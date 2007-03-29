@@ -21,8 +21,10 @@
 		}
 
 		/* Skin */
-		body, .tabs-container { /* declare background color for container to avoid distorted fonts in IE while fading */
+		.tabs-container { /* declare background color for container to avoid distorted fonts in IE while fading */
 		    background: #fff;
+		    border-top: 1px solid #97a5b0;
+		    padding: 1em 8px;
 		}
 		.tabs-nav {
 		    list-style: none;
@@ -52,7 +54,7 @@
 		    line-height: 1.2;
 		    text-align: center;
 		    text-decoration: none;
-		    background: url(tab.png) no-repeat;
+		    background: url(/delphi/trunk/themes/pahma/images/tab.png) no-repeat;
 		}
 		.tabs-nav .tabs-selected a {
 		    padding-top: 7px;
@@ -74,15 +76,17 @@
 		.tabs-nav .tabs-disabled {
 		    opacity: .4;
 		}
-		.tabs-container {
-		    border-top: 1px solid #97a5b0;
-		    padding: 1em 8px;
-		}
 		/* Uncomment this if you want a little spinner to be shown next to the tab title while an Ajax tab gets loaded
 		.tabs-loading span {
 		    padding: 0 0 0 20px;
 		    background: url(loading.gif) no-repeat 0 50%;
 		}*/
+		
+		#container-1{
+			width:300px;
+			border: 1px solid #999;
+		}
+		
 	</style>
 </head>
 
