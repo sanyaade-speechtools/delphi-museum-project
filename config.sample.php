@@ -37,9 +37,9 @@ unset($CFG);  // Ignore this line
 //                                                                       //
 //
 
-$CFG->dbtype    = 'mysql';       // mysql or postgres7 (for now)
+$CFG->dbtype    = 'mysql';       // mysql
 $CFG->dbhost    = 'localhost';   // eg localhost or db.isp.com
-$CFG->dbname    = 'delphi';      // database name, eg moodle
+$CFG->dbname    = 'delphi';      // database name
 $CFG->dbuser    = 'username';    // your database username
 $CFG->dbpass    = 'password';    // your database password
 $CFG->prefix    = 'delphi_';        // Prefix to use for all table names
