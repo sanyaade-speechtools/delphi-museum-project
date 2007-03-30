@@ -134,6 +134,31 @@ body {
 	/* background-color : #D4C08A; */
 }
 
+#front_examples {
+	margin: 24px 0;
+}
+
+.front_example {
+	float: left;
+	margin: 0 8px 24px 0px;
+}
+
+.front_exampleName {
+	font-size: 100%;
+}
+
+.front_exampleThumbnail {
+	width: 120px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height:90px;
+	height:auto !important;
+	height:90px;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+}
+
 /* ------------------------------------------------------- *
  * - BROWSER --------------------------------------------- *
  * ------------------------------------------------------- */
@@ -249,19 +274,6 @@ body {
 	*/
 }
 
-.results_resultR {
-	float: right;
-	width: 149px;
-	margin: 6px 0 0 1px;
-	padding: 0;
-	border-width: 0;
-	/*
-	border-width: 1px;
-	border-style: solid;
-	border-color: #aaaaaa;
-	*/
-}
-
 .results_resultName {
 	font-size: 100%;
 }
@@ -284,9 +296,10 @@ body {
  * ------------------------------------------------------- */
 
 #detail_name {
+	margin: 24px 0 0 0;
 }
 
-#detail_image {
+#detail_imageColumn {
 	float: left;
 	width: 400px;
 
@@ -295,30 +308,84 @@ body {
 	height: auto !important;
 	height: 300px;
 
-	margin: 24px 0;
+	margin: 12px 0;
 	padding: 0;
 	border-width: 0;
 	
-	background-color: #aaaaaa;
-	color: #ffffff
 	/* background-color : #D4C08A; */
 
 }
 
+#detail_image {
+	width: 400px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+	
+
+	margin: 0 0 6px 0;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+}
+
+#detail_thumbnails {
+}
+
+#detail_thumbnailSelected {
+	/* display: inline; */
+	float: left;
+
+	width: 120px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 3px;
+	padding: 0px;
+	border: 1px solid #000000;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+}
+
+.detail_thumbnail {
+	/* display: inline; */
+	float: left;
+
+	width: 120px;
+	
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 4px;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+}
+
 #detail_information {
 	float: right;
-	width: 390px;
-	margin: 24px 0 0 10px;
+	width: 388px;
+	border: 1px solid #999999;
+	margin: 12px 0 12px 10px;
 	padding: 0;
-	border-width: 0;
+
 	/* background-color : #D4C08A; */
 }
 
 #detail_facetPath {
 	clear: both;
-	margin: 24px 0;
+	margin: 12px 0;
 	padding: 0;
-	border-width: 0;
+	border: 1px solid #999999;
 	/* background-color : #D4C08A; */
 }
 
