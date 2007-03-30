@@ -146,7 +146,7 @@ body {
 	
 	margin: 24px 0;
 	padding: 0 10px;
-	background-color: #dddddd;
+	background-color: #aaaaaa;
 }
 
 .front_example {
@@ -171,8 +171,8 @@ body {
 	margin: 0;
 	padding: 0;
 	
-	background-color: #aaaaaa;
-	color: #ffffff;
+	background-color: #dddddd;
+	color: #000000;
 }
 
 /* ------------------------------------------------------- *
@@ -228,8 +228,8 @@ body {
 	height:auto !important;
 	height: 90px;
 	
-	background-color: #aaaaaa;
-	color: #ffffff;
+	background-color: #dddddd;
+	color: #000000;
 }
 
 /* ------------------------------------------------------- *
@@ -270,11 +270,16 @@ body {
 .results_pagination {
 	clear: both;
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 0.9em;
 }
 
-.results_pagination ul li {
+.results_pagination ul {
+	margin-left: -3em;
+}
+
+.results_pagination li {
 	display: inline;
+	list-style: none;
 }
 
 .results_result {
@@ -302,8 +307,8 @@ body {
 	height:auto !important;
 	height:90px;
 	
-	background-color: #aaaaaa;
-	color: #ffffff;
+	background-color: #dddddd;
+	color: #000000;
 }
 
 /* ------------------------------------------------------- *
@@ -341,8 +346,8 @@ body {
 
 	margin: 0 0 6px 0;
 	
-	background-color: #aaaaaa;
-	color: #ffffff;
+	background-color: #dddddd;
+	color: #000000;
 }
 
 #detail_thumbnails {
@@ -375,8 +380,8 @@ body {
 	padding: 0px;
 	border: 0;
 	
-	background-color: #aaaaaa;
-	color: #ffffff;
+	background-color: #dddddd;
+	color: #000000;
 }
 
 .detail_thumbnail {
@@ -392,8 +397,8 @@ body {
 	
 	margin: 4px;
 	
-	background-color: #aaaaaa;
-	color: #ffffff;
+	background-color: #dddddd;
+	color: #000000;
 }
 
 #detail_information {
@@ -409,7 +414,7 @@ body {
 #detail_facetPath {
 	clear: both;
 	margin: 12px 0;
-	padding: 0;
+	padding: 0 8px;
 	border: 1px solid #999999;
 	/* background-color : #D4C08A; */
 }
