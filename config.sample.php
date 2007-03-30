@@ -42,7 +42,7 @@ $CFG->dbhost    = 'localhost';   // eg localhost or db.isp.com
 $CFG->dbname    = 'delphi';      // database name
 $CFG->dbuser    = 'username';    // your database username
 $CFG->dbpass    = 'password';    // your database password
-$CFG->prefix    = 'delphi_';        // Prefix to use for all table names
+$CFG->prefix    = 'delphi_';        // Prefix to use for all table names (not working yet)
 
 
 //=========================================================================
@@ -63,11 +63,19 @@ $CFG->wwwroot   = 'http://example.com/delphi';
 // Next, specify the full OS directory path to this same location
 // Make sure the upper/lower case is correct.  Some examples:
 //
-//    $CFG->dirroot = 'c:\program files\easyphp\www\moodle';    // Windows
-//    $CFG->dirroot = '/var/www/html/moodle';     // Redhat Linux
-//    $CFG->dirroot = '/home/example/public_html/moodle'; // Cpanel host
+//    $CFG->dirroot = 'c:\program files\easyphp\www\delphi';    // Windows
+//    $CFG->dirroot = '/var/www/html/delphi';     // Redhat Linux
+//    $CFG->dirroot = '/home/example/public_html/delphi'; // Cpanel host
 
 $CFG->dirroot   = '/home/example/public_html/delphi';
+
+
+//=========================================================================
+// 4. DEFAULT THEME
+//=========================================================================
+// Next, specify which theme should be used by default
+
+$CFG->theme   = 'pahma';
 
 
 //=========================================================================
