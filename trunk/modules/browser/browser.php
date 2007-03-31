@@ -24,6 +24,6 @@ while ($row = $res->fetchRow()) {
 $res->free();
 */
 // Display template
-$t->display('results.tpl');
+$t->display('browser.tpl');
 
 ?>
