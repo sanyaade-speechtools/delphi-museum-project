@@ -20,6 +20,7 @@ if (PEAR::isError($db)) {
     die($db->getMessage());
 }
 
+$db->setFetchMode(MDB2_FETCHMODE_ASSOC);
 
 // Setup template object
 $t = new Smarty;

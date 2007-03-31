@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	$('#container-1').tabs();
+	$('#detail_information').tabs();
 });
