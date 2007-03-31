@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
 <link rel="stylesheet" href="{$themeroot}/style/delphi_style.css" type="text/css" />
-<script type="text/JavaScript" src="script.js"></script>
 
 <title></title>
 </head>
@@ -23,5 +22,5 @@
 	</div>
 	-->
 	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
-	<div id="user">Welcome <strong>USER</strong></div>
+	<div id="user">Welcome <strong>Adam Smith</strong></div>
 </div>
