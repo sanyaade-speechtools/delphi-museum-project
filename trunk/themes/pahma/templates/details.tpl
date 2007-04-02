@@ -1,9 +1,8 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-latest.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.tabs.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/themes/pahma/scripts/tabs.js"></script>
-
 
 <div id="content">
 	<h2 id="detail_name">{$name}</h2>
