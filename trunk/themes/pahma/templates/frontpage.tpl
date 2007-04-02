@@ -90,6 +90,7 @@
 			</div>
 		</div>
 	</div>
+	<br style="clear:both;" />
 </div>
 
 {include file="footer.tpl"}
