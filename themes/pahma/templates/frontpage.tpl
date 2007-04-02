@@ -4,7 +4,6 @@
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.tooltip.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/themes/pahma/scripts/rollover.js"></script>
 
-
 <div id="content">
 	<div id="front_links"><h2><a href="./browser.html">Browse Collections</a></h2></div>
 
