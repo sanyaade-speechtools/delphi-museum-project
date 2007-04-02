@@ -23,4 +23,5 @@
 	-->
 	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
 	<div id="user">Welcome <strong>Adam Smith</strong></div>
+	<br style="clear:both;" />
 </div>
