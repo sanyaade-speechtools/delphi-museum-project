@@ -3,7 +3,7 @@
 require_once("../../libs/env.php");
 
 // Query DB
-$sql = "	SELECT o.id, o.objnum, o.name, o.thumb_path 
+$sql = "	SELECT o.id, o.objnum, o.name, o.img_path 
 			FROM objects o, categories c, obj_cats oc 
 			WHERE o.id=oc.obj_id and c.id=oc.cat_id and c.name='gray' 
 			LIMIT 12;
@@ -27,7 +27,7 @@ $objects = array();
 while ($row = $res->fetchRow()) {
 	
 	$object = array(	'id' => $row['id'], 
-						'thumb_path' => $row['thumb_path'], 
+						'img_path' => $row['img_path'], 
 						'name' => $row['name'], 
 						'objnum' => $row['objnum']
 					);

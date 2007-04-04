@@ -25,7 +25,7 @@
 		<div class="front_example">
 			<h3 class="front_exampleName">{$objects[examples].name}</h3>
 			<div class="front_exampleThumbnail">
-				<img src="{$wwwroot}/objimages/{$objects[examples].thumb_path}"/>
+				<img src="{$thumbs}/{$objects[examples].img_path}"/>
 			</div>
 		</div>
 		{/section}

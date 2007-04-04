@@ -232,6 +232,62 @@ body {
 }
 
 /* ------------------------------------------------------- *
+ * - VIEWSET --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#viewset_leftCol {
+	float: left;
+	width: 384px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	
+	margin: 0px 10px 0 0;
+	padding: 10;
+	border: 1px solid #999;
+	/* background-color : #D4C08A; */
+}
+
+#viewset_rightCol {
+	float: right;
+	width: 400px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	padding: 0;
+	border: 1px solid #999;	
+	/* background-color : #D4C08A; */
+}
+
+#viewset_sortableThumbs{
+	width: 380px;
+	height:380px;
+}
+#viewset_sortableThumbs img{
+	float: left;
+	width: 70px;
+	height: 70px;
+}
+
+.viewset_sorthelper{
+	background-color: #666;
+	float: left;
+}
+
+.viewset_sortableactive{
+}
+
+.viewset_sortablehover{
+}
+
+.viewset_thumbnailHover{
+}
+
+/* ------------------------------------------------------- *
  * - RESULTS --------------------------------------------- *
  * ------------------------------------------------------- */
 
