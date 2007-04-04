@@ -79,6 +79,21 @@ $CFG->theme   = 'pahma';
 
 
 //=========================================================================
+// 5. IMAGE PATHS
+//=========================================================================
+// Next, specify the full web address to the location where object
+// images can be accessed. 
+//
+// Do not include a trailing slash!
+
+
+$CFG->image_thumb   = 'http://example.com/delphi/objimages/thumbs';
+$CFG->image_thumb_square   = 'http://example.com/delphi/objimages/thumbs_square';
+$CFG->image_medium   = 'http://example.com/delphi/objimages/mids';
+$CFG->image_full   = 'http://example.com/delphi/objimages/fulls';
+
+
+//=========================================================================
 // ALL DONE!  To continue installation, visit your main page with a browser
 //=========================================================================
 
