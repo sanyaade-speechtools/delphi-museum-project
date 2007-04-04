@@ -7,10 +7,10 @@
 <div id="content">
 	<h2 id="detail_name">{$name}</h2>
 	<div id="detail_imageColumn">
-		<div id="detail_image"><img	src="{$wwwroot}/objimages/{$med_img_path}" width="398px" height="298px"/></div>
+		<div id="detail_image"><img	src="{$mids}/{$img_path}" width="398px" height="298px"/></div>
 		<div id="detail_thumbnails">
 			<div id="detail_thumbnailSelectedContainer">
-				<div id="detail_thumbnailSelected"><img	src="{$wwwroot}/objimages/{$thumb_path}" width="115px" height="85px"/></div>
+				<div id="detail_thumbnailSelected"><img	src="{$thumbs}/{$img_path}" width="115px" height="85px"/></div>
 			</div>
 			<div class="detail_thumbnail">alt view 1</div>
 			<div class="detail_thumbnail">alt view 2</div>
