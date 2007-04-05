@@ -29,7 +29,7 @@ header link - #AA7016
 standard link - #AE7F35
 
 text link - #4D3D24
-text visited - #DC6403
+text unavailable - #DC6403
  
 */
 
@@ -43,64 +43,78 @@ text visited - #DC6403
 	font-size: 0;
 }
 
-a:link  {
+#header a:link, #header a:visited {
+	color: #aa7016;
+	text-decoration: none;
+}
+#header a:hover, #header a:active {
+	color: #aa7016;
+	text-decoration: underline;
+}
+
+#logo a:link {
+	color: #b19262;
+	text-decoration: none;
+}
+#logo a:visited {
+	color: #b19262;
+	text-decoration: none;
+}
+#logo a:hover {
+	color: #b19262;
+	text-decoration: none;
+}
+#logo a:active {
+	color: #b19262;
+	text-decoration: none;
+}
+
+#content a:link, #content a:visited {
+	color: #aa7016;
+	text-decoration: none;
+}
+#content a:hover, #content a:active {
+	color: #aa7016;
+	text-decoration: underline;
+}
+
+#inner_content a:link {
+	color: #ae7f35;
+	text-decoration: underline;
+}
+#inner_content a:visited {
+	color: #ae7f35;
+	text-decoration: underline;
+}
+#inner_content a:hover {
+	color: #ae7f35;
+	text-decoration: underline;
+}
+#inner_content a:active {
+	color: #ae7f35;
+	text-decoration: underline;
+}
+
+.results_pagination a:link  {
 	color: #4d3d24;
 }
 
-a:visited  {
+.results_pagination a:visited  {
 	color: #dc6403;
 }
 
-a:hover {
+.results_pagination a:hover {
 	color: #4d3d24;
 }
 
-a:active  {
+.results_pagination a:active  {
 	color: #4d3d24;
-}
-
-#header a:link {
-	color: #aa7016;
-	text-decoration: none;
-}
-#header a:visited {
-	color: #aa7016;
-	text-decoration: none;
-}
-#header a:hover {
-	color: #aa7016;
-	text-decoration: underline;
-}
-#header a:active {
-	color: #aa7016;
-	text-decoration: underline;
-}
-
-#content a:link {
-	color: #aa7016;
-	text-decoration: none;
-}
-#content a:visited {
-	color: #aa7016;
-	text-decoration: none;
-}
-#content a:hover {
-	color: #aa7016;
-	text-decoration: underline;
-}
-#content a:active {
-	color: #aa7016;
-	text-decoration: underline;
-}
-
-#inner_content a {
-	color: #ae7f35;
 }
 
 body {
 	width: 868px;
 	margin-top: 24px;
-	margin-bottom: 16px;
+	margin-bottom: 24px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #E9E3C8;
@@ -189,7 +203,7 @@ body {
 
 .front_example {
 	float: left;
-	margin: 0 5px 5px 0;
+	margin: 4px;
 }
 
 .front_exampleName {
@@ -288,7 +302,7 @@ body {
 	height:auto !important;
 	height: 800px;
 	
-	margin: 24px 10px 24px 0;
+	margin: 24px 10px 0 0;
 	padding: 0;
 	border-width: 0;
 		
@@ -308,6 +322,8 @@ body {
 
 .results_pagination {
 	clear: both;
+	
+	color: #DC6403;
 	text-align: center;
 	font-size: 1em;
 }
@@ -330,25 +346,14 @@ body {
 	float: left;
 	width: 120px;
 	padding: 0;
-	margin: 8px 4px;
-	/*
-	border-width: 1px;
-	border-style: solid;
-	border-color: #aaaaaa;
-	*/
+	margin: 4px;
 }
 .results_result ul {
-	margin-top: 4px;
-	margin-left: -2em;
 }
 .results_result li {
-	font-size: 0.8em;
-	list-style: none;
 }
 
 .results_resultName {
-	margin-bottom: 0;
-	font-size: 100%;
 }
 
 .results_resultThumbnail {
@@ -523,7 +528,6 @@ body {
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
-    text-decoration: none;
     background: url(/delphi/trunk/themes/pahma/images/tab.png) no-repeat;
 }
 .tabs-nav .tabs-selected a {
