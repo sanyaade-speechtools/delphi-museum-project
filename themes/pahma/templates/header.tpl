@@ -22,6 +22,6 @@
 	</div>
 	
 	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
-	<div id="user">Welcome <strong>Theresa Conant</strong><br/><a href="#">My Sets</a> | <a href="#">Sign Out</a></div>
+	<div id="user">Welcome <strong>Theresa Conant</strong><br/><a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> | <a href="#">Sign Out</a></div>
 	<br style="clear:both;" />
 </div>
