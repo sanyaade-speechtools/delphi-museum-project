@@ -9,7 +9,7 @@
 
 
 <div id="content">
-	<div id="viewset_nameDiv"><span class="editSetName viewset_setName" id="setName___1">{$setName}</span>Created by <a href="#">Theresa Conant</a></div>
+	<div id="viewset_nameDiv"><span class="viewset_setName" id="setName___1">{$setName}</span>Created by <a href="#">JohnDoe</a></div>
 	<div id="viewset_innerContent">
 	<div id="viewset_leftCol">
 		{include file="viewsetDetails.tpl"}
@@ -18,7 +18,7 @@
 				<h3>Set Description</h3>
 			</div>
 			<div class="viewset_boxContent">
-				<p id="setDescription___1" class="editSetDescription">{$setDescription}</p>
+				<p id="setDescription___1">{$setDescription}</p>
 			</div>
 		</div>
 	</div>

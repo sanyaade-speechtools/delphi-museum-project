@@ -1,7 +1,7 @@
 <?
 
 require_once("../../libs/env.php");
-
+/*
 // If there is no id param in the url, send to object not found.
 if( isset( $_GET['sid'] ) ) {
 	$setId = $_GET['sid'];
@@ -32,8 +32,8 @@ while ($row = $res->fetchRow()) {
 
 // Free the result
 $res->free();
-
+*/
 // Display template
-$t->display('viewset.tpl');
+$t->display('demo/setsHome.tpl');
 
 ?>
