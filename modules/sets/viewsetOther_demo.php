@@ -34,6 +34,6 @@ while ($row = $res->fetchRow()) {
 $res->free();
 
 // Display template
-$t->display('viewset.tpl');
+$t->display('demo/viewsetOther.tpl');
 
 ?>

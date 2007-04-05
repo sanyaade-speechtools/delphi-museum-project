@@ -44,7 +44,7 @@ function TB_show(caption, url, rel) {
 	TB_overlaySize();
 	
 	// TODO create loader only once, hide and show on demand
-	$("body").append("<div id='TB_load'><img src='/site_media/images/loadingAnimation.gif' /></div>");
+	$("body").append("<div id='TB_load'><img src='/delphi/trunk/themes/pahma/images/loadingAnimation.gif' /></div>");
 	TB_load_position();
 	
 	// check if a query string is involved
