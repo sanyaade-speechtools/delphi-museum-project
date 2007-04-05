@@ -1,0 +1,899 @@
+/* ------------------------------------------------------- *
+ * - PALETTE --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+/*
+
+#e9e3c8 - body bg
+#d4c08a - content bg
+#7f5f43 - text
+ 
+
+*/
+
+/* ------------------------------------------------------- *
+ * - SHARED ---------------------------------------------- *
+ * ------------------------------------------------------- */
+
+a:link  {
+	color: blue;
+}
+
+a:visited  {
+	color: purple;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active  {
+	color: red;
+}
+
+body {
+	width: 800px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	margin-left: auto;
+	margin-right: auto;
+	/* background-color: #E9E3C8; */
+	/* color: #7F5F43; */
+	font-family: verdana, helvetica, sans-serif;
+}
+
+#header  {
+	padding: 0px;
+	border: 0px;
+	margin: 6px 0;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 80px;
+	height: auto !important;
+	height: 80px;
+
+	background: #aaaaaa;
+	color: #ffffff;
+	/* background-color: #D4C08A; */
+	/* color: #7F5F43; */
+
+	font-family: verdana, helvetica, sans-serif;
+}
+
+#logo {
+	float: left;
+	width: 200px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	/* background-color : #D4C08A; */
+	text-align: center;
+	font-family: garamond;
+	font-weight: bold;
+}
+
+#search {
+	float: left;
+	width: 240px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	/* background-color : #D4C08A; */
+}
+
+#user {
+	float: left;
+	width: 600px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	/* background-color : #D4C08A; */
+	text-align: right;
+}
+
+#content {
+	clear: both;
+	
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 200px;
+	height: auto !important;
+	height: 200px;
+	
+
+	margin: 6px 0;
+}
+
+#footer {
+	clear: both;
+	margin: 24px 0;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+	/* background-color : #D4C08A; */
+	
+	text-align: center;
+}
+
+/* ------------------------------------------------------- *
+ * - FRONT ----------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#front_links {
+	margin: 24px 0;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+	/* background-color : #D4C08A; */
+	
+	text-align: center;
+}
+
+#front_featuredSets {
+	margin: 24px 0;
+
+	background-color: #aaaaaa;
+	color: #ffffff;
+	/* background-color : #D4C08A; */
+}
+
+#front_examples {
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height:300px;
+	height:auto !important;
+	height:300px;
+	
+	margin: 24px 0;
+	padding: 0 10px;
+	background-color: #aaaaaa;
+}
+
+.front_example {
+	float: left;
+	margin: 0 5px 24px 5px;
+}
+
+.front_exampleName {
+	margin-bottom: 0;
+
+	font-size: 100%;
+}
+
+.front_exampleThumbnail {
+	width: 120px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height:90px;
+	height:auto !important;
+	height:90px;
+	
+	margin: 0;
+	padding: 0;
+	
+	background-color: #dddddd;
+	color: #000000;
+}
+
+/* ------------------------------------------------------- *
+ * - BROWSER --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#browser_facetTree {
+	float: left;
+	width: 390px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	
+	margin: 24px 10px 0 0;
+	padding: 0;
+	border-width: 0;
+	background-color: #aaaaaa;
+	color: #ffffff;
+	/* background-color : #D4C08A; */
+}
+
+#browser_help {
+	float: right;
+	width: 400px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	
+	margin: 24px 0;
+	padding: 0;
+	border-width: 0;
+	/* background-color : #D4C08A; */
+}
+
+#browser_instructions {
+}
+
+.browser_exampleName {
+	margin-bottom: 0;
+	font-size: 100%;
+}
+
+.browser_exampleThumbnail {
+	width: 120px;
+
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height:auto !important;
+	height: 90px;
+	
+	background-color: #dddddd;
+	color: #000000;
+}
+
+/* ------------------------------------------------------- *
+ * - VIEWSET --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#viewset_leftCol {
+	float: left;
+	width: 384px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	
+	margin: 0px 10px 0 0;
+	padding: 10;
+	border: 1px solid #999;
+	/* background-color : #D4C08A; */
+}
+
+#viewset_rightCol {
+	float: right;
+	width: 400px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	padding: 0;
+	border: 1px solid #999;	
+	/* background-color : #D4C08A; */
+}
+
+#viewset_sortableThumbs{
+	width: 380px;
+	height:380px;
+}
+#viewset_sortableThumbs img{
+	float: left;
+	width: 70px;
+	height: 70px;
+}
+
+.viewset_sorthelper{
+	background-color: #666;
+	float: left;
+}
+
+.viewset_sortableactive{
+}
+
+.viewset_sortablehover{
+}
+
+.viewset_thumbnailHover{
+}
+
+/* ------------------------------------------------------- *
+ * - RESULTS --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#results_facetTree {
+	float: left;
+	width: 340px;
+	
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	
+	margin: 24px 10px 24px 0;
+	padding: 0;
+	border-width: 0;
+	
+	background-color: #aaaaaa;
+	color: #ffffff;
+	/* background-color : #D4C08A; */
+}
+
+#results_results {
+	float: right;
+	width: 450px;
+	margin: 24px 0;
+	padding: 0;
+	border-width: 0;
+	/* background-color : #D4C08A; */
+}
+
+#results_grid {
+}
+
+.results_pagination {
+	clear: both;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.results_pagination ul {
+	margin-left: -3em;
+}
+
+.results_pagination li {
+	display: inline;
+	list-style: none;
+}
+
+.results_result {
+	float: left;
+	width: 120px;
+	margin: 0 15px;
+	padding: 0;
+	/*
+	border-width: 1px;
+	border-style: solid;
+	border-color: #aaaaaa;
+	*/
+}
+
+.results_resultName {
+	margin-bottom: 0;
+	font-size: 100%;
+}
+
+.results_resultThumbnail {
+	width: 120px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height:90px;
+	height:auto !important;
+	height:90px;
+	
+	background-color: #dddddd;
+	color: #000000;
+}
+
+/* ------------------------------------------------------- *
+ * - DETAIL ---------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#detail_name {
+	margin: 24px 0 0 0;
+}
+
+#detail_imageColumn {
+	float: left;
+	width: 400px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+
+	margin: 0 0 12px 0;
+	padding: 0;
+	border-width: 0;
+	
+	/* background-color : #D4C08A; */
+}
+
+#detail_image {
+	width: 400px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 300px;
+	height: auto !important;
+	height: 300px;
+	
+
+	margin: 0 0 6px 0;
+	
+	background-color: #dddddd;
+	color: #000000;
+}
+
+#detail_thumbnails {
+	margin: 0 8px;
+}
+
+#detail_thumbnailSelectedContainer {
+	float: left;
+	
+
+	width: 124px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 0px;
+	padding: 1px;
+	border: 1px solid #000000;
+}
+
+#detail_thumbnailSelected {
+	width: 120px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 2px;
+	padding: 0px;
+	border: 0;
+	
+	background-color: #dddddd;
+	color: #000000;
+}
+
+.detail_thumbnail {
+	float: left;
+
+	width: 120px;
+	
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 4px;
+	
+	background-color: #dddddd;
+	color: #000000;
+}
+
+#detail_information {
+	float: right;
+	width: 388px;
+	border: 1px solid #999999;
+	margin: 0px 0 12px 10px;
+	padding: 0;
+
+	/* background-color : #D4C08A; */
+}
+
+#detail_facetPath {
+	clear: both;
+	margin: 12px 0;
+	padding: 0 8px;
+	border: 1px solid #999999;
+	/* background-color : #D4C08A; */
+}
+
+
+/* ------------------------------------------------------- *
+ * - TABS ------------------------------------------------ *
+ * ------------------------------------------------------- */
+
+
+/* Caution: ensure accessibility in print */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .tabs-hide {
+        display: none;
+    }
+}
+
+@media print {
+    .tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.tabs-container { /* declare background color for container to avoid distorted fonts in IE while fading */
+    background: #fff;
+    border-top: 1px solid #97a5b0;
+    padding: 1em 8px;
+}
+.tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 4px;
+}
+.tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.tabs-nav li {
+    float: left;
+    margin: 0 0 0 1px;
+}
+.tabs-nav a {
+    display: block;
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    padding: 6px 10px 0;
+    width: 64px;
+    height: 18px;
+    color: #27537a;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    background: url(/delphi/trunk/themes/pahma/images/tab.png) no-repeat;
+}
+.tabs-nav .tabs-selected a {
+    padding-top: 7px;
+    color: #000;
+}
+.tabs-nav .tabs-selected a, .tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active {
+    background-position: 0 -50px;
+}
+.tabs-nav .tabs-disabled a:hover, .tabs-nav .tabs-disabled a:focus, .tabs-nav .tabs-disabled a:active {
+    background-position: 0 0;
+}
+.tabs-nav .tabs-selected a:link, .tabs-nav .tabs-selected a:visited,
+.tabs-nav .tabs-disabled a:link, .tabs-nav .tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+.tabs-nav .tabs-disabled {
+    opacity: .4;
+}
+/* Uncomment this if you want a little spinner to be shown next to the tab title while an Ajax tab gets loaded
+.tabs-loading span {
+    padding: 0 0 0 20px;
+    background: url(loading.gif) no-repeat 0 50%;
+}*/
+
+/* ------------------------------------------------------- *
+ * - PAHMA DEFAULT --------------------------------------- *
+ * ------------------------------------------------------- */
+
+input  {
+	font-family : verdana, helvetica, sans-serif;
+	/* font-size : 11.5px; */
+	/* color : #aaaaaa; */
+	/* letter-spacing : .1em; */
+	/* text-transform : uppercase; */
+	/* background-color : C9CCB1; */
+}
+
+/* - START COMMENT --------------------------------------- *
+
+:link  {
+	color : rgb(122, 47, 16);
+}
+
+:visited  {
+	color : rgb(174,150, 113);
+}
+
+:hover {
+}
+
+:active  {
+	color : rgb(122, 47, 16);
+}
+
+.noline  {
+	color : rgb(122, 47, 16);
+	text-decoration : none;
+}
+
+.bigger  {
+	font-size : 10pt;
+	font-family : verdana, helvetica, sans-serif;
+	color : #7F5F43;
+}
+
+.italsmall  {
+	font-size : 11px;
+	font-family : verdana, helvetica, sans-serif;
+	color : #7F5F43;
+	font-style : italic;
+}
+
+.smallest  {
+	font-size : 11px;
+	font-family : verdana, helvetica, sans-serif;
+	color : #7F5F43;
+}
+
+.black  {
+	font-size : 11px;
+	font-family : verdana, helvetica, sans-serif;
+	color : #aaaaaa;
+}
+
+.caption  {
+	color : #666666;
+}
+
+.bowled  {
+	font-weight : 500;
+}
+
+select  {
+	font-family : verdana, helvetica;
+	font-size : 11.5px;
+	color : #aaaaaa;
+	letter-spacing : .1em;
+	text-transform : uppercase;
+	background-color : C9CCB1;
+}
+
+td.menu1 {
+  font-weight: normal;
+}
+
+.menu1 a {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #424849;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu1 a:active {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #424849;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu1 a:visited {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #424849;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu1 a:hover {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu1 a:visited:hover {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+td.activemenu1 {
+  font-weight: normal;
+}
+
+.activemenu1 a {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.activemenu1 a:active {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.activemenu1 a:visited {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.activemenu1 a:hover {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.activemenu1 a:hover:visited {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+td.menu2 {
+  font-weight: normal;
+}
+
+.menu2 a {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu2 a:active {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu2 a:visited {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu2 a:hover {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu2 a:visited:hover {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+td.activemenu2 {
+  font-weight: normal;
+}
+
+.activemenu2 a {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu2 a:active {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu2 a:visited {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu2 a:hover {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu2 a:hover:visited {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+td.menu3 {
+  font-weight: normal;
+}
+
+.menu3 a {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu3 a:active {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu3 a:visited {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu3 a:hover {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.menu3 a:visited:hover {
+  font-family:  verdana, helvetica, geneva, sans-serif;
+	font-size : 10px;
+	color: #A28049;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+td.activemenu3 {
+  font-weight: normal;
+}
+
+.activemenu3 a {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu3 a:active {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu3 a:visited {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu3 a:hover {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.activemenu3 a:hover:visited {
+  font-family : verdana, helvetica;
+	font-size : 10px;
+	color: #7A2F10;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+ * - END COMMENT------------------------------------------ */

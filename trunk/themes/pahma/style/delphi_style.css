@@ -11,35 +11,66 @@
 
 */
 
+
+
+
+
 /* ------------------------------------------------------- *
  * - SHARED ---------------------------------------------- *
  * ------------------------------------------------------- */
 
 a:link  {
-	color: blue;
+	color:#aa7016;
+	text-decoration: none;
 }
 
 a:visited  {
-	color: purple;
+	color:#aa7016;
+	text-decoration: none;
+	
 }
 
 a:hover {
 	color: red;
+	text-decoration: underline;
 }
 
 a:active  {
 	color: red;
+	text-decoration: none;
+}
+
+h1{
+	color:#000;
+}
+
+h2{
+	color:#000;
+}
+
+h3{
+	color:#000;
+}
+
+h4{
+	color:#000;
+}
+
+h5{
+	color:#000;
 }
 
 body {
-	width: 800px;
+	width: 820px;
 	margin-top: 24px;
 	margin-bottom: 24px;
 	margin-left: auto;
 	margin-right: auto;
-	/* background-color: #E9E3C8; */
+	background-color: #E9E3C8;
 	/* color: #7F5F43; */
-	font-family: verdana, helvetica, sans-serif;
+	font-family: helvetica, arial, sans-serif;
+	font-size: .8em;
+	color:#6e6d6d;
 }
 
 #header  {
@@ -52,11 +83,7 @@ body {
 	height: auto !important;
 	height: 80px;
 
-	background: #aaaaaa;
-	color: #ffffff;
-	/* background-color: #D4C08A; */
-	/* color: #7F5F43; */
-
+	color: #B19262;
 	font-family: verdana, helvetica, sans-serif;
 }
 
@@ -67,9 +94,6 @@ body {
 	border: 0px;
 	margin: 0px;
 	/* background-color : #D4C08A; */
-	text-align: center;
-	font-family: garamond;
-	font-weight: bold;
 }
 
 #search {
@@ -100,18 +124,14 @@ body {
 	height: auto !important;
 	height: 200px;
 	
-
+	background-color: #DDCD9F;
+	border: 3px solid #FFF;
 	margin: 6px 0;
 }
 
 #footer {
 	clear: both;
 	margin: 24px 0;
-	
-	background-color: #aaaaaa;
-	color: #ffffff;
-	/* background-color : #D4C08A; */
-	
 	text-align: center;
 }
 
@@ -235,9 +255,28 @@ body {
  * - VIEWSET --------------------------------------------- *
  * ------------------------------------------------------- */
 
+#viewset_nameDiv{
+	margin: 60px 0px 0px 60px;
+	color:#000;
+	
+}
+
+.viewset_setName{
+	font-size: 1.5em;
+	font-style: normal;
+	margin-right:10px;
+}
+
+
+#viewset_innerContent{
+	background-color: #e5dfcc;
+	padding: 40px;
+	margin: 0px 60px 60px 60px;
+}
+
 #viewset_leftCol {
 	float: left;
-	width: 384px;
+	width: 200px;
 	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 600px;
@@ -245,33 +284,41 @@ body {
 	height: 600px;
 	
 	margin: 0px 10px 0 0;
-	padding: 10;
-	border: 1px solid #999;
-	/* background-color : #D4C08A; */
+	padding: 10px;
 }
 
 #viewset_rightCol {
-	float: right;
-	width: 400px;
+	float: left;
+	width: 300px;
 	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 600px;
 	height:auto !important;
 	height: 600px;
-	padding: 0;
-	border: 1px solid #999;	
-	/* background-color : #D4C08A; */
+	padding: 10px;
+	margin-top:-5;
+
+}
+
+#viewset_thumbnails .viewset_boxHeader{
+	text-align:right;
+	padding:0px;
+	width:354px;
 }
 
 #viewset_sortableThumbs{
 	width: 380px;
 	height:380px;
 }
-#viewset_sortableThumbs img{
+
+.viewset_thumbnail{
 	float: left;
-	width: 70px;
-	height: 70px;
+	width: 66px;
+	height: 66px;
+	margin:0px;
+	border: 3px solid #e5dfcc;
 }
+
 
 .viewset_sorthelper{
 	background-color: #666;
@@ -285,6 +332,12 @@ body {
 }
 
 .viewset_thumbnailHover{
+	border: 3px solid #000;
+}
+
+.viewset_thumbnailSelected{
+	border: 3px solid #F00;
+	
 }
 
 /* ------------------------------------------------------- *
