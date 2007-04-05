@@ -1,3 +1,9 @@
+function loadObjDetails(id,img){
+	$("img").removeClass("viewset_thumbnailSelected")
+	$("#thumb_" + id).addClass("viewset_thumbnailSelected");
+	$("#viewset_objectDetails").load("api_loadDetails.php?id=" + id + "&img=" + img);
+}
+
 $(document).ready(
 	function () {
 		/*$('#viewset_sortableThumbs').Sortable(
@@ -28,13 +34,7 @@ $(document).ready(
 		   $(this).addClass("viewset_thumbnailHover");
 		 },function(){
 		   $(this).removeClass("viewset_thumbnailHover");
-		 });
-		
-	}	
+		 });		
+		loadObjDetails(4,"0002");
+	}
 );
-
-
-
-function loadObjDetails(id){
-	$("#viewset_objectDetails").load("api_loadDetails.php?id=" + id);
-}
