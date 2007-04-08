@@ -33,7 +33,7 @@ $t->cache_dir = "$CFG->dirroot/libs/smarty/cache/";
 //$t->force_compile = true;
 //$t->caching = true;
 
-## GLOBALS:  $db, $t
+##GLOBALS:  $db, $t
 session_start();
 
 // Assign any global smarty values here.
@@ -43,4 +43,7 @@ $t->assign('thumbs', $CFG->image_thumb);
 $t->assign('thumbs_square', $CFG->image_thumb_square);
 $t->assign('mids', $CFG->image_medium);
 $t->assign('fulls', $CFG->image_full);
+
+
+
 ?>
