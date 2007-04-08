@@ -1,7 +1,6 @@
 <?php
-// Report all PHP errors (bitwise 63 may be used in PHP 3)
-// Set to 0 for public release.
-error_reporting(E_ALL);
+
+require_once("../../libs/env.php");
 
 // Define the login states
 define("DELPHI_LOGGED_IN", 0);
@@ -19,22 +18,32 @@ define("DELPHI_REG_PENDING", -4);
  * On success it returns the login_id (any return > 0 is success).
  */
 function confirmUser($username, $password){
-   global $mysqli;
+	global $db;
+	
    /* Add slashes if necessary (for query) */
    if(!get_magic_quotes_gpc()) {
 		$username = addslashes($username);
    }
 
    /* Verify that user is in database */
-   $q = "select id, passwdmd5, pending from user where username = '$username'";
-   $result = $mysqli->query($q);
-   if(!$result || ($result->num_rows < 1)){
-      return DELPHI_NO_SUCH_USER; //Indicates username failure
-   }
+	$sql = "	SELECT id, passwdmd5, pending 
+				FROM user 
+				WHERE username = '$username'
+			";
+
+	$res =& $db->query($sql);
+	if (PEAR::isError($res)) {
+	    die($res->getMessage());
+	}
+
+	// If nothing is found...
+	if ( $res->numRows() < 1 ){
+		return DELPHI_NO_SUCH_USER; //Indicates username failure
+	}
 
    $password = stripslashes($password);
    /* Retrieve password from result, strip slashes */
-   $dbarray = $result->fetch_array(MYSQLI_ASSOC);
+   $dbarray = $res->fetchRow();
    $dbpw = stripslashes($dbarray['passwdmd5']);
    $dbpend = stripslashes($dbarray['pending']);
 
@@ -81,6 +90,7 @@ function checkLogin(){
       }
    }
 	 return $result;
+	
 }
 
 /**
@@ -127,31 +137,35 @@ function displayLogin(){
  * creates session.
  */
 if(isset($_POST['sublogin'])){
+	
    /* Check that all fields were typed in */
    if(!$_POST['user'] || !$_POST['pass']){
-		 die('<p>You didn\'t fill in a required field.</p>'
-			 .'<p><a href="main.php">Return to login page.</a></p>');
+		$t->assign('message','You did not fill in a required field.');
+		$t->display('login.tpl');
+		 die();
    }
    /* Spruce up username, check length */
    $_POST['user'] = trim($_POST['user']);
    if(strlen($_POST['user']) > 40){
-      die('<p>Sorry, the username is longer than 40 characters, please shorten it.</p>'
-			 .'<p><a href="main.php">Return to login page.</a></p>');
+		$t->assign('message','Sorry, the username is longer than 40 characters, please shorten it.');
+		$t->display('login.tpl');
+		 die();
    }
 
    /* Checks that username is in database and password is correct */
    $md5pass = md5($_POST['pass']);
-   $result = confirmUser($_POST['user'], $md5pass);
 
+   $result = confirmUser($_POST['user'], $md5pass);
    /* Check error codes */
    if($result == DELPHI_NO_SUCH_USER){
-      die('<p>That username does not exist in our database.</p>'
-			 .'<p><a href="main.php">Return to login page.</a> '
-			 .'or <a href="register.php">Register</a>.</p>');
+		$t->assign('message','That username does not exist in our database.');
+		$t->display('login.tpl');
+		die();
    }
    else if($result == DELPHI_PASSWD_WRONG){
-      die('<p>Incorrect password, please try again.</p>'
-			 .'<p><a href="main.php">Return to login page.</a></p>');
+		$t->assign('message','Incorrect password, please try again.');
+		$t->display('login.tpl');
+		die();
    }
 
    /* Username and password correct, register session variables */
@@ -173,10 +187,13 @@ if(isset($_POST['sublogin'])){
 
    /* Quick self-redirect to avoid resending data on refresh */
    echo "<meta http-equiv=\"Refresh\" content=\"0;url=$HTTP_SERVER_VARS[PHP_SELF]\">";
-   return;
+	$t->assign('message','You logged in!');
+	$t->display('login.tpl');
+	die();
+
 }
 
-/* Sets the value of the login_state variable, which can be used in your code */
-$login_state = checkLogin();
-
+// Display template
+$t->display('login.tpl');
+die();
 ?>
