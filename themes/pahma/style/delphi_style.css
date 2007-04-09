@@ -249,9 +249,44 @@ body {
 	color: #000000;
 }
 
+
+
 /* ------------------------------------------------------- *
  * - VIEWSET --------------------------------------------- *
  * ------------------------------------------------------- */
+
+.viewset_mySetTeaser{
+	padding:10px 10px 10px 70px;
+	
+	border: 1px solid #999;
+	margin:0px 20px 20px 0px;
+	background-color: #BBB399;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 100px;
+	height:auto !important;
+	height: 100px;
+	width:525px;
+}
+
+.viewset_mySetTeaser img{
+	float:left;
+	height:50px;
+	width:50px;
+	margin-right:10px;
+	margin-left:-60px;
+	border: 1px solid #999;
+}
+
+.viewset_mySetTeaser h3{
+	margin-top:0px;
+}
+
+.vwiewset_mySetTeaser p{
+	float:right;
+	margin-top:-30px;
+	width:250px;
+}
+
 
 #viewset_nameDiv{
 	margin: 60px 0px 0px 60px;
