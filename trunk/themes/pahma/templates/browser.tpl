@@ -4,7 +4,11 @@
 	<h2>Collection Browser</h2>
 
 	<div id="inner_content">
-		<div id="browser_facetTree"><h2>Facet Tree goes here</h2></div>
+		<div id="browser_facetTree">
+			<h2>Facet Tree goes here</h2>
+			<h2><a href="{$wwwroot}/modules/browser/results.php">temp link to results</a></h2>
+			<h2><a href="{$wwwroot}/modules/browser/results_alt.php">temp link to results_alt (subcategorized)</a></h2>
+		</div>
 
 		<div id="browser_help">
 			<h2>Instructions</h2>
