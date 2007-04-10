@@ -335,10 +335,13 @@ body {
 #results_results {
 	float: right;
 	width: 384px;
-	margin: 0;
+	margin: 24px 0 0 0;
 	padding: 0;
 	border-width: 0;
 	/* background-color: #D4C08A; */
+}
+#results_results>h2 {
+	margin: 0 0 16px 0;
 }
 
 .results_pagination {
@@ -390,6 +393,23 @@ body {
 	background-color: #61572f;
 	color: #ffffff;
 	text-align: center;
+}
+
+/* ------------------------------------------------------- *
+ * - RESULTS_ALT ----------------------------------------- *
+ * ------------------------------------------------------- */
+
+.results_subcategory {
+	width: 384px;
+	margin-bottom: 16px;
+	padding-bottom: 4px;
+	background-color: #DDCD9F;
+}
+.results_subcategory>h3 {
+	margin: 0 0 4px 0;
+
+	padding: 4px 0 4px 4px;
+	background-color: #D4C08A;
 }
 
 /* ------------------------------------------------------- *
