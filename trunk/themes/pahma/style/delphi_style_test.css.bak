@@ -78,25 +78,21 @@ text unavailable - #DC6403
 	text-decoration: underline;
 }
 
-#inner_content a:link, #inner_content a:visited, #inner_content a:hover, #inner_content a:active {
+#inner_content a:link {
 	color: #ae7f35;
 	text-decoration: underline;
 }
-
-.front_exampleThumbnail a:link  {
-	color: #e9e3c8;
+#inner_content a:visited {
+	color: #ae7f35;
+	text-decoration: underline;
 }
-
-.front_exampleThumbnail a:visited  {
-	color: #e9e3c8;
+#inner_content a:hover {
+	color: #ae7f35;
+	text-decoration: underline;
 }
-
-.front_exampleThumbnail a:hover {
-	color: #e9e3c8;
-}
-
-.front_exampleThumbnail a:active  {
-	color: #e9e3c8;
+#inner_content a:active {
+	color: #ae7f35;
+	text-decoration: underline;
 }
 
 .results_pagination a:link  {
@@ -123,12 +119,12 @@ body {
 	margin-right: auto;
 	background-color: #E9E3C8;
 	color: #4d3d24;
-	font-family: helvetica, verdana, sans-serif;
+	font-family: verdana, helvetica, sans-serif;
 }
 
 #header  {
 	text-align: left;
-	font-family: helvetica, verdana, sans-serif;
+	font-family: verdana, helvetica, sans-serif;
 }
 
 #logo {
@@ -193,19 +189,9 @@ body {
  * ------------------------------------------------------- */
 
 #front_links {
-	width: 768px;
-	padding: 2px 16px 4px 16px;
-	background-color: #e5dfcc;
 }
 #front_links>h2 {
-	margin: 0;
-}
-
-#front_search {
-	width: 768px;
-	padding: 8px 16px 8px 16px;
-	margin-bottom: 16px;
-	background-color: #61572f;
+	margin: 0 0 8px 0;
 }
 
 #front_featuredSets {
@@ -227,9 +213,9 @@ body {
 	width: 120px;
 	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 120px;
+	min-height:120px;
 	height:auto !important;
-	height: 120px;
+	height:120px;
 	
 	margin: 0;
 	padding: 0;
@@ -237,11 +223,6 @@ body {
 	background-color: #61572f;
 	color: #ffffff;
 	text-align: center;
-}
-.front_exampleThumbnail img {
-	width: 120px;
-	height: 116px;
-	border-width: 0;
 }
 
 /* ------------------------------------------------------- *
@@ -296,15 +277,13 @@ body {
 }
 
 .browser_exampleThumbnail {
-	width: 90px;
+	width: 120px;
 
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
+	min-height: 120px;
 	height:auto !important;
-	height: 90px;
-
-	padding: 15px;	
-
+	height: 120px;
+	
 	background-color: #61572f;
 	color: #ffffff;
 	text-align: center;
@@ -378,15 +357,13 @@ body {
 }
 
 .results_resultThumbnail {
-	width: 90px;
+	width: 120px;
 
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
+	min-height: 120px;
 	height:auto !important;
-	height: 90px;
-
-	padding: 15px;	
-
+	height: 120px;
+	
 	background-color: #61572f;
 	color: #ffffff;
 	text-align: center;
@@ -423,10 +400,6 @@ body {
 	color: #ffffff;
 	text-align: center;
 }
-#detail_image img {
-	width: 400px;
-	height: 400px;
-}
 
 #detail_thumbnails {
 	margin: 0 8px;
@@ -435,59 +408,44 @@ body {
 #detail_thumbnailSelectedContainer {
 	float: left;
 	
-	width: 120px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 120px;
-	height: auto !important;
-	height: 120px;
+	width: 124px;
 	
-	background-color: #D4C08A;
-
-	margin: 0;
-	padding: 3px;
+	margin: 0px;
+	padding: 1px;
 	border: 1px solid #000000;
 }
 
-#detail_thumbnailSelected { /* 120x120 */
+#detail_thumbnailSelected {
 	width: 120px;
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 120px;
 	height: auto !important;
 	height: 120px;
 	
-	margin: 0;
-	padding: 0;
-	border-width: 0;
+	margin: 2px;
+	padding: 0px;
+	border: 0;
 	
 	background-color: #61572f;
 	color: #ffffff;
 	text-align: center;
 }
-#detail_thumbnailSelected img {
-	width: 120px;
-	height: 116px;
-}
 
-.detail_thumbnail { /* 128x128 */
+.detail_thumbnail {
 	float: left;
 
-	width: 90px;
+	width: 120px;
 
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
+	min-height: 120px;
 	height: auto !important;
-	height: 90px;
+	height: 120px;
 	
 	margin: 4px;
-	padding: 15px;	
-
+	
 	background-color: #61572f;
 	color: #ffffff;
 	text-align: center;
-}
-.detail_thumbnail img {
-	width: 82px;
-	height: 82px;
 }
 
 #detail_information {
@@ -498,8 +456,6 @@ body {
 	border: 1px solid #999999;
 
 	background-color: #D4C08A;
-
-	line-height: 1.2em;
 }
 
 #detail_facetPath {
@@ -520,6 +476,7 @@ body {
  * - TABS ------------------------------------------------ *
  * ------------------------------------------------------- */
 
+
 /* Caution: ensure accessibility in print */
 @media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
     .tabs-hide {
@@ -535,10 +492,15 @@ body {
 
 /* Skin */
 .tabs-container { /* declare background color for container to avoid distorted fonts in IE while fading */
-    background: #fff;
     border-top: 1px solid #97a5b0;
     padding: 1em 8px;
+    background-color: #ffffff;
 }
+
+.tabs-hide {
+	background-color: #D4C08A;
+}
+
 .tabs-nav {
     list-style: none;
     margin: 0;
@@ -566,7 +528,6 @@ body {
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
-    text-decoration: none;
     background: url(/delphi/trunk/themes/pahma/images/tab.png) no-repeat;
 }
 .tabs-nav .tabs-selected a {
@@ -589,119 +550,12 @@ body {
 .tabs-nav .tabs-disabled {
     opacity: .4;
 }
+
 /* Uncomment this if you want a little spinner to be shown next to the tab title while an Ajax tab gets loaded
 .tabs-loading span {
     padding: 0 0 0 20px;
     background: url(loading.gif) no-repeat 0 50%;
 }*/
-
-
-/* ----------------------------------------------------------------------------------------------------------------*/
-/* ---------->>> thickbox specific link and font settings <<<------------------------------------------------------*/
-/* ----------------------------------------------------------------------------------------------------------------*/
-#TB_window {
-  font: 12px Arial, Helvetica, sans-serif;
-  color: #333333;
-}
-#TB_secondLine {
-  font: 10px Arial, Helvetica, sans-serif;
-  color:#666666;
-}
-#TB_window a:link {color: #666666;}
-#TB_window a:visited {color: #666666;}
-#TB_window a:hover {color: #000;}
-#TB_window a:active {color: #666666;}
-#TB_window a:focus{color: #666666;}
-/* ----------------------------------------------------------------------------------------------------------------*/
-/* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/
-/* ----------------------------------------------------------------------------------------------------------------*/
-#TB_overlay {
-  position: absolute;
-  z-index:100;
-  top: 0px;
-  left: 0px;
-  background-color:#000;
-  filter:alpha(opacity=60);
-  -moz-opacity: 0.6;
-  opacity: 0.6;
-}
-#TB_window {
-  position: absolute;
-  background: #ffffff;
-  z-index: 102;
-  color:#000000;
-  display:none;
-  border: 4px solid #525252;
-  text-align:left;
-}
-#TB_window img {
-  display:block;
-  margin: 15px 0 0 15px;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #666;
-  border-left: 1px solid #666;
-}
-#TB_caption{
-  height:25px;
-  padding:7px 30px 10px 25px;
-  float:left;
-}
-#TB_closeWindow{
-  height:25px;
-  padding:11px 25px 10px 0;
-  float:right;
-}
-#TB_closeAjaxWindow{
-  padding:5px 10px 7px 0;
-  margin-bottom:1px;
-  text-align:right;
-  float:right;
-}
-#TB_ajaxWindowTitle{
-  float:left;
-  padding:7px 0 5px 10px;
-  margin-bottom:1px;
-}
-#TB_title{
-  background-color:#e8e8e8;
-  height:27px;
-}
-#TB_ajaxContent{
-  clear:both;
-  padding:2px 15px 15px 15px;
-  overflow:auto;
-  text-align:left;
-  line-height:1.4em;
-}
-#TB_ajaxContent p{
-  padding:5px 0px 5px 0px;
-}
-#TB_load{
-  position: absolute;
-  display:none;
-  height:100px;
-  width:100px;
-  z-index:101;
-}
-#TB_HideSelect{
-  z-index:99;
-  position:absolute;
-  top: 0;
-  left: 0;
-  background-color:#fff;
-  border:none;
-  filter:alpha(opacity=0);
-  -moz-opacity: 0;
-  opacity: 0;
-}
-#TB_iframeContent{
-  clear:both;
-  border:none;
-  margin-bottom:-1px;
-  margin-top:1px;
-  _margin-bottom:1px;
-}
 
 /* ------------------------------------------------------- *
  * - PAHMA DEFAULT --------------------------------------- *

@@ -5,23 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-<link rel="stylesheet" href="{$themeroot}/style/delphi_style.css" type="text/css" />
+<link rel="stylesheet" href="{$themeroot}/style/delphi_style_test.css" type="text/css" />
+<script type="text/JavaScript" src="script.js"></script>
 
 <title></title>
 </head>
 
 <body>
 <div id="header">
-	<div id="logo"><h1><a href="{$wwwroot}/modules/sets/setsHome_demo.php">Delphi</a></h1></div>
-	
+	<div id="logo"><h1><a href="{$wwwroot}/modules/frontpage/frontpage.php">Delphi</a></h1></div>
+	<!--
 	<div id="search">
-		<form action="{$wwwroot}/modules/sets/results_demo.php" method="post">
+		<form action="" method="post">
 			<input type="text" name="search" maxlength="40">
 			<input type="submit" name="submit_search" value="Search">
 		</form>
 	</div>
-	
+	-->
 	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
-	<div id="user">Welcome <strong>Theresa Conant</strong><br/><a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> | <a href="#">Sign Out</a></div>
-	<br style="clear:both;" />
+	<div id="user">Welcome <strong><a href="#">John Doe</a></strong></div>
+	<!-- <div id="sets"><a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a></div> -->
+	<br class="clearbreak" />
 </div>
