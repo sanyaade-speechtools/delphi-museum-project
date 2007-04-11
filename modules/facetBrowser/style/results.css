@@ -1,0 +1,41 @@
+ p#newSrch { position:absolute; top:5px; right:10px; font-size:12px; }
+ div#container { position: relative; width:95%; }
+ div#leftSide { position: absolute; left:0px; top:0px; width:260px; }
+ div#rightSide { position: absolute; left:260px; top:0px; width:400; background-color:#eeeeee }
+ div.tree { cursor:default; border: solid 1px gray; width:100%; }
+ div.tree div.facet { border-bottom: solid 1px blue; padding-bottom: 2px; }
+ div.tree div.facet span.title {font-family:Arial, Helvitica; font-weight:bold; font-size:11px; 
+ 				position:relative; top:0px; left:-1px; border-bottom: solid 1px gray; 
+ 				padding: 0px 2px 0px 2px; color: gray}
+ div.facet div.treeitem { cursor:default; position:relative; left:5px; overflow:hidden; 
+	  width:250px;
+ 		font-family:Arial, Helvitica; font-size:12px; border-bottom:none 0 ; margin:0; padding:0;}
+ div.open span img, div.closed span img { cursor:pointer;}
+ div.treeitem span a { text-decoration:none; color:	black;}
+ div.open span a:hover, div.closed span a:hover { color:blue; text-decoration:underline;}
+ div.open span img.open { display:inline;}
+ div.open span img.closed { display:none;}
+ div.closed span img.closed { display:inline;}
+ div.closed span img.open { display:none;}
+ div.open div.treeitem { display: block; }
+ div.closed div.treeitem { display: none; }
+ div.imageblock {width:160px; height:160px; display:inline; background-color:black; margin:5px;
+ 		position:relative}
+ div.imageblock span.label { font-size:9px; color:yellow; position:absolute; bottom:10px; right:10px; } 
+ div.imageblock a img { border:none; margin: 0 0 0 0; padding:0; }
+ img.h80thumb {position:absolute; top:10px;}
+ img.v80thumb {position:absolute; left:10px;}
+ img.h160thumb {position:absolute; top:20px; left:0;}
+ img.v160thumb {position:absolute; top:0; left:20px;}
+ code.hidden {display:none;}
+ p.debug {display:none;}
+
+ /* Rules for the basic search page */
+
+  #simpleSrch { display:block; }
+  #advSrchLink { text-decoration:underline; color:blue; cursor:hand;}
+  #advSrch { display:none; padding:10px; }
+  #advSrchLbl { font-style:italic; font-size:x-small; position:relative; left:10px;}
+  #advSrchInner { border:solid 1px black; padding:10px; text-align:center;}
+  #simpleSrchLink { text-decoration:underline; color:blue; cursor:hand;}
+ 
