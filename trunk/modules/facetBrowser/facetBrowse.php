@@ -1,12 +1,6 @@
-<html>
-<head>
-<title>Facet UI Test</title>
-<link href="style/results.css" rel="stylesheet" type="text/css" />
-<script src="script/treeview.js" type="text/javascript" ></script>
-</head>
-
-<body>
 <?
+require_once("../../libs/env.php");
+
 include("dbconnect.php");
 require "Facet.inc";
 $_DELPHI_PAGE_SIZE = 40;
@@ -104,13 +98,13 @@ function buildStringForQueryTerms( $catIDs ) {
 		}
 		if( $pageNum > 0 )
 			$tqFull .= " OFFSET ".($_DELPHI_PAGE_SIZE*$pageNum);
-		echo "<code class=\"hidden\">CountsByCat Query:
+		echo "<code style=\"display:none;\">CountsByCat Query:
 			".$tqCountsByCat."
 			</code>";
-		echo "<code class=\"hidden\">Full Query:
+		echo "<code style=\"display:none;\">Full Query:
 			".$tqFull."
 			</code>";
-		echo "<code class=\"hidden\">Full Count Query:
+		echo "<code style=\"display:none;\">Full Count Query:
 			".$tqFullCount."
 			</code>";
 
@@ -127,56 +121,59 @@ function buildStringForQueryTerms( $catIDs ) {
 	GetFacetListFromResultSet($facetsResults);
 	$countsresult=$mysqli->query($tqCountsByCat);
 	PopulateFacetsFromResultSet( $countsresult, true );
-// Facets now exist as array in $facets. Nodes are avail in hashMap.
+	// Facets now exist as array in $facets. Nodes are avail in hashMap.
+	
+	/*
+		TODO fix urls so that cats doesn't have to be the last parameter
+	*/
 	$baseQ = $_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING'];
-	if( $numResultsTotal == 0 )
-		echo( "<h3>Query: ".buildStringForQueryTerms($catIDs)."</h3>");
-	else
-		echo "<h4>Found ".$numResultsTotal." results".$qual." for query: ".buildStringForQueryTerms($catIDs)."</h4>";
 
-?>
-<div id="container">
-<div id="leftSide">
-<div class="tree">
-<?php
+	$t->assign("numResultsTotal", $numResultsTotal); // e.g. "48"
+	$t->assign("qual", $qual); // e.g. "with images"
+	$t->assign("query", buildStringForQueryTerms($catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
+	
+	// var for holding concated output
+	$facetTreeOutput = "";
+	
 	foreach( $facets as $facet ) {
 		if( empty($facet->arrChildren) )
-			echo( "<code class=\"hidden\">Facet: ".$facet->name." has no no matches</code>" );
+			echo( "<code style=\"display:none;\">Facet: ".$facet->name." has no no matches</code>" );
 		else {
 			$facet->PruneForOutput($numResultsTotal, $catIDs);
-			$facet->GenerateHTMLOutput( "facet", 0, 1, $baseQ, false );
+			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $baseQ, false );
 		}
 	}
-?>
-</div>
-</div> <!-- close left side div -->
-<div id="rightSide">
+	
+	$t->assign("facetTree", $facetTreeOutput);
 
-<?php
-/*
+
 	$nPix=0;
-	while( $row=mysql_fetch_array($objsresult) )
+	$objsresult=$mysqli->query($tqFull);
+	
+	// var for holding concated output
+	$imageOutput = "";
+	
+	/*
+		TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
+	*/
+	while( $row=$objsresult->fetch_assoc() )
 	{
-		echo "<div class=\"imageblock\">";
-		$pathToImg = $row['BasePath'].$row['Path']."/".$row['Filename'];
-		echo "<a href=\"".$pathToImg."\"><img src=\"".$pathToImg."\"";
-		$w = (int)$row['Width'];
-		$h = (int)$row['Height'];
-		if( $w >= $h )
-			echo " class=\"h160thumb\" width=\"160px\" height=\"120px\"	/></a>";
-		else
-			echo " class=\"v160thumb\" width=\"120px\" height=\"160px\"	/></a>";
-		echo "<span class=\"label\">".$row['Filename']." (".$w." x ".$h.")</span>";
-		echo "</div>";
+		$imageOutput .= "<div class=\"imageblock\">";
+		$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
+		$imageOutput .= "<a href=\"".$pathToImg."\"><img src=\"".$pathToImg."\"";
+		$imageOutput .= " class=\"h160thumb\" width=\"160px\" height=\"120px\"	/></a>";
+
+		$imageOutput .= "<span class=\"label\">".$row['name']."</span>";
+		$imageOutput .= "</div>";
 		$nPix++;
 		if( $nPix >= 40 ) {
-			echo "<p>Another ".($numResultsTotal-40)." images not shown...</p>";
+			$imageOutput .= "<p>Another ".($numResultsTotal-40)." images not shown...</p>";
 			break;
 		}
 	}
- */
+	
+	$t->assign("imageOutput", $imageOutput);
+	$t->display("results.tpl");
+	die;
+ 
 ?>
-</div> <!-- close rightSide div -->
-</div> <!-- close container div -->
-</body>
-</html>
