@@ -1,9 +1,10 @@
 {include file="header.tpl"}
 
 <div id="content">
-	<h2 id="results_heading">Results</h2>
+	<h2 id="results_heading">{$numResultsTotal} Results {$qual}</h2>
 
 	<div id="inner_content">
+		{$query}
 		<div id="results_facetTree">
 			{$facetTree}
 		</div>
