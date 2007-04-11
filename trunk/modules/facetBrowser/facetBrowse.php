@@ -92,7 +92,7 @@ function buildStringForQueryTerms( $catIDs ) {
 				 where c.id=tqTop.cat_id group by c.id order by c.id";
 			$tqFull = 
 			"select o.id, o.objnum, o.name, o.description, o.img_path
-			 from objects o,".$tqMain." where o.id=tqMain.obj_id ".$_DELPHI_PAGE_SIZE;
+			 from objects o,".$tqMain." where o.id=tqMain.obj_id limit ".$_DELPHI_PAGE_SIZE;
 			$tqFullCount = 
 				"select count(*) from objects o,".$tqMain." where o.id=tqMain.obj_id";
 		}
