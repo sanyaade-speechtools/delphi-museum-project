@@ -5,7 +5,7 @@
 
 	<div id="inner_content">
 		<div id="results_facetTree">
-			<h2>Facet Tree goes here</h2>
+			{$facetTree}
 		</div>
 
 		<div id="results_results">
@@ -30,146 +30,7 @@
 			</div>
 
 			<div id="results_resultsGrid">
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<!--<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>-->
-				</div>
+				{$imageOutput}
 				<div class="results_result">
 					<!--<h3 class="results_resultName">Name</h3>-->
 					<div class="results_resultThumbnail">
