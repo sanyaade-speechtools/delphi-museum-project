@@ -1,0 +1,17 @@
+ div.tree { cursor:default; border: solid 1 gray; width:150px; height:100%; overflow:scroll;}
+ div.tree div.facet { border-bottom: solid 1 blue; padding-bottom: 2px; font-size:12px; }
+ div.tree div.facet span.title {font-family:Arial, Helvitica; font-weight:bold; font-size:10px; 
+ 				position:relative; top:-2px; left:-1px; border-bottom: solid 1 gray; 
+ 				padding: 0px 2px 0px 2px; color: gray}
+ div.facet div.treeitem { cursor:default; position:relative; left:5px; overflow:auto; width:300px;
+ 					font-family:Arial, Helvitica; font-size:12px; border-bottom:none 0 ; margin:0; padding:0;}
+ div.open span img, div.closed span img { cursor:pointer;}
+ div.treeitem span a { text-decoration:none; color:	black; font-size: 11px;}
+ div.open span a:hover, div.closed span a:hover { color:blue; text-decoration:underline;}
+ div.open  img.open { display:inline-block;}
+ div.open  img.closed { display:none;}
+ div.closed img.closed { display:inline-block;}
+ div.closed img.open { display:none;}
+ div.open div.treeitem { display: block; }
+ div.closed div.treeitem { display: none; }
+
