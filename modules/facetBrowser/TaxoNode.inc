@@ -72,7 +72,7 @@ class TaxoNode {
 	// into the children as prefix strings, rather than hiding altogether.
 	// We may need to mark categories in the taxonomies as hidable or required,
 	// and even specify abbreviations for collapsing. E.g., "US:" before "Kansas"
-	function GenerateHTMLOutput( $class, $depth, $nSiblings, $pageURL ) {
+	function GenerateHTMLOutput( $class, $depth, $nSiblings, $pageURL, $fFullTree ) {
 		if( $this->fPrune ) {
 			//echo "<p>Pruned: ".$this->name."</p>";
 			return;
@@ -88,9 +88,10 @@ class TaxoNode {
 		else
 			$span = "<span>";
 
-		if(($depth == 0)
+		// If we are in full tree mode, then close up everything to the roots.
+		if(!$fFullTree && (($depth == 0)
 			|| (($depth == 1) && ($nSiblings < 3))
-			|| $this->fNoClick)
+			|| $this->fNoClick))
 			$oc = " open";
 		else
 			$oc = " closed";
@@ -115,16 +116,20 @@ class TaxoNode {
 			else if( $this->fNoClick )
 				echo " ".$this->name." (".$this->nResults.")
 						</span>";
-			else
-				echo "<a href=\"".$pageURL.",".$this->id."\"> ".$this->name." (".$this->nResults.")</a>
-						</span>";
+			else {
+				echo "<a href=\"".$pageURL;
+				if( !$fFullTree )
+					echo ",";
+				echo $this->id."\"> ".$this->name." (".$this->nResults.")</a>
+				</span>";
+			}
 		}
 		$nChildren = count($this->arrChildren);
 		if($nChildren > 0) {
 			//echo "Node: ".$this->name." has ".count($this->arrChildren)." children.";
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
-					$child->GenerateHTMLOutput( "treeitem", $depth+1, $nChildren, $pageURL );
+					$child->GenerateHTMLOutput( "treeitem", $depth+1, $nChildren, $pageURL, $fFullTree );
 			}
 		}
 		if( !$this->fHidden || $class == "facet") {
