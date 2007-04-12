@@ -122,12 +122,17 @@ function buildStringForQueryTerms( $catIDs ) {
 	$countsresult=$mysqli->query($tqCountsByCat);
 	PopulateFacetsFromResultSet( $countsresult, true );
 	// Facets now exist as array in $facets. Nodes are avail in hashMap.
-	
-	/*
-		TODO fix urls so that cats doesn't have to be the last parameter
-	*/
-	$baseQ = $_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING'];
+	// Need to build the base query out of the existing parameters.
+	// As written, baseQ is sufficient to use for page queries - just append the page=#
+	$baseQ = $_SERVER['PHP_SELF']."?";
+	$catsParam = "cats=".$cats;
+	if( !$onlyWithImgs )
+		$baseQ.= "wImgs=false&".$catsParam;
+  else 
+		$baseQ.= $catsParam;
 
+	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
+	$t->assign("pageNum", $pageNum); 	// for pagination queries in page
 	$t->assign("numResultsTotal", $numResultsTotal); // e.g. "48"
 	$t->assign("qual", $qual); // e.g. "with images"
 	$t->assign("query", buildStringForQueryTerms($catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
