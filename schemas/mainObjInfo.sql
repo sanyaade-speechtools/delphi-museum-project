@@ -15,6 +15,9 @@ CREATE TABLE DBInfo (
   `version`           VARCHAR(16) NOT NULL,
   -- TFacetMaskWidth must agree with the FacetMaskCache definition
   `facetMaskWidth`    TINYINT(2) NULL DEFAULT 32,
+  -- cache the number of objects and those with images
+  `n_objs_total`      INT(8) NOT NULL DEFAULT 0,
+  `n_objs_w_imgs`     INT(8) NOT NULL DEFAULT 0,
   -- Be general about orientation, and store long and short side sizes.
   `thumb_long_side`   SMALLINT(4) UNSIGNED DEFAULT 80,
   `thumb_short_side`  SMALLINT(4) UNSIGNED DEFAULT 60,
@@ -109,6 +112,7 @@ CREATE TABLE `categories` (
   MaskBit TINYINT(2) UNSIGNED NOT NULL,    -- which bit in the mask is this?
  */
   `always_inferred` BIT(1) NULL,
+  `n_matches` int(10) NOT NULL default 0,
   INDEX `cat_id_index` (`id`),
   INDEX `cat_name_index` (`name`),    -- Removed until need clarified
   CONSTRAINT `cat_ibfk_1` FOREIGN KEY (`parent_id`)
