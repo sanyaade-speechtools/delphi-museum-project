@@ -29,5 +29,5 @@ if (PEAR::isError($res)) {
 $res->free();
 
 // Display template
-echo stripslashes($update_value);
+echo stripslashes($update_value . " <span class='viewset_editLink'>(<a href='#'>edit</a>)</span>");
 ?>

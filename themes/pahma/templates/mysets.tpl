@@ -11,7 +11,7 @@
 <div id="content">
 	<div id="viewset_nameDiv"><span class="viewset_setName">My Sets</span></div>
 	
-	<div id="viewset_innerContent">
+	<div id="inner_content">
 		
 		<div class="viewset_mySetTeaser">
 			<img src="{$thumbs_square}/0002.jpg"/>
