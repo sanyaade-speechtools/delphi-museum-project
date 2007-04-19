@@ -1,6 +1,6 @@
 function sendSet(){
-	 $("#confirmSendForm").css("display","block");
-	$("#sendSetForm").css("display","none");
+	 $("#viewset_confirmSendForm").css("display","block");
+	$("#viewset_sendSetForm").css("display","none");
 }
 
 

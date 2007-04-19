@@ -78,7 +78,12 @@ text unavailable - #DC6403
 	text-decoration: underline;
 }
 
-#inner_content a:link, #inner_content a:visited, #inner_content a:hover, #inner_content a:active {
+#inner_content a:link, #inner_content a:visited{
+	color: #ae7f35;
+	text-decoration: none;
+}
+
+#inner_content a:hover, #inner_content a:active {
 	color: #ae7f35;
 	text-decoration: underline;
 }
@@ -170,9 +175,9 @@ body {
 #content {
 	padding: 30px;
 	border: 4px solid #ffffff;
-
 	margin: 0;
 	background-color : #ddcd9f;
+	position: relative;
 }
 #content>h2 {
 	margin: 0;
@@ -543,9 +548,8 @@ body {
 
 .viewset_mySetTeaser{
 	padding:10px 10px 10px 70px;
-	
 	border: 1px solid #999;
-	margin:0px 20px 20px 0px;
+	margin:30px auto 0px auto;
 	background-color: #BBB399;
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 100px;
@@ -573,34 +577,31 @@ body {
 	width:250px;
 }
 
-
-#viewset_nameDiv{
-	margin: 60px 0px 0px 60px;
-	color:#000;
-	
+.viewset_shareLink{
+	position: absolute;
+	right:32px;
+	top:62px;
 }
 
 .viewset_setName{
 	font-size: 1.5em;
 	font-style: normal;
-	margin-right:10px;
+	color:#000;
 }
 
-
-#viewset_innerContent{
-	background-color: #e5dfcc;
-	padding: 40px;
-	margin: 0px 60px 60px 60px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
-	height:auto !important;
-	height: 600px;
-	
+#viewset_createdBy{
+	margin-top:10px;
+	margin-bottom:5px;
 }
+
+.viewset_editLink{
+
+}
+
 
 #viewset_leftCol {
 	float: left;
-	width: 200px;
+	width: 370px;
 	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 600px;
@@ -608,18 +609,17 @@ body {
 	height: 600px;
 	
 	margin: 0px 10px 0 0;
-	padding: 10px;
+
 }
 
 #viewset_rightCol {
 	float: left;
-	width: 300px;
+	width:360px;
 	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 600px;
 	height:auto !important;
 	height: 600px;
-	padding: 10px;
 	margin-top:-5;
 
 }
@@ -630,19 +630,42 @@ body {
 	width:354px;
 }
 
+
+.viewset_thumbnail{
+	float: left;
+	margin: 1px;
+	background-color: #e5dfcc;
+	position:relative;
+	padding:2px;
+
+}
+
+.addButton{
+	position:absolute;
+	right:2px;
+	bottom:2px;
+}
+
+.addButton a img{
+	border-width: 0px;
+}
+
+.viewset_thumbnail img{
+	display: block;
+}
+
+.viewset_thumbnailHover{
+	background-color: #000;
+}
+
+.viewset_thumbnailSelected{
+	background-color: #e96a03;
+}
+
 #viewset_sortableThumbs{
 	width: 380px;
 	height:380px;
 }
-
-.viewset_thumbnail{
-	float: left;
-	width: 66px;
-	height: 66px;
-	margin:0px;
-	border: 3px solid #e5dfcc;
-}
-
 
 .viewset_sorthelper{
 	background-color: #666;
@@ -655,14 +678,6 @@ body {
 .viewset_sortablehover{
 }
 
-.viewset_thumbnailHover{
-	border: 3px solid #000;
-}
-
-.viewset_thumbnailSelected{
-	border: 3px solid #F00;
-	
-}
 
 #setsHome_innerContent{
 	text-align:center;
@@ -670,6 +685,12 @@ body {
 
 #setsHome_innerContent a img{
 	margin:20px 7px 20px 7px;
+}
+
+#viewset_sendSetForm form{
+	width:75%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 /* ------------------------------------------------------- *

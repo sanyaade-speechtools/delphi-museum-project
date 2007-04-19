@@ -1,5 +1,5 @@
 function loadObjDetails(id,img){
-	$("img").removeClass("viewset_thumbnailSelected")
+	$(".viewset_thumbnail").removeClass("viewset_thumbnailSelected")
 	$("#thumb_" + id).addClass("viewset_thumbnailSelected");
 	$("#viewset_objectDetails").load("api_loadDetails.php?id=" + id + "&img=" + img);
 }
@@ -28,13 +28,16 @@ $(document).ready(
 			params: "ajax=yes",
 			field_type: "textarea",
 		    textarea_rows: "5",
-		    textarea_cols: "35"
+		    textarea_cols: "40"
 		});
-		$("img").hover(function(){
-		   $(this).addClass("viewset_thumbnailHover");
-		 },function(){
-		   $(this).removeClass("viewset_thumbnailHover");
-		 });		
+		$(".viewset_thumbnail").hover(function(){
+			$(this).addClass("viewset_thumbnailHover");
+		},function(){
+			$(this).removeClass("viewset_thumbnailHover");
+		});
+		$(".addButton a").click(function(){
+			$(this).load("api_addButtonPress.php");
+		});	
 		loadObjDetails(4,"0002");
 	}
 );
