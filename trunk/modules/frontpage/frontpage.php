@@ -45,4 +45,8 @@ $t->assign('objects', $objects);
 // Display template
 $t->display('frontpage.tpl');
 
+//Die here or additional PHP lines will be excecuted.
+die();
+
+
 ?>

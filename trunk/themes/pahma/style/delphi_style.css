@@ -1,135 +1,191 @@
 /* ------------------------------------------------------- *
+ * - SIZES ----------------------------------------------- *
+ * ------------------------------------------------------- */
+
+/*
+
+width - 868px
+
+*/
+
+/* ------------------------------------------------------- *
  * - PALETTE --------------------------------------------- *
  * ------------------------------------------------------- */
 
 /*
 
-#e9e3c8 - body bg
-#d4c08a - content bg
-#7f5f43 - text
+body bg - #E9E3C8
+content bg - #DDCD9F
+inner content bg - #E5DFCC
+inner inner content bg - #61572F
+alt inner inner content bg - #D4C08A
+
+logo text - #B19262
+heading text - #4D3D24
+body text - #4d3d24
+
+header link - #AA7016
+
+standard link - #AE7F35
+
+text link - #4D3D24
+text unavailable - #DC6403
  
-
 */
-
-
-
-
 
 /* ------------------------------------------------------- *
  * - SHARED ---------------------------------------------- *
  * ------------------------------------------------------- */
 
-a:link  {
-	color:#aa7016;
-	text-decoration: none;
+.clearbreak {
+	clear: both;
+	margin: 0;
+	font-size: 0;
 }
 
-a:visited  {
-	color:#aa7016;
+#header a:link, #header a:visited {
+	color: #aa7016;
 	text-decoration: none;
-	
 }
-
-a:hover {
-	color: red;
+#header a:hover, #header a:active {
+	color: #aa7016;
 	text-decoration: underline;
 }
 
-a:active  {
-	color: red;
+#logo a:link {
+	color: #b19262;
+	text-decoration: none;
+}
+#logo a:visited {
+	color: #b19262;
+	text-decoration: none;
+}
+#logo a:hover {
+	color: #b19262;
+	text-decoration: none;
+}
+#logo a:active {
+	color: #b19262;
 	text-decoration: none;
 }
 
-h1{
-	color:#000;
+#content a:link, #content a:visited {
+	color: #aa7016;
+	text-decoration: none;
+}
+#content a:hover, #content a:active {
+	color: #aa7016;
+	text-decoration: underline;
 }
 
-h2{
-	color:#000;
+#inner_content a:link, #inner_content a:visited, #inner_content a:hover, #inner_content a:active {
+	color: #ae7f35;
+	text-decoration: underline;
 }
 
-h3{
-	color:#000;
+.front_exampleThumbnail a:link  {
+	color: #e9e3c8;
 }
 
-h4{
-	color:#000;
+.front_exampleThumbnail a:visited  {
+	color: #e9e3c8;
 }
 
-h5{
-	color:#000;
+.front_exampleThumbnail a:hover {
+	color: #e9e3c8;
+}
+
+.front_exampleThumbnail a:active  {
+	color: #e9e3c8;
+}
+
+.results_pagination a:link  {
+	color: #4d3d24;
+}
+
+.results_pagination a:visited  {
+	color: #dc6403;
+}
+
+.results_pagination a:hover {
+	color: #4d3d24;
+}
+
+.results_pagination a:active  {
+	color: #4d3d24;
 }
 
 body {
-	width: 820px;
+	width: 868px;
 	margin-top: 24px;
 	margin-bottom: 24px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #E9E3C8;
-	/* color: #7F5F43; */
+	color: #4d3d24;
 	font-family: helvetica, arial, sans-serif;
-	font-size: .8em;
-	color:#6e6d6d;
+	font-size: .9em;
 }
 
 #header  {
-	padding: 0px;
-	border: 0px;
-	margin: 6px 0;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 80px;
-	height: auto !important;
-	height: 80px;
-
+	text-align: left;
+	font-family: helvetica, verdana, sans-serif;
 }
 
 #logo {
 	float: left;
-	width: 200px;
-	padding: 0px;
-	border: 0px;
-	margin: 0px;
-	/* background-color : #D4C08A; */
+	width: 434px;
+	height: 50px;
+	margin-bottom: 16px;
+}
+#logo>h1 {
+
+	margin: 0;
+
+	color: #b19262;
+
+	text-align: left;
+
+	font-size: 3em;
+	font-family: garamond;
+	font-variant: small-caps;
+	font-weight: bold;
 }
 
 #search {
-	float: left;
-	width: 240px;
-	padding: 0px;
-	border: 0px;
-	margin: 0px;
-	/* background-color : #D4C08A; */
 }
 
 #user {
 	float: left;
-	width: 600px;
-	padding: 0px;
-	border: 0px;
-	margin: 0px;
-	/* background-color : #D4C08A; */
+	width: 434px;
+	height: 25px;
+	margin-top: 25px;
+	margin-bottom: 16px;
 	text-align: right;
 }
 
-#content {
-	clear: both;
-	
+#sets {
+}
 
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 200px;
-	height: auto !important;
-	height: 200px;
-	
-	background-color: #DDCD9F;
-	border: 3px solid #FFF;
-	margin: 6px 0;
+#content {
+	padding: 30px;
+	border: 4px solid #ffffff;
+
+	margin: 0;
+	background-color : #ddcd9f;
+}
+#content>h2 {
+	margin: 0;
+}
+
+#inner_content {
+	width: 768px; 
+	padding: 2px 16px 24px 16px;
+	background-color: #e5dfcc;
 }
 
 #footer {
-	clear: both;
-	margin: 24px 0;
+	margin-top: 8px;	
 	text-align: center;
 }
 
@@ -138,58 +194,55 @@ body {
  * ------------------------------------------------------- */
 
 #front_links {
-	margin: 24px 0;
-	
-	background-color: #aaaaaa;
-	color: #ffffff;
-	/* background-color : #D4C08A; */
-	
-	text-align: center;
+	width: 768px;
+	padding: 2px 16px 4px 16px;
+	background-color: #e5dfcc;
+}
+#front_links>h2 {
+	margin: 0;
+}
+
+#front_search {
+	width: 768px;
+	padding: 8px 16px 8px 16px;
+	margin-bottom: 16px;
+	background-color: #61572f;
 }
 
 #front_featuredSets {
-	margin: 24px 0;
-
-	background-color: #aaaaaa;
-	color: #ffffff;
-	/* background-color : #D4C08A; */
 }
 
 #front_examples {
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height:300px;
-	height:auto !important;
-	height:300px;
-	
-	margin: 24px 0;
-	padding: 0 10px;
-	background-color: #aaaaaa;
+	background-color: #e5dfcc;
 }
 
 .front_example {
 	float: left;
-	margin: 0 5px 24px 5px;
+	margin: 4px;
 }
 
 .front_exampleName {
-	margin-bottom: 0;
-
-	font-size: 100%;
 }
 
 .front_exampleThumbnail {
 	width: 120px;
 	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height:90px;
+	min-height: 120px;
 	height:auto !important;
-	height:90px;
+	height: 120px;
 	
 	margin: 0;
 	padding: 0;
 	
-	background-color: #dddddd;
-	color: #000000;
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+.front_exampleThumbnail img {
+	width: 120px;
+	height: 116px;
+	border-width: 0;
 }
 
 /* ------------------------------------------------------- *
@@ -198,58 +251,291 @@ body {
 
 #browser_facetTree {
 	float: left;
-	width: 390px;
-	
+	width: 374px;
+
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
+	min-height: 800px;
 	height:auto !important;
-	height: 600px;
+	height: 800px;
 	
 	margin: 24px 10px 0 0;
 	padding: 0;
 	border-width: 0;
-	background-color: #aaaaaa;
+	
+	background-color: #61572f;
 	color: #ffffff;
-	/* background-color : #D4C08A; */
+	text-align: center;
 }
 
 #browser_help {
 	float: right;
-	width: 400px;
-	
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
-	height:auto !important;
-	height: 600px;
-	
-	margin: 24px 0;
-	padding: 0;
+	width: 384px;
+	margin: 0;
+	padding: 2px 0px 24px 0px;
 	border-width: 0;
-	/* background-color : #D4C08A; */
 }
 
 #browser_instructions {
 }
 
-.browser_exampleName {
-	margin-bottom: 0;
+#browser_example {
+	border: 1px solid #61572f;
+	padding: 4px 8px 8px 8px;
+	background-color: #D4C08A;
+}
+#browser_example>h3 {
 	font-size: 100%;
+	margin-top: 0;
+}
+
+.browser_exampleFacetPath h3 {
+	margin-bottom: 0;
+}
+.browser_exampleFacetPath ul {
+	margin: 0;
+	padding-left: 1em;
 }
 
 .browser_exampleThumbnail {
-	width: 120px;
+	width: 90px;
 
-	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 90px;
 	height:auto !important;
 	height: 90px;
-	
-	background-color: #dddddd;
-	color: #000000;
+
+	padding: 15px;	
+
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
 }
 
+/* ------------------------------------------------------- *
+ * - RESULTS --------------------------------------------- *
+ * ------------------------------------------------------- */
 
+#results_facetTree {
+	float: left;
+	width: 374px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 800px;
+	height:auto !important;
+	height: 800px;
+	
+	margin: 24px 10px 0 0;
+	padding: 0;
+	border-width: 0;
+		
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+
+#results_results {
+	float: right;
+	width: 384px;
+	margin: 24px 0 0 0;
+	padding: 0;
+	border-width: 0;
+	/* background-color: #D4C08A; */
+}
+#results_results>h2 {
+	margin: 0 0 16px 0;
+}
+
+.results_pagination {
+	clear: both;
+	
+	color: #DC6403;
+	text-align: center;
+	font-size: 1em;
+}
+
+.results_pagination ul {
+	margin: 0;
+	padding: 0;
+}
+
+.results_pagination li {
+	display: inline;
+	list-style: none;
+}
+
+#results_grid {
+	margin: 16px 0;
+}
+
+.results_result {
+	float: left;
+	width: 120px;
+	padding: 0;
+	margin: 4px;
+}
+.results_result ul {
+}
+.results_result li {
+}
+
+.results_resultName {
+}
+
+.results_resultThumbnail {
+	width: 90px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height:auto !important;
+	height: 90px;
+
+	padding: 15px;	
+
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* ------------------------------------------------------- *
+ * - RESULTS_ALT ----------------------------------------- *
+ * ------------------------------------------------------- */
+
+.results_subcategory {
+	width: 384px;
+	margin-bottom: 16px;
+	padding-bottom: 4px;
+	background-color: #DDCD9F;
+}
+.results_subcategory>h3 {
+	margin: 0 0 4px 0;
+
+	padding: 4px 0 4px 4px;
+	background-color: #D4C08A;
+}
+
+/* ------------------------------------------------------- *
+ * - DETAIL ---------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#detail_name {
+	margin: 24px 0 0 0;
+}
+
+#detail_imageColumn {
+	float: left;
+	width: 400px;
+
+	margin: 24px 0 12px 0;
+	padding: 0;
+	border-width: 0;
+}
+
+#detail_image {
+	width: 400px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 400px;
+	height: auto !important;
+	height: 400px;
+
+	margin: 0 0 6px 0;
+	
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+#detail_image img {
+	width: 400px;
+	height: 400px;
+}
+
+#detail_thumbnails {
+	margin: 0 8px;
+}
+
+#detail_thumbnailSelectedContainer {
+	float: left;
+	
+	width: 120px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 120px;
+	height: auto !important;
+	height: 120px;
+	
+	background-color: #D4C08A;
+
+	margin: 0;
+	padding: 3px;
+	border: 1px solid #000000;
+}
+
+#detail_thumbnailSelected { /* 120x120 */
+	width: 120px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 120px;
+	height: auto !important;
+	height: 120px;
+	
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+#detail_thumbnailSelected img {
+	width: 120px;
+	height: 116px;
+}
+
+.detail_thumbnail { /* 128x128 */
+	float: left;
+
+	width: 90px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 4px;
+	padding: 15px;	
+
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+.detail_thumbnail img {
+	width: 82px;
+	height: 82px;
+}
+
+#detail_information {
+	float: right;
+	width: 356px;
+	margin: 24px 0 12px 10px;
+	padding: 0;
+	border: 1px solid #999999;
+
+	background-color: #D4C08A;
+
+	line-height: 1.2em;
+}
+
+#detail_facetPath {
+	clear: both;
+	margin: 16px 0 0 0;
+	padding: 0 8px;
+	border: 1px solid #61572f;
+	background-color: #D4C08A;
+}
+#detail_facetPath ul {
+	margin-left: 0;
+	padding-left: 1em;
+}
+#detail_facetPath ul {
+}
 
 /* ------------------------------------------------------- *
  * - VIEWSET --------------------------------------------- *
@@ -387,197 +673,8 @@ body {
 }
 
 /* ------------------------------------------------------- *
- * - RESULTS --------------------------------------------- *
- * ------------------------------------------------------- */
-
-#results_facetTree {
-	float: left;
-	width: 340px;
-	
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
-	height:auto !important;
-	height: 600px;
-	
-	margin: 24px 10px 24px 0;
-	padding: 0;
-	border-width: 0;
-	
-	background-color: #aaaaaa;
-	color: #ffffff;
-	/* background-color : #D4C08A; */
-}
-
-#results_results {
-	float: right;
-	width: 450px;
-	margin: 24px 0;
-	padding: 0;
-	border-width: 0;
-	/* background-color : #D4C08A; */
-}
-
-#results_grid {
-}
-
-.results_pagination {
-	clear: both;
-	text-align: center;
-	font-size: 0.9em;
-}
-
-.results_pagination ul {
-	margin-left: -3em;
-}
-
-.results_pagination li {
-	display: inline;
-	list-style: none;
-}
-
-.results_result {
-	float: left;
-	width: 120px;
-	margin: 15px 15px;
-	padding: 0;
-	clear:none;
-	/*
-	border-width: 1px;
-	border-style: solid;
-	border-color: #aaaaaa;
-	*/
-}
-
-.results_resultName {
-	margin-bottom: 0;
-	font-size: 100%;
-}
-
-.results_resultThumbnail {
-	width: 120px;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height:90px;
-	height:auto !important;
-	height:90px;
-	
-	background-color: #dddddd;
-	color: #000000;
-}
-
-/* ------------------------------------------------------- *
- * - DETAIL ---------------------------------------------- *
- * ------------------------------------------------------- */
-
-#detail_name {
-	margin: 24px 0 0 0;
-}
-
-#detail_imageColumn {
-	float: left;
-	width: 400px;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 300px;
-	height: auto !important;
-	height: 300px;
-
-	margin: 0 0 12px 0;
-	padding: 0;
-	border-width: 0;
-	
-	/* background-color : #D4C08A; */
-}
-
-#detail_image {
-	width: 400px;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 300px;
-	height: auto !important;
-	height: 300px;
-	
-
-	margin: 0 0 6px 0;
-	
-	color: #000000;
-}
-
-#detail_thumbnails {
-	margin: 0 8px;
-}
-
-#detail_thumbnailSelectedContainer {
-	float: left;
-	
-
-	width: 124px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
-	height: auto !important;
-	height: 90px;
-	
-	margin: 0px;
-	padding: 1px;
-	border: 1px solid #000000;
-}
-
-#detail_thumbnailSelected {
-	width: 120px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
-	height: auto !important;
-	height: 90px;
-	
-	margin: 2px;
-	padding: 0px;
-	border: 0;
-	
-	background-color: #dddddd;
-	color: #000000;
-}
-
-.detail_thumbnail {
-	float: left;
-
-	width: 120px;
-	
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
-	height: auto !important;
-	height: 90px;
-	
-	margin: 4px;
-	
-	background-color: #dddddd;
-	color: #000000;
-}
-
-#detail_information {
-	float: right;
-	width: 388px;
-	border: 1px solid #999999;
-	margin: 0px 0 12px 10px;
-	padding: 0;
-
-	/* background-color : #D4C08A; */
-}
-
-#detail_facetPath {
-	clear: both;
-	margin: 12px 0;
-	padding: 0 8px;
-	border: 1px solid #999999;
-	/* background-color : #D4C08A; */
-}
-
-
-/* ------------------------------------------------------- *
  * - TABS ------------------------------------------------ *
  * ------------------------------------------------------- */
-
 
 /* Caution: ensure accessibility in print */
 @media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
@@ -761,7 +858,6 @@ body {
   margin-top:1px;
   _margin-bottom:1px;
 }
-
 
 /* ------------------------------------------------------- *
  * - PAHMA DEFAULT --------------------------------------- *
