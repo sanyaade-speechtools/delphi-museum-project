@@ -98,24 +98,28 @@ function buildStringForQueryTerms( $catIDs ) {
 		}
 		if( $pageNum > 0 )
 			$tqFull .= " OFFSET ".($_DELPHI_PAGE_SIZE*$pageNum);
-		echo "<code style=\"display:none;\">CountsByCat Query:
-			".$tqCountsByCat."
-			</code>";
-		echo "<code style=\"display:none;\">Full Query:
-			".$tqFull."
-			</code>";
-		echo "<code style=\"display:none;\">Full Count Query:
-			".$tqFullCount."
-			</code>";
+		$t->assign("catsByCountQ", $tqCountsByCat);
+		$t->assign("fullQ", $tqFull);
+		$t->assign("fullCountQ", $tqFullCount);
+		$pageNum2 = $pageNum+1;		// Page uses 1-based pages.
 
 		$objsresult=$mysqli->query($tqFull);
 		$fullCountResult=$mysqli->query($tqFullCount);
 		// This is unreliable because of the LIMIT clause in the query.
 		// $numResultsTotal = $mysqli->num_rows($objsresult);
-		if($row = $fullCountResult->fetch_array())
+		if($row = $fullCountResult->fetch_array()) {
 			$numResultsTotal = $row[0];
-		else
+			$numPagesTotal = ceil($numResultsTotal/$_DELPHI_PAGE_SIZE);
+			//$numPagesLeft = $numPagesTotal - $pageNum2; // 1-based page indices.
+			$pageRangeStart = max(($pageNum2-3), 1);    // start at 1 or curr-3
+			for( $i=0; $i<7 && ($pageRangeStart+$i)<=$numPagesTotal; $i++ )
+				$pageNums[] = $pageRangeStart+$i;
+		} else {
 			$numResultsTotal = 0;
+			$numPagesTotal = 1;
+			//$numPagesLeft = 0;
+			$pageNums[] = 1;
+		}
 	}
 	$facetsResults=$mysqli->query("select id, display_name from facets");
 	GetFacetListFromResultSet($facetsResults);
@@ -132,8 +136,13 @@ function buildStringForQueryTerms( $catIDs ) {
 		$baseQ.= $catsParam;
 
 	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
-	$t->assign("pageNum", $pageNum); 	// for pagination queries in page
+	$t->assign("pageNum", $pageNum2); 	// for pagination queries in page
+	$t->assign("pageNums", $pageNums); 	// for pagination queries in page
+	$t->assign("numPagesTotal", $numPagesTotal);
 	$t->assign("numResultsTotal", $numResultsTotal); // e.g. "48"
+	$t->assign("iFirstResult", 1+($pageNum*$_DELPHI_PAGE_SIZE)); // e.g. "48"
+	$t->assign("iLastResult", min((($pageNum+1)*$_DELPHI_PAGE_SIZE),$numResultsTotal));
+	//$t->assign("numPagesLeft", $numPagesLeft);
 	$t->assign("qual", $qual); // e.g. "with images"
 	$t->assign("query", buildStringForQueryTerms($catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
 	
