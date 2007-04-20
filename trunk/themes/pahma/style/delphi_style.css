@@ -335,7 +335,50 @@ body {
 		
 	background-color: #61572f;
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
+}
+
+div.treeitem {
+	cursor:default; 
+	position:relative; 
+	left:8px; 
+	/* Put a limit on text and crop for long strings to keep from wrapping */
+	overflow:hidden; 
+	width:250px;
+	font-family: helvetica, arial, sans-serif;
+	/* font-size:12px;  */
+	border-bottom:none 0;
+	margin:0;
+	padding:0;
+	text-align: left;
+}
+
+div.open span img, div.closed span img {
+	cursor:pointer;
+}
+div.treeitem span a {
+	text-decoration:none; color:	black;
+}
+div.open span a:hover, div.closed span a:hover {
+	color:blue; text-decoration:underline;
+}
+div.open span img.open {
+	display:inline;
+}
+div.open span img.closed {
+	display:none;
+}
+div.closed span img.closed {
+	display:inline;
+}
+div.closed span img.open {
+	display:none;
+}
+div.open div.treeitem {
+	display: block; 
+}
+div.closed div.treeitem {
+	display: none; 
 }
 
 #results_results {
