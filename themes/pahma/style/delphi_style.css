@@ -415,33 +415,34 @@ div.closed div.treeitem {
 	margin: 16px 0;
 }
 
-.results_result {
+.results_result { /* 128x128 */
 	float: left;
+
 	width: 120px;
-	padding: 0;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 120px;
+	height: auto !important;
+	height: 120px;
+	
 	margin: 4px;
+	padding: 0;
+	border-width: 0;
+	
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
 }
+.results_result img {
+	width: 120px;
+	height: 116px;
+}
+
 .results_result ul {
 }
 .results_result li {
 }
 
 .results_resultName {
-}
-
-.results_resultThumbnail {
-	width: 90px;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
-	height:auto !important;
-	height: 90px;
-
-	padding: 15px;	
-
-	background-color: #61572f;
-	color: #ffffff;
-	text-align: center;
 }
 
 /* ------------------------------------------------------- *
