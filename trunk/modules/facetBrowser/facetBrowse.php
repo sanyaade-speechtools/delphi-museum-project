@@ -69,31 +69,31 @@ function buildStringForQueryTerms( $catIDs ) {
 
 		if( $onlyWithImgs ) {
 			$qual = " (with images)";
-			$tqCountsByCat = 
+			$tqCountsByCat =
 				"select c.id, c.parent_id, c.facet_id, c.display_name, count(*) from categories c,
 					objects o, (select distinct oc.obj_id, oc.cat_id from obj_cats oc,
 				".$tqMain."
 				where oc.obj_id=tqMain.obj_id) tqTop
 				where c.id=tqTop.cat_id and o.id=tqTop.obj_id and NOT o.img_path IS NULL
 			 	group by c.id order by c.id";
-			$tqFull = 
+			$tqFull =
 			"select o.id, o.objnum, o.name, o.description, o.img_path
 			 from objects o,".$tqMain." where o.id=tqMain.obj_id and NOT o.img_path IS NULL limit ".$_DELPHI_PAGE_SIZE;
-			$tqFullCount = 
-				"select count(*) from objects o,".$tqMain." 
+			$tqFullCount =
+				"select count(*) from objects o,".$tqMain."
 				where o.id=tqMain.obj_id and NOT o.img_path IS NULL";
 		} else {
 			$qual = "";
-			$tqCountsByCat = 
+			$tqCountsByCat =
 				"select c.id, c.parent_id, c.facet_id, c.display_name, count(*) from categories c,
 				(select distinct oc.obj_id, oc.cat_id from obj_cats oc,
 				".$tqMain."
 				where oc.obj_id=tqMain.obj_id) tqTop
 				 where c.id=tqTop.cat_id group by c.id order by c.id";
-			$tqFull = 
+			$tqFull =
 			"select o.id, o.objnum, o.name, o.description, o.img_path
 			 from objects o,".$tqMain." where o.id=tqMain.obj_id limit ".$_DELPHI_PAGE_SIZE;
-			$tqFullCount = 
+			$tqFullCount =
 				"select count(*) from objects o,".$tqMain." where o.id=tqMain.obj_id";
 		}
 		if( $pageNum > 0 )
@@ -132,7 +132,7 @@ function buildStringForQueryTerms( $catIDs ) {
 	$catsParam = "cats=".$cats;
 	if( !$onlyWithImgs )
 		$baseQ.= "wImgs=false&".$catsParam;
-  else 
+  else
 		$baseQ.= $catsParam;
 
 	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
@@ -145,10 +145,10 @@ function buildStringForQueryTerms( $catIDs ) {
 	//$t->assign("numPagesLeft", $numPagesLeft);
 	$t->assign("qual", $qual); // e.g. "with images"
 	$t->assign("query", buildStringForQueryTerms($catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
-	
+
 	// var for holding concated output
 	$facetTreeOutput = "";
-	
+
 	foreach( $facets as $facet ) {
 		if( empty($facet->arrChildren) )
 			echo( "<code style=\"display:none;\">Facet: ".$facet->name." has no no matches</code>" );
@@ -157,37 +157,38 @@ function buildStringForQueryTerms( $catIDs ) {
 			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $baseQ, false );
 		}
 	}
-	
+
 	$t->assign("facetTree", $facetTreeOutput);
 
 
 	$nPix=0;
 	$objsresult=$mysqli->query($tqFull);
-	
+
 	// var for holding concated output
 	$imageOutput = "";
-	
+
 	/*
 		TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
 	*/
 	while( $row=$objsresult->fetch_assoc() )
 	{
-		$imageOutput .= "<div class=\"imageblock\">";
+		$imageOutput .= "<div class=\"results_result\">";
 		$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
 		$imageOutput .= "<a href=\"".$pathToImg."\"><img src=\"".$pathToImg."\"";
-		$imageOutput .= " class=\"h160thumb\" width=\"160px\" height=\"120px\"	/></a>";
+		$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
 
-		$imageOutput .= "<span class=\"label\">".$row['name']."</span>";
+		$imageOutput .= "<!--<span class=\"label\">".$row['name']."</span>-->";
 		$imageOutput .= "</div>";
 		$nPix++;
 		if( $nPix >= 40 ) {
+			$imageOutput .= "<br class=\"clearbreak\"";
 			$imageOutput .= "<p>Another ".($numResultsTotal-40)." images not shown...</p>";
 			break;
 		}
 	}
-	
+
 	$t->assign("imageOutput", $imageOutput);
 	$t->display("results.tpl");
 	die;
- 
+
 ?>

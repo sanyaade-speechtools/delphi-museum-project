@@ -32,34 +32,31 @@
 
 			<div id="results_resultsGrid">
 				{$imageOutput}
-				<div class="results_result">
-					<!--<h3 class="results_resultName">Name</h3>-->
+				
+				<!--<div class="results_result">
+					<h3 class="results_resultName">Name</h3>
 					<div class="results_resultThumbnail">
 						image
 					</div>
-					<!--<ul>
+					<ul>
 						<li>Favorite</li>
 						<li>Add to Set</li>
-					</ul>-->
-				</div>
+					</ul>
+				</div>-->
+				
 			</div>
 
 			<div class="results_pagination">
 				<ul>
-					<li>First</li>
-					<li>Previous</li>
+					<li><a href="{$baseQ}&page=0">First</a></li>
+					{if $pageNum gt 1}<li><a href="{$baseQ}&page={$pageNum-2}">Previous</a></li>{/if}
 					<li> &middot; </li>
-					<li><strong>1</strong></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li>...</li>
-					<li><a href="#">10</a></li>
+					{foreach from=$pageNums item=pn}
+						<li>{if $pageNum eq $pn}{$pn}{else}<a href="{$baseQ}&page={$pn-1}">{$pn}</a>{/if}</li>
+					{/foreach}
 					<li> &middot; </li>
-					<li><a href="#">Next</a></li>
-					<li><a href="#">Last</a></li>
+					<li>{if $pageNum lt $numPagesTotal}<a href="{$baseQ}&page={$pageNum}">Next</a>{/if}</li>
+					<li><a href="{$baseQ}&page={$numPagesTotal-1}">Last</a></li>
 				</ul>
 			</div>
 		</div>
