@@ -190,7 +190,8 @@ function buildStringForQueryTerms( $catIDs ) {
 	{
 		$imageOutput .= "<div class=\"results_result\">";
 		$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
-		$imageOutput .= "<a href=\"".$pathToImg."\"><img src=\"".$pathToImg."\"";
+		$pathToDetails = $CFG->wwwroot . "/modules/browser/details.php?id=" . $row['id'];
+		$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\"";
 		$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
 
 		$imageOutput .= "<!--<span class=\"label\">".$row['name']."</span>-->";
