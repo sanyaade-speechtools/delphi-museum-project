@@ -1,37 +1,28 @@
 {include file="header.tpl"}
 
+<script type="text/javascript" src="{$themeroot}/scripts/treeview.js"></script>
+
+<code style="display:none;">CountsByCat Query: {$catsByCountQ}</code>
+<h2>PAHMA online has {$objsTotal} total objects{$qual}.</h2>
+
 <div id="content">
 	<h2>Collection Browser</h2>
 
 	<div id="inner_content">
 		<div id="browser_facetTree">
-			<h2>Facet Tree goes here</h2>
-			<h2><a href="{$wwwroot}/modules/browser/results.php">temp link to results</a></h2>
-			<h2><a href="{$wwwroot}/modules/browser/results_alt.php">temp link to results_alt (subcategorized)</a></h2>
+			{$facetTree}
 		</div>
 
 		<div id="browser_help">
 			<h2>Instructions</h2>
-			<p>Lorem ipsum dolor sit amet, proprius ut patria vel vulputate esse consequat gemino, indoles, blandit veniam ymo, gemino refoveo. Modo abigo transverbero sed quis reprobo dolore. Ille tation sed sudo, ludus pneum. Valde roto, epulae epulae iusto et commodo tamen genitus, quod nisl illum nutus. Commoveo, facilisis nimis volutpat vel ingenium capto roto olim neque iusto praesent letalis fere. Saepius, transverbero nutus ullamcorper hendrerit nisl damnum zelus antehabeo, hendrerit. Ullamcorper obruo wisi te facilisi mara blandit quis vulpes. Luptatum esca duis quia adsum delenit dolor obruo probo suscipere. Jugis capto metuo iustum lenis delenit hendrerit. Duis in ymo immitto scisco nimis, olim lobortis inhibeo sed ullamcorper meus nobis.</p>
+			<p>Click on any concept term to search for objects that match that concept.</p>
+			<p>You can also click on a&nbsp;&nbsp;
+				<img src="images/expandbtn.gif" width="9px" height="9px" />
+				&nbsp;&nbsp;icon to the left of a concept term to expand
+				the sub-concepts for that concept term.</p>
+		<p>The counts after the concept terms indicate the number of matching objects in the 
+		collections.</p>
 
-			<!--
-			<div id="browser_example">
-				<h3>example name</h3>
-				<div class="browser_exampleThumbnail">image</div>
-				<div class="browser_exampleFacetPath">
-					<h3>facet</h3>
-					<ul>
-						<li>root</li>
-						<ul>
-							<li>one-deep</li>
-							<ul>
-								<li>two-deep</li>
-							</ul>
-						</ul>
-					</ul>
-				</div>
-			</div>
-			-->
 		</div>
 
 		<br style="clear:both;" />
