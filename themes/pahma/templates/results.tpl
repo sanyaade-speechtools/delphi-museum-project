@@ -2,9 +2,10 @@
 
 <script type="text/javascript" src="{$themeroot}/scripts/treeview.js"></script>
 
+<code style="display:none;">Cat order Query: {$tqCatOrder}</code>
 <code style="display:none;">CountsByCat Query: {$catsByCountQ}</code>
 <code style="display:none;">Full Query: {$fullQ}</code>
-<code style="display:none;">Full Count Query: {$tqFullCount}</code>
+<code style="display:none;">Full Count Query: {$fullCountQ}</code>
 
 <div id="content">
 	<h2 id="results_heading">{$iFirstResult} - {$iLastResult} of {$numResultsTotal} Results {$qual}</h2>
