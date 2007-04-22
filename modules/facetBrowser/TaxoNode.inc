@@ -93,9 +93,10 @@ class TaxoNode {
 			$span = "<span>";
 
 		// If we are in full tree mode, then close up everything to the roots.
-		if(!$fFullTree && (($depth == 0)
+		// if(!$fFullTree && (($depth == 0)
+		if(($depth == 0)
 			|| (($depth == 1) && ($nSiblings < 3))
-			|| $this->fNoClick))
+			|| $this->fNoClick)
 			$oc = " open";
 		else
 			$oc = " closed";
