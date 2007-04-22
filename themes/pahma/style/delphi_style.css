@@ -269,7 +269,7 @@ body {
 	
 	background-color: #61572f;
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
 }
 
 #browser_help {
@@ -378,6 +378,9 @@ div.open div.treeitem {
 	display: block; 
 }
 div.closed div.treeitem {
+	display: none; 
+}
+code.hidden {
 	display: none; 
 }
 
