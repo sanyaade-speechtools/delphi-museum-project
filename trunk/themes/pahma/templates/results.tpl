@@ -11,12 +11,10 @@
 	<h2 id="results_heading">{$iFirstResult} - {$iLastResult} of {$numResultsTotal} Results {$qual}</h2>
 
 	<div id="inner_content">
-		{$query}
-		<div id="results_facetTree">
-			{$facetTree}
-		</div>
-
-		<div id="results_results">
+		<div id="results_innerContentTop">
+			<div id="results_breadcrumbs">
+				{$query}
+			</div>
 			<div class="results_pagination">
 				<ul>
 					<li><a href="{$baseQ}&page=0">First</a></li>
@@ -30,7 +28,12 @@
 					<li><a href="{$baseQ}&page={$numPagesTotal-1}">Last</a></li>
 				</ul>
 			</div>
+		</div>
+		<div id="results_facetTree">
+			{$facetTree}
+		</div>
 
+		<div id="results_results">
 			<div id="results_resultsGrid">
 				{$imageOutput}
 				

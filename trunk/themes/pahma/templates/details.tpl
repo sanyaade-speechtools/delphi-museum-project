@@ -8,11 +8,15 @@
 	<h2 id="detail_name">{$name}</h2>
 
 	<div id="inner_content">
+		<div id="detail_innerContentTop">
+			<a href="#" onClick="history.go(-1)">&lt;&lt; Back to Results</a> 
+		</div>
 		<div id="detail_imageColumn">
 			<div id="detail_image">
 				<img src="{$mids}/{$img_path}" />
 			</div>
 			<div id="detail_thumbnails">
+				<!--
 				<div id="detail_thumbnailSelectedContainer">
 					<div id="detail_thumbnailSelected">
 						<img src="{$thumbs}/{$img_path}" />
@@ -23,10 +27,10 @@
 				<div class="detail_thumbnail">view</div>
 				<div class="detail_thumbnail">view</div>
 				<div class="detail_thumbnail">view</div>
+				-->
 			</div>
 		</div>
-
-
+		<br class="clearbreak" />
 		<div id="detail_information">
 			<ul class="tabs-nav">
 				<li class="tabs-selected"><a href="#">Description</a></li>
