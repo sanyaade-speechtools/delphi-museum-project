@@ -40,6 +40,7 @@ require "Facet.inc";
 	$qual = $onlyWithImgs ? " with images. <a href=\"".$_SERVER['PHP_SELF']."?wImgs=false\">Show All</a>":". (<a href=\"".$_SERVER['PHP_SELF']."\">Only show objects with images</a>)";
 	$t->assign("qual", $qual);
 	$t->assign("catsByCountQ", $tqCountsByCat);
+	$facetTreeOutput = "";
 	foreach( $facets as $facet ) {
 		if( empty($facet->arrChildren) ) {
 			$facetTreeOutput .= "<code class=\"hidden\">Facet: "
