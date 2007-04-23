@@ -14,6 +14,13 @@ import org.w3c.dom.*;
  *
  */
 public class DoubleHashTree {
+	private int _debugLevel = 1;
+
+	protected void debug( int level, String str ){
+		if( level <= _debugLevel )
+			System.out.println( str );
+	}
+
 	// Note that the tree implied by TaxoNode only allows 1 root.
 	// However, multiple trees can be in a single hashMap.
 	private class FacetInfo {
@@ -55,7 +62,6 @@ public class DoubleHashTree {
 
 	private HashMap<String,FacetInfo> facetsByName = null;
 	private HashMap<Integer,FacetInfo> facetsByID = null;
-	public boolean verbose = false;
 	private int nCatsPerFacetMax = 10000;
 
 	public DoubleHashTree() {
@@ -220,8 +226,7 @@ public class DoubleHashTree {
 
 	public ArrayList<TaxoNode> GetInferredCategories( TaxoNode nodeForCat ) {
 		ArrayList<TaxoNode> retList = new ArrayList<TaxoNode>();
-		if( verbose )
-			System.out.println( "Checking inferred Categories for : " + nodeForCat.name );
+		debug( 2, "Checking inferred Categories for : " + nodeForCat.name );
 		boolean fAtBase = true;
 		while( nodeForCat != null ) {
 			if( !fAtBase ) {
@@ -230,8 +235,7 @@ public class DoubleHashTree {
 				if( !nodeForCat.inferredByChildren )
 					break;
 				retList.add( nodeForCat );
-				if( verbose )
-					System.out.println( "Adding inferred (parent) Category: "
+				debug( 2, "Adding inferred (parent) Category: "
 											+ nodeForCat.name );
 			}
 			/*
@@ -246,21 +250,20 @@ public class DoubleHashTree {
 				for( String infNm : nodeForCat.impliedNodes ) {
 					ArrayList<TaxoNode> infList = nameMap.get( infNm.toLowerCase() );
 					if( infList == null ) {
-						System.out.println( "Category: " + nodeForCat.name
+						debug( 2, "Category: " + nodeForCat.name
 								+ " refers to unknown infers node: " + infNm );
 						continue;
 					}
 					else if( infList.size() != 1 )
-						System.out.println( "Category: " + nodeForCat.name
+						debug(1, "Category: " + nodeForCat.name
 								+ " refers to infers node with more than one mapping (NYI): " + infNm );
 					TaxoNode inf = infList.get(0);
 					if( inf == null )
-						System.out.println( "Category: " + nodeForCat.name
+						debug( 1, "Category: " + nodeForCat.name
 								+ " refers to infers node with internal error: " + infNm );
 					else {
 						retList.add( inf );
-						if( verbose )
-							System.out.println( "Adding inferred Category: " + infNm );
+						debug(2, "Adding inferred Category: " + infNm );
 					}
 				}
 			  */
@@ -352,7 +355,7 @@ public class DoubleHashTree {
 			// nodes in the taxonomy tree
 			int nChildren = childNodes.getLength();
 			if( nChildren>0)
-    			System.out.println("AddCatsFromNode:["+parent.name+"] Recursing. "
+    			debug( 2, "AddCatsFromNode:["+parent.name+"] Recursing. "
     					+ "nPrefices: "+((prefices==null)?0:prefices.size())
     					+ " nSuffices: "+((suffices==null)?0:suffices.size()) );
 			for( int iChild = 0; iChild < nChildren; iChild++) {
@@ -491,14 +494,14 @@ public class DoubleHashTree {
 			    	String fromStr = childEl.getAttribute( "from" );
 			    	String toStr = childEl.getAttribute( "to" );
 			    	if( fromStr != null && toStr != null) {
-			    		System.out.println("Ignoring reduce from:["+fromStr+"] to:["+toStr+"] (NYI)");
+			    		debug( 1, "Ignoring reduce from:["+fromStr+"] to:["+toStr+"] (NYI)");
 			    	}
 			    }
 			    // Handle the reduce tokens
 			    else if( childEl.getNodeName().equals( noiseTokenElName ) ) {
 			    	String noiseToken = childEl.getAttribute( "value" );
 			    	if( noiseToken != null) {
-			    		System.out.println("Ignoring noiseToken:["+noiseToken+"] (NYI)");
+			    		debug( 1, "Ignoring noiseToken:["+noiseToken+"] (NYI)");
 			    	}
 			    }
 			    else if( childEl.getNodeName().equals( tokenElName ) ) {
@@ -577,7 +580,7 @@ public class DoubleHashTree {
 			while( rs.next() ) {
 				iRow = rs.getRow();
 				if( iRow % 1000 == 0 )
-					System.out.println( "MarkInferablesInTable: Processed " + iRow + " rows...");
+					debug( 1, "MarkInferablesInTable: Processed " + iRow + " rows...");
 				int baseID = rs.getInt(baseIDColName);
 			    if(( baseID == 0 ) && rs.wasNull() )
 			    	throw new RuntimeException( "MarkInferablesInTable got NULL baseID index value!");
@@ -592,14 +595,13 @@ public class DoubleHashTree {
 			    	keywordsForBase.clear();
 			    	if( !exceptionKWIDs.contains( kwIdx ))
 			    		keywordsForBase.add( new Pair<Integer, Integer>( iRow, kwIdx ) );
-			    	else if( verbose )
-			    		System.out.println("Skipping excepted node: " + kwIdx );
+			    	else
+			    		debug( 1, "Skipping excepted node: " + kwIdx );
 
 			    }
 			    else if( exceptionKWIDs.contains( kwIdx )) {
 			    	// Skip these - leave them alone, and leave them out of the list
-			    	if( verbose )
-			    		System.out.println("Skipping excepted node: " + kwIdx );
+		    		debug( 1, "Skipping excepted node: " + kwIdx );
 			    }
 			    else { // Not the first kw for this base, so check against the others
 		        	// TODO: We need to have a list of exceptions to this, so that where
@@ -644,7 +646,7 @@ public class DoubleHashTree {
 				    	keywordsForBase.add( new Pair<Integer, Integer>( iRow, kwIdx ) );
 			    }
 			}
-			System.out.println( "MarkInferablesInTable: Completed processing of " + iRow + " rows...");
+			debug( 1, "MarkInferablesInTable: Completed processing of " + iRow + " rows...");
 		} catch(SQLException ex) {
 			System.err.println("SQLException: " + ex.getMessage());
 		}
