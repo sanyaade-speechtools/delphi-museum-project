@@ -128,7 +128,7 @@ body {
 	margin-right: auto;
 	background-color: #E9E3C8;
 	color: #4d3d24;
-	font-family: helvetica, arial, sans-serif;
+	font-family: helvetica, verdana, arial, sans-serif;
 	font-size: .9em;
 }
 
@@ -211,7 +211,7 @@ body {
 	width: 768px;
 	padding: 8px 16px 8px 16px;
 	margin-bottom: 16px;
-	background-color: #61572f;
+	background-color: #b19262;
 }
 
 #front_featuredSets {
@@ -267,7 +267,7 @@ body {
 	padding: 0;
 	border-width: 0;
 	
-	background-color: #61572f;
+	background-color: #b19262;
 	color: #ffffff;
 	text-align: left;
 }
@@ -320,20 +320,30 @@ body {
  * - RESULTS --------------------------------------------- *
  * ------------------------------------------------------- */
 
+#results_innerContentTop {
+	margin: 24px 0 4px 0;
+}
+#results_innerContentTop ul {
+	margin-left: 280px;
+}
+#results_breadcrumbs {
+	font-weight: bold;
+}
+
 #results_facetTree {
 	float: left;
-	width: 374px;
+	width: 276px;
 
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 800px;
 	height:auto !important;
 	height: 800px;
 	
-	margin: 24px 10px 0 0;
-	padding: 0;
+	margin: 0 2px 0 0;
+	padding: 8px 0 8px 2px;
 	border-width: 0;
 		
-	background-color: #61572f;
+	background-color: #e9e3c8;
 	color: #ffffff;
 	text-align: left;
 }
@@ -345,7 +355,7 @@ div.treeitem {
 	/* Put a limit on text and crop for long strings to keep from wrapping */
 	overflow:hidden; 
 	width:250px;
-	font-family: helvetica, arial, sans-serif;
+	font-family: helvetica, verdana, arial, sans-serif;
 	/* font-size:12px;  */
 	border-bottom:none 0;
 	margin:0;
@@ -386,8 +396,8 @@ code.hidden {
 
 #results_results {
 	float: right;
-	width: 384px;
-	margin: 24px 0 0 0;
+	width: 488px;
+	margin: 0;
 	padding: 0;
 	border-width: 0;
 	/* background-color: #D4C08A; */
@@ -418,7 +428,7 @@ code.hidden {
 	margin: 16px 0;
 }
 
-.results_result { /* 128x128 */
+.results_result { /* 122x122 */
 	float: left;
 
 	width: 120px;
@@ -427,7 +437,7 @@ code.hidden {
 	height: auto !important;
 	height: 120px;
 	
-	margin: 4px;
+	margin: 0 0 2px 2px;
 	padding: 0;
 	border-width: 0;
 	
@@ -437,7 +447,9 @@ code.hidden {
 }
 .results_result img {
 	width: 120px;
-	height: 116px;
+	height: 120px;
+	
+	border-width: 1px;
 }
 
 .results_result ul {
@@ -473,11 +485,16 @@ code.hidden {
 	margin: 24px 0 0 0;
 }
 
+#detail_innerContentTop {
+	margin: 24px 0 4px 0;
+	font-weight: bold;
+}
+
 #detail_imageColumn {
 	float: left;
 	width: 400px;
 
-	margin: 24px 0 12px 0;
+	margin: 0 0 12px 0;
 	padding: 0;
 	border-width: 0;
 }
@@ -566,7 +583,7 @@ code.hidden {
 #detail_information {
 	float: right;
 	width: 356px;
-	margin: 24px 0 12px 10px;
+	margin: 0 0 12px 10px;
 	padding: 0;
 	border: 1px solid #999999;
 
