@@ -285,9 +285,16 @@ body {
 	padding: 0;
 	border-width: 0;
 	
-	background-color: #b19262;
-	color: #ffffff;
+	/* background-color: #b19262; */
+	background-color: #e9e3c8;
+	/* color: #ffffff; */
+	/* color: #aa7016; Dark brown */
 	text-align: left;
+}
+
+#browser_facetTree>div.facet>span {
+	color: #000000;
+	font-weight:bold;
 }
 
 #browser_help {
@@ -362,8 +369,14 @@ body {
 	border-width: 0;
 		
 	background-color: #e9e3c8;
-	color: #ffffff;
+	/* color: #ffffff; */
+	color: #aa7016;
 	text-align: left;
+}
+
+#results_facetTree>div.facet>span {
+	color: #000000;
+	font-weight:bold;
 }
 
 div.treeitem {
