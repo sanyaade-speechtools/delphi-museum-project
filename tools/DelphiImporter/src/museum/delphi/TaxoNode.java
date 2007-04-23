@@ -1,6 +1,9 @@
 package museum.delphi;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import org.w3c.dom.Node;
+import java.util.ArrayList;
 import org.w3c.dom.Node;
 
 public class TaxoNode {
@@ -214,6 +217,23 @@ public class TaxoNode {
 		while( ascendant != null && ascendant.inferredByChildren
 				&& !list.contains(ascendant)) {
 			list.add(ascendant);
+			ascendant = ascendant.parent;
+		}
+	}
+
+	public void AddInferredNodes(HashMap<TaxoNode, Float> map, float minValue ) {
+		// while parents not null and inferredByChidren, add to list.
+		// If find a node already in list, can assume we're done, since its
+		// inferreds must also already be there
+		// TODO include the implies nodes for each node, and not just ascendants
+		TaxoNode ascendant = parent;
+		while( ascendant != null && ascendant.inferredByChildren ) {
+			Float ret = map.get(ascendant); // returns null if not in hashMap
+			float priorVal = (ret==null)?0:ret.floatValue();
+			if( minValue > priorVal )
+				map.put(ascendant, minValue);
+			else
+				break;	// If found and higher value, can quit now.
 			ascendant = ascendant.parent;
 		}
 	}
