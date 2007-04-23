@@ -215,14 +215,31 @@ body {
 }
 
 #front_featuredSets {
+	float: left;
+	
+
+	width: 608px;
+
+	margin: 24px 8px 0 0;
 }
 
 #front_examples {
-	background-color: #e5dfcc;
+	float: right;
+	
+
+	width: 128px;
+
+	margin: 24px 0 0 8px;
+	padding: 0 8px 16px 8px;
+	
+	background-color: #b19262;
+	color: #ffffff;
+	
+	text-align: center;
 }
 
 .front_example {
-	float: left;
+	/* float: left; */
 	margin: 4px;
 }
 
@@ -240,14 +257,15 @@ body {
 	margin: 0;
 	padding: 0;
 	
-	background-color: #61572f;
+	/* background-color: #61572f; */
+	background-color: #e9e3c8;
 	color: #ffffff;
 	text-align: center;
 }
 .front_exampleThumbnail img {
 	width: 120px;
-	height: 116px;
-	border-width: 0;
+	height: 120px;
+	border-width: 1px;
 }
 
 /* ------------------------------------------------------- *
