@@ -61,6 +61,7 @@ function buildStringForQueryTerms( $catIDs ) {
 		$catIDs = explode( ",", $cats );
 		if( count($catIDs) == 1 ) {
 			$t->assign("catsByCountQ", "Unneeded");
+			$qCatIDs = $catIDs;
 		} else {
 			// We need to order the cats to put the ones with the most objects at the outside
 			$tqCatOrder = "SELECT id, ".($onlyWithImgs?"n_matches_w_img":"n_matches").
@@ -76,13 +77,13 @@ function buildStringForQueryTerms( $catIDs ) {
 			$tqCatOrder .= " order by n desc";
 			$catsQResult=$mysqli->query($tqCatOrder);
 			$t->assign("tqCatOrder", $tqCatOrder);
-			unset($catIDs);
+			// unset($catIDs);
 			while($row = $catsQResult->fetch_array()) {
-				$catIDs[] = $row[0];
+				$qCatIDs[] = $row[0];
 			}
 		}
 
-		$tqMain = buildMainQueryForTerm( $catIDs, 0 );
+		$tqMain = buildMainQueryForTerm( $qCatIDs, 0 );
 		$pageNum = 0;
 		if( !empty( $_GET['page'] ))
 			$pageNum = 1*$_GET['page'];
