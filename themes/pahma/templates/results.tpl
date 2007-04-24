@@ -15,7 +15,7 @@
 			<div id="results_breadcrumbs">
 				Find: {$query}
 			</div>
-			<div class="results_pagination">
+			<div class="results_pagination">{if $numResultsTotal>0}
 				<ul>
 					<li><a href="{$baseQ}&page=0">First</a></li>
 					{if $pageNum gt 1}<li><a href="{$baseQ}&page={$pageNum-2}">Previous</a></li>{/if}
@@ -26,16 +26,23 @@
 					<li> &middot; </li>
 					<li>{if $pageNum lt $numPagesTotal}<a href="{$baseQ}&page={$pageNum}">Next</a>{/if}</li>
 					<li><a href="{$baseQ}&page={$numPagesTotal-1}">Last</a></li>
-				</ul>
+				</ul>{/if}
 			</div>
 		</div>
 		<div id="results_facetTree">
-			{$facetTree}
+			{if $numResultsTotal>0}
+				{$facetTree}
+			{else}
+				<h3><br />&nbsp;&nbsp;No results found!</h3>
+				<h4>&nbsp;&nbsp;&nbsp;&nbsp;<a class="showlink" href="{$wwwroot}/modules/frontpage/frontpage.php">Begin a new search</a></h4>
+			{/if}
 		</div>
 
 		<div id="results_results">
 			<div id="results_resultsGrid">
+			{if $numResultsTotal>0}
 				{$imageOutput}
+			{/if}
 				
 				<!--<div class="results_result">
 					<h3 class="results_resultName">Name</h3>
@@ -50,7 +57,7 @@
 				
 			</div>
 
-			<div class="results_pagination">
+			<div class="results_pagination">{if $numResultsTotal>0}
 				<ul>
 					<li><a href="{$baseQ}&page=0">First</a></li>
 					{if $pageNum gt 1}<li><a href="{$baseQ}&page={$pageNum-2}">Previous</a></li>{/if}
@@ -61,7 +68,7 @@
 					<li> &middot; </li>
 					<li>{if $pageNum lt $numPagesTotal}<a href="{$baseQ}&page={$pageNum}">Next</a>{/if}</li>
 					<li><a href="{$baseQ}&page={$numPagesTotal-1}">Last</a></li>
-				</ul>
+				</ul>{/if}
 			</div>
 		</div>
 		<br class="clearbreak" />
