@@ -3,7 +3,7 @@
 <script type="text/javascript" src="{$themeroot}/scripts/treeview.js"></script>
 
 <code style="display:none;">CountsByCat Query: {$catsByCountQ}</code>
-<h2>PAHMA online has {$objsTotal} total objects{$qual}.</h2>
+<h3>PAHMA online has {$objsTotal} total objects{$qual}.</h3>
 
 <div id="content">
 	<h2>Collection Browser</h2>

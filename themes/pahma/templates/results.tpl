@@ -13,7 +13,7 @@
 	<div id="inner_content">
 		<div id="results_innerContentTop">
 			<div id="results_breadcrumbs">
-				{$query}
+				Find: {$query}
 			</div>
 			<div class="results_pagination">
 				<ul>

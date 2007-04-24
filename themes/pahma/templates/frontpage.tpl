@@ -11,9 +11,9 @@
 	</div>
 
 	<div id="front_search">
-		<form action="" method="post">
-			<input type="text" name="search" maxlength="40">
-			<input type="submit" name="submit_search" value="Search">
+		<form action="{$wwwroot}/modules/facetBrowser/facetBrowse.php" method="get">
+			<input type="text" name="kwds" maxlength="40">
+			<input type="submit" value="Search">
 		</form>
 	</div>
 
