@@ -1,8 +1,6 @@
 <?php
-session_start(); 
-include("dbconnect.php");
-include("dmail.php");
-$subtitle = "Forgotten Password";
+
+require_once("../../libs/env.php");
 
 /**
  * Checks for a given user, and returns the email for that user, 
@@ -73,7 +71,7 @@ function checkSubmitValues(){
 	// If we get here, username is valid. Return the email address.
 	return $email;
 }
-include("genheader.php");
+
 /* If a request has been submitted, handle it.  */
 if(isset($_POST['subreq'])){
 	$email = checkSubmitValues();
@@ -85,7 +83,6 @@ if(isset($_POST['subreq'])){
 to the email account associated to your account.</p>
 <p><a href="main.php">Return to main page</a></p>
 <?php
-include("gentail.php");
 		return;
 	}
 	// Otherwise will fall through to show the form, with the error set.
@@ -103,4 +100,3 @@ include("gentail.php");
 <tr><td colspan="2" align="right"><input type="submit" name="subreq" value="Submit"></td></tr>
 </table>
 </form>
-<?php include("gentail.php"); ?>
