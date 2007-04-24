@@ -32,17 +32,17 @@
 		</div>
 		<br class="clearbreak" />
 		<div id="detail_information">
-			<ul class="tabs-nav">
-				<li class="tabs-selected"><a href="#">Description</a></li>
-				<li class=""><a href="#">Details</a></li>
+			<ul>
+				<li><a href="#tab1">Description</a></li>
+				<li><a href="#tab2">Details</a></li>
 			</ul>
 
-			<div style="display: block;" class="tabs-container">
+			<div id="tab1">
 				<!--<h3>Description</h3>-->
 				<p>{$description}</p>
 			</div>
 
-			<div style="" class="tabs-container tabs-hide">
+			<div id="tab2">
 				<div id="detail_facetPath">
 					<h2>facet 1</h2>
 					<ul>
