@@ -7,7 +7,7 @@ require_once("../../libs/utils.php");
 /**
  * Confirms a user's registration, clearing the pending flag in the DB
  */
-function confirmUser($userid){
+function confirmRegistration($userid){
    global $db;
 	$sql =	"	UPDATE user 
 				SET pending = 0
@@ -84,29 +84,22 @@ function addNewUser($username, $password, $email){
 
 	$affected =& $db->exec($sql);
 
-	// check that result is not an error
-	if (PEAR::isError($affected)) {
-	    die($affected->getMessage());
-	}
-
 	 if($affected) {
 		$sql = "SELECT *
 				FROM user
-				WHERE username = $username";
+				WHERE username = '$username'";
 		
 		$res =& $db->query($sql);
 		if (PEAR::isError($res)) {
 		    die($res->getMessage());
 		}
 		
-		if ( $res->numRows() > 0 ){
-			$row = $res->fetchRow();
-		} else {
-			die('something went wrong with the insert');
-		}
-		
+		$row = $res->fetchRow();
 		$new_uid = $row['id'];
-		sendRegMail($new_uid, $username, $email);
+		/*
+			TODO get email working
+		*/
+		//sendRegMail($new_uid, $username, $email);
 		return $new_uid;
 		
 	 }
@@ -192,16 +185,17 @@ function checkSubmitValues(){
 if(isset($_POST['subjoin'])){
 	if( checkSubmitValues() ) {
 		/* Add the new account to the database */
-		$_SESSION['reguname'] = $_POST['user'];
+		$_SESSION['username'] = $_POST['user'];
+		$_SESSION['password'] = md5($_POST['pass']);
 		$_SESSION['reguid'] = addNewUser(trim($_POST['user']), trim($_POST['pass']), trim($_POST['email']));
 		$_SESSION['registered'] = true;
-		echo "<meta http-equiv=\"Refresh\" content=\"0;url=$HTTP_SERVER_VARS[PHP_SELF]\">";
+		header( 'Location: ' . $CFG->wwwroot . '/modules/frontpage/frontpage.php' );
 		return;
 	}
-	// Otherwise will fall through to shwo the form, with the error set.
+	// Otherwise will fall through to show the form, with the error set.
 }
 else if(isset($_GET['confirm'])){
-	if( confirmUser($_GET['confirm']) ) {
+	if( confirmRegistration($_GET['confirm']) ) {
 		$t->assign('message','Thank you for confirming your registration.');
 		$t->display('registerConfirm.tpl');
 		die();
@@ -215,6 +209,7 @@ else if(isset($_SESSION['registered'])){
 	/**
 	 * This is the page that will be displayed after the
 	 * registration has been attempted.
+	 * This isn't being used at the moment. Rather user is just redirected.
 	 */
 	displayStatus();
 }

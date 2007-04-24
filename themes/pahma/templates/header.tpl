@@ -22,7 +22,13 @@
 	</div>
 	-->
 	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
-	<div id="user">Welcome <strong><a href="#">John Doe</a></strong></div>
+	<div id="user">
+		{if $username }
+			Welcome <strong><a href="#">{$username}</a></strong> (<a href="{$wwwroot}/modules/auth/logout.php">Logout</a>)
+		{else}
+			<a href="{$wwwroot}/modules/auth/login.php">Login</a> or <a href="{$wwwroot}/modules/auth/register.php">Register</a>
+		{/if}
+	</div>
 	<!-- <div id="sets"><a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a></div> -->
 	<br class="clearbreak" />
 </div>

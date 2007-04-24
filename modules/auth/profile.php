@@ -1,22 +1,29 @@
 <?php
-session_start(); 
-include("dbconnect.php");
-include("utils.php");
+require_once("../../libs/env.php");
+require_once("../../libs/utils.php");
+
 include("login.php");
-$subtitle = "User Profile page";
 
 /**
  * Checks for a given user, and returns the info for that user, 
  * or FALSE if user not found.
  */
 function checkUser($username){
-	global $mysqli;
+	global $db;
 	// Get current user info
-	$q = "select email, passwdmd5 from user where username = '$username'";
-	$result = $mysqli->query($q);
-	if(!$result || ($result->num_rows < 1))
-		return FALSE;
-	return $result;
+	$sql = "select email, passwdmd5 from user where username = '$username'";
+	
+	$res =& $db->query($sql);
+	if (PEAR::isError($res)) {
+	    die($res->getMessage());
+	}
+	
+   	// If nothing is found, username is available
+	if ( $res->numRows() < 1 ){
+		return false;
+	} else {
+		return $res;
+	}
 }
 
 /**
@@ -24,17 +31,25 @@ function checkUser($username){
  * already encrypted (via md5).
  */
 function updatePassword($username, $newPW){
-	global $mysqli;
-	$q = "update user set passwdmd5='$newPW'where username = '$username'";
-	$mysqli->query($q);
-	return ($mysqli->affected_rows > 0);
+	global $db;
+	$sql = "update user set passwdmd5='$newPW'where username = '$username'";
+	$res =& $db->query($sql);
+	if (PEAR::isError($res)) {
+	    die($res->getMessage());
+	} else {
+		return true;
+	}
 }
 
 function updateEmail($username, $newEmail){
-	global $mysqli;
-	$q = "update user set email='$newEmail'where username = '$username'";
-	$mysqli->query($q);
-	return ($mysqli->affected_rows > 0);
+	global $db;
+	$sql = "update user set email='$newEmail'where username = '$username'";
+	$res =& $db->query($sql);
+	if (PEAR::isError($res)) {
+	    die($res->getMessage());
+	} else {
+		return true;
+	}
 }
 
 $showErr = FALSE;			// Error to show if we find one
@@ -84,12 +99,11 @@ function checkAndUpdateValues(){
 
 $showErr = FALSE;			// Error to show if we find one
 
-include("genheader.php");
 
 if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
 	echo "<h2 class=\"error\">You are not logged in!</h2>";
 	displayLogin();
-include("gentail.php");
+	include("gentail.php");
 	return;
 }
 
@@ -98,7 +112,7 @@ $result = checkUser($user);
 if(!$result){
 	echo "<h2 class=\"error\">There is problem with your profile. "
 		." Please log out and log back in, or contact Delphi support.</h2>";
-include("gentail.php");
+	include("gentail.php");
 	return;
 }
 
@@ -123,17 +137,3 @@ if(isset($_POST['subreq'])){
 }
 ?>
 
-<form action="" method="post">
-<table border="0" cellspacing="0" cellpadding="3">
-<tr><td>Change Password:</td><td><input type="password" name="pass" maxlength="40"></td></tr>
-<tr><td>Repeat New Password:</td><td><input type="password" name="pass2" maxlength="40"></td></tr>
-<tr><td>Email:</td><td>
-	<input type="text" name="email" maxlength="70" <?php echo 'value="'.$dbemail.'" '; ?> >
-</td></tr>
-<tr><td colspan="2" align="right"><input type="submit" name="subreq" value="Update"></td></tr>
-<tr><td style="height:20px;"></td></tr>
-<tr><td colspan="2" align="right"><a href="main.php">Return to main page</a></td></tr>
-</table>
-</form>
-
-<?php include("gentail.php"); ?>
