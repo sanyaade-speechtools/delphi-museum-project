@@ -37,7 +37,9 @@ require "Facet.inc";
 		$baseQ.= "wImgs=false&".$catsParam;
   else 
 		$baseQ.= $catsParam;	
-	$qual = $onlyWithImgs ? " with images. <a href=\"".$_SERVER['PHP_SELF']."?wImgs=false\">Show All</a>":". (<a href=\"".$_SERVER['PHP_SELF']."\">Only show objects with images</a>)";
+	$qual = $onlyWithImgs ?
+	  	" with images. (<a href=\"".$_SERVER['PHP_SELF']."?wImgs=false\">Also show objects without images</a>)"
+		: ". (<a href=\"".$_SERVER['PHP_SELF']."\">Only show objects with images</a>)";
 	$t->assign("qual", $qual);
 	$t->assign("catsByCountQ", $tqCountsByCat);
 	$facetTreeOutput = "";
