@@ -158,113 +158,115 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 		$fullCountResult=$mysqli->query($tqFullCount);
 		if($row = $fullCountResult->fetch_array()) {
 			$numResultsTotal = $row[0];
-			$numPagesTotal = ceil($numResultsTotal/$_DELPHI_PAGE_SIZE);
-			//$numPagesLeft = $numPagesTotal - $pageNum2; // 1-based page indices.
-			$pageRangeStart = max(($pageNum2-3), 1);    // start at 1 or curr-3
-			for( $i=0; $i<7 && ($pageRangeStart+$i)<=$numPagesTotal; $i++ )
-				$pageNums[] = $pageRangeStart+$i;
+			if($numResultsTotal == 0 ) {
+				$numPagesTotal = 1;
+				$pageNums[] = 1;
+			} else {
+				$numPagesTotal = ceil($numResultsTotal/$_DELPHI_PAGE_SIZE);
+				//$numPagesLeft = $numPagesTotal - $pageNum2; // 1-based page indices.
+				$pageRangeStart = max(($pageNum2-3), 1);    // start at 1 or curr-3
+				for( $i=0; $i<7 && ($pageRangeStart+$i)<=$numPagesTotal; $i++ )
+					$pageNums[] = $pageRangeStart+$i;
+			}
 		} else {
 			$numResultsTotal = 0;
 			$numPagesTotal = 1;
-			//$numPagesLeft = 0;
 			$pageNums[] = 1;
 		}
 	}
-	$facetsResults=$mysqli->query("SELECT id, display_name from facets order by id");
-	GetFacetListFromResultSet($facetsResults);
-	try {
-		$countsresult=$mysqli->query($tqCountsByCat);
-		if( empty($countsresult))
-			throw new Exception($mysqli->error);
-		PopulateFacetsFromResultSet( $countsresult, true );
-	} catch( Exception $e ) {
-		echo "<h1>Problem with cat counts query/tree building</h1>\n";
-		echo "<h2>".$e->getMessage()."</h2>\n";
-		echo "<h2>Query:</h2>\n";
-		echo "<code>".$tqCountsByCat."</code>\n";
-		die();
-	}
-	// Facets now exist as array in $facets. Nodes are avail in hashMap.
-	// Need to build the base query out of the existing parameters.
-	// As written, baseQ is sufficient to use for page queries - just append the page=#
-	$baseQ = $_SERVER['PHP_SELF']."?";
-	$firstP = true;
-	if( !$onlyWithImgs ) {
-		$baseQ.= "wImgs=false";
-		$firstP = false;
-	}
-	if( !empty($kwds)) {
-		if( $firstP ) {
-			$firstP = false;
-			$baseQ.= "kwds=".$kwds;
-		}
-		else
-			$baseQ.= "&kwds=".$kwds;
-	}
-	// If have cats, include for baseQ (for pagination)
-	$catsParam = $firstP?"cats=":"&cats=";
-	if( !empty($cats)) {
-		$catsParam .= $cats;
-		$baseQ .= $catsParam;
-		$refineQ = $baseQ.",";
-	} else {
-		$refineQ = $baseQ.$catsParam;
-	}
-
-	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
-	$t->assign("pageNum", $pageNum2); 	// for pagination queries in page
-	$t->assign("pageNums", $pageNums); 	// for pagination queries in page
-	$t->assign("numPagesTotal", $numPagesTotal);
-	$t->assign("numResultsTotal", $numResultsTotal); // e.g. "48"
-	$t->assign("iFirstResult", 1+($pageNum*$_DELPHI_PAGE_SIZE)); // e.g. "48"
-	$t->assign("iLastResult", min((($pageNum+1)*$_DELPHI_PAGE_SIZE),$numResultsTotal));
-	//$t->assign("numPagesLeft", $numPagesLeft);
-	$t->assign("qual", $qual); // e.g. "with images"
-	$t->assign("query", buildStringForQueryTerms($kwds, $catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
-
 	// var for holding concated output
 	$facetTreeOutput = "";
-
-	foreach( $facets as $facet ) {
-		if( empty($facet->arrChildren) ) {
-			$facetTreeOutput .= "<code class=\"hidden\">Facet: "
-														.$facet->name." has no no matches</code>";
-		} else {
-			$facet->PruneForOutput($numResultsTotal, $catIDs);
-			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $refineQ, false );
-		}
-	}
-
-	$t->assign("facetTree", $facetTreeOutput);
-
-
-	$nPix=0;
-	$objsresult=$mysqli->query($tqFull);
-
 	// var for holding concated output
 	$imageOutput = "";
 
-	/*
-		TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
-	*/
-	while( $row=$objsresult->fetch_assoc() )
-	{
-		$imageOutput .= "<div class=\"results_result\">";
-		$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
-		$pathToDetails = $CFG->wwwroot . "/modules/browser/details.php?id=" . $row['id'];
-		$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\"";
-		$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
+	if( $numResultsTotal == 0 ) {
+		$baseQ = "";
+		$t->assign("iFirstResult", 0); // e.g. "48"
+		$t->assign("iLastResult", 0);
+	} else {
+		$facetsResults=$mysqli->query("SELECT id, display_name from facets order by id");
+		GetFacetListFromResultSet($facetsResults);
+		try {
+			$countsresult=$mysqli->query($tqCountsByCat);
+			if( empty($countsresult))
+				throw new Exception($mysqli->error);
+			PopulateFacetsFromResultSet( $countsresult, true );
+		} catch( Exception $e ) {
+			echo "<h1>Problem with cat counts query/tree building</h1>\n";
+			echo "<h2>".$e->getMessage()."</h2>\n";
+			echo "<h2>Query:</h2>\n";
+			echo "<code>".$tqCountsByCat."</code>\n";
+			die();
+		}
+		// Facets now exist as array in $facets. Nodes are avail in hashMap.
+		// Need to build the base query out of the existing parameters.
+		// As written, baseQ is sufficient to use for page queries - just append the page=#
+		$baseQ = $_SERVER['PHP_SELF']."?";
+		$firstP = true;
+		if( !$onlyWithImgs ) {
+			$baseQ.= "wImgs=false";
+			$firstP = false;
+		}
+		if( !empty($kwds)) {
+			if( $firstP ) {
+				$firstP = false;
+				$baseQ.= "kwds=".$kwds;
+			}
+			else
+				$baseQ.= "&kwds=".$kwds;
+		}
+		// If have cats, include for baseQ (for pagination)
+		$catsParam = $firstP?"cats=":"&cats=";
+		if( !empty($cats)) {
+			$catsParam .= $cats;
+			$baseQ .= $catsParam;
+			$refineQ = $baseQ.",";
+		} else {
+			$refineQ = $baseQ.$catsParam;
+		}
 
-		$imageOutput .= "<!--<span class=\"label\">".$row['name']."</span>-->";
-		$imageOutput .= "</div>";
-		$nPix++;
-		if( $nPix >= 40 ) {
-			$imageOutput .= "<br class=\"clearbreak\"";
-			$imageOutput .= "<p>Another ".($numResultsTotal-40)." images not shown...</p>";
-			break;
+		$t->assign("iFirstResult", 1+($pageNum*$_DELPHI_PAGE_SIZE)); // e.g. "48"
+		$t->assign("iLastResult", min((($pageNum+1)*$_DELPHI_PAGE_SIZE),$numResultsTotal));
+		//$t->assign("numPagesLeft", $numPagesLeft);
+		foreach( $facets as $facet ) {
+			if( empty($facet->arrChildren) ) {
+				$facetTreeOutput .= "<code class=\"hidden\">Facet: "
+															.$facet->name." has no no matches</code>";
+			} else {
+				$facet->PruneForOutput($numResultsTotal, $catIDs);
+				$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $refineQ, false );
+			}
+		}
+		/*
+			TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
+		*/
+		$nPix=0;
+		while( $row=$objsresult->fetch_assoc() )
+		{
+			$imageOutput .= "<div class=\"results_result\">";
+			$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
+			$pathToDetails = $CFG->wwwroot . "/modules/browser/details.php?id=" . $row['id'];
+			$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\"";
+			$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
+
+			$imageOutput .= "<!--<span class=\"label\">".$row['name']."</span>-->";
+			$imageOutput .= "</div>";
+			$nPix++;
+			if( $nPix >= 40 ) {
+				$imageOutput .= "<br class=\"clearbreak\"";
+				$imageOutput .= "<p>Another ".($numResultsTotal-40)." images not shown...</p>";
+				break;
+			}
 		}
 	}
-
+	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
+	$t->assign("numResultsTotal", $numResultsTotal); // e.g. "48"
+	$t->assign("pageNum", $pageNum2); 	// for pagination queries in page
+	$t->assign("pageNums", $pageNums); 	// for pagination queries in page
+	$t->assign("numPagesTotal", $numPagesTotal);
+	$t->assign("qual", $qual); // e.g. "with images"
+	$t->assign("query", buildStringForQueryTerms($kwds, $catIDs));
+	$t->assign("facetTree", $facetTreeOutput);
 	$t->assign("imageOutput", $imageOutput);
 	$t->display("results.tpl");
 	die;
