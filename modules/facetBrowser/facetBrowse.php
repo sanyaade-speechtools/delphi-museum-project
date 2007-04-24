@@ -85,11 +85,13 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 		if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false'))
 			$onlyWithImgs = false;
 		$kwds = $_GET['kwds'];
-		$cats = $_GET['cats'];
-		if( empty($cats) )
+		if( empty($_GET['cats']) ) {
+			$cats = null;
 			$catIDs = array();
-		else
+		} else {
+			$cats = $_GET['cats'];
 			$catIDs = explode( ",", $cats );
+		}
 		if( count($catIDs) <= 1 ) {
 			$t->assign("tqCatOrder", "Unneeded");
 			$qCatIDs = $catIDs;
