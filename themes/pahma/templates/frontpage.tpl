@@ -7,7 +7,7 @@
 <div id="content">
 	<div id="front_links">
 		<p>Lorem ipsum dolor sit amet, proprius ut patria vel vulputate esse consequat gemino, indoles, blandit veniam ymo, gemino refoveo. Modo abigo transverbero sed quis reprobo dolore. Ille tation sed sudo, ludus pneum. Valde roto, epulae epulae iusto et commodo tamen genitus, quod nisl illum nutus. Commoveo, facilisis nimis volutpat vel ingenium capto roto olim neque iusto praesent letalis fere. Saepius, transverbero nutus ullamcorper hendrerit nisl damnum zelus antehabeo, hendrerit. Ullamcorper obruo wisi te facilisi mara blandit quis vulpes. Luptatum esca duis quia adsum delenit dolor obruo probo suscipere. Jugis capto metuo iustum lenis delenit hendrerit. Duis in ymo immitto scisco nimis, olim lobortis inhibeo sed ullamcorper meus nobis.</p>
-		<h2><a href="{$wwwroot}/modules/browser/browser.php" style="text-decoration: underline;">Browse the Collections</a></h2>
+		<h2><a href="{$wwwroot}/modules/facetBrowser/browser.php" style="text-decoration: underline;">Browse the Collections</a></h2>
 	</div>
 
 	<div id="front_search">
