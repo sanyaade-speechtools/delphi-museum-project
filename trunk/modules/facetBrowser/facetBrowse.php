@@ -5,31 +5,58 @@ include("dbconnect.php");
 require "Facet.inc";
 $_DELPHI_PAGE_SIZE = 40;
 
+	// Build up a keyword(s) query. Does NOT append subQ name!
+function buildKwdQuery( $kwds, $wImgs ) {
+	$subQ = "(SELECT id as obj_id FROM objects o WHERE MATCH(name, description) AGAINST('"
+		.$kwds."') ";
+	if( $wImgs )
+		$subQ .= "AND NOT o.img_path IS NULL) ";
+	else
+		$subQ .= ") ";
+	return $subQ;
+}
+
 	// This builds up the query by recursing for the rest of the list
-function buildMainQueryForTerm( $catIDList, $iID ) {
+function buildMainQueryForTerm( $catIDList, $iID, $kwds, $wImgs ) {
 	if( $iID == 0 )
 		$qName = "tqMain";
 	else {
 		$qName = "sub";
 		$qName .= (string)$iID;
 	}
+	if( empty($catIDList) ) {
+		if( empty($kwds))
+			die("buildMainQuery: no categories and no keywords!");
+		$subQ = buildKwdQuery( $kwds, $wImgs );
+		return $subQ.$qName;
+	}
+	
 	if( $iID == count($catIDList)-1 ) {		// simple form
-		return "(SELECT obj_id from obj_cats where cat_id=".(string)$catIDList[$iID].") ".$qName;
+		if( empty($kwds) )
+			return "(SELECT obj_id from obj_cats where cat_id=".(string)$catIDList[$iID].") ".$qName;
+		$subQ = buildKwdQuery( $kwds, $wImgs )."subK";
+		return "(SELECT oc.obj_id from obj_cats oc,".$subQ."
+						 where oc.obj_id=subK.obj_id and oc.cat_id="
+							.(string)$catIDList[$iID].") ".$qName;
 	}
 	// Not the last one, so we build the return string as a join on this and the recursively
 	// computed string
-	$subQ = buildMainQueryForTerm( $catIDList, $iID+1 );
+	$subQ = buildMainQueryForTerm( $catIDList, $iID+1, $kwds, $wImgs );
 	$subName = "sub".($iID+1);
 	return "(SELECT oc.obj_id from obj_cats oc,".$subQ."
 					 where oc.obj_id=".$subName.".obj_id and oc.cat_id="
 						.(string)$catIDList[$iID].") ".$qName;
 }
 
-function buildStringForQueryTerms( $catIDs ) {
+function buildStringForQueryTerms( $kwds, $catIDs ) {
 	global $facets;
 	global $taxoNodesHashMap;
 	$fFirstName = true;
 	$retStr = "";
+	if( !empty($kwds) ) {
+		$retStr .= "\"".$kwds."\"";
+		$fFirstName = false;
+	}
 	foreach( $catIDs as $catID ) {
 		$cnode = $taxoNodesHashMap[$catID];
 		if( $fFirstName )
@@ -50,17 +77,21 @@ function buildStringForQueryTerms( $catIDs ) {
 }
 
 
-	if( empty( $_GET['cats'] )) {
+	if( empty( $_GET['cats'] ) && empty( $_GET['kwds'] )) {
 		echo "<h2>No query params specified</h2>";
 		return;
 	} else {
 		$onlyWithImgs = true;		// default to only images
 		if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false'))
 			$onlyWithImgs = false;
+		$kwds = $_GET['kwds'];
 		$cats = $_GET['cats'];
-		$catIDs = explode( ",", $cats );
-		if( count($catIDs) == 1 ) {
-			$t->assign("catsByCountQ", "Unneeded");
+		if( empty($cats) )
+			$catIDs = array();
+		else
+			$catIDs = explode( ",", $cats );
+		if( count($catIDs) <= 1 ) {
+			$t->assign("tqCatOrder", "Unneeded");
 			$qCatIDs = $catIDs;
 		} else {
 			// We need to order the cats to put the ones with the most objects at the outside
@@ -83,15 +114,16 @@ function buildStringForQueryTerms( $catIDs ) {
 			}
 		}
 
-		$tqMain = buildMainQueryForTerm( $qCatIDs, 0 );
+		$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $onlyWithImgs );
 		$pageNum = 0;
 		if( !empty( $_GET['page'] ))
 			$pageNum = 1*$_GET['page'];
 
 		// We have to set all the nResults values. Get the counts first
+		$qual = $onlyWithImgs?" (with images)":"";
 
-		if( $onlyWithImgs ) {
-			$qual = " (with images)";
+		// If kwds is non-empty, we put the wImgs constraint in that subquery
+		if( $onlyWithImgs && empty($kwds)) {
 			$tqCountsByCat =
 				"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) FROM categories c,
 					(SELECT oc.obj_id, oc.cat_id from obj_cats oc, objects o, 
@@ -102,7 +134,6 @@ function buildStringForQueryTerms( $catIDs ) {
 			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path
 			 FROM objects o,".$tqMain." WHERE o.id=tqMain.obj_id AND NOT o.img_path IS NULL LIMIT ".$_DELPHI_PAGE_SIZE;
 		} else {
-			$qual = "";
 			$tqCountsByCat =
 				"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) from categories c,
 				(SELECT oc.obj_id, oc.cat_id from obj_cats oc,
@@ -139,17 +170,44 @@ function buildStringForQueryTerms( $catIDs ) {
 	}
 	$facetsResults=$mysqli->query("SELECT id, display_name from facets order by id");
 	GetFacetListFromResultSet($facetsResults);
-	$countsresult=$mysqli->query($tqCountsByCat);
-	PopulateFacetsFromResultSet( $countsresult, true );
+	try {
+		$countsresult=$mysqli->query($tqCountsByCat);
+		if( empty($countsresult))
+			throw new Exception($mysqli->error);
+		PopulateFacetsFromResultSet( $countsresult, true );
+	} catch( Exception $e ) {
+		echo "<h1>Problem with cat counts query/tree building</h1>\n";
+		echo "<h2>".$e->getMessage()."</h2>\n";
+		echo "<h2>Query:</h2>\n";
+		echo "<code>".$tqCountsByCat."</code>\n";
+		die();
+	}
 	// Facets now exist as array in $facets. Nodes are avail in hashMap.
 	// Need to build the base query out of the existing parameters.
 	// As written, baseQ is sufficient to use for page queries - just append the page=#
 	$baseQ = $_SERVER['PHP_SELF']."?";
-	$catsParam = "cats=".$cats;
-	if( !$onlyWithImgs )
-		$baseQ.= "wImgs=false&".$catsParam;
-  else
-		$baseQ.= $catsParam;
+	$firstP = true;
+	if( !$onlyWithImgs ) {
+		$baseQ.= "wImgs=false";
+		$firstP = false;
+	}
+	if( !empty($kwds)) {
+		if( $firstP ) {
+			$firstP = false;
+			$baseQ.= "kwds=".$kwds;
+		}
+		else
+			$baseQ.= "&kwds=".$kwds;
+	}
+	// If have cats, include for baseQ (for pagination)
+	$catsParam = $firstP?"cats=":"&cats=";
+	if( !empty($cats)) {
+		$catsParam .= $cats;
+		$baseQ .= $catsParam;
+		$refineQ = $baseQ.",";
+	} else {
+		$refineQ = $baseQ.$catsParam;
+	}
 
 	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
 	$t->assign("pageNum", $pageNum2); 	// for pagination queries in page
@@ -160,7 +218,7 @@ function buildStringForQueryTerms( $catIDs ) {
 	$t->assign("iLastResult", min((($pageNum+1)*$_DELPHI_PAGE_SIZE),$numResultsTotal));
 	//$t->assign("numPagesLeft", $numPagesLeft);
 	$t->assign("qual", $qual); // e.g. "with images"
-	$t->assign("query", buildStringForQueryTerms($catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
+	$t->assign("query", buildStringForQueryTerms($kwds, $catIDs)); // e.g. "Color:White + Site or Provenience:Western Africa"
 
 	// var for holding concated output
 	$facetTreeOutput = "";
@@ -171,7 +229,7 @@ function buildStringForQueryTerms( $catIDs ) {
 														.$facet->name." has no no matches</code>";
 		} else {
 			$facet->PruneForOutput($numResultsTotal, $catIDs);
-			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $baseQ, false );
+			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $refineQ, false );
 		}
 	}
 

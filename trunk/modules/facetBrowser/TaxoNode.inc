@@ -123,8 +123,6 @@ class TaxoNode {
 						</span>";
 			else {
 				$responseOutput .= "<a href=\"".$pageURL;
-				if( !$fFullTree )
-					$responseOutput .= ",";
 				$responseOutput .= $this->id."\"> ".$this->name." (".$this->nResults.")</a>
 				</span>";
 			}
