@@ -245,7 +245,7 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 		*/
 		$nPix=0;
 		$maxChars = 16;
-		$ellipses = "...";
+		$ellipses = " ...";
 		$eLen = strlen($ellipses);
 		while( $row=$objsresult->fetch_assoc() )
 		{
