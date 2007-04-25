@@ -68,9 +68,19 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 		else {
 			if( $cnode->facet_id != null ) {
 				$fnode = $facets[$cnode->facet_id];
-				$retStr .= "<em>".$fnode->name."</em>:";
+				$retStr .= "<em><span class=\"results_breadcrumbFacet\">".$fnode->name."</span></em>:";
 			}
-			$retStr .= $cnode->name;
+			$retStr .= "<span class=\"results_breadcrumbCategory\">".$cnode->name."</span>";
+
+			$newQuery = "facetBrowse.php?cats=";
+			foreach ($catIDs as $categoryID) {
+				if ($categoryID != $catID) {
+					$newQuery .= (string)$categoryID.",";
+				}
+			}
+			$newQuery = substr($newQuery, 0, -1);
+
+			$retStr .= "<a href=\"".$newQuery."\"><sup class=\"results_removeBreadcrumb\">(x)</sup></a>";
 		}
 	}
 	return $retStr;
