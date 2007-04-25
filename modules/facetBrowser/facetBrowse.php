@@ -48,7 +48,7 @@ function buildMainQueryForTerm( $catIDList, $iID, $kwds, $wImgs ) {
 						.(string)$catIDList[$iID].") ".$qName;
 }
 
-function buildStringForQueryTerms( $kwds, $catIDs ) {
+function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 	global $facets;
 	global $taxoNodesHashMap;
 	$fFirstName = true;
@@ -73,10 +73,21 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 			$retStr .= "<span class=\"results_breadcrumbCategory\">".$cnode->name."</span>";
 
 			$newQuery = "";
+			$wImgsFalse = "?wImgs=false&";
 			if (count($catIDs)-1 < 1) {
 				$newQuery = "browser.php";
+				if (!$withImages) {
+					$newQuery .= $wImgsFalse;
+					$newQuery = substr($newQuery, 0, -1);
+				}
 			} else {
-				$newQuery = "facetBrowse.php?cats=";
+				$newQuery = "facetBrowse.php";
+				if (!$withImages) {
+					$newQuery .= $wImgsFalse;
+				} else {
+					$newQuery .= "?";
+				}
+				$newQuery .= "cats=";
 				foreach ($catIDs as $categoryID) {
 					if ($categoryID != $catID) {
 						$newQuery .= (string)$categoryID.",";
@@ -259,7 +270,7 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 			TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
 		*/
 		$nPix=0;
-		$maxChars = 16;
+		$maxChars = 18;
 		$ellipses = " ...";
 		$eLen = strlen($ellipses);
 		while( $row=$objsresult->fetch_assoc() )
@@ -296,7 +307,12 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 	$t->assign("pageNums", $pageNums); 	// for pagination queries in page
 	$t->assign("numPagesTotal", $numPagesTotal);
 	$t->assign("qual", $qual); // e.g. "with images"
-	$t->assign("query", buildStringForQueryTerms($kwds, $catIDs));
+
+	$onlyWithImgs = true; // default to only images
+	if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false')) {
+		$onlyWithImgs = false;
+	}
+	$t->assign("query", buildStringForQueryTerms($kwds, $catIDs, $onlyWithImgs));
 	$t->assign("facetTree", $facetTreeOutput);
 	$t->assign("imageOutput", $imageOutput);
 	$t->display("results.tpl");
