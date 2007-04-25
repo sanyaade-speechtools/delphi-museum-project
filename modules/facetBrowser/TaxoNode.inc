@@ -119,7 +119,7 @@ class TaxoNode {
 			if( $class == "facet" )
 				$responseOutput .= " $this->name</span>";
 			else if( $this->fNoClick )
-				$responseOutput .= " ".$this->name." (".$this->nResults.")
+				$responseOutput .= " <strong>".$this->name."</strong> (".$this->nResults.")
 						</span>";
 			else {
 				$responseOutput .= "<a href=\"".$pageURL;
