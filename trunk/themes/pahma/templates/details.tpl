@@ -30,7 +30,7 @@
 				-->
 			</div>
 		</div>
-		<br class="clearbreak" />
+		<!--<br class="clearbreak" />-->
 		<div id="detail_information">
 			<ul>
 				<li><a href="#tab1">Description</a></li>
