@@ -31,15 +31,18 @@ function getRoles(){
 
 
 function sendDelphiMail($username, $email, $subj, $plaintextmsg, $htmlmsg){
-	require_once 'XPM/smtp.php';
+	require_once 'XPM/XPM3_MAIL.php';
 	
-	$mail = new SMTP;
+	$mail = new XPM3_MAIL;
 	$mail->Delivery('local');
 	$mail->From('delphi@hearstmuseum.berkeley.edu', 'Delphi');
 	$mail->AddTo($email, $username);
 	$mail->Text($plaintextmsg);
 	$mail->Html($htmlmsg);
-	return $mail->Send($subj);
+	$mail->Send($subj);
+	print_r($mail->result);
+	return;
+	
 }
 
 ?>

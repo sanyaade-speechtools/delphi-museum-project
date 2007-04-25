@@ -1,20 +1,26 @@
 <?php
 
 require_once("../../libs/env.php");
+require_once("../../libs/utils.php");
+
 
 /**
  * Checks for a given user, and returns the email for that user, 
  * or FALSE if user not found.
  */
 function checkUser($username){
-	global $mysqli;
-	$q = "select email from user where username = '$username'";
-	$result = $mysqli->query($q);
-	if(!$result || ($result->num_rows < 1))
+	global $db;
+	$sql = "select email from user where username = '$username'";
+	
+	$res =& $db->query($sql);
+	if (PEAR::isError($res)) {
 		return FALSE;
-	$dbarray = $result->fetch_array(MYSQLI_ASSOC);
-	$dbemail = stripslashes($dbarray['email']);
-	return $dbemail;
+	    die($res->getMessage());
+	}
+
+	$row = $res->fetchRow();
+
+	return stripslashes($row['email']);
 }
 
 /**
@@ -22,7 +28,7 @@ function checkUser($username){
  * Returns the new cleartext password, or FALSE if user not found.
  */
 function synthesizeAndUpdatePassword($username){
-	global $mysqli;
+	global $db;
 	$chars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 	$nchars=strlen($chars);
 	$newPWClear = '';
@@ -30,12 +36,17 @@ function synthesizeAndUpdatePassword($username){
 	for($i = 0; $i <= 15; $i++) 
 		$newPWClear .= $chars[rand(0,$nchars-1)]; 
 	$newPWmd5 = md5($newPWClear);
-	$q = "update user set passwdmd5='$newPWmd5'where username = '$username'";
-	$mysqli->query($q);
-	if($mysqli->affected_rows > 0)
-		return $newPWClear;
-	else
+	$sql = "update user set passwdmd5='$newPWmd5'where username = '$username'";
+	
+	$affected =& $db->exec($sql);
+
+	// check that result is not an error
+	if (PEAR::isError($affected)) {
 		return FALSE;
+	    die($affected->getMessage());
+	} else {
+		return $newPWClear;
+	}
 }
 
 function sendPWMail($username, $email, $newPW){
@@ -94,7 +105,7 @@ to the email account associated to your account.</p>
 ?>
 <h2>Request a new password</h2>
 <?php if($showErr) echo '<h3 style="color:red;">'.$showErr.'</h3>'; ?>
-<form action="<?php echo $HTTP_SERVER_VARS['PHP_SELF']; ?>" method="post">
+<form action="" method="post">
 <table border="0" cellspacing="0" cellpadding="3">
 <tr><td>Username:</td><td><input type="text" name="user" maxlength="40" ></td></tr>
 <tr><td colspan="2" align="right"><input type="submit" name="subreq" value="Submit"></td></tr>
