@@ -84,7 +84,10 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 		$onlyWithImgs = true;		// default to only images
 		if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false'))
 			$onlyWithImgs = false;
-		$kwds = $_GET['kwds'];
+		if( empty($_GET['kwds']) )
+			$kwds = null;
+		else
+			$kwds = $_GET['kwds'];
 		if( empty($_GET['cats']) ) {
 			$cats = null;
 			$catIDs = array();
