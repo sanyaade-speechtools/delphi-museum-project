@@ -3,11 +3,9 @@
 require_once("../../libs/env.php");
 
 // Query DB
-$sql = "	SELECT o.id, o.objnum, o.name, o.img_path 
-			FROM objects o, categories c, obj_cats oc 
-			WHERE o.id=oc.obj_id and c.id=oc.cat_id and c.name='gray' 
-			LIMIT 12;
-		";
+$sql = "SELECT o.id, o.objnum, o.name, o.img_path FROM objects o, set_objs so 
+WHERE so.set_id=1 AND so.obj_id=o.id ORDER BY RAND() LIMIT 12";
+
 
 $res =& $db->query($sql);
 if (PEAR::isError($res)) {
