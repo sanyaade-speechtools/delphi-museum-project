@@ -89,25 +89,14 @@ if(isset($_POST['subreq'])){
 	if($email){
 		$newPW = synthesizeAndUpdatePassword($_POST['user']);
 		sendPWMail($_POST['user'], $email, $newPW);
-?>
-<p>Your password has been updated, and the new password will be mailed
-to the email account associated to your account.</p>
-<p><a href="main.php">Return to main page</a></p>
-<?php
-		return;
+		$t->assign('message', "Your password has been updated, and the new password will be mailed to the email account associated to your account.");
+		$t->display('forgotpw.tpl');
+		die();
 	}
-	// Otherwise will fall through to show the form, with the error set.
 }
 
-/**
- * This is the form to enter info to get a new password
- */
+$t->assign('message', "$showErr");
+$t->display('forgotpw.tpl');
+
 ?>
-<h2>Request a new password</h2>
-<?php if($showErr) echo '<h3 style="color:red;">'.$showErr.'</h3>'; ?>
-<form action="" method="post">
-<table border="0" cellspacing="0" cellpadding="3">
-<tr><td>Username:</td><td><input type="text" name="user" maxlength="40" ></td></tr>
-<tr><td colspan="2" align="right"><input type="submit" name="subreq" value="Submit"></td></tr>
-</table>
-</form>
+
