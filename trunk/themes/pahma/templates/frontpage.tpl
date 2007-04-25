@@ -20,7 +20,7 @@
 	<div id="inner_content">
 		<div id="front_featuredSets">
 			<div>
-				<img src="{$wwwroot}/themes/pahma/images/featuredSet1.jpg" width="717" height="209" alt="FeaturedSet1">
+				<img src="{$wwwroot}/themes/pahma/images/featuredSet1.jpg" width="608" height="209" alt="FeaturedSet1">
 				<img src="{$wwwroot}/themes/pahma/images/featuredSet2.jpg" width="348" height="209" alt="FeaturedSet2">
 				<img src="{$wwwroot}/themes/pahma/images/featuredSet3.jpg" width="348" height="209" alt="FeaturedSet3">
 			</div>

@@ -37,6 +37,11 @@ text unavailable - #DC6403
  * - SHARED ---------------------------------------------- *
  * ------------------------------------------------------- */
 
+abbr {
+	text-decoration: none;
+	border-style: none;
+}
+
 .clearbreak {
 	clear: both;
 	margin: 0;
@@ -464,11 +469,11 @@ code.hidden {
 
 	width: 120px;
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 120px;
+	min-height: 136px;
 	height: auto !important;
-	height: 120px;
+	height: 136px;
 	
-	margin: 0 0 2px 2px;
+	margin: 0 0 10px 2px;
 	padding: 0;
 	border-width: 0;
 	
@@ -480,7 +485,12 @@ code.hidden {
 	width: 120px;
 	height: 120px;
 	
-	border-width: 1px;
+	border-width: 0px;
+}
+
+.results_resultLabel {
+	font-weight: bold;
+	padding-bottom: 4px;
 }
 
 .results_result ul {

@@ -30,7 +30,7 @@ function buildMainQueryForTerm( $catIDList, $iID, $kwds, $wImgs ) {
 		$subQ = buildKwdQuery( $kwds, $wImgs );
 		return $subQ.$qName;
 	}
-	
+
 	if( $iID == count($catIDList)-1 ) {		// simple form
 		if( empty($kwds) )
 			return "(SELECT obj_id from obj_cats where cat_id=".(string)$catIDList[$iID].") ".$qName;
@@ -131,7 +131,7 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 		if( $onlyWithImgs && empty($kwds)) {
 			$tqCountsByCat =
 				"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) FROM categories c,
-					(SELECT oc.obj_id, oc.cat_id from obj_cats oc, objects o, 
+					(SELECT oc.obj_id, oc.cat_id from obj_cats oc, objects o,
 				".$tqMain."
 				WHERE oc.obj_id=tqMain.obj_id AND o.id=tqMain.obj_id AND NOT o.img_path IS NULL) tqTop
 				WHERE c.id=tqTop.cat_id GROUP BY c.id ORDER BY c.id";
@@ -244,16 +244,29 @@ function buildStringForQueryTerms( $kwds, $catIDs ) {
 			TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
 		*/
 		$nPix=0;
+		$maxChars = 16;
+		$ellipses = "...";
+		$eLen = strlen($ellipses);
 		while( $row=$objsresult->fetch_assoc() )
 		{
 			$imageOutput .= "<div class=\"results_result\">";
 			$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
 			$pathToDetails = $CFG->wwwroot . "/modules/browser/details.php?id=" . $row['id'];
-			$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\"";
+			$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\" alt=\"".$row['name']."\"";
 			$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
 
-			$imageOutput .= "<!--<span class=\"label\">".$row['name']."</span>-->";
+			$text = $row['name'];
+
+			if (strlen($text) > $maxChars) {
+				$text = substr($text,0,$maxChars-$eLen);
+				$text = substr($text,0,strrpos($text,' '));
+				$text .= $ellipses;
+			}
+
+			$text = "<abbr title=\"".$row['name']."\">".$text."</abbr>";
+			$imageOutput .= "<div class=\"results_resultLabel\"><a href=\"".$pathToDetails."\">".$text."</a></div>";
 			$imageOutput .= "</div>";
+
 			$nPix++;
 			if( $nPix >= 40 ) {
 				$imageOutput .= "<br class=\"clearbreak\"";
