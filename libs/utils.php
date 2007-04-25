@@ -39,9 +39,8 @@ function sendDelphiMail($username, $email, $subj, $plaintextmsg, $htmlmsg){
 	$mail->AddTo($email, $username);
 	$mail->Text($plaintextmsg);
 	$mail->Html($htmlmsg);
-	$mail->Send($subj);
-	print_r($mail->result);
-	return;
+	return $mail->Send($subj);
+	
 	
 }
 

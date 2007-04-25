@@ -24,7 +24,7 @@
 	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
 	<div id="user">
 		{if $username }
-			Welcome <strong><a href="#">{$username}</a></strong> (<a href="{$wwwroot}/modules/auth/logout.php">Logout</a>)
+			Welcome <strong><a href="{$wwwroot}/modules/auth/profile.php">{$username}</a></strong> (<a href="{$wwwroot}/modules/auth/logout.php">Logout</a>)
 		{else}
 			<a href="{$wwwroot}/modules/auth/login.php">Login</a> or <a href="{$wwwroot}/modules/auth/register.php">Register</a>
 		{/if}

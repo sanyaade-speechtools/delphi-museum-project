@@ -99,7 +99,7 @@ function addNewUser($username, $password, $email){
 		/*
 			TODO get email working
 		*/
-		//sendRegMail($new_uid, $username, $email);
+		sendRegMail($new_uid, $username, $email);
 		return $new_uid;
 		
 	 }
