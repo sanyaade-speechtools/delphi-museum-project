@@ -55,8 +55,8 @@ function usernameTaken($username){
 }
 
 function sendRegMail($uid, $username, $email){
-	$confirmUrl =	'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']
-								. '?confirm=' . $uid;
+	global $CFG;
+	$confirmUrl = $CFG->wwwroot . '/modules/auth/register.php?confirm=' . $uid;
 	$plaintextmsg = 
 		 'Thank you for registering with Delphi! Click on the link below '
 		 .'or copy and paste the URL into your browser to complete the registration.
@@ -96,9 +96,7 @@ function addNewUser($username, $password, $email){
 		
 		$row = $res->fetchRow();
 		$new_uid = $row['id'];
-		/*
-			TODO get email working
-		*/
+
 		sendRegMail($new_uid, $username, $email);
 		return $new_uid;
 		
