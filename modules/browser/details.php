@@ -58,7 +58,7 @@ if( !empty($catsresult))
 	// Fills out the paths under facets
 	PopulateFacetsFromResultSet( $catsresult, false );
 
-$baseQ = "facetBrowse.php?";
+$baseQ = "../facetBrowser/facetBrowse.php?";
 $catsParam = "cats=";
 if( !$onlyWithImgs )
 	$baseQ.= "wImgs=false&".$catsParam;
