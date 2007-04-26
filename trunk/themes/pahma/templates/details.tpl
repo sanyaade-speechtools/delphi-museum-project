@@ -43,6 +43,8 @@
 			</div>
 
 			<div id="tab2">
+				  {$facetTree}
+					<!--
 				<div id="detail_facetPath">
 					<h2>facet 1</h2>
 					<ul>
@@ -79,6 +81,7 @@
 						</ul>
 					</ul>
 				</div>
+					-->
 			</div>
 		</div>
 		<br class="clearbreak" />

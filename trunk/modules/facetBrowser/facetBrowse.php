@@ -263,7 +263,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 															.$facet->name." has no no matches</code>";
 			} else {
 				$facet->PruneForOutput($numResultsTotal, $catIDs);
-				$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $refineQ, false );
+				$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $refineQ, false, false );
 			}
 		}
 		/*

@@ -49,7 +49,7 @@ require "Facet.inc";
 														.$facet->name." has no no matches</code>";
 		} else {
 			//$facet->PruneForOutput($numResultsTotal, $catIDs);
-			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $baseQ, true );
+			$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", 0, 1, $baseQ, true, false );
 		}
 	}
 	$t->assign("facetTree", $facetTreeOutput);
