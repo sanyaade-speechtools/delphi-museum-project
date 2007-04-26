@@ -74,7 +74,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 
 			$newQuery = "";
 			$wImgsFalse = "?wImgs=false&";
-			if (count($catIDs)-1 < 1) {
+			if((count($catIDs)-1 < 1) && empty($kwds)) {
 				$newQuery = "browser.php";
 				if (!$withImages) {
 					$newQuery .= $wImgsFalse;
@@ -87,10 +87,15 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				} else {
 					$newQuery .= "?";
 				}
-				$newQuery .= "cats=";
-				foreach ($catIDs as $categoryID) {
-					if ($categoryID != $catID) {
-						$newQuery .= (string)$categoryID.",";
+				if( !empty($kwds)) {
+					$newQuery .= "kwds=".$kwds."&";
+				}
+				if( !empty($catIDs)) {
+					$newQuery .= "cats=";
+					foreach ($catIDs as $categoryID) {
+						if ($categoryID != $catID) {
+							$newQuery .= (string)$categoryID.",";
+						}
 					}
 				}
 				$newQuery = substr($newQuery, 0, -1);
