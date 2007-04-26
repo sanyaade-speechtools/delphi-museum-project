@@ -45,9 +45,9 @@ $res->free();
 // Query DB for categories
 $tqCatsForObj =
 	"SELECT c.id, c.parent_id, c.facet_id, c.display_name
-		FROM categories c, obj_cats oc, objects o
-		WHERE oc.obj_id=".$objId." AND c.id=oc.cat_id
-		GROUP BY c.id ORDER BY c.id";
+FROM categories c, obj_cats oc
+WHERE oc.obj_id=".$objId." AND c.id=oc.cat_id
+GROUP BY c.id ORDER BY c.id";
 $t->assign("tqCatsForObj", $tqCatsForObj);
 
 $facetsResults = $mysqli->query("select id, display_name from facets order by id");
