@@ -72,7 +72,7 @@ class TaxoNode {
 	// into the children as prefix strings, rather than hiding altogether.
 	// We may need to mark categories in the taxonomies as hidable or required,
 	// and even specify abbreviations for collapsing. E.g., "US:" before "Kansas"
-	function GenerateHTMLOutput( $class, $depth, $nSiblings, $pageURL, $fFullTree ) {
+	function GenerateHTMLOutput( $class, $depth, $nSiblings, $pageURL, $fFullTree , $fOmitDetails ) {
 		
 		//var to hold concated output
 		$responseOutput = "";
@@ -94,7 +94,8 @@ class TaxoNode {
 
 		// If we are in full tree mode, then close up everything to the roots.
 		// if(!$fFullTree && (($depth == 0)
-		if(($depth == 0)
+		// 
+		if(($depth <= 0)
 			|| (($depth == 1) && ($nSiblings < 3))
 			|| $this->fNoClick)
 			$oc = " open";
@@ -106,15 +107,21 @@ class TaxoNode {
 
 		if( !$this->fHidden || $class == "facet" ) {
 			$responseOutput .= "<div id=\"".$nid."\" class=\"".$class.$oc."\">".$span;
-			if( empty($this->arrChildren) )
-				$responseOutput .= "
-    <img class=\"treeitem\" src=\"images/leafmrkr2.gif\" width=\"9\" height=\"9\" />";
-			else {
-				$responseOutput .= "
-		<img class=\"open ".$class."\" src=\"images/collapsebtn.gif\" width=\"9\" height=\"9\" 
-			onclick=\"toggleVis( ".$nid.");\" />
-		<img class=\"closed ".$class."\" src=\"images/expandbtn.gif\" width=\"9\" height=\"9\" 
-			onclick=\"toggleVis( ".$nid.");\" />";
+			if( $fOmitDetails ) {
+				// Put in a spacer that approximates the images if we are omitting them
+				if( $class != "facet" )
+					$responseOutput .= "<span>-&nbsp;</span>";
+			} else {
+				if( empty($this->arrChildren) )
+					$responseOutput .= "
+			<img class=\"treeitem\" src=\"images/leafmrkr2.gif\" width=\"9\" height=\"9\" />";
+				else {
+					$responseOutput .= "
+			<img class=\"open ".$class."\" src=\"images/collapsebtn.gif\" width=\"9\" height=\"9\" 
+				onclick=\"toggleVis( ".$nid.");\" />
+			<img class=\"closed ".$class."\" src=\"images/expandbtn.gif\" width=\"9\" height=\"9\" 
+				onclick=\"toggleVis( ".$nid.");\" />";
+				}
 			}
 			if( $class == "facet" )
 				$responseOutput .= " $this->name</span>";
@@ -123,7 +130,10 @@ class TaxoNode {
 						</span>";
 			else {
 				$responseOutput .= "<a href=\"".$pageURL;
-				$responseOutput .= $this->id."\"> ".$this->name." (".$this->nResults.")</a>
+				$responseOutput .= $this->id."\"> ".$this->name;
+				if( !$fOmitDetails )
+					$responseOutput .= " (".$this->nResults.")";
+				$responseOutput .= "</a>
 				</span>";
 			}
 		}
@@ -132,7 +142,8 @@ class TaxoNode {
 			//$responseOutput .= "Node: ".$this->name." has ".count($this->arrChildren)." children.";
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
-					$responseOutput .= $child->GenerateHTMLOutput( "treeitem", $depth+1, $nChildren, $pageURL, $fFullTree );
+					$responseOutput .= $child->GenerateHTMLOutput( "treeitem", $depth+1,
+																	$nChildren, $pageURL, $fFullTree, $fOmitDetails );
 			}
 		}
 		if( !$this->fHidden || $class == "facet") {
