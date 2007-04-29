@@ -53,7 +53,15 @@ $t->assign('mids', $CFG->image_medium);
 $t->assign('fulls', $CFG->image_full);
 
 if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
-	$t->assign('username', $_SESSION['username']);
+	$details = getUserDetails($_SESSION['username']);
+	$t->assign('currentUser_loggedIn', TRUE);
+	$t->assign('currentUser_name', $details['username']);
+	$t->assign('currentUser_email', $details['email']);
+	$t->assign('currentUser_id', $details['id']);
+	$_SESSION['id'] = $details['id'];
+	$_SESSION['email'] = $details['email'];	
+} else {
+	$t->assign('currentUser_loggedIn', FALSE);
 }
 
 

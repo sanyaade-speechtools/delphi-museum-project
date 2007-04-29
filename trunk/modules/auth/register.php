@@ -83,7 +83,10 @@ function addNewUser($username, $password, $email){
           ." VALUES ('$username', '$md5pass', '$email', now() )";
 
 	$affected =& $db->exec($sql);
-
+	if (PEAR::isError($affected)) {
+	    die($res->getMessage());
+	}
+	
 	 if($affected) {
 		$sql = "SELECT *
 				FROM user
@@ -97,7 +100,22 @@ function addNewUser($username, $password, $email){
 		$row = $res->fetchRow();
 		$new_uid = $row['id'];
 
+		// Create a default set for the user
+		$name = $row['username'] . "\'s First Set";
+		$description = "This set was created for you automatically when you registered. Click the edit link to change this description.";
+		$policy = "private";
+		$owner_id = $row['id'];
+		$sql = 'INSERT INTO sets ( name, description, policy, owner_id, creation_time )'
+		      ." VALUES ('$name', '$description', '$policy', '$owner_id', now() )";
+		
+		$affected =& $db->exec($sql);
+		if (PEAR::isError($affected)) {
+		    die($res->getMessage());
+		}
+		
+		// Send confirmation email
 		sendRegMail($new_uid, $username, $email);
+		
 		return $new_uid;
 		
 	 }

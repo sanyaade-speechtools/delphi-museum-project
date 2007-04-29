@@ -30,13 +30,13 @@ function getRoles(){
 }
 
 
-function sendDelphiMail($username, $email, $subj, $plaintextmsg, $htmlmsg){
+function sendDelphiMail($nameTo, $emailTo, $subj, $plaintextmsg, $htmlmsg, $emailFrom = "delphi@hearstmuseum.berkeley.edu", $nameFrom = "Delphi"){
 	require_once 'XPM/XPM3_MAIL.php';
 	
 	$mail = new XPM3_MAIL;
 	$mail->Delivery('local');
-	$mail->From('delphi@hearstmuseum.berkeley.edu', 'Delphi');
-	$mail->AddTo($email, $username);
+	$mail->From($emailFrom, $nameFrom);
+	$mail->AddTo($emailTo, $nameTo);
 	$mail->Text($plaintextmsg);
 	$mail->Html($htmlmsg);
 	return $mail->Send($subj);

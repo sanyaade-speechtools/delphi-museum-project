@@ -5,7 +5,6 @@ require_once("../../libs/env.php");
 // If there is no id param in the url, send to object not found.
 if( isset( $_GET['id'] ) ) {
 	$objId = $_GET['id'];
-	$objImg = $_GET['img'];
 } else {
 	$t->display('objectNotFound.tpl');
 	die;
@@ -26,12 +25,11 @@ if ( $res->numRows() < 1 ){
 
 // Assign vars to template
 while ($row = $res->fetchRow()) {
-    $t->assign('id', $row['id']);
-    $t->assign('objnum', $row['objnum']);
-    $t->assign('name', $row['name']);
-    $t->assign('description', $row['description']);
-    $t->assign('img_path', $row['img_path']);
-	$t->assign('img', $objImg);
+    $t->assign('detail_id', $row['id']);
+    $t->assign('detail_objnum', $row['objnum']);
+    $t->assign('detail_name', $row['name']);
+    $t->assign('detail_description', $row['description']);
+    $t->assign('detail_img_path', $row['img_path']);
 }
 
 // Free the result
