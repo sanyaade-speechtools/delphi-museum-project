@@ -1,18 +1,16 @@
 <?
 
 require_once("../../libs/env.php");
-/*
-// If there is no id param in the url, send to object not found.
-if( isset( $_GET['id'] ) ) {
-	$objId = $_GET['id'];
-	$img = $_GET['img'];
-} else {
-	$t->display('objectNotFound.tpl');
-	die;
-}
 
-// Query DB
-$sql = "SELECT * FROM objects o WHERE o.id = $objId LIMIT 1";
+/**********************************
+GET USER'S SETS
+**********************************/
+
+
+/*
+	TODO Add Count of objects within the set
+*/
+$sql = "SELECT * FROM sets WHERE owner_id = '". $_SESSION['id'] . "'" ;
 $res =& $db->query($sql);
 if (PEAR::isError($res)) {
     die($res->getMessage());
@@ -20,23 +18,53 @@ if (PEAR::isError($res)) {
 
 // If nothing is found, send to object not found.
 if ( $res->numRows() < 1 ){
-	$t->display('objectNotFound.tpl');
+	$t->assign('heading', "Error");
+	$t->assign('message', "You don't have any sets!");	
+	$t->display('error.tpl');
 	die;
 }
 
-// Assign vars to template
+$sets = array();
+
 while ($row = $res->fetchRow()) {
-    $t->assign('id', $row['id']);
-    $t->assign('objnum', $row['objnum']);
-    $t->assign('name', $row['name']);
-    $t->assign('description', $row['description']);
-    $t->assign('img', $img);
+	
+	$set = array(	'sid' => $row['id'], 
+					'setName' => $row['name'], 
+					'setDescription' => $row['description']
+				);
+	
+	array_push($sets, $set);
+    
 }
 
 // Free the result
 $res->free();
-*/
+
+
 // Display template
+$t->assign('sets', $sets);
 $t->display('mysets.tpl');
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

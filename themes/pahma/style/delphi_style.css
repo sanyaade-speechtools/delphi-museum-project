@@ -732,18 +732,15 @@ code.hidden {
 	float: left;
 	width:360px;
 	
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
-	height:auto !important;
-	height: 600px;
 	margin-top:-5;
 
 }
 
 #viewset_thumbnails .viewset_boxHeader{
-	text-align:right;
+	margin-top:30px;
 	padding:0px;
 	width:354px;
+	
 }
 
 
@@ -780,7 +777,6 @@ code.hidden {
 
 #viewset_sortableThumbs{
 	width: 380px;
-	height:380px;
 }
 
 .viewset_sorthelper{
@@ -804,9 +800,36 @@ code.hidden {
 }
 
 #viewset_sendSetForm form{
-	width:75%;
+	width:80%;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+#viewset_sendSetForm form label, #viewset_sendSetForm form input {
+	display: block;
+	width: 150px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#viewset_sendSetForm form label {
+	text-align: right;
+	width: 150px;
+	padding-right: 10px;
+}
+
+#viewset_sendSetForm form br {
+	clear: left;
+}
+
+#viewset_sendSetForm form label.error{
+	color: #F00;
+	clear: both;
+	font-style: italic;
+	font-size: .9em;
+	margin-left:160px;
+	width:200px;
+	text-align: left;
 }
 
 /* ------------------------------------------------------- *

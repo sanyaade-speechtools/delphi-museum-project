@@ -84,4 +84,21 @@ function checkLogin(){
 
 }
 
+function getUserDetails($userName){
+	global $db;
+	// Query DB
+	$sql = "SELECT * FROM user WHERE username = '$userName'";
+	$res =& $db->query($sql);
+	if (PEAR::isError($res)) {
+	    die($res->getMessage());
+	}
+	
+	$details = $res->fetchRow();
+
+	// Free the result
+	$res->free();
+
+	return $details;
+}
+
 ?>

@@ -1,24 +1,11 @@
-function loadObjDetails(id,img){
+function loadObjDetails(id){
 	$(".viewset_thumbnail").removeClass("viewset_thumbnailSelected")
 	$("#thumb_" + id).addClass("viewset_thumbnailSelected");
-	$("#viewset_objectDetails").load("api_loadDetails.php?id=" + id + "&img=" + img);
+	$("#viewset_objectDetails").load("api_loadDetails.php?id=" + id);
 }
 
 $(document).ready(
 	function () {
-		/*$('#viewset_sortableThumbs').Sortable(
-			{
-				accept : 		'viewset_sortableitem',
-				helperclass : 	'viewset_sorthelper',
-				activeclass : 	'viewset_sortableactive',
-				hoverclass : 	'viewset_sortablehover',
-				opacity: 		0.8,
-				fx:				200,
-				revert:			true,
-				floats:			true,
-				tolerance:		'pointer'
-			}
-		)*/
 		$(".editSetName").editInPlace({
 			url: "api_updateSetName.php",
 			params: "ajax=yes"
@@ -37,7 +24,6 @@ $(document).ready(
 		});
 		$(".addButton a").click(function(){
 			$(this).load("api_addButtonPress.php");
-		});	
-		loadObjDetails(4,"0002");
+		});		
 	}
 );

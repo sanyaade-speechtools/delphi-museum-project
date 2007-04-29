@@ -13,22 +13,20 @@
 <body>
 <div id="header">
 	<div id="logo"><h1><a href="{$wwwroot}/modules/frontpage/frontpage.php">Delphi</a></h1></div>
-	<!--
+	
 	<div id="search">
-		<form action="" method="post">
-			<input type="text" name="search" maxlength="40">
-			<input type="submit" name="submit_search" value="Search">
+		<form action="{$wwwroot}/modules/facetBrowser/facetBrowse.php" method="get">
+			<input type="text" name="kwds" maxlength="40">
+			<input type="submit" value="Search">
 		</form>
 	</div>
-	-->
-	<!-- <div id="user"><a href="#">Register</a> &middot;<a href="#">Sign in</a> | Welcome <strong>USER</strong> &middot; <a href="#">My Account</a> &middot; <a href="#">Sign out</a></div> -->
+	
 	<div id="user">
-		{if $username }
-			Welcome <strong><a href="{$wwwroot}/modules/auth/profile.php">{$username}</a></strong> (<a href="{$wwwroot}/modules/auth/logout.php">Logout</a>)
+		{if $currentUser_loggedIn }
+			Welcome <strong>{$currentUser_name}</strong> | <a href="{$wwwroot}/modules/auth/profile.php">My Account</a> &middot; <a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> &middot; <a href="{$wwwroot}/modules/auth/logout.php">Sign Out</a>
 		{else}
-			<a href="{$wwwroot}/modules/auth/login.php">Login</a> or <a href="{$wwwroot}/modules/auth/register.php">Register</a>
+			<a href="{$wwwroot}/modules/auth/login.php">Sign In</a> or <a href="{$wwwroot}/modules/auth/register.php">Register</a>
 		{/if}
 	</div>
-	<!-- <div id="sets"><a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a></div> -->
 	<br class="clearbreak" />
 </div>
