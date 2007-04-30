@@ -27,7 +27,7 @@
 					<div class="viewset_thumbnail{if $smarty.section.setObj.first} viewset_thumbnailSelected{/if}" id="thumb_{$objects[setObj].id}">
 						<img src="{$thumbs}/{$objects[setObj].img_path}" onclick="loadObjDetails({$objects[setObj].id}); return false;" width="70px" height="70px"/>
 						<div class="addButton">
-							<a href="addToSet.php?height=270&width=400" class="thickbox" title="Add this object to a set"><img src="{$themeroot}/images/addButton.gif"/></a>
+							<a href="addToSet.php?height=270&width=400&oid={$objects[setObj].id}" class="thickbox" title="Add this object to a set"><img src="{$themeroot}/images/addButton.gif"/></a>
 						</div>
 					</div>
 					{/section}

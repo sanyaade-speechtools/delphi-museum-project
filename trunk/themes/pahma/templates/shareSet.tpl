@@ -24,9 +24,7 @@
 		<textarea id="message" name="message" rows="5" cols="25"></textarea>
 		<br/><br/>
 		
-		<a class="closer" href="#" style="float:left;">Cancel</a>
-		
-		
+		<a class="closer" href="#" style="float:left;">Cancel</a> 		
 		<input type="submit" value="Send Email" />
 
 		<input type="hidden" name="submitted" value="True" />

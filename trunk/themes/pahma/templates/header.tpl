@@ -30,3 +30,8 @@
 	</div>
 	<br class="clearbreak" />
 </div>
+<!--
+<div id="messageBox">
+	<p>This is a warning!</p>
+</div>
+-->
