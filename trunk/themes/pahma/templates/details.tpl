@@ -1,8 +1,7 @@
 {include file="header.tpl"}
 
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.tabs.pack.js"></script>
-<script type="text/javascript" src="{$wwwroot}/themes/pahma/scripts/tabs.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
 
 <div id="content">
 	<h2 id="detail_name">{$name}</h2>
@@ -14,6 +13,9 @@
 		<div id="detail_imageColumn">
 			<div id="detail_image">
 				<img src="{$mids}/{$img_path}" />
+				<div style="position:relative;width=350px;">
+					<a href="{$wwwroot}/modules/sets/addToSet.php?height=270&width=400&oid={$id}" class="thickbox" style="position:absolute;left:330px;" title="Add this object to a set">Add to Set</a>
+				</div>
 			</div>
 			<div id="detail_thumbnails">
 				<!--
@@ -30,59 +32,15 @@
 				-->
 			</div>
 		</div>
-		<!--<br class="clearbreak" />-->
 		<div id="detail_information">
-			<ul>
-				<li><a href="#tab1">Description</a></li>
-				<li><a href="#tab2">Details</a></li>
-			</ul>
-
-			<div id="tab1">
-				<!--<h3>Description</h3>-->
+			<h3>Description</h3>
+			{if $description != ""}
 				<p>{$description}</p>
-			</div>
-
-			<div id="tab2">
-				  {$facetTree}
-					<!--
-				<div id="detail_facetPath">
-					<h2>facet 1</h2>
-					<ul>
-						<li>root</li>
-						<ul>
-							<li>one-deep</li>
-							<ul>
-								<li>two-deep</li>
-							</ul>
-						</ul>
-					</ul>
-		
-					<h2>facet 2</h2>
-					<ul>
-						<li>root</li>
-						<ul>
-							<li>one-deep</li>
-							<ul>
-								<li>two-deep</li>
-							</ul>
-						</ul>
-					</ul>
-		
-					<h2>...</h2>
-		
-					<h2>facet n</h2>
-					<ul>
-						<li>root</li>
-						<ul>
-							<li>one-deep</li>
-							<ul>
-								<li>two-deep</li>
-							</ul>
-						</ul>
-					</ul>
-				</div>
-					-->
-			</div>
+			{else}
+				<p>None available</p>
+			{/if}
+			<h3>Categories</h3>
+			{$facetTree}
 		</div>
 		<br class="clearbreak" />
 	</div>
