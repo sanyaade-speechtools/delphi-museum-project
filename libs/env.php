@@ -16,6 +16,7 @@ ini_set('display_errors', "On");
 require_once('../../config.php');
 
 // Include pear database handler, smarty
+ini_set('include_path',ini_get('include_path').":$CFG->dirroot/libs/pear/:");
 require_once "$CFG->dirroot/libs/pear/MDB2.php";
 require_once "$CFG->dirroot/libs/smarty/Smarty.class.php";
 
