@@ -54,7 +54,36 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 	$fFirstName = true;
 	$retStr = "";
 	if( !empty($kwds) ) {
+		$retStr .= "<em><span class=\"results_breadcrumbFacet\">Keywords</span></em>:";
 		$retStr .= "\"".$kwds."\"";
+
+		$newQuery = "";
+		$wImgsFalse = "?wImgs=false&";
+		if(empty($catIDs)) {
+			$newQuery = "browser.php";
+			if (!$withImages) {
+				$newQuery .= $wImgsFalse;
+				$newQuery = substr($newQuery, 0, -1);
+			}
+		} else {
+			$newQuery = "facetBrowse.php";
+			if (!$withImages) {
+				$newQuery .= $wImgsFalse;
+			} else {
+				$newQuery .= "?";
+			}
+			if( !empty($catIDs)) {
+				$newQuery .= "cats=";
+				foreach ($catIDs as $categoryID) {
+					$newQuery .= (string)$categoryID.",";
+				}
+			}
+			$newQuery = substr($newQuery, 0, -1);
+		}
+		$retStr .= "<a href=\"".$newQuery."\"><sup class=\"results_removeBreadcrumb\">(x)</sup></a>";
+
+
+
 		$fFirstName = false;
 	}
 	foreach( $catIDs as $catID ) {
@@ -90,7 +119,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				if( !empty($kwds)) {
 					$newQuery .= "kwds=".$kwds."&";
 				}
-				if( !empty($catIDs)) {
+				if( count($catIDs)-1 != 0) {
 					$newQuery .= "cats=";
 					foreach ($catIDs as $categoryID) {
 						if ($categoryID != $catID) {
@@ -156,7 +185,33 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 			$pageNum = 1*$_GET['page'];
 
 		// We have to set all the nResults values. Get the counts first
-		$qual = $onlyWithImgs?" (with images)":"";
+		//$qual = $onlyWithImgs?" (with images)":"";
+
+		$requery = "facetBrowse.php?";
+		$newQuery = "";
+		if( !empty($kwds)) {
+			$newQuery .= "kwds=".$kwds."&";
+		}
+		if( !empty($catIDs)) {
+			$newQuery .= "cats=";
+			foreach ($catIDs as $categoryID) {
+				$newQuery .= (string)$categoryID.",";
+			}
+		}
+
+		if( empty( $_GET['wImgs'] )) {
+			$qual = " with images ";
+
+			$requery .= "wImgs=false&";
+			$requery .= $newQuery;
+			$requery = substr($requery, 0, -1);
+
+			$qual = "<a href=\"$requery\">(Also show objects without images)</a>";
+		} else {
+			$requery .= $newQuery;
+			$requery = substr($requery, 0, -1);
+			$qual = "<a href=\"$requery\">(Show only objects with images)</a>";
+		}
 
 		// If kwds is non-empty, we put the wImgs constraint in that subquery
 		if( $onlyWithImgs && empty($kwds)) {
@@ -283,6 +338,9 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 			$imageOutput .= "<div class=\"results_result\">";
 			$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
 			$pathToDetails = $CFG->wwwroot . "/modules/browser/details.php?id=" . $row['id'];
+			if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false')) {
+				$pathToDetails .= "&wImgs=false";
+			}
 			$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\" alt=\"".$row['name']."\"";
 			$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
 
@@ -320,6 +378,8 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 	$t->assign("query", buildStringForQueryTerms($kwds, $catIDs, $onlyWithImgs));
 	$t->assign("facetTree", $facetTreeOutput);
 	$t->assign("imageOutput", $imageOutput);
+	$startOver = "<strong><a href=\"browser.php\">Start Over</a></strong>";
+	$t->assign("startOver", $startOver);
 	$t->display("results.tpl");
 	die;
 
