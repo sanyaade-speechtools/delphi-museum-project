@@ -29,11 +29,7 @@
 		<div id="front_examples">
 			<h2>Featured Objects</h2>
 			{section name=examples loop=$objects}
-			<div class="front_example">
-				<div class="front_exampleThumbnail">
-					<a href="{$wwwroot}/modules/browser/details.php?id={$objects[examples].id}"><img src="{$thumbs}/{$objects[examples].img_path}" alt="{$objects[examples].name}" /></a>
-				</div>
-			</div>
+				{$objects[examples]}
 			{/section}
 		</div>
 		<br class="clearbreak" />

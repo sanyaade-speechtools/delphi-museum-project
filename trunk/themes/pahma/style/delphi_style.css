@@ -242,7 +242,6 @@ body {
 #front_examples {
 	float: right;
 	
-
 	width: 128px;
 
 	margin: 24px 0 0 8px;
@@ -254,35 +253,33 @@ body {
 	text-align: center;
 }
 
-.front_example {
-	/* float: left; */
-	margin: 4px;
-}
-
-.front_exampleName {
-}
-
-.front_exampleThumbnail {
+.front_example { /* 128x128 */
 	width: 120px;
-	
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 120px;
-	height:auto !important;
-	height: 120px;
+	min-height: 144px;
+	height: auto !important;
+	height: 144px;
 	
-	margin: 0;
+	margin: 0 4px 10px 4px;
 	padding: 0;
+	border-width: 0;
 	
-	/* background-color: #61572f; */
 	background-color: #e9e3c8;
+	/* background-color: #61572f; */
 	color: #ffffff;
 	text-align: center;
 }
-.front_exampleThumbnail img {
+.front_example img {
 	width: 120px;
-	height: 120px;
-	border-width: 1px;
+	height: 120px;	
+	border-width: 0px;
 }
+
+.front_exampleLabel {
+	font-weight: normal;
+	padding-bottom: 4px;
+}
+
 
 /* ------------------------------------------------------- *
  * - BROWSER --------------------------------------------- *
