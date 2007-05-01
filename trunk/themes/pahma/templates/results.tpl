@@ -12,6 +12,9 @@
 
 	<div id="inner_content">
 		<div id="results_innerContentTop">
+			<div>
+				{$startOver}
+			</div>
 			<div id="results_breadcrumbs">
 				Find: {$query}
 			</div>
