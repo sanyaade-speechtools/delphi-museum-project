@@ -30,13 +30,32 @@ if ( $res->numRows() < 1 ){
 	die;
 }
 
+$mid_dir = $CFG->dir_image_medium;
+$zoom_dir = $CFG->dir_image_zoom;
+if( empty($mid_dir) || empty($zoom_dir) )
+	die("Paths to images not configured!");
+
 // Assign vars to template
 while ($row = $res->fetchRow()) {
     $t->assign('id', $row['id']);
     $t->assign('objnum', $row['objnum']);
     $t->assign('name', $row['name']);
-    $t->assign('description', $row['description']);
-    $t->assign('img_path', $row['img_path']);
+		$t->assign('description', $row['description']);
+		$relPath = $row['img_path'];
+		$mid_path = $mid_dir.'/'.$relPath;
+		$rel_zoom_dir = substr($relPath, 0, strlen($relPath)-4);
+		$zoom_img_dir = $zoom_dir.'/'.$rel_zoom_dir;
+		if( is_dir($zoom_img_dir) )
+			$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
+		else
+			$t->assign('bad_zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
+		// We always set the image path so we can fall back from the flash app
+		if( is_file($mid_path) )
+			$t->assign('img_path', $CFG->image_medium.'/'.$relPath);
+		else {
+			$t->assign('img_path', $CFG->no_image_medium);
+			$t->assign('bad_img_path', $CFG->image_medium.'/'.$relPath);
+		}
 }
 
 // Free the result
