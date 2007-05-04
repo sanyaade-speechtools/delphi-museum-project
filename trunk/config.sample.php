@@ -67,7 +67,10 @@ $CFG->wwwroot   = 'http://example.com/delphi';
 //    $CFG->dirroot = '/var/www/html/delphi';     // Redhat Linux
 //    $CFG->dirroot = '/home/example/public_html/delphi'; // Cpanel host
 
-$CFG->dirroot   = '/home/example/public_html/delphi';
+$CFG->dirroot           = '/home/example/public_html/delphi';
+$CFG->dir_image_thumb   = '/home/example/public_html/objimages/thumbs';
+$CFG->dir_image_medium  = '/home/example/public_html/objimages/mids';
+$CFG->dir_image_zoom    = '/home/example/public_html/objimages/zooms';
 
 
 //=========================================================================
@@ -87,10 +90,15 @@ $CFG->theme   = 'pahma';
 // Do not include a trailing slash!
 
 
-$CFG->image_thumb   = 'http://example.com/delphi/objimages/thumbs';
-$CFG->image_thumb_square   = 'http://example.com/delphi/objimages/thumbs_square';
-$CFG->image_medium   = 'http://example.com/delphi/objimages/mids';
-$CFG->image_full   = 'http://example.com/delphi/objimages/fulls';
+$CFG->image_thumb        = 'http://example.com/delphi/objimages/thumbs';
+$CFG->image_thumb_square = 'http://example.com/delphi/objimages/thumbs_square';
+$CFG->image_medium       = 'http://example.com/delphi/objimages/mids';
+$CFG->image_full         = 'http://example.com/delphi/objimages/fulls';
+$CFG->image_zoom         = 'http://example.com/delphi/trunk/objimages/zooms';
+$CFG->no_image_thumb     = 'http://example.com/delphi/trunk/objimages/thumbs/noimg.jpg';
+$CFG->no_image_thumb     = 'http://example.com/objimages/thumbs/noimg.jpg';
+$CFG->no_image_thumb_square = 'http://example.com/delphi/trunk/objimages/thumbs_square/noimg.jpg';
+$CFG->no_image_medium    = 'http://example.com/delphi/trunk/objimages/mids/noimg.jpg';
 
 
 //=========================================================================
