@@ -1,4 +1,5 @@
 <?
+session_cache_limiter("public");		// enable caching of this page
 require_once("../../libs/env.php");
 
 include("dbconnect.php");
