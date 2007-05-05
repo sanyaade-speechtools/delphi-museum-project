@@ -98,13 +98,14 @@ class TaxoNode {
 		// 
 		if(($depth <= 0)
 			|| ($nSiblings == 1)
-			|| (($depth <= 1) && ($nSiblings <= 3))
+			|| (($depth <= 1) && ($nSiblings < 3))
 			|| $this->fNoClick) {
 			$oc = " open";
 			$doChildren = ($nChildren > 0);
 			} else {
 			$oc = " closed";
-			$doChildren = $fFullTree && ($nChildren > 0);
+			// If a full tree, of if this is hidden, and we have children, recurse
+			$doChildren = ($this->fHidden || $fFullTree) && ($nChildren > 0);
 			}
 
 		// Distinguish between facet and node, since there might be ID overlap
