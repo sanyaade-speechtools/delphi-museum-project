@@ -16,8 +16,8 @@ ini_set('display_errors', "On");
 require_once('../../config.php');
 
 // Include pear database handler, smarty
-ini_set('include_path',ini_get('include_path').":$CFG->dirroot/libs/pear/:");
-require_once "$CFG->dirroot/libs/pear/MDB2.php";
+ini_set('include_path',"$CFG->dirroot\libs\pear\:".ini_get('include_path'));
+require_once "MDB2.php";
 require_once "$CFG->dirroot/libs/smarty/Smarty.class.php";
 
 // Connect to the database
@@ -42,8 +42,9 @@ $t->compile_dir = "$CFG->dirroot/libs/smarty/compile/";
 $t->cache_dir = "$CFG->dirroot/libs/smarty/cache/";
 
 // Change comment on these when you're done developing to improve performance
-//$t->force_compile = true;
-//$t->caching = true;
+$t->force_compile = true;
+$t->caching = true;
+$t->cache_modified_check = true;
 
 // Assign any global smarty values here.
 $t->assign('themeroot', "$CFG->wwwroot/themes/$CFG->theme");
