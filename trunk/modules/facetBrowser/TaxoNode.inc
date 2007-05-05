@@ -92,15 +92,20 @@ class TaxoNode {
 		else
 			$span = "<span>";
 
+		$nChildren = count($this->arrChildren);
 		// If we are in full tree mode, then close up everything to the roots.
 		// if(!$fFullTree && (($depth == 0)
 		// 
 		if(($depth <= 0)
-			|| (($depth == 1) && ($nSiblings < 3))
-			|| $this->fNoClick)
+			|| ($nSiblings == 1)
+			|| (($depth <= 1) && ($nSiblings <= 3))
+			|| $this->fNoClick) {
 			$oc = " open";
-		else
+			$doChildren = ($nChildren > 0);
+			} else {
 			$oc = " closed";
+			$doChildren = $fFullTree && ($nChildren > 0);
+			}
 
 		// Distinguish between facet and node, since there might be ID overlap
 		$nid = (($class == "facet")?"F_":"N_").$this->id;
@@ -112,7 +117,7 @@ class TaxoNode {
 				if( $class != "facet" )
 					$responseOutput .= "<span>-&nbsp;</span>";
 			} else {
-				if( empty($this->arrChildren) )
+				if( !$doChildren )
 					$responseOutput .= "
 			<img class=\"treeitem\" src=\"images/leafmrkr2.gif\" width=\"9\" height=\"9\" />";
 				else {
@@ -137,8 +142,7 @@ class TaxoNode {
 				</span>";
 			}
 		}
-		$nChildren = count($this->arrChildren);
-		if($nChildren > 0) {
+		if($doChildren) {
 			//$responseOutput .= "Node: ".$this->name." has ".count($this->arrChildren)." children.";
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
