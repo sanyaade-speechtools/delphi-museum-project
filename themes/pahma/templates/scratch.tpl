@@ -1,10 +1,29 @@
-{include file="header.tpl"}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.inplace.js"></script>
-<script type="text/javascript" src="{$themeroot}/scripts/scratch.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
-<p id="setName___1" class="editSetName">This is the set name</p>
-<p id="setDescription___1" class="editSetDescription">This is the set description</p>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-{include file="footer.tpl"}
+<link rel="stylesheet" href="http://192.168.2.26/delphi/trunk/themes/pahma/style/style.css" type="text/css" />
+
+<title></title>
+</head>
+
+<body>
+
+	<script type="text/javascript" src="http://192.168.2.26/delphi/trunk/libs/jquery/jquery-1.1.2.pack.js"></script>
+	<script type="text/javascript" src="http://192.168.2.26/delphi/trunk/libs/jquery/jquery.ie-png-hack-c.js"></script>
+
+	
+<div id="header">
+
+</div>
+<div id="content">
+
+</div>
+
+<div id="footer"></div>
+</body>
+
+</html>
