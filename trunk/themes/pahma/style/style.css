@@ -1,0 +1,150 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-size:1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ------------------------------------------------------- *
+ * - Front Page ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+#navBarContent, #headerBarContent{
+	width:760px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#headerBar{
+	background-image: url(../images/headerBar.png);
+	background-repeat: repeat-x;
+	min-height:100px;
+	position: absolute;
+	width:100%;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 96px;
+	height: auto !important;
+	height: 96px;
+}
+
+#headerBarContent{
+	position:relative;
+	margin-top:17px;
+}
+
+#headerBarContent img{
+	position:absolute;
+	left:-26px;
+}
+
+#loginNav{
+	position:absolute;
+	top:60px;
+	right:0px;
+	font-size:.8em;
+	color:#61615f;
+}
+
+#loginNav a{
+	color:#61615f;
+	text-decoration: none;
+}
+
+#loginNav a:hover{
+	color:#61615f;
+	text-decoration: underline;
+}
+
+#loginNav span{
+	font-weight: bold;
+	color:#0085c9;
+}
+
+
+#navBar{
+	background-image: url(../images/brownBar.png);
+	background-repeat: repeat-x;
+	min-height:100px;
+	position: absolute;
+	width:100%;
+	top:96px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 38px;
+	height: auto !important;
+	height: 38px;
+}
+
+#navBarContent{
+	margin: 8px auto 0px auto;
+	position:relative;
+	color:#FFF;
+}
+
+.navLink{
+	margin-right:15px;
+	font-size:1.2em;
+	letter-spacing: .02em;
+}
+
+.navLink a{
+	color:#FFF;
+	text-decoration: none;
+}
+
+.navLink a:hover{
+	color:#FFF;
+	text-decoration: underline;
+}
+
+#navSearchBox{
+	position:absolute;
+	right:0px;
+	top:0px;
+	font-size:.9em;
+	color:#FFF;
+}
+
+#navSearchBoxInput{
+	font-size:.9em;
+	font-weight: bold;
+	color:#c3c3c3;
+	padding:2px 2px 2px 4px;
+	border:1px solid #603913;
+
+}
+
+#navSearchBoxButton{
+	font-size:.9em;
+	padding:2px;
+	width:53px;
+	margin:0px;
+	background:none;
+	cursor:pointer;
+	border:0px solid #603913;
+	color:#FFF;
+	background-image: url(../images/searchButtonBackground.png);
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 21px;
+	height: auto !important;
+	height: 21px;
+	
+}
+
+#navSearchBox a{
+	color:#FFF;
+	text-decoration: none;
+}
+
+#navSearchBox a:hover{
+	color:#FFF;
+	text-decoration: underline;
+}
+
+
+
+
+
+
