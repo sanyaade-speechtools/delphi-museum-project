@@ -1,6 +1,6 @@
 	</div>
 	<div id="footer">
-		<a href="#">About</a> | <a href="#">Hearst Museum</a> | <a href="#">Delphi</a>
+		<a href="{$wwwroot}/modules/about/about.php">About</a> | <a href="http://hearstmuseum.berkeley.edu/">Hearst Museum</a> | <a href="{$wwwroot}/modules/about/about.php">Delphi</a>
 	</div>
 </div>
 
