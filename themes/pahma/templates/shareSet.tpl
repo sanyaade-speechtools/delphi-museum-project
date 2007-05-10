@@ -5,7 +5,6 @@
 <script type="text/javascript" src="{$themeroot}/scripts/shareSet.js"></script>
 
 <div id="viewset_sendSetForm">
-	<ul id="messageBox"></ul>
 	<p>To share this set, just fill out this form and we'll email them a link</p>
 	<form id="shareSetForm" action="{$wwwroot}/modules/sets/shareSet.php" method="post" accept-charset="utf-8">
 		
