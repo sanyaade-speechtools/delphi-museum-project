@@ -4,7 +4,7 @@ require_once("../../libs/env.php");
 
 // Query DB
 $sql = "SELECT o.id, o.objnum, o.name, o.img_path FROM objects o, set_objs so
-WHERE so.set_id=1 AND so.obj_id=o.id ORDER BY RAND() LIMIT 12";
+WHERE so.set_id=1 AND so.obj_id=o.id ORDER BY RAND() LIMIT 6";
 
 
 $res =& $db->query($sql);
@@ -67,7 +67,7 @@ $res->free();
 $t->assign('objects', $objects);
 
 // Display template
-$t->display('frontpage.tpl');
+$t->display('frontpage/frontpage.tpl');
 
 //Die here or additional PHP lines will be excecuted.
 die();
