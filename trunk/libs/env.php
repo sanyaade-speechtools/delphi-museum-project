@@ -43,8 +43,8 @@ $t->cache_dir = "$CFG->dirroot/libs/smarty/cache/";
 
 // Change comment on these when you're done developing to improve performance
 $t->force_compile = true;
-$t->caching = true;
-$t->cache_modified_check = true;
+//$t->caching = true;
+//$t->cache_modified_check = true;
 
 // Assign any global smarty values here.
 $t->assign('themeroot', "$CFG->wwwroot/themes/$CFG->theme");
@@ -52,7 +52,7 @@ $t->assign('wwwroot', $CFG->wwwroot);
 $t->assign('thumbs', $CFG->image_thumb);
 $t->assign('thumbs_square', $CFG->image_thumb_square);
 $t->assign('mids', $CFG->image_medium);
-$t->assign('zooms', $CFG->image_zoom);
+//$t->assign('zooms', $CFG->image_zoom);
 
 if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$details = getUserDetails($_SESSION['username']);

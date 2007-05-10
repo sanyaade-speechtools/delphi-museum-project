@@ -5,17 +5,42 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Used for styling grey help text that appears in form fields. */
+label.overlabel-apply {
+	position:absolute;
+	top:5px;
+	left:8px;
+	z-index:1;
+	font-size:.9em;
+	font-weight: bold;
+	color:#c3c3c3;
+}
+
+h1{
+	font-size:1.7em;
+	color:#0094df;
+	font-weight: normal;
+	margin: 10px 0px 10px 0px;
+	padding: 0px;
+}
+
+h2{
+	font-size:1.4em;
+	color:#0094df;
+	font-weight: normal;
+	margin: 10px 0px 10px 0px;
+	padding: 0px;
+}
 
 /* ------------------------------------------------------- *
- * - Front Page ------------------------------------------ *
+ * - Header     ------------------------------------------ *
  * ------------------------------------------------------- */
 
-#navBarContent, #headerBarContent{
+#navBarContent, #headerBarContent, #content, #footer{
 	width:760px;
 	margin-left:auto;
 	margin-right:auto;
 }
-
 
 #headerBar{
 	background-image: url(../images/headerBar.png);
@@ -66,7 +91,6 @@ body{
 #navBar{
 	background-image: url(../images/brownBar.png);
 	background-repeat: repeat-x;
-	min-height:100px;
 	position: absolute;
 	width:100%;
 	top:96px;
@@ -107,9 +131,6 @@ body{
 }
 
 #navSearchBoxInput{
-	font-size:.9em;
-	font-weight: bold;
-	color:#c3c3c3;
 	padding:2px 2px 2px 4px;
 	border:1px solid #603913;
 
@@ -142,6 +163,856 @@ body{
 	color:#FFF;
 	text-decoration: underline;
 }
+
+/* ------------------------------------------------------- *
+ * - Messages -------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#messageBox{
+	border: 1px solid #999;
+	width: 600px;
+	height:40px;
+	margin:5px auto 5px auto;
+	padding:0px;
+	color:#000;
+	background-color: yellow;
+	text-align:center;
+}
+
+
+/* ------------------------------------------------------- *
+ * - Content     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+#contentContainer{
+	position: relative;
+	top:134px;
+	width:100%;
+}
+
+#content{
+	position:relative;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 134px;
+	height: auto !important;
+	height: 134px;
+}
+
+.clearbreak {
+	clear: both;
+	margin: 0;
+	font-size: 0;
+}
+
+/* ------------------------------------------------------- *
+ * - Footer     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+
+#footer{
+	clear:both;
+	text-align:center;
+	padding-top:30px;
+	margin-top:10px;
+	font-size: .8em;
+	color: #cdcdc9;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 60px;
+	height: auto !important;
+	height: 60px;
+}
+
+
+/* ------------------------------------------------------- *
+ * - FRONT ----------------------------------------------- *
+ * ------------------------------------------------------- */
+#front_tongue{
+	position:absolute;
+	left:0px;
+	z-index: 1;
+	background-image: url(../images/tongue.gif);
+	width:246px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 240px;
+	height:auto !important;
+	height: 240px;
+	padding: 18px 25px 10px 25px;
+}
+
+#front_tongue h1, #front_tongue p, #front_tongue a{
+	color:#FFF;
+}
+
+#front_tongue p{
+	font-size:.8em;
+}
+
+
+#front_featuredObjects{
+	position:absolute;
+	left:15px;
+	top:280px;
+	width:253px;
+	padding: 0px;
+}
+
+.front_example{
+	float:left;
+	width:95px;
+	border: 1px solid #cdcdc9;
+	margin-right:9px;
+	margin-bottom:9px;
+	padding:8px 8px 4px 8px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 130px;
+	height:auto !important;
+	height: 130px;
+}
+
+.front_example img{
+	width:95px;
+	height:95px;
+	border:0px;
+}
+
+.front_exampleLabel{
+	font-size:.9em;
+	width:100%;
+	text-align:center;
+}
+
+.front_exampleLabel a, .front_exampleLabel abbr{
+	text-decoration: none;
+    border-style: none;
+	color:#61615f;
+
+}
+
+#front_greyCol{
+	float:right;
+	width:425px;
+	min-height: 400px;
+	height:auto !important;
+	height: 400px;
+	background-color:#f4f4f4;
+	padding-left:70px;
+	padding-bottom:40px;
+}
+
+.front_featuredSetBox{
+	position:relative;
+	float:left;
+	border: 1px solid #cdcdc9;
+	padding: 8px 8px 0px 8px;
+	margin-right:17px;
+	margin-bottom:17px;
+	width:173px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 240px;
+	height:auto !important;
+	height: 240px;
+}
+
+.front_featuredSetBox img{
+	width:173px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 155px;
+	height:auto !important;
+	height: 155px;
+}
+
+.front_featuredSetName{
+	color:#61615f;
+	font-size:1.2em;
+}
+
+.front_featuredSetCreator{
+	position:absolute;
+	bottom:8px;
+	right:8px;
+	color:#61615f;
+	font-size:.8em;
+}
+
+.front_featuredSetCreator span{
+	color:#f7941d;
+}
+
+/* ------------------------------------------------------- *
+ * - BROWSER --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#browser_facetTree {
+	float: left;
+	width: 374px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 800px;
+	height:auto !important;
+	height: 800px;
+	
+	margin: 24px 10px 0 0;
+	padding: 0;
+	border-width: 0;
+	
+	/* background-color: #b19262; */
+	background-color: #e9e3c8;
+	/* color: #ffffff; */
+	/* color: #aa7016; Dark brown */
+	text-align: left;
+}
+
+#browser_facetTree>div.facet>span {
+	color: #000000;
+	font-weight:bold;
+}
+
+#browser_help {
+	float: right;
+	width: 384px;
+	margin: 0;
+	padding: 2px 0px 24px 0px;
+	border-width: 0;
+}
+
+#browser_instructions {
+}
+
+#browser_example {
+	border: 1px solid #61572f;
+	padding: 4px 8px 8px 8px;
+	background-color: #D4C08A;
+}
+#browser_example>h3 {
+	font-size: 100%;
+	margin-top: 0;
+}
+
+.browser_exampleFacetPath h3 {
+	margin-bottom: 0;
+}
+.browser_exampleFacetPath ul {
+	margin: 0;
+	padding-left: 1em;
+}
+
+.browser_exampleThumbnail {
+	width: 90px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height:auto !important;
+	height: 90px;
+
+	padding: 15px;	
+
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* ------------------------------------------------------- *
+ * - RESULTS --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+.results_pagination a:link  {
+	color: #4d3d24;
+}
+
+.results_pagination a:visited  {
+	color: #dc6403;
+}
+
+.results_pagination a:hover {
+	color: #4d3d24;
+}
+
+.results_pagination a:active  {
+	color: #4d3d24;
+}
+
+#results_innerContentTop {
+	margin: 24px 0 4px 0;
+}
+#results_innerContentTop ul {
+	margin-left: 280px;
+}
+#results_breadcrumbs {
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.results_breadcrumbFacet {
+	font-weight: normal;
+}
+.results_breadcrumbCategory {
+	font-weight: bold;
+}
+.results_removeBreadcrumb {
+}
+
+#results_facetTree {
+	float: left;
+	width: 276px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 800px;
+	height:auto !important;
+	height: 800px;
+	
+	margin: 0 2px 0 0;
+	padding: 8px 0 8px 2px;
+	border-width: 0;
+		
+	background-color: #e9e3c8;
+	/* color: #ffffff; */
+	color: #aa7016;
+	text-align: left;
+}
+
+#results_facetTree>div.facet>span {
+	color: #000000;
+	font-weight:bold;
+}
+
+div.treeitem {
+	cursor:default; 
+	position:relative; 
+	left:8px; 
+	/* Put a limit on text and crop for long strings to keep from wrapping */
+	overflow:hidden; 
+	width:250px;
+	font-family: helvetica, verdana, arial, sans-serif;
+	/* font-size:12px;  */
+	border-bottom:none 0;
+	margin:0;
+	padding:0;
+	text-align: left;
+}
+
+div.open span img, div.closed span img {
+	cursor:pointer;
+}
+div.treeitem span a {
+	text-decoration:none; color:	black;
+}
+div.open span a:hover, div.closed span a:hover {
+	color:blue; text-decoration:underline;
+}
+div.open span img.open {
+	display:inline;
+}
+div.open span img.closed {
+	display:none;
+}
+div.closed span img.closed {
+	display:inline;
+}
+div.closed span img.open {
+	display:none;
+}
+div.open div.treeitem {
+	display: block; 
+}
+div.closed div.treeitem {
+	display: none; 
+}
+code.hidden {
+	display: none; 
+}
+
+#results_results {
+	float: right;
+	width: 488px;
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	/* background-color: #D4C08A; */
+}
+#results_results>h2 {
+	margin: 0 0 16px 0;
+}
+
+.results_pagination {
+	clear: both;
+	
+	color: #DC6403;
+	text-align: center;
+	font-size: 1em;
+}
+
+.results_pagination ul {
+	margin: 0;
+	padding: 0;
+}
+
+.results_pagination li {
+	display: inline;
+	list-style: none;
+}
+
+#results_grid {
+	margin: 16px 0;
+}
+
+.results_result { /* 122x122 */
+	float: left;
+
+	width: 120px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 144px;
+	height: auto !important;
+	height: 144px;
+	
+	margin: 0 0 10px 2px;
+	padding: 0;
+	border-width: 0;
+	
+	background-color: #e9e3c8;
+	/* background-color: #61572f; */
+	color: #ffffff;
+	text-align: center;
+}
+.results_result img {
+	width: 120px;
+	height: 120px;
+	
+	border-width: 0px;
+}
+
+.results_resultLabel {
+	font-weight: normal;
+	padding-bottom: 4px;
+}
+
+.results_result ul {
+}
+.results_result li {
+}
+
+.results_resultName {
+}
+
+/* ------------------------------------------------------- *
+ * - RESULTS_ALT ----------------------------------------- *
+ * ------------------------------------------------------- */
+
+.results_subcategory {
+	width: 384px;
+	margin-bottom: 16px;
+	padding-bottom: 4px;
+	background-color: #DDCD9F;
+}
+.results_subcategory>h3 {
+	margin: 0 0 4px 0;
+
+	padding: 4px 0 4px 4px;
+	background-color: #D4C08A;
+}
+
+/* ------------------------------------------------------- *
+ * - DETAIL ---------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#detail_name {
+	margin: 24px 0 0 0;
+}
+
+#detail_innerContentTop {
+	margin: 24px 0 4px 0;
+	font-weight: bold;
+}
+
+#detail_imageColumn {
+	float: left;
+	width: 400px;
+
+	margin: 0 0 12px 0;
+	padding: 0;
+	border-width: 0;
+}
+
+#detail_image {
+	width: 400px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 400px;
+	height: auto !important;
+	height: 400px;
+
+	margin: 0 0 6px 0;
+	
+	text-align: center;
+}
+#detail_image img {
+	width: 400px;
+	height: 400px;
+}
+
+#detail_thumbnails {
+	margin: 0 8px;
+}
+
+#detail_thumbnailSelectedContainer {
+	float: left;
+	
+	width: 120px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 120px;
+	height: auto !important;
+	height: 120px;
+	
+	background-color: #D4C08A;
+
+	margin: 0;
+	padding: 3px;
+	border: 1px solid #000000;
+}
+
+#detail_thumbnailSelected { /* 120x120 */
+	width: 120px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 120px;
+	height: auto !important;
+	height: 120px;
+	
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+#detail_thumbnailSelected img {
+	width: 120px;
+	height: 116px;
+}
+
+.detail_thumbnail { /* 128x128 */
+	float: left;
+
+	width: 90px;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 90px;
+	height: auto !important;
+	height: 90px;
+	
+	margin: 4px;
+	padding: 15px;	
+
+	background-color: #61572f;
+	color: #ffffff;
+	text-align: center;
+}
+.detail_thumbnail img {
+	width: 82px;
+	height: 82px;
+}
+
+#detail_information {
+	float: right;
+	width:335px;
+	padding: 0px 10px 10px 10px;
+	background-color: #FFF;
+	line-height: 1.2em;
+}
+
+
+/* ------------------------------------------------------- *
+ * - VIEWSET --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+.viewset_mySetTeaser{
+	padding:10px 10px 10px 70px;
+	border: 1px solid #999;
+	margin:30px auto 0px auto;
+	background-color: #BBB399;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 100px;
+	height:auto !important;
+	height: 100px;
+	width:525px;
+}
+
+.viewset_mySetTeaser img{
+	float:left;
+	height:50px;
+	width:50px;
+	margin-right:10px;
+	margin-left:-60px;
+	border: 1px solid #999;
+}
+
+.viewset_mySetTeaser h3{
+	margin-top:0px;
+}
+
+.vwiewset_mySetTeaser p{
+	float:right;
+	margin-top:-30px;
+	width:250px;
+}
+
+.viewset_shareLink{
+	position: absolute;
+	right:32px;
+	top:62px;
+}
+
+.viewset_setName{
+	font-size: 1.5em;
+	font-style: normal;
+	color:#000;
+}
+
+#viewset_createdBy{
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
+.viewset_editLink{
+
+}
+
+
+#viewset_leftCol {
+	float: left;
+	width: 370px;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height:auto !important;
+	height: 600px;
+	
+	margin: 0px 10px 0 0;
+
+}
+
+#viewset_rightCol {
+	float: left;
+	width:360px;
+	
+	margin-top:-5;
+
+}
+
+#viewset_thumbnails .viewset_boxHeader{
+	margin-top:30px;
+	padding:0px;
+	width:354px;
+	
+}
+
+
+.viewset_thumbnail{
+	float: left;
+	margin: 1px;
+	background-color: #e5dfcc;
+	position:relative;
+	padding:2px;
+
+}
+
+.addButton{
+	position:absolute;
+	right:2px;
+	bottom:2px;
+}
+
+.addButton a img{
+	border-width: 0px;
+}
+
+.viewset_thumbnail img{
+	display: block;
+}
+
+.viewset_thumbnailHover{
+	background-color: #000;
+}
+
+.viewset_thumbnailSelected{
+	background-color: #e96a03;
+}
+
+#viewset_sortableThumbs{
+	width: 380px;
+}
+
+.viewset_sorthelper{
+	background-color: #666;
+	float: left;
+}
+
+.viewset_sortableactive{
+}
+
+.viewset_sortablehover{
+}
+
+
+#setsHome_innerContent{
+	text-align:center;
+}
+
+#setsHome_innerContent a img{
+	margin:20px 7px 20px 7px;
+}
+
+#viewset_sendSetForm form{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#viewset_sendSetForm form label, #viewset_sendSetForm form input {
+	display: block;
+	width: 150px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#viewset_sendSetForm form label {
+	text-align: right;
+	width: 150px;
+	padding-right: 10px;
+}
+
+#viewset_sendSetForm form br {
+	clear: left;
+}
+
+#viewset_sendSetForm form label.error{
+	color: #F00;
+	clear: both;
+	font-style: italic;
+	font-size: .9em;
+	margin-left:160px;
+	width:200px;
+	text-align: left;
+}
+
+
+/* ------------------------------------------------------- *
+ * -- Thickbox specific link and font settings ----------- *
+ * ------------------------------------------------------- */
+
+#TB_window {
+  font: 12px Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+#TB_secondLine {
+  font: 10px Arial, Helvetica, sans-serif;
+  color:#666666;
+}
+#TB_window a:link {color: #666666;}
+#TB_window a:visited {color: #666666;}
+#TB_window a:hover {color: #000;}
+#TB_window a:active {color: #666666;}
+#TB_window a:focus{color: #666666;}
+
+
+/* ------------------------------------------------------- *
+ * -- Thickbox settings ---------------------------------- *
+ * ------------------------------------------------------- */
+
+#TB_overlay {
+  position: absolute;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  background-color:#000;
+  filter:alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+#TB_window {
+  position: absolute;
+  background: #ffffff;
+  z-index: 102;
+  color:#000000;
+  display:none;
+  border: 4px solid #525252;
+  text-align:left;
+}
+#TB_window img {
+  display:block;
+  margin: 15px 0 0 15px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+}
+#TB_caption{
+  height:25px;
+  padding:7px 30px 10px 25px;
+  float:left;
+}
+#TB_closeWindow{
+  height:25px;
+  padding:11px 25px 10px 0;
+  float:right;
+}
+#TB_closeAjaxWindow{
+  padding:5px 10px 7px 0;
+  margin-bottom:1px;
+  text-align:right;
+  float:right;
+}
+#TB_ajaxWindowTitle{
+  float:left;
+  padding:7px 0 5px 10px;
+  margin-bottom:1px;
+}
+#TB_title{
+  background-color:#e8e8e8;
+  height:27px;
+}
+#TB_ajaxContent{
+  clear:both;
+  padding:2px 15px 15px 15px;
+  overflow:auto;
+  text-align:left;
+  line-height:1.4em;
+}
+#TB_ajaxContent p{
+  padding:5px 0px 5px 0px;
+}
+#TB_load{
+  position: absolute;
+  display:none;
+  height:100px;
+  width:100px;
+  z-index:101;
+}
+#TB_HideSelect{
+  z-index:99;
+  position:absolute;
+  top: 0;
+  left: 0;
+  background-color:#fff;
+  border:none;
+  filter:alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+}
+#TB_iframeContent{
+  clear:both;
+  border:none;
+  margin-bottom:-1px;
+  margin-top:1px;
+  _margin-bottom:1px;
+}
+
+
+
+
+
+
+
+
 
 
 

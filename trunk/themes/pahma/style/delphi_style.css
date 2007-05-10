@@ -1,216 +1,4 @@
 /* ------------------------------------------------------- *
- * - SIZES ----------------------------------------------- *
- * ------------------------------------------------------- */
-
-/*
-
-width - 868px
-
-*/
-
-/* ------------------------------------------------------- *
- * - PALETTE --------------------------------------------- *
- * ------------------------------------------------------- */
-
-/*
-
-body bg - #E9E3C8
-content bg - #DDCD9F
-inner content bg - #E5DFCC
-inner inner content bg - #61572F
-alt inner inner content bg - #D4C08A
-
-logo text - #B19262
-heading text - #4D3D24
-body text - #4d3d24
-
-header link - #AA7016
-
-standard link - #AE7F35
-
-text link - #4D3D24
-text unavailable - #DC6403
- 
-*/
-
-/* ------------------------------------------------------- *
- * - SHARED ---------------------------------------------- *
- * ------------------------------------------------------- */
-
-abbr {
-	text-decoration: none;
-	border-style: none;
-}
-
-.clearbreak {
-	clear: both;
-	margin: 0;
-	font-size: 0;
-}
-
-#header a:link, #header a:visited {
-	color: #aa7016;
-	text-decoration: none;
-}
-#header a:hover, #header a:active {
-	color: #aa7016;
-	text-decoration: underline;
-}
-
-#logo a:link {
-	color: #b19262;
-	text-decoration: none;
-}
-#logo a:visited {
-	color: #b19262;
-	text-decoration: none;
-}
-#logo a:hover {
-	color: #b19262;
-	text-decoration: none;
-}
-#logo a:active {
-	color: #b19262;
-	text-decoration: none;
-}
-
-#content a:link, #content a:visited {
-	color: #aa7016;
-	text-decoration: none;
-}
-#content a:hover, #content a:active, #content a.showlink:link, #content a.showlink:visited {
-	color: #aa7016;
-	text-decoration: underline;
-}
-
-#inner_content a:link, #inner_content a:visited{
-	color: #ae7f35;
-	text-decoration: none;
-}
-
-#inner_content a:hover, #inner_content a:active {
-	color: #ae7f35;
-	text-decoration: underline;
-}
-
-.front_exampleThumbnail a:link  {
-	color: #e9e3c8;
-}
-
-.front_exampleThumbnail a:visited  {
-	color: #e9e3c8;
-}
-
-.front_exampleThumbnail a:hover {
-	color: #e9e3c8;
-}
-
-.front_exampleThumbnail a:active  {
-	color: #e9e3c8;
-}
-
-.results_pagination a:link  {
-	color: #4d3d24;
-}
-
-.results_pagination a:visited  {
-	color: #dc6403;
-}
-
-.results_pagination a:hover {
-	color: #4d3d24;
-}
-
-.results_pagination a:active  {
-	color: #4d3d24;
-}
-
-body {
-	width: 868px;
-	margin-top: 24px;
-	margin-bottom: 24px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #E9E3C8;
-	color: #4d3d24;
-	font-family: helvetica, verdana, arial, sans-serif;
-	font-size: .9em;
-}
-
-#header  {
-	text-align: left;
-	font-family: helvetica, verdana, sans-serif;
-}
-
-#messageBox{
-	border: 1px solid #999;
-	width: 600px;
-	height:40px;
-	margin:5px auto 5px auto;
-	padding:0px;
-	color:#000;
-	background-color: yellow;
-	text-align:center;
-}
-
-#logo {
-	float: left;
-	width: 434px;
-	height: 50px;
-	margin-bottom: 16px;
-}
-#logo>h1 {
-
-	margin: 0;
-
-	color: #b19262;
-
-	text-align: left;
-
-	font-size: 3em;
-	font-family: garamond;
-	font-variant: small-caps;
-	font-weight: bold;
-}
-
-#search {
-}
-
-#user {
-	float: left;
-	width: 434px;
-	height: 25px;
-	margin-top: 25px;
-	margin-bottom: 16px;
-	text-align: right;
-}
-
-#sets {
-}
-
-#content {
-	padding: 30px;
-	border: 4px solid #ffffff;
-	margin: 0;
-	background-color : #ddcd9f;
-	position: relative;
-}
-#content>h2 {
-	margin: 0;
-}
-
-#inner_content {
-	width: 768px; 
-	padding: 2px 16px 24px 16px;
-	background-color: #e5dfcc;
-}
-
-#footer {
-	margin-top: 8px;	
-	text-align: center;
-}
-
-/* ------------------------------------------------------- *
  * - FRONT ----------------------------------------------- *
  * ------------------------------------------------------- */
 
@@ -357,6 +145,22 @@ body {
 /* ------------------------------------------------------- *
  * - RESULTS --------------------------------------------- *
  * ------------------------------------------------------- */
+
+.results_pagination a:link  {
+	color: #4d3d24;
+}
+
+.results_pagination a:visited  {
+	color: #dc6403;
+}
+
+.results_pagination a:hover {
+	color: #4d3d24;
+}
+
+.results_pagination a:active  {
+	color: #4d3d24;
+}
 
 #results_innerContentTop {
 	margin: 24px 0 4px 0;
@@ -931,17 +735,4 @@ code.hidden {
   margin-bottom:-1px;
   margin-top:1px;
   _margin-bottom:1px;
-}
-
-/* ------------------------------------------------------- *
- * - PAHMA DEFAULT --------------------------------------- *
- * ------------------------------------------------------- */
-
-input  {
-	font-family : helvetica, arial, sans-serif;
-	/* font-size : 11.5px; */
-	/* color : #aaaaaa; */
-	/* letter-spacing : .1em; */
-	/* text-transform : uppercase; */
-	/* background-color : C9CCB1; */
 }
