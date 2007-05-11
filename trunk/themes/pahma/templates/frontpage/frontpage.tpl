@@ -17,9 +17,9 @@
 <div id="front_greyCol">
 	<h2>Featured Sets</h2>
 	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage.jpg" alt="Featured set image" />
+		<img src="{$themeroot}/images/featuredSetTestImage1.jpg" alt="Featured set image" />
 		<div class="front_featuredSetName">
-			New Baskets from South America
+			Portraits of India
 		</div>
 		<div class="front_featuredSetCreator">
 			Created by <span>HearstMuseum</span>
@@ -35,36 +35,36 @@
 		</div>
 	</div>
 	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage.jpg" alt="Featured set image" />
+		<img src="{$themeroot}/images/featuredSetTestImage2.jpg" alt="Featured set image" />
 		<div class="front_featuredSetName">
-			New Baskets from South America
+			Strictly Figurines
 		</div>
 		<div class="front_featuredSetCreator">
 			Created by <span>HearstMuseum</span>
 		</div>
 	</div>
 	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage.jpg" alt="Featured set image" />
+		<img src="{$themeroot}/images/featuredSetTestImage3.jpg" alt="Featured set image" />
 		<div class="front_featuredSetName">
-			New Baskets from South America
+			Serpent Time!
 		</div>
 		<div class="front_featuredSetCreator">
 			Created by <span>HearstMuseum</span>
 		</div>
 	</div>
 	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage.jpg" alt="Featured set image" />
+		<img src="{$themeroot}/images/featuredSetTestImage4.jpg" alt="Featured set image" />
 		<div class="front_featuredSetName">
-			New Baskets from South America
+			Pachyderms and their friends
 		</div>
 		<div class="front_featuredSetCreator">
 			Created by <span>HearstMuseum</span>
 		</div>
 	</div>
 	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage.jpg" alt="Featured set image" />
+		<img src="{$themeroot}/images/featuredSetTestImage5.jpg" alt="Featured set image" />
 		<div class="front_featuredSetName">
-			New Baskets from South America
+			Low Contrast Everything
 		</div>
 		<div class="front_featuredSetCreator">
 			Created by <span>HearstMuseum</span>
