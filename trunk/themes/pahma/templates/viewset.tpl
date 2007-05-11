@@ -1,6 +1,5 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/interface_1.2/interface.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.inplace.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
