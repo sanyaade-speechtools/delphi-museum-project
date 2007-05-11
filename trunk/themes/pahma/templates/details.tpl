@@ -1,15 +1,14 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
 
-<div id="content">
-	<h2 id="detail_name">{$name}</h2>
+	<h2>{$name}</h2>
 
-	<div id="inner_content">
+		<!--
 		<div id="detail_innerContentTop">
 			<a href="#" onClick="history.go(-1)">&lt;&lt; Back to Results</a> 
 		</div>
+		-->
 		<div id="detail_imageColumn">
 			<div id="detail_image">
 				{if isset($zoom_path) }
@@ -22,7 +21,7 @@
 						<EMBED FlashVars="zoomifyImagePath={$zoom_path}/&zoomifyMaxZoom=125"
 							SRC="{$wwwroot}/libs/zoom/zoomifyDynamicViewer.swf" MENU="false"
 							PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
-							WIDTH="400" HEIGHT="400" NAME="theMovie"></EMBED>
+							WIDTH="300" HEIGHT="300" NAME="theMovie"></EMBED>
 					</OBJECT>
 				{else}
 					<code class="hidden">{$bad_zoom_path}</code>
@@ -59,7 +58,6 @@
 			{$facetTree}
 		</div>
 		<br class="clearbreak" />
-	</div>
-</div>
+
 
 {include file="footer.tpl"}
