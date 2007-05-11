@@ -52,7 +52,7 @@ $t->assign('wwwroot', $CFG->wwwroot);
 $t->assign('thumbs', $CFG->image_thumb);
 $t->assign('thumbs_square', $CFG->image_thumb_square);
 $t->assign('mids', $CFG->image_medium);
-$t->assign('zooms', $CFG->image_zoom);
+//$t->assign('zooms', $CFG->image_zoom);
 
 if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$details = getUserDetails($_SESSION['username']);
@@ -61,9 +61,16 @@ if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$t->assign('currentUser_email', $details['email']);
 	$t->assign('currentUser_id', $details['id']);
 	$_SESSION['id'] = $details['id'];
-	$_SESSION['email'] = $details['email'];	
+	$_SESSION['email'] = $details['email'];
 } else {
 	$t->assign('currentUser_loggedIn', FALSE);
+	
+	//Get the name of the file being called
+	$scriptName = end (explode("/", $_SERVER['SCRIPT_NAME']) );
+	if ( $scriptName != "login.php" ) {
+		header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php' );
+		die();
+	}
 }
 
 
