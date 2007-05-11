@@ -12,7 +12,7 @@
 					<EMBED FlashVars="zoomifyImagePath={$zoom_path}/&zoomifyMaxZoom=125"
 						SRC="{$wwwroot}/libs/zoom/zoomifyDynamicViewer.swf" MENU="false"
 						PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
-						WIDTH="300" HEIGHT="300" NAME="theMovie"></EMBED>
+						WIDTH="350" HEIGHT="350" NAME="theMovie"></EMBED>
 				</OBJECT>
 			{else}
 				<code class="hidden">{$bad_zoom_path}</code>
