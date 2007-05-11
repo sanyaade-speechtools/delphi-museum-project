@@ -1,18 +1,13 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
-
-<div id="content">
-<br />
-<h3>Welcome to the Delphi Faceted Browser</h3>
+<h2>Welcome to the Delphi Faceted Browser</h2>
 <p>Facets are an increasingly popular way to organize objects in a collection and to
 help a user to learn "what's there." We believe that they provide a superior
 experience of exploring and searching through diverse collections and help the
 visitor notice categories and relationships between objects that may not have been
 obvious otherwise. Please read this Help to learn about and begin using the
 Delphi Faceted Browser.</p>
-<h3>What is a facet?</h3>
+<h2>What is a facet?</h2>
 <p> 
 A facet is a set of attributes that describe an object. Every item in the collection
 can have a variety of attributes associated with it, depending upon how much is known
@@ -26,7 +21,7 @@ Example: A <b>Japanese sword</b> is described by the following facets:
 "Use or Context," "Site or Provenience," "Material," "Technique, Design or Decoration,"
 and "Color."
 </p>
-<h3>Working with the Delphi Faceted Browser.</h3>
+<h2>Working with the Delphi Faceted Browser.</h2>
 <p>
 How can a user find an item that has several properties which are described by
 different categories? Begin by exploring any facet, such as "Material" or
@@ -61,7 +56,7 @@ listed at the top of the page. Selecting more facets will further constrain sear
 while un-checking the facets will enlarge the number of results.
 </p>
 
-<h3>Dynamically changing browser view.</h3>
+<h2>Dynamically changing browser view.</h2>
 <p>The Delphi Faceted Browser will only show the categories that are relevant to the
 part of the set of the collection objects that you are recurrently viewing. The Browser
 will <em>hide</em> facets that are not relevant to the items shown in the results area
@@ -69,7 +64,7 @@ on your right. This makes the browsing experience more visually streamlined
 and simplifies navigation.
 </p>
 
-<h3>Collection objects without images</h3>
+<h2>Collection objects without images</h2>
 <p>
 The Hearst Museum has many items in their collection which do not (yet) have images
 associated with them. The users can still browse through all of the collection records
@@ -83,12 +78,9 @@ We hope that you will have fun and find many interesting items while exploring t
 </p>
 
 Thank you,
-
+<br/>
 Delphi team 
-
+<br/><br/>
 May 9, 2007
-
-</div>
-
 
 {include file="footer.tpl"}

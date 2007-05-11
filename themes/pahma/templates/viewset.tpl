@@ -6,11 +6,10 @@
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/viewset.js"></script>
 
-<div id="content">
 
-	<span class="viewset_setName{if $username == $currentUser_name} editSetName{/if}" id="setName___{$setId}">{$setName} {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if}</span> 
+	<h2 class="{if $username == $currentUser_name} editSetName{/if}" id="setName___{$setId}">{$setName} {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if}</h2> 
 	<div id="viewset_createdBy">Created by {$username}</div>
-	<a href="shareSet.php?height=340&width=400&sid={$setId}" class="thickbox viewset_shareLink" title="Share this set">Share this set</a>
+	<a href="shareSet.php?height=425&width=400&sid={$setId}" class="thickbox viewset_shareLink" title="Share this set">Share this set</a>
 
 	<div id="inner_content">
 	<div id="viewset_leftCol">
@@ -35,7 +34,7 @@
 				<br style="clear:both;" />
 				<div id="viewset_objectDescription" class="viewset_box">
 					<div class="viewset_boxHeader">
-						<span class="viewset_setName">Set Description</span>
+						<h2>Set Description</h2>
 					</div>
 					<div class="viewset_boxContent">
 						<p id="setDescription___{$setId}" class="{if $username == $currentUser_name}editSetDescription{/if}">{$setDescription} {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if}</p>
@@ -46,6 +45,4 @@
 	</div>
 	<br style="clear:both;" />
 	</div>
-</div>
-
 {include file="footer.tpl"}

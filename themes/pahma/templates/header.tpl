@@ -24,7 +24,7 @@
 			{if $currentUser_loggedIn }
 				Welcome <a href="{$wwwroot}/modules/auth/profile.php"><span>{$currentUser_name}</span></a> | 
 				<a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> | 
-				<a href="#">Help</a> | 
+				<a href="{$wwwroot}/modules/help/help.php">Help</a> | 
 				<a href="{$wwwroot}/modules/auth/logout.php">Sign Out</a>
 			{else}
 				<a href="{$wwwroot}/modules/auth/login.php">Sign In</a> | 
