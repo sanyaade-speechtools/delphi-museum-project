@@ -1,6 +1,7 @@
 {include file="header.tpl"}
 
 <h2>Login</h2>
+This site is currently not open to the public. If you need access, <a href="mailto:cogit@ludicrum.org?subject=Delphi&amp;cc=contact@jonlesser.net">email us</a>.
 <h3>{$message}</h3>
 <form action="{$wwwroot}/modules/auth/login.php" method="post">
 	<table border="0" cellspacing="0" cellpadding="3">
@@ -23,11 +24,11 @@
 		<tr>
 			<td colspan="2" align="right"><input type="submit" name="sublogin" value="Login"></td>
 		</tr>
-
+		<!--
 		<tr>
 			<td colspan="2" align="left"><a href="register.php">Register</a></td>
 		</tr>
-
+		-->
 		<tr>
 			<td colspan="2" align="left"><a href="forgotpw.php">Forgot your password?</a></td>
 		</tr>
