@@ -627,6 +627,15 @@ code.hidden {
 	line-height: 1.2em;
 }
 
+/* Top Level facets */
+#detail_information>div.facet>span {
+	margin:15px 0px 5px 2px;
+	display:block;
+	font-size:1em;
+	color:#0094df;
+	font-weight: normal;
+	padding: 0px;
+}
 
 /* ------------------------------------------------------- *
  * - VIEWSET --------------------------------------------- *
@@ -709,7 +718,7 @@ code.hidden {
 .viewset_thumbnail{
 	float: left;
 	margin: 1px;
-	background-color: #FFF;
+	background-color: #e5dfcc;
 	position:relative;
 	padding:2px;
 
@@ -734,7 +743,27 @@ code.hidden {
 }
 
 .viewset_thumbnailSelected{
-	background-color: #f7941d;
+	background-color: #e96a03;
+}
+
+#viewset_sortableThumbs{
+	width: 380px;
+}
+
+.viewset_sorthelper{
+	background-color: #666;
+	float: left;
+}
+
+.viewset_sortableactive{
+}
+
+.viewset_sortablehover{
+}
+
+
+#setsHome_innerContent{
+	text-align:center;
 }
 
 #setsHome_innerContent a img{
@@ -755,7 +784,7 @@ code.hidden {
 }
 
 #viewset_sendSetForm form label {
-	text-align: left;
+	text-align: right;
 	width: 150px;
 	padding-right: 10px;
 }

@@ -1,9 +1,7 @@
 {include file="header.tpl"}
 
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
-
-	<h2>{$name}</h2>
-
+<br/><br/>
 		<!--
 		<div id="detail_innerContentTop">
 			<a href="#" onClick="history.go(-1)">&lt;&lt; Back to Results</a> 
@@ -29,7 +27,7 @@
 					<img src="{$img_path}" />
 				{/if}
 				<div style="position:relative;width=350px;">
-					<a href="{$wwwroot}/modules/sets/addToSet.php?height=270&width=400&oid={$id}" class="thickbox" style="position:absolute;left:330px;" title="Add this object to a set">Add to Set</a>
+					<a href="{$wwwroot}/modules/sets/addToSet.php?height=270&width=400&oid={$id}" class="thickbox" style="position:absolute;left:300px;" title="Add this object to a set">Add to Set</a>
 				</div>
 			</div>
 			<div id="detail_thumbnails">
@@ -48,13 +46,13 @@
 			</div>
 		</div>
 		<div id="detail_information">
-			<h3>Description</h3>
+			<h1>{$name}</h1>
 			{if $description != ""}
 				<p>{$description}</p>
 			{else}
-				<p>None available</p>
+				<p>No description available for this item.</p>
 			{/if}
-			<h3>Categories</h3>
+			<h1>Categories</h1>
 			{$facetTree}
 		</div>
 		<br class="clearbreak" />
