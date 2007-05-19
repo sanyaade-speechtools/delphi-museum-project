@@ -1,0 +1,1 @@
+<img src="{$themeroot}/images/addButtonPressed.gif"/>
