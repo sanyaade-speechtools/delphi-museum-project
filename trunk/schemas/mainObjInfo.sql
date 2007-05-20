@@ -1,8 +1,5 @@
 -- ----------------------------------------------------------------------
 -- SQL create script for delphi main object info tables
--- The image info is denormalized for simplicity and performance,
--- since the system requirements are fixed for now. Can later
--- Provide multiple images with a proper normalized table if need be.
 -- ----------------------------------------------------------------------
 
 USE delphi;
@@ -37,6 +34,9 @@ INSERT INTO DBInfo( version, creation_time )
 SHOW WARNINGS;
 
 -- Define the main object table
+-- The image info is denormalized for simplicity and performance,
+-- based upon the initial system requirements. Must also
+-- provide additional images with a proper normalized table.
 DROP TABLE IF EXISTS `objects` \p;
 CREATE TABLE `objects` (
   `id`            INT(10) UNSIGNED PRIMARY KEY NOT NULL,
