@@ -1,0 +1,856 @@
+<!-- This is a taxonomy facet for Technique, Design or Decoration.
+       This covers how a created or manipulated object (vs. a found substance such as bones)
+       was created or modified to produce its form.
+       This taxonomy is not intended to stand alone, but rather to be included in a facetmap. -->
+<taxonomy id="TechniqueDesignorDecoration" title="Technique, Design or Decoration">
+	<noiseToken value="sitting"/>
+	<noiseToken value="seated"/>
+	<noiseToken value="standing"/>
+	<noiseToken value="resting"/>
+	<noiseToken value="young"/>
+	<noiseToken value="ivory"/>
+	<noiseToken value="walrus ivory"/>
+	<noiseToken value="alabaster"/>
+	<!-- <noiseToken value="wood" /> -->
+	<noiseToken value="small"/>
+	<noiseToken value="minute"/>
+	<noiseToken value="hand painted"/>
+	<noiseToken value="stone"/>
+	<noiseToken value="cast"/>
+	<!-- <noiseToken value="bone" /> -->
+	<noiseToken value="[\n]"/>
+	<!-- remove all numbers -->
+	<noiseToken value="one"/>
+	<noiseToken value="two"/>
+	<noiseToken value="three"/>
+	<noiseToken value="four"/>
+	<noiseToken value="five"/>
+	<noiseToken value="six"/>
+	<noiseToken value="seven"/>
+	<noiseToken value="eight"/>
+	<noiseToken value="nine"/>
+	<noiseToken value="ten"/>
+	<reduce from="carved ivory" to="carved"/>
+	<reduce from="carved wood" to="carved"/>
+	<reduce from="carved wooden" to="carved"/>
+	<reduce from="carved bone" to="carved"/>
+	<!-- 
+		Group as 
+			
+	in ObjectName file, replace statue: with "statue of"; ditto statuette:, figure:, figures:, painting:, carving:, figurine:, ornament: bust:, carving:, ?ornament:, relief:, sculpture:
+	For this facet, split on parens, period, ; which, and, with, w/, in, that, on? , or
+
+	Add Wooden X, Ceramic X, woodcarving of X, carved figure of X,  carved X, gold X, brass X, bronze X
+	Add "incised figures", ceramic figure(s), ceramic statue/statuette, statue/statuette  at top, 
+	For incised, excl "not incised"
+	
+	Look for shape-motif for geom. Need to mine out of text as n-grams. Max n?
+	-->
+	<heading id="Undecorated" title="Undecorated">
+		<synonym value="plain"/>
+		<synonym value="No decoration"/>
+		<excl value="plain twined"/>
+		<excl value="plain twine"/>
+		<excl value="plain twining"/>
+		<excl value="plain weave"/>
+		<excl value="plain weav"/>
+		<excl value="plain-twined"/>
+		<excl value="plain - twined"/>
+	</heading>
+	<heading id="LinearDesign" title="Linear Design">
+		<synonym value="Linear Decoration"/>
+		<synonym value="Linear Pattern"/>
+		<!-- This is where we need  a NEAR operator (or at least an AND), to catch things like "linear indented pattern" -->
+		<heading id="Crenellated" title="Crenellated"/>
+		<heading id="Dentate" title="Dentate">
+			<synonym value="Dentated"/>
+		</heading>
+		<heading id="Zigzag" title="Zigzag">
+			<synonym value="Zig-zag"/>
+			<synonym value="Zig-zags"/>
+			<synonym value="Zigzags"/>
+			<synonym value="Zig zag"/>
+		</heading>
+	</heading>
+	<!-- No evidence for this, and unclear how to characterize vs. Color:polychromatic.
+	 <heading id="Chromatic" title="Chromatic"/> -->
+	<heading id="Abstract" title="Abstract"/>
+	<heading id="FigurativeOrRepresentational" title="Figurative or Representational" nomatch="true">
+		<!-- These are really fallbacks if we do not latch anything underneath -->
+		<synonym value="figurative"/>
+		<synonym value="figure"/>
+		<synonym value="figures"/>
+		<synonym value="representation"/>
+		<synonym value="represents"/>
+		<synonym value="representation"/>
+		<synonym value="mask"/>
+		<synonym value="rhyton"/>
+		<!-- These will all apply to all "token" elements under this subtree -->
+		<!-- token name with each of the following suffices prepended -->
+		<prefix value="carved "/>
+		<prefix value="carved wooden "/>
+		<prefix value="carving of a "/>
+		<prefix value="carving of an "/>
+		<prefix value="carving of "/>
+		<prefix value="figure of a "/>
+		<prefix value="figure of an "/>
+		<prefix value="figure of "/>
+		<prefix value="statue of a "/>
+		<prefix value="statue of an "/>
+		<prefix value="statue of "/>
+		<prefix value="sculpture of a "/>
+		<prefix value="sculpture of an "/>
+		<prefix value="sculpture of "/>
+		<prefix value="painting of a "/>
+		<prefix value="painting of an "/>
+		<prefix value="painting of "/>
+		<prefix value="drawing of a "/>
+		<prefix value="drawing of an "/>
+		<prefix value="drawing of "/>
+		<prefix value="form of a "/>
+		<prefix value="form of an "/>
+		<prefix value="form of "/>
+		<prefix value="image of a "/>
+		<prefix value="image of an "/>
+		<prefix value="image of "/>
+		<prefix value="shape of a "/>
+		<prefix value="shape of an "/>
+		<prefix value="shape of "/>
+		<prefix value="model of a "/>
+		<prefix value="model of an "/>
+		<prefix value="model of "/>
+		<prefix value="represents a "/>
+		<prefix value="represents an "/>
+		<prefix value="represents "/>
+		<prefix value="representing a "/>
+		<prefix value="representing an "/>
+		<prefix value="representing "/>
+		<prefix value="depicts a "/>
+		<prefix value="depicts an "/>
+		<prefix value="depicts "/>
+		<prefix value="ornament: "/>
+		<prefix value="portrays a "/>
+		<prefix value="portrays an "/>
+		<prefix value="portrays "/>
+		<prefix value="stylized "/>
+		<prefix value="toy "/>
+		<prefix value="ceramic "/>
+		<prefix value="wooden "/>
+		<prefix value="brass "/>
+		<prefix value="bronze "/>
+		<!-- token name with each of the following suffices appended -->
+		<suffix value=" shaped"/>
+		<suffix value="-shaped"/>
+		<suffix value=" image"/>
+		<suffix value=" images"/>
+		<suffix value=" button"/>
+		<suffix value=" carving"/>
+		<suffix value=" decoration"/>
+		<suffix value=" decorations"/>
+		<suffix value=" representation"/>
+		<suffix value="-representation"/>
+		<suffix value=" figure"/>
+		<suffix value="-figure"/>
+		<suffix value=" figures"/>
+		<suffix value="-figures"/>
+		<suffix value=" figurine"/>
+		<suffix value=" figurines"/>
+		<suffix value="like design"/>
+		<suffix value=" like design"/>
+		<suffix value="-like design"/>
+		<suffix value="like figure"/>
+		<suffix value=" like figure"/>
+		<suffix value="-like figure"/>
+		<suffix value="like shape"/>
+		<suffix value=" like shape"/>
+		<suffix value="-like shape"/>
+		<suffix value="'s head"/>
+		<suffix value=" statue"/>
+		<suffix value=" statues"/>
+		<suffix value=" statuette"/>
+		<suffix value=" statuettes"/>
+		<suffix value=" charm"/>
+		<suffix value=" necklace"/>
+		<suffix value=" ornament"/>
+		<suffix value=" pendant"/>
+		<suffix value=" pattern"/>
+		<suffix value=" patterns"/>
+		<suffix value=" motif"/>
+		<suffix value=" motifs"/>
+		<suffix value=" motifes"/>
+		<suffix value=" design"/>
+		<suffix value=" designs"/>
+		<suffix value=" in relief"/>
+		<suffix value=" toy"/>
+		<suffix value=" toys"/>
+		<!-- Considered  moving "doll" to object. Perhaps doll (as object) otherwise latches as figurative.
+			BUT if toy suffix matches, what about doll? Probably good for animals, etc. but not for human? Hard...
+			Could argue that it is a figurative design, even if it is also an object. Perhaps go with that. -->
+		<suffix value=" doll"/>
+		<heading id="HumanShapes" title="Human Shapes">
+			<prefix value="bust of "/>
+			<prefix value="bust of a"/>
+			<prefix value="bust of an"/>
+			<suffix value=" bust"/>
+			<suffix value=" effigy"/>
+			<suffix value=" effigies"/>
+			<synonym value="anthropomorphic"/>
+			<synonym value="anthropo-"/>
+			<synonym value="demon"/>
+			<synonym value="devil"/>
+			<synonym value="devil's"/>
+			<synonym value="devil-mask"/>
+			<!-- <synonym value="devils claw"/>
+			<synonym value="devil's-claw"/> 
+			<synonym value="devil's claw"/> -->
+			<excl value="dust-devil"/>
+			<excl value="devil peak"/>
+			<token value="human"/>
+			<token value="humans"/>
+			<token value="man"/>
+			<token value="men"/>
+			<token value="woman"/>
+			<token value="women"/>
+			<token value="child"/>
+			<token value="children"/>
+			<token value="baby"/>
+			<token value="bride"/>
+			<token value="groom"/>
+			<token value="person"/>
+			<token value="mythical person"/>
+			<token value="people" combine="prefix"/>
+			<token value="servant"/>
+			<token value="servants"/>
+			<token value="dancer"/>
+			<token value="dancers"/>
+			<token value="musician"/>
+			<token value="musicians"/>
+			<token value="indian"/>
+			<token value="indians"/>
+			<token value="indian chief"/>
+			<token value="eskimo"/>
+			<token value="eskimos"/>
+			<token value="eskimo"/>
+			<token value="human face"/>
+			<token value="human faces" combine="prefix"/>
+			<token value="man's face"/>
+			<token value="man's faces" combine="prefix"/>
+			<token value="woman's face"/>
+			<token value="woman's faces" combine="prefix"/>
+		</heading>
+		<heading id="AnimalShapes" title="Animal Shapes">
+			<synonym value=" zoomorphic"/>
+			<suffix value=" effigy"/>
+			<suffix value=" effigies"/>
+			<suffix value="like animal"/>
+			<suffix value=" like animal"/>
+			<suffix value="-like animal"/>
+			<token value="animal"/>
+			<token value="animals" combine="prefix"/>
+			<token value="creature"/>
+			<token value="creatures" combine="prefix"/>
+			<token value="imaginary creature"/>
+			<token value="imaginary creatures" combine="prefix"/>
+			<heading id="Bird" title="Bird" nomatch="true" astoken="plural">
+				<token value="feather"/>
+				<token value="wing"/>
+				<token value="talon"/>
+				<token value="beak"/>
+				<heading id="Crane" title="Crane" nomatch="true" astoken="plural"/>
+				<heading id="Chicken" title="Chicken" nomatch="true" astoken="plural"/>
+				<heading id="Condor" title="Condor" nomatch="true" astoken="plural"/>
+				<heading id="Cormorant" title="Cormorant" nomatch="true" astoken="plural"/>
+				<heading id="Crow" title="Crow" nomatch="true" astoken="plural"/>
+				<heading id="Dove" title="Dove" nomatch="true" astoken="plural"/>
+				<heading id="Duck" title="Duck" nomatch="true" astoken="plural"/>
+				<heading id="Eagle" title="Eagle" nomatch="true" astoken="plural"/>
+				<heading id="Goose" title="Goose" nomatch="true">
+					<token value="geese"/>
+				</heading>
+				<heading id="Hawk" title="Hawk" nomatch="true" astoken="plural"/>
+				<heading id="Hummingbird" title="Hummingbird" astoken="plural"/>
+				<heading id="Ibis" title="Ibis"/>
+				<heading id="Meadowlark" title="Meadowlark"/>
+				<heading id="Ostrich" title="Ostrich" nomatch="true" astoken="plural"/>
+				<heading id="Owl" title="Owl" nomatch="true" astoken="plural"/>
+				<heading id="Parrot" title="Parrot" nomatch="true" astoken="plural"/>
+				<heading id="Peacock" title="Peacock" nomatch="true" astoken="plural"/>
+				<heading id="Pelican" title="Pelican" nomatch="true">
+					<token value="pelican"/>
+					<token value="pelicans"/>
+					<token value="pelikan"/>
+				</heading>
+				<heading id="Penguin" title="Penguin" nomatch="true" astoken="plural"/>
+				<heading id="Phoenix" title="Phoenix" nomatch="true" astoken="noplural"/>
+				<heading id="Quail" title="Quail" nomatch="true" astoken="plural">
+					<heading id="QuailCrest" title="Quail Crest">
+						<synonym value="quail crests"/>
+						<synonym value="quail crest decoration"/>
+						<synonym value="quail crest fringe"/>
+						<synonym value="quail crest design"/>
+						<synonym value="quail crests decoration"/>
+					</heading>
+				</heading>
+				<heading id="Raven" title="Raven" nomatch="true" astoken="plural"/>
+				<heading id="RedWingedBlackbird" title="RedWinged Blackbird">
+					<synonym value="red-wing blackbird"/>
+					<synonym value="redwinged blackbird"/>
+				</heading>
+				<heading id="Roadrunner" title="Roadrunner" nomatch="true" astoken="plural"/>
+				<heading id="Sparrow" title="Sparrow" nomatch="true" astoken="plural"/>
+				<heading id="Swan" title="Swan" nomatch="true" astoken="plural"/>
+				<heading id="Thunderbird" title="Thunderbird">
+					<synonym value="thunderbird"/>
+					<excl value="thunderbird park"/>
+				</heading>
+			</heading>
+			<heading id="WaterAnimals" title="Water Animals (Fish, Marine mammals, Shellfish, etc.)" nomatch="true">
+				<heading id="Fish" title="Fish" nomatch="true">
+					<token value="fish"/>
+					<token value="fresh water fish"/>
+					<token value="fishes" combine="prefix"/>
+					<heading id="Eel" title="Eel" nomatch="true" astoken="noplural"/>
+					<heading id="Salmon" title="Salmon" nomatch="true" astoken="noplural"/>
+					<heading id="Sculpin" title="Sculpin" nomatch="true" astoken="noplural"/>
+					<heading id="Seashell" title="Seashell" nomatch="true" astoken="plural">
+						<heading id="Scallop" title="Scallop" nomatch="true" astoken="plural"/>
+					</heading>
+					<heading id="Starfish" title="Starfish"/>
+				</heading>
+				<heading id="MarineMammals" title="Marine Mammals" nomatch="true">
+					<!-- Note dolphin is mostly used as design -->
+					<heading id="Dolphin" title="Dolphin">
+						<synonym value="Dolphins"/>
+						<excl value="Dolphin bone"/>
+						<excl value="Dolphin jaw bone"/>
+					</heading>
+					<!-- Note Killer whale is mostly used as design -->
+					<heading id="KillerWhale" title="Killer Whale">
+						<synonym value="killerwhale"/>
+						<synonym value="orca"/>
+					</heading>
+					<heading id="Seal" title="Seal" nomatch="true" astoken="plural"/>
+					<!-- No evidence of use as design <heading id="SeaLion" title="Sea Lion" nomatch="true"> -->
+					<heading id="Walrus" title="Walrus" nomatch="true" astoken="plural"/>
+					<heading id="Whale" title="Whale" nomatch="true" astoken="plural">
+						<heading id="BelugaWhale" title="Beluga Whale">
+							<token value="beluga whale"/>
+							<token value="beluga whales" combine="prefix"/>
+							<token value="beluga"/>
+							<token value="belugas" combine="prefix"/>
+						</heading>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="AmphibiansAndReptiles" title="Amphibians and Reptiles">
+				<heading id="Alligator" title="Alligator" nomatch="true" astoken="plural"/>
+				<heading id="Crocodile" title="Crocodile">
+					<synonym value="crocodiles"/>
+					<excl value="mummified crocodile"/>
+					<excl value="material:  crocodile"/>
+				</heading>
+				<heading id="Dragon" title="Dragon"/>
+				<heading id="Frog" title="Frog" nomatch="true" astoken="plural"/>
+				<heading id="Lizard" title="Lizard" nomatch="true" astoken="plural">
+					<heading id="HornedToad" title="Horned Toad"/>
+					<heading id="Iguana" title="Iguana"/>
+				</heading>
+				<heading id="Serpent" title="Serpent"/>
+				<heading id="Snake" title="Snake" nomatch="true" astoken="plural">
+					<heading id="Rattlesnake" title="Rattlesnake" nomatch="true" astoken="plural"/>
+					<heading id="Cobra" title="Cobra" nomatch="true" astoken="plural"/>
+				</heading>
+				<heading id="Toad" title="Toad" nomatch="true" astoken="plural"/>
+				<heading id="Tortoise" title="Tortoise" nomatch="true" astoken="plural"/>
+				<heading id="Turtle" title="Turtle" nomatch="true" astoken="plural"/>
+			</heading>
+			<heading id="Insects" title="Insects" nomatch="true">
+				<heading id="Butterfly" title="Butterfly" nomatch="true" astoken="plural"/>
+				<heading id="Cockroach" title="Cockroach" nomatch="true" astoken="noplural"/>
+				<heading id="Grasshopper" title="Grasshopper" nomatch="true" astoken="plural"/>
+				<heading id="Louse" title="Louse" nomatch="true" astoken="noplural"/>
+				<heading id="Scorpion" title="Scorpion">
+					<synonym value="scorpions"/>
+					<excl value="scorpion bay"/>
+					<excl value="scorpion hill"/>
+				</heading>
+				<heading id="Spider" title="Spider" nomatch="true">
+					<token value="spider"/>
+					<token value="water-spider"/>
+					<heading id="SpiderWeb" title="Spider Web" nomatch="true" astoken="noplural"/>
+				</heading>
+				<heading id="Worm" title="Worm" nomatch="true" astoken="plural"/>
+			</heading>
+			<heading id="LandMammals" title="Land Mammals" nomatch="true">
+				<heading id="DomesticMammals" title="Domestic Mammals" nomatch="true">
+					<heading id="Cat" title="Cat" nomatch="true" astoken="plural"/>
+					<heading id="Dog" title="Dog" nomatch="true" astoken="plural"/>
+					<heading id="Pig" title="Pig" nomatch="true" astoken="plural"/>
+					<heading id="Goat" title="Goat" nomatch="true" astoken="plural"/>
+					<heading id="Sheep" title="Sheep" nomatch="true" astoken="plural"/>
+					<heading id="Horse" title="Horse" nomatch="true" astoken="plural"/>
+					<heading id="Llama" title="Llama" nomatch="true" astoken="plural"/>
+					<heading id="Bull" title="Bull" nomatch="true" astoken="plural"/>
+					<heading id="Oxen" title="Oxen"/>
+				</heading>
+				<heading id="SmallWildMammals" title="Small Wild Mammals" nomatch="true">
+					<heading id="Bat" title="Bat" nomatch="true" astoken="plural"/>
+					<heading id="Beaver" title="Beaver" nomatch="true" astoken="plural"/>
+					<heading id="BobcatOrLynx" title="Bobcat Or Lynx" nomatch="true">
+						<token value="bobcat"/>
+						<token value="bobcats" combine="prefix"/>
+						<token value="lynx"/>
+						<token value="lynxes" combine="prefix"/>
+					</heading>
+					<heading id="Marten" title="Marten" nomatch="true" astoken="plural"/>
+					<heading id="Mink" title="Mink" nomatch="true" astoken="plural"/>
+					<heading id="Otter" title="Otter" nomatch="true">
+						<token value="otter"/>
+						<token value="otters" combine="prefix"/>
+						<token value="land otter"/>
+						<token value="land otters" combine="prefix"/>
+					</heading>
+					<heading id="Porcupine" title="Porcupine" nomatch="true" astoken="plural"/>
+					<heading id="RabbitOrHare" title="Rabbit or Hare" nomatch="true">
+						<token value="rabbit"/>
+						<token value="rabbits" combine="prefix"/>
+						<token value="hare"/>
+						<token value="hares" combine="prefix"/>
+					</heading>
+					<heading id="Squirrel" title="Squirrel" nomatch="true" astoken="plural"/>
+					<heading id="Weasel" title="Weasel" nomatch="true" astoken="plural"/>
+				</heading>
+				<heading id="LargeWildMammals" title="Large Wild Mammals" nomatch="true">
+					<heading id="Antelope" title="Antelope" nomatch="true" astoken="plural"/>
+					<heading id="Bear" title="Bear" nomatch="true" astoken="plural">
+						<heading id="GrizzlyBear" title="Grizzly Bear"/>
+						<heading id="PolarBear" title="Polar Bear"/>
+					</heading>
+					<heading id="Boar" title="Boar" nomatch="true" astoken="plural"/>
+					<heading id="Camel" title="Camel" nomatch="true" astoken="plural"/>
+					<heading id="Coyote" title="Coyote" nomatch="true" astoken="plural"/>
+					<heading id="Deer" title="Deer" nomatch="true">
+						<token value="deer"/>
+					</heading>
+					<heading id="Fox" title="Fox" nomatch="true" astoken="plural">
+						<heading id="RedFox" title="Red Fox" nomatch="true" astoken="plural"/>
+						<heading id="WhiteFox" title="White Fox" nomatch="true" astoken="plural"/>
+					</heading>
+					<heading id="Elephant" title="Elephant" nomatch="true" astoken="plural"/>
+					<!-- no evidence of use as design  -->
+					<!-- giraffe, hippo, zebra, gazelle, -->
+					<heading id="Jackal" title="Jackal" nomatch="true" astoken="plural"/>
+					<heading id="Jaguar" title="Jaguar" nomatch="true">
+						<token value="jaguar"/>
+						<token value="jaguars" combine="prefix"/>
+						<token value="panther"/>
+						<token value="panthers" combine="prefix"/>
+					</heading>
+					<heading id="Leopard" title="Leopard" nomatch="true" astoken="plural"/>
+					<heading id="Lion" title="Lion" nomatch="true" astoken="plural"/>
+					<heading id="MonkeyOrApe" title="Monkey or Ape" nomatch="true">
+						<token value="monkey"/>
+						<token value="monkeys" combine="prefix"/>
+						<token value="ape"/>
+						<token value="apes" combine="prefix"/>
+					</heading>
+					<heading id="MountainGoat" title="Mountain Goat" nomatch="true" astoken="plural"/>
+					<heading id="Tiger" title="Tiger" nomatch="true" astoken="plural"/>
+					<heading id="Wolf" title="Wolf" nomatch="true">
+						<token value="wolf"/>
+						<token value="wolves" combine="prefix"/>
+					</heading>
+					<heading id="Wolverine" title="Wolverine" nomatch="true" astoken="plural"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="PlantShapes" title="Plant Shapes">
+			<prefix value="painted with "/>
+			<prefix value="painted w/ "/>
+			<prefix value="row of "/>
+			<prefix value="embroidered "/>
+			<suffix value="like pattern"/>
+			<suffix value=" like pattern"/>
+			<suffix value="-like pattern"/>
+			<suffix value=" patterned"/>
+			<suffix value="-patterned"/>
+			<suffix value=" embroidery"/>
+			<suffix value="-embroidery"/>
+			<suffix value=" bead"/>
+			<suffix value=" band"/>
+			<suffix value=" bands"/>
+			<suffix value=" border"/>
+			<suffix value=" borders"/>
+			<suffix value=" cloth"/>
+			<suffix value=" decal"/>
+			<suffix value=" figured"/>
+			<suffix value=" print"/>
+			<suffix value=" prints"/>
+			<suffix value=" quillwork"/>
+			<heading id="Flower" title="Flower" nomatch="true">
+				<token value="flower"/>
+				<token value="flowerd"/>
+				<token value="flowered"/>
+				<token value="flowers"/>
+				<token value="floral"/>
+				<synonym value="floral decorated"/>
+				<synonym value="floral decorated"/>
+				<synonym value="floral beaded design"/>
+				<heading id="Lotus" title="Lotus" nomatch="true" astoken="noplural"/>
+				<heading id="Petal" title="Petal" nomatch="true"/>
+				<heading id="Rose" title="Rose" nomatch="true">
+					<synonym value="rosette"/>
+					<synonym value="rosettes"/>
+				</heading>
+				<heading id="SquashBlossom" title="Squash-blossom" nomatch="true" astoken="plural"/>
+				<heading id="Tulip" title="Tulip" nomatch="true"/>
+			</heading>
+			<heading id="FruitAndVegetables" title="Fruit and Vegetables" nomatch="true">
+				<token value="fruit"/>
+				<heading id="Apple" title="Apple" nomatch="true" astoken="plural"/>
+				<heading id="Acorn" title="Acorn" nomatch="true" astoken="plural"/>
+				<heading id="Grain" title="Grain" nomatch="true" astoken="noplural">
+					<heading id="Barley" title="Barley" nomatch="true" astoken="noplural"/>
+					<heading id="Corn" title="Corn" nomatch="true" astoken="noplural">
+						<heading id="Maize" title="Maize" nomatch="true" astoken="noplural"/>
+					</heading>
+					<heading id="Wheat" title="Wheat" nomatch="true" astoken="noplural"/>
+				</heading>
+				<heading id="Pear" title="Pear" nomatch="true" astoken="noplural"/>
+				<heading id="Gourd" title="Gourd" nomatch="true" astoken="noplural">
+					<token value="Squash"/>
+				</heading>
+			</heading>
+			<heading id="Leaf" title="Leaf" nomatch="true" astoken="noplural">
+				<synonym value="leaflike"/>
+				<synonym value="leaf-like"/>
+				<heading id="LaurelLeaf" title="Laurel-Leaf" nomatch="true" astoken="noplural"/>
+			</heading>
+			<heading id="Tree" title="Tree" nomatch="true">
+				<token value="tree"/>
+				<token value="trees"/>
+				<heading id="PineTree" title="Pine Tree" nomatch="true">
+					<token value="pinetree"/>
+					<token value="pinetrees"/>
+					<token value="pine tree"/>
+					<token value="pine trees"/>
+					<!-- An argument could be made for nesting pinetree under this,
+					      but it does not seem merited by the numbers for now. -->
+					<token value="conifer"/>
+					<token value="conifers"/>
+				</heading>
+			</heading>
+		</heading>
+		<!--
+		flower dance - this needs more thought
+		flower song
+		multicolored flowers
+		(lower reliability) flower
+		acanthus (as is)
+		look at incuse as general marker
+		-->
+	</heading>
+	<heading id="Symbolic" title="Symbolic">
+		<synonym value="shrine symbol"/>
+		<synonym value="star symbol"/>
+		<synonym value="in field symbol"/>
+		<synonym value="in field symbols"/>
+		<!-- this may not work since splitting on "with" -->
+		<synonym value="symbols"/>
+		<synonym value="symbolism"/>
+		<excl value="no visible symbols"/>
+		<heading id="Ammunition" title="Ammunition"/>
+		<heading id="Arrowhead" title="Arrowhead"/>
+		<heading id="Aura" title="Aura"/>
+		<heading id="Cross" title="Cross"/>
+		<heading id="Feather" title="Feather"/>
+		<heading id="FleurdeLys" title="Fleur de Lys"/>
+		<heading id="God" title="God">
+			<synonym value="god figure"/>
+			<synonym value="god figures"/>
+			<synonym value="monkey god"/>
+			<synonym value="rain god"/>
+			<synonym value="rivergod"/>
+			<synonym value="kitchen-god"/>
+		</heading>
+		<heading id="Goddess" title="Goddess"/>
+		<heading id="Halo" title="Halo"/>
+		<heading id="Mandala" title="Mandala"/>
+		<heading id="Moon" title="Moon"/>
+		<heading id="Star" title="Star">
+			<synonym value="star-shaped"/>
+			<synonym value="star shaped"/>
+			<synonym value="star design"/>
+			<synonym value="star-like"/>
+			<excl value="star fish"/>
+			<excl value="star chart"/>
+		</heading>
+		<heading id="Sun" title="Sun" nomatch="true">
+			<synonym value="sun-shaped"/>
+			<synonym value="sun figure"/>
+			<synonym value="representing the sun"/>
+			<synonym value="sun-like"/>
+			<excl value="star fish"/>
+			<excl value="star chart"/>
+		</heading>
+		<heading id="Petroglyph" title="Petroglyph"/>
+		<heading id="Swastika" title="Swastika"/>
+	</heading>
+	<heading id="Geometric" title="Geometric">
+		<synonym value="geometrical"/>
+		<heading id="Round" title="Round">
+			<synonym value="circle"/>
+			<synonym value="circles"/>
+			<synonym value="circlet"/>
+			<synonym value="circular"/>
+			<excl value="round valley"/>
+			<excl value="round-ended"/>
+			<excl value="round-sided"/>
+			<heading id="Disk" title="Disk">
+				<synonym value="disc"/>
+				<synonym value="discoid"/>
+				<synonym value="discoidal"/>
+			</heading>
+			<heading id="Piriform" title="Piriform (Pear shaped)">
+				<synonym value="Piriform"/>
+				<synonym value="Pear shaped"/>
+				<synonym value="Pear-shaped"/>
+			</heading>
+			<heading id="Ring" title="Ring, Hoop or Crown">
+				<synonym value="ring-shaped"/>
+				<synonym value="hoop"/>
+				<synonym value="hooplet"/>
+				<synonym value="hooplets"/>
+				<synonym value="diadem"/>
+			</heading>
+			<heading id="Spiral" title="Spiral">
+				<synonym value="spirals"/>
+				<synonym value="spirally"/>
+				<synonym value="spiralling"/>
+				<synonym value="spiralled"/>
+				<synonym value="spiral-looped"/>
+				<synonym value="spiral-loped"/>
+				<synonym value="spiral-lopped"/>
+			</heading>
+			<heading id="Crescent" title="Crescent">
+				<synonym value="crescent shaped"/>
+				<synonym value="crescent-shaped"/>
+				<synonym value="crescentic"/>
+				<excl value="not a crescent"/>
+				<excl value="crescent city"/>
+			</heading>
+			<heading id="LensShaped" title="Lens Shaped">
+				<synonym value="lens-shaped"/>
+				<synonym value="lentoid"/>
+			</heading>
+			<heading id="Oval" title="Oval">
+				<synonym value="ovoid"/>
+			</heading>
+			<heading id="BowlShaped" title="Bowl Shaped">
+				<synonym value="bowl-shape"/>
+				<synonym value="bowl shape"/>
+				<synonym value="bowl-shaped"/>
+			</heading>
+			<heading id="ConcaveConvex" title="Concave-Convex">
+				<synonym value="concave"/>
+				<synonym value="convex"/>
+				<synonym value="saucer"/>
+				<excl value="concave base"/>
+				<excl value="convex base"/>
+				<excl value="concaved"/>
+			</heading>
+			<heading id="Ball" title="Ball or Sphere">
+				<synonym value="ball-shaped"/>
+				<synonym value="globe shaped"/>
+				<synonym value="globe-shaped"/>
+				<synonym value="spherical"/>
+				<synonym value="spheroidal"/>
+				<synonym value="spheroid"/>
+				<synonym value="sphere"/>
+				<synonym value="hemisphere"/>
+				<synonym value="hemispherical"/>
+			</heading>
+			<heading id="Toroid" title="Toroid (Donut shaped)">
+				<synonym value="Torus"/>
+				<synonym value="Toroid"/>
+				<synonym value="Toroidal"/>
+				<synonym value="Donut shaped"/>
+				<synonym value="Donut-shaped"/>
+				<synonym value="Doughnut shaped"/>
+				<synonym value="Doughnut-shaped"/>
+			</heading>
+		</heading>
+		<heading id="Angular" title="Angular">
+			<heading id="V-Shaped" title="V-Shaped">
+				<synonym value="v shaped"/>
+				<synonym value="v shape"/>
+			</heading>
+			<heading id="Triangular" title="Triangular">
+				<synonym value="triangle"/>
+				<heading id="WedgeShaped" title="Wedge-Shaped">
+					<synonym value="wedge shaped"/>
+				</heading>
+			</heading>
+			<heading id="Rectangular" title="Rectangular">
+				<synonym value="rectangle"/>
+				<synonym value="rounded rectangle"/>
+				<synonym value="rounded rectangular"/>
+				<heading id="Square" title="Square" nomatch="true">
+					<synonym value="square cut"/>
+					<synonym value="square-cut"/>
+					<synonym value="square braid"/>
+					<synonym value="square quilt"/>
+					<synonym value="square edge"/>
+					<synonym value="square edges"/>
+					<synonym value="square bead"/>
+					<synonym value="square beads"/>
+					<synonym value="square shape"/>
+					<synonym value="square shaped"/>
+					<synonym value="square-shaped"/>
+					<synonym value="square pattern"/>
+					<synonym value="square patterns"/>
+					<synonym value="square stickers"/>
+					<synonym value="square piece"/>
+					<synonym value="square pieces"/>
+					<synonym value="square abalone"/>
+					<synonym value="square haliotis"/>
+					<synonym value="square head"/>
+					<synonym value="squares"/>
+					<synonym value="squared"/>
+					<synonym value="squared-off"/>
+					<synonym value="semi-squared"/>
+					<synonym value="incuse square"/>
+					<synonym value="incuse squares"/>
+				</heading>
+				<heading id="BoxOrCube" title="BoxOrCube">
+					<synonym value="cubical"/>
+					<synonym value="cube"/>
+					<synonym value="cubed"/>
+					<synonym value="box-shaped"/>
+					<synonym value="box shape"/>
+					<synonym value="pillbox shape"/>
+					<synonym value="box shaped"/>
+					<synonym value="box inlay"/>
+					<synonym value="box decoration"/>
+					<synonym value="box ornament"/>
+					<synonym value="box ornaments"/>
+				</heading>
+			</heading>
+			<heading id="Diamond" title="Diamond">
+				<excl value="diamond-like stone"/>
+				<excl value="rose-cut diamonds"/>
+			</heading>
+			<heading id="Trapezoidal" title="Trapezoidal">
+				<synonym value="trapezoid"/>
+			</heading>
+			<heading id="Pentagonal" title="Pentagonal">
+				<synonym value="pentagon"/>
+				<synonym value="pentangle"/>
+			</heading>
+			<heading id="Hexagonal" title="Hexagonal">
+				<synonym value="hexagon"/>
+				<synonym value="hexangle"/>
+			</heading>
+		</heading>
+		<heading id="Cylindrical" title="Cylindrical">
+			<synonym value="cylinder"/>
+			<synonym value="barrel"/>
+			<heading id="Tubular" title="Tubular">
+				<synonym value="tube"/>
+				<synonym value="tubes"/>
+				<synonym value="flute"/>
+				<!-- shouod this be a token or synonym? -->
+			</heading>
+		</heading>
+		<heading id="Conical" title="Conical">
+			<synonym value="conically"/>
+			<synonym value="cone shape"/>
+			<synonym value="cone shaped"/>
+			<synonym value="cone form"/>
+			<synonym value="cone"/>
+			<synonym value="cones"/>
+			<excl value="pine cone"/>
+			<excl value="cone pine"/>
+			<excl value="pine cones"/>
+			<excl value="cone shell"/>
+			<excl value="cone shells"/>
+			<excl value="cone of"/>
+			<excl value="fir cone"/>
+			<heading id="Biconical" title="Biconical">
+				<synonym value="bi-conical"/>
+				<synonym value="double cone"/>
+				<synonym value="doubled cone"/>
+				<synonym value="biconically"/>
+				<synonym value="bi-conically"/>
+			</heading>
+			<heading id="Hourglass" title="Hourglass">
+				<synonym value="hour glass"/>
+				<synonym value="hour-glass"/>
+			</heading>
+		</heading>
+		<heading id="Pyramidal" title="Pyramidal">
+			<synonym value="pyramid"/>
+			<synonym value="bi-pyramidal"/>
+			<excl value="pyramid lake"/>
+		</heading>
+	</heading>
+	<heading id="Amorphous" title="Amorphous">
+		<heading id="Globular" title="Globular">
+			<synonym value="globule"/>
+		</heading>
+	</heading>
+	<heading id="BeadingThreadwork" title="Beading, Threadwork, etc.">
+		<heading id="Beaded" title="Beaded"/>
+		<heading id="Braided" title="Braided"/>
+		<heading id="Embroidered" title="Embroidered"/> embroidery, stitchery
+		<heading id="Knotted" title="Knotted"/>
+		<heading id="Monogrammed" title="Monogrammed"/>
+		<heading id="Quillwork" title="Quillwork"/>
+		<heading id="Sequined" title="Sequined"/>
+		<heading id="Sewn" title="Sewn"/> also sewed, sewed-on
+		<heading id="Stitched" title="Stitched"/>
+		<heading id="Strung" title="Strung"/>
+	</heading>
+	<heading id="CarvedOrShaped" title="Carved Or Shaped">
+		<heading id="BasRelief" title="Bas Relief"/>
+		<heading id="Carved" title="Carved"/>
+		<heading id="CastOrMolded" title="Cast or Molded"/>
+		<heading id="Coiled" title="Coiled"/>
+		<heading id="Engraved" title="Engraved"/>
+		<heading id="Flakedstone" title="Flaked (stone)"/>
+		<heading id="HammeredCoinage" title="Hammered (coinage)"/>
+		<heading id="Incised" title="Incised"/>
+		<heading id="Inlaid" title="Inlaid"/>
+		<heading id="Milledcoinage" title="Milled (coinage)"/>
+		<heading id="Perforated" title="Perforated"/>
+		<heading id="Ribbed" title="Ribbed"/>
+		<heading id="Sculpted" title="Sculpted"/>
+		<heading id="Serrated" title="Serrated"/>
+		<heading id="Workedstone" title="Worked (stone)"/>
+	</heading>
+	<heading id="Woven" title="Woven">
+		<heading id="Wovenbasketry" title="Woven (basketry)"/> weave, weaving, plainweave, openweave, checker-weave, lattice-weave, plaited, 
+		<heading id="Woventextiles" title="Woven (textiles)"/>
+	</heading>
+	<heading id="Finished" title="Finished">
+		<!-- lots of colors grey-died, black-dyed, red-dyed, tie-dyed, green-dyed, indigo-dyed, orange-dyed, yellow-dyed, ikat-dyed, purple-dyed -->
+		<heading id="Dyed" title="Dyed"/>
+		<heading id="DrawnOn" title="Drawn On"/>
+		<heading id="Enameled" title="Enameled"/>
+		<heading id="Faience" title="Faience"/>
+		<heading id="Fired" title="Fired"/>
+		<heading id="Glazed" title="Glazed"/>
+		<heading id="Painted" title="Painted"/>
+		<heading id="Rubbed" title="Rubbed"/>
+		<!-- few colors dark-stained, red-stained, black-, brown- (excl badly-) ochre-, yellow-stained, but has a few troubles... -->
+		<heading id="Stained" title="Stained"/>
+	</heading>
+	<heading id="Recorded" title="Recorded">
+		<heading id="Filmed" title="Filmed"/>
+		<heading id="Written" title="Written"/>
+	</heading>
+	<heading id="Performed" title="Performed">
+		<heading id="Sung" title="Sung"/>
+		<heading id="Spoken" title="Spoken"/>
+	</heading>
+</taxonomy>
