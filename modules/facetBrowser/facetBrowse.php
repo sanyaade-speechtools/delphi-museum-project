@@ -1,6 +1,7 @@
 <?
 session_cache_limiter("public");		// enable caching of this page
 require_once("../../libs/env.php");
+require_once("../common/imgthumb.php");
 
 include("dbconnect.php");
 require "Facet.inc";
@@ -223,7 +224,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				WHERE oc.obj_id=tqMain.obj_id AND o.id=tqMain.obj_id AND NOT o.img_path IS NULL) tqTop
 				WHERE c.id=tqTop.cat_id GROUP BY c.id ORDER BY c.id";
 			$tqFull =
-			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path
+			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar
 			 FROM objects o,".$tqMain." WHERE o.id=tqMain.obj_id AND NOT o.img_path IS NULL LIMIT ".$_DELPHI_PAGE_SIZE;
 		} else {
 			$tqCountsByCat =
@@ -233,7 +234,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				where oc.obj_id=tqMain.obj_id) tqTop
 				 where c.id=tqTop.cat_id group by c.id order by c.id";
 			$tqFull =
-			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path
+			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar
 			 from objects o,".$tqMain." where o.id=tqMain.obj_id limit ".$_DELPHI_PAGE_SIZE;
 		}
 		$tqFullCount = "SELECT FOUND_ROWS()";
@@ -330,39 +331,9 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		/*
 			TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
 		*/
-		$nPix=0;
-		$maxChars = 18;
-		$ellipses = " ...";
-		$eLen = strlen($ellipses);
 		while( $row=$objsresult->fetch_assoc() )
 		{
-			$imageOutput .= "<div class=\"results_result\">";
-			$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
-			$pathToDetails = $CFG->wwwroot . "/modules/browser/details.php?id=" . $row['id'];
-			if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false')) {
-				$pathToDetails .= "&wImgs=false";
-			}
-			$imageOutput .= "<a href=\"".$pathToDetails."\"><img src=\"".$pathToImg."\" alt=\"".$row['name']."\"";
-			$imageOutput .= " class=\"results_resultThumbnail\" /></a>";
-
-			$text = $row['name'];
-
-			if (strlen($text) > $maxChars) {
-				$text = substr($text,0,$maxChars-$eLen);
-				$text = substr($text,0,strrpos($text,' '));
-				$text .= $ellipses;
-			}
-
-			$text = "<abbr title=\"".$row['name']."\">".$text."</abbr>";
-			$imageOutput .= "<div class=\"results_resultLabel\"><a href=\"".$pathToDetails."\">".$text."</a></div>";
-			$imageOutput .= "</div>";
-
-			$nPix++;
-			if( $nPix >= 40 ) {
-				$imageOutput .= "<br class=\"clearbreak\"";
-				$imageOutput .= "<p>Another ".($numResultsTotal-40)." images not shown...</p>";
-				break;
-			}
+			$imageOutput .= outputThumbnail( $row, "results_result" );
 		}
 	}
 	$t->assign("baseQ", $baseQ); 			// for pagination queries in page
