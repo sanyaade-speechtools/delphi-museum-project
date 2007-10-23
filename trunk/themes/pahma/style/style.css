@@ -259,7 +259,7 @@ h2{
 	padding: 0px;
 }
 
-.front_example{
+div.front_example{
 	float:left;
 	width:95px;
 	border: 1px solid #cdcdc9;
@@ -268,11 +268,23 @@ h2{
 	padding:8px 8px 4px 8px;
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
 	min-height: 132px;
-	height:auto !important;
+	/* height:auto !important; */
 	height: 132px;
 }
 
-.front_example img{
+div.thumb_img_wrapper{
+	width:95px;
+	height:96px;
+	border-style:none;
+	padding:0;
+}
+
+
+img.thumb{
+	border:0px;
+}
+
+img.thumb_unk{
 	width:95px;
 	height:95px;
 	border:0px;
@@ -288,6 +300,22 @@ h2{
 	text-decoration: none;
     border-style: none;
 	color:#61615f;
+}
+
+div.front_example a:hover abbr {
+	text-decoration: underline;
+	color:#0094df;
+}
+
+div.front_example a:link img ,
+div.front_example a:visited img 
+{
+	border: 1px solid #FFF;
+}
+
+div.front_example a:hover img,
+div.front_example a:active img {
+	border: 1px solid #0094df;
 }
 
 #front_greyCol{
