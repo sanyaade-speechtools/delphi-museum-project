@@ -17,3 +17,9 @@ INSERT INTO role_perms( role_id, perm_id, creation_time ) VALUES
    ( 1, 3, now() ),
    ( 2, 4, now() ),
    ( 2, 5, now() );
+
+INSERT INTO user( id, username, passwdmd5, email, creation_time ) VALUES
+( 1, 'admin', md5('delphi'), 'blackhole@ludicrum.org', now() );
+
+INSERT INTO user_roles( user_id, role_id, approver_id, creation_time ) VALUES
+( 1, 1, 1, now() );
