@@ -96,26 +96,26 @@ function outputSimpleImage( $row, $size, $fCenter ) {
 		$pathToImg = $CFG->image_medium . "/" . $row['img_path'];
 
 	if( $row['img_ar'] <= 0 ) {
-		$imageOutput .= "<img src=\"".$pathToImg."\" class=\"mid_unk".$size."\" />";
+		$imageOutput = "<img src=\"".$pathToImg."\" class=\"mid_unk".$size."\" />";
 	} else {
 		if( $row['img_ar'] > 1 ) {	// Horizontal/landscape
 			if( isset($fCenter) && $fCenter ) {
-				$imageOutput .= "<div class=\"shift\" style=\"position:relative;left:0px;";
+				$imageOutput = "<div class=\"shift\" style=\"position:relative;left:0px;";
 				// y offset = ($size-(height))/2 == ($size-($size/img_ar))/2
 				$imageOutput .= "top:".(($size-$size/$row['img_ar'])/2)."px;\">";
 				$imageOutput .= "<img width=\"$size\" src=\"".$pathToImg."\" class=\"mid\" /></div>";
 			} else {
 				// no y offset for this case
-				$imageOutput .= "<img width=\"$size\" src=\"".$pathToImg."\" class=\"mid\" />";
+				$imageOutput = "<img width=\"$size\" src=\"".$pathToImg."\" class=\"mid\" />";
 			}
 		} else { // Vertical/portrait
 			if( isset($fCenter) && $fCenter ) {
-				$imageOutput .= "<div class=\"shift\" style=\"position:relative;top:0px;";
+				$imageOutput = "<div class=\"shift\" style=\"position:relative;top:0px;";
 				// x offset = ($size-(width))/2 == ($size-($size*img_ar))/2
 				$imageOutput .= "left:".(($size-$size*$row['img_ar'])/2)."px;\">";
 				$imageOutput .= "<img height=\"$size\" src=\"".$pathToImg."\" class=\"mid\" /></div>";
 			} else {
-				$imageOutput .= "<img height=\"$size\" src=\"".$pathToImg."\" class=\"mid\" />";
+				$imageOutput = "<img height=\"$size\" src=\"".$pathToImg."\" class=\"mid\" />";
 			}
 		}
 	}
