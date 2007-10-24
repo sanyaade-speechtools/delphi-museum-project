@@ -333,7 +333,9 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		*/
 		while( $row=$objsresult->fetch_assoc() )
 		{
-			$imageOutput .= outputThumbnail( $row, "results_result" );
+			$imageOutput .= outputThumbnail( $row, "results_result", 
+							$CFG->wwwroot."/modules/browser/details.php?id=", 95 );
+
 		}
 	}
 	$t->assign("baseQ", $baseQ); 			// for pagination queries in page

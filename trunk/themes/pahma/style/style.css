@@ -272,9 +272,16 @@ div.front_example{
 	height: 132px;
 }
 
-div.thumb_img_wrapper{
+div.thumb_img_wrapper95{
 	width:95px;
-	height:96px;
+	height:98px;
+	border-style:none;
+	padding:0;
+}
+
+div.thumb_img_wrapper173{
+	width:173px;
+	height:176px;
 	border-style:none;
 	padding:0;
 }
@@ -284,37 +291,68 @@ img.thumb{
 	border:0px;
 }
 
-img.thumb_unk{
+img.thumb_unk95{
 	width:95px;
 	height:95px;
 	border:0px;
 }
 
-.front_exampleLabel{
+img.thumb_unk173{
+	width:173px;
+	height:173px;
+	border:0px;
+}
+
+
+
+.thumbLabel{
 	font-size:.9em;
 	width:100%;
 	text-align:center;
 }
 
-.front_exampleLabel a, .front_exampleLabel abbr{
+.thumbLabel a, .thumbLabel abbr{
 	text-decoration: none;
     border-style: none;
 	color:#61615f;
 }
 
-div.front_example a:hover abbr {
+div.front_fset .thumbLabel{
+	font-size:1.2em;
+	text-align:left;
+	color:#61615f;
+}
+
+
+div.front_fset .thumbLabel a {
+	text-decoration: none;
+    border-style: none;
+	color:#61615f;
+}
+
+div.front_example a:hover abbr,
+div.results_result a:hover abbr,
+div.front_fset a:hover abbr {
 	text-decoration: underline;
 	color:#0094df;
 }
 
-div.front_example a:link img ,
-div.front_example a:visited img 
+div.front_example a:link img,
+div.front_example a:visited img,
+div.results_result a:link img,
+div.results_result a:visited img,
+div.front_set a:link img,
+div.front_set a:visited img 
 {
 	border: 1px solid #FFF;
 }
 
 div.front_example a:hover img,
-div.front_example a:active img {
+div.front_example a:active img,
+div.results_result a:hover img,
+div.results_result a:active img,
+div.front_set a:hover img,
+div.front_set a:active img {
 	border: 1px solid #0094df;
 }
 
@@ -329,7 +367,7 @@ div.front_example a:active img {
 	padding-bottom:40px;
 }
 
-.front_featuredSetBox{
+.front_fset{
 	position:relative;
 	float:left;
 	border: 1px solid #cdcdc9;
@@ -337,26 +375,14 @@ div.front_example a:active img {
 	margin-right:17px;
 	margin-bottom:17px;
 	width:173px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack 
 	min-height: 240px;
 	height:auto !important;
+	*/
 	height: 240px;
 }
 
-.front_featuredSetBox img{
-	width:173px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 155px;
-	height:auto !important;
-	height: 155px;
-}
-
-.front_featuredSetName{
-	color:#61615f;
-	font-size:1.2em;
-}
-
-.front_featuredSetCreator{
+.ownerLabel{
 	position:absolute;
 	bottom:8px;
 	right:8px;
@@ -364,7 +390,7 @@ div.front_example a:active img {
 	font-size:.8em;
 }
 
-.front_featuredSetCreator span{
+.ownerLabel span.ownerName{
 	color:#f7941d;
 }
 
@@ -575,7 +601,7 @@ code.hidden {
 	
 	text-align: center;
 }
-#detail_image img {
+#detail_image img.mid_unk400 {
 	width: 400px;
 	height: 400px;
 }

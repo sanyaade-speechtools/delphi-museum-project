@@ -1,6 +1,7 @@
 <?
 
 require_once("../../libs/env.php");
+require_once("../common/imgthumb.php");
 // Temp hack until we move from mysqli to all PEAR
 include("../facetBrowser/dbconnect.php");
 // This should go somewhere else
@@ -51,7 +52,7 @@ while ($row = $res->fetchRow()) {
 			$t->assign('bad_zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
 		// We always set the image path so we can fall back from the flash app
 		if( is_file($mid_path) )
-			$t->assign('img_path', $CFG->image_medium.'/'.$relPath);
+			$t->assign('img_html', outputSimpleImage( $row, 400, false ));
 		else {
 			$t->assign('img_path', $CFG->no_image_medium);
 			$t->assign('bad_img_path', $CFG->image_medium.'/'.$relPath);

@@ -16,60 +16,9 @@
 </div>
 <div id="front_greyCol">
 	<h2>Featured Sets</h2>
-	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage1.jpg" alt="Featured set image" />
-		<div class="front_featuredSetName">
-			Portraits of India
-		</div>
-		<div class="front_featuredSetCreator">
-			Created by <span>HearstMuseum</span>
-		</div>
-	</div>
-	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage.jpg" alt="Featured set image" />
-		<div class="front_featuredSetName">
-			New Baskets from South America
-		</div>
-		<div class="front_featuredSetCreator">
-			Created by <span>HearstMuseum</span>
-		</div>
-	</div>
-	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage2.jpg" alt="Featured set image" />
-		<div class="front_featuredSetName">
-			Strictly Figurines
-		</div>
-		<div class="front_featuredSetCreator">
-			Created by <span>HearstMuseum</span>
-		</div>
-	</div>
-	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage3.jpg" alt="Featured set image" />
-		<div class="front_featuredSetName">
-			Serpent Time!
-		</div>
-		<div class="front_featuredSetCreator">
-			Created by <span>HearstMuseum</span>
-		</div>
-	</div>
-	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage4.jpg" alt="Featured set image" />
-		<div class="front_featuredSetName">
-			Pachyderms and their friends
-		</div>
-		<div class="front_featuredSetCreator">
-			Created by <span>HearstMuseum</span>
-		</div>
-	</div>
-	<div class="front_featuredSetBox">
-		<img src="{$themeroot}/images/featuredSetTestImage5.jpg" alt="Featured set image" />
-		<div class="front_featuredSetName">
-			Low Contrast Everything
-		</div>
-		<div class="front_featuredSetCreator">
-			Created by <span>HearstMuseum</span>
-		</div>
-	</div>
+	{section name=set loop=$sets}
+            {$sets[set]}
+    {/section}
 </div>
 
 {include file="footer.tpl"}
