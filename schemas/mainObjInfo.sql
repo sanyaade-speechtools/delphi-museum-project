@@ -43,12 +43,56 @@ CREATE TABLE `objects` (
   `objnum`        VARCHAR(80) NOT NULL,
   `name`          VARCHAR(255) NOT NULL,
   `description`   text NULL,
-  -- All paths are relative to the configured image roots`
+  -- All paths are relative to the configured image roots
   `img_path`      VARCHAR(255) NULL,    
+  `img_ar`        DOUBLE(7,3) UNSIGNED NULL,    
   `creation_time` timestamp NOT NULL default '0000-00-00 00:00:00',
   `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP 
         on update CURRENT_TIMESTAMP,
-  INDEX `obj_id_index` (`id`)
+  INDEX `obj_id_index` (`id`),
+	-- Enable full text (keyword) search on the name and description
+  FULLTEXT KEY `obj_fulltext_index` (`name`,`description`)
+)ENGINE=MyIsam;
+SHOW WARNINGS;
+
+-- Define the media table
+-- This is for media associated to an object. It may be a derivative or view.
+-- Note that we have only the relative paths, and prepend base paths both
+-- to handle location on the site, and as well to handle various derivative
+-- forms (e.g., thumbs, mids, audio-previews, etc.).
+-- The media type indicates the type of the set of derivatives. Therefore,
+-- if there is an image associated with an audio or video object, the type
+-- only refers to the image. In this case, there may be multiple media
+-- with different types.
+-- For most objects, the default image is denormalized into the objects table
+-- to speed up the generation of results views.
+DROP TABLE IF EXISTS `media` \p;
+CREATE TABLE `media` (
+  `id`            INT(10) UNSIGNED PRIMARY KEY auto_increment NOT NULL,
+  `obj_id`        INT(10) UNSIGNED NOT NULL,
+	-- name is not for the object but of this surrogate 
+	-- (e.g., "Obverse view", "Reverse view")
+  `name`          VARCHAR(255) NULL,
+	-- description is not for the object but of this surrogate 
+	-- (e.g., "Frontal view of object taken during restoration.")
+  `description`   text NULL,
+  -- All paths are relative to the configured media roots
+  `path`          VARCHAR(255) NULL,
+	-- If we need to distinguish actual mime-types (e.g., among different image types)
+	-- we can expand this, or add a mime-type as well. Seems like overkill.
+  `type`          ENUM ('image', 'audio', 'video' ) NOT NULL DEFAULT 'image',
+	-- width, height are NULL for audio, or if unknown
+  `width`         INT(5) UNSIGNED NULL,    
+  `height`        INT(5) UNSIGNED NULL,
+  -- aspectR is NULL if width or height are NULL
+  `aspectR`       DOUBLE(7,3) UNSIGNED NULL,
+  `creation_time` timestamp NOT NULL default '0000-00-00 00:00:00',
+  `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP 
+        on update CURRENT_TIMESTAMP,
+  INDEX `med_id_index` (`id`),
+  INDEX `med_obj_id_index` (`obj_id`,`type`),
+  CONSTRAINT `me_ibfk_1` FOREIGN KEY (`obj_id`)
+      REFERENCES `objects` (`id`)
 )ENGINE=MyIsam;
 SHOW WARNINGS;
 
@@ -73,8 +117,11 @@ SHOW WARNINGS;
 
 DROP TABLE IF EXISTS `set_objs` \p;
 CREATE TABLE `set_objs` (
-  `set_id`   int(10) unsigned NOT NULL,
-  `obj_id`   int(10) unsigned NOT NULL,
+  `set_id`        int(10) unsigned NOT NULL,
+  `obj_id`        int(10) unsigned NOT NULL,
+  `notes`         text NULL,			-- why did owner put this in the set?
+  `use_as_icon`   boolean NOT NULL default false, -- for individual featured objs
+  `order_num`     int(2) NOT NULL default 0,      -- To control presentation order
   INDEX `so_set_index` (`set_id`),
   INDEX `so_obj_index` (`obj_id`),
 	-- Ensure we have no dupes in a given set
