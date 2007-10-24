@@ -333,7 +333,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		*/
 		while( $row=$objsresult->fetch_assoc() )
 		{
-			$imageOutput .= outputThumbnail( $row, "results_result", 
+			$imageOutput .= outputWrappedImage( $row, "results_result", 
 							$CFG->wwwroot."/modules/browser/details.php?id=", 95 );
 
 		}
