@@ -27,7 +27,7 @@ if ( isset( $_POST['submitted'] ) ) {
 		$sql = "	INSERT INTO set_objs 
 					(`set_id`, `obj_id`, `order`) 
 					VALUES 
-					('$set_id', '$obj_id', '1')";
+					($set_id, $obj_id, '1')";
 		
 		$res =& $db->exec($sql);
 		if (PEAR::isError($res)) {
@@ -56,7 +56,7 @@ if ( isset( $_POST['submitted'] ) ) {
 		$sql = 	"	INSERT INTO set_objs 
 					(`set_id`, `obj_id`, `order`) 
 					VALUES 
-					('5', '5', '5')
+					($set_id, $obj_id, $order)
 				";
 		
 		$res =& $db->exec($sql);
