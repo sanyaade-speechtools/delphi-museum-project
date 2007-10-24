@@ -100,6 +100,13 @@ $CFG->no_image_thumb     = 'http://example.com/objimages/thumbs/noimg.jpg';
 $CFG->no_image_thumb_square = 'http://example.com/delphi/trunk/objimages/thumbs_square/noimg.jpg';
 $CFG->no_image_medium    = 'http://example.com/delphi/trunk/objimages/mids/noimg.jpg';
 
+//=========================================================================
+// 6. IMAGE CONSTANTS
+//=========================================================================
+// Next, specify the size of derivative images, etc.
+//
+
+$CFG->thumbSize          = 120;
 
 //=========================================================================
 // ALL DONE!  To continue installation, visit your main page with a browser
