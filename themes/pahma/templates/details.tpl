@@ -24,7 +24,11 @@
 				{else}
 					<code class="hidden">{$bad_zoom_path}</code>
 					<code class="hidden">{$bad_img_path}</code>
-					<img src="{$img_path}" />
+					{if isset($img_html) }
+						{$img_html}
+					{else}
+						<img src="{$img_path}" />
+					{/if}
 				{/if}
 				<div style="position:relative;width=350px;">
 					<a href="{$wwwroot}/modules/sets/addToSet.php?height=270&width=400&oid={$id}" class="thickbox" style="position:absolute;left:300px;" title="Add this object to a set">Add to Set</a>
