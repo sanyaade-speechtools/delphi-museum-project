@@ -121,6 +121,7 @@ if($permroles){
 //if($opmsg!="")
 //	$t->assign('opmsg', $opmsg);
 
+$t->assign('page_title', 'PAHMA/Delphi: Edit Role Permissions');
 $t->display('adminRolePerms.tpl');
 
 ?>

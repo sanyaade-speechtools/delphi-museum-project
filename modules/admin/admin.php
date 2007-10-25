@@ -10,5 +10,6 @@ if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
 
 // This need not verify perms as it does not expose anything directly. 
 
+$t->assign('page_title', 'PAHMA/Delphi: Roles and Permissions Administration');
 $t->display('admin.tpl');
 ?>
