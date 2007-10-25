@@ -136,5 +136,6 @@ if($perms){
 if($opmsg!="")
 	$t->assign('opmsg', $opmsg);
 
+$t->assign('page_title', 'PAHMA/Delphi: Edit Permission Definitions');
 $t->display('adminPermissions.tpl');
 ?>

@@ -135,5 +135,6 @@ if($roles){
 if($opmsg!="")
 	$t->assign('opmsg', $opmsg);
 
+$t->assign('page_title', 'PAHMA/Delphi: Edit Role Definitions');
 $t->display('adminRoles.tpl');
 ?>
