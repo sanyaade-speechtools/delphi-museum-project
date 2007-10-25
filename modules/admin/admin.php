@@ -1,27 +1,14 @@
 <?php 
 /* Include Files *********************/
-session_start(); 
-include("dbconnect.php");
-include("login.php");
+require_once("../../libs/env.php");
 /*************************************/
-$subtitle = "Admin";
-
-include("genheader.php");
-if($login_state != DELPHI_LOGGED_IN){
-	echo "<h2 class=\"error\">You are not logged in!</h2>";
-	displayLogin();
-  include("gentail.php");
-	return;
+// If the user isn't logged in, send to the login page.
+if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
+	header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php' );
+	die();
 }
-// This needs to verify the admin perms as well...
-?>
-<h3><a href="adminRoles.php">Manage Role Definitions</a></h3>
-<h3><a href="adminPermissions.php">Manage Permission Definitions</a></h3>
-<h3><a href="adminUserRoles.php">Manage User Roles</a></h3>
-<h3><a href="adminRolePerms.php">Manage Role Permissions</a></h3>
-<p></p>
-<p></p>
-<p><a href="main.php">Return to main page</a></p>
-<?php
-include("gentail.php");
+
+// This need not verify perms as it does not expose anything directly. 
+
+$t->display('admin.tpl');
 ?>
