@@ -1,4 +1,7 @@
 <?php
+//Bring in the user's config file
+require_once('../config.php');
+
 	$badarg = false;
 	if(empty($_POST['r']) || empty($_POST['p']) || empty($_POST['a']))
 		$badarg = true;
@@ -17,7 +20,7 @@
 		exit();
 	}
 // Connect to the mysql database.
-	$mysqli = new mysqli("", "", "", "");
+  $mysqli = new mysqli("$CFG->dbhost", "$CFG->dbuser", "$CFG->dbpass", "$CFG->dbname");
 	// verify connection
 	if (mysqli_connect_errno()) {
 		header("HTTP/1.0 503 Service Unavailable");

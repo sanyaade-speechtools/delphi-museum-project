@@ -1,44 +1,32 @@
 <?php 
 /* Include Files *********************/
-session_start(); 
-include("dbconnect.php");
-include("utils.php");
-include("login.php");
+require_once("../../libs/env.php");
 /*************************************/
-$subtitle = "<a href=\"admin.php\">Admin</a>";
-$subtitle2 = "User Roles";
-
-include("genhead1.php");
-?>
-<style>
-td.title { border-bottom: medium solid #000000; font-weight:bold; }
-td.label { font-weight:bold; }
-td.user { border-bottom: 1px solid black; }
-</style>
-<script src="setupXMLHttpObj.js" ></script>
-<script>
-var sess_login_id = -1;
-<?php 
-	if(isset($_SESSION['login_id'])){
-		echo "sess_login_id = ".$_SESSION['login_id'].";
-		";
-	}
-?>
-function MarkChanged(evt) {
-	var evt = evt || window.event; // event object
-	var target = evt.target || window.event.srcElement; // event target
-	var targetID = target.getAttribute("id"); // event target id
-	var iDot = targetID.indexOf('.');
-	if(iDot < 1)
-		alert( "Error on page - cannot find role to set for item" );
-	else {
-		var user = targetID.substr( 0, iDot );
-		var role = targetID.substr( iDot+1 );
-		var action = target.checked? "set":"unset";
-		//alert( "Calling setRoleForUser( "+role+", "+user+", "+action+")" );
-		setRoleForUser( role, user, action );
-	}
+// If the user isn't logged in, send to the login page.
+if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
+	header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php' );
+	die();
 }
+
+// This needs to verify perms. 
+$style_block = "<style>
+td.title { border-bottom: 2px solid black; font-weight:bold; text-align:left; 
+		font-style:italic; color:#777777; }
+td.label { font-weight:bold; }
+td.role { border-bottom: 1px solid black; }
+</style>";
+
+
+$t->assign("style_block", $style_block);
+
+$themebase = $CFG->wwwroot.'/themes/'.$CFG->theme;
+
+$script_block = '
+<script type="text/javascript" src="'.$themebase.'/scripts/setupXMLHttpObj.js"></script>
+
+<script>
+var sess_login_id = '.((isset($_SESSION['login_id']))?$_SESSION['login_id']:-1).';
+
 // The ready state change callback method that waits for a response.
 function setRoleForUserRSC() {
   if (xmlhttp.readyState==4) {
@@ -57,7 +45,7 @@ function setRoleForUser( role, user, action ) {
 	if( !xmlhttp )
 	  alert( "Cannot update role:permission - no http obj!\n Please advise Delphi support." );
 	else {
-		var url = "API/setUserRole.php";
+		var url = "../../api/setUserRole.php";
 		var args = "r="+role+"&u="+user+"&a="+action;
 		if(sess_login_id >= 0)
 			args += "&ap="+sess_login_id;
@@ -70,70 +58,71 @@ function setRoleForUser( role, user, action ) {
 		//window.status = "request sent: POST: "+url+"?"+args;
 	}
 }
-</script>
-<?php
-include("genbanner.php");
 
-if($login_state != DELPHI_LOGGED_IN){
-	echo "<h2 class=\"error\">You are not logged in!</h2>";
-	displayLogin();
-  include("gentail.php");
-	return;
+function MarkChanged(evt) {
+	var evt = evt || window.event; // event object
+	var target = evt.target || window.event.srcElement; // event target
+	var targetID = target.getAttribute("id"); // event target id
+	var iDot = targetID.indexOf(".");
+	if(iDot < 1)
+		alert( "Error on page - cannot find role to set for item" );
+	else {
+		var user = targetID.substr( 0, iDot );
+		var role = targetID.substr( iDot+1 );
+		var action = target.checked? "set":"unset";
+		//alert( "Calling setRoleForUser( "+role+", "+user+", "+action+")" );
+		setRoleForUser( role, user, action );
+	}
 }
-// This needs to verify the admin perms as well...
+</script>';
+
+$t->assign("script_block", $script_block);
+
+function getRoles(){
+	global $db;
+  /* Get all the roles */
+	$q = "select name from role";
+	$res =& $db->query($q);
+	if (PEAR::isError($res))
+		return false;
+	$roles = array();
+	while ($row = $res->fetchRow()) {
+		$roles[] = $row['name'];
+	}
+	return $roles;
+}
 
 function getUserRoles(){
-	global $mysqli;
+	global $db;
    /* Get all the users and their assigned roles */
-	$q = "select u.username, r.name from user u left join user_roles ur on ( u.id=ur.user_id )"
+	$q = "select u.username user, r.name role from user u "
+			." left join user_roles ur on ( u.id=ur.user_id )"
 	 		." left join role r on (ur.role_id=r.id)";
-	$result = $mysqli->query($q);
-	if(!$result)
+	$res =& $db->query($q);
+	if (PEAR::isError($res))
 		return false;
-	else {
-		while ($row = $result->fetch_array()) {
-			$userroles[$row[0]][$row[1]] = true;
-		}
+	$userroles = array();
+	while ($row =& $res->fetchRow()) {
+		$userroles[$row['user']][$row['role']] = 1;
 	}
+	// Free the result
+	$res->free();
 	return $userroles;
 }
+
 $roles = getRoles();
+if($roles){
+	$t->assign('roles', $roles);
+}
+
 $userroles = getUserRoles();
-if(!$roles){
-	echo "<p>There are no roles defined!</p>";
+if($userroles){
+	$t->assign('userroles', $userroles);
 }
-else if(!$userroles){
-	echo "<p>There are no users defined!</p>";
-}
-else {
-?>
-<table border="0" cellspacing="0" cellpadding="3">
-<tr>
-	 <td class="title"><em>User</em></td>
-<?php
-	foreach( $roles as $role ) {
-		echo '<td class="title" width="100px" align="center">'.$role.'</td>';
-	}
-?>
-</tr>
-<?php
-	foreach( $userroles as $user => $uroles ) {
-		echo '<tr><td class="user" ><p><strong>'.$user.'</td>';
-		foreach( $roles as $role ) {
-			echo '<td class="user" align="center">'
-				.'<input type="checkbox" class="set" id="'.$user.'.'.$role.'"';
-			if(isset($uroles[$role])){
-				echo ' checked="true"';
-			}
-			echo ' onclick="MarkChanged(event);" /></td>';
-		}
-		echo '</tr>';
-	}
-?>
-<tr><td height="20px"></td></tr>
-<tr><td colspan="3" align="left"><a href="main.php">Return to main page</a></td></tr>
-</table>
-<?php
-}
-include("gentail.php");
+
+//if($opmsg!="")
+//	$t->assign('opmsg', $opmsg);
+
+$t->display('adminUserRoles.tpl');
+
 ?>

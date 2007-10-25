@@ -1,37 +1,31 @@
 <?php 
 /* Include Files *********************/
-session_start(); 
-include("dbconnect.php");
-include("utils.php");
-include("login.php");
+require_once("../../libs/env.php");
 /*************************************/
-$subtitle = "<a href=\"admin.php\">Admin</a>";
-$subtitle2 = "Role Permissions";
+// If the user isn't logged in, send to the login page.
+if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
+	header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php' );
+	die();
+}
 
-include("genhead1.php");
-?>
-<style>
-td.title { border-bottom: 2px solid black; font-weight:bold; }
+// This needs to verify perms. 
+
+$style_block = "<style>
+td.title { border-bottom: 2px solid black; font-weight:bold; text-align:left; 
+		font-style:italic; color:#777777; }
 td.label { font-weight:bold; }
 td.role { border-bottom: 1px solid black; }
-</style>
-<script src="setupXMLHttpObj.js" ></script>
+</style>";
+
+
+$t->assign("style_block", $style_block);
+
+$themebase = $CFG->wwwroot.'/themes/'.$CFG->theme;
+
+$script_block = '
+<script type="text/javascript" src="'.$themebase.'/scripts/setupXMLHttpObj.js"></script>
+
 <script>
-function MarkChanged(evt) {
-	var evt = evt || window.event; // event object
-	var target = evt.target || window.event.srcElement; // event target
-	var targetID = target.getAttribute("id"); // event target id
-	var iDot = targetID.indexOf('.');
-	if(iDot < 1)
-		alert( "Error on page - cannot find role to set for item" );
-	else {
-		var perm = targetID.substr( 0, iDot );
-		var role = targetID.substr( iDot+1 );
-		var action = target.checked? "set":"unset";
-		//alert( "Calling setPermForRole( "+perm+", "+role+", "+action+")" );
-		setPermForRole( perm, role, action );
-	}
-}
 
 // The ready state change callback method that waits for a response.
 function setPermForRoleRSC() {
@@ -51,87 +45,82 @@ function setPermForRole( perm, role, action ) {
 	if( !xmlhttp )
 	  alert( "Cannot update role:permission - no http obj!\n Please advise Delphi support." );
 	else {
-		var url = "API/setRolePerm.php";
+		var url = "../../api/setRolePerm.php";
 		var args = "r="+role+"&p="+perm+"&a="+action;
 		//alert( "Preparing request: POST: "+url+"?"+args );
 		xmlhttp.open("POST", url, true);
-		xmlhttp.setRequestHeader("Content-Type",
-															"application/x-www-form-urlencoded" );
+		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded" );
  		xmlhttp.onreadystatechange=setPermForRoleRSC;
 		xmlhttp.send(args);
 		//window.status = "request sent: POST: "+url+"?"+args;
 	}
 }
-</script>
 
-<?php
-include("genbanner.php");
-
-if($login_state != DELPHI_LOGGED_IN){
-	echo "<h2 class=\"error\">You are not logged in!</h2>";
-	displayLogin();
-  include("gentail.php");
-	return;
+function MarkChanged(evt) {
+	var evt = evt || window.event; // event object
+	var target = evt.target || window.event.srcElement; // event target
+	var targetID = target.getAttribute("id"); // event target id
+	var iDot = targetID.indexOf(".");
+	if(iDot < 1)
+		alert( "Error on page - cannot find role to set for item" );
+	else {
+		var perm = targetID.substr( 0, iDot );
+		var role = targetID.substr( iDot+1 );
+		var action = target.checked? "set":"unset";
+		//alert( "Calling setPermForRole( "+perm+", "+role+", "+action+")" );
+		setPermForRole( perm, role, action );
+	}
 }
-// This needs to verify the admin perms as well...
+
+</script>';
+
+$t->assign("script_block", $script_block);
+
+function getRoles(){
+	global $db;
+  /* Get all the roles */
+	$q = "select name from role";
+	$res =& $db->query($q);
+	if (PEAR::isError($res))
+		return false;
+	$roles = array();
+	while ($row = $res->fetchRow()) {
+		$roles[] = $row['name'];
+	}
+	return $roles;
+}
 
 function getPermRoles(){
-	global $mysqli;
+	global $db;
    /* Get all the permissions and their assigned roles */
-	$q = "select p.name, r.name from permission p left join role_perms rp on ( p.id=rp.perm_id )"
+	$q = "select p.name perm, r.name role from permission p "
+			." left join role_perms rp on ( p.id=rp.perm_id )"
 	 		." left join role r on (rp.role_id=r.id)";
-	$result = $mysqli->query($q);
-	if(!$result)
+	$res =& $db->query($q);
+	if (PEAR::isError($res))
 		return false;
-	else {
-		while ($row = $result->fetch_array()) {
-			$permroles[$row[0]][$row[1]] = true;
-		}
+	$permroles = array();
+	while ($row =& $res->fetchRow()) {
+		$permroles[$row['perm']][$row['role']] = 1;
 	}
+	// Free the result
+	$res->free();
 	return $permroles;
 }
+
 $roles = getRoles();
+if($roles){
+	$t->assign('roles', $roles);
+}
+
 $permroles = getPermRoles();
-if(!$roles){
-	echo "<p>There are no roles defined!</p>";
+if($permroles){
+	$t->assign('permroles', $permroles);
 }
-else if(!$permroles){
-	echo "<p>There are no permissions defined!</p>";
-}
-else {
-?>
-<table border="0" cellspacing="0" cellpadding="3">
-<tr>
-   <td class="title"><em>Permission</em></td>
-<?php
-	foreach( $roles as $role ) {
-		echo '<td class="title" width="100px" align="center">'.$role.'</td>';
-	}
-?>
-</tr>
-<?php
-	foreach( $permroles as $perm => $proles ) {
-		echo '<tr><td class="role" ><p><strong>'.$perm.'</td>';
-		foreach( $roles as $role ) {
-			echo '<td class="role" align="center">'
-				.'<input type="checkbox" class="set" id="'.$perm.'.'.$role.'"';
-			if(isset($proles[$role])){
-				echo ' checked="true"';
-			}
-			echo ' onclick="MarkChanged(event);" /></td>';
-		}
-		echo '</tr>';
-	}
-?>
-</table>
-</div>
-<div style="width:80%; text-align:left; line-height:0.8em; padding-top:15px; padding-left:3px;">
-<h5><a href="adminRoles.php">Edit Role Definitions</a></h5>
-<h5><a href="adminPerms.php">Edit Permission Definitions</a></h5>
-<h5><a href="main.php">Return to main page</a></h5>
 
+//if($opmsg!="")
+//	$t->assign('opmsg', $opmsg);
 
-<?php
-}
-include("gentail.php");
+$t->display('adminRolePerms.tpl');
+
 ?>
