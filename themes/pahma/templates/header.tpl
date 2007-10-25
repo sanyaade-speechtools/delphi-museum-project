@@ -6,10 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
 <link rel="stylesheet" href="{$themeroot}/style/style.css" type="text/css" />
-
+{if isset($style_block) }
+{$style_block}
+{/if}
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.overlabel.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/header.js"></script>
+{if isset($script_block) }
+{$script_block}
+{/if}
+
 
 <title></title>
 
