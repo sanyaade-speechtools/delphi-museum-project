@@ -17,7 +17,7 @@
 {/if}
 
 
-<title></title>
+<title>{$page_title}</title>
 
 </head>
 
