@@ -1,6 +1,7 @@
 <?php 
 /* Include Files *********************/
 require_once("../../libs/env.php");
+require_once("authUtils.php");
 /*************************************/
 // If the user isn't logged in, send to the login page.
 if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
@@ -8,7 +9,18 @@ if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
 	die();
 }
 
+$t->assign('page_title', 'PAHMA/Delphi: Edit User Roles');
+
 // This needs to verify perms. 
+if( !currUserHasPerm( 'AssignRoles' ) ) {
+	$opmsg = "You do not have rights to Assign roles to users. <br />
+		Please contact your Delphi administrator for help.";
+	$t->assign('perm_error', $opmsg);
+
+	$t->display('adminPermissions.tpl');
+	die();
+}
+
 $style_block = "<style>
 td.title { border-bottom: 2px solid black; font-weight:bold; text-align:left; 
 		font-style:italic; color:#777777; }
@@ -82,6 +94,9 @@ function getRoles(){
 	global $db;
   /* Get all the roles */
 	$q = "select name from role";
+	if( !currUserHasRole( 'Admin' ) ) {
+		$q .= " where NOT name like 'Admin'";
+	}
 	$res =& $db->query($q);
 	if (PEAR::isError($res))
 		return false;
@@ -98,6 +113,12 @@ function getUserRoles(){
 	$q = "select u.username user, r.name role from user u "
 			." left join user_roles ur on ( u.id=ur.user_id )"
 	 		." left join role r on (ur.role_id=r.id)";
+	if( !currUserHasRole( 'Admin' ) ) {
+		$q .= " where NOT r.name like 'Admin' and NOT u.username like 'admin'";
+	} else {
+		$q .= " where NOT u.username like 'admin'";
+	}
+	$q .= " order by u.id";
 	$res =& $db->query($q);
 	if (PEAR::isError($res))
 		return false;
@@ -123,7 +144,6 @@ if($userroles){
 //if($opmsg!="")
 //	$t->assign('opmsg', $opmsg);
 
-$t->assign('page_title', 'PAHMA/Delphi: Edit User Roles');
 $t->display('adminUserRoles.tpl');
 
 ?>

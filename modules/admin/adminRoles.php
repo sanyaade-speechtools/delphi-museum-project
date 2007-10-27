@@ -1,6 +1,7 @@
 <?php 
 /* Include Files *********************/
 require_once("../../libs/env.php");
+require_once("authUtils.php");
 /*************************************/
 // If the user isn't logged in, send to the login page.
 if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
@@ -8,7 +9,17 @@ if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
 	die();
 }
 
+$t->assign('page_title', 'PAHMA/Delphi: Edit Role Definitions');
+
 // This needs to verify perms. 
+if( !currUserHasPerm( 'EditRoles' ) ) {
+	$opmsg = "You do not have rights to Edit roles. <br />
+		Please contact your Delphi administrator for help.";
+	$t->assign('perm_error', $opmsg);
+
+	$t->display('adminPermissions.tpl');
+	die();
+}
 
 $style_block = "<style>
 td.title { border-bottom: 2px solid black; font-weight:bold; text-align:left; 
@@ -135,6 +146,5 @@ if($roles){
 if($opmsg!="")
 	$t->assign('opmsg', $opmsg);
 
-$t->assign('page_title', 'PAHMA/Delphi: Edit Role Definitions');
 $t->display('adminRoles.tpl');
 ?>

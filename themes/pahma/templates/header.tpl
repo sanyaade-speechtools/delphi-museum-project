@@ -31,6 +31,9 @@
 				Welcome <a href="{$wwwroot}/modules/auth/profile.php"><span>{$currentUser_name}</span></a> | 
 				<a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> | 
 				<a href="{$wwwroot}/modules/help/help.php">Help</a> | 
+				{if $currentUser_isAdmin || $currentUser_isAuthStaff }
+				<a href="{$wwwroot}/modules/admin/admin.php">Admin</a> |
+				{/if}
 				<a href="{$wwwroot}/modules/auth/logout.php">Sign Out</a>
 			{else}
 				<a href="{$wwwroot}/modules/auth/login.php">Sign In</a> | 

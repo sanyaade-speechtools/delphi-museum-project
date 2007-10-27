@@ -17,7 +17,7 @@ require_once('../../config.php');
 
 // Include pear database handler, smarty
 ini_set('include_path',"$CFG->dirroot/libs/pear/:".ini_get('include_path'));
-require_once "MDB2.php";
+require_once "$CFG->dirroot/libs/pear/MDB2.php";
 require_once "$CFG->dirroot/libs/smarty/Smarty.class.php";
 
 // Connect to the database
@@ -32,6 +32,7 @@ $db->setFetchMode(MDB2_FETCHMODE_ASSOC);
 
 // Determin user's login state
 require_once "$CFG->dirroot/modules/auth/checkLogin.php";
+require_once "$CFG->dirroot/modules/admin/authUtils.php";
 $login_state = checkLogin();
 // echo $login_state;
 
@@ -62,6 +63,10 @@ if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$t->assign('currentUser_id', $details['id']);
 	$_SESSION['id'] = $details['id'];
 	$_SESSION['email'] = $details['email'];
+	if( userHasRole( $details['id'], 'Admin' ))
+		$t->assign('currentUser_isAdmin', TRUE );
+	if( userHasRole( $details['id'], 'AuthorizedStaff' ))
+		$t->assign('currentUser_isAuthStaff', TRUE );
 } else {
 	$t->assign('currentUser_loggedIn', FALSE);
 	
