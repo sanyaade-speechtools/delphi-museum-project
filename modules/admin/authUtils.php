@@ -31,7 +31,7 @@ function userHasPerm($user_id, $perm) {
 }
 
 function currUserHasRole( $role ) {
-	if( isset($_SESSION['id']) && $_SESSION['login_id'] >= 0 )
+	if( isset($_SESSION['id']) && $_SESSION['id'] >= 0 )
 		return userHasRole( $_SESSION['id'], $role );
 	return false;
 }
