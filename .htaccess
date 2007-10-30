@@ -1,0 +1,28 @@
+RewriteEngine On
+# Direct to frontpage
+RewriteRule   ^delphi/$ delphi/trunk/modules/frontpage/frontpage.php
+
+# Sets rules
+RewriteRule   ^delphi/mysets/{0,1}$ delphi/trunk/modules/sets/mysets.php
+RewriteRule   ^delphi/set/(\d+)/{0,1}$ delphi/trunk/modules/sets/viewset.php?sid=$1
+
+# Browser rules
+RewriteRule   ^delphi/browse/([0-9]+)/{0,1}$ delphi/trunk/modules/facetBrowser/facetBrowse.php?cats=$1
+RewriteRule   ^delphi/browser/{0,1}$ delphi/trunk/modules/facetBrowser/browser.php
+
+# Auth rules
+RewriteRule   ^delphi/logout/{0,1}$ delphi/trunk/modules/auth/logout.php
+RewriteRule   ^delphi/login/{0,1}$ delphi/trunk/modules/auth/login.php
+RewriteRule   ^delphi/profile/{0,1}$ delphi/trunk/modules/auth/profile.php
+RewriteRule   ^delphi/lostpass/{0,1}$ delphi/trunk/modules/auth/forgotpw.php
+RewriteRule   ^delphi/register/{0,1}$ delphi/trunk/modules/auth/register.php
+
+# Admin rules
+RewriteRule   ^delphi/admin/{0,1}$ delphi/trunk/modules/admin/admin.php
+RewriteRule   ^delphi/admin/userroles/{0,1}$ delphi/trunk/modules/admin/adminUserRoles.php
+RewriteRule   ^delphi/admin/roles/{0,1}$ delphi/trunk/modules/admin/adminRoles.php
+RewriteRule   ^delphi/admin/roleperms/{0,1}$ delphi/trunk/modules/admin/adminRolePerms.php
+RewriteRule   ^delphi/admin/permissions/{0,1}$ delphi/trunk/modules/admin/adminPermissions.php
+
+# Static-like pages. e.g.: /delphi/help --> delphi/trunk/modules/help/help.php
+RewriteRule   ^delphi/([^/]+)/{0,1}$ delphi/trunk/modules/$1/$1.php
