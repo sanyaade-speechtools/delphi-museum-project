@@ -39,6 +39,9 @@ while ($row = $res->fetchRow()) {
 	$mid_path = $mid_dir.'/'.$relPath;
 	$rel_zoom_dir = substr($relPath, 0, strlen($relPath)-4);
 	$zoom_img_dir = $zoom_dir.'/'.$rel_zoom_dir;
+	
+	$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
+
 		if( is_dir($zoom_img_dir) )
 			$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
 		else

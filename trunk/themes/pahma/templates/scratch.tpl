@@ -12,7 +12,7 @@
 
 <body>
 
-	<script type="text/javascript" src="http://192.168.2.26/delphi/trunk/libs/jquery/jquery-1.1.2.pack.js"></script>
+	<script type="text/javascript" src="http://192.168.2.26/delphi/trunk/libs/jquery/jquery-1.2.1.pack.js"></script>
 	<script type="text/javascript" src="http://192.168.2.26/delphi/trunk/libs/jquery/jquery.ie-png-hack-c.js"></script>
 
 	

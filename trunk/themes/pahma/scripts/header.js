@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $("label.overlabel").overlabel();
+	$("label.overlabel").overlabel();
 });

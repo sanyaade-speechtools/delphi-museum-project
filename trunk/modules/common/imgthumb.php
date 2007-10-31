@@ -76,13 +76,33 @@ function outputWrappedImage( $row, $wrapperClass, $linkBase, $size ) {
 	return $imageOutput;
 
 }
-//
-// Take row of image into and a wrapper class and produce the HTML for a thumb.
-// Assumes row has: id, img_path, img_ar
-// If $fCenter is true, will output the offset logic
-// If size is > configured thumbmax, will use medium rather than thumb images.
-// linkBase can be any URL (even javascript) that can take the id as suffix
-function outputSimpleImage( $row, $size, $fCenter ) {
+
+
+/*
+	Returns a div containing a centered image. If a linkURL is provided, the image
+	will be linked to the given URL. If size is > configured thumbmax, will use 
+	medium rather than thumb images.
+
+	Example of returned markup:
+	
+	<div style="width:30px;height:30px;position:relative">
+		<a href="#">
+			<img src="image.png" style="width:30px;position:absolute;left:0px;top:10px" />
+		</a>
+	</div>
+	
+	Args is an array of options. Some are required!
+	
+	$args = array(	'img_path' => $row['img_path'], 				//REQUIRED!
+							'size' => 40, 									//REQUIRED!
+							'img_ar' => $row['img_ar'], 					//REQUIRED!
+							'linkURL' => "/delphi/set/".$row['set_id'], 	//optional
+							'vAlign' => "top", 								//optional {top,center,bottom} (default: center)
+							'hAlign' => "center" 							//optional {left,center,right} (default: center)
+						);
+
+*/
+function outputSimpleImage($args) {
 	global $CFG;
 
 	if( isset( $CFG->thumbSize ))
@@ -90,35 +110,46 @@ function outputSimpleImage( $row, $size, $fCenter ) {
 	else
 		$thumbMax = 120;
 
-	if( $size <= $thumbMax )
-		$pathToImg = $CFG->image_thumb . "/" . $row['img_path'];
+	if( $args['size'] <= $thumbMax )
+		$pathToImg = $CFG->image_thumb . "/" . $args['img_path'];
 	else
-		$pathToImg = $CFG->image_medium . "/" . $row['img_path'];
+		$pathToImg = $CFG->image_medium . "/" . $args['img_path'];
 
-	if( $row['img_ar'] <= 0 ) {
-		$imageOutput = "<img src=\"".$pathToImg."\" class=\"mid_unk".$size."\" />";
+	$imageOutput = "<div style='width:".$args['size']."px;height:".$args['size']."px;position:relative;'>";
+	if (isset($args['linkURL'])) $imageOutput .= "<a href='".$args['linkURL']."'>";
+	
+	if( $args['img_ar'] <= 0 ) {
+		$imageOutput .= "<img src='".$pathToImg."' style='width:".$args['size']."px;'/>";
 	} else {
-		if( $row['img_ar'] > 1 ) {	// Horizontal/landscape
-			if( isset($fCenter) && $fCenter ) {
-				$imageOutput = "<div class=\"shift\" style=\"position:relative;left:0px;";
-				// y offset = ($size-(height))/2 == ($size-($size/img_ar))/2
-				$imageOutput .= "top:".(($size-$size/$row['img_ar'])/2)."px;\">";
-				$imageOutput .= "<img width=\"$size\" src=\"".$pathToImg."\" class=\"mid\" /></div>";
-			} else {
-				// no y offset for this case
-				$imageOutput = "<img width=\"$size\" src=\"".$pathToImg."\" class=\"mid\" />";
+		$vAlign = "";
+		$hAlign = ""; 
+		$width = "";
+		$height = "";
+		if( $args['img_ar'] > 1 ) {	// Horizontal/landscape
+			$width = "width:".$args['size']."px;";
+			$offset = (($args['size']-$args['size']/$args['img_ar'])/2);
+			if(!isset($args['vAlign']) || $args['vAlign'] == "center"){
+				$vAlign = "top:".$offset."px;";
+			} elseif( $args['vAlign'] == "top"){
+				$vAlign = "top:0px;";
+			} elseif($args['vAlign'] == "bottom"){
+				$vAlign = "top:".($offset*2)."px;";
 			}
 		} else { // Vertical/portrait
-			if( isset($fCenter) && $fCenter ) {
-				$imageOutput = "<div class=\"shift\" style=\"position:relative;top:0px;";
-				// x offset = ($size-(width))/2 == ($size-($size*img_ar))/2
-				$imageOutput .= "left:".(($size-$size*$row['img_ar'])/2)."px;\">";
-				$imageOutput .= "<img height=\"$size\" src=\"".$pathToImg."\" class=\"mid\" /></div>";
-			} else {
-				$imageOutput = "<img height=\"$size\" src=\"".$pathToImg."\" class=\"mid\" />";
+			$height = "height:".$args['size']."px;";
+			$offset = (($args['size']-$args['size']*$args['img_ar'])/2);
+			if(!isset($args['hAlign']) || $args['hAlign'] == "center"){
+				$hAlign = "left:".$offset."px;";
+			} elseif( $args['hAlign'] == "left"){
+				$hAlign = "left:0px;";
+			} elseif($args['hAlign'] == "right"){
+				$hAlign = "left:".($offset*2)."px;";
 			}
 		}
+		$imageOutput .= "<img src='".$pathToImg."' style='position:relative;".$vAlign.$hAlign.$width.$height."'/>";
 	}
+	if (isset($args['linkURL'])) $imageOutput .= "</a>";
+	$imageOutput .= "</div>";
 
 	return $imageOutput;
 

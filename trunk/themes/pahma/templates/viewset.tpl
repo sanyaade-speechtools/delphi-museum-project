@@ -6,7 +6,8 @@
 <script type="text/javascript" src="{$themeroot}/scripts/viewset.js"></script>
 
 
-	<h2 class="{if $username == $currentUser_name} editSetName{/if}" id="setName___{$setId}">{$setName} {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if}</h2> 
+	<h2 class="{if $username == $currentUser_name} editSetName{/if}" id="setName___{$setId}">{$setName}
+		<!--  {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if} --></h2> 
 	<div id="viewset_createdBy">Created by {$username}</div>
 	<a href="shareSet.php?height=425&width=400&sid={$setId}" class="thickbox viewset_shareLink" title="Share this set">Share this set</a>
 
@@ -24,9 +25,9 @@
 					{section name=setObj loop=$objects}
 					<div class="viewset_thumbnail{if $smarty.section.setObj.first} viewset_thumbnailSelected{/if}" id="thumb_{$objects[setObj].id}">
 						<img src="{$thumbs}/{$objects[setObj].img_path}" onclick="loadObjDetails({$objects[setObj].id}); return false;" width="70px" height="70px"/>
-						<div class="addButton">
+						<!-- <div class="addButton">
 							<a href="addToSet.php?height=270&width=400&oid={$objects[setObj].id}" class="thickbox" title="Add this object to a set"><img src="{$themeroot}/images/addButton.gif"/></a>
-						</div>
+						</div> -->
 					</div>
 					{/section}
 				</div>
@@ -36,7 +37,7 @@
 						<h2>Set Description</h2>
 					</div>
 					<div class="viewset_boxContent">
-						<p id="setDescription___{$setId}" class="{if $username == $currentUser_name}editSetDescription{/if}">{$setDescription} {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if}</p>
+						<p id="setDescription___{$setId}" class="{if $username == $currentUser_name}editSetDescription{/if}">{$setDescription} <!-- {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if} --></p>
 					</div>
 				</div>
 			</div>

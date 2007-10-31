@@ -3,7 +3,7 @@
 <html>
 <head>
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.2.1.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.form.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.validate.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/metadata.js"></script>

@@ -9,13 +9,12 @@
 {if isset($style_block) }
 {$style_block}
 {/if}
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.2.1.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.overlabel.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/header.js"></script>
 {if isset($script_block) }
 {$script_block}
 {/if}
-
 
 <title>{$page_title}</title>
 
