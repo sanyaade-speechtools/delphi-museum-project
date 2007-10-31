@@ -7,6 +7,7 @@ include("../facetBrowser/dbconnect.php");
 // This should go somewhere else
 require "../facetBrowser/Facet.inc";
 
+
 // If there is no id param in the url, send to object not found.
 if( isset( $_GET['id'] ) ) {
 	$objId = $_GET['id'];
@@ -18,7 +19,11 @@ $onlyWithImgs = true;		// default to only images
 if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false'))
 	$onlyWithImgs = false;
 
+
+//---------------------------------
 // Query DB for obj info
+//---------------------------------
+
 $sql = "SELECT * FROM objects o WHERE o.id = $objId LIMIT 1";
 $res =& $db->query($sql);
 if (PEAR::isError($res)) {
@@ -41,28 +46,36 @@ while ($row = $res->fetchRow()) {
     $t->assign('id', $row['id']);
     $t->assign('objnum', $row['objnum']);
     $t->assign('name', $row['name']);
-		$t->assign('description', $row['description']);
-		$relPath = $row['img_path'];
-		$mid_path = $mid_dir.'/'.$relPath;
-		$rel_zoom_dir = substr($relPath, 0, strlen($relPath)-4);
-		$zoom_img_dir = $zoom_dir.'/'.$rel_zoom_dir;
-		if( is_dir($zoom_img_dir) )
-			$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-		else
-			$t->assign('bad_zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-		// We always set the image path so we can fall back from the flash app
-		if( is_file($mid_path) )
-			$t->assign('img_html', outputSimpleImage( $row, 400, false ));
-		else {
-			$t->assign('img_path', $CFG->no_image_medium);
-			$t->assign('bad_img_path', $CFG->image_medium.'/'.$relPath);
-		}
+	$t->assign('description', $row['description']);
+	
+	// This section need to be reworked. See issue 37
+	
+	$relPath = $row['img_path'];
+	$mid_path = $mid_dir.'/'.$relPath;
+	$rel_zoom_dir = substr($relPath, 0, strlen($relPath)-4);
+	$zoom_img_dir = $zoom_dir.'/'.$rel_zoom_dir;
+	
+	$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
+	if( is_dir($zoom_img_dir) )
+		$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
+	else
+		$t->assign('bad_zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
+	// We always set the image path so we can fall back from the flash app
+	if( is_file($mid_path) )
+		$t->assign('img_path', $CFG->image_medium.'/'.$relPath);
+	else {
+		$t->assign('img_path', $CFG->no_image_medium);
+		$t->assign('bad_img_path', $CFG->image_medium.'/'.$relPath);
+	}
 }
 
 // Free the result
 $res->free();
 
+
+//---------------------------------
 // Query DB for categories
+//---------------------------------
 $tqCatsForObj =
 	"SELECT c.id, c.parent_id, c.facet_id, c.display_name
 FROM categories c, obj_cats oc
@@ -99,6 +112,137 @@ foreach( $facets as $facet ) {
 }
 
 $t->assign("facetTree", $facetTreeOutput);
+
+
+//---------------------------------
+// Query DB for sets containing this object
+//---------------------------------
+$sql = 	"	SELECT 
+				set_objs.set_id, 
+				sets.name as set_name, 
+				sets.owner_id, 
+				sets.creation_time, 
+				user.username as owner_name, 
+				tFirstSetObject.img_path, 
+				tFirstSetObject.img_ar	
+			FROM set_objs
+			LEFT JOIN sets
+			ON set_objs.set_id = sets.id
+			LEFT JOIN user
+			ON sets.owner_id = user.id
+			LEFT JOIN (SELECT set_objs.set_id, objects.img_path, objects.img_ar
+						FROM set_objs
+						LEFT JOIN objects
+						ON set_objs.obj_id = objects.id
+						WHERE set_objs.order = 1) tFirstSetObject
+			ON tFirstSetObject.set_id = set_objs.set_id
+			WHERE set_objs.obj_id = ".$objId." AND sets.policy = 'public'
+			ORDER BY creation_time DESC
+		";
+		
+$res =& $db->query($sql);
+if (PEAR::isError($res)) {
+    die($res->getMessage());
+}
+
+// If nothing is found, set containingSets variable to false
+if ( $res->numRows() < 1 ){
+	$t->assign("containingSets", false);
+} else {
+	$t->assign("containingSets", true);
+	if ( $res->numRows() > 1 ) $t->assign("moreSetsLink", true);
+
+	$otherSets = array();
+	$otherSetsLimit = 1;
+	$otherSetsCounter = 0;
+	while ($row = $res->fetchRow()) {
+		if($otherSetsCounter < $otherSetsLimit){
+			$imageOptions = array(	'img_path' => $row['img_path'],
+									'size' => 40,
+									'img_ar' => $row['img_ar'],
+									'linkURL' => "/delphi/set/".$row['set_id'],
+									'vAlign' => "top",
+									'hAlign' => "center"
+								);
+
+			$otherSet = array(	'set_id' => $row['set_id'], 
+								'set_name' => $row['set_name'],
+								'owner_id' => $row['owner_id'],
+								'owner_name' => $row['owner_name'],
+								'thumb' => outputSimpleImage($imageOptions)
+							);
+
+			array_push($otherSets, $otherSet);
+		}
+		$otherSetsCounter++;
+	}
+	$t->assign("otherSets", $otherSets);
+}
+// Free the result
+$res->free();
+
+//---------------------------------
+// Query DB for a list of the user's sets
+//---------------------------------
+$sql = 	"	SELECT 
+				sets.id as set_id, 
+				sets.name as set_name, 
+				sets.creation_time, 
+				tFirstSetObject.img_path, 
+				tFirstSetObject.img_ar,
+				tMySetsWithObject.contains_obj
+			FROM sets
+			LEFT JOIN (SELECT set_objs.set_id, objects.img_path, objects.img_ar
+						FROM set_objs
+						LEFT JOIN objects
+						ON set_objs.obj_id = objects.id
+						WHERE set_objs.order = 1) tFirstSetObject
+			ON tFirstSetObject.set_id = sets.id
+			LEFT JOIN (SELECT set_objs.set_id, objects.id as contains_obj
+						FROM set_objs
+						LEFT JOIN objects
+						ON set_objs.obj_id = objects.id
+						WHERE set_objs.obj_id = ".$objId.") tMySetsWithObject
+			ON tMySetsWithObject.set_id = sets.id
+			WHERE sets.owner_id = ".$_SESSION['id']."
+			ORDER BY creation_time DESC
+		";
+		
+$res =& $db->query($sql);
+if (PEAR::isError($res)) {
+    die($res->getMessage());
+}
+
+// If nothing is found, set personalSets variable to false
+if ( $res->numRows() < 1 ){
+	$t->assign("personalSets", false);
+} else {
+	$t->assign("personalSets", true);
+
+	$personalSets = array();
+	while ($row = $res->fetchRow()) {
+		$imageOptions = array(	'img_path' => $row['img_path'],
+								'size' => 50,
+								'img_ar' => $row['img_ar'],
+								'linkURL' => "/delphi/set/".$row['set_id'],
+								'vAlign' => "center",
+								'hAlign' => "center"
+							);
+
+		$personalSet = array('set_id' => $row['set_id'], 
+							'set_name' => $row['set_name'],
+							'contains_obj' => $row['contains_obj'],
+							'thumb' => outputSimpleImage($imageOptions)
+						);
+	//	print_r($personalSet);
+		array_push($personalSets, $personalSet);
+		
+	}
+	$t->assign("personalSets", $personalSets);
+	
+}
+// Free the result
+$res->free();
 
 // Display template
 $t->display('details.tpl');

@@ -53,6 +53,7 @@ $t->assign('wwwroot', $CFG->wwwroot);
 $t->assign('thumbs', $CFG->image_thumb);
 $t->assign('thumbs_square', $CFG->image_thumb_square);
 $t->assign('mids', $CFG->image_medium);
+$t->assign('zoomer', $CFG->zoomer);
 //$t->assign('zooms', $CFG->image_zoom);
 
 if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){

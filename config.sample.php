@@ -39,10 +39,10 @@ unset($CFG);  // Ignore this line
 
 $CFG->dbtype    = 'mysql';       // mysql
 $CFG->dbhost    = 'localhost';   // eg localhost or db.isp.com
-$CFG->dbname    = 'delphi';      // database name
-$CFG->dbuser    = 'username';    // your database username
-$CFG->dbpass    = 'password';    // your database password
-$CFG->prefix    = 'delphi_';        // Prefix to use for all table names (not working yet)
+$CFG->dbname    = '';      // database name
+$CFG->dbuser    = '';    // your database username
+$CFG->dbpass    = '';    // your database password
+$CFG->prefix    = '';        // Prefix to use for all table names (not working yet)
 
 
 //=========================================================================

@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.1.2.pack.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.2.1.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
 
 <div id="content">

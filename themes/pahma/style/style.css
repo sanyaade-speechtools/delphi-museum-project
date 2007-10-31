@@ -1,8 +1,13 @@
+/* ------------------------------------------------------- *
+ * - Global     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
 body{
 	margin:0px;
 	padding:0px;
-	font-size:1em;
+	font-size:.9em;
 	font-family: Arial, Helvetica, sans-serif;
+	color: #61615f;
 }
 
 /* Used for styling grey help text that appears in form fields. */
@@ -17,8 +22,8 @@ label.overlabel-apply {
 }
 
 h1{
-	font-size:1.7em;
-	color:#0094df;
+	font-size:1.8em;
+	color:#00a6e6;
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
 	padding: 0px;
@@ -26,10 +31,47 @@ h1{
 
 h2{
 	font-size:1.4em;
-	color:#0094df;
+	color:#00a6e6;
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
 	padding: 0px;
+}
+
+h3{
+	font-size:1.1em;
+	color:#000;
+	font-weight: bold;
+	padding: 0px;
+	margin:0px;
+}
+
+a, a:visited{
+	color:#00a6e6;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+border:0;
+}
+
+a.smaller{
+	font-size:0.85em;
+}
+
+p.smaller{
+	font-size:0.85em;
+}
+
+.smaller{
+	font-size:0.85em;
+}
+
+.clear{
+	clear:both;
 }
 
 /* ------------------------------------------------------- *
@@ -214,13 +256,8 @@ h2{
 	clear:both;
 	text-align:center;
 	padding-top:30px;
-	margin-top:10px;
-	font-size: .8em;
-	color: #cdcdc9;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 60px;
-	height: auto !important;
-	height: 60px;
+	margin-top:100px;
+	margin-bottom:200px;
 }
 
 
@@ -571,22 +608,22 @@ code.hidden {
  * - DETAIL ---------------------------------------------- *
  * ------------------------------------------------------- */
 
-#detail_name {
-	margin: 24px 0 0 0;
-}
-
-#detail_innerContentTop {
-	margin: 24px 0 4px 0;
-	font-weight: bold;
-}
-
-#detail_imageColumn {
+#detail_imageCol {
 	float: left;
 	width: 400px;
 
 	margin: 0 0 12px 0;
 	padding: 0;
 	border-width: 0;
+}
+
+
+#detail_infoCol {
+	float: right;
+	width:335px;
+	padding: 0px 10px 10px 10px;
+	background-color: #FFF;
+	line-height: 1.2em;
 }
 
 #detail_image {
@@ -601,90 +638,143 @@ code.hidden {
 	
 	text-align: center;
 }
-#detail_image img.mid_unk400 {
-	width: 400px;
-	height: 400px;
+
+.detail_publicSetlet{
+	float:left;
+	margin-top:10px;
+	padding:0px;
+	clear:both;
 }
 
-#detail_thumbnails {
-	margin: 0 8px;
+.detail_publicSetletThumb{
+	float:left;
 }
 
-#detail_thumbnailSelectedContainer {
-	float: left;
-	
-	width: 120px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 120px;
-	height: auto !important;
-	height: 120px;
-	
-	background-color: #D4C08A;
-
-	margin: 0;
-	padding: 3px;
-	border: 1px solid #000000;
+.detail_publicSetletDetails{
+	float:left;
+	margin-left:10px;
+}
+#detail_publicSetletAllLink{
+	padding-top:15px;
+	padding-bottom:8px;
+	clear:both;
 }
 
-#detail_thumbnailSelected { /* 120x120 */
-	width: 120px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 120px;
-	height: auto !important;
-	height: 120px;
-	
-	margin: 0;
-	padding: 0;
-	border-width: 0;
-	
-	background-color: #61572f;
-	color: #ffffff;
-	text-align: center;
-}
-#detail_thumbnailSelected img {
-	width: 120px;
-	height: 116px;
+.detail_personalSetlet{
+	float:left;
+	margin-top:10px;
+	width:100px;
+	height:105px;
+	padding:5px;
 }
 
-.detail_thumbnail { /* 128x128 */
-	float: left;
-
-	width: 90px;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 90px;
-	height: auto !important;
-	height: 90px;
-	
-	margin: 4px;
-	padding: 15px;	
-
-	background-color: #61572f;
-	color: #ffffff;
-	text-align: center;
-}
-.detail_thumbnail img {
-	width: 82px;
-	height: 82px;
+.detail_personalSetletThumb div{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
 }
 
-#detail_information {
-	float: right;
-	width:335px;
-	padding: 0px 10px 10px 10px;
-	background-color: #FFF;
-	line-height: 1.2em;
+.detail_personalSetletDetails{
+	text-align:center;
 }
 
-/* Top Level facets */
-#detail_information>div.facet>span {
-	margin:15px 0px 5px 2px;
-	display:block;
-	font-size:1em;
-	color:#0094df;
-	font-weight: normal;
-	padding: 0px;
-} 
+#detail_personalSetletLinks{
+	padding-top:15px;
+	padding-bottom:8px;
+	clear:both;
+}
+
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .ui-tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.ui-tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0px;
+	height: 42px; /* IE 6 treats height as min-height */
+    min-height: 42px;
+	position:relative;
+}
+.ui-tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.ui-tabs-nav li {
+    float: left;
+    margin: 0px;
+	position:absolute;
+	bottom:-1px;
+    min-width: 84px; /* be nice to Opera */
+}
+
+.detail_setsTabLI{
+	left:0px;
+}
+
+.detail_tagsTabLI{
+	left:83px;
+}
+
+.ui-tabs-nav a {
+	display: block;
+    padding: 5px 5px 12px 8px;
+    text-decoration: none;
+	background-color:#f2f1ee;
+	border:1px solid #cdcdc9;
+	font-size:1.4em;
+	padding
+    white-space: nowrap; /* required in IE 6 */    
+    outline: 0; /* prevent dotted border in Firefox */
+}
+.ui-tabs-nav .ui-tabs-selected a {
+    padding: 7px 5px 12px 8px;
+    z-index: 2;
+	background-color:#fff;
+	font-weight: bold;
+	border-bottom:1px solid #fff;
+}
+
+
+.ui-tabs-container {
+    border: 1px solid #cdcdc9;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+	padding:8px;
+}
+
+*>.ui-tabs-nav a span { /* hide from IE 6 */
+    width: auto;
+    height: auto;
+}
+
+.ui-tabs-nav .ui-tabs-selected a:link, .ui-tabs-nav .ui-tabs-selected a:visited, .ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active, .ui-tabs-nav .ui-tabs-unselect a:hover, .ui-tabs-nav .ui-tabs-unselect a:focus, .ui-tabs-nav .ui-tabs-unselect a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .ui-tabs-nav  { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}
+
+
 
 /* ------------------------------------------------------- *
  * - VIEWSET --------------------------------------------- *
