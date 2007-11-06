@@ -5,6 +5,7 @@ RewriteRule   ^delphi/$ delphi/trunk/modules/frontpage/frontpage.php
 # Sets rules
 RewriteRule   ^delphi/mysets/{0,1}$ delphi/trunk/modules/sets/mysets.php
 RewriteRule   ^delphi/set/(\d+)/{0,1}$ delphi/trunk/modules/sets/viewset.php?sid=$1
+RewriteRule   ^delphi/sets/featured/{0,1}$ delphi/trunk/modules/sets/featuredSets.php
 
 # Browser rules
 RewriteRule   ^delphi/browse/([0-9]+)/{0,1}$ delphi/trunk/modules/facetBrowser/facetBrowse.php?cats=$1

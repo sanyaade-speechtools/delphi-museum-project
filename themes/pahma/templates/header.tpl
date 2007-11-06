@@ -45,7 +45,7 @@
 	<div id="navBarContent">
 		<span class="navLink"><a href="{$wwwroot}/modules/frontpage/frontpage.php">Home</a> </span>
 		<span class="navLink"><a href="{$wwwroot}/modules/facetBrowser/browser.php">Browse</a></span>
-		<span class="navLink"><a href="#">Sets</a></span>
+		<span class="navLink"><a href="{$wwwroot}/modules/sets/featuredSets.php">Sets</a></span>
 		<div id="navSearchBox">
 			<form action="{$wwwroot}/modules/facetBrowser/facetBrowse.php" method="get">
 				<div>

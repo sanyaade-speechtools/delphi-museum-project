@@ -6,27 +6,10 @@ require_once("../common/imgthumb.php");
 GET USER'S SETS
 **********************************/
 
-$sql = 	"	SELECT sets.id, sets.name, sets.creation_time, tTotal_objects.total_objects, tImage_paths.thumb_path, tImage_paths.img_ar
-
-			FROM sets
-
-			LEFT OUTER JOIN 
-			(SELECT set_id, count(*) total_objects
-			FROM set_objs
-			GROUP BY set_id) tTotal_objects
-			ON tTotal_objects.set_id = sets.id
-
-			LEFT OUTER JOIN
-			(SELECT set_objs.set_id, objects.img_path as thumb_path, objects.img_ar
-			FROM set_objs
-			LEFT JOIN objects
-			ON set_objs.obj_id = objects.id
-			GROUP BY set_id
-			ORDER BY set_objs.order ASC) tImage_paths
-			ON tImage_paths.set_id = sets.id
-
-			WHERE sets.owner_id = ".$_SESSION['id']."
-			ORDER BY sets.creation_time DESC";
+$sql = 	$sql = "SELECT set_id id, name, owner_name owner, img_path, aspectR img_ar 
+				FROM featured_sets 
+				ORDER BY porder
+				";
 $res =& $db->query($sql);
 if (PEAR::isError($res)) {
     die($res->getMessage());
@@ -67,27 +50,9 @@ $res->free();
 
 // Display template
 $t->assign('sets', $sets);
-$t->display('mysets.tpl');
+$t->display('featuredSets.tpl');
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -71,7 +71,7 @@
 						<li>Add to Set</li>
 					</ul>-->
 				</div>
-				<br class="clearbreak" />
+				<br class="clear" />
 			</div>
 			<div class="results_subcategory">
 				<h3>subcategory name (# results)</h3>
@@ -135,7 +135,7 @@
 						<li>Add to Set</li>
 					</ul>-->
 				</div>
-				<br class="clearbreak" />
+				<br class="clear" />
 			</div>
 			<div class="results_subcategory">
 				<h3>subcategory name (# results)</h3>
@@ -199,10 +199,10 @@
 						<li>Add to Set</li>
 					</ul>-->
 				</div>
-				<br class="clearbreak" />
+				<br class="clear" />
 			</div>
 		</div>
-		<br class="clearbreak" />
+		<br class="clear" />
 	</div>
 </div>
 
