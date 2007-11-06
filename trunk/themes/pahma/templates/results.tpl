@@ -74,7 +74,7 @@
 				</ul>{/if}
 			</div>
 		</div>
-		<br class="clearbreak" />
+		<br class="clear" />
 	</div>
 </div>
 

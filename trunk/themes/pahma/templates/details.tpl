@@ -34,6 +34,11 @@
 	                <li class="detail_tagsTabLI"><a href="#detail_tagsTab"><span>Tags</span></a></li>
 	            </ul>
 	            <div id="detail_setsTab">
+<!--
+	TODO Create a new set
+	TODO See all sets containing this object
+	TODO link to owner of public set
+-->
 	                <p class="smaller">Sets are collections of objects made by users. You can view sets that contain this object or add this object to one of your own sets.</p>
 	            	{if $containingSets}
 						<h3>Public sets containing this object</h3>
@@ -50,8 +55,11 @@
 						{/section}
 						{if $moreSetsLink}
 						<p class="smaller" id="detail_publicSetletAllLink"><a href="#">See all sets containing this object</a></p>
+						{else}
+						<br class="clear"/>
 						{/if}
 					{/if}
+					<br class="clear"/>
 					<h3>Add this object to one of your sets</h3>
 					{section name=set loop=$personalSets}
 					<div class="detail_personalSetlet smaller">
@@ -61,16 +69,16 @@
 						<div class="detail_personalSetletDetails">
 							{if $personalSets[set].contains_obj}
 								{$personalSets[set].set_name}<br/>
-								<a href="#">[remove]</a>
+								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="addToSetLink">[remove]</a>
 							{else}
 								{$personalSets[set].set_name}<br/>
-								<a href="#">[add to set]</a>
-								<!-- <a href="/delphi/set/{$personalSets[set].set_id}">{$personalSets[set].set_name}</a> -->
+								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="addToSetLink">[add to set]</a>
+								<img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="addToSet{$personalSets[set].set_id}Indicator" alt="Spinning indicator"/>
 							{/if}
 						</div>
 					</div>
 					{/section}
-					<p class="smaller" id="detail_personalSetletLinks"><a href="#">Create a new set</a><br/><a href="#">Manage your sets</a></p>
+					<p class="smaller" id="detail_personalSetletLinks"><a href="#">Create a new set with this object</a><br/><a href="/delphi/mysets/">Manage your sets</a></p>
 				</div>
 	            <div id="detail_tagsTab">
 					<h3>This is TAGS</h3>
@@ -89,7 +97,7 @@
 			<h1>Categories</h1>
 			{$facetTree}
 		</div>
-		<br class="clearbreak" />
+		<br class="clear" />
 
 
 {include file="footer.tpl"}

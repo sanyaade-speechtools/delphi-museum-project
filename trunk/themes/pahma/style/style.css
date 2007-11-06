@@ -236,16 +236,18 @@ p.smaller{
 #content{
 	position:relative;
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 134px;
+	min-height: 600px;
 	height: auto !important;
-	height: 134px;
+	height: 600px;
 }
 
-.clearbreak {
-	clear: both;
-	margin: 0;
-	font-size: 0;
+/* used for some pages which don't need the full width*/
+#contentNarrow{
+	width:625px;
+	margin-left:auto;
+	margin-right:auto;
 }
+
 
 /* ------------------------------------------------------- *
  * - Footer     ------------------------------------------ *
@@ -642,12 +644,17 @@ code.hidden {
 .detail_publicSetlet{
 	float:left;
 	margin-top:10px;
+	margin-left:10px;
 	padding:0px;
 	clear:both;
 }
 
 .detail_publicSetletThumb{
 	float:left;
+	background: #FFF url(../images/setFrame_s.gif) no-repeat scroll;
+	padding:6px 7px 4px 3px;
+	height:40px;
+	width:40px;
 }
 
 .detail_publicSetletDetails{
@@ -656,16 +663,16 @@ code.hidden {
 }
 #detail_publicSetletAllLink{
 	padding-top:15px;
-	padding-bottom:8px;
 	clear:both;
 }
 
 .detail_personalSetlet{
+	background: #FFF url(../images/setFrame_m.gif) no-repeat scroll;
 	float:left;
-	margin-top:10px;
-	width:100px;
-	height:105px;
-	padding:5px;
+	margin:10px 0 0 10px;
+	width:80px;
+	height:109px;
+	padding:10px 10px 5px 5px;
 }
 
 .detail_personalSetletThumb div{
@@ -775,33 +782,40 @@ code.hidden {
 }
 
 
+/* ------------------------------------------------------- *
+ * - My SETS --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+.setlet_Large{
+	background: #FFF url(../images/setFrame_l.gif) no-repeat scroll;
+	float:left;
+	margin:20px 0px 0px 20px;
+	width:161px;
+	height:218px;
+	padding:15px 12px 5px 8px;
+}
+
+.setletThumb_Large div{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+}
+
+.setletDetails_Large{
+	text-align:center;
+}
+
+.setletDetails_Large a{
+	font-size:1.3em;
+	font-weight: bold;
+}
+
 
 /* ------------------------------------------------------- *
  * - VIEWSET --------------------------------------------- *
  * ------------------------------------------------------- */
 
-.viewset_mySetTeaser{
-	padding:10px 10px 10px 70px;
-	margin-bottom:30px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 60px;
-	height:auto !important;
-	height: 60px;
-	width:525px;
-}
 
-.viewset_mySetTeaser img{
-	float:left;
-	height:50px;
-	width:50px;
-	margin-right:10px;
-	margin-left:-60px;
-	border: 1px solid #999;
-}
-
-.viewset_mySetTeaser h3{
-	margin-top:0px;
-}
 
 .viewset_shareLink{
 	position: absolute;

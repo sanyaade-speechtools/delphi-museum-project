@@ -2,13 +2,12 @@
 <script type="text/javascript" src="{$themeroot}/scripts/mysets.js"></script>
 
 <!--
-	TODO Link Create new set
 	TODO Add view count
+	TODO get images showing up
 -->
 <div id="contentNarrow">
-	<h1>My Sets</h1>
-	<p>Sets allow you to organize objects into collections. You can make sets private so that only you can see them, or you can make them public and share your set with others. You can add your own titles and captions for each object within a set to tell a story with your set.</p>
-	<p><a href="#">Create a new set</a></p>
+	<h1>Featured Sets</h1>
+	<p>Featured sets are selected by the staff at the museum. Featured sets are selected by the staff at the museum.</p>
 	{section name=set loop=$sets}
 		<div class="setlet_Large smaller">
 			<div class="setletThumb_Large">
