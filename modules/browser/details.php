@@ -244,6 +244,45 @@ if ( $res->numRows() < 1 ){
 // Free the result
 $res->free();
 
+
+//------------------------------------------------------------------------------
+// Query DB for a list of tags the user has applied to this object
+//------------------------------------------------------------------------------
+
+$sql = 	"	SELECT tag_user_object.tag_id, tags.tag_name
+			FROM tag_user_object
+			JOIN tags		
+			ON tags.tag_id = tag_user_object.tag_id
+			WHERE tag_user_id = ".$_SESSION['id']." AND tag_object_id = $objId
+			ORDER BY tag_user_object.tag_id
+		";
+		
+$res =& $db->query($sql);
+if (PEAR::isError($res)) {
+    die($res->getMessage());
+}
+
+// If nothing is found, set personalSets variable to false
+if ( $res->numRows() < 1 ){
+	$t->assign("objectTags", false);
+} else {
+	$t->assign("objectTags", true);
+
+	$tags = array();
+	while ($row = $res->fetchRow()) {
+		$tag = array(	'tag_id' => $row['tag_id'], 
+						'tag_name' => $row['tag_name']
+						);
+		array_push($tags, $tag);
+		
+	}
+	$t->assign("tags", $tags);
+	
+}
+// Free the result
+$res->free();
+
+$t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
 // Display template
 $t->display('details.tpl');
 
