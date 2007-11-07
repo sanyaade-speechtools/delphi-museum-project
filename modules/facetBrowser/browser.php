@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("../../libs/env.php");
 // Temp hack until we move from mysqli to all PEAR
 include("dbconnect.php");

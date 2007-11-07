@@ -1,4 +1,4 @@
-<?
+<?php
 session_cache_limiter("public");		// enable caching of this page
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");

@@ -1,4 +1,4 @@
-<?
+<?php
 
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");

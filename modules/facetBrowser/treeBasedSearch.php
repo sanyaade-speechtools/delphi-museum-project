@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<?
+<?php
 include("dbconnect.php");
 require "Facet.inc";
 
