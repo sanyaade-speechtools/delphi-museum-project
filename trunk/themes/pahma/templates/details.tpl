@@ -1,4 +1,8 @@
 {include file="header.tpl"}
+<script type="text/javascript" charset="utf-8">
+	//var templateVarsJSON = JSON.parse({$templateVarsJSON});
+	var templateVarsJSON = eval({$templateVarsJSON});
+</script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.tabs.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
 		<div id="detail_imageCol">
@@ -69,10 +73,10 @@
 						<div class="detail_personalSetletDetails">
 							{if $personalSets[set].contains_obj}
 								{$personalSets[set].set_name}<br/>
-								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="addToSetLink">[remove]</a>
+								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="ajaxLink" title="Remove object from this set">[remove]</a>
 							{else}
 								{$personalSets[set].set_name}<br/>
-								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="addToSetLink">[add to set]</a>
+								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="ajaxLink" title="Add object to this set">[add to set]</a>
 								<img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="addToSet{$personalSets[set].set_id}Indicator" alt="Spinning indicator"/>
 							{/if}
 						</div>
@@ -81,9 +85,32 @@
 					<p class="smaller" id="detail_personalSetletLinks"><a href="#">Create a new set with this object</a><br/><a href="/delphi/mysets/">Manage your sets</a></p>
 				</div>
 	            <div id="detail_tagsTab">
-					<h3>This is TAGS</h3>
-	               <p>First tab is active by default:</p>
-	            </div>
+					<p class="smaller">Tags are short labels that you can apply to museum objects.</p>
+					<form action="{$wwwroot}/modules/tags/addTag.php" method="post" accept-charset="utf-8" id="tagAddForm">
+						<input type="text" name="tagInput" value="" id="tagAddForm_input"/>
+						<input type="submit" value="add"/> <img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="addTagFormIndicator" alt="Spinning indicator"/>
+						<input type="hidden" name="obj_id" value="{$id}" id="tagAddForm_obj_id"/>
+					</form>
+					<br/>
+					<h3>Tags you associate with this object</h3>
+					<div id="detail_tagList">			
+						{if $objectTags}
+							{section name=tag loop=$tags}
+								<div class="detail_tag">{$tags[tag].tag_name} 
+									<a href="{$wwwroot}/modules/tags/removeTag.php?tag_id={$tags[tag].tag_id}&amp;obj_id={$id}" class="ajaxLink" id="tag{$tags[tag].tag_id}" title="Remove this tag">[x]</a>
+									<img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="tag{$tags[tag].tag_id}Indicator" alt="Spinning indicator"/>
+								</div>
+							{/section}
+							<div id="detail_noTagsMessage" style="display:none;">
+								You have no tags associated with this object.
+							</div>
+						{else}
+							<div id="detail_noTagsMessage">
+								You have no tags associated with this object.
+							</div>
+						{/if}
+					</div>
+			</div>
 			</div>
 		</div>
 		<div id="detail_infoCol">

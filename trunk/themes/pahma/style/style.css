@@ -224,6 +224,51 @@ p.smaller{
 
 
 /* ------------------------------------------------------- *
+ * - Browser    ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+#browserContainer{
+	width:100%;
+	position:relative;
+}
+
+.browser_topLevelFacet{
+	float:left;
+	clear:left;
+	border:1px solid #61615f;
+	padding:7px 15px 7px 0px;
+	width:180px;
+	margin-left:5px;
+	margin-bottom:-1px;
+	background-color:#f2f1ee;
+	font-size: 1.3em;
+	color:#0094df;
+	text-align:right;
+	cursor: pointer;
+}	
+
+.browser_topLevelFacetSelected{
+	width:186px;
+	margin-left:0px;
+	border-right:#FFF;
+	background-color:#FFF;
+	font-weight: bold;
+	cursor: default;
+}
+
+.browser_browsePane{
+	display:none;
+	margin-left:201px;
+	border:1px solid #61615f;
+	width:420px;
+	padding:10px 10px 25px 25px;
+} 
+
+.browser_browsePaneSelected{
+	display:block;
+}
+
+/* ------------------------------------------------------- *
  * - Content     ------------------------------------------ *
  * ------------------------------------------------------- */
 
@@ -690,6 +735,15 @@ code.hidden {
 	padding-bottom:8px;
 	clear:both;
 }
+
+#detail_tagList{
+	padding-top:7px;
+}
+
+.detail_tag{
+	padding-bottom:2px;
+}
+
 
 /* Caution! Ensure accessibility in print and other media types... */
 @media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
