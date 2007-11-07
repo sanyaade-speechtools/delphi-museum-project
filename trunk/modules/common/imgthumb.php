@@ -1,4 +1,4 @@
-<?
+<?php
 // Take row of image into and a wrapper class and produce the HTML for a thumb.
 // Assumes row has: id, img_path, img_ar
 // If also has name and/or owner, will put out additional text

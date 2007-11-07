@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * Checks whether or not the given username is in the
