@@ -278,3 +278,32 @@ CREATE TABLE `obj_cats` (
 )ENGINE=MyIsam;
 SHOW WARNINGS;
 
+/*
+ * Defines the tag information
+ * TODO add creation and modification times.
+ */
+DROP TABLE IF EXISTS `tags` \p;
+CREATE TABLE `tags` (
+  `tag_id` int(11) NOT NULL auto_increment,
+  `tag_name` varchar(50) NOT NULL,
+  `tag_count` int(11) NOT NULL default '1',
+  PRIMARY KEY  (`tag_id`),
+  UNIQUE KEY `tag_name` (`tag_name`),
+  KEY `tags_id_idx` (`tag_id`)
+) ENGINE=MyISAM;
+
+/*
+ * Provides associations of tags to objects, by user.
+ * TODO add creation time.
+ */
+DROP TABLE IF EXISTS `tag_user_object` \p;
+CREATE TABLE `tag_user_object` (
+  `tag_id` int(11) NOT NULL,
+  `tag_user_id` int(11) NOT NULL,
+  `tag_object_id` int(11) NOT NULL,
+  PRIMARY KEY  (`tag_id`,`tag_user_id`,`tag_object_id`),
+  KEY `tuo_id_idx` (`tag_id`),
+  KEY `tuo_user_idx` (`tag_user_id`),
+  KEY `tuo_object_idx` (`tag_object_id`)
+) ENGINE=MyISAM;
+
