@@ -42,6 +42,7 @@
 	TODO Create a new set
 	TODO See all sets containing this object
 	TODO link to owner of public set
+	TODO truncate long set names
 -->
 	                <p class="smaller">Sets are collections of objects made by users. You can view sets that contain this object or add this object to one of your own sets.</p>
 	            	{if $containingSets}
@@ -87,7 +88,7 @@
 	            <div id="detail_tagsTab">
 					<p class="smaller">Tags are short labels that you can apply to museum objects.</p>
 					<form action="{$wwwroot}/modules/tags/addTag.php" method="post" accept-charset="utf-8" id="tagAddForm">
-						<input type="text" name="tagInput" value="" id="tagAddForm_input"/>
+						<input type="text" name="tagInput" value="" id="tagAddForm_input" size="20" maxlength="45"/>
 						<input type="submit" value="add"/> <img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="addTagFormIndicator" alt="Spinning indicator"/>
 						<input type="hidden" name="obj_id" value="{$id}" id="tagAddForm_obj_id"/>
 					</form>

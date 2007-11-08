@@ -101,12 +101,32 @@ $CFG->no_image_thumb_square = 'http://example.com/delphi/trunk/objimages/thumbs_
 $CFG->no_image_medium    = 'http://example.com/delphi/trunk/objimages/mids/noimg.jpg';
 
 //=========================================================================
-// 6. IMAGE CONSTANTS
+// 6. Zoomify location
+//=========================================================================
+// The zoomify swf file must be in the same domain as the the tiled images. 
+//
+// Do not include a trailing slash!
+$CFG->zoomer	= 'http://example.com/delphi/zoomifyDynamicViewer.swf';
+
+
+//=========================================================================
+// 7. IMAGE CONSTANTS
 //=========================================================================
 // Next, specify the size of derivative images, etc.
 //
 
 $CFG->thumbSize          = 120;
+
+
+//=========================================================================
+// 8. IMAGE CONSTANTS
+//=========================================================================
+// Specify an email address to recieve messages from the contact form
+//
+
+$CFG->contactEmail          = "somebody@example.com";
+
+
 
 //=========================================================================
 // ALL DONE!  To continue installation, visit your main page with a browser

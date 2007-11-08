@@ -27,7 +27,7 @@
 		<img src="{$themeroot}/images/logo.gif" alt="Logo Image"/>
 		<div id="loginNav">
 			{if $currentUser_loggedIn }
-				Welcome <a href="{$wwwroot}/modules/auth/profile.php"><span>{$currentUser_name}</span></a> | 
+				Welcome <a href="{$wwwroot}/modules/auth/profile.php?uid={$currentUser_id}"><span>{$currentUser_name}</span></a> | 
 				<a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> | 
 				<a href="{$wwwroot}/modules/help/help.php">Help</a> | 
 				{if $currentUser_isAdmin || $currentUser_isAuthStaff }

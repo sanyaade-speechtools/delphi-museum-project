@@ -1,39 +1,28 @@
 {include file="header.tpl"}
+<div id="contentNarrow">
+	
 
-<h2>Login</h2>
+<h1>Login</h1>
 This site is currently not open to the public.
 If you need access, <a href="mailto:mtblack@berkeley.edu?subject=Delphi">email us</a>.
-<h3>{$message}</h3>
-<form action="{$wwwroot}/modules/auth/login.php" method="post">
-	<table border="0" cellspacing="0" cellpadding="3">
-		<tr>
-			<td>Username:</td>
-
-			<td><input type="text" name="user" maxlength="40"></td>
-		</tr>
-
-		<tr>
-			<td>Password:</td>
-
-			<td><input type="password" name="pass" maxlength="40"></td>
-		</tr>
-
-		<tr>
-			<td colspan="2" align="left"><input type="checkbox" name="remember"> <font size="2">Remember me on this computer</font></td>
-		</tr>
-
-		<tr>
-			<td colspan="2" align="right"><input type="submit" name="sublogin" value="Login"></td>
-		</tr>
-		<!--
-		<tr>
-			<td colspan="2" align="left"><a href="register.php">Register</a></td>
-		</tr>
-		-->
-		<tr>
-			<td colspan="2" align="left"><a href="forgotpw.php">Forgot your password?</a></td>
-		</tr>
-	</table>
+{if $message}
+<div class="formError">
+	{$message}
+</div>
+{/if}
+<form action="{$wwwroot}/modules/auth/login.php" method="post" class="delphiForm">
+	<label for="user">Username <span class="requiredFieldIndicator">*</span></label>
+	<input type="text" name="user" maxlength="40"/>
+	
+	<label for="pass">Password <span class="requiredFieldIndicator">*</span></label>
+	<input type="password" name="pass" maxlength="40"/>
+	<br/><br/>
+	<input type="checkbox" name="remember"/> Remember me on this computer
+	<div class="buttonRow">
+		<input type="submit" name="sublogin" value="Login"/>
+	</div>
 </form>
-
+<p><!-- <a href="register.php">Register</a> --><br/>
+<a href="forgotpw.php">Forgot your password?</a></p>
+</div>
 {include file="footer.tpl"}

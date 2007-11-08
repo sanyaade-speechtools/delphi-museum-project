@@ -72,11 +72,11 @@ if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$t->assign('currentUser_loggedIn', FALSE);
 	
 	//Get the name of the file being called
-	$scriptName = end (explode("/", $_SERVER['SCRIPT_NAME']) );
-	if ( $scriptName != "login.php" ) {
-		header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php' );
-		die();
-	}
+	// $scriptName = end (explode("/", $_SERVER['SCRIPT_NAME']) );
+	// if ( $scriptName != "login.php" ) {
+	// 	header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php' );
+	// 	die();
+	// }
 }
 
 

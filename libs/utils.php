@@ -11,8 +11,37 @@ function emailValid($email){
 	$dotCharROff = strlen($email) - $dotCharROff - 1;
  
 	// Domain suffix must be at least 2 chars, and at most 6 (.museum)
-	return ( $atCharPos	> 0 ) && ( $dotCharROff >= 2 ) && ( $dotCharROff <= 6 );
+	if (( $atCharPos	> 0 ) && ( $dotCharROff >= 2 ) && ( $dotCharROff <= 6 )){
+		return true;
+	} else{
+		return false;		
+	}
 }
+
+function website_urlValid($website_url){
+	if (preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $website_url)){
+		return true;
+	} else{
+		return false;		
+	}
+}
+
+function real_nameValid($realName){
+	return true;
+}
+
+function aboutValid($about){
+	return true;
+}
+
+function passValid($pass, $pass2){
+	if(strlen($pass) >= 6 && $pass == $pass2){
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 function getRoles(){
 	global $mysqli;
