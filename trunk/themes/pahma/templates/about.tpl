@@ -1,8 +1,5 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.2.1.pack.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
-
 <div id="content">
 <br />
 
@@ -28,7 +25,7 @@ a wide range of objects: from an ancient Egyptian sculpture from Giza to Japanes
 to century-old photos of Native Californians. 
 </p>
 <p>Delphi can be used by researchers, students, and educators, though we decided to
-design our system to accomodate the needs of the general public, which the Museum wants
+design our system to accommodate the needs of the general public, which the Museum wants
 to attract.  
 </p>
 <p>
@@ -36,7 +33,7 @@ Searching and browsing functionality could be used to explore the collections. T
 facetted browser is based on an ontology designed from the metadata in the
 Museum's current content management system. 
 Delphi uses text-mining to associate ontology concepts with collections objects. 
-Please read our <a href="../help/help.php">Help</a> section
+Please read our <a href="{$wwwroot}/modules/help/help.php">Help</a> section
 to learn to browse and search the ontologies of objects presented by Delphi 
 </p>
 <p>

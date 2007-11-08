@@ -10,17 +10,6 @@ body{
 	color: #61615f;
 }
 
-/* Used for styling grey help text that appears in form fields. */
-label.overlabel-apply {
-	position:absolute;
-	top:5px;
-	left:8px;
-	z-index:1;
-	font-size:.9em;
-	font-weight: bold;
-	color:#c3c3c3;
-}
-
 h1{
 	font-size:1.8em;
 	color:#00a6e6;
@@ -72,6 +61,62 @@ p.smaller{
 
 .clear{
 	clear:both;
+}
+
+/* ------------------------------------------------------- *
+ * - Forms      ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+form.delphiForm{
+	width:465px;
+}
+
+form.delphiForm label{
+	font-size:.9em;
+	font-weight:bold;
+	margin-top:15px;
+	display:block;
+}
+
+form.delphiForm .buttonRow{
+	margin-top:10px;
+}
+
+form.delphiForm fieldset {
+	margin-bottom:20px;
+	padding:0px 20px 20px 20px;
+	border:1px solid #cdcdc9;
+}
+
+form.delphiForm legend {
+	font-size:1.1em;
+	color:#000;
+	font-weight: bold;
+	padding: 0px;
+	margin:0px;
+}
+
+/* Used for styling grey help text that appears in form fields. */
+label.overlabel-apply {
+	display:inline;
+	margin-top:0px;
+	position:absolute;
+	top:5px;
+	left:8px;
+	z-index:1;
+	font-size:1em;
+	font-weight: normal;
+	color:#61615f;
+}
+
+.formError{
+	padding:20px;
+	color:#F00;
+	font-weight:bold;
+}
+
+.requiredFieldIndicator{
+	color:#F00;
 }
 
 /* ------------------------------------------------------- *
@@ -208,17 +253,36 @@ p.smaller{
 }
 
 /* ------------------------------------------------------- *
+ * - Profile     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+.profile_metadata{
+	margin-top:5px;
+	width:400px;
+}
+
+.profile_metadataLabel{
+	font-weight:bold;
+}
+
+.profile_memberSince{
+	margin-top:-8px;
+	margin-bottom:5px;
+}
+
+
+/* ------------------------------------------------------- *
  * - Messages -------------------------------------------- *
  * ------------------------------------------------------- */
 
 #messageBox{
 	border: 1px solid #999;
-	width: 600px;
+	width: 100%;
 	height:40px;
 	margin:5px auto 5px auto;
 	padding:0px;
 	color:#000;
-	background-color: yellow;
+	background-color: green;
 	text-align:center;
 }
 

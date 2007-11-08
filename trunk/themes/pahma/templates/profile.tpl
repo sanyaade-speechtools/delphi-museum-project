@@ -1,17 +1,41 @@
 {include file="header.tpl"}
 
-<h2>Profile information for {$username} </h2>
-<h3>{$message}</h3>
-<form action="" method="post">
-<table border="0" cellspacing="0" cellpadding="3">
-<tr><td>Change Password:</td><td><input type="password" name="pass" maxlength="40"></td></tr>
-<tr><td>Repeat New Password:</td><td><input type="password" name="pass2" maxlength="40"></td></tr>
-<tr><td>Email:</td><td>
-	<input type="text" name="email" maxlength="70" value="{$email}" >
-</td></tr>
-<tr><td colspan="2" align="right"><input type="submit" name="subreq" value="Update"></td></tr>
-<tr><td style="height:20px;"></td></tr>
-</table>
-</form>
+<h1>{$username}</h1>
+<div class="profile_memberSince">Member since {$creation_time|date_format}</div>
+<p>{if $ownProfile}<a href="{$wwwroot}/modules/auth/profileEdit.php">Edit my profile</a>{/if}</p>
+
+{if $real_name}
+<div class="profile_metadata">
+	<span class="profile_metadataLabel">Name:</span> {$real_name}
+</div>
+{/if}
+{if $website_url}
+<div class="profile_metadata">
+	<span class="profile_metadataLabel">Website:</span> <a href="{$website_url}">{$website_url}</a>
+</div>
+{/if}
+{if $about}
+<div class="profile_metadata">
+	<span class="profile_metadataLabel">About:</span> {$about} 
+</div>
+{/if}
+<br/>
+
+<h2>Public Sets by {$username}</h2>
+{if $sets}
+	{section name=set loop=$sets}
+		<div class="setlet_Large smaller">
+			<div class="setletThumb_Large">
+				{$sets[set].thumb}
+			</div>
+			<div class="setletDetails_Large">
+				<a href="/delphi/set/{$sets[set].set_id}">{$sets[set].set_name}</a>
+				<p><strong>{$sets[set].total_objects}</strong> objects</p>
+			</div>
+		</div>
+	{/section}
+{else}
+	{$username} does not have any public sets.
+{/if}
 
 {include file="footer.tpl"}
