@@ -3,32 +3,11 @@
 	//var templateVarsJSON = JSON.parse({$templateVarsJSON});
 	var templateVarsJSON = eval({$templateVarsJSON});
 </script>
+<script type="text/javascript" src="{$wwwroot}/libs/swfobject1-5/swfobject.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.tabs.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
 		<div id="detail_imageCol">
-			<div id="detail_image">
-				{if isset($zoom_path) }
-		  	  <OBJECT CLASSID="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-					   CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
-						 WIDTH="400" HEIGHT="400" ID="theMovie">
-						<PARAM NAME="FlashVars" VALUE="zoomifyImagePath={$zoom_path}/&amp;zoomifyMaxZoom=125">
-						<PARAM NAME="MENU" VALUE="FALSE">
-						<PARAM NAME="SRC" VALUE="{$zoomer}">
-						<EMBED FlashVars="zoomifyImagePath={$zoom_path}/&amp;zoomifyMaxZoom=125"
-							SRC="{$zoomer}" MENU="false"
-							PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
-							WIDTH="400" HEIGHT="400" NAME="theMovie"></EMBED>
-					</OBJECT>
-				{else}
-					<code class="hidden">{$bad_zoom_path}</code>
-					<code class="hidden">{$bad_img_path}</code>
-					{if isset($img_html) }
-						{$img_html}
-					{else}
-						<img src="{$img_path}" />
-					{/if}
-				{/if}
-			</div>
+			<div id="detail_image"></div>
 			<div id="detail_thumbnails">
 
 			</div>

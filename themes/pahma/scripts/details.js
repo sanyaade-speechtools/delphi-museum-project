@@ -1,12 +1,23 @@
-
 $(document).ready(function(){
+	//load zoomer
+	var so = new SWFObject(templateVarsJSON['zoomer'], "zoomer", "375", "350", "6", "#FFFFFF");
+	so.useExpressInstall(templateVarsJSON['wwwroot'] + '/libs/swfobject1-5/expressinstall.swf');
+	so.addVariable("zoomifyMaxZoom", 150);
+	so.addVariable("zoomifySlider", 0);
+	so.addVariable("zoomifyNavWindow", 0);
+	so.addVariable("zoomifyImagePath", templateVarsJSON['zoomDir']);
+	so.write("detail_image");
+	
+	//init tabs
 	$('#detail_tabBox ul').tabs();
 	
+	//bind various links that require an ajax action on click
 	$('.ajaxLink').click(function(){
 		ajaxLinkHandler(this.id, this.href, this.title);
 		return false;
 	});
-
+	
+	// handle the add tag form
 	$("#tagAddForm").submit(function() {
 		var tagInput = $('#tagAddForm_input').val();
 		var obj_id = $('#tagAddForm_obj_id').val();

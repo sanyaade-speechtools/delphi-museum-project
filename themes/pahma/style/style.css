@@ -16,6 +16,7 @@ h1{
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
 	padding: 0px;
+	line-height:1.2em;
 }
 
 h2{
@@ -721,33 +722,25 @@ code.hidden {
 
 #detail_imageCol {
 	float: left;
-	width: 400px;
-
-	margin: 0 0 12px 0;
+	width: 410px;
+	margin-top: 30px;
 	padding: 0;
-	border-width: 0;
 }
 
 
 #detail_infoCol {
 	float: right;
-	width:335px;
+	width:315px;
+	margin-top: 30px;
 	padding: 0px 10px 10px 10px;
 	background-color: #FFF;
 	line-height: 1.2em;
 }
 
 #detail_image {
-	width: 400px;
-
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 400px;
-	height: auto !important;
-	height: 400px;
-
-	margin: 0 0 6px 0;
-	
-	text-align: center;
+	margin:0px 0px 40px 0px;
+	padding:15px;
+	border:1px solid #cdcdc9;
 }
 
 .detail_publicSetlet{
@@ -991,7 +984,6 @@ code.hidden {
 	margin:0px 25px 0px 10px;
 	padding:15px 10px 20px 10px;
 	border:1px solid #cdcdc9;
-	
 }
 
 #viewset_objectDescription{

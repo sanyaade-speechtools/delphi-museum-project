@@ -3,9 +3,9 @@
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");
 // Temp hack until we move from mysqli to all PEAR
-include("../facetBrowser/dbconnect.php");
+//include("../facetBrowser/dbconnect.php");
 // This should go somewhere else
-require "../facetBrowser/Facet.inc";
+//require "../facetBrowser/Facet.inc";
 
 
 // If there is no id param in the url, send to object not found.
@@ -51,26 +51,7 @@ while ($row = $res->fetchRow()) {
     $t->assign('objnum', $row['objnum']);
     $t->assign('name', $row['name']);
 	$t->assign('description', $row['description']);
-	
-	// This section need to be reworked. See issue 37
-	
-	$relPath = $row['img_path'];
-	$mid_path = $mid_dir.'/'.$relPath;
-	$rel_zoom_dir = substr($relPath, 0, strlen($relPath)-4);
-	$zoom_img_dir = $zoom_dir.'/'.$rel_zoom_dir;
-	
-	$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-	if( is_dir($zoom_img_dir) )
-		$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-	else
-		$t->assign('bad_zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-	// We always set the image path so we can fall back from the flash app
-	if( is_file($mid_path) )
-		$t->assign('img_path', $CFG->image_medium.'/'.$relPath);
-	else {
-		$t->assign('img_path', $CFG->no_image_medium);
-		$t->assign('bad_img_path', $CFG->image_medium.'/'.$relPath);
-	}
+	$t->assign('zoomDir', $CFG->image_zoom."/".substr($row['img_path'], 0, -4));
 }
 
 // Free the result
@@ -80,42 +61,42 @@ $res->free();
 //---------------------------------
 // Query DB for categories
 //---------------------------------
-$tqCatsForObj =
-	"SELECT c.id, c.parent_id, c.facet_id, c.display_name
-FROM categories c, obj_cats oc
-WHERE oc.obj_id=".$objId." AND c.id=oc.cat_id
-GROUP BY c.id ORDER BY c.id";
-$t->assign("tqCatsForObj", $tqCatsForObj);
-
-$facetsResults = $mysqli->query("select id, display_name from facets order by id");
-// Fills global $facets variable
-GetFacetListFromResultSet($facetsResults);
-$catsresult=$mysqli->query($tqCatsForObj);
-if( !empty($catsresult))
-	// Fills out the paths under facets
-	PopulateFacetsFromResultSet( $catsresult, false );
-
-$baseQ = "../facetBrowser/facetBrowse.php?";
-$catsParam = "cats=";
-if( !$onlyWithImgs )
-	$baseQ.= "wImgs=false&".$catsParam;
-else 
-	$baseQ.= $catsParam;	
-
-// var for holding concated output
-$facetTreeOutput = "";
-foreach( $facets as $facet ) {
-	if( empty($facet->arrChildren) ) {
-		$facetTreeOutput .= "<code class=\"hidden\">Facet: "
-													.$facet->name." has no no matches</code>";
-	} else {
-		$catIDs = array();
-		$facet->PruneForOutput(1, $catIDs);
-		$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", -9, 1, $baseQ, false, true );
-	}
-}
-
-$t->assign("facetTree", $facetTreeOutput);
+// $tqCatsForObj =
+// 	"SELECT c.id, c.parent_id, c.facet_id, c.display_name
+// FROM categories c, obj_cats oc
+// WHERE oc.obj_id=".$objId." AND c.id=oc.cat_id
+// GROUP BY c.id ORDER BY c.id";
+// $t->assign("tqCatsForObj", $tqCatsForObj);
+// 
+// $facetsResults = $mysqli->query("select id, display_name from facets order by id");
+// // Fills global $facets variable
+// GetFacetListFromResultSet($facetsResults);
+// $catsresult=$mysqli->query($tqCatsForObj);
+// if( !empty($catsresult))
+// 	// Fills out the paths under facets
+// 	PopulateFacetsFromResultSet( $catsresult, false );
+// 
+// $baseQ = "../facetBrowser/facetBrowse.php?";
+// $catsParam = "cats=";
+// if( !$onlyWithImgs )
+// 	$baseQ.= "wImgs=false&".$catsParam;
+// else 
+// 	$baseQ.= $catsParam;	
+// 
+// // var for holding concated output
+// $facetTreeOutput = "";
+// foreach( $facets as $facet ) {
+// 	if( empty($facet->arrChildren) ) {
+// 		$facetTreeOutput .= "<code class=\"hidden\">Facet: "
+// 													.$facet->name." has no no matches</code>";
+// 	} else {
+// 		$catIDs = array();
+// 		$facet->PruneForOutput(1, $catIDs);
+// 		$facetTreeOutput .= $facet->GenerateHTMLOutput( "facet", -9, 1, $baseQ, false, true );
+// 	}
+// }
+// 
+// $t->assign("facetTree", $facetTreeOutput);
 
 //If there is a logged in user, show their sets and tags
 if (isset($_SESSION['id'])){
@@ -165,7 +146,7 @@ if (isset($_SESSION['id'])){
 				$imageOptions = array(	'img_path' => $row['img_path'],
 										'size' => 40,
 										'img_ar' => $row['img_ar'],
-										'linkURL' => "/delphi/set/".$row['set_id'],
+										'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 										'vAlign' => "top",
 										'hAlign' => "center"
 									);
@@ -247,7 +228,7 @@ if (isset($_SESSION['id'])){
 			$imageOptions = array(	'img_path' => $img_path,
 									'size' => 50,
 									'img_ar' => $img_ar,
-									'linkURL' => "/delphi/set/".$row['set_id'],
+									'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 									'vAlign' => "center",
 									'hAlign' => "center"
 								);

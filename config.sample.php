@@ -58,6 +58,15 @@ $CFG->wwwroot   = 'http://example.com/delphi';
 
 
 //=========================================================================
+// 2.5 SHORT URL BASE
+//=========================================================================
+// shortbase allows delphi to construct short URLs in conjunction with Apace rewite rules.
+//
+// Do not include a trailing slash!
+
+$CFG->shortbase   = '/delphi';
+
+//=========================================================================
 // 3. SERVER FILES LOCATION
 //=========================================================================
 // Next, specify the full OS directory path to this same location
@@ -119,7 +128,7 @@ $CFG->thumbSize          = 120;
 
 
 //=========================================================================
-// 8. IMAGE CONSTANTS
+// 8. CONTACT EMAIL
 //=========================================================================
 // Specify an email address to recieve messages from the contact form
 //
