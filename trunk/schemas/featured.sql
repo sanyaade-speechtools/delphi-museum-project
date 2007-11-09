@@ -3,8 +3,6 @@
 -- Assumes main DB tables have already been created.
 -- ----------------------------------------------------------------------
 
-USE delphi;
-
 -- Featured sets are shown on the first page to invite people in.
 -- We denormalize for speed - this should be built out of the other tables.
 -- We may adjust the name and username for presentation, which breaks

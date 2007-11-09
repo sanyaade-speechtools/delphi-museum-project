@@ -2,8 +2,6 @@
 -- SQL create script for delphi main object info tables
 -- ----------------------------------------------------------------------
 
-USE delphi;
-
 -- The DBInfo table has a single row and is just used to hold system-wide
 -- parameters such as the sizes of alternate image sizes, the version of this
 -- DB schema, etc.

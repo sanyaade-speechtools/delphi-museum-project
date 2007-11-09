@@ -1,5 +1,3 @@
-use delphi;
-
 INSERT INTO role( id, name, description, creation_time ) VALUES 
    ( 1, 'Admin', 'Manages users, roles, permissions and other aspects of the system.', now() ),
    ( 2, 'Authenticated', 'An authenticated user of the system with basic usage rights.', now() );
