@@ -41,7 +41,6 @@
 <!--
 	TODO Create a new set
 	TODO See all sets containing this object
-	TODO link to owner of public set
 	TODO truncate long set names
 -->
 	                <p class="smaller">Sets are collections of objects made by users. You can view sets that contain this object or add this object to one of your own sets.</p>
@@ -54,7 +53,7 @@
 							</div>
 							<div class="detail_publicSetletDetails">
 								<a href="/delphi/set/{$otherSets[set].set_id}">{$otherSets[set].set_name}</a><br/>
-								<span class="smaller">Created by <a href="#">{$otherSets[set].owner_name}</a></span>
+								<span class="smaller">Created by <a href="{$wwwroot}/modules/auth/profile.php?uid={$otherSets[set].owner_id}">{$otherSets[set].owner_name}</a></span>
 							</div>
 						</div>
 						{/section}
@@ -68,7 +67,7 @@
 					<h3>Add this object to one of your sets</h3>
 					{section name=set loop=$personalSets}
 					<div class="detail_personalSetlet smaller">
-						<div class="detail_personalSetletThumb">
+						<div class="detail_personalSetletThumb" id="set_thumb_{$personalSets[set].set_id}">
 							{$personalSets[set].thumb}
 						</div>
 						<div class="detail_personalSetletDetails">

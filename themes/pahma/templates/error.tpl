@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<h2>{$heading}</h2>
+<h1>{$heading}</h1>
 <p>{$message}</p>
 
 {include file="footer.tpl"}

@@ -3,15 +3,20 @@
 require_once("../../libs/env.php");
 
 // If there is no id param in the url, send to object not found.
-if( isset( $_GET['id'] ) ) {
-	$objId = $_GET['id'];
+if( isset($_POST['obj_id']) && isset($_POST['set_id'])) {
+	$obj_id = $_POST['obj_id'];
+	$set_id = $_POST['set_id'];
 } else {
 	$t->display('objectNotFound.tpl');
 	die;
 }
 
 // Query DB
-$sql = "SELECT * FROM objects o WHERE o.id = $objId LIMIT 1";
+$sql = "SELECT objects.*, set_objs.order FROM objects
+		LEFT JOIN set_objs
+		ON objects.id = set_objs.obj_id
+		WHERE objects.id = $obj_id AND set_objs.set_id = $set_id
+		LIMIT 1";
 $res =& $db->query($sql);
 if (PEAR::isError($res)) {
     die($res->getMessage());
@@ -20,45 +25,26 @@ if (PEAR::isError($res)) {
 // If nothing is found, send to object not found.
 if ( $res->numRows() < 1 ){
 	$t->display('objectNotFound.tpl');
-	die;
+	die();
 }
 
 
-$mid_dir = $CFG->dir_image_medium;
-$zoom_dir = $CFG->dir_image_zoom;
-if( empty($mid_dir) || empty($zoom_dir) )
-	die("Paths to images not configured!");
-
-// Assign vars to template
+// Assign vars to resonse
+$response = array();
 while ($row = $res->fetchRow()) {
-    $t->assign('detail_id', $row['id']);
-    $t->assign('detail_objnum', $row['objnum']);
-    $t->assign('detail_name', $row['name']);
-	$t->assign('detail_description', $row['description']);
-	$relPath = $row['img_path'];
-	$mid_path = $mid_dir.'/'.$relPath;
-	$rel_zoom_dir = substr($relPath, 0, strlen($relPath)-4);
-	$zoom_img_dir = $zoom_dir.'/'.$rel_zoom_dir;
-	
-	$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-
-		if( is_dir($zoom_img_dir) )
-			$t->assign('zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-		else
-			$t->assign('bad_zoom_path', $CFG->image_zoom.'/'.$rel_zoom_dir);
-		// We always set the image path so we can fall back from the flash app
-		if( is_file($mid_path) )
-			$t->assign('img_path', $CFG->image_medium.'/'.$relPath);
-		else {
-			$t->assign('img_path', $CFG->no_image_medium);
-			$t->assign('bad_img_path', $CFG->image_medium.'/'.$relPath);
-		}
+    $response['obj_id'] = $row['id'];
+    $response['obj_num'] = $row['objnum'];
+    $response['obj_name'] = $row['name'];
+	$response['obj_description'] = $row['description'];
+	$response['obj_order'] = $row['order'];
+	$response['obj_img'] = $row['img_path'];
+	$response['obj_zoomDir'] = substr($row['img_path'], 0, -4); // trims off .jpg
 }
 
 // Free the result
 $res->free();
 
-// Display template
-$t->display('viewsetDetails.tpl');
+// print JSON
+echo json_encode($response);
 
 ?>

@@ -31,7 +31,7 @@ h3{
 	color:#000;
 	font-weight: bold;
 	padding: 0px;
-	margin:0px;
+	margin: 5px 0px 5px 0px;
 }
 
 a, a:visited{
@@ -941,138 +941,79 @@ code.hidden {
 	top:62px;
 }
 
-.viewset_setName{
-	font-size: 1.5em;
-	font-style: normal;
-	color:#000;
-}
-
 #viewset_createdBy{
-	margin-top:10px;
-	margin-bottom:5px;
+	margin-top:-8px;
+	margin-bottom:15px;
 }
-
-.viewset_editLink{
-
-}
-
 
 #viewset_leftCol {
-	float: left;
-	width: 370px;
-	
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
-	height:auto !important;
-	height: 600px;
-	
-	margin: 0px 10px 0 0;
-
+	float:left;
+	width: 300px;
+	margin-top:20px;
 }
 
 #viewset_rightCol {
-	float: left;
-	width:360px;
-	
-	margin-top:-5;
-
+	width:425px;	
+	float:right;
+	margin-top:40px;
 }
 
-#viewset_thumbnails .viewset_boxHeader{
-	margin-top:30px;
-	padding:0px;
-	width:354px;
+#viewset_thumbnails {
 	
 }
 
-
-.viewset_thumbnail{
-	float: left;
-	margin: 1px;
-	background-color: #e5dfcc;
-	position:relative;
-	padding:2px;
-
+#viewset_noThumbnails{
+	font-style:italic;
 }
 
-.addButton{
+.viewset_objectThumb{
+	float:left;
+	padding:5px;
+	border:1px solid #cdcdc9;
+	margin-right:10px;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+
+.viewset_objectThumbSelected{
+	border:1px solid #00a6e6;
+}
+
+#viewset_setDescription{
+	margin-bottom:20px;
+}
+#viewset_setNoDescription{
+	font-style:italic;
+	margin-bottom:20px;
+}
+
+#viewset_detailsBox{
+	margin:0px 25px 0px 10px;
+	padding:15px 10px 20px 10px;
+	border:1px solid #cdcdc9;
+	
+}
+
+#viewset_objectDescription{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#viewset_objectDetaiLink{
+	
+}
+
+.viewset_prevIcon{
 	position:absolute;
-	right:2px;
-	bottom:2px;
+	top:190px;
+	right:408px;
+}
+.viewset_nextIcon{
+	position:absolute;
+	top:190px;
+	right:0px;
 }
 
-.addButton a img{
-	border-width: 0px;
-}
-
-.viewset_thumbnail img{
-	display: block;
-}
-
-.viewset_thumbnailHover{
-	background-color: #000;
-}
-
-.viewset_thumbnailSelected{
-	background-color: #e96a03;
-}
-
-#viewset_sortableThumbs{
-	width: 380px;
-}
-
-.viewset_sorthelper{
-	background-color: #666;
-	float: left;
-}
-
-.viewset_sortableactive{
-}
-
-.viewset_sortablehover{
-}
-
-
-#setsHome_innerContent{
-	text-align:center;
-}
-
-#setsHome_innerContent a img{
-	margin:20px 7px 20px 7px;
-}
-
-#viewset_sendSetForm form{
-	width:80%;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-#viewset_sendSetForm form label, #viewset_sendSetForm form input {
-	display: block;
-	width: 150px;
-	float: left;
-	margin-bottom: 10px;
-}
-
-#viewset_sendSetForm form label {
-	text-align: right;
-	width: 150px;
-	padding-right: 10px;
-}
-
-#viewset_sendSetForm form br {
-	clear: left;
-}
-
-#viewset_sendSetForm form label.error{
-	color: #F00;
-	clear: both;
-	font-style: italic;
-	font-size: .9em;
-	margin-left:160px;
-	width:200px;
-	text-align: left;
-}
 
 
 /* ------------------------------------------------------- *
