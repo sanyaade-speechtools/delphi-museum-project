@@ -60,7 +60,7 @@ if ( $res->numRows() < 1 ){
 				LEFT JOIN objects
 				ON set_objs.obj_id = objects.id
 				GROUP BY set_id
-				ORDER BY set_objs.order ASC) tImage_paths
+				ORDER BY set_objs.order_num ASC) tImage_paths
 				ON tImage_paths.set_id = sets.id
 
 				WHERE sets.owner_id = $profileId AND sets.policy = 'public'

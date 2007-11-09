@@ -64,12 +64,12 @@ FETCH SET OBJECTS
 
 // Query DB
 
-$sql =	"	SELECT objects.id, objects.name, objects.description, objects.img_path, objects.img_ar, set_objs.order
+$sql =	"	SELECT objects.id, objects.name, objects.description, objects.img_path, objects.img_ar, set_objs.order_num
 			FROM set_objs 
 			LEFT JOIN objects
 			ON objects.id = set_objs.obj_id
 			WHERE set_objs.set_id = $setId
-			ORDER BY set_objs.order
+			ORDER BY set_objs.order_num
 		";
 
 $res =& $db->query($sql);

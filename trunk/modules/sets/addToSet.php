@@ -23,7 +23,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			// Get order value so new item can be added in the last place
 			$sql = 	"	SELECT * FROM set_objs
 						WHERE set_id = $set_id
-						ORDER BY `order` DESC
+						ORDER BY order_num DESC
 						LIMIT 1
 					";
 			$res =& $db->query($sql);
@@ -33,7 +33,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			
 			// add object to the set
 			$sql = 	"	INSERT INTO set_objs 
-						(`set_id`, `obj_id`, `order`) 
+						(`set_id`, `obj_id`, `order_num`) 
 						VALUES 
 						($set_id, $obj_id, $order)
 					";
@@ -67,7 +67,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			}			
 	} else if ( $_POST['action'] == "remove" ){
 		// Get the object's order within the set
-		$sql = 	"	SELECT `order` FROM set_objs
+		$sql = 	"	SELECT order_num FROM set_objs
 					WHERE set_id = $set_id AND obj_id = $obj_id
 					LIMIT 1
 				";
@@ -101,10 +101,10 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			$response['thumbDiv'] = outputSimpleImage($imageOptions);
 			$response['set_id'] = $set_id;
 		} elseif($order == 1) { // If the removed object was first in the set, get the new set thumb
-			$sql = 	"	SELECT `order`, set_objs.set_id, objects.id, objects.img_path, objects.img_ar FROM set_objs
+			$sql = 	"	SELECT order_num, set_objs.set_id, objects.id, objects.img_path, objects.img_ar FROM set_objs
 						JOIN objects
 						ON objects.id = set_objs.obj_id
-						WHERE set_objs.order= 2 AND set_objs.set_id = $set_id
+						WHERE set_objs.order_num= 2 AND set_objs.set_id = $set_id
 						LIMIT 1
 					";
 			$res =& $db->query($sql);
@@ -132,15 +132,15 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 		if($order < $count+1){
 			// Get all the objects that need new orders
 			$sql = 	"	SELECT * FROM set_objs
-						WHERE set_id = $set_id AND `order` > $order
-						ORDER BY `order` ASC
+						WHERE set_id = $set_id AND order_num > $order
+						ORDER BY order_num ASC
 					";
 			$res =& $db->query($sql);
 			if (PEAR::isError($res)) {die($res->getMessage());}
 		
 			// Generate all the update statements necessary and execute them
 			while ($row = $res->fetchRow()) {
-				$sql = "UPDATE set_objs SET `order` = $order WHERE set_id = ".$row['set_id']." AND obj_id = ".$row['obj_id'];
+				$sql = "UPDATE set_objs SET order_num = $order WHERE set_id = ".$row['set_id']." AND obj_id = ".$row['obj_id'];
 				$res2 =& $db->exec($sql);
 				if (PEAR::isError($res2)) {die($res2->getMessage());}
 				$order++;

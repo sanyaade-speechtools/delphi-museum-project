@@ -12,7 +12,7 @@ if( isset($_POST['obj_id']) && isset($_POST['set_id'])) {
 }
 
 // Query DB
-$sql = "SELECT objects.*, set_objs.order FROM objects
+$sql = "SELECT objects.*, set_objs.order_num FROM objects
 		LEFT JOIN set_objs
 		ON objects.id = set_objs.obj_id
 		WHERE objects.id = $obj_id AND set_objs.set_id = $set_id

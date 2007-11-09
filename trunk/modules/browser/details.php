@@ -138,7 +138,7 @@ $sql = 	"	SELECT
 						FROM set_objs
 						LEFT JOIN objects
 						ON set_objs.obj_id = objects.id
-						WHERE set_objs.order = 1) tFirstSetObject
+						WHERE set_objs.order_num = 1) tFirstSetObject
 			ON tFirstSetObject.set_id = set_objs.set_id
 			WHERE set_objs.obj_id = ".$objId." AND sets.policy = 'public'
 			ORDER BY creation_time DESC
@@ -206,7 +206,7 @@ $sql = 	"	SELECT
 						FROM set_objs
 						LEFT JOIN objects
 						ON set_objs.obj_id = objects.id
-						WHERE set_objs.order = 1) tFirstSetObject
+						WHERE set_objs.order_num = 1) tFirstSetObject
 			ON tFirstSetObject.set_id = sets.id
 			LEFT JOIN (SELECT set_objs.set_id, objects.id as contains_obj
 						FROM set_objs
