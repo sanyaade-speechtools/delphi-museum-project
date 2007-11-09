@@ -48,7 +48,7 @@ while ($row = $res->fetchRow()) {
 	$t->assign('owner_id', $row['owner_id']);
 }
 
-if($row['owner_id'] == $_SESSION['id']){
+if(isset($_SESSION['id']) && $row['owner_id'] == $_SESSION['id']){
 	$t->assign('ownSet', true);
 } else {
 	$t->assign('ownSet', false);
