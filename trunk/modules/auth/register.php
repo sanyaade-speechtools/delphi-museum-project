@@ -149,47 +149,50 @@ function displayStatus(){
 
 
 function checkSubmitValues(){
+	// Errors to show if we find any
+	$msg = array();
+	
 	global $t;
-	/* Make sure all fields were entered */
-	if(!$_POST['user'] || !$_POST['pass'] || !$_POST['pass2'] || !$_POST['email']){
-		$t->assign('message','Please provide a value for each field. All fields are required');
-		$t->display('register.tpl');
-		die();
+
+	// reassign vars to user input in case we need to send them back to fix something.
+	$t->assign('email', cleanFormData($_POST['email']));
+	$t->assign('user', cleanFormData($_POST['user']));
+	
+	if(strlen($_POST['pass']) < 6 ){
+		array_push($msg, "Your password must be at least 6 characters.");
 	}
 
-	if(strlen($_POST['pass']) < 3 ){
-		$t->assign('message','Your password must be at least 3 characters. Please try again.');
-		$t->display('register.tpl');
-		die();
+	if(strlen($_POST['pass']) > 25 ){
+		array_push($msg, "Your password cannot be more than 25 characters.");
 	}
+
 	if($_POST['pass'] != $_POST['pass2']){
-		$t->assign('message','Your retyped password did not match the first typed password. Please try again.');
-		$t->display('register.tpl');
-		die();
+		array_push($msg, "Your retyped password did not match the first typed password.");
 	}
 
 	/* Spruce up username, check length */
-	$_POST['user'] = trim($_POST['user']);
-	if(strlen($_POST['user']) > 40){
-		$t->assign('message','Sorry, the username is longer than 40 characters; please shorten it.');
-		$t->display('register.tpl');
-		die();
+	if(strlen(stripslashes($_POST['user'])) > 40 || strlen(stripslashes($_POST['user'])) < 3){
+		array_push($msg, "Username must be between 3 and 40 characters.");
+	} elseif(!preg_match('|^[a-zA-Z0-9-_]+$|i', $_POST['user'])){
+		array_push($msg, "Username can only contain letters, numbers, hyphens, and underscores");
+	} elseif(usernameTaken($_POST['user'])){
+		array_push($msg, "The username \"".cleanFormData($_POST['user'])."\"is already taken. Please pick another one.");
 	}
-
-	/* Check if username is already in use */
-	if(usernameTaken($_POST['user'])){
-		$t->assign('message','Sorry, that username is already taken. Please pick another one.');
-		$t->display('register.tpl');
-		die();	
-	}
-
+	
 	/* Check if email is valid */
 	if(!emailValid($_POST['email'])){
-		$t->assign('message','Sorry, the email address is not valid; please enter a valid one.');
+		array_push($msg, "Email address is not valid.");
+	}
+
+
+	
+	if(count($msg) > 0){
+		$t->assign('messages', $msg);
 		$t->display('register.tpl');
 		die();
+	} else {
+		return true;
 	}
-	return TRUE;
 }
 
 /**

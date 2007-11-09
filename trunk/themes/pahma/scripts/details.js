@@ -44,22 +44,36 @@ function ajaxLinkHandler(arg_id, arg_href, arg_title){
 	// Check if we're adding or removing the object
 	if(title == "Add object to this set"){
 		// Ajax add to set
-		$.ajax({url: url_and_params[0], type: "POST", data: url_and_params[1] + "&action=add",
-				success: function(response){
+		$.ajax({url: url_and_params[0], type: "POST", data: url_and_params[1] + "&action=add", dataType: "json",
+				success: function(responseJSON){
 					// Update the content with a remove link
 					link.html("[remove]");
 					link.attr("title", "Remove object from this set");
+					
+					if(responseJSON['updateThumb']){
+						$("#set_thumb_"+responseJSON['set_id']).hide();
+						$("#set_thumb_"+responseJSON['set_id']).html(responseJSON['thumbDiv']);
+						$("#set_thumb_"+responseJSON['set_id']).fadeIn(400);
+					}
+					
 					// hide the progress indicator
 					indicator.hide();
 					link.fadeIn(400);
 				}
 		});
 	} else if (title == "Remove object from this set"){
-		$.ajax({url: url_and_params[0], type: "POST", data: url_and_params[1] + "&action=remove",
-				success: function(response){
+		$.ajax({url: url_and_params[0], type: "POST", data: url_and_params[1] + "&action=remove", dataType: "json",
+				success: function(responseJSON){
 					// Update the content with a remove link
 					link.html("[add to set]");
 					link.attr("title", "Add object to this set");
+
+					if(responseJSON['updateThumb']){
+						$("#set_thumb_"+responseJSON['set_id']).hide();
+						$("#set_thumb_"+responseJSON['set_id']).html(responseJSON['thumbDiv']);
+						$("#set_thumb_"+responseJSON['set_id']).fadeIn(400);
+					}
+					
 					// hide the progress indicator
 					indicator.hide();
 					link.fadeIn(400);

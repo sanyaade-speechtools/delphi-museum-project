@@ -43,20 +43,34 @@ if ( $res->numRows() < 1 ){
 $sets = array();
 
 while ($row = $res->fetchRow()) {
-	$imageOptions = array(	'img_path' => $row['thumb_path'],
+	
+	if(!$row['total_objects'] > 0){
+		$setHasObjects = false;
+		$img_ar = "1.065";
+		$img_path = "noSetObjects";
+		$total_object = 0;
+	} else {
+		$setHasObjects = true;
+		$img_ar = $row['img_ar'];
+		$img_path = $row['thumb_path'];
+		$total_object = $row['total_objects'];
+	}
+	
+	
+	$imageOptions = array(	'img_path' => $img_path,
 							'size' => 118,
-							'img_ar' => $row['img_ar'],
+							'img_ar' => $img_ar,
 							'linkURL' => "/delphi/set/".$row['id'],
 							'vAlign' => "center",
 							'hAlign' => "center"
 						);
-						
+	
 	$set = array(	'set_id' => $row['id'], 
 					'set_name' => $row['name'], 
-					'total_objects' => $row['total_objects'],
-					'thumb' => outputSimpleImage($imageOptions)
+					'total_objects' => $total_object,
+					'thumb' => outputSimpleImage($imageOptions),
+					'setHasObjects' => $setHasObjects
 				);
-	
 	array_push($sets, $set);
     
 }

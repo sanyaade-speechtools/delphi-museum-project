@@ -1,48 +1,56 @@
 {include file="header.tpl"}
-
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/interface_1.2/interface.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.inplace.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.thickbox.js"></script>
+<script type="text/javascript" charset="utf-8">
+	//var templateVarsJSON = JSON.parse({$templateVarsJSON});
+	var templateVarsJSON = eval({$templateVarsJSON});
+</script>
+<script type="text/javascript" src="{$wwwroot}/libs/swfobject1-5/swfobject.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/viewset.js"></script>
 
 
-	<h2 class="{if $username == $currentUser_name} editSetName{/if}" id="setName___{$setId}">{$setName}
-		<!--  {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if} --></h2> 
-	<div id="viewset_createdBy">Created by {$username}</div>
-	<a href="shareSet.php?height=425&width=400&sid={$setId}" class="thickbox viewset_shareLink" title="Share this set">Share this set</a>
-
-	<div id="inner_content">
 	<div id="viewset_leftCol">
-		<br/>
-		{include file="viewsetDetails.tpl"}
-	</div>
-
-	<div id="viewset_rightCol">
-		<div id="viewset_thumbnails" class="viewset_box">
-			<br/>
-			<div class="viewset_boxContent">
-				<div id="viewset_sortableThumbs">
-					{section name=setObj loop=$objects}
-					<div class="viewset_thumbnail{if $smarty.section.setObj.first} viewset_thumbnailSelected{/if}" id="thumb_{$objects[setObj].id}">
-						<img src="{$thumbs}/{$objects[setObj].img_path}" onclick="loadObjDetails({$objects[setObj].id}); return false;" width="70px" height="70px"/>
-						<!-- <div class="addButton">
-							<a href="addToSet.php?height=270&width=400&oid={$objects[setObj].id}" class="thickbox" title="Add this object to a set"><img src="{$themeroot}/images/addButton.gif"/></a>
-						</div> -->
+		<h1>{$setName}</h1>
+		
+		<div id="viewset_createdBy" class="smaller">Created by <a href="{$wwwroot}/modules/auth/profile.php?uid={$owner_id}">{$username}</a></div>
+		
+		<h3>Description</h3>
+			<div id="viewset_setDescription">
+				{if $setDescription}
+					<div id="viewset_setDescription">{$setDescription}</div>
+				{else}
+					<div id="viewset_setNoDescription">No description</div>
+				{/if}
+			</div>
+		<h3>Objects</h3>
+		
+			{if $setHasObjects}
+				<div id="viewset_thumbnails">
+					{section name=obj loop=$objects}
+					<div class="viewset_objectThumb" id="{$objects[obj].id}">
+						{$objects[obj].thumb}
 					</div>
 					{/section}
 				</div>
-				<br style="clear:both;" />
-				<div id="viewset_objectDescription" class="viewset_box">
-					<div class="viewset_boxHeader">
-						<h2>Set Description</h2>
-					</div>
-					<div class="viewset_boxContent">
-						<p id="setDescription___{$setId}" class="{if $username == $currentUser_name}editSetDescription{/if}">{$setDescription} <!-- {if $username == $currentUser_name}<span class="viewset_editLink">(<a href="#">edit</a>)</span>{/if} --></p>
-					</div>
+			{else}
+				<div id="viewset_noThumbnails">
+					There are no objects in this set
 				</div>
-			</div>
+			{/if}
+		
+	</div>
+
+	{if $setHasObjects}
+	<div id="viewset_rightCol">
+		<div id="viewset_detailsBox">
+			<div id="viewset_objectImage"></div>
+			<h2 id="viewset_objectName"></h2>
+			<div id="viewset_objectDescription"></div>
+			<a href="#" id="viewset_objectDetaiLink" class="smaller">View object details</a>
 		</div>
 	</div>
-	<br style="clear:both;" />
-	</div>
+	<img src="{$themeroot}/images/viewset_prev.png" id="viewset_prev" alt="View the previous item" title="View the previous item" class="viewset_prevIcon"/>
+	<img src="{$themeroot}/images/viewset_prev_click.png" id="viewset_prev_click" alt="View the previous item" title="View the previous item" class="viewset_prevIcon" style="display:none;"/>
+
+	<img src="{$themeroot}/images/viewset_next.png" id="viewset_next" alt="View the next item" title="View the next item" class="viewset_nextIcon"/>
+	<img src="{$themeroot}/images/viewset_next_click.png" id="viewset_next_click" alt="View the next item" title="View the next item" class="viewset_nextIcon" style="display:none;"/>
+	{/if}
 {include file="footer.tpl"}

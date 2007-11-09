@@ -15,18 +15,18 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(count($msg) > 0){
-		$t->assign('name', stripslashes($_POST['name']));
-		$t->assign('email', stripslashes($_POST['email']));
-		$t->assign('message', stripslashes($_POST['message']));
+		$t->assign('name', cleanFormData($_POST['name']));
+		$t->assign('email', cleanFormData($_POST['email']));
+		$t->assign('message', cleanFormData($_POST['message']));
 		$t->assign('messages', $msg);
 	} else {
 		$nameTo = "Delphi Feedback";
 		$emailTo = $CFG->contactEmail;
 		$subj = "New message from Delphi's feedback form";
-		$plaintextmsg = $_POST['message'];
-		$htmlmsg = $_POST['message'];
+		$plaintextmsg = cleanFormData($_POST['message']);
+		$htmlmsg = cleanFormData($_POST['message']);
 		$emailFrom = $_POST['email'];
-		$nameFrom = $_POST['name'];
+		$nameFrom = cleanFormData($_POST['name']);
 
 		if(sendDelphiMail($nameTo, $emailTo, $subj, $plaintextmsg, $htmlmsg, $emailFrom, $nameFrom)){
 			$t->display('contactSent.tpl');

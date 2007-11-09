@@ -55,6 +55,12 @@ $t->assign('about', $userData['about']);
 
 /* If a request has been submitted, handle it.  */
 if(isset($_POST['subreq'])){
+	
+	// clean form input
+	$_POST['about'] = cleanFormData($_POST['about']);
+	$_POST['website_url'] = cleanFormData($_POST['website_url']);
+	$_POST['real_name'] = cleanFormData($_POST['real_name']);
+	
 	// reassign vars to user input
 	$t->assign('email', $_POST['email']);
 	$t->assign('real_name', $_POST['real_name']);
@@ -79,6 +85,7 @@ if(isset($_POST['subreq'])){
 	if($_POST['email'] != $userData['email']) {
 		if(!emailValid($_POST['email'])){
 			array_push($msg, "Email address is not valid.");
+			$t->assign('email', cleanFormData($_POST['email']));
 		} else if(!updateField("email", $_POST['email'])){
 			array_push($msg, "Error trying to update email.");
 		}

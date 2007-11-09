@@ -12,7 +12,9 @@ require "../facetBrowser/Facet.inc";
 if( isset( $_GET['id'] ) ) {
 	$objId = $_GET['id'];
 } else {
-	$t->display('objectNotFound.tpl');
+	$t->assign('heading', "Whoops!");
+	$t->assign('message', "We could not find the object you were looking for!");
+	$t->display('error.tpl');
 	die;
 }
 $onlyWithImgs = true;		// default to only images
@@ -32,7 +34,9 @@ if (PEAR::isError($res)) {
 
 // If nothing is found, send to object not found.
 if ( $res->numRows() < 1 ){
-	$t->display('objectNotFound.tpl');
+	$t->assign('heading', "Whoops!");
+	$t->assign('message', "We could not find the object you were looking for!");
+	$t->display('error.tpl');
 	die;
 }
 
@@ -190,8 +194,14 @@ $sql = 	"	SELECT
 				sets.creation_time, 
 				tFirstSetObject.img_path, 
 				tFirstSetObject.img_ar,
-				tMySetsWithObject.contains_obj
+				tMySetsWithObject.contains_obj,
+				tTotal_objects.total_objects
 			FROM sets
+			LEFT OUTER JOIN 
+			(SELECT set_id, count(*) total_objects
+			FROM set_objs
+			GROUP BY set_id) tTotal_objects
+			ON tTotal_objects.set_id = sets.id
 			LEFT JOIN (SELECT set_objs.set_id, objects.img_path, objects.img_ar
 						FROM set_objs
 						LEFT JOIN objects
@@ -221,9 +231,21 @@ if ( $res->numRows() < 1 ){
 
 	$personalSets = array();
 	while ($row = $res->fetchRow()) {
-		$imageOptions = array(	'img_path' => $row['img_path'],
+		if(!$row['total_objects'] > 0){
+			$setHasObjects = false;
+			$img_ar = "1.065";
+			$img_path = "noSetObjects";
+			$total_objects = 0;
+		} else {
+			$setHasObjects = true;
+			$img_ar = $row['img_ar'];
+			$img_path = $row['img_path'];
+			$total_objects = $row['total_objects'];
+		}
+		
+		$imageOptions = array(	'img_path' => $img_path,
 								'size' => 50,
-								'img_ar' => $row['img_ar'],
+								'img_ar' => $img_ar,
 								'linkURL' => "/delphi/set/".$row['set_id'],
 								'vAlign' => "center",
 								'hAlign' => "center"
@@ -232,7 +254,9 @@ if ( $res->numRows() < 1 ){
 		$personalSet = array('set_id' => $row['set_id'], 
 							'set_name' => $row['set_name'],
 							'contains_obj' => $row['contains_obj'],
-							'thumb' => outputSimpleImage($imageOptions)
+							'thumb' => outputSimpleImage($imageOptions),
+							'setHasObjects' => $setHasObjects,
+							'$total_object' => $total_objects
 						);
 	//	print_r($personalSet);
 		array_push($personalSets, $personalSet);

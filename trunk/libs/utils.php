@@ -3,15 +3,7 @@
  * Returns true if the email looks valid
  */
 function emailValid($email){
-	$atCharPos = strpos( $email, '@');
-	$dotCharROff = strrpos( $email, '.');
-	if( !$dotCharROff )
-		return false;
-
-	$dotCharROff = strlen($email) - $dotCharROff - 1;
- 
-	// Domain suffix must be at least 2 chars, and at most 6 (.museum)
-	if (( $atCharPos	> 0 ) && ( $dotCharROff >= 2 ) && ( $dotCharROff <= 6 )){
+	if (preg_match("/^[_a-z0-9-+]+(\.[_a-z0-9-+]+)*(\.{0,1})@[_a-z0-9-]+(\.[_a-z0-9-]+)*(\.[a-z]{2,3}|\.info|\.gouv|\.name|\.museum)$/i", $email)){
 		return true;
 	} else{
 		return false;		
@@ -40,6 +32,10 @@ function passValid($pass, $pass2){
 	} else {
 		return false;
 	}
+}
+
+function cleanFormData($data){
+	return htmlentities(stripslashes(trim($data)), ENT_QUOTES);
 }
 
 
