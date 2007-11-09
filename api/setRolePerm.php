@@ -1,6 +1,6 @@
 <?php
 //Bring in the user's config file
-require_once('../config.php');
+require_once('apiSetup.php');
 
 	$badarg = false;
 	if(empty($_POST['r']) || empty($_POST['p']) || empty($_POST['a']))
@@ -19,13 +19,6 @@ require_once('../config.php');
 		print_r( $_POST );
 		exit();
 	}
-// Connect to the mysql database.
-  $mysqli = new mysqli("$CFG->dbhost", "$CFG->dbuser", "$CFG->dbpass", "$CFG->dbname");
-	// verify connection
-	if (mysqli_connect_errno()) {
-		header("HTTP/1.0 503 Service Unavailable");
-		exit();
-	}
 	if( $action == 'set' ) {
 		$updateQ = "insert ignore into role_perms(role_id, perm_id, creation_time)"
 			." select r.id, p.id, now() from role r, permission p"
@@ -35,10 +28,12 @@ require_once('../config.php');
 			." where rp.role_id=r.id and rp.perm_id=p.id"
 			." and r.name='".$rolename."' and p.name='".$permname."'";
 	}
-	if( $mysqli->query($updateQ) )
-		header("HTTP/1.0 200 OK");
+  $res =& $db->query($updateQ);
+	if (PEAR::isError($res)) {
+		header("HTTP/1.0 500 Internal Server Error\n"+$res->getMessage());
+	}
 	else
-		header("HTTP/1.0 500 Internal Server Error");
+		header("HTTP/1.0 200 OK");
 	//echo "Query:";
 	//echo $updateQ;
 	exit();

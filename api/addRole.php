@@ -1,6 +1,6 @@
 <?php
-//Bring in the user's config file
-require_once('../config.php');
+// set up env, DB
+require_once('apiSetup.php');
 
 	$badarg = false;
 	if(empty($_POST['r']))
@@ -16,19 +16,14 @@ require_once('../config.php');
 		print_r( $_POST );
 		exit();
 	}
-// Connect to the mysql database.
-  $mysqli = new mysqli("$CFG->dbhost", "$CFG->dbuser", "$CFG->dbpass", "$CFG->dbname");
-	// verify connection
-	if (mysqli_connect_errno()) {
-		header("HTTP/1.0 503 Service Unavailable");
-		exit();
-	}
 	$updateQ = "INSERT IGNORE INTO role(name, description, creation_time)"
 		." VALUES ('".$rolename."', '".$roledesc."', now())";
-	if( $mysqli->query($updateQ) )
-		header("HTTP/1.0 200 OK");
+	$res =& $db->query($updateQ);
+	if (PEAR::isError($res)) {
+		header("HTTP/1.0 500 Internal Server Error\n"+$res->getMessage());
+	}
 	else
-		header("HTTP/1.0 500 Internal Server Error");
+		header("HTTP/1.0 200 OK");
 	//echo "Query:";
 	//echo $updateQ;
 	exit();

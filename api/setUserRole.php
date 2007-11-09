@@ -1,6 +1,6 @@
 <?php
 //Bring in the user's config file
-require_once('../config.php');
+require_once('apiSetup.php');
 
 	$badarg = false;
 	if(empty($_POST['r']) || empty($_POST['u']) || empty($_POST['a']))
@@ -21,13 +21,6 @@ require_once('../config.php');
 		print_r( $_POST );
 		exit();
 	}
-// Connect to the mysql database.
-  $mysqli = new mysqli("$CFG->dbhost", "$CFG->dbuser", "$CFG->dbpass", "$CFG->dbname");
-	// verify connection
-	if (mysqli_connect_errno()) {
-		header("HTTP/1.0 503 Service Unavailable");
-		exit();
-	}
 	if( $action == 'set' ) {
 		$updateQ = "insert ignore into user_roles(user_id, role_id, ";
 		if( isset($approver_id)){
@@ -43,13 +36,12 @@ require_once('../config.php');
 			." where ur.role_id=r.id and ur.user_id=u.id"
 			." and r.name='".$rolename."' and u.username='".$username."'";
 	}
-	if( $mysqli->query($updateQ) )
-		header("HTTP/1.0 200 OK");
-	else {
-		header("HTTP/1.0 500 Internal Server Error");
-		echo "<p>Error:<br />".$mysqli->error."</p>";
+  $res =& $db->query($updateQ);
+	if (PEAR::isError($res)) {
+		header("HTTP/1.0 500 Internal Server Error\n"+$res->getMessage());
 	}
-	echo "Query:";
-	echo $updateQ;
+	else
+		header("HTTP/1.0 200 OK");
+
 	exit();
 ?>
