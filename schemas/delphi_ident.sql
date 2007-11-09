@@ -1,4 +1,3 @@
-use delphi;
 --
 -- Table structure for table `user`
 -- Should the user table have the core role to denormalize and save a join?
@@ -10,6 +9,9 @@ CREATE TABLE `user` (
   `username`      varchar(40) NOT NULL UNIQUE,
   `passwdmd5`     varchar(32) NOT NULL,        -- MD5 of the pw
   `email`         varchar(80) NOT NULL,           -- allow for very long email addresses
+  `real_name`     varchar(100) NULL,
+  `website_url`   varchar(255) NULL,
+  `about`         text NULL,
   `pending`       boolean NOT NULL default true, -- on creation, is unverified
   `blocked`       boolean NOT NULL default false,
   `creation_time` timestamp NOT NULL default '0000-00-00 00:00:00',

@@ -2,7 +2,6 @@
 -- Table structure for table category counts
 -- The when field is in the timezone of the museum.
 --
-use delphi;
 DROP TABLE IF EXISTS `cat_counts` \p;
 SHOW WARNINGS;
 CREATE TABLE `cat_counts` (
