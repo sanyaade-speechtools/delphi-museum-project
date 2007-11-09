@@ -29,7 +29,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			$res =& $db->query($sql);
 			if (PEAR::isError($res)) {die($res->getMessage());}
 			$order = $res->fetchRow();
-			$order = $order['order'] + 1;
+			$order = $order['order_num'] + 1;
 			
 			// add object to the set
 			$sql = 	"	INSERT INTO set_objs 
@@ -54,7 +54,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 					$imageOptions = array(	'img_path' => $row['img_path'],
 											'size' => 50,
 											'img_ar' => $row['img_ar'],
-											'linkURL' => "/delphi/set/".$row['set_id'],
+											'linkURL' => $CFG->shortbase."/set/".$set_id,
 											'vAlign' => "center",
 											'hAlign' => "center"
 										);
@@ -74,7 +74,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 		$res =& $db->query($sql);
 		if (PEAR::isError($res)) {die($res->getMessage());}
 		$order = $res->fetchRow();
-		$order = $order['order'];
+		$order = $order['order_num'];
 		
 		// Delete the offending object
 		$sql = "DELETE FROM set_objs WHERE set_id = $set_id AND obj_id = $obj_id";		
@@ -93,7 +93,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			$imageOptions = array(	'img_path' => "noSetObjects",
 									'size' => 50,
 									'img_ar' => "1.065",
-									'linkURL' => "/delphi/set/".$set_id,
+									'linkURL' => $CFG->shortbase."/set/".$set_id,
 									'vAlign' => "center",
 									'hAlign' => "center"
 								);
@@ -113,7 +113,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 				$imageOptions = array(	'img_path' => $row['img_path'],
 										'size' => 50,
 										'img_ar' => $row['img_ar'],
-										'linkURL' => "/delphi/set/".$row['set_id'],
+										'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 										'vAlign' => "center",
 										'hAlign' => "center"
 									);

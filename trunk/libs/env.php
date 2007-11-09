@@ -50,6 +50,7 @@ $t->cache_modified_check = true;
 // Assign any global smarty values here.
 $t->assign('themeroot', "$CFG->wwwroot/themes/$CFG->theme");
 $t->assign('wwwroot', $CFG->wwwroot);
+$t->assign('shortbase', $CFG->shortbase);
 $t->assign('thumbs', $CFG->image_thumb);
 $t->assign('thumbs_square', $CFG->image_thumb_square);
 $t->assign('mids', $CFG->image_medium);

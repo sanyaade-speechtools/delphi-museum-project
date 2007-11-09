@@ -63,7 +63,6 @@ function loadZoomer(path){
 	so.addVariable("zoomifyNavWindow", 0);
 	so.addVariable("zoomifyImagePath", templateVarsJSON['image_zoom']+"/"+path);
 	so.write("viewset_objectImage");
-	//http://cyark.berkeley.edu/delphi/trunk/objimages/zooms/Cat01/1-255349
 }
 
 function showNextObject(){
