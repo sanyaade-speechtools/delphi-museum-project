@@ -1,6 +1,6 @@
 <?php
 //Bring in the user's config file
-require_once('../config.php');
+require_once('apiSetup.php');
 
 	$badarg = false;
 	if(empty($_POST['r']))
@@ -16,19 +16,13 @@ require_once('../config.php');
 		print_r( $_POST );
 		exit();
 	}
-// Connect to the mysql database.
-  $mysqli = new mysqli("$CFG->dbhost", "$CFG->dbuser", "$CFG->dbpass", "$CFG->dbname");
-	// verify connection
-	if (mysqli_connect_errno()) {
-		header("HTTP/1.0 503 Service Unavailable");
-		exit();
-	}
 	$updateQ = "UPDATE role set description='".$roledesc."' where name='".$rolename."'";
-	if( $mysqli->query($updateQ) )
-		header("HTTP/1.0 200 OK");
+	$res =& $db->query($updateQ);
+	if (PEAR::isError($res)) {
+		header("HTTP/1.0 500 Internal Server Error\n"+$res->getMessage());
+	}
 	else
-		header("HTTP/1.0 500 Internal Server Error");
-	//echo "Query:";
-	//echo $updateQ;
+		header("HTTP/1.0 200 OK");
+
 	exit();
 ?>
