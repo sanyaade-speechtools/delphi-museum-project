@@ -18,7 +18,7 @@ $response = array(	"success" => false,
 					"tag_name" => ""
 				);
 
-if( isset($_POST['tagInput']) && isset($_POST['obj_id']) ){
+if( isset($_SESSION['id']) && isset($_POST['tagInput']) && isset($_POST['obj_id']) ){
 	$tagInput = $_POST['tagInput'];
 	$obj_id = $_POST['obj_id'];
 

@@ -16,7 +16,7 @@ $response = array(	"success" => false,
 					"msg" => "Did not receive the right vars"
 				);
 
-if( isset($_POST['tag_id']) && isset($_POST['obj_id']) ){
+if( isset($_SESSION['id']) && isset($_POST['tag_id']) && isset($_POST['obj_id']) ){
 	$tag_id = $_POST['tag_id'];
 	$obj_id = $_POST['obj_id'];
 	$uid = $_SESSION['id'];

@@ -7,7 +7,9 @@ if( isset($_POST['obj_id']) && isset($_POST['set_id'])) {
 	$obj_id = $_POST['obj_id'];
 	$set_id = $_POST['set_id'];
 } else {
-	$t->display('objectNotFound.tpl');
+	$t->assign('heading', "Error");
+	$t->assign('message', "Did get the right vars to complete the request.");
+	$t->display('error.tpl');
 	die;
 }
 
@@ -24,8 +26,10 @@ if (PEAR::isError($res)) {
 
 // If nothing is found, send to object not found.
 if ( $res->numRows() < 1 ){
-	$t->display('objectNotFound.tpl');
-	die();
+	$t->assign('heading', "Error");
+	$t->assign('message', "Did not find the object you were looking for.");
+	$t->display('error.tpl');
+	die;
 }
 
 
@@ -36,7 +40,7 @@ while ($row = $res->fetchRow()) {
     $response['obj_num'] = $row['objnum'];
     $response['obj_name'] = $row['name'];
 	$response['obj_description'] = $row['description'];
-	$response['obj_order'] = $row['order'];
+	$response['obj_order'] = $row['order_num'];
 	$response['obj_img'] = $row['img_path'];
 	$response['obj_zoomDir'] = substr($row['img_path'], 0, -4); // trims off .jpg
 }
