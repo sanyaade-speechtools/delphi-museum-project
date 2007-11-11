@@ -96,7 +96,7 @@ function outputWrappedImage( $row, $wrapperClass, $linkBase, $size ) {
 	$args = array(	'img_path' => $row['img_path'], 				//REQUIRED!
 							'size' => 40, 									//REQUIRED!
 							'img_ar' => $row['img_ar'], 					//REQUIRED!
-							'linkURL' => "/delphi/set/".$row['set_id'], 	//optional
+							'linkURL' => $CFG->shortbase."/set/".$row['set_id'], 	//optional
 							'vAlign' => "top", 								//optional {top,center,bottom} (default: center)
 							'hAlign' => "center" 							//optional {left,center,right} (default: center)
 						);

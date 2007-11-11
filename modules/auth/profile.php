@@ -79,7 +79,7 @@ if ( $res->numRows() < 1 ){
 			$imageOptions = array(	'img_path' => $row['thumb_path'],
 									'size' => 118,
 									'img_ar' => $row['img_ar'],
-									'linkURL' => "/delphi/set/".$row['id'],
+									'linkURL' => $CFG->shortbase."/set/".$row['id'],
 									'vAlign' => "center",
 									'hAlign' => "center"
 								);

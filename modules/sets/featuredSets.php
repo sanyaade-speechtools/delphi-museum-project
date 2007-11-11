@@ -36,7 +36,7 @@ while ($row = $res->fetchRow()) {
 	$imageOptions = array(	'img_path' => $row['img_path'],
 							'size' => 118,
 							'img_ar' => $row['img_ar'],
-							'linkURL' => "/delphi/set/".$row['set_id'],
+							'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 							'vAlign' => "center",
 							'hAlign' => "center"
 						);

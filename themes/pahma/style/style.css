@@ -211,6 +211,11 @@ label.overlabel-apply {
 	text-decoration: underline;
 }
 
+.navLink a:visited{
+	color:#FFF;
+}
+
+
 #navSearchBox{
 	position:absolute;
 	right:0px;
@@ -293,40 +298,41 @@ label.overlabel-apply {
  * ------------------------------------------------------- */
 
 #browserContainer{
-	width:100%;
 	position:relative;
 }
 
 .browser_topLevelFacet{
-	float:left;
-	clear:left;
-	border:1px solid #61615f;
-	padding:7px 15px 7px 0px;
-	width:180px;
-	margin-left:5px;
-	margin-bottom:-1px;
+	left:7px;
+	position:absolute;
+	width:181px;
+	height:22px;
+	border:1px solid #cdcdc9;
+	padding:7px 15px 5px 0px;
 	background-color:#f2f1ee;
-	font-size: 1.3em;
-	color:#0094df;
+	color:#00a6e6;
+	font-size:1.2em;
 	text-align:right;
 	cursor: pointer;
 }	
 
 .browser_topLevelFacetSelected{
-	width:186px;
-	margin-left:0px;
-	border-right:#FFF;
+	z-index:1;	
+	left:0px;
+	border-right:0px;
+	width:189px;
 	background-color:#FFF;
-	font-weight: bold;
+	font-weight:bold;
 	cursor: default;
 }
 
 .browser_browsePane{
 	display:none;
-	margin-left:201px;
-	border:1px solid #61615f;
-	width:420px;
-	padding:10px 10px 25px 25px;
+	position:absolute;
+	left:204px;
+	top:0px;
+	width:375px;
+	border:1px solid #cdcdc9;
+	padding:10px 20px 20px 20px;
 } 
 
 .browser_browsePaneSelected{
@@ -853,7 +859,6 @@ code.hidden {
 	background-color:#f2f1ee;
 	border:1px solid #cdcdc9;
 	font-size:1.4em;
-	padding
     white-space: nowrap; /* required in IE 6 */    
     outline: 0; /* prevent dotted border in Firefox */
 }
