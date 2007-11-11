@@ -1,9 +1,10 @@
 {include file="header.tpl"}
 <script type="text/javascript" charset="utf-8">
-	//var templateVarsJSON = JSON.parse({$templateVarsJSON});
+//<![CDATA[
 	var templateVarsJSON = eval({$templateVarsJSON});
+//]]>
 </script>
-<script type="text/javascript" src="{$wwwroot}/libs/swfobject1-5/swfobject.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.flash.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/viewset.js"></script>
 
 
@@ -13,19 +14,17 @@
 		<div id="viewset_createdBy" class="smaller">Created by <a href="{$wwwroot}/modules/auth/profile.php?uid={$owner_id}">{$username}</a></div>
 		
 		<h3>Description</h3>
-			<div id="viewset_setDescription">
-				{if $setDescription}
-					<div id="viewset_setDescription">{$setDescription}</div>
-				{else}
-					<div id="viewset_setNoDescription">No description</div>
-				{/if}
-			</div>
+		{if $setDescription}
+			<div id="viewset_setDescription">{$setDescription}</div>
+		{else}
+			<div id="viewset_setNoDescription">No description</div>
+		{/if}
 		<h3>Objects</h3>
 		
 			{if $setHasObjects}
 				<div id="viewset_thumbnails">
 					{section name=obj loop=$objects}
-					<div class="viewset_objectThumb" id="{$objects[obj].id}">
+					<div class="viewset_objectThumb" id="objectThumb_{$objects[obj].id}">
 						{$objects[obj].thumb}
 					</div>
 					{/section}
@@ -41,7 +40,7 @@
 	{if $setHasObjects}
 	<div id="viewset_rightCol">
 		<div id="viewset_detailsBox">
-			<div id="viewset_objectImage"></div>
+			<div id="viewset_objectImage">Replaced by flash</div>
 			<h2 id="viewset_objectName"></h2>
 			<div id="viewset_objectDescription"></div>
 			<a href="#" id="viewset_objectDetaiLink" class="smaller">View object details</a>

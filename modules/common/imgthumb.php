@@ -153,7 +153,7 @@ function outputSimpleImage($args) {
 				$hAlign = "left:".($offset*2)."px;";
 			}
 		}
-		$imageOutput .= "<img src='".$pathToImg."' style='position:relative;".$vAlign.$hAlign.$width.$height."'/>";
+		$imageOutput .= "<img src='".$pathToImg."' style='position:relative;".$vAlign.$hAlign.$width.$height."' alt='thumbnail'/>";
 	}
 	if (isset($args['linkURL'])) $imageOutput .= "</a>";
 	$imageOutput .= "</div>";

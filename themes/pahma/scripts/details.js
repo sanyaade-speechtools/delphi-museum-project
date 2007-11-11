@@ -1,12 +1,21 @@
+//load zoomer
+
 $(document).ready(function(){
-	//load zoomer
-	var so = new SWFObject(templateVarsJSON['zoomer'], "zoomer", "375", "350", "6", "#FFFFFF");
-	so.useExpressInstall(templateVarsJSON['wwwroot'] + '/libs/swfobject1-5/expressinstall.swf');
-	so.addVariable("zoomifyMaxZoom", 150);
-	so.addVariable("zoomifySlider", 0);
-	so.addVariable("zoomifyNavWindow", 0);
-	so.addVariable("zoomifyImagePath", templateVarsJSON['zoomDir']);
-	so.write("detail_image");
+	
+	myflashvars = {
+		zoomifyMaxZoom: "125",
+		zoomifySlider: "0",
+		zoomifyNavWindow: "0",
+		zoomifyImagePath: templateVarsJSON['zoomDir']
+	};
+	$('#detail_image').flash(
+	        { src: templateVarsJSON['zoomer'],
+	          width: 375,
+	          height: 350,
+			flashvars: myflashvars,
+			expressInstall: true }, 
+	        { version: 6 }
+	    );
 	
 	//init tabs
 	$('#detail_tabBox ul').tabs();

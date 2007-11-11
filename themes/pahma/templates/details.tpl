@@ -1,13 +1,15 @@
 {include file="header.tpl"}
 <script type="text/javascript" charset="utf-8">
-	//var templateVarsJSON = JSON.parse({$templateVarsJSON});
+//<![CDATA[
 	var templateVarsJSON = eval({$templateVarsJSON});
+//]]>
 </script>
-<script type="text/javascript" src="{$wwwroot}/libs/swfobject1-5/swfobject.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.flash.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.tabs.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
 		<div id="detail_imageCol">
-			<div id="detail_image"></div>
+			<div id="detail_image">
+			</div>
 			<div id="detail_thumbnails">
 
 			</div>
@@ -66,9 +68,11 @@
 	            <div id="detail_tagsTab">
 					<p class="smaller">Tags are short labels that you can apply to museum objects.</p>
 					<form action="{$wwwroot}/modules/tags/addTag.php" method="post" accept-charset="utf-8" id="tagAddForm">
+						<div>
 						<input type="text" name="tagInput" value="" id="tagAddForm_input" size="20" maxlength="45"/>
 						<input type="submit" value="add"/> <img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="addTagFormIndicator" alt="Spinning indicator"/>
 						<input type="hidden" name="obj_id" value="{$id}" id="tagAddForm_obj_id"/>
+						</div>
 					</form>
 					<br/>
 					<h3>Tags you associate with this object</h3>
