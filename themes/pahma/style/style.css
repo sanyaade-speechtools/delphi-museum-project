@@ -7,7 +7,10 @@ body{
 	padding:0px;
 	font-size:.9em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #61615f;
+	color: #61615F;
+	background-image:url(../images/backgroundFade.png);
+	background-repeat: repeat-x;
+	background-color:#0a6696;
 }
 
 h1{
@@ -65,6 +68,115 @@ p.smaller{
 }
 
 /* ------------------------------------------------------- *
+ * - Main Layout Divs   ---------------------------------- *
+ * ------------------------------------------------------- */
+
+#contentContainer{
+	position: relative;
+	top:0px;
+	width:899px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 600px;
+	height: auto !important;
+	height: 600px;
+}
+
+#content{
+	position:relative;
+	background-color:#FFF;
+	width:820px;
+	margin:0px auto;
+	padding:5px 20px 75px 20px;
+	overflow: auto;
+}
+
+/* used for some pages which don't need the full width*/
+#contentNarrow{
+	width:625px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* ------------------------------------------------------- *
+ * - Header     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+#headerBar{
+	position:relative;
+	background-repeat: no-repeat;
+	background-image: url(../images/logo.png);
+	height:89px;
+}
+
+#headerBarLinks{
+	position:absolute;
+	bottom:5px;
+	right:26px;
+	color:#FFF;
+	font-size:12px;
+}
+
+#navBar{
+	background-image: url(../images/backgroundNavBar.png);
+	background-repeat: no-repeat;
+	position: relative;
+	width:100%;
+	height: 51px;
+}
+
+#navBarLinks{
+	position:absolute;
+	left:25px;
+	top:10px;
+	width:100%;
+}
+
+#navBarLinks a{
+	color:#FFF;
+	font-size:24px;
+	font-weight:normal;
+	margin-right:16px;
+}
+
+#navBarSearchBox{
+	position:absolute;
+	right:25px;
+	top:15px;
+}
+
+/* ------------------------------------------------------- *
+ * - Footer     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+
+#footer{
+	width:500px;
+	margin: 50px auto 100px auto;
+}
+
+/* ------------------------------------------------------- *
+ * - Profile     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+.profile_metadata{
+	margin-top:5px;
+	width:400px;
+}
+
+.profile_metadataLabel{
+	font-weight:bold;
+}
+
+.profile_memberSince{
+	margin-top:-8px;
+	margin-bottom:5px;
+}
+
+
+/* ------------------------------------------------------- *
  * - Forms      ------------------------------------------ *
  * ------------------------------------------------------- */
 
@@ -97,6 +209,12 @@ form.delphiForm legend {
 	margin:0px;
 }
 
+/*Should be applied to all textarea and text input fields*/
+.delphiFormInput{
+	padding:2px 2px 2px 4px;
+	border:1px solid #603913;
+}
+
 /* Used for styling grey help text that appears in form fields. */
 label.overlabel-apply {
 	display:inline;
@@ -105,7 +223,7 @@ label.overlabel-apply {
 	top:5px;
 	left:8px;
 	z-index:1;
-	font-size:1em;
+	font-size:12px;
 	font-weight: normal;
 	color:#61615f;
 }
@@ -119,163 +237,6 @@ label.overlabel-apply {
 .requiredFieldIndicator{
 	color:#F00;
 }
-
-/* ------------------------------------------------------- *
- * - Header     ------------------------------------------ *
- * ------------------------------------------------------- */
-
-#navBarContent, #headerBarContent, #content, #footer{
-	width:760px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-#headerBar{
-	background-image: url(../images/headerBar.png);
-	background-repeat: repeat-x;
-	min-height:100px;
-	position: absolute;
-	width:100%;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 96px;
-	height: auto !important;
-	height: 96px;
-	top:0px;
-}
-
-#headerBarContent{
-	position:relative;
-	margin-top:17px;
-}
-
-#headerBarContent img{
-	position:absolute;
-	left:-26px;
-}
-
-#loginNav{
-	position:absolute;
-	top:60px;
-	right:0px;
-	font-size:.8em;
-	color:#61615f;
-}
-
-#loginNav a{
-	color:#61615f;
-	text-decoration: none;
-}
-
-#loginNav a:hover{
-	color:#61615f;
-	text-decoration: underline;
-}
-
-#loginNav span{
-	font-weight: bold;
-	color:#0085c9;
-}
-
-
-#navBar{
-	background-image: url(../images/brownBar.png);
-	background-repeat: repeat-x;
-	position: absolute;
-	width:100%;
-	top:96px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 38px;
-	height: auto !important;
-	height: 38px;
-}
-
-#navBarContent{
-	margin: 8px auto 0px auto;
-	position:relative;
-	color:#FFF;
-}
-
-.navLink{
-	margin-right:15px;
-	font-size:1.2em;
-	letter-spacing: .02em;
-}
-
-.navLink a{
-	color:#FFF;
-	text-decoration: none;
-}
-
-.navLink a:hover{
-	color:#FFF;
-	text-decoration: underline;
-}
-
-.navLink a:visited{
-	color:#FFF;
-}
-
-
-#navSearchBox{
-	position:absolute;
-	right:0px;
-	top:0px;
-	font-size:.9em;
-	color:#FFF;
-}
-
-#navSearchBoxInput{
-	padding:2px 2px 2px 4px;
-	border:1px solid #603913;
-
-}
-
-#navSearchBoxButton{
-	font-size:.9em;
-	padding:2px;
-	width:53px;
-	margin:0px;
-	background:none;
-	cursor:pointer;
-	border:0px solid #603913;
-	color:#FFF;
-	background-image: url(../images/searchButtonBackground.png);
-	
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 21px;
-	height: auto !important;
-	height: 21px;
-	
-}
-
-#navSearchBox a{
-	color:#FFF;
-	text-decoration: none;
-}
-
-#navSearchBox a:hover{
-	color:#FFF;
-	text-decoration: underline;
-}
-
-/* ------------------------------------------------------- *
- * - Profile     ------------------------------------------ *
- * ------------------------------------------------------- */
-
-.profile_metadata{
-	margin-top:5px;
-	width:400px;
-}
-
-.profile_metadataLabel{
-	font-weight:bold;
-}
-
-.profile_memberSince{
-	margin-top:-8px;
-	margin-bottom:5px;
-}
-
 
 /* ------------------------------------------------------- *
  * - Messages -------------------------------------------- *
@@ -297,8 +258,10 @@ label.overlabel-apply {
  * - Browser    ------------------------------------------ *
  * ------------------------------------------------------- */
 
-#browserContainer{
-	position:relative;
+#browserTabs{
+	position:absolute;
+	top:140px;
+	left:117px;
 }
 
 .browser_topLevelFacet{
@@ -327,9 +290,10 @@ label.overlabel-apply {
 
 .browser_browsePane{
 	display:none;
-	position:absolute;
+/*	position:absolute;
 	left:204px;
 	top:0px;
+*/	margin-left:204px;
 	width:375px;
 	border:1px solid #cdcdc9;
 	padding:10px 20px 20px 20px;
@@ -339,61 +303,20 @@ label.overlabel-apply {
 	display:block;
 }
 
-/* ------------------------------------------------------- *
- * - Content     ------------------------------------------ *
- * ------------------------------------------------------- */
-
-#contentContainer{
-	position: relative;
-	top:134px;
-	width:100%;
-}
-
-#content{
-	position:relative;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
-	height: auto !important;
-	height: 600px;
-}
-
-/* used for some pages which don't need the full width*/
-#contentNarrow{
-	width:625px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-
-/* ------------------------------------------------------- *
- * - Footer     ------------------------------------------ *
- * ------------------------------------------------------- */
-
-
-#footer{
-	clear:both;
-	text-align:center;
-	padding-top:30px;
-	margin-top:100px;
-	margin-bottom:200px;
-}
-
 
 /* ------------------------------------------------------- *
  * - FRONT ----------------------------------------------- *
  * ------------------------------------------------------- */
 #front_tongue{
 	position:absolute;
-	left:0px;
+	left:70px;
 	z-index: 1;
 	background-image: url(../images/tongue.gif);
 	background-repeat: no-repeat;
 	width:246px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 240px;
-	height:auto !important;
 	height: 240px;
 	padding: 18px 25px 10px 25px;
+	top:0px;
 }
 
 #front_tongue h1, #front_tongue p, #front_tongue a{
@@ -401,14 +324,9 @@ label.overlabel-apply {
 }
 
 
-#front_tongue p{
-	font-size:.8em;
-}
-
-
 #front_featuredObjects{
 	position:absolute;
-	left:15px;
+	left:95px;
 	top:280px;
 	width:253px;
 	padding: 0px;
@@ -514,10 +432,7 @@ div.front_set a:active img {
 #front_greyCol{
 	float:right;
 	width:425px;
-	min-height: 400px;
-	height:auto !important;
-	height: 400px;
-	background-color:#f4f4f4;
+	background-color:#f2f1ee;
 	padding-left:70px;
 	padding-bottom:40px;
 }
@@ -1003,12 +918,12 @@ code.hidden {
 .viewset_prevIcon{
 	position:absolute;
 	top:190px;
-	right:408px;
+	right:429px;
 }
 .viewset_nextIcon{
 	position:absolute;
 	top:190px;
-	right:0px;
+	right:19px;
 }
 
 
