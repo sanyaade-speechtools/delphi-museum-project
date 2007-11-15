@@ -2,23 +2,12 @@
 
 $(document).ready(function(){
 	
-	myflashvars = {
-		zoomifyMaxZoom: "125",
-		zoomifySlider: "0",
-		zoomifyNavWindow: "0",
-		zoomifyImagePath: templateVarsJSON['zoomDir']
-	};
-	$('#detail_image').flash(
-	        { src: templateVarsJSON['zoomer'],
-	          width: 375,
-	          height: 350,
-			flashvars: myflashvars,
-			expressInstall: true }, 
-	        { version: 6 }
-	    );
-	
 	//init tabs
 	$('#detail_tabBox ul').tabs();
+	
+	// Load the first image into the zoomer and hightlight the first thumb
+	loadObjectZoomer(templateVarsJSON['zoomDir']);
+	$(".detail_thumbnail:first").addClass("detail_thumbnailSelected");
 	
 	//bind various links that require an ajax action on click
 	$('.ajaxLink').click(function(){
@@ -53,7 +42,37 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+	
+	// show the right image when addional media thumbs are clicked
+	$(".detail_thumbnail").click(function(){
+		// Show the right object in the zoomer
+		loadObjectZoomer($(this).children().children().attr("href"));
+		
+		// highlight the correct thumb
+		$(".detail_thumbnailSelected").removeClass("detail_thumbnailSelected");
+		$(this).addClass("detail_thumbnailSelected");
+		
+		return false;
+	});
 });
+
+function loadObjectZoomer(path){
+	$('#detail_image').html("");
+	myflashvars = {
+		zoomifyMaxZoom: 100,
+		zoomifySlider: 0,
+		zoomifyNavWindow: 0,
+		zoomifyImagePath: path
+	};
+	$('#detail_image').flash(
+	        { src: templateVarsJSON['zoomer'],
+	          width: 375,
+	          height: 350,
+			flashvars: myflashvars,
+			expressInstall: true }, 
+	        { version: 6 }
+	);
+}
 
 function ajaxLinkHandler(arg_id, arg_href, arg_title){
 	var link = $('#' + arg_id).hide();

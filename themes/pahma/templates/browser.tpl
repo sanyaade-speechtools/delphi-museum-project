@@ -17,7 +17,6 @@
 	</div>
 	<div class="browser_browsePane browser_browsePaneSelected" id="useOrContext_pane">
 		<div class="smaller">Use or Context describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		<br/>as<br/>asd<br/>asd<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>asd<br/><br/><br/><br/><br/><br/><br/>
 	</div>
 	<div class="browser_browsePane" id="siteOrProvenience_pane">
 		<div class="smaller">Site or Provenience describes the blah abd blah of an object. It something for the of something and the other thing.</div>

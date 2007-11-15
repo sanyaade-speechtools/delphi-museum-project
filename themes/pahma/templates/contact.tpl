@@ -13,13 +13,13 @@
 {/if}
 <form action="" method="post" accept-charset="utf-8" class="delphiForm">
 	<label for="name">Your name</label>	
-	<input type="text" name="name" value="{$name}" id="name"/>
+	<input class="delphiFormInput" type="text" name="name" value="{$name}" id="name"/>
 
 	<label for="email">Your email <span class="requiredFieldIndicator">*</span></label>
-	<input type="text" name="email" value="{$email}" id="email"/>
+	<input class="delphiFormInput" type="text" name="email" value="{$email}" id="email"/>
 
 	<label for="message">Your comment or question <span class="requiredFieldIndicator">*</span></label>
-	<textarea name="message" rows="8" cols="40">{$message}</textarea>
+	<textarea class="delphiFormInput" name="message" rows="8" cols="40">{$message}</textarea>
 	
 	<div class="buttonRow">
 		<input type="submit" name="submit" value="Submit"/>

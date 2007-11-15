@@ -40,11 +40,6 @@ if ( $res->numRows() < 1 ){
 	die;
 }
 
-$mid_dir = $CFG->dir_image_medium;
-$zoom_dir = $CFG->dir_image_zoom;
-if( empty($mid_dir) || empty($zoom_dir) )
-	die("Paths to images not configured!");
-
 // Assign vars to template
 while ($row = $res->fetchRow()) {
     $t->assign('id', $row['id']);
@@ -57,6 +52,46 @@ while ($row = $res->fetchRow()) {
 // Free the result
 $res->free();
 
+
+//---------------------------------
+// Query DB for Object Images
+//---------------------------------
+$sql = "SELECT * FROM media WHERE media.obj_id = $objId";
+$res =& $db->query($sql);
+if (PEAR::isError($res)) {
+    die($res->getMessage());
+}
+
+// If nothing is found, send to object not found.
+if ( $res->numRows() <= 1 ){
+	$t->assign('hasAdditionalMedia', false);
+}else{
+	$t->assign('hasAdditionalMedia', true);
+	
+	$additionalMediaItems = array();
+	while ($row = $res->fetchRow()) {
+		$imageOptions = array(	'img_path' => $row['path'],
+								'size' => 40,
+								'img_ar' => $row['aspectr'],
+								'linkURL' => $CFG->image_zoom."/".substr($row['path'], 0, -4),
+								'vAlign' => "center",
+								'hAlign' => "center"
+							);
+
+		$additionalMediaItem = array('name' => $row['name'], 
+									'description' => $row['description'],
+									'type' => $row['type'],
+									'width' => $row['width'],
+									'height' => $row['height'],
+									'thumb' => outputSimpleImage($imageOptions)
+						);
+		array_push($additionalMediaItems, $additionalMediaItem);
+
+	}
+	$t->assign("additionalMediaItems", $additionalMediaItems);
+}
+// Free the result
+$res->free();
 
 //---------------------------------
 // Query DB for categories
@@ -240,7 +275,6 @@ if (isset($_SESSION['id'])){
 								'setHasObjects' => $setHasObjects,
 								'$total_object' => $total_objects
 							);
-		//	print_r($personalSet);
 			array_push($personalSets, $personalSet);
 
 		}

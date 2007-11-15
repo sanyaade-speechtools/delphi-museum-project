@@ -12,16 +12,16 @@
 {/if}
 <form action="{$wwwroot}/modules/auth/register.php" method="post" class="delphiForm">
 	<label for="user">Username <span class="requiredFieldIndicator">*</span></label>
-	<input type="text" name="user" maxlength="40" value="{$user}">
+	<input class="delphiFormInput" type="text" name="user" maxlength="40" value="{$user}">
 	
 	<label for="pass">Password <span class="requiredFieldIndicator">*</span></label>
-	<input type="password" name="pass" maxlength="40" maxlength="25"/>
+	<input class="delphiFormInput" type="password" name="pass" maxlength="40" maxlength="25"/>
 	
 	<label for="pass2">Retype your password <span class="requiredFieldIndicator">*</span></label>
-	<input type="password" name="pass2" maxlength="40"/>
+	<input class="delphiFormInput" type="password" name="pass2" maxlength="40"/>
 	
 	<label for="email">Email <span class="requiredFieldIndicator">*</span></label>
-	<input type="text" name="email" maxlength="70" value="{$email}"/>
+	<input class="delphiFormInput" type="text" name="email" maxlength="70" value="{$email}"/>
 	<div class="buttonRow">
 		<input type="submit" name="subjoin" value="Register"/>
 	</div>
