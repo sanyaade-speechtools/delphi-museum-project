@@ -8,10 +8,20 @@
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.tabs.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
 		<div id="detail_imageCol">
-			<div id="detail_image">
-			</div>
-			<div id="detail_thumbnails">
-
+			<div id="detail_mediaBox">
+				<div id="detail_image">
+					Flash zoomer goes here.
+				</div>
+				<div id="detail_thumbnails">
+					{if $hasAdditionalMedia}
+						<h3>Additional Media</h3>
+						{section name=item loop=$additionalMediaItems}
+							<div class="detail_thumbnail">
+								{$additionalMediaItems[item].thumb}
+							</div>
+						{/section}
+					{/if}
+				</div>
 			</div>
 			<div id="detail_tabBox">
 	            <ul>

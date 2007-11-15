@@ -15,24 +15,24 @@
 	<fieldset>
 		<legend>Account settings</legend>
 	<label for="email">Email address <span class="requiredFieldIndicator">*</span></label>
-	<input type="text" name="email" maxlength="70" size="50" value="{$email}"/>
+	<input class="delphiFormInput" type="text" name="email" maxlength="70" size="50" value="{$email}"/>
 	
 	<label for="pass">Change your password</label>
-	<input type="password" name="pass" maxlength="40"/>
+	<input class="delphiFormInput" type="password" name="pass" maxlength="40"/>
 	
 	<label for="pass2">Repeat your new password</label>
-	<input type="password" name="pass2" maxlength="40"/>
+	<input class="delphiFormInput" type="password" name="pass2" maxlength="40"/>
 	</fieldset>
 	<fieldset>
 		<legend>Profile information</legend>
 	<label for="real_name">Real name</label>
-	<input type="text" name="real_name" maxlength="70" value="{$real_name}"/>
+	<input class="delphiFormInput" type="text" name="real_name" maxlength="70" value="{$real_name}"/>
 	
 	<label for="website_url">Website URL</label>
-	<input type="text" name="website_url" maxlength="255" size="50" value="{$website_url}"/>
+	<input class="delphiFormInput" type="text" name="website_url" maxlength="255" size="50" value="{$website_url}"/>
 	
 	<label for="about">About you</label>
-	<textarea name="about" rows="15" cols="30">{$about}</textarea>
+	<textarea class="delphiFormInput" name="about" rows="15" cols="30">{$about}</textarea>
 	</fieldset>
 	<div class="buttonRow">
 		<input type="submit" name="subreq" value="Update"/> or <a href="{$wwwroot}/modules/auth/profile.php?uid={$currentUser_id}"> Discard changes</a>

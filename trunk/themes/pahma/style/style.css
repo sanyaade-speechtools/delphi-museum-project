@@ -41,6 +41,7 @@ h3{
 a, a:visited{
 	color:#00a6e6;
 	text-decoration:none;
+	outline:none;
 }
 
 a:hover{
@@ -297,6 +298,7 @@ label.overlabel-apply {
 	width:375px;
 	border:1px solid #cdcdc9;
 	padding:10px 20px 20px 20px;
+	height:400px;
 } 
 
 .browser_browsePaneSelected{
@@ -645,7 +647,7 @@ code.hidden {
 	float: left;
 	width: 410px;
 	margin-top: 30px;
-	padding: 0;
+	padding: 0px;
 }
 
 
@@ -656,12 +658,6 @@ code.hidden {
 	padding: 0px 10px 10px 10px;
 	background-color: #FFF;
 	line-height: 1.2em;
-}
-
-#detail_image {
-	margin:0px 0px 40px 0px;
-	padding:15px;
-	border:1px solid #cdcdc9;
 }
 
 .detail_publicSetlet{
@@ -692,7 +688,7 @@ code.hidden {
 .detail_personalSetlet{
 	background: #FFF url(../images/setFrame_m.gif) no-repeat scroll;
 	float:left;
-	margin:10px 0 0 10px;
+	margin:10px 0px 0px 10px;
 	width:80px;
 	height:109px;
 	padding:10px 10px 5px 5px;
@@ -722,6 +718,28 @@ code.hidden {
 	padding-bottom:2px;
 }
 
+#detail_mediaBox {
+	margin:0px 0px 40px 0px;
+	padding:15px;
+	border:1px solid #cdcdc9;
+	width:375px;
+}
+
+#detail_thumbnails{
+	overflow:auto;
+}
+
+.detail_thumbnail{
+	float:left;
+	padding:3px;
+	border:1px solid #FFF;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+.detail_thumbnailSelected{
+	border:1px solid #00a6e6;
+}
 
 /* Caution! Ensure accessibility in print and other media types... */
 @media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
@@ -913,6 +931,10 @@ code.hidden {
 
 #viewset_objectDetaiLink{
 	
+}
+
+#viewset_objectImage{
+	height:360px;
 }
 
 .viewset_prevIcon{

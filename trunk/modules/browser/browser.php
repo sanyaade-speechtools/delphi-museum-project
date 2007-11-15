@@ -39,6 +39,7 @@ require "../facetBrowser/Facet.inc";
 		}
 	}
 	$t->assign("facetTree", $facetTreeOutput);
+
 // Display template
 $t->display('browser.tpl');
 ?>
