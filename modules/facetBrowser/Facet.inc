@@ -16,7 +16,7 @@ class Facet extends TaxoNode {
 	// Expects results in rows of 2 columns: id and name
 	function GetFacetListFromResultSet( $result )	{
 		global $facets;
-		while ($row = $result->fetch_array()) {
+		while ($row = $result->fetchRow(MDB2_FETCHMODE_ORDERED)) {
 			$id = $row[0];
 			$name = $row[1];
 			$facet = new Facet( $name, $id, null, true, false );
@@ -29,7 +29,7 @@ class Facet extends TaxoNode {
 	function PopulateFacetsFromResultSet( $result, $fWithCounts )	{
 		global $facets;
 		global $taxoNodesHashMap;
-		while ($row = $result->fetch_array()) {
+		while ($row = $result->fetchRow(MDB2_FETCHMODE_ORDERED)) {
 			$id = $row[0];
 			$p_id = $row[1];
 			$f_id = $row[2];

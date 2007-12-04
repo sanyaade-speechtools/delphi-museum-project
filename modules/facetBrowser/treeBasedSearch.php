@@ -7,13 +7,12 @@
 
 <body>
 <?php
-include("dbconnect.php");
 require "Facet.inc";
 
 	//$cats = array();	// Create an empty array to pass in to Prune
 
-	$allCountsResults=$mysqli->query("SELECT n_objs_total, n_objs_w_imgs FROM DBInfo LIMIT 1");
-	if($row = $allCountsResults->fetch_array()) {
+	$allCountsResults =& $db->query("SELECT n_objs_total, n_objs_w_imgs FROM DBInfo LIMIT 1");
+	if($row = $allCountsResults->fetchRow(MDB2_FETCHMODE_ORDERED)) {
 		$all = $row[0];
 		$wImgs = $row[1];
 		echo "<h2>PAHMA online has ".$all." total objects (".$wImgs." with images).</h2>";
@@ -25,9 +24,9 @@ require "Facet.inc";
 	$tqCountsByCat = 
 		"select c.id, c.parent_id, c.facet_id, c.display_name, n_matches 
 		from categories c where n_matches>0 order by id";
-	$facetsResults=$mysqli->query("select id, display_name from facets");
+	$facetsResults =& $db->query("select id, display_name from facets");
 	GetFacetListFromResultSet($facetsResults);
-	$countsresult=$mysqli->query($tqCountsByCat);
+	$countsresult =& $db->query($tqCountsByCat);
 	PopulateFacetsFromResultSet( $countsresult, true );
   // Facets now exist as array in $facets. Nodes are avail in hashMap.
 	$baseQ = "facetBrowse.php?cats=";

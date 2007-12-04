@@ -3,7 +3,6 @@ session_cache_limiter("public");		// enable caching of this page
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");
 
-include("dbconnect.php");
 require "Facet.inc";
 $_DELPHI_PAGE_SIZE = 40;
 
@@ -173,10 +172,10 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				$tqCatOrder .= "id=".$catID;
 			}
 			$tqCatOrder .= " order by n desc";
-			$catsQResult=$mysqli->query($tqCatOrder);
+			$catsQResult =& $db->query($tqCatOrder);
 			$t->assign("tqCatOrder", $tqCatOrder);
 			// unset($catIDs);
-			while($row = $catsQResult->fetch_array()) {
+			while($row = $catsQResult->fetchRow(MDB2_FETCHMODE_ORDERED)) {
 				$qCatIDs[] = $row[0];
 			}
 		}
@@ -245,9 +244,9 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		$t->assign("fullCountQ", $tqFullCount);
 		$pageNum2 = $pageNum+1;		// Page uses 1-based pages.
 
-		$objsresult=$mysqli->query($tqFull);
-		$fullCountResult=$mysqli->query($tqFullCount);
-		if($row = $fullCountResult->fetch_array()) {
+		$objsresult =& $db->query($tqFull);
+		$fullCountResult =& $db->query($tqFullCount);
+		if($row = $fullCountResult->fetchRow(MDB2_FETCHMODE_ORDERED)) {
 			$numResultsTotal = $row[0];
 			if($numResultsTotal == 0 ) {
 				$numPagesTotal = 1;
@@ -275,12 +274,12 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		$t->assign("iFirstResult", 0); // e.g. "48"
 		$t->assign("iLastResult", 0);
 	} else {
-		$facetsResults=$mysqli->query("SELECT id, display_name from facets order by id");
+		$facetsResults =& $db->query("SELECT id, display_name from facets order by id");
 		GetFacetListFromResultSet($facetsResults);
 		try {
-			$countsresult=$mysqli->query($tqCountsByCat);
+			$countsresult =& $db->query($tqCountsByCat);
 			if( empty($countsresult))
-				throw new Exception($mysqli->error);
+				throw new Exception($countsresult->getMessage());
 			PopulateFacetsFromResultSet( $countsresult, true );
 		} catch( Exception $e ) {
 			echo "<h1>Problem with cat counts query/tree building</h1>\n";
@@ -331,7 +330,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		/*
 			TODO rewrite thumbnail fetching to pass an array, rather than html, to the template
 		*/
-		while( $row=$objsresult->fetch_assoc() )
+		while( $row=$objsresult->fetchRow() )
 		{
 			$imageOutput .= outputWrappedImage( $row, "results_result", 
 							$CFG->wwwroot."/modules/browser/details.php?id=", 95 );
