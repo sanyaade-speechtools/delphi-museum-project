@@ -2,8 +2,6 @@
 
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");
-// Temp hack until we move from mysqli to all PEAR
-//include("../facetBrowser/dbconnect.php");
 // This should go somewhere else
 //require "../facetBrowser/Facet.inc";
 
