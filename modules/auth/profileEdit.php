@@ -10,7 +10,7 @@ require_once("../../libs/utils.php");
 function getUserInfo(){
 	global $db;
 	// Get current user info
-	$sql = "SELECT * FROM user WHERE id = '" . $_SESSION['id'] . "'";
+	$sql = "SELECT * FROM user WHERE id = ".$db->quote($_SESSION['id'], 'integer');
 	
 	$res =& $db->query($sql);
 	if (PEAR::isError($res)) {die($res->getMessage());}
@@ -25,7 +25,7 @@ function getUserInfo(){
 
 function updateField($field, $value){
 	global $db;
-	$sql = "UPDATE user SET $field=".$db->quote($value, 'text')." WHERE id = '" . $_SESSION['id'] . "'";
+	$sql = "UPDATE user SET $field=".$db->quote($value, 'text')." WHERE id = ".$db->quote($_SESSION['id'], 'integer');
 	$res =& $db->exec($sql);
 
 	// check that result is not an error

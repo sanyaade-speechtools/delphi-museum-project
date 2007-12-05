@@ -31,11 +31,23 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			$order = $res->fetchRow();
 			$order = $order['order_num'] + 1;
 			
+			// Get the name and description of the object to initialize the name
+			// and description fields of the set_objs table
+			$sql = 	"	SELECT name, description FROM objects
+						WHERE id = $obj_id
+						LIMIT 1
+					";
+			$res =& $db->query($sql);
+			if (PEAR::isError($res)) {die($res->getMessage());}
+			$row = $res->fetchRow();
+			$objName = $row['name'];
+			$objDesc = $row['description'];
+			
 			// add object to the set
 			$sql = 	"	INSERT INTO set_objs 
-						(`set_id`, `obj_id`, `order_num`) 
+						(`set_id`, `obj_id`, `order_num`, `name`, `description`) 
 						VALUES 
-						($set_id, $obj_id, $order)
+						($set_id, $obj_id, $order, ".$db->quote($objName, 'text').", ".$db->quote($objDesc, 'text').")
 					";
 
 			$res =& $db->exec($sql);
@@ -128,7 +140,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 		
 		// If the order of the deleted object is less than the current number of objects in the set (plus 1)
 		// then we need to update the order column for all the objects in the set between the object
-		// ordered just after the deleted object, through to the last object.		
+		// ordered just after the deleted object through to the last object.		
 		if($order < $count+1){
 			// Get all the objects that need new orders
 			$sql = 	"	SELECT * FROM set_objs

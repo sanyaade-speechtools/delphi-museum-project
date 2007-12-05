@@ -2,65 +2,57 @@
 
 require_once("../../libs/env.php");
 
+$response = array();
+$response['error'] = False;
+$response['msg'] = array();
 
-// If there is no sid param in the GET, do nothing
-if( isset( $_GET['sid'] ) ) {
-	$setId = $_GET['sid'];
+// If there is no sid param in the POST, do nothing
+if( isset( $_POST['set_id'] ) ) {
+	$setId = $_POST['set_id'];
 
 	//Get the sets's owner
 	$sql = "SELECT owner_id FROM sets WHERE id = '$setId'";
 
 	$res =& $db->query($sql);
 	if (PEAR::isError($res)) {
-	    die($res->getMessage());
+		$response['error'] = True;
+		array_push($response['msg'], "Failed to fetch the set from the database.");
+	} else {
+		if ($res->numRows() < 1) {
+			$response['error'] = True;
+			array_push($response['msg'], "The set you tried to delete doesn't exist.");
+		} else {
+			$setOwner = $res->fetchRow();
+			$setOwner = $setOwner['owner_id'];
+			$res->free();	
+		}	
 	}
-	
-	if ($res->numRows() < 1) {
-		$t->assign('heading', "Error");
-		$t->assign('message', "The set you tried to delete doesn't exist");	
-		$t->display('error.tpl');
-		die;
-	}
-	
-	$setOwner = $res->fetchRow();
-	$setOwner = $setOwner['owner_id'];
-
-	$res->free();
 	
 	// If the set's owner is requesting the delete, delete set and set objects
-	if ($setOwner == $_SESSION['id']) {
+	if ($setOwner == $_SESSION['id'] && $response['error'] == False) {
 		$sql = "DELETE FROM sets WHERE id = '$setId'";		
 		$res =& $db->exec($sql);
 		if (PEAR::isError($res)) {
-		    die($res->getMessage());
+			$response['error'] = True;
+			array_push($response['msg'], "Failed to delete the set from the database.");
 		}
 		
 		$sql = "DELETE FROM set_objs WHERE set_id = '$setId'";
 		$res =& $db->exec($sql);
 		if (PEAR::isError($res)) {
-		    die($res->getMessage());
+			$response['error'] = True;
+			array_push($response['msg'], "Failed to delete the set objects from the database.");
 		}
-
-		//redirect to mysets.php
-		header( 'Location: ' . $CFG->wwwroot . '/modules/sets/mysets.php' );
-		die();
 	} else {
-		$t->assign('heading', "Error");
-		$t->assign('message', "The set you tried to delete doesn't belong to you!");	
-		$t->display('error.tpl');
-		die;
+		$response['error'] = True;
+		array_push($response['msg'], "The set you tried to delete doesn't belong to you!");
 	}
-	
-
 } else {
-	$t->assign('heading', "Error");
-	$t->assign('message', "No set specified.");	
-	$t->display('error.tpl');
-	die;
+	$response['error'] = True;
+	array_push($response['msg'], "No set found in the params.");
 }
 
-
-
-
+// print JSON
+echo json_encode($response);
 
 ?>
