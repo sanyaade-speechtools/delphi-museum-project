@@ -14,7 +14,7 @@ if( isset($_POST['obj_id']) && isset($_POST['set_id'])) {
 }
 
 // Query DB
-$sql = "SELECT objects.*, set_objs.order_num FROM objects
+$sql = "SELECT objects.id, objects.objnum, objects.img_path, set_objs.order_num, set_objs.name, set_objs.description FROM objects
 		LEFT JOIN set_objs
 		ON objects.id = set_objs.obj_id
 		WHERE objects.id = $obj_id AND set_objs.set_id = $set_id
@@ -38,8 +38,8 @@ $response = array();
 while ($row = $res->fetchRow()) {
     $response['obj_id'] = $row['id'];
     $response['obj_num'] = $row['objnum'];
-    $response['obj_name'] = $row['name'];
-	$response['obj_description'] = $row['description'];
+    $response['objectName'] = $row['name'];
+	$response['objectDescription'] = $row['description'];
 	$response['obj_order'] = $row['order_num'];
 	$response['obj_img'] = $row['img_path'];
 	$response['obj_zoomDir'] = substr($row['img_path'], 0, -4); // trims off .jpg
