@@ -117,6 +117,7 @@ DROP TABLE IF EXISTS `set_objs` \p;
 CREATE TABLE `set_objs` (
   `set_id`        int(10) unsigned NOT NULL,
   `obj_id`        int(10) unsigned NOT NULL,
+  `name`          VARCHAR(255) NOT NULL,
   `notes`         text NULL,			-- why did owner put this in the set?
   `use_as_icon`   boolean NOT NULL default false, -- for individual featured objs
   `order_num`     int(2) NOT NULL default 0,      -- To control presentation order
