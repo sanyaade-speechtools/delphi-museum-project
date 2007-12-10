@@ -5,6 +5,7 @@ package museum.delphi;
 
 //import java.util.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -41,6 +42,17 @@ import java.awt.Insets;
 import javax.swing.JTextField;
 import javax.swing.JOptionPane;
 
+// For image resizing.
+/*
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+*/
+import javax.swing.ImageIcon;
+
+
+
 /**
  * @author Patrick
  *
@@ -74,6 +86,10 @@ public class MainApp {
 
 	private JMenu objectActionsMenu = null;
 	private JMenuItem loadImagePathsMenuItem = null;
+	private JMenuItem computeImageOrientationsMenuItem = null;
+	//private JMenuItem saveObjectSQLUpdatesMenuItem = null;
+	private JMenuItem saveSQLMediaLoadFileMenuItem = null;
+	private JMenuItem saveSQLMediaInsertFileMenuItem = null;
 	private JMenuItem buildObjectSQLMenuItem = null;
 	private JMenuItem categorizeObjectsMenuItem = null;
 
@@ -508,6 +524,12 @@ public class MainApp {
 			objectActionsMenu = new JMenu();
 			objectActionsMenu.setText("Objects");
 			objectActionsMenu.add(getLoadImagePathsMenuItem());
+			objectActionsMenu.add(getComputeImageOrientationsMenuItem());
+			objectActionsMenu.add(getSaveSQLMediaInsertFileMenuItem());
+			/* OBSOLETE
+			objectActionsMenu.add(getSaveObjectSQLUpdatesMenuItem());
+			 */
+			objectActionsMenu.add(getSaveSQLMediaLoadFileMenuItem());
 			objectActionsMenu.add(getBuildObjectSQLMenuItem());
 			objectActionsMenu.add(getCategorizeObjectsMenuItem());
 		}
@@ -544,14 +566,231 @@ public class MainApp {
 		    	int nObjs = imagePathsReader.readInfo(Integer.MAX_VALUE, true);
 		        setStatus("Found: " + nObjs + " objects with images.");
 		        debug(2,"Found: " + nObjs + " objects with images.");
-		        debug(3, "Mid path for 3716: ["
-		        		+imagePathsReader.GetSimpleSubPathForID(3716, "mids")+"]" );
-		        debug(3,"Thumb path for 5204: ["
-		        		+imagePathsReader.GetSimpleSubPathForID(5204, "thumbs")+"]" );
+		        debug(3, "Mid path for 3716: [mids/"
+		        		+imagePathsReader.GetSimpleSubPathForID(3716, null)+"]" );
+		        debug(3,"Thumb path for 5204: [thumbs/"
+		        		+imagePathsReader.GetSimpleSubPathForID(5204, null)+"]" );
+				computeImageOrientationsMenuItem.setEnabled(true);
+				//saveObjectSQLUpdatesMenuItem.setEnabled(true);
+				saveSQLMediaLoadFileMenuItem.setEnabled(true);
+				saveSQLMediaInsertFileMenuItem.setEnabled(true);
 		    }
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Loading Image paths File Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method initializes jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getComputeImageOrientationsMenuItem() {
+		if (computeImageOrientationsMenuItem == null) {
+			computeImageOrientationsMenuItem = new JMenuItem();
+			computeImageOrientationsMenuItem.setText("Compute Image Orientations...");
+			computeImageOrientationsMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					computeImageOrientations();
+				}
+			});
+		}
+		computeImageOrientationsMenuItem.setEnabled(false);
+		return computeImageOrientationsMenuItem;
+	}
+
+	/**
+	 * Assumes the base path is set, and that there are variants under the thumbs.
+	 */
+	private void computeImageOrientations() {
+		// HACK HACK HACK
+		String pathBase = "D:/PAHMA/ObjImages/thumbs/";
+		if( imagePathsReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		debug(1,"Computing Image Orientations...");
+		try {
+			int nToProcessMax = Integer.MAX_VALUE;
+			int nToReport = 2500;
+			int nTillReport = nToReport;
+			int nProcessed = 0;
+			int nSkipped = 0;
+			Collection<ArrayList<ImageInfo>> allImgs = imagePathsReader.GetAllAsList();
+			java.util.Iterator<ArrayList<ImageInfo>> allImgsIterator = allImgs.iterator();
+			while( allImgsIterator.hasNext() ) {
+				ArrayList<ImageInfo> imgsForId = allImgsIterator.next();
+				java.util.ListIterator<ImageInfo> objImgIterator = imgsForId.listIterator();
+				while( objImgIterator.hasNext() ) {
+					ImageInfo ii = objImgIterator.next();
+					if( ii.getAspectR() != ImageInfo.UNKNOWN_ORIENTATION ) {
+						nSkipped++;
+						continue;
+					}
+					// We need to load one of the image variants (mid, thumb)
+					// and then compute and set the orientation
+					String fullRelPath = ii.path + "/" + ii.filename;
+			        ImageIcon image = new ImageIcon(pathBase+fullRelPath);
+			        ii.setWidth(image.getIconWidth());
+			        ii.setHeight(image.getIconHeight());
+			        debug(3, ii.toString() );
+					nProcessed++;
+					if( nProcessed >= nToProcessMax )
+						break;
+					if( --nTillReport <= 0 ) {
+				        debug(1, "Processed " + nProcessed + " entries" );
+						nTillReport = nToReport;
+					}
+				}
+				if( nProcessed >= nToProcessMax )
+					break;
+			}
+			// Now it is time to write the results. User can cancel if not interested.
+			String outFileName = imagePathsReader.getInFile();
+			chooser.setSelectedFile(new File( outFileName ));
+		    int returnVal = chooser.showSaveDialog(getJFrame());
+		    if(returnVal == JFileChooser.APPROVE_OPTION) {
+		    	String filename = chooser.getSelectedFile().getPath();
+		        setStatus("Saving Updated Image Info to file: " + filename);
+		        imagePathsReader.writeContents(filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Computing Aspect ratios: ", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
+	}
+
+	/* OBSOLETE
+	private JMenuItem getSaveObjectSQLUpdatesMenuItem() {
+		if (saveObjectSQLUpdatesMenuItem == null) {
+			saveObjectSQLUpdatesMenuItem = new JMenuItem();
+			saveObjectSQLUpdatesMenuItem.setText("Save Object Updates SQL...");
+			saveObjectSQLUpdatesMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveObjectSQLUpdates();
+				}
+			});
+		}
+		saveObjectSQLUpdatesMenuItem.setEnabled(false);
+		return saveObjectSQLUpdatesMenuItem;
+	}
+	*/
+
+	/* OBSOLETE
+	private void saveObjectSQLUpdates() {
+		if( imagePathsReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		debug(1,"Saving Object Updates SQL...");
+		try {
+			String outFileName = imagePathsReader.getInFile();
+			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
+			if( lastSlash >= 0 )
+				outFileName = outFileName.substring(0, lastSlash+1) + "objectUpdates.sql";
+			else
+				outFileName = "objectUpdates.sql";
+			chooser.setSelectedFile(new File( outFileName ));
+		    int returnVal = chooser.showSaveDialog(getJFrame());
+		    if(returnVal == JFileChooser.APPROVE_OPTION) {
+		    	String filename = chooser.getSelectedFile().getPath();
+		        setStatus("Saving Object Updates SQL to file: " + filename);
+		        imagePathsReader.writeSQLObjTableUpdates(filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Saving Object Updates SQL: ", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
+	}
+	*/
+
+
+	private JMenuItem getSaveSQLMediaInsertFileMenuItem() {
+		if (saveSQLMediaInsertFileMenuItem == null) {
+			saveSQLMediaInsertFileMenuItem = new JMenuItem();
+			saveSQLMediaInsertFileMenuItem.setText("Save SQL Media Insert File...");
+			saveSQLMediaInsertFileMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveSQLMediaInsertFile();
+				}
+			});
+		}
+		saveSQLMediaInsertFileMenuItem.setEnabled(false);
+		return saveSQLMediaInsertFileMenuItem;
+	}
+
+	private void saveSQLMediaInsertFile() {
+		if( imagePathsReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		debug(1,"Saving SQL Media Insert File...");
+		try {
+			String outFileName = imagePathsReader.getInFile();
+			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
+			if( lastSlash >= 0 )
+				outFileName = outFileName.substring(0, lastSlash+1) + "mediaInsert.sql";
+			else
+				outFileName = "mediaInsert.sql";
+			chooser.setSelectedFile(new File( outFileName ));
+		    int returnVal = chooser.showSaveDialog(getJFrame());
+		    if(returnVal == JFileChooser.APPROVE_OPTION) {
+		    	String filename = chooser.getSelectedFile().getPath();
+		        setStatus("Saving SQL Media Load File to file: " + filename);
+		        imagePathsReader.writeSQLMediaTableInsertFile(filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Saving SQL Media Insert File: ", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
+	}
+
+	private JMenuItem getSaveSQLMediaLoadFileMenuItem() {
+		if (saveSQLMediaLoadFileMenuItem == null) {
+			saveSQLMediaLoadFileMenuItem = new JMenuItem();
+			saveSQLMediaLoadFileMenuItem.setText("Save SQL Media Load File...");
+			saveSQLMediaLoadFileMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveSQLMediaLoadFile();
+				}
+			});
+		}
+		saveSQLMediaLoadFileMenuItem.setEnabled(false);
+		return saveSQLMediaLoadFileMenuItem;
+	}
+
+	private void saveSQLMediaLoadFile() {
+		if( imagePathsReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		debug(1,"Saving SQL Media Load File...");
+		try {
+			String outFileName = imagePathsReader.getInFile();
+			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
+			if( lastSlash >= 0 )
+				outFileName = outFileName.substring(0, lastSlash+1) + "mediaLoadFile.sql";
+			else
+				outFileName = "mediaLoadFile.sql";
+			chooser.setSelectedFile(new File( outFileName ));
+		    int returnVal = chooser.showSaveDialog(getJFrame());
+		    if(returnVal == JFileChooser.APPROVE_OPTION) {
+		    	String filename = chooser.getSelectedFile().getPath();
+		        setStatus("Saving SQL Media Load File to file: " + filename);
+		        imagePathsReader.writeSQLMediaTableLoadFile(filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Saving SQL Media Load File: ", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
 	}
@@ -757,9 +996,9 @@ public class MainApp {
 									boolean fFirst, boolean fWithNewlines ) {
 		try {
 			String name = (line.get(2).length() == 0)?"(no name)":line.get(2);
-			ArrayList<Pair<String,String>> basePaths = null;
+			ArrayList<ImageInfo> imgInfo = null;
 			if( imagePathsReader != null )
-				basePaths = imagePathsReader.GetBasePathsForID(id);
+				imgInfo = imagePathsReader.GetInfoForID(id);
 			// TODO Need to be smarter about getting Description
 			// For now, just take the description column and fold all white space
 			// (especially the newlines) into a single space.
@@ -771,11 +1010,11 @@ public class MainApp {
 			}
 			writer.append("("+id+",\""+line.get(1).trim()+"\",\""+name+"\",\""
 							+description+"\",");
-			if(basePaths == null)
+			if(imgInfo == null)
 				writer.append("null,");
 			else {
-				Pair<String,String> pair = basePaths.get(0);
-				String imgPath = "\""+pair.first + "/" + pair.second+"\",";
+				ImageInfo info = imgInfo.get(0);
+				String imgPath = "\""+info.path + "/" + info.filename+"\",";
 				writer.append(imgPath);
 			}
 			writer.append("now())");
@@ -1174,6 +1413,11 @@ public class MainApp {
 				Document facetMapDoc = builder.parse(filename);
 				facetMapHashTree = new DoubleHashTree();
 		        facetMapHashTree.PopulateFromFacetMap(facetMapDoc);
+		        String s1 = "Found a total of " + facetMapHashTree.totalTermCount()
+        		+ " terms for "
+        		+ facetMapHashTree.totalConceptCount() + " concepts.";
+		        setStatus(s1);
+		        debug(1, s1);
 		        opened = true;
 		    }
         } catch (SAXParseException spe) {
@@ -1235,7 +1479,11 @@ public class MainApp {
 		        vocabHashTree =
 		        	vocabTermsReader.readTerms( Integer.MAX_VALUE, vocabOutputDoc,
 		        			"PAHMA AUT Collection Facets" );
-		        setStatus("Scanned a total of " + vocabHashTree.totalSize() + " terms.");
+		        String s1 = "Scanned a total of " + vocabHashTree.totalTermCount()
+		        		+ " terms for "
+		        		+ vocabHashTree.totalConceptCount() + " concepts.";
+		        setStatus(s1);
+		        debug(1, s1);
 		        opened = true;
 		    }
 		} catch( ParserConfigurationException pce ) {
