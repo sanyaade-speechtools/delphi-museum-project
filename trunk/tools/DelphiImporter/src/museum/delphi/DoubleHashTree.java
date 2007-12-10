@@ -69,10 +69,17 @@ public class DoubleHashTree {
 		facetsByID = new HashMap<Integer,FacetInfo>();
 	}
 
-	public int totalSize() {
+	public int totalConceptCount() {
 		int total = 0;
 		for( FacetInfo fI : facetsByName.values() )
 			total += fI.idMap.size();
+		return total;
+	}
+
+	public int totalTermCount() {
+		int total = 0;
+		for( FacetInfo fI : facetsByName.values() )
+			total += fI.nameMap.size();
 		return total;
 	}
 
