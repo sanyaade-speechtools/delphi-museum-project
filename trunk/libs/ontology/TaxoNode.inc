@@ -47,7 +47,7 @@ class TaxoNode {
 		if( empty($this->arrChildren )) {
 			// If this covers all results, disable link. 
 			// Need to get nResults working first.
-			//if( $this->nResults == $nResultsTotal )
+			//if( $nResultsTotal>0 && $this->nResults == $nResultsTotal )
 			//	$this->fNoClick = true;
 		} else {
 			// See if we have children to deal with
