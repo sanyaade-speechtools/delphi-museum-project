@@ -2,38 +2,39 @@
 require_once "apiSetup.php";
 require_once "../libs/ontology/ontoServices.php";
 
-if(empty($_GET['depth'])) {
-	$asHTML = true;
-} else {
-	$asHTML = false;
-	$depth = $_GET['depth'];
-}
+if(empty($_GET['f'])) 
+	$facetname = '__ALL';
+else
+	$facetname = $_GET['f'];
+
+if(empty($_GET['rT']))
+	$retType = 'HTML_UL';
+else
+	$retType = $_GET['rT'];
+
+if(empty($_GET['d']))
+	$depth = 9999;
+else
+	$depth = $_GET['d'];
 
 ?>
 <HTML>
 <BODY>
 <?php
-if( $asHTML ) {
-	$facetinfo = getCategoriesInFacet("__ALL", true, "HTML_UL");
-	if( !$facetinfo || count($facetinfo) == 0 ) {
-		echo "<h2>Cannot get facets...</h2>";
-	} else {
-		echo "<h2>Facet info:</h2>
-		";
-		foreach( $facetinfo as $facet ) {
-			echo "<h3>".$facet['facet']." (".$facet['id'].")</h3>";
+$facetinfo = getCategoriesInFacet($facetname, true, $retType );
+if( !$facetinfo || count($facetinfo) == 0 ) {
+	echo "<h2>Cannot find categories";
+	if( $facetname != "__ALL" )
+		echo " for facet: ".$facetname;
+	echo "</h2>";
+} else {
+	echo "<h2>Facet info:</h2>
+	";
+	foreach( $facetinfo as $facet ) {
+		echo "<h3>".$facet['facet']." (".$facet['id'].")</h3>";
+		if( $retType == 'HTML_UL') {
 			echo $facet['items'];
-		}
-	}
-} else {	// Get as PHP and output only to depth
-	$facetinfo = getCategoriesInFacet("__ALL", true, "PHP");
-	if( !$facetinfo || count($facetinfo) == 0 ) {
-		echo "<h2>Cannot get facets...</h2>";
-	} else {
-		echo "<h2>Facet info:</h2>
-		";
-		foreach( $facetinfo as $facet ) {
-			echo "<h3>".$facet['facet']." (".$facet['id'].")</h3>";
+		} else {	// Get as PHP and output completely 
 			echo "<ul>
 			";
 			outputPHPToDepth( $facet['items'], 0, $depth );
