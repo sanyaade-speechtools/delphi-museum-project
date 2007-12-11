@@ -30,7 +30,6 @@
 	            </ul>
 	            <div id="detail_setsTab">
 <!--
-	TODO Create a new set
 	TODO See all sets containing this object
 	TODO truncate long set names
 -->
@@ -64,16 +63,19 @@
 						<div class="detail_personalSetletDetails">
 							{if $personalSets[set].contains_obj}
 								{$personalSets[set].set_name}<br/>
-								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="ajaxLink" title="Remove object from this set">[remove]</a>
+								<a href="{$wwwroot}/modules/sets/api_addToSet.php?obj_id={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="ajaxLink" title="Remove object from this set">[remove]</a>
 							{else}
 								{$personalSets[set].set_name}<br/>
-								<a href="{$wwwroot}/modules/sets/addToSet.php?oid={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="ajaxLink" title="Add object to this set">[add to set]</a>
+								<a href="{$wwwroot}/modules/sets/api_addToSet.php?obj_id={$id}&amp;set_id={$personalSets[set].set_id}" id="addToSet{$personalSets[set].set_id}" class="ajaxLink" title="Add object to this set">[add to set]</a>
 								<img src="{$themeroot}/images/indicator_s.gif" style="display:none;" id="addToSet{$personalSets[set].set_id}Indicator" alt="Spinning indicator"/>
 							{/if}
 						</div>
 					</div>
 					{/section}
-					<p class="smaller" id="detail_personalSetletLinks"><a href="#">Create a new set with this object</a><br/><a href="/delphi/mysets/">Manage your sets</a></p>
+					<p class="smaller" id="detail_personalSetletLinks">
+						<a href="{$wwwroot}/modules/sets/api_createNewSet.php?obj_id={$id}&amp;owner_id={$currentUser_id}" class="ajaxLink" id="" title="Create a new set with this object">Create a new set with this object</a><br/>
+						<a href="/delphi/mysets/">Manage your sets</a>
+					</p>
 				</div>
 	            <div id="detail_tagsTab">
 					<p class="smaller">Tags are short labels that you can apply to museum objects.</p>

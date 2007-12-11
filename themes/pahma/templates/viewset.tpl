@@ -40,6 +40,7 @@
 					<input type="submit" name="submit" value="Save changes"/> or <a href="#" id="viewset_cancelSetEditLink">Cancel</a>
 					<input type="hidden" name="set_id" value="{$setId}"/>
 				</form>
+				<br/>
 			</div>
 			<div id="viewset_setDetailLinks">
 				<a href="#" id="viewset_editSetDetailsLink" class="smaller">Edit set details</a><br/>

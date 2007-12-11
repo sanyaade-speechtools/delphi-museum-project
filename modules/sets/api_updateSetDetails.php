@@ -1,5 +1,16 @@
 <?php
 
+/*
+
+Updates the title and description fields for a given set.
+
+Accepts POST data. 
+$_POST['set_id'] -- The ID number of the set to be updated
+$_POST['setTitle'] -- The new set name
+$_POST['setDesc'] -- The new set description
+
+*/
+
 require_once("../../libs/env.php");
 require_once("../../libs/utils.php");
 

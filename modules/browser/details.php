@@ -143,7 +143,8 @@ if (isset($_SESSION['id'])){
 					sets.creation_time, 
 					user.username as owner_name, 
 					tFirstSetObject.img_path, 
-					tFirstSetObject.img_ar	
+					tFirstSetObject.img_ar,
+					sets.id
 				FROM set_objs
 				LEFT JOIN sets
 				ON set_objs.set_id = sets.id
@@ -230,7 +231,7 @@ if (isset($_SESSION['id'])){
 							WHERE set_objs.obj_id = ".$objId.") tMySetsWithObject
 				ON tMySetsWithObject.set_id = sets.id
 				WHERE sets.owner_id = ".$_SESSION['id']."
-				ORDER BY creation_time DESC
+				ORDER BY sets.id ASC
 			";
 
 	$res =& $db->query($sql);
