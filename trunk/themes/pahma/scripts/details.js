@@ -134,6 +134,31 @@ function ajaxLinkHandler(arg_id, arg_href, arg_title){
 					}
 				}
 		});
+	}else if (title == "Create a new set with this object"){
+		// Make two ajax calls. The first creates the set, the second add the object to the set
+		$.ajax({url: url_and_params[0], 
+				type: "POST", 
+				data: url_and_params[1], 
+				dataType: "json",
+				success: function(newSetResponse){
+					if(!newSetResponse['error']){
+						$.ajax({url: templateVarsJSON['wwwroot'] + "/modules/sets/api_addToSet.php", 
+								type: "POST", 
+								data: url_and_params[1]+"&action=add&set_id="+newSetResponse['set_id'], 
+								dataType: "json",
+								success: function(addObjectrResponse){
+									if(!addObjectrResponse['error']){
+										window.location = templateVarsJSON['shortbase'] + "/set/" + newSetResponse['set_id'];
+									} else {
+										alert("An error occured trying to add this object to your new set.");
+									}
+								}
+						});
+					} else {
+						alert("An error occured trying to create a new set.\n"+newSetResponse['msg'][0]);
+					}
+				}
+		});
 	}
 	
 	// Return false so that the link is not followed

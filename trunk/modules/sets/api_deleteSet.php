@@ -25,7 +25,7 @@ if( isset( $_POST['set_id'] ) ) {
 			$setOwner = $res->fetchRow();
 			$setOwner = $setOwner['owner_id'];
 			$res->free();	
-		}	
+		}
 	}
 	
 	// If the set's owner is requesting the delete, delete set and set objects

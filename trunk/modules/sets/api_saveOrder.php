@@ -1,5 +1,16 @@
 <?php
 
+/*
+
+Updates the order values of objects within a set.
+
+Accepts POST data. 
+$_POST['jsonRequest'] -- A JSON object of an associative array with two keyed elements. 
+						 The two keys are 1) 'set_id' and 2) 'items'. set_id should be an integer
+						 and items should be an array of object ids. 
+
+*/
+
 require_once("../../libs/env.php");
 $response = array();
 $response['error'] = False;

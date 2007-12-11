@@ -81,6 +81,7 @@ $res->free();
 
 // Display template
 $t->assign('sets', $sets);
+$t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
 $t->display('mysets.tpl');
 
 ?>

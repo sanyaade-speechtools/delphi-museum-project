@@ -8,16 +8,18 @@ Handles AJAX calls to remove OR add an object to a set.
 
 Accepts POST data. 
 $_POST['set_id'] -- The ID number of the set involved in the action
-$_POST['oid'] -- The ID number of the object involved in the action
+$_POST['obj_id'] -- The ID number of the object involved in the action
 $_POST['action'] -- The action to perform. Either "add" or "remove"
 
 */
 
-if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
+$response = array();
+$response['error'] = False;
+$response['msg'] = array();
+
+if( isset($_POST['set_id']) && isset($_POST['obj_id']) && isset($_POST['action'])){
 	$set_id = $_POST['set_id'];
-	$obj_id = $_POST['oid'];
-	$response = array();
-	// Make sure this set belong to the user
+	$obj_id = $_POST['obj_id'];
 
 	if ( $_POST['action'] == "add" ) {		
 			// Get order value so new item can be added in the last place
@@ -45,7 +47,7 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 			
 			// add object to the set
 			$sql = 	"	INSERT INTO set_objs 
-						(`set_id`, `obj_id`, `order_num`, `name`, `description`) 
+						(`set_id`, `obj_id`, `order_num`, `name`, `notes`) 
 						VALUES 
 						($set_id, $obj_id, $order, ".$db->quote($objName, 'text').", ".$db->quote($objDesc, 'text').")
 					";
@@ -160,7 +162,9 @@ if( isset($_POST['set_id']) && isset($_POST['oid']) && isset($_POST['action'])){
 		}
 		
 	}
-	
-	echo json_encode($response); 
+} else {
+	$response['error'] = True;
+	array_push($response['msg'], "Did not receive the proper params");
 }
+echo json_encode($response); 
 ?>
