@@ -145,8 +145,8 @@ class TaxoNode {
 			return null;
 		}
 		$nChildren = count($this->arrChildren);
-		if( $depth < 2 )
-			error_log( "GeneratePHPItems for ".$this->name.". Children: ".$nChildren );
+		//if( $depth < 2 )
+		//	error_log( "GeneratePHPItems for ".$this->name.". Children: ".$nChildren );
 
 		if($nChildren <= 0)
 			$doChildren = false;
