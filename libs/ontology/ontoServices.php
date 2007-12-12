@@ -69,7 +69,7 @@ function getCategoriesInFacet(
 			return false;
 		}
 	}
-	$countCol = $onlyWithImgs ? "n_matches_w_img" : "n_matches";
+	$countCol = $countsWithImages ? "n_matches_w_img" : "n_matches";
  	$tqCountsByCat = "select id, parent_id, facet_id, display_name, ".$countCol
  										  ." from categories where ".$countCol.">0";
 	if( $fid >= 0 ) {
@@ -134,7 +134,7 @@ function getCategoriesForObject(
 			return false;
 		}
 	}
-	$countCol = $onlyWithImgs ? "n_matches_w_img" : "n_matches";
+	$countCol = $countsWithImages ? "n_matches_w_img" : "n_matches";
  	$tqCountsByCat = "select c.id, c.parent_id, c.facet_id, c.display_name, c.".$countCol
  										  ." from categories c, obj_cats oc where c.id=oc.cat_id"
 											." AND oc.obj_id=".$forObjID;
