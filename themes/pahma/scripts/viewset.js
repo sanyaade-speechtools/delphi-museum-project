@@ -168,6 +168,7 @@ $(document).ready(function () {
 					} else {
 						$("#viewset_setDetailsDisplay h1.viewset_setTitle").html(responseJSON['setTitle']);
 						$("#viewset_setDetailsDisplay div.viewset_setDescription").html(responseJSON['setDesc']);
+						$("#viewset_policy").html(responseJSON['policy']);
 						
 						$("#viewset_setDetailsDisplay").show();
 						$("#viewset_setDetailLinks").show();

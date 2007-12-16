@@ -19,13 +19,16 @@
 	<div id="viewset_leftCol">
 		<div id="viewset_setDetailsDisplay">
 			<h1 class="viewset_setTitle">{$setName}</h1>
-			<div id="viewset_createdBy" class="smaller">Created by <a href="{$wwwroot}/modules/auth/profile.php?uid={$owner_id}">{$username}</a></div>
+			<div id="viewset_createdBy" class="smaller">Created by <a href="{$wwwroot}/modules/auth/profile.php?uid={$owner_id}">{$username}</a><br/>This set is <span id="viewset_policy">{$policy}</span>.</div>
 
 			{if $setDescription}
 				<div class="viewset_setDescription">{$setDescription}</div>
 			{else}
 				<div class="viewset_setDescription"></div>
-			{/if}			
+			{/if}
+			<div class="smaller">
+				
+			</div>		
 		</div>
 		{if $owner_id == $currentUser_id}
 			<div id="viewset_setDetailsEdit" style="display:none;">
@@ -37,10 +40,15 @@
 					<div class="viewset_setDescription">
 						<textarea name="setDesc" id="viewset_setDescTextarea" class="viewset_descTextarea"></textarea>
 					</div>
+					<h3>Policy</h3>
+					<p>
+						<input type="radio" name="policy" value="private" {if $policy == "private"}checked="checked"{/if}/> Private <input type="radio" name="policy" value="public" {if $policy == "public"}checked="checked"{/if}/> Public
+					</p>
+					
+					
 					<input type="submit" name="submit" value="Save changes"/> or <a href="#" id="viewset_cancelSetEditLink">Cancel</a>
 					<input type="hidden" name="set_id" value="{$setId}"/>
 				</form>
-				<br/>
 			</div>
 			<div id="viewset_setDetailLinks">
 				<a href="#" id="viewset_editSetDetailsLink" class="smaller">Edit set details</a><br/>

@@ -26,7 +26,7 @@ $sql = 	"	SELECT sets.id, sets.name, sets.creation_time, tTotal_objects.total_ob
 			ON tImage_paths.set_id = sets.id
 
 			WHERE sets.owner_id = ".$_SESSION['id']."
-			ORDER BY sets.creation_time DESC";
+			ORDER BY sets.id";
 $res =& $db->query($sql);
 if (PEAR::isError($res)) {
     die($res->getMessage());

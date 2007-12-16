@@ -291,14 +291,12 @@ label.overlabel-apply {
 
 .browser_browsePane{
 	display:none;
-/*	position:absolute;
-	left:204px;
-	top:0px;
-*/	margin-left:204px;
+	margin-left:204px;
 	width:375px;
 	border:1px solid #cdcdc9;
 	padding:10px 20px 20px 20px;
 	height:400px;
+	overflow:auto;
 } 
 
 .browser_browsePaneSelected{
@@ -890,7 +888,7 @@ code.hidden {
 }
 
 #viewset_thumbnails {
-	
+	margin-top:20px;
 }
 
 #viewset_noThumbnails{
