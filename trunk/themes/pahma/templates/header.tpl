@@ -37,7 +37,7 @@
 		<div id="navBar">
 			<div id="navBarLinks">
 				<a class="navLink" href="{$wwwroot}/modules/frontpage/frontpage.php">Home</a>
-				<a class="navLink" href="{$wwwroot}/modules/facetBrowser/browser.php">Browse</a>
+				<a class="navLink" href="{$wwwroot}/modules/browser/browser.php">Browse</a>
 				<a class="navLink" href="{$wwwroot}/modules/sets/featuredSets.php">Sets</a>
 			</div>
 			<div id="navBarSearchBox">

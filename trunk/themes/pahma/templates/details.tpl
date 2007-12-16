@@ -116,8 +116,11 @@
 			{else}
 				<p>No description available for this item.</p>
 			{/if}
-			<h1>Categories</h1>
-			{$facetTree}
+			<h2>Categories</h2>
+			{section name=facet loop=$facetinfo}
+				<h3>{$facetinfo[facet].facet}</h3>
+				{$facetinfo[facet].items}
+			{/section}
 		</div>
 		<br class="clear" />
 

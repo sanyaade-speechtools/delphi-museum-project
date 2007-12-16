@@ -3,7 +3,7 @@
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");
 /**********************************
-GET USER'S SETS
+Get Frontpage sets
 **********************************/
 
 $sql = 	$sql = "SELECT featured_sets.set_id, name, owner_name owner, img_path, aspectR img_ar, tTotal_objects.total_objects

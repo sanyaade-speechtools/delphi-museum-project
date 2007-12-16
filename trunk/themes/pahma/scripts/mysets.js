@@ -9,10 +9,9 @@ $(document).ready(function(){
 					if(responseJSON['error']){
 						alert(responseJSON['msg'][0]);
 					}else {
-						newSetId = responseJSON['set_id'];
+						window.location = templateVarsJSON['shortbase'] + "/set/" + responseJSON['set_id'];
 					}
 				}
 		});
-		window.location = templateVarsJSON['shortbase'] + "/set/" + newSetId;
 	});
 });

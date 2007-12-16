@@ -26,4 +26,4 @@ RewriteRule   ^delphi/admin/roleperms/{0,1}$ delphi/trunk/modules/admin/adminRol
 RewriteRule   ^delphi/admin/permissions/{0,1}$ delphi/trunk/modules/admin/adminPermissions.php
 
 # Static-like pages. e.g.: /delphi/help --> delphi/trunk/modules/help/help.php
-RewriteRule   ^delphi/([^/]+)/{0,1}$ delphi/trunk/modules/$1/$1.php
+#RewriteRule   ^delphi/([^/]+)/{0,1}$ delphi/trunk/modules/$1/$1.php

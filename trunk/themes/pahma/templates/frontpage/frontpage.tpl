@@ -17,8 +17,16 @@
 <div id="front_greyCol">
 	<h2>Featured Sets</h2>
 	{section name=set loop=$sets}
-            {$sets[set]}
-    {/section}
+		<div class="setlet_Large smaller">
+			<div class="setletThumb_Large">
+				{$sets[set].thumb}
+			</div>
+			<div class="setletDetails_Large">
+				<a href="/delphi/set/{$sets[set].set_id}">{$sets[set].set_name}</a>
+				<p><strong>{$sets[set].total_objects}</strong> objects</p>
+			</div>
+		</div>
+	{/section}
 </div>
 
 {include file="footer.tpl"}

@@ -18,7 +18,7 @@ FETCH SET DETAILS
 ***********************************/
 
 // Query DB
-$sql = 	"	SELECT sets.id, sets.name, sets.description, user.username, sets.owner_id
+$sql = 	"	SELECT sets.id, sets.name, sets.description, user.username, sets.owner_id, sets.policy
 			FROM sets
 			LEFT JOIN user
 			ON sets.owner_id = user.id
@@ -46,6 +46,7 @@ while ($row = $res->fetchRow()) {
     $t->assign('setDescription', $row['description']);
     $t->assign('username', $row['username']);
 	$t->assign('owner_id', $row['owner_id']);
+	$t->assign('policy', $row['policy']);
 }
 
 if(isset($_SESSION['id']) && $row['owner_id'] == $_SESSION['id']){

@@ -1,9 +1,7 @@
 {include file="header.tpl"}
-<script type="text/javascript" src="{$themeroot}/scripts/mysets.js"></script>
 
 <!--
 	TODO Add view count
-	TODO get images showing up
 -->
 <div id="contentNarrow">
 	<h1>Featured Sets</h1>
