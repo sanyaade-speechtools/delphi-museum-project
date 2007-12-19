@@ -7,5 +7,15 @@ $(document).ready(function(){
 		// Show the right pane
 		$(".browser_browsePane").removeClass("browser_browsePaneSelected")
 		$("#" + this.id + "_pane").addClass("browser_browsePaneSelected");
+		
+	});
+	$(function() {
+		$('div.tree li:has(ul)').addClass('parent'); // Requires jQuery 1.2!
+		$('div.tree li').click(function() {
+			var o = $(this);
+			o.children('ul').toggle();
+			o.filter('.parent').toggleClass('expanded');
+			return false;
+		});
 	});
 });
