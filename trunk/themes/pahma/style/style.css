@@ -1018,10 +1018,28 @@ div.admin_hdr p#orient a {
 }
 
 
+/* ------------------------------------------------------- *
+ * -- Tree view            ------------------------------- *
+ * ------------------------------------------------------- */
 
 
-
-
-
-
-
+div.tree ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0em;
+	text-indent: 0em;
+}
+div.tree li {
+ padding-left:16px;
+}
+div.tree li.parent ul {
+ display:none;
+ cursor:default;
+}
+div.tree li.parent {
+ cursor:pointer !important;
+ background:transparent url(../images/plus.gif) no-repeat top left;
+}
+div.tree li.expanded {
+ background:transparent url(../images/minus.gif) no-repeat top left;
+}

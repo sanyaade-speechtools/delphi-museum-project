@@ -1,5 +1,6 @@
 {include file="header.tpl"}
-<!-- <script type="text/javascript" src="{$themeroot}/scripts/treeview.js"></script> -->
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/treeview/jquery.treeview.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/treeview/jquery.cookie.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/browser.js"></script>
 
 <div id="contentNarrow">
@@ -16,27 +17,27 @@
 	</div>
 	<div class="browser_browsePane browser_browsePaneSelected" id="facet_id_10000_pane">
 		<div class="smaller">Use or Context describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		{$cats_10000}
+		<div class="tree">{$cats_10000}</div>
 	</div>
 	<div class="browser_browsePane" id="facet_id_20000_pane">
 		<div class="smaller">Site or Provenience describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		{$cats_20000}
+		<div class="tree">{$cats_20000}</div>
 	</div>
 	<div class="browser_browsePane" id="facet_id_30000_pane">
 		<div class="smaller">Cultural Group describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		{$cats_30000}
+		<div class="tree">{$cats_30000}</div>
 	</div>
 	<div class="browser_browsePane" id="facet_id_40000_pane">
 		<div class="smaller">Material describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		{$cats_40000}
+		<div class="tree">{$cats_40000}</div>
 	</div>
 	<div class="browser_browsePane" id="facet_id_50000_pane">
 		<div class="smaller">Technique describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		{$cats_50000}
+		<div class="tree">{$cats_50000}</div>
 	</div>
 	<div class="browser_browsePane" id="facet_id_60000_pane">
 		<div class="smaller">Color describes the blah abd blah of an object. It something for the of something and the other thing.</div>
-		{$cats_60000}
+		<div class="tree">{$cats_60000}</div>
 	</div>
 	
 </div>
