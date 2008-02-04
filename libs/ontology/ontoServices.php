@@ -192,7 +192,7 @@ function queryObjects(
 	global $db;
 	global $_DELPHI_PAGE_SIZE;
 
-	if( empty($cats) && empty($kwds) ) {
+	if( empty($catIDs) && empty($kwds) ) {
 		error_log( "queryObjects() called with no categories or keywords" );
 		return false;
 	}
@@ -253,7 +253,7 @@ function queryResultsCategories(
 	if( count($facets) == 0 ) 
 		return false;		// Can't find any facets in DB - just bail
 
-	if( empty($cats) && empty($kwds) ) {
+	if( empty($catIDs) && empty($kwds) ) {
 		error_log( "queryResultsCategories() called with no categories or keywords" );
 		return false;
 	}
