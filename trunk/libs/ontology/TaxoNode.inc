@@ -72,7 +72,7 @@ class TaxoNode {
 	// into the children as prefix strings, rather than hiding altogether.
 	// We may need to mark categories in the taxonomies as hidable or required,
 	// and even specify abbreviations for collapsing. E.g., "US:" before "Kansas"
-	function GenerateHTMLItems( $depth, $nSiblings, $fFullTree, $fOmitDetails ) {
+	function GenerateHTMLItems( $depth, $limit, $nSiblings, $fFullTree, $fOmitDetails ) {
 		
 		//var to hold concated output
 		$responseOutput = "";
@@ -112,7 +112,7 @@ class TaxoNode {
 				$doChildren = true;
 			} else {
 				// If a full tree, or if this is hidden and we have children, recurse
-				$doChildren = ($this->fHidden || $fFullTree);
+				$doChildren = ($this->fHidden || ($fFullTree && ($depth<$limit)));
 			}
 		}
 
@@ -121,7 +121,7 @@ class TaxoNode {
 			";
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
-					$responseOutput .= $child->GenerateHTMLItems( $depth+1,
+					$responseOutput .= $child->GenerateHTMLItems( $depth+1, $limit,
 																	$nChildren, $fFullTree, $fOmitDetails );
 			}
 			$responseOutput .= "</ul>
@@ -139,7 +139,7 @@ class TaxoNode {
 	// If this node is marked hidden, only "children" is set.
 	// If there are no children, then "children" is not set.
 	// If $fOmitDetails is set, then 'count' is not set.
-	function GeneratePHPItems( $depth, $nSiblings, $fFullTree, $fOmitDetails ) {
+	function GeneratePHPItems( $depth, $limit, $nSiblings, $fFullTree, $fOmitDetails ) {
 		
 		if( $this->fPrune ) {
 			return null;
@@ -159,7 +159,7 @@ class TaxoNode {
 				$doChildren = true;
 			} else {
 				// If a full tree, or if this is hidden and we have children, recurse
-				$doChildren = ($this->fHidden || $fFullTree);
+				$doChildren = ($this->fHidden || ($fFullTree && ($depth<$limit)));
 			}
 		}
 
@@ -167,7 +167,7 @@ class TaxoNode {
 			$children = array();
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune ) {
-					$children[] = $child->GeneratePHPItems( $depth+1,
+					$children[] = $child->GeneratePHPItems( $depth+1, $limit,
 																								$nChildren, $fFullTree, $fOmitDetails );
 			  }
 			}
