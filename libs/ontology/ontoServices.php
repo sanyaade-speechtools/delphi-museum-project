@@ -53,7 +53,8 @@ function getNumObjs() {
 function getCategoriesInFacet(
 						$facetname,					//:String
 						$countsWithImages,	//:boolean
-						$retType) {					//:String 
+						$retType, 					//:String 
+						$depth ) {					//:int
 	global $facets;
 	global $db;
 	checkAndLoadFacets();
@@ -90,16 +91,16 @@ function getCategoriesInFacet(
 						default:
 							return false;
 						case "PHP":
-							$items = $facet->GeneratePHPItems( 0, 1, true, false );
+							$items = $facet->GeneratePHPItems( 0, $depth, 1, true, false );
 							break;
 						case "JSON":
-							// $items = $facet->GeneratePHPItems( 0, 1, false, false );
+							// $items = $facet->GeneratePHPItems( 0, $depth, 1, false, false );
 							// Convert to JSON
 							// break;
 							return false;	// NYI
 						case "HTML_UL":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, 1, true, false );
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false );
 							break;
 					}
 				// Only add a new item if there are children for that facet
@@ -148,6 +149,7 @@ function getCategoriesForObject(
 	// Note that we do not prune since this is for the details, not a full query.
 	$retVal = array();
 	//error_log( "getCategoriesForObject() considering ".count($facets)." facets...  ");
+	$largeNum = 999999;
 	foreach( $facets as $facet ) {
 		if(( $fid < 0 ) || ( $fid == $facet->id )) {
 			$items = array();
@@ -156,16 +158,16 @@ function getCategoriesForObject(
 						default:
 							return false;
 						case "PHP":
-							$items = $facet->GeneratePHPItems( 0, 1, true, false );
+							$items = $facet->GeneratePHPItems( 0, $largeNum, 1, true, false );
 							break;
 						case "JSON":
-							// $items = $facet->GeneratePHPItems( 0, 1, false, false );
+							// $items = $facet->GeneratePHPItems( 0, $largeNum, 1, false, false );
 							// Convert to JSON
 							// break;
 							return false;	// NYI
 						case "HTML_UL":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, 1, true, false );
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false );
 							break;
 					}
 				// Only add a new item if there are children for that facet
@@ -278,6 +280,7 @@ function queryResultsCategories(
 	$retVal = array();
 	//error_log( "getCategoriesForObject() considering ".count($facets)." facets...  ");
 	$fid = -1;	// Stub this until we decide to allow facet spec
+	$largeNum = 999999;
 	foreach( $facets as $facet ) {
 		if(( $fid < 0 ) || ( $fid == $facet->id )) {
 			$items = array();
@@ -287,16 +290,16 @@ function queryResultsCategories(
 					default:
 						return false;
 					case "PHP":
-						$items = $facet->GeneratePHPItems( 0, 1, true, false );
+						$items = $facet->GeneratePHPItems( 0, $largeNum, 1, true, false );
 						break;
 					case "JSON":
-						// $items = $facet->GeneratePHPItems( 0, 1, false, false );
+						// $items = $facet->GeneratePHPItems( 0, $largeNum, 1, false, false );
 						// Convert to JSON
 						// break;
 						return false;	// NYI
 					case "HTML_UL":
 						//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, 1, true, false );
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false );
 						break;
 				}
 				// Only add a new item if there are children for that facet

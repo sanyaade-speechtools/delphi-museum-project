@@ -21,7 +21,7 @@ else
 <HTML>
 <BODY>
 <?php
-$facetinfo = getCategoriesInFacet($facetname, true, $retType );
+$facetinfo = getCategoriesInFacet($facetname, true, $retType, $depth );
 if( !$facetinfo || count($facetinfo) == 0 ) {
 	echo "<h2>Cannot find categories";
 	if( $facetname != "__ALL" )
@@ -37,7 +37,7 @@ if( !$facetinfo || count($facetinfo) == 0 ) {
 		} else {	// Get as PHP and output completely 
 			echo "<ul>
 			";
-			outputPHPToDepth( $facet['items'], 0, $depth );
+			outputPHP( $facet['items'] );
 			echo "
 			</ul>
 			";
@@ -45,18 +45,17 @@ if( !$facetinfo || count($facetinfo) == 0 ) {
 	}
 }
 
-function outputPHPToDepth( $item, $currDepth, $limit ) {
+function outputPHP( $item ) {
 		if( isset($item['id']) ) {
 			echo "<li>".$item['name'];
 			if( isset( $item['count'] ))
 				echo " (".$item['count'].")";
 			}
-		if( $currDepth < $limit
-			&& isset( $item['children'] ) && count($item['children']) > 0 ) {
+		if( isset( $item['children'] ) && count($item['children']) > 0 ) {
 			echo "<ul>
 			";
 			foreach( $item['children'] as $child )
-				outputPHPToDepth( $child, $currDepth+1, $limit );
+				outputPHP( $child );
 			echo "
 			</ul>
 			";
