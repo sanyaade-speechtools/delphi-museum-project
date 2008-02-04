@@ -3,9 +3,10 @@ require_once "apiSetup.php";
 require_once "../libs/ontology/ontoServices.php";
 
 $badarg = false;
-if(empty($_GET['id']))
+if(empty($_GET['id'])) {
 	$badarg = true;
-else {
+	$objID = '[empty]';
+} else {
 	$objID = $_GET['id'];
 	if(empty($_GET['f'])) 
 		$facetname = '__ALL';
