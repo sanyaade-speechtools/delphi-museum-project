@@ -84,8 +84,11 @@ class TaxoNode {
 
 		// If no clicks, then just put out the name.
 		// Note: do not close the LI here.
-		if( $depth == 0 )	{
+		$nested = true;
+		if(( $depth == 0 ) || $this->fHidden )	{
 			// Do not generate li for facet - just for it's kids
+			// Skip this step for hidden items - we just skip to children
+			$nested = false;
 		} else if( $this->fNoClick ) {
 			$responseOutput .= '<li class="treeCat noClick">'.$this->name;
 			if( !$fOmitDetails )
@@ -117,18 +120,21 @@ class TaxoNode {
 		}
 
 		if($doChildren) {
-			$responseOutput .= "<ul>
-			";
+			if( $nested )
+				$responseOutput .= "<ul>
+				";
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
 					$responseOutput .= $child->GenerateHTMLItems( $depth+1, $limit,
 																	$nChildren, $fFullTree, $fOmitDetails );
 			}
-			$responseOutput .= "</ul>
-			";
+			if( $nested )
+				$responseOutput .= "</ul>
+				";
 		}
-		$responseOutput .= "</li>
-		";
+		if( $nested )
+			$responseOutput .= "</li>
+			";
 		
 		return $responseOutput;
 	}

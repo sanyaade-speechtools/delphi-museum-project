@@ -40,7 +40,7 @@ $resInfo = queryResultsCategories($catIDs, $kwds, $onlyWithImgs, $retType );
 if( !$resInfo || count($resInfo) == 0 ) {
 	echo "<h2>Query Failed</h2>";
 } else {
-	echo "<h2>Facet info:</h2>
+	echo "<h3>Categories for query on Categories:".$cats." and Keywords:".$kwds."</h3>
 	";
 	foreach( $resInfo as $facet ) {
 		echo "<h3>".$facet['facet']." (".$facet['id'].")</h3>";
@@ -58,22 +58,25 @@ if( !$resInfo || count($resInfo) == 0 ) {
 }
 
 function outputPHPToDepth( $item, $currDepth, $limit ) {
-		if( isset($item['id']) ) {
+		$nested = isset($item['id']);
+		if( $nested ) {
 			echo "<li>".$item['name'];
 			if( isset( $item['count'] ))
 				echo " (".$item['count'].")";
-			}
+		}
 		if( $currDepth < $limit
 			&& isset( $item['children'] ) && count($item['children']) > 0 ) {
-			echo "<ul>
-			";
+			if( $nested )
+				echo "<ul>
+				";
 			foreach( $item['children'] as $child )
 				outputPHPToDepth( $child, $currDepth+1, $limit );
-			echo "
-			</ul>
-			";
+			if( $nested )
+				echo "
+				</ul>
+				";
 		}
-		if( isset($item['id']) ) {
+		if( $nested ) {
 			echo "
 			</li>
 			";
