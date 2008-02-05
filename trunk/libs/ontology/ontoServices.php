@@ -290,7 +290,7 @@ function queryResultsCategories(
 					default:
 						return false;
 					case "PHP":
-						$items = $facet->GeneratePHPItems( 0, $largeNum, 1, true, false );
+						$items = $facet->GeneratePHPItems( 0, $largeNum, 1, false, false );
 						break;
 					case "JSON":
 						// $items = $facet->GeneratePHPItems( 0, $largeNum, 1, false, false );
@@ -299,7 +299,7 @@ function queryResultsCategories(
 						return false;	// NYI
 					case "HTML_UL":
 						//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false );
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false );
 						break;
 				}
 				// Only add a new item if there are children for that facet
