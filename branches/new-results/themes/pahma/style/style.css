@@ -468,173 +468,37 @@ div.front_set a:active img {
  * - RESULTS --------------------------------- *
  * ------------------------------------------------------- */
 
-#results_help {
-	float: right;
-	width: 300px;
-	margin: 0;
-	padding: 2px 0px 24px 0px;
-	border-width: 0;
-}
-
-.results_pagination a:link  {
-}
-
-.results_pagination a:visited  {
-}
-
-.results_pagination a:hover {
-}
-
-.results_pagination a:active  {
-}
-
-#results_innerContentTop {
-	margin: 24px 0 4px 0;
-}
-#results_innerContentTop ul {
-	margin-left: 280px;
-}
-#results_breadcrumbs {
-	font-weight: bold;
-	margin-bottom: 12px;
-}
-
-.results_breadcrumbFacet {
-	font-weight: normal;
-}
-.results_breadcrumbCategory {
-	font-weight: bold;
-}
-.results_removeBreadcrumb {
-}
-
-#results_facetTree {
-	float: left;
-	
-	margin: 0 2px 0 0;
-	padding: 8px 0 8px 2px;
-	
-	width:250px;
-	
-	font-size:.9em;
-	text-align: left;
-}
-
-/* Top Level facets */
-#results_facetTree>div.facet>span {
-	margin:15px 0px 5px 15px;
-	display:block;
-	font-size:1.4em;
-	color:#0094df;
-	font-weight: normal;
-	padding: 0px;
-}
-
-/* Categories */
-div.treeitem {
-	position:relative; 
-	left:15px; 
-	/* Put a limit on text and crop for long strings to keep from wrapping */
-	width:240px;
-}
-
-/* Category links */
-div.treeitem span a {
-	text-decoration:none; 
-	color: black;
-}
-div.open span a:hover, div.closed span a:hover {
-	color:blue; 
-	text-decoration:underline;
-}
-
-code.hidden {
-	display: none; 
-}
-
-#results_results {
-	float: right;
-	width: 488px;
-	margin: 0;
-	padding: 0;
-	border-width: 0;
-	/* background-color: #D4C08A; */
-}
-#results_results>h2 {
-	margin: 0 0 16px 0;
-}
-
-.results_pagination {
-	clear: both;
-	
-	color: #DC6403;
-	text-align: center;
-	font-size: 1em;
-}
-
-.results_pagination ul {
-	margin: 0;
-	padding: 0;
-}
-
-.results_pagination li {
-	display: inline;
-	list-style: none;
-}
-
-#results_grid {
-	margin: 16px 0;
-}
-
-.results_result { /* 122x122 */
+#results_menuCol{
+	width:260px;
+	border: 1px solid #999;
 	float:left;
-	width:95px;
-	border: 1px solid #cdcdc9;
-	margin-right:9px;
-	margin-bottom:9px;
-	padding:8px 8px 4px 8px;
-	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 132px;
-	height:auto !important;
-	height: 132px;
 }
 
-.results_resultLabel {
-	font-size:.9em;
-	width:100%;
+#results_resultsCol{
+	width:530px;
+	border: 1px solid #999;
+	margin-left:275px;
 	text-align:center;
 }
 
-
-.results_resultLabel a, .results_resultLabel abbr{
-	text-decoration: none;
-    border-style: none;
-	color:#61615f;
+#results_filterContainer{
+	
 }
 
-.results_result ul {
-}
-.results_result li {
-}
-
-.results_resultName {
+#results_categoriesContainer{
+	
 }
 
-/* ------------------------------------------------------- *
- * - RESULTS_ALT ----------------------------------------- *
- * ------------------------------------------------------- */
-
-.results_subcategory {
-	width: 384px;
-	margin-bottom: 16px;
-	padding-bottom: 4px;
-	background-color: #DDCD9F;
+#results_pagerCount{
+	
 }
-.results_subcategory>h3 {
-	margin: 0 0 4px 0;
 
-	padding: 4px 0 4px 4px;
-	background-color: #D4C08A;
+#results_pagerLinks{
+	
+}
+
+#results_thumbnails{
+	
 }
 
 /* ------------------------------------------------------- *

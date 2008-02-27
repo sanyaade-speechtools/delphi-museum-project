@@ -1,6 +1,4 @@
 {include file="header.tpl"}
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/treeview/jquery.treeview.js"></script>
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/treeview/jquery.cookie.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/browser.js"></script>
 
 <div id="contentNarrow">
