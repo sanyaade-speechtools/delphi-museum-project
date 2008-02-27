@@ -1,0 +1,29 @@
+RewriteEngine On
+# Direct to frontpage
+RewriteRule   ^$ modules/frontpage/frontpage.php
+
+# Sets rules
+RewriteRule   ^mysets/{0,1}$ modules/sets/mysets.php
+RewriteRule   ^set/(\d+)/{0,1}$ modules/sets/viewset.php?sid=$1
+RewriteRule   ^sets/featured/{0,1}$ modules/sets/featuredSets.php
+
+# Browser rules
+RewriteRule   ^browse/([0-9]+)/{0,1}$ modules/facetBrowser/facetBrowse.php?cats=$1
+RewriteRule   ^browser/{0,1}$ modules/facetBrowser/browser.php
+
+# Auth rules
+RewriteRule   ^logout/{0,1}$ modules/auth/logout.php
+RewriteRule   ^login/{0,1}$ modules/auth/login.php
+RewriteRule   ^profile/{0,1}$ modules/auth/profile.php
+RewriteRule   ^lostpass/{0,1}$ modules/auth/forgotpw.php
+RewriteRule   ^register/{0,1}$ modules/auth/register.php
+
+# Admin rules
+RewriteRule   ^admin/{0,1}$ modules/admin/admin.php
+RewriteRule   ^admin/userroles/{0,1}$ modules/admin/adminUserRoles.php
+RewriteRule   ^admin/roles/{0,1}$ modules/admin/adminRoles.php
+RewriteRule   ^admin/roleperms/{0,1}$ modules/admin/adminRolePerms.php
+RewriteRule   ^admin/permissions/{0,1}$ modules/admin/adminPermissions.php
+
+# Static-like pages. e.g.: /help --> modules/help/help.php
+RewriteRule   ^([^/]+)/{0,1}$ modules/$1/$1.php
