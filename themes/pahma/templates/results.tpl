@@ -1,82 +1,37 @@
 {include file="header.tpl"}
 
-<script type="text/javascript" src="{$themeroot}/scripts/treeview.js"></script>
-
-<code style="display:none;">Cat order Query: {$tqCatOrder}</code>
-<code style="display:none;">CountsByCat Query: {$catsByCountQ}</code>
-<code style="display:none;">Full Query: {$fullQ}</code>
-<code style="display:none;">Full Count Query: {$fullCountQ}</code>
-
-<div id="content">
-	<h2 id="results_heading">{$iFirstResult} - {$iLastResult} of {$numResultsTotal} Results {$qual}</h2>
-
-	<div id="inner_content">
-		<div id="results_innerContentTop">
-			<div>
-				{$startOver}
-			</div>
-			<div id="results_breadcrumbs">
-				Find: {$query}
-			</div>
-			<div class="results_pagination">{if $numResultsTotal>0}
-				<ul>
-					<li><a href="{$baseQ}&page=0">First</a></li>
-					{if $pageNum gt 1}<li><a href="{$baseQ}&page={$pageNum-2}">Previous</a></li>{/if}
-					<li> &middot; </li>
-					{foreach from=$pageNums item=pn}
-						<li>{if $pageNum eq $pn}{$pn}{else}<a href="{$baseQ}&page={$pn-1}">{$pn}</a>{/if}</li>
-					{/foreach}
-					<li> &middot; </li>
-					<li>{if $pageNum lt $numPagesTotal}<a href="{$baseQ}&page={$pageNum}">Next</a>{/if}</li>
-					<li><a href="{$baseQ}&page={$numPagesTotal-1}">Last</a></li>
-				</ul>{/if}
-			</div>
-		</div>
-		<div id="results_facetTree">
-			{if $numResultsTotal>0}
-				{$facetTree}
-			{else}
-				<h3><br />&nbsp;&nbsp;No results found!</h3>
-				<h4>&nbsp;&nbsp;&nbsp;&nbsp;<a class="showlink" href="{$wwwroot}/modules/frontpage/frontpage.php">Begin a new search</a></h4>
-			{/if}
-		</div>
-
-		<div id="results_results">
-			<div id="results_resultsGrid">
-			{if $numResultsTotal>0}
-				{$imageOutput}
-			{/if}
-				
-				<!--<div class="results_result">
-					<h3 class="results_resultName">Name</h3>
-					<div class="results_resultThumbnail">
-						image
-					</div>
-					<ul>
-						<li>Favorite</li>
-						<li>Add to Set</li>
-					</ul>
-				</div>-->
-				
-			</div>
-
-			<div class="results_pagination">{if $numResultsTotal>0}
-				<ul>
-					<li><a href="{$baseQ}&page=0">First</a></li>
-					{if $pageNum gt 1}<li><a href="{$baseQ}&page={$pageNum-2}">Previous</a></li>{/if}
-					<li> &middot; </li>
-					{foreach from=$pageNums item=pn}
-						<li>{if $pageNum eq $pn}{$pn}{else}<a href="{$baseQ}&page={$pn-1}">{$pn}</a>{/if}</li>
-					{/foreach}
-					<li> &middot; </li>
-					<li>{if $pageNum lt $numPagesTotal}<a href="{$baseQ}&page={$pageNum}">Next</a>{/if}</li>
-					<li><a href="{$baseQ}&page={$numPagesTotal-1}">Last</a></li>
-				</ul>{/if}
-			</div>
-		</div>
-		<br class="clear" />
+<script type="text/javascript" src="{$themeroot}/scripts/results.js"></script>
+<div id="results_menuCol">
+	<div id="results_filterContainer">
+		<h2>Search Filters</h2>
+		<form method="post" accept-charset="utf-8">
+			<input type="text" name="keyword" value="" size="15" class="delphiFormInput"/>
+			<input type="submit" value="Add keyword"/>
+		</form>
+		<a href="?cats=123,23,123&amp;keywords=sldkj,sasdf,ASjdfkjsdf" script="return false;">New search</a>
+	</div>
+	<div id="results_categoriesContainer">
+		<h2>Categories</h2>
+		{section name=facet loop=$facets}
+			<h4>{$facets[facet].facet}</h4>
+			{$facets[facet].items}
+	    {/section}
+	</div>	
+</div>
+<div id="results_resultsCol">
+	<div id="results_pagerCount">
+		<h2>{$results_start} - {$results_end} of {$results_total} Results</h2>
+	</div>
+	<div id="results_pagerLinks">
+		Previous 1 2 3 4 5 6 Next
+	</div>
+	<div id="results_thumbnails">
+		{section name=object loop=$objects}
+			{$objects[object].name}<br/>
+	    {/section}
 	</div>
 </div>
+
 
 
 {include file="footer.tpl"}

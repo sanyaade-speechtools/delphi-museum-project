@@ -6,7 +6,6 @@
 	</script>
 {if $owner_id == $currentUser_id}
 	<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.form.js"></script>
-	<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.impromptu.js"></script>
 	<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/jquery.dimensions.js"></script>
 	<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.mouse.js"></script>
 	<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.draggable.js"></script>
