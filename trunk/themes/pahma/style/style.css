@@ -259,22 +259,25 @@ label.overlabel-apply {
  * - Browser    ------------------------------------------ *
  * ------------------------------------------------------- */
 
+#browserDiv {
+	position:relative;
+}
+
 #browserTabs{
 	position:absolute;
-	top:140px;
-	left:117px;
+	left:0px;
+	top:0px;
 }
 
 .browser_topLevelFacet{
 	left:7px;
-	position:absolute;
+	position:relative;	
 	width:181px;
-	height:22px;
 	border:1px solid #cdcdc9;
 	padding:7px 15px 5px 0px;
 	background-color:#f2f1ee;
 	color:#00a6e6;
-	font-size:1.2em;
+	font-size:16px;
 	text-align:right;
 	cursor: pointer;
 }	
@@ -301,6 +304,16 @@ label.overlabel-apply {
 
 .browser_browsePaneSelected{
 	display:block;
+}
+
+.browser_browsePane * ul {
+	list-style-type:none;
+}
+
+.browser_browsePane * li.treeCat span {
+	text-decoration:underline;
+	cursor:pointer;
+	color:#00a6e6;
 }
 
 
