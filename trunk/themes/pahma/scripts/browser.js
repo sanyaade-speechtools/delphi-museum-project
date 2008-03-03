@@ -17,5 +17,15 @@ $(document).ready(function(){
 			o.filter('.parent').toggleClass('expanded');
 			return false;
 		});
+		$('div.tree li span').click(function(e) {
+			var o = $(this);
+			var id = o.attr("id");
+			//alert( "go to: " + id );
+			window.location.href = templateVarsJSON['wwwroot'] //'http://pahma-dev.berkeley.edu/patrick' 
+							+'/modules/facetBrowser/facetBrowse.php?cats='+id;
+			e.cancelBubble = true;
+			if (e.stopPropagation) e.stopPropagation();
+			return false;
+		});
 	});
 });
