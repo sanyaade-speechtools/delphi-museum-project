@@ -7,10 +7,16 @@ if(empty($_GET['f']))
 else
 	$facetname = $_GET['f'];
 
-if(empty($_GET['rT']))
+if(empty($_GET['rT'])) {
 	$retType = 'HTML_UL';
-else
+	$HTparam = '';
+} else {
 	$retType = $_GET['rT'];
+	if(empty($_GET['p'])) 
+		$HTparam = '';
+	else
+		$HTparam = $_GET['p'];
+}
 
 if(empty($_GET['d']))
 	$depth = 9999;
@@ -19,9 +25,19 @@ else
 
 ?>
 <HTML>
+<script>
+function query(e, id) {
+	//alert( "Query for category: " + id );
+	location.href = "../modules/facetBrowser/facetBrowse.php?cats="+id;
+	if (!e) var e = window.event;
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	return false;
+}
+</script>
 <BODY>
 <?php
-$facetinfo = getCategoriesInFacet($facetname, true, $retType, $depth );
+$facetinfo = getCategoriesInFacet($facetname, true, $retType, $HTparam, $depth );
 if( !$facetinfo || count($facetinfo) == 0 ) {
 	echo "<h2>Cannot find categories";
 	if( $facetname != "__ALL" )
@@ -32,7 +48,9 @@ if( !$facetinfo || count($facetinfo) == 0 ) {
 	";
 	foreach( $facetinfo as $facet ) {
 		echo "<h3>".$facet['facet']." (".$facet['id'].")</h3>";
-		if( $retType == 'HTML_UL') {
+		echo "<p>".$facet['desc']."</p>";
+		if(( $retType == 'HTML_UL' ) || 
+			( $retType == 'HTML_UL_ATAG' ) || ( $retType == 'HTML_UL_ATTR' ) || ( $retType == 'HTML_UL_OC' )) {
 			echo $facet['items'];
 		} else {	// Get as PHP and output completely 
 			echo "<ul>
