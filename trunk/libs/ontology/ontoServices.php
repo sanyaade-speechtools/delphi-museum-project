@@ -54,6 +54,7 @@ function getCategoriesInFacet(
 						$facetname,					//:String
 						$countsWithImages,	//:boolean
 						$retType, 					//:String 
+						$HTparam,							//:String
 						$depth ) {					//:int
 	global $facets;
 	global $db;
@@ -100,11 +101,24 @@ function getCategoriesInFacet(
 							return false;	// NYI
 						case "HTML_UL":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false );
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, "none", "" );
+							break;
+						case "HTML_UL_ATAG":
+							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, 'A_Tag', $HTparam );
+							break;
+						case "HTML_UL_ATTR":
+							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, 'attr', $HTparam );
+							break;
+						case "HTML_UL_OC":
+							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, 'onclick', $HTparam );
 							break;
 					}
 				// Only add a new item if there are children for that facet
 				$facetVal = array( 'facet' => $facet->name,
+													 'desc'  => $facet->name." describes the blah abd blah of an object.",
 													 'id'    => $facet->id,
 													 'items' => $items );
 				$retVal[] = $facetVal;
@@ -166,8 +180,20 @@ function getCategoriesForObject(
 							// break;
 							return false;	// NYI
 						case "HTML_UL":
-							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false );
+							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, "none", "" );
+							break;
+						case "HTML_UL_ATAG":
+							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, 'A_Tag', $HTparam );
+							break;
+						case "HTML_UL_ATTR":
+							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, 'attr', $HTparam );
+							break;
+						case "HTML_UL_OC":
+							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, 'onclick', $HTparam );
 							break;
 					}
 				// Only add a new item if there are children for that facet
@@ -298,8 +324,20 @@ function queryResultsCategories(
 						// break;
 						return false;	// NYI
 					case "HTML_UL":
-						//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false );
+						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, "none", "" );
+						break;
+					case "HTML_UL_ATAG":
+						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, 'A_Tag', $HTparam );
+						break;
+					case "HTML_UL_ATTR":
+						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, 'attr', $HTparam );
+						break;
+					case "HTML_UL_OC":
+						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, 'onclick', $HTparam );
 						break;
 				}
 				// Only add a new item if there are children for that facet

@@ -72,10 +72,12 @@ class TaxoNode {
 	// into the children as prefix strings, rather than hiding altogether.
 	// We may need to mark categories in the taxonomies as hidable or required,
 	// and even specify abbreviations for collapsing. E.g., "US:" before "Kansas"
-	function GenerateHTMLItems( $depth, $limit, $nSiblings, $fFullTree, $fOmitDetails ) {
+	// 
+	function GenerateHTMLItems( $depth, $limit, $nSiblings, $fFullTree, $fOmitDetails, 
+												$fClickMode, $HTparam ) {
 		
 		//var to hold concated output
-		$responseOutput = "";
+		$responseOutput = ( $depth == 0 )?"<ul>":"";
 		
 		if( $this->fPrune ) {
 			//echo1 "<p>Pruned: ".$this->name."</p>";
@@ -94,13 +96,31 @@ class TaxoNode {
 			if( !$fOmitDetails )
 				$responseOutput .= " (".$this->nResults.")";
 		} else {
-			$responseOutput .= '<li class="treeCat noClick">'
-			                  .'<a href="cat_id_'.$this->id.'">'
-												.$this->name;
+			$responseOutput .= '<li class="treeCat">';
+			$close = "";
+			switch( $fClickMode ) {
+				default:
+					break;
+				case "A_Tag":
+					$responseOutput .= '<a href="'.$HTparam.$this->id.'">';
+					$close = "</a>
+					";
+					break;
+				case "onclick":
+					$responseOutput .= '<span onclick="'.$HTparam.'(event, '.$this->id.')">';
+					$close = "</span>
+					";
+					break;
+				case "attr":
+					$responseOutput .= '<span '.$HTparam.'="'.$this->id.'">';
+					$close = "</span>
+					";
+					break;
+			}
+			$responseOutput .= $this->name;
 			if( !$fOmitDetails )
 				$responseOutput .= " (".$this->nResults.")";
-			$responseOutput .= "</a>
-			";
+			$responseOutput .= $close;
 		}
 
 		$nChildren = count($this->arrChildren);
@@ -126,7 +146,8 @@ class TaxoNode {
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
 					$responseOutput .= $child->GenerateHTMLItems( $depth+1, $limit,
-																	$nChildren, $fFullTree, $fOmitDetails );
+																					 $nChildren, $fFullTree, $fOmitDetails,
+																					 $fClickMode, $HTparam	);
 			}
 			if( $nested )
 				$responseOutput .= "</ul>
@@ -136,6 +157,9 @@ class TaxoNode {
 			$responseOutput .= "</li>
 			";
 		
+		if( $depth == 0 )
+			$responseOutput .= "</ul>
+		";
 		return $responseOutput;
 	}
 	
