@@ -4,6 +4,9 @@
 <div id="results_menuCol">
 	<div id="results_filterContainer">
 		<h2>Search Filters</h2>
+		<div id="results_searchFilters">
+			{$filters}
+		</div>
 		<form method="post" accept-charset="utf-8">
 			<input type="text" name="keyword" value="" size="15" class="delphiFormInput"/>
 			<input type="submit" value="Add keyword"/>
@@ -22,13 +25,13 @@
 	<div id="results_pagerCount">
 		<h2>{$results_start} - {$results_end} of {$results_total} Results</h2>
 	</div>
-	<div id="results_pagerLinks">
-		Previous 1 2 3 4 5 6 Next
-	</div>
 	<div id="results_thumbnails">
 		{section name=object loop=$objects}
 			{$objects[object].name}<br/>
 	    {/section}
+	</div>
+	<div id="results_pagerLinks">
+		{$pager}
 	</div>
 </div>
 
