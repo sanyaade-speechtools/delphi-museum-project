@@ -54,6 +54,16 @@ $(document).ready(function(){
 		
 		return false;
 	});
+	$('#detail_infoCol li.treeCat span').click(function(e) {
+		var o = $(this);
+		var id = o.attr("id");
+		//alert( "go to: " + id );
+		window.location.href = templateVarsJSON['wwwroot'] //'http://pahma-dev.berkeley.edu/patrick' 
+						+'/modules/facetBrowser/facetBrowse.php?cats='+id;
+		e.cancelBubble = true;
+		if (e.stopPropagation) e.stopPropagation();
+		return false;
+	});
 });
 
 function loadObjectZoomer(path){

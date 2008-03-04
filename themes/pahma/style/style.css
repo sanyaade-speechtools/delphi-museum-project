@@ -666,9 +666,34 @@ code.hidden {
 	float: right;
 	width:315px;
 	margin-top: 30px;
-	padding: 0px 10px 10px 10px;
+	padding: 0px 10px 10px 0px;
 	background-color: #FFF;
 	line-height: 1.2em;
+}
+
+#detail_infoCol h1.name, #detail_infoCol #cats_label  {
+	color:black;
+}
+
+#detail_infoCol #desc_label, #detail_infoCol .facet_name {
+	color:#555;
+}
+
+#detail_infoCol ul {
+	padding: 0;
+	margin: 0;
+	margin-left: 20px;
+	list-style-type:disc;
+}
+
+#detail_infoCol ul * ul {
+	margin-left: 10px;
+}
+
+#detail_infoCol * li.treeCat {
+	text-decoration:underline;
+	cursor:pointer;
+	color:#00a6e6;
 }
 
 .detail_publicSetlet{

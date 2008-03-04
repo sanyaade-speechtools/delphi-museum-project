@@ -109,16 +109,16 @@
 			</div>
 		</div>
 		<div id="detail_infoCol">
-			<h1>{$name}</h1>
-			<h3>Description</h3>
+			<h1 class="name">{$name}</h1>
+			<h3 id="desc_label">Description</h3>
 			{if $description != ""}
 				<p>{$description}</p>
 			{else}
 				<p>No description available for this item.</p>
 			{/if}
-			<h2>Categories</h2>
+			<h2 id="cats_label">Categories</h2>
 			{section name=facet loop=$facetinfo}
-				<h3>{$facetinfo[facet].facet}</h3>
+				<h3 class="facet_name">{$facetinfo[facet].facet}</h3>
 				{$facetinfo[facet].items}
 			{/section}
 		</div>

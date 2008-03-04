@@ -133,7 +133,8 @@ function getCategoriesForObject(
 						$forObjID,					//:int ID of object in DB
 						$facetname,					//:String 1 facet name or "__ALL"
 						$countsWithImages,	//:boolean
-						$retType) {					//:String "PHP", "JSON" or "HTML_UL"
+						$retType,						//:String "PHP", "JSON" or "HTML_UL*"
+						$HTparam ) {				//:String
 	global $facets;
 	global $db;
 	checkAndLoadFacets();
