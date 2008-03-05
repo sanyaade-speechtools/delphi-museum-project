@@ -1,6 +1,7 @@
 <?php 
 /* Include Files *********************/
-require_once("../../libs/env.php");
+// Depends upon libs/env.php or equivalent to set up DB connection.
+// Caller must include.
 /*************************************/
 
 function currUserHasPerm( $perm ) {

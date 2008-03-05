@@ -22,7 +22,7 @@ if( !currUserHasPerm( 'AssignRoles' ) ) {
 }
 
 $style_block = "<style>
-td.title { border-bottom: 2px solid black; font-weight:bold; text-align:left; 
+td.title { border-bottom: 2px solid black; font-weight:bold; 
 		font-style:italic; color:#777777; }
 td.label { font-weight:bold; }
 td.role { border-bottom: 1px solid black; }
