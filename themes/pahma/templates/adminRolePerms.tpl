@@ -15,7 +15,7 @@
 		{else}
 	<table border="0" cellspacing="0" cellpadding="3">
 		<tr>
-			<td class="title"><em>Permission</em></td>
+			<td class="title" align="left"><em>Permission</em></td>
 			{section name=role loop=$roles}
 				<td class="title" width="100px" align="center">{$roles[role]}</td>
 			{/section}

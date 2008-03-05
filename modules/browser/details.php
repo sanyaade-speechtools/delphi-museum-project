@@ -3,6 +3,7 @@
 require_once("../../libs/env.php");
 require_once("../common/imgthumb.php");
 require_once("../../libs/ontology/ontoServices.php");
+require_once("../admin/authUtils.php");
 
 // If there is no id param in the url, send to object not found.
 if( isset( $_GET['id'] ) ) {
@@ -47,6 +48,8 @@ while ($row = $res->fetchRow()) {
 
 // Free the result
 $res->free();
+
+$t->assign('showObjNum', currUserHasPerm( 'ViewBaseCMSInfo' ));
 
 
 //---------------------------------
