@@ -1,6 +1,7 @@
 <?php
 
 require_once("../../libs/env.php");
+require_once("../common/imgthumb.php");
 require_once("../../libs/ontology/ontoServices.php");
 
 // Parse out Cats from URL
@@ -10,17 +11,34 @@ isset($_GET['kwds']) ? $kwds = $_GET['kwds'] : $kwds = false;
 // Parse out page
 isset($_GET['page']) ? $page = $_GET['page'] : $page = 1;
 // Parse page size
-isset($_GET['pageSize']) ? $pageSize = $_GET['pageSize'] : $pageSize = 20;
+isset($_GET['pageSize']) ? $pageSize = $_GET['pageSize'] : $pageSize = 24;
 // Parse out with images
 (isset($_GET['images']) && $_GET['images'] == 0)? $images = false : $images = true;
 
-$objResults = queryObjects($catIDs, $kwds, $page, $pageSize, $images);
-// print_r($objResults);
+// Query objects
+$objResults = queryObjects($catIDs, $kwds, $page-1, $pageSize, $images);
+
+// Get object thumbs
+$objects = array();
+foreach($objResults['objects'] as $obj){
+	$imageOptions = array(	'img_path' => $obj['img_path'],
+							'size' => 60,
+							'img_ar' => $obj['aspectRatio'],
+							'linkURL' => $CFG->shortbase."/object/".$obj['id'],
+							'vAlign' => "center",
+							'hAlign' => "center"
+						);
+	
+	$obj['thumb'] = outputSimpleImage($imageOptions);
+	$objects[] = $obj;
+}
+
+// print_r($objects);
 
 $t->assign('facets', queryResultsCategories( $catIDs, $kwds, true, "HTML_UL"));
 $t->assign('filters',getFilters($kwds,$catIDs));
-$t->assign('pager',themePager($page, $objResults['nPages'],"kwds=mask"));
-$t->assign('objects', $objResults['objects']);
+$t->assign('pager',themePager($page, $objResults['nPages'],"cats=10004"));
+$t->assign('objects', $objects);
 $t->assign('results_total', $objResults['nObjs']);
 $t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
 $t->assign('results_end', ($page * $objResults['pageSize'] <= $objResults['nObjs']) ? $page * $objResults['pageSize'] : $objResults['nObjs']);
@@ -87,21 +105,42 @@ function getFacetByID($facetID){
 
 function themePager($page, $nPages, $query){
 	$pager = "";
-	// Put up first and previous links if not on the first page
-	if ($page > 1) {
-		$pager .= "<a href='?$query&page=1'>First</a>";
-		$pager .= "<a href='?$query&page=".($page - 1)."'>Previous</a>";
-	}
-	for ($i=0; $i < $nPages; $i++) { 
-		if($page - 1 == $i){
-			$pager .= $page;
-		} else {
-			$pager .= "<a href='?$query&page=".($i+1)."'>".($i+1)."</a>";	
+	
+	// Make an array of all the pages
+	$pageArray = range(1,$nPages);
+	
+	// Splice out some pages if there are lots	
+	if($nPages > 10){
+		switch($page){
+			case $page <= 10:
+				array_splice($pageArray, 10, count($pageArray)-12, array("..."));
+				break;
+			case $page > 10 && $page < $nPages-7:
+				array_splice($pageArray, 2, $page-6, array("..."));
+				array_splice($pageArray, 10, count($pageArray)-12, array("..."));
+				break;
+			case $page >= $nPages-7:
+				array_splice($pageArray, 2, $nPages-10, array("..."));
+				break;
 		}
 	}
+	
+	// Put out previous link if not on the first page
+	if ($page > 1) {
+		$pager .= "<a href='?$query&page=".($page - 1)."'>Previous</a>";
+	}
+	
+	// Loop through page array and spit out the links
+	foreach($pageArray as $p){
+		if($page == $p || $p == "..."){
+			$pager .= $p;
+		} else {
+			$pager .= "<a href='?$query&page=".($p)."'>".($p)."</a>";	
+		}
+	}
+	// Put out next link if not on the last page
 	if ($page < $nPages) {
 		$pager .= "<a href='?$query&page=".($page + 1)."'>Next</a>";
-		$pager .= "<a href='?$query&page=".$nPages."'>Last</a>";
 	}
 	
 	return $pager;

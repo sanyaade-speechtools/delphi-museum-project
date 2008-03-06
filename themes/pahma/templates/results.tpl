@@ -25,9 +25,19 @@
 	<div id="results_pagerCount">
 		<h2>{$results_start} - {$results_end} of {$results_total} Results</h2>
 	</div>
+	<div id="results_pagerLinks">
+		{$pager}
+	</div>
 	<div id="results_thumbnails">
 		{section name=object loop=$objects}
-			{$objects[object].name}<br/>
+		<div class="results_object smaller">
+			<div class="results_objectThumb">
+				{$objects[object].thumb}
+			</div>
+			<div class="resuts_objectDetails">
+				{$objects[object].name}
+			</div>
+		</div>
 	    {/section}
 	</div>
 	<div id="results_pagerLinks">
