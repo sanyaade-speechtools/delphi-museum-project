@@ -270,10 +270,12 @@ function queryObjects(
 }
 
 function queryResultsCategories(
-						$catIDs,						//:int[] array of category IDs
-						$kwds,							//:String[] array of keyword names
-						$countsWithImages,	//:boolean
-						$retType) {					//:String "PHP", "JSON" or "HTML_UL"
+						$catIDs,					//:int[] array of category IDs
+						$kwds,						//:String[] array of keyword names
+						$countsWithImages,			// :boolean
+						$retType,					//:String "PHP", "JSON" or "HTML_UL"
+						$HTparam 					//:String
+						) {					
 	global $facets;
 	global $db;
 	checkAndLoadFacets();

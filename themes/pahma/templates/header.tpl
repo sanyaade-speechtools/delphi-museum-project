@@ -41,7 +41,7 @@
 				<a class="navLink" href="{$wwwroot}/modules/sets/featuredSets.php">Sets</a>
 			</div>
 			<div id="navBarSearchBox">
-				<form action="{$wwwroot}/modules/facetBrowser/facetBrowse.php" method="get">
+				<form action="{$wwwroot}/results/" method="get">
 					<div>
 						<label for="navSearchBoxInput" class="overlabel">Search the Collection</label>
 						<input type="text" name="kwds" maxlength="40" title="Search The Collection" id="navSearchBoxInput" class="delphiFormInput"/>

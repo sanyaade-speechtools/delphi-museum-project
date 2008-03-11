@@ -21,8 +21,7 @@ $(document).ready(function(){
 			var o = $(this);
 			var id = o.attr("id");
 			//alert( "go to: " + id );
-			window.location.href = templateVarsJSON['wwwroot'] //'http://pahma-dev.berkeley.edu/patrick' 
-							+'/modules/facetBrowser/facetBrowse.php?cats='+id;
+			window.location.href = templateVarsJSON['wwwroot'] + '/results/?cats=' + id;
 			e.cancelBubble = true;
 			if (e.stopPropagation) e.stopPropagation();
 			return false;
