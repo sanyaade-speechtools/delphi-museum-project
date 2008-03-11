@@ -8,8 +8,9 @@ $_DELPHI_PAGE_SIZE = 40;
 
 	// Build up a keyword(s) query. Does NOT append subQ name!
 function buildKwdQuery( $kwds, $wImgs ) {
-	$subQ = "(SELECT id as obj_id FROM objects o WHERE MATCH(name, description) AGAINST('"
-		.$kwds."') ";
+	$matchStr = "MATCH(name, description) AGAINST('".mysql_real_escape_string($kwds)."' IN BOOLEAN MODE)";
+	$subQ = "(SELECT id as obj_id, ".$matchStr." as relevance FROM objects o where ".$matchStr;
+
 	if( $wImgs )
 		$subQ .= "AND NOT o.img_path IS NULL) ";
 	else
@@ -56,7 +57,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 	$retStr = "";
 	if( !empty($kwds) ) {
 		$retStr .= "<em><span class=\"results_breadcrumbFacet\">Keywords</span></em>:";
-		$retStr .= "\"".$kwds."\"";
+		$retStr .= "'".$kwds."'";
 
 		$newQuery = "";
 		$wImgsFalse = "?wImgs=false&";
@@ -118,7 +119,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 					$newQuery .= "?";
 				}
 				if( !empty($kwds)) {
-					$newQuery .= "kwds=".$kwds."&";
+					$newQuery .= "kwds=".urlencode($kwds)."&";
 				}
 				if( count($catIDs)-1 != 0) {
 					$newQuery .= "cats=";
@@ -145,10 +146,17 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		$onlyWithImgs = true;		// default to only images
 		if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false'))
 			$onlyWithImgs = false;
+
 		if( empty($_GET['kwds']) )
 			$kwds = null;
-		else
-			$kwds = $_GET['kwds'];
+		else {
+			$kwds = trim($_GET['kwds']);
+			if( empty($kwds) )
+				$kwds = null;
+			else if (get_magic_quotes_gpc())
+				$kwds = stripslashes($kwds); 
+		}
+		
 		if( empty($_GET['cats']) ) {
 			$cats = null;
 			$catIDs = array();
@@ -191,7 +199,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		$requery = "facetBrowse.php?";
 		$newQuery = "";
 		if( !empty($kwds)) {
-			$newQuery .= "kwds=".$kwds."&";
+			$newQuery .= "kwds=".urlencode($kwds)."&";
 		}
 		if( !empty($catIDs)) {
 			$newQuery .= "cats=";
@@ -224,7 +232,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				WHERE c.id=tqTop.cat_id GROUP BY c.id ORDER BY c.id";
 			$tqFull =
 			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar
-			 FROM objects o,".$tqMain." WHERE o.id=tqMain.obj_id AND NOT o.img_path IS NULL LIMIT ".$_DELPHI_PAGE_SIZE;
+			 FROM objects o,".$tqMain." WHERE o.id=tqMain.obj_id AND NOT o.img_path IS NULL";
 		} else {
 			$tqCountsByCat =
 				"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) from categories c,
@@ -234,8 +242,12 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				 where c.id=tqTop.cat_id group by c.id order by c.id";
 			$tqFull =
 			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar
-			 from objects o,".$tqMain." where o.id=tqMain.obj_id limit ".$_DELPHI_PAGE_SIZE;
+			 from objects o,".$tqMain." where o.id=tqMain.obj_id";
 		}
+		if(!empty($kwds))
+			$tqFull .= " ORDER BY relevance DESC";
+		$tqFull .= " LIMIT ".$_DELPHI_PAGE_SIZE;
+		
 		$tqFullCount = "SELECT FOUND_ROWS()";
 		if( $pageNum > 0 )
 			$tqFull .= " OFFSET ".($_DELPHI_PAGE_SIZE*$pageNum);
@@ -300,10 +312,10 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		if( !empty($kwds)) {
 			if( $firstP ) {
 				$firstP = false;
-				$baseQ.= "kwds=".$kwds;
+				$baseQ.= "kwds=".urlencode($kwds);
 			}
 			else
-				$baseQ.= "&kwds=".$kwds;
+				$baseQ.= "&kwds=".urlencode($kwds);
 		}
 		// If have cats, include for baseQ (for pagination)
 		$catsParam = $firstP?"cats=":"&cats=";
