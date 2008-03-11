@@ -84,6 +84,34 @@ function enableElement( elID ) {
 	//window.status = "Element ["+elID+"] enabled.";
 }
 
+function limitChars( field, maxlimit ) {
+  if ( field.value.length > maxlimit )
+  {
+    field.value = field.value.substring( 0, maxlimit-1 );
+    alert( "Description can only be 255 characters in length." );
+    return false;
+  }
+	return true;
+}
+
+function checkValues( e, name, desc, limit ) {
+	if( name.value.length < 4 ) {
+    alert( "Permission name must be at least 4 characters in length." );
+		e.returnValue = false;
+		if( e.preventDefault )
+			e.preventDefault();
+    return false;
+  }
+	if( !limitChars( desc, limit ) ) {
+		e.returnValue = false;
+		if( e.preventDefault )
+			e.preventDefault();
+    return false;
+  }
+	return true;
+}
+
+
 </script>';
 
 $t->assign("script_block", $script_block);

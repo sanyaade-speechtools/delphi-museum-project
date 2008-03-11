@@ -39,7 +39,7 @@
 		{/section}
 	{/if}
 	<div style="height:10px"></div>
-	<form method="post">
+	<form method="post" onsubmit="checkValues(event, this.perm, this.desc, 255);">
 		<table border="0" cellspacing="0" cellpadding="5">
 			<tr>
 				<td class="title" colspan="4">Add a New Permission</td>
@@ -47,7 +47,10 @@
 			<tr>
 				<td class="perm_label" width="100px">Name:</td>
 				<td class="2" width="200px"><input type="text" name="perm" maxlength="40"></td>
-				<td class="permdesc"><textarea name="desc" rows="2" cols="40"></textarea></td>
+				<td class="permdesc"><textarea name="desc" rows="2" cols="40" 
+				       onkeypress="limitChars(this,255);"
+							 onblur="limitChars(this,255);"
+							 onfocus="limitChars(this,255);"></textarea></td>
 				<td><input type="submit" name="add" value="Add" /></td>
 			</tr>
 		</table>
