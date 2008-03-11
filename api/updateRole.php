@@ -2,21 +2,33 @@
 //Bring in the user's config file
 require_once('apiSetup.php');
 
-	$badarg = false;
+	unset($errmsg);
 	if(empty($_POST['r']))
-		$badarg = true;
+		$errmsg = "Missing role name.";
 	else {
-		$rolename = $_POST['r'];
-		$roledesc = $_POST['d'];
+		$rolename = trim($_POST['r']);
+		if( strlen( $rolename ) < 4 )
+			$errmsg = "Invalid role name: [".$rolename."]";
+		else if( preg_match( "/[^\w\s]/", $rolename ))
+			$errmsg = "Invalid role name (invalid chars): [".$rolename."]";
+		else if(empty($_POST['d']))
+			$errmsg = "Missing role description.";
+		else {
+			$roledesc = trim($_POST['d']);
+			if( strlen( $roledesc ) > 255 )
+				$errmsg = "Invalid role description (too long);";
+			else if( preg_match( "/[^\w\-\s.:'()]/", $roledesc ))
+				$errmsg = "Invalid role description (invalid chars): [".$roledesc."]";
+		}
 	}
-	if( $badarg ) {
+	if(!empty($errmsg)) {
 		header("HTTP/1.0 400 Bad Request");
-		echo "Bad Arg: r[".$rolename."] d[".$roledesc."]";
-		echo "POST: ";
-		print_r( $_POST );
+		echo $errmsg;
 		exit();
 	}
-	$updateQ = "UPDATE role set description='".$roledesc."' where name='".$rolename."'";
+	$updateQ = "UPDATE role set description='"
+		.mysql_real_escape_string($roledesc)."' where name='"
+		.mysql_real_escape_string($rolename)."'";
 	$res =& $db->query($updateQ);
 	if (PEAR::isError($res)) {
 		header("HTTP/1.0 500 Internal Server Error\n"+$res->getMessage());
