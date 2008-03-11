@@ -3,7 +3,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" href="{$themeroot}/style/style.css" type="text/css" />
 {if isset($style_block) }
 {$style_block}
