@@ -52,12 +52,11 @@ function updateRoleRSC() {
 		}
 	}
 }
-
 function updateRole(roleName) {
 	// Could change cursor and disable button until get response
 	var descTextEl = document.getElementById("D_"+roleName);
 	var desc = descTextEl.value;
-	if( desc.length <= 2 )
+	if( desc.length < 3 )
 		alert( "You must enter a description that is at least 3 characters long" );
 	else if( !xmlhttp )
 		alert( "Cannot update role - no http obj!\n Please advise Delphi support." );
@@ -82,6 +81,34 @@ function enableElement( elID ) {
 	el.disabled = false;
 	//window.status = "Element ["+elID+"] enabled.";
 }
+
+function limitChars( field, maxlimit ) {
+  if ( field.value.length > maxlimit )
+  {
+    field.value = field.value.substring( 0, maxlimit-1 );
+    alert( "Description can only be 255 characters in length." );
+    return false;
+  }
+	return true;
+}
+
+function checkValues( e, name, desc, limit ) {
+	if( name.value.length < 4 ) {
+    alert( "Role name must be at least 4 characters in length." );
+		e.returnValue = false;
+		if( e.preventDefault )
+			e.preventDefault();
+    return false;
+  }
+	if( !limitChars( desc, limit ) ) {
+		e.returnValue = false;
+		if( e.preventDefault )
+			e.preventDefault();
+    return false;
+  }
+	return true;
+}
+
 
 </script>';
 
