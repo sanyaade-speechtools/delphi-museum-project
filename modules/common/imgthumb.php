@@ -146,9 +146,9 @@ function outputSimpleImage($args) {
 			$height = "height:".$args['size']."px;";
 			$offset = (($args['size']-$args['size']*$args['img_ar'])/2);
 			if(!isset($args['hAlign']) || $args['hAlign'] == "center"){
-				$hAlign = "left:".$offset."px;";
-			} elseif( $args['hAlign'] == "left"){
 				$hAlign = "left:0px;";
+			} elseif( $args['hAlign'] == "left"){
+				$hAlign = "left:".$offset."px;";
 			} elseif($args['hAlign'] == "right"){
 				$hAlign = "left:".($offset*2)."px;";
 			}

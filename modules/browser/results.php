@@ -24,7 +24,7 @@ $objResults = queryObjects($catIDs, $kwds, $page-1, $pageSize, $images);
 $objects = array();
 foreach($objResults['objects'] as $obj){
 	$imageOptions = array(	'img_path' => $obj['img_path'],
-							'size' => 60,
+							'size' => 80,
 							'img_ar' => $obj['aspectRatio'],
 							'linkURL' => $CFG->shortbase."/object/".$obj['id'],
 							'vAlign' => "center",

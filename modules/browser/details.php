@@ -74,7 +74,7 @@ if ( $res->numRows() <= 1 ){
 								'img_ar' => $row['aspectr'],
 								'linkURL' => $CFG->image_zoom."/".substr($row['path'], 0, -4),
 								'vAlign' => "center",
-								'hAlign' => "center"
+								'hAlign' => "left"
 							);
 
 		$additionalMediaItem = array('name' => $row['name'], 
@@ -150,7 +150,7 @@ if (isset($_SESSION['id'])){
 										'img_ar' => $row['img_ar'],
 										'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 										'vAlign' => "top",
-										'hAlign' => "center"
+										'hAlign' => "left"
 									);
 
 				$otherSet = array(	'set_id' => $row['set_id'], 
@@ -232,7 +232,7 @@ if (isset($_SESSION['id'])){
 									'img_ar' => $img_ar,
 									'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 									'vAlign' => "center",
-									'hAlign' => "center"
+									'hAlign' => "left"
 								);
 
 			$personalSet = array('set_id' => $row['set_id'], 

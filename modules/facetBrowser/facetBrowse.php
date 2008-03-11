@@ -6,6 +6,10 @@ require_once("../common/imgthumb.php");
 require "Facet.inc";
 $_DELPHI_PAGE_SIZE = 40;
 
+// Reporting E_NOTICE can be good too (to report uninitialized
+// variables or catch variable name misspellings ...)
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
 	// Build up a keyword(s) query. Does NOT append subQ name!
 function buildKwdQuery( $kwds, $wImgs ) {
 	$matchStr = "MATCH(name, description) AGAINST('".mysql_real_escape_string($kwds)."' IN BOOLEAN MODE)";
@@ -37,7 +41,7 @@ function buildMainQueryForTerm( $catIDList, $iID, $kwds, $wImgs ) {
 		if( empty($kwds) )
 			return "(SELECT obj_id from obj_cats where cat_id=".(string)$catIDList[$iID].") ".$qName;
 		$subQ = buildKwdQuery( $kwds, $wImgs )."subK";
-		return "(SELECT oc.obj_id from obj_cats oc,".$subQ."
+		return "(SELECT oc.obj_id, subK.relevance from obj_cats oc,".$subQ."
 						 where oc.obj_id=subK.obj_id and oc.cat_id="
 							.(string)$catIDList[$iID].") ".$qName;
 	}
@@ -45,7 +49,11 @@ function buildMainQueryForTerm( $catIDList, $iID, $kwds, $wImgs ) {
 	// computed string
 	$subQ = buildMainQueryForTerm( $catIDList, $iID+1, $kwds, $wImgs );
 	$subName = "sub".($iID+1);
-	return "(SELECT oc.obj_id from obj_cats oc,".$subQ."
+	if( empty($kwds) )
+		return "(SELECT oc.obj_id from obj_cats oc,".$subQ."
+						 where oc.obj_id=".$subName.".obj_id and oc.cat_id="
+							.(string)$catIDList[$iID].") ".$qName;
+	return "(SELECT oc.obj_id, ".$subName.".relevance from obj_cats oc,".$subQ."
 					 where oc.obj_id=".$subName.".obj_id and oc.cat_id="
 						.(string)$catIDList[$iID].") ".$qName;
 }
@@ -223,6 +231,7 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 		}
 
 		// If kwds is non-empty, we put the wImgs constraint in that subquery
+		$rel = (empty($kwds)?"":",tqMain.relevance ");
 		if( $onlyWithImgs && empty($kwds)) {
 			$tqCountsByCat =
 				"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) FROM categories c,
@@ -231,7 +240,8 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				WHERE oc.obj_id=tqMain.obj_id AND o.id=tqMain.obj_id AND NOT o.img_path IS NULL) tqTop
 				WHERE c.id=tqTop.cat_id GROUP BY c.id ORDER BY c.id";
 			$tqFull =
-			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar
+				"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, 
+				o.img_path, o.img_ar".$rel."
 			 FROM objects o,".$tqMain." WHERE o.id=tqMain.obj_id AND NOT o.img_path IS NULL";
 		} else {
 			$tqCountsByCat =
@@ -241,11 +251,12 @@ function buildStringForQueryTerms( $kwds, $catIDs, $withImages ) {
 				where oc.obj_id=tqMain.obj_id) tqTop
 				 where c.id=tqTop.cat_id group by c.id order by c.id";
 			$tqFull =
-			"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar
+				"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description,
+				o.img_path, o.img_ar".$rel."
 			 from objects o,".$tqMain." where o.id=tqMain.obj_id";
 		}
 		if(!empty($kwds))
-			$tqFull .= " ORDER BY relevance DESC";
+			$tqFull .= " ORDER BY tqMain.relevance DESC";
 		$tqFull .= " LIMIT ".$_DELPHI_PAGE_SIZE;
 		
 		$tqFullCount = "SELECT FOUND_ROWS()";
