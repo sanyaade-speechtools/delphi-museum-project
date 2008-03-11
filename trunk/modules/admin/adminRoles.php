@@ -131,13 +131,31 @@ if(isset($_POST['delete'])){
 	}
 }
 else if(isset($_POST['add'])){
-	if(empty($_POST['role']) || empty($_POST['desc']))
-		$opmsg = "Problem adding new role. You must define both a name and a description.";
+	unset($errmsg);
+	if(empty($_POST['role']))
+		$errmsg = "Missing role name.";
 	else {
-		$rolename = $_POST['role'];
-		$roledesc = $_POST['desc'];
+		$rolename = trim($_POST['role']);
+		if( strlen( $rolename ) < 4 )
+			$errmsg = "Invalid role name: [".$rolename."]";
+		else if( preg_match( "/[^\w\s]/", $rolename ))
+			$errmsg = "Invalid role name (invalid chars): [".$rolename."]";
+		else if(empty($_POST['desc']))
+			$errmsg = "Missing role description.";
+		else {
+			$roledesc = trim($_POST['desc']);
+			if( strlen( $roledesc ) > 255 )
+				$errmsg = "Invalid role description (too long);";
+			else if( preg_match( "/[^\w\-\s.:'()]/", $roledesc ))
+				$errmsg = "Invalid role description (invalid chars): [".$roledesc."]";
+		}
+	}
+	if(!empty($errmsg))
+		$opmsg = $errmsg;
+	else {
 		$addQ = "INSERT IGNORE INTO role(name, description, creation_time)"
-			." VALUES ('".$rolename."', '".$roledesc."', now())";
+			." VALUES ('".mysql_real_escape_string($rolename)."', '"
+			.mysql_real_escape_string($roledesc)."', now())";
 		$res =& $db->query($addQ);
 		if (PEAR::isError($res)) {
 			$opmsg = "Problem adding role \"".$rolename."\".<br />".$res->getMessage();

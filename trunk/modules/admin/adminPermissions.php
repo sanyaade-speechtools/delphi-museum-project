@@ -131,13 +131,31 @@ if(isset($_POST['delete'])){
 	}
 }
 else if(isset($_POST['add'])){
-	if(empty($_POST['perm']) || empty($_POST['desc']))
-		$opmsg = "Problem adding new permission: You must specify both a name and a description.";
+	unset($errmsg);
+	if(empty($_POST['perm']))
+		$errmsg = "Missing Permission name.";
 	else {
-		$permname = $_POST['perm'];
-		$permdesc = $_POST['desc'];
+		$permname = trim($_POST['perm']);
+		if( strlen( $permname ) < 4 )
+			$errmsg = "Invalid permission name: [".$permname."]";
+		else if( preg_match( "/[^\w\s]/", $permname ))
+			$errmsg = "Invalid permission name (invalid chars): [".$permname."]";
+		else if(empty($_POST['desc']))
+			$errmsg = "Missing permission description.";
+		else {
+			$permdesc = trim($_POST['desc']);
+			if( strlen( $permdesc ) > 255 )
+				$errmsg = "Invalid permission description (too long);";
+			else if( preg_match( "/[^\w\-\s.:'()]/", $permdesc ))
+				$errmsg = "Invalid permission description (invalid chars): [".$permdesc."]";
+		}
+	}
+	if(!empty($errmsg))
+		$opmsg = $errmsg;
+	else {
 		$addQ = "INSERT IGNORE INTO permission(name, description, creation_time)"
-			." VALUES ('".$permname."', '".$permdesc."', now())";
+			." VALUES ('".mysql_real_escape_string($permname)."', '"
+			.mysql_real_escape_string($permdesc)."', now())";
 		$res =& $db->query($addQ);
 		if (PEAR::isError($res)) {
 			$opmsg = "Problem adding permission \"".$permname."\".<br />".$res->getMessage();
