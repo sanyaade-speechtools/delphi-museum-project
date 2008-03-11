@@ -8,25 +8,30 @@
 <script type="text/javascript" src="{$themeroot}/scripts/results.js"></script>
 <div id="results_menuCol">
 	<div id="results_filterContainer">
-		<h2>Search Filters</h2>
+		<h3>Find Objects where:</h3>
 		<div id="results_searchFilters">
 			{$filters}
 		</div>
-		<form method="post" accept-charset="utf-8" id="results_keywordForm">
-			<div>
-				<input type="text" name="keyword" value="" size="15" class="delphiFormInput" id="results_keywordInput"/>
-				<input type="submit" value="Add keyword"/>
-			</div>
-		</form>
 		<!-- <a href="#">New search</a> -->
 	</div>
 	{if $results_total > 0}
+	<hr />
 	<div id="results_categoriesContainer">
-		<h2>Categories</h2>
+		<h3>Narrow with Categories:</h3>
 		{section name=facet loop=$facets}
 			<h4>{$facets[facet].facet}</h4>
 			{$facets[facet].items}
 	    {/section}
+	</div>
+	<hr />
+	<div id="results_categoriesContainer">
+		<h3>Narrow with Keywords:</h3>
+		<form method="post" accept-charset="utf-8" id="results_keywordForm">
+			<div>
+				<input type="text" name="keyword" value="" size="15" class="delphiFormInput" id="results_keywordInput"/>
+				<input type="submit" value="Add"/>
+			</div>
+		</form>
 	</div>
 	{/if}
 </div>
