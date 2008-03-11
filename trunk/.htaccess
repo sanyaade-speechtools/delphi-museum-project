@@ -8,8 +8,9 @@ RewriteRule   ^set/(\d+)/{0,1}$ modules/sets/viewset.php?sid=$1
 RewriteRule   ^sets/featured/{0,1}$ modules/sets/featuredSets.php
 
 # Browser rules
-RewriteRule   ^browse/([0-9]+)/{0,1}$ modules/facetBrowser/facetBrowse.php?cats=$1
-RewriteRule   ^browser/{0,1}$ modules/facetBrowser/browser.php
+RewriteRule   ^browser/{0,1}$ modules/browser/browser.php
+RewriteRule   ^object/([0-9]+)/{0,1}$ modules/browser/details.php?id=$1
+RewriteRule   ^results/$ modules/browser/results.php
 
 # Auth rules
 RewriteRule   ^logout/{0,1}$ modules/auth/logout.php
@@ -26,4 +27,4 @@ RewriteRule   ^admin/roleperms/{0,1}$ modules/admin/adminRolePerms.php
 RewriteRule   ^admin/permissions/{0,1}$ modules/admin/adminPermissions.php
 
 # Static-like pages. e.g.: /help --> modules/help/help.php
-RewriteRule   ^([^/]+)/{0,1}$ modules/$1/$1.php
+#RewriteRule   ^([^/]+)/{0,1}$ modules/$1/$1.php
