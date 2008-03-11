@@ -67,7 +67,8 @@ function getFilters($kwds, $catIDs){
 function themeFilters($filters){
 	$output = "";
 	foreach($filters as $filterType => $filter ){
-		$output .= "<div class='results_filterFacet'>".$filterType."</div>";
+		$output .= "<div class='results_filterFacet'>".$filterType
+								.(($filterType == "Keywords")?" include:</div>":" is:</div>");
 		foreach($filter as $item){
 			if($filterType == "Keywords"){
 				$output .= "<div class='results_filterName'>".$item." <a href='".$item."' class='results_kwdRemoveLink'>[remove]</a></div>";	
