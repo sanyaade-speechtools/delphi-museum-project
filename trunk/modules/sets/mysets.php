@@ -62,7 +62,7 @@ while ($row = $res->fetchRow()) {
 							'img_ar' => $img_ar,
 							'linkURL' => $CFG->shortbase."/set/".$row['id'],
 							'vAlign' => "center",
-							'hAlign' => "center"
+							'hAlign' => "left"
 						);
 	
 	$set = array(	'set_id' => $row['id'], 

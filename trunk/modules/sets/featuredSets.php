@@ -38,7 +38,7 @@ while ($row = $res->fetchRow()) {
 							'img_ar' => $row['img_ar'],
 							'linkURL' => $CFG->shortbase."/set/".$row['set_id'],
 							'vAlign' => "center",
-							'hAlign' => "center"
+							'hAlign' => "left"
 						);
 						
 	$set = array(	'set_id' => $row['set_id'], 

@@ -89,7 +89,7 @@ if ( $res->numRows() < 1 ){
 								'size' => 50,
 								'img_ar' => $row['img_ar'],
 								'vAlign' => "center",
-								'hAlign' => "center"
+								'hAlign' => "left"
 							);
 		$object = array(	'id' => $row['id'], 
 							'name' => $row['name'],
