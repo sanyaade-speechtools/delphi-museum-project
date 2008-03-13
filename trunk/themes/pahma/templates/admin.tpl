@@ -4,6 +4,8 @@
  </div>
 
 <dl>
+<dt><h3><a href="../auth/register.php">Register a new user</a></h3></dt>
+<dd>Allows you to create a new user in the system, set their password and provide an email address for contact.</dd>
 <dt><h3><a href="adminUserRoles.php">Assign User Roles</a></h3></dt>
 <dd>Sets up the roles for users, which in turn grants them
 permissions associated with each role.</dd>
