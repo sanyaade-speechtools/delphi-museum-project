@@ -7,9 +7,9 @@ $.fn.overlabel = function() {
             var control = $(field);
             label.addClass("overlabel-apply");
             if (field.value !== '') {
-                label.css("text-indent", "-1000px");
+                label.css("text-indent", "-10000px");
             }
-            control.focus(function () {label.css("text-indent", "-1000px");}).blur(function () {
+            control.focus(function () {label.css("text-indent", "-10000px");}).blur(function () {
                 if (this.value === '') {
                     label.css("text-indent", "0px");
                 }
