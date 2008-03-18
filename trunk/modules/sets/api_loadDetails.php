@@ -42,7 +42,17 @@ while ($row = $res->fetchRow()) {
 	$response['objectDescription'] = $row['notes'];
 	$response['obj_order'] = $row['order_num'];
 	$response['obj_img'] = $row['img_path'];
-	$response['obj_zoomDir'] = substr($row['img_path'], 0, -4); // trims off .jpg
+	// HACK to accommodate the current zoomer tool
+	// dirs for filenames have spaces replaced with underscores for ZOOMs
+	$lastSlash = strrpos($row['img_path'], "/")+1;
+	if( $lastSlash === false ) {
+		$path = substr($row['img_path'], 0, -4);
+	} else {
+		// Use up to slash, plus filename without extension where space converted to _.
+		$path = substr($row['img_path'], 0, $lastSlash) 
+							. str_replace(" ", "_", substr($row['img_path'], $lastSlash, -4));
+	}
+	$response['obj_zoomDir'] = $path; // trims off .jpg
 }
 
 // Free the result

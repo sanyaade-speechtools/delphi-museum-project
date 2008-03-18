@@ -42,8 +42,18 @@ while ($row = $res->fetchRow()) {
     $t->assign('id', $row['id']);
     $t->assign('objnum', $row['objnum']);
     $t->assign('name', $row['name']);
-	$t->assign('description', $row['description']);
-	$t->assign('zoomDir', $CFG->image_zoom."/".substr($row['img_path'], 0, -4));
+		$t->assign('description', $row['description']);
+		// HACK - to accomodate the current zoomer tool
+		// dirs for filenames have spaces replaced with underscores for ZOOMs
+		$lastSlash = strrpos($row['img_path'], "/")+1;
+		if( $lastSlash === false ) {
+			$path_clean = substr($row['img_path'], 0, -4);
+		} else {
+			// Use up to slash, plus filename without extension where space converted to _.
+			$path_clean = substr($row['img_path'], 0, $lastSlash) 
+								. str_replace(" ", "_", substr($row['img_path'], $lastSlash, -4));
+		}
+		$t->assign('zoomDir', $CFG->image_zoom."/".$path_clean);
 }
 
 // Free the result
@@ -69,10 +79,18 @@ if ( $res->numRows() <= 1 ){
 	
 	$additionalMediaItems = array();
 	while ($row = $res->fetchRow()) {
+		$lastSlash = strrpos($row['path'], "/")+1;
+		if( $lastSlash === false ) {
+			$path = substr($row['path'], 0, -4);
+		} else {
+			// Use up to slash, plus filename without extension where space converted to _.
+			$path = substr($row['path'], 0, $lastSlash) 
+								. str_replace(" ", "_", substr($row['path'], $lastSlash, -4));
+		}
 		$imageOptions = array(	'img_path' => $row['path'],
 								'size' => 40,
 								'img_ar' => $row['aspectr'],
-								'linkURL' => $CFG->image_zoom."/".substr($row['path'], 0, -4),
+								'linkURL' => $CFG->image_zoom."/".$path,
 								'vAlign' => "center",
 								'hAlign' => "left"
 							);
