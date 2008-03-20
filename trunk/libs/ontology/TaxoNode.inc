@@ -118,9 +118,9 @@ class TaxoNode {
 					break;
 			}
 			$responseOutput .= $this->name;
+			$responseOutput .= $close;
 			if( !$fOmitDetails )
 				$responseOutput .= " (".$this->nResults.")";
-			$responseOutput .= $close;
 		}
 
 		$nChildren = count($this->arrChildren);
