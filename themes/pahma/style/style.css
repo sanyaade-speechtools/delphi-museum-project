@@ -1,12 +1,17 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.0
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}body {font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
 /* ------------------------------------------------------- *
  * - Global     ------------------------------------------ *
  * ------------------------------------------------------- */
 
-body{
-	margin:0px;
-	padding:0px;
-	font-size:.9em;
-	font-family: Arial, Helvetica, sans-serif;
+html{
+	font-size:93%;/*12px*/
 	color: #61615F;
 	background-image:url(../images/backgroundFade.png);
 	background-repeat: repeat-x;
@@ -14,27 +19,24 @@ body{
 }
 
 h1{
-	font-size:1.8em;
+	font-size:182%;/*24px*/
 	color:#00a6e6;
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
-	padding: 0px;
 	line-height:1.2em;
 }
 
 h2{
-	font-size:1.4em;
+	font-size:138.5%;/*18px*/
 	color:#00a6e6;
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
-	padding: 0px;
 }
 
 h3{
-	font-size:1.1em;
+	font-size:108%;/*14px*/
 	color:#000;
 	font-weight: bold;
-	padding: 0px;
 	margin: 5px 0px 5px 0px;
 }
 
@@ -52,20 +54,22 @@ a img{
 border:0;
 }
 
-a.smaller{
-	font-size:0.85em;
-}
-
-p.smaller{
-	font-size:0.85em;
-}
-
 .smaller{
-	font-size:0.85em;
+	font-size:85%;/*11px*/
 }
 
 .clear{
 	clear:both;
+}
+
+ul{
+	list-style: none;
+}
+
+ul li ul li{
+	margin-left: 18px;
+	text-indent:-5px;
+	list-style-image: url("../images/bulletArrow.gif");
 }
 
 /* ------------------------------------------------------- *
@@ -117,7 +121,7 @@ p.smaller{
 	bottom:5px;
 	right:26px;
 	color:#FFF;
-	font-size:12px;
+	font-size:93%;/*12px*/
 }
 
 #navBar{
@@ -137,7 +141,7 @@ p.smaller{
 
 #navBarLinks a{
 	color:#FFF;
-	font-size:24px;
+	font-size:182%;/*24px*/
 	font-weight:normal;
 	margin-right:16px;
 }
@@ -186,9 +190,10 @@ form.delphiForm{
 }
 
 form.delphiForm label{
-	font-size:.9em;
+	font-size:85%;/*11px*/
 	font-weight:bold;
-	margin-top:15px;
+	margin-top:10px;
+	margin-bottom:2px;
 	display:block;
 }
 
@@ -203,7 +208,7 @@ form.delphiForm fieldset {
 }
 
 form.delphiForm legend {
-	font-size:1.1em;
+	font-size:108%;/*14px*/
 	color:#000;
 	font-weight: bold;
 	padding: 0px;
@@ -224,7 +229,7 @@ label.overlabel-apply {
 	top:5px;
 	left:8px;
 	z-index:1;
-	font-size:12px;
+	font-size:93%;/*12px*/
 	font-weight: normal;
 	color:#61615f;
 }
@@ -277,7 +282,7 @@ label.overlabel-apply {
 	padding:7px 15px 5px 0px;
 	background-color:#f2f1ee;
 	color:#00a6e6;
-	font-size:16px;
+	font-size:123.1%;/*16px*/
 	text-align:right;
 	cursor: pointer;
 }	
@@ -306,15 +311,15 @@ label.overlabel-apply {
 	display:block;
 }
 
-.browser_browsePane * ul {
+/*.browser_browsePane * ul {
 	list-style-type:none;
 }
-
-.browser_browsePane * li.treeCat span {
+*/
+/*.browser_browsePane * li.treeCat span {
 	text-decoration:underline;
 	cursor:pointer;
 	color:#00a6e6;
-}
+}*/
 
 
 /* ------------------------------------------------------- *
@@ -417,7 +422,6 @@ div.front_fset .thumbLabel a {
 }
 
 div.front_example a:hover abbr,
-div.results_result a:hover abbr,
 div.front_fset a:hover abbr {
 	text-decoration: underline;
 	color:#0094df;
@@ -425,8 +429,6 @@ div.front_fset a:hover abbr {
 
 div.front_example a:link img,
 div.front_example a:visited img,
-div.results_result a:link img,
-div.results_result a:visited img,
 div.front_set a:link img,
 div.front_set a:visited img 
 {
@@ -435,8 +437,6 @@ div.front_set a:visited img
 
 div.front_example a:hover img,
 div.front_example a:active img,
-div.results_result a:hover img,
-div.results_result a:active img,
 div.front_set a:hover img,
 div.front_set a:active img {
 	border: 1px solid #0094df;
@@ -470,7 +470,7 @@ div.front_set a:active img {
 	bottom:8px;
 	right:8px;
 	color:#61615f;
-	font-size:.8em;
+	font-size:85%;/*11px*/
 }
 
 .ownerLabel span.ownerName{
@@ -482,121 +482,75 @@ div.front_set a:active img {
  * ------------------------------------------------------- */
 
 #results_menuCol{
-	width:260px;
-	float:left;
+        width:260px;
+        float:left;
 }
 
 #results_resultsCol{
-	width:530px;
-	margin-left:275px;
-	text-align:center;
+        width:530px;
+        margin-left:275px;
+        text-align:center;
+
 }
 
 .results_object{
-	background: #FFF;
-	float:left;
-	margin:10px 0px 0px 10px;
-	width:100px;
-	height:119px;
-	padding:10px 5px 5px 5px;
-	border: 1px solid #cdcdc9;
-	overflow:hidden;
+        background: #FFF;
+        float:left;
+        margin:10px 0px 0px 10px;
+        width:102px;
+        height:135px;
+        padding:10px 10px 5px 5px;
+        border: 1px solid #cdcdc9;
 }
 
 .results_objectThumb div{
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:10px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:10px;
 }
 
-div.resuts_objectDetails{
-	text-align:center;
+.resuts_objectDetails{
+        text-align:center;
 }
 
 
-#results_filterContainer h2{
-	padding: 0;
-	margin: 4px 0;
-	color:black;
-}
-
-#results_searchFilters,
-#results_keywordForm {
-	/* margin-left: 10px; */
-}
-
-#results_keywordForm {
-	padding-top: 4px;
-}
-
-#results_keywordForm {
-	margin-top: 5px;
+#results_filterContainer, #results_categoriesContainer{
+	border-bottom:1px solid #999;
+	padding-bottom:13px;
 }
 
 .results_filterFacet{
-	margin-top: 5px;
-	font-weight: bold;
+	font-weight:bold;
 }
 
 .results_filterName{
-	margin-left: 10px;
-	color:#555;
+/*        font-weight: bold;*/
 }
 
-#results_filterContainer, 
-#results_categoriesContainer, 
-#results_NarrowKwdsContainer{
-	padding: 0;
-	margin: 0;
-	padding-top: 4px;
-	line-height: 1.2em;
+#results_categoriesContainer h3{
+	margin-top:8px;
 }
 
-#results_categoriesContainer h2,
-#results_categoriesContainer h4 {
-	padding: 0;
-	margin: 8px 0;
+#results_keywordContainer{
 }
-
-#results_categoriesContainer h2,
-#results_NarrowKwdsContainer h2 {
-	/* margin-top: 12px; */
-	color:black;
-}
-
-#results_categoriesContainer h4 {
-	color:#555;
-}
-
-#results_categoriesContainer ul {
-	padding: 0;
-	margin: 0;
-	margin-left: 20px;
-	list-style-type:disc;
-}
-
-#results_categoriesContainer ul * ul {
-	margin-left: 10px;
-}
-
-#results_categoriesContainer * li.treeCat a {
-	text-decoration:underline;
-	cursor:pointer;
-	color:#00a6e6;
-}
-
 
 #results_pagerCount{
 
 }
 
 #results_pagerLinks{
+	padding-top:20px;
 	clear:both;
+}
+
+#results_pagerLinks span{
+	margin:10px 5px 10px 5px;
 }
 
 #results_thumbnails{
 
 }
+
 
 /* ------------------------------------------------------- *
  * - DETAIL ---------------------------------------------- *
@@ -617,31 +571,6 @@ div.resuts_objectDetails{
 	padding: 0px 10px 10px 0px;
 	background-color: #FFF;
 	line-height: 1.2em;
-}
-
-#detail_infoCol h1.name, #detail_infoCol #cats_label  {
-	color:black;
-}
-
-#detail_infoCol #desc_label, #detail_infoCol .facet_name {
-	color:#555;
-}
-
-#detail_infoCol ul {
-	padding: 0;
-	margin: 0;
-	margin-left: 20px;
-	list-style-type:disc;
-}
-
-#detail_infoCol ul * ul {
-	margin-left: 10px;
-}
-
-#detail_infoCol * li.treeCat {
-	text-decoration:underline;
-	cursor:pointer;
-	color:#00a6e6;
 }
 
 .detail_publicSetlet{
@@ -775,7 +704,7 @@ div.resuts_objectDetails{
     text-decoration: none;
 	background-color:#f2f1ee;
 	border:1px solid #cdcdc9;
-	font-size:1.4em;
+	font-size:123.1%;/*16px*/
     white-space: nowrap; /* required in IE 6 */    
     outline: 0; /* prevent dotted border in Firefox */
 }
@@ -839,7 +768,7 @@ div.resuts_objectDetails{
 }
 
 .setletDetails_Large a{
-	font-size:1.3em;
+	font-size:123.1%;/*16px*/
 	font-weight: bold;
 }
 
@@ -847,7 +776,6 @@ div.resuts_objectDetails{
 /* ------------------------------------------------------- *
  * - VIEWSET --------------------------------------------- *
  * ------------------------------------------------------- */
-
 
 
 .viewset_shareLink{
@@ -903,7 +831,6 @@ div.resuts_objectDetails{
 
 .viewset_descTextarea{
 	width:100%;
-	font-size:1em;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #61615F;
 	height:100px;
@@ -914,7 +841,6 @@ div.resuts_objectDetails{
 .viewset_titleInput{
 	width:100%;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size:1em;
 	color:#00a6e6;
 	line-height:1.2em;
 	padding:2px 2px 2px 4px;
@@ -951,38 +877,6 @@ div.resuts_objectDetails{
 	right:19px;
 }
 
-/* ------------------------------------------------------- *
- * -- Impromptu settings ---------------------------------- *
- * ------------------------------------------------------- */
-
-.jqifade{
-	background-color: #ffffff;
-}
-div.jqi{
-	position: absolute;
-	background-color: #c0cEa6;
-	padding: 10px;
-	width: 300px;
-}
-div.jqi .jqicontainer{
-	background-color: #e0eEc6;
-	padding: 5px;
-	color: #ffffff;
-	font-weight: bold;
-}
-div.jqi .jqimessage{
-	background-color: #c0cEa6;
-	padding: 10px;
-}
-div.jqi .jqibuttons{
-	text-align: center;
-	padding: 5px 0 0 0;
-}
-div.jqi button{
-	padding: 3px 10px 3px 10px;
-	margin: 0 10px;
-}
-
 
 /* ------------------------------------------------------- *
  * -- Admin Pages settings ------------------------------- *
@@ -995,7 +889,7 @@ div.admin_hdr {
 
 div.admin_hdr p#orient {
 	color:#61615f;
-	font-size:0.85em;
+	font-size:85%;/*11px*/
 	font-weight: bold;
 }
 
@@ -1008,24 +902,38 @@ div.admin_hdr p#orient a {
  * -- Tree view            ------------------------------- *
  * ------------------------------------------------------- */
 
+div.tree ul li ul li {
+	margin:0px;
+	margin-left:5px;
+	text-indent:-5px;
+	list-style-image: none;
+}
 
 div.tree ul {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0em;
+	margin-left: 0px;
 	text-indent: 0em;
 }
+
 div.tree li {
- padding-left:16px;
+	padding-left:18px;
 }
+
 div.tree li.parent ul {
- display:none;
- cursor:default;
+	display:none;
+/*	cursor:default;*/
 }
+
 div.tree li.parent {
- cursor:pointer !important;
- background:transparent url(../images/plus.gif) no-repeat top left;
+	cursor:pointer !important;
+	background:transparent url(../images/plus.gif) no-repeat top left;
+	list-style-image:none;
+	text-indent:0px;
+	margin:0px;
 }
+
 div.tree li.expanded {
- background:transparent url(../images/minus.gif) no-repeat top left;
+	background:transparent url(../images/minus.gif) no-repeat top left;
+		list-style-image:none;
+		text-indent:0px;
+		margin:0px;
 }

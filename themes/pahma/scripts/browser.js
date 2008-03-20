@@ -17,9 +17,9 @@ $(document).ready(function(){
 			o.filter('.parent').toggleClass('expanded');
 			return false;
 		});
-		$('div.tree li span').click(function(e) {
+		$('div.tree li a').click(function(e) {
 			var o = $(this);
-			var id = o.attr("id");
+			var id = o.attr("href").split("_")[1];
 			//alert( "go to: " + id );
 			window.location.href = templateVarsJSON['wwwroot'] + '/results/?cats=' + id;
 			e.cancelBubble = true;

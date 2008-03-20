@@ -39,7 +39,7 @@ foreach($objResults['objects'] as $obj){
 
 $t->assign('facets', queryResultsCategories( $catIDs, $kwds, true, "HTML_UL_ATAG", "id_"));
 $t->assign('filters',getFilters($kwds,$catIDs));
-$t->assign('pager',themePager($page, $objResults['nPages'],"cats=10004"));
+$t->assign('pager',themePager($page, $objResults['nPages']));
 $t->assign('objects', $objects);
 $t->assign('results_total', $objResults['nObjs']);
 $t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
@@ -67,8 +67,8 @@ function getFilters($kwds, $catIDs){
 function themeFilters($filters){
 	$output = "";
 	foreach($filters as $filterType => $filter ){
-		$output .= "<div class='results_filterFacet'>".$filterType
-								.(($filterType == "Keywords")?" include:</div>":" is:</div>");
+		$output .= "<h3><div class='results_filterFacet'>".$filterType
+								.(($filterType == "Keywords")?" include:</div></h3>":" is:</div></h3>");
 		foreach($filter as $item){
 			if($filterType == "Keywords"){
 				$output .= "<div class='results_filterName'>".$item." <a href='".$item."' class='results_kwdRemoveLink'>[remove]</a></div>";	
@@ -136,20 +136,20 @@ function themePager($page, $nPages){
 	
 	// Put out previous link if not on the first page
 	if ($page > 1) {
-		$pager .= "<a href='".($page - 1)."' class='results_pagerLink'>Previous</a>";
+		$pager .= "<span><a href='".($page - 1)."' class='results_pagerLink'>&laquo; Previous</a></span>";
 	}
 	
 	// Loop through page array and spit out the links
 	foreach($pageArray as $p){
 		if($page == $p || $p == "..."){
-			$pager .= $p;
+			$pager .= "<span>".$p."</span>";
 		} else {
-			$pager .= "<a href='".($p)."' class='results_pagerLink'>".($p)."</a>";	
+			$pager .= "<span><a href='".($p)."' class='results_pagerLink'>".($p)."</a></span>";
 		}
 	}
 	// Put out next link if not on the last page
 	if ($page < $nPages) {
-		$pager .= "<a href='".($page + 1)."' class='results_pagerLink'>Next</a>";
+		$pager .= "<span><a href='".($page + 1)."' class='results_pagerLink'>Next &raquo;</a></span>";
 	}
 	
 	return $pager;

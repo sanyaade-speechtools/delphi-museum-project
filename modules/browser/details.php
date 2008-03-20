@@ -114,7 +114,7 @@ $res->free();
 // Query DB for categories
 //---------------------------------
 $bigint = 999999;
-$facetinfo = getCategoriesForObject($objId, "__ALL", true, "HTML_UL_ATTR", "id", $bigint );
+$facetinfo = getCategoriesForObject($objId, "__ALL", true, "HTML_UL_ATAG", "id_", $bigint );
 $t->assign("facetinfo", $facetinfo);
 
 //If there is a logged in user, show their sets and tags
