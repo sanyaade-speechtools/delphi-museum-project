@@ -8,24 +8,22 @@
 <script type="text/javascript" src="{$themeroot}/scripts/results.js"></script>
 <div id="results_menuCol">
 	<div id="results_filterContainer">
-		<h3>Find Objects where:</h3>
+		<h2>Found Objects where...</h2>
 		<div id="results_searchFilters">
 			{$filters}
 		</div>
 		<!-- <a href="#">New search</a> -->
 	</div>
 	{if $results_total > 0}
-	<hr />
 	<div id="results_categoriesContainer">
-		<h3>Narrow with Categories:</h3>
+		<h2>Narrow with Categories</h2>
 		{section name=facet loop=$facets}
-			<h4>{$facets[facet].facet}</h4>
+			<h3>{$facets[facet].facet}</h3>
 			{$facets[facet].items}
 	    {/section}
 	</div>
-	<hr />
-	<div id="results_categoriesContainer">
-		<h3>Narrow with Keywords:</h3>
+	<div id="results_keywordContainer">
+		<h2>Narrow with Keywords</h2>
 		<form method="post" accept-charset="utf-8" id="results_keywordForm">
 			<div>
 				<input type="text" name="keyword" value="" size="15" class="delphiFormInput" id="results_keywordInput"/>
@@ -47,7 +45,7 @@
 				{$objects[object].thumb}
 			</div>
 			<div class="resuts_objectDetails">
-				{$objects[object].name}
+				<a href="{$shortbase}/object/{$objects[object].id}">{$objects[object].name}</a>
 			</div>
 		</div>
 	    {/section}
