@@ -7,7 +7,8 @@ function checkAndLoadFacets() {
 	global $facets;
 	global $db;
 	if( count($facets) <= 0 ) {
-		$facetsResults =& $db->query("SELECT id, display_name from facets order by id");
+		$facetsResults =& $db->query(
+			"SELECT id, display_name, description, notes from facets order by id");
 		if (PEAR::isError($facetsResults)) {
 				echo "ERROR: ".$facetsResults->getMessage();
 				return false;
@@ -24,7 +25,8 @@ function getFacets() {
 	}
 	$retVal = array();
 	foreach( $facets as $facet ) {
-		$retVal[] = array( "id" => $facet->id, "name" => $facet->name );
+		$retVal[] = array( "id" => $facet->id, "name" => $facet->name,
+											 "description" => $facet->description, "notes" => $facet->notes );
 	}
 	return $retVal;
 }
@@ -118,7 +120,8 @@ function getCategoriesInFacet(
 					}
 				// Only add a new item if there are children for that facet
 				$facetVal = array( 'facet' => $facet->name,
-													 'desc'  => $facet->name." describes the blah abd blah of an object.",
+													 'desc'  => $facet->description,
+													 'notes' => $facet->notes,
 													 'id'    => $facet->id,
 													 'items' => $items );
 				$retVal[] = $facetVal;
@@ -199,6 +202,8 @@ function getCategoriesForObject(
 					}
 				// Only add a new item if there are children for that facet
 				$facetVal = array( 'facet' => $facet->name,
+													 'desc'  => $facet->description,
+													 'notes' => $facet->notes,
 													 'id'    => $facet->id,
 													 'items' => $items );
 				$retVal[] = $facetVal;
@@ -346,6 +351,8 @@ function queryResultsCategories(
 				// Only add a new item if there are children for that facet
 				$facetVal = array( 'facet' => $facet->name,
 													 'id'    => $facet->id,
+													 'desc'  => $facet->description,
+													 'notes' => $facet->notes,
 													 'items' => $items );
 				$retVal[] = $facetVal;
 			}

@@ -2,11 +2,15 @@
 	require_once "TaxoNode.inc";
 
 class Facet extends TaxoNode {
-	var $supports;				// "supports" in facetmap schema
+	var $supports;			// "supports" in facetmap schema
+	var $description;		// <description> child in schema
+	var $notes;					// <notes> child in facetmap schema
 
-	function __construct( $name, $id, $supports ) {
+	function __construct( $name, $id, $description, $notes, $supports ) {
 		parent::__construct($name, $id, null, null, false, false);
 		$this->supports = $supports;
+		$this->description = $description;
+		$this->notes = $notes;
 	}
 }
 
@@ -19,7 +23,9 @@ class Facet extends TaxoNode {
 		while ($row = $result->fetchRow(MDB2_FETCHMODE_ORDERED)) {
 			$id = $row[0];
 			$name = $row[1];
-			$facet = new Facet( $name, $id, null, true, false );
+			$description = $row[2];
+			$notes = $row[3];
+			$facet = new Facet( $name, $id, $description, $notes, null );
 			$facets[$id] = $facet;
 		}
 	}
