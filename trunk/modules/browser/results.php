@@ -17,33 +17,42 @@ isset($_GET['pageSize']) ? $pageSize = $_GET['pageSize'] : $pageSize = 36;
 // Parse out with images
 (isset($_GET['images']) && $_GET['images'] == 0)? $images = false : $images = true;
 
+$kwds = trim( $kwds, " \t\n\r'" );
+
 // Query objects
 $objResults = queryObjects($catIDs, $kwds, $page-1, $pageSize, $images);
 
 // Get object thumbs
 $objects = array();
-foreach($objResults['objects'] as $obj){
-	$imageOptions = array(	'img_path' => $obj['img_path'],
-							'size' => 80,
-							'img_ar' => $obj['aspectRatio'],
-							'linkURL' => $CFG->shortbase."/object/".$obj['id'],
-							'vAlign' => "center",
-							'hAlign' => "center"
-						);
-	
-	$obj['thumb'] = outputSimpleImage($imageOptions);
-	$objects[] = $obj;
+if(empty($objResults['objects'])) {
+	$t->assign('pager', "");
+	$t->assign('results_total', 0);
+	$t->assign('results_start', 0);
+	$t->assign('results_end', 0);
+} else {
+	foreach($objResults['objects'] as $obj){
+		$imageOptions = array(	'img_path' => $obj['img_path'],
+								'size' => 80,
+								'img_ar' => $obj['aspectRatio'],
+								'linkURL' => $CFG->shortbase."/object/".$obj['id'],
+								'vAlign' => "center",
+								'hAlign' => "center"
+							);
+		
+		$obj['thumb'] = outputSimpleImage($imageOptions);
+		$objects[] = $obj;
+	}
+	$t->assign('pager',themePager($page, $objResults['nPages'],"cats=10004"));
+	$t->assign('results_total', $objResults['nObjs']);
+	$t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
+	$t->assign('results_end', ($page * $objResults['pageSize'] <= $objResults['nObjs']) ? $page * $objResults['pageSize'] : $objResults['nObjs']);
+	$t->assign('facets', queryResultsCategories( $catIDs, $kwds, true, "HTML_UL_ATAG", "id_"));
 }
 
 // print_r($objects);
 
-$t->assign('facets', queryResultsCategories( $catIDs, $kwds, true, "HTML_UL_ATAG", "id_"));
-$t->assign('filters',getFilters($kwds,$catIDs));
-$t->assign('pager',themePager($page, $objResults['nPages']));
 $t->assign('objects', $objects);
-$t->assign('results_total', $objResults['nObjs']);
-$t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
-$t->assign('results_end', ($page * $objResults['pageSize'] <= $objResults['nObjs']) ? $page * $objResults['pageSize'] : $objResults['nObjs']);
+$t->assign('filters',getFilters($kwds,$catIDs));
 
 
 // Display template
