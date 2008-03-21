@@ -39,7 +39,10 @@
 			<heading id="Ivory" title="Ivory" implies="OffWhite"/>
 		</heading>
 		<heading id="Antler" title="Antler"/>
-		<heading id="Sinew" title="Sinew"/>
+		<heading id="Sinew" title="Sinew">
+			<excl value="Sinew shredder" />
+			<heading id="WhaleSinew" title="Whale Sinew" />
+		</heading>
 		<heading id="ShellMaterials" title="Shell and Shell-like Materials">
 			<heading id="Coral" title="Coral"/>
 			<heading id="MotherofPearl" title="Mother of Pearl">
@@ -205,7 +208,10 @@
 			<heading id="Aluminum" title="Aluminum">
 				<synonym value="Aluminium"/>
 			</heading>
-			<heading id="Brass" title="Brass"/>
+			<heading id="Brass" title="Brass">
+					<!-- a "gold weight" is an item usually made of brass -->
+				<synonym value="Gold weight"/>
+			</heading>
 			<heading id="Bronze" title="Bronze"/>
 			<heading id="Copper" title="Copper">
 				<heading id="CopperAlloy" title="Copper Alloy"/>
@@ -218,6 +224,8 @@
 					<synonym value="Gold-Plate"/>
 					<synonym value="Gold Plated"/>
 					<synonym value="Gold-Plated"/>
+					<!-- Gold weight is an item usually made of brass -->
+					<excl value="Gold weight"/>
 				</heading>
 			</heading>
 			<heading id="Iron" title="Iron">
