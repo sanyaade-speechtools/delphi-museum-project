@@ -1,7 +1,8 @@
 {include file="header.tpl"}
 
 <h1>Contact us</h1>
-<p>Please use this form to send us your questions and comments about this site.</p>
+<p>Please use this form to send us your questions and comments about this site.<br />
+Starred<span class="requiredFieldIndicator">*</span> items are required.</p>
 {if count($messages) > 0}
 <div class="formError">
 	<ul>
