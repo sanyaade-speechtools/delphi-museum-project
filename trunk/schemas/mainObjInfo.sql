@@ -165,6 +165,8 @@ CREATE TABLE `categories` (
   `n_matches_w_img` int(10) NOT NULL default 0,
   INDEX `cat_id_index` (`id`),
   INDEX `cat_name_index` (`name`),    -- Removed until need clarified
+	-- Enable full text (keyword) search on the name and description
+  FULLTEXT KEY `cat_fulltext_index` (`display_name`),
   CONSTRAINT `cat_ibfk_1` FOREIGN KEY (`parent_id`)
     REFERENCES `categories` (`id`),
   CONSTRAINT `cat_ibfk_2` FOREIGN KEY (`facet_id`)
@@ -223,6 +225,8 @@ CREATE TABLE `facets` (
   `name`           VARCHAR(255) NOT NULL,
 -- In UI, if not filtering. E.g.: "All People"
   `display_name`   VARCHAR(255) NOT NULL,
+  `description`    text NULL,
+  `notes`          text NULL,
   `num_categories` INT(10) UNSIGNED UNSIGNED NULL,
   `num_masks`      TINYINT(3) UNSIGNED NULL
 --  `root_cat_id`  INT(10) UNSIGNED NULL,
