@@ -117,7 +117,8 @@
 				<p>No description available for this item.</p>
 			{/if}
 			{if $showObjNum }
-			  <p>Object# {$objnum}</p>
+				<h3>Object Number</h3>
+				<p>{$objnum}</p>
 			{/if}
 			<h2 id="cats_label">Categories</h2>
 			{section name=facet loop=$facetinfo}

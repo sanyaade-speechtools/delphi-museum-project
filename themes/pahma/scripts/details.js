@@ -54,9 +54,9 @@ $(document).ready(function(){
 		
 		return false;
 	});
-	$('#detail_infoCol li.treeCat span').click(function(e) {
+	$('#detail_infoCol li.treeCat a').click(function(e) {
 		var o = $(this);
-		var id = o.attr("id");
+		var id = o.attr("href").split("_")[1];
 		//alert( "go to: " + id );
 		window.location.href = templateVarsJSON['wwwroot'] + '/results/?cats=' + id;
 		e.cancelBubble = true;
