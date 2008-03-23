@@ -1,6 +1,7 @@
 <?php
 
 require_once("../../libs/env.php");
+require_once("../../libs/utils.php");
 
 // If there is no id param in the url, send to object not found.
 if( isset($_POST['obj_id']) && isset($_POST['set_id'])) {
@@ -32,14 +33,13 @@ if ( $res->numRows() < 1 ){
 	die;
 }
 
-
 // Assign vars to resonse
 $response = array();
 while ($row = $res->fetchRow()) {
     $response['obj_id'] = $row['id'];
     $response['obj_num'] = $row['objnum'];
-    $response['objectName'] = $row['name'];
-	$response['objectDescription'] = $row['notes'];
+    $response['objectName'] = convert_smart_quotes($row['name']);
+	$response['objectDescription'] = convert_smart_quotes($row['notes']);
 	$response['obj_order'] = $row['order_num'];
 	$response['obj_img'] = $row['img_path'];
 	// HACK to accommodate the current zoomer tool
