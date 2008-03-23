@@ -13,14 +13,19 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 html{
 	font-size:93%;/*12px*/
 	color: #61615F;
-	background-image:url(../images/backgroundFade.png);
-	background-repeat: repeat-x;
-	background-color:#0a6696;
+	background-image: url(../images/sideShadows.png);
+	background-repeat:repeat-y;
+	background-position:50% 0pt;
+	background-color:#2D100F;
+}
+
+body{
+	background: url(../images/backgroundFade2.png) no-repeat scroll 50% 0pt;
 }
 
 h1{
 	font-size:182%;/*24px*/
-	color:#00a6e6;
+	color:#e8941a;
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
 	line-height:1.2em;
@@ -28,14 +33,14 @@ h1{
 
 h2{
 	font-size:138.5%;/*18px*/
-	color:#00a6e6;
+	color:#e8941a;
 	font-weight: normal;
 	margin: 10px 0px 10px 0px;
 }
 
 h3{
 	font-size:108%;/*14px*/
-	color:#000;
+	color:#61615F;
 	font-weight: bold;
 	margin: 5px 0px 5px 0px;
 }
@@ -72,6 +77,10 @@ ul li ul li{
 	list-style-image: url("../images/bulletArrow.gif");
 }
 
+p {
+	margin-bottom:10px;
+}
+
 /* ------------------------------------------------------- *
  * - Main Layout Divs   ---------------------------------- *
  * ------------------------------------------------------- */
@@ -79,22 +88,22 @@ ul li ul li{
 #contentContainer{
 	position: relative;
 	top:0px;
-	width:899px;
+	width:885px;
 	margin-left:auto;
 	margin-right:auto;
-	
+
 	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
-	min-height: 600px;
+	min-height: 775px;
 	height: auto !important;
-	height: 600px;
+	height: 775px;
 }
 
 #content{
 	position:relative;
 	background-color:#FFF;
-	width:820px;
+	width:785px;
 	margin:0px auto;
-	padding:5px 20px 75px 20px;
+	padding:0px 20px 75px 20px;
 	overflow: auto;
 }
 
@@ -111,31 +120,32 @@ ul li ul li{
 
 #headerBar{
 	position:relative;
-	background-repeat: no-repeat;
-	background-image: url(../images/logo.png);
-	height:89px;
+	height:110px;
+	width:885px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #headerBarLinks{
 	position:absolute;
 	bottom:5px;
-	right:26px;
+	right:41px;
 	color:#FFF;
 	font-size:93%;/*12px*/
 }
 
 #navBar{
-	background-image: url(../images/backgroundNavBar.png);
-	background-repeat: no-repeat;
 	position: relative;
-	width:100%;
+	width:885px;
 	height: 51px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #navBarLinks{
 	position:absolute;
-	left:25px;
-	top:10px;
+	left:45px;
+	top:7px;
 	width:100%;
 }
 
@@ -148,8 +158,8 @@ ul li ul li{
 
 #navBarSearchBox{
 	position:absolute;
-	right:25px;
-	top:15px;
+	right:41px;
+	top:12px;
 }
 
 /* ------------------------------------------------------- *
@@ -482,13 +492,13 @@ div.front_set a:active img {
  * ------------------------------------------------------- */
 
 #results_menuCol{
-        width:260px;
+        width:250px;
         float:left;
 }
 
 #results_resultsCol{
-        width:530px;
-        margin-left:275px;
+        width:520px;
+        margin-left:265px;
         text-align:center;
 
 }
@@ -497,9 +507,9 @@ div.front_set a:active img {
         background: #FFF;
         float:left;
         margin:10px 0px 0px 10px;
-        width:102px;
+        width:97px;
         height:135px;
-        padding:10px 10px 5px 5px;
+        padding:10px 10px 5px 10px;
         border: 1px solid #cdcdc9;
 }
 
@@ -559,25 +569,21 @@ div.front_set a:active img {
 #detail_imageCol {
 	float: left;
 	width: 410px;
-	margin-top: 30px;
-	padding: 0px;
+	margin-top: 15px;
 }
 
 
 #detail_infoCol {
 	float: right;
-	width:315px;
-	margin-top: 30px;
+	width:340px;
 	padding: 0px 10px 10px 0px;
 	background-color: #FFF;
-	line-height: 1.2em;
 }
 
 .detail_publicSetlet{
 	float:left;
 	margin-top:10px;
 	margin-left:10px;
-	padding:0px;
 	clear:both;
 }
 

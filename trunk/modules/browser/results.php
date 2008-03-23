@@ -32,7 +32,7 @@ if(empty($objResults['objects'])) {
 } else {
 	foreach($objResults['objects'] as $obj){
 		$imageOptions = array(	'img_path' => $obj['img_path'],
-								'size' => 80,
+								'size' => 90,
 								'img_ar' => $obj['aspectRatio'],
 								'linkURL' => $CFG->shortbase."/object/".$obj['id'],
 								'vAlign' => "center",
