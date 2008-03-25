@@ -85,12 +85,12 @@
 			{if $owner_id == $currentUser_id}
 			<div id="viewset_objectDetailsEdit" style="display:none;">
 				<form method="post" accept-charset="utf-8" id="viewset_objectDetailsEditForm">
-					<h3>Title</h3>
+					<h3>My name for object</h3>
 					<h2 class="viewset_objectName">
 						<input type="text" name="objectName" id="viewset_objectNameInput" class="viewset_titleInput" value=""/>
 					</h2>
 					
-					<h3>Description</h3>
+					<h3>My notes for object</h3>
 					<div class="viewset_objectDescription">
 						<textarea name="objectDesc" id="viewset_objectDescTextarea" class="viewset_descTextarea"></textarea>
 					</div>
@@ -102,7 +102,7 @@
 			{/if}
 			<div id="viewset_objectDetailLinks">
 				{if $owner_id == $currentUser_id}
-					<a href="#" id="viewset_objectEditLink" class="smaller">Edit object details</a><br/>
+					<a href="#" id="viewset_objectEditLink" class="smaller">Edit my name and notes for object</a><br/>
 					<a href="#" id="viewset_objectDeleteLink" class="smaller">Remove object from this set</a><br/>
 				{/if}
 				<a href="#" id="viewset_objectDetailLink" class="smaller">View object details</a>
