@@ -91,5 +91,11 @@ associated with them. The users can still browse through all of the collection r
 by selecting the "Include Items without Images"
 option. 
 </p>
+
+<h3>Still have questions?</h3>
+<p>
+If you are having problems or
+have questions or comments, please let us know using the <a href="/delphi/modules/about/contact.php">contact
+page</a>. Thanks!</p>
 </div>
 {include file="footer.tpl"}
