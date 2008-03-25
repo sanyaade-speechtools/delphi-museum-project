@@ -45,7 +45,7 @@ Delphi is an open-source project created under the <a href="http://www.opensourc
 and collaborate, see the <a href="http://code.google.com/p/delphi-museum-project/">project page</a>.
 </p>
 
-<h4>Acknowledgements:</h4>
+<h3>Acknowledgements:</h3>
 
 <p>Thanks to the original Delphi team: Olga Amuzinskaya, Adrienne Hilgert, Jon Lesser, Patrick Schmitz, Jerry Yu,
 for all their hard work and for realizing the original vision, and to <a href="http://www.ischool.berkeley.edu/~ray/">Professor
