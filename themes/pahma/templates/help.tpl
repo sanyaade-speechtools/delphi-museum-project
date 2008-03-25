@@ -1,86 +1,95 @@
 {include file="header.tpl"}
 
-<h2>Welcome to the Delphi Faceted Browser</h2>
-<p>Facets are an increasingly popular way to organize objects in a collection and to
-help a user to learn "what's there." We believe that they provide a superior
-experience of exploring and searching through diverse collections and help the
-visitor notice categories and relationships between objects that may not have been
-obvious otherwise. Please read this Help to learn about and begin using the
-Delphi Faceted Browser.</p>
-<h2>What is a facet?</h2>
+<div id="contentNarrow">
+<h2>Welcome to the Delphi Collections Browser</h2>
+<p>The Delphi faceted browser provides a simple way to navigate through museum
+collections. The browser view changes dynamically to show only categories
+relevant to the area of the collection that is being explored. This makes the
+browsing experience more visually streamlined and helps the visitor discover
+categories and relationships between objects that may not otherwise be obvious.
+Clicking on any category refines the search. The category listing on the left is
+derived automatically from an underlying ontology that organizes concepts
+associated with the collections into distinct <em>facets</em> such as location,
+culture, materials, etc.</p>
+<h3>What is a facet?</h3>
 <p> 
-A facet is a set of attributes that describe an object. Every item in the collection
-can have a variety of attributes associated with it, depending upon how much is known
-about the object. For example, a cup could have a <b>Material</b> facet (plastic,
-metal, glass), a <b>Site or Provenience</b> facet (where it was found or made),
-a <b>Technique</b> facet (how it was made), and a few other facets that describe it.</p>
-<p>
-Here are the examples of some other facets a user may find in our Delphi
-Faceted Browser:<br />
-Example: A <b>Japanese sword</b> is described by the following facets:
-"Use or Context," "Site or Provenience," "Material," "Technique, Design or Decoration,"
-and "Color."
-</p>
-<h2>Working with the Delphi Faceted Browser.</h2>
-<p>
-How can a user find an item that has several properties which are described by
-different categories? Begin by exploring any facet, such as "Material" or
-"Use or Context." It does not matter in which order a user proceeds, because she will always
-arrive at the same destination by exploring the same facets in different order. We present
-the results of each step of a search on the right side of the browser screen,
-while helping users to explore, mark, expand, or narrow down the categories in the Faceted
-Browser on the left side of the screen. 
+A facet is a set of attributes that describe an object from a distinct and
+independent perspective. A Location facet, for example, describes all the places
+associated with objects in the collections, and organizes these places for easy
+understanding.&nbsp; The PAHMA collections are described using facets that
+address the general questions of&nbsp; 'who?' (<strong>Culture</strong>),
+'what?' (<strong>Use or Context</strong>, and <strong>Materials)</strong>,
+'where?' (<strong>Location</strong>), 'why?' (<strong>Use or Context</strong>)
+and 'how?' (<strong>Technique, Design or Decoration</strong>, and <strong>Color</strong>).&nbsp;
+Separating these from one another simplifies the
+overall structure and makes it easier and more powerful to use for searching and
+browsing.</p>
+<h3>Where to begin?</h3>
+<p>There are several ways to use the Delphi browser, depending on the task at
+hand. You can dive right in, enter a basic keyword search, or browse the full
+set of categories that describe the collections. 
 </p>
 
-<p><b>Select a first facet.</b> Let's begin with the "Material" facet.
-Click onto the <b> plus sign</b> next to the "Material" facet link on
-the left side of the screen. A list of possible categories that describe materials will
-be presented. Select any of the facets inside of the "Material," such as "metal," by clicking
-on it in order to apply it to the search results. The font of the selected facet
-will become bold. A user will also see that a selection of items in the results area
-got smaller and the only remaining items are those that have their "Material" facet equal
-to "metal." 
-</p>
-<p>
-<b>Select any other facet.</b> For example, in order to narrow down these results to
-a specific color, such as red, click on "Red." Voila! The only remaining items in
-the results section are those that match all of the criteria ("Material" is "metal"
-and the "Color" is "red") that have been selected by exploring and clicking on
-to the Delphi Faceted Browser facets on the left. 
-</p>
-<p>
-<b>Modifying search results.</b> A user can select any number of other facets. All he has to
-do in order to modify his search is to either check or un-check some
-of the facets by clicking on the small cross icon next to the selected facets
-listed at the top of the page. Selecting more facets will further constrain search results,
-while un-checking the facets will enlarge the number of results.
+<p>If you just want to browse some interesting objects, you can click on any of
+the objects or featured sets on the home page. These will dive right into the
+collections and let you explore. 
 </p>
 
-<h2>Dynamically changing browser view.</h2>
-<p>The Delphi Faceted Browser will only show the categories that are relevant to the
-part of the set of the collection objects that you are recurrently viewing. The Browser
-will <em>hide</em> facets that are not relevant to the items shown in the results area
-on your right. This makes the browsing experience more visually streamlined
-and simplifies navigation.
+<p>If you have a particular topic in mind, you can type a keyword (or keywords)
+into the search box that is in the banner of every page (use quotes to specify
+an exact phrase). This will search the collections for names and descriptions
+that include the keyword(s) you enter. Delphi will then display the results and
+also show you the categories in each facet, that apply to the results of your
+search. You can click on any category in the facet listing to refine your
+search. The numbers after each category indicate how many objects you will see
+if you refine the search with that category, and so can give you a quick
+overview of how the results are distributed by location, culture, etc.&nbsp; 
 </p>
 
-<h2>Collection objects without images</h2>
+<p>If you want to explore the collections by topic, click on the
+&quot;Browse&quot; link in the banner and you can explore the full ontology,
+facet by facet. Clicking on the plus icon to the left of a category will expand
+to show sub-categories. As on the results page, numbers after each category
+indicate how many objects are associated with that category. Clicking on any
+category will search the collections for all objects associated with that
+category. 
+</p>
+
+<p>Click on the image or name for any object on the results page to see the
+details for that object. 
+</p>
+
+<h3>Viewing object details</h3>
+<p>When you are on the details page for any object, you will see a larger image
+(for those objects that have images), and more information about the object.
+Click on the image to zoom in and explore the details of the object. If there
+are multiple views, this will be indicated below the zoom window, and you can
+click on any of these to switch views for zooming.&nbsp; 
+</p>
+
+<p>The details view also lists all the categories, by facet, associated with
+that object. - you can click on any of these to &quot;pivot&quot;, or explore
+the collections on that subject. 
+</p>
+
+<p>The details page lets you add an object to a <em>set</em>, allowing you to
+build your own personal collections. These may be themed, or may just be favorite
+objects you've come across - it's up to you. If you want, you can even set your
+own name and notes for each object to create a story, and then share your sets
+with your friends. 
+</p>
+
+<p>If you want to add your own descriptive keywords to an object, click the Tags
+button and then add yours. If you want to add more than one, enter them one at a
+time.&nbsp; 
+</p>
+
+<h3>Collections objects without images</h3>
 <p>
-The Hearst Museum has many items in their collection which do not (yet) have images
+The Hearst Museum collections include many items that do not (yet) have images
 associated with them. The users can still browse through all of the collection records
 by selecting the "Include Items without Images"
-option on the right top portion of the screen, in the area just
-above the results set. 
+option. 
 </p>
-
-<p>
-We hope that you will have fun and find many interesting items while exploring the Museum's collections! 
-</p>
-
-Thank you,
-<br/>
-Delphi team 
-<br/><br/>
-May 9, 2007
-
+</div>
 {include file="footer.tpl"}
