@@ -30,6 +30,12 @@
 				<input type="submit" value="Add"/>
 			</div>
 		</form>
+		<br/><br/>
+		{if $toggleImages}
+			<a href="#" id="toggleImagesLink">Include objects without images</a>
+		{else}
+			<a href="#" id="toggleImagesLink">Exclude objects without images</a>
+		{/if}
 	</div>
 	{/if}
 </div>

@@ -42,7 +42,9 @@ while ($row = $res->fetchRow()) {
     $t->assign('id', $row['id']);
     $t->assign('objnum', $row['objnum']);
     $t->assign('name', $row['name']);
-		$t->assign('description', $row['description']);
+	$t->assign('description', $row['description']);
+	if($row['img_path']){
+		$t->assign('noImage', false);
 		// HACK - to accomodate the current zoomer tool
 		// dirs for filenames have spaces replaced with underscores for ZOOMs
 		$lastSlash = strrpos($row['img_path'], "/")+1;
@@ -53,7 +55,10 @@ while ($row = $res->fetchRow()) {
 			$path_clean = substr($row['img_path'], 0, $lastSlash) 
 								. str_replace(" ", "_", substr($row['img_path'], $lastSlash, -4));
 		}
-		$t->assign('zoomDir', $CFG->image_zoom."/".$path_clean);
+		$t->assign('zoomDir', $CFG->image_zoom."/".$path_clean);		
+	} else {
+		$t->assign('noImage', true);
+	}
 }
 
 // Free the result

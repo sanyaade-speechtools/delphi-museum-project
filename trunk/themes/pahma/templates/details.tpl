@@ -9,19 +9,23 @@
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
 		<div id="detail_imageCol">
 			<div id="detail_mediaBox">
-				<div id="detail_image">
-					Flash zoomer goes here.
-				</div>
-				<div id="detail_thumbnails">
-					{if $hasAdditionalMedia}
-						<h3>Additional Media</h3>
-						{section name=item loop=$additionalMediaItems}
-							<div class="detail_thumbnail">
-								{$additionalMediaItems[item].thumb}
-							</div>
-						{/section}
-					{/if}
-				</div>
+				{if $noImage}
+					<img src="{$themeroot}/images/noObjectImage.png" alt="No image"/>
+				{else}
+					<div id="detail_image">
+						Flash zoomer goes here.
+					</div>
+					<div id="detail_thumbnails">
+						{if $hasAdditionalMedia}
+							<h3>Additional Media</h3>
+							{section name=item loop=$additionalMediaItems}
+								<div class="detail_thumbnail">
+									{$additionalMediaItems[item].thumb}
+								</div>
+							{/section}
+						{/if}
+					</div>
+				{/if}
 			</div>
 			<div id="detail_tabBox">
 	            <ul>
