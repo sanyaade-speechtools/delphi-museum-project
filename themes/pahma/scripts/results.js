@@ -44,6 +44,12 @@ $(document).ready(function(){
 		window.location = generateURL();
 		return false;
 	});
+	// Bind link to toggle images
+	$("#toggleImagesLink").click(function(){
+		if(images > 0){images = 0;}
+		else{images = 1;}
+		window.location = generateURL();
+	});
 	
 });
 

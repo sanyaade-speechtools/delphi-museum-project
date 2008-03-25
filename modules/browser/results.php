@@ -31,6 +31,7 @@ if(empty($objResults['objects'])) {
 	$t->assign('results_end', 0);
 } else {
 	foreach($objResults['objects'] as $obj){
+		($obj['img_path']) ? $img_path = $obj['img_path'] : $obj['img_path'] = "noObjectImage";
 		$imageOptions = array(	'img_path' => $obj['img_path'],
 								'size' => 90,
 								'img_ar' => $obj['aspectRatio'],
@@ -47,6 +48,7 @@ if(empty($objResults['objects'])) {
 	$t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
 	$t->assign('results_end', ($page * $objResults['pageSize'] <= $objResults['nObjs']) ? $page * $objResults['pageSize'] : $objResults['nObjs']);
 	$t->assign('facets', queryResultsCategories( $catIDs, $kwds, true, "HTML_UL_ATAG", "id_"));
+	$t->assign('toggleImages', $images);
 }
 
 // print_r($objects);

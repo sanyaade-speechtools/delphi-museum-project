@@ -119,7 +119,7 @@ function outputSimpleImage($args) {
 		$pathToImg = "$CFG->wwwroot/themes/$CFG->theme/images/sets_zeroObjects.gif";
 	}
 	if($args['img_path'] == "noObjectImage"){
-		$pathToImg = "$CFG->wwwroot/themes/$CFG->theme/images/noObjectImage_thumb.gif";
+		$pathToImg = "$CFG->wwwroot/themes/$CFG->theme/images/noObjectImage_thumb.png";
 	}
 
 	$imageOutput = "<div style='width:".$args['size']."px;height:".$args['size']."px;position:relative;'>";
