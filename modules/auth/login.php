@@ -8,6 +8,9 @@ require_once("../../libs/env.php");
  * if so, checks authenticity in database and
  * creates session.
  */
+
+$t->assign('contactEmail',$CFG->contactEmail);
+
 if(isset($_POST['sublogin'])){
 	
    /* Check that all fields were typed in */
