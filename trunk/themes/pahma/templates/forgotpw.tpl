@@ -10,7 +10,7 @@
 	
 	<label for="user">Username <span class="requiredFieldIndicator">*</span></label>
 	<input type="text" name="user" maxlength="40" />
-	<div id="buttonRow">
+	<div class="buttonRow">
 		<input type="submit" name="subreq" value="Submit"/>
 	</div>
 </form>
