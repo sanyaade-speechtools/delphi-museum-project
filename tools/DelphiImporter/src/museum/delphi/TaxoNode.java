@@ -3,8 +3,6 @@ package museum.delphi;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.w3c.dom.Node;
-import java.util.ArrayList;
-import org.w3c.dom.Node;
 
 public class TaxoNode {
 	static int nextID = 1;		// used to synthesize ID values
