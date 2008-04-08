@@ -5,7 +5,7 @@
 -- The DBInfo table has a single row and is just used to hold system-wide
 -- parameters such as the sizes of alternate image sizes, the version of this
 -- DB schema, etc.
-DROP TABLE IF EXISTS DBInfo \p;
+DROP TABLE IF EXISTS DBInfo;
 CREATE TABLE DBInfo (
   `version`           VARCHAR(16) NOT NULL,
   -- TFacetMaskWidth must agree with the FacetMaskCache definition
@@ -28,14 +28,14 @@ CREATE TABLE DBInfo (
 SHOW WARNINGS;
 
 INSERT INTO DBInfo( version, creation_time ) 
-  VALUES( '0.2 alpha', now() ) \p;
+  VALUES( '0.2 alpha', now() );
 SHOW WARNINGS;
 
 -- Define the main object table
 -- The image info is denormalized for simplicity and performance,
 -- based upon the initial system requirements. Must also
 -- provide additional images with a proper normalized table.
-DROP TABLE IF EXISTS `objects` \p;
+DROP TABLE IF EXISTS `objects`;
 CREATE TABLE `objects` (
   `id`            INT(10) UNSIGNED PRIMARY KEY NOT NULL,
   `objnum`        VARCHAR(80) NOT NULL,
@@ -64,7 +64,7 @@ SHOW WARNINGS;
 -- with different types.
 -- For most objects, the default image is denormalized into the objects table
 -- to speed up the generation of results views.
-DROP TABLE IF EXISTS `media` \p;
+DROP TABLE IF EXISTS `media`;
 CREATE TABLE `media` (
   `id`            INT(10) UNSIGNED PRIMARY KEY auto_increment NOT NULL,
   `obj_id`        INT(10) UNSIGNED NOT NULL,
@@ -94,9 +94,9 @@ CREATE TABLE `media` (
 )ENGINE=MyIsam;
 SHOW WARNINGS;
 
---Sets allow users (or the system) to group together items for
+-- Sets allow users (or the system) to group together items for
 -- a particular reason (or simply as favorites).
-DROP TABLE IF EXISTS `sets` \p;
+DROP TABLE IF EXISTS `sets`;
 CREATE TABLE `sets` (
   `id`             int(10) unsigned PRIMARY KEY NOT NULL auto_increment,
   `name`           VARCHAR(255) NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `sets` (
 )ENGINE=MyIsam;
 SHOW WARNINGS;
 
-DROP TABLE IF EXISTS `set_objs` \p;
+DROP TABLE IF EXISTS `set_objs`;
 CREATE TABLE `set_objs` (
   `set_id`        int(10) unsigned NOT NULL,
   `obj_id`        int(10) unsigned NOT NULL,
@@ -141,7 +141,7 @@ SHOW WARNINGS;
  * condition is met, and then the category acts as a boolean attribute.
  * TODO add creation and modification times.
  */
-DROP TABLE IF EXISTS `categories` \p;
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `id`              INT(10) UNSIGNED PRIMARY KEY NOT NULL auto_increment,
   -- May not have a parent if facet root ; otherwise parent is non-null and >0.
@@ -178,7 +178,7 @@ SHOW WARNINGS;
  * Provides all the hooks (matching tokens) for Categories.
  * TODO add creation and modification times.
  */
-DROP TABLE IF EXISTS `hooks` \p;
+DROP TABLE IF EXISTS `hooks`;
 CREATE TABLE `hooks` (
   `id`       INT(10) UNSIGNED PRIMARY KEY NOT NULL auto_increment,
   `cat_id`   INT(10) UNSIGNED NULL,
@@ -194,7 +194,7 @@ SHOW WARNINGS;
  * Provides all the exclusions (countraindications) for Categories.
  * TODO add creation and modification times.
  */
-DROP TABLE IF EXISTS `exclusions` \p;
+DROP TABLE IF EXISTS `exclusions`;
 CREATE TABLE `exclusions` (
   `id`       INT(10) UNSIGNED PRIMARY KEY NOT NULL auto_increment,
   `cat_id`   INT(10) UNSIGNED NULL,
@@ -219,7 +219,7 @@ SHOW WARNINGS;
  * imported at index time. The column sizes for the maskIndex and maskSize
  * must match the optimized definitions in the FacetCache table.
  */
-DROP TABLE IF EXISTS `facets` \p;
+DROP TABLE IF EXISTS `facets`;
 CREATE TABLE `facets` (
   `id`             INT(10) UNSIGNED PRIMARY KEY NOT NULL auto_increment,
   `name`           VARCHAR(255) NOT NULL,
@@ -265,7 +265,7 @@ CREATE TABLE NewPhotoDB.FacetCaches (
  * Provides associations of categorizations of objects.
  * TODO add creation and modification times.
  */
-DROP TABLE IF EXISTS `obj_cats` \p;
+DROP TABLE IF EXISTS `obj_cats`;
 CREATE TABLE `obj_cats` (
   `obj_id`      int(10) unsigned NOT NULL,
   `cat_id`      int(10) unsigned NOT NULL,
@@ -285,7 +285,7 @@ SHOW WARNINGS;
  * Defines the tag information
  * TODO add creation and modification times.
  */
-DROP TABLE IF EXISTS `tags` \p;
+DROP TABLE IF EXISTS `tags`;
 CREATE TABLE `tags` (
   `tag_id` int(11) NOT NULL auto_increment,
   `tag_name` varchar(50) NOT NULL,
@@ -299,7 +299,7 @@ CREATE TABLE `tags` (
  * Provides associations of tags to objects, by user.
  * TODO add creation time.
  */
-DROP TABLE IF EXISTS `tag_user_object` \p;
+DROP TABLE IF EXISTS `tag_user_object`;
 CREATE TABLE `tag_user_object` (
   `tag_id` int(11) NOT NULL,
   `tag_user_id` int(11) NOT NULL,
