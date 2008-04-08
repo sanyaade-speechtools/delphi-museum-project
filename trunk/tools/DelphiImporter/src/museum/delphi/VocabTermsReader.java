@@ -53,7 +53,8 @@ public class VocabTermsReader {
 		int dummyFacetID = 0;
 		try {
 			// Create dummy facet to add everything to
-			Facet facet = new Facet( "default", "none", dummyFacetID, false, false, null, null, "None" );
+			Facet facet = new Facet( "default", "none", dummyFacetID, null, null, 
+															false, false, null, null, "None" );
 			hashTree.AddFacet(facet);
 			boolean fFirstLine = true;
 			int lastTermMasterID = -1;
