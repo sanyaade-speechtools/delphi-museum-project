@@ -24,6 +24,7 @@ public class DoubleHashTree {
 	// Note that the tree implied by TaxoNode only allows 1 root.
 	// However, multiple trees can be in a single hashMap.
 	private class FacetInfo {
+		// TODO the nameMap should take a CollationKey, not a String
 		private HashMap<String, TaxoNode>  nameMap = null;
 		private HashMap<Integer, TaxoNode> idMap = null;
 		private Facet                      facet = null;
@@ -35,6 +36,7 @@ public class DoubleHashTree {
 		}
 
 		protected void AddTaxoNodeToMap( TaxoNode node, String name, Integer id ) {
+			// TODO This should be getting a CollationKey, not mapping to lower
 			String nameLwr = name.toLowerCase();
 			if( nameMap.get( nameLwr ) == null ) {
 				if( idMap.get( id ) != null )
@@ -47,6 +49,7 @@ public class DoubleHashTree {
 		}
 
 		protected void AddNodeToNameMap( TaxoNode node, String name ) {
+			// TODO This should be getting a CollationKey, not mapping to lower
 			String nameLwr = name.toLowerCase();
 			if( nameMap.get( nameLwr ) == null ) {
 				nameMap.put( nameLwr, node );
@@ -112,11 +115,13 @@ public class DoubleHashTree {
 
 	public TaxoNode FindNodeByName( int facetID, String name ) {
 		FacetInfo facet = facetsByID.get(facetID);
+		// TODO This should be getting a CollationKey, not mapping to lower
 		return ( facet == null )? null:facet.nameMap.get(name.toLowerCase());
 	}
 
 	public TaxoNode FindNodeByName( String facetName, String name ) {
 		FacetInfo facet = facetsByName.get(facetName);
+		// TODO This should be getting a CollationKey, not mapping to lower
 		return ( facet == null )? null:facet.nameMap.get(name.toLowerCase());
 	}
 
@@ -314,10 +319,25 @@ public class DoubleHashTree {
 			    String selectMode = taxoRoot.getAttribute( selectModeName );
 			    boolean single = ((selectMode.length() > 0 )			// not empty string - is there
 		    					&& selectMode.equalsIgnoreCase("single"));
+			    NodeList kids = taxoRoot.getElementsByTagName("description");
+			    String description = null;
+			    if( kids.getLength() > 0 ) {
+				    Element descEl = (Element)kids.item(0);
+			    	description = StringUtils.outputXMLStringForNode( descEl ).replaceAll(
+			    							"</?description>", "");
+			    }
+			    kids = taxoRoot.getElementsByTagName("notes");
+			    String notes = null;
+			    if( kids.getLength() > 0 ) {
+				    Element notesEl = (Element)kids.item(0);
+			    	notes = StringUtils.outputXMLStringForNode( notesEl ).replaceAll(
+							"</?notes>", "");
+			    }
 			    // Facet facet = new Facet( name, displayName, -1, infer, single,
 			    // Facets should never be inferred from the children, IMO
 			    int facetID = (iTax+1)*nCatsPerFacetMax;
-			    Facet facet = new Facet( name, displayName, facetID, false, single,
+			    Facet facet = new Facet( name, displayName, facetID,
+			    						description, notes, false, single,
 			    						  sort, rootHTitle, supports );
 			    FacetInfo fInfo = new FacetInfo(facet);
 			    facetsByName.put(name, fInfo);
@@ -331,6 +351,17 @@ public class DoubleHashTree {
 		}
 	} // PopulateFromFacetMap
 
+	/**
+	 * Parses and fills out the subtree under the passed node. Called initially with a
+	 * taxonomy root, and then recurses for all heading elements.
+	 * @param currEl	The current local root in the tree
+	 * @param parent	The context. A Facet for the root case.
+	 * @param facetID	The ID of the current facet
+	 * @param nextID	The next available id in this facet
+	 * @param prefices	The accumulated prefix strings to apply
+	 * @param suffices	The accumulated suffix strings to apply
+	 * @return			The number of headings added (and so the # of IDs used).
+	 */
 	protected int AddCategoriesFromNode( Element currEl, TaxoNode parent, int facetID,
 										int nextID, ArrayList<String> prefices, ArrayList<String> suffices ) {
 		final String	categoryElName = "heading";
@@ -347,16 +378,18 @@ public class DoubleHashTree {
 		final String	reduceElName = "reduce";
 		final String	noiseTokenElName = "noiseToken";
 		final String	tokenElName = "token";
+		// Facets take descriptions and notes, and we can quietly ignore these here.
+		final String	descriptionElName = "description";
+		final String	notesElName = "notes";
 		int nAdded = 0;
 		ArrayList<String> local_prefices = null;
 		ArrayList<String> local_suffices = null;
 		FacetInfo		currFacet;
 
-		//TaxoNode node = new TaxoNode( taxoRoot., id, parentNode );
 		try {
 			if(( currFacet = facetsByID.get(facetID)) == null )
 				throw new RuntimeException( "AddCatsFromNode no such facet: "+facetID);
-			// First, get the taxonomy children of the root.
+			// First, get the children of the the current node.
 			NodeList childNodes = currEl.getChildNodes();
 			// For each taxonomy element, need to recurse to get all the
 			// nodes in the taxonomy tree
@@ -370,7 +403,8 @@ public class DoubleHashTree {
 				if( node.getNodeType() != Node.ELEMENT_NODE )
 					continue;
 			    Element childEl = (Element)node;
-			    if( childEl.getNodeName().equals( categoryElName ) ) {
+			    String nodeName = childEl.getNodeName();
+			    if( nodeName.equals( categoryElName ) ) {
 				    String name = childEl.getAttribute( idName );
 				    String displayName = childEl.getAttribute( displayNameName );
 				    String inferredByChildren = childEl.getAttribute( inferName );
@@ -451,12 +485,12 @@ public class DoubleHashTree {
 				    nAdded += AddCategoriesFromNode( childEl, newNode, facetID, nextID+nAdded,
 				    									local_prefices, local_suffices );
 			    }
-			    else if( childEl.getNodeName().equals( impliesElName ) ) {
+			    else if( nodeName.equals( impliesElName ) ) {
 			    	String path = childEl.getAttribute( "value" );
 			    	if( path != null )
 			    		parent.AddImpliedNode( path );
 			    }
-			    else if( childEl.getNodeName().equals( synonymElName ) ) {
+			    else if( nodeName.equals( synonymElName ) ) {
 			    	String synName = childEl.getAttribute( "value" );
 			    	if( synName != null ) {
 			    		// TODO Need to put in termID if we have it???
@@ -465,7 +499,7 @@ public class DoubleHashTree {
 			    		currFacet.AddNodeToNameMap( parent, synName  );
 			    	}
 			    }
-			    else if( childEl.getNodeName().equals( exclElName ) ) {
+			    else if( nodeName.equals( exclElName ) ) {
 			    	String exclName = childEl.getAttribute( "value" );
 			    	if( exclName != null ) {
 			    		// TODO Need to put in termID if we have it???
@@ -474,7 +508,7 @@ public class DoubleHashTree {
 			    		currFacet.AddNodeToNameMap( parent, exclName  );
 			    	}
 			    }
-			    else if( childEl.getNodeName().equals( prefixElName ) ) {
+			    else if( nodeName.equals( prefixElName ) ) {
 			    	String prefixName = childEl.getAttribute( "value" );
 			    	if( prefixName != null ) {
 			    		if( local_prefices == null ) {
@@ -485,7 +519,7 @@ public class DoubleHashTree {
 			    		local_prefices.add(prefixName);
 			    	}
 			    }
-			    else if( childEl.getNodeName().equals( suffixElName ) ) {
+			    else if( nodeName.equals( suffixElName ) ) {
 			    	String suffixName = childEl.getAttribute( "value" );
 			    	if( suffixName != null ) {
 			    		if( local_suffices == null ) {
@@ -497,21 +531,21 @@ public class DoubleHashTree {
 			    	}
 			    }
 			    // Handle the reduce tokens
-			    else if( childEl.getNodeName().equals( reduceElName ) ) {
+			    else if( nodeName.equals( reduceElName ) ) {
 			    	String fromStr = childEl.getAttribute( "from" );
 			    	String toStr = childEl.getAttribute( "to" );
 			    	if( fromStr != null && toStr != null) {
 			    		debug( 1, "Ignoring reduce from:["+fromStr+"] to:["+toStr+"] (NYI)");
 			    	}
 			    }
-			    // Handle the reduce tokens
-			    else if( childEl.getNodeName().equals( noiseTokenElName ) ) {
+			    // Handle the noise tokens
+			    else if( nodeName.equals( noiseTokenElName ) ) {
 			    	String noiseToken = childEl.getAttribute( "value" );
 			    	if( noiseToken != null) {
 			    		debug( 1, "Ignoring noiseToken:["+noiseToken+"] (NYI)");
 			    	}
 			    }
-			    else if( childEl.getNodeName().equals( tokenElName ) ) {
+			    else if( nodeName.equals( tokenElName ) ) {
 			    	String tokenName = childEl.getAttribute( "value" );
 				    String combineStr = childEl.getAttribute( combineName );
 				    boolean combineWithPrefices = ((combineStr.length() <= 0 )			// not empty string - is there
@@ -536,7 +570,8 @@ public class DoubleHashTree {
 			    		}
 			    	}
 			    }
-			    else
+			    // Ignore description and notes, but complain about all others.
+			    else if( !nodeName.equals( descriptionElName ) && !nodeName.equals( notesElName ) )
 					System.err.println("Unexpected child element: " + childEl.getNodeName()
 							+ " under node: " + parent.name );
 			}
