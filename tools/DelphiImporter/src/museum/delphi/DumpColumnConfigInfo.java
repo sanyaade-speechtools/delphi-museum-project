@@ -8,7 +8,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 public class DumpColumnConfigInfo {
-	private static String columnSeparator = null;
+	private static int columnSeparator = -1;
 	private static HashMap<String, DumpColumnConfigInfo> columnInfoMap = null;
 
 	protected String name;
@@ -17,6 +17,11 @@ public class DumpColumnConfigInfo {
 	protected ArrayList<String> noiseTokens;
 	protected ArrayList<Pair<String,String>> reduceRules;
 	protected ArrayList<Pair<String,Float>> facetsToMine;
+	// TODO Add array of integers that indicate how to build description.
+	// TODO Value <0 means do not use column, and value >=0 indicates order for descr.
+
+	// TODO Add variables that store the ID column index, the ObjNum index,
+	// and the Name/Title index. Provide setter/getters.
 
 
 	protected DumpColumnConfigInfo( String newName, String newComment ) {
@@ -24,7 +29,7 @@ public class DumpColumnConfigInfo {
 		comment = newComment;
 	}
 
-	public static String getColumnSeparator() {
+	public static int getColumnSeparator() {
 		return columnSeparator;
 	}
 
@@ -34,7 +39,7 @@ public class DumpColumnConfigInfo {
 		DumpColumnConfigInfo returnVal =
 			columnInfoMap.get(forColumn);
 		if( returnVal == null)
-			throw new RuntimeException("DumpColumnConfigInfo."+detail+": Bad column name.");
+			throw new RuntimeException("DumpColumnConfigInfo."+detail+": Bad column name:"+forColumn);
 		return returnVal;
 	}
 
@@ -98,9 +103,10 @@ public class DumpColumnConfigInfo {
 			if( colSepNodes.getLength() <= 0 )
 				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: missing colSep node.");
 		    Element colSepNode = (Element)colSepNodes.item(0);
-			columnSeparator = colSepNode.getAttribute("value");
-			if( columnSeparator.length() <= 0 )
-				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: bad colSep node.");
+			String colSepValue = colSepNode.getAttribute("value");
+			if( colSepValue.length() != 1 )
+				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: bad colSep node (must be 1 char).");
+			columnSeparator = colSepValue.charAt(0);
 			// Next, get the info children of the root.
 			NodeList colNodes = document.getElementsByTagName( "colInfo" );
 			// For each info element, need to get all the fields.
