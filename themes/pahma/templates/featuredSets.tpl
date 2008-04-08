@@ -5,7 +5,7 @@
 -->
 <div id="contentNarrow">
 	<h1>Featured Sets</h1>
-	<p>Featured sets are selected by the staff at the museum. Featured sets are selected by the staff at the museum.</p>
+	<p>Featured sets are selected by the staff at the museum.</p>
 	{section name=set loop=$sets}
 		<div class="setlet_Large smaller">
 			<div class="setletThumb_Large">
