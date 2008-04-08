@@ -10,10 +10,9 @@ import java.util.HashMap;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
 import java.awt.Point;
 import javax.swing.*;
+import javax.swing.filechooser.*;
 import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -39,8 +38,6 @@ import org.w3c.dom.Node;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import javax.swing.JTextField;
-import javax.swing.JOptionPane;
 
 // For image resizing.
 /*
@@ -67,6 +64,8 @@ public class MainApp {
 	//private JMenuItem saveMenuItem = null;
 	private JMenuItem exitMenuItem = null;
 	private JFileChooser chooser = null;
+	private FileNameExtensionFilter xmlfilter = null;
+	private FileNameExtensionFilter sqlfilter = null;
 	private VocabTermsReader vocabTermsReader = null;  //  @jve:decl-index=0:
 	private MetaDataReader metaDataReader = null;  //  @jve:decl-index=0:
 	private ImagePathsReader imagePathsReader = null;  //  @jve:decl-index=0:
@@ -201,7 +200,9 @@ public class MainApp {
 			public void run() {
 				MainApp application = new MainApp();
 				//application.chooser = new JFileChooser( new File("D:/PAHMA/VocabDump3b.txt"));
-				application.chooser = new JFileChooser( new File("D:/PAHMA/"));
+				application.chooser = new JFileChooser( new File("C:/Patrick/Delphi"));
+				application.xmlfilter = new FileNameExtensionFilter( "XML files", "xml" );
+				application.sqlfilter = new FileNameExtensionFilter( "SQL files", "sql" );
 				application.getJFrame().setVisible(true);
 			}
 		});
@@ -557,6 +558,7 @@ public class MainApp {
 	private void loadImagePaths() {
 		debug(1,"Loading Image paths...");
 		try {
+			chooser.setFileFilter(null);
 		    int returnVal = chooser.showOpenDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
@@ -651,9 +653,11 @@ public class MainApp {
 			// Now it is time to write the results. User can cancel if not interested.
 			String outFileName = imagePathsReader.getInFile();
 			chooser.setSelectedFile(new File( outFileName ));
+			chooser.setFileFilter(sqlfilter);
 		    int returnVal = chooser.showSaveDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
+		    	// TODO Check for existing file overwrite
 		        setStatus("Saving Updated Image Info to file: " + filename);
 		        imagePathsReader.writeContents(filename);
 		    }
@@ -663,53 +667,6 @@ public class MainApp {
             e.printStackTrace();
 		}
 	}
-
-	/* OBSOLETE
-	private JMenuItem getSaveObjectSQLUpdatesMenuItem() {
-		if (saveObjectSQLUpdatesMenuItem == null) {
-			saveObjectSQLUpdatesMenuItem = new JMenuItem();
-			saveObjectSQLUpdatesMenuItem.setText("Save Object Updates SQL...");
-			saveObjectSQLUpdatesMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					saveObjectSQLUpdates();
-				}
-			});
-		}
-		saveObjectSQLUpdatesMenuItem.setEnabled(false);
-		return saveObjectSQLUpdatesMenuItem;
-	}
-	*/
-
-	/* OBSOLETE
-	private void saveObjectSQLUpdates() {
-		if( imagePathsReader == null ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
-					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
-			return;
-		}
-		debug(1,"Saving Object Updates SQL...");
-		try {
-			String outFileName = imagePathsReader.getInFile();
-			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
-			if( lastSlash >= 0 )
-				outFileName = outFileName.substring(0, lastSlash+1) + "objectUpdates.sql";
-			else
-				outFileName = "objectUpdates.sql";
-			chooser.setSelectedFile(new File( outFileName ));
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		        setStatus("Saving Object Updates SQL to file: " + filename);
-		        imagePathsReader.writeSQLObjTableUpdates(filename);
-		    }
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Saving Object Updates SQL: ", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-	}
-	*/
-
 
 	private JMenuItem getSaveSQLMediaInsertFileMenuItem() {
 		if (saveSQLMediaInsertFileMenuItem == null) {
@@ -740,9 +697,11 @@ public class MainApp {
 			else
 				outFileName = "mediaInsert.sql";
 			chooser.setSelectedFile(new File( outFileName ));
+			chooser.setFileFilter(sqlfilter);
 		    int returnVal = chooser.showSaveDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
+		    	// TODO Check for existing file overwrite
 		        setStatus("Saving SQL Media Load File to file: " + filename);
 		        imagePathsReader.writeSQLMediaTableInsertFile(filename);
 		    }
@@ -782,9 +741,11 @@ public class MainApp {
 			else
 				outFileName = "mediaLoadFile.sql";
 			chooser.setSelectedFile(new File( outFileName ));
+			chooser.setFileFilter(sqlfilter);
 		    int returnVal = chooser.showSaveDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
+		    	// TODO Check for existing file overwrite
 		        setStatus("Saving SQL Media Load File to file: " + filename);
 		        imagePathsReader.writeSQLMediaTableLoadFile(filename);
 		    }
@@ -813,6 +774,10 @@ public class MainApp {
 		return buildObjectSQLMenuItem;
 	}
 
+	/**
+	 * Run through the metadata file, and gather up the ID, ObjectNumber,
+	 * Name/Title and Description information for insertion into the DB.
+	 */
 	private void buildObjectSQL() {
     	String filename = null;
     	String basefilename = null;
@@ -823,16 +788,23 @@ public class MainApp {
     	int nObjsProcessedFile = 0;
     	int nObjsProcessedTotal = 0;
     	int nObjsPerDumpFile = 50000;
+    	String descMergeSeparator = "|";
 		try {
 			debug(1,"Build Objects SQL...");
 			// We need to pick an output file
 			if( openMDFile() && metaDataReader != null ) {
 				// Have an open file - let's check the columns
 				// We need ObjectID, ObjectNumber, ObjectName, Description
-				if( !columnNames[0].equalsIgnoreCase("ObjectID")
-					|| !columnNames[1].equalsIgnoreCase("ObjectNumber")
-					|| !columnNames[2].equalsIgnoreCase("ObjectName")
-					|| !columnNames[9].equalsIgnoreCase("Description"))
+				// TODO These should be mapped in the ColConfig file, and then
+				// TODO we should check that the named columns are present.
+				int objIDCol = 0;
+				int objNumCol = 4;
+				int objNameCol = 5;
+				int objDescCol = 12;
+				if( !columnNames[objIDCol].equalsIgnoreCase("ObjectID")
+					|| !columnNames[objNumCol].equalsIgnoreCase("ObjectNumber")
+					|| !columnNames[objNameCol].equalsIgnoreCase("ObjectName")
+					|| !columnNames[objDescCol].equalsIgnoreCase("Description"))
 					throw new RuntimeException("BuildObjectSQL columns not as expected!");
 				/*
 			    int returnVal = chooser.showSaveDialog(getJFrame());
@@ -859,36 +831,38 @@ public class MainApp {
 				int lastIDVal = -1;
 				ArrayList<String> lastStrings = new ArrayList<String>();
 				while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
-					if(nextLine.get(0).length() == 0) {
+					if(nextLine.get(objIDCol).length() == 0) {
 						//debug( )
 						debug(2,"Skipping line with empty id" );
 						continue;
 					}
-					int id = Integer.parseInt(nextLine.get(0));
+					int id = Integer.parseInt(nextLine.get(objIDCol));
 					if( lastIDVal < 0 ) {
 						lastStrings.addAll(nextLine);
 						lastIDVal = id;
 						continue;
 					}
 					if( id == lastIDVal ) {
-						// Consider merging the two lines
-						for(int i=1; i<=9; i++ ) {
-							// But we only use 3 tokens besides ID 1, 2, and 9
-							if(i>2 && i!=9)
-								continue;
-							String nextToken = nextLine.get(i);
-							if(nextToken.length()==0)	// If new token is empty ("") skip it
-								continue;
-							String last = lastStrings.get(i);
-							if(last.length()==0)		// If old token is empty (""), just set
-								lastStrings.set(i, nextLine.get(i));
-							else if(nextLine.get(i).equalsIgnoreCase(last)
-									|| last.contains(nextLine.get(i)))
-								continue;
-							else
-								lastStrings.set(i, last+"|"+nextLine.get(i));
-							debug(2,"Combining "+columnNames[i]+ " for id: "+id+
-												" ["+lastStrings.get(i)+"]");
+						// TODO we should configure which columns go into SQL description
+						// We cannot merge objNum or Name, but we will allow out of order
+						// primary lines, and set these fields
+						if( lastStrings.get(objNumCol).length() == 0 )
+							lastStrings.set(objNumCol, nextLine.get(objNumCol));
+						if( lastStrings.get(objNameCol).length() == 0 )
+							lastStrings.set(objNameCol, nextLine.get(objNameCol));
+						// Merge descriptions
+						String desc = nextLine.get(objDescCol);
+						if(desc.length()!=0) {	// If new token is empty ("") skip it
+							String lastDesc = lastStrings.get(objDescCol);
+						// BUG - need not use get(i) over and over)
+							if(lastDesc.length()==0)		// If old token is empty (""), just set
+								lastStrings.set(objDescCol, desc);
+							else if(!desc.equalsIgnoreCase(lastDesc)
+									&& !lastDesc.contains(desc)) {
+								lastStrings.set(objDescCol, lastDesc+descMergeSeparator+desc);
+								debug(2,"Combining descriptions for id: "+id+
+											" ["+lastStrings.get(objDescCol)+"]");
+							}
 						}
 						continue;
 					}
@@ -898,8 +872,9 @@ public class MainApp {
 						fFirst = true;
 			    		currFilename = basefilename + iOutputFile + extension;
 						objWriter = new BufferedWriter(new FileWriter( currFilename ));
-						objWriter.append("USE delphi;");
-						objWriter.newLine();
+						// TODO need a way to let user specify the output database.
+						//objWriter.append("USE delphi;");
+						//objWriter.newLine();
 						// INSERT ALL in order:
 						// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
 						objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, img_path, creation_time) VALUES" );
@@ -995,20 +970,27 @@ public class MainApp {
 	private void dumpSQLForObject( int id, ArrayList<String> line, BufferedWriter writer,
 									boolean fFirst, boolean fWithNewlines ) {
 		try {
-			String name = (line.get(2).length() == 0)?"(no name)":line.get(2);
+			int objNumCol = 4;
+			int objNameCol = 5;
+			int objDescCol = 12;
+			String name = (line.get(objNameCol).length() == 0)?"(no name)"
+					             :(line.get(objNameCol).replace("\"", "\\\"").replace("'", "\\'"));
 			ArrayList<ImageInfo> imgInfo = null;
 			if( imagePathsReader != null )
 				imgInfo = imagePathsReader.GetInfoForID(id);
 			// TODO Need to be smarter about getting Description
 			// For now, just take the description column and fold all white space
 			// (especially the newlines) into a single space.
-			String description = line.get(9).replaceAll("[\\s]+", " " );
+			String description = line.get(objDescCol).replaceAll("[\\s]+", " " );
+			//description = description.replaceAll("\\(['\"]\\)", "\\\1");
+			description = description.replace("\"", "\\\"");
+			description = description.replace("'", "\\'");
 			if( !fFirst ) {
 				writer.append(',');
 				if( fWithNewlines )
 					writer.newLine();
 			}
-			writer.append("("+id+",\""+line.get(1).trim()+"\",\""+name+"\",\""
+			writer.append("("+id+",\""+line.get(objNumCol).trim()+"\",\""+name+"\",\""
 							+description+"\",");
 			if(imgInfo == null)
 				writer.append("null,");
@@ -1403,6 +1385,7 @@ public class MainApp {
 	protected boolean openOntologyFile() {
 		boolean opened = false;
 		try {
+			chooser.setFileFilter(xmlfilter);
 		    int returnVal = chooser.showOpenDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -1462,6 +1445,7 @@ public class MainApp {
 	protected boolean openVocabFile() {
 		boolean opened = false;
 		try {
+			chooser.setFileFilter(null);
 		    int returnVal = chooser.showOpenDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -1501,16 +1485,18 @@ public class MainApp {
 	protected boolean openMDConfigFile() {
 		boolean opened = false;
 		try {
+			chooser.setFileFilter(xmlfilter);
 		    int returnVal = chooser.showOpenDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder builder = factory.newDocumentBuilder();
-		    	String filename = chooser.getSelectedFile().getPath();
+		    	File file = chooser.getSelectedFile();
+		    	String filename = file.getPath();
 		        debug(2,"Scanning column config info from file: " + filename);
 		        setStatus("Scanning column config info from file: " + filename);
-				Document colConfigDoc = builder.parse(filename);
+				Document colConfigDoc = builder.parse(file);
 				DumpColumnConfigInfo.PopulateFromConfigFile(colConfigDoc);
-				debug(2,"Col Sep is: ["+DumpColumnConfigInfo.getColumnSeparator()+"]");
+				debug(2,"Col Sep is: ["+(char)(DumpColumnConfigInfo.getColumnSeparator())+"]");
 				if( _debugLevel>=2 ) {
 					System.out.print("Token seps for ObjectName are: " );
 					ArrayList<String> tokenSeps = DumpColumnConfigInfo.getTokenSeparators("ObjectName");
@@ -1563,16 +1549,21 @@ public class MainApp {
 	protected boolean openMDFile() {
 		boolean opened = false;
 		try {
+			chooser.setFileFilter(null);
 		    int returnVal = chooser.showOpenDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
 		        debug(2,"Scanning column names from file: " + filename);
 		        setStatus("Scanning column names from file: " + filename);
-		        metaDataReader = new MetaDataReader(filename);
+		        int colSep = DumpColumnConfigInfo.getColumnSeparator();
+		        if( !Character.isDefined(colSep) )
+					throw new RuntimeException( "No Column separator configured!" );
+		        metaDataReader = new MetaDataReader(filename, colSep );
 		        columnNames = metaDataReader.readColumnHeaders();
 		        setStatus("Found: " + columnNames.length + " columns.");
 		        if( !(columnNames[0]).equalsIgnoreCase("objectid") )
-					throw new RuntimeException( "Column 0 in metadata dump file is not ObjectID" );
+					throw new RuntimeException( "Column 0 in metadata dump file is not ObjectID: "
+												+ columnNames[0]);
 		        debug(2,"Found: " + columnNames.length + " columns.");
 		        if( _debugLevel >= 2 )
 			        for( String str : columnNames ) {
@@ -1597,14 +1588,17 @@ public class MainApp {
 			int iDot = outFileName.lastIndexOf('.');
 			if( iDot >0 )
 				outFileName = outFileName.substring(0, iDot);
-			outFileName += "_"+columnNames[colIndex]+"_Usage.txt";
+			outFileName += "_"+(columnNames[colIndex].replaceAll("\\W", "_"))+"_Usage.txt";
 			chooser.setSelectedFile(new File( outFileName ));
+			chooser.setFileFilter(null);
 	        debug(1,"Saving column usage info to file: " + outFileName);
 		    int returnVal = chooser.showSaveDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
+		    	// TODO Check for existing file overwrite
 		        setStatus("Saving usage report to file: " + filename);
 		        try {
+		        	// TODO Make this a UTF8 file out.
 					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
 					vocabCounts.write(writer, true, 0, true);
 					writer.flush();
@@ -1626,56 +1620,77 @@ public class MainApp {
 	protected void saveVocabAsSQL() {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
+	    	String filename;
 			setStatus( "Building SQL Load file...");
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		        setStatus("Saving SQL Load to file: " + filename);
-		        try {
-					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-					// Set up the correct DB
-					 writer.append("USE delphi;");
-					 writer.newLine();
-					 writer.append("truncate facets;");
-					 writer.newLine();
-					// First, let's populate the facets table
-					 writer.append("INSERT INTO facets( id, name, display_name ) VALUES" );
-					 boolean fFirst = true;
-					for( Facet facet : facetMapHashTree.GetFacets() ) {
-						if( fFirst )
-							fFirst = false;
-						else
-							writer.append(',');
-						if(fWithNewlines)
-							writer.newLine();
-						writer.append("("+facet.id+",\""+facet.name+"\",\""+facet.displayName+"\")");
-					}
-					writer.append(';');
-					writer.newLine();
-					 writer.append("truncate categories;");
-					 writer.newLine();
-					// Now, let's populate the categories table
-					writer.append("INSERT INTO categories(id, parent_id, name, display_name, facet_id, select_mode, always_inferred) VALUES" );
-					writer.newLine();
-					fFirst = true;
-					for( Facet facet : facetMapHashTree.GetFacets() ) {
-						for( TaxoNode child : facet.children ) {
-							// for each child of the facet, dump. Mark as a root in facet.
-							dumpSQLForVocabNode( child, writer, true, fFirst, fWithNewlines );
-							fFirst = false;
-						}
-					}
-					writer.append(';');
-					writer.newLine();
-					writer.flush();
-					writer.close();
-					debug(1, "Finished writing SQL Dump to file: "+filename);
-					setStatus( "Finished writing SQL Dump to file: "+filename);
-				} catch( IOException e ) {
-		            e.printStackTrace();
-					throw new RuntimeException("Could not create (or write to) output file: " + filename);
-				}
+			chooser.setFileFilter(sqlfilter);
+			while(true) {
+				int returnVal = chooser.showSaveDialog(getJFrame());
+			    if(returnVal != JFileChooser.APPROVE_OPTION)
+			    	return;
+			    else {
+			    	filename = chooser.getSelectedFile().getPath();
+			    	// TODO Check for existing file overwrite
+			    	File newFile = new File( filename );
+			    	if( !newFile.exists() )
+			    		break;
+			    	else {
+			    		int answer = JOptionPane.showConfirmDialog(getJFrame(), "File exists:\n" + filename
+			    				+"\nAre you sure you want to overwrite this file?",
+								"Saving SQL Load to file", JOptionPane.YES_NO_CANCEL_OPTION);
+			    		if( answer == JOptionPane.YES_OPTION )
+			    			break;
+			    		else if( answer == JOptionPane.CANCEL_OPTION )
+			    			return;
+			    		// else will loop to try again
+			    	}
+			    }
 		    }
+	        setStatus("Saving SQL Load to file: " + filename);
+	        try {
+				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+				// Set up the correct DB
+				 writer.append("USE delphi;");
+				 writer.newLine();
+				 writer.append("truncate facets;");
+				 writer.newLine();
+				// First, let's populate the facets table
+				 writer.append("INSERT INTO facets( id, name, display_name, description, notes ) VALUES" );
+				 boolean fFirst = true;
+				for( Facet facet : facetMapHashTree.GetFacets() ) {
+					if( fFirst )
+						fFirst = false;
+					else
+						writer.append(',');
+					if(fWithNewlines)
+						writer.newLine();
+					writer.append("("+facet.id+",\""+facet.name+"\",\""+facet.displayName+"\", \'"
+										+facet.description+"\', \'" + facet.notes + "\')");
+				}
+				writer.append(';');
+				writer.newLine();
+				 writer.append("truncate categories;");
+				 writer.newLine();
+				// Now, let's populate the categories table
+				writer.append("INSERT INTO categories(id, parent_id, name, display_name, facet_id, select_mode, always_inferred) VALUES" );
+				writer.newLine();
+				fFirst = true;
+				for( Facet facet : facetMapHashTree.GetFacets() ) {
+					for( TaxoNode child : facet.children ) {
+						// for each child of the facet, dump. Mark as a root in facet.
+						dumpSQLForVocabNode( child, writer, true, fFirst, fWithNewlines );
+						fFirst = false;
+					}
+				}
+				writer.append(';');
+				writer.newLine();
+				writer.flush();
+				writer.close();
+				debug(1, "Finished writing SQL Dump to file: "+filename);
+				setStatus( "Finished writing SQL Dump to file: "+filename);
+			} catch( IOException e ) {
+	            e.printStackTrace();
+				throw new RuntimeException("Could not create (or write to) output file: " + filename);
+			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Build Usage Report Error", JOptionPane.ERROR_MESSAGE);
@@ -1717,6 +1732,7 @@ public class MainApp {
 
 	protected void saveVocabAsXML() {
 		try {
+			chooser.setFileFilter(xmlfilter);
 		    int returnVal = chooser.showSaveDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
 		    	String filename = chooser.getSelectedFile().getPath();
@@ -1796,6 +1812,8 @@ public class MainApp {
     	int nObjsCatsPerDumpFile = Integer.MAX_VALUE;
     	int nObjCatsDumpedToFile = 0;
     	int nObjCatsDumpedTotal = 0;
+    	// TODO get this from col config
+    	int objIDCol = 0;
     	// Hold the information for the Facet(s)
     	DumpColumnConfigInfo[] colDumpInfo = null;
 		try {
@@ -1825,11 +1843,11 @@ public class MainApp {
 			HashMap<TaxoNode, Float> matchedCats = new HashMap<TaxoNode, Float>();
 			nObjCatsTillReport = nObjCatsReport;
 			while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
-				if(nextLine.get(0).length() == 0) {
+				if(nextLine.get(objIDCol).length() == 0) {
 					debug(2,"Skipping line with empty id" );
 					continue;
 				}
-				int id = Integer.parseInt(nextLine.get(0));
+				int id = Integer.parseInt(nextLine.get(objIDCol));
 				if( lastIDVal < 0 ) {
 					lastStrings.addAll(nextLine);
 					lastIDVal = id;
@@ -1960,12 +1978,17 @@ public class MainApp {
 			reducedSource = reducedSource.replaceAll(reduce.first, reduce.second);
 		}
 		// Next, we tokenize with the token separators
-		if( colInfo.tokenSeparators.size() == 0 )
-			throw new RuntimeException( "No Token separators for column: " + colInfo.name);
-		String regex = "\\||"+colInfo.tokenSeparators.get(0);
-		for( int i=1; i<colInfo.tokenSeparators.size(); i++)
-			regex += "|"+colInfo.tokenSeparators.get(i);
-		String[] tokens_1 = reducedSource.split(regex);
+		String[] tokens_1;
+		if( colInfo.tokenSeparators.size() == 0 ) {
+			// throw new RuntimeException( "No Token separators for column: " + colInfo.name);
+			tokens_1 = new String[1];
+			tokens_1[0] = reducedSource;
+		} else {
+			String regex = "\\||"+colInfo.tokenSeparators.get(0);
+			for( int i=1; i<colInfo.tokenSeparators.size(); i++)
+				regex += "|"+colInfo.tokenSeparators.get(i);
+			tokens_1 = reducedSource.split(regex);
+		}
 		// Next, we further split up each token on space and certain punctuation and remove the noise items
 		// We also build the words list for Colors
 		for( int i=0; i< tokens_1.length; i++ ){
@@ -1999,6 +2022,7 @@ public class MainApp {
 		float reliability = colInfo.columnReliabilityForFacet(facetName);
 		// Now, we try to find a category in the hashMap for each token
 		for( String token:tokenPair.first ) {
+			// Test where id is 317239 - how do we match FUR?
 			TaxoNode node = facetMapHashTree.FindNodeByName(facetName,token.toLowerCase());
 			if( node == null )
 				continue;

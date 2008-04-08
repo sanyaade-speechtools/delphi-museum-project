@@ -7,6 +7,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+
 import java.util.*;
 
 //import org.w3c.dom.Element;
@@ -24,20 +27,30 @@ public class MetaDataReader {
 
 	private int _debugLevel = 1;
 	private String filename;
+	private int colSep;
 	private int currLine;
+	// TODO we should put the encoding into the colconfig file.
+	//private static String encoding = "ISO-8859-1";
+	private static String encoding = "UTF-8";
 
 	// Pass in a Document to add to? Then caller can set up
 	// top level stuff like title, xsl spreadsheet, etc.
 	// Could provide a convenience method in here to build the
 	// default one with just a passed name default to Delphi or something.
-	public MetaDataReader( String inFileName ) {
+	public MetaDataReader( String inFileName, int inColSep ) {
 		try {
 			filename = inFileName;
-			reader = new BufferedReader(new FileReader(filename));
+			colSep = inColSep;
+			//reader = new BufferedReader(new FileReader(filename));
+			reader = new BufferedReader(
+			          new InputStreamReader(new FileInputStream(filename),
+			        		  encoding));
 			currLine = 0;
 			//skipTerms = new HashSet<String>();
 		} catch (FileNotFoundException e) {
 			throw new RuntimeException("Could not open input file: " + inFileName);
+		} catch (java.io.UnsupportedEncodingException e) {
+			throw new RuntimeException("Internal error: Unsupported encoding: " + encoding);
 		}
 	}
 
@@ -70,11 +83,12 @@ public class MetaDataReader {
 	protected ArrayList<String> getNextLineAsColumns() {
 		// We will read chars up to newlines, parsing as we go.
 		// If we hit a quote at the start, then we run to match a quote, even running over newlines
-		// When not balancing a quote, run to | for a token, or to end of line.
+		// When not balancing a quote, run to colSep for a token, or to end of line.
 		ArrayList<String> tokens = new ArrayList<String>();
 		StringBuilder sb = new StringBuilder();
 		boolean fAtEOL = false;
 		boolean fSeekQuote = false;
+		boolean fEscape = false;
 		try {
 			while(reader.ready()){
 				fAtEOL = false;
@@ -84,12 +98,16 @@ public class MetaDataReader {
 					fAtEOL = true;		// treat EOF as EOL
 					break;
 				}
-				if(ch == '"') {
+				if(ch == '\\' && !fEscape ) {
+					fEscape = true;
+					continue;
+				}
+				if(ch == '"' && !fEscape ) {
 					fSeekQuote = !fSeekQuote;
 					continue;
 				}
-				if(!fSeekQuote) {
-					if(ch == '|') {
+				if(!fSeekQuote && !fEscape ) {
+					if(ch == colSep) {
 						// Note that okay to be 0 length - it is an empty column
 						tokens.add(sb.toString());
 						int len = sb.length();
@@ -108,6 +126,7 @@ public class MetaDataReader {
 					}
 				} // if fall through, just add the char
 				sb.append((char)ch);
+				fEscape = false;
 			}
 			// Deal with last line logic - if not at end of line but at EOF,
 			// then have to add last column. Require at least 2 columns
@@ -134,7 +153,7 @@ public class MetaDataReader {
 			if( iCol >= tokens.size() ) {
 				throw new RuntimeException( "Illegal column index: " + iCol
 						+" (too few columns on line): " + currLine
-						+"\n  Line:["+StringUtils.buildLineFromTokens(tokens,'|')+"]");
+						+"\n  Line:["+StringUtils.buildLineFromTokens(tokens, colSep)+"]");
 			}
 			return tokens.get(iCol);
 		}
