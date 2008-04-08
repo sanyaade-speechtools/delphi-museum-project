@@ -3,8 +3,6 @@
 	
 
 <h1>Login</h1>
-This site is currently not open to the public.
-If you need access, <a href="mailto:{$contactEmail}?subject=Delphi">email us</a>.
 {if $message}
 <div class="formError">
 	{$message}
