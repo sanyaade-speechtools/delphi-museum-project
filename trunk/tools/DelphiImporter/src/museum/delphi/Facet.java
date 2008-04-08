@@ -3,10 +3,13 @@ package museum.delphi;
 public class Facet extends TaxoNode {
 	public String rootHTitle;	// "root-heading-title" in facetmap schema
 	public String supports;		// "supports" in facetmap schema
+	public String description;
+	public String notes;
 	public int nMasks;			// How many masks does this facet need?
 	public int iMaskBase;		// first mask index for this facet
 
 	Facet( String name, String displayName, int id,
+			String description, String notes,
 			boolean inferredByChildren, boolean selectSingle,
 			String sort, String rootHTitle, String supports ) {
 		super( name, displayName, name, id, -1, -1, null, sort, false,
@@ -22,6 +25,8 @@ public class Facet extends TaxoNode {
 			throw new RuntimeException( "Illegal value for supports: "
 					+ supports + " on Facet: " + name );
 		this.supports = supports;
+		this.description = description;
+		this.notes = notes;
 		this.nMasks = 0;
 		this.iMaskBase = 0;
 	}
