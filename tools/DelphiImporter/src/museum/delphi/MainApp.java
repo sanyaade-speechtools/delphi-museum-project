@@ -70,6 +70,7 @@ public class MainApp {
 	private MetaDataReader metaDataReader = null;  //  @jve:decl-index=0:
 	private ImagePathsReader imagePathsReader = null;  //  @jve:decl-index=0:
 	private String columnNames[] = null;
+	private String dbName = "pahma_dev";
 
 	private JMenu vocabActionsMenu = null;
 	private JMenuItem openVocabMenuItem = null;
@@ -77,6 +78,8 @@ public class MainApp {
 	private JMenuItem loadVocabFromXMLMenuItem = null;
 	//private JMenuItem addVocabToDBMenuItem = null;
 	private JMenuItem saveOntologyAsSQLMenuItem = null;
+	private JMenuItem saveHooksAsSQLMenuItem = null;
+	private JMenuItem saveExclusionsAsSQLMenuItem = null;
 
 	private JMenu metaDataActionsMenu = null;
 	private JMenuItem openMDCfgFileMenuItem = null;
@@ -304,10 +307,14 @@ public class MainApp {
 			vocabActionsMenu.add(getLoadVocabFromXMLMenuItem());
 			// vocabActionsMenu.add(getAddVocabToDBMenuItem());
 			vocabActionsMenu.add(getSaveOntologyAsSQLMenuItem());
+			vocabActionsMenu.add(getSaveHooksAsSQLMenuItem());
+			vocabActionsMenu.add(getSaveExclusionsAsSQLMenuItem());
 			saveVocabAsXMLMenuItem.setEnabled(false);
 			loadVocabFromXMLMenuItem.setEnabled(true);
 			//addVocabToDBMenuItem.setEnabled(false);
 			saveOntologyAsSQLMenuItem.setEnabled(false);
+			saveHooksAsSQLMenuItem.setEnabled(false);
+			saveExclusionsAsSQLMenuItem.setEnabled(false);
 		}
 		return vocabActionsMenu;
 	}
@@ -347,6 +354,8 @@ public class MainApp {
 				public void actionPerformed(ActionEvent e) {
 					if( openOntologyFile() ) {
 						saveOntologyAsSQLMenuItem.setEnabled(true);
+						saveHooksAsSQLMenuItem.setEnabled(true);
+						saveExclusionsAsSQLMenuItem.setEnabled(true);
 						// NYI addVocabToDBMenuItem.setEnabled(true);
 						/*
 						TaxoNode node = facetMapHashTree.FindNodeByName("Color", "blue");
@@ -412,6 +421,43 @@ public class MainApp {
 		}
 		return saveOntologyAsSQLMenuItem;
 	}
+
+	/**
+	 * This method initializes jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getSaveHooksAsSQLMenuItem() {
+		if (saveHooksAsSQLMenuItem == null) {
+			saveHooksAsSQLMenuItem = new JMenuItem();
+			saveHooksAsSQLMenuItem.setText("Save Hooks as SQL Load...");
+			saveHooksAsSQLMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveVocabHooksOrExclusionsAsSQL( true );
+				}
+			});
+		}
+		return saveHooksAsSQLMenuItem;
+	}
+
+	/**
+	 * This method initializes jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getSaveExclusionsAsSQLMenuItem() {
+		if (saveExclusionsAsSQLMenuItem == null) {
+			saveExclusionsAsSQLMenuItem = new JMenuItem();
+			saveExclusionsAsSQLMenuItem.setText("Save Exclusions as SQL Load...");
+			saveExclusionsAsSQLMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveVocabHooksOrExclusionsAsSQL( false );
+				}
+			});
+		}
+		return saveExclusionsAsSQLMenuItem;
+	}
+
 
 
 	/**
@@ -872,8 +918,7 @@ public class MainApp {
 						fFirst = true;
 			    		currFilename = basefilename + iOutputFile + extension;
 						objWriter = new BufferedWriter(new FileWriter( currFilename ));
-						// TODO need a way to let user specify the output database.
-						//objWriter.append("USE delphi;");
+						//objWriter.append("USE "+dbName+";");
 						//objWriter.newLine();
 						// INSERT ALL in order:
 						// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
@@ -1590,12 +1635,9 @@ public class MainApp {
 				outFileName = outFileName.substring(0, iDot);
 			outFileName += "_"+(columnNames[colIndex].replaceAll("\\W", "_"))+"_Usage.txt";
 			chooser.setSelectedFile(new File( outFileName ));
-			chooser.setFileFilter(null);
-	        debug(1,"Saving column usage info to file: " + outFileName);
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		    	// TODO Check for existing file overwrite
+    		String filename = getSafeOutfile(null);
+    		if( filename != null ) {
+    			debug(1,"Saving column usage info to file: " + filename);
 		        setStatus("Saving usage report to file: " + filename);
 		        try {
 		        	// TODO Make this a UTF8 file out.
@@ -1620,36 +1662,15 @@ public class MainApp {
 	protected void saveVocabAsSQL() {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-	    	String filename;
-			setStatus( "Building SQL Load file...");
-			chooser.setFileFilter(sqlfilter);
-			while(true) {
-				int returnVal = chooser.showSaveDialog(getJFrame());
-			    if(returnVal != JFileChooser.APPROVE_OPTION)
-			    	return;
-			    else {
-			    	filename = chooser.getSelectedFile().getPath();
-			    	// TODO Check for existing file overwrite
-			    	File newFile = new File( filename );
-			    	if( !newFile.exists() )
-			    		break;
-			    	else {
-			    		int answer = JOptionPane.showConfirmDialog(getJFrame(), "File exists:\n" + filename
-			    				+"\nAre you sure you want to overwrite this file?",
-								"Saving SQL Load to file", JOptionPane.YES_NO_CANCEL_OPTION);
-			    		if( answer == JOptionPane.YES_OPTION )
-			    			break;
-			    		else if( answer == JOptionPane.CANCEL_OPTION )
-			    			return;
-			    		// else will loop to try again
-			    	}
-			    }
-		    }
-	        setStatus("Saving SQL Load to file: " + filename);
+			setStatus( "Building SQL Vocab load file...");
+    		String filename = getSafeOutfile(sqlfilter);
+    		if( filename == null )
+    			return;
+	        setStatus("Saving SQL Vocab Load to file: " + filename);
 	        try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
 				// Set up the correct DB
-				 writer.append("USE delphi;");
+				 writer.append("USE "+dbName+";");
 				 writer.newLine();
 				 writer.append("truncate facets;");
 				 writer.newLine();
@@ -1721,13 +1742,140 @@ public class MainApp {
 							+node.facetid+","+select+","+infer+")");
 			if( node.children != null )
 				for( TaxoNode child : node.children ) {
-					// Recusrse for children. Note cannot be roots, nor first.
+					// Recurse for children. Note cannot be roots, nor first.
 					dumpSQLForVocabNode( child, writer, false, false, fWithNewlines );
 				}
 		} catch( IOException e ) {
             e.printStackTrace();
 			throw new RuntimeException("Error writing to SQL dump file." );
 		}
+	}
+
+	protected String getSafeOutfile( FileNameExtensionFilter filter ) {
+    	String filename;
+		chooser.setFileFilter(filter);
+		while(true) {
+			int returnVal = chooser.showSaveDialog(getJFrame());
+		    if(returnVal != JFileChooser.APPROVE_OPTION)
+		    	return null;
+		    else {
+		    	filename = chooser.getSelectedFile().getPath();
+		    	// TODO Check for existing file overwrite
+		    	File newFile = new File( filename );
+		    	if( !newFile.exists() )
+		    		break;
+		    	else {
+		    		int answer = JOptionPane.showConfirmDialog(getJFrame(), "File exists:\n" + filename
+		    				+"\nAre you sure you want to overwrite this file?",
+							"Saving SQL Load to file", JOptionPane.YES_NO_CANCEL_OPTION);
+		    		if( answer == JOptionPane.YES_OPTION )
+		    			break;
+		    		else if( answer == JOptionPane.CANCEL_OPTION )
+		    			return null;
+		    		// else will loop to try again
+		    	}
+		    }
+	    }
+		return filename;
+	}
+
+	protected void saveVocabHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
+		boolean fWithNewlines = true;	// Easier for debugging output.
+		try {
+    		String filename = getSafeOutfile(sqlfilter);
+    		if( filename == null )
+    			return;
+    		String tablename = fSaveHooks ? "hooks":"exclusions";
+	        setStatus("Saving SQL for "+tablename+" to file: " + filename);
+	        try {
+	    		setStatus( "Building SQL "+tablename+" Load file...");
+				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+				// Set up the correct DB
+				writer.append("USE "+dbName+";");
+				writer.newLine();
+				writer.append("truncate "+tablename+";");
+				writer.newLine();
+				// First, let's populate the hooks table
+				writer.append("INSERT INTO "+tablename+" ( cat_id, token ) VALUES" );
+				writer.newLine();
+				boolean fFirst = true;
+				for( Facet facet : facetMapHashTree.GetFacets() ) {
+					for( TaxoNode child : facet.children ) {
+						// for each child of the facet, dump.
+						// Once something has been saved, fFirst will be marked false.
+						fFirst = dumpHooksOrExclusionsSQLForVocabNode( child, fSaveHooks, writer,
+															true, fFirst, fWithNewlines );
+					}
+				}
+				writer.append(';');
+				writer.newLine();
+				writer.flush();
+				writer.close();
+				debug(1, "Finished writing SQL Dump to file: "+filename);
+				setStatus( "Finished writing SQL Dump to file: "+filename);
+			} catch( IOException e ) {
+	            e.printStackTrace();
+				throw new RuntimeException("Could not create (or write to) output file: " + filename);
+			}
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Save Vocab Hooks Or Exclusions As SQL Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
+	}
+
+	// We insert all the hooks, with category id associations
+	// This will be inefficient with all the entailment phrases, but
+	// it is just db rows and may make some search (kwd match to category) easier.
+	private boolean dumpHooksOrExclusionsSQLForVocabNode( TaxoNode node, boolean fSaveHooks, BufferedWriter writer,
+			boolean fRootNode, boolean fFirst, boolean fWithNewlines ) {
+		try {
+			if( fSaveHooks ) {
+				// Save the display name, even if marked as nomatch, since things like
+				// design motifs should show up if they enter "bird" in kwd.
+				if( !fFirst ) {
+					writer.append(',');
+					if( fWithNewlines )
+						writer.newLine();
+				}
+				writer.append("("+node.id+",\""+node.displayName+"\")");
+				fFirst = false;
+				// Save any synonyms as hooks
+				if( node.synset != null )
+					for( String hook : node.synset ) {
+						if( !fFirst ) {
+							writer.append(',');
+							if( fWithNewlines )
+								writer.newLine();
+						}
+						writer.append("("+node.id+",\""+hook+"\")");
+						fFirst = false;
+					}
+			} else {
+				// Save any exclusions
+				if( node.exclset != null )
+					for( String excl : node.exclset ) {
+						if( !fFirst ) {
+							writer.append(',');
+							if( fWithNewlines )
+								writer.newLine();
+						}
+						writer.append("("+node.id+",\""+excl+"\")");
+						fFirst = false;
+					}
+			}
+			// Now recurse to catch children
+			if( node.children != null )
+				for( TaxoNode child : node.children ) {
+					// Recurse for children. Note cannot be roots, nor first.
+					fFirst = dumpHooksOrExclusionsSQLForVocabNode( child, fSaveHooks, writer,
+																	false, fFirst, fWithNewlines );
+				}
+		} catch( IOException e ) {
+            e.printStackTrace();
+			throw new RuntimeException("Error writing to SQL dump file." );
+		}
+		return fFirst;
 	}
 
 	protected void saveVocabAsXML() {
@@ -1883,7 +2031,7 @@ public class MainApp {
 		    		currFilename = basefilename + iOutputFile + extension;
 		    		objCatsWriter = new BufferedWriter(new FileWriter( currFilename ));
 		    		if( fDumpAsSQLInsert ) {
-			    		objCatsWriter.append("USE delphi;");
+			    		objCatsWriter.append("USE "+dbName+";");
 			    		objCatsWriter.newLine();
 			    		objCatsWriter.append("INSERT IGNORE INTO obj_cats(obj_id, cat_id, inferred, reliability) VALUES" );
 			    		objCatsWriter.newLine();
