@@ -279,12 +279,14 @@ end.</p>
 			<div class="smspace"></div>
 			</dd>
 			<dt class="attr">implies={<em>concept-id-reference</em>}</dt>
-			<dd>Indicates that if this concept is associated to an object, then 
-			additional concept referred to by <code>concept-id-reference</code> 
+			<dd>Indicates that if this concept is associated to an object, then
+              the additional concept referred to by <code>concept-id-reference</code> 
 			should also be associated to the object. This is often used where 
-			there are relationship across or between facets. E.g., the material 
+			there are relationships across or between facets. E.g., the material 
 			gold is generally golden in color, and so the concept in a materials 
-			facet would imply the concept in a color facet. <br>
+			facet would imply the concept in a color facet.<br>
+              Note that by default, a parent (broader) concept is implied by the
+              child (narrower) concept, and so this must not be declared. <br>
 			The value of the attribute is the id of another concept <code>
 			&lt;heading&gt;</code> element. <em>Currently, all facets are treated as 
 			being in a single namespace, and so it does not matter which facet 
@@ -486,13 +488,15 @@ end.</p>
 <p>This is a draft document of an initial schema. A number of changes to the
 schema have been proposed or considered. These include:</p>
 <ul>
-  <li>Renaming the root element for each facet from <code>&lt;taxonomy&gt;</code>
+  <li>Rename the root element for each facet from <code>&lt;taxonomy&gt;</code>
     to <code>&lt;facet&gt;</code>.</li>
-  <li>Renaming the element used to declare concepts from <code>&lt;heading&gt;</code>
+  <li>Rename the element used to declare concepts from <code>&lt;heading&gt;</code>
     to <code>&lt;concept&gt;</code> or <code>&lt;category&gt;</code>.</li>
-  <li>Renaming the element used to declare hooks from <code>&lt;synonym&gt;</code>
+  <li>Rename the element used to declare hooks from <code>&lt;synonym&gt;</code>
     to <code>&lt;hook&gt;</code> or <code>&lt;match&gt;</code>.</li>
-  <li>Allowing <code>&lt;heading&gt;</code>/<code>&lt;concept&gt;</code>
+  <li>Rename the element used to declare exclusioins from <code>&lt;excl&gt;</code>
+    to <code>&lt;exclude&gt;</code> or <code>&lt;exclusion&gt;</code>.</li>
+  <li>Allow <code>&lt;heading&gt;</code>/<code>&lt;concept&gt;</code>
     elements to control the inheritance of prefix and suffix strings. This would
     be an additional attribute.</li>
   <li>Deprecate/remove the <code>&lt;reduce&gt;</code> element. This is not yet
@@ -516,18 +520,75 @@ schema have been proposed or considered. These include:</p>
 &nbsp;</code><br>Since colon (':') is a legal character for XML ID values, we 
 	would specify that only the first unescaped colon character would be 
 	recognized as the separator for this purpose.</li>
-	<li>Add support for complex inference rules. Inasmuch as these will often be 
+</ul>
+<h4>Adding support for inference rules:</h4>
+We need to add support for complex inference rules. Inasmuch as these will often be 
 	defined as a function of several concepts across different facets, it 
 	probably does not make sense to locate the rules in the individual facet 
 	files. We will probably define a separate file (or files) that contain the 
-	rules. Initially, a simple model like the following would suffice:
-	<pre>   &lt;infer id=&quot;i1&quot; ref=&quot;TechniqueDesignorDecoration:Carved&quot; confidence=&quot;.9&quot;&gt;
-     &lt;require&gt;
-       &lt;concept ref=&quot;UseorContext:Mask&quot; /&gt;
-       &lt;concept ref=&quot;Material:Wood&quot; /&gt;
-     &lt;/require&gt;
-&nbsp;&nbsp; &lt;/infer&gt;</pre><br>&nbsp;</li>
-</ul>
+	rules. Initially, a simple model like the following would suffice. The
+following rule asserts that if both the concepts <em>mask</em> and <em>wood</em>
+are associated to an object, and that neither of <em>willow</em> or <em>yucca</em>
+are, we can infer that the object was <em>carved</em>.
+   <pre>  &lt;infer id=&quot;i1&quot; ref=&quot;TechniqueDesignorDecoration:Carved&quot; confidence=&quot;.9&quot; author=&quot;Patrick&quot;&gt;
+    &lt;notes&gt;We generally assume that something used as a mask and made of wood 
+           was carved. The wood/materials from some trees are not generally
+           carved and so we exclude them (Willow, Yucca). 
+    &lt;/notes&gt;
+    &lt;require mode=&quot;all&quot;&gt;
+      &lt;concept ref=&quot;UseorContext:Mask&quot; /&gt;
+      &lt;concept ref=&quot;Material:Wood&quot; /&gt;
+    &lt;/require&gt;
+    &lt;exclude mode=&quot;any&quot;&gt;
+      &lt;concept ref=&quot;Material:Willow&quot; /&gt;
+      &lt;concept ref=&quot;Material:Yucca&quot; /&gt;
+    &lt;/exclude&gt;
+&nbsp; &lt;/infer&gt;</pre>
+      <p>
+      It should be noted that the declared confidence (0.9 in the example above)
+      is for the <em>rule</em>, and expresses the assertion that 9 out
+          of 10 wooden masks (in this collection) are carved. This confidence
+      value will be combined with the confidence
+    of the required concept associations to produce the net confidence for the
+    inferred association. Thus for some object X with the following confidence
+      levels:</p>
+      <ul>
+        <li>confidence that object X was used as a <em>mask</em> is 0.9 </li>
+        <li>confidence that the material for object X is wood is 0.8</li>
+        <li>declared confidence of our inference rule above is 0.9</li>
+      </ul>
+      <p>the inferred confidence that object X was carved would be (0.9 * 0.8 *
+      0.9) = 0.648. In practice, this means that in a search for
+      &quot;carved&quot; objects, object X will likely be sorted below (i.e.,
+      have lower relevance than ) other objects for which the NLP processing
+      found an indication of &quot;carved&quot; in the text. This seems
+      appropriate.</p>
+      <p>Considering another example that makes a simple association for a set
+      of concepts. Here the <code>&lt;require&gt;</code> mode is <em>any </em>and
+      so we express this rule as &quot;If an object is associated to any of the
+      concepts <em>brick</em>, <em>earthenware</em>, <em>stoneware</em>, <em>terracotta</em>
+      or <em>porcelain</em>, then we can infer it was <em>fired</em> (unless the
+      metadata includes the term <em>unfired</em>).&quot;</p>
+<pre>  &lt;infer id=&quot;i2&quot; ref=&quot;TechniqueDesignorDecoration:Fired&quot; confidence=&quot;.95&quot; author=&quot;Patrick&quot;&gt;
+    &lt;notes&gt;These materials are by definition fired, unless specifically declared unfired.
+    &lt;/notes&gt;
+    &lt;require mode=&quot;any&quot;&gt;
+      &lt;concept ref=&quot;Material:Brick&quot; /&gt;
+      &lt;concept ref=&quot;Material:Earthenware&quot; /&gt;
+      &lt;concept ref=&quot;Material:Stoneware&quot; /&gt;
+      &lt;concept ref=&quot;Material:Terracotta&quot; /&gt;
+      &lt;concept ref=&quot;Material:Porcelain&quot; /&gt;
+    &lt;/require&gt;
+    &lt;exclude mode=&quot;any&quot;&gt;
+      &lt;term value=&quot;unfired&quot; /&gt;
+    &lt;/exclude&gt;
+&nbsp; &lt;/infer&gt;</pre>
+      <h5>Issues and questions:</h5>
+      <p>Do we need alternate methods of computing confidence? E.g., Taking the
+      max or min confidence rather than multiplying them, or multiplying the
+      (1-C) values with the idea that the more specific we get, the more
+      confidence we gain. We need some use-cases to support any of this, and for
+      now, can just talk to the users to see whether any of this makes sense.</p>
 </body>
 
 </html>
