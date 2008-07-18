@@ -126,7 +126,7 @@ public class MainApp {
 	private int _debugLevel = 1;
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			StringUtils.outputDebugStr( str );
 	}
 
 	/**
@@ -2171,7 +2171,7 @@ public class MainApp {
 		// Now, we try to find a category in the hashMap for each token
 		for( String token:tokenPair.first ) {
 			// Test where id is 317239 - how do we match FUR?
-			TaxoNode node = facetMapHashTree.FindNodeByName(facetName,token.toLowerCase());
+			TaxoNode node = facetMapHashTree.FindNodeByHook(facetName,token);
 			if( node == null )
 				continue;
 			debug(3, "Obj:"+id+" matched on token: ["+token+"] facet: "+facetName);
@@ -2191,13 +2191,25 @@ public class MainApp {
 				if( fCatExcluded )
 					continue;
 			}
-			// We have a TaxoNode match! If not yet matched, or if this reliability
-			// is greater than any previous match, set the value in the matchedCats.
-			Float ret = matchedCats.get(node); // returns null if not in hashMap
-			float priorRel = (ret==null)?0:ret.floatValue();
-			if( reliability > priorRel )
-				matchedCats.put(node, reliability);
+			// We have a TaxoNode match! Update matches with this node
+			updateMatches( matchedCats, reliability, node);
+			// Now, consider all the implied nodes as well.
+			for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
+				updateMatches( matchedCats, reliability, node.impliedNodes.get(i));
+			}
 		}
+	}
+
+	private static void updateMatches(
+			HashMap<TaxoNode, Float> matchedCats,
+			float baseReliability,
+			TaxoNode node ) {
+		// If not yet matched, or if this reliability
+		// is greater than any previous match, set the value in the matchedCats.
+		Float ret = matchedCats.get(node); // returns null if not in hashMap
+		float priorRel = (ret==null)?0:ret.floatValue();
+		if( baseReliability > priorRel )
+			matchedCats.put(node, baseReliability);
 	}
 
 	private int dumpSQLForObjCatsOnFacet( int id, HashMap<TaxoNode, Float> matchedCats,
