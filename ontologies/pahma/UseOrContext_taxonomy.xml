@@ -65,7 +65,10 @@
 		<heading id="Toiletarticles" title="Toilet articles">
 			<heading id="Mirror" title="Mirror"/>
 			<heading id="Comb" title="Comb"/>
-			<heading id="Hairpin" title="Hairpin"/>
+			<!-- DUPE - needs disambiguation or clarification -->
+			<heading id="Hairpin" title="Hairpin">
+				<synonym value="Hair Pin"/>
+			</heading>
 			<heading id="Hairbrush" title="Hairbrush"/>
 			<heading id="Scissors" title="Scissors"/>
 			<heading id="Soap" title="Soap"/>
@@ -159,7 +162,6 @@
 				<heading id="MatSleeping" title="Mat, Sleeping"/>
 				<heading id="Canopy" title="Canopy"/>
 			</heading>
-			<heading id="Pillow" title="Pillow"/>
 		</heading>
 		<heading id="Recreationalitems" title="Recreational items">
 			<heading id="Games" title="Games">
@@ -182,6 +184,7 @@
 				<heading id="Cufflink" title="Cufflink"/>
 				<heading id="Ring" title="Ring"/>
 				<heading id="Fibula" title="Fibula"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Hairpin" title="Hairpin">
 					<synonym value="Hair Pin"/>
 				</heading>
@@ -227,7 +230,9 @@
 		</heading>
 		<heading id="Ceremonialitems" title="Ceremonial items">
 			<heading id="Mandala" title="Mandala"/>
-			<heading id="Mask" title="Mask"/>
+			<heading id="Mask" title="Mask">
+				<implies facet="TechniqueDesignorDecoration" cat="FigurativeOrRepresentational"/>
+			</heading>
 			<heading id="FeatheredStick" title="Feathered Stick"/>
 			<heading id="Charmstone" title="Charmstone"/>
 			<heading id="Headdress" title="Headdress"/>
@@ -494,10 +499,11 @@
 				<heading id="Drachma" title="Drachma"/>
 				<heading id="Dekadrachm" title="Dekadrachm"/>
 				<heading id="Tetradrachm" title="Tetradrachm">
-					<heading id="Tetradrachm" title="Tetradrachm?"/>
+					<synonym value="Tetradrachm?"/>
 				</heading>
 				<heading id="Octodrachm" title="Octodrachm"/>
 				<heading id="Pentokion" title="Pentokion"/>
+				<!-- close to DUPE - needs disambiguation or clarification -->
 				<heading id="Tetradrachma" title="Tetradrachma"/>
 				<heading id="tetrobol" title="tetrobol"/>
 				<heading id="Halfdrachma" title="Half drachma"/>
@@ -523,7 +529,6 @@
 				<heading id="TriaAssaria" title="Tria Assaria"/>
 			</heading>
 			<heading id="AncientRoman" title="Ancient Roman">
-				<heading id="Denarius" title="Denarius"/>
 				<heading id="Antoninianus" title="Antoninianus">
 					<heading id="Antoninianvs" title="Antoninianvs"/>
 					<heading id="Antioninianus" title="Antioninianus"/>
@@ -541,11 +546,17 @@
 					<heading id="Sextansuncialstandrard" title="Sextans; uncial standrard"/>
 				</heading>
 				<heading id="Aes" title="Aes">
-					<heading id="Aessemiuncialstandard" title="Aes - semiuncial standard"/>
-					<heading id="Aessextantalstandard" title="Aes - sextantal standard"/>
-					<heading id="Aesuncialstandard" title="Aes - uncial standard"/>
-					<heading id="Aesuncialstandard" title="Aes (uncial standard)"/>
-					<heading id="Aessextantalstandard" title="Aes (sextantal standard)"/>
+					<heading id="Aessemiuncialstandard" title="Aes - semiuncial standard">
+						<synonym value="Aes; semiuncial standard"/>
+					</heading>
+					<heading id="Aessextantalstandard" title="Aes - sextantal standard">
+						<synonym value="Aes (sextantal standard)"/>
+						<synonym value="Aes-(sextantal standard?)"/>
+						<synonym value="Aes; sextantal standard"/>
+					</heading>
+					<heading id="Aesuncialstandard" title="Aes - uncial standard">
+						<synonym value="Aes (uncial standard)"/>
+					</heading>
 					<heading id="Aesfolles" title="Aes folles">
 						<heading id="Aesfolles4" title="Aes folles (4)"/>
 						<heading id="AesfollesR3" title="Aes folles (R3)"/>
@@ -563,9 +574,6 @@
 					<heading id="Aesrude" title="Aes rude">
 						<heading id="Aesrudesextantalstand" title="Aes rude; sextantal stand"/>
 					</heading>
-					<heading id="Aessextantalstandard" title="Aes-(sextantal standard?)"/>
-					<heading id="Aessemiuncialstandard" title="Aes; semiuncial standard"/>
-					<heading id="Aessextantalstandard" title="Aes; sextantal standard"/>
 					<heading id="Aessemis" title="Aes semis"/>
 				</heading>
 				<heading id="Aureus" title="Aureus"/>
@@ -580,18 +588,27 @@
 				<heading id="Semuncia" title="Semuncia"/>
 				<heading id="Dupondius" title="Dupondius"/>
 				<heading id="Semis" title="Semis">
+					<synonym value="Semis ?"/>
 					<heading id="Semissemiuncialstanda" title="Semis - semiuncial standa"/>
-					<heading id="Semissextantalstandard" title="Semis (sextantal standard"/>
-					<heading id="Semis" title="Semis ?"/>
-					<heading id="Semissextantalstandard" title="Semis; sextantal standard"/>
+					<heading id="Semissextantalstandard" title="Semis (sextantal standard">
+						<synonym value="Semis; sextantal standard"/>
+					</heading>
 				</heading>
 				<heading id="Triens" title="Triens">
-					<heading id="Triensuncialstandard" title="Triens - uncial standard"/>
+					<heading id="Triensuncialstandard" title="Triens - uncial standard">
+						<synonym value="Triens; uncial standard"/>
+					</heading>
+					<!-- TYPO?? - needs attention -->
 					<heading id="Trienssextantalstandar" title="Triens (sextantal standar"/>
-					<heading id="Triensuncialstandard" title="Triens; uncial standard"/>
 				</heading>
-				<heading id="As" title="As"/>
-				<heading id="As" title="As."/>
+				<!-- This is a bad category for matching; we need to be pretty careful with this.
+				     It will match too much common prose. Perhaps we can disallow unigram
+						 matching from strings, or perhaps we must insist that it co-occurs
+						 with a coin or something.
+						 - needs attention -->
+				<heading id="As" title="As">
+					<synonym value="As."/>
+				</heading>
 				<heading id="Quartunciasemilibrals" title="Quartuncia (semi-libral s"/>
 				<heading id="SydenhamQuartunciaGr" title="Sydenham:  Quartuncia; Gr"/>
 				<heading id="Uncia" title="Uncia">

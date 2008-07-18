@@ -1,7 +1,3 @@
-<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Patrick Schmitz (private) -->
-<!-- This is a taxonomy facet for Material (materials used in the construction of and object, 
-       or the material that the object is made of. 
-       This taxonomy is not intended to stand alone, but rather to be included in a facetmap. -->
 <taxonomy id="Material" title="Material">
 	<description>This facet describes the materials that make up an object
 		(another aspect of <em><strong>what</strong></em> it is). The organization
@@ -241,7 +237,9 @@
 					<synonym value="Human canine teeth"/>
 					<synonym value="Human molar"/>
 				</heading>
-			<heading id="Ivory" title="Ivory" implies="OffWhite"/>
+			<heading id="Ivory" title="Ivory">
+				<implies facet="Color" cat="OffWhite"/>
+			</heading>
 		</heading>
 		<heading id="Antler" title="Antler"/>
 		<heading id="Sinew" title="Sinew">
@@ -324,13 +322,14 @@
 		</heading>
 	</heading>
 	<heading id="FromPlants" title="From Plants">
-		<heading id="Treesandshrubs" title="Trees and shrubs">
+		<heading id="Wood" title="Wood">
+			<synonym value="wooden"/>
+			<synonym value="of wood"/>
 			<heading id="Alder" title="Alder"/>
 			<heading id="Birch" title="Birch">
 				<heading id="Hazel" title="Hazel"/>
 			</heading>
 			<heading id="Cedar" title="Cedar"/>
-			<heading id="Cercis" title="Cercis"/>
 			<heading id="Conifer" title="Conifer">
 				<heading id="Fir" title="Fir"/>
 				<heading id="Pine" title="Pine">
@@ -345,20 +344,23 @@
 				</heading>
 				<heading id="Redwood" title="Redwood"/>
 			</heading>
-			<heading id="Grapevine" title="Grapevine"/>
-			<heading id="Juniper" title="Juniper"/>
 			<heading id="Maple" title="Maple"/>
 			<heading id="Oak" title="Oak"/>
+			<heading id="Spruce" title="Spruce"/>
+			<heading id="Willow" title="Willow"/>
+			<heading id="Yew" title="Yew"/>
+			<heading id="Yucca" title="Yucca"/>
+		</heading>
+		<heading id="Shrubs" title="Shrubs">
+			<heading id="Cercis" title="Cercis"/>
+			<heading id="Grapevine" title="Grapevine"/>
+			<heading id="Juniper" title="Juniper"/>
 			<heading id="Redbud" title="Redbud">
 				<synonym value="Red-bud"/>
 			</heading>
 			<heading id="Skunkbushsumac" title="Skunkbush sumac">
 				<synonym value="Rhus trilobata"/>
 			</heading>
-			<heading id="Spruce" title="Spruce"/>
-			<heading id="Willow" title="Willow"/>
-			<heading id="Yew" title="Yew"/>
-			<heading id="Yucca" title="Yucca"/>
 		</heading>
 		<heading id="GrassandHerbs" title="Grass and Herbs">
 			<heading id="Commonbeargrass" title="Common beargrass">
@@ -394,7 +396,9 @@
 			<heading id="Bucchero" title="Bucchero"/>
 			<heading id="Clay" title="Clay">
 				<heading id="Adobe" title="Adobe"/>
-				<heading id="Brick" title="Brick"/>
+				<heading id="Brick" title="Brick">
+					<excl value="brick red"/>
+				</heading>
 				<heading id="Earthenware" title="Earthenware">
 					<synonym value="Earthen ware"/>
 				</heading>
@@ -426,7 +430,8 @@
 				<heading id="CopperAlloy" title="Copper Alloy"/>
 			</heading>
 			<heading id="Electrum" title="Electrum"/>
-			<heading id="Gold" title="Gold" implies="GoldColored">
+			<heading id="Gold" title="Gold">
+				<implies facet="Color" cat="GoldColored"/>
 				<heading id="GoldPlate" title="Gold Plate">
 					<synonym value="Gilded"/>
 					<synonym value="Gilt"/>
@@ -448,7 +453,8 @@
 			</heading>
 			<heading id="Pewter" title="Pewter"/>
 			<heading id="Platinum" title="Platinum"/>
-			<heading id="Silver" title="Silver" implies="SilverColored">
+			<heading id="Silver" title="Silver">
+				<implies facet="Color" cat="SilverColored"/>
 				<heading id="SilverAlloy" title="Silver Alloy"/>
 				<heading id="SilverPlate" title="Silver Plate">
 					<synonym value="Silver-Plate"/>
@@ -471,7 +477,9 @@
 				<synonym value="Gemstone"/>
 				<synonym value="Gems"/>
 				<synonym value="Gem"/>
-				<heading id="Amber" title="Amber" implies="AmberColored"/>
+				<heading id="Amber" title="Amber">
+					<implies facet="Color" cat="AmberColored"/>
+				</heading>
 				<heading id="Amethyst" title="Amethyst"/>
 				<heading id="Chalcedony" title="Chalcedony">
 					<heading id="Agate" title="Agate"/>
