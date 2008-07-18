@@ -1,7 +1,3 @@
-<!-- This is a taxonomy facet for Technique, Design or Decoration.
-       This covers how a created or manipulated object (vs. a found substance such as bones)
-       was created or modified to produce its form.
-       This taxonomy is not intended to stand alone, but rather to be included in a facetmap. -->
 <taxonomy id="TechniqueDesignorDecoration" title="Technique, Design or Decoration">
 	<description>This facet describes <em><strong>how</strong></em> an object was made,
 		and combines visual design and decorative elements with the techniques
@@ -91,7 +87,6 @@
 		<synonym value="representation"/>
 		<synonym value="represents"/>
 		<synonym value="representation"/>
-		<synonym value="mask"/>
 		<synonym value="rhyton"/>
 		<!-- These will all apply to all "token" elements under this subtree -->
 		<!-- token name with each of the following suffices prepended -->
@@ -768,7 +763,7 @@
 				<synonym value="tube"/>
 				<synonym value="tubes"/>
 				<synonym value="flute"/>
-				<!-- shouod this be a token or synonym? -->
+				<!-- should this be a token or synonym? -->
 			</heading>
 		</heading>
 		<heading id="Conical" title="Conical">
@@ -811,12 +806,18 @@
 	<heading id="BeadingThreadwork" title="Beading, Threadwork, etc.">
 		<heading id="Beaded" title="Beaded"/>
 		<heading id="Braided" title="Braided"/>
-		<heading id="Embroidered" title="Embroidered"/> embroidery, stitchery
+		<heading id="Embroidered" title="Embroidered">
+			<synonym value="embroidery"/>
+			<synonym value="stitchery"/>
+		</heading>
 		<heading id="Knotted" title="Knotted"/>
 		<heading id="Monogrammed" title="Monogrammed"/>
 		<heading id="Quillwork" title="Quillwork"/>
 		<heading id="Sequined" title="Sequined"/>
-		<heading id="Sewn" title="Sewn"/> also sewed, sewed-on
+		<heading id="Sewn" title="Sewn">
+			<synonym value="sewed"/>
+			<synonym value="sewed-on"/>
+		</heading>
 		<heading id="Stitched" title="Stitched"/>
 		<heading id="Strung" title="Strung"/>
 	</heading>
@@ -838,7 +839,15 @@
 		<heading id="Workedstone" title="Worked (stone)"/>
 	</heading>
 	<heading id="Woven" title="Woven">
-		<heading id="Wovenbasketry" title="Woven (basketry)"/> weave, weaving, plainweave, openweave, checker-weave, lattice-weave, plaited, 
+		<heading id="Wovenbasketry" title="Woven (basketry)">
+			<synonym value="weave"/>
+			<synonym value="weaving"/>
+			<synonym value="plainweave"/>
+			<synonym value="openweave"/>
+			<synonym value="checker-weave"/>
+			<synonym value="lattice-weave"/>
+			<synonym value="plaited"/>
+		</heading>
 		<heading id="Woventextiles" title="Woven (textiles)"/>
 	</heading>
 	<heading id="Finished" title="Finished">
