@@ -56,7 +56,7 @@ public class MetaDataReader {
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			StringUtils.outputDebugStr( str );
 	}
 
 	protected String getFileName() {
