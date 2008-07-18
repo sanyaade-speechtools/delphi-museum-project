@@ -28,7 +28,7 @@ public class Pair<F,S> {
     if (this == o) return true;
     if (!(o instanceof Pair)) return false;
 
-    final Pair pair = (Pair) o;
+    final Pair<F, S> pair = (Pair<F, S>) o;
 
     if (first != null ? !first.equals(pair.first) : pair.first != null) return false;
     if (second != null ? !second.equals(pair.second) : pair.second != null) return false;
