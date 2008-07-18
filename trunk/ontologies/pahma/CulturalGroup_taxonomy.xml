@@ -171,13 +171,20 @@
 				<heading id="Atka" title="Atka"/>
 				<heading id="Chilcotin" title="Chilcotin"/>
 				<heading id="Cree" title="Cree"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Teslin" title="Teslin"/>
 				<heading id="Tutchone" title="Tutchone"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Han" title="Han"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Kutchin" title="Kutchin"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Tanana" title="Tanana"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Ahtna" title="Ahtna"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Tanaina" title="Tanaina"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Ingalik" title="Ingalik"/>
 				<heading id="Montagnais" title="Montagnais"/>
 				<heading id="Tagish" title="Tagish"/>
@@ -188,14 +195,20 @@
 					</heading>
 					<heading id="NorthernAthapaskantribes" title="Northern Athapaskan tribes">
 						<synonym value="Northern Athabascan"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Ahtna" title="Ahtna"/>
 						<heading id="Carrier" title="Carrier"/>
 						<heading id="Eyak" title="Eyak"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Han" title="Han"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Ingalik" title="Ingalik"/>
 						<heading id="Koyukon" title="Koyukon"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Tanaina" title="Tanaina"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Tanana" title="Tanana"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Kutchin" title="Kutchin"/>
 					</heading>
 				</heading>
@@ -207,6 +220,7 @@
 				<heading id="Blood" title="Blood"/>
 				<heading id="Cheyenne" title="Cheyenne"/>
 				<heading id="Arapaho" title="Arapaho"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Atakapa" title="Atakapa">
 					<synonym value="Attacapa"/>
 				</heading>
@@ -355,16 +369,16 @@
 					<synonym value="Nucka"/>
 				</heading>
 				<heading id="Kwakiutl" title="Kwakiutl">
-					<heading id="Kwakiutl" title="Kwakiutl (?)"/>
+					<synonym value="Kwakiutl (?)"/>
 				</heading>
 				<heading id="Haida" title="Haida"/>
 				<heading id="Tlingit" title="Tlingit">
 					<synonym value="Tlinkit"/>
 					<heading id="InlandTlingit" title="Inland Tlingit">
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Teslin" title="Teslin"/>
 					</heading>
 				</heading>
-				<heading id="NorthwestCoasttribes" title="Northwest Coast tribes"/>
 				<heading id="Tututni" title="Tututni"/>
 				<heading id="Quileute" title="Quileute"/>
 				<heading id="Twana" title="Twana"/>
@@ -418,7 +432,6 @@
 			</heading>
 			<heading id="Plateautribes" title="Plateau tribes">
 				<heading id="Bannock" title="Bannock"/>
-				<heading id="Plateautribes" title="Plateau tribes"/>
 				<heading id="EasternOregontribes" title="Eastern Oregon tribes"/>
 				<heading id="EasternWashingtontribes" title="Eastern Washington tribes"/>
 				<heading id="Klikitat" title="Klikitat"/>
@@ -441,7 +454,6 @@
 					<synonym value="Chemehueve"/>
 				</heading>
 				<heading id="Kawaiisu" title="Kawaiisu"/>
-				<heading id="GreatBasintribes" title="Great Basin tribes"/>
 				<heading id="Paiute" title="Paiute">
 					<heading id="NorthernPaiute" title="Northern Paiute">
 						<synonym value="Paviotso"/>
@@ -450,8 +462,10 @@
 							<heading id="NorthernPaiuteTovusidokadolivingatFallonReservationNevada" title="Northern Paiute (Tovusidokado), living at Fallon Reservation, Nevada."/>
 						</heading>
 						<heading id="PyramidLakePaiute" title="Pyramid Lake Paiute"/>
+						<!-- We should reconsider modeling these "uncertain" categories, to simply
+						     associate the parent with no child. -->
 						<heading id="NorthernPaiuteuncertain" title="Northern Paiute (uncertain)">
-							<heading id="NorthernPaiute" title="Northern Paiute (?)"/>
+							<synonym value="Northern Paiute (?)"/>
 						</heading>
 						<heading id="NorthernPaiuteNevada" title="Northern Paiute, Nevada"/>
 						<heading id="MonoLakePaiute" title="Mono Lake Paiute">
@@ -473,8 +487,10 @@
 						<synonym value="Koso"/>
 						<synonym value="Timbasha"/>
 					</heading>
+					<!-- We should reconsider modeling these "uncertain" categories, to simply
+							 associate the parent with no child. -->
 					<heading id="Shoshoneuncertain" title="Shoshone (uncertain)">
-						<heading id="Shoshone" title="Shoshone (?)"/>
+						<synonym value="Shoshone (?)"/>
 					</heading>
 					<heading id="WindRiverShoshoneWyoming" title="Wind River Shoshone, Wyoming"/>
 				</heading>
@@ -499,22 +515,27 @@
 				</heading>
 			</heading>
 			<heading id="CaliforniaTribes" title="California Tribes">
-				<heading id="CaliforniaTribes" title="California Tribes"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Cahto" title="Cahto">
 					<synonym value="Chato"/>
 					<synonym value="Kato"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Cahuilla" title="Cahuilla">
 					<synonym value="Coahuilla"/>
 					<heading id="MountainCahuilla" title="Mountain Cahuilla"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Chilula" title="Chilula"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Chumash" title="Chumash">
 					<heading id="VenturenoChumash" title="Ventureno Chumash"/>
 				</heading>
 				<heading id="Chukchansi" title="Chukchansi"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Nomlaki" title="Nomlaki"/>
 				<heading id="Modoc" title="Modoc"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Miwok" title="Miwok">
 					<heading id="CoastMiwok" title="Coast Miwok"/>
 					<heading id="LakeMiwok" title="Lake Miwok"/>
@@ -525,6 +546,7 @@
 					</heading>
 					<heading id="PlainsMiwok" title="Plains Miwok"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Yokuts" title="Yokuts">
 					<heading id="Mitcahai" title="Mitcahai"/>
 					<heading id="Yaudanchi" title="Yaudanchi"/>
@@ -539,17 +561,24 @@
 					<heading id="Choinimni" title="Choinimni"/>
 				</heading>
 				<heading id="MissionTribes" title="Mission Tribes"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Mattole" title="Mattole">
 					<synonym value="Matole"/>
 				</heading>
+				<!-- DUPE BAD - needs disambiguation or clarification.
+				     The other version is much richer, and should be merged with this one. -->
 				<heading id="Maidu" title="Maidu">
 					<heading id="MaiduNishiam" title="Maidu, Nishiam"/>
 					<heading id="Concow" title="Concow"/>
 					<heading id="NortheasternMaidu" title="Northeastern Maidu"/>
+					<!-- We should reconsider modeling these "uncertain" categories, to simply
+							 associate the parent with no child. -->
 					<heading id="Maiduuncertain" title="Maidu (uncertain)">
-						<heading id="Maidu" title="Maidu (?)"/>
+						<synonym value="Maidu (?)"/>
+						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Nisenan" title="Nisenan (?)"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Nisenan" title="Nisenan">
 						<synonym value="Southern Maidu"/>
 					</heading>
@@ -564,8 +593,10 @@
 					</heading>
 					<heading id="KlamathLakeTribes" title="Klamath Lake Tribes"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Kitanemuk" title="Kitanemuk"/>
 				<heading id="Juaneno" title="Juaneno"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Hupa" title="Hupa"/>
 				<heading id="Gabrieleno" title="Gabrieleno">
 					<synonym value="San Gabriel"/>
@@ -578,14 +609,19 @@
 					<heading id="Kamia" title="Kamia"/>
 				</heading>
 				<heading id="Cupeo" title="Cupeo">
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Cupeno" title="Cupeno">
 						<synonym value="Agua Caliente"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Costanoan" title="Costanoan"/>
 				<heading id="NorthernCaliforniatribes" title="Northern California tribes"/>
 				<heading id="Ohlone" title="Ohlone"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Patwin" title="Patwin"/>
+				<!-- DUPE BAD - needs disambiguation or clarification.
+						The other one is much richer and should be merged with this one. -->
 				<heading id="Pomo" title="Pomo">
 					<heading id="KashayaPomo" title="Kashaya Pomo">
 						<synonym value="Pomo, S.W."/>
@@ -599,6 +635,8 @@
 					<heading id="NorthernPomo" title="Northern Pomo">
 						<synonym value="N. Pomo"/>
 					</heading>
+					<!-- DUPE -  using the parent name as synonym here. 
+					       This needs disambiguation or clarification -->
 					<heading id="Pomoan" title="Pomoan">
 						<synonym value="Pomo"/>
 					</heading>
@@ -625,31 +663,40 @@
 						<synonym value="S Pomo"/>
 					</heading>
 					<heading id="LittleLake" title="Little Lake"/>
+					<!-- We should reconsider modeling these "uncertain" categories, to simply
+							 associate the parent with no child. -->
 					<heading id="Pomouncertain" title="Pomo (uncertain)">
-						<heading id="Pomo" title="Pomo (?)"/>
+						<synonym value="Pomo (?)"/>
 					</heading>
 				</heading>
 				<heading id="RoundValleyReservation" title="Round Valley Reservation"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wiyot" title="Wiyot">
-					<heading id="Wiyot" title="Wiyot">
-						<synonym value="Wishosk"/>
-					</heading>
+					<synonym value="Wishosk"/>
 				</heading>
 				<heading id="Yahi" title="Yahi">
+					<!-- We should reconsider modeling these "uncertain" categories, to simply
+							 associate the parent with no child. -->
 					<heading id="Yahiuncertain" title="Yahi (uncertain)">
-						<heading id="Yahi" title="Yahi(?)"/>
+						<synonym value="Yahi(?)"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Yana" title="Yana">
 					<heading id="NorthernYana" title="Northern Yana"/>
+					<!-- We should reconsider modeling these "uncertain" categories, to simply
+							 associate the parent with no child. -->
 					<heading id="Yanauncertain" title="Yana (uncertain)">
-						<heading id="Yana" title="Yana (?)"/>
+						<synonym value="Yana (?)"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Yuki" title="Yuki">
 					<heading id="CoastYuki" title="Coast Yuki"/>
 					<heading id="HuchnomYuki" title="Huchnom Yuki"/>
 				</heading>
+				<!-- DUPE BAD - needs disambiguation or clarification.
+						The other one is much richer and should be merged with this one. -->
 				<heading id="Yurok" title="Yurok">
 					<heading id="Yoruk" title="Yoruk"/>
 					<heading id="Weitchpec" title="Weitchpec"/>
@@ -657,7 +704,7 @@
 						<synonym value="Klamath Lake"/>
 					</heading>
 					<heading id="Yorokuncertain" title="Yorok (uncertain)">
-						<heading id="Yurok" title="Yurok (?)"/>
+						<synonym value="Yurok (?)"/>
 					</heading>
 					<heading id="CoastYurok" title="Coast Yurok">
 						<heading id="CoastalYurokandthewifeofTskerkr" title="Coastal Yurok and the wife of Tskerkr"/>
@@ -665,17 +712,22 @@
 						<heading id="AcoastalYurokfromOrick" title="A coastal Yurok from Orick"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Salinan" title="Salinan"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Sinkyone" title="Sinkyone">
 					<heading id="Lolanko" title="Lolanko"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wappo" title="Wappo"/>
 				<heading id="Wukchamni" title="Wukchamni"/>
 				<heading id="AchomawiPitRiver" title="Achomawi (Pit River)">
 					<synonym value="Achomawi"/>
 					<synonym value="Pit River"/>
+					<!-- DUPE of category names - needs disambiguation or clarification -->
 					<synonym value="Achumawi"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Tolowa" title="Tolowa">
 					<synonym value="Etchulets"/>
 					<synonym value="Etchulet"/>
@@ -698,37 +750,48 @@
 					<synonym value="Tahluwahs"/>
 					<synonym value="Tolanas"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Lassik" title="Lassik"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Nongatl" title="Nongatl"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Shasta" title="Shasta">
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="NewRiverShasta" title="New River Shasta"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Whilkut" title="Whilkut">
 					<synonym value="Redwood Indian"/>
 				</heading>
 				<heading id="NortheasternCaliforniatribes" title="Northeastern California tribes"/>
 				<heading id="BearRiver" title="Bear River">
 					<synonym value="Bear River, Humboldt"/>
+					<!-- DUPE - synonym matches another category. Needs disambiguation or clarification -->
 					<synonym value="Wiyot"/>
 					<synonym value="Matole"/>
+					<!-- DUPE of category name(s) - needs disambiguation or clarification -->
 					<synonym value="Mattole"/>
 					<heading id="AthabascanBearRiverCalifornia" title="Athabascan, Bear River, California"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Atsugewi" title="Atsugewi">
 					<synonym value="Atsuwegi"/>
 					<synonym value="Apwarige"/>
 					<synonym value="Apwaruge"/>
+					<synonym value="Atsugewi ?"/>
 					<heading id="AtsugewiHatCreek" title="Atsugewi (Hat Creek)">
+						<!-- DUPE - needs disambiguation or clarification -->
 						<synonym value="Atsugewi"/>
 					</heading>
-					<heading id="Atsugewi" title="Atsugewi ?"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Serrano" title="Serrano"/>
 				<heading id="CaliforniaDesert" title="California Desert"/>
 				<heading id="Karuk" title="Karuk">
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Karok" title="Karok">
 						<heading id="Karokuncertain" title="Karok (uncertain)">
-							<heading id="Karok" title="Karok(?)"/>
+							<synonym value="Karok(?)"/>
 							<heading id="Karokprob" title="Karok, prob."/>
 						</heading>
 					</heading>
@@ -736,7 +799,9 @@
 				<heading id="Tubatalabal" title="Tubatalabal">
 					<heading id="Tbatulabal" title="Tbatulabal"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wailaki" title="Wailaki"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wintu" title="Wintu">
 					<synonym value="Northern Wintun"/>
 					<heading id="Wintuntribes" title="Wintun tribes"/>
@@ -756,6 +821,8 @@
 				</heading>
 				<heading id="Unalaskan" title="Unalaskan"/>
 				<heading id="Eskimo" title="Eskimo">
+					<!-- Removed child dupe category and moved its synonym here. -->
+					<synonym value="Inuit"/>
 					<heading id="AglegmiutEskimo" title="Aglegmiut Eskimo"/>
 					<heading id="AlaskanEskimo" title="Alaskan Eskimo">
 						<synonym value="Western Eskimo"/>
@@ -773,9 +840,6 @@
 					</heading>
 					<heading id="CopperEskimo" title="Copper Eskimo"/>
 					<heading id="ColvilleRiverEskimo" title="Colville River Eskimo"/>
-					<heading id="Eskimo" title="Eskimo">
-						<synonym value="Inuit"/>
-					</heading>
 					<heading id="KalugademiutEskimo" title="Kaluga-de-miut Eskimo">
 						<synonym value="Kayaligmiut"/>
 					</heading>
@@ -826,6 +890,7 @@
 			<heading id="Southeasttribes" title="Southeast tribes">
 				<heading id="Southeasterntribes" title="Southeastern tribes"/>
 				<heading id="Creek" title="Creek"/>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Atakapa" title="Atakapa"/>
 				<heading id="Houma" title="Houma">
 					<synonym value="Huma"/>
@@ -901,6 +966,7 @@
 				<heading id="Mexican" title="Mexican"/>
 			</heading>
 			<heading id="CaliforniaIndiansShannonsTemp" title="California Indians-Shannon's Temp">
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wiyot" title="Wiyot">
 					<synonym value="So-lot-luck"/>
 					<synonym value="So-lah-te-luk"/>
@@ -915,10 +981,12 @@
 						<synonym value="Wishosk"/>
 					</heading>
 					<heading id="EelRiver" title="Eel River">
+						<!-- DUPE - synonym matches another category. Needs disambiguation or clarification -->
 						<synonym value="Wiyot"/>
 						<synonym value="Viard"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Hupa" title="Hupa">
 					<synonym value="Nabiltse"/>
 					<synonym value="Natano"/>
@@ -929,12 +997,15 @@
 						<synonym value="South Fork Indians"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Chilula" title="Chilula">
 					<synonym value="Bald Hills Indians"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Whilkut" title="Whilkut">
 					<synonym value="Redwood Indians"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Karok" title="Karok">
 					<synonym value="Cahroc"/>
 					<synonym value="Cahrok"/>
@@ -950,6 +1021,7 @@
 					<synonym value="Chimalakwe"/>
 					<synonym value="Kwoshonipu"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Cahto" title="Cahto">
 					<synonym value="Batem-da-kai-ee"/>
 					<synonym value="Kai Po-mo"/>
@@ -971,6 +1043,7 @@
 					<synonym value="Tahtoo"/>
 					<synonym value="Tatu"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wappo" title="Wappo">
 					<synonym value="Guapo"/>
 					<synonym value="Guapos"/>
@@ -994,10 +1067,12 @@
 						<synonym value="Myacomas"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Wintu" title="Wintu">
 					<synonym value="Win-toon"/>
 					<synonym value="Northern Wintun"/>
 					<synonym value="Mountain Diggers"/>
+					<!-- DUPE of category names - needs disambiguation or clarification -->
 					<synonym value="Shasta"/>
 					<synonym value="Trinity Wintu"/>
 					<synonym value="Trinity"/>
@@ -1015,6 +1090,7 @@
 					<heading id="Norelmeq" title="Norelmeq"/>
 					<heading id="Waymaq" title="Waymaq"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Nomlaki" title="Nomlaki">
 					<synonym value="Nomlaka"/>
 					<synonym value="Nomkewel"/>
@@ -1038,6 +1114,7 @@
 						<heading id="Puymok" title="Puymok"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Patwin" title="Patwin">
 					<synonym value="Patweens"/>
 					<synonym value="Copeh"/>
@@ -1057,9 +1134,12 @@
 						<synonym value="Ku'mnom"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Yana" title="Yana">
+					<!-- DUPE - synonym matches another category. Needs disambiguation or clarification -->
 					<synonym value="Yahi Yana"/>
 					<synonym value="Kombo"/>
+					<!-- DUPE - synonym matches another category. Needs disambiguation or clarification -->
 					<synonym value="Yahi"/>
 					<heading id="NorthernorCentralYana" title="Northern or Central Yana">
 						<synonym value="Nozi"/>
@@ -1072,6 +1152,7 @@
 						<synonym value="Puisus"/>
 						<synonym value="Puiel Yuki"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="YahiYana" title="Yahi Yana">
 						<synonym value="Kombo"/>
 						<synonym value="Yaana"/>
@@ -1080,6 +1161,8 @@
 						<synonym value="Yahnah"/>
 					</heading>
 				</heading>
+				<!-- DUPE BAD - needs disambiguation or clarification.
+				     This version is much richer, and should be merged with the other. -->
 				<heading id="Maidu" title="Maidu">
 					<synonym value="Mai'-deh"/>
 					<synonym value="Mai'-du"/>
@@ -1190,6 +1273,7 @@
 						<synonym value="Toloim"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Costanoan" title="Costanoan">
 					<synonym value="Olhonean"/>
 					<synonym value="Olhone"/>
@@ -1232,6 +1316,7 @@
 					<heading id="Eslenajan" title="Eslenajan"/>
 					<heading id="Tucutnut" title="Tucutnut"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Salinan" title="Salinan">
 					<synonym value="En'-ne'sen"/>
 					<heading id="Antonianos" title="Antonianos"/>
@@ -1267,6 +1352,7 @@
 					<synonym value="Kechis"/>
 					<synonym value="Acagchemem"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Kitanemuk" title="Kitanemuk">
 					<synonym value="Kikitanum"/>
 					<synonym value="Kikitamakar"/>
@@ -1277,6 +1363,7 @@
 					<synonym value="Tejon Indians"/>
 					<synonym value="Haminot"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Serrano" title="Serrano">
 					<synonym value="Maringints"/>
 					<synonym value="Pitanta"/>
@@ -1286,6 +1373,7 @@
 					<synonym value="Takhtam"/>
 					<synonym value="Kaiviatam"/>
 					<synonym value="Cow-ang-a-chem"/>
+					<!-- DUPE of category name(s) - needs disambiguation or clarification -->
 					<synonym value="Cahuilla"/>
 					<synonym value="Vanyume"/>
 					<synonym value="Beneme"/>
@@ -1293,6 +1381,7 @@
 					<synonym value="Mohineyam"/>
 					<synonym value="Mohinyam"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Cahuilla" title="Cahuilla">
 					<synonym value="Kumi-taraxam"/>
 					<synonym value="Cowela"/>
@@ -1317,6 +1406,7 @@
 					<synonym value="Cahahaguillas"/>
 					<synonym value="Coahuillas"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Cupeno" title="Cupeno">
 					<synonym value="Warner's Ranch Indians"/>
 					<synonym value="Kupa"/>
@@ -1339,6 +1429,7 @@
 					<synonym value="Kawak-upai"/>
 					<synonym value="Kawakipai"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Yokuts" title="Yokuts">
 					<heading id="SouthernValleyYokuts" title="Southern Valley Yokuts">
 						<heading id="Tachi" title="Tachi">
@@ -1600,6 +1691,8 @@
 						</heading>
 					</heading>
 				</heading>
+				<!-- DUPE BAD - needs disambiguation or clarification.
+						This one is much richer and should be merged with the other. -->
 				<heading id="Pomo" title="Pomo">
 					<synonym value="Poma"/>
 					<heading id="Kashaya" title="Kashaya">
@@ -1913,6 +2006,7 @@
 						</heading>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Tolowa" title="Tolowa">
 					<synonym value="Dalawa"/>
 					<synonym value="Tollowa"/>
@@ -1928,6 +2022,8 @@
 					<heading id="Tolak" title="Tola'k"/>
 					<heading id="Etchulets" title="Etchulets"/>
 				</heading>
+				<!-- DUPE BAD - needs disambiguation or clarification.
+						This one is much richer and should be merged with the other. -->
 				<heading id="Yurok" title="Yurok">
 					<synonym value="Al-agnas"/>
 					<synonym value="Al-i-kwa"/>
@@ -1970,6 +2066,7 @@
 					<heading id="CoastalYurok" title="Coastal Yurok"/>
 				</heading>
 				<heading id="SouthernAthapaskan" title="Southern Athapaskan">
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Mattole" title="Mattole">
 						<synonym value="Mattoal"/>
 						<synonym value="Mattol'"/>
@@ -1977,6 +2074,7 @@
 						<synonym value="Bettol'"/>
 						<synonym value="Pet'-tol'"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Nongatl" title="Nongatl">
 						<synonym value="Noan'-kakhl"/>
 						<synonym value="Nungkah"/>
@@ -1988,6 +2086,7 @@
 						<synonym value="Siahs"/>
 						<synonym value="Sians"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Sinkyone" title="Sinkyone">
 						<synonym value="Kaikomas"/>
 						<synonym value="Tulbush"/>
@@ -2013,11 +2112,13 @@
 							<synonym value="Kush-Kish"/>
 						</heading>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Lassik" title="Lassik">
 						<synonym value="Tinney"/>
 						<synonym value="Lassics"/>
 						<synonym value="Lessics"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Wailaki" title="Wailaki">
 						<synonym value="Ken'-es-ti"/>
 						<synonym value="Kastel Pomos"/>
@@ -2048,6 +2149,7 @@
 						<synonym value="Iwappi"/>
 						<synonym value="Salmon River Person"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="NewRiverShasta" title="New River Shasta">
 						<synonym value="Ho-hah'-pah-soo'-ish"/>
 						<synonym value="Kah-hoo'-tin-e'-ruk"/>
@@ -2065,6 +2167,7 @@
 						<synonym value="Wi'-in"/>
 						<synonym value="Wayin"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Shasta" title="Shasta">
 						<synonym value="Rogue River Indian"/>
 						<synonym value="Shaste"/>
@@ -2094,6 +2197,7 @@
 							<synonym value="Kamma'twa"/>
 						</heading>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Achumawi" title="Achumawi">
 						<synonym value="Achomawi"/>
 						<synonym value="Pit River Indians"/>
@@ -2105,6 +2209,7 @@
 						<synonym value="Blaykni"/>
 						<synonym value="Mo-watwa-s"/>
 					</heading>
+					<!-- DUPE - needs disambiguation or clarification -->
 					<heading id="Atsugewi" title="Atsugewi">
 						<synonym value="Atsuke"/>
 						<synonym value="Adwanuqdji"/>
@@ -2116,6 +2221,7 @@
 						<synonym value="Pacamallies"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Achumawi" title="Achumawi">
 					<synonym value="Achomawi"/>
 					<synonym value="Pit River Indians"/>
@@ -2125,6 +2231,7 @@
 					<synonym value="Mowatwas"/>
 					<heading id="Shawash" title="Shawash"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Atsugewi" title="Atsugewi">
 					<synonym value="Hat Creek Indians"/>
 					<synonym value="Adwanjqdji"/>
@@ -2134,6 +2241,7 @@
 					<synonym value="Chenoya"/>
 					<synonym value="Pacamallies"/>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Chumash" title="Chumash">
 					<heading id="InteriorChumash" title="Interior Chumash">
 						<heading id="Cuyama" title="Cuyama"/>
@@ -2168,6 +2276,7 @@
 						<heading id="PurisimenoChumash" title="Purisimeno Chumash"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Miwok" title="Miwok">
 					<heading id="LakeMiwok" title="Lake Miwok">
 						<synonym value="Pomo"/>
@@ -2244,7 +2353,9 @@
 						<synonym value="Utchium"/>
 					</heading>
 				</heading>
+				<!-- DUPE - needs disambiguation or clarification -->
 				<heading id="Yuki" title="Yuki">
+					<!-- DUPE - needs restructuring - this is silly. -->
 					<heading id="Yuki" title="Yuki">
 						<synonym value="Yuke"/>
 						<synonym value="Eukas"/>
