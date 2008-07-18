@@ -34,7 +34,7 @@ public class VocabTermsReader {
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			StringUtils.outputDebugStr( str );
 	}
 
 	public void addSkipTerm( String termToSkip ) {
@@ -53,7 +53,7 @@ public class VocabTermsReader {
 		int dummyFacetID = 0;
 		try {
 			// Create dummy facet to add everything to
-			Facet facet = new Facet( "default", "none", dummyFacetID, null, null, 
+			Facet facet = new Facet( "default", "none", dummyFacetID, null, null,
 															false, false, null, null, "None" );
 			hashTree.AddFacet(facet);
 			boolean fFirstLine = true;

@@ -25,7 +25,11 @@ public class StringUtils {
 
 	protected static void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			outputDebugStr( str );
+	}
+
+	public static void outputDebugStr( String str ){
+		System.out.println( str );
 	}
 
 	public static String trimQuotes( String str ) {
