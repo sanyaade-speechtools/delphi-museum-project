@@ -47,7 +47,7 @@ public class ImagePathsReader {
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			StringUtils.outputDebugStr( str );
 	}
 
 	public ArrayList<ImageInfo> GetInfoForID( int id ) {
