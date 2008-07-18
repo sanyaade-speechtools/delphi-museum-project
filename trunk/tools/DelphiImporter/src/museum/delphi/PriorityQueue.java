@@ -254,7 +254,7 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 	  *
 	  * @return new Counter for this priority queue.
 	  */
-	 public Counter asCounter() {
+	 public Counter<I> asCounter() {
 		 PriorityQueue<I> pq = clone();
 		 Counter<I> counter = new Counter<I>();
 		 while (pq.hasNext()) {
