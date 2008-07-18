@@ -18,41 +18,56 @@ public class DoubleHashTree {
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			StringUtils.outputDebugStr(str);
+	}
+
+	private class DuplicateTaxoNodeException extends RuntimeException {
+		public static final long serialVersionUID = 1;
+
+		public DuplicateTaxoNodeException( String str ) {
+			super( str );
+		}
 	}
 
 	// Note that the tree implied by TaxoNode only allows 1 root.
 	// However, multiple trees can be in a single hashMap.
 	private class FacetInfo {
 		// TODO the nameMap should take a CollationKey, not a String
-		private HashMap<String, TaxoNode>  nameMap = null;
+		private HashMap<String, TaxoNode>  hookMap = null;
+		private HashMap<String, TaxoNode>  strIDMap = null;
 		private HashMap<Integer, TaxoNode> idMap = null;
 		private Facet                      facet = null;
 
 		protected FacetInfo(Facet facet) {
 			this.facet = facet;
-			nameMap = new HashMap<String, TaxoNode>();
+			hookMap = new HashMap<String, TaxoNode>();
+			strIDMap = new HashMap<String, TaxoNode>();
 			idMap = new HashMap<Integer, TaxoNode>();
 		}
 
-		protected void AddTaxoNodeToMap( TaxoNode node, String name, Integer id ) {
-			// TODO This should be getting a CollationKey, not mapping to lower
-			String nameLwr = name.toLowerCase();
-			if( nameMap.get( nameLwr ) == null ) {
+		protected void AddTaxoNodeToMap( TaxoNode node, String hook, Integer id ) {
+			if( strIDMap.get( node.name ) == null ) {
 				if( idMap.get( id ) != null )
-					throw new RuntimeException( "AddTaxoNodeToMap: node not in name map, but in IDmap!");
+					throw new DuplicateTaxoNodeException( "AddTaxoNodeToMap: node not in name map, but in IDmap:"
+												+node.toString());
 				idMap.put( id, node );
-				nameMap.put( nameLwr, node );
+				strIDMap.put( node.name, node );
+				AddNodeToNameMap( node, hook );
 			} else if( idMap.get( id ) == null )
-				throw new RuntimeException(
+				throw new DuplicateTaxoNodeException(
 						"AddTaxoNodeToMap: node in name map, but not in IDmap:"+node.toString());
 		}
 
 		protected void AddNodeToNameMap( TaxoNode node, String name ) {
 			// TODO This should be getting a CollationKey, not mapping to lower
-			String nameLwr = name.toLowerCase();
-			if( nameMap.get( nameLwr ) == null ) {
-				nameMap.put( nameLwr, node );
+			if( name != null ) {
+				String hookL = name.toLowerCase();
+				TaxoNode old = hookMap.get(hookL);
+				if( old == null )
+					hookMap.put( hookL, node );
+				else
+					debug( 1, "Duplicate hook:["+hookL+"] New node:["+node.name
+							+"] precluded by previous:["+old.name+"]");
 			}
 		}
 	}
@@ -82,7 +97,7 @@ public class DoubleHashTree {
 	public int totalTermCount() {
 		int total = 0;
 		for( FacetInfo fI : facetsByName.values() )
-			total += fI.nameMap.size();
+			total += fI.hookMap.size();
 		return total;
 	}
 
@@ -115,14 +130,24 @@ public class DoubleHashTree {
 
 	public TaxoNode FindNodeByName( int facetID, String name ) {
 		FacetInfo facet = facetsByID.get(facetID);
-		// TODO This should be getting a CollationKey, not mapping to lower
-		return ( facet == null )? null:facet.nameMap.get(name.toLowerCase());
+		return ( facet == null )? null:facet.strIDMap.get(name);
 	}
 
 	public TaxoNode FindNodeByName( String facetName, String name ) {
 		FacetInfo facet = facetsByName.get(facetName);
+		return ( facet == null )? null:facet.strIDMap.get(name);
+	}
+
+	public TaxoNode FindNodeByHook( int facetID, String hook ) {
+		FacetInfo facet = facetsByID.get(facetID);
 		// TODO This should be getting a CollationKey, not mapping to lower
-		return ( facet == null )? null:facet.nameMap.get(name.toLowerCase());
+		return ( facet == null )? null:facet.hookMap.get(hook.toLowerCase());
+	}
+
+	public TaxoNode FindNodeByHook( String facetName, String hook ) {
+		FacetInfo facet = facetsByName.get(facetName);
+		// TODO This should be getting a CollationKey, not mapping to lower
+		return ( facet == null )? null:facet.hookMap.get(hook.toLowerCase());
 	}
 
 	public TaxoNode FindNodeByID( int facetID, int id ) {
@@ -346,6 +371,14 @@ public class DoubleHashTree {
 				// This cast is stupid - facet subclasses TaxoNode!!!
 			    AddCategoriesFromNode( taxoRoot, (TaxoNode)facet, facetID, facetID, null, null );
 			}
+			// Now we're done parsing, so we can do the second pass, resolving forward
+			// references on implied links, etc.
+			// First, do the pending implied nodes
+			for( FacetInfo facet : facetsByID.values() ) {
+				for( TaxoNode tnode : facet.idMap.values() ) {
+					tnode.ResolvePendingImpliedNodes(this);
+				}
+			}
 		} catch(Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
 		}
@@ -435,44 +468,46 @@ public class DoubleHashTree {
 
 				    TaxoNode newNode = new TaxoNode( name, displayName, null, nextID+nAdded, termID, facetID,
 				    								parent, sort, guide, infer, single);
+				    try {
+				    	currFacet.AddTaxoNodeToMap( newNode, (nomatch?null:displayName), newNode.id );
+				    } catch(DuplicateTaxoNodeException dte) {
+				    	debug(2, dte.getMessage());
+						System.err.println("DuplicateTaxoNodeException (skipping node): " + newNode.toString());
+						continue;
+					}
 				    nAdded++;
-				    currFacet.idMap.put( newNode.id, newNode );
 				    childEl.setAttribute( "catID", String.valueOf(newNode.id) );
-				    if( !nomatch )
-				    	currFacet.AddNodeToNameMap( newNode, displayName );
-				    else {
-				    	// Note that any local prefices and suffices MUST come before the categories,
-				    	// so we can just inherit the ones coming in if we have not add any.
-		    			if( local_prefices == null )
-			    			local_prefices = prefices;
-		    			if( local_suffices == null )
-			    			local_suffices = suffices;
-				    	if( asTokenNoPlural || asTokenPlural ) {
-				    		if( combineWithPrefices ) {
-				    			if( local_prefices == null )
-				    				throw new RuntimeException("No Prefices to combine with token: "+name);
-					    		AddSynonymsForTokenWithPrefices( currFacet, newNode, name, local_prefices );
-				    		}
-				    		if( combineWithSuffices ) {
-				    			if( local_suffices == null )
-				    				throw new RuntimeException("No Suffices to combine with token: "+name);
-					    		AddSynonymsForTokenWithSuffices( currFacet, newNode, name, local_suffices );
-				    		}
-				    	}
-				    	if( asTokenPlural ) {
-				    		String plural = name+"s";
-				    		if( combineWithPrefices ) {
-				    			if( local_prefices == null )
-				    				throw new RuntimeException("No Prefices to combine with token: "+plural);
-					    		AddSynonymsForTokenWithPrefices( currFacet, newNode, plural, local_prefices );
-				    		}
-				    		if( combineWithSuffices ) {
-				    			if( local_suffices == null )
-				    				throw new RuntimeException("No Suffices to combine with token: "+plural);
-					    		AddSynonymsForTokenWithSuffices( currFacet, newNode, plural, local_suffices );
-				    		}
-				    	}
-				    }
+			    	// Note that any local prefices and suffices MUST come before the categories,
+			    	// so we can just inherit the ones coming in if we have not add any.
+	    			if( local_prefices == null )
+		    			local_prefices = prefices;
+	    			if( local_suffices == null )
+		    			local_suffices = suffices;
+			    	if( asTokenNoPlural || asTokenPlural ) {
+			    		if( combineWithPrefices ) {
+			    			if( local_prefices == null )
+			    				throw new RuntimeException("No Prefices to combine with token: "+name);
+				    		AddSynonymsForTokenWithPrefices( currFacet, newNode, name, local_prefices );
+			    		}
+			    		if( combineWithSuffices ) {
+			    			if( local_suffices == null )
+			    				throw new RuntimeException("No Suffices to combine with token: "+name);
+				    		AddSynonymsForTokenWithSuffices( currFacet, newNode, name, local_suffices );
+			    		}
+			    	}
+			    	if( asTokenPlural ) {
+			    		String plural = name+"s";
+			    		if( combineWithPrefices ) {
+			    			if( local_prefices == null )
+			    				throw new RuntimeException("No Prefices to combine with token: "+plural);
+				    		AddSynonymsForTokenWithPrefices( currFacet, newNode, plural, local_prefices );
+			    		}
+			    		if( combineWithSuffices ) {
+			    			if( local_suffices == null )
+			    				throw new RuntimeException("No Suffices to combine with token: "+plural);
+				    		AddSynonymsForTokenWithSuffices( currFacet, newNode, plural, local_suffices );
+			    		}
+			    	}
 				    if( parent != null )
 				    	parent.AddChild( newNode );
 				    // Recurse to handle descendents.
@@ -484,13 +519,18 @@ public class DoubleHashTree {
 		    			local_suffices = suffices;
 				    nAdded += AddCategoriesFromNode( childEl, newNode, facetID, nextID+nAdded,
 				    									local_prefices, local_suffices );
-			    }
-			    else if( nodeName.equals( impliesElName ) ) {
-			    	String path = childEl.getAttribute( "value" );
-			    	if( path != null )
-			    		parent.AddImpliedNode( path );
-			    }
-			    else if( nodeName.equals( synonymElName ) ) {
+			    } else if( nodeName.equals( impliesElName ) ) {
+			    	String facetName = childEl.getAttribute( "facet" );
+			    	String catName = childEl.getAttribute( "cat" );
+			    	if( facetName != null && catName != null ) {
+			    		TaxoNode impliedNode = FindNodeByName( facetName, catName );
+			    		if( impliedNode != null )
+			    			parent.AddImpliedNode( impliedNode );
+			    		else
+			    			parent.AddImpliedNode(facetName, catName );
+			    	} else
+			    		debug( 1, "Bad \"implies\" node for category: " + parent.name );
+			    } else if( nodeName.equals( synonymElName ) ) {
 			    	String synName = childEl.getAttribute( "value" );
 			    	if( synName != null ) {
 			    		// TODO Need to put in termID if we have it???
@@ -498,8 +538,7 @@ public class DoubleHashTree {
 			    		// Add another name to the map for the parent
 			    		currFacet.AddNodeToNameMap( parent, synName  );
 			    	}
-			    }
-			    else if( nodeName.equals( exclElName ) ) {
+			    } else if( nodeName.equals( exclElName ) ) {
 			    	String exclName = childEl.getAttribute( "value" );
 			    	if( exclName != null ) {
 			    		// TODO Need to put in termID if we have it???
@@ -507,8 +546,7 @@ public class DoubleHashTree {
 			    		// Add another name to the map for the parent
 			    		currFacet.AddNodeToNameMap( parent, exclName  );
 			    	}
-			    }
-			    else if( nodeName.equals( prefixElName ) ) {
+			    } else if( nodeName.equals( prefixElName ) ) {
 			    	String prefixName = childEl.getAttribute( "value" );
 			    	if( prefixName != null ) {
 			    		if( local_prefices == null ) {
@@ -535,14 +573,14 @@ public class DoubleHashTree {
 			    	String fromStr = childEl.getAttribute( "from" );
 			    	String toStr = childEl.getAttribute( "to" );
 			    	if( fromStr != null && toStr != null) {
-			    		debug( 1, "Ignoring reduce from:["+fromStr+"] to:["+toStr+"] (NYI)");
+			    		debug( 2, "Ignoring reduce from:["+fromStr+"] to:["+toStr+"] (NYI)");
 			    	}
 			    }
 			    // Handle the noise tokens
 			    else if( nodeName.equals( noiseTokenElName ) ) {
 			    	String noiseToken = childEl.getAttribute( "value" );
 			    	if( noiseToken != null) {
-			    		debug( 1, "Ignoring noiseToken:["+noiseToken+"] (NYI)");
+			    		debug( 2, "Ignoring noiseToken:["+noiseToken+"] (NYI)");
 			    	}
 			    }
 			    else if( nodeName.equals( tokenElName ) ) {
