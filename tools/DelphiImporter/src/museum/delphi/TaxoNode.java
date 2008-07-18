@@ -18,12 +18,13 @@ public class TaxoNode {
 	public String sort;						// null if no sort specified
 	public ArrayList<String> synset;	// Synonyms/alt terms for this node
 	public ArrayList<String> exclset;	// Synonyms/alt terms for this node
-	// Need to establish which namespace this uses - name or controlName
-	// TODO - support both name list as well as node list. Add method
-	// that takes a DoubleHashTree and resolves the implied nodes.
-	// Change format to be facetName qualified, as in Color:Blue.
-	// Will call DoubleHashTree.FindNodeByName( String facetName, String name );
-	public ArrayList<String> impliedNodes;	// Other than ascendants
+	// This is a list of TaxoNodes, which may be in other facets.
+	// ince each Taxonode is tied to a facet, this is okay, and just
+	// affords arcs across facets, making a linked graph.
+	public ArrayList<TaxoNode> impliedNodes;	// Other than ascendants
+	// We may get forward references to nodes, and keep them to resolve later
+	// The references are by facet and category names
+	public ArrayList<Pair<String, String>> impliedNodesPending;
 	public boolean inferredByChildren;// Is this node implied by children
 	public boolean isGuideTerm;				// Is this node implied by children
 	public boolean selectSingle;			// For facet map UI
@@ -78,8 +79,17 @@ public class TaxoNode {
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
-			System.out.println( str );
+			StringUtils.outputDebugStr( str );
 	}
+
+	public boolean equals(Object o) {
+	    if (this == o) return true;
+	    if (!(o instanceof TaxoNode)) return false;
+
+	    final TaxoNode tnode = (TaxoNode) o;
+
+	    return id == tnode.id;
+  	}
 
 	public boolean isRoot() {
 		return parent==null;
@@ -162,22 +172,56 @@ public class TaxoNode {
 		return nDesc;
 	}
 
-	// Add another reference to a category that this category infers. We accept
-	// a path to assist in disambiguation. Path is rooted at a facet.
-	// Path may also be a simple id if that is unambiguous within the facet.
-	// TODO: Decide if we can allow cross-facet inferral.
-	boolean AddImpliedNode( String path ) {
-		if( impliedNodes == null )
-			impliedNodes = new ArrayList<String>();
+	// Add another reference to a category that this category infers.
+	// This is an id in the global ontology namespace.
+	boolean AddImpliedNode( String facet, String cat ) {
+		Pair<String, String> newPair = new Pair<String, String>( facet, cat );
+		if( impliedNodesPending == null )
+			impliedNodesPending = new ArrayList<Pair<String, String>>();
 		// Check to see if there already, and if so, return false
-		impliedNodes.add( path );
+		else if( impliedNodesPending.contains( newPair ))
+			return false;
+		impliedNodesPending.add( newPair );
+		return true;
+	}
+
+	boolean ResolvePendingImpliedNodes( DoubleHashTree map ) {
+		if(( impliedNodesPending == null ) || ( impliedNodesPending.size() <= 0 ))
+			return false;
+		for( int i=0; i<impliedNodesPending.size(); i++ ) {
+			Pair<String, String> pair = impliedNodesPending.get(i);
+			TaxoNode implied = map.FindNodeByName(pair.first, pair.second);
+			if( implied != null ) {
+				AddImpliedNode( implied );
+				debug( 2, "Resolved implied link from [" + displayName + "("+id+")] to ["
+					+pair.first + " : " + pair.second + "("+implied.id+")]" );
+			} else {
+				debug( 1, "Could not resolve implied link from [" + displayName + "("+id+")] to ["
+						+pair.first + " : " + pair.second + "]" );
+			}
+		}
+		return true;
+	}
+
+	// Add another reference to a category that this category infers.
+	// This is an id in the global ontology namespace.
+	boolean AddImpliedNode( TaxoNode implied ) {
+		if( impliedNodes == null )
+			impliedNodes = new ArrayList<TaxoNode>();
+		// Check to see if there already, and if so, return false
+		else if( impliedNodes.contains( implied ))
+			return false;
+		impliedNodes.add( implied );
 		return true;
 	}
 
 	public String toString(){
-		String str = "TaxoNode{ "+name+", tID:"+termID+", "+controlName;
+		// String str = "TaxoNode{ "+name+", ID:"+id+", tID:"+termID+", "+controlName;
+		String str = "TaxoNode{ "+name+", ID:"+id;
 		if(parent!=null)
-			str += ", parent:"+parent.termID;
+			str += ", parent:"+parent.name;
+		if(facetid>=0)
+			str += ", facetid:"+facetid;
 		str += "}";
 		return str;
 	}
