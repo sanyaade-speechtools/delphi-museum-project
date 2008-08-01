@@ -56,12 +56,14 @@ $(document).ready(function(){
 // Parse out variables from the URL
 function initVars(){
 	// Parse out Cats from URL
-	catsGET = $.getURLParam("cats");
-	if(catsGET){cats = catsGET.split(",");}
+	// NO - get from passed var. catsGET = $.getURLParam("cats");
+	if( requested_cats.length > 0 )
+		{cats = requested_cats.split(",");}
 	
 	// Parse out Keywords from URL
-	kwdsGET = $.getURLParam("kwds");
-	if(kwdsGET){kwds = kwdsGET.split(",");}
+	// NO - get from passed var. kwdsGET = $.getURLParam("kwds");
+	if( requested_kwds.length > 0 )
+		{kwds = requested_kwds.split(",");}
 	
 	// Parse out page
 	page = $.getURLParam("page");

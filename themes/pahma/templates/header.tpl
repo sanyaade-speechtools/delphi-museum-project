@@ -44,7 +44,7 @@
 				<form action="{$wwwroot}/results/" method="get">
 					<div>
 						<label for="navSearchBoxInput" class="overlabel">Search the Collection</label>
-						<input type="text" name="kwds" maxlength="40" title="Search The Collection" id="navSearchBoxInput" class="delphiFormInput"/>
+						<input type="text" name="rawkwds" maxlength="40" title="Search The Collection" id="navSearchBoxInput" class="delphiFormInput"/>
 						<input type="submit" value="Search" id="navSearchBoxButton" />
 					</div>
 				</form>
