@@ -10,14 +10,23 @@ $t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
 isset($_GET['cats']) ? $catIDs = explode(",",$_GET['cats']) : $catIDs = array();
 // Parse out Keywords from URL
 isset($_GET['kwds']) ? $kwds = $_GET['kwds'] : $kwds = false;
+// Parse out with images
+(isset($_GET['images']) && $_GET['images'] == 0)? $images = false : $images = true;
 // Parse out page
 isset($_GET['page']) ? $page = $_GET['page'] : $page = 1;
 // Parse page size
 isset($_GET['pageSize']) ? $pageSize = $_GET['pageSize'] : $pageSize = 36;
-// Parse out with images
-(isset($_GET['images']) && $_GET['images'] == 0)? $images = false : $images = true;
 
-$kwds = trim( $kwds, " \t\n\r'" );
+// Cannot process rawkwds unless we have no cats or refined keywords
+if( isset($_GET['rawkwds']) && empty($kwds) && empty($catIDs)) {
+	$rawkwds = trim( $_GET['rawkwds'], " \t\n\r'" );
+	$values = getCategoryIDsForKwds($rawkwds, $images);
+	$catIDs = $values['cats'];
+	$kwds = implode( ",", $values['kwds']);
+}
+$t->assign('cats', implode( ",", $catIDs));
+if( $kwds )
+	$t->assign('kwds', $kwds );
 
 // Query objects
 $objResults = queryObjects($catIDs, $kwds, $page-1, $pageSize, $images);
