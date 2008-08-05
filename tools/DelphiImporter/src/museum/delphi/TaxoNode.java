@@ -25,7 +25,7 @@ public class TaxoNode {
 	// We may get forward references to nodes, and keep them to resolve later
 	// The references are by facet and category names
 	public ArrayList<Pair<String, String>> impliedNodesPending;
-	public boolean inferredByChildren;// Is this node implied by children
+	public boolean inferredByChildren;		// Is this node implied by children
 	public boolean isGuideTerm;				// Is this node implied by children
 	public boolean selectSingle;			// For facet map UI
 	public int iMaskBase;					// First mask for this

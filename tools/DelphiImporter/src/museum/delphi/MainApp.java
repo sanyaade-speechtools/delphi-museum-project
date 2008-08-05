@@ -1838,7 +1838,10 @@ public class MainApp {
 					if( fWithNewlines )
 						writer.newLine();
 				}
-				writer.append("("+node.id+",\""+node.displayName+"\")");
+				// We use display names (in most cases) as hooks, but do not
+				// fold to lower in the TaxoNode structure. Hooks assumes all lower.
+				// TODO this should properly deal with Unicode collation mechanisms.
+				writer.append("("+node.id+",\""+node.displayName.toLowerCase()+"\")");
 				fFirst = false;
 				// Save any synonyms as hooks
 				if( node.synset != null )
@@ -1990,6 +1993,7 @@ public class MainApp {
 			ArrayList<String> lastStrings = new ArrayList<String>();
 			HashMap<TaxoNode, Float> matchedCats = new HashMap<TaxoNode, Float>();
 			nObjCatsTillReport = nObjCatsReport;
+			// TODO - BUG: does not categorize last object in file.
 			while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
 				if(nextLine.get(objIDCol).length() == 0) {
 					debug(2,"Skipping line with empty id" );
@@ -2164,7 +2168,7 @@ public class MainApp {
 
 	private void categorizeObjectForFacet( int id, String source,
 			String facetName, DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
-		// Tokensize the string for this column
+		// Tokenize the string for this column
 		Pair<ArrayList<String>,ArrayList<String>> tokenPair
 				= prepareSourceTokens( source, colInfo );
 		float reliability = colInfo.columnReliabilityForFacet(facetName);
@@ -2178,11 +2182,13 @@ public class MainApp {
 			// We have a candidate here. Check for the exclusions
 			if( node.exclset != null ) {
 				boolean fCatExcluded = false;
+				// TODO once we have collation based checking, remove this.
+				String tokenL = token.toLowerCase();
 				for( String excl:node.exclset ) {
 					// We'll have to consider whether and when to search
 					// the entire string for the exclusion. May need to put
 					// a flag on the exclusion terms.
-					if( token.indexOf(excl) >= 0 ) {
+					if( tokenL.indexOf(excl) >= 0 ) {
 						fCatExcluded = true;
 						debug(3, "Obj:"+id+" match on token excluded on: ["+excl+"]");
 						break;
@@ -2193,10 +2199,11 @@ public class MainApp {
 			}
 			// We have a TaxoNode match! Update matches with this node
 			updateMatches( matchedCats, reliability, node);
-			// Now, consider all the implied nodes as well.
-			for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
-				updateMatches( matchedCats, reliability, node.impliedNodes.get(i));
-			}
+			// Now, consider any pending implied nodes as well.
+			if(( node.impliedNodesPending != null ) && ( node.impliedNodesPending.size() > 0 ))
+				for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
+					updateMatches( matchedCats, reliability, node.impliedNodes.get(i));
+				}
 		}
 	}
 

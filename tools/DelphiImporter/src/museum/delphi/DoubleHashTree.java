@@ -531,7 +531,7 @@ public class DoubleHashTree {
 			    	} else
 			    		debug( 1, "Bad \"implies\" node for category: " + parent.name );
 			    } else if( nodeName.equals( synonymElName ) ) {
-			    	String synName = childEl.getAttribute( "value" );
+			    	String synName = childEl.getAttribute( "value" ).toLowerCase();
 			    	if( synName != null ) {
 			    		// TODO Need to put in termID if we have it???
 			    		parent.AddSynonym( synName );
@@ -539,12 +539,10 @@ public class DoubleHashTree {
 			    		currFacet.AddNodeToNameMap( parent, synName  );
 			    	}
 			    } else if( nodeName.equals( exclElName ) ) {
-			    	String exclName = childEl.getAttribute( "value" );
+			    	String exclName = childEl.getAttribute( "value" ).toLowerCase();
 			    	if( exclName != null ) {
 			    		// TODO Need to put in termID if we have it???
 			    		parent.AddExclusion( exclName );
-			    		// Add another name to the map for the parent
-			    		currFacet.AddNodeToNameMap( parent, exclName  );
 			    	}
 			    } else if( nodeName.equals( prefixElName ) ) {
 			    	String prefixName = childEl.getAttribute( "value" );
@@ -622,14 +620,20 @@ public class DoubleHashTree {
 
 	public void AddSynonymsForTokenWithPrefices( FacetInfo facet, TaxoNode node, String token, ArrayList<String> prefices ) {
 		// For each prefix, combine with token and add to nameMap
-		for( String prefix : prefices )
-			facet.AddNodeToNameMap( node, prefix+token );
+		for( String prefix : prefices ) {
+			String syn = prefix+token;
+			node.AddSynonym( syn );			// We have to do this to get the hooks table right
+			facet.AddNodeToNameMap( node, syn );
+		}
 	}
 
 	public void AddSynonymsForTokenWithSuffices( FacetInfo facet, TaxoNode node, String token, ArrayList<String> suffices ) {
-		// For each prefix, combine with token and add to nameMap
-		for( String suffix : suffices )
-			facet.AddNodeToNameMap( node, token+suffix );
+		// For each suffix, combine with token and add to nameMap
+		for( String suffix : suffices ) {
+			String syn = token+suffix;
+			node.AddSynonym( syn );			// We have to do this to get the hooks table right
+			facet.AddNodeToNameMap( node, syn );
+		}
 	}
 
 	/*
