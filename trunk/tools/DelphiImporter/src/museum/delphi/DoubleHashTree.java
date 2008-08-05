@@ -479,6 +479,7 @@ public class DoubleHashTree {
 				    childEl.setAttribute( "catID", String.valueOf(newNode.id) );
 			    	// Note that any local prefices and suffices MUST come before the categories,
 			    	// so we can just inherit the ones coming in if we have not add any.
+				    String displayNameAsToken = displayName.toLowerCase();
 	    			if( local_prefices == null )
 		    			local_prefices = prefices;
 	    			if( local_suffices == null )
@@ -487,16 +488,16 @@ public class DoubleHashTree {
 			    		if( combineWithPrefices ) {
 			    			if( local_prefices == null )
 			    				throw new RuntimeException("No Prefices to combine with token: "+name);
-				    		AddSynonymsForTokenWithPrefices( currFacet, newNode, name, local_prefices );
+				    		AddSynonymsForTokenWithPrefices( currFacet, newNode, displayNameAsToken, local_prefices );
 			    		}
 			    		if( combineWithSuffices ) {
 			    			if( local_suffices == null )
 			    				throw new RuntimeException("No Suffices to combine with token: "+name);
-				    		AddSynonymsForTokenWithSuffices( currFacet, newNode, name, local_suffices );
+				    		AddSynonymsForTokenWithSuffices( currFacet, newNode, displayNameAsToken, local_suffices );
 			    		}
 			    	}
 			    	if( asTokenPlural ) {
-			    		String plural = name+"s";
+			    		String plural = displayNameAsToken+"s";
 			    		if( combineWithPrefices ) {
 			    			if( local_prefices == null )
 			    				throw new RuntimeException("No Prefices to combine with token: "+plural);
@@ -510,9 +511,9 @@ public class DoubleHashTree {
 			    	}
 				    if( parent != null )
 				    	parent.AddChild( newNode );
-				    // Recurse to handle descendents.
-				    // We should hit prefices and suffices before children, so if we did not,
-				    // thenjust used what was passed in (may be null).
+				    // Recurse to handle descendants.
+				    // We should hit prefixes and suffices before children, so if we did not,
+				    // then just used what was passed in (may be null).
 	    			if( local_prefices == null )
 		    			local_prefices = prefices;
 	    			if( local_suffices == null )
@@ -582,7 +583,7 @@ public class DoubleHashTree {
 			    	}
 			    }
 			    else if( nodeName.equals( tokenElName ) ) {
-			    	String tokenName = childEl.getAttribute( "value" );
+			    	String tokenName = childEl.getAttribute( "value" ).toLowerCase();
 				    String combineStr = childEl.getAttribute( combineName );
 				    boolean combineWithPrefices = ((combineStr.length() <= 0 )			// not empty string - is there
 	    					|| !combineStr.equalsIgnoreCase("suffix"));
