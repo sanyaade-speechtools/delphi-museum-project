@@ -330,10 +330,11 @@ function getCategoryIDsForKwds(
 		}
 	}
 
+	// TODO set up as a prepared and parameterized query.
 	$tqCatsForKwds = "select c.id cid, c.parent_id pid, c.facet_id fid,"
-										." LOWER(hk.token) token, CHAR_LENGTH(hk.token) as tlen, MAX(c.".$countCol
-										.") count from categories c, hooks hk where c.id=hk.cat_id"
-										." AND (";
+										." LOWER(hk.token) token, CHAR_LENGTH(hk.token) as tlen,"
+										." c.".$countCol." count from categories c, hooks hk"
+										." where c.id=hk.cat_id AND (";
 	// Should we put in the like matches as well? We can match against the tokens
 	// and figure out which are proper matches and which not.
 	// Not now - TODO?
@@ -345,7 +346,7 @@ function getCategoryIDsForKwds(
 	// We sort by token length to pull out longest n-grams.
 	// We use a secondary sort on count, so if we get multiple matches, we
 	// choose the category with the most associated objects.
-	$tqCatsForKwds .= ") GROUP BY token ORDER BY tlen desc";
+	$tqCatsForKwds .= ") ORDER BY tlen desc, count desc";
 	// Only for debug!!!
 	$retval['query'] = $tqCatsForKwds;
  	$catsresult =& $db->query($tqCatsForKwds);
@@ -364,6 +365,7 @@ function getCategoryIDsForKwds(
 		// We have to make sure that the token is still in the list we're considering.
 		// If we have "West African" and match the full token, we do not want to also
 		// match the token "African".
+		// This will also filter out multiple matches of a given token (preferring first).
 		$iMatch = -1;
 		for( $i = 0; $i < $nNgrams; $i++ ) {
 			if( !strcmp( $ngrams[$i]['ngram'], $row['token']) ) {
