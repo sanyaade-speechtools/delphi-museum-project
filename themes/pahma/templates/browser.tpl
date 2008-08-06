@@ -9,7 +9,7 @@
 <script type="text/javascript" src="{$themeroot}/scripts/browser.js"></script>
 
 <div id="contentNarrow">
-	<h1>Collection Browser</h1>
+	<h1>Category Browser</h1>
 	<p>You can use the category browser to find all of the categories associated with the museum collection. Click on any category to search for objects in that category. Click on the triangle to the left of the category to see sub-categories.</p>
 	<div id="browserDiv">
 	
