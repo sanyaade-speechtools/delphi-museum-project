@@ -5,6 +5,7 @@ require_once("../common/imgthumb.php");
 require_once("../../libs/ontology/ontoServices.php");
 
 $t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
+$t->assign('page_title', 'Delphi search results');
 
 // Parse out Cats from URL
 isset($_GET['cats']) ? $catIDs = explode(",",$_GET['cats']) : $catIDs = array();

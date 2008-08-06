@@ -42,6 +42,7 @@ while ($row = $res->fetchRow()) {
     $t->assign('id', $row['id']);
     $t->assign('objnum', $row['objnum']);
     $t->assign('name', $row['name']);
+    $t->assign('page_title', 'Details for object ('.$row['objnum'].'): '.$row['name']);
 	$t->assign('description', $row['description']);
 	if($row['img_path']){
 		$t->assign('noImage', false);

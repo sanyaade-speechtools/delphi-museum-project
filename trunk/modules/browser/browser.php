@@ -7,6 +7,7 @@ $facetinfo = getCategoriesInFacet("__ALL", true, "HTML_UL_ATAG", "id_", $bigint 
 
 $t->assign("facets", $facetinfo);
 $t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
+$t->assign('page_title', 'Delphi Category Browser');
 
 // Display template
 $t->display('browser.tpl');
