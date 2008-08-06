@@ -64,7 +64,8 @@ while ($row = $res->fetchRow()) {
 // Free the result
 $res->free();
 
-$t->assign('showObjNum', currUserHasPerm( 'ViewBaseCMSInfo' ));
+//$t->assign('showObjNum', currUserHasPerm( 'ViewBaseCMSInfo' ));
+$t->assign('showObjNum', true);
 
 
 //---------------------------------
