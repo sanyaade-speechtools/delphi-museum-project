@@ -5,7 +5,6 @@ require_once("../common/imgthumb.php");
 require_once("../../libs/ontology/ontoServices.php");
 
 $t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
-$t->assign('page_title', 'Delphi search results');
 
 // Parse out Cats from URL
 isset($_GET['cats']) ? $catIDs = explode(",",$_GET['cats']) : $catIDs = array();
@@ -64,7 +63,10 @@ if(empty($objResults['objects'])) {
 // print_r($objects);
 
 $t->assign('objects', $objects);
-$t->assign('filters',getFilters($kwds,$catIDs));
+
+$rawfilters = getFilters($kwds,$catIDs);
+$t->assign('filters',themeFilters($rawfilters));
+$t->assign('page_title', filtersToNameList($rawfilters).' - PAHMA Delphi Search Results');
 
 
 // Display template
@@ -82,7 +84,7 @@ function getFilters($kwds, $catIDs){
 	if ($kwds){
 		$filters['Keywords'] = explode(",",$kwds);
 	}
-	return themeFilters($filters);
+	return $filters;
 }
 
 function themeFilters($filters){
@@ -100,6 +102,22 @@ function themeFilters($filters){
 	}
 	return $output;
 }
+
+function filtersToNameList($filters){
+	$output = "";
+	$first = true;
+	foreach($filters as $filterType => $filter ){
+		foreach($filter as $item){
+			if( !$first )
+				$output .= ", ";
+			else
+				$first = false;
+			$output .= ($filterType == "Keywords")? $item:$item['display_name'];
+		}
+	}
+	return $output;
+}
+
 
 function getCategoryByID($catID){
 	if(!is_numeric($catID)){
