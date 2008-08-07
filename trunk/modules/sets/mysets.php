@@ -5,6 +5,7 @@ require_once("../common/imgthumb.php");
 /**********************************
 GET USER'S SETS
 **********************************/
+$t->assign('page_title', 'My Sets - '.$CFG->page_title_default);
 
 $sql = 	"	SELECT sets.id, sets.name, sets.creation_time, tTotal_objects.total_objects, tImage_paths.thumb_path, tImage_paths.img_ar
 

@@ -5,6 +5,7 @@ require_once("../common/imgthumb.php");
 /**********************************
 Get Frontpage sets
 **********************************/
+$t->assign('page_title', 'Featured Sets - '.$CFG->page_title_default);
 
 $sql = 	$sql = "SELECT featured_sets.set_id, name, owner_name owner, img_path, aspectR img_ar, tTotal_objects.total_objects
 				FROM featured_sets
