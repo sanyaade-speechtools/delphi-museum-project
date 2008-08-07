@@ -57,6 +57,9 @@ $t->assign('mids', $CFG->image_medium);
 $t->assign('zoomer', $CFG->zoomer);
 $t->assign('image_zoom', $CFG->image_zoom);
 
+// Assign global UI defaults here
+$t->assign('page_title', $CFG->page_title_default);
+
 if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$details = getUserDetails($_SESSION['username']);
 	$t->assign('currentUser_loggedIn', TRUE);
