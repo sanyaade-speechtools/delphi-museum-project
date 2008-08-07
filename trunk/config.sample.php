@@ -119,6 +119,14 @@ $CFG->thumbSize          = 120;
 
 $CFG->contactEmail          = "somebody@example.com";
 
+//=========================================================================
+// 9. General UI defaults and constants
+//=========================================================================
+// Specify the following general constants
+//
+// Specify a default web page title. Can be overridden by individual pages.
+$CFG->page_title_default    = "Delphi Collections Browser";
+
 
 
 //=========================================================================
