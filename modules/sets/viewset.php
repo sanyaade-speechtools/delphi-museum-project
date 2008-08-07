@@ -43,6 +43,7 @@ if ( $res->numRows() < 1 ){
 while ($row = $res->fetchRow()) {
     $t->assign('setId', $row['id']);
     $t->assign('setName', $row['name']);
+    $t->assign('page_title', 'Set: '.$row['name'].' - '.$CFG->page_title_default);
     $t->assign('setDescription', $row['description']);
     $t->assign('username', $row['username']);
 	$t->assign('owner_id', $row['owner_id']);
