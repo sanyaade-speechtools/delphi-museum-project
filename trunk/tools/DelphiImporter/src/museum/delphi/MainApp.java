@@ -13,10 +13,7 @@ import java.awt.BorderLayout;
 import java.awt.Point;
 import javax.swing.*;
 import javax.swing.filechooser.*;
-import java.io.File;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -1496,9 +1493,6 @@ public class MainApp {
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder builder = factory.newDocumentBuilder();
 				vocabOutputDoc = builder.newDocument();
-				Node pi = vocabOutputDoc.createProcessingInstruction("xml-stylesheet",
-					       "type=\"text/xsl\" HREF=\"FacetMapToNavUI.xsl\"" );
-				vocabOutputDoc.appendChild(pi);
 		    	String filename = chooser.getSelectedFile().getPath();
 		        debug(1,"Scanning vocabulary from file: " + filename);
 		        setStatus("Scanning vocabulary from file: " + filename);
@@ -1907,8 +1901,11 @@ public class MainApp {
 
 	protected void writeXMLDocToFile(Document outputDoc, String outFileName) {
 		try {
-			FileWriter writer = new FileWriter( outFileName );
-		    // Use a Transformer for output
+			//FileWriter writer = new FileWriter( outFileName );
+			final String encoding = "UTF-8";
+			OutputStreamWriter writer =
+				new OutputStreamWriter(new FileOutputStream(outFileName), encoding);
+			// Use a Transformer for output
 			TransformerFactory tFactory =
 		    TransformerFactory.newInstance();
 			Transformer transformer = tFactory.newTransformer();
