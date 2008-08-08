@@ -4,7 +4,9 @@
 package museum.delphi;
 
 import java.util.*;
+import java.util.regex.*;
 import java.io.*;
+
 import org.w3c.dom.*;
 //import javax.xml.parsers.*;
 
@@ -18,6 +20,9 @@ public class VocabTermsReader {
 
 	protected Node outputDocRoot = null;
 	protected int _debugLevel = 2;
+	// TODO we should have the user select the encoding.
+	private static String encoding = "ISO-8859-1";
+	//private static String encoding = "UTF-8";
 
 	// Pass in a Document to add to? Then caller can set up
 	// top level stuff like title, xsl spreadsheet, etc.
@@ -26,9 +31,14 @@ public class VocabTermsReader {
 	public VocabTermsReader( String inFileName ) {
 		try {
 			reader = new BufferedReader(new FileReader(inFileName));
+			reader = new BufferedReader(
+			          new InputStreamReader(new FileInputStream(inFileName),
+			        		  encoding));
 			skipTerms = new HashSet<String>();
 		} catch (FileNotFoundException e) {
 			throw new RuntimeException("Could not open input file: " + inFileName);
+		} catch (java.io.UnsupportedEncodingException e) {
+			throw new RuntimeException("Internal error: Unsupported encoding: " + encoding);
 		}
 	}
 
@@ -91,13 +101,20 @@ public class VocabTermsReader {
 						|| termType.equalsIgnoreCase( "British Equivalent" )
 						|| termType.equalsIgnoreCase( "Alternate Term" )
 						|| termType.equalsIgnoreCase( "Miscellaneous Source Equivalent" )
+						|| termType.equalsIgnoreCase( "Search Term Equivalent" )
 						|| termType.equalsIgnoreCase( "Misspelling" )
+						|| termType.equalsIgnoreCase( "Native name" )
 						|| termType.equalsIgnoreCase( "Non-native name" )
 						|| termType.equalsIgnoreCase( "Other term" )
 						|| termType.equalsIgnoreCase( "Village Name" )
+						|| termType.equalsIgnoreCase( "Place Name" )
+						|| termType.equalsIgnoreCase( "Geographic Location" )
 						|| termType.equalsIgnoreCase( "Scientific Name" )
 						|| termType.equalsIgnoreCase( "Spelling Variant" )
 						|| termType.equalsIgnoreCase( "Synonym" )
+						|| termType.equalsIgnoreCase( "Derogatory" )
+						|| termType.equalsIgnoreCase( "Common name" )
+						|| termType.equalsIgnoreCase( "Historical name" )
 						|| termType.equalsIgnoreCase( "LCSH Link" )
 						|| termType.equalsIgnoreCase( "Use for Term" )) {
 						fAddSym = true;
@@ -128,7 +145,8 @@ public class VocabTermsReader {
 					debug(2, "VTR.readTerms: Found 'To Delete' term Type for: "+name);
 				}
 				else {
-					if( !termType.equalsIgnoreCase( "Descriptor" )) {
+					if( !termType.equalsIgnoreCase( "Descriptor" )
+							&& !termType.equalsIgnoreCase( "Preferred Term" )) {
 						debug(2, "VTR.readTerms: Found unexpected term Type ["+termType+"] for: "+name);
 					}
 					boolean isGuide = Boolean.parseBoolean( tokens[4] );
@@ -178,12 +196,15 @@ public class VocabTermsReader {
 	}
 
 	protected String makeIDSafeString( String input ) {
+		// TODO Change to chars with diacriticals become simple chars. Better match.
 		String retVal = input.replaceAll("[\\W]", "");
 		return retVal;
 	}
 
 	protected String makeXMLSafeString( String input ) {
-		String retVal = input.replaceAll("[^\\p{Graph} ]", "");
+		//String retVal = input.replaceAll("[^\\p{Graph} ]", "");
+		//String retVal = Pattern.compile("[\\P{N}&&\\P{L}&&\\P{M}]", Pattern.CANON_EQ).matcher(input).replaceAll("");
+		String retVal = input.replaceAll("[\\p{Zl}\\p{Zp}\\p{C}]", "");
 		return retVal;
 	}
 
