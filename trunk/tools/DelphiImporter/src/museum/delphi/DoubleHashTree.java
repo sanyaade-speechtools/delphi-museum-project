@@ -51,7 +51,9 @@ public class DoubleHashTree {
 					throw new DuplicateTaxoNodeException( "AddTaxoNodeToMap: node not in name map, but in IDmap:"
 												+node.toString());
 				idMap.put( id, node );
-				strIDMap.put( node.name, node );
+				// If we have a controlName, we use that as the idMap key.
+				// Else (more typical case) we use the id ("name" in token class).
+				strIDMap.put( ((node.controlName != null)?node.controlName:node.name), node );
 				AddNodeToNameMap( node, hook );
 			} else if( idMap.get( id ) == null )
 				throw new DuplicateTaxoNodeException(
