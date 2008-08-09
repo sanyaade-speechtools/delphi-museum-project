@@ -58,7 +58,7 @@ if(empty($objResults['objects'])) {
 	$t->assign('results_total', $objResults['nObjs']);
 	$t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
 	$t->assign('results_end', ($page * $objResults['pageSize'] <= $objResults['nObjs']) ? $page * $objResults['pageSize'] : $objResults['nObjs']);
-	$t->assign('facets', queryResultsCategories( $catIDs, $kwds, true, "HTML_UL_ATAG", "id_"));
+	$t->assign('facets', queryResultsCategories( $catIDs, $kwds, $images, "HTML_UL_ATAG", "id_"));
 	$t->assign('toggleImages', $images);
 }
 
