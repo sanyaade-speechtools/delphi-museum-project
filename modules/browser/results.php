@@ -38,6 +38,8 @@ if(empty($objResults['objects'])) {
 	$t->assign('results_total', 0);
 	$t->assign('results_start', 0);
 	$t->assign('results_end', 0);
+	if( $images )
+		$t->assign('toggleImages', $images);
 } else {
 	foreach($objResults['objects'] as $obj){
 		($obj['img_path']) ? $img_path = $obj['img_path'] : $obj['img_path'] = "noObjectImage";

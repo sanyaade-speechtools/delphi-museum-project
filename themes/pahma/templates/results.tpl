@@ -39,6 +39,13 @@
 			<a href="#" id="toggleImagesLink">Exclude objects without images</a>
 		{/if}
 	</div>
+	{else}
+		{if $toggleImages}
+			<div id="results_keywordContainer">
+				<br/><br/>
+				<p><a href="#" id="toggleImagesLink">Include objects without images</a></p>
+			</div>
+		{/if}
 	{/if}
 </div>
 <div id="results_resultsCol">

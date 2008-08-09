@@ -32,7 +32,7 @@ class Facet extends TaxoNode {
 
 	// Expects results in rows of 3 or 4 columns: id, parent_id, display name, count.
 	// The count column is only expected if fWithCounts is true
-	function PopulateFacetsFromResultSet( $result, $fWithCounts )	{
+	function PopulateFacetsFromResultSet( $result, $fBothCounts )	{
 		global $facets;
 		global $taxoNodesHashMap;
 		while ($row = $result->fetchRow(MDB2_FETCHMODE_ORDERED)) {
@@ -54,7 +54,9 @@ class Facet extends TaxoNode {
 			$node = new TaxoNode( $name, $id, $f_id, $parent, true, false );
 			$taxoNodesHashMap[$id] = $node;
 			$parent->AddChild($node);
-			$node->nResults = $fWithCounts ? $row[4] : 0;
+			// If single count, the right count is in col 4
+			$node->nResults = $row[4];
+			$node->nResults2 = ( $fBothCounts ) ? $row[5] : 0;
 		}
 	}
 ?>

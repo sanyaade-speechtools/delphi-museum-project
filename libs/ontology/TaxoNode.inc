@@ -11,6 +11,7 @@ class TaxoNode {
 		// var $nMasks;
 		// var $iBitInMask;
 		var $nResults;		// nResults associated to this category
+		var $nResults2;		// secondary Results associated to this category
 		var $fHidden;			// Is this category hidden in the output tree
 		var $fNoClick;		// Is this category shown, but not clickable
 		var $fPrune;			// Should we prune this subtree?
@@ -27,6 +28,7 @@ class TaxoNode {
 //		$this-nMasks = 0;
 //		$this-iBitInMask = -1;
 		$this->nResults = 0;
+		$this->nResults2 = 0;
 		$this->fHidden = false;
 		$this->fNoClick = false;
 		$this->fPrune = false;
@@ -73,9 +75,10 @@ class TaxoNode {
 	// We may need to mark categories in the taxonomies as hidable or required,
 	// and even specify abbreviations for collapsing. E.g., "US:" before "Kansas"
 	// 
-	function GenerateHTMLItems( $depth, $limit, $nSiblings, $fFullTree, $fOmitDetails, 
+	function GenerateHTMLItems( $depth, $limit, $nSiblings, $fFullTree, $countsFields, 
 												$fClickMode, $HTparam ) {
 		
+		$nChildren = count($this->arrChildren);
 		//var to hold concated output
 		$responseOutput = ( $depth == 0 )?"<ul>":"";
 		
@@ -93,37 +96,57 @@ class TaxoNode {
 			$nested = false;
 		} else if( $this->fNoClick ) {
 			$responseOutput .= '<li class="treeCat noClick">'.$this->name;
-			if( !$fOmitDetails )
+			if( $countsFields >= 1 )
 				$responseOutput .= " (".$this->nResults.")";
+			if( $countsFields == 2 )
+				$responseOutput .= " (".$this->nResults2.")";
 		} else {
-			$responseOutput .= '<li class="treeCat">';
+			if( $nChildren > 0 )
+				$responseOutput .= '<li class="treeCat parent">';
+			else
+				$responseOutput .= '<li class="treeCat">';
+			$open = "";
+			$open2 = "";
+			$open3 = "";
 			$close = "";
 			switch( $fClickMode ) {
 				default:
 					break;
 				case "A_Tag":
-					$responseOutput .= '<a href="'.$HTparam.$this->id.'">';
+					$open = '<a href="'.$HTparam.$this->id.'">';
+					$open2 = '<a class="c1" href="'.$HTparam.$this->id.'">';
+					$open3 = '<a class="c2" href="'.$HTparam.$this->id.'">';
 					$close = "</a>
 					";
 					break;
 				case "onclick":
-					$responseOutput .= '<span onclick="'.$HTparam.'(event, '.$this->id.')">';
+					$open = '<span onclick="'.$HTparam.'(event, '.$this->id.', 1)">';
+					$open2 = '<span class="c1" onclick="'.$HTparam.'(event, '.$this->id.', 1)">';
+					$open3 = '<span class="c2" onclick="'.$HTparam.'(event, '.$this->id.', 2)">';
 					$close = "</span>
 					";
 					break;
 				case "attr":
-					$responseOutput .= '<span '.$HTparam.'="'.$this->id.'">';
+					$open = '<span '.$HTparam.'="'.$this->id.'">';
+					$open2 = '<span class="c1" '.$HTparam.'="'.$this->id.'">';
+					$open3 = '<span class="c2" '.$HTparam.'="'.$this->id.'">';
 					$close = "</span>
 					";
 					break;
 			}
-			$responseOutput .= $this->name;
-			$responseOutput .= $close;
-			if( !$fOmitDetails )
+			$responseOutput .= $open.$this->name.$close;
+			if( $countsFields == 1 ) {
 				$responseOutput .= " (".$this->nResults.")";
+			} else if( $countsFields == 2 ) {
+				// When showing both, need to add additional links on the counts
+				if( $this->nResults > 0 )
+					$responseOutput .= " ".$open2."(".$this->nResults.")".$close;
+				else
+					$responseOutput .= " (".$this->nResults.")";
+				$responseOutput .= " ".$open3."(".$this->nResults2.")".$close;
+			}
 		}
 
-		$nChildren = count($this->arrChildren);
 		if($nChildren <= 0)
 			$doChildren = false;
 		else {
@@ -146,7 +169,7 @@ class TaxoNode {
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune )
 					$responseOutput .= $child->GenerateHTMLItems( $depth+1, $limit,
-																					 $nChildren, $fFullTree, $fOmitDetails,
+																					 $nChildren, $fFullTree, $countsFields,
 																					 $fClickMode, $HTparam	);
 			}
 			if( $nested )
@@ -168,8 +191,8 @@ class TaxoNode {
 	// If this node is marked to prune, returns null.
 	// If this node is marked hidden, only "children" is set.
 	// If there are no children, then "children" is not set.
-	// If $fOmitDetails is set, then 'count' is not set.
-	function GeneratePHPItems( $depth, $limit, $nSiblings, $fFullTree, $fOmitDetails ) {
+	// If $countsFields is 0, omit counts. If 1, show single count. If 2, show a pair.
+	function GeneratePHPItems( $depth, $limit, $nSiblings, $fFullTree, $countsFields ) {
 		
 		if( $this->fPrune ) {
 			return null;
@@ -198,15 +221,17 @@ class TaxoNode {
 			foreach( $this->arrChildren as $child ) {
 				if( !$child->fPrune ) {
 					$children[] = $child->GeneratePHPItems( $depth+1, $limit,
-																								$nChildren, $fFullTree, $fOmitDetails );
+																								$nChildren, $fFullTree, $countsFields );
 			  }
 			}
 		}
 		// Only show id, name, etc. for non-hidden nodes below facet level
 		if( !$this->fHidden && $depth > 0 ) {
 			$item = array( "id" => $this->id, "name" => $this->name );
-			if( !$fOmitDetails )
+			if( $countsFields >= 1 )
 				$item["count"] = $this->nResults;
+			if( $countsFields == 2 )
+				$item["count2"] = $this->nResults2;
 		} else 
 			$item = array();
 
