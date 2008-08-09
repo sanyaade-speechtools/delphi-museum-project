@@ -9,8 +9,15 @@
 <script type="text/javascript" src="{$themeroot}/scripts/browser.js"></script>
 
 <div id="contentNarrow">
-	<h1>Category Browser</h1>
-	<p>You can use the category browser to find all of the categories associated with the museum collection. Click on any category to search for objects in that category. Click on the triangle to the left of the category to see sub-categories.</p>
+	<h1>Concept Browser</h1>
+	<p>You can use this facet browser to find objects in the Museum's collections
+	which are related to any of the listed concepts.
+	Click on any concept to see objects related to that concept.
+	Click on the '+' button to the left of the concept to see sub-concepts.</p>
+	<p>The numbers in parentheses after each concept represent the <em>number of objects</em>
+	in that	concept: the first number is for objects <em>with images</em>, and the second
+	is for <em>all objects</em> (including those without images).
+	</p>
 	<div id="browserDiv">
 	
 {if !isset($facets) }

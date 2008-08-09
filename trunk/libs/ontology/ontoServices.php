@@ -97,7 +97,7 @@ function getNumObjs() {
 // $depth specifies the maximum depth to traverse the ontology.
 function getCategoriesInFacet(
 						$facetname,					//:String
-						$countsWithImages,	//:boolean
+						$countsMode,				//:String: "withImg", "all", "both"
 						$retType, 					//:String 
 						$HTparam,						//:String
 						$depth ) {					//:int
@@ -116,15 +116,27 @@ function getCategoriesInFacet(
 			return false;
 		}
 	}
-	$countCol = $countsWithImages ? "n_matches_w_img" : "n_matches";
- 	$tqCountsByCat = "select id, parent_id, facet_id, display_name, ".$countCol
- 										  ." from categories where ".$countCol.">0";
+	$fBothCounts = false;
+	if( $countsMode == "withImg" ) {
+		$countField = "n_matches_w_img";
+		$countCheck = "n_matches_w_img>0";
+	}	else if( $countsMode == "all" ) {
+		$countField = "n_matches";
+		$countCheck = "n_matches>0";
+	} else {// assume "both" 
+		$countField = "n_matches_w_img, n_matches";
+		$countCheck = "(n_matches_w_img>0 OR n_matches>0)";
+		$fBothCounts = true;
+	}
+
+ 	$tqCountsByCat = "select id, parent_id, facet_id, display_name, ".$countField
+ 										  ." from categories where ".$countCheck;
 	if( $fid >= 0 ) {
  		$tqCountsByCat .= " AND facet_id=".$fid;
  	}
 	$tqCountsByCat .= " order by id";
  	$countsresult =& $db->query($tqCountsByCat);
- 	PopulateFacetsFromResultSet( $countsresult, true );
+ 	PopulateFacetsFromResultSet( $countsresult, $fBothCounts );
   // Facets now exist as array in $facets. Nodes are avail in hashMap.
 	// Note that we do not prune since this is for the ontology, not a query.
 	$retVal = array();
@@ -146,19 +158,19 @@ function getCategoriesInFacet(
 							return false;	// NYI
 						case "HTML_UL":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, "none", "" );
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, 2, "none", "" );
 							break;
 						case "HTML_UL_ATAG":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, 'A_Tag', $HTparam );
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, 2, 'A_Tag', $HTparam );
 							break;
 						case "HTML_UL_ATTR":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, 'attr', $HTparam );
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, 2, 'attr', $HTparam );
 							break;
 						case "HTML_UL_OC":
 							//error_log( "getCategoriesInFacet() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, false, 'onclick', $HTparam );
+							$items = $facet->GenerateHTMLItems( 0, $depth, 1, true, 2, 'onclick', $HTparam );
 							break;
 					}
 				// Only add a new item if there are children for that facet
@@ -207,7 +219,7 @@ function getCategoriesForObject(
  	}
 	$tqCountsByCat .= " order by id";
  	$countsresult =& $db->query($tqCountsByCat);
- 	PopulateFacetsFromResultSet( $countsresult, true );
+ 	PopulateFacetsFromResultSet( $countsresult, false );
   // Facets now exist as array in $facets. Nodes are avail in hashMap.
 	// Note that we do not prune since this is for the details, not a full query.
 	$retVal = array();
@@ -230,19 +242,19 @@ function getCategoriesForObject(
 							return false;	// NYI
 						case "HTML_UL":
 							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, "none", "" );
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, 1, "none", "" );
 							break;
 						case "HTML_UL_ATAG":
 							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, 'A_Tag', $HTparam );
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, 1, 'A_Tag', $HTparam );
 							break;
 						case "HTML_UL_ATTR":
 							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, 'attr', $HTparam );
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, 1, 'attr', $HTparam );
 							break;
 						case "HTML_UL_OC":
 							//error_log( "getCategoriesForObject() dumping HTML for: ".$facet->name);
-							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, false, 'onclick', $HTparam );
+							$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, true, 1, 'onclick', $HTparam );
 							break;
 					}
 				// Only add a new item if there are children for that facet
@@ -517,7 +529,7 @@ function queryResultsCategories(
 	}
 	//error_log( "queryResultsCategories() Query : ".$tqFull);
 
- 	PopulateFacetsFromResultSet( $catsresult, true );
+ 	PopulateFacetsFromResultSet( $catsresult, false );
   // Facets now exist as array in $facets. Nodes are avail in hashMap.
 	$retVal = array();
 	//error_log( "getCategoriesForObject() considering ".count($facets)." facets...  ");
@@ -541,19 +553,19 @@ function queryResultsCategories(
 						return false;	// NYI
 					case "HTML_UL":
 						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, "none", "" );
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, 1, "none", "" );
 						break;
 					case "HTML_UL_ATAG":
 						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, 'A_Tag', $HTparam );
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, 1, 'A_Tag', $HTparam );
 						break;
 					case "HTML_UL_ATTR":
 						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, 'attr', $HTparam );
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, 1, 'attr', $HTparam );
 						break;
 					case "HTML_UL_OC":
 						//error_log( "queryResultsCategories() dumping HTML for: ".$facet->name);
-						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, false, 'onclick', $HTparam );
+						$items = $facet->GenerateHTMLItems( 0, $largeNum, 1, false, 1, 'onclick', $HTparam );
 						break;
 				}
 				// Only add a new item if there are children for that facet
