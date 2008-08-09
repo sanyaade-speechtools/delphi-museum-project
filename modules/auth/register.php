@@ -58,12 +58,22 @@ function sendRegMail($uid, $username, $email){
 	global $CFG;
 	$confirmUrl = $CFG->wwwroot . '/modules/auth/register.php?confirm=' . $uid;
 	$plaintextmsg = 
-		 'Thank you for registering with Delphi! Click on the link below '
+		'Thank you for registering with Delphi!
+
+Your username (to log in to the system) is: '.$username.'
+
+If you forget your password, you can ask the system 
+to email it to you. You can also change it on your profile page.
+
+Click on the link below '
 		 .'or copy and paste the URL into your browser to complete the registration.
 
 		 ' . $confirmUrl;
 	$htmlmsg = 
-		 '<p>Thank you for registering with Delphi!<br />Click on the link below '
+		'<p>Thank you for registering with Delphi!</p><p>Your username is: '.$username.'</p>'
+	   .'<p>If you forget your password, you can ask the system' 
+	   .' to email it to you. You can also change it on your profile page.</p>'
+	   .'<p>Click on the link below '
 		 .'or copy and paste the URL into your browser to complete the registration.'
 		 .'<br /><br /><a href="'.$confirmUrl.'">'.$confirmUrl.'</a></p>';
 	$subj = 'Phoebe A. Hearst Museum: Delphi registration';
