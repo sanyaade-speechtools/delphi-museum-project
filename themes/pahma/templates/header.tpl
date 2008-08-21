@@ -10,6 +10,11 @@
 {/if}
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.2.1.pack.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.overlabel.js"></script>
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+	var wwwroot = "{$wwwroot}";
+//]]>
+</script>
 <script type="text/javascript" src="{$themeroot}/scripts/header.js"></script>
 {if isset($script_block) }
 {$script_block}
