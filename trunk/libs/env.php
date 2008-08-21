@@ -20,22 +20,6 @@ ini_set('include_path',"$CFG->dirroot/libs/pear/:".ini_get('include_path'));
 require_once "$CFG->dirroot/libs/pear/MDB2.php";
 require_once "$CFG->dirroot/libs/smarty/Smarty.class.php";
 
-// Connect to the database
-$dsn = "$CFG->dbtype://$CFG->dbuser:$CFG->dbpass@$CFG->dbhost/$CFG->dbname";
-
-$db =& MDB2::factory($dsn);
-if (PEAR::isError($db)) {
-    die($db->getMessage());
-}
-
-$db->setFetchMode(MDB2_FETCHMODE_ASSOC);
-
-// Determin user's login state
-require_once "$CFG->dirroot/modules/auth/checkLogin.php";
-require_once "$CFG->dirroot/modules/admin/authUtils.php";
-$login_state = checkLogin();
-// echo $login_state;
-
 // Setup template object
 $t = new Smarty;
 $t->template_dir = "$CFG->dirroot/themes/$CFG->theme/templates/";
@@ -56,6 +40,40 @@ $t->assign('thumbs_square', $CFG->image_thumb_square);
 $t->assign('mids', $CFG->image_medium);
 $t->assign('zoomer', $CFG->zoomer);
 $t->assign('image_zoom', $CFG->image_zoom);
+
+// Connect to the database
+$dsn = "$CFG->dbtype://$CFG->dbuser:$CFG->dbpass@$CFG->dbhost/$CFG->dbname";
+
+$db =& MDB2::factory($dsn);
+$noDB = false;
+$DBerr = "";
+if (PEAR::isError($db)) {
+	$noDB = true;
+	$DBerr = $db->getMessage();
+} else {
+	$exists = $db->connect();
+	if (PEAR::isError($exists)) {
+		$noDB = true;
+		$DBerr = $exists->getMessage();
+	}
+}
+if( $noDB ) {
+    $t->assign('heading', "Delphi is not currently available...");
+    $t->assign('message', "<p>The Delphi system is not currently available.</p>
+<p>This is either due to scheduled maintenance or to a temporary outage.
+Please try back again later.</p>
+<p style=\"display:none\">DB error: ".$DBerr."</p>");
+    $t->display('error.tpl');
+    die();
+}
+
+$db->setFetchMode(MDB2_FETCHMODE_ASSOC);
+
+// Determin user's login state
+require_once "$CFG->dirroot/modules/auth/checkLogin.php";
+require_once "$CFG->dirroot/modules/admin/authUtils.php";
+$login_state = checkLogin();
+// echo $login_state;
 
 // Assign global UI defaults here
 $t->assign('page_title', $CFG->page_title_default);
