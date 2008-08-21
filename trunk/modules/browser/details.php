@@ -8,7 +8,15 @@ require_once("../admin/authUtils.php");
 // If there is no id param in the url, send to object not found.
 if( isset( $_GET['id'] ) ) {
 	$objId = $_GET['id'];
-} else {
+} else if( isset( $_GET['onum'] ) ) {
+	$objNum = $_GET['onum'];
+	$sql = "SELECT o.id FROM objects o WHERE o.objnum = '$objNum' LIMIT 1";
+	$res =& $db->query($sql);
+	if( !PEAR::isError($res) && ($row = $res->fetchRow())) {
+    $objId = $row['id'];
+	}
+}
+if( empty( $objId )) {
 	$t->assign('heading', "Whoops!");
 	$t->assign('message', "We could not find the object you were looking for!");
 	$t->display('error.tpl');
