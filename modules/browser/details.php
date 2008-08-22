@@ -10,7 +10,7 @@ if( isset( $_GET['id'] ) ) {
 	$objId = $_GET['id'];
 } else if( isset( $_GET['onum'] ) ) {
 	$objNum = $_GET['onum'];
-	$sql = "SELECT o.id FROM objects o WHERE o.objnum = '$objNum' LIMIT 1";
+	$sql = "SELECT o.id FROM objects o WHERE o.objnum RLIKE '^$objNum\[a-z\\,\\-\]*$' LIMIT 1";
 	$res =& $db->query($sql);
 	if( !PEAR::isError($res) && ($row = $res->fetchRow())) {
     $objId = $row['id'];
