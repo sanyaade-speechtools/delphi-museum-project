@@ -1,5 +1,6 @@
 var currentObjectIndex = 0;
 var currentObjectId = 0;
+var pendingSetObjectId = -1;
 var objectArray = Array();
 $(document).ready(function () {	
 	if(templateVarsJSON['setHasObjects']){
@@ -35,6 +36,7 @@ $(document).ready(function () {
 		$(".viewset_objectThumb").click(function(){
 			// substring trims off "objectThumb_"
 			loadObjectDetails(this.id.substring(12));
+			hideEditForm(); // Ensure that we do not leave the edit form up.
 		});
 		if(templateVarsJSON['owner_id'] == templateVarsJSON['currentUser_id']){
 			/*
@@ -48,34 +50,32 @@ $(document).ready(function () {
 				$("#viewset_objectNameInput").val(originalTitle);
 				$("#viewset_objectDescTextarea").val(originalDesc);
 
-				$("#viewset_objectDetailsDisplay").hide();
-				$("#viewset_objectDetailLinks").hide();
-				$("#viewset_objectDetailsEdit").show();
+				showEditForm();
 				return false;
 			});
 			$("#viewset_cancelObjectEditLink").click(function(){
-				// Hide the edit form
-				$("#viewset_objectDetailsDisplay").show();
-				$("#viewset_objectDetailLinks").show();
-				$("#viewset_objectDetailsEdit").hide();
+				hideEditForm();
 				return false;
 			});
 			
 			$("#viewset_objectDetailsEditForm").submit(function(){
+				pendingSetObjectId = currentObjectId;
 				$(this).ajaxSubmit({
 					url: templateVarsJSON['wwwroot'] + "/modules/sets/api_updateSetObjectDetails.php",
 					dataType: "json", 
 					success: function(responseJSON,statusText){
 						if(responseJSON['error']){
 							alert("Error updating the set details\n"+responseJSON['msg'][0]);
-						} else {
+						} else if( pendingSetObjectId == currentObjectId ) {
+							// Selection could change while response is pending, so
+							// we only handle update if we are still on the same object.
 							$("#viewset_objectName").html(responseJSON['objectName']);
 							$("#viewset_objectDescription").html(responseJSON['objectDesc']);
-							
-							$("#viewset_objectDetailsDisplay").show();
-							$("#viewset_objectDetailLinks").show();
-							$("#viewset_objectDetailsEdit").hide();
+							// Wait till here to hide. If call takes a while, could get flash of
+							// old name/description which would be funky.
+							hideEditForm();
 						}
+						pendingSetObjectId = -1;
 					}
 				}); 
 				return false;
@@ -257,6 +257,20 @@ function loadObjectDetails(obj_id){
 			});
 }
 
+function hideEditForm() {
+		// Hide the edit form, showing the others.
+		$("#viewset_objectDetailsDisplay").show();
+		$("#viewset_objectDetailLinks").show();
+		$("#viewset_objectDetailsEdit").hide();
+}
+
+function showEditForm() {
+		// Show the edit form, and hide the others.
+		$("#viewset_objectDetailsDisplay").hide();
+		$("#viewset_objectDetailLinks").hide();
+		$("#viewset_objectDetailsEdit").show();
+}
+
 function highlightObject(obj_id){
 	$(".viewset_objectThumb").removeClass("viewset_objectThumbSelected");
 	$("#objectThumb_"+obj_id).addClass("viewset_objectThumbSelected");
@@ -287,7 +301,7 @@ function showNextObject(){
 		currentObjectIndex = 0;
 	}	
 	loadObjectDetails(objectArray[currentObjectIndex]);
-	
+	hideEditForm(); // Ensure that we do not leave the edit form up.
 }
 
 function showPrevObject(){
@@ -296,4 +310,5 @@ function showPrevObject(){
 		currentObjectIndex = (objectArray.length - 1);
 	}	
 	loadObjectDetails(objectArray[currentObjectIndex]);
+	hideEditForm(); // Ensure that we do not leave the edit form up.
 }
