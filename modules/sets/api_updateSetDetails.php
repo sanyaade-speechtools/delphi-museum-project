@@ -22,7 +22,7 @@ $response['msg'] = array();
 if( isset($_POST['setTitle']) && isset($_POST['setDesc']) && isset($_POST['set_id']) && isset($_POST['policy']) ) {
 	
 	$_POST['setTitle'] = cleanFormData($_POST['setTitle']);
-	$_POST['setDesc'] = cleanFormData($_POST['setDesc']);
+	$_POST['setDesc'] = cleanFormDataAllowHTML($_POST['setDesc']);
 	
 	if( !($_POST['policy']=="public" || $_POST['policy']=="private")){
 		$_POST['policy'] = "private";

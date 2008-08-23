@@ -38,6 +38,68 @@ function cleanFormData($data){
 	return htmlentities(stripslashes(trim($data)), ENT_QUOTES);
 }
 
+// This is like cleanFormData except that it will allow certain html tags.
+// It will alow strip out all content within certain dangerous tags (script, etc.).
+// function cleanFormDataAllowHTML($str, $allow_safeFormat, $allow_hyperlink, $allow_tags )
+function cleanFormDataAllowHTML($str) {
+	// TODO Tags for which we should remove all content as well as the tags.
+	//$dangerousTags = array('script', 'style', 'title', 'xml' );
+
+	// Tags we'll allow.
+	$safeFormatTags = array('b', 'i', 'strong', 'em', 'br', 'hr', 'strike' );
+	// $hyperLinkTag = 'a';
+	// $safeHyperLinkProtocols = array('http', 'mailto' );
+
+	// $keys = array_keys($safeFormatTags);
+
+	$str = stripslashes($str);
+	// First, close up all space around the angle brackets.
+	$str = eregi_replace("<[[:space:]]*([^>]*)[[:space:]]*>","<\\1>",$str);
+	// TODO If we allow hyperlinks, then tighten up the format and constrain args. REVIEW 
+	//$str = eregi_replace("<a([^>]*)href=\"?([^\"]*)\"?([^>]*)>","<a href=\"\\2\">", $str);
+
+	$tmp = '';
+	// Find the first tag in the string
+	while(eregi("<([^> ]*)([^>]*)>",$str,$reg))	{
+		$i = strpos($str,$reg[0]);
+		$l = strlen($reg[0]);
+		// Fold tag string for compare
+		if($reg[1][0] == "/") {	// Close tag?
+			$tag = strtolower(substr($reg[1],1));
+			$closetag = true;
+		}	else {
+			$tag = strtolower($reg[1]);
+			$closetag = false;
+		}
+
+		if(in_array($tag, $safeFormatTags)) {
+		//if( false ) {
+			if($closetag)
+				$tag = "</$tag>";
+			else
+				$tag = "<$tag>";
+		// TODO - put in code to catch dangerous tags and remove them and content.
+		} else
+			$tag = '';	// elide the tag
+
+		// Append the string up to the tag and the filtered tag string
+		$tmp .= substr($str,0,$i) . $tag;
+		// Reset the string
+		$str = substr($str,$i+$l);
+	}
+
+	// Append the end of the string
+	$str = $tmp . $str;
+
+	// Squash PHP tags unconditionally
+	$str = ereg_replace("<\?","",$str);
+
+	// Squash comment tags unconditionally
+	$str = ereg_replace("<!--","",$str);
+
+	return $str;
+}
+
 
 function getRoles(){
 	global $mysqli;

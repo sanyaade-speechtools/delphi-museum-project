@@ -23,7 +23,7 @@ $response['msg'] = array();
 if( isset($_POST['objectName']) && isset($_POST['objectDesc']) && isset($_POST['set_id']) && isset($_POST['obj_id'])) {
 	
 	$_POST['objectNameobjectName'] = cleanFormData($_POST['objectName']);
-	$_POST['objectDesc'] = cleanFormData($_POST['objectDesc']);
+	$_POST['objectDesc'] = cleanFormDataAllowHTML($_POST['objectDesc']);
 	
 	// Query DB
 	$sql = "UPDATE set_objs SET notes = ".$db->quote($_POST['objectDesc'], 'text').", name = ".$db->quote($_POST['objectName'], 'text')." WHERE set_id = ".$db->quote($_POST['set_id'], 'integer')." AND obj_id = ".$db->quote($_POST['obj_id'], 'integer')." LIMIT 1";
