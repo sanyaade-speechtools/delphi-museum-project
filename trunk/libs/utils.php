@@ -79,17 +79,32 @@ function cleanFormDataAllowHTML($str) {
 			else
 				$tag = "<$tag>";
 		// TODO - put in code to catch dangerous tags and remove them and content.
+		} elseif( $tag == 'script' ) {
+			$tag = '';	// elide the tag
+			$pos = strpos( $str, '</script>' );
+			if( $pos === false ) {
+				// No closing tag, so toss the rest of the string
+				$l = 0;
+				$str = substr($str,0,$i);
+			} else {
+				// Strip everything up to the end of the closing tag
+				$l = ($pos-$i)+strlen( '</script>' );
+			}
 		} else
 			$tag = '';	// elide the tag
 
 		// Append the string up to the tag and the filtered tag string
-		$tmp .= substr($str,0,$i) . $tag;
+		//Need to ensure we safely store entities in the DB. 
+		// But html_entity_decode misses some important ones, including
+		//  mdash, ndash.
+		$tmp .= htmlentities(allEntitiesDecode(substr($str,0,$i), ENT_QUOTES), ENT_QUOTES) . $tag;
+		
 		// Reset the string
 		$str = substr($str,$i+$l);
 	}
 
 	// Append the end of the string
-	$str = $tmp . $str;
+	$str = $tmp .  htmlentities(allEntitiesDecode($str, ENT_QUOTES), ENT_QUOTES);
 
 	// Squash PHP tags unconditionally
 	$str = ereg_replace("<\?","",$str);
@@ -98,6 +113,20 @@ function cleanFormDataAllowHTML($str) {
 	$str = ereg_replace("<!--","",$str);
 
 	return $str;
+}
+
+// Since PHP's html_entity_decode misses some things, we'll work around it
+function allEntitiesDecode( $str ) {
+	$s = html_entity_decode( $str );
+	if(!(strpos( $s, '&' )===false)) {
+		$s = str_replace('&mdash;', chr(151), $s);
+		$s = str_replace('&ndash;', chr(150), $s);
+		$s = str_replace('&rdquo;', chr(148), $s);
+		$s = str_replace('&ldquo;', chr(147), $s);
+		$s = str_replace('&rsquo;', chr(146), $s);
+		$s = str_replace('&lsquo;', chr(145), $s);
+	}
+	return $s;
 }
 
 
