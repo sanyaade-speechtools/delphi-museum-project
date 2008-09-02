@@ -460,8 +460,8 @@ function queryObjects(
 		$qCatIDs =& orderCatsForQuery( $catIDs, $countsWithImages );
 	//error_log( "queryObjects() Kwds: ".(empty($kwds)?"None":$kwds));
 	//error_log( "queryObjects() Cats: ".(empty($qCatIDs)?"None":implode(",", $qCatIDs)));
-	$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $countsWithImages );
-	$tqFull = prepareObjsQuery( $tqMain, empty($kwds), $countsWithImages, $pageNum, $pageSize );
+	//$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $countsWithImages );
+	$tqFull = prepareObjsQuery( $qCatIDs, $kwds, $countsWithImages, $pageNum, $pageSize );
 	$objsresult =& $db->query($tqFull);
 	if (PEAR::isError($objsresult)) {
 		error_log( "queryObjects() main Query error: ".$objsresult->getMessage());
@@ -519,8 +519,8 @@ function queryResultsCategories(
 		$qCatIDs =& orderCatsForQuery( $catIDs, $countsWithImages );
 	//error_log( "queryObjects() Kwds: ".(empty($kwds)?"None":$kwds));
 	//error_log( "queryObjects() Cats: ".(empty($qCatIDs)?"None":implode(",", $qCatIDs)));
-	$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $countsWithImages );
-	$tqFull = prepareResultsCatsQuery( $tqMain, empty($kwds), $countsWithImages );
+	//$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $countsWithImages );
+	$tqFull = prepareResultsCatsQuery( $qCatIDs, $kwds, $countsWithImages );
 	$catsresult =& $db->query($tqFull);
 	if (PEAR::isError($catsresult)) {
 		error_log( "queryResultsCategories() main Query error: ".$catsresult->getMessage());
@@ -594,7 +594,7 @@ function orderCatsForQuery( $catIDs, $countsWithImages ) {
 			$tqCatOrder .= " or ";
 		$tqCatOrder .= "id=".$catID;
 	}
-	$tqCatOrder .= " order by n desc";
+	$tqCatOrder .= " order by n asc";
 	$catsQResult =& $db->query($tqCatOrder);
 	// $t->assign("tqCatOrder", $tqCatOrder);
 	// unset($catIDs);
@@ -605,84 +605,79 @@ function orderCatsForQuery( $catIDs, $countsWithImages ) {
 	return $qCatIDs;
 }
 
-function prepareObjsQuery( $tqMain, $nokwds, $countsWithImages, $pageNum, $pageSize ) {
-	// If kwds is non-empty, we put the wImgs constraint in that subquery
-	if( $countsWithImages && $nokwds) {
-		$tqFull =
-		"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar"
-		 ." FROM objects o,".$tqMain
-		 ." WHERE o.id=tqMain.obj_id AND NOT o.img_path IS NULL LIMIT ".$pageSize;
-	} else {
-		$tqFull =
-		"SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar"
-		 ." from objects o,".$tqMain." where o.id=tqMain.obj_id limit ".$pageSize;
-	}
-	if( $pageNum > 0 )
-		$tqFull .= " OFFSET ".($pageSize*$pageNum);
-	return $tqFull;
-}
-
-function prepareResultsCatsQuery( $tqMain, $nokwds, $countsWithImages ) {
-	// If kwds is non-empty, we put the wImgs constraint in that subquery
-	if( $countsWithImages && $nokwds) {
-		$tqCountsByCat =
-			"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) FROM categories c,"
-				." (SELECT oc.obj_id, oc.cat_id from obj_cats oc, objects o, "
-			.$tqMain
-			." WHERE oc.obj_id=tqMain.obj_id AND o.id=tqMain.obj_id AND NOT o.img_path IS NULL) tqTop"
-			." WHERE c.id=tqTop.cat_id GROUP BY c.id ORDER BY c.id";
-	} else {
-		$tqCountsByCat =
-			"SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) from categories c,"
-			." (SELECT oc.obj_id, oc.cat_id from obj_cats oc,"
-			.$tqMain
-			." where oc.obj_id=tqMain.obj_id) tqTop"
-			." where c.id=tqTop.cat_id group by c.id order by c.id";
-	}
-	return $tqCountsByCat;
-}
-
-function buildKwdQuery( $kwds, $wImgs ) {
-	$subQ = "(SELECT id as obj_id FROM objects o WHERE MATCH(name, description) AGAINST('"
-		.$kwds."') ";
-	if( $wImgs )
-		$subQ .= "AND NOT o.img_path IS NULL) ";
-	else
-		$subQ .= ") ";
-	return $subQ;
-}
-
-// This builds up the query by recursing for the rest of the list
-// The cats should have been ordered for efficiency before calling this.
-function buildMainQueryForTerm( $catIDList, $iID, $kwds, $wImgs ) {
-	if( $iID == 0 )
-		$qName = "tqMain";
-	else {
-		$qName = "sub";
-		$qName .= (string)$iID;
-	}
-	if( empty($catIDList) ) {
+// Assumes that any categories have already been sorted for query-opt.
+function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
+	$tq = "SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar";
+	if( empty($qCatIDs) ) {
 		if( empty($kwds))
-			die("buildMainQuery: no categories and no keywords!");
-		$subQ = buildKwdQuery( $kwds, $wImgs );
-		return $subQ.$qName;
+			die("prepareObjsQuery: no categories and no keywords!");
+		// No relevance ranking for keywords-only search
+		$tq .= " from objects o where MATCH(o.name, o.description) AGAINST('".$kwds."') ";
+		if( $withImages )
+			$tq .= " AND NOT o.img_path IS NULL";
+	} else { // Have some concepts to search on
+		$nCats = count($qCatIDs);
+		// First, tack on the relevance computation to the select fields
+		$tq .= ",";
+		for($i=0; $i<$nCats; $i++) {
+			if($i>0)
+				$tq .= "*";
+			$tq .= "oc".($i+1).".reliability";
+		}
+		$tq .= " rel 
+		FROM objects o";
+		// Now, tack on the self-join tables for the category matching
+		for($i=0; $i<$nCats; $i++) {
+			$tq .= ", ".($withImages?"obj_cats_wimgs":"obj_cats")." oc".($i+1);
+		}
+		// Now, tack on the self-join statements
+		for($i=0; $i<$nCats; $i++) {
+			$tq .= ($i==0)?" WHERE ":" AND ";
+			$tq .= "o.id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
+		}
+		if( !empty($kwds) )
+			$tq .= " AND MATCH(o.name, o.description) AGAINST('".$kwds."') ";
+		// Note that if we only want objs with images, this is covered by using
+		// the custom obj_cats table that only associates to such objects. We
+		// can omit the explicit qualifier in the query.
 	}
+	$tq .= " limit ".$pageSize;
+	if( $pageNum > 0 )
+		$tq .= " OFFSET ".($pageSize*$pageNum);
+	return $tq;
+}
 
-	if( $iID == count($catIDList)-1 ) {		// simple form
-		if( empty($kwds) )
-			return "(SELECT obj_id from obj_cats where cat_id=".(string)$catIDList[$iID].") ".$qName;
-		$subQ = buildKwdQuery( $kwds, $wImgs )."subK";
-		return "(SELECT oc.obj_id from obj_cats oc,".$subQ
-						 ." where oc.obj_id=subK.obj_id and oc.cat_id="
-							.(string)$catIDList[$iID].") ".$qName;
+function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
+	$tq = "SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) "
+				."FROM categories c, ".($withImages?"obj_cats_wimgs":"obj_cats")." oc0";
+	if( empty($qCatIDs) ) {
+		if( empty($kwds))
+			die("prepareResultsCatsQuery: no categories and no keywords!");
+		$tq .= ", objects o where MATCH(o.name, o.description) AGAINST('".$kwds."') "
+					."AND oc0.obj_id=o.id AND c.id=oc0.cat_id ";
+		if( $withImages )
+			$tq .= "AND NOT o.img_path IS NULL";
+	} else { // Have some concepts to search on
+		if( !empty($kwds) )
+			$tq .= ", objects o";
+		$nCats = count($qCatIDs);
+		// Now, tack on the self-join tables for the category matching
+		for($i=0; $i<$nCats; $i++) {
+			$tq .= ", ".($withImages?"obj_cats_wimgs":"obj_cats")." oc".($i+1);
+		}
+		$tq .= " WHERE c.id=oc0.cat_id ";
+		// Now, tack on the self-join statements
+		for($i=0; $i<$nCats; $i++) {
+			$tq .= " AND oc0.obj_id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
+		}
+		if( !empty($kwds) )
+			$tq .= " AND oc0.obj_id=o.id AND MATCH(o.name, o.description) AGAINST('".$kwds."') ";
+		// Note that if we only want objs with images, this is covered by using
+		// the custom obj_cats table that only associates to such objects. We
+		// can omit the explicit qualifier in the query.
 	}
-	// Not the last one, so we build the return string as a join on this and the recursively
-	// computed string
-	$subQ = buildMainQueryForTerm( $catIDList, $iID+1, $kwds, $wImgs );
-	$subName = "sub".($iID+1);
-	return "(SELECT oc.obj_id from obj_cats oc,".$subQ
-					 ." where oc.obj_id=".$subName.".obj_id and oc.cat_id="
-						.(string)$catIDList[$iID].") ".$qName;
+	$tq .= " GROUP BY c.id ORDER BY c.id ";
+	return $tq;
 }
 
 ?>
