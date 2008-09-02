@@ -282,6 +282,27 @@ CREATE TABLE `obj_cats` (
 SHOW WARNINGS;
 
 /*
+ * Provides associations of categorizations of objects with images.
+ * This is a denormalized table to speed queries.
+ * TODO add creation and modification times.
+ */
+DROP TABLE IF EXISTS `obj_cats_wimgs`;
+CREATE TABLE `obj_cats_wimgs` (
+  `obj_id`      int(10) unsigned NOT NULL,
+  `cat_id`      int(10) unsigned NOT NULL,
+  `inferred`    TINYINT(1) NOT NULL DEFAULT 0,
+  `reliability` TINYINT(1) NOT NULL DEFAULT 9,
+  INDEX `ocwi_obj_index` (`obj_id`),
+  INDEX `ocwi_cat_index` (`cat_id`),
+  UNIQUE INDEX `ocwi_obj_cat_index` (`obj_id`,`cat_id`),
+  CONSTRAINT `ocwi_ibfk_1` FOREIGN KEY (`obj_id`)
+      REFERENCES `objects` (`id`),
+  CONSTRAINT `ocwi_ibfk_2` FOREIGN KEY (`cat_id`)
+      REFERENCES `categories` (`id`)
+)ENGINE=MyIsam;
+SHOW WARNINGS;
+
+/*
  * Defines the tag information
  * TODO add creation and modification times.
  */
