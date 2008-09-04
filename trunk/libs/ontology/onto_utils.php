@@ -44,4 +44,16 @@ function buildNGramsFromTokens($tokens) {
 	return $ngrams;
 }
 
+function requoteMultiTermKwdTokens($tokens) {
+	$kwdArray = array();
+	$nTokens = count($tokens);
+	for( $i=0; $i<$nTokens; $i++ ) {
+		if( strpos($tokens[$i], ' ' ) === FALSE )
+			$kwdArray[] = $tokens[$i];
+		else
+			$kwdArray[] = '"'.$tokens[$i].'"';
+	}
+	return $kwdArray;
+}
+
 ?>
