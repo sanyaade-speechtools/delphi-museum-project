@@ -3,7 +3,7 @@
 //<![CDATA[
 	var templateVarsJSON = eval({$templateVarsJSON});
 	var requested_cats = "{$cats}";
-	var requested_kwds = "{$kwds}";
+	var requested_kwds = '{$kwds}';
 //]]>
 </script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/getParams.js"></script>
