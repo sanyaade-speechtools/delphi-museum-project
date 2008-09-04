@@ -336,7 +336,7 @@ function getCategoryIDsForKwds(
 		$nNgrams = count( $ngrams );
 		if( $nNgrams <= 0 ) {
 			// Should complain somehow
-			$retval['kwds'] = $tokens;
+			$retval['kwds'] = requoteMultiTermKwdTokens($tokens);
 			$retval['msg'] = 'Could not create nGrams from tokens???';
 			return $retval;
 		}
@@ -366,7 +366,7 @@ function getCategoryIDsForKwds(
 		error_log( "getCategoryIDsForKwds() Query error: ".$tqCatsForKwds->getMessage());
 		error_log( "getCategoryIDsForKwds() Query : ".$tqCatsForKwds);
 		// Fall back to just returning the keywords as input.
-		$retval['kwds'] = $tokens;
+		$retval['kwds'] = requoteMultiTermKwdTokens($tokens);
 		$retval['msg'] = "getCategoryIDsForKwds() Query error: ".$tqCatsForKwds->getMessage();
 		return $retval;
 	}
@@ -428,7 +428,8 @@ function getCategoryIDsForKwds(
 		}
 	}
 	$retval['cats'] = $catsFound;
-	$retval['kwds'] = array_values($tokens);	// collapse all the unset values and re-index
+	// collapse all the unset values and re-index
+	$retval['kwds'] = requoteMultiTermKwdTokens(array_values($tokens));
 
 	return $retval;
 }
@@ -612,7 +613,8 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 		if( empty($kwds))
 			die("prepareObjsQuery: no categories and no keywords!");
 		// No relevance ranking for keywords-only search
-		$tq .= " from objects o where MATCH(o.name, o.description) AGAINST('".$kwds."') ";
+		$tq .= ", MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) score 
+		     from objects o where MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		if( $withImages )
 			$tq .= " AND NOT o.img_path IS NULL";
 	} else { // Have some concepts to search on
@@ -624,7 +626,9 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 				$tq .= "*";
 			$tq .= "oc".($i+1).".reliability";
 		}
-		$tq .= " rel 
+		if( !empty($kwds) )
+			$tq .= " * MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
+		$tq .= " score 
 		FROM objects o";
 		// Now, tack on the self-join tables for the category matching
 		for($i=0; $i<$nCats; $i++) {
@@ -636,12 +640,12 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 			$tq .= "o.id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
 		}
 		if( !empty($kwds) )
-			$tq .= " AND MATCH(o.name, o.description) AGAINST('".$kwds."') ";
+			$tq .= " AND MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		// Note that if we only want objs with images, this is covered by using
 		// the custom obj_cats table that only associates to such objects. We
 		// can omit the explicit qualifier in the query.
 	}
-	$tq .= " limit ".$pageSize;
+	$tq .= " order by score desc limit ".$pageSize;
 	if( $pageNum > 0 )
 		$tq .= " OFFSET ".($pageSize*$pageNum);
 	return $tq;
@@ -653,7 +657,7 @@ function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
 	if( empty($qCatIDs) ) {
 		if( empty($kwds))
 			die("prepareResultsCatsQuery: no categories and no keywords!");
-		$tq .= ", objects o where MATCH(o.name, o.description) AGAINST('".$kwds."') "
+		$tq .= ", objects o where MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) "
 					."AND oc0.obj_id=o.id AND c.id=oc0.cat_id ";
 		if( $withImages )
 			$tq .= "AND NOT o.img_path IS NULL";
@@ -671,7 +675,7 @@ function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
 			$tq .= " AND oc0.obj_id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
 		}
 		if( !empty($kwds) )
-			$tq .= " AND oc0.obj_id=o.id AND MATCH(o.name, o.description) AGAINST('".$kwds."') ";
+			$tq .= " AND oc0.obj_id=o.id AND MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		// Note that if we only want objs with images, this is covered by using
 		// the custom obj_cats table that only associates to such objects. We
 		// can omit the explicit qualifier in the query.
