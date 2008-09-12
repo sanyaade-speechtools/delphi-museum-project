@@ -124,7 +124,7 @@
 				<h3>Object Number</h3>
 				<p>{$objnum}</p>
 			{/if}
-			<h2 id="cats_label">Categories</h2>
+			<h2 id="cats_label">Concepts</h2>
 			{section name=facet loop=$facetinfo}
 				<h3 class="facet_name">{$facetinfo[facet].facet}</h3>
 				{$facetinfo[facet].items}

@@ -3,11 +3,11 @@
 <div id="contentNarrow">
 <h2>Welcome to the Delphi Collections Browser</h2>
 <p>The Delphi faceted browser provides a simple way to navigate through museum
-collections. The browser view changes dynamically to show only categories
+collections. The browser view changes dynamically to show only concepts
 relevant to the area of the collection that is being explored. This makes the
 browsing experience more visually streamlined and helps the visitor discover
-categories and relationships between objects that may not otherwise be obvious.
-Clicking on any category refines the search. The category listing on the left is
+concepts and relationships between objects that may not otherwise be obvious.
+Clicking on any concept refines the search. The concept listing on the left is
 derived automatically from an underlying ontology that organizes concepts
 associated with the collections into distinct <em>facets</em> such as location,
 culture, materials, etc.</p>
@@ -27,7 +27,7 @@ browsing.</p>
 <h3>Where to begin?</h3>
 <p>There are several ways to use the Delphi browser, depending on the task at
 hand. You can dive right in, enter a basic keyword search, or browse the full
-set of categories that describe the collections. 
+set of concepts that describe the collections. 
 </p>
 
 <p>If you just want to browse some interesting objects, you can click on any of
@@ -39,20 +39,20 @@ collections and let you explore.
 into the search box that is in the banner of every page (use quotes to specify
 an exact phrase). This will search the collections for names and descriptions
 that include the keyword(s) you enter. Delphi will then display the results and
-also show you the categories in each facet, that apply to the results of your
-search. You can click on any category in the facet listing to refine your
-search. The numbers after each category indicate how many objects you will see
-if you refine the search with that category, and so can give you a quick
+also show you the concepts in each facet, that apply to the results of your
+search. You can click on any concept in the facet listing to refine your
+search. The numbers after each concept indicate how many objects you will see
+if you refine the search with that concept, and so can give you a quick
 overview of how the results are distributed by location, culture, etc.&nbsp; 
 </p>
 
 <p>If you want to explore the collections by topic, click on the
 &quot;Browse&quot; link in the banner and you can explore the full ontology,
-facet by facet. Clicking on the plus icon to the left of a category will expand
-to show sub-categories. As on the results page, numbers after each category
-indicate how many objects are associated with that category. Clicking on any
-category will search the collections for all objects associated with that
-category. 
+facet by facet. Clicking on the plus icon to the left of a concept will expand
+to show sub-concepts. As on the results page, numbers after each concept
+indicate how many objects are associated with that concept. Clicking on any
+concept will search the collections for all objects associated with that
+concept. 
 </p>
 
 <p>Click on the image or name for any object on the results page to see the
@@ -67,7 +67,7 @@ are multiple views, this will be indicated below the zoom window, and you can
 click on any of these to switch views for zooming.&nbsp; 
 </p>
 
-<p>The details view also lists all the categories, by facet, associated with
+<p>The details view also lists all the concepts, by facet, associated with
 that object. - you can click on any of these to &quot;pivot&quot;, or explore
 the collections on that subject. 
 </p>

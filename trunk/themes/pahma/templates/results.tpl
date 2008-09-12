@@ -18,7 +18,7 @@
 	</div>
 	{if $results_total > 0}
 	<div id="results_categoriesContainer">
-		<h2>Narrow with Categories</h2>
+		<h2>Narrow with Concepts</h2>
 		{section name=facet loop=$facets}
 			<h3>{$facets[facet].facet}</h3>
 			{$facets[facet].items}
