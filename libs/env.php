@@ -46,6 +46,7 @@ $dsn = "$CFG->dbtype://$CFG->dbuser:$CFG->dbpass@$CFG->dbhost/$CFG->dbname";
 
 $db =& MDB2::factory($dsn);
 $noDB = false;
+$lockout = false;
 $DBerr = "";
 if (PEAR::isError($db)) {
 	$noDB = true;
@@ -55,19 +56,32 @@ if (PEAR::isError($db)) {
 	if (PEAR::isError($exists)) {
 		$noDB = true;
 		$DBerr = $exists->getMessage();
+	} else {
+		$db->setFetchMode(MDB2_FETCHMODE_ASSOC);
+		$sql = "SELECT lockoutActive lo from DBInfo";
+		$res =& $db->query($sql);
+		if (PEAR::isError($res))  {
+			$noDB = true;
+			$DBerr = $db->getMessage();
+		} else {
+			if(!( $row = $res->fetchRow() )
+				|| ( $row['lo'] != FALSE )) {
+				$noDB = true;
+				$lockout = true;
+				$DBerr = "Lockout is enabled...";
+			}
+ 		}
 	}
 }
 if( $noDB ) {
     $t->assign('heading', "Delphi is not currently available...");
-    $t->assign('message', "<p>The Delphi system is not currently available.</p>
-<p>This is either due to scheduled maintenance or to a temporary outage.
-Please try back again later.</p>
-<p style=\"display:none\">DB error: ".$DBerr."</p>");
+		$reason = $lockout?"scheduled maintenance":"a temporary outage";
+		$t->assign('message', "<p>The Delphi system is not currently available, due to ".$reason
+			.".</p>Please try back again later.</p><p style=\"display:none\">DB error: ".$DBerr."</p>");
     $t->display('error.tpl');
     die();
 }
 
-$db->setFetchMode(MDB2_FETCHMODE_ASSOC);
 
 // Determin user's login state
 require_once "$CFG->dirroot/modules/auth/checkLogin.php";
