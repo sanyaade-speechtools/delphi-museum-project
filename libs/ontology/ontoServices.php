@@ -613,8 +613,8 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 		if( empty($kwds))
 			die("prepareObjsQuery: no categories and no keywords!");
 		// No relevance ranking for keywords-only search
-		$tq .= ", MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) score 
-		     from objects o where MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
+		$tq .= ", MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) score 
+		     from objects o where MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		if( $withImages )
 			$tq .= " AND NOT o.img_path IS NULL";
 	} else { // Have some concepts to search on
@@ -627,7 +627,7 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 			$tq .= "oc".($i+1).".reliability";
 		}
 		if( !empty($kwds) )
-			$tq .= " * MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
+			$tq .= " * MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		$tq .= " score 
 		FROM objects o";
 		// Now, tack on the self-join tables for the category matching
@@ -640,7 +640,7 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 			$tq .= "o.id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
 		}
 		if( !empty($kwds) )
-			$tq .= " AND MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
+			$tq .= " AND MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		// Note that if we only want objs with images, this is covered by using
 		// the custom obj_cats table that only associates to such objects. We
 		// can omit the explicit qualifier in the query.
@@ -657,7 +657,7 @@ function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
 	if( empty($qCatIDs) ) {
 		if( empty($kwds))
 			die("prepareResultsCatsQuery: no categories and no keywords!");
-		$tq .= ", objects o where MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) "
+		$tq .= ", objects o where MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) "
 					."AND oc0.obj_id=o.id AND c.id=oc0.cat_id ";
 		if( $withImages )
 			$tq .= "AND NOT o.img_path IS NULL";
@@ -675,7 +675,7 @@ function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
 			$tq .= " AND oc0.obj_id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
 		}
 		if( !empty($kwds) )
-			$tq .= " AND oc0.obj_id=o.id AND MATCH(o.name, o.description) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
+			$tq .= " AND oc0.obj_id=o.id AND MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		// Note that if we only want objs with images, this is covered by using
 		// the custom obj_cats table that only associates to such objects. We
 		// can omit the explicit qualifier in the query.
