@@ -22,7 +22,8 @@ public class VocabTermsReader {
 	protected int _debugLevel = 2;
 	// TODO we should have the user select the encoding.
 	private static String encoding = "ISO-8859-1";
-	//private static String encoding = "UTF-8";
+	// private static String encoding = "UTF-8";
+	//private static String encoding = "UTF-16";
 
 	// Pass in a Document to add to? Then caller can set up
 	// top level stuff like title, xsl spreadsheet, etc.
@@ -119,6 +120,10 @@ public class VocabTermsReader {
 						|| termType.equalsIgnoreCase( "Use for Term" )) {
 						fAddSym = true;
 						debug(3, "VTR.readTerms: Found synonym ["+name+"] for: "+lastPrimaryNode.name );
+					}
+					else if( termType.equalsIgnoreCase( "Preferred Term" )) {
+						fAddSym = true;
+						debug(1, "VTR.readTerms: Found illegally declared synonym ["+name+"] for: "+lastPrimaryNode.name );
 					}
 					else if( termType.equalsIgnoreCase( "Related Term" )) {
 						debug(1, "VTR.readTerms: Found related term for: "
