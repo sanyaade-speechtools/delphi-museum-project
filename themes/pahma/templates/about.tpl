@@ -21,11 +21,11 @@ Services</a> group.&nbsp;
 </p>
 
 <p>The Delphi faceted browser provides a simple way to navigate through museum
-collections. The browser view changes dynamically to show only categories
+collections. The browser view changes dynamically to show only concepts
 relevant to the area of the collection that is being explored. This makes the
 browsing experience more visually streamlined and helps the visitor discover
-categories and relationships between objects that may not otherwise be obvious.
-Clicking on any category refines the search. The category listing is
+concepts and relationships between objects that may not otherwise be obvious.
+Clicking on any concept refines the search. The concept listing is
 derived automatically from an underlying ontology that organizes concepts
 associated with the collections into distinct facets such as location, culture,
 materials, etc. Concepts are associated to each object in the collections by
