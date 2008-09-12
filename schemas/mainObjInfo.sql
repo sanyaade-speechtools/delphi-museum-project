@@ -8,6 +8,7 @@
 DROP TABLE IF EXISTS DBInfo;
 CREATE TABLE DBInfo (
   `version`           VARCHAR(16) NOT NULL,
+  `lockoutActive`     boolean NOT NULL default false, -- Allows for maintenance lockout
   -- TFacetMaskWidth must agree with the FacetMaskCache definition
   `facetMaskWidth`    TINYINT(2) NULL DEFAULT 32,
   -- cache the number of objects and those with images
@@ -41,6 +42,7 @@ CREATE TABLE `objects` (
   `objnum`        VARCHAR(80) NOT NULL,
   `name`          VARCHAR(255) NOT NULL,
   `description`   text NULL,
+  `hiddenNotes`   text NULL,
   -- All paths are relative to the configured image roots
   `img_path`      VARCHAR(255) NULL,    
   `img_ar`        DOUBLE(7,3) UNSIGNED NULL,    
@@ -49,7 +51,7 @@ CREATE TABLE `objects` (
         on update CURRENT_TIMESTAMP,
   INDEX `obj_id_index` (`id`),
 	-- Enable full text (keyword) search on the name and description
-  FULLTEXT KEY `obj_fulltext_index` (`name`,`description`)
+  FULLTEXT KEY `obj_fulltext_index` (`name`,`description`,`hiddenNotes`)
 )ENGINE=MyIsam;
 SHOW WARNINGS;
 
