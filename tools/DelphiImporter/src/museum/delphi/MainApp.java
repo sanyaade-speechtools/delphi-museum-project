@@ -830,8 +830,10 @@ public class MainApp {
     	int nObjsOutMax = Integer.MAX_VALUE;
     	int nObjsProcessedFile = 0;
     	int nObjsProcessedTotal = 0;
+    	int nObjsSkippedTotal = 0;
     	int nObjsPerDumpFile = 50000;
     	String descMergeSeparator = "|";
+		ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
 		try {
 			debug(1,"Build Objects SQL...");
 			// We need to pick an output file
@@ -843,11 +845,9 @@ public class MainApp {
 				int objIDCol = 0;
 				int objNumCol = 4;
 				int objNameCol = 5;
-				int objDescCol = 12;
 				if( !columnNames[objIDCol].equalsIgnoreCase("ObjectID")
 					|| !columnNames[objNumCol].equalsIgnoreCase("ObjectNumber")
-					|| !columnNames[objNameCol].equalsIgnoreCase("ObjectName")
-					|| !columnNames[objDescCol].equalsIgnoreCase("Description"))
+					|| !columnNames[objNameCol].equalsIgnoreCase("ObjectName"))
 					throw new RuntimeException("BuildObjectSQL columns not as expected!");
 				/*
 			    int returnVal = chooser.showSaveDialog(getJFrame());
@@ -893,55 +893,84 @@ public class MainApp {
 							lastStrings.set(objNumCol, nextLine.get(objNumCol));
 						if( lastStrings.get(objNameCol).length() == 0 )
 							lastStrings.set(objNameCol, nextLine.get(objNameCol));
-						// Merge descriptions
-						String desc = nextLine.get(objDescCol);
-						if(desc.length()!=0) {	// If new token is empty ("") skip it
-							String lastDesc = lastStrings.get(objDescCol);
-						// BUG - need not use get(i) over and over)
-							if(lastDesc.length()==0)		// If old token is empty (""), just set
-								lastStrings.set(objDescCol, desc);
-							else if(!desc.equalsIgnoreCase(lastDesc)
-									&& !lastDesc.contains(desc)) {
-								lastStrings.set(objDescCol, lastDesc+descMergeSeparator+desc);
-								debug(2,"Combining descriptions for id: "+id+
-											" ["+lastStrings.get(objDescCol)+"]");
+						// Merge description columns
+						for( int i=0; i<descrCols.size(); i++ ) {
+							// Take each description column and fold all white space
+							// (especially the newlines) into a single space.
+							int iCol = descrCols.get(i);
+							String desc = nextLine.get(iCol);
+							if(desc.length()!=0) {	// If new token is empty ("") skip it
+								String lastDesc = lastStrings.get(iCol);
+								if(lastDesc.length()==0)		// If old token is empty (""), just set
+									lastStrings.set(iCol, desc);
+								else if(!desc.equalsIgnoreCase(lastDesc)
+										&& !lastDesc.contains(desc)) {
+									lastStrings.set(iCol, lastDesc+descMergeSeparator+desc);
+									debug(2,"Combining descriptions for id: "+id+
+												" ["+lastStrings.get(iCol)+"]");
+								}
+							}
+						}
+						// Merge hiddenNotes columns
+						for( int iCol=0; iCol<DumpColumnConfigInfo.hiddenNotesCols.size(); iCol++ ) {
+							// Take each description column and fold all white space
+							// (especially the newlines) into a single space.
+							String hNote = nextLine.get(iCol);
+							if(hNote.length()!=0) {	// If new token is empty ("") skip it
+								String lastHNote = lastStrings.get(iCol);
+								if(lastHNote.length()==0)		// If old token is empty (""), just set
+									lastStrings.set(iCol, hNote);
+								else if(!hNote.equalsIgnoreCase(lastHNote)
+										&& !lastHNote.contains(hNote)) {
+									lastStrings.set(iCol, lastHNote+descMergeSeparator+hNote);
+									debug(2,"Combining descriptions for id: "+id+
+												" ["+lastStrings.get(iCol)+"]");
+								}
 							}
 						}
 						continue;
 					}
-					if( objWriter == null ) {
-			        	nObjsProcessedFile = 0;
-			    		iOutputFile++;
-						fFirst = true;
-			    		currFilename = basefilename + iOutputFile + extension;
-						objWriter = new BufferedWriter(new FileWriter( currFilename ));
-						//objWriter.append("USE "+dbName+";");
-						//objWriter.newLine();
-						// INSERT ALL in order:
-						// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
-						objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, img_path, creation_time) VALUES" );
-						objWriter.newLine();
+					// Have a complete line - check for validity
+					String objNumStr = lastStrings.get(objNumCol);
+					if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
+						// Skip lines with no object number.
+						debug(1,"BuildObjectSQL: Discarding line for id (bad objNum): "+id );
+						nObjsSkippedTotal++;
+					} else {
+						if( objWriter == null ) {
+				        	nObjsProcessedFile = 0;
+				    		iOutputFile++;
+							fFirst = true;
+				    		currFilename = basefilename + iOutputFile + extension;
+							objWriter = new BufferedWriter(new FileWriter( currFilename ));
+							//objWriter.append("USE "+dbName+";");
+							//objWriter.newLine();
+							// INSERT ALL in order:
+							// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
+							objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, hiddenNotes, img_path, creation_time) VALUES" );
+							objWriter.newLine();
+						}
+						// Otherwise, now we output the info for the last Line, and then transfer
+						// the next line to Last line and loop
+						dumpSQLForObject( lastIDVal, lastStrings, objWriter, fFirst, fWithNewlines );
+						fFirst = false;
+						nObjsProcessedFile++;
+						nObjsProcessedTotal++;
+						if( nObjsProcessedTotal >= nObjsOutMax ) {
+							if(lastStrings.size() > 0)
+								dumpSQLForObject( lastIDVal, lastStrings, objWriter, false, fWithNewlines );
+							break;
+						}
+						if( nObjsProcessedFile >= nObjsPerDumpFile ) {
+							objWriter.append(";");
+							objWriter.flush();
+							objWriter.close();
+							objWriter = null;	// signal to open next one
+							debug(1,"Wrote "+nObjsProcessedFile+" objects to file: "+currFilename);
+						}
 					}
-					// Otherwise, now we output the info for the last Line, and then transfer
-					// the next line to Last line and loop
-					dumpSQLForObject( lastIDVal, lastStrings, objWriter, fFirst, fWithNewlines );
-					fFirst = false;
 					lastIDVal = id;
 					lastStrings = nextLine;
-					nObjsProcessedFile++;
-					nObjsProcessedTotal++;
-					if( nObjsProcessedTotal >= nObjsOutMax ) {
-						if(lastStrings.size() > 0)
-							dumpSQLForObject( lastIDVal, lastStrings, objWriter, false, fWithNewlines );
-						break;
-					}
-					if( nObjsProcessedFile >= nObjsPerDumpFile ) {
-						objWriter.append(";");
-						objWriter.flush();
-						objWriter.close();
-						objWriter = null;	// signal to open next one
-						debug(1,"Wrote "+nObjsProcessedFile+" objects to file: "+currFilename);
-					}
 				}
 				if( objWriter != null ) {
 					objWriter.append(";");
@@ -950,7 +979,7 @@ public class MainApp {
 					objWriter.flush();
 					objWriter.close();
 				}
-				debug(1,"Wrote "+nObjsProcessedTotal+" total objects.");
+				debug(1,"Wrote "+nObjsProcessedTotal+" total objects. Skipped: "+nObjsSkippedTotal);
 			}
 		} catch( IOException e ) {
             e.printStackTrace();
@@ -1012,28 +1041,66 @@ public class MainApp {
 	private void dumpSQLForObject( int id, ArrayList<String> line, BufferedWriter writer,
 									boolean fFirst, boolean fWithNewlines ) {
 		try {
+			// TODO use function attribute to find this
 			int objNumCol = 4;
+			// TODO use function attribute to find this
 			int objNameCol = 5;
-			int objDescCol = 12;
 			String name = (line.get(objNameCol).length() == 0)?"(no name)"
 					             :(line.get(objNameCol).replace("\"", "\\\"").replace("'", "\\'"));
 			ArrayList<ImageInfo> imgInfo = null;
 			if( imagePathsReader != null )
 				imgInfo = imagePathsReader.GetInfoForID(id);
-			// TODO Need to be smarter about getting Description
-			// For now, just take the description column and fold all white space
-			// (especially the newlines) into a single space.
-			String description = line.get(objDescCol).replaceAll("[\\s]+", " " );
-			//description = description.replaceAll("\\(['\"]\\)", "\\\1");
-			description = description.replace("\"", "\\\"");
-			description = description.replace("'", "\\'");
+			// Gather all the description columns together and append
+			String description = "";
+			ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
+			boolean fFirstDescLine = true;
+			for( int i=0; i<descrCols.size(); i++ ) {
+				// Take each description column and fold all white space
+				// (especially the newlines) into a single space.
+				String newDescLine = line.get(descrCols.get(i)).trim();
+				if( newDescLine.isEmpty() )
+					continue;
+				newDescLine = newDescLine.replaceAll("[\\s]+", " " );
+				// There are some pipes as field separators when Description is merged
+				// from several lines or DB fields. Turn these into line breaks.
+				newDescLine = newDescLine.replaceAll("[|]", "<br />" );
+				//newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
+				newDescLine = newDescLine.replace("\"", "\\\"");
+				newDescLine = newDescLine.replace("'", "\\'");
+				if( fFirstDescLine )
+					fFirstDescLine = false;
+				else
+					description += "<br />";	// Join with line breaks between
+				description += newDescLine;
+			}
+			// Now do the hiddenNotes column
+			String hiddenNotes = "";
+			boolean fFirstHNLine = true;
+			for( int i=0; i<DumpColumnConfigInfo.hiddenNotesCols.size(); i++ ) {
+				// Take each hiddenNotes column and fold all white space
+				// (especially the newlines) into a single space.
+				String newHNLine = line.get(DumpColumnConfigInfo.hiddenNotesCols.get(i)).trim();
+				if( newHNLine.isEmpty() )
+					continue;
+				newHNLine = newHNLine.replaceAll("[\\s]+", " " );
+				//newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
+				newHNLine = newHNLine.replace("\"", "\\\"");
+				newHNLine = newHNLine.replace("'", "\\'");
+				if( fFirstHNLine )
+					fFirstHNLine = false;
+				else
+					hiddenNotes += " ";	// Join with spaces between
+				hiddenNotes += newHNLine;
+			}
+			// Deal with line separation
 			if( !fFirst ) {
 				writer.append(',');
 				if( fWithNewlines )
 					writer.newLine();
 			}
+			// Dump the data
 			writer.append("("+id+",\""+line.get(objNumCol).trim()+"\",\""+name+"\",\""
-							+description+"\",");
+							+description+"\",\""+hiddenNotes+"\",");
 			if(imgInfo == null)
 				writer.append("null,");
 			else {
@@ -1960,8 +2027,10 @@ public class MainApp {
     	int nObjsCatsPerDumpFile = Integer.MAX_VALUE;
     	int nObjCatsDumpedToFile = 0;
     	int nObjCatsDumpedTotal = 0;
+    	int nObjsSkippedTotal = 0;
     	// TODO get this from col config
     	int objIDCol = 0;
+		int objNumCol = 4;
     	// Hold the information for the Facet(s)
     	DumpColumnConfigInfo[] colDumpInfo = null;
 		try {
@@ -2025,76 +2094,85 @@ public class MainApp {
 					}
 					continue;
 				}
-				if( objCatsWriter == null ) {
-					nObjCatsDumpedToFile = 0;
-		    		iOutputFile++;
-					fFirst = true;
-		    		currFilename = basefilename + iOutputFile + extension;
-		    		objCatsWriter = new BufferedWriter(new FileWriter( currFilename ));
-		    		if( fDumpAsSQLInsert ) {
-			    		objCatsWriter.append("USE "+dbName+";");
-			    		objCatsWriter.newLine();
-			    		objCatsWriter.append("INSERT IGNORE INTO obj_cats(obj_id, cat_id, inferred, reliability) VALUES" );
-			    		objCatsWriter.newLine();
-		    		}
-				}
-				// Otherwise, now we output the info for the last Line, and then transfer
-				// the next line to Last line and loop
-				// We need to track the matches we have made, and the reliability assigned per column.
-				// If two columns generate the same category, then we use the higher reliability.
-				matchedCats.clear();
-				for(int i=1; i<nCols; i++ ) {
-					if(skipCol[i])				// Do not bother with misc cols
-						continue;
-					String source = lastStrings.get(i);
-					if( source.length() <= 1 )
-						continue;
-					categorizeObjectForFacet( lastIDVal, source,
-							facetName, colDumpInfo[i], matchedCats );
-				}
-				int nCatsDumped = dumpSQLForObjCatsOnFacet( lastIDVal, matchedCats,
-										objCatsWriter, fFirst, fWithNewlines, fDumpAsSQLInsert );
-				if( nCatsDumped > 0) {
-					nObjCatsDumpedTotal += nCatsDumped;
-					nObjCatsDumpedToFile += nCatsDumped;
-					nObjCatsTillReport -= nCatsDumped;
-					fFirst = false;
+				// Have a complete line. Check for validity
+				String objNumStr = lastStrings.get(objNumCol);
+				if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
+					// Skip lines with no object number.
+					debug(1,"CategorizeForFacet: Discarding line for id (bad objNum): "+id );
+					nObjsSkippedTotal++;
+				} else { //  Process a valid line
+					if( objCatsWriter == null ) {
+						nObjCatsDumpedToFile = 0;
+			    		iOutputFile++;
+						fFirst = true;
+			    		currFilename = basefilename + iOutputFile + extension;
+			    		objCatsWriter = new BufferedWriter(new FileWriter( currFilename ));
+			    		if( fDumpAsSQLInsert ) {
+				    		objCatsWriter.append("USE "+dbName+";");
+				    		objCatsWriter.newLine();
+				    		objCatsWriter.append("INSERT IGNORE INTO obj_cats(obj_id, cat_id, inferred, reliability) VALUES" );
+				    		objCatsWriter.newLine();
+			    		}
+					}
+					// Otherwise, now we output the info for the last Line, and then transfer
+					// the next line to Last line and loop
+					// We need to track the matches we have made, and the reliability assigned per column.
+					// If two columns generate the same category, then we use the higher reliability.
+					matchedCats.clear();
+					for(int i=1; i<nCols; i++ ) {
+						if(skipCol[i])				// Do not bother with misc cols
+							continue;
+						String source = lastStrings.get(i);
+						if( source.length() <= 1 )
+							continue;
+						categorizeObjectForFacet( lastIDVal, source,
+								facetName, colDumpInfo[i], matchedCats );
+					}
+					int nCatsDumped = dumpSQLForObjCatsOnFacet( lastIDVal, matchedCats,
+											objCatsWriter, fFirst, fWithNewlines, fDumpAsSQLInsert );
+					if( nCatsDumped > 0) {
+						nObjCatsDumpedTotal += nCatsDumped;
+						nObjCatsDumpedToFile += nCatsDumped;
+						nObjCatsTillReport -= nCatsDumped;
+						fFirst = false;
+					}
+					matchedCats.clear();
+					// BUG? We already ran against the line - why do this again?!?!
+					if( nObjCatsDumpedTotal >= nObjCatsOutMax ) {
+						if(lastStrings.size() > 0) {
+							for(int i=1; i<nCols; i++ ) {
+								if(skipCol[i])				// Do not bother with misc cols
+									continue;
+								String source = lastStrings.get(i);
+								if( source.length() <= 1 )
+									continue;
+								categorizeObjectForFacet( lastIDVal, source,
+										facetName, colDumpInfo[i], matchedCats );
+							}
+						}
+						break;
+					}
+					nCatsDumped = dumpSQLForObjCatsOnFacet( lastIDVal, matchedCats,
+							objCatsWriter, fFirst, fWithNewlines, fDumpAsSQLInsert );
+					if( nCatsDumped > 0) {
+						// Gratuitous since have already decided to quit
+						// nObjsProcessedTotal += nCatsFound;
+						fFirst = false;
+					}
+					if( nObjCatsDumpedToFile >= nObjsCatsPerDumpFile ) {
+						if( fDumpAsSQLInsert )
+							objCatsWriter.append(";");
+						objCatsWriter.flush();
+						objCatsWriter.close();
+						objCatsWriter = null;	// signal to open next one
+						debug(1,"Wrote "+nObjCatsDumpedToFile+" object categories to file: "+currFilename);
+					} else if( nObjCatsTillReport <= 0 ) {
+						debug(1,"Wrote "+nObjCatsDumpedToFile+" object categories to file: "+currFilename);
+						nObjCatsTillReport = nObjCatsReport;
+					}
 				}
 				lastIDVal = id;
 				lastStrings = nextLine;
-				matchedCats.clear();
-				if( nObjCatsDumpedTotal >= nObjCatsOutMax ) {
-					if(lastStrings.size() > 0) {
-						for(int i=1; i<nCols; i++ ) {
-							if(skipCol[i])				// Do not bother with misc cols
-								continue;
-							String source = lastStrings.get(i);
-							if( source.length() <= 1 )
-								continue;
-							categorizeObjectForFacet( lastIDVal, source,
-									facetName, colDumpInfo[i], matchedCats );
-						}
-					}
-					break;
-				}
-				nCatsDumped = dumpSQLForObjCatsOnFacet( lastIDVal, matchedCats,
-						objCatsWriter, fFirst, fWithNewlines, fDumpAsSQLInsert );
-				if( nCatsDumped > 0) {
-					// Gratuitous since have already decided to quit
-					// nObjsProcessedTotal += nCatsFound;
-					fFirst = false;
-				}
-				if( nObjCatsDumpedToFile >= nObjsCatsPerDumpFile ) {
-					if( fDumpAsSQLInsert )
-						objCatsWriter.append(";");
-					objCatsWriter.flush();
-					objCatsWriter.close();
-					objCatsWriter = null;	// signal to open next one
-					debug(1,"Wrote "+nObjCatsDumpedToFile+" object categories to file: "+currFilename);
-				} else if( nObjCatsTillReport <= 0 ) {
-					debug(1,"Wrote "+nObjCatsDumpedToFile+" object categories to file: "+currFilename);
-					nObjCatsTillReport = nObjCatsReport;
-				}
 			}
 			if( objCatsWriter != null ) {
 				if( fDumpAsSQLInsert ) {

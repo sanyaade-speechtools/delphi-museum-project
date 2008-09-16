@@ -10,8 +10,12 @@ import org.w3c.dom.NodeList;
 public class DumpColumnConfigInfo {
 	private static int columnSeparator = -1;
 	private static HashMap<String, DumpColumnConfigInfo> columnInfoMap = null;
+	protected static PriorityQueue<Integer> descColsPQ = null;
+	protected static ArrayList<Integer> hiddenNotesCols = null;
 
 	protected String name;
+	protected boolean addToHiddenNotes;
+	protected int descriptionOrder;		// Part of description? -1 of not, else order
 	protected String comment;
 	protected ArrayList<String> tokenSeparators;
 	protected ArrayList<String> noiseTokens;
@@ -27,6 +31,8 @@ public class DumpColumnConfigInfo {
 	protected DumpColumnConfigInfo( String newName, String newComment ) {
 		name = newName;
 		comment = newComment;
+		addToHiddenNotes = false;
+		descriptionOrder = -1;
 	}
 
 	public static int getColumnSeparator() {
@@ -53,6 +59,12 @@ public class DumpColumnConfigInfo {
 		return allCols;
 	}
 
+	public static ArrayList<Integer> getDescriptionColumns() {
+		if( descColsPQ == null )
+			throw new RuntimeException("DumpColumnConfigInfo.getDescriptionColumns: Module not initialized.");
+		return descColsPQ.asArrayList();
+	}
+
 	public static String getColComment( String forColumn ) {
 		return GetColInfo(forColumn, "getColComment").comment;
 	}
@@ -77,6 +89,23 @@ public class DumpColumnConfigInfo {
 		return 0;
 	}
 
+	// This supports filtering of objects in a metadata dump that should not be promoted
+	// to the web collections browser. In general, these should be filtered out of the
+	// dump up front, but in reality, garbage creeps in.
+	// The PAHMA-SPECIFIC rules are: must not be empty, must not include "Acc."
+	// or "Nature of contents:", (both indicate an accession record),
+	// and must not include "." (indicates a burial record).
+	public static boolean objNumIsValid( String objNumStr ) {
+		// TODO This should be configured as rules somehow.
+		// PAHMA-SPECIFIC - this must be generalized.
+		// If rules not initialized, should throw a not initialized exception
+		boolean isValid = !objNumStr.isEmpty()
+						&& !objNumStr.contains("Acc")
+						&& !objNumStr.contains("Nature of contents:")
+						&& !objNumStr.contains(".");
+		return isValid;
+	}
+
 	public static float columnReliabilityForFacet( String forColumn, String facetName ) {
 		ArrayList<Pair<String,Float>> facetsToMine =
 			GetColInfo(forColumn, "columnReliabilityForFacet").facetsToMine;
@@ -95,8 +124,12 @@ public class DumpColumnConfigInfo {
 			if( columnInfoMap != null ) {
 				System.out.println("Rebuilding columnInfoMap...");
 				columnInfoMap = null;
+				descColsPQ = null;
+				hiddenNotesCols = null;
 			}
 			columnInfoMap = new HashMap<String, DumpColumnConfigInfo>();
+			descColsPQ = new PriorityQueue<Integer>();
+			hiddenNotesCols = new ArrayList<Integer>();
 			// First, get the column separator.
 			NodeList colSepNodes = document.getElementsByTagName( "colSep" );
 			// Only use the first one.
@@ -121,6 +154,17 @@ public class DumpColumnConfigInfo {
 				ArrayList<String> noiseTokens = new ArrayList<String>();
 				ArrayList<Pair<String,String>> reduceRules = new ArrayList<Pair<String,String>>();
 				ArrayList<Pair<String,Float>> facetsToMine = new ArrayList<Pair<String,Float>>();
+		    	String function = colInfoEl.getAttribute( "function" );
+		    	if( function.equals("hiddenNotes"))
+		    		hiddenNotesCols.add(iCol);
+		    	String descOrderStr = colInfoEl.getAttribute( "descriptionOrder" );
+		    	double descOrder = -1;
+		    	if( !descOrderStr.isEmpty()) {
+			    	descOrder = Double.parseDouble(descOrderStr);
+				    if( descOrder >= 0 )
+				    	// Note that PriorityQueue ranks high to low
+				    	descColsPQ.add(iCol, 1.0/descOrder);
+		    	}
 				NodeList childNodes = colInfoEl.getChildNodes();
 				int nChildren = childNodes.getLength();
 				for( int iChild = 0; iChild < nChildren; iChild++) {
@@ -161,6 +205,8 @@ public class DumpColumnConfigInfo {
 								+ " under colInfo for: " + name );
 				}
 			    DumpColumnConfigInfo info = new DumpColumnConfigInfo( name, comment );
+			    if( function != null && function.equals("hiddenNotes"))
+			    	info.addToHiddenNotes = true;
 		    	info.facetsToMine = facetsToMine;
 		    	info.tokenSeparators = tokenSeparators;
 		    	info.reduceRules = reduceRules;
@@ -171,7 +217,8 @@ public class DumpColumnConfigInfo {
 			}
 			System.out.println("Parsed info for "+nAdded+" columns.");
 		} catch(Exception ex) {
-			System.err.println("Exception: " + ex.getMessage());
+			System.err.println("PopulateFromConfigFile: Exception: " + ex.getMessage());
+			ex.printStackTrace();
 		}
 	} // PopulateFromConfigFile
 }

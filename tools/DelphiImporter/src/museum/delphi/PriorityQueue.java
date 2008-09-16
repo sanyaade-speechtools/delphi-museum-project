@@ -266,6 +266,21 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 	 }
 
 	 /**
+	  * Returns an ArrayList with the items in this priority queue, sorted
+	  * by the priorities in this queue.
+	  *
+	  * @return new ArrayList for this priority queue.
+	  */
+	 public ArrayList<I> asArrayList() {
+		 PriorityQueue<I> pq = clone();
+		 ArrayList<I> al = new ArrayList<I>();
+		 while (pq.hasNext()) {
+			 al.add(pq.next());
+		 }
+		 return al;
+	 }
+
+	 /**
 	  * Returns a clone of this priority queue.  Modifications to one will not
 	  * affect modifications to the other.
 	  */
