@@ -13,6 +13,7 @@ class TaxoNode {
 		var $nResults;		// nResults associated to this category
 		var $nResults2;		// secondary Results associated to this category
 		var $fHidden;			// Is this category hidden in the output tree
+		var $fMustShow;		// Set when a child is among query categories. fHidden overrides.
 		var $fNoClick;		// Is this category shown, but not clickable
 		var $fPrune;			// Should we prune this subtree?
 	
@@ -31,6 +32,7 @@ class TaxoNode {
 		$this->nResults2 = 0;
 		$this->fHidden = false;
 		$this->fNoClick = false;
+		$this->fMustShow = false;
 		$this->fPrune = false;
 	}
 
@@ -44,8 +46,10 @@ class TaxoNode {
 
 	function PruneForOutput($nResultsTotal, $catIDs) {
 		// if leaf, check hidden and return count
-		if( in_array($this->id, $catIDs) )
+		if( in_array($this->id, $catIDs) ) {
 			$this->fNoClick = true;
+			$this->fMustShow = true;
+		}
 		if( empty($this->arrChildren )) {
 			// If this covers all results, disable link. 
 			// Need to get nResults working first.
@@ -53,19 +57,23 @@ class TaxoNode {
 			//	$this->fNoClick = true;
 		} else {
 			// See if we have children to deal with
-			$mustShow = false;
+			$noHide = false;
 			foreach( $this->arrChildren as $node ) {
 				$nSubTree = $node->PruneForOutput($nResultsTotal, $catIDs);
 				// If we find a child with fewer results, or a leaf child, show this
 				if(( $nSubTree != $this->nResults ) || empty($node->arrChildren ))
-						$mustShow = true;
+						$noHide = true;
 			}
 			// If we do not have to show it, mark it hidden
-			if( !$mustShow ) {
+			if( !$noHide ) {
 				$this->fHidden = true;
 				//echo1 "Marking node fHidden: ".$this->name;
 			}
 		}
+		// If we are set to MustShow (because we are among the query categories,
+	  // or one of our descendents is), then propagate up.
+		if( $this->fMustShow && $this->pParent != null )
+			$this->pParent->fMustShow = true;
 		return $this->nResults;
 	}
 
@@ -154,7 +162,7 @@ class TaxoNode {
 			if(($depth <= 0)
 					|| ($nSiblings == 1)
 					|| (($depth <= 1) && ($nSiblings < 3))
-					|| $this->fNoClick) {
+					|| $this->fMustShow) {
 				$doChildren = true;
 			} else {
 				// If a full tree, or if this is hidden and we have children, recurse
