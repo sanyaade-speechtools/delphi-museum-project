@@ -1,82 +1,94 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
 <head>
-<meta name="generator" content="HTML Tidy for Mac OS X (vers 14 February 2006), see www.w3.org" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Delphi - Deployment - Components</title>
 
 </head>
-<body style="width: 600px;">
+<body>
 <h1>Deploying Delphi: Components</h1>
-<p>There are three major components to the current Delphi deployment
-used by the Phoebe A. Hearst Museum of Anthropology (PAHMA) at the
-University of California, Berkeley:</p>
+<p>There are three major components to the current Delphi
+deployment used by the Phoebe A. Hearst Museum of Anthropology (PAHMA)
+at the University of California, Berkeley:</p>
 <ol>
-<li style="width: 600px;">
+<li>
 <strong>A web-based application</strong>
-<p>A web-based application, the Delphi "collections browser," allows
-virtual museum visitors to explore the museum's collections over the
-web.&nbsp; Visitors can search for artifacts, via both concepts and
-keywords, and can interactively browse their various "facets" (e.g.
+<p>A web-based application, the Delphi "collections browser,"
+allows virtual museum visitors to explore the museum's collections over
+the web.&nbsp; Visitors can search for artifacts, via both concepts
+and keywords, and can interactively browse their various "facets" (e.g.
 location, culture, materials).</p>
-<p><span style="background-color: rgb(255, 255, 215);">Decide whether,
-and if so how, to introduce the personal annotation and community
-curation aspects of Delphi here. -Aron Roberts 10/22/08 4:01 PM</span></p>
-<p>Currently, the Delphi collections browser application runs in the
-Apache Web Server.&nbsp; It consists of a number of interrelated
-components that are more fully described below, including PHP
-application code and libraries; Smarty templates; JavaScript
+<p><span style="background-color: rgb(255, 255, 215);">Decide
+whether, and if so how, to introduce the personal annotation and
+community curation aspects of Delphi here. -Aron Roberts 10/22/08 4:01
+PM</span></p>
+<p>Currently, the Delphi collections browser application runs
+in the Apache Web Server.&nbsp; It consists of a number of
+interrelated components that are more fully described below, including
+PHP application code and libraries; Smarty templates; JavaScript
 application code and libraries; a Flash-based tool to allow users to
 zoom-and-pan through images; and CSS style sheets.</p>
 </li>
 <li>
 <strong>A data repository</strong>
-<p>The data repository is used for storing the data about artifacts in the collections ("metadata") provided by PAHMA.</p>
-<p>This repository is also used for storing supplementary data –
-indexes of terms, synonyms/antonyms, and concepts – that is "mined"
-from the metadata.&nbsp; This data about underlying meanings ... helps
-users of Delphi's collections browser locate artifacts by concepts, and
-uncover relationships between artifacts.</p>
-<p>The data stored in the respository is used by the collections browser, above, as well as for reporting and other purposes.</p>
-<p>Currently, the data repository is a MySQL relational database.</p>
+<p>The data repository is used for storing the data about
+artifacts in the collections ("metadata") provided by PAHMA.</p>
+<p>This repository is also used for storing supplementary
+data – indexes of terms, synonyms/antonyms, and concepts – that is
+"mined" from the metadata.&nbsp; This data about underlying
+meanings ... helps users of Delphi's collections browser locate
+artifacts by concepts, and uncover relationships between artifacts.</p>
+<p>The data stored in the respository is used by the
+collections browser, above, as well as for reporting and other purposes.</p>
+<p>Currently, the data repository is a MySQL relational
+database.</p>
 </li>
 <li>
 <strong>A set of back-end tools</strong>
-<p>These tools allow Delphi's administrators and others to analyze and
-process data about the artifacts in the collection – both metadata and
-semantic data – and to load this data into the data repository.</p>
-<p>Currently, these tools are run manually, in batch mode, via a
-Java-based GUI application.&nbsp; Future Delphi enhancements may
-automate some of these back-end processes.</p>
+<p>These tools allow Delphi's administrators and others to
+analyze and process data about the artifacts in the collection – both
+metadata and semantic data – and to load this data into the data
+repository.</p>
+<p>Currently, these tools are run manually, in batch mode,
+via a Java-based GUI application.&nbsp; Future Delphi enhancements
+may automate some of these back-end processes.</p>
 </li>
 </ol>
-<p>These three components, along with their associated sub-components,
-described further below, will also be present in any highly similar
-instances of Delphi that are deployed and run outside PAHMA.</p>
+<p>These three components, along with their associated
+sub-components, described further below, will also be present in any
+highly similar instances of Delphi that are deployed and run outside
+PAHMA.</p>
 <p>In addition to the three major components listed above, other
 important components of the Delphi project include the code repository
 for the project – where its source code, templates, configuration
 files, libraries, and other files are stored, and its issues are
 tracked – and its set of associated documentation, papers and articles.</p>
 <p>For more information about the code repository, please see: ...</p>
-<p>For links to associated documentation, papers and articles, please see: ...</p>
+<p>For links to associated documentation, papers and articles,
+please see: ...</p>
 <h2>1. Web-based application</h2>
-<p>The web-based collections browser consists of a set of required sub-components, described further below.</p>
-<h3>1.1 Hosting Environment<br /></h3>
-<p>The web-based collections browser runs in a web hosting environment:
-a server or collection of servers that accept web connections over the
-Internet.&nbsp; Web hosting environments typically provide some
-combination of base-level and optional services, such as hardware
-support for the server computers; network administration; system
-administration services, such as maintaining operating systems, server
-software, and certain other software packages; storage; and data
-backups.&nbsp; This allows application providers to focus exclusively
-on providing their own services via the Web.<br /></p><strong>IST Unix Web Farm</strong>
-<p>The web hosting environment for the instance of Delphi used by PAHMA
-runs on the Unix Web Farm, a Web hosting service provided by
+<p>The web-based collections browser consists of a set of
+required sub-components, described further below.</p>
+<h3>1.1 Hosting Environment<br />
+</h3>
+<p>The web-based collections browser runs in a web hosting
+environment: a server or collection of servers that accept web
+connections over the Internet.&nbsp; Web hosting environments
+typically provide some combination of base-level and optional services,
+such as hardware support for the server computers; network
+administration; system administration services, such as maintaining
+operating systems, server software, and certain other software
+packages; storage; and data backups.&nbsp; This allows application
+providers to focus exclusively on providing their own services via the
+Web.<br />
+</p>
+<h4><strong>IST Unix Web Farm</strong></h4>
+<p>The web hosting environment for the instance of Delphi used by
+PAHMA runs on the Unix Web Farm, a Web hosting service provided by
 Information Services and Technology (IST) at UC Berkeley, which is
-located in the Campus Data Center.&nbsp; For more details regarding the
-Web Farm, please see <a href="http://ist.berkeley.edu/services/is/unix/webfarm">http://ist.berkeley.edu/services/is/unix/webfarm</a>.</p>
-<p>The IST Web Farm provides a three-tier hosting model, consisting of:</p>
+located in the Campus Data Center.&nbsp; For more details regarding
+the Web Farm, please see <a href="http://ist.berkeley.edu/services/is/unix/webfarm">http://ist.berkeley.edu/services/is/unix/webfarm</a>.</p>
+<p>The IST Web Farm provides a three-tier hosting model,
+consisting of:</p>
 <ul>
 <li>A development ("dev") environment.</li>
 <li>A quality assurance ("qa") environment.</li>
@@ -89,176 +101,217 @@ environment, and after further testing there, to the production
 environment.</p>
 <p>Currently, all of the files required by the various required
 sub-components of the collection browser are maintained under version
-control, in a code repository.&nbsp; (For a detailed discussion, please
-see Delphi-Deployment-Code Repository.)&nbsp; When migrations between
-tiers are requested, the administrators of the IST Unix Web Farm obtain
-the latest set of files from this code repository and install them on
-the next tier in sequence.</p>
+control, in a code repository.&nbsp; (For a detailed discussion,
+please see Delphi-Deployment-Code Repository.)&nbsp; When
+migrations between tiers are requested, the administrators of the IST
+Unix Web Farm obtain the latest set of files from this code repository
+and install them on the next tier in sequence.</p>
 <p>Delphi's web-based application does not require the use of a
-three-tier hosting model.&nbsp; However, several of its configuration
-files, used by the PAHMA instance, currently reflect this model.</p>
-<h3>1.2 Web Server<br /></h3>
-<p>The web hosting environment includes a web server, which accepts
-connections from web browsers and returns web pages or other content,
-either from a filesystem or from programming code that returns pages
-from other types of repositories or that generates web pages
-dynamically.<br /></p>
-<p><strong>Apache Web Server</strong></p>
-<p>The collections browser application for the instance of Delphi used by PAHMA runs within the open source Apache Web Server.</p>
-<p>Apache version 2 is provided by default in the IST Unix Web Farm
-hosting environment at UC Berkeley.&nbsp; Apache (either major versions
-1 or 2, or sometimes both) often provided in other Web hosting
+three-tier hosting model.&nbsp; However, several of its
+configuration files, used by the PAHMA instance, currently reflect this
+model.</p>
+<h3>1.2 Web Server<br />
+</h3>
+<p>The web hosting environment includes a web server, which
+accepts connections from web browsers and returns web pages or other
+content, either from a filesystem or from programming code that returns
+pages from other types of repositories or that generates web pages
+dynamically.<br />
+</p>
+<h4><strong>Apache Web Server</strong></h4>
+<p>The collections browser application for the instance of Delphi
+used by PAHMA runs within the open source Apache Web Server.</p>
+<p>Apache version 2 is provided by default in the IST Unix Web
+Farm hosting environment at UC Berkeley.&nbsp; Apache (either major
+versions 1 or 2, or sometimes both) often provided in other Web hosting
 environments.</p>
-<p>Configuration:</p><br />
-<em>Location in Delphi code repository:</em>&nbsp; An Apache configuration file (".htaccess") in /trunk
-<p><span style="background-color: rgb(255, 255, 215);">Look for other configuration details that differ from the stock Web Farm configuration file. -Aron Roberts 10/21/08 9:38 PM</span><br /></p>
-<h3><br />
-1.3 Application components</h3>While running within its
-hosting environment and web server, above, the application itself is
-composed of a number of sub-components.&nbsp; In combination, these
-allow the application to respond to user input by pulling the
-appropriate data from the data repository and returning
+<p>Configuration:</p>
+<em>Location in Delphi code repository:</em>&nbsp; An
+Apache configuration file (".htaccess") in /trunk
+<p><span style="background-color: rgb(255, 255, 215);">Look
+for other configuration details that differ from the stock Web Farm
+configuration file. -Aron Roberts 10/21/08 9:38 PM</span><br />
+</p>
+<h3>
+1.3 Application components</h3>
+While running within its hosting environment and web server, above, the
+application itself is composed of a number of sub-components.&nbsp;
+In combination, these allow the application to respond to user input by
+pulling the appropriate data from the data repository and returning
 dynamically-created web pages, based on the user's requests.
-<p>These sub-components include including PHP application code and
-libraries; Smarty templates; JavaScript application code and libraries;
-libraries for zooming and panning images and sending email; and CSS
-style sheets:</p>
-<p><br />
-<strong>PHP</strong><br /></p>
-<p><em>Description:</em> PHP is "a widely-used general-purpose
-scripting language that is especially suited for Web development and
-can be embedded into HTML."<br /></p>
-<p><br /></p>
-<p><em>Use in Delphi</em>: Web pages in Delphi are generated dynamically via the PHP programming language.<br /></p><br />
-<p>There are two components that support the use of PHP in this manner:<br /></p>
-<p><br /></p>
+<p>These sub-components include including PHP application code
+and libraries; Smarty templates; JavaScript application code and
+libraries; libraries for zooming and panning images and sending email;
+and CSS style sheets:</p>
+<h4>PHP</h4>
+<p><em>Description:</em> PHP is "a widely-used
+general-purpose scripting language that is especially suited for Web
+development and can be embedded into HTML."<br />
+</p>
+<p><em>Use in Delphi</em>: Web pages in Delphi are
+generated dynamically via the PHP programming language.<br />
+</p>
+<p>There are two components that support the use of PHP in this
+manner:<br />
+</p>
 <ul>
 <li>The PHP language package itself.
-<p>PHP is provided by default in the IST Unix Web Farm hosting
-environment at UC Berkeley, and is often provided in other Web hosting
-environments. *VERIFY THE FIRST ASSERTION; THIS MAY NOT BE ACCURATE*</p>
+<p>PHP is provided by default in the IST Unix Web Farm
+hosting environment at UC Berkeley, and is often provided in other Web
+hosting environments. *VERIFY THE FIRST ASSERTION; THIS MAY NOT BE
+ACCURATE*</p>
 </li>
-<li>The installation of PHP as a shared module for the Apache Web Server.
-<p>This allows the processing of PHP code, inserted on Web pages using special tags, to create dynamic content on those pages.</p>
-<p>This shared module is provided with Apache by default in the IST
-Unix Web Farm hosting environment at UC Berkeley, and is often provided
-in other web hosting environments that support PHP.&nbsp; *VERIFY THE
-FIRST ASSERTION*</p>
-<p>Instructions on installing PHP within the Apache web server are provided at http://www.php.net/manual/en/install.ph</p>
+<li>The installation of PHP as a shared module for the Apache
+Web Server.
+<p>This allows the processing of PHP code, inserted on Web
+pages using special tags, to create dynamic content on those pages.</p>
+<p>This shared module is provided with Apache by default in
+the IST Unix Web Farm hosting environment at UC Berkeley, and is often
+provided in other web hosting environments that support PHP.&nbsp;
+*VERIFY THE FIRST ASSERTION*</p>
+<p>Instructions on installing PHP within the Apache web
+server are provided at http://www.php.net/manual/en/install.ph</p>
 </li>
-</ul><br />
-<p><em>Obtained from</em>: http://www.php.net/</p><br />
-<em>Installed version in Delphia's PAHMA instance</em>: 5.x {Determined by the IST Unix Web Farm Admins} *VERIFY THIS AND VERSION*
-<p><em>Latest version (stable)</em>: 5.2.6 (2008-05-01)</p>
-<p><em>Licensing terms</em>: PHP License, version 3.0.1 (as of
-2008-10-23), http://us2.php.net/license/&nbsp; "Essentially, the PHP
-license gives you the right to use, distribute and modify PHP as much
-as you want, for both commercial and non-commercial use. You just have
-to make it clear to the user that what you have distributed contains
-PHP."</p>
-<p><em>Location in Delphi code repository:</em>&nbsp; N/A&nbsp; *VERIFY THIS*</p>
-<p><br />
-<strong>PEAR::MDB2</strong></p>
-<p><em>Description:</em> Pear::MDB2 is an open source package for PHP
-that extends the core PHP language to provide programmers with a common
-interface to many different types of relational databases.</p>
-<p>(Pear is a packaging and distribution system for PHP packages, somewhat akin to CPAN for Perl packages.)<br /></p><br />
-<p><em>Use in Delphi</em>: Pear::MDB2 routines are used to access data
-in the MySQL-based data repository (below).&nbsp; These routines are
-called from PHP code in Smarty templates (below).&nbsp; *VERIFY*<br /></p><br />
-<p><em>Obtained from</em>: http://pear.php.net/package/MDB2<br /></p><br />
-<p><em>Installed version in Delphia's PAHMA instance</em>: 2.4.0 (per a constant in the source code of MDB2.php)<br /></p>
-<p><br /></p>
-<p><em>Latest version (stable)</em>: 2.4.1 (released on 2007-05-03)<br /></p><br />
+</ul>
+<p><em>Obtained from</em>: http://www.php.net/</p>
+<em>Installed version in Delphia's PAHMA instance</em>: 5.x
+{Determined by the IST Unix Web Farm Admins} *VERIFY THIS AND VERSION*
+<p><em>Latest version (stable)</em>: 5.2.6
+(2008-05-01)</p>
+<p><em>Licensing terms</em>: PHP License, version
+3.0.1 (as of 2008-10-23), http://us2.php.net/license/&nbsp;
+"Essentially, the PHP license gives you the right to use, distribute
+and modify PHP as much as you want, for both commercial and
+non-commercial use. You just have to make it clear to the user that
+what you have distributed contains PHP."</p>
+<p><em>Location in Delphi code repository:</em>&nbsp;
+N/A&nbsp; *VERIFY THIS*</p>
+<h4>PEAR::MDB2</h4>
+<p><em>Description:</em> Pear::MDB2 is an open source
+package for PHP that extends the core PHP language to provide
+programmers with a common interface to many different types of
+relational databases.</p>
+<p>(Pear is a packaging and distribution system for PHP packages,
+somewhat akin to CPAN for Perl packages.)<br />
+</p>
+<p><em>Use in Delphi</em>: Pear::MDB2 routines are
+used to access data in the MySQL-based data repository
+(below).&nbsp; These routines are called from PHP code in Smarty
+templates (below).&nbsp; *VERIFY*<br />
+</p>
+<p><em>Obtained from</em>:
+http://pear.php.net/package/MDB2<br />
+</p>
+<p><em>Installed version in Delphia's PAHMA instance</em>:
+2.4.0 (per a constant in the source code of MDB2.php)<br />
+</p>
+<p><em>Latest version (stable)</em>: 2.4.1 (released
+on 2007-05-03)<br />
+</p>
 <em>Latest version (pre-release)</em>:
 <p><em>Licensing terms</em>:</p>
-<p><em>Location in Delphi code repository:</em>&nbsp; Delphi's installation of the Pear::MD2 package is provided as a collection of PHP code (".php") files in /trunk/libs/pear</p>
-<p><span style="background-color: rgb(255, 255, 215);">Note where database connections are configured, if relevant to this package. -Aron Roberts 10/21/08 10:15 PM<br /></span><br /></p>
-<p><br /></p>
-<p><strong>Smarty</strong></p><em>Description</em>: Smarty is an open source template engine and presentation framework for PHP.<br />
-<div>
+<p><em>Location in Delphi code repository:</em>&nbsp;
+Delphi's installation of the Pear::MD2 package is provided as a
+collection of PHP code (".php") files in /trunk/libs/pear</p>
+<p><span style="background-color: rgb(255, 255, 215);">Note
+where database connections are configured, if relevant to this package.
+-Aron Roberts 10/21/08 10:15 PM</span><br />
+</p>
+<h4>Smarty</h4>
+<em>Description</em>: Smarty is an open source template
+engine and presentation framework for PHP.<br />
 <br />
 Smarty, which is itself written in PHP, allows PHP programmers to
 dynamically create web pages and other text output by executing
-commands that are inserted into template files.&nbsp; Smarty template
-files typically contain Smarty code interspersed within static
+commands that are inserted into template files.&nbsp; Smarty
+template files typically contain Smarty code interspersed within static
 elements, such as HTML markup.
-<p>(Smarty is roughly analogous to ASP, JSP, or ColdFusion; and to
-template engines like FreeMarker and Velocity for Java, and the
+<p>(Smarty is roughly analogous to ASP, JSP, or ColdFusion; and
+to template engines like FreeMarker and Velocity for Java, and the
 Template Toolkit for Perl and Python.)</p>
-<p><em>Use in Delphi</em>: Smarty templates are used to generate all of the HTML pages presented by the web-based collections browser. *VERIFY THIS*</p>
+<p><em>Use in Delphi</em>: Smarty templates are used
+to generate all of the HTML pages presented by the web-based
+collections browser. *VERIFY THIS*</p>
 <p><em>Obtained from</em>: http://www.smarty.net/</p>
-<p><em>Installed version in Delphia's PAHMA instance</em>:&nbsp; 2.6.18<br /></p>
-<p><br /></p>
-<p><em>Latest version (stable)</em>: 2.6.20 (Released 2008-08-15)</p>
+<p><em>Installed version in Delphia's PAHMA instance</em>:&nbsp;
+2.6.18<br />
+</p>
+<p><em>Latest version (stable)</em>: 2.6.20 (Released
+2008-08-15)</p>
 <p><em>Licensing terms</em>:</p>
 <p><em>Location in Delphi code repository:</em></p>
 <ul>
-<li>Delphi's installation of the Smarty framework itself consists of a collection of PHP code (".php") files in svn/trunk/libs/pear</li>
-<li>Delphi's Smarty templates are the collection of template (".tpl") files in svn/trunk/themes/pahma/templates</li>
-<li>Delphi's PHP source code, which produces the data that is 'poured'
-into Smarty template files to dynamically generate web pages, is
-contained in the set of PHP code (".php") files in
-svn/trunk/modules.&nbsp; There is also related code, used by some those
-code modules, in svn/trunk/api and svn/trunk/libs/ontology<br /></li>
-</ul><br />
-<p><br />
-<strong>XPertMailer</strong></p>
+<li>Delphi's installation of the Smarty framework itself
+consists of a collection of PHP code (".php") files in
+svn/trunk/libs/pear</li>
+<li>Delphi's Smarty templates are the collection of template
+(".tpl") files in svn/trunk/themes/pahma/templates</li>
+<li>Delphi's PHP source code, which produces the data that is
+'poured' into Smarty template files to dynamically generate web pages,
+is contained in the set of PHP code (".php") files in
+svn/trunk/modules.&nbsp; There is also related code, used by some
+those code modules, in svn/trunk/api and svn/trunk/libs/ontology<br />
+</li>
+</ul>
+<h4>XPertMailer</h4>
 <p>(placeholder)</p>
-<p><em>Use in Delphi</em>: Authentication - requesting new passwords be
-emailed.&nbsp; Sharing personal annotations - sending URLs to
-personally-created sets via email.&nbsp; *VERIFY THIS - AND ANY OTHERS?*</p>
+<p><em>Use in Delphi</em>: Authentication -
+requesting new passwords be emailed.&nbsp; Sharing personal
+annotations - sending URLs to personally-created sets via
+email.&nbsp; *VERIFY THIS - AND ANY OTHERS?*</p>
 <p><em>Obtained from</em>: http://www.xpertmailer.com/</p>
-<p><em>Location in Delphi code repository:</em>&nbsp; Delphi's
-installation of the XPertMailer package is provided as a collection of
-PHP code (".php") files in /trunk/libs/XPM</p><br />
-<strong>jQuery</strong>
-<p><em>Description</em>: jQuery is an open source, general purpose
-JavaScript framework: a library of routines - themselves written in
-JavaScript - that provide enhancements to the core JavaScript
-language.&nbsp; jQuery is known for the conciseness of its expressions;
-for its active developer community, which has provided many extensions
-to the framework; and for working properly within the JavaScript
-engines built into most modern web browsers.</p>
-<p><em>Use in Delphi</em>: Many of the user interactions in the
-collections browser, such as managing collapsible and expandable
-"trees" of links to facets that can be browsed, are handled via
-JavaScript.&nbsp; In Delphi, a great deal of this JavaScript code makes
-calls to functions provided by jQuery, and its user interface library,
-jQuery UI (below).&nbsp; *VERIFY THIS*</p>
+<p><em>Location in Delphi code repository:</em>&nbsp;
+Delphi's installation of the XPertMailer package is provided as a
+collection of PHP code (".php") files in /trunk/libs/XPM</p>
+<h4>jQuery</h4>
+<p><em>Description</em>: jQuery is an open source,
+general purpose JavaScript framework: a library of routines -
+themselves written in JavaScript - that provide enhancements to the
+core JavaScript language.&nbsp; jQuery is known for the conciseness
+of its expressions; for its active developer community, which has
+provided many extensions to the framework; and for working properly
+within the JavaScript engines built into most modern web browsers.</p>
+<p><em>Use in Delphi</em>: Many of the user
+interactions in the collections browser, such as managing collapsible
+and expandable "trees" of links to facets that can be browsed, are
+handled via JavaScript.&nbsp; In Delphi, a great deal of this
+JavaScript code makes calls to functions provided by jQuery, and its
+user interface library, jQuery UI (below).&nbsp; *VERIFY THIS*</p>
 <p><em>Obtained from</em>: http://jquery.com/</p>
-<p><em>Installed version in Delphia's PAHMA instance</em>:<br /></p>
-<p><br /></p>
-<p><em>Latest version</em>: 1.2.6 (released 2008-05-24)</p>
-<p><br /></p>
+<p><em>Installed version in Delphia's PAHMA instance</em>:<br />
+</p>
+<p><em>Latest version</em>: 1.2.6 (released
+2008-05-24)</p>
 <p><em>Licensing terms</em>:</p>
-<p><em><br /></em></p>
-<p><em>Location in Delphi code repository:</em>&nbsp; A collection of JavaScript (".js") files in svn/trunk/libs/jquery<em><br /></em></p>
-<p><br /></p><em>Issues (very rough notes, needs cleanup, needs entry of and/or references to bugs in Google Code)</em>:
+<p><em>Location in Delphi code repository:</em>&nbsp;
+A collection of JavaScript (".js") files in svn/trunk/libs/jquery<em><br />
+</em></p>
+<em>Issues (very rough notes, needs cleanup, needs entry of
+and/or references to bugs in Google Code)</em>:
 <p><span style="background-color: rgb(255, 255, 215);">Mention
 performance concerns in building the trees and links.&nbsp; (One
 suggested approach was to further restrict the 'genericity' levels -
 easier for location, more difficult for other facets) or more generally
 to prune trees both top and bottom before handing off to jQuery.) -Aron
 Roberts 10/21/08 3:51 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">Note home page
-issue regarding possibly not generating simplified
-(mod_rewrite-handled) URLs in links. -Aron Roberts 10/21/08 3:51 PM</span><br /></p>
-<p><br /></p>
-<p><br /></p>
-<p><strong>jQuery UI</strong><br /></p><br />
-<em>Description</em>: Built on jQuery (above), jQuery UI is a library
-for handling user interaction within web-based applications.&nbsp; It
-offers a variety of UI widgets that can be placed on a web page, as
-well as allowing applications to more easily respond to a user's
-behavior on a page, such as mouse clicks and drags.
-<p><em>Use in Delphi</em>: One of the widgets used heavily by Delphi
-is the jQuery UI "accordion" widget, "an expandable/collapsible content
-pane." *VERIFY THIS*</p>
+<p><span style="background-color: rgb(255, 255, 215);">Note
+home page issue regarding possibly not generating simplified
+(mod_rewrite-handled) URLs in links. -Aron Roberts 10/21/08 3:51 PM</span><br />
+</p>
+<h4>jQuery UI</h4>
+<p><em>Description</em>: Built on jQuery (above),
+jQuery UI is
+a library for handling user interaction within web-based
+applications.&nbsp; It offers a variety of UI widgets that can be
+placed on a web page, as well as allowing applications to more easily
+respond to a user's behavior on a page, such as mouse clicks and drags.</p>
+<p><em>Use in Delphi</em>: One of the widgets used
+heavily by Delphi is the jQuery UI "accordion" widget, "an
+expandable/collapsible content pane." *VERIFY THIS*</p>
 <p><em>Obtained from</em>: http://ui.jquery.com/</p>
-<p><em>Location in Delphi code repository:</em>&nbsp; A collection of JavaScript (".js") files in /trunk/libs/jquery</p>
-<p><br />
-<strong>Zoomify</strong></p>
+<p><em>Location in Delphi code repository:</em>&nbsp;
+A collection of JavaScript (".js") files in /trunk/libs/jquery</p>
+<h4><strong>Zoomify</strong></h4>
 <p>(placeholder - also need to determine which package is in use)</p>
 <p><em>Obtained from</em>: http://www.zoomify.com/</p>
 <p>Licensing:</p>
@@ -269,187 +322,213 @@ museum, and I think it holds for the PAHMA deployment, but I doubt that
 it holds for the Delphi project. Will have to straighten this out as
 well. We may have to tell deployers to get the runtime from Zoomify
 (they allow redist for any users). -Aron Roberts 10/23/08 12:42 PM</span></p>
-<p><em>Location in Delphi code repository:</em>&nbsp; A single Adobe Shockwave (".swf") file in /trunk/libs/zoom</p>
-<p><br />
-<strong>CSS</strong></p>
-<p><em>Description:&nbsp;</em> Cascading Style Sheets (CSS) are a
-technology, rather than a product: a specification from the World Wide
-Web Consortium (W3C).&nbsp; CSS makes it possible to specify text fonts
-and styles, colors, layout positioning, and other presentation aspects
-of Web pages.&nbsp; These are specified by a set of appearance and
-layout definitions ("selectors"), contained in stylesheets, that can be
-selectively applied to specific parts of a web page.<br />
+<p><em>Location in Delphi code repository:</em>&nbsp;
+A single Adobe Shockwave (".swf") file in /trunk/libs/zoom</p>
+<h4>CSS</h4>
+<p><em>Description:&nbsp;</em> Cascading Style
+Sheets (CSS) are a technology, rather than a product: a specification
+from the World Wide Web Consortium (W3C).&nbsp; CSS makes it
+possible to specify text fonts and styles, colors, layout positioning,
+and other presentation aspects of Web pages.&nbsp; These are
+specified by a set of appearance and layout definitions ("selectors"),
+contained in stylesheets, that can be selectively applied to specific
+parts of a web page.<br />
 <em><br />
 Use in Delphi</em>:&nbsp; CSS is used to specify the text
 fonts and styles, colors, layout position, and other presentation
 aspects of the collection browser's Web pages.</p>
 <p>The HTML output generated by Delphi's collections browser, via
 Smarty templates, does not contain information about how it will be
-displayed on a web page.&nbsp; Rather, it contains 'decorations,' such
-as the "class" and "id" attributes that uniquely identify various HTML
-elements, that allow those elements to be styled, colored, and
+displayed on a web page.&nbsp; Rather, it contains 'decorations,'
+such as the "class" and "id" attributes that uniquely identify various
+HTML elements, that allow those elements to be styled, colored, and
 positioned on the page through the use of CSS stylesheets.</p>
-<p><em>Obtained from</em>:&nbsp; As a technology, CSS is documented at http://www.w3.org/Style/CSS/</p>
+<p><em>Obtained from</em>:&nbsp; As a technology,
+CSS is documented at http://www.w3.org/Style/CSS/</p>
 <p>(Random notes)</p>
-<p>Support for CSS is built into all modern web browsers.&nbsp; There
-are some variances in support for CSS features, and in the rendering of
-Web pages based those features, in different Web browsers.&nbsp;
-However, over time, there has been a trend toward more uniform support
-for CSS among browsers.&nbsp; <span style="background-color: rgb(255, 255, 215);">Another recent trend is the growing adoption of version 3 of the CSS specification (CSS 3). -Aron Roberts 10/23/08 11:53 AM</span></p>
-<p>Nearly all aspects of the presentation of the collections browser's
-web pages can be customized simply by changing styles in CSS
-stylesheets, along with replacing static image files.&nbsp; However,
-some forms of significant customization may also require changes to one
-or more of Delphi's Smarty templates.&nbsp; For instance, if it is
-desired to change the format of certain lists of results returned from
-searching or browsing ...</p>
-<p><em>Issues (very rough notes, needs cleanup, needs entry of and/or references to bugs in Google Code)</em>:</p>
-<p><span style="background-color: rgb(255, 255, 215);">The collections browser currently uses a single large CSS file, style.css. -Aron Roberts 10/21/08 7:22 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">Opportunities to
-parameterize the CSS file(s), for instance to allow one or more theme
-colors to be provided externally, rather than being hard-coded as
-values in the stylesheet. -Aron Roberts 10/21/08 7:22 PM</span><br /></p>
-<h2><br />
-2. A data repository<br /></h2>The data repository is where
-data used by the web-based application is stored.&nbsp; Data is placed
-into this repository using the back-end tools, below.
-<p><strong>MySQL</strong></p>
-<p>The data repository for the instance of Delphi used by PAHMA is
-MySQL, an open source relational database management system (RDBMS).</p>
-<p>MySQL is provided by the IST database team, as an extra-cost option to the IST Unix Web Farm hosting environment at UC Berkeley.</p>
+<p>Support for CSS is built into all modern web
+browsers.&nbsp; There are some variances in support for CSS
+features, and in the rendering of Web pages based those features, in
+different Web browsers.&nbsp; However, over time, there has been a
+trend toward more uniform support for CSS among browsers.&nbsp; <span style="background-color: rgb(255, 255, 215);">Another recent
+trend is the growing adoption of version 3 of the CSS specification
+(CSS 3). -Aron Roberts 10/23/08 11:53 AM</span></p>
+<p>Nearly all aspects of the presentation of the collections
+browser's web pages can be customized simply by changing styles in CSS
+stylesheets, along with replacing static image files.&nbsp;
+However, some forms of significant customization may also require
+changes to one or more of Delphi's Smarty templates.&nbsp; For
+instance, if it is desired to change the format of certain lists of
+results returned from searching or browsing ...</p>
+<p><em>Issues (very rough notes, needs cleanup, needs entry
+of and/or references to bugs in Google Code)</em>:</p>
+<p><span style="background-color: rgb(255, 255, 215);">The
+collections browser currently uses a single large CSS file, style.css.
+-Aron Roberts 10/21/08 7:22 PM</span></p>
+<p><span style="background-color: rgb(255, 255, 215);">Opportunities
+to parameterize the CSS file(s), for instance to allow one or more
+theme colors to be provided externally, rather than being hard-coded as
+values in the stylesheet. -Aron Roberts 10/21/08 7:22 PM</span><br />
+</p>
+<h2>
+2. A data repository
+</h2>
+The data repository is where data used by the web-based application is
+stored.&nbsp; Data is placed into this repository using the
+back-end tools, below.
+<h3><strong>MySQL</strong></h3>
+<p>The data repository for the instance of Delphi used by PAHMA
+is MySQL, an open source relational database management system (RDBMS).</p>
+<p>MySQL is provided by the IST database team, as an extra-cost
+option to the IST Unix Web Farm hosting environment at UC Berkeley.</p>
 <p>Delphi uses the MySQL Basic service, which "is appropriate for
 projects which have no restricted data, modest storage requirements,
 and no complex database design issues. It includes a single production
-environment with limited support."&nbsp; For more information regarding
-this service, please see
+environment with limited support."&nbsp; For more information
+regarding this service, please see
 http://ist.berkeley.edu/services/catalog/database/mysql</p>
-<p>In the three-tier model of the IST Unix Web Farm, it is possible to
-have separate instances of databases, such as MySQL databases,
-available to each of the tiers.&nbsp; This way, development and quality
-assurance work that changes database contents can be carried out
-without affecting the production database.&nbsp; In the current
-instance of Delphi on the Web Farm, there are two instances of MySQL:
-one shared by the development and quality assurance environments, and
-another specific to the production environment. *VERIFY THIS*</p>
-<p>A relational database was chosen primarily for performance.&nbsp;
-The Delphi team had considered other types of data repositories, such
-as a triple store that is optimized for storing and retrieving Resource
-Description Framework (RDF) and similar metadata. *VERIFY THIS*</p>
-<p><strong>phpMyAdmin</strong></p>
+<p>In the three-tier model of the IST Unix Web Farm, it is
+possible to have separate instances of databases, such as MySQL
+databases, available to each of the tiers.&nbsp; This way,
+development and quality assurance work that changes database contents
+can be carried out without affecting the production database.&nbsp;
+In the current instance of Delphi on the Web Farm, there are two
+instances of MySQL: one shared by the development and quality assurance
+environments, and another specific to the production environment.
+*VERIFY THIS*</p>
+<p>A relational database was chosen primarily for
+performance.&nbsp; The Delphi team had considered other types of
+data repositories, such as a triple store that is optimized for storing
+and retrieving Resource Description Framework (RDF) and similar
+metadata. *VERIFY THIS*</p>
+<h3><strong>phpMyAdmin</strong></h3>
 <p>phpMyAdmin is an open source administration console for MySQL.</p>
-<p>This console is provided by default in the IST Unix Web Farm hosting
-environment at UC Berkeley *VERIFY THIS*, and is often provided in
-other web hosting environments that support PHP.&nbsp; phpMyAdmin can
-also be obtained from http://www.phpmyadmin.net&nbsp;</p>
+<p>This console is provided by default in the IST Unix Web Farm
+hosting environment at UC Berkeley *VERIFY THIS*, and is often provided
+in other web hosting environments that support PHP.&nbsp;
+phpMyAdmin can also be obtained from http://www.phpmyadmin.net&nbsp;</p>
 <p>(Rough notes)</p>
-<p><span style="background-color: rgb(255, 255, 215);">In a separate
-document linked from here, discuss the database schema - look for
-descriptive text, diagrams. -Aron Roberts 10/21/08 10:13 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">All tables
-created in MySQL using the .sql files in /trunk/schema use the default
-MyISAM storage engine,
+<p><span style="background-color: rgb(255, 255, 215);">In
+a separate document linked from here, discuss the database schema -
+look for descriptive text, diagrams. -Aron Roberts 10/21/08 10:13 PM</span></p>
+<p><span style="background-color: rgb(255, 255, 215);">All
+tables created in MySQL using the .sql files in /trunk/schema use the
+default MyISAM storage engine,
 http://dev.mysql.com/doc/refman/5.0/en/myisam-storage-engine.html -Aron
-Roberts 10/21/08 10:13 PM<br /></span><br /></p>
-<h2>3. Back-end tools</h2>(Placeholder text; need to incorporate
-Patrick's process descriptions, better summaries of this analysis data
-mining work from the I-School report and otherwise)
-<p><em>Description</em>: A set of back-end tools are provided for
-processing and analyzing data about the artifacts in the collection,
-and to load this data into a data repository.&nbsp; These tools aren't
-directly accessible to virtual museum visitors, but rather, they are
-used behind the scenes.</p>
-<p><em>Use in Delphi</em>: These back-end tools are used primarily to prepare data for access by the web-based collections browser.</p>
-<p>This data is also used for other purposes, as well.&nbsp; For
-instance, it is used to generate reports for museum staff, IT
+Roberts 10/21/08 10:13 PM<br />
+</span><br />
+</p>
+<h2>3. Back-end tools</h2>
+(Placeholder text; need to incorporate Patrick's process descriptions,
+better summaries of this analysis data mining work from the I-School
+report and otherwise)
+<p><em>Description</em>: A set of back-end tools are
+provided for processing and analyzing data about the artifacts in the
+collection, and to load this data into a data repository.&nbsp;
+These tools aren't directly accessible to virtual museum visitors, but
+rather, they are used behind the scenes.</p>
+<p><em>Use in Delphi</em>: These back-end tools are
+used primarily to prepare data for access by the web-based collections
+browser.</p>
+<p>This data is also used for other purposes, as well.&nbsp;
+For instance, it is used to generate reports for museum staff, IT
 personnel, and researchers: to help them better understand the
 collection, find and correct errors in cataloging, and iteratively
 improve Delphi's natural language processing, among other purposes.*</p>
-<p>Currently, extracts of data from the museum's collections management
-system are created, at various intervals, by PAHMA staff.&nbsp; These
-extracts to date have typically consisted of between one and eight
-separate files.</p>
-<p>This data is then provided to Delphi's administrators, who process
-the data using these back-end tools.&nbsp; These tools must be run
-manually – in batch mode – and in a particular sequence.&nbsp; A
-Java-based GUI application, MainApp, provides a unified control panel
-for many of these tools; its menu options provide some guidance for
-what steps must be performed, and in what order.&nbsp; Some other tools
-are run separately, outside of MainApp.&nbsp; A proposed future
-enhancement to Delphi is to automate many parts of this back-end
-workflow.</p>
-<p>As an abstract, high-level overview, these back-end tools perform
-the following tasks (*VERIFY THIS -&nbsp; THIS HAS BEEN WRITTEN AS A
-PLACEHOLDER WITHOUT REFERENCING ANY DOCUMENTATION*)</p>
+<p>Currently, extracts of data from the museum's collections
+management system are created, at various intervals, by PAHMA
+staff.&nbsp; These extracts to date have typically consisted of
+between one and eight separate files.</p>
+<p>This data is then provided to Delphi's administrators, who
+process the data using these back-end tools.&nbsp; These tools must
+be run manually – in batch mode – and in a particular
+sequence.&nbsp; A Java-based GUI application, MainApp, provides a
+unified control panel for many of these tools; its menu options provide
+some guidance for what steps must be performed, and in what
+order.&nbsp; Some other tools are run separately, outside of
+MainApp.&nbsp; A proposed future enhancement to Delphi is to
+automate many parts of this back-end workflow.</p>
+<p>As an abstract, high-level overview, these back-end tools
+perform the following tasks (*VERIFY THIS -&nbsp; THIS HAS BEEN
+WRITTEN AS A PLACEHOLDER WITHOUT REFERENCING ANY DOCUMENTATION*)</p>
 <ul>
-<li>"Cleaning up" the data ("metadata") for each of the artifacts in the collection.
-<p>Examples of clean-up include removing "sensitive, stale or otherwise
-undesired noise" from the metadata.&nbsp; For instance, sensitive data,
-such as donor names and the prices of artifacts, need to be removed
-before this data can be stored in the data repository.</p>
-<p>It's also helpful to be clear about what Delphi's cleanup work <em>doesn't</em>
-attempt to do.&nbsp; When many different people enter data about the
-artifacts in a collection, especially over a considerable period of
-time, there will inevitably be considerable variance in this
-data.&nbsp; Sometimes, data entered even for two highly similar
-artifacts can contain significant differences.&nbsp; While sets of
-terms ("controlled vocabularies") and other curatorial practices can
-reduce this variance, they can't eliminate it.&nbsp;</p>
+<li>"Cleaning up" the data ("metadata") for each of the
+artifacts in the collection.
+<p>Examples of clean-up include removing "sensitive, stale or
+otherwise undesired noise" from the metadata.&nbsp; For instance,
+sensitive data, such as donor names and the prices of artifacts, need
+to be removed before this data can be stored in the data repository.</p>
+<p>It's also helpful to be clear about what Delphi's cleanup
+work <em>doesn't</em> attempt to do.&nbsp; When many
+different people enter data about the artifacts in a collection,
+especially over a considerable period of time, there will inevitably be
+considerable variance in this data.&nbsp; Sometimes, data entered
+even for two highly similar artifacts can contain significant
+differences.&nbsp; While sets of terms ("controlled vocabularies")
+and other curatorial practices can reduce this variance, they can't
+eliminate it.&nbsp;</p>
 <p>Delphi's back-end tools generally don't try to correct or
 standardize metadata about artifacts, although Delphi's cleanup work
 and its other back-end workflows can occasionally reveal specific
-issues that can readily be addressed by curators.&nbsp; Rather, they
-build new data that ...</p>
-<p>... identify sets of terms, found in different data fields, all of
-which may correspond to a particular concept or sub-concept.&nbsp; This
-helps tie together sets of related artifacts whose metadata wouldn't
-otherwise make clear their similarity.</p>
-<p><br /></p>
+issues that can readily be addressed by curators.&nbsp; Rather,
+they build new data that ...</p>
+<p>... identify sets of terms, found in different data
+fields, all of which may correspond to a particular concept or
+sub-concept.&nbsp; This helps tie together sets of related
+artifacts whose metadata wouldn't otherwise make clear their similarity.</p>
+<p><br />
+</p>
 </li>
-<li>Scanning this metadata and determining what concepts ("facets") in
-a previously-developed mental model ("ontology") apply to each
-artifact.
-<p>By associating concepts with artifacts, this allows virtual museum
-visitors to more powerfully search and browse the collections than is
-possible by searching or browsing the metadata alone.&nbsp; This also
-helps museum staff, scholars, and others better understand the
-collections and find emerging patterns.</p>
+<li>Scanning this metadata and determining what concepts
+("facets") in a previously-developed mental model ("ontology") apply to
+each artifact.
+<p>By associating concepts with artifacts, this allows
+virtual museum visitors to more powerfully search and browse the
+collections than is possible by searching or browsing the metadata
+alone.&nbsp; This also helps museum staff, scholars, and others
+better understand the collections and find emerging patterns.</p>
 </li>
-<li>Build and maintain the mental model ("ontology"), independently of any data about artifacts.
-<p>The mental model used in the instance of Delphi for PAHMA is
-specific to the archeological artifacts in that museum's
-collections.&nbsp; While it does contain many concepts that are germane
-to many types of artifacts, when used with instances of Delphi outside
-PAHMA this model will likely need to be changed.</p>
-<p>In Delphi's back-end tools, the association between concepts in the
-mental model, and text that appears in one or more of the fields of the
-data ("metadata") for each of the artifacts in the collection, is
-maintained as ... XML ...</p>
-<p><br /></p>
+<li>Build and maintain the mental model ("ontology"),
+independently of any data about artifacts.
+<p>The mental model used in the instance of Delphi for PAHMA
+is specific to the archeological artifacts in that museum's
+collections.&nbsp; While it does contain many concepts that are
+germane to many types of artifacts, when used with instances of Delphi
+outside PAHMA this model will likely need to be changed.</p>
+<p>In Delphi's back-end tools, the association between
+concepts in the mental model, and text that appears in one or more of
+the fields of the data ("metadata") for each of the artifacts in the
+collection, is maintained as ... XML ...</p>
+<p><br />
+</p>
 </li>
 <li>Load the data – about the artifacts in the collection, the
 associations between artifacts and their associated concepts, and the
 mental model that defines those concepts – into a data
-repository.&nbsp; This allows the data to be flexibly accessed at high
-speed.</li>
+repository.&nbsp; This allows the data to be flexibly accessed at
+high speed.</li>
 </ul>
 <p><br />
-<em>Location in Delphi code repository:<br /></em><br />
+<em>Location in Delphi code repository:<br />
+</em><br />
 svn/trunk/ontologies<br />
 svn/trunk/schemas<br />
 svn/trunk/tools</p>
-<p><em><br /></em></p>
-</div><em>Issues (very rough notes, needs cleanup, needs entry of and/or references to bugs in Google Code)</em>:
-<p><span style="background-color: rgb(255, 255, 215);">The Java-based
-application that provides access to various back-end modules may be
-enabling certain menu options, that allow and/or guide work to be
-performed out of sequence. -Aron Roberts 10/22/08 3:52 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">It would be
-desirable if updates to the data in the repository could occur more
-frequently, to be more responsive to ongoing changes to the museum's
-collections.&nbsp; This might require changes both in the museum's
-processes and in the back-end tools and workflows.&nbsp; For instance,
-the current load scripts wipe out ("drop"), recreate, and reload
-database tables with new data, rather than performing a set of inserts,
-updates, and deletions. -Aron Roberts 10/22/08 3:58 PM</span></p>
+<p><em><br />
+</em></p>
+<em>Issues (very rough notes, needs cleanup, needs entry of
+and/or references to bugs in Google Code)</em>:
+<p><span style="background-color: rgb(255, 255, 215);">The
+Java-based application that provides access to various back-end modules
+may be enabling certain menu options, that allow and/or guide work to
+be performed out of sequence. -Aron Roberts 10/22/08 3:52 PM</span></p>
+<p><span style="background-color: rgb(255, 255, 215);">It
+would be desirable if updates to the data in the repository could occur
+more frequently, to be more responsive to ongoing changes to the
+museum's collections.&nbsp; This might require changes both in the
+museum's processes and in the back-end tools and workflows.&nbsp;
+For instance, the current load scripts wipe out ("drop"), recreate, and
+reload database tables with new data, rather than performing a set of
+inserts, updates, and deletions. -Aron Roberts 10/22/08 3:58 PM</span></p>
 </body>
 </html>
