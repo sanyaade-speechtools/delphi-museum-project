@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Introduction</title></head>
+<body>
+<h1>Deploying Delphi: Back-end Tools</h1>The Delphi Project incorporates a set of back-end tools for processing and analyzing data about the artifacts in the
+collection, and to load this data into a data repository.<br /><br />These tools are used to carry out the following processes:<br /><br /><ol><li>Retrieving data from the collection(s).<br /><br /></li><li>Cleaning up the data.<br /><br /></li><li>Merging data (where required).<br /><br /></li><li>...<br /><br /></li></ol><h2>1. Retrieving data from the collections</h2>To
+kick-off the set of back-end processes, Delphi's back-end tools need to
+retrieve data ("metadata") about the artifacts in the collection, in a
+format suitable for further processing.<br /><br />The
+following notes are specific to the instance of Delphi for the Phoebe
+A. Hearst Museum of Anthropology (PAHMA) at the University of
+California, Berkeley. Similar procedures would need to be carried out
+for collections at other museums or similar institutions.<br /><br />PAHMA stores data about the artifacts in its collections in a content management system, <a href="http://www.gallerysystems.com/products/tms.html" target="_blank">The Museum System (TMS)</a>
+by Gallery Systems. &nbsp;TMS uses Microsoft SQL Server as a back-end
+relational database management system. &nbsp;At one point in the past,
+PAHMA staff determined which of the approximately 250 database tables
+used by TMS have pertinent data about their artifacts. &nbsp;Via SQL
+queries, they periodically extract that data into comma-separated value
+(CSV) files, in order to make this data available to Delphi.<br /><br />Periodically,
+Delphi's administrators physically visit PAHMA to acquire PAHMA's
+latest extracts from the TMS database, placing them on a memory stick
+or similar portable drive. &nbsp;Beginning in Fall 2008, Delphi's
+administrators have been working with PAHMA staff to determine whether
+it is feasible for Delphi to perform the same SQL queries directly
+against the TMS database over the campus network. &nbsp;This could
+obviate the need for physical visits, making it possible to both
+automate some of the back-end processing workflows and to perform them
+more frequently.<br /><br />As of Fall 2008, &nbsp;the entire database
+extract - about 1 million database table rows, representing some 600
+million artifacts in the collection, and requiring about 250 MB of disk
+space (uncompressed) or 30 MB (compressed) &#8211; is processed each time.
+&nbsp;A future goal of the Delphi Project is to make it possible to
+identify just what has changed between successive processing runs &#8211;
+additions, changes, and deletions &#8211; and process just that data.<br /><br />Other notes:<br /><br />TMS
+was designed for art collections, not anthropology collections.
+&nbsp;As a result, there are some ideosyncracies in the way that data
+is stored in TMS's database tables that need to be worked around.
+&nbsp;For instance, with artwork, typically the location field is used
+to specify where the artifact is currently located. &nbsp;With
+anthropology collections, a second location value also needs to be
+provided, identifying the setting in which the artifact was originally
+found.<br /><br />Also, because of some programming quirks in TMS,
+pertinent data may be stored in any number of tables and fields.
+&nbsp;For instance, there are six possible places where location data
+for an artifact may be stored.<br /><br />Possibly-related rough notes, not understood on re-reading:<br /><br />If all new CU items to obj not uniformly across DB.<br /><h2>2. Cleaning up the data</h2>The data that comes in <br /><br /><h2>3. Merging data (where required)</h2></body></html>
