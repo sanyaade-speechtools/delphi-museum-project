@@ -9,6 +9,13 @@
 		and chosen labels are different.
 	</notes>
 	<heading id="FromAnimals" title="From Animals">
+		<prefix value="made of "/>
+		<prefix value="made out of "/>
+		<prefix value="made from "/>
+		<prefix value="made with "/>
+		<prefix value="made using "/>
+		<prefix value="manufactured with "/>
+		<prefix value="manufactured from "/>
 		<heading id="LeatherAndFur" title="Leather and Fur">
 			<synonym value="leather"/>
 			<synonym value="fur"/>
@@ -247,14 +254,26 @@
 			<heading id="WhaleSinew" title="Whale Sinew" />
 		</heading>
 		<heading id="ShellMaterials" title="Shell and Shell-like Materials">
-			<heading id="Coral" title="Coral"/>
+			<heading id="Coral" title="Coral">
+				<excl value="textile"/>
+			</heading>
 			<heading id="MotherofPearl" title="Mother of Pearl">
 				<synonym value="Mother-of-Pearl"/>
 			</heading>
 			<heading id="Pearl" title="Pearl"/>
 			<heading id="Shell" title="Shell">
+				<synonym value="Shells"/>
+				<synonym value="Univalve"/>
+				<synonym value="Univalves"/>
+				<synonym value="Bivalve"/>
+				<synonym value="Bivalves"/>
+				<synonym value="Marine Shell"/>
+				<synonym value="Marine Shells"/>
+				<synonym value="Freshwater Shell"/>
+				<synonym value="Freshwater Shells"/>
 				<heading id="Abaloneshell" title="Abalone Shell">
 					<synonym value="Abalone"/>
+					<synonym value="Haliotis"/>
 				</heading>
 				<heading id="BarnacleShell" title="Barnacle Shell">
 					<synonym value="Barnacle"/>
@@ -269,9 +288,17 @@
 						<synonym value="Macoma"/>
 						<synonym value="Bent-Nosed"/>
 					</heading>
+					<heading id="PismoClamShell" title="Pismo Clam Shell">
+						<synonym value="Pismo Clam"/>
+						<synonym value="Pismo Clams"/>
+						<synonym value="Tivela"/>
+					</heading>
 				</heading>
 				<heading id="CockleShell" title="Cockle Shell">
 					<synonym value="Cockle"/>
+					<synonym value="Cockles"/>
+					<synonym value="Cockle Shells"/>
+					<synonym value="Glycymeris"/>
 				</heading>
 				<heading id="Conch" title="Conch"/>
 				<heading id="Coneshell" title="Cone Shell">
@@ -282,6 +309,10 @@
 					<synonym value="Cowry"/>
 					<synonym value="Cowrie"/>
 					<synonym value="Cowries"/>
+				</heading>
+				<heading id="Dentalium" title="Dentalium">
+					<synonym value="Dentalia"/>
+					<synonym value="Dentailum"/>
 				</heading>
 				<heading id="MoonShell" title="Moon Shell">
 					<synonym value="polinices"/>
@@ -297,7 +328,9 @@
 				<heading id="Nautilusshell" title="Nautilus Shell">
 					<synonym value="Nautilus"/>
 				</heading>
-				<heading id="OlivellaShell" title="Olivella Shell"/>
+				<heading id="OlivellaShell" title="Olivella Shell">
+					<synonym value="Olivella"/>
+				</heading>
 				<heading id="Oystershell" title="Oyster Shell">
 					<synonym value="Oyster"/>
 					<synonym value="Oysters"/>
@@ -322,17 +355,46 @@
 		</heading>
 	</heading>
 	<heading id="FromPlants" title="From Plants">
-		<heading id="Wood" title="Wood">
+		<prefix value="made of "/>
+		<prefix value="made out of "/>
+		<prefix value="made from "/>
+		<prefix value="made with "/>
+		<prefix value="made using "/>
+		<prefix value="manufactured with "/>
+		<prefix value="manufactured from "/>
+		<heading id="Trees" title="Trees">
 			<synonym value="wooden"/>
 			<synonym value="of wood"/>
 			<heading id="Alder" title="Alder"/>
+			<heading id="Banana" title="Banana">
+				<synonym value="Bananas"/>
+				<synonym value="Banana seed"/>
+				<synonym value="Banana seeds"/>
+			</heading>
 			<heading id="Birch" title="Birch">
 				<heading id="Hazel" title="Hazel"/>
 			</heading>
 			<heading id="Cedar" title="Cedar"/>
+			<heading id="Coconut" title="Coconut">
+				<synonym value="Coconuts"/>
+				<heading id="CoconutShell" title="Coconut Shell">
+					<synonym value="Coconut Shells"/>
+				</heading>
+			</heading>
 			<heading id="Conifer" title="Conifer">
 				<heading id="Fir" title="Fir"/>
+				<heading id="Juniper" title="Juniper">
+					<synonym value="Junipers"/>
+					<synonym value="Juniper seed"/>
+					<synonym value="Juniper seeds"/>
+				</heading>
 				<heading id="Pine" title="Pine">
+					<synonym value="Pinenut"/>
+					<synonym value="Pinenuts"/>
+					<synonym value="Pine nut"/>
+					<synonym value="Pine nuts"/>
+					<synonym value="Pine-nut"/>
+					<synonym value="Pine-nuts"/>
 					<heading id="BigConepine" title="Big Cone pine"/>
 					<heading id="Bullpine" title="Bullpine"/>
 					<heading id="Diggerpine" title="Digger pine"/>
@@ -354,6 +416,12 @@
 		<heading id="Shrubs" title="Shrubs">
 			<heading id="Cercis" title="Cercis"/>
 			<heading id="Grapevine" title="Grapevine"/>
+			<heading id="Honeysuckle" title="Honeysuckle">
+				<synonym value="Caprifoliaceae"/>
+				<synonym value="Viburnum"/>
+				<synonym value="Common Viburnum"/>
+				<synonym value="Viburnum ellipticum"/>
+			</heading>
 			<heading id="Juniper" title="Juniper"/>
 			<heading id="Redbud" title="Redbud">
 				<synonym value="Red-bud"/>
@@ -363,6 +431,7 @@
 			</heading>
 		</heading>
 		<heading id="GrassandHerbs" title="Grass and Herbs">
+			<heading id="Bamboo" title="Bamboo"/>
 			<heading id="Commonbeargrass" title="Common beargrass">
 				<synonym value="Bear grass"/>
 				<synonym value="Beargrass"/>
@@ -392,6 +461,13 @@
 		<heading id="Devilsclaw" title="'Devil's claw'"/>
 	</heading>
 	<heading id="Inorganic" title="Inorganic">
+		<prefix value="made of "/>
+		<prefix value="made out of "/>
+		<prefix value="made from "/>
+		<prefix value="made with "/>
+		<prefix value="made using "/>
+		<prefix value="manufactured with "/>
+		<prefix value="manufactured from "/>
 		<heading id="GlassAndCeramic" title="Glass And Ceramic">
 			<heading id="Bucchero" title="Bucchero"/>
 			<heading id="Clay" title="Clay">
@@ -480,7 +556,9 @@
 				<heading id="Amber" title="Amber">
 					<implies facet="Color" cat="AmberColored"/>
 				</heading>
-				<heading id="Amethyst" title="Amethyst"/>
+				<heading id="Amethyst" title="Amethyst">
+					<implies facet="Color" cat="Purple"/>
+				</heading>
 				<heading id="Chalcedony" title="Chalcedony">
 					<heading id="Agate" title="Agate"/>
 					<heading id="Bloodstone" title="Bloodstone"/>
@@ -494,6 +572,7 @@
 				<heading id="LapisLazuli" title="Lapis Lazuli">
 					<synonym value="lapis lazui"/>
 					<synonym value="lapis"/>
+					<implies facet="Color" cat="Blue"/>
 				</heading>
 				<heading id="Malachite" title="Malachite"/>
 				<!-- Already under Shell materials <heading id="Pearl" title="Pearl" /> -->
@@ -516,18 +595,22 @@
 					<heading id="Vesilicbasalt" title="Vesilic basalt"/>
 				</heading>
 				<heading id="Lava" title="Lava"/>
-				<heading id="Obsidian" title="Obsidian"/>
+				<heading id="Obsidian" title="Obsidian">
+					<implies facet="Color" cat="Black"/>
+				</heading>
 				<heading id="Pumice" title="Pumice">
 					</heading>
 				<heading id="Rhyolite" title="Rhyolite"/>
 			</heading>
 			<heading id="CommonStones" title="Common Stones">
+				<heading id="Amphibolite" title="Amphibolite"/>
 				<heading id="Argillite" title="Argillite"/>
 				<heading id="Asbestos" title="Asbestos"/>
 				<heading id="Asphalt" title="Asphalt">
 					<synonym value="Asphaltum"/>
 				</heading>
 				<heading id="Breccia" title="Breccia"/>
+				<heading id="Calcite" title="Calcite"/>
 				<heading id="Chalk" title="Chalk"/>
 				<heading id="Chert" title="Chert"/>
 				<heading id="Coal" title="Coal"/>
@@ -535,8 +618,11 @@
 				<heading id="Flint" title="Flint"/>
 				<heading id="Granite" title="Granite"/>
 				<heading id="Limestone" title="Limestone"/>
-				<heading id="Magnesite" title="Magnesite"/>
+				<heading id="Magnesite" title="Magnesite">
+					<synonym value="Magnestie"/>
+				</heading>
 				<heading id="Sandstone" title="Sandstone"/>
+				<heading id="Serpentine" title="Serpentine"/>
 				<heading id="Shale" title="Shale"/>
 				<heading id="Slate" title="Slate"/>
 				<heading id="Tufa" title="Tufa">
@@ -553,15 +639,34 @@
 				<synonym value="boulder"/>
 			</heading>
 		</heading>
-		<heading id="ManufacturedMaterial" title="Manufactured Materials">
-			<heading id="Adhesive" title="Adhesive"/>
-			<heading id="Gesso" title="Gesso"/>
-			<heading id="Paint" title="Paint"/>
-			<heading id="Plastic" title="Plastic">
-				<heading id="Polyester" title="Polyester"/>
-			</heading>
-			<heading id="Synthetic" title="Synthetic"/>
-			<heading id="Whitemansmaterial" title="White man's material"/>
+	</heading>
+	<heading id="ManufacturedMaterial" title="Manufactured Materials">
+		<prefix value="made of "/>
+		<prefix value="made out of "/>
+		<prefix value="made from "/>
+		<prefix value="made with "/>
+		<prefix value="made using "/>
+		<prefix value="manufactured with "/>
+		<prefix value="manufactured from "/>
+		<heading id="Adhesive" title="Adhesive"/>
+		<heading id="BottleCap" title="Bottle cap"/>
+		<heading id="Gesso" title="Gesso"/>
+		<heading id="Paint" title="Paint"/>
+		<heading id="Plastic" title="Plastic">
+			<heading id="Polyester" title="Polyester"/>
+			<heading id="Nylon" title="Nylon"/>
+		</heading>
+		<heading id="Synthetic" title="Synthetic"/>
+		<heading id="Textiles" title="Textiles">
+			<synonym value="Cloth"/>
+			<synonym value="Fabric"/>
+			<synonym value="Fabrics"/>
+			<synonym value="Textile"/>
+			<heading id="Lurex" title="Lurex"/>
+		</heading>
+		<heading id="Whitemansmaterial" title="White man's material"/>
+		<heading id="Wire" title="Wire">
+			<synonym value="Wires"/>
 		</heading>
 	</heading>
 </taxonomy>
