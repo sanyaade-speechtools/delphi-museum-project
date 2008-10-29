@@ -35,7 +35,7 @@ function passValid($pass, $pass2){
 }
 
 function cleanFormData($data){
-	return htmlentities(stripslashes(trim($data)), ENT_QUOTES);
+	return htmlentities(stripslashes(trim($data)), ENT_QUOTES, "UTF-8");
 }
 
 // This is like cleanFormData except that it will allow certain html tags.
@@ -94,17 +94,17 @@ function cleanFormDataAllowHTML($str) {
 			$tag = '';	// elide the tag
 
 		// Append the string up to the tag and the filtered tag string
-		//Need to ensure we safely store entities in the DB. 
+		// Need to ensure we safely store entities in the DB. 
 		// But html_entity_decode misses some important ones, including
 		//  mdash, ndash.
-		$tmp .= htmlentities(allEntitiesDecode(substr($str,0,$i), ENT_QUOTES), ENT_QUOTES) . $tag;
+		$tmp .= htmlentities(allEntitiesDecode(substr($str,0,$i), ENT_QUOTES), ENT_QUOTES, "UTF-8") . $tag;
 		
 		// Reset the string
 		$str = substr($str,$i+$l);
 	}
 
 	// Append the end of the string
-	$str = $tmp .  htmlentities(allEntitiesDecode($str, ENT_QUOTES), ENT_QUOTES);
+	$str = $tmp .  htmlentities(allEntitiesDecode($str, ENT_QUOTES), ENT_QUOTES, "UTF-8");
 
 	// Squash PHP tags unconditionally
 	$str = ereg_replace("<\?","",$str);
@@ -116,8 +116,8 @@ function cleanFormDataAllowHTML($str) {
 }
 
 // Since PHP's html_entity_decode misses some things, we'll work around it
-function allEntitiesDecode( $str ) {
-	$s = html_entity_decode( $str );
+function allEntitiesDecode( $str, $mode, $charset ) {
+	$s = html_entity_decode( $str, $mode, $charset );
 	if(!(strpos( $s, '&' )===false)) {
 		$s = str_replace('&mdash;', chr(151), $s);
 		$s = str_replace('&ndash;', chr(150), $s);
@@ -125,6 +125,7 @@ function allEntitiesDecode( $str ) {
 		$s = str_replace('&ldquo;', chr(147), $s);
 		$s = str_replace('&rsquo;', chr(146), $s);
 		$s = str_replace('&lsquo;', chr(145), $s);
+		$s = str_replace('&egrave;', chr(232), $s);
 	}
 	return $s;
 }
