@@ -1,45 +1,397 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Introduction</title></head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Back-end Tools</title>
+
+</head>
 <body>
-<h1>Deploying Delphi: Back-end Tools</h1>The Delphi Project incorporates a set of back-end tools for processing and analyzing data about the artifacts in the
-collection, and to load this data into a data repository.<br /><br />These tools are used to carry out the following processes:<br /><br /><ol><li>Retrieving data from the collection(s).<br /><br /></li><li>Cleaning up the data.<br /><br /></li><li>Merging data (where required).<br /><br /></li><li>...<br /><br /></li></ol><h2>1. Retrieving data from the collections</h2>To
-kick-off the set of back-end processes, Delphi's back-end tools need to
-retrieve data ("metadata") about the artifacts in the collection, in a
-format suitable for further processing.<br /><br />The
+<h1>Deploying Delphi: Back-end Tools</h1>
+The Delphi Project incorporates a set of back-end tools for processing
+and analyzing data about the artifacts in the
+collection, and to load this data into a data repository.<br /><br />The
+goal of this processing and analysis is to build a "semantic index,"
+which associates a set of concepts from a mental model ("ontology")
+with each artifact. &nbsp;That way, the collection can be searched or
+browsed by these concepts - such as culture, use or context, material,
+and design - in addition to the data ("metadata") already available for
+the artifact.<br />
+<br />
+These back-end tools are used to carry out the following processes, all
+of which are necessary to build the semantic index: &nbsp;*THIS IS A
+PLACEHOLDER AND ONLY PARTLY ACCURATE LIST*<br />
+<ol>
+<li>Retrieving data ("metadata") from the collection(s).<br />
+<br />
+</li>
+<li>Cleaning up the data.<br />
+<br />
+</li>
+<li>Merging data.<br />
+<br />
+</li>
+<li>Building and maintaining the mental model ("ontology").<br /><br /></li><li>Associating concepts from that model with each artifact.</li>
+</ol>
+<p>The
 following notes are specific to the instance of Delphi for the Phoebe
 A. Hearst Museum of Anthropology (PAHMA) at the University of
-California, Berkeley. Similar procedures would need to be carried out
-for collections at other museums or similar institutions.<br /><br />PAHMA stores data about the artifacts in its collections in a content management system, <a href="http://www.gallerysystems.com/products/tms.html" target="_blank">The Museum System (TMS)</a>
-by Gallery Systems. &nbsp;TMS uses Microsoft SQL Server as a back-end
-relational database management system. &nbsp;At one point in the past,
-PAHMA staff determined which of the approximately 250 database tables
-used by TMS have pertinent data about their artifacts. &nbsp;Via SQL
-queries, they periodically extract that data into comma-separated value
-(CSV) files, in order to make this data available to Delphi.<br /><br />Periodically,
-Delphi's administrators physically visit PAHMA to acquire PAHMA's
-latest extracts from the TMS database, placing them on a memory stick
-or similar portable drive. &nbsp;Beginning in Fall 2008, Delphi's
-administrators have been working with PAHMA staff to determine whether
-it is feasible for Delphi to perform the same SQL queries directly
-against the TMS database over the campus network. &nbsp;This could
-obviate the need for physical visits, making it possible to both
-automate some of the back-end processing workflows and to perform them
-more frequently.<br /><br />As of Fall 2008, &nbsp;the entire database
-extract - about 1 million database table rows, representing some 600
-million artifacts in the collection, and requiring about 250 MB of disk
-space (uncompressed) or 30 MB (compressed) &#8211; is processed each time.
-&nbsp;A future goal of the Delphi Project is to make it possible to
-identify just what has changed between successive processing runs &#8211;
-additions, changes, and deletions &#8211; and process just that data.<br /><br />Other notes:<br /><br />TMS
-was designed for art collections, not anthropology collections.
-&nbsp;As a result, there are some ideosyncracies in the way that data
-is stored in TMS's database tables that need to be worked around.
-&nbsp;For instance, with artwork, typically the location field is used
-to specify where the artifact is currently located. &nbsp;With
+California, Berkeley. However, highly similar procedures would need to
+be carried out with new instances of Delphi that may be applied to
+collections at other institutions.</p>
+<h2>1. Retrieving data from the collections</h2>
+To kick-off its set of back-end processes, Delphi's back-end tools need
+to first retrieve data ("metadata") from PAHMA about the artifacts in
+the collection.<br />
+<br />
+PAHMA stores data about the artifacts in its collections in a content
+management system, <a href="http://www.gallerysystems.com/products/tms.html" target="_blank">The Museum System</a> (TMS) by Gallery
+Systems. &nbsp;TMS uses Microsoft SQL Server as a back-end
+relational database management system.<br />
+<br />
+At one point in the
+past, PAHMA staff determined which of the approximately 250 database
+tables used by TMS have pertinent data about their artifacts.
+&nbsp;Via SQL queries, they periodically extract that data into
+comma-separated value (CSV) files, in order to make this data available
+to Delphi. &nbsp;These CSV files are structured as a set of named
+columns, each
+containing text annotations about the artifacts.<br />
+<br />
+On certain occasions, Delphi's administrators physically visit PAHMA to
+acquire
+PAHMA's latest extracts from the TMS database, placing them on a memory
+stick or similar portable drive.<br />
+<br />
+As of Fall 2008, &nbsp;the entire database extract - about 1
+million database table rows, representing some 600 million artifacts in
+the collection, and requiring about 250 MB of disk space (uncompressed)
+or 30 MB (compressed) &#8211; is processed each time.<br />
+<br />
+<span style="font-style: italic;">Notes regarding possible
+future enhancements:</span><br />
+<br style="font-style: italic;" />
+<span style="font-style: italic;">Directly access database
+data from PAHMA</span>. &nbsp;Beginning in Fall 2008,
+Delphi's administrators have been working with PAHMA staff to determine
+whether it is feasible for Delphi to perform the same SQL queries
+directly against the TMS database over the campus network.
+&nbsp;This could obviate the need for physical visits, making it
+possible to both automate some of the back-end processing workflows and
+to perform them more frequently.<br />
+<br />
+<span style="font-style: italic;">Create a data warehouse</span>.
+&nbsp;In addition, IST's MySQL Basic service allows the creation of
+multiple databases. &nbsp;This may make it feasible to set up a
+"data warehouse," a database dedicated to storing newly-received data
+from PAHMA, and replace the current practice of storing and
+manipulating text extracts from PAHMA's TMS databases. &nbsp;Future
+back-end tools could directly extract data from the data warehouse, in
+more automated workflows that could then selectively update the data in
+Delphi's production database.<br />
+<br />
+<span style="font-style: italic;">Process only updated
+data, rather than all data at once</span>. &nbsp;A future
+goal
+of the Delphi Project is to make it possible to identify just what has
+changed between successive processing runs &#8211; additions, changes, and
+deletions taking place after the previous run &#8211; and process just that
+data. A data warehouse or, barring that, some other changes in
+practices, might make that more feasible.<br />
+<br />
+<span style="font-style: italic;">Other notes</span>:<br />
+<br />
+TMS was designed for art collections, not anthropology collections.
+&nbsp;As a result, there are some ideosyncracies in the way that
+data is stored in TMS's database tables that need to be worked around.
+&nbsp;For instance, with artwork, typically the location field is
+used to specify where the artifact is currently located. &nbsp;With
 anthropology collections, a second location value also needs to be
 provided, identifying the setting in which the artifact was originally
-found.<br /><br />Also, because of some programming quirks in TMS,
-pertinent data may be stored in any number of tables and fields.
-&nbsp;For instance, there are six possible places where location data
-for an artifact may be stored.<br /><br />Possibly-related rough notes, not understood on re-reading:<br /><br />If all new CU items to obj not uniformly across DB.<br /><h2>2. Cleaning up the data</h2>The data that comes in <br /><br /><h2>3. Merging data (where required)</h2></body></html>
+found.<br />
+<br />
+Also, because of some programming quirks in TMS, pertinent data may be
+stored in any number of tables and fields. &nbsp;For instance,
+there are six possible places where location data for an artifact may
+be stored.<br />
+<br style="font-style: italic;" />
+<span style="font-style: italic;">Possibly-related rough
+notes, not understood on re-reading</span>:<br />
+<br />
+If all new CU items to obj not uniformly across DB.<br />
+<h2>2. Cleaning up the data</h2>
+The data that comes in from PAHMA requires some cleanup before it can
+be provided for public access via Delphi's collections browser.
+&nbsp; The characteristics of this data vary throughout the
+collections, making this cleanup necessary. &nbsp;Annotations about
+the objects in PAHMA's collections have been made by many different
+people, over a period of more than a century, and in recent years some
+of this data was imported from a variety of data repositories, each
+with their own ideosyncracies.<br />
+<br />
+There are a number of types of problematic data that require cleanup:<br />
+<ul>
+<li>Noise data.<br />
+<br />
+Generally this is data internal to curatorial staff that, while
+valuable, is not descriptive of the artifacts, and therefore is not
+useful in associating concepts with each artifact.
+Examples include notations about an artifact having been examined by a
+particular anthropologist or other expert, or reviewed by a committee.<br />
+<br />
+Noise data is generally removed, in a process that is generically
+termed "noise reduction."<br />
+<br />
+</li>
+<li>Confidential or sensitive data.<br />
+<br />
+These include prices paid for objects and donor names.<br />
+<br />
+Prices are
+obfuscated with placeholder values like '$xx.xx' and donor names and
+similarly sensitive data are removed.<br /><br />
+</li>
+<li>Problematic character data.<br />
+<br />
+Characters pasted in from Word, for instance, that are in various
+character sets. &nbsp;'Smart' (curly) quote marks, em- and
+en-dashes, and ... &nbsp;<br />
+<br />
+Problematic character data is generally encoded as XML entities.
+&nbsp;*VERIFY THIS*<br /><br />(Placeholder) Note that some entities need to be further transformed for output, in PHP, to avoid various display issues.<br />
+</li>
+</ul><h3>Performing the cleanup</h3>This cleanup is currently performed using one or more sed scripts (<a href="http://en.wikipedia.org/wiki/Sed" target="_blank">Wikipedia's
+description</a>) on Patrick's workstation. &nbsp;Due to the
+potential sensitivity of their contents, these scripts are not
+currently managed under version control, nor are there copies in the
+'pahma' account on the IST Unix Web Farm.<br />
+<br />
+<span style="font-style: italic;">To do note</span>:
+At Patrick's suggestion, Aron will look into whether these might be
+securely stored in the Subversion repository associated with that IST
+Unix Web Farm account. &nbsp;Although that repository is primarily
+intended for migrations between Web Farm tiers, it could also be used
+for an auxiliary purpose like this.
+<br /><br />
+<span style="font-style: italic;">Notes regarding possible
+future enhancements:</span><br />
+<br />
+Question to self: Does the cleanup process also involve tokenizing the
+data, or is this a separate step? &nbsp;See Patrick's
+"Documentation Needs" notes.<br />
+<br />
+<h2>3. Merging data</h2>
+<br />
+<h2>4. Building and maintaining the mental model<br />
+</h2>
+<span style="font-weight: bold;">Exclusions</span>
+(catalog ID, token ); e.g.<br />
+<br />
+(50184,"pine cones"),<br />
+(50184,"cone shell"),<br />
+(50184,"cone shells"),<br />
+(50184,"cone of") ...<br />
+<br />
+<span style="font-weight: bold;">Hooks</span>
+(catalog ID, token); e.g.<br />
+<br />
+(50006,"Figurative or Representational"),<br />
+(50006,"figurative"),<br />
+(50006,"figure"),<br />
+(50006,"figures"),<br />
+(50006,"representation"),<br />
+(50006,"represents"),<br />
+(50006,"mask"),<br />
+(50006,"rhyton")<br />
+...<br />
+(50008," zoomorphic"),<br />
+(50008,"carved animal"),<br />
+(50008,"carved wooden animal"),<br />
+(50008,"carving of a animal"),<br />
+(50008,"carving of an animal"),<br />
+(50008,"carving of animal"),<br />
+(50008,"figure of a animal"),<br />
+(50008,"figure of an animal"),<br />
+...<br />
+<br />
+"Hooks" are used to associate <span style="font-weight: bold;">tokens</span>
+found in the text annotations about artifacts in the collection, with
+one or more <span style="font-weight: bold;">categories</span>
+in the mental model ("ontology").<br />
+<br />
+Example: the tokens above are all associated, by key ID, with the
+following categories:<br />
+<br />
+(50006,null,"FigurativeOrRepresentational","Figurative or
+Representational",50000,'multiple',1),<br />
+(50007,50006,"HumanShapes","Human Shapes",50000,'multiple',1),<br />
+(50008,50006,"AnimalShapes","Animal Shapes",50000,'multiple',1) ...<br />
+<br />
+(The second category ID, above, refers to its parent ID.)<br />
+<br />
+MainVocab<br />
+<br />
+<span style="font-weight: bold;">Categories (mainVocab.sql)</span><br />
+<br />
+This <br />
+<br />
+Currently, there are six facets:<br />
+<br />
+Use or Context<br />
+Location<br />
+Cultural Group<br />
+Material<br />
+Technique, Design or Decoration<br />
+Color<br />
+<br />
+Each of these facets in turn contains a set of categories<br />
+(there is one default category <br />
+<br />
+truncate facets;<br />
+INSERT INTO facets( id, name, display_name, description, notes ) VALUES<br />
+(50000,"TechniqueDesignorDecoration","Technique, Design or Decoration",
+'This fa<br />
+cet describes
+&lt;em&gt;&lt;strong&gt;how&lt;/strong&gt;&lt;/em&gt;
+an object was made,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and combines visual design and decorative elements with the tech<br />
+niques<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+used in creating an object.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The organization is broad, reflecting a wide range of creative a<br />
+ctivities.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+', 'This facet and its coverage in the collections will continue to<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+improve with time as we enrich the model.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'),<br />
+(40000,"Material","Material", 'This facet describes the materials that
+make up a<br />
+n object<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(another aspect of
+&lt;em&gt;&lt;strong&gt;what&lt;/strong&gt;&lt;/em&gt;
+it is). The or<br />
+ganization<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+loosely follows the popular animal/vegetable/mineral pattern.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+', 'This facet particularly reflects the non-specialist audience,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and follows a folk organization. The topics are mostly the same <br />
+as<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+would be present for a specialist in anthropology, but the organ<br />
+ization<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and chosen labels are different.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'),<br />
+(10000,"UseorContext","Use or Context", 'This facet describes what an
+object is <br />
+in terms of <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;em&gt;&lt;strong&gt;why&lt;/strong&gt;&lt;/em&gt;
+it was<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+created (e.g., baskets for storing food), or in what context it <br />
+was used<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(e.g., in religious ceremonies). The organization is based upon <br />
+the range<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+of human activities.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+', 'The primary organization is the context and use, and so a very<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+broad concept like basket appears in several contexts: food stor<br />
+age<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+baskets, baby baskets, seed gathering baskets, etc. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'),<br />
+(30000,"CulturalGroup","Cultural Group", 'This facet describes the
+culture(s) as<br />
+sociated with an object<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(&lt;em&gt;&lt;strong&gt;who&lt;/strong&gt;&lt;/em&gt;
+created or used it, or is depicte<br />
+d). The organization combines general<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+geographic range with cultural groupings.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+', 'While cultures tend to be associated with location, the range of a<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+culture does not neatly match political boundaries.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'),<br />
+(20000,"SiteorProvenience","Location", '<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This facet describes
+&lt;em&gt;&lt;strong&gt;where&lt;/strong&gt;&lt;/em&gt;
+an object w<br />
+as<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+created and/or found. The organization is based upon geographic <br />
+and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+political divisions of the world.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+', '&lt;em&gt;Note some of the grouping nodes, like
+mid-west?&lt;/em&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'),<br />
+(60000,"Color","Color", 'This is a somewhat experimental facet that
+describes co<br />
+lors<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+described for an object. This is based not on an analysis of the<br />
+&nbsp;image,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+but on the description and notes for an object.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+', 'We continue to experiment with techniques to improve the reliability<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+of this, but it seems to be fun even with the current limitation<br />
+s.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+');
+<br />
+<br />
+<hr />
+<br />
+<br />
+<br />
+As of March 2007, the CSV files begin with a SQL INSERT statement with
+a set of
+named columns, followed by a long list of values representing each of
+the database rows, and containing text annotations about the artifacts.
+&nbsp;A sample of one of these files:<br />
+<br />
+INSERT IGNORE INTO objects(id, objnum, name, description, img_path,
+creation_time) VALUES<br />
+(5,"3-30180","textile","Mola blouse, Blouse; yoke.9 x 47cm.; kelly
+green flannel<br />
+; neck trim 3.5 cm w. (splits to front and back at neck hole) 14 cm.
+from the sl<br />
+eeve seam; 11.5 cm long areas back and front pleated at shoulder and
+cuff in the<br />
+&nbsp;green flannel; 1 cm. neck band in black and white gingham 27
+cm l. encases cord<br />
+. Sleeves 14.5 xm x 20 cm. w/ gathering at shoulder and cuff; 2 cm ,
+with orange<br />
+&nbsp;and pink.trim; trim connecting blouse to mola handmade
+sawtooth in orange and a<br />
+&nbsp;stripe of black. Bottom trim; 3 cm white cotton. Mola: back
+and front; 49 cm w.<br />
+&nbsp;x 39 cm l.; four X shaped motifs , each w/ four trapazoidal
+shapes inside surro<br />
+unded by serpentine background ; color layers, dark red, gold and
+tomato red.; f<br />
+ill pieces are backed by many different colored fabric in solids and
+prints; asy<br />
+metrical reverse applique along sides. same basic design on back and
+front.","MO<br />
+AC/pahm00001383_22a_k.jpg",now()), ...
+</body></html>
