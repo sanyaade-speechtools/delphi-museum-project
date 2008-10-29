@@ -39,7 +39,7 @@ while ($row = $res->fetchRow()) {
     $response['obj_id'] = $row['id'];
     $response['obj_num'] = $row['objnum'];
     $response['objectName'] = convert_smart_quotes($row['name']);
-	$response['objectDescription'] = convert_smart_quotes($row['notes']);
+		$response['objectDescription'] = convert_smart_quotes(allEntitiesDecode($row['notes'], ENT_COMPAT, "UTF-8"));
 	$response['obj_order'] = $row['order_num'];
 	$response['obj_img'] = $row['img_path'];
 	// HACK to accommodate the current zoomer tool
