@@ -26,10 +26,10 @@ div.smspace {height:8px;}
 
 <body>
 
-<h2>Delphi Ontology Schema Notes</h2>
-<p>Version 0.9, May 22, 2008 by Patrick Schmitz</p>
+<h1>Delphi Ontology Schema Notes</h1>
+<p>Version 1.01, Oct 30, 2008 by Patrick Schmitz</p>
 
-<h3>Intro</h3>
+<h2>Intro</h2>
 <p>These notes describe the XML schema used to describe the faceted ontologies 
 within the Delphi framework. The ontologies serve the linguistic needs of the
 Natural Language Processing (NLP) engine, the knowledge modeling support for the given domain (including 
@@ -46,7 +46,7 @@ address this. For example, we use &quot;category&quot;, &quot;concept&quot; and 
 the same idea. Bear with us until we get this straightened out.</p>
 <p>We present an overview of the principles and terms we use, and then describe 
 the <a href="#Element_Syntax">element syntax</a> in detail.</p>
-<h3>Overview</h3>
+<h2>Overview</h2>
 <p>We talk about an ontology as a collection of facets, each of which contains 
 groupings of concepts and some linguistic hints about how to recognize the 
 concepts in some input text. Each <b>facet</b> is described in a separate XML file 
@@ -83,7 +83,7 @@ be controlled with additional attributes described below). </p>
 <p>It is important that the id values for the facet <code>&lt;taxonomy&gt;</code> 
 elements and for the concept <code>&lt;heading&gt;</code> elements be unique, or 
 other aspects of the ontology will break!</p>
-<h5>Linguistic Support</h5>
+<h3>Linguistic Support</h3>
 <p>In order to recognize the concepts in the metadata text for collections 
 objects, we need to describe the different words or phrases that can be used to 
 indicate the concept. For some concepts, e.g., the material gold, there are just 
@@ -117,7 +117,7 @@ simply specify the word &quot;plate&quot; for a concept (e.g., the one for food)
 <em>exclude</em> the few other uses that actually occur in the metadata for that 
 collection (e.g., &quot;photographic plate&quot;). The <code><a href="#excl_el">&lt;excl&gt;</a></code> 
 element is used to define the exclusions. </p>
-<h5>Structure and organizing principles</h5>
+<h3>Structure and organizing principles</h3>
 <p>It is important to remember that the titles, structure and organization of the headings 
 are more than just a model for you as a collections manager or taxonomist. These 
 features are also used directly to produce the UI for your collections browser. 
@@ -143,7 +143,7 @@ to think about:</p>
 	deeper and narrower structure than might be used by other standard 
 	vocabularies.</li>
 </ul>
-<h5>Knowledge modeling and reasoning support</h5>
+<h3>Knowledge modeling and reasoning support</h3>
 <p>The NLP engine is designed to associate individual concepts to objects in the 
 collections. However, since the ontology generally models broader and narrower 
 concepts, the engine infers the broader concepts (the parent and ascendant 
@@ -155,10 +155,10 @@ processing.</p>
 <code>implies</code> attribute on the concept <code><a href="#heading_el">&lt;heading&gt;</a></code> 
 element. As described in the Proposed Changes appendix, we need to add support 
 for complex inferences.</p>
-<h5>I18n and Unicode issues</h5>
+<h3>I18n and Unicode issues</h3>
 <p>The Delphi codebase supports the use of Unicode (UTF-8), and the XML for the 
 ontology definitions </p><hr>
-<h3><a name="Element_Syntax"></a>Element Syntax</h3>
+<h2><a name="Element_Syntax"></a>Element Syntax</h2>
 <p>The elements are described more or less in the expected order in which they would be 
 encountered in a typical file. Some lesser-used elements have been sorted to the
 end.</p>
@@ -255,7 +255,7 @@ end.</p>
               attributes), it will be folded to lower case.
 			<div class="smspace"></div>
 			</dd>
-			<dt class="attr">nomatch={&quot;true&quot;|&quot;false&quot;}</dt>
+			<dt class="attr">noMatch={&quot;true&quot;|&quot;false&quot;}</dt>
 			<dd>A boolean (true/false) attribute that controls whether the title
               is used as a hook for NLP processing.&nbsp;<br>
               If <em>false</em>, then the title is used as a hook. This is the
@@ -266,7 +266,7 @@ end.</p>
               concept in NLP processing.
 			<div class="smspace"></div>
 			</dd>
-			<dt class="attr">astoken={&quot;plural&quot;|&quot;noplural&quot;}</dt>
+			<dt class="attr">asToken={&quot;plural&quot;|&quot;noplural&quot;}</dt>
 			<dd>Controls whether and how the title is used as a token together
               with entailment phrases for NLP processing. See also the <code><a href="#prefix_el">&lt;prefix&gt;</a></code>
               and <code><a href="#suffix_el">&lt;suffix&gt;</a></code> elements.&nbsp;If 
@@ -483,22 +483,32 @@ end.</p>
 
 <hr>
 
-<h3>Appendix: Proposed Changes</h3>
+<h2>Appendix: Proposed Changes</h2>
 
-<p>This is a draft document of an initial schema. A number of changes to the
+<p>This is a living document for an evolving schema. A number of changes to the
 schema have been proposed or considered. These include:</p>
 <ul>
   <li>Rename the root element for each facet from <code>&lt;taxonomy&gt;</code>
     to <code>&lt;facet&gt;</code>.</li>
   <li>Rename the element used to declare concepts from <code>&lt;heading&gt;</code>
-    to <code>&lt;concept&gt;</code> or <code>&lt;category&gt;</code>.</li>
+    to <code>&lt;concept&gt;</code>.</li>
   <li>Rename the element used to declare hooks from <code>&lt;synonym&gt;</code>
     to <code>&lt;hook&gt;</code> or <code>&lt;match&gt;</code>.</li>
-  <li>Rename the element used to declare exclusioins from <code>&lt;excl&gt;</code>
+  <li>Rename the element used to declare exclusions from <code>&lt;excl&gt;</code>
     to <code>&lt;exclude&gt;</code> or <code>&lt;exclusion&gt;</code>.</li>
   <li>Allow <code>&lt;heading&gt;</code>/<code>&lt;concept&gt;</code>
     elements to control the inheritance of prefix and suffix strings. This would
     be an additional attribute.</li>
+  <li>Allow <code>&lt;taxonomy&gt;</code>/<code>&lt;facet&gt;</code>
+    elements to contain prefix and suffix declarations. Sometimes, an entire 
+	facet shares these, and as it is, they must be duplicated across each top 
+	level concept.</li>
+	<li>Add description and notes to <code>&lt;heading&gt;</code>/<code>&lt;concept&gt;</code>
+    elements. This will be important for maintenance.</li>
+	<li>Change the default behavior of the <code>asToken</code> attribute to be 
+	&quot;<em>asPlural</em>&quot;. If there are prefix/suffix values for the element, the 
+	default behavior should be to use them. We can then override this by 
+	specifying <code>asToken</code><code>=</code>&quot;<i>no</i>&quot;.</li>
   <li>Deprecate/remove the <code>&lt;reduce&gt;</code> element. This is not yet
     implemented anyway, and is of questionable use. Raises the larger question
     of whether noise reduction should be done as a separate pass or not.
@@ -520,17 +530,24 @@ schema have been proposed or considered. These include:</p>
 &nbsp;</code><br>Since colon (':') is a legal character for XML ID values, we 
 	would specify that only the first unescaped colon character would be 
 	recognized as the separator for this purpose.</li>
+	<li>Add examples and snippets to explain the various features. Add 
+	informative usage notes that explain how features interact, e.g., how to use 
+	noMatch for grouping concepts, how noMatch and asToken can be used with 
+	prefix/suffix values to get at subtle concepts.</li>
+	<li>Consider <code>&lt;with&gt;</code> or <code>&lt;near&gt;</code> tokens to support 
+	additional matching cases.</li>
 </ul>
-<h4>Adding support for inference rules:</h4>
+<h3>Adding support for inference rules:</h3>
 We need to add support for complex inference rules. Inasmuch as these will often be 
 	defined as a function of several concepts across different facets, it 
 	probably does not make sense to locate the rules in the individual facet 
 	files. We will probably define a separate file (or files) that contain the 
-	rules. Initially, a simple model like the following would suffice. The
-following rule asserts that if both the concepts <em>mask</em> and <em>wood</em>
+	rules. Initially, a simple model should suffice. We present several examples 
+to illustrate our thinking.<h5>Example 1: Combining concepts to infer another</h5>
+The following rule asserts that if both the concepts <em>mask</em> and <em>wood</em>
 are associated to an object, and that neither of <em>willow</em> or <em>yucca</em>
 are, we can infer that the object was <em>carved</em>.
-   <pre>  &lt;infer id=&quot;i1&quot; ref=&quot;TechniqueDesignorDecoration:Carved&quot; confidence=&quot;.9&quot; author=&quot;Patrick&quot;&gt;
+   <pre>  &lt;infer id=&quot;i1&quot; ref=&quot;TechniqueDesignorDecoration:Carved&quot; confidence=&quot;.9&quot;&gt;
     &lt;notes&gt;We generally assume that something used as a mask and made of wood 
            was carved. The wood/materials from some trees are not generally
            carved and so we exclude them (Willow, Yucca). 
@@ -544,9 +561,35 @@ are, we can infer that the object was <em>carved</em>.
       &lt;concept ref=&quot;Material:Yucca&quot; /&gt;
     &lt;/exclude&gt;
 &nbsp; &lt;/infer&gt;</pre>
+      <h5>Example 2: Grouping concepts any of which can infer another</h5>
+      <p>Consider another example that makes a simple association for a set
+      of concepts. Here the <code>&lt;require&gt;</code> mode is <em>any </em>and
+      so we express this rule as &quot;If an object is associated to any of the
+      concepts <em>brick</em>, <em>earthenware</em>, <em>stoneware</em>, <em>terracotta</em>
+      or <em>porcelain</em>, then we can infer it was <em>fired</em> (unless the
+      metadata includes the term <em>unfired</em>).&quot;</p>
+<pre>  &lt;infer id=&quot;i2&quot; ref=&quot;TechniqueDesignorDecoration:Fired&quot; confidence=&quot;.95&quot;&gt;
+    &lt;notes&gt;These materials are by definition fired, unless specifically declared unfired.
+    &lt;/notes&gt;
+    &lt;require mode=&quot;any&quot;&gt;
+      &lt;concept ref=&quot;Material:Brick&quot; /&gt;
+      &lt;concept ref=&quot;Material:Earthenware&quot; /&gt;
+      &lt;concept ref=&quot;Material:Stoneware&quot; /&gt;
+      &lt;concept ref=&quot;Material:Terracotta&quot; /&gt;
+      &lt;concept ref=&quot;Material:Porcelain&quot; /&gt;
+    &lt;/require&gt;
+    &lt;exclude mode=&quot;any&quot;&gt;
+      &lt;term value=&quot;unfired&quot; /&gt;
+    &lt;/exclude&gt;
+&nbsp; &lt;/infer&gt;</pre>
+      <h4>Computing confidence</h4>
       <p>
-      It should be noted that the declared confidence (0.9 in the example above)
-      is for the <em>rule</em>, and expresses the assertion that 9 out
+      We compute the confidence for any inferred concept (just as the text 
+		mining assigns confidence to mined concepts). This confidence is used to 
+		rank query results (it is a predictor of relevance).</p>
+<p>
+      It should be noted that the declared confidence 
+      is for the <em>rule</em>. Thus in Example 1, the confidence value of 0.9 expresses the assertion that 9 out
           of 10 wooden masks (in this collection) are carved. This confidence
       value will be combined with the confidence
     of the required concept associations to produce the net confidence for the
@@ -563,32 +606,47 @@ are, we can infer that the object was <em>carved</em>.
       have lower relevance than ) other objects for which the NLP processing
       found an indication of &quot;carved&quot; in the text. This seems
       appropriate.</p>
-      <p>Considering another example that makes a simple association for a set
-      of concepts. Here the <code>&lt;require&gt;</code> mode is <em>any </em>and
-      so we express this rule as &quot;If an object is associated to any of the
-      concepts <em>brick</em>, <em>earthenware</em>, <em>stoneware</em>, <em>terracotta</em>
-      or <em>porcelain</em>, then we can infer it was <em>fired</em> (unless the
-      metadata includes the term <em>unfired</em>).&quot;</p>
-<pre>  &lt;infer id=&quot;i2&quot; ref=&quot;TechniqueDesignorDecoration:Fired&quot; confidence=&quot;.95&quot; author=&quot;Patrick&quot;&gt;
-    &lt;notes&gt;These materials are by definition fired, unless specifically declared unfired.
-    &lt;/notes&gt;
-    &lt;require mode=&quot;any&quot;&gt;
-      &lt;concept ref=&quot;Material:Brick&quot; /&gt;
-      &lt;concept ref=&quot;Material:Earthenware&quot; /&gt;
-      &lt;concept ref=&quot;Material:Stoneware&quot; /&gt;
-      &lt;concept ref=&quot;Material:Terracotta&quot; /&gt;
-      &lt;concept ref=&quot;Material:Porcelain&quot; /&gt;
-    &lt;/require&gt;
-    &lt;exclude mode=&quot;any&quot;&gt;
-      &lt;term value=&quot;unfired&quot; /&gt;
-    &lt;/exclude&gt;
-&nbsp; &lt;/infer&gt;</pre>
-      <h5>Issues and questions:</h5>
-      <p>Do we need alternate methods of computing confidence? E.g., Taking the
-      max or min confidence rather than multiplying them, or multiplying the
-      (1-C) values with the idea that the more specific we get, the more
-      confidence we gain. We need some use-cases to support any of this, and for
-      now, can just talk to the users to see whether any of this makes sense.</p>
+<p>
+      This confidence computation should be a function of the <code>&lt;require&gt;</code> 
+		mode. In Example 2 with a mode of &quot;any&quot;, the confidence for the rule 
+		(0.95) will be combined with the confidence
+    of the individual required concept association to produce the net confidence for the
+    inferred association. Thus for some object Y with the following confidence
+      levels:</p>
+      <ul>
+        <li>confidence that object Y was made of <em>stoneware</em> is 0.8 </li>
+        <li>declared confidence of our inference rule above is 0.95</li>
+      </ul>
+      <p>the inferred confidence that object Y was fired would be (0.8 * 0.95) = 0.76. 
+		Note that the object may also be declared to be made of, e.g., <em>
+		terracotta</em> (it may have several parts of different materials). If 
+		the <em>terracotta</em> association has a confidence level of 0.9, we 
+		get an inferred confidence of (0.9 * 0.95) = 0.855 for <em>fired</em>. 
+		Because the <code>&lt;require&gt;</code> mode is &quot;any&quot;, we compare the 
+		two computed confidence levels and use the higher one (0.855).</p>
+<h4>Issues and questions:</h4>
+      <ol>
+		<li>Do we need alternate methods of computing confidence (e.g., taking the
+      	<em>max</em> or <em>min</em> confidence rather than multiplying them)?
+		<p>In Example 1, the <em>min</em> approach yield a confidence of 0.72 
+		that it was fired, and the <em>max</em> approach yield a confidence of 
+		0.81. It is attractive to think that these results closer to (our sense 
+		of) reality than the combined result of 0.648, however this approach is 
+		harder to justify theoretically than the combined approach.</p>
+		<p>We need some use-cases to support any of this, and for now, can just 
+		talk to the users to see whether any of this makes sense.</p> </li>
+	<li><p>I think that on <code>&lt;require&gt;</code>, the mode should default to 
+	&quot;all&quot;, and on <code>&lt;exclude&gt;</code>,&nbsp; the mode should default to 
+	&quot;any&quot;. I am pretty sure that this will be the typical usage, however it 
+	might confuse some people.</p></li>
+		<li><p>Should we continue to support the simplified syntax on the &lt;concept&gt; 
+		element when a single concept can infer another concept, or should we 
+		place all the inferences in one section? As soon as we move to a service 
+		that maintains the model, this will be a moot point. I think it will 
+		probably make sense to put all inference in one section for easier 
+		maintenance, since authoring ease will (hopefully soon) no longer be an 
+		issue.</p></li>
+</ol>
 </body>
 
 </html>
