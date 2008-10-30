@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Delphi - Code Repository</title>
+
+</head>
+<body>
+<h1>Delphi: Code Repository</h1>
+<p>This document describes the code repository used to manage the
+source code, configuration files, and other artifacts of the Delphi
+project,&nbsp;used by the Phoebe A. Hearst Museum of Anthropology
+(PAHMA)
+at the University of California, Berkeley.</p><h2>Google Code Repository</h2>The Delphi project currently uses a free, open source code hosting site on Google Code. &nbsp;The site is located at:<br /><br />http://code.google.com/p/delphi-museum-project/<br /><br />(This site can also be accessed via an alternate URL, http://delphi-museum-project.googlecode.com/)<br /><br />This
+site was chosen, in part, because it offered a good issue tracking
+system. &nbsp;Project members had previously experimented with another
+open source code hosting service, SourceForge, and there is an obsolete
+Delphi project site on that service as well. &nbsp;(Wikipedia also
+offers <a href="http://en.wikipedia.org/wiki/Comparison_of_free_software_hosting_facilities" target="_blank">an article comparing multiple services of this type</a>.)
+&nbsp;If and when UC Berkeley's Information Services and Technology
+(IST) offers a comparable hosting site in-house, this could be
+considered for hosting the service in the future.<br /><h3>Site administration and permissions</h3>The
+Delphi project site on Google Code is currently owned, and hence
+administered, by Patrick Schmitz. &nbsp;The site owner(s) can add or
+delete owners and members via an "Administer" tab on the site,
+accessible only to them.<br /><br />There is a set of project members,
+any of whom can commit code, edit wiki pages, or otherwise make changes
+to the content of the site.<br /><br />Finally, all other visitors to
+the site have broad, primarily read-only access: to browse or download
+source code, read and comment on wiki pages, and read documentation
+(such as this document).<br /><br />All project owner(s) and members are identified by their Google
+accounts, rather than by email addresses provided by UC Berkeley or
+other institutions.<br /><h3>Version control repository</h3>Google
+Code offers a Subversion-based version control repository. &nbsp;A
+current version of nearly all of Delphi's code and related artifacts is
+maintained there. &nbsp;The repository also&nbsp;offers access to older
+revisions of each of these files, and to notes about the changes made
+in each successive release.<br /><br />(One notable exception are the
+back-end 'sed' scripts that are used for initial cleanup of the data
+provided by PAHMA. &nbsp;As noted in <a href="deployment/back-end-tools.html">Deploying Delphi: Back-end Tools</a>,&nbsp; these scripts contain some sensitive information, so they are not included in this publicly-accessible repository.)<br /><br />You
+can browse Delphi's code and related artifacts can be browsed via the
+web by clicking the "Source" tab on the project's Google Code site,
+then the "Browse" link under that tab. &nbsp;More typically, however,
+you'll access this code base via a Subversion client - a piece of
+software that allows one to interact with Subversion repositories.
+&nbsp;The Subversion website maintains a <a href="http://subversion.tigris.org/links.html#clients" target="_blank">list of these clients</a> (http://subversion.tigris.org/links.html#clients), and a Wikipedia article offers <a href="http://en.wikipedia.org/wiki/Comparison_of_Subversion_clients" target="_blank">a comparison matrix of many popular clients</a> (http://en.wikipedia.org/wiki/Comparison_of_Subversion_clients).<br /><h4>Public access to Delphi's code</h4>Anyone
+can use a Subversion client to download Delphi's code. &nbsp;The public
+URL to which anyone can point a Subversion client to download the
+project's code and related artifacts is:<br /><pre>http://delphi-museum-project.googlecode.com/svn/trunk/ delphi-museum-project-read-only</pre>From
+a command-line version of the Subversion client, the command to check
+out the project to a local directory named
+"delphi-museum-project-read-only" is:<br /><pre>svn checkout http://delphi-museum-project.googlecode.com/svn/trunk/ delphi-museum-project-read-only</pre><h4>Private (project member-only) access to Delphi's code</h4>Project
+members can also use a Subversion client, not only to download code but
+also to make changes within the project repository. &nbsp;The private
+URL to which they can point a Subversion client is available by
+clicking the "Source" tab on the project site, after they have logged
+into their Google accounts.<br /><br />Project members use their Google
+account as a username, and a googlecode.com password. &nbsp;They can
+generate or update this password by clicking the "Source" tab on the
+project site, and following the link provided on the "Checkout" page.
+&nbsp;(This link only appears for logged-in project members.)<br /><h3>Delphi's code base</h3>(Patrick's notes about the structure and organization of Delphi's code and related artifacts goes here for starters ...)<br /></body></html>
