@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Delphi - Code Layout</title>
+
+
+</head>
+<body>
+<h1>Delphi: Code Layout</h1>
+<p>This document describes the code layout - the hierarchical
+organization of the
+source code, configuration files, and other artifacts - of the Delphi
+project,&nbsp;an open source
+software system that helps open up access via the web to collections of
+artifacts held by museums, historical societies, archeological
+repositories and similar heritage institutions.<br />
+</p>
+For a closely related
+discussion of the&nbsp;repository used to manage the code and other
+artifacts for the Delphi project - in other words, where the files described below can be found and downloaded - please see <a href="code-repository.html">Delphi: Code Repository</a>.
+<h2>Organization of Delphi's code within the source tree<br /></h2>(At the moment, this is nearly verbatim from Patrick Schmitz and has had only minimal editing and augmentation.)<br />By folder under the source tree:<br /><h3>/api</h3>Includes various service calls that support both other php logic as well as some ajax calls. <br /><br />Also includes some test files, like catsInFacet.php, catsForObjID.php, test*.php.<br /><br /><h3>/libs</h3>Includes mostly imported libraries like jQuery, Smarty, PEAR (for the MDB model), XPM (XPertMailer), and the Zoomify swf file. <br /><br />Also includes common libraries we developed to support ontology-related functionality. <br /><br /><h3>/modules</h3>Has the PHP files that provide most of the page functionality for Delphi.<br /><br />The files are named for the respective functional areas, and should be fairly self-evident. <br /><br /><h3>/ontologies</h3>Is where we keep the ontologies used for each deployment.<br /><br />At
+this point, we only have PAHMA ontologies. Each facet is stored in a
+separate file to simplify the maintenance, and there is a script to
+merge these into the unified file. There is a document describing the
+format: /ontologies/schema_notes.htm.<br />&nbsp;<br /><h3>/schemas</h3>Contains the SQL table creation scripts and related SQL utility scripts:<br /><ul><li>mainObjInfo.sql has most of the tables we use, and is the primary schema file.</li><li>delphi_ident.sql has the authentication and authorization tables.</li><li>addBaseRolesAndPerms.sql has an init script for the basic auth/authz info.</li><li>featured.sql has the table for the featured sets on the PAHMA home page.</li><li>grants.sql
+has a template for setting up permissions on the tables for the DB user
+you will use. It is just a template, and must be customized for local
+username and passwords.</li><li>cat_counts.sql defines tables and the scripts to fill these tables to support various UI features.</li><li>delphi_visit.sql is not yet used.<br /></li></ul><h3><br />/themes</h3>Includes
+the templates, script, CSS and static images used to produce the actual
+HTML deployed on the site. This is deployment specific, however many
+aspects could potentially be shared across deployments. We'll need to
+consider how to better share this content at some point.<br /><br />The templates and the scripts are named for the functional areas of the UI (and/or for the specific pages) they support. <br /><br /><span style="font-style: italic;">Future enhancements</span>:<br />The CSS file is currently monolithic.<br />There are a host of unused images we should clean up.<br /><br /><h3>/tools</h3>Is the tree for the Java classes that make up the text analysis and semantic indexing engine:<br /><ul><li>MainApp.java
+has the bulk of the UI logic, and a fair amount of application glue. It
+should be broken up more into clearer modules that separate UI and
+application logic.<br /></li><li>TaxoNode.java and Facet.java classes support the nodes in an ontology, and facets.</li><li>ImagePathsReader.java and ImageInfo.java support the image information for objects.</li><li>MetaDataReader.java is a class that simplifies the processing of the collections metadata.</li><li>DumpColumnConfig.java models the info in the configuration file that defines how we process a metadata dump.</li><li>VocabTermsReader.java
+handles the reading of a default format for vocabularies - it is fairly
+specific to the TMS export format, and may need additional attention
+for broader use.</li><li>DoubleHashTree.java defines the data structure
+that models the terms and synonyms associated to concepts in the
+ontologies. It includes support to initialize the data structure from
+the XML format for the ontologies.</li><li>Counter.java, Pair.Java, PriorityQueue.java, and TextUtils.java are various utility and data structure classes.<br /></li></ul>
+</body></html>
