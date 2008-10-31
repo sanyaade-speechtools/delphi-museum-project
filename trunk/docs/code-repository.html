@@ -7,26 +7,32 @@
 <h1>Delphi: Code Repository</h1>
 <p>This document describes the code repository used to manage the
 source code, configuration files, and other artifacts of the Delphi
-project,&nbsp;used by the Phoebe A. Hearst Museum of Anthropology
-(PAHMA)
-at the University of California, Berkeley.</p><h2>Google Code Repository</h2>The Delphi project currently uses a free, open source code hosting site on Google Code. &nbsp;The site is located at:<br /><br />http://code.google.com/p/delphi-museum-project/<br /><br />(This site can also be accessed via an alternate URL, http://delphi-museum-project.googlecode.com/)<br /><br />This
+project,&nbsp;an open source
+software system that helps open up access via the web to collections of
+artifacts held by museums, historical societies, archeological
+repositories and similar heritage institutions.<br /><br />It also
+briefly discusses the use of this repository with the instance of
+Delphi used by the Phoebe A. Hearst Museum of Anthropology (PAHMA)
+at the University of California, Berkeley.</p>For a related discussion
+of the hierarchical organization of the code and other artifacts for
+the Delphi project, please see Delphi: Code Layout.<h2>Google Code Repository</h2>The Delphi project currently uses a no-cost, open source code hosting site on Google Code. &nbsp;The site is located at:<br /><br /><a href="http://code.google.com/p/delphi-museum-project/" target="_blank">http://code.google.com/p/delphi-museum-project/</a><br /><br />(This site can also be accessed via an alternate URL, <a href="http://delphi-museum-project.googlecode.com/" target="_blank">http://delphi-museum-project.googlecode.com/</a>)<br /><br />This
 site was chosen, in part, because it offered a good issue tracking
 system. &nbsp;Project members had previously experimented with another
 open source code hosting service, SourceForge, and there is an obsolete
 Delphi project site on that service as well. &nbsp;(Wikipedia also
-offers <a href="http://en.wikipedia.org/wiki/Comparison_of_free_software_hosting_facilities" target="_blank">an article comparing multiple services of this type</a>.)
-&nbsp;If and when UC Berkeley's Information Services and Technology
-(IST) offers a comparable hosting site in-house, this could be
-considered for hosting the service in the future.<br /><h3>Site administration and permissions</h3>The
+offers <a href="http://en.wikipedia.org/wiki/Comparison_of_free_software_hosting_facilities" target="_blank">an article comparing multiple services of this type</a>.)<br /><br />If
+and when UC Berkeley's Information Services and Technology (IST) offers
+a comparable hosting site in-house, this could be considered for
+hosting the service in the future.<br /><h3>Site administration and permissions</h3>The
 Delphi project site on Google Code is currently owned, and hence
 administered, by Patrick Schmitz. &nbsp;The site owner(s) can add or
-delete owners and members via an "Administer" tab on the site,
-accessible only to them.<br /><br />There is a set of project members,
-any of whom can commit code, edit wiki pages, or otherwise make changes
-to the content of the site.<br /><br />Finally, all other visitors to
-the site have broad, primarily read-only access: to browse or download
-source code, read and comment on wiki pages, and read documentation
-(such as this document).<br /><br />All project owner(s) and members are identified by their Google
+delete owners and members via an "Administer" tab on the site; this tab
+appears only to the owner(s).<br /><br />There is a set of project
+members, any of whom can commit code, edit wiki pages, or otherwise
+make changes to the content of the site.<br /><br />Finally, all other
+visitors to the site have broad, primarily read-only access: to browse
+or download source code, read and comment on wiki pages, and read
+documentation (such as this document).<br /><br />All project owner(s) and members are identified by their Google
 accounts, rather than by email addresses provided by UC Berkeley or
 other institutions.<br /><h3>Version control repository</h3>Google
 Code offers a Subversion-based version control repository. &nbsp;A
@@ -46,8 +52,8 @@ can use a Subversion client to download Delphi's code. &nbsp;The public
 URL to which anyone can point a Subversion client to download the
 project's code and related artifacts is:<br /><pre>http://delphi-museum-project.googlecode.com/svn/trunk/ delphi-museum-project-read-only</pre>From
 a command-line version of the Subversion client, the command to check
-out the project to a local directory named
-"delphi-museum-project-read-only" is:<br /><pre>svn checkout http://delphi-museum-project.googlecode.com/svn/trunk/ delphi-museum-project-read-only</pre><h4>Private (project member-only) access to Delphi's code</h4>Project
+out the entire set of project code and related artifacts, to a local
+directory named "delphi-museum-project-read-only", is:<br /><pre>svn checkout http://delphi-museum-project.googlecode.com/svn/trunk/ delphi-museum-project-read-only</pre><h4>Private (project member-only) access to Delphi's code</h4>Project
 members can also use a Subversion client, not only to download code but
 also to make changes within the project repository. &nbsp;The private
 URL to which they can point a Subversion client is available by
@@ -55,5 +61,10 @@ clicking the "Source" tab on the project site, after they have logged
 into their Google accounts.<br /><br />Project members use their Google
 account as a username, and a googlecode.com password. &nbsp;They can
 generate or update this password by clicking the "Source" tab on the
-project site, and following the link provided on the "Checkout" page.
-&nbsp;(This link only appears for logged-in project members.)<br /><h3>Delphi's code base</h3>(Patrick's notes about the structure and organization of Delphi's code and related artifacts goes here for starters ...)<br /></body></html>
+project site, and clicking the link provided on the "Checkout" page
+under that tab. &nbsp;(This link only appears for logged-in project
+members.)<br /><br /><h2>Use of the Code Repository with the PAHMA instance of Delphi</h2>(Verify
+whether the IST Unix Web Farm uses the Google Code-provided Subversion
+repository in migrations between the Web Farm's tiers.)<br /><br /><h2>Organization of Delphi's code</h2>(Patrick's
+notes about the structure and organization of Delphi's code base,
+including source code and related artifacts, goes here for starters ...)<br /></body></html>

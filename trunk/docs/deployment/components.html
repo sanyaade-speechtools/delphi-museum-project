@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Delphi - Deployment - Components</title>
 
 </head>
+
 <body>
 <h1>Deploying Delphi: Components</h1>
 <p>There are three major components to the current Delphi
@@ -31,19 +31,22 @@ zoom-and-pan through images; and CSS style sheets.</p>
 <li>
 <strong>A data repository</strong>
 <p>The data repository is used for storing the data about
-artifacts in the collections ("metadata") provided by PAHMA.</p>
-<p>This repository is also used for storing supplementary
-data – indexes of terms, synonyms/antonyms, and concepts – that is
-"mined" from the metadata.&nbsp; This data about underlying
-meanings ... helps users of Delphi's collections browser locate
-artifacts by concepts, and uncover relationships between artifacts.</p>
-<p>The data stored in the respository is used by the
-collections browser, above, as well as for reporting and other purposes.</p>
-<p>Currently, the data repository is a MySQL relational
+artifacts in the collections ("metadata") provided by PAHMA.<br />
+<br />
+This repository is also used for storing supplementary
+data, including indexes of&nbsp; concepts and the associations
+between artifacts and concepts – that is then "mined" from the metadata
+using natural language processing.&nbsp; This data about underlying
+meanings helps users of Delphi's collections browser locate
+artifacts by concepts, and uncover relationships between artifacts.<br />
+<br />
+The data stored in the respository is used by the
+collections browser, above, as well as for reporting and other purposes.<br />
+<br />
+Currently, the data repository is a MySQL relational
 database.</p>
 </li>
-<li>
-<strong>A set of back-end tools</strong>
+<li><strong>A set of back-end tools</strong>
 <p>These tools allow Delphi's administrators and others to
 analyze and process data about the artifacts in the collection – both
 metadata and semantic data – and to load this data into the data
@@ -57,14 +60,14 @@ may automate some of these back-end processes.</p>
 sub-components, described further below, will also be present in any
 highly similar instances of Delphi that are deployed and run outside
 PAHMA.</p>
-<p>In addition to the three major components listed above, other
+<p>In addition to the three major components listed above, two other
 important components of the Delphi project include the code repository
 for the project – where its source code, templates, configuration
 files, libraries, and other files are stored, and its issues are
 tracked – and its set of associated documentation, papers and articles.</p>
-<p>For more information about the code repository, please see: ...</p>
+<p>For more information about the code repository, please see <a href="../code-repository.html">Delphi - Code Repository</a></p>
 <p>For links to associated documentation, papers and articles,
-please see: ...</p>
+please see <a href="../bibliography.html">Delphi - Bibliography</a></p>
 <h2>1. Web-based application</h2>
 <p>The web-based collections browser consists of a set of
 required sub-components, described further below.</p>
@@ -126,7 +129,7 @@ Farm hosting environment at UC Berkeley.&nbsp; Apache (either major
 versions 1 or 2, or sometimes both) often provided in other Web hosting
 environments.</p>
 <p>Configuration:</p>
-<em>Location in Delphi code repository:</em>&nbsp; An
+<em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp; An
 Apache configuration file (".htaccess") in /trunk
 <p><span style="background-color: rgb(255, 255, 215);">Look
 for other configuration details that differ from the stock Web Farm
@@ -184,7 +187,7 @@ server are provided at http://www.php.net/manual/en/install.ph</p>
 and modify PHP as much as you want, for both commercial and
 non-commercial use. You just have to make it clear to the user that
 what you have distributed contains PHP."</p>
-<p><em>Location in Delphi code repository:</em>&nbsp;
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;
 N/A&nbsp; *VERIFY THIS*</p>
 <h4>PEAR::MDB2</h4>
 <p><em>Description:</em> Pear::MDB2 is an open source
@@ -210,7 +213,7 @@ on 2007-05-03)<br />
 </p>
 <em>Latest version (pre-release)</em>:
 <p><em>Licensing terms</em>:</p>
-<p><em>Location in Delphi code repository:</em>&nbsp;
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;
 Delphi's installation of the Pear::MD2 package is provided as a
 collection of PHP code (".php") files in /trunk/libs/pear</p>
 <p><span style="background-color: rgb(255, 255, 215);">Note
@@ -239,7 +242,7 @@ collections browser. *VERIFY THIS*</p>
 <p><em>Latest version (stable)</em>: 2.6.20 (Released
 2008-08-15)</p>
 <p><em>Licensing terms</em>:</p>
-<p><em>Location in Delphi code repository:</em></p>
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;</p>
 <ul>
 <li>Delphi's installation of the Smarty framework itself
 consists of a collection of PHP code (".php") files in
@@ -260,7 +263,7 @@ requesting new passwords be emailed.&nbsp; Sharing personal
 annotations - sending URLs to personally-created sets via
 email.&nbsp; *VERIFY THIS - AND ANY OTHERS?*</p>
 <p><em>Obtained from</em>: http://www.xpertmailer.com/</p>
-<p><em>Location in Delphi code repository:</em>&nbsp;
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 Delphi's installation of the XPertMailer package is provided as a
 collection of PHP code (".php") files in /trunk/libs/XPM</p>
 <h4>jQuery</h4>
@@ -283,8 +286,7 @@ user interface library, jQuery UI (below).&nbsp; *VERIFY THIS*</p>
 <p><em>Latest version</em>: 1.2.6 (released
 2008-05-24)</p>
 <p><em>Licensing terms</em>:</p>
-<p><em>Location in Delphi code repository:</em>&nbsp;
-A collection of JavaScript (".js") files in svn/trunk/libs/jquery<em><br />
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;A collection of JavaScript (".js") files in svn/trunk/libs/jquery<em><br />
 </em></p>
 <em>Issues (very rough notes, needs cleanup, needs entry of
 and/or references to bugs in Google Code)</em>:
@@ -309,7 +311,7 @@ respond to a user's behavior on a page, such as mouse clicks and drags.</p>
 heavily by Delphi is the jQuery UI "accordion" widget, "an
 expandable/collapsible content pane." *VERIFY THIS*</p>
 <p><em>Obtained from</em>: http://ui.jquery.com/</p>
-<p><em>Location in Delphi code repository:</em>&nbsp;
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 A collection of JavaScript (".js") files in /trunk/libs/jquery</p>
 <h4><strong>Zoomify</strong></h4>
 <p>(placeholder - also need to determine which package is in use)</p>
@@ -322,7 +324,7 @@ museum, and I think it holds for the PAHMA deployment, but I doubt that
 it holds for the Delphi project. Will have to straighten this out as
 well. We may have to tell deployers to get the runtime from Zoomify
 (they allow redist for any users). -Aron Roberts 10/23/08 12:42 PM</span></p>
-<p><em>Location in Delphi code repository:</em>&nbsp;
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 A single Adobe Shockwave (".swf") file in /trunk/libs/zoom</p>
 <h4>CSS</h4>
 <p><em>Description:&nbsp;</em> Cascading Style
@@ -416,8 +418,7 @@ tables created in MySQL using the .sql files in /trunk/schema use the
 default MyISAM storage engine,
 http://dev.mysql.com/doc/refman/5.0/en/myisam-storage-engine.html -Aron
 Roberts 10/21/08 10:13 PM<br />
-</span><br />
-</p>
+</span></p>
 <h2>3. Back-end tools</h2>
 (Placeholder text; need to incorporate Patrick's process descriptions,
 better summaries of this analysis data mining work from the I-School
@@ -425,8 +426,8 @@ report and otherwise)
 <p><em>Description</em>: A set of back-end tools are
 provided for processing and analyzing data about the artifacts in the
 collection, and to load this data into a data repository.&nbsp;
-These tools aren't directly accessible to virtual museum visitors, but
-rather, they are used behind the scenes.</p>
+These tools are used behind the scenes, rather than being directly
+accessible to virtual museum visitors.</p>
 <p><em>Use in Delphi</em>: These back-end tools are
 used primarily to prepare data for access by the web-based collections
 browser.</p>
@@ -476,8 +477,7 @@ they build new data that ...</p>
 fields, all of which may correspond to a particular concept or
 sub-concept.&nbsp; This helps tie together sets of related
 artifacts whose metadata wouldn't otherwise make clear their similarity.</p>
-<p><br />
-</p>
+
 </li>
 <li>Scanning this metadata and determining what concepts
 ("facets") in a previously-developed mental model ("ontology") apply to
@@ -499,8 +499,7 @@ outside PAHMA this model will likely need to be changed.</p>
 concepts in the mental model, and text that appears in one or more of
 the fields of the data ("metadata") for each of the artifacts in the
 collection, is maintained as ... XML ...</p>
-<p><br />
-</p>
+
 </li>
 <li>Load the data – about the artifacts in the collection, the
 associations between artifacts and their associated concepts, and the
@@ -508,8 +507,7 @@ mental model that defines those concepts – into a data
 repository.&nbsp; This allows the data to be flexibly accessed at
 high speed.</li>
 </ul>
-<p><br />
-<em>Location in Delphi code repository:<br />
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp; <em><br />
 </em><br />
 svn/trunk/ontologies<br />
 svn/trunk/schemas<br />
@@ -530,5 +528,4 @@ museum's processes and in the back-end tools and workflows.&nbsp;
 For instance, the current load scripts wipe out ("drop"), recreate, and
 reload database tables with new data, rather than performing a set of
 inserts, updates, and deletions. -Aron Roberts 10/22/08 3:58 PM</span></p>
-</body>
-</html>
+</body></html>
