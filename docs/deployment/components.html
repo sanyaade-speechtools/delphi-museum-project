@@ -1,9 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Delphi - Deployment - Components</title>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+<title>Delphi - Deployment - Components</title>
+<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
+<!--
+Last committed revision:
+$Author: aron $
+$Date: 2008-10-23 15:23:16 -0700 (Thu, 23 Oct 2008) $
+$Revision: 504 $
+-->
 </head>
-
 <body>
 <h1>Deploying Delphi: Components</h1>
 <p>There are three major components to the current Delphi
@@ -17,10 +24,9 @@ allows virtual museum visitors to explore the museum's collections over
 the web.&nbsp; Visitors can search for artifacts, via both concepts
 and keywords, and can interactively browse their various "facets" (e.g.
 location, culture, materials).</p>
-<p><span style="background-color: rgb(255, 255, 215);">Decide
+<p><span class="comment highlight">Decide
 whether, and if so how, to introduce the personal annotation and
-community curation aspects of Delphi here. -Aron Roberts 10/22/08 4:01
-PM</span></p>
+community curation aspects of Delphi here.</span></p>
 <p>Currently, the Delphi collections browser application runs
 in the Apache Web Server.&nbsp; It consists of a number of
 interrelated components that are more fully described below, including
@@ -34,9 +40,10 @@ zoom-and-pan through images; and CSS style sheets.</p>
 artifacts in the collections ("metadata") provided by PAHMA.<br />
 <br />
 This repository is also used for storing supplementary
-data, including indexes of&nbsp; concepts and the associations
-between artifacts and concepts – that is then "mined" from the metadata
-using natural language processing.&nbsp; This data about underlying
+data, including indexes of concepts and the associations
+between artifacts and concepts that is then "mined" from the
+metadata
+using natural language processing. This data about underlying
 meanings helps users of Delphi's collections browser locate
 artifacts by concepts, and uncover relationships between artifacts.<br />
 <br />
@@ -48,8 +55,8 @@ database.</p>
 </li>
 <li><strong>A set of back-end tools</strong>
 <p>These tools allow Delphi's administrators and others to
-analyze and process data about the artifacts in the collection – both
-metadata and semantic data – and to load this data into the data
+analyze and process data about the artifacts in the collection - both
+metadata and semantic data - and to load this data into the data
 repository.</p>
 <p>Currently, these tools are run manually, in batch mode,
 via a Java-based GUI application.&nbsp; Future Delphi enhancements
@@ -60,14 +67,17 @@ may automate some of these back-end processes.</p>
 sub-components, described further below, will also be present in any
 highly similar instances of Delphi that are deployed and run outside
 PAHMA.</p>
-<p>In addition to the three major components listed above, two other
+<p>In addition to the three major components listed above, two
+other
 important components of the Delphi project include the code repository
-for the project – where its source code, templates, configuration
+for the project, where its source code, templates, configuration
 files, libraries, and other files are stored, and its issues are
-tracked – and its set of associated documentation, papers and articles.</p>
+tracked, and its set of associated documentation, papers and
+articles.</p>
 <p>For more information about the code repository, please see <a href="../code-repository.html">Delphi - Code Repository</a></p>
 <p>For links to associated documentation, papers and articles,
-please see <a href="../bibliography.html">Delphi - Bibliography</a></p>
+please see <a href="../bibliography.html">Delphi -
+Bibliography</a></p>
 <h2>1. Web-based application</h2>
 <p>The web-based collections browser consists of a set of
 required sub-components, described further below.</p>
@@ -97,8 +107,9 @@ consisting of:</p>
 <li>A quality assurance ("qa") environment.</li>
 <li>A production ("prod") environment.</li>
 </ul>
-<p>Changes to Delphi – such as to libraries, code, templates, and
-configuration files – are first tested within the development
+<p>Changes to Delphi - such as to libraries, code, templates,
+and
+configuration files - are first tested within the development
 environment.&nbsp; They are then migrated to the quality assurance
 environment, and after further testing there, to the production
 environment.</p>
@@ -129,11 +140,12 @@ Farm hosting environment at UC Berkeley.&nbsp; Apache (either major
 versions 1 or 2, or sometimes both) often provided in other Web hosting
 environments.</p>
 <p>Configuration:</p>
-<em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp; An
+<em>Location in Delphi <a href="../code-repository.html">code
+repository</a>:</em>&nbsp; An
 Apache configuration file (".htaccess") in /trunk
-<p><span style="background-color: rgb(255, 255, 215);">Look
+<p><span class="comment highlight">Look
 for other configuration details that differ from the stock Web Farm
-configuration file. -Aron Roberts 10/21/08 9:38 PM</span><br />
+configuration file.</span>
 </p>
 <h3>
 1.3 Application components</h3>
@@ -176,7 +188,7 @@ provided in other web hosting environments that support PHP.&nbsp;
 server are provided at http://www.php.net/manual/en/install.ph</p>
 </li>
 </ul>
-<p><em>Obtained from</em>: http://www.php.net/</p>
+<p><em>Obtained from</em>: <a href="http://www.php.net/" target="_blank">http://www.php.net/</a></p>
 <em>Installed version in Delphia's PAHMA instance</em>: 5.x
 {Determined by the IST Unix Web Farm Admins} *VERIFY THIS AND VERSION*
 <p><em>Latest version (stable)</em>: 5.2.6
@@ -203,7 +215,7 @@ used to access data in the MySQL-based data repository
 templates (below).&nbsp; *VERIFY*<br />
 </p>
 <p><em>Obtained from</em>:
-http://pear.php.net/package/MDB2<br />
+<a href="http://pear.php.net/package/MDB2" target="_blank">http://pear.php.net/package/MDB2</a><br />
 </p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:
 2.4.0 (per a constant in the source code of MDB2.php)<br />
@@ -216,9 +228,8 @@ on 2007-05-03)<br />
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;
 Delphi's installation of the Pear::MD2 package is provided as a
 collection of PHP code (".php") files in /trunk/libs/pear</p>
-<p><span style="background-color: rgb(255, 255, 215);">Note
-where database connections are configured, if relevant to this package.
--Aron Roberts 10/21/08 10:15 PM</span><br />
+<p><span class="comment highlight">Note
+where database connections are configured, if relevant to this package.</span>
 </p>
 <h4>Smarty</h4>
 <em>Description</em>: Smarty is an open source template
@@ -235,7 +246,7 @@ Template Toolkit for Perl and Python.)</p>
 <p><em>Use in Delphi</em>: Smarty templates are used
 to generate all of the HTML pages presented by the web-based
 collections browser. *VERIFY THIS*</p>
-<p><em>Obtained from</em>: http://www.smarty.net/</p>
+<p><em>Obtained from</em>: <a href="http://www.smarty.net/" target="_blank">http://www.smarty.net/</a></p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:&nbsp;
 2.6.18<br />
 </p>
@@ -262,7 +273,7 @@ those code modules, in svn/trunk/api and svn/trunk/libs/ontology<br />
 requesting new passwords be emailed.&nbsp; Sharing personal
 annotations - sending URLs to personally-created sets via
 email.&nbsp; *VERIFY THIS - AND ANY OTHERS?*</p>
-<p><em>Obtained from</em>: http://www.xpertmailer.com/</p>
+<p><em>Obtained from</em>: <a href="http://www.xpertmailer.com/" target="_blank">http://www.xpertmailer.com/</a></p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 Delphi's installation of the XPertMailer package is provided as a
 collection of PHP code (".php") files in /trunk/libs/XPM</p>
@@ -280,25 +291,25 @@ and expandable "trees" of links to facets that can be browsed, are
 handled via JavaScript.&nbsp; In Delphi, a great deal of this
 JavaScript code makes calls to functions provided by jQuery, and its
 user interface library, jQuery UI (below).&nbsp; *VERIFY THIS*</p>
-<p><em>Obtained from</em>: http://jquery.com/</p>
+<p><em>Obtained from</em>: <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:<br />
 </p>
 <p><em>Latest version</em>: 1.2.6 (released
 2008-05-24)</p>
 <p><em>Licensing terms</em>:</p>
-<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;A collection of JavaScript (".js") files in svn/trunk/libs/jquery<em><br />
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;A
+collection of JavaScript (".js") files in svn/trunk/libs/jquery<em><br />
 </em></p>
 <em>Issues (very rough notes, needs cleanup, needs entry of
 and/or references to bugs in Google Code)</em>:
-<p><span style="background-color: rgb(255, 255, 215);">Mention
+<p><span class="comment highlight">Mention
 performance concerns in building the trees and links.&nbsp; (One
 suggested approach was to further restrict the 'genericity' levels -
 easier for location, more difficult for other facets) or more generally
-to prune trees both top and bottom before handing off to jQuery.) -Aron
-Roberts 10/21/08 3:51 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">Note
+to prune trees both top and bottom before handing off to jQuery.)</span></p>
+<p><span class="comment highlight">Note
 home page issue regarding possibly not generating simplified
-(mod_rewrite-handled) URLs in links. -Aron Roberts 10/21/08 3:51 PM</span><br />
+(mod_rewrite-handled) URLs in links.</span><br />
 </p>
 <h4>jQuery UI</h4>
 <p><em>Description</em>: Built on jQuery (above),
@@ -310,20 +321,20 @@ respond to a user's behavior on a page, such as mouse clicks and drags.</p>
 <p><em>Use in Delphi</em>: One of the widgets used
 heavily by Delphi is the jQuery UI "accordion" widget, "an
 expandable/collapsible content pane." *VERIFY THIS*</p>
-<p><em>Obtained from</em>: http://ui.jquery.com/</p>
+<p><em>Obtained from</em>: <a href="http://ui.jquery.com/" target="_blank">http://ui.jquery.com/</a></p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 A collection of JavaScript (".js") files in /trunk/libs/jquery</p>
 <h4><strong>Zoomify</strong></h4>
 <p>(placeholder - also need to determine which package is in use)</p>
-<p><em>Obtained from</em>: http://www.zoomify.com/</p>
+<p><em>Obtained from</em>: <a href="http://www.zoomify.com/" target="_blank">http://www.zoomify.com/</a></p>
 <p>Licensing:</p>
-<p><span style="background-color: rgb(255, 255, 215);">Patrick
+<p><span class="comment highlight">Patrick
 2008-10-23: I have a personal license for the Zoomify runtime that
 entitles me to redistribute it. I used this when consulting to the
 museum, and I think it holds for the PAHMA deployment, but I doubt that
 it holds for the Delphi project. Will have to straighten this out as
 well. We may have to tell deployers to get the runtime from Zoomify
-(they allow redist for any users). -Aron Roberts 10/23/08 12:42 PM</span></p>
+(they allow redist for any users).</span></p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 A single Adobe Shockwave (".swf") file in /trunk/libs/zoom</p>
 <h4>CSS</h4>
@@ -346,15 +357,15 @@ such as the "class" and "id" attributes that uniquely identify various
 HTML elements, that allow those elements to be styled, colored, and
 positioned on the page through the use of CSS stylesheets.</p>
 <p><em>Obtained from</em>:&nbsp; As a technology,
-CSS is documented at http://www.w3.org/Style/CSS/</p>
+CSS is documented at <a href="http://www.w3.org/Style/CSS/" target="_blank">http://www.w3.org/Style/CSS/</a></p>
 <p>(Random notes)</p>
 <p>Support for CSS is built into all modern web
 browsers.&nbsp; There are some variances in support for CSS
 features, and in the rendering of Web pages based those features, in
 different Web browsers.&nbsp; However, over time, there has been a
-trend toward more uniform support for CSS among browsers.&nbsp; <span style="background-color: rgb(255, 255, 215);">Another recent
+trend toward more uniform support for CSS among browsers.&nbsp; <span class="comment highlight">Another recent
 trend is the growing adoption of version 3 of the CSS specification
-(CSS 3). -Aron Roberts 10/23/08 11:53 AM</span></p>
+(CSS 3).</span></p>
 <p>Nearly all aspects of the presentation of the collections
 browser's web pages can be customized simply by changing styles in CSS
 stylesheets, along with replacing static image files.&nbsp;
@@ -364,13 +375,12 @@ instance, if it is desired to change the format of certain lists of
 results returned from searching or browsing ...</p>
 <p><em>Issues (very rough notes, needs cleanup, needs entry
 of and/or references to bugs in Google Code)</em>:</p>
-<p><span style="background-color: rgb(255, 255, 215);">The
-collections browser currently uses a single large CSS file, style.css.
--Aron Roberts 10/21/08 7:22 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">Opportunities
+<p><span class="comment highlight">The
+collections browser currently uses a single large CSS file, style.css.</span></p>
+<p><span class="comment highlight">Opportunities
 to parameterize the CSS file(s), for instance to allow one or more
 theme colors to be provided externally, rather than being hard-coded as
-values in the stylesheet. -Aron Roberts 10/21/08 7:22 PM</span><br />
+values in the stylesheet.</span><br />
 </p>
 <h2>
 2. A data repository
@@ -388,7 +398,7 @@ projects which have no restricted data, modest storage requirements,
 and no complex database design issues. It includes a single production
 environment with limited support."&nbsp; For more information
 regarding this service, please see
-http://ist.berkeley.edu/services/catalog/database/mysql</p>
+<a href="http://ist.berkeley.edu/services/catalog/database/mysql" target="_blank">http://ist.berkeley.edu/services/catalog/database/mysql</a></p>
 <p>In the three-tier model of the IST Unix Web Farm, it is
 possible to have separate instances of databases, such as MySQL
 databases, available to each of the tiers.&nbsp; This way,
@@ -410,15 +420,15 @@ hosting environment at UC Berkeley *VERIFY THIS*, and is often provided
 in other web hosting environments that support PHP.&nbsp;
 phpMyAdmin can also be obtained from http://www.phpmyadmin.net&nbsp;</p>
 <p>(Rough notes)</p>
-<p><span style="background-color: rgb(255, 255, 215);">In
+<p><span class="comment highlight">In
 a separate document linked from here, discuss the database schema -
-look for descriptive text, diagrams. -Aron Roberts 10/21/08 10:13 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">All
+look for descriptive text, diagrams.</span></p>
+<p><span class="comment highlight">All
 tables created in MySQL using the .sql files in /trunk/schema use the
 default MyISAM storage engine,
-http://dev.mysql.com/doc/refman/5.0/en/myisam-storage-engine.html -Aron
-Roberts 10/21/08 10:13 PM<br />
-</span></p>
+http://dev.mysql.com/doc/refman/5.0/en/myisam-storage-engine.html
+</span><br />
+</p>
 <h2>3. Back-end tools</h2>
 (Placeholder text; need to incorporate Patrick's process descriptions,
 better summaries of this analysis data mining work from the I-School
@@ -442,7 +452,7 @@ staff.&nbsp; These extracts to date have typically consisted of
 between one and eight separate files.</p>
 <p>This data is then provided to Delphi's administrators, who
 process the data using these back-end tools.&nbsp; These tools must
-be run manually – in batch mode – and in a particular
+be run manually - in batch mode - and in a particular
 sequence.&nbsp; A Java-based GUI application, MainApp, provides a
 unified control panel for many of these tools; its menu options provide
 some guidance for what steps must be performed, and in what
@@ -477,7 +487,6 @@ they build new data that ...</p>
 fields, all of which may correspond to a particular concept or
 sub-concept.&nbsp; This helps tie together sets of related
 artifacts whose metadata wouldn't otherwise make clear their similarity.</p>
-
 </li>
 <li>Scanning this metadata and determining what concepts
 ("facets") in a previously-developed mental model ("ontology") apply to
@@ -499,15 +508,16 @@ outside PAHMA this model will likely need to be changed.</p>
 concepts in the mental model, and text that appears in one or more of
 the fields of the data ("metadata") for each of the artifacts in the
 collection, is maintained as ... XML ...</p>
-
 </li>
-<li>Load the data – about the artifacts in the collection, the
+<li>Load the data - about the artifacts in the collection,
+the
 associations between artifacts and their associated concepts, and the
-mental model that defines those concepts – into a data
+mental model that defines those concepts - into a data
 repository.&nbsp; This allows the data to be flexibly accessed at
 high speed.</li>
 </ul>
-<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp; <em><br />
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
+<em><br />
 </em><br />
 svn/trunk/ontologies<br />
 svn/trunk/schemas<br />
@@ -516,16 +526,16 @@ svn/trunk/tools</p>
 </em></p>
 <em>Issues (very rough notes, needs cleanup, needs entry of
 and/or references to bugs in Google Code)</em>:
-<p><span style="background-color: rgb(255, 255, 215);">The
+<p><span class="comment highlight">The
 Java-based application that provides access to various back-end modules
 may be enabling certain menu options, that allow and/or guide work to
-be performed out of sequence. -Aron Roberts 10/22/08 3:52 PM</span></p>
-<p><span style="background-color: rgb(255, 255, 215);">It
+be performed out of sequence.</span></p>
+<p><span class="comment highlight">It
 would be desirable if updates to the data in the repository could occur
 more frequently, to be more responsive to ongoing changes to the
 museum's collections.&nbsp; This might require changes both in the
 museum's processes and in the back-end tools and workflows.&nbsp;
 For instance, the current load scripts wipe out ("drop"), recreate, and
 reload database tables with new data, rather than performing a set of
-inserts, updates, and deletions. -Aron Roberts 10/22/08 3:58 PM</span></p>
+inserts, updates, and deletions.</span></p>
 </body></html>

@@ -1,0 +1,31 @@
+/*
+  Stylesheet for HTML documentation of the Delphi Project
+  as maintained on the project's site on Google Code.
+
+  Last checked in by: $Author: aron $
+  At: $Date: 2008-10-23 15:23:16 -0700 (Thu, 23 Oct 2008) $
+*/
+
+/* Styles applied to standard HTML markup */
+ 
+ body
+   { background-color: white; }
+ 
+ h1, h2, h3, h4, h5, h6
+   { font-family: Verdana, Arial, sans-serif; 
+     color: #333333; }
+        
+ p
+   { font-family: Georgia, serif; } 
+
+ code
+   { font-family: "Courier New", Courier, monospace; }
+
+ /* Styles which may be applied via class or id attributes, or span or div tags */
+
+ .comment
+   { color: gray; }
+
+ .highlight
+   { background: #ffffcc; }
+
