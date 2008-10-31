@@ -1,22 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Back-end Tools</title>
-
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+<title>Delphi - Deployment - Back-end Tools</title>
+<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
+<!--
+Last committed revision:
+$Author: aron $
+$Date: 2008-10-23 15:23:16 -0700 (Thu, 23 Oct 2008) $
+$Revision: 504 $
+-->
 </head>
 <body>
 <h1>Deploying Delphi: Back-end Tools</h1>
 The Delphi Project incorporates a set of back-end tools for processing
 and analyzing data about the artifacts in the
-collection, and to load this data into a data repository.<br /><br />The
+collection, and to load this data into a data repository.<br />
+<br />
+The
 goal of this processing and analysis is to build a "semantic index,"
 which associates a set of concepts from a mental model ("ontology")
-with each artifact. &nbsp;That way, the collection can be searched or
+with each artifact. &nbsp;That way, the collection can be searched
+or
 browsed by these concepts - such as culture, use or context, material,
 and design - in addition to the data ("metadata") already available for
 the artifact.<br />
 <br />
 These back-end tools are used to carry out the following processes, all
-of which are necessary to build the semantic index: &nbsp;*THIS IS A
+of which are necessary to build the semantic index: &nbsp;*THIS IS
+A
 PLACEHOLDER AND ONLY PARTLY ACCURATE LIST*<br />
 <ol>
 <li>Retrieving data ("metadata") from the collection(s).<br />
@@ -28,7 +39,10 @@ PLACEHOLDER AND ONLY PARTLY ACCURATE LIST*<br />
 <li>Merging data.<br />
 <br />
 </li>
-<li>Building and maintaining the mental model ("ontology").<br /><br /></li><li>Associating concepts from that model with each artifact.</li>
+<li>Building and maintaining the mental model ("ontology").<br />
+<br />
+</li>
+<li>Associating concepts from that model with each artifact.</li>
 </ol>
 <p>The
 following notes are specific to the instance of Delphi for the Phoebe
@@ -43,7 +57,8 @@ the collection.<br />
 <br />
 PAHMA stores data about the artifacts in its collections in a content
 management system, <a href="http://www.gallerysystems.com/products/tms.html" target="_blank">The Museum System</a> (TMS) by Gallery
-Systems (http://www.gallerysystems.com/products/tms.html). &nbsp;TMS uses Microsoft SQL Server as a back-end
+Systems (http://www.gallerysystems.com/products/tms.html).
+&nbsp;TMS uses Microsoft SQL Server as a back-end
 relational database management system.<br />
 <br />
 At one point in the
@@ -119,32 +134,47 @@ If all new CU items to obj not uniformly across DB.<br />
 <h2>2. Cleaning up the data</h2>
 The data that comes in from PAHMA requires some cleanup before it can
 be provided for public access via Delphi's collections browser.
-<br /><br />(Background - may not be necessary to discuss this here ...) The characteristics of this data vary throughout the
+<br />
+<br />
+(Background - may not be necessary to discuss this here ...) The
+characteristics of this data vary throughout the
 collections, making this cleanup necessary. &nbsp;Annotations about
 the objects in PAHMA's collections have been made by many different
 people, over a period of more than a century, and in recent years some
 of this data was imported from a variety of data repositories, each
 with their own ideosyncracies.<br />
 <br />
-There are several types of&nbsp;problematic data that must be cleaned:<ul><li>Noise data.<br />
+There are several types of&nbsp;problematic data that must be
+cleaned:
+<ul>
+<li>Noise data.<br />
 <br />
-Generally this is internal data, of interest primarily to institutional staff, rather than to the public. &nbsp;While
-valuable in its own right, this data does not describe the characteristics of an artifact and therefore is not
-useful in associating concepts with that artifact.<br /><br />Examples
+Generally this is internal data, of interest primarily to institutional
+staff, rather than to the public. &nbsp;While
+valuable in its own right, this data does not describe the
+characteristics of an artifact and therefore is not
+useful in associating concepts with that artifact.<br />
+<br />
+Examples
 include notations about an artifact having been examined by a
 particular anthropologist or other expert, or reviewed by a committee.
 &nbsp;Attribution notes, tracking notes or notations for accounting
 review are other representative examples.<br />
 <br />
-Noise data is generally removed outright ("elided"), in a process generically termed "noise reduction."<br />
+Noise data is generally removed outright ("elided"), in a process
+generically termed "noise reduction."<br />
 <br />
 </li>
 <li>Confidential or sensitive data.<br />
 <br />
-This includes prices paid for objects, detailed storage locations and donor names.<br />
+This includes prices paid for objects, detailed storage locations and
+donor names.<br />
 <br />
-Confidential or sensitive data is generally either obfuscated or anonymized - for instance, prices are
-obfuscated with placeholder values like '$##.##' or '&#8364;##.##' - so that sentence structures can remain intact.<br /><br />
+Confidential or sensitive data is generally either obfuscated or
+anonymized - for instance, prices are
+obfuscated with placeholder values like&nbsp;<code>$##.##</code> or&nbsp;<code>&#8364;##.##</code> - so that
+sentence structures can remain intact.<br />
+<br />
 </li>
 <li>Problematic character data.<br />
 <br />
@@ -153,44 +183,70 @@ character sets. &nbsp;'Smart' (curly) quote marks, em- and
 en-dashes, and ... &nbsp;<br />
 <br />
 Problematic character data is generally encoded as XML entities.
-&nbsp;*VERIFY THIS*<br /><br />(Placeholder)
+&nbsp;*VERIFY THIS*<br />
+<br />
+(Placeholder)
 Note that some XML entities need to be further transformed within PHP,
 when preparing data for output on web pages, to avoid various display
-issues.<br /></li>
-</ul><h3>Performing the cleanup</h3>This cleanup is currently performed
-using one or more 'sed' scripts on Patrick's workstation. &nbsp;sed is
+issues.<br />
+</li>
+</ul>
+<h3>Performing the cleanup</h3>
+This cleanup is currently performed
+using one or more 'sed' scripts on Patrick's workstation. &nbsp;sed
+is
 a text processing tool that includes the ability to use regular
-expressions patterns to transform text. &nbsp;It comes standard with
-Unix-like systems&nbsp;, and is available for other operating systems.
-&nbsp;For more background on sed, please see this&nbsp;<span style="text-decoration: underline;"></span><a href="http://en.wikipedia.org/wiki/Sed" target="_blank">Wikipedia article</a> (http://en.wikipedia.org/wiki/Sed).<br /><br />Most
+expressions patterns to transform text. &nbsp;It comes standard
+with
+Unix-like systems&nbsp;, and is available for other operating
+systems.
+&nbsp;For more background on sed, please see this&nbsp;<span style="text-decoration: underline;"></span><a href="http://en.wikipedia.org/wiki/Sed" target="_blank">Wikipedia
+article</a> (http://en.wikipedia.org/wiki/Sed).<br />
+<br />
+Most
 of the processing performed by these scripts uses either of two
 types of regular expression rules: finding and replacing text, or
 deleting any text if a match is found (as is done with noise data).
-&nbsp;These rules have been commented, both to describe their purpose
+&nbsp;These rules have been commented, both to describe their
+purpose
 and to summarize what text substitutions or deletions they are
-performing.<br /><br />Due to the
+performing.<br />
+<br />
+Due to the
 potential sensitivity of their contents, these sed scripts are not
 currently managed under version control, nor are there copies in the
-'pahma' account on the IST Unix Web Farm.<br /><br />
+'pahma' account on the IST Unix Web Farm.<br />
+<br />
 <span style="font-style: italic;">To do note</span>:
-At Patrick's suggestion, Aron will look into whether these scripts might be
+At Patrick's suggestion, Aron will look into whether these scripts
+might be
 securely stored in the Subversion repository associated with that IST
 Unix Web Farm account. &nbsp;Although that repository is primarily
 intended for migrations between Web Farm tiers, it could also be used
 for an auxiliary purpose like this.
-<br /><br />
+<br />
+<br />
 <span style="font-style: italic;">Notes regarding possible
 future enhancements:</span><br />
-<br />Use a rules processing engine, along with a configuration
+<br />
+Use a rules processing engine, along with a configuration
 file:&nbsp; Patrick Schmitz has suggested that the cleanup process
-could be made more general and configurable <br /><br />http://code.google.com/p/delphi-museum-project/wiki/DataImportNotes<br /><br />
+could be made more general and configurable <br />
+<br />
+http://code.google.com/p/delphi-museum-project/wiki/DataImportNotes<br />
+<br />
 Question to self: Does the cleanup process also involve tokenizing the
 data, or is this a separate step? &nbsp;See Patrick's
 "Documentation Needs" notes.<br />
 <br />
 <h2>3. Merging data</h2>
-Merging data from multiple database dump files<br /><br />Handling duplicate records for certain artifacts<br /><br />Merging data from individual facet files<br />
-<h2>4. Building and maintaining the mental model</h2><span style="font-weight: bold;">Exclusions</span>
+Merging data from multiple database dump files<br />
+<br />
+Handling duplicate records for certain artifacts<br />
+<br />
+Merging data from individual facet files<br />
+<h2>4. Building and maintaining the mental model</h2>
+<span style="font-weight: bold;">Exclusions</span>
 (catalog ID, token ); e.g.<br />
 <br />
 (50184,"pine cones"),<br />
@@ -225,7 +281,8 @@ found in the text annotations about artifacts in the collection, with
 one or more <span style="font-weight: bold;">categories</span>
 in the mental model ("ontology").<br />
 <br />
-Example: the tokens above are all associated, via common IDs in each database table, with the
+Example: the tokens above are all associated, via common IDs in each
+database table, with the
 following categories:<br />
 <br />
 (50006,null,"FigurativeOrRepresentational","Figurative or
@@ -252,8 +309,15 @@ Color<br />
 <br />
 Each of these facets in turn contains a set of categories<br />
 (there is one default category <br />
-<br /><h2>5. Associating concepts from the mental model with each artifact.</h2>Tokenizing the annotations<br /><br />Creating <br /><br />
-<span style="font-weight: bold;"></span>truncate facets;<br />
+<br />
+<h2>5. Associating concepts from the mental model with each
+artifact.</h2>
+Tokenizing the annotations<br />
+<br />
+Creating <br />
+<br />
+<span style="font-weight: bold;"></span>truncate
+facets;<br />
 INSERT INTO facets( id, name, display_name, description, notes ) VALUES<br />
 (50000,"TechniqueDesignorDecoration","Technique, Design or Decoration",
 'This fa<br />
