@@ -18,6 +18,13 @@
  p
    { font-family: Georgia, serif; } 
 
+ p.linkback
+   { font-size:0.75em; } 
+
+ p.linkback.right
+   { text-align:right; padding-bottom:-10px;} 
+
+
  code
    { font-family: "Courier New", Courier, monospace; }
 
@@ -28,4 +35,14 @@
 
  .highlight
    { background: #ffffcc; }
+
+ div.draftnote
+   { font-style:italic;
+		 border: 1px black solid; padding:1px 20px 1px 20px; background-color: #FFFF99; }
+	 
+/* Styles applied (only) to screen display */
+
+@media screen {
+  body { padding: 0.25in 0.5in 0.25in 0.5in; }
+  }
 
