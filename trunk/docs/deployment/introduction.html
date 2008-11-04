@@ -1,16 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
-<title>Delphi - Deployment - Introduction</title>
-<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
-<!--
+
+<title>Delphi - Deployment - Introduction</title><link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" /><!--
 Last committed revision:
 $Author$
 $Date$
 $Revision$
--->
-</head>
+--></head>
+
 <body>
 <h1>Deploying Delphi: Introduction</h1>
 <div class="draftnote">
@@ -44,12 +42,28 @@ at the University of California, Berkeley.<br />
 Delphi, at an institution other than PAHMA.</li>
 </ul>
 <h2>Deployment components</h2>
-<p>A Delphi collections browser is supported by a database, some PHP libraries 
-and PHP-driven content and template files. To learn more about the browser 
-support, see <a href="components.html">Deploying Delphi: Components</a>.</p>
-<h2>Back end tools</h2>
-<p>A java application provides support for text analysis, semantic indexing, and 
-related support to build and maintain the database that supports the online 
-browser. To learn more about this, see <a href="back-end-tools.html">Deploying 
-Delphi: Back-end Tools.</a></p>
+<p>Delphi has three major components:<br /></p><ol><li>
+<strong>T</strong><span style="font-weight: bold;">he Delphi "collections browser,"</span>
+a web-based application that allows virtual museum visitors to explore
+the museum's collections over
+the Internet. &nbsp;Visitors can browse and search the collections
+using concepts such as culture and materials, as well as using
+traditional search terms.<br /></li><li>
+<strong>A data repository</strong><span style="font-family: Georgia,serif;"> is accessed by the collections browser. &nbsp;This repository stores </span>the
+data about the
+artifacts in the collections ("metadata"), as well as a semantic index
+containing the associations between each artifact and the set of
+concepts that pertain to it.<br /><br /></li><li><strong>A set of back-end tools </strong>build and maintain the data in the data repository. &nbsp;Thereafter, that data is accessed directly by the collections browser.</li></ol><h2>Collections browser<br /></h2><p>The
+Delphi collections browser is supported by PHP libraries and PHP-driven
+content and template files. &nbsp;It also accesses data in a repository
+- a MySQL database - whose contents are maintained using a set of
+back-end tools.<br /><br />To learn more about the collections browser and its sub-components, see <a href="components.html">Deploying Delphi: Components</a>. &nbsp;(Change this to Deploying Delphi: Collections browser.)</p><h2>Data repository</h2>
+...<br /><br />To learn more about the data repository, see ...<h2>Back-end tools</h2>
+<p>A Java application provides support for text analysis, semantic
+indexing, and related support to build and maintain the database that
+supports the online browser. &nbsp;A 'sed' script is also used to
+perform some initial data cleanup, required before this set of
+processes can take place.<br /><br />To learn more about these back-end tools, see <a href="back-end-tools.html">Deploying 
+Delphi: Back-end Tools.<br /><br /></a><br /><a href="back-end-tools.html"></a></p>
+<h2></h2><p><a href="back-end-tools.html"></a></p>
 </body></html>
