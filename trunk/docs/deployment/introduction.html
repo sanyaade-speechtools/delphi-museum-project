@@ -1,23 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Introduction</title>
 
-<title>Delphi - Deployment - Introduction</title><link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" /><!--
+<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
+<!--
 Last committed revision:
 $Author$
 $Date$
 $Revision$
---></head>
-
+-->
+</head>
 <body>
 <h1>Deploying Delphi: Introduction</h1>
 <div class="draftnote">
-<p>This is a draft page, in ongoing development. It is still rough, but we are exposing it to the community
-for review and to help anyone considering a Delphi deployment. We are actively updating all of the documentation, 
-so it is best to use this resource online, rather than printing out a version.</p>
+<p>This is a draft page, in ongoing development. It is still
+rough, but we are exposing it to the community
+for review and to help anyone considering a Delphi deployment. We are
+actively updating all of the documentation, so it is best to use this
+resource online, rather than printing out a version.</p>
 </div>
 <p>
-This is an overview of the deployment of Delphi, an open source
+This is an introduction to and overview of the deployment of Delphi, an open source
 software system that helps open up access via the Web to collections of
 artifacts held by museums, historical societies, archeological
 repositories and similar heritage institutions.</p>
@@ -27,7 +30,9 @@ make it more effective and enjoyable to find individual artifacts in
 collections, and to uncover relationships between artifacts, than is
 possible through traditional searching and browsing.</p>
 <p>
-To learn more about Delphi, see Delphi: Bibliography (TBD).
+To learn more about Delphi, see <a href="../bibliography.html">Delphi
+-
+Bibliography</a> (TBD).
 </p>
 <p>
 This deployment overview serves two purposes:
@@ -39,31 +44,173 @@ at the University of California, Berkeley.<br />
 <br />
 </li>
 <li>To make it easier to deploy and run your own instance of
-Delphi, at an institution other than PAHMA.</li>
+Delphi, at an institution other than PAHMA.<br />
+<br />
+</li>
 </ul>
 <h2>Deployment components</h2>
-<p>Delphi has three major components:<br /></p><ol><li>
-<strong>T</strong><span style="font-weight: bold;">he Delphi "collections browser,"</span>
-a web-based application that allows virtual museum visitors to explore
+<p>There are three major components to the current Delphi
+deployment used by the Phoebe A. Hearst Museum of Anthropology (PAHMA)
+at the University of California, Berkeley. &nbsp;These
+components, along with their associated
+sub-components, will also be present in any
+highly similar instances of Delphi that are deployed and run outside
+PAHMA:</p>
+<strong></strong>
+<ul>
+<li><strong>T</strong><span style="font-weight: bold;">he Delphi "collections browser,"</span>
+a web-based application, allows virtual museum visitors to explore
 the museum's collections over
-the Internet. &nbsp;Visitors can browse and search the collections
-using concepts such as culture and materials, as well as using
-traditional search terms.<br /></li><li>
-<strong>A data repository</strong><span style="font-family: Georgia,serif;"> is accessed by the collections browser. &nbsp;This repository stores </span>the
-data about the
-artifacts in the collections ("metadata"), as well as a semantic index
+the Internet.<br />
+<br />
+</li>
+<li><strong>A data repository</strong><span style="font-family: Georgia,serif;"> stores the data that
+is&nbsp;accessed by the collections browser.<br />
+<br />
+This includes </span>data about the
+artifacts in the collections ("metadata"), plus a "semantic index"
 containing the associations between each artifact and the set of
-concepts that pertain to it.<br /><br /></li><li><strong>A set of back-end tools </strong>build and maintain the data in the data repository. &nbsp;Thereafter, that data is accessed directly by the collections browser.</li></ol><h2>Collections browser<br /></h2><p>The
-Delphi collections browser is supported by PHP libraries and PHP-driven
-content and template files. &nbsp;It also accesses data in a repository
-- a MySQL database - whose contents are maintained using a set of
-back-end tools.<br /><br />To learn more about the collections browser and its sub-components, see <a href="components.html">Deploying Delphi: Components</a>. &nbsp;(Change this to Deploying Delphi: Collections browser.)</p><h2>Data repository</h2>
-...<br /><br />To learn more about the data repository, see ...<h2>Back-end tools</h2>
-<p>A Java application provides support for text analysis, semantic
+concepts that pertain to it.<br />
+<br />
+</li>
+<li><strong>A set of back-end tools</strong>
+process the data obtained from the museum, and load the data into the
+data repository.<br />
+</li>
+</ul>
+More detail about each of these three major components follows:
+<h3>Collections browser<br />
+</h3>
+<p>The Delphi "collections browser," a web-based
+application,&nbsp;allows virtual museum visitors to explore the
+museum's collections over
+the web.&nbsp; Visitors can search for artifacts, via both concepts
+and keywords, and can interactively browse their various "facets" (e.g.
+location, culture, materials).</p>
+<p><span class="comment highlight">Decide
+whether, and if so how, to introduce the personal annotation and
+community curation aspects of Delphi here.</span></p>
+<p>The collections browser currently runs
+in the Apache Web Server and at its core consists of PHP-driven content
+and template files, supported by PHP libraries; JavaScript code and
+libraries; CSS style sheets, and a Flash-based tool to allow users to
+zoom-and-pan through images.<br />
+</p>
+<p>To learn more about the collections, see <a href="collections-browser.html">Deploying Delphi:
+Collections Browser</a>.</p>
+<h3>Data repository</h3>
+<p>The data repository contains the data that is accessed by the
+collections browser. &nbsp;This data is also sometimes used for
+reporting and other
+purposes.<br />
+<br />
+Currently, the data repository is a MySQL relational
+database. &nbsp;Delphi can also potentially use other relational
+database software, or in the future, a "triple store" or other type of
+database-like repository. <br />
+<br />
+The data repository stores two types of data:<br />
+</p>
+<ul>
+<li>Data about
+artifacts in the collections ("metadata").<br />
+<br />
+<span style="font-style: italic;">Purposes of this data</span>:
+&nbsp;This data is displayed when the Delphi collections browser
+provides details about individual artifacts.<br />
+<br />
+In
+addition, this data is "mined," via natural language processing, to
+help build a set of concepts that more fully describe the collection
+and then to associate those concepts with each of the individual
+artifacts in the collections.<br />
+<br />
+<span style="font-style: italic;">Source of this data</span>:
+&nbsp;In the instance of Delphi used by PAHMA, this metadata comes
+directly from that museum. &nbsp;Future instances of Delphi at
+other
+sites will obtain this data from their own museums or heritage
+institutions. &nbsp;The format of this data will vary, depending on
+how
+the museum or heritage institution stores the met about its collections.<br />
+<br />
+</li>
+<li>Data about the concepts associated with these artifacts (a
+"semantic index").<br />
+<br />
+<span style="font-style: italic;">Purpose of this data</span>:
+&nbsp;This data helps users of Delphi's collections browser locate
+artifacts by concepts, and help uncover relationships between artifacts.<br />
+<br />
+<span style="font-style: italic;">Source of this data</span>:
+This data is generated by Delphi's back-end tools (below), based on the
+data provided by the museum. &nbsp; &nbsp;Future instances of
+Delphi at
+other sites will build their own ontologies.</li>
+</ul>
+To learn more about the data repository, see <a href="data-repository.html">Deploying Delphi: Data Repository</a>.
+<h3>Back-end tools</h3>
+A set of back-end tools are used to take the data received from
+PAHMA, process that data, and load it into the data repository.<br />
+<p>There are currently two back-end tools:<br />
+</p>
+<ul>
+<li>A 'sed' script for initial cleanup of the data.<br />
+<br />
+</li>
+<li>A Java-based, GUI application for further processing of the
+cleaned
+data.<br />
+<br />
+This application provides support for text analysis, semantic
 indexing, and related support to build and maintain the database that
-supports the online browser. &nbsp;A 'sed' script is also used to
-perform some initial data cleanup, required before this set of
-processes can take place.<br /><br />To learn more about these back-end tools, see <a href="back-end-tools.html">Deploying 
-Delphi: Back-end Tools.<br /><br /></a><br /><a href="back-end-tools.html"></a></p>
-<h2></h2><p><a href="back-end-tools.html"></a></p>
+supports the online browser. &nbsp;Delphi's administrators and
+others to
+analyze and process data about the artifacts in the collection - both
+metadata and semantic index data - and to load this data into the data
+repository.<br />
+<br />
+<span class="comment highlight">The above paragraph
+needs rewriting for clarity, and to merge similar ideas found in both
+of its sentences.</span></li>
+</ul>
+<p>Currently,
+these tools are used manually, in batch mode. &nbsp;Each of the
+back-end
+processes must also be run in a specific sequence, one after
+another.&nbsp;
+Future Delphi enhancements
+may automate some of these back-end processes.</p>
+<p>
+To learn more about these back-end tools, see <a href="back-end-tools.html">Deploying Delphi: Back-end Tools</a>.</p>
+<h2>Other Delphi
+components</h2>
+<p>In addition to the
+three deployment-related components listed
+above, there are two closely-related support components of the Delphi
+project:</p>
+<ul>
+<li><span style="font-weight: bold;">The code
+repository
+for the project</span>,
+where its source code, templates,
+configuration
+files, libraries, and other files are stored, and its issues are
+tracked.<br />
+<br />
+For more information about the code repository, see <a href="../code-repository.html">Delphi: Code Repository</a>.<br />
+<br />
+For a related discussion
+of the hierarchical organization of the code and other artifacts for
+the Delphi project, see <a href="../code-layout.html">Delphi:
+Code Layout</a>.<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">Documentation
+about the project</span>.<br />
+<br />
+For links to this documentation, including papers and articles,
+see&nbsp;<a href="../bibliography.html">Delphi -
+Bibliography</a> (TBD).</li>
+</ul>
 </body></html>
