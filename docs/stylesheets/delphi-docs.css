@@ -22,11 +22,17 @@
    { font-size:0.75em; } 
 
  p.linkback.right
-   { text-align:right; padding-bottom:-10px;} 
-
+   { text-align:right; padding-bottom:-10px;}
 
  code
    { font-family: "Courier New", Courier, monospace; }
+   
+ dt
+   { font-family: "Courier New", Courier, monospace; }
+
+ dd
+   { font-size: 0.97em;
+     margin-bottom: 0.5em }
 
  /* Styles which may be applied via class or id attributes, or span or div tags */
 
@@ -42,6 +48,7 @@
 	 
 /* Styles applied (only) to screen display */
 
+/* Indent slightly from window margins */
 @media screen {
   body { padding: 0.25in 0.5in 0.25in 0.5in; }
   }
