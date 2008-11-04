@@ -1,15 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
-<title>Delphi - Deployment - Back-end Tools</title>
-<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
-<!--
+
+<title>Delphi - Deployment - Back-end Tools</title><link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" /><!--
 Last committed revision:
 $Author$
 $Date$
 $Revision$
--->
-</head>
+--></head>
 <body>
 <p class="linkback right"><a href="introduction.html">Back to Introduction</a></p>
 <h1>Deploying Delphi: Back-end Tools</h1>
@@ -17,12 +15,44 @@ $Revision$
 <p>This is a draft page, in ongoing development. It is still rough, but we are exposing it to the community
 for review and to help anyone considering a Delphi deployment. We are actively updating all of the documentation, 
 so it is best to use this resource online, rather than printing out a version.</p>
-</div>
-<p></p>The Delphi Project incorporates a set of back-end tools for processing
-and analyzing data about the artifacts in the
-collection, and to load this data into a data repository.<br />
+</div><br /><span class="comment highlight">NOTE: This is a placeholder
+document at present, and is extremely rough - consisting of a set of
+un-connected notes, which are also known to have many inaccuracies and
+omissions, as well as numerous overlapping repetitions of content.<br /><br />All of the content below the horizontal line, below should be assumed to be unfinished and not to be relied upon.</span><br /><p>This is an overview of the back-end tools in Delphi, an
+open source
+software system that helps open up access via the Web to collections of
+artifacts held by museums, historical societies, archeological
+repositories and similar heritage institutions.</p><p>The
+Delphi Project includes a set of back-end tools for cleaning up,
+analyzing and processing data about the artifacts in an institution's
+collections, and loading this data into a data repository.<br /></p><p>There are currently two back-end tools:<br />
+</p>
+<ul><li>A 'sed' script for initial cleanup of the data.<br />
 <br />
-The
+</li><li>A Java-based, GUI application for further processing of the
+cleaned
+data.<br />
+<br />
+This application provides support for text analysis, semantic
+indexing, and related support to build and maintain the database that
+supports the online browser. &nbsp;Delphi's administrators and
+others to
+analyze and process data about the artifacts in the collection - both
+metadata and semantic index data - and to load this data into the data
+repository.<br />
+<br />
+<span class="comment highlight">The above paragraph
+needs rewriting for clarity, and to merge similar ideas found in both
+of its sentences.</span></li></ul>
+<p>Currently,
+these tools are used manually, in batch mode. &nbsp;Each of the
+back-end
+processes must also be run in a specific sequence, one after
+another.&nbsp;
+Future Delphi enhancements
+may automate some of these back-end processes.</p><span class="comment highlight"></span><br />
+<hr />
+<br />The
 goal of this processing and analysis is to build a "semantic index,"
 which associates a set of concepts from a mental model ("ontology")
 with each artifact. &nbsp;That way, the collection can be searched
@@ -32,9 +62,7 @@ and design - in addition to the data ("metadata") already available for
 the artifact.<br />
 <br />
 These back-end tools are used to carry out the following processes, all
-of which are necessary to build the semantic index: &nbsp;*THIS IS
-A
-PLACEHOLDER AND ONLY PARTLY ACCURATE LIST*<br />
+of which are necessary to build the semantic index:<br /><br /><span class="comment highlight">This is a rough placeholder for now.</span><br />
 <ol>
 <li>Retrieving data ("metadata") from the collection(s).<br />
 <br />
@@ -438,12 +466,7 @@ s.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ');
 <br />
-<br />
-<hr />
-<br />
-<br />
-<br />
-As of March 2007, the CSV files begin with a SQL INSERT statement with
+<br />As of March 2007, the CSV files begin with a SQL INSERT statement with
 a set of
 named columns, followed by a long list of values representing each of
 the database rows, and containing text annotations about the artifacts.
@@ -473,5 +496,108 @@ ill pieces are backed by many different colored fabric in solids and
 prints; asy<br />
 metrical reverse applique along sides. same basic design on back and
 front.","MO<br />
-AC/pahm00001383_22a_k.jpg",now()), ...
+AC/pahm00001383_22a_k.jpg",now()), ...<br /><br /><br /><h2>
+3. Back-end tools</h2><span class="comment highlight">Need to incorporate Patrick's process descriptions,
+better summaries of this analysis data mining work from the I-School
+report and otherwise.</span>
+<p><em>Description</em>: A set of back-end tools are
+provided for processing and analyzing data about the artifacts in the
+collection, and to load this data into a data repository.&nbsp;
+These tools are used behind the scenes, rather than being directly
+accessible to virtual museum visitors.</p>
+<p><em>Use in Delphi</em>: These back-end tools are
+used primarily to prepare data for access by the web-based collections
+browser.</p>
+<p>This data is also used for other purposes, as well.&nbsp;
+For instance, it is used to generate reports for museum staff, IT
+personnel, and researchers: to help them better understand the
+collection, find and correct errors in cataloging, and iteratively
+improve Delphi's natural language processing, among other purposes.*</p>
+<p>Currently, extracts of data from the museum's collections
+management system are created, at various intervals, by PAHMA
+staff.&nbsp; These extracts to date have typically consisted of
+between one and eight separate files.</p>
+<p>This data is then provided to Delphi's administrators, who
+process the data using these back-end tools.&nbsp; These tools must
+be run manually - in batch mode - and in a particular
+sequence.&nbsp; A Java-based GUI application, MainApp, provides a
+unified control panel for many of these tools; its menu options provide
+some guidance for what steps must be performed, and in what
+order.&nbsp; Some other tools are run separately, outside of
+MainApp.&nbsp; A proposed future enhancement to Delphi is to
+automate many parts of this back-end workflow.</p>
+<p>As an abstract, high-level overview, these back-end tools
+perform the following tasks (*VERIFY THIS -&nbsp; THIS HAS BEEN
+WRITTEN AS A PLACEHOLDER WITHOUT REFERENCING ANY DOCUMENTATION*)</p>
+<ul><li>"Cleaning up" the data ("metadata") for each of the
+artifacts in the collection.
+<p>Examples of clean-up include removing "sensitive, stale or
+otherwise undesired noise" from the metadata.&nbsp; For instance,
+sensitive data, such as donor names and the prices of artifacts, need
+to be removed before this data can be stored in the data repository.</p>
+<p>It's also helpful to be clear about what Delphi's cleanup
+work <em>doesn't</em> attempt to do.&nbsp; When many
+different people enter data about the artifacts in a collection,
+especially over a considerable period of time, there will inevitably be
+considerable variance in this data.&nbsp; Sometimes, data entered
+even for two highly similar artifacts can contain significant
+differences.&nbsp; While sets of terms ("controlled vocabularies")
+and other curatorial practices can reduce this variance, they can't
+eliminate it.&nbsp;</p>
+<p>Delphi's back-end tools generally don't try to correct or
+standardize metadata about artifacts, although Delphi's cleanup work
+and its other back-end workflows can occasionally reveal specific
+issues that can readily be addressed by curators.&nbsp; Rather,
+they build new data that ...</p>
+<p>... identify sets of terms, found in different data
+fields, all of which may correspond to a particular concept or
+sub-concept.&nbsp; This helps tie together sets of related
+artifacts whose metadata wouldn't otherwise make clear their similarity.</p>
+</li><li>Scanning this metadata and determining what concepts
+("facets") in a previously-developed mental model ("ontology") apply to
+each artifact.
+<p>By associating concepts with artifacts, this allows
+virtual museum visitors to more powerfully search and browse the
+collections than is possible by searching or browsing the metadata
+alone.&nbsp; This also helps museum staff, scholars, and others
+better understand the collections and find emerging patterns.</p>
+</li><li>Build and maintain the mental model ("ontology"),
+independently of any data about artifacts.
+<p>The mental model used in the instance of Delphi for PAHMA
+is specific to the archeological artifacts in that museum's
+collections.&nbsp; While it does contain many concepts that are
+germane to many types of artifacts, when used with instances of Delphi
+outside PAHMA this model will likely need to be changed.</p>
+<p>In Delphi's back-end tools, the association between
+concepts in the mental model, and text that appears in one or more of
+the fields of the data ("metadata") for each of the artifacts in the
+collection, is maintained as ... XML ...</p>
+</li><li>Load the data - about the artifacts in the collection,
+the
+associations between artifacts and their associated concepts, and the
+mental model that defines those concepts - into a data
+repository.&nbsp; This allows the data to be flexibly accessed at
+high speed.</li></ul>
+<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
+<em><br />
+</em><br />
+svn/trunk/ontologies<br />
+svn/trunk/schemas<br />
+svn/trunk/tools</p>
+<p><em><br />
+</em></p>
+<em>Issues (very rough notes, needs cleanup, needs entry of
+and/or references to bugs in Google Code)</em>:
+<p><span class="comment highlight">The
+Java-based application that provides access to various back-end modules
+may be enabling certain menu options, that allow and/or guide work to
+be performed out of sequence.</span></p>
+<p><span class="comment highlight">It
+would be desirable if updates to the data in the repository could occur
+more frequently, to be more responsive to ongoing changes to the
+museum's collections.&nbsp; This might require changes both in the
+museum's processes and in the back-end tools and workflows.&nbsp;
+For instance, the current load scripts wipe out ("drop"), recreate, and
+reload database tables with new data, rather than performing a set of
+inserts, updates, and deletions.</span></p>
 </body></html>
