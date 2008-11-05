@@ -20,16 +20,15 @@ actively updating all of the documentation, so it is best to use this
 resource online, rather than printing out a version.</p>
 </div>
 <p>
-This is an overview of the data repository in Delphi, an
+This is an overview of the <span style="font-weight: bold;">data repository</span> in Delphi, an
 open source
 software system that helps open up access via the Web to collections of
 artifacts held by museums, historical societies, archeological
-repositories and similar heritage institutions.<br />
+repositories and similar heritage institutions. &nbsp;Delphi uses artificial intelligence and natural language processing to
+make it more effective and enjoyable to find individual artifacts in
+collections, and to uncover relationships between artifacts, than is
+possible through traditional searching and browsing.
 </p>
-Delphi's data repository stores the data that is accessed by its
-web-based collections
-browser.&nbsp; Data is placed into this repository using a set of
-back-end tools.<br />
 <h2>Types of data stored in the repository<br />
 </h2>
 The data repository stores two types of data:
@@ -92,8 +91,12 @@ The data repository currently consists of the following components:
 <h3><strong>1. MySQL</strong></h3>
 <p>The data repository for the instance of Delphi currently used
 by PAHMA
-is MySQL, an open source relational database management system (RDBMS).<br />
-<br />
+is MySQL, an open source relational database management system (RDBMS).
+&nbsp;MySQL is available in two flavors - MySQL Community Server
+(free), and MySQL Enterprise (commercial, packaged with an enhanced set
+of support services).<br />
+<br /><em>Obtained from</em>: <a href="http://www.mysql.com/" target="_blank">http://www.mysql.com/</a></p><p><em>Installed version in Delphia's PAHMA instance:</em> &nbsp;5.0.67 &nbsp;(The installed version is under the control of IST's&nbsp;</p><p>
+<em>Latest version (stable)</em>: 5.0.67</p><p><span class="comment highlight">Add details about licensing, etc. here.</span></p><p><em></em>
 Delphi can also potentially use other relational
 database software in place of MySQL. &nbsp;This is because Delphi's
 PHP-based code makes generic database calls via a PHP library,
@@ -102,12 +105,10 @@ Pear::MDB2, that supports a number of different types of databases.<br />
 The Delphi team had considered other types of
 data repositories, such as a "triple store" that is optimized for
 storing
-and retrieving Resource Description Framework (RDF) and similar
-metadata, but chose a relational database primarily on the basis of
-performance.&nbsp;<br />
-<br />
-<span class="comment highlight">Add details about
-versions, licensing, etc. here.</span> </p>
+and retrieving semantic data represented via the Resource Description
+Framework (RDF), but chose a relational database primarily on the basis
+of
+performance.&nbsp;<span class="comment highlight"><br /></span> </p>
 <h3><strong>2. phpMyAdmin</strong></h3>
 <p>phpMyAdmin is an open source administration console for MySQL.<br />
 <br />
@@ -122,24 +123,22 @@ option to the IST Unix Web Farm hosting environment at UC Berkeley.</p>
 projects which have no restricted data, modest storage requirements,
 and no complex database design issues. It includes a single production
 environment with limited support."&nbsp; For more information
-regarding this service, please see
+regarding this service,&nbsp; see
 <a href="http://ist.berkeley.edu/services/catalog/database/mysql" target="_blank">http://ist.berkeley.edu/services/catalog/database/mysql</a></p>
 <p>In the three-tier model of the IST Unix Web Farm, it is
 possible to have separate instances of databases, such as MySQL
 databases, available to each of the tiers.&nbsp; This way,
 development and quality assurance work that changes database contents
-can be carried out without affecting the production database.&nbsp;
-In the current instance of Delphi on the Web Farm, there are two
+can be carried out without affecting the production database.</p><p>In the current instance of Delphi on the Web Farm, there are two
 instances of MySQL: one shared by the development and quality assurance
-environments, and another specific to the production environment.
-*VERIFY THIS*</p>
+environments, and another specific to the production environment.</p>
 <p>The phpMyAdmin console is provided by default in the IST Unix
 Web Farm
 hosting environment at UC Berkeley *VERIFY THIS*, and is often provided
 in other web hosting environments that support PHP.&nbsp;
 phpMyAdmin can also be obtained independently from
 http://www.phpmyadmin.net&nbsp;</p>
-<br />
+
 <h2>The structure of data stored in the repository: database
 schemas<br />
 </h2>
@@ -156,4 +155,9 @@ http://dev.mysql.com/doc/refman/5.0/en/myisam-storage-engine.html
 <span class="comment highlight">Discuss how the PHP
 environment is configured to point to specific MySQL database
 instances, including across the three tiers of the IST Unix Web Farm.</span><br />
-<h2><br /></h2></body></html>
+<h2>Related documentation</h2>Delphi's data repository stores the data that is accessed by its
+web-based collections
+browser. &nbsp;To learn more about this collections browser, see <a href="collections-browser.html">Deploying Delphi:
+Collections Browser</a>.<br /><br />Data is placed into this repository using a set of
+back-end tools. &nbsp;
+To learn more about these tools, see <a href="back-end-tools.html">Deploying Delphi: Back-end Tools</a>.<h2></h2></body></html>

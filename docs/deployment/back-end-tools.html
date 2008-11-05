@@ -22,35 +22,31 @@ omissions, as well as numerous overlapping repetitions of content.<br /><br />Al
 open source
 software system that helps open up access via the Web to collections of
 artifacts held by museums, historical societies, archeological
-repositories and similar heritage institutions.</p><p>The
+repositories and similar heritage institutions. &nbsp;Delphi uses artificial intelligence and natural language processing to
+make it more effective and enjoyable to find individual artifacts in
+collections, and to uncover relationships between artifacts, than is
+possible through traditional searching and browsing.</p><p>The
 Delphi Project includes a set of back-end tools for cleaning up,
 analyzing and processing data about the artifacts in an institution's
 collections, and loading this data into a data repository.<br /></p><p>There are currently two back-end tools:<br />
 </p>
 <ul><li>A 'sed' script for initial cleanup of the data.<br />
 <br />
-</li><li>A Java-based, GUI application for further processing of the
+</li><li>A Java-based, menu-driven application for further processing of the
 cleaned
-data.<br />
-<br />
-This application provides support for text analysis, semantic
-indexing, and related support to build and maintain the database that
-supports the online browser. &nbsp;Delphi's administrators and
-others to
-analyze and process data about the artifacts in the collection - both
-metadata and semantic index data - and to load this data into the data
-repository.<br />
-<br />
-<span class="comment highlight">The above paragraph
-needs rewriting for clarity, and to merge similar ideas found in both
-of its sentences.</span></li></ul>
-<p>Currently,
-these tools are used manually, in batch mode. &nbsp;Each of the
-back-end
-processes must also be run in a specific sequence, one after
-another.&nbsp;
+data.<br /><br />
+This application makes it possible to perform a set of diverse tasks
+related to text analysis and semantic
+indexing. &nbsp;The ultimate result of performing all of these tasks is
+that the data repository is populated with data that can be used by the
+collections browser. &nbsp;This data includes metadata about artifacts
+in the collection, and a semantic index of the concepts associated with
+each artifact.<span class="comment highlight"><br /></span></li></ul>
+<p>Currently, both of these tools are used manually, in batch mode. &nbsp;After
+the initial data cleanup, it is then necessary to perform a set of tasks in a specific sequence, using
+the Java-based application, in order to process the data and load it into the data repository.&nbsp;
 Future Delphi enhancements
-may automate some of these back-end processes.</p><span class="comment highlight"></span><br />
+may help automate some of this back-end work.</p><span class="comment highlight"></span><br />
 <hr />
 <br />The
 goal of this processing and analysis is to build a "semantic index,"
@@ -176,7 +172,10 @@ collections, making this cleanup necessary. &nbsp;Annotations about
 the objects in PAHMA's collections have been made by many different
 people, over a period of more than a century, and in recent years some
 of this data was imported from a variety of data repositories, each
-with their own ideosyncracies.<br />
+with their own ideosyncracies.<br /><br />Patrick notes: "This is getting less important
+              over time as the museum cleans up some of their CMS metadata, but
+              some of it is correct in the CMS, but inappropriate for public
+              viewing (such as prices of objects, donor names, etc.)."<br />
 <br />
 There are several types of&nbsp;problematic data that must be
 cleaned:
@@ -264,22 +263,24 @@ for an auxiliary purpose like this.
 <span style="font-style: italic;">Notes regarding possible
 future enhancements:</span><br />
 <br />
-Use a rules processing engine, along with a configuration
-file:&nbsp; Patrick Schmitz has suggested that the cleanup process
+<span style="font-style: italic;">Use a rules processing engine, along with a configuration
+file</span>:&nbsp; Patrick Schmitz has suggested that the cleanup process
 could be made more general and configurable <br />
-<br />
-http://code.google.com/p/delphi-museum-project/wiki/DataImportNotes<br />
+<br /><a href="http://code.google.com/p/delphi-museum-project/wiki/DataImportNotes" target="_blank">
+http://code.google.com/p/delphi-museum-project/wiki/DataImportNotes</a><br />
 <br />
 Question to self: Does the cleanup process also involve tokenizing the
 data, or is this a separate step? &nbsp;See Patrick's
 "Documentation Needs" notes.<br />
 <br />
 <h2>3. Merging data</h2>
-Merging data from multiple database dump files<br />
+Merging data from multiple database dump files (a "dump set") into a single dump file.<br />
 <br />
-Handling duplicate records for certain artifacts<br />
+Handling duplicate records for certain artifacts. &nbsp;Likely done
+simply by sorting (?), and code then handles contiguous records with
+identical IDs.<br />
 <br />
-Merging data from individual facet files<br />
+Merging data from individual facet files (?)<br />
 <h2>4. Building and maintaining the mental model</h2>
 <span style="font-weight: bold;">Exclusions</span>
 (catalog ID, token ); e.g.<br />
