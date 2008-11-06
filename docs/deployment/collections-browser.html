@@ -2,12 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Collections Browser</title>
 
-<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" /><!--
+<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
+<!--
 Last committed revision:
 $Author: aronroberts $
 $Date: 2008-11-03 16:55:46 -0800 (Mon, 03 Nov 2008) $
 $Revision: 386 $
---></head>
+-->
+</head>
 <body>
 <p class="linkback right"><a href="introduction.html">Back
 to Introduction</a></p>
@@ -32,7 +34,7 @@ possible through traditional searching and browsing.<br />
 <br />
 The collections browser, a Web-based application, currently
 consists of the following set of required sub-components:</p>
-<h2>1. Hosting Environment<br />
+<h2>1. Web hosting environment<br />
 </h2>
 <p>The collections browser runs in a <span style="font-style: italic;">web hosting
 environment</span>: a server or collection of servers that accept
@@ -64,19 +66,26 @@ and
 configuration files - are first tested within the development
 environment.&nbsp; They are then migrated to the quality assurance
 environment, and after further testing there, to the production
-environment.</p>
-<p>Currently, all of the files required by the various required
+environment. &nbsp;Migrations are requested either by sending email to
+the IST Enterprise Unix team, or by entering a new ticket in an IST
+issue tracking system.<br /><br />By
+IST Web Farm convention, one accesses the hosts running on the
+development and quality assurance tiers - using web browsers or similar
+service clients - using a hostname that is a combination of the
+registered hostname, followed by a hyphen ("-") and the abbreviation
+for the tier. &nbsp;Thus, for the instance of Delphi used by PAHMA, the
+hostnames for accessing the development, quality assurance, and
+production environments are, respectively:</p><ul><li>pahma-dev.berkeley.edu</li><li>pahma-qa.berkeley.edu</li><li>pahma.berkeley.edu</li></ul><p>Currently, all of the files required by the various required
 sub-components of the collection browser are maintained under version
 control, in a code repository.&nbsp; (For a detailed discussion,
-please see Delphi-Deployment-Code Repository.)&nbsp; When
+please see <a href=".../code-repository.html">Delphi: Code Repository</a>.)&nbsp; When
 migrations between tiers are requested, the administrators of the IST
 Unix Web Farm obtain the latest set of files from this code repository
 and install them on the next tier in sequence.</p>
 <p>Delphi's web-based application does not require the use of a
 three-tier hosting model.&nbsp; However, several of its
 configuration files, used by the PAHMA instance, currently reflect this
-model.</p>
-<h2>2. Web Server<br />
+model.</p><h2>2. Web server<br />
 </h2>
 <p>The web hosting environment includes a <span style="font-style: italic;">web server</span>, which
 accepts connections from web browsers and returns web pages or other
@@ -88,13 +97,19 @@ dynamically.<br />
 <p>The collections browser application for the instance of Delphi
 used by PAHMA runs within the open source Apache Web Server.</p>
 <p>Apache version 2 is provided by default in the IST Unix Web
-Farm hosting environment at UC Berkeley.&nbsp; Apache (either major
-versions 1 or 2, or sometimes both) often provided in other Web hosting
+Farm hosting environment at UC Berkeley.&nbsp; Apache is also
+frequently provided in other Web hosting
 environments.</p>
-<p>Configuration:</p>
+<em>Installed version in Delphia's PAHMA instance</em>:
+2.2.4<br />
+(The installed version is chosen by the adminstrators of the IST Unix
+Web Farm.)<br />
+<br />
 <em>Location in Delphi <a href="../code-repository.html">code
-repository</a>:</em>&nbsp; An
-Apache configuration file (".htaccess") in /trunk
+repository</a>:</em>&nbsp; The Apache Web Server is not itself provided in the Delphi source
+code tree. &nbsp;Rather, it needs to be present or installed within
+the web hosting environment.<br /><br />However, a configuration file that works in conjunction with the Apache Web Server, <code>.htaccess</code>, is included at the
+top level of the source code tree (in <code>/trunk</code>).
 <p><span class="comment highlight">Look
 for other configuration details that differ from the stock Web Farm
 configuration file.</span>
@@ -108,7 +123,7 @@ pulling the appropriate data from the data repository and returning
 dynamically-created web pages, based on the user's requests.
 <p>At its core, the collections browser consists of PHP-driven
 content
-and template files, supported by PHP libraries; JavaScript code and
+and template files, supported by a combination of PHP libraries; JavaScript code and
 libraries; CSS style sheets, and a Flash-based tool to allow users to
 zoom-and-pan through images. &nbsp;These sub-components are
 described below.</p>
@@ -143,47 +158,65 @@ server are provided at http://www.php.net/manual/en/install.ph</p>
 </li>
 </ul>
 <p><em>Obtained from</em>: <a href="http://www.php.net/" target="_blank">http://www.php.net/</a></p>
-<em>Installed version in Delphia's PAHMA instance</em>: 5.x
-{Determined by the IST Unix Web Farm Admins} *VERIFY THIS AND VERSION*
+<em>Installed version in Delphia's PAHMA instance</em>: 5.x<br />
+(The installed version is chosen by the adminstrators of the IST Unix
+Web Farm.)&nbsp;*VERIFY THIS AND VERSION*
 <p><em>Latest version (stable)</em>: 5.2.6
 (2008-05-01)</p>
 <p><em>Licensing terms</em>: PHP License, version
-3.0.1 (as of 2008-10-23), http://us2.php.net/license/&nbsp;
+3.0.1 (as of 2008-10-23), <a href="http://us2.php.net/license/" target="_blank">http://us2.php.net/license/</a>&nbsp;
 "Essentially, the PHP license gives you the right to use, distribute
 and modify PHP as much as you want, for both commercial and
 non-commercial use. You just have to make it clear to the user that
 what you have distributed contains PHP."</p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;
-N/A&nbsp; *VERIFY THIS*</p>
+The PHP language package is not itself provided in the Delphi source
+code tree. &nbsp;Rather, it needs to be present or installed within
+the web hosting environment, as does the PHP shared module for the Apache
+Web Server.<br /><br />However,
+code and libraries that use the PHP language are distributed throughout
+many parts of Delphi's code repository. &nbsp;Many of these are
+detailed below.</p>
 <h3>3.2. PEAR::MDB2 (a PHP database library)</h3>
-<p><em>Description:</em> Pear::MDB2 is an open source
-package for PHP that extends the core PHP language to provide
+<p><em>Description:</em> Pear::MDB2 ("MDB2") is an
+open source
+package that extends the core PHP language to provide
 programmers with a common interface to many different types of
 relational databases.</p>
 <p>(Pear is a packaging and distribution system for PHP packages,
 somewhat akin to CPAN for Perl packages.)<br />
 </p>
-<p><em>Use in Delphi</em>: Pear::MDB2 routines are
-used to access data in the MySQL-based data repository
-(below).&nbsp; These routines are called from PHP code in Smarty
-templates (below).&nbsp; *VERIFY*<br />
+<p><em>Use in Delphi</em>:&nbsp;MDB2 routines are
+used to access data in the MySQL-based data repository.&nbsp;<br />
 </p>
 <p><em>Obtained from</em>:
 <a href="http://pear.php.net/package/MDB2" target="_blank">http://pear.php.net/package/MDB2</a><br />
 </p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:
-2.4.0 (per a constant in the source code of MDB2.php)<br />
+2.4.0 (per a constant in the source code of <code>MDB2.php</code>)<br />
 </p>
 <p><em>Latest version (stable)</em>: 2.4.1 (released
 on 2007-05-03)<br />
 </p>
 <em>Latest version (pre-release)</em>:
-<p><em>Licensing terms</em>:</p>
+<p><em>Licensing terms</em>: &nbsp;PHP License,
+version
+3.0.1 (as of 2008-10-23), <a href="http://us2.php.net/license/" target="_blank">http://us2.php.net/license/</a>&nbsp;
+"Essentially, the PHP license gives you the right to use, distribute
+and modify PHP as much as you want, for both commercial and
+non-commercial use. You just have to make it clear to the user that
+what you have distributed contains PHP."<br />
+<br />
+(The parent Pear project allows developers who distribute their
+packages via Pear to choose any of &nbsp;five different open source
+licenses, as described in <a href="http://pear.php.net/manual/en/faq.devs.php#faq.licenses" target="_blank">http://pear.php.net/manual/en/faq.devs.php#faq.licenses</a>
+as of 2008-11-05.)</p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;
 Delphi's installation of the Pear::MD2 package is provided as a
 collection of PHP code (".php") files in /trunk/libs/pear</p>
 <p><span class="comment highlight">Note
-where database connections are configured, if relevant to this package.</span>
+where database connections are configured, in the config.sample.php
+file at the top-level of the source code tree.</span>
 </p>
 <h3>3.3. Smarty (a PHP template library)</h3>
 <em>Description</em>: Smarty is an open source template
@@ -206,7 +239,8 @@ collections browser. *VERIFY THIS*</p>
 </p>
 <p><em>Latest version (stable)</em>: 2.6.20 (Released
 2008-08-15)</p>
-<p><em>Licensing terms</em>:</p>
+<p><em>Licensing terms</em>: &nbsp;"Smarty is
+released under the LGPL (Lesser GPL)," per <a href="http://www.smarty.net/copyright.php" target="_blank">http://www.smarty.net/copyright.php</a></p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;</p>
 <ul>
 <li>Delphi's installation of the Smarty framework itself
@@ -217,18 +251,20 @@ svn/trunk/libs/pear</li>
 <li>Delphi's PHP source code, which produces the data that is
 'poured' into Smarty template files to dynamically generate web pages,
 is contained in the set of PHP code (".php") files in
-svn/trunk/modules.&nbsp; There is also related code, used by some
+svn/trunk/modules.&nbsp; There is also related code, used by some of
 those code modules, in svn/trunk/api and svn/trunk/libs/ontology<br />
 </li>
 </ul>
 <h3>3.4. XPertMailer (a PHP email library)</h3>
-<p>(placeholder)</p>
+<p><em>Description</em>: </p>
 <p><em>Use in Delphi</em>: Authentication -
 requesting new passwords be emailed.&nbsp; Sharing personal
 annotations - sending URLs to personally-created sets via
 email.&nbsp; *VERIFY THIS - AND ANY OTHERS?*</p>
 <p><em>Obtained from</em>: <a href="http://www.xpertmailer.com/" target="_blank">http://www.xpertmailer.com/</a></p>
-<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
+<p><em>Installed version in Delphia's PAHMA instance</em>:<br />
+</p>
+<em>Latest version (stable)</em>:<br /><br /><em>Licensing terms</em>:<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 Delphi's installation of the XPertMailer package is provided as a
 collection of PHP code (".php") files in /trunk/libs/XPM</p>
 <h3>3.5. jQuery (a JavaScript library)</h3>
@@ -248,7 +284,7 @@ user interface library, jQuery UI (below).&nbsp; *VERIFY THIS*</p>
 <p><em>Obtained from</em>: <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:<br />
 </p>
-<p><em>Latest version</em>: 1.2.6 (released
+<p><em>Latest version (stable)</em>: 1.2.6 (released
 2008-05-24)</p>
 <p><em>Licensing terms</em>:</p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;A
@@ -276,21 +312,31 @@ respond to a user's behavior on a page, such as mouse clicks and drags.</p>
 heavily by Delphi is the jQuery UI "accordion" widget, "an
 expandable/collapsible content pane." *VERIFY THIS*</p>
 <p><em>Obtained from</em>: <a href="http://ui.jquery.com/" target="_blank">http://ui.jquery.com/</a></p>
-<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
+<p><em>Installed version in Delphia's PAHMA instance</em>:<br />
+</p>
+<p><em>Latest version (stable)</em>:</p>
+<p><em>Licensing terms</em>:</p><p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 A collection of JavaScript (".js") files in /trunk/libs/jquery</p>
 <h3><strong>3.7. Zoomify (a Flash-based application)</strong></h3>
 <p>(placeholder - also need to determine which package is in use)</p>
+<p><em>Description</em>:&nbsp;</p>
+<p><em>Use in Delphi</em>:&nbsp;</p>
 <p><em>Obtained from</em>: <a href="http://www.zoomify.com/" target="_blank">http://www.zoomify.com/</a></p>
-<p>Licensing:</p>
+<p><em>Installed version in Delphia's PAHMA instance</em>:<br />
+
+</p><p><em>Latest version (stable)</em>:</p>
+<p><em>Licensing terms</em>:</p>
+<em>Location in Delphi <a href="../code-repository.html">code
+repository</a>:</em>&nbsp;&nbsp;A single Adobe Shockwave (".swf") file in /trunk/libs/zoom
+
+
 <p><span class="comment highlight">Patrick
 2008-10-23: I have a personal license for the Zoomify runtime that
 entitles me to redistribute it. I used this when consulting to the
 museum, and I think it holds for the PAHMA deployment, but I doubt that
 it holds for the Delphi project. Will have to straighten this out as
 well. We may have to tell deployers to get the runtime from Zoomify
-(they allow redist for any users).</span></p>
-<p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
-A single Adobe Shockwave (".swf") file in /trunk/libs/zoom</p>
+(they allow redist for any users).</span><br /><em><br /></em></p>
 <h3>3.8. CSS (a technology for styling web pages)</h3>
 <p><em>Description:&nbsp;</em> Cascading Style
 Sheets (CSS) are a technology, rather than a product: a specification
@@ -334,5 +380,8 @@ collections browser currently uses a single large CSS file, style.css.</span></p
 <p><span class="comment highlight">Opportunities
 to parameterize the CSS file(s), for instance to allow one or more
 theme colors to be provided externally, rather than being hard-coded as
-values in the stylesheet.</span><br /></p><p><br />
-</p></body></html>
+values in the stylesheet.</span><br />
+</p>
+<p><br />
+</p>
+</body></html>
