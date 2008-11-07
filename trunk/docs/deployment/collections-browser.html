@@ -35,17 +35,23 @@ possible through traditional searching and browsing.<br />
 The collections browser, a web-based application, allows a virtual
 'visitor' to a museum or heritage institution - including researchers,
 members of the public, and even the museum's or institution's own staff
-- to interactively explore the collections over the Internet. &nbsp;At
-each page, the visitor is presented not only with photos and (when
+- to interactively explore the collections over the Internet.
+&nbsp;At
+each page, the visitor is presented not only with listings and (when
 available) photos of the artifacts they have selected through searching
 or browsing, but also a "tree" of concepts&nbsp;relevant to those
 artifacts. &nbsp;Each of these concepts, in turn, falls under a
 category, or "facet," such as&nbsp;location, culture, and materials
-used. &nbsp;This helps visitors better understand the characteristics
+used. &nbsp;This helps visitors better understand the
+characteristics
 and scope of the set of artifacts they're viewing at any one time.
-&nbsp;It also helps them further refine their searching or browsing, as
-well giving them starting points for&nbsp;exploring related parts of
-the collections.<br /><br />The collections browser application currently
+&nbsp;It also helps them further refine their searching or
+browsing, as
+well giving them starting points for&nbsp;exploring related parts
+of
+the collections.<br />
+<br />
+The collections browser application currently
 consists of the following set of required sub-components:</p>
 <h2>1. Web hosting environment<br />
 </h2>
@@ -139,7 +145,7 @@ the web hosting environment.</p>
 <p>However, a configuration file that works in conjunction with
 the Apache
 Web Server, <code>.htaccess</code>, is included at the
-top level of the source code tree (in <code>/trunk</code>).
+top level of the source code tree (in <code>svn/trunk</code>).
 </p>
 <p><span class="comment highlight">Look
 for other configuration details that differ from the stock Web Farm
@@ -184,7 +190,8 @@ Web Server.
 pages using special tags, to create dynamic content on those pages.</p>
 <p>This shared module is provided with Apache by default in
 the IST Unix Web Farm hosting environment at UC Berkeley, and is often
-provided in other web hosting environments that support PHP.&nbsp; <span class="comment highlight">&nbsp;Verify the first assertion.</span></p>
+provided in other web hosting environments that support PHP.&nbsp; <span class="comment highlight">&nbsp;Verify the first
+assertion.</span></p>
 <p>Instructions on installing PHP within the Apache web
 server are provided at <a href="http://www.php.net/manual/en/install.ph" target="_blank">http://www.php.net/manual/en/install.ph</a></p>
 </li>
@@ -235,8 +242,8 @@ used to access data in the MySQL-based data repository.&nbsp;<br />
 2.4.0<br />
 (Identified by a constant in the source code file <code>MDB2.php</code>)</p>
 <p><em>Latest version (stable)</em>: 2.4.1 (released
-on 2007-05-03)<em><br /></em>
-</p>
+on 2007-05-03)<em><br />
+</em></p>
 <p><em>Licensing terms</em>: &nbsp;PHP License,
 version
 3.0.1 (as of 2008-10-23), <a href="http://us2.php.net/license/" target="_blank">http://us2.php.net/license/</a>&nbsp;
@@ -251,7 +258,7 @@ licenses, as described in <a href="http://pear.php.net/manual/en/faq.devs.php#fa
 as of 2008-11-05.)</p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;
 Delphi's installation of the Pear::MD2 package is provided as a
-collection of PHP code (".php") files in /trunk/libs/pear</p>
+collection of PHP code (".php") files in <code>svn/trunk/libs/pear</code></p>
 <p><span class="comment highlight">Note
 where database connections are configured, in the config.sample.php
 file at the top-level of the source code tree.</span>
@@ -288,15 +295,15 @@ released under the LGPL (Lesser GPL)," per <a href="http://www.smarty.net/copyri
 <ul>
 <li>Delphi's installation of the Smarty framework itself
 consists of a collection of PHP code (".php") files in
-svn/trunk/libs/pear</li>
+<code>svn/trunk/libs/pear</code></li>
 <li>Delphi's Smarty templates are the collection of template
-(".tpl") files in svn/trunk/themes/pahma/templates</li>
+(".tpl") files in <code>svn/trunk/themes/pahma/templates</code></li>
 <li>Delphi's PHP source code, which produces the data that is
 'poured' into Smarty template files to dynamically generate web pages,
 is contained in the set of PHP code (".php") files in
-svn/trunk/modules.&nbsp; There is also related code, used by some
+<code>svn/trunk/modules</code>.&nbsp; There is also related code, used by some
 of
-those code modules, in svn/trunk/api and svn/trunk/libs/ontology<br />
+those code modules, in <code>svn/trunk/api</code> and <code>svn/trunk/libs/ontology</code><br />
 </li>
 </ul>
 <h3>3.4. XPertMailer (a PHP email library)</h3>
@@ -306,18 +313,22 @@ email messages, and send those messages via an SMTP server on a local
 or remote host, with support for authentication when relaying messages
 and for TLS/SSL encryption. &nbsp;It can also retrieve messages via
 POP3. </p>
-<p><em>Use in Delphi</em>: XPertMailer is used in several situations in
+<p><em>Use in Delphi</em>: XPertMailer is used in
+several situations in
 which Delphi sends email to users of the collections browser.
-&nbsp;These include interactions related to user accounts, where Delphi
+&nbsp;These include interactions related to user accounts, where
+Delphi
 sends email when a new user registers or when an existing user requests
 that their forgotten password be reset. &nbsp;These also include
 interactions around sharing personal
-annotations, where Delphi can email URLs that allow others to&nbsp;view
+annotations, where Delphi can email URLs that allow others
+to&nbsp;view
 your personally-saved sets. <span class="comment highlight">&nbsp;Verify
 this.</span></p>
 <p><em>Obtained from</em>: <a href="http://www.xpertmailer.com/" target="_blank">http://www.xpertmailer.com/</a></p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:<br />
-(Was not readily able to identify this from examining the XPertMailer files in
+(Was not readily able to identify this from examining the XPertMailer
+files in
 the source tree.)<em><br />
 <br />
 Latest version (stable)</em>: 0.5<em><br />
@@ -329,7 +340,7 @@ License version 2.0 or any later version.
 </p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
 Delphi's installation of the XPertMailer package is provided as a
-collection of PHP code (".php") files in /trunk/libs/XPM</p>
+collection of PHP code (".php") files in <code>svn/trunk/libs/XPM</code></p>
 <h3>3.5. jQuery (a JavaScript library)</h3>
 <p><em>Description</em>: jQuery is an open source,
 general purpose JavaScript framework: a library of routines -
@@ -358,8 +369,7 @@ under two extremely permissive licenses. &nbsp;"jQuery is currently
 available for use in all personal or commercial projects under both MIT
 and GPL licenses," according to <a href="http://docs.jquery.com/Licensing" target="_blank">http://docs.jquery.com/Licensing</a></p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;&nbsp;A
-collection of JavaScript (".js") files in svn/trunk/libs/jquery<em></em><em><br />
-</em></p>
+collection of JavaScript (".js") files in <code>svn/trunk/libs/jquery</code></p>
 <p><span class="comment highlight">Mention
 performance concerns in building the trees and links.&nbsp; (One
 suggested approach was to further restrict the 'genericity' levels -
@@ -381,45 +391,66 @@ heavily by Delphi is the jQuery UI "accordion" widget, "an
 expandable/collapsible content pane." <span class="comment highlight">Verify this.</span></p>
 <p><em>Obtained from</em>: <a href="http://ui.jquery.com/" target="_blank">http://ui.jquery.com/</a></p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:<br />
-(Was not able to readily identify the version of jQuery UI. &nbsp;It is included in header of&nbsp;the file <code>ui.core.js</code>,
-which does not appear to be in the source tree. &nbsp;Other individual files in the
+(Was not able to readily identify the version of jQuery UI.
+&nbsp;It is included in header of&nbsp;the file <code>ui.core.js</code>,
+which does not appear to be in the source tree. &nbsp;Other
+individual files in the
 installed distribution either have varying version numbers, or none at
-all; this issue has also been noted in comments in the product mailing list.)<span style="text-decoration: underline;"></span><br />
+all; this issue has also been noted in comments in the product mailing
+list.)<span style="text-decoration: underline;"></span><br />
 </p>
 <p><em>Latest version (stable)</em>: 1.5.2</p>
 <p><em>Licensing terms</em>: &nbsp;Appears to be
 dual-licensed under both the GPL and MIT License. &nbsp;(See
 Licensing terms for jQuery, above.)</p>
 <p><em>Location in Delphi <a href="../code-repository.html">code repository</a>:</em>&nbsp;
-A collection of JavaScript (".js") files in /trunk/libs/jquery</p>
+A collection of JavaScript (".js") files in <code>svn/trunk/libs/jquery</code></p>
 <h3><strong>3.7. Zoomifyer EZ (a Flash-based application)</strong></h3>
-
-<p><em>Description</em>: Zoomifyer EZ (also variously named "Zoomify
+<p><em>Description</em>: Zoomifyer EZ (also variously
+named "Zoomify
 EZ" and "Zoomify Express" at various places on the vendor's website),
 allows for zoom-and-pan viewing of large images within a relatively
-small viewing window. &nbsp;It consists of a converter utility "to make
+small viewing window. &nbsp;It consists of a converter utility "to
+make
 any image zoomable," as well as a viewer utility, implemented as a
 Flash (SWF) movie file, that allows a user to interact with the image
 within their browser window, using a set of provided controls to zoom
 in or out, and to move about the image. &nbsp;(To use this viewer,
-version 6 or later of the Flash browser plug-in must also be installed.)<br /><br /><span class="comment highlight">Verify
+version 6 or later of the Flash browser plug-in must also be installed.)<br />
+<br />
+<span class="comment highlight">Verify
 that this is the product used and installed, versus commercial product
 Zoomify for Flash. &nbsp;A product comparison is provided at
 http://www.zoomify.com/compare.htm</span></p>
-<p><em>Use in Delphi</em>: &nbsp;As noted in the Delphi project report,
+<p><em>Use in Delphi</em>: &nbsp;As stated in the
+initial Delphi project report,
 "On details pages [for individual artifacts] that have images, if Flash
-is installed on the user&#8217;s browser, then the Zoomify image zoom-and-pan
+is installed on the user's browser, then the Zoomify image zoom-and-pan
 Flash applet is embedded in the place of the higher-resolution image."
-&nbsp;This facilitates close inspection of images, and makes efficient
-use of web browser screen space. &nbsp;In some possible future Delphi
-instances, the use of this viewer may also potentially help protect copyrighted image content from being used without authorization.</p>
+The use of this viewer facilitates close inspection of images, and
+makes efficient
+use of web browser screen space. &nbsp;In some possible future
+Delphi
+instances, using a zoom-and-pan viewer may also potentially help
+protect copyrighted, higher-resolution image content from being used
+without authorization.</p>
 <p><em>Obtained from</em>: <a href="http://www.zoomify.com/" target="_blank">http://www.zoomify.com/</a></p>
 <p><em>Installed version in Delphia's PAHMA instance</em>:<br />
+(Could not readily identify the version from the binary
+<code>zoomifyDynamicViewer.swf</code> file in the Delphi
+source code tree, and there
+were no other files provided.)<br />
 </p>
-<p><em>Latest version (stable)</em>:</p>
-<p><em>Licensing terms</em>: &nbsp;"The Zoomify Viewer is freely
+<p><em>Latest version (stable)</em>: &nbsp;3.0<br />
+(Identified from the version string in the Macintosh binary
+distribution of the Zoomify EZ package, downloaded on 2008-11-07; this
+particular version number may or may not reflect the vendor's own
+versioning scheme for its Windows and Macintosh products.)</p>
+<p><em>Licensing terms</em>: &nbsp;"The Zoomify
+Viewer is freely
 redistributable on web sites or CDs/DVDs in published (SWF) form. Your
-content is your own - no royalties, no strings." &nbsp;According to the
+content is your own - no royalties, no strings." &nbsp;According to
+the
 Zoomify License Agreement at <a href="http://www.zoomify.com/zoomifyLicenseAgreement.htm" target="_blank">http://www.zoomify.com/zoomifyLicenseAgreement.htm</a>,
 "The Zoomify Viewers are used to view images that have been converted
 for zoom-and-pan viewing. The Viewers are used in published form as
@@ -429,11 +460,17 @@ networks and distributable media. ... No Zoomify Viewer shall be
 redistributed as part of a paid or free product with zoomable image
 content created by any means other than a Zoomify converter obtained
 with a licensed copy of a Zoomify product unless specifically permitted
-by a written reseller agreement with Zoomify."<em><br />
+by a written reseller agreement with Zoomify."<br />
+<br />
+(The license agreement included with the downloadable Macintosh package
+appears to be older, with a copyright date extending just through 2003,
+and contains far more restrictive language; it's possible that
+agreement may be superseded by the newer agreement on Zoomify's
+website, above.)<em><br />
 <br />
 Location in Delphi <a href="../code-repository.html">code
 repository</a>:</em>&nbsp;&nbsp;A single Adobe
-Shockwave (".swf") file in /trunk/libs/zoom
+Shockwave (".swf") file in <code>svn/trunk/libs/zoom</code>
 </p>
 <p><span class="comment highlight">Patrick
 2008-10-23: I have a personal license for the Zoomify runtime that
@@ -451,7 +488,7 @@ from the World Wide Web Consortium (W3C).&nbsp; CSS makes it
 possible to specify text fonts and styles, colors, layout positioning,
 and other presentation aspects of Web pages. &nbsp;These are
 specified by a set of appearance and layout definitions ("selectors"),
-typically contained in separate files called "stylesheets," that can be
+usually contained in separate files called "stylesheets," that can be
 selectively applied to specific
 parts of web pages.<br />
 <br />
@@ -460,21 +497,24 @@ browsers.&nbsp; There are some variances in support for CSS
 features, as well as in the rendering of Web pages based on various CSS
 features, in
 different Web browsers.&nbsp; However, over time, there has been a
-trend toward more uniform support for CSS within modern web browsers.<span class="comment highlight"></span><br />
+trend toward more uniform support for CSS across major web browsers.<span class="comment highlight"></span><br />
 <em><br />
 Use in Delphi</em>:&nbsp; CSS is used to specify the text
 fonts and styles, colors, layout position, and other presentation
 aspects of the collection browser's Web pages.</p>
 <p>The HTML output generated by Delphi's collections browser, via
-Smarty templates, does not contain information about how it will be
+Smarty templates, does not directly contain information about how it
+will be
 displayed on a web page.&nbsp; Rather, it contains 'decorations,'
 such as the "class" and "id" attributes that uniquely identify various
 HTML elements, that allow those elements to be styled, colored, and
-positioned on the page through the use of CSS stylesheets.<br />
+positioned on the page through the use of CSS selectors corresponding
+to those decorations.<br />
 <br />
 A great many aspects of the presentation of the collections
 browser's web pages can be customized simply by changing styles in CSS
-stylesheets, along with replacing static image files.&nbsp;
+stylesheets, along with changing the static image files displayed on
+those pages.&nbsp;
 However, more significant customization, such as major changes to the
 format of the lists of
 results returned from searching or browsing, will also require
