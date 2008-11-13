@@ -195,18 +195,23 @@ accounts, databases, and tables, and other MySQL components.
 versions, licensing, usage etc. here.<br />
 </span></p>
 <h3><strong>3. Image storage</strong></h3>
-<p>Images - digital photographs or scans - have been created for a
+<p>Images - digital photographs or scans - have been created for
+a
 portion of the
 artifacts in the PAHMA collection, and are retrieved and displayed by
-Delphi's collections browser.</p><p>In
+Delphi's collections browser.</p>
+<p>In
 Delphi, images are currently retrieved by the PHP-based code in the
 collections browser as files in a filesystem, rather than as binary
 objects in a database.</p>
-<h4>3.1. Image storage on the IST Unix Web Farm</h4><p>In the data repository for
+<h4>3.1. Image storage on the IST Unix Web Farm</h4>
+<p>In the data repository for
 the instance of Delphi currently used
-by PAHMA,&nbsp;images are stored as files on a Storage Area Network (SAN) in
+by PAHMA,&nbsp;images are stored as files on a Storage Area Network
+(SAN) in
 the campus Data Center at UC Berkeley,
-via a storage service provided by Information Services and Technology (IST). &nbsp;The
+via a storage service provided by Information Services and Technology
+(IST). &nbsp;The
 Delphi
 service is currently paying for 70
 MB of SAN storage, and uses less than half of that storage, as of
@@ -221,8 +226,8 @@ Unix symbolic link:<span style="font-family: &quot;Courier New&quot;,Courier,mon
 the <code>webroot/delphi/objimages</code> directory within
 that account
 is actually a symlink to the NFS-mounted area of SAN storage that is
-provided at&nbsp; <code>/nas/pahma/objimages</code>.</p><p>
-This SAN storage area is generally mounted read-only.
+provided at&nbsp; <code>/nas/pahma/objimages</code>.</p>
+<p>This SAN storage area is generally mounted read-only.
 &nbsp;When it is necessary to add additional images, Delphi's
 administrators make a request to the IST Unix Team to temporarily mount
 this storage area as read-write.</p>
@@ -230,26 +235,223 @@ this storage area as read-write.</p>
 For
 more details about the IST's storage services, including SAN storage
 and network-accessible (NFS) access to that storage, see
-<a href="http://ist.berkeley.edu/is/platforms/storage/san" target="_blank">http://ist.berkeley.edu/is/platforms/storage/san</a><br /></p>
-<h2><br />The structure of data stored in the repository: database
+<a href="http://ist.berkeley.edu/is/platforms/storage/san" target="_blank">http://ist.berkeley.edu/is/platforms/storage/san</a><br />
+</p>
+<h2><br />
+The structure of data stored in the repository: database
 schemas<br />
 </h2>
-<p><span class="comment highlight"></span>Delphi uses the following database tables, with a number of the descriptions below taken directly from the SQL create scripts</p><ul><li><span style="font-weight: bold;">DBInfo</span><br /><br />Holds system-wide&nbsp;parameters, such as the sizes of alternate images and the version of this database schema.<br /><br /></li><li><span style="font-weight: bold;">categories</span><br /></li><li><span style="font-weight: bold;">media</span><br /><br />Identifies each of the media objects&nbsp;<span class="comment highlight"></span>associated with each artifact. &nbsp;This data includes names and descriptions of each object (e.g. "Obverse
+<p><span class="comment highlight"></span>Delphi's
+data repository primarily consists of a set of database tables.
+&nbsp;These tables are categorized below by their broad purpose in
+the repository, and are then listed alphabetically within each category.<br />
+<br />
+These tables are created using table creation scripts in the /schemas
+directory of the Delphi source code tree. &nbsp;Most of these tables are
+then populated with data by Delphi's set of back-end tools.<span class="comment highlight"></span><br />
+</p>
+<h3>Tables associated with data about artifacts in the collections ("metadata")</h3>
+<p>The following tables contain the metadata about each artifact, and identify the media connected to that artifact.<br /><br />Each of these tables is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code> script.</p>
+<ul>
+<li><span style="font-weight: bold;">media</span><br />
+<br />
+Identifies each of the available media objects <span class="comment highlight"></span>and their
+associations with particular artifacts. &nbsp;This data includes
+names and descriptions of each object (e.g. "Obverse
 view," "Frontal view of object taken during restoration"), the image
 (or multimedia preview) size, and the filesystem path to the media
-object.<br /><br /> In the Delphi instance for PAHMA, media currently consists only of images, although audio and video types are defined - <span class="comment highlight">verify
-this</span>. &nbsp;<br /></li><li><span style="font-weight: bold;">objects</span><br /><br />Contains
+object.<br />
+<br />
+In the Delphi instance for PAHMA, media currently consists only of
+images, although audio and video types are defined.&nbsp; <span class="comment highlight">Verify
+this.</span>&nbsp;<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">objects</span><br />
+<br />
+Contains
 the core metadata about each artifact: its object number in the
-collections, name, description, and the filesystem path to its default
-image.<br /></li><li><span style="font-weight: bold;">sets</span><br /><br />Maintains
-lists of sets. &nbsp;Sets allow users to create and manage personal
+collections, its name and description, and the filesystem path to its
+default
+image (de-normalized from the 'media' table to improve performance).<br />
+<br />
+In the Delphi instance for PAHMA, the "description is sourced from a
+concatenation of several columns in the database that have been
+determined to contain richer descriptive text."<br />
+<br />
+</li>
+</ul>
+<h3>Tables associated with the concepts associated with these artifacts (a "semantic index")</h3>
+<p>The following tables maintain the mental model of the collections
+("ontology"), and the association of concepts in that mental model with
+each artifact.<br /><br />Each of these tables is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code> script.</p>
+<ul>
+<li><span style="font-weight: bold;">categories</span><span style="font-weight: bold;"></span><br />
+<br />
+Maintains
+the hierarchical set of concepts (aka "categories") that can be
+associated with each artifact, as well as that concept's parent concept
+and the facet it falls under. &nbsp;(A&nbsp;facet is a broad
+top-level
+category, such as "culture," "location," "materials," or "color.)<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">exclusions</span><span style="font-weight: bold;"></span><br />
+<br />
+Identifies the tokens (words or phrases) that, if found in the metadata
+for an artifact, will cause that artifact to <span style="font-style: italic;">not</span> be associated
+with a particular concept (aka category).<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">facets</span><br />
+<br />
+"Facets
+define how we set up the caches and the annotations. &nbsp;A facet
+includes
+the facet name as well as policies for adding annotations using the
+facet categories."<br />
+<br />
+<span class="comment highlight">Taken from the
+comments in the table creation script, schemas/mainObjInfo.sql, and not
+yet fully understood.</span><br />
+<br />
+</li>
+<li><span style="font-weight: bold;">facetCaches</span><br />
+<br />
+"Facet Masks Cache all the categories from a facet that are associated
+to a given image, as a sparse list of bitmasks."<br />
+<br />
+<span class="comment highlight">Taken
+from the comments in the table creation script,
+schemas/mainObjInfo.sql, and not yet fully understood. &nbsp;In
+that script,
+this table is given a 'dot notation,' NewPhotoDB.FacetCaches', which
+may imply that this table is stored in a separate database
+(?).&nbsp; <br />
+<br />
+</span></li>
+<li><span class="comment highlight"></span><span style="font-weight: bold;">hooks</span><br />
+<br />
+Identifies
+the tokens (words or phrases) associated with various categories
+(concepts).<br />
+<br />
+If one or more of those tokens are found in the metadata for an
+artifact, and there are no exclusions (see above), that will cause the
+artifact to be associated with that particular
+concept, via a record in the obj_cats table, below.<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">obj_cats</span><br />
+<br />
+The core table in the semantic index: associates categories with
+artifacts in the collection. &nbsp;Includes flags that note the
+reliability of these associations, and whether a particular association
+of a category from an artifact may have been made automatically
+("inferred").<br />
+</li>
+</ul>
+<h3>Tables associated with user and curator annotations</h3>
+<p>The following tables store informal, custom annotations - sets and
+tags - that are made by&nbsp;by virtual visitors to the collections.
+&nbsp;These annotations can be useful in supplementing the
+institution's data about the artifacts in these collections
+("metadata") and the association of concepts to artifacts ("semantic
+index"). &nbsp;One type of sets - "featured" sets - are created by the
+institution's curators, to help "invite people" into the collections. <br /><br />Each of these tables is created by the
+<code>/schemas/mainObjInfo.sql</code> script, with one exception: the 'featured_sets' table is created by the <code>/schemas/featured.sql</code> script.</p>
+<ul>
+<li><span style="font-weight: bold;">featured_sets</span><br />
+<br />
+"Featured sets are shown on the first page" of Delphi's collections
+browser "to invite people in." &nbsp;According to the comments in
+the table creation script, "there should be about 6 of these" sets.<br />
+<br />
+Denormalized to improve performance, this table draws upon
+previously-defined sets stored in the 'sets' table below.<br />
+<br />
+<span style="font-weight: bold;"></span></li>
+<li><span style="font-weight: bold;">sets</span><br />
+<br />
+Maintains
+lists of sets.&nbsp; Sets allow virtual visitors to the collections
+to create and manage personal
 groupings of artifacts, whether associated by topic or simply kept as
-favorites.<br /><br /></li><li><span style="font-weight: bold;">set_objs</span><br /><br />Identifies the artifacts associated with a set.</li></ul>
-<p><span class="comment highlight"></span></p>
-<p><span class="comment highlight">Discuss the
-database schema -
-look for load files in the source code tree, descriptive text, diagrams.</span></p>
-<span class="comment highlight">All
+favorites.<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">set_objs</span><br />
+<br />
+Identifies the artifacts associated with a set. &nbsp;Sets allow
+virtual visitors to the collections to create and manage personal
+groupings of artifacts,&nbsp;whether associated by topic or simply
+kept as
+favorites.<br />
+<br />
+</li>
+<li><span style="font-weight: bold;">tags</span><br />
+<br />
+Maintains
+lists of tags.&nbsp; Delphi's "tags" feature allows virtual
+visitors to the collections to assign 'tags' - meaningful words or
+phrases of their own creation - to artifacts. &nbsp;<span class="comment highlight">Verify whether this is still
+experimental.</span><br />
+<br />
+</li>
+<li><span style="font-weight: bold;">tag_user_object</span><br />
+<br />
+Identifies
+each instance where a virtual visitor to the collections ("user") has
+assigned
+a tag to a specific artifact. &nbsp;<span class="comment highlight">Verify whether this is still
+experimental.<br />
+</span></li>
+</ul>
+<h3>Tables associated with user roles and access permissions<br />
+</h3>
+<p>Each of these tables is created by the
+<code>/schemas/delphi_ident.sql</code> script. &nbsp;A base set of
+roles, permissions, and users, and the associations between them, is
+then loaded into these tables by a second script.</p>
+<ul>
+<li><span style="font-weight: bold;">permission</span><br />
+<br />
+Defines permissions for the Delphi service.<br /><br />
+</li>
+<li><span style="font-weight: bold;">role</span><br />
+<br />
+Defines roles for the Delphi service.<br /><br />
+</li>
+<li><span style="font-weight: bold;">role_perms</span><br />
+<br />
+Associates one or more permissions to each role.<br /><br />
+</li>
+<li><span style="font-weight: bold;">user</span><br />
+<br />
+Identifies
+each registered user of the Delphi service, including their username,
+hashed password, email address, real name, and the status of their user
+account.<br />
+<br />
+<span style="font-weight: bold;"></span></li>
+<li><span style="font-weight: bold;">user_roles</span><br />
+<br />
+Associates one or more roles with each Delphi user.<span class="comment highlight"></span></li>
+</ul>
+<h3>Tables associated with utility functions</h3>
+<p>This table is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code> script, which also loads a minimal, initial set of data into that table. &nbsp;<span class="comment highlight">Identify how this table is later populated.</span></p>
+<ul>
+<li><span style="font-weight: bold;">DBInfo</span><br />
+<br />
+Holds system-wide&nbsp;parameters, such as the sizes of alternate
+images and the version of this database schema.<br />
+</li>
+</ul>
+<span class="comment highlight"><br />
+Other tables: what is the purpose of the visit_request table, created
+by schemas/delphi_visit.sql?<br />
+<br />
+All
 tables created in MySQL using the .sql files in /trunk/schema currently
 use the
 default MyISAM storage engine,
