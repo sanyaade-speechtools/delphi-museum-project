@@ -37,8 +37,8 @@ possible through traditional searching and browsing.
 </h2>
 The data repository stores two types of data:
 <ul>
-<li>Data about
-artifacts in the collections ("metadata").<br />
+<li><span style="font-weight: bold;">Data about
+artifacts in the collections ("metadata").</span><br />
 <br />
 <span style="font-style: italic;">Purposes of this data</span>:
 &nbsp;This data is displayed when the Delphi collections browser
@@ -79,8 +79,9 @@ instance? &nbsp;Also, consider moving this paragraph elsewhere;
 this may not be its most appropriate location.</span><br />
 <br />
 </li>
-<li>Data about the concepts associated with these artifacts (a
-"semantic index").<br />
+<li><span style="font-weight: bold;">Data about
+the concepts associated with these artifacts (a
+"semantic index").</span><br />
 <br />
 <span style="font-style: italic;">Purpose of this data</span>:
 &nbsp;This data helps users of Delphi's collections browser locate
@@ -96,8 +97,12 @@ Delphi: Back-end Tools</a>.<br />
 Future instances of
 Delphi deployed elsewhere will need to build their own mental models
 ("ontologies") of their data facets and concepts.<br />
-</li>
+<br />
+<span class="comment highlight"></span></li>
 </ul>
+<span class="comment highlight">Should we insert 'images
+depicting the artifacts' as a second bullet point, above, or is this
+simply a specialized form of metadata?</span>
 <h2>Components</h2>
 The data repository currently consists of the following components:<br />
 <h3><strong>1. MySQL</strong></h3>
@@ -129,7 +134,7 @@ performance. &nbsp;That choice might be revisited at a future time,
 if and when the performance of triple store repositories significantly
 improves.<br />
 </p>
-<h4>MySQL on the IST Unix Web Farm</h4>
+<h4>1.1. MySQL on the IST Unix Web Farm</h4>
 <p>In Delphi instance for PAHMA at UC Berkeley, MySQL is provided
 by the IST Database team, as an extra-cost
 option to the IST Unix Web Farm hosting environment.</p>
@@ -140,9 +145,11 @@ and no complex database design issues. It includes a single production
 environment with limited support." &nbsp;For more information
 regarding this service,&nbsp; see
 <a href="http://ist.berkeley.edu/services/catalog/database/mysql" target="_blank">http://ist.berkeley.edu/services/catalog/database/mysql</a>
-&nbsp;There are also other MySQL services available from the IST Database team which offer
+&nbsp;There are also other MySQL services available from the IST
+Database team which offer
 more support, at a higher cost.&nbsp;
-</p><p>In the three-tier model of the IST
+</p>
+<p>In the three-tier model of the IST
 Unix Web Farm, it is
 possible to have separate instances of databases, such as MySQL
 databases, available to each of the tiers.&nbsp; This way,
@@ -158,12 +165,15 @@ specific to the production environment.<br />
 <span class="comment highlight">Add details about the Web
 Farm tiers here, including </span><span class="comment highlight">how the PHP
 environment is configured to point to specific MySQL database
-instances across these tiers</span><span class="comment highlight">.<br /></span><p><em>Installed version in Delphia's PAHMA instance:</em>
+instances across these tiers</span><span class="comment highlight">.<br />
+</span>
+<p><em>Installed version in Delphia's PAHMA instance:</em>
 &nbsp;5.0.67<br />
 (The installed version is selected and maintained by the
 adminstrators
 of the IST Unix
-Web Farm. &nbsp;It was identified by running the 'mysql' utility from
+Web Farm. &nbsp;It was identified by running the 'mysql' utility
+from
 the command line, with a set of parameters to connect to the instance
 of MySQL provided by the MySQL Basic service: <code>mysql --host=<span style="font-style: italic;">hostname</span>
 --port=<span style="font-style: italic;">port_number</span>
@@ -175,58 +185,78 @@ configuration file <code>config.php</code>.
 &nbsp;After connecting and receiving the interactive <code>mysql&gt;</code>
 prompt, the following SQL command identified the MySQL version: <code>SHOW
 VARIABLES LIKE "%version%";</code>)</p>
-
 <h3><strong>2. phpMyAdmin</strong></h3>
 <p>phpMyAdmin is an open source administration console for MySQL.
 &nbsp;It provides a web-based, graphical interface to managing
-accounts, databases, and tables, and other MySQL components. &nbsp;phpMyAdmin is included as part of IST's MySQL Basic service.<br />
+accounts, databases, and tables, and other MySQL components.
+&nbsp;phpMyAdmin is included as part of IST's MySQL Basic service.<br />
 <br />
 <span class="comment highlight">Add details about
 versions, licensing, usage etc. here.<br />
 </span></p>
 <h3><strong>3. Image storage</strong></h3>
-High-resolution images have been created for a portion of the
+<p>Images - digital photographs or scans - have been created for a
+portion of the
 artifacts in the PAHMA collection, and are retrieved and displayed by
-Delphi's collections browser. &nbsp;In the data repository for
+Delphi's collections browser.</p><p>In
+Delphi, images are currently retrieved by the PHP-based code in the
+collections browser as files in a filesystem, rather than as binary
+objects in a database.</p>
+<h4>3.1. Image storage on the IST Unix Web Farm</h4><p>In the data repository for
 the instance of Delphi currently used
-by PAHMA, these images are stored on a Storage Area Network (SAN) in
+by PAHMA,&nbsp;images are stored as files on a Storage Area Network (SAN) in
 the campus Data Center at UC Berkeley,
-provided by Information Services and Technology (IST). &nbsp;The
+via a storage service provided by Information Services and Technology (IST). &nbsp;The
 Delphi
 service is currently paying for 70
 MB of SAN storage, and uses less than half of that storage, as of
-2008-10-21.<br />
-<br />
+2008-10-21.</p>
+<p>
 This SAN storage is mounted over the Data Center's network via the
 Network File System (NFS) <span class="comment highlight">verify
-this,</span>, and is
+this</span>, and is
 made available to Delphi's 'pahma' account on the IST Unix Web Farm
 through a
-Unix symbolic link:<span style="font-family: &quot;Courier New&quot;,Courier,monospace;"></span><code>
-the webroot/delphi/objimages</code> directory within that account
+Unix symbolic link:<span style="font-family: &quot;Courier New&quot;,Courier,monospace;"></span>
+the <code>webroot/delphi/objimages</code> directory within
+that account
 is actually a symlink to the NFS-mounted area of SAN storage that is
-provided at&nbsp; <code>/nas/pahma/objimages</code>.<br />
-<br />
+provided at&nbsp; <code>/nas/pahma/objimages</code>.</p><p>
 This SAN storage area is generally mounted read-only.
 &nbsp;When it is necessary to add additional images, Delphi's
 administrators make a request to the IST Unix Team to temporarily mount
-this storage area as read-write.<br />
-<br />
+this storage area as read-write.</p>
+<p>
 For
 more details about the IST's storage services, including SAN storage
 and network-accessible (NFS) access to that storage, see
-<a href="http://ist.berkeley.edu/is/platforms/storage/san" target="_blank">http://ist.berkeley.edu/is/platforms/storage/san</a><br />
-<br />
-<h2>The structure of data stored in the repository: database
+<a href="http://ist.berkeley.edu/is/platforms/storage/san" target="_blank">http://ist.berkeley.edu/is/platforms/storage/san</a><br /></p>
+<h2><br />The structure of data stored in the repository: database
 schemas<br />
 </h2>
+<p><span class="comment highlight"></span>Delphi uses the following database tables, with a number of the descriptions below taken directly from the SQL create scripts</p><ul><li><span style="font-weight: bold;">DBInfo</span><br /><br />Holds system-wide&nbsp;parameters, such as the sizes of alternate images and the version of this database schema.<br /><br /></li><li><span style="font-weight: bold;">categories</span><br /></li><li><span style="font-weight: bold;">media</span><br /><br />Identifies each of the media objects&nbsp;<span class="comment highlight"></span>associated with each artifact. &nbsp;This data includes names and descriptions of each object (e.g. "Obverse
+view," "Frontal view of object taken during restoration"), the image
+(or multimedia preview) size, and the filesystem path to the media
+object.<br /><br /> In the Delphi instance for PAHMA, media currently consists only of images, although audio and video types are defined - <span class="comment highlight">verify
+this</span>. &nbsp;<br /></li><li><span style="font-weight: bold;">objects</span><br /><br />Contains
+the core metadata about each artifact: its object number in the
+collections, name, description, and the filesystem path to its default
+image.<br /></li><li><span style="font-weight: bold;">sets</span><br /><br />Maintains
+lists of sets. &nbsp;Sets allow users to create and manage personal
+groupings of artifacts, whether associated by topic or simply kept as
+favorites.<br /><br /></li><li><span style="font-weight: bold;">set_objs</span><br /><br />Identifies the artifacts associated with a set.</li></ul>
+<p><span class="comment highlight"></span></p>
 <p><span class="comment highlight">Discuss the
 database schema -
 look for load files in the source code tree, descriptive text, diagrams.</span></p>
 <span class="comment highlight">All
-tables created in MySQL using the .sql files in /trunk/schema currently use the
+tables created in MySQL using the .sql files in /trunk/schema currently
+use the
 default MyISAM storage engine,
 http://dev.mysql.com/doc/refman/5.0/en/myisam-storage-engine.html
+&nbsp;Determine where to best note this, and to discuss the
+ramifications of using this storage engine versus the transactional
+InnoDB engine, as per discussion with Patrick in early November 2008.
 </span><br />
 <span class="comment highlight"><br />
 </span>
