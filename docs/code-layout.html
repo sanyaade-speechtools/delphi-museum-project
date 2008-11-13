@@ -2,14 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Code Layout</title>
 
-<link rel="stylesheet" type="text/css" href="stylesheets/delphi-docs.css" />
-<!--
+<link rel="stylesheet" type="text/css" href="stylesheets/delphi-docs.css" /><!--
 Last committed revision:
 $Author$
 $Date$
 $Revision$
--->
-</head>
+--></head>
 <body>
 <h1>Delphi: Code Layout</h1>
 <div class="draftnote">
@@ -96,8 +94,17 @@ This configuration file creates a PHP object named "<code>CFG</code>" (for
 variable <code>$CFG</code> in many
 locations throughout Delphi's PHP code.
 &nbsp;This object contains the following data:<br />
-<br />
-...<br />
+<br /><ul><li>Database type (e.g. 'mysql').</li><li>Database host and port.</li><li>Database name.</li><li>Related connection details.</li><li>The root HTTP URL for the Delphi collections browser (e.g. 'http://myservername/delphi').</li><li>The short URL base for the browser (e.g. '/delphi').</li><li>HTTP
+path locations of various server files: the root directory for the
+Delphi files, as well as for certain image directories (thumbnails,
+mid-sized images, and tiled images that have been prepared for
+zoom-and-pan access).</li><li>The default theme.</li><span style="font-family: Georgia,serif;"></span><li>Local filesystem paths to various image directories and heavily used images (e.g. 'no-image' placeholders).</li><li>The location of the Zoomify SWF file.</li><li>The size of derivative images, in pixels.</li><li>A contact email address.</li><li>A default web page title.</li></ul><br />Currently,
+in the Delphi instance for PAHMA, the customized copies of this file
+for the IST Unix Web Farm's development and quality assurance tiers
+differ from the customized copy of this file for the Web Farm's
+production tier in only three areas: the hostname and/or port of the
+MySQL database server, the database name, and several related
+connection details.<br />
 <br />
 </dd>
 <dt>favicon.ico</dt>
