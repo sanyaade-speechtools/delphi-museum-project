@@ -2,14 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Code Layout</title>
 
-<link rel="stylesheet" type="text/css" href="stylesheets/delphi-docs.css" />
-<!--
+<link rel="stylesheet" type="text/css" href="stylesheets/delphi-docs.css" /><!--
 Last committed revision:
 $Author$
 $Date$
 $Revision$
--->
-</head>
+--></head>
 <body>
 <h1>Delphi: Code Layout</h1>
 <div class="draftnote">
@@ -183,25 +181,28 @@ format<span style="font-family: monospace;">, </span><code>schema_notes.htm</cod
 <h3>/schemas</h3>
 Contains the SQL table creation scripts and related SQL utility scripts:<br />
 <ul>
-<li><code>mainObjInfo.sql</code> has most of the
-tables we use, and is the
-primary schema file.</li>
-<li><code>delphi_ident.sql</code> has the
+<li><code>mainObjInfo.sql</code> is the
+primary schema file. &nbsp;It&nbsp;creates
+most of the tables used by Delphi, including the tables that contain
+data about the artifacts ("metadata"); the association of categories
+with artifacts ("semantic index"); and the annotation of artifacts via
+sets and tags.</li>
+<li><code>delphi_ident.sql</code> creates the
 authentication and authorization
-tables.</li>
+tables that define users, roles, and permissions, and the associations between them.</li>
 <li><code>addBaseRolesAndPerms.sql</code> has an
-init script for the basic
-auth/authz info.</li>
-<li><code>featured.sql</code> has the table for the
+init script that loads a base set of authentication and authorization data:
+roles, permissions, and users.</li>
+<li><code>featured.sql</code> creates the table for the
 featured sets on the
 PAHMA home page.</li>
 <li><code>grants.sql</code> has a template for
 setting up permissions on the
 tables for the DB user you will use. It is just a template, and must be
 customized for local username and passwords.</li>
-<li><code>cat_counts.sql</code> defines tables and
-the scripts to fill these
-tables to support various UI features.</li>
+<li><code>cat_counts.sql</code> creates a temporary table in which the
+count of artifacts associated with each category is stored, prior to
+being copied to the categories tables.</li>
 <li><code>delphi_visit.sql</code> is not yet used.<br />
 </li>
 </ul>
