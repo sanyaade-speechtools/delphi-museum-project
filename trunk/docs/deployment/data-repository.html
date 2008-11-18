@@ -100,8 +100,9 @@ Delphi deployed elsewhere will need to build their own mental models
 <br />
 <span class="comment highlight"></span></li>
 </ul>
-<span class="comment highlight">Should we insert 'images
-depicting the artifacts' as a second bullet point, above, or is this
+<span class="comment highlight">Should we insert a bullet
+point, above, for 'images
+depicting the artifacts', or is this
 simply a specialized form of metadata?</span>
 <h2>Components</h2>
 The data repository currently consists of the following components:<br />
@@ -202,7 +203,8 @@ artifacts in the PAHMA collection, and are retrieved and displayed by
 Delphi's collections browser.</p>
 <p>In
 Delphi, images are currently retrieved by the PHP-based code in the
-collections browser as image files stored in a filesystem, rather than as binary
+collections browser as image files stored in a filesystem, rather than
+as binary
 objects in a database.</p>
 <h4>3.1. Image storage on the IST Unix Web Farm</h4>
 <p>In the data repository for
@@ -229,7 +231,8 @@ is actually a symlink to the NFS-mounted area of SAN storage that is
 provided at&nbsp; <code>/nas/pahma/objimages</code>.</p>
 <p>This SAN storage area is generally mounted read-only.
 &nbsp;When it is necessary to add additional images, Delphi's
-administrators make a request to the IST Enterprise Unix Team to temporarily mount
+administrators make a request to the IST Enterprise Unix Team to
+temporarily mount
 this storage area as read-write.</p>
 <p>
 For
@@ -247,11 +250,17 @@ data repository primarily consists of a set of database tables.
 the repository, and are then listed alphabetically within each category.<br />
 <br />
 These tables are created using table creation scripts in the /schemas
-directory of the Delphi source code tree. &nbsp;Most of these tables are
+directory of the Delphi source code tree. &nbsp;Most of these
+tables are
 then populated with data by Delphi's set of back-end tools.<span class="comment highlight"></span><br />
 </p>
-<h3>Tables associated with data about artifacts in the collections ("metadata")</h3>
-<p>The following tables contain the metadata about each artifact, and identify the media connected to that artifact.<br /><br />Each of these tables is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code> script.</p>
+<h3>Tables associated with data about artifacts in the
+collections ("metadata")</h3>
+<p>The following tables contain the metadata about each artifact,
+and identify the media connected to that artifact.<br />
+<br />
+Each of these tables is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code>
+script.</p>
 <ul>
 <li><span style="font-weight: bold;">media</span><br />
 <br />
@@ -281,16 +290,25 @@ determined to contain richer descriptive text."<br />
 <br />
 </li>
 </ul>
-<h3>Tables associated with the concepts associated with these artifacts (a "semantic index")</h3>
-<p>The following tables maintain the mental model of the collections
+<h3>Tables associated with the concepts associated with these
+artifacts (a "semantic index")</h3>
+<p>The following tables maintain the mental model of the
+collections
 ("ontology"), and the association of concepts in that mental model with
-each artifact.<br /><br />Each of these tables is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code> script with one exception: the temporary 'cat_counts' table is created by the <code>/schemas/cat_counts.sql</code> script.</p>
+each artifact.<br />
+<br />
+Each of these tables is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code>
+script with one exception: the temporary 'cat_counts' table is created
+by the <code>/schemas/cat_counts.sql</code> script.</p>
 <ul>
-<li><span style="font-weight: bold;">cat_counts<br /></span><span style="font-weight: bold;"></span><br />
+<li><span style="font-weight: bold;">cat_counts<br />
+</span><span style="font-weight: bold;"></span><br />
 A temporary table for calculating the number of artifacts in the
 collections that are associated with each category. &nbsp;Once
 calculated, these counts are placed into the 'categories' table, below,
-and this table is deleted.<br /></li><li><span style="font-weight: bold;">categories</span><span style="font-weight: bold;"></span><br />
+and this table is deleted.<br />
+</li>
+<li><span style="font-weight: bold;">categories</span><span style="font-weight: bold;"></span><br />
 <br />
 Maintains
 the hierarchical set of concepts (aka "categories") that can be
@@ -356,15 +374,22 @@ of a category with an artifact may have been made automatically
 </li>
 </ul>
 <h3>Tables associated with user and curator annotations</h3>
-<p>The following tables store informal, custom annotations - sets and
-tags - that are made by&nbsp;by virtual visitors to the collections.
+<p>The following tables store informal, custom annotations - sets
+and
+tags - that are made by&nbsp;by virtual visitors to the
+collections.
 &nbsp;These annotations can be useful in supplementing the
 institution's data about the artifacts in these collections
 ("metadata") and the association of concepts to artifacts ("semantic
-index"). &nbsp;A small number of predefined sets - "featured" sets -
+index"). &nbsp;A small number of predefined sets - "featured" sets
+-
 are created by the institution's curators, to help "invite people" into
-the collections. <br /><br />Each of these tables is created by the
-<code>/schemas/mainObjInfo.sql</code> script, with one exception: the 'featured_sets' table is created by the <code>/schemas/featured.sql</code> script.</p>
+the collections. <br />
+<br />
+Each of these tables is created by the
+<code>/schemas/mainObjInfo.sql</code> script, with one
+exception: the 'featured_sets' table is created by the <code>/schemas/featured.sql</code>
+script.</p>
 <ul>
 <li><span style="font-weight: bold;">featured_sets</span><br />
 <br />
@@ -415,21 +440,25 @@ experimental.<br />
 <h3>Tables associated with user roles and access permissions<br />
 </h3>
 <p>Each of these tables is created by the
-<code>/schemas/delphi_ident.sql</code> script. &nbsp;A base set of
+<code>/schemas/delphi_ident.sql</code> script. &nbsp;A
+base set of
 roles, permissions, and users, and the associations between them, is
 then loaded into these tables by a second script.</p>
 <ul>
 <li><span style="font-weight: bold;">permission</span><br />
 <br />
-Defines permissions for the Delphi service.<br /><br />
+Defines permissions for the Delphi service.<br />
+<br />
 </li>
 <li><span style="font-weight: bold;">role</span><br />
 <br />
-Defines roles for the Delphi service.<br /><br />
+Defines roles for the Delphi service.<br />
+<br />
 </li>
 <li><span style="font-weight: bold;">role_perms</span><br />
 <br />
-Associates one or more permissions to each role.<br /><br />
+Associates one or more permissions to each role.<br />
+<br />
 </li>
 <li><span style="font-weight: bold;">user</span><br />
 <br />
@@ -444,7 +473,10 @@ account.<br />
 Associates one or more roles with each Delphi user.<span class="comment highlight"></span></li>
 </ul>
 <h3>Tables associated with utility functions</h3>
-<p>This table is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code> script, which also loads a minimal, initial set of data into that table. &nbsp;<span class="comment highlight">Identify how this table is later populated.</span></p>
+<p>This table is created by the&nbsp;<code>/schemas/mainObjInfo.sql</code>
+script, which also loads a minimal, initial set of data into that
+table. &nbsp;<span class="comment highlight">Identify
+how this table is later populated.</span></p>
 <ul>
 <li><span style="font-weight: bold;">DBInfo</span><br />
 <br />
@@ -468,14 +500,13 @@ InnoDB engine, as per discussion with Patrick in early November 2008.
 <span class="comment highlight"><br />
 </span>
 <h2>Related documentation</h2>
-Delphi's data repository stores the data that is accessed by its
+<p>Delphi's data repository stores the data that is accessed by its
 web-based collections
 browser. &nbsp;To learn more about this collections browser, see <a href="collections-browser.html">Deploying Delphi:
-Collections Browser</a>.<br />
-<br />
+Collections Browser</a>.</p>
+<p>
 Data is placed into this repository using a set of
 back-end tools. &nbsp;
 To learn more about these tools, see <a href="back-end-tools.html">Deploying
-Delphi: Back-end Tools</a>.
-<h2></h2>
+Delphi: Back-end Tools.</a></p>
 </body></html>
