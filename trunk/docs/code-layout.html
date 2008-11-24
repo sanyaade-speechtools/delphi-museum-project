@@ -142,17 +142,24 @@ windows/tabs and bookmarks when visiting the Delphi site.
 </dd>
 </dl>
 <h3>/api</h3>
-<p>PHP code files that provide various service calls.<br /><br />A core utility module, used by other PHP code and AJAX calls:</p><dl><dt>apiSetup.php</dt><dd>Sets up the Delphi API: reading the PHP configuration file,
+<p>PHP code files that provide various service calls.<br />
+<br />
+A core utility module, used by other PHP code and AJAX calls:</p>
+<dl>
+<dt>apiSetup.php</dt>
+<dd>Sets up the Delphi API: reading the PHP configuration file,
 loads and includes the Pear MDB2 library (handler) within the current
 PHP environment, and initiates a connection to
 the database specified in the instance's configuration file (i.e. a
 customized and renamed copy of the <code>config.sample.php</code>
-file).</dd></dl><p>The following files help manage users, roles, and permissions:</p>
+file).</dd>
+</dl>
+<p>The following files help manage users, roles, and permissions:</p>
 <dl>
 <dt>addRole.php</dt>
 <dd>Adds&nbsp;a new role - by name and description - to the
-role table in the database.</dd><dt>setRolePerm.php</dt>
-
+role table in the database.</dd>
+<dt>setRolePerm.php</dt>
 <dd>Adds, updates or deletes the permissions associated with a
 role.</dd>
 <dt>setUserRole.php</dt>
@@ -162,8 +169,10 @@ role.</dd>
 <dt>updateRole.php</dt>
 <dd>Updates the description associated with a role.</dd>
 </dl>
-<p>The following are test files, used in testing the semantic index and
-the blended (category and keyword) search functionality. &nbsp;These
+<p>The following are test files, used in testing the semantic
+index and
+the blended (category and keyword) search functionality.
+&nbsp;These
 return HTML results:</p>
 <dl>
 <dt>catsForObjId.php</dt>
@@ -186,12 +195,35 @@ categories and/or keywords.</dd>
 artifacts found by searching on categories and/or keywords.</dd>
 </dl>
 <h3>/libs</h3>
-Includes mostly imported libraries like jQuery, Smarty, PEAR (for the
-MDB model), XPM (XPertMailer), and the Zoomify swf file. <br />
+This directory primarily includes imported libraries like jQuery,
+Smarty, PEAR (for the
+MDB model), XPM (XPertMailer), and the Zoomify swf file. Also included are common libraries we developed
+to support ontology-related
+functionality.<br /><br />The root of this directory contains the following PHP and JavaScript library files:<br />
+<dl>
+<dt>env.php</dt>
+<dd>Starts an interactive Web session, and reads the PHP
+configuration file (see "config.php.sample", above) from the current
+directory. &nbsp;It then uses the settings in that configuration
+file to configure the Smarty template engine, connect to the database,
+and determine the user's login name and role. &nbsp;(If the user is
+not logged in, they will be presented with a login page.)</dd>
+<dt>json.js</dt>
+<dd>Routines to convert in both directions between JavaScript
+objects and JSON string representations of those objects.</dd>
+<dt>utils.php</dt>
+<dd>A diverse collection of utility functions. &nbsp;These
+include data validation and data cleansing routines to validate real
+names and email addresses and to safely accept data submitted via web
+pages, by stripping out potentially dangerous content. &nbsp;This library
+also includes a function to send email messages via XPM.<br />
 <br />
-Also includes common libraries we developed to support ontology-related
-functionality. <br />
-<br />
+</dd>
+</dl>
+<h3>/libs/ontology</h3>
+Also included in the <code>/libs</code> directory are common libraries we developed
+to support ontology-related
+functionality:<br /><br />...
 <h3>/modules</h3>
 Has the PHP files that provide most of the page functionality for
 Delphi.<br />
