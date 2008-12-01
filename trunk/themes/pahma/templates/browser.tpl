@@ -10,7 +10,7 @@
 
 <div id="contentNarrow">
 	<h1>Concept Browser</h1>
-	<p>Youu can use this facet browser to find objects in the Museum's collections
+	<p>You can use this facet browser to find objects in the Museum's collections
 	which are related to any of the listed concepts.
 	Click on any concept to see objects related to that concept.
 	Click on the '+' button to the left of the concept to see sub-concepts.</p>
