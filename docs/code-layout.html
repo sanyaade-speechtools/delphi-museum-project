@@ -202,7 +202,7 @@ to support ontology-related
 functionality.<br /><br />The root of this directory contains the following PHP and JavaScript library files:<br />
 <dl>
 <dt>env.php</dt>
-<dd>Starts an interactive Web session, and reads the PHP
+<dd>Starts an interactive Web session and reads the PHP
 configuration file (see "config.php.sample", above) from the current
 directory. &nbsp;It then uses the settings in that configuration
 file to configure the Smarty template engine, connect to the database,
@@ -212,7 +212,7 @@ not logged in, they will be presented with a login page.)</dd>
 <dd>Routines to convert in both directions between JavaScript
 objects and JSON string representations of those objects.</dd>
 <dt>utils.php</dt>
-<dd>A diverse collection of utility functions. &nbsp;These
+<dd>A diverse collection of utility routines. &nbsp;These
 include data validation and data cleansing routines to validate real
 names and email addresses and to safely accept data submitted via web
 pages, by stripping out potentially dangerous content. &nbsp;This library
@@ -223,7 +223,10 @@ also includes a function to send email messages via XPM.<br />
 <h3>/libs/ontology</h3>
 Also included in the <code>/libs</code> directory are common libraries we developed
 to support ontology-related
-functionality:<br /><br />...
+functionality:<br /><dl><dt><dt>Facet.inc</dt></dt><dd>...</dd><dt>ontoServices.php</dt><dd>...</dd><dt><dt>onto_utils.php</dt></dt><dd>Utility routines for parsing text, when
+mining text from database fields. &nbsp;This library includes functions to
+split keywords on space separators, while respecting quoted sequences;
+and to build n-grams <span class="comment highlight">explain here</span> of various lengths from a set of tokens.</dd><dt>TaxoNode.inc</dt><dd>...</dd></dl>
 <h3>/modules</h3>
 Has the PHP files that provide most of the page functionality for
 Delphi.<br />
@@ -291,7 +294,7 @@ semantic indexing engine:<br />
 <ul>
 <li><code>MainApp.java</code> has the bulk of the
 UI logic, and a fair
-amount of application glue. It should be broken up more into clearer
+amount of application glue.<br />Future direction: should be broken up more into clearer
 modules that separate UI and application logic.<br />
 </li>
 <li><code>TaxoNode.java</code> and <code>Facet.java</code>
