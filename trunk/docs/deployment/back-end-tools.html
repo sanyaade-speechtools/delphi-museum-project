@@ -2,14 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" /><title>Delphi - Deployment - Back-end Tools</title>
 
-<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" />
-<!--
+<link rel="stylesheet" type="text/css" href="../stylesheets/delphi-docs.css" /><!--
 Last committed revision:
 $Author$
 $Date$
 $Revision$
--->
-</head>
+--></head>
 <body>
 <p class="linkback right"><a href="introduction.html">Back
 to Introduction</a></p>
@@ -40,77 +38,99 @@ make it more effective and enjoyable to find individual artifacts in
 collections, and to uncover relationships between artifacts, than is
 possible through traditional searching and browsing.</p>
 <p>The
-Delphi Project includes a set of back-end tools analyzing and processing data about the artifacts in an institution's
-collections, and loading this data into a data repository.</p>
-<p>The primary back-end tool is a Java-based, menu-driven
-application,
-which - through various menu options - allows a Delphi administrator to
-perform three categories of tasks:</p>
+Delphi Project includes back-end tools for analyzing and processing
+data about the artifacts in an institution's
+collections, and loading this data into a data repository. &nbsp;Using
+a Java-based application, Delphi's administrators perform a set of
+tasks in a specific sequence in order to process the data and load it
+into the data repository.&nbsp;At a specific point in the process, they also use a collection of 'sed' scripts are to clean up selected data.&nbsp; </p><p>Currently, these back-end tools must be used manually, in batch
+mode. &nbsp;Future Delphi enhancements
+may help automate some of this work.<br /></p><h2>Java-based application</h2><p>The primary back-end tool is a Java-based, menu-driven
+application. &nbsp;By selecting various menu options in this application, Delphi administrator's can
+perform the tasks necessary to prepare the three types of data used by Delphi's collections browser:</p>
 <ol>
-<li>Creating and maintaining the mental model of a collection
-or set of collections ("ontology").<br />
-<br />
-This ontology consists of broad categories, or "facets," such as location,
-culture, and design, and an often large and hierarchical set of
-underlying concepts within each facet, such as "Western United States,"
-"Yokuts," and "wings," respectively.<br />
+<li>Concepts that describe the collections ("ontology").<br /><br />The
+first set of tasks involves creating and iteratively refining a set of
+concepts that describe the collections. &nbsp;This builds a "mental
+model" of the collections, formally called an "ontology."<br />
+<br />The ontology is currently built and maintained by Delphi's
+administrators, working closely with the staff of the museum or other
+institution. &nbsp;It consists of broad conceptual categories, or
+"facets," each containing a hierarchical "tree" of more specific
+concepts.<br /><br />For instance, for the instance of Delphi for
+the&nbsp;Phoebe A. Hearst Museum of Anthropology (PAHMA)
+at the University of California, Berkeley, facets describing the
+collections include "Location," "Cultural Group", and "Technique,
+Design or Decoration." &nbsp;Examples of hierarchically nested concepts
+that fall within the "Location" facet include "United States,"
+"Southwestern states," "California," and "Madera county."<br /><br /> Currently, the ontology consists of a set of XML files, one for each facet.<br />
 <br />
 </li>
-<li> Selecting and organizing the
-data about the
-artifacts in their collections ("metadata").<br />
-<br />
-This consists of metadata obtained from the museum or other heritage
-institution, such as the titles,
-descriptions, and sizes of each artifact.<br />
+<li>Data about the
+artifacts in the collections ("metadata").<br />
+<br />The second set of tasks involves retrieving and organizing the
+data about the artifacts in the collections, formally known as "metadata."<br /><br />This
+metadata comes from the museum or other heritage
+institution, usually from their collections management system or
+catalog of the collections. &nbsp;It typically consists of the text and
+numeric fields describing the artifacts in the collection, such as the
+titles, descriptions, and ID numbers for each artifact. &nbsp;Media,
+such as digital photos or scans, are a second type of metadata that
+further describes the artifacts.<br /><br />In
+the instance of Delphi for PAHMA, this data is currently obtained as a
+comma-separated value (CSV) text dump from the museum, along with a set
+of digital images. &nbsp;After selecting and cleaning up the text-based
+metadata, it is loaded into Delphi's data repository, and the digital
+images are stored in a filesystem.<br />
 <br />
 </li>
-<li>Matching data about artifacts to concepts in the ontology,
-thus creating a "semantic index."<br />
-<br />Through its metadata, for instance, a particular artifact may be associated
-with the concepts "Western
-United States," "California" and "Central Valley" in the location
-facet, the concept "Yokuts" in the culture facet, and the concepts
-"wings" and "circular" in the "design" facet.<br />
-<br />
+<li>Associations between concepts and artifacts ("semantic index").<br /><br />The
+third set of tasks involves making connections between the two types of
+data created above: associating concepts from the ontology with the
+artifacts in the collections, thus creating what is formally termed a
+"semantic index."<br /><br />In the instance of Delphi for PAHMA, these
+associations are currently generated by Delphi's administrators, with
+the involvement of the museum's staff in improving the quality of this
+work over time. &nbsp;Through this process, a Native American basket
+might, for instance, be associated
+with a set of concepts:&nbsp;"United States," "Southwestern states,"
+"California," "Inyo county," "Death Valley" and "McKinley" in the
+Location
+facet; "North American Indian Cultures", "California Tribes,"
+"Shoshone," and "Panamint" in the Cultural Group facet; and "Figurative
+or Representational", "Insects," and "Butterfly," as well as "Carved or
+Shaped" and "Coiled" in the Technique, Design and Decoration facet.
+&nbsp;The semantic index makes it possible for the collections browser
+to return this basket when a user of the Delphi collection browser
+searches or browses by concepts like "Southwestern states and
+butterfly", as well as helping them explore its
+relationship to other artifacts in the collections. <br /><br /><span class="comment highlight">Do
+we need to discuss here the mechanics of how parent concepts throughout
+faceted hierarchies are explicitly or implicitly associated with
+artifacts?</span><br /><br />
 This
 matching of data about an artifact to one or more concepts in the
 ontology is
-performed by&nbsp;examining ("mining") text in the artifact's
-metadata. &nbsp;Various natural language processing techniques are
-applied to find words or phrases in the metadata that, with a high
-degree of confidence, match or closely match various concepts,&nbsp;or their
-synonyms,
-in the ontology.<br />
+performed by sifting through ("mining") text in the artifact's
+metadata. &nbsp;Specifically, various natural language processing techniques are
+applied to find words or multi-word phrases in the metadata that match concepts - or their synonyms -
+in the ontology. &nbsp;These associations between concepts and artifacts are then stored in Delphi's data repository.<br />
 </li>
-</ol>
-<p>The result of performing these tasks is that
-the data repository is populated with data that can be used by the
-collections browser, allowing the collection to be searched and browsed
-by concepts - such as culture, material and design - along with the
-data traditionally available about the artifacts in the collections.</p>
-<p>There is also a secondary but nonetheless important back-end
-tool: a collection of 'sed' scripts.
-&nbsp;These are used to perform initial cleanup of the data
+</ol><h2>'sed' scripts<br /></h2><p>There is also a secondary but nonetheless important back-end
+tool, comprised of <span style="font-weight: bold;">a collection of 'sed' scripts</span>.
+&nbsp;These scripts are used to perform an initial cleanup of the metadata about the artifacts in the collections that is
 received from
-the museum or other heritage institution, before it can be processed by
-the Java-based application.&nbsp;&nbsp;In the case of data
+the museum or other heritage institution, before that metadata is processed by
+the Java-based application.<br /><br />In
+the case of data
 received from PAHMA,
-for instance,&nbsp;data that must be cleaned up include internal
+for instance,&nbsp;data that must be cleaned up by these scripts
+include internal
 notes that
-are of interest only to museum staff, not to researchers or the public;
-and potentially sensitive notations about donors or purchase prices.</p>
-<p>
-Currently, these back-end tools are used manually, in batch
-mode. &nbsp;After
-the initial data cleanup using the 'sed' scripts, it is then necessary
-to perform a set of
-tasks in a specific sequence, using
-the Java-based application, in order to process the data and load it
-into the data repository.&nbsp;
-Future Delphi enhancements
-may help automate some of this back-end work.
-</p>
+are likely of interest only to museum staff; potentially sensitive
+notations about donors or purchase prices; and 'garbage' characters
+that can make it difficult to mine the text in the metadata to find
+associated concepts.</p>
 <hr /><br />
 The
 goal of this processing and analysis is to build a "semantic index,"
