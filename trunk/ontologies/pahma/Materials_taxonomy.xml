@@ -86,6 +86,70 @@
 			</heading>
 		</heading>
 		<heading id="Hair" title="Hair"/>
+		<heading id="Horn" title="Horn"> <!-- Exclude if "great horned owl", "powder horn", "horn fish",
+			 "elk horn prong", "prong horn", "Mrs. Horne", "hornfels", etc. -->
+			<synonym value="Horns"/>
+			<heading id="AntelopeHorn" title="Antelope Horn">
+				<synonym value="Antelope Horns"/>
+				<synonym value="Antelope's Horn"/>
+				<synonym value="Antelope's Horns"/>
+				<synonym value="Antelopes' Horn"/>
+				<synonym value="Antelopes' Horns"/>
+			</heading>
+			<heading id="BuffaloHorn" title="Buffalo Horn">
+				<synonym value="Buffalo Horns"/>
+				<synonym value="Buffalo's Horn"/>
+				<synonym value="Buffalo's Horns"/>
+				<synonym value="Buffalos' Horn"/>
+				<synonym value="Buffalos' Horns"/>
+				<synonym value="Bison Horn"/>
+				<synonym value="Bison Horns"/>
+				<synonym value="Bison's Horn"/>
+				<synonym value="Bison's Horns"/>
+				<synonym value="Bisons' Horn"/>
+				<synonym value="Bisons' Horns"/>
+			</heading>
+			<heading id="CowHorn" title="Cow Horn">
+				<synonym value="Cow Horns"/>
+				<synonym value="Cow's Horn"/>
+				<synonym value="Cow's Horns"/>
+				<synonym value="Cows' Horn"/>
+				<synonym value="Cows' Horns"/>
+				<synonym value="Cattle Horn"/>
+				<synonym value="Cattle Horns"/>
+				<synonym value="Cattle's Horn"/>
+				<synonym value="Cattle's Horns"/>
+				<synonym value="Cattles' Horn"/>
+				<synonym value="Cattles' Horns"/>
+				<synonym value="Bull Horn"/>
+				<synonym value="Bull Horns"/>
+				<synonym value="Bull's Horn"/>
+				<synonym value="Bull's Horns"/>
+				<synonym value="Bulls' Horn"/>
+				<synonym value="Bulls' Horns"/>
+			</heading>
+			<heading id="MountainGoatHorn" title="Mountain Goat Horn">
+				<synonym value="Mountain Goat Horns"/>
+				<synonym value="Mountain Goat's Horn"/>
+				<synonym value="Mountain Goat's Horns"/>
+				<synonym value="Mountain Goats' Horn"/>
+				<synonym value="Mountain Goats' Horns"/>
+			</heading>
+			<heading id="MountainSheepHorn" title="Mountain Sheep Horn">
+				<synonym value="Mountain Sheep Horns"/>
+				<synonym value="Mountain Sheep's Horn"/>
+				<synonym value="Mountain Sheep's Horns"/>
+				<synonym value="Mountain Sheeps' Horn"/>
+				<synonym value="Mountain Sheeps' Horns"/>
+			</heading>
+			<heading id="SheepHorn" title="Sheep Horn">
+				<synonym value="Sheep Horns"/>
+				<synonym value="Sheep's Horn"/>
+				<synonym value="Sheep's Horns"/>
+				<synonym value="Sheeps' Horn"/>
+				<synonym value="Sheeps' Horns"/>
+			</heading>
+		</heading>
 		<heading id="Wool" title="Wool">
 			<synonym value="Wool Fabric"/>
 			<heading id="BrushedWool" title="Brushed Wool">
@@ -249,7 +313,22 @@
 				<implies facet="Color" cat="OffWhite"/>
 			</heading>
 		</heading>
-		<heading id="Antler" title="Antler"/>
+		<heading id="Antler" title="Antler">
+			<heading id="DeerHorn" title="Deer Horn">
+				<synonym value="Deer Horns"/>
+				<synonym value="Deer's Horn"/>
+				<synonym value="Deer's Horns"/>
+				<synonym value="Deers' Horn"/>
+				<synonym value="Deers' Horns"/>
+			</heading>
+			<heading id="ElkHorn" title="Elk Horn">
+				<synonym value="Elk Horns"/>
+				<synonym value="Elk's Horn"/>
+				<synonym value="Elk's Horns"/>
+				<synonym value="Elks' Horn"/>
+				<synonym value="Elks' Horns"/>
+			</heading>
+		</heading>
 		<heading id="Sinew" title="Sinew">
 			<excl value="Sinew shredder" />
 			<heading id="WhaleSinew" title="Whale Sinew" />
@@ -604,6 +683,7 @@
 				<heading id="Rhyolite" title="Rhyolite"/>
 			</heading>
 			<heading id="CommonStones" title="Common Stones">
+				<heading id="Actinolite" title="Actinolite"/>
 				<heading id="Amphibolite" title="Amphibolite"/>
 				<heading id="Argillite" title="Argillite"/>
 				<heading id="Asbestos" title="Asbestos"/>
@@ -615,9 +695,15 @@
 				<heading id="Chalk" title="Chalk"/>
 				<heading id="Chert" title="Chert"/>
 				<heading id="Coal" title="Coal"/>
+				<heading id="Claystone" title="Claystone"/>
 				<heading id="Diorite" title="Diorite"/>
 				<heading id="Flint" title="Flint"/>
+				<heading id="Gneiss" title="Gneiss">
+					<heading id="DioriteGneiss" title="Diorite Gneiss"/>
+					<heading id="GraniteGneiss" title="Granite Gneiss"/>
+				</heading>
 				<heading id="Granite" title="Granite"/>
+				<heading id="Hornfels" title="Hornfels"/>
 				<heading id="Limestone" title="Limestone"/>
 				<heading id="Magnesite" title="Magnesite">
 					<synonym value="Magnestie"/>
