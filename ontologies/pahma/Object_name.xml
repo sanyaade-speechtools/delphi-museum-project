@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<taxonomy id="ObjectName" title="Object Name or Type">
+		<heading id="ArchitecturalElements" title="Architectural Elements">
+			<synonym value="Architectural Element"/>
+			<heading id="RoofingTiles" title="Roofing Tiles">
+				<synonym value="Roofing Tile"/>
+				<heading id="Imbrex" title="Imbrex">
+					<synonym value="Imbrices"/>
+				</heading>
+				<heading id="Tegula" title="Tegula">
+					<synonym value="Tegulea"/>
+				</heading>
+			</heading>
+			<heading id="Door" title="Door">
+				<synonym value="Doors"/>
+			</heading>
+		</heading>
 		<heading id="AudioRecordings" title="Audio Recordings">
 			<synonym value="Audio Recording"/>
 			<heading id="DigitalAudio" title="Digital Audio">
@@ -39,15 +54,20 @@
 			<heading id="DoctoringBasket" title="Doctoring Basket">
 				<synonym value="Doctoring Baskets"/>
 			</heading>
-			<heading id="EelTrapBasket" title="Eel Trap Basket">
-				<synonym value="Eel Trap Baskets"/>
-				<synonym value="Eel-trap Basket"/>
-				<synonym value="Eel-trap Baskets"/>
-			</heading>
 			<heading id="FishTrapBasket" title="Fish Trap Basket">
 				<synonym value="Fish Trap Baskets"/>
 				<synonym value="Fish-trap Basket"/>
 				<synonym value="Fish-trap Baskets"/>
+				<heading id="EelTrapBasket" title="Eel Trap Basket">
+					<synonym value="Eel Trap Baskets"/>
+					<synonym value="Eel-trap Basket"/>
+					<synonym value="Eel-trap Baskets"/>
+				</heading>
+				<heading id="SalmonTrapBasket" title="Salmon Trap Basket">
+					<synonym value="Salmon Trap Baskets"/>
+					<synonym value="Salmon-trap Basket"/>
+					<synonym value="Salmon-trap Baskets"/>
+				</heading>
 			</heading>
 			<heading id="GatheringBasket" title="Gathering Basket">
 				<synonym value="Gathering Baskets"/>
@@ -81,11 +101,6 @@
 			<heading id="ParchingBasket" title="Parching Basket">
 				<synonym value="Parching Baskets"/>
 			</heading>
-			<heading id="SalmonTrapBasket" title="Salmon Trap Basket">
-				<synonym value="Salmon Trap Baskets"/>
-				<synonym value="Salmon-trap Basket"/>
-				<synonym value="Salmon-trap Baskets"/>
-			</heading>
 			<heading id="ServingBasket" title="Serving Basket">
 				<synonym value="Serving Baskets"/>
 			</heading>
@@ -100,6 +115,24 @@
 			</heading>
 			<heading id="WinnowingBasket" title="Winnowing Basket">
 				<synonym value="Winnowing Baskets"/>
+			</heading>
+		</heading>
+		<heading id="Furniturefurnishings" title="Furniture &amp; furnishings">
+			<synonym value="Furniture"/>
+			<heading id="Bed" title="Bed">
+				<synonym value="Beds"/>
+			</heading>
+			<heading id="Chair" title="Chair">
+				<synonym value="Chairs"/>
+			</heading>
+			<heading id="Rug" title="Rug">
+				<synonym value="Rugs"/>
+			</heading>
+			<heading id="Table" title="Table">
+				<synonym value="Tables"/>
+				<heading id="Desk" title="Desk">
+					<synonym value="Desks"/>
+				</heading>
 			</heading>
 		</heading>
 		<heading id="Photographs" title="Photographs">
@@ -161,5 +194,23 @@
 		</heading>
 		<heading id="Textiles" title="Textiles">
 			<synonym value="Textile"/>
+			<heading id="Bedding" title="Bedding">
+				<heading id="Blanket" title="Blanket"> 					
+					<synonym value="Blankets"/> 				
+				</heading>
+				<heading id="Headrest" title="Headrest"> 					
+					<synonym value="Headrests"/> 				
+				</heading>
+				<heading id="Pillow" title="Pillow"> 					
+					<synonym value="Pillows"/> 				
+				</heading>
+				<heading id="MatSleeping" title="Mat, Sleeping"/>
+				<heading id="Canopy" title="Canopy"> 					
+					<synonym value="Canopies"/> 				
+				</heading>
+			</heading>
+			<heading id="Tablecloth" title="Tablecloth">
+				<synonym value="Tablecloths"/>
+			</heading>
 		</heading>
 	</taxonomy>
