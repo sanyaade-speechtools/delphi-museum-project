@@ -3,15 +3,16 @@
 		<!-- Terms to be added:
 			bayonet
 			bonnet
+			boss (shield)
 			bridle
 			curling iron
 			ladle
+			Mesh measure
 			powder horn
 			quirt
 			shuttle
 			war bonnet
 			whisk
-			Mesh measure
 		-->
 		<heading id="ArchitecturalElements" title="Architectural Elements">
 			<synonym value="Architectural Element"/>
@@ -41,109 +42,148 @@
 			</heading>
 		</heading>
 		<heading id="Armaments" title="Armaments">
-			<heading id="Edgedweapons" title="Edged weapons">
-				<heading id="Sword" title="Sword"> 					
-					<synonym value="Swords"/> 				
-				</heading>
-				<heading id="Knife" title="Knife"> 					
-					<synonym value="Knives"/> 				
-				</heading>
-				<heading id="Blade" title="Blade"> 					
-					<synonym value="Blades"/> 				
-				</heading>
-				<heading id="Dagger" title="Dagger"> 					
-					<synonym value="Daggers"/> 				
-				</heading>
-				<heading id="Sheath" title="Sheath"> 					
-					<synonym value="Sheaths"/> 				
-				</heading>
-				<heading id="Scabbard" title="Scabbard"> 					
-					<synonym value="Scabbards"/> 				
-				</heading>
-				<heading id="Machete" title="Machete"> 					
-					<synonym value="Machetes"/> 				
-				</heading>
-			</heading>
-			<heading id="Firearms" title="Firearms">
-				<synonym value="Firearm"/>
-				<heading id="Cannon" title="Cannon"> 					
-					<synonym value="Cannons"/>
-					<excl value="Cannon Bone"/>
-					<excl value="Cannon Bones"/>
-					<excl value="Cannon-Bone"/>
-					<excl value="Cannon-Bones"/>			
-				</heading>
-				<heading id="Guns" title="Guns"> 					
-					<synonym value="Gun"/>
-					<heading id="Carbine" title="Carbine"> 					
-						<synonym value="Carbines"/>
-						<synonym value="Carabine"/>
-						<synonym value="Carabines"/> 				
-					</heading> 
-					<heading id="Musket" title="Musket"> 					
-						<synonym value="Muskets"/> 				
-					</heading>
-					<heading id="Rifle" title="Rifle"> 					
-						<synonym value="Rifles"/> 				
-					</heading>				
-				</heading>
-				
-			</heading>
-			<heading id="Trap" title="Trap"> 					
-				<synonym value="Traps"/> 				
-			</heading>
-			<heading id="Propulsiveweapons" title="Propulsive weapons">
-				<synonym value="Propulsive weapon"/>
-				<heading id="Spear" title="Spear"> 					
-					<synonym value="Spears"/> 				
-				</heading>
-				<heading id="Atlatl" title="Atlatl"> 					
-					<synonym value="Atlatls"/> 				
-				</heading>
-				<heading id="ProjectilePoint" title="Projectile Point"> 					
-					<synonym value="Projectile Points"/>
-					<synonym value="Arrowhead"/>
-					<synonym value="Arrowheads"/>
-					<synonym value="Arrow head"/>
-					<synonym value="Arrow heads"/>
-					<synonym value="Arrowpoint"/>
-					<synonym value="Arrowpoints"/>
-					<synonym value="Arrow point"/>
-					<synonym value="Arrow points"/>
-					<synonym value="Arrow-point"/>
-					<synonym value="Arrow-points"/> 				
-				</heading>
-				<heading id="Arrow" title="Arrow"> 					
-					<synonym value="Arrows"/> 				
-				</heading>
-				<heading id="Boomerang" title="Boomerang"> 					
-					<synonym value="Boomerangs"/> 				
-				</heading>
-				<heading id="Lance" title="Lance"> 					
-					<synonym value="Lances"/> 				
-				</heading>
-			</heading>
-			<heading id="Bluntweapons" title="Blunt weapons">
-				<synonym value="Blunt weapon"/>
-				<heading id="Mace" title="Mace"> 					
-					<synonym value="Maces"/> 				
-				</heading>
-				<heading id="Cudgel" title="Cudgel"> 					
-					<synonym value="Cudgels"/> 				
-				</heading>
-				<heading id="Maul" title="Maul"> 					
-					<synonym value="Mauls"/> 				
-				</heading>
-			</heading>
 			<heading id="Armor" title="Armor">
 				<heading id="Helmet" title="Helmet"> 					
 					<synonym value="Helmets"/> 				
 				</heading>
+				<heading id="Gorgets" title="Gorgets"></heading>			
+					<synonym value="Gorget"/>
+					<heading id="ArmorBanjo" title="Banjo"> 	<!-- Called ArmorBanjo because I also want to enter banjo as an ornament and as a musical instrument-->
+						<synonym value="Banjos"/> 		<!-- Will this work? Can I do this? I'll also need to use exclusions -->
+						<heading id="HalfBanjo" title="Half Banjo">	<!-- infer Gifford's type N2A1 from this -->	
+							<synonym value="Half Banjos"/>
+						</heading>
+					</heading>
 				<heading id="Greave" title="Greave"> 					
 					<synonym value="Greaves"/> 				
 				</heading>
 				<heading id="Shield" title="Shield"> 					
 					<synonym value="Shields"/> 				
+				</heading>
+			</heading>
+			<heading id="Munitions" title="Munitions">
+				<synonym value="Munition"/>
+				<synonym value="Ammunition"/>
+				<heading id="Arrow" title="Arrow"> 					
+					<synonym value="Arrows"/>		
+				</heading>
+				<heading id="Bullet" title="Bullet"> 					
+					<synonym value="Bullets"/>			
+				</heading>
+				<heading id="CannonBall" title="Cannon Ball"> 					
+					<synonym value="Cannon Balls"/>			
+				</heading>
+			</heading>
+			<heading id="Weapons" title="Weapons">
+				<synonym value="Weapon"/>
+				<heading id="Bluntweapons" title="Blunt weapons">
+					<synonym value="Blunt weapon"/>
+					<heading id="Mace" title="Mace"> 					
+						<synonym value="Maces"/> 				
+					</heading>
+					<heading id="Cudgel" title="Cudgel"> 					
+						<synonym value="Cudgels"/> 				
+					</heading>
+					<heading id="Maul" title="Maul"> 					
+						<synonym value="Mauls"/> 				
+					</heading>
+				</heading>
+				<heading id="Edgedweapons" title="Edged weapons">
+					<heading id="Sword" title="Sword"> 					
+						<synonym value="Swords"/> 				
+					</heading>
+					<heading id="Knife" title="Knife"> 					
+						<synonym value="Knives"/> 				
+					</heading>
+					<heading id="Blade" title="Blade"> 					
+						<synonym value="Blades"/> 				
+					</heading>
+					<heading id="Dagger" title="Dagger"> 					
+						<synonym value="Daggers"/> 				
+					</heading>
+					<heading id="Sheath" title="Sheath"> 					
+						<synonym value="Sheaths"/> 				
+					</heading>
+					<heading id="Scabbard" title="Scabbard"> 					
+						<synonym value="Scabbards"/> 				
+					</heading>
+					<heading id="Machete" title="Machete"> 					
+						<synonym value="Machetes"/> 				
+					</heading>
+				</heading>
+				<heading id="Firearms" title="Firearms">
+					<synonym value="Firearm"/>
+					<heading id="Cannon" title="Cannon"> 					
+						<synonym value="Cannons"/>
+						<excl value="Cannon Bone"/>
+						<excl value="Cannon Bones"/>
+						<excl value="Cannon-Bone"/>
+						<excl value="Cannon-Bones"/>			
+					</heading>
+					<heading id="Guns" title="Guns"> 					
+						<synonym value="Gun"/>
+						<heading id="Carbine" title="Carbine"> 					
+							<synonym value="Carbines"/>
+							<synonym value="Carabine"/>
+							<synonym value="Carabines"/> 				
+						</heading> 
+						<heading id="Musket" title="Musket"> 					
+							<synonym value="Muskets"/> 				
+						</heading>
+						<heading id="Rifle" title="Rifle"> 					
+							<synonym value="Rifles"/> 				
+						</heading>				
+					</heading>
+					
+				</heading>
+				<heading id="Propulsiveweapons" title="Propulsive weapons">
+					<synonym value="Propulsive weapon"/>
+					<heading id="Spear" title="Spear"> 					
+						<synonym value="Spears"/> 				
+					</heading>
+					<heading id="Atlatl" title="Atlatl"> 					
+						<synonym value="Atlatls"/> 				
+					</heading>
+					<heading id="ProjectilePoint" title="Projectile Point"> 					
+						<synonym value="Projectile Points"/>
+						<synonym value="Arrowhead"/>
+						<synonym value="Arrowheads"/>
+						<synonym value="Arrow head"/>
+						<synonym value="Arrow heads"/>
+						<synonym value="Arrowpoint"/>
+						<synonym value="Arrowpoints"/>
+						<synonym value="Arrow point"/>
+						<synonym value="Arrow points"/>
+						<synonym value="Arrow-point"/>
+						<synonym value="Arrow-points"/> 				
+					</heading>
+					<heading id="Arrow" title="Arrow"> 					
+						<synonym value="Arrows"/> 				
+					</heading>
+					<heading id="Boomerang" title="Boomerang"> 					
+						<synonym value="Boomerangs"/> 				
+					</heading>
+					<heading id="Lance" title="Lance"> 					
+						<synonym value="Lances"/> 				
+					</heading>
+				</heading>
+				<heading id="Traps" title="Traps"> 					
+					<synonym value="Trap"/>
+					<heading id="TrapFishTrapBaskets" title="Fish Trap Baskets"> <!-- Also a kind of basket -->					
+						<synonym value="Fish Trap Basket"/>
+						<synonym value="Fish-trap Basket"/>
+						<synonym value="Fish-trap Baskets"/>
+						<heading id="TrapEelTrapBasket" title="Eel Trap Basket"> <!-- Also a kind of basket -->					
+							<synonym value="Eel Trap Baskets"/>
+							<synonym value="Eel-trap Basket"/>
+							<synonym value="Eel-trap Baskets"/>				
+						</heading>
+						<heading id="TrapSalmonTrapBasket" title="Salmon Trap Basket"> <!-- Also a kind of basket -->					
+							<synonym value="Salmon Trap Baskets"/>
+							<synonym value="Salmon-trap Basket"/>
+							<synonym value="Salmon-trap Baskets"/>			
+						</heading>			
+					</heading>
 				</heading>
 			</heading>
 		</heading>
@@ -186,16 +226,16 @@
 			<heading id="DoctoringBasket" title="Doctoring Basket">
 				<synonym value="Doctoring Baskets"/>
 			</heading>
-			<heading id="FishTrapBasket" title="Fish Trap Basket">
+			<heading id="BasketFishTrapBasket" title="Fish Trap Basket"> <!-- Also a kind of trap (armament) -->
 				<synonym value="Fish Trap Baskets"/>
 				<synonym value="Fish-trap Basket"/>
 				<synonym value="Fish-trap Baskets"/>
-				<heading id="EelTrapBasket" title="Eel Trap Basket">
+				<heading id="EelTrapBasket" title="Eel Trap Basket"> <!-- Also a kind of trap (armament) -->
 					<synonym value="Eel Trap Baskets"/>
 					<synonym value="Eel-trap Basket"/>
 					<synonym value="Eel-trap Baskets"/>
 				</heading>
-				<heading id="SalmonTrapBasket" title="Salmon Trap Basket">
+				<heading id="SalmonTrapBasket" title="Salmon Trap Basket"> <!-- Also a kind of trap (armament) -->
 					<synonym value="Salmon Trap Baskets"/>
 					<synonym value="Salmon-trap Basket"/>
 					<synonym value="Salmon-trap Baskets"/>
@@ -249,6 +289,29 @@
 				<synonym value="Winnowing Baskets"/>
 			</heading>
 		</heading>
+		<heading id="Beads" title="Beads">
+			<heading id="BarrelBeads" title="Barrel Beads">
+				<synonym value="Barrel Bead"/>
+			</heading>
+			<heading id="CylinderBeads" title="Cylinder Beads">
+				<synonym value="Cylinder Bead"/>
+			</heading>
+			<heading id="FaienceBeads" title="Faience Beads">
+				<synonym value="Faience Bead"/>
+			</heading>
+			<heading id="GlassBeads" title="Glass Beads">
+				<synonym value="Glass Bead"/>
+			</heading>
+			<heading id="PotteryBeads" title="Pottery Beads">
+				<synonym value="Pottery Bead"/>
+			</heading>
+			<heading id="RingBeads" title="Ring Beads">
+				<synonym value="Ring Bead"/>
+			</heading>
+			<heading id="ShellBeads" title="Shell Beads">
+				<synonym value="Shell Bead"/>
+			</heading>
+		</heading>
 		<heading id="ClothingorCostume" title="Clothing or Costume">
 			<heading id="Accessories" title="Accessories">
 				<heading id="Netsuke" title="Netsuke"/>
@@ -260,70 +323,6 @@
 				</heading>
 				<heading id="ButtonHook" title="Button Hook">
 					<synonym value="Button Hooks"/>
-				</heading>
-				<heading id="Jewelry" title="Jewelry">
-						<synonym value="Jewellery"/>
-						<synonym value="Jewelery"/>
-						<synonym value="Jewellry"/>
-						<heading id="Brooch" title="Brooch">
-							<synonym value="Brooches"/>
-						</heading>
-						<heading id="Cameo" title="Cameo">
-							<synonym value="Cameos"/>
-						</heading>
-						<heading id="Earring" title="Earring">
-							<synonym value="Earrings"/>
-							<synonym value="Ear ring"/>
-							<synonym value="Ear rings"/>
-							<synonym value="Ear-ring"/>
-							<synonym value="Ear-rings"/>
-						</heading>
-						<heading id="Charm" title="Charm">
-							<synonym value="Charms"/>
-						</heading>
-						<heading id="Bracelet" title="Bracelet">
-							<synonym value="Bracelets"/>
-						</heading>
-						<heading id="Cufflink" title="Cufflink"> 					
-							<synonym value="Cufflinks"/> 				
-						</heading>
-						<heading id="Ring" title="Ring"> 					
-							<synonym value="Rings"/> 				
-						</heading>
-						<heading id="Fibula" title="Fibula"> 					
-							<synonym value="Fibulas"/>
-							<synonym value="Fibulae"/> 				
-						</heading>
-						<heading id="Pendant" title="Pendant"> 					
-							<synonym value="Pendants"/> 				
-						</heading>
-						<heading id="Pin" title="Pin"> 					
-							<synonym value="Pins"/> 				
-						</heading>
-						<heading id="HatPin" title="Hat Pin"> 					
-							<synonym value="Hat Pins"/> 				
-						</heading>
-						<heading id="Torque" title="Torque">
-							<synonym value="Torques"/>
-							<synonym value="Torc"/>
-							<synonym value="Torcs"/>
-						</heading>
-						<heading id="Circlet" title="Circlet"> 					
-							<synonym value="Circlets"/> 				
-						</heading>
-						<heading id="Necklace" title="Necklace"> 					
-							<synonym value="Necklaces"/> 				
-						</heading>
-						<heading id="Locket" title="Locket"> 					
-							<synonym value="Lockets"/> 				
-						</heading>
-						<heading id="Bulla" title="Bulla"> 					
-							<synonym value="Bullas"/>
-							<synonym value="Bullae"/> 				
-						</heading>
-				</heading>
-				<heading id="TopKnot" title="Top Knot"> 					
-					<synonym value="Top Knots"/> 				
 				</heading>
 			</heading>
 			<heading id="Apron" title="Apron"> 					
@@ -369,8 +368,17 @@
 				</heading>
 			</heading>
 			<heading id="Headwear" title="Headwear">
+				<heading id="Basketryhat" title="Basketry hat">
+					<synonym value="Basketry hats"/>
+					<synonym value="Basketry cap"/>
+					<synonym value="Basketry caps"/>
+				</heading>
 				<heading id="Cap" title="Cap"> 					
 					<synonym value="Caps"/> 				
+				</heading>
+				<heading id="Fez" title="Fez">
+					<synonym value="Fes"/>
+					<synonym value="Fezzes"/>
 				</heading>
 				<heading id="Hat" title="Hat">
 					<synonym value="Hats"/>
@@ -378,11 +386,8 @@
 				<heading id="Headband" title="Headband">
 					<synonym value="Headbands"/>
 				</heading>
-				<heading id="Fez" title="Fez"/>
-				<heading id="Basketryhat" title="Basketry hat">
-					<synonym value="Basketry hats"/>
-					<synonym value="Basketry cap"/>
-					<synonym value="Basketry caps"/>
+				<heading id="Turban" title="Turban">
+					<synonym value="Turbans"/>
 				</heading>
 			</heading>
 			<heading id="Outerwear" title="Outerwear">
@@ -441,6 +446,109 @@
 				</heading>
 			</heading>
 		</heading>
+		<heading id="Jewelry" title="Jewelry">
+			<synonym value="Jewellery"/>
+			<synonym value="Jewelery"/>
+			<synonym value="Jewellry"/>
+			<heading id="ArmOrnamentation" title="Arm Ornamentation">
+				<synonym value="Arm Ornamentations"/>
+				<heading id="Bracelet" title="Bracelet">
+					<synonym value="Bracelets"/>
+				</heading>
+				<heading id="Cufflink" title="Cufflink"> 					
+					<synonym value="Cufflinks"/> 				
+				</heading>
+				<heading id="Torque" title="Torque">
+					<synonym value="Torques"/>
+					<synonym value="Torc"/>
+					<synonym value="Torcs"/>
+				</heading>
+			</heading>
+			<heading id="ChestOrnamentation" title="Chest Ornamentation">
+				<synonym value="Chest Ornamentations"/>
+				<heading id="Brooch" title="Brooch">
+					<synonym value="Brooches"/>
+				</heading>
+				<heading id="Cameo" title="Cameo"> <!-- not sure this is limited to chest wear -->
+					<synonym value="Cameos"/>
+				</heading>
+				<heading id="Fibula" title="Fibula"> 					
+					<synonym value="Fibulas"/>
+					<synonym value="Fibulae"/> 				
+				</heading>
+				<heading id="Pin" title="Pin"> 					
+					<synonym value="Pins"/> 				
+				</heading>
+			</heading>
+			<heading id="FingerToeOrnamentation" title="Finger &amp; Toe Ornamentation">
+				<synonym value="Finger &amp; Toe Ornamentations"/>
+				<synonym value="Finger &amp; Toe Jewelry"/>
+				<synonym value="Finger or Toe Ornamentation"/>
+				<synonym value="Finger or Toe Jewelry"/>
+				<synonym value="Finger Ornamentation"/>
+				<synonym value="Finger Ornamentations"/>
+				<synonym value="Finger Jewelry"/>
+				<synonym value="Toe Ornamentation"/>
+				<synonym value="Toe Ornamentations"/>
+				<synonym value="Toe Jewelry"/>
+				<heading id="Ring" title="Ring"> 					
+					<synonym value="Rings"/> 				
+				</heading>
+			</heading>
+			<heading id="HeadOrnamentation" title="Head Ornamentation">
+				<synonym value="Head Ornamentations"/>
+				<heading id="Circlet" title="Circlet"> 					
+					<synonym value="Circlets"/> 				
+				</heading>
+				<heading id="Crown" title="Crown">	<!-- will need exclusions -->
+					<synonym value="Crowns"/> 				
+				</heading>
+				<heading id="Earring" title="Earring">
+					<synonym value="Earrings"/>
+					<synonym value="Ear ring"/>
+					<synonym value="Ear rings"/>
+					<synonym value="Ear-ring"/>
+					<synonym value="Ear-rings"/>
+				</heading>
+				<heading id="HatPin" title="Hat Pin"> 					
+					<synonym value="Hat Pins"/> 				
+				</heading>
+				<heading id="HeadLockets" title="Head Lockets">
+					<synonym value="Head Locket"/>
+					<heading id="Maangtika" title="Maangtika">
+						<synonym value="Mangtika"/>
+					</heading>
+				</heading>
+				<heading id="TopKnot" title="Top Knot"> 					
+					<synonym value="Top Knots"/> 				
+				</heading>
+			</heading>
+			<heading id="NeckOrnamentation" title="Neck Ornamentation">
+				<synonym value="Neck Ornamentations"/>
+				<heading id="OrnamentBanjo" title="Banjo">	<!-- Called OrnamentBanjo because I also want to enter banjo as a gorget (armor) and as a musical instrument-->
+					<synonym value="Banjos"/>		<!-- Will this work? Can I do this? I'll also need to use exclusions -->
+					<heading id="HalfBanjo" title="Half Banjo">	<!-- infer Gifford's type N2A1 from this -->	
+						<synonym value="Half Banjos"/>
+					</heading>
+				</heading>
+				<heading id="Bulla" title="Bulla"> <!-- Not to include "tympanic bulla" or "auditory bulla" -->			
+					<synonym value="Bullas"/>
+					<synonym value="Bullae"/>
+				</heading>
+				<heading id="Charm" title="Charm">
+					<synonym value="Charms"/>
+				</heading>
+				<heading id="Locket" title="Locket"> 					
+					<synonym value="Lockets"/> 				
+				</heading>
+				<heading id="Necklace" title="Necklace">
+					<synonym value="Necklaces"/> 				
+				</heading>
+				<heading id="Pendant" title="Pendant">
+					<synonym value="Pendants"/>
+				</heading>
+			</heading>
+		</heading>
 		<heading id="Musicrelateditems" title="Music">
 			<synonym value="Music"/>
 			<synonym value="Musical"/>
@@ -450,8 +558,13 @@
 				<synonym value="Stringed instrument"/>
 				<synonym value="Chordophones"/> 					
 				<synonym value="Chordophone"/>
-				<heading id="Banjo" title="Banjo">
+				<heading id="Banjo" title="Banjo">  <!-- Exclude abalone "banjo", "Haliotis, banjo type" -->
 					<synonym value="Banjos"/>
+					<synonym value="Banjoes"/>
+					<heading id="GourdBanjo" title="Gourd Banjo">
+						<synonym value="Gourd Banjos"/>
+						<synonym value="Gourd Banjoes"/>
+					</heading>
 				</heading>
 				<heading id="Guitar" title="Guitar">
 					<synonym value="Guitars"/>
@@ -876,6 +989,12 @@
 				<heading id="Canopy" title="Canopy"> 					
 					<synonym value="Canopies"/> 				
 				</heading>
+			</heading>
+			<heading id="Flags" title="Flags"> 					
+				<synonym value="Flag"/>
+				<heading id="Pennant" title="Pennant"> 					
+					<synonym value="Pennants"/> 				
+				</heading>			
 			</heading>
 			<heading id="PrayerMat" title="Prayer Mat"> 					
 				<synonym value="Prayer Mats"/> 				
