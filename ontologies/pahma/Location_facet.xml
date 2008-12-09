@@ -7,6 +7,13 @@
 	</description>
 	<notes><em>Note some of the grouping nodes, like mid-west?</em>
 	</notes>
+	<!-- Insert the following syntax wherever a site is temporally narrow enough
+		to justify such an inference:
+			<implies facet="Collection" cat="EuropeanPaleolithic"/>
+			<implies facet="CulturalGroup" cat="Hohokam"/>
+			<implies facet="Event" cat="SanFranciscoPanPacificExpo"/>
+			<implies facet="Period" cat="EuropeanMedieval"/>
+	-->
 	<heading id="Africa" title="Africa">
 		<heading id="NorthernAfrica" title="Northern Africa">
 			<synonym value="North Africa"/>
@@ -1008,273 +1015,290 @@
 		  </heading>
 		</heading>
 		<heading id="SouthernEurope" title="Southern Europe">
-		  <heading id="Italy" title="Italy">
-		    <heading id="Sardinia" title="Sardinia">
-		      <heading id="Cagliari" title="Cagliari"/>
-		      <heading id="SettimoSanPietro" title="Settimo San Pietro"/>
-		    </heading>
-		    <heading id="SouthernItaly" title="Southern Italy">
-		      <synonym value="South Italy"/>
-		      <heading id="Apulia" title="Apulia">
-		        <heading id="Taranto" title="Taranto">
-		          <synonym value="Tarentum"/>
-		          <synonym value="Taras"/>
-		        </heading>
-		        <heading id="Barletta" title="Barletta"/>
-		      </heading>
-		      <heading id="Campania" title="Campania">
-		        <heading id="Capua" title="Capua">
-		          <synonym value="Curti"/>
-		        </heading>
-		        <heading id="Pozzuoli" title="Pozzuoli"/>
-		        <heading id="Naples" title="Naples">
-		          <synonym value="Napoli"/>
-		        </heading>
-		        <heading id="Nola" title="Nola"/>
-		        <heading id="Canosa" title="Canosa"/>
-		        <heading id="Pompeii" title="Pompeii">
-		          <synonym value="Pompei"/>
-		        </heading>
-		        <heading id="Boscoreale" title="Boscoreale"/>
-		      </heading>
-		      <heading id="PonteLucano" title="Ponte Lucano"/>
-		      <heading id="Lucania" title="Lucania"/>
-		    </heading>
-		    <heading id="NorthernItaly" title="Northern Italy">
-		      <synonym value="North Italy"/>
-		      <heading id="Milan" title="Milan">
-		        <synonym value="Milano"/>
-		      </heading>
-		      <heading id="Turin" title="Turin">
-		        <synonym value="Torino"/>
-		      </heading>
-		      <heading id="Venice" title="Venice">
-		        <synonym value="Venezia"/>
-		      </heading>
-		      <heading id="SanMarino" title="San Marino"/>
-		      <heading id="SanLazzaro" title="San Lazzaro"/>
-		      <heading id="Ravenna" title="Ravenna"/>
-		    </heading>
-		    <heading id="CentralItaly" title="Central Italy">
-		      <heading id="Anagni" title="Anagni"/>
-		      <heading id="Latium" title="Latium">
-		        <synonym value="Lazio"/>
-		        <heading id="Rome" title="Rome">
-		          <heading id="Colosseum" title="Colosseum">
-		            <synonym value="Coliseum"/>
-		          </heading>
-		          <heading id="BathsofDiocletian" title="Baths of Diocletian"/>
-		        </heading>
-		        <heading id="HadriansVilla" title="Hadrians Villa"/>
-		        <heading id="Nemilake" title="Nemi lake"/>
-		        <heading id="Viterbo" title="Viterbo">
-		          <heading id="Musarna" title="Musarna"/>
-		        </heading>
-		        <heading id="ViaLatina" title="Via Latina"/>
-		        <heading id="Vicovaro" title="Vicovaro"/>
-		        <heading id="Gabii" title="Gabii"/>
-		        <heading id="PontediNona" title="Ponte di Nona"/>
-		        <heading id="Ostia" title="Ostia"/>
-		        <heading id="Marino" title="Marino"/>
-		        <heading id="Palestrina" title="Palestrina"/>
-		        <heading id="Tivoli" title="Tivoli"/>
-		      </heading>
-		      <heading id="Siena" title="Siena"/>
-		      <heading id="Cerveteri" title="Cerveteri">
-		        <synonym value="Caere"/>
-		      </heading>
-		      <heading id="Florence" title="Florence"/>
-		      <heading id="Arezzo" title="Arezzo"/>
-		      <heading id="Etruria" title="Etruria">
-		        <heading id="Campomorto" title="Campomorto"/>
-		        <heading id="Zambra" title="Zambra"/>
-		        <heading id="Narce" title="Narce"/>
-		      </heading>
-		      <heading id="Perugia" title="Perugia"/>
-		      <heading id="Chiusi" title="Chiusi"/>
-		      <heading id="CivitaCastellana" title="Civita Castellana"/>
-		      <heading id="Saturnia" title="Saturnia">
-		        <heading id="TombO" title="Tomb O"/>
-		        <heading id="TombP" title="Tomb P"/>
-		        <heading id="TombQ" title="Tomb Q"/>
-		        <heading id="TombR" title="Tomb R"/>
-		      </heading>
-		      <heading id="Orvieto" title="Orvieto">
-		        <heading id="TombS" title="Tomb S"/>
-		      </heading>
-		      <heading id="Piombino" title="Piombino"/>
-		      <heading id="Sovana" title="Sovana">
-		        <heading id="TombH" title="Tomb H"/>
-							<heading id="TombI" title="Tomb I"/>
-		        <heading id="TombK" title="Tomb K"/>
-		        <heading id="TombL" title="Tomb L"/>
-		        <heading id="TombM" title="Tomb M"/>
-		      </heading>
-		      <heading id="Bieda" title="Bieda"/>
-		      <heading id="PoggioBuco" title="Poggio Buco">
-		        <heading id="AbbadiadelFiume" title="Abbadia del Fiume">
-		          <heading id="AbbadiadelFiumeTombA" title="Abbadia del Fiume: Tomb A"/>
-		          <heading id="AbbadiadelFiumeTombB" title="Abbadia del Fiume: Tomb B"/>
-		          <heading id="AbbadiadelFiumeTombC" title="Abbadia del Fiume: Tomb C"/>
-		          <heading id="AbbadiadelFiumeTombD" title="Abbadia del Fiume: Tomb D"/>
-		          <heading id="AbbadiadelFiumeTombE" title="Abbadia del Fiume: Tomb E"/>
-		          <heading id="AbbadiadelFiumeTombF" title="Abbadia del Fiume: Tomb F"/>
-		          <heading id="AbbadiadelFiumeTombG" title="Abbadia del Fiume: Tomb G"/>
-		        </heading>
-		      </heading>
-		      <heading id="SanLazzaro" title="San Lazzaro"/>
-		      <heading id="Pitigliano" title="Pitigliano"/>
-		      <heading id="Capena" title="Capena">
-		        <synonym value="Leprignano"/>
-		      </heading>
-		      <heading id="Vulci" title="Vulci"/>
-		      <heading id="Tarquinia" title="Tarquinia"/>
-		      <heading id="Veii" title="Veii">
-		        <synonym value="Veio"/>
-		      </heading>
-		    </heading>
-		    <heading id="Sicily" title="Sicily">
-		      <heading id="Palermo" title="Palermo"/>
-		      <heading id="Selinunte" title="Selinunte"/>
-		      <heading id="Gela" title="Gela"/>
-		      <heading id="Taormina" title="Taormina"/>
-		    </heading>
-		  </heading>
-		  <heading id="Turkey" title="Turkey">
-		    <heading id="Anatolia" title="Anatolia">
-		      <heading id="SouthwesternAnatolia" title="Southwestern Anatolia"/>
-		      <heading id="WesternAnatolia" title="Western Anatolia"/>
-		      <heading id="WesternCentralAnatolia" title="Western Central Anatolia"/>
-		      <heading id="CentralAnatolia" title="Central Anatolia"/>
-		    </heading>
-		    <heading id="KurdishTurkey" title="Kurdish Turkey"/>
-		    <heading id="Marmararegion" title="Marmara region">
-		      <heading id="Adrianople" title="Adrianople">
-		        <synonym value="Edirna"/>
-		      </heading>
-		      <heading id="Istanbul" title="Istanbul">
-		        <synonym value="Constantinople"/>
-		      </heading>
-		      <heading id="Aeolis" title="Aeolis"/>
-		      <heading id="Bursa" title="Bursa"/>
-		    </heading>
-		    <heading id="Aegeanregion" title="Aegean region">
-		      <heading id="Smyrna" title="Smyrna">
-		        <synonym value="Izmir"/>
-		        <synonym value="Smyrne"/>
-		      </heading>
-		      <heading id="Pergamon" title="Pergamon"/>
-		      <heading id="Aydin" title="Aydin">
-		        <synonym value="Tralles"/>
-		      </heading>
-		    </heading>
-		    <heading id="BlackSearegion" title="Black Sea region">
-		      <heading id="Trabzon" title="Trabzon"/>
-		    </heading>
-		    <heading id="CentralAnatoliaregion" title="Central Anatolia region">
-		      <heading id="Ankara" title="Ankara"/>
-		      <heading id="Konia" title="Konia"/>
-		      <heading id="Ladik" title="Ladik"/>
-		    </heading>
-		    <heading id="Mediterraneanregion" title="Mediterranean region">
-		      <heading id="Anavarza" title="Anavarza"/>
-		      <heading id="Antakya" title="Antakya">
-		        <synonym value="Antioch"/>
-		      </heading>
-		    </heading>
-		    <heading id="EasternAnatoliaregion" title="Eastern Anatolia region">
-		      <heading id="Verneh" title="Verneh"/>
-		      <heading id="Erzurum" title="Erzurum"/>
-		    </heading>
-		    <heading id="SoutheasternAnatoliaregion" title="Southeastern Anatolia region"/>
-		  </heading>
-		  <heading id="Greece" title="Greece">
-		    <heading id="Crete" title="Crete">
-		      <heading id="Naxos" title="Naxos"/>
-		      <heading id="Vasiliki" title="Vasiliki"/>
-		    </heading>
-		    <heading id="Attica" title="Attica">
-		      <heading id="Laurium" title="Laurium"/>
-		      <heading id="Marathon" title="Marathon"/>
-		      <heading id="Megara" title="Megara"/>
-		      <heading id="Eleusis" title="Eleusis"/>
-		      <heading id="Piraeus" title="Piraeus"/>
-		      <heading id="Salamis" title="Salamis"/>
-		      <heading id="Aegina" title="Aegina">
-		        <synonym value="Aegina"/>
-		      </heading>
-		      <heading id="Poros" title="Poros"/>
-		      <heading id="Hydra" title="Hydra"/>
-		      <heading id="Spetses" title="Spetses"/>
-		      <heading id="Kythira" title="Kythira"/>
-		      <heading id="Antikythera" title="Antikythera"/>
-		      <heading id="Keratea" title="Keratea"/>
-		      <heading id="Menide" title="Menide"/>
-		      <heading id="Tanagra" title="Tanagra"/>
-		      <heading id="Janina" title="Janina"/>
-		      <heading id="Spata" title="Spata"/>
-		      <heading id="Paros" title="Paros"/>
-		      <heading id="MountHymettos" title="Mount Hymettos"/>
-		      <heading id="Athens" title="Athens">
-		        <heading id="Acropolis" title="Acropolis"/>
-		      </heading>
-		    </heading>
-		    <heading id="WestGreece" title="West Greece">
-		      <heading id="Acarnania" title="Acarnania"/>
-		      <heading id="Aetolia" title="Aetolia"/>
-		    </heading>
-		    <heading id="CentralGreece" title="Central Greece">
-		      <heading id="Boeotia" title="Boeotia">
-		        <heading id="Lebadeia" title="Lebadeia">
-		          <synonym value="Livadeia"/>
-		          <synonym value="Lebadia"/>
-		        </heading>
-		        <heading id="Akraiphia" title="Akraiphia"/>
-		        <heading id="Thebes" title="Thebes"/>
-		      </heading>
-		      <heading id="Locris" title="Locris">
-		        <synonym value="Lokris"/>
-		      </heading>
-		      <heading id="Skyros" title="Skyros">
-		        <synonym value="Scyros"/>
-		      </heading>
-		    </heading>
-		    <heading id="SouthAegean" title="South Aegean">
-		      <heading id="Anafi" title="Anafi">
-		        <synonym value="Anaphe"/>
-		      </heading>
-		      <heading id="Andros" title="Andros"/>
-		      <heading id="Rhodes" title="Rhodes"/>
-		    </heading>
-		    <heading id="CentralMacedonia" title="Central Macedonia">
-		      <heading id="Thessaloniki" title="Thessaloniki">
-		        <synonym value="Saloniki"/>
-		      </heading>
-		    </heading>
-		    <heading id="IonianIslands" title="Ionian Islands">
-		      <heading id="Cephalonia" title="Cephalonia">
-		        <synonym value="Kefalonia"/>
-		      </heading>
-		    </heading>
-		    <heading id="Peloponnese" title="Peloponnese">
-		      <heading id="Kalamata" title="Kalamata"/>
-		      <heading id="Corinth" title="Corinth"/>
-		      <heading id="Tiryns" title="Tiryns"/>
-		    </heading>
-		    <heading id="NorthAegean" title="North Aegean">
-		      <heading id="Lesbos" title="Lesbos"/>
-		    </heading>
-		  </heading>
-		  <heading id="Albania" title="Albania"/>
-		  <heading id="Malta" title="Malta">
-		    <heading id="Valletta" title="Valletta"/>
-		  </heading>
-		  <heading id="RepublicofMacedonia" title="Republic of Macedonia">
+			<heading id="Italy" title="Italy">
+				<heading id="Sardinia" title="Sardinia">
+					<heading id="Cagliari" title="Cagliari"/>
+					<heading id="SettimoSanPietro" title="Settimo San Pietro"/>
+				</heading>
+				<heading id="SouthernItaly" title="Southern Italy">
+					<synonym value="South Italy"/>
+					<heading id="Apulia" title="Apulia">
+						<heading id="Taranto" title="Taranto">
+							<synonym value="Tarentum"/>
+							<synonym value="Taras"/>
+						</heading>
+						<heading id="Barletta" title="Barletta"/>
+					</heading>
+					<heading id="Campania" title="Campania">
+						<heading id="Boscoreale" title="Boscoreale"/>
+						<heading id="Canosa" title="Canosa"/>
+						<heading id="Capua" title="Capua">
+							<synonym value="Curti"/>
+						</heading>
+						<heading id="Naples" title="Naples">
+							<synonym value="Napoli"/>
+						</heading>
+						<heading id="Nola" title="Nola"/>
+						<heading id="Pompeii" title="Pompeii">
+							<synonym value="Pompei"/>
+						</heading>
+						<heading id="Pozzuoli" title="Pozzuoli"/>
+					</heading>
+					<heading id="Lucania" title="Lucania"/>
+					<heading id="PonteLucano" title="Ponte Lucano"/>
+				</heading>
+				<heading id="NorthernItaly" title="Northern Italy">
+					<synonym value="North Italy"/>
+					<heading id="Milan" title="Milan">
+						<synonym value="Milano"/>
+					</heading>
+					<heading id="SanMarino" title="San Marino"/>
+					<heading id="SanLazzaro" title="San Lazzaro"/>
+					<heading id="Ravenna" title="Ravenna"/>
+					<heading id="Turin" title="Turin">
+						<synonym value="Torino"/>
+					</heading>
+					<heading id="Venice" title="Venice">
+						<synonym value="Venezia"/>
+					</heading>
+				</heading>
+				<heading id="CentralItaly" title="Central Italy">
+					<heading id="Anagni" title="Anagni"/>
+					<heading id="Arezzo" title="Arezzo"/>
+					<heading id="Bieda" title="Bieda"/>
+					<heading id="Capena" title="Capena">
+						<synonym value="Leprignano"/>
+					</heading>
+					<heading id="Cerveteri" title="Cerveteri">
+						<synonym value="Caere"/>
+					</heading>
+					<heading id="Chiusi" title="Chiusi"/>
+					<heading id="CivitaCastellana" title="Civita Castellana"/>
+					<heading id="Etruria" title="Etruria">
+						<heading id="Campomorto" title="Campomorto"/>
+						<heading id="Zambra" title="Zambra"/>
+						<heading id="Narce" title="Narce"/>
+					</heading>
+					<heading id="Florence" title="Florence"/>
+					<heading id="Latium" title="Latium">
+						<synonym value="Lazio"/>
+						<heading id="Rome" title="Rome">
+							<heading id="BathsofDiocletian" title="Baths of Diocletian"/>
+							<heading id="Colosseum" title="Colosseum">
+								<synonym value="Coliseum"/>
+							</heading>
+							<heading id="RomanForum" title="Forum">
+								<heading id="TempleOfJanus" title="Temple of Janus"/>
+							</heading>
+						</heading>
+						<heading id="HadriansVilla" title="Hadrians Villa"/>
+						<heading id="Nemilake" title="Nemi lake"/>
+						<heading id="Viterbo" title="Viterbo">
+							<heading id="Musarna" title="Musarna"/>
+						</heading>
+						<heading id="ViaLatina" title="Via Latina"/>
+						<heading id="Vicovaro" title="Vicovaro"/>
+						<heading id="Gabii" title="Gabii"/>
+						<heading id="PontediNona" title="Ponte di Nona"/>
+						<heading id="Ostia" title="Ostia"/>
+						<heading id="Marino" title="Marino"/>
+						<heading id="Palestrina" title="Palestrina"/>
+						<heading id="Tivoli" title="Tivoli"/>
+					</heading>
+					<heading id="Orvieto" title="Orvieto">
+						<heading id="TombS" title="Tomb S"/>
+					</heading>
+					<heading id="Perugia" title="Perugia"/>
+					<heading id="Piombino" title="Piombino"/>
+					<heading id="Pitigliano" title="Pitigliano"/>
+					<heading id="PoggioBuco" title="Poggio Buco">
+						<heading id="AbbadiadelFiume" title="Abbadia del Fiume">
+							<heading id="AbbadiadelFiumeTombA" title="Tomb A">
+								<synonym value="Abbadia del Fiume: Tomb A"/>
+							</heading>
+							<heading id="AbbadiadelFiumeTombB" title="Tomb B">
+								<synonym value="Abbadia del Fiume: Tomb B"/>
+							</heading>
+							<heading id="AbbadiadelFiumeTombC" title="Tomb C">
+								<synonym value="Abbadia del Fiume: Tomb C"/>
+							</heading>
+							<heading id="AbbadiadelFiumeTombD" title="Tomb D">
+								<synonym value="Abbadia del Fiume: Tomb D"/>
+							</heading>
+							<heading id="AbbadiadelFiumeTombE" title="Tomb E">
+								<synonym value="Abbadia del Fiume: Tomb E"/>
+							</heading>
+							<heading id="AbbadiadelFiumeTombF" title="Tomb F">
+								<synonym value="Abbadia del Fiume: Tomb F"/>
+							</heading>
+							<heading id="AbbadiadelFiumeTombG" title="Tomb G">
+								<synonym value="Abbadia del Fiume: Tomb G"/>
+							</heading>
+						</heading>
+					</heading>
+					<heading id="SanLazzaro" title="San Lazzaro"/>
+					<heading id="Saturnia" title="Saturnia">
+						<heading id="SaturniaTombO" title="Tomb O"/>
+						<heading id="SaturniaTombP" title="Tomb P"/>
+						<heading id="SaturniaTombQ" title="Tomb Q"/>
+						<heading id="SaturniaTombR" title="Tomb R"/>
+					</heading>
+					<heading id="Siena" title="Siena"/>
+					<heading id="Sovana" title="Sovana">
+						<heading id="TombH" title="Tomb H"/>
+						<heading id="TombI" title="Tomb I"/>
+						<heading id="TombK" title="Tomb K"/>
+						<heading id="TombL" title="Tomb L"/>
+						<heading id="TombM" title="Tomb M"/>
+					</heading>
+					<heading id="Tarquinia" title="Tarquinia"/>
+					<heading id="Veii" title="Veii">
+						<synonym value="Veio"/>
+					</heading>
+					<heading id="Vulci" title="Vulci"/>
+				</heading>
+				<heading id="Sicily" title="Sicily">
+					<heading id="Gela" title="Gela"/>
+					<heading id="Palermo" title="Palermo"/>
+					<heading id="Selinunte" title="Selinunte"/>
+					<heading id="Taormina" title="Taormina"/>
+				</heading>
+			</heading>
+			<heading id="Turkey" title="Turkey">
+			<heading id="Anatolia" title="Anatolia">
+			  <heading id="SouthwesternAnatolia" title="Southwestern Anatolia"/>
+			  <heading id="WesternAnatolia" title="Western Anatolia"/>
+			  <heading id="WesternCentralAnatolia" title="Western Central Anatolia"/>
+			  <heading id="CentralAnatolia" title="Central Anatolia"/>
+			</heading>
+			<heading id="KurdishTurkey" title="Kurdish Turkey"/>
+			<heading id="Marmararegion" title="Marmara region">
+			  <heading id="Adrianople" title="Adrianople">
+			    <synonym value="Edirna"/>
+			  </heading>
+			  <heading id="Istanbul" title="Istanbul">
+			    <synonym value="Constantinople"/>
+			  </heading>
+			  <heading id="Aeolis" title="Aeolis"/>
+			  <heading id="Bursa" title="Bursa"/>
+			</heading>
+			<heading id="Aegeanregion" title="Aegean region">
+			  <heading id="Smyrna" title="Smyrna">
+			    <synonym value="Izmir"/>
+			    <synonym value="Smyrne"/>
+			  </heading>
+			  <heading id="Pergamon" title="Pergamon"/>
+			  <heading id="Aydin" title="Aydin">
+			    <synonym value="Tralles"/>
+			  </heading>
+			</heading>
+			<heading id="BlackSearegion" title="Black Sea region">
+			  <heading id="Trabzon" title="Trabzon"/>
+			</heading>
+			<heading id="CentralAnatoliaregion" title="Central Anatolia region">
+			  <heading id="Ankara" title="Ankara"/>
+			  <heading id="Konia" title="Konia"/>
+			  <heading id="Ladik" title="Ladik"/>
+			</heading>
+			<heading id="Mediterraneanregion" title="Mediterranean region">
+			  <heading id="Anavarza" title="Anavarza"/>
+			  <heading id="Antakya" title="Antakya">
+			    <synonym value="Antioch"/>
+			  </heading>
+			</heading>
+			<heading id="EasternAnatoliaregion" title="Eastern Anatolia region">
+			  <heading id="Verneh" title="Verneh"/>
+			  <heading id="Erzurum" title="Erzurum"/>
+			</heading>
+			<heading id="SoutheasternAnatoliaregion" title="Southeastern Anatolia region"/>
+			</heading>
+			<heading id="Greece" title="Greece">
+			<heading id="Crete" title="Crete">
+			  <heading id="Naxos" title="Naxos"/>
+			  <heading id="Vasiliki" title="Vasiliki"/>
+			</heading>
+			<heading id="Attica" title="Attica">
+			  <heading id="Laurium" title="Laurium"/>
+			  <heading id="Marathon" title="Marathon"/>
+			  <heading id="Megara" title="Megara"/>
+			  <heading id="Eleusis" title="Eleusis"/>
+			  <heading id="Piraeus" title="Piraeus"/>
+			  <heading id="Salamis" title="Salamis"/>
+			  <heading id="Aegina" title="Aegina">
+			    <synonym value="Aegina"/>
+			  </heading>
+			  <heading id="Poros" title="Poros"/>
+			  <heading id="Hydra" title="Hydra"/>
+			  <heading id="Spetses" title="Spetses"/>
+			  <heading id="Kythira" title="Kythira"/>
+			  <heading id="Antikythera" title="Antikythera"/>
+			  <heading id="Keratea" title="Keratea"/>
+			  <heading id="Menide" title="Menide"/>
+			  <heading id="Tanagra" title="Tanagra"/>
+			  <heading id="Janina" title="Janina"/>
+			  <heading id="Spata" title="Spata"/>
+			  <heading id="Paros" title="Paros"/>
+			  <heading id="MountHymettos" title="Mount Hymettos"/>
+			  <heading id="Athens" title="Athens">
+			    <heading id="Acropolis" title="Acropolis"/>
+			  </heading>
+			</heading>
+			<heading id="WestGreece" title="West Greece">
+			  <heading id="Acarnania" title="Acarnania"/>
+			  <heading id="Aetolia" title="Aetolia"/>
+			</heading>
+			<heading id="CentralGreece" title="Central Greece">
+			  <heading id="Boeotia" title="Boeotia">
+			    <heading id="Lebadeia" title="Lebadeia">
+			      <synonym value="Livadeia"/>
+			      <synonym value="Lebadia"/>
+			    </heading>
+			    <heading id="Akraiphia" title="Akraiphia"/>
+			    <heading id="Thebes" title="Thebes"/>
+			  </heading>
+			  <heading id="Locris" title="Locris">
+			    <synonym value="Lokris"/>
+			  </heading>
+			  <heading id="Skyros" title="Skyros">
+			    <synonym value="Scyros"/>
+			  </heading>
+			</heading>
+			<heading id="SouthAegean" title="South Aegean">
+			  <heading id="Anafi" title="Anafi">
+			    <synonym value="Anaphe"/>
+			  </heading>
+			  <heading id="Andros" title="Andros"/>
+			  <heading id="Rhodes" title="Rhodes"/>
+			</heading>
+			<heading id="CentralMacedonia" title="Central Macedonia">
+			  <heading id="Thessaloniki" title="Thessaloniki">
+			    <synonym value="Saloniki"/>
+			  </heading>
+			</heading>
+			<heading id="IonianIslands" title="Ionian Islands">
+			  <heading id="Cephalonia" title="Cephalonia">
+			    <synonym value="Kefalonia"/>
+			  </heading>
+			</heading>
+			<heading id="Peloponnese" title="Peloponnese">
+			  <heading id="Kalamata" title="Kalamata"/>
+			  <heading id="Corinth" title="Corinth"/>
+			  <heading id="Tiryns" title="Tiryns"/>
+			</heading>
+			<heading id="NorthAegean" title="North Aegean">
+			  <heading id="Lesbos" title="Lesbos"/>
+			</heading>
+			</heading>
+			<heading id="Albania" title="Albania"/>
+			<heading id="Malta" title="Malta">
+			<heading id="Valletta" title="Valletta"/>
+			</heading>
+			<heading id="RepublicofMacedonia" title="Republic of Macedonia">
 					<synonym value="Rupublic of Macedonia"/>
-		    <heading id="Monastir" title="Monastir">
-		      <synonym value="Bitola"/>
-		    </heading>
-		  </heading>
+			<heading id="Monastir" title="Monastir">
+			  <synonym value="Bitola"/>
+			</heading>
+			</heading>
 		</heading>
 		<heading id="EasternEurope" title="Eastern Europe">
 		  <heading id="Moldova" title="Moldova">
