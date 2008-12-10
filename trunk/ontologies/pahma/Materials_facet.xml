@@ -85,7 +85,28 @@
 				<synonym value="fishskin"/>
 			</heading>
 		</heading>
-		<heading id="Hair" title="Hair"/>
+		<heading id="Hair" title="Hair">
+			<heading id="Angora" title="Angora"/>
+			<heading id="Horsehair" title="Horsehair">
+				<synonym value="Horse Hair"/>
+			</heading>
+			<heading id="Mohair" title="Mohair"/>
+			<heading id="Wool" title="Wool">
+				<synonym value="Wool Fabric"/>
+				<heading id="BrushedWool" title="Brushed Wool">
+					<synonym value="Brushed-Wool"/>
+				</heading>
+				<heading id="Cashmere" title="Cashmere">
+					<synonym value="Cashmere wool"/>
+				</heading>
+				<heading id="Lambswool" title="Lambswool">
+					<synonym value="Lambs wool"/>
+					<synonym value="Lambs' wool"/>
+					<synonym value="Lamb's wool"/>
+				</heading>
+				<heading id="WoolFelt" title="Wool Felt"/>
+			</heading>
+		</heading>
 		<heading id="Horn" title="Horn"> <!-- Exclude if "great horned owl", "powder horn", "horn fish",
 			 "elk horn prong", "prong horn", "Mrs. Horne", "hornfels", etc. -->
 			<synonym value="Horns"/>
@@ -149,21 +170,6 @@
 				<synonym value="Sheeps' Horn"/>
 				<synonym value="Sheeps' Horns"/>
 			</heading>
-		</heading>
-		<heading id="Wool" title="Wool">
-			<synonym value="Wool Fabric"/>
-			<heading id="BrushedWool" title="Brushed Wool">
-				<synonym value="Brushed-Wool"/>
-			</heading>
-			<heading id="Cashmere" title="Cashmere">
-				<synonym value="Cashmere wool"/>
-			</heading>
-			<heading id="Lambswool" title="Lambswool">
-				<synonym value="Lambs wool"/>
-				<synonym value="Lambs' wool"/>
-				<synonym value="Lamb's wool"/>
-			</heading>
-			<heading id="WoolFelt" title="Wool Felt"/>
 		</heading>
 		<heading id="Feather" title="Feather"/>
 		<heading id="Silk" title="Silk"/>
