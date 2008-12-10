@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<taxonomy id="ObjectName" title="Object Name or Type">
 		<!-- Terms to be added:
-			bayonet
+			bones
+				wildcat bones
 			bonnet
 			boss (shield)
 			bridle
+			button-seal
+			cocoon rattle
+			[crystal] dummy jar
 			curling iron
+			feather-dart headdress
+			funnel
+			grass game
 			Guttus (lamp feeder)
 			ladle
 			Mesh measure
@@ -13,6 +20,8 @@
 			powder horn
 			quirt
 			shuttle
+			sieve
+				meal sieve
 			war bonnet
 			whisk
 			wreath
@@ -67,6 +76,10 @@
 			<heading id="Munitions" title="Munitions">
 				<synonym value="Munition"/>
 				<synonym value="Ammunition"/>
+				<heading id="ArmorpiercingShell" title="Armorpiercing shell"> 					
+					<synonym value="Armor-piercing shell"/>
+					<synonym value="Armor-piercing shells"/>
+				</heading>
 				<heading id="Arrow" title="Arrow"> 					
 					<synonym value="Arrows"/>		
 				</heading>
@@ -92,11 +105,8 @@
 					</heading>
 				</heading>
 				<heading id="Edgedweapons" title="Edged weapons">
-					<heading id="Sword" title="Sword"> 					
-						<synonym value="Swords"/> 				
-					</heading>
-					<heading id="Knife" title="Knife"> 					
-						<synonym value="Knives"/> 				
+					<heading id="Bayonet" title="Bayonet"> <!--exclude "Spanish Bayonet"-->					
+						<synonym value="Bayonets"/> 				
 					</heading>
 					<heading id="Blade" title="Blade"> 					
 						<synonym value="Blades"/> 				
@@ -104,14 +114,23 @@
 					<heading id="Dagger" title="Dagger"> 					
 						<synonym value="Daggers"/> 				
 					</heading>
-					<heading id="Sheath" title="Sheath"> 					
-						<synonym value="Sheaths"/> 				
+					<heading id="Knife" title="Knife"> 					
+						<synonym value="Knives"/> 				
+					</heading>
+					<heading id="Machete" title="Machete"> 					
+						<synonym value="Machetes"/> 				
+					</heading>
+					<heading id="Parang" title="Parang"> 					
+						<synonym value="Parangs"/> 				
 					</heading>
 					<heading id="Scabbard" title="Scabbard"> 					
 						<synonym value="Scabbards"/> 				
 					</heading>
-					<heading id="Machete" title="Machete"> 					
-						<synonym value="Machetes"/> 				
+					<heading id="Sheath" title="Sheath"> 					
+						<synonym value="Sheaths"/> 				
+					</heading>
+					<heading id="Sword" title="Sword"> 					
+						<synonym value="Swords"/> 				
 					</heading>
 				</heading>
 				<heading id="Firearms" title="Firearms">
@@ -296,6 +315,9 @@
 			<heading id="BarrelBeads" title="Barrel Beads">
 				<synonym value="Barrel Bead"/>
 			</heading>
+			<heading id="CrumbBeads" title="Crumb Beads">
+				<synonym value="Crumb Bead"/>
+			</heading>
 			<heading id="CylinderBeads" title="Cylinder Beads">
 				<synonym value="Cylinder Bead"/>
 			</heading>
@@ -305,14 +327,8 @@
 			<heading id="GlassBeads" title="Glass Beads">
 				<synonym value="Glass Bead"/>
 			</heading>
-			<heading id="PotteryBeads" title="Pottery Beads">
-				<synonym value="Pottery Bead"/>
-			</heading>
 			<heading id="RingBeads" title="Ring Beads">
 				<synonym value="Ring Bead"/>
-			</heading>
-			<heading id="ShellBeads" title="Shell Beads">
-				<synonym value="Shell Bead"/>
 			</heading>
 		</heading>
 		<heading id="ClothingorCostume" title="Clothing or Costume">
@@ -495,7 +511,11 @@
 				<synonym value="Toe Ornamentations"/>
 				<synonym value="Toe Jewelry"/>
 				<heading id="Ring" title="Ring"> 					
-					<synonym value="Rings"/> 				
+					<synonym value="Rings"/>
+					<synonym value="Finger ring"/>
+					<synonym value="Finger rings"/>
+					<synonym value="Toe ring"/>
+					<synonym value="Toe rings"/>	
 				</heading>
 			</heading>
 			<heading id="HeadOrnamentation" title="Head Ornamentation">
@@ -756,6 +776,31 @@
 		</heading>
 		<heading id="Photographs" title="Photographs">
 			<synonym value="Photograph"/>
+			<synonym value="Photo"/>
+			<synonym value="Photos"/>
+			<heading id="Negatives" title="Negatives">
+				<synonym value="Negative"/>  <!-- Check for possible exclusions -->
+				<heading id="GlassPlateNegative" title="Glass Plate Negative">
+					<synonym value="Glass Plate Negatives"/>
+					<synonym value="Glass-Plate Negative"/>
+					<synonym value="Glass-Plate Negatives"/>
+					<synonym value="Glassplate Negative"/>
+					<synonym value="Glassplate Negatives"/>
+				</heading>
+			</heading>
+			<heading id="Positives" title="Positives">
+				<synonym value="Positive"/>  <!-- Check for possible exclusions -->
+				<heading id="ColorSlides" title="Color Slides">
+					<synonym value="Color Slide"/>
+					<synonym value="BW Slide"/>
+					<synonym value="B/W Slide"/>
+					<synonym value="B&W Slide"/>
+					<synonym value="Slides"/>  <!-- Check for possible exclusions -->
+					<synonym value="Slide"/>  <!-- Check for possible exclusions -->
+					<synonym value="Transparencies"/>  <!-- Check for possible exclusions -->
+					<synonym value="Transparency"/>  <!-- Check for possible exclusions -->
+				</heading>
+			</heading>
 		</heading>
 		<heading id="Pottery" title="Pottery">
 			<synonym value="Pot"/>
@@ -786,8 +831,11 @@
 			<heading id="Jar" title="Jar">
 				<synonym value="Jars"/>
 				<heading id="CanopicJar" title="Canopic Jar">
-				<synonym value="Canopic Jars"/>
-			</heading>
+					<synonym value="Canopic Jars"/>
+				</heading>
+				<heading id="DummyJar" title="Dummy Jar">
+					<synonym value="Dummy Jars"/>
+				</heading>
 			</heading>
 			<heading id="Jug" title="Jug">
 				<synonym value="Jugs"/>
