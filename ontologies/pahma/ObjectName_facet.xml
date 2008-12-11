@@ -1184,6 +1184,68 @@
 	</heading>
 	<heading id="Tools" title="Tools">			
 		<synonym value="Tool"/>
+		<heading id="AnimalHusbandryTools" title="AnimalHusbandryTools"  nomatch="true">
+			<implies facet="ActivityOrContext" cat="AnimalHusbandry"/>
+			<heading id="StockWhip" title="StockWhip"> 					
+				<synonym value="StockWhips"/>
+				<heading id="BuggyWhip" title="Buggy Whip">
+					<synonym value="Buggy Whips"/>
+				</heading>
+				<heading id="RidingCrop" title="Riding Crop">
+					<synonym value="Riding Crops"/>
+				</heading>
+				<heading id="Quirt" title="Quirt">					
+					<synonym value="Quirts"/>
+					<implies facet="ActivityOrContext" cat="HorsebackRiding"/>
+					<implies facet="Materials" cat="Leather"/>
+					<implies facet="TechniqueDesignDecoration" cat="Forked"/>	
+				</heading>			
+			</heading>
+			<heading id="Yoke" title="Yoke"> 					
+				<synonym value="Yokes"/> 				
+			</heading>
+		</heading>
+		<heading id="HorseTack" title="Horse Tack">
+			<definition value="used to describe any of the various equipment and accessories 
+				worn by horses in the course of their use as domesticated animals"/>
+			<heading id="HorseBreastplate" title="Breastplate"> 					
+				<synonym value="Breastplates"/> 				
+			</heading>
+			<heading id="Bridle" title="Bridle"> 					
+				<synonym value="Bridles"/> 				
+			</heading>
+			<heading id="HorseBit" title="Horse bit"> 					
+				<synonym value="Horse bits"/> 				
+			</heading>
+			<heading id="Halter" title="Halter"> 					
+				<synonym value="Halters"/> 				
+			</heading>
+			<heading id="Harness" title="Harness"> 					
+				<synonym value="Harnesses"/> 				
+			</heading>
+			<heading id="Horseshoe" title="Horseshoe"> 					
+				<synonym value="Horseshoes"/> 				
+			</heading>
+			<heading id="Reins" title="Reins"> 					
+				<synonym value="Reins"/> 				
+			</heading>
+			<heading id="Saddle" title="Saddle"> 					
+				<synonym value="Saddles"/>
+				<heading id="SaddleBag" title="Saddle bag"> 					
+					<synonym value="Saddle bags"/>
+					<synonym value="Saddlebags"/> 			
+				</heading>
+				<heading id="Stirrup" title="Stirrup"> 					
+					<synonym value="Stirrups"/> 				
+				</heading>				
+			</heading>
+			<heading id="SaddleBlanket" title="Saddle Blanket"> 					
+				<synonym value="Saddle Blankets"/> 				
+			</heading>
+			<heading id="Martingale" title="Martingale"> 					
+				<synonym value="Martingales"/> 				
+			</heading>
+		</heading>
 		<heading id="Awl" title="Awl"> 					
 			<synonym value="Awls"/>
 			<heading id="BasketAwl" title="Basket awl"> 					

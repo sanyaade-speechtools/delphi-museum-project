@@ -786,32 +786,7 @@
 				<synonym value="Gorge hooks"/> 				
 			</heading>
 		</heading>
-		<heading id="AnimalHusbandryitems" title="Animal Husbandry items">
-			<heading id="Harness" title="Harness"> 					
-				<synonym value="Harnesses"/> 				
-			</heading>
-			<heading id="Saddle" title="Saddle"> 					
-				<synonym value="Saddles"/> 				
-			</heading>
-			<heading id="Yoke" title="Yoke"> 					
-				<synonym value="Yokes"/> 				
-			</heading>
-			<heading id="Bridle" title="Bridle"> 					
-				<synonym value="Bridles"/> 				
-			</heading>
-			<heading id="Whip" title="Whip"> 					
-				<synonym value="Whips"/> 				
-			</heading>
-			<heading id="Stirrup" title="Stirrup"> 					
-				<synonym value="Stirrups"/> 				
-			</heading>
-			<heading id="HorseBit" title="Horse bit"> 					
-				<synonym value="Horse bits"/> 				
-			</heading>
-			<heading id="Horseshoe" title="Horseshoe"> 					
-				<synonym value="Horseshoes"/> 				
-			</heading>
-		</heading>
+		<heading id="AnimalHusbandry" title="Animal Husbandry"/>
 		<heading id="Foodgatheringitems" title="Food gathering items">
 			<heading id="Gatheringbaskets" title="Gathering baskets">
 				<heading id="Acorngatheringbasket" title="Acorn-gathering basket">
@@ -992,21 +967,29 @@
 		<heading id="Fasting" title="Fasting"/>
 	</heading>
 	<heading id="Transportation" title="Transportation">
-		<heading id="Galley" title="Galley"/>
-		<heading id="Canoe" title="Canoe">
-			<synonym value="Canoes"/>
+		<heading id="TransportationByAir" title="By Air"  nomatch="true">
+			<heading id="Airplane" title="Airplane"/>
 		</heading>
-		<heading id="Kayak" title="Kayak">
-			<synonym value="Kayaks"/>
+		<heading id="TransportationByLand" title="By Land"  nomatch="true">
+			<heading id="HorsebackRiding" title="Horseback Riding"/>
 		</heading>
-		<heading id="Boat" title="Boat">
-			<synonym value="Boats"/>
+		<heading id="TransportationByWater" title="By Water"  nomatch="true">
+			<heading id="Galley" title="Galley"/>
+			<heading id="Canoe" title="Canoe">
+				<synonym value="Canoes"/>
+			</heading>
+			<heading id="Kayak" title="Kayak">
+				<synonym value="Kayaks"/>
+			</heading>
+			<heading id="Boat" title="Boat">
+				<synonym value="Boats"/>
+			</heading>
+			<heading id="Paddle" title="Paddle">
+				<synonym value="Paddles"/>
+				<synonym value="Oar"/>
+				<synonym value="Oars"/>
+			</heading>
+			<heading id="Boathook" title="Boat hook"/>
 		</heading>
-		<heading id="Paddle" title="Paddle">
-			<synonym value="Paddles"/>
-			<synonym value="Oar"/>
-			<synonym value="Oars"/>
-		</heading>
-		<heading id="Boathook" title="Boat hook"/>
 	</heading>
 </taxonomy>
