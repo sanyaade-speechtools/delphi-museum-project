@@ -4,20 +4,27 @@
 		object was used (e.g., in religious ceremonies).
 		The organization is based upon the range of human activities.
 	</description>
+	<syntax_notes> <!-- This is a temporary section, to speed up entry 
+		by making it easier to locate and copy syntax examples
+		<excl value="photographic plate"/>
+		<implies facet="ActivityOrContext" cat="Burial"/>
+		<synonym value="Drawings"/>
+		-->
+	</syntax_notes>
 	<notes>The primary organization is the activity and context, and so a very
 		broad concept like basket appears in several contexts: food storage
 		baskets, baby baskets, seed gathering baskets, etc. To find all
 		baskets, use the Object Name facet.
 		<!-- Terms to be added:\
 			night chant (Yeibichai)
-			• Drinking (alcohol)
-			• Eating
-			• Worship
-			• Cooking
-			• Dancing
-			• Singing
-			• Hunting
-			• Celebrating
+			Cooking
+			Dancing
+			Grooming
+			Singing
+			Hunting
+			Celebrating
+			Sculpting
+			Carving
 		-->
 	</notes>
 	<heading id="Artartrelateditems" title="Art &amp; art-related">
@@ -82,64 +89,130 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Ceremonies" title="Ceremonies">  <!-- keep this separate from Religion & Spirituality -->
-		<synonym value="Ceremony"/>
-		<heading id="AgeRelatedCeremonies" title="Age-Related Ceremonies">
-			<synonym value="Coming-of-Age Ceremony"/>
-			<synonym value="Coming of Age Ceremony"/>
-			<synonym value="Coming-of-Age Ceremonies"/>
-			<synonym value="Coming of Age Ceremonies"/>
-			<heading id="CircumcisionCeremony" title="Circumcision Ceremony"> 					
-				<synonym value="Circumcision Ceremonies"/>
-				<synonym value="Circumcision"/>
-				<heading id="Bris" title="Bris"> 					
-					<synonym value="Brith"/> 				
-				</heading>		
+	<heading id="CeremoniesFestivalsHolidays" title="Ceremonies, Festivals, &amp; Holidays">  <!-- keep this separate from Religion & Spirituality -->
+		<heading id="Ceremonies" title="Ceremonies">
+			<synonym value="Ceremonies"/>
+			<heading id="AgeRelatedCeremonies" title="Age-Related Ceremonies">
+				<synonym value="Coming-of-Age Ceremony"/>
+				<synonym value="Coming of Age Ceremony"/>
+				<synonym value="Coming-of-Age Ceremonies"/>
+				<synonym value="Coming of Age Ceremonies"/>
+				<heading id="CircumcisionCeremony" title="Circumcision Ceremony"> 					
+					<synonym value="Circumcision Ceremonies"/>
+					<synonym value="Circumcision"/>
+					<heading id="Bris" title="Bris"> 					
+						<synonym value="Brith"/> 				
+					</heading>		
+				</heading>
+				<heading id="NamingCeremony" title="Naming Ceremony"> 					
+					<synonym value="Naming Ceremonies"/> 				
+				</heading>
+				<heading id="PubertyCeremonies" title="Puberty Ceremonies"> 					
+					<synonym value="Puberty Ceremony"/>
+					<heading id="Barmitzvah" title="Barmitzvah"> <!-- tie to the concept of 'intended for boys' (future gender- and age-specificity facet) -->				
+						<synonym value="Barmitzvahs"/><!-- tie to the concept of 'judaism' (future religion facet?) -->
+						<synonym value="Bar Mitzvah"/>
+						<synonym value="Bar Mitzvahs"/>
+					</heading>
+					<heading id="Batmitzvah" title="Batmitzvah"><!-- tie to the concept of 'intended for girls' (future gender- and age-specificity facet) -->			
+						<synonym value="Batmitzvahs"/><!-- tie to the concept of 'judaism' (future religion facet?) -->
+						<synonym value="Bat Mitzvah"/>
+						<synonym value="Bat Mitzvahs"/>
+					</heading>
+					<heading id="Confirmation" title="Confirmation"> <!-- tie to the concept of 'intended for boys' (future gender- and age-specificity facet) -->	
+								<!-- tie to the concept of 'catholicism' (future religion facet?) -->							
+					</heading>	
+				</heading>
+				<heading id="MarriageAvailabilityCeremonies" title="Marriage Availability Ceremonies">
+					<heading id="Debuntante" title="Debuntante"> 					
+						<synonym value="Debuntante Ball"/>	
+					</heading>
+					<heading id="QuinsineraCeremony" title="Quinsinera Ceremony"> 					
+						<synonym value="Quinzinera Ceremonies"/>
+						<synonym value="Quinzinera Ceremonies"/>		
+					</heading>
+				</heading>
 			</heading>
-			<heading id="NamingCeremony" title="Naming Ceremony"> 					
-				<synonym value="Naming Ceremonies"/> 				
+			<heading id="FuneraryRites" title="Funerary Rites">
+				<heading id="Cremations" title="Funerals">
+					<synonym value="Funeral"/>
+					<heading id="FuneralPyre" title="Funeral Pyre"> <!-- Is a pyre a kind of cremation?  Vice-versa?  Or something different? -->
+						<synonym value="Funerary Pyre"/>
+						<synonym value="Pyre"/>
+					</heading>
+				</heading>
+				<heading id="Funerals" title="Funerals">
+					<synonym value="Funeral"/>
+					<synonym value="Burial"/>
+					<synonym value="Burials"/>
+				</heading>
 			</heading>
-			<heading id="PubertyCeremonies" title="Puberty Ceremonies"> 					
-				<synonym value="Puberty Ceremony"/>
-				<heading id="Barmitzvah" title="Barmitzvah"> <!-- tie to the concept of 'intended for boys' (future gender- and age-specificity facet) -->				
-					<synonym value="Barmitzvahs"/><!-- tie to the concept of 'judaism' (future religion facet?) -->
-					<synonym value="Bar Mitzvah"/>
-					<synonym value="Bar Mitzvahs"/>
-				</heading>
-				<heading id="Batmitzvah" title="Batmitzvah"><!-- tie to the concept of 'intended for girls' (future gender- and age-specificity facet) -->			
-					<synonym value="Batmitzvahs"/><!-- tie to the concept of 'judaism' (future religion facet?) -->
-					<synonym value="Bat Mitzvah"/>
-					<synonym value="Bat Mitzvahs"/>
-				</heading>
-				<heading id="Confirmation" title="Confirmation"> <!-- tie to the concept of 'intended for boys' (future gender- and age-specificity facet) -->	
-							<!-- tie to the concept of 'catholicism' (future religion facet?) -->							
-				</heading>	
+			<heading id="HealingCeremonies" title="Healing Ceremonies">
+				<synonym value="Healing Ceremony"/>
 			</heading>
-			<heading id="MarriageAvailabilityCeremonies" title="Marriage Availability Ceremonies">
-				<heading id="Debuntante" title="Debuntante"> 					
-					<synonym value="Debuntante Ball"/>	
+			<heading id="Marriage" title="Marriage">
+				<synonym value="Wedding"/>
+				<heading id="BridalAdornment" title="Bridal Adornment">
+					<heading id="MaangtikaBridalLocket" title="Mangtika (Bridal Locket)">
+						<synonym value="Maangtika"/>
+						<synonym value="Mangtika"/>
+						<synonym value="Mang Tika"/>
+					</heading>
 				</heading>
-				<heading id="QuinsineraCeremony" title="Quinsinera Ceremony"> 					
-					<synonym value="Quinzinera Ceremonies"/>
-					<synonym value="Quinzinera Ceremonies"/>		
-				</heading>
+			</heading>
+			<heading id="MourningCeremonies" title="Mourning Ceremonies">
+				<synonym value="Mourning Ceremony"/>
+				<synonym value="Wake"/> <!-- exclusions needed -->
+				<synonym value="Mourning"/>
 			</heading>
 		</heading>
-		<heading id="Funeral" title="Funeral">
-			<synonym value="Funerals"/>
-		</heading>
-		<heading id="HealingCeremonies" title="Healing Ceremonies">
-			<synonym value="Healing Ceremony"/>
-		</heading>
-		<heading id="Marriage" title="Marriage">
-			<synonym value="Wedding"/>
-			<heading id="BridalAdornment" title="Bridal Adornment">
-				<heading id="MaangtikaBridalLocket" title="Mangtika (Bridal Locket)">
-					<synonym value="Maangtika"/>
-					<synonym value="Mangtika"/>
-					<synonym value="Mang Tika"/>
+		<heading id="Festivals" title="Festivals">
+			<heading id="BladderFestival" title="Bladder Festival"> <!-- Annual celebration; each December -->
+				<synonym value="Bladder Festivals"/>
+			</heading>
+			<heading id="DiwaliFestival" title="Diwali Festival">
+				<synonym value="Diwali Festivals"/>
+			</heading>
+			<heading id="DragonBoatFestival" title="Dragon Boat Festival"> <!-- Annual celebration; mid-summer -->
+				<synonym value="Dragon Boat Festivals"/>
+				<synonym value="Dragonboat Festival"/>
+				<synonym value="Dragonboat Festivals"/>
+				<synonym value="Dragon-boat Festival"/>
+				<synonym value="Dragon-boat Festivals"/>
+			</heading>
+			<heading id="FandangoFestival" title="Fandango Festival">
+				<synonym value="Fandango Festivals"/>
+			</heading>
+			<heading id="GionFestival" title="Gion Festival"> <!-- In Japan (at least in Kyoto) -->
+				<synonym value="Gion Festivals"/>
+			</heading>
+			<heading id="HarvestFestivals" title="Harvest Festivals">
+				<synonym value="Harvest Festival"/>
+				<synonym value="Oktoberfest"/>
+				<synonym value="Otoberfest"/>
+				<heading id="RiceFestival" title="Rice Festival">
+					<synonym value="Rice Festivals"/>
+					<synonym value="Rice Harvest Festival"/>
+					<synonym value="Rice Harvest Festivals"/>
+				</heading>
+				<heading id="StrawberryFestival" title="Strawberry Festival">
+					<synonym value="Strawberry Festivals"/>
+					<implies facet="CulturalGroup" cat="KashayaPomo"/>
 				</heading>
 			</heading>
+			<heading id="HoliFestival" title="Holi Festival">
+				<synonym value="Holi Festivals"/>
+			</heading>
+			<heading id="JunkanooFestival" title="Junkanoo Festival">
+				<synonym value="Junkanoo Festivals"/>
+				<implies facet="Location" cat="TheBahamas"/>
+			</heading>
+			<heading id="Só'iFestival" title="Só'i Festival"> <!-- Mortuary festival -->
+				<synonym value="Só'i Festivals"/>
+			</heading>
+		</heading>
+		<heading id="Holidays" title="Holidays">
+			<heading id="Christmas" title="Christmas"/>
 		</heading>
 	</heading>
 	<heading id="Childrearing" title="Child rearing">
@@ -827,9 +900,11 @@
 		</heading>
 	</heading>
 	<heading id="ReligionSpirituality" title="Religion &amp; Spirituality">
+		<synonym value="Worship"/>
 		<heading id="Funeraryitems" title="Funerary items">
 			<heading id="Mummy" title="Mummy">
 				<synonym value="Mummies"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 				<heading id="Humanmummy" title="Human mummy"> 					
 					<synonym value="Human mummies"/> 				
 				</heading>
@@ -865,15 +940,19 @@
 				<synonym value="Sarcophogas"/>
 				<synonym value="Sarcophogases"/>
 				<synonym value="Sarcophagi"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 			</heading>
 			<heading id="Coffin" title="Coffin">
 				<synonym value="Coffins"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 			</heading>
 			<heading id="CanopicJar" title="Canopic Jar"> 					
-				<synonym value="Canopic Jars"/> 				
+				<synonym value="Canopic Jars"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>			
 			</heading>
 			<heading id="CanopicBox" title="Canopic Box"> 					
-				<synonym value="Canopic Boxes"/> 				
+				<synonym value="Canopic Boxes"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>			
 			</heading>
 		</heading>
 		<heading id="Ceremonialitems" title="Ceremonial items">

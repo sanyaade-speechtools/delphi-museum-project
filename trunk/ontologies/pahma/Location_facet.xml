@@ -983,7 +983,7 @@
 		    </heading>
 		    <heading id="RhinelandPalatinate" title="Rhineland-Palatinate">
 		      <heading id="Mentz" title="Mentz"/>
-		      <heading id="Nassau" title="Nassau"/>
+		      <heading id="GermanNassau" title="Nassau"/> <!-- need to differentiate from city in Bahamas -->
 		    </heading>
 		  </heading>
 		  <heading id="CzechRepublic" title="Czech Republic">
@@ -2158,7 +2158,10 @@
       <heading id="Jamaica" title="Jamaica"/>
       <heading id="Haiti" title="Haiti"/>
       <heading id="TurksandCaicosIslands" title="Turks and Caicos Islands"/>
-      <heading id="TheBahamas" title="The Bahamas"/>
+      <heading id="TheBahamas" title="The Bahamas">
+      	<synonym value="Bahamas"/>
+      	 <heading id="BahamanNassau" title="Nassau"/><!-- need to differentiate from city in Germany -->
+      </heading>
       <heading id="AntiguaandBarbuda" title="Antigua and Barbuda"/>
       <heading id="Grenada" title="Grenada"/>
       <heading id="Barbados" title="Barbados"/>

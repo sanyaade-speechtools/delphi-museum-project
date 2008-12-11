@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <taxonomy id="ObjectName" title="Object Name or Type">
-	<!-- Terms to be added:
+	<notes><!-- This is a temporary notes section.
+	    Terms to be added:
+	    	balloons
 		bones
 		   wildcat bones
 		bonnet
@@ -17,15 +19,28 @@
 		ladle
 		Mesh measure
 		Patera
+		platter
 		powder horn
 		quirt
 		shuttle
 		sieve
 		   meal sieve
+		spray bottle
+		strigil
+		tumbler
+		utensils
 		war bonnet
 		whisk
 		wreath
 	-->
+	</notes>
+	<syntax_notes> <!-- This is a temporary section, to speed up entry 
+		by making it easier to locate and copy syntax examples
+		<excl value="photographic plate"/>
+		<implies facet="ActivityOrContext" cat="Burial"/>
+		<synonym value="Drawings"/>
+		-->
+	</syntax_notes>
 	<heading id="ArchitecturalElements" title="Architectural Elements">
 		<synonym value="Architectural Element"/>
 		<heading id="Column" title="Column">
@@ -905,6 +920,9 @@
 			<heading id="OilLamp" title="Oil Lamp">
 				<synonym value="Oil Lamps"/>
 			</heading>
+			<heading id="Plate" title="Plate">
+				<synonym value="Plates"/>
+			</heading>
 			<heading id="PotStand" title="Pot Stand">
 				<synonym value="Pot Stands"/>
 			</heading>
@@ -1123,6 +1141,14 @@
 			<synonym value="Yarn Samples"/>
 		</heading>
 	</heading>
+	<heading id="SculpturedWorks" title="Sculptured Works">
+		<heading id="Ossuary" title="Ossuary">
+			<synonym value="Ossuaries"/>
+			<implies facet="ActivityOrContext" cat="Burial"/>
+			<implies facet="ActivityOrContext" cat="Sculpting"/>
+			<implies facet="ActivityOrContext" cat="Carving"/>  <!-- could be stone carving or wood carving -->
+		</heading>
+	</heading>
 	<heading id="Textiles" title="Textiles">
 		<synonym value="Textile"/>
 		<synonym value="RGM Yardage"/>
@@ -1156,30 +1182,43 @@
 	</heading>
 	<heading id="Toiletarticles" title="Toilet articles">
 		<synonym value="Toiletries"/>
-		<heading id="Mirror" title="Mirror"> 					
-			<synonym value="Mirrors"/> 				
-		</heading>
 		<heading id="Comb" title="Comb"> 					
-			<synonym value="Combs"/> 				
+			<synonym value="Combs"/>
+			<synonym value="Grooming"/>			
+		</heading>
+		<heading id="Hairbrush" title="Hairbrush"> 					
+			<synonym value="Hairbrushes"/>
+			<synonym value="Grooming"/>			
 		</heading>
 		<heading id="Hairpin" title="Hairpin">
 			<synonym value="Hair Pin"/>
+			<synonym value="Grooming"/>
 		</heading>
-		<heading id="Hairbrush" title="Hairbrush"> 					
-			<synonym value="Hairbrushes"/> 				
+		<heading id="LouseKiller" title="Louse Killer"> 					
+			<synonym value="Louse Killers"/>
+			<synonym value="Lice Killer"/>
+			<synonym value="Lice Killers"/>
+			<synonym value="Grooming"/>		
+		</heading>
+		<heading id="Mirror" title="Mirror"> 					
+			<synonym value="Mirrors"/>
+			<synonym value="Grooming"/>	
 		</heading>
 		<heading id="Scissors" title="Scissors">
 			<synonym value="Scissor"/>
 			<synonym value="Shears"/>
 			<synonym value="Shear"/>
+			<!-- <synonym value="Grooming"/> this needs multiple inferentiation -->
 		</heading>
 		<heading id="Soap" title="Soap"> 					
-			<synonym value="Soaps"/> 				
+			<synonym value="Soaps"/>
+			<synonym value="Grooming"/>
 		</heading>
-		<heading id="LouseKiller" title="Louse Killer"> 					
-			<synonym value="Louse Killers"/>
-			<synonym value="Lice Killer"/>
-			<synonym value="Lice Killers"/> 				
+		<heading id="Strigil" title="Strigil"> 
+			<synonym value="Strigils"/> 
+			<synonym value="Stirgil"/> 					
+			<synonym value="Stirgils"/>
+			<synonym value="Grooming"/>			
 		</heading>
 	</heading>
 	<heading id="Tools" title="Tools">			
