@@ -803,32 +803,66 @@
 		</heading>
 	</heading>
 	<heading id="Pottery" title="Pottery">
+		<implies facet="Material" cat="Clay"/>
 		<synonym value="Pot"/>
-		<heading id="PotteryByShape" title="By shape"> <!-- This should not be a latching term -->
+		<heading id="PotteryByShape" title="By shape" nomatch="true">
 		<!-- to be added:
-			alabastron
-			aryballos
 			column-krater
 			cup-skyphos
 			eye-cup
-			kylix
-			oinochoe
-			olpe
 		-->
-			<heading id="BeerCup" title="Beer Cup">
-				<synonym value="Beer Cups"/>
+			<heading id="Aryballos" title="Aryballos">
+				<synonym value="αρύβαλλος"/>
 			</heading>
 			<heading id="Bowl" title="Bowl">
 				<synonym value="Bowls"/>
 			</heading>
 			<heading id="Cup" title="Cup">
 				<synonym value="Cups"/>
+				<heading id="BeerCup" title="Beer Cup">
+					<synonym value="Beer Cups"/>
+					<implies facet="ActivityOrContext" cat="Beer Drinking"/>
+				</heading>
+				<heading id="Chalice" title="Chalice">
+					<synonym value="Chalices"/>
+					<implies facet="ActivityOrContext" cat="Drinking"/>
+				</heading>
+				<heading id="Kotyle" title="Kotyle">
+					<heading id="Kylix" title="Kylix">
+						<synonym value="κύλιξ"/>
+						<synonym value="Cylix"/>
+						<synonym value="Kylixes"/>
+						<synonym value="Kylikes"/>
+						<implies facet="Culture" cat="Greek"/>
+						<implies facet="ActivityOrContext" cat="Wine Drinking"/>
+						<heading id="Tondo" title="Tondo">
+							<definition value="The almost flat interior circle on the interior base of the cup, 
+								called the tondo, was the primary surface for painted decoration in the 
+								Black-figure or Red-figure styles of the 6th and 5th century BC. As the
+								representations would be covered with wine, the scenes would only be
+								revealed in stages as the wine was drained. They were often designed
+								with this in mind, with scenes created so that they would surprise or
+								titillate the drinker as they were revealed."/>
+						</heading>
+					</heading>
+					<heading id="Skyphos" title="Skyphos">
+						<synonym value="σκύφος"/>
+						<synonym value="skyphoi"/>
+						<implies facet="Culture" cat="Greek"/>
+						<implies facet="ActivityOrContext" cat="Wine Drinking"/>
+					</heading>
+				</heading>
 			</heading>
 			<heading id="Dish" title="Dish">
 				<synonym value="Dishes"/>
 			</heading>
 			<heading id="Flask" title="Flask">
 				<synonym value="Flasks"/>
+				<heading id="Alabastron" title="Alabastron">
+					<synonym value="αλάβαστρον"/>
+					<synonym value="alabastra"/>
+					<synonym value="alabastrons"/>
+				</heading>
 				<heading id="PilgrimsFlask" title="Pilgrims Flask">
 				<synonym value="Pilgrims Flasks"/>
 				<synonym value="Pilgrims' Flask"/>
@@ -848,10 +882,21 @@
 					<synonym value="Dummy Jars"/>
 				</heading>
 			</heading>
-			<heading id="Jug" title="Jug">
+			<heading id="JugsPitchers" title="Jugs &amp; Pitchers">
 				<synonym value="Jugs"/>
 				<heading id="Juglet" title="Juglet">
 					<synonym value="Juglets"/>
+				</heading>
+				<heading id="WineJug" title="Wine Jug">
+					<synonym value="Wine Jugs"/>
+					<implies facet="ActivityOrContext" cat="Wine Drinking"/>
+					<heading id="Oinochoe" title="Oinochoe">
+						<synonym value="Οινοχόη"/>
+						<synonym value="Oenochoe"/>
+						<heading id="Olpe" title="Olpe">  <!-- Implies a sigmoid shape -->
+							<implies facet="Culture" cat="Corinthian"/>
+						</heading>
+					</heading>
 				</heading>
 			</heading>
 			<heading id="OfferingTable" title="Offering Table">
@@ -870,7 +915,7 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="PotteryByStyleOrType" title="By style or type"> <!-- This should not be a latching term -->
+		<heading id="PotteryByStyleOrType" title="By style or type" nomatch="true">
 			<heading id="BlackFigureWare" title="Black Figure ware">
 				<synonym value="Black-Figure ware"/>
 				<synonym value="'μελανόμορφα"/>
@@ -1117,7 +1162,7 @@
 		<heading id="Comb" title="Comb"> 					
 			<synonym value="Combs"/> 				
 		</heading>
-		 <heading id="Hairpin" title="Hairpin">
+		<heading id="Hairpin" title="Hairpin">
 			<synonym value="Hair Pin"/>
 		</heading>
 		<heading id="Hairbrush" title="Hairbrush"> 					
