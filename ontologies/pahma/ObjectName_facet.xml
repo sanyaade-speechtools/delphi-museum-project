@@ -6,18 +6,15 @@
 		bones
 		   wildcat bones
 		bonnet
-		boss (shield)
 		button-seal
 		cocoon rattle
-		[crystal] dummy jar
 		curling iron
 		feather-dart headdress
 		Guttus (lamp feeder)
 		mandrel
 		night chant (Yeibichai)
 		Patera
-		powder horn
-		shuttle
+		shuttle  (also loom)
 		sieve
 		   meal sieve
 		spray bottle
@@ -44,11 +41,17 @@
 				<implies facet="ActivityOrContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Tipi" title="Tipi">
+				<synonym value="Tipis"/>
 				<synonym value="Tee Pee"/>
+				<synonym value="Tee Pees"/>
 				<synonym value="Teepee"/>
+				<synonym value="Teepees"/>
 				<synonym value="Tepee"/>
+				<synonym value="Tepees"/>
 				<synonym value="thípi"/> <!-- in the Lakota language -->
+				<synonym value="thípis"/>
 				<synonym value="wigwam"/>
+				<synonym value="wigwams"/>
 			</heading>
 		</heading>
 		<heading id="Column" title="Column">
@@ -93,7 +96,10 @@
 				<synonym value="Greaves"/> 				
 			</heading>
 			<heading id="Shield" title="Shield"> 					
-				<synonym value="Shields"/> 				
+				<synonym value="Shields"/>
+				<heading id="Boss" title="Boss"> 					
+					<synonym value="Bosses"/> <!-- exclude managers -->	
+				</heading>	
 			</heading>
 		</heading>
 		<heading id="Munitions" title="Munitions">
@@ -111,6 +117,9 @@
 			</heading>
 			<heading id="CannonBall" title="Cannon Ball"> 					
 				<synonym value="Cannon Balls"/>			
+			</heading>
+			<heading id="PowderHorn" title="Powder Horn"> 					
+				<synonym value="Powder Horns"/>			
 			</heading>
 		</heading>
 		<heading id="Weapons" title="Weapons">
