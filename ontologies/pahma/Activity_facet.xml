@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <taxonomy id="ActivityorContext" title="Activity or Context">
-	<description>This facet describes what the activity or context in which an
-		object was used (e.g., in religious ceremonies).
-		The organization is based upon the range of human activities.
+	<description>This facet describes what the activity depicted on, or implied by, an
+		object.
 	</description>
-	<notes>The primary organization is the activity and context, and so a very
-		broad concept like basket appears in several contexts: food storage
-		baskets, baby baskets, seed gathering baskets, etc. To find all
-		baskets, use the Object Name facet.
-		<!-- Terms to be added:\
-			night chant (Yeibichai)
-			Cooking
-			Dancing
-			Grooming
-			Singing
-			Hunting
-			Celebrating
-			Sculpting
-			Carving
-		-->
-	</notes>
 	<heading id="ArtistryCraftsmanship" title="Artistry &amp; Craftsmanship">
 		<heading id="BasketMaking" title="Basket Making">
 			<synonym value="Basket weaving"/>
@@ -51,6 +34,12 @@
 			<synonym value="Sculpture"/> 				
 		</heading> 
 	</heading>
+	<heading id="Building" title="Building"> <!-- exclude the noun -->
+		<heading id="Constructing" title="Constructing"/>
+		<heading id="Erecting" title="Erecting"/>
+		<heading id="Raising" title="Raising"/> <!-- Be careful of other meanings -->
+	</heading>
+	<heading id="Celebrating" title="Celebrating"/>
 	<heading id="CeremoniesFestivalsHolidays" title="Ceremonies, Festivals, &amp; Holidays">  <!-- keep this separate from Religion & Spirituality -->
 		<heading id="Ceremonies" title="Ceremonies">
 			<synonym value="Ceremonies"/>
@@ -198,6 +187,7 @@
 			<synonym value="Sales"/>
 		</heading>
 	</heading>
+	<heading id="Dancing" title="Dancing"/>
 	<heading id="EatingDrinking" title="Eating &amp; Drinking">
 		<heading id="Drinking" title="Drinking">
 			<synonym value="Imbibing"/>
@@ -238,34 +228,15 @@
 		</heading>
 		<heading id="Fasting" title="Fasting"/>
 	</heading>
+	<heading id="Grooming" title="Grooming">
+		<heading id="Bathing" title="Bathing"/>
+		<heading id="Combing" title="Combing"/>
+		<heading id="Showering" title="Showering"/>
+		<heading id="Washing" title="Washing"/>
+	</heading>
 	<heading id="Healing" title="Healing">
 		<synonym value="Doctoring"/>
 		<synonym value="Medicine"/>
-	</heading>
-	<heading id="Building" title="Building">
-		<!--
-		constructing
-		erecting
-		-->
-	</heading>
-	<heading id="Grooming" title="Grooming">
-		<!--
-		bathing
-		washing
-		combing
-		-->
-	</heading>
-	<heading id="Violence" title="Violence">
-		<!--
-		killing
-		stabbing
-		injuring
-		attacking
-		warring
-		maiming
-		blinding
-		destroying
-		-->
 	</heading>
 	<heading id="HuntingGatheringAgriculture" title="Hunting, Gathering, &amp; Agriculture">
 		<heading id="Fishing" title="Fishing"/>
@@ -290,5 +261,16 @@
 	<heading id="Sex" title="Sex">
 		<synonym value="Intercourse"/>
 	</heading>
+	<heading id="Singing" title="Singing"/>
 	<heading id="Transport" title="Transport"/>
+	<heading id="Violence" title="Violence">
+		<heading id="Attacking" title="Attacking"/>
+		<heading id="Blinding" title="Blinding"/>
+		<heading id="Destroying" title="Destroying"/>
+		<heading id="Injuring" title="Injuring"/>
+		<heading id="Killing" title="Killing"/>
+		<heading id="Maiming" title="Maiming"/>
+		<heading id="Stabbing" title="Stabbing"/>
+		<heading id="Warring" title="Warring"/>
+	</heading>
 </taxonomy>
