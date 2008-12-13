@@ -7,19 +7,14 @@
 		   wildcat bones
 		bonnet
 		boss (shield)
-		bridle
 		button-seal
 		cocoon rattle
 		[crystal] dummy jar
 		curling iron
 		feather-dart headdress
-		funnel
-		grass game
 		Guttus (lamp feeder)
-		ladle
-		Mesh measure
+		mandrel
 		Patera
-		platter
 		powder horn
 		shuttle
 		sieve
@@ -36,7 +31,7 @@
 	<syntax_notes> <!-- This is a temporary section, to speed up entry 
 		by making it easier to locate and copy syntax examples
 		<excl value="photographic plate"/>
-		<implies facet="ActivityOrContext" cat="Burial"/>
+		<implies facet="ActivityOrContext" cat="Burials"/>
 		<synonym value="Drawings"/>
 		-->
 	</syntax_notes>
@@ -222,6 +217,74 @@
 				</heading>
 			</heading>
 		</heading>
+	</heading>
+	<heading id="Artartrelateditems" title="Art &amp; art-related">
+		<heading id="TwoDimensionalItems" title="2-Dimensional Items" nomatch="true">
+			<heading id="Drawing" title="Drawing">
+				<synonym value="Drawings"/>
+				<synonym value="Sketch"/>
+				<synonym value="Sketches"/>
+				<synonym value="Illustration"/>
+			</heading>
+			<heading id="Handstamp" title="Handstamp"> 					
+				<synonym value="Handstamps"/> 				
+			</heading>
+			<heading id="Painting" title="Painting"> 					
+				<synonym value="Paintings"/> 				
+			</heading>
+			<heading id="Photograph" title="Photograph">
+				<synonym value="Photographs"/>				
+				<synonym value="Photo"/>
+				<synonym value="Photos"/>
+				<synonym value="Negative"/>
+				<synonym value="Negatives"/>
+				<synonym value="Print"/> 				
+			</heading>
+			<heading id="Poster" title="Poster">
+				<synonym value="Posters"/>
+			</heading>
+		</heading>
+		<heading id="ThreeDimensionalItems" title="3-Dimensional Items" nomatch="true">
+			<heading id="Basketry" title="Basketry">
+				<heading id="Touristbasket" title="Tourist basket"> 					
+					<synonym value="Tourist baskets"/> 				
+				</heading>
+				<heading id="Decorativebasket" title="Decorative basket"> 					
+					<synonym value="Decorative baskets"/> 				
+				</heading>
+				<heading id="Giftbasket" title="Gift basket">
+					<synonym value="Gift baskets"/>
+					<synonym value="Jewel basket"/>
+					<synonym value="Jewel baskets"/>
+					<synonym value="Gift-basket"/>
+					<synonym value="Gift-baskets"/>
+					<synonym value="Jewel-basket"/>
+					<synonym value="Jewel-baskets"/>
+				</heading>
+			</heading>
+			<heading id="Carving" title="Carving"> 					
+				<synonym value="Carvings"/>
+				<synonym value="Woodcarving"/>
+				<synonym value="Woodcarvings"/>
+				<synonym value="Wood-carving"/>
+				<synonym value="Wood-carvings"/>			
+			</heading>
+			<heading id="Figurine" title="Figurine"> 					
+				<synonym value="Figurines"/> 				
+			</heading>
+			<heading id="Sculpture" title="Sculpture"> 					
+				<synonym value="Sculptures"/> 				
+			</heading>
+			<heading id="Statue" title="Statue"> 					
+				<synonym value="Statues"/> 				
+			</heading>
+		</heading>
+	</heading>
+	<heading id="Cradle" title="Cradle">
+		<synonym value="Cradles"/>
+	</heading>
+	<heading id="BabyBasket" title="Baby Basket">
+		<synonym value="Baby Baskets"/>
 	</heading>
 	<heading id="AudioRecordings" title="Audio Recordings">
 		<synonym value="Audio Recording"/>
@@ -455,6 +518,179 @@
 			<synonym value="Shirts"/> 				
 		</heading>
 	</heading>
+	<heading id="ContainersVesselsPottery" title="ContainersVesselsPottery">
+		<heading id="Pottery" title="Pottery">
+			<implies facet="Material" cat="Clay"/>
+			<synonym value="Pot"/>
+			<heading id="PotteryByShape" title="By shape" nomatch="true">
+				<heading id="OfferingTable" title="Offering Table">
+					<synonym value="Offering Tables"/>
+				</heading>
+				<heading id="OilLamp" title="Oil Lamp">
+					<synonym value="Oil Lamps"/>
+				</heading>
+				<heading id="Plate" title="Plate">
+					<synonym value="Plates"/>
+				</heading>
+				<heading id="PotStand" title="Pot Stand">
+					<synonym value="Pot Stands"/>
+				</heading>
+			</heading>
+			<heading id="PotteryByStyleOrType" title="By style or type" nomatch="true">
+				<heading id="BlackFigureWare" title="Black Figure ware">
+					<synonym value="Black-Figure ware"/>
+					<synonym value="'μελανόμορφα"/>
+					<implies facet="Color" cat="Black"/>
+					<implies facet="Color" cat="Red"/>
+					<implies facet="Collection" cat="ClassicalMediterranean"/>
+				</heading>
+				<heading id="BlackTopRedWare" title="Black-top red ware">
+					<synonym value="BTR"/>
+					<implies facet="Color" cat="Red"/>
+					<implies facet="Color" cat="Black"/>
+				</heading>
+				<heading id="CeladonWare" title="Celadon ware">
+					<synonym value="Celadon"/>
+					<implies facet="Color" cat="Celadon"/>
+				</heading>
+				<heading id="Lusterware" title="Lusterware">
+					<synonym value="Lusterware"/>
+					<synonym value="Lustre ware"/>
+					<synonym value="Lustreware"/>
+					<implies facet="TechniqueDesignDecoration" cat="MetallicGlaze"/>
+					<implies facet="Color" cat="Iridescent"/>
+				</heading>
+				<heading id="Plasticware" title="Plastic ware"/>
+				<heading id="Porcelain" title="Porcelain"/>
+				<heading id="RedFigureWare" title="Red Figure ware">
+					<synonym value="Red-Figure ware"/>
+					<synonym value="Red Figure pottery"/>
+					<synonym value="Red-Figure pottery"/>
+					<implies facet="Color" cat="Black"/>
+					<implies facet="Color" cat="Red"/>
+					<implies facet="Collection" cat="ClassicalMediterranean"/>
+				</heading>
+				<heading id="Whiteware" title="White ware">
+					<synonym value="whiteware"/>
+					<implies facet="Color" cat="White"/>
+				</heading>
+				<heading id="WhiteGroundWare" title="White ground ware">
+					<synonym value="WG ware"/>
+					<implies facet="Color" cat="White"/>
+				</heading>
+			</heading>
+		</heading>
+		<!-- to be added:
+			column-krater
+			cup-skyphos
+			eye-cup
+		-->
+		<heading id="Aryballos" title="Aryballos">
+			<synonym value="αρύβαλλος"/>
+		</heading>
+		<heading id="Bowl" title="Bowl">
+			<synonym value="Bowls"/>
+		</heading>
+		<heading id="Dish" title="Dish">
+			<synonym value="Dishes"/>
+		</heading>
+		<heading id="Flask" title="Flask">
+			<synonym value="Flasks"/>
+			<heading id="Alabastron" title="Alabastron">
+				<synonym value="αλάβαστρον"/>
+				<synonym value="alabastra"/>
+				<synonym value="alabastrons"/>
+			</heading>
+			<heading id="PilgrimsFlask" title="Pilgrims Flask">
+			<synonym value="Pilgrims Flasks"/>
+			<synonym value="Pilgrims' Flask"/>
+			<synonym value="Pilgrims' Flasks"/>
+			<synonym value="Pilgrim's Flask"/>
+			<synonym value="Pilgrim's Flasks"/>
+			<synonym value="Pilgrim Flask"/>
+			<synonym value="Pilgrim Flasks"/>
+		</heading>
+		</heading>
+		<heading id="Jar" title="Jar">
+			<synonym value="Jars"/>
+			<heading id="CanopicJar" title="Canopic Jar">
+				<synonym value="Canopic Jars"/>
+			</heading>
+			<heading id="DummyJar" title="Dummy Jar">
+				<synonym value="Dummy Jars"/>
+			</heading>
+			<heading id="JarStopper" title="Jar Stopper">
+				<synonym value="Jar Stoppers"/>
+			</heading>
+		</heading>
+		<heading id="JugsPitchers" title="Jugs &amp; Pitchers">
+			<synonym value="Jugs"/>
+			<heading id="Juglet" title="Juglet">
+				<synonym value="Juglets"/>
+			</heading>
+			<heading id="WineJug" title="Wine Jug">
+				<synonym value="Wine Jugs"/>
+				<implies facet="ActivityOrContext" cat="WineDrinking"/>
+				<heading id="Oinochoe" title="Oinochoe">
+					<synonym value="Οινοχόη"/>
+					<synonym value="Oenochoe"/>
+					<heading id="Olpe" title="Olpe">  <!-- Implies a sigmoid shape -->
+						<implies facet="Culture" cat="Corinthian"/>
+						<implies facet="TechniqueDesignDecoration" cat="SShaped"/>
+					</heading>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="Barrel" title="Barrel">
+			<synonym value="Barrels"/>
+		</heading>
+		<heading id="Cup" title="Cup">
+			<synonym value="Cups"/>
+			<heading id="BeerCup" title="Beer Cup">
+				<synonym value="Beer Cups"/>
+				<implies facet="ActivityOrContext" cat="BeerDrinking"/>
+			</heading>
+			<heading id="Chalice" title="Chalice">
+				<synonym value="Chalices"/>
+				<implies facet="ActivityOrContext" cat="Drinking"/>
+			</heading>
+			<heading id="Kotyle" title="Kotyle">
+				<heading id="Kylix" title="Kylix">
+					<synonym value="κύλιξ"/>
+					<synonym value="Cylix"/>
+					<synonym value="Kylixes"/>
+					<synonym value="Kylikes"/>
+					<implies facet="Culture" cat="Greek"/>
+					<implies facet="ActivityOrContext" cat="Wine Drinking"/>
+					<heading id="Tondo" title="Tondo">
+						<definition value="The almost flat interior circle on the interior base of the cup, 
+							called the tondo, was the primary surface for painted decoration in the 
+							Black-figure or Red-figure styles of the 6th and 5th century BC. As the
+							representations would be covered with wine, the scenes would only be
+							revealed in stages as the wine was drained. They were often designed
+							with this in mind, with scenes created so that they would surprise or
+							titillate the drinker as they were revealed."/>
+					</heading>
+				</heading>
+				<heading id="Skyphos" title="Skyphos">
+					<synonym value="σκύφος"/>
+					<synonym value="skyphoi"/>
+					<implies facet="Culture" cat="Greek"/>
+					<implies facet="ActivityOrContext" cat="Wine Drinking"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="Porringer" title="Porringer">
+			<synonym value="Porringers"/>
+			<implies facet="ActivityOrContext" cat="Eating"/>
+		</heading>
+		<heading id="Vase" title="Vase">
+			<synonym value="Vases"/>
+			<heading id="HesVase" title="Hes Vase">
+				<synonym value="Hes Vases"/>
+			</heading>
+		</heading>
+	</heading>
 	<heading id="Furniturefurnishings" title="Furniture &amp; furnishings">
 		<synonym value="Furniture"/>
 		<heading id="Bed" title="Bed">
@@ -477,6 +713,19 @@
 			<heading id="Desk" title="Desk">
 				<synonym value="Desks"/>
 			</heading>
+		</heading>
+	</heading>
+	<heading id="Games" title="Games">
+		<synonym value="Game"/>
+		<implies facet="ActivityOrContext" cat="PlayingGames"/>
+		<heading id="Parcheesi" title="Parcheesi"/>
+		<heading id="Chess" title="Chess"/>
+		<heading id="Checkers" title="Checkers"/> <!-- exclude the design motif -->
+		<heading id="Dice" title="Dice">
+			<synonym value="Die"/> <!-- exclude death, machining tools -->
+		</heading>
+		<heading id="GrassGame" title="Grass game">
+			<synonym value="Grass games"/>
 		</heading>
 	</heading>
 	<heading id="Jewelry" title="Jewelry">
@@ -777,8 +1026,12 @@
 		<heading id="Umbrella" title="Umbrella"> 					
 			<synonym value="Umbrellas"/> 				
 		</heading>
-		<heading id="Pipe" title="Pipe">
+		<heading id="Pipe" title="Pipe">  <!-- exclude musical instruments & plumbing -->
 			<synonym value="Pipes"/>
+			<heading id="OpiumPipe" title="OpiumPipe">
+				<synonym value="Opium Pipes"/>
+				<implies facet="ActivityOrContext" cat="DrugUse"/>
+			</heading>
 		</heading>
 		<heading id="Bag" title="Bag">
 			<synonym value="Bags"/>
@@ -816,165 +1069,8 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Pottery" title="Pottery">
-		<implies facet="Material" cat="Clay"/>
-		<synonym value="Pot"/>
-		<heading id="PotteryByShape" title="By shape" nomatch="true">
-		<!-- to be added:
-			column-krater
-			cup-skyphos
-			eye-cup
-		-->
-			<heading id="Aryballos" title="Aryballos">
-				<synonym value="αρύβαλλος"/>
-			</heading>
-			<heading id="Bowl" title="Bowl">
-				<synonym value="Bowls"/>
-			</heading>
-			<heading id="Cup" title="Cup">
-				<synonym value="Cups"/>
-				<heading id="BeerCup" title="Beer Cup">
-					<synonym value="Beer Cups"/>
-					<implies facet="ActivityOrContext" cat="Beer Drinking"/>
-				</heading>
-				<heading id="Chalice" title="Chalice">
-					<synonym value="Chalices"/>
-					<implies facet="ActivityOrContext" cat="Drinking"/>
-				</heading>
-				<heading id="Kotyle" title="Kotyle">
-					<heading id="Kylix" title="Kylix">
-						<synonym value="κύλιξ"/>
-						<synonym value="Cylix"/>
-						<synonym value="Kylixes"/>
-						<synonym value="Kylikes"/>
-						<implies facet="Culture" cat="Greek"/>
-						<implies facet="ActivityOrContext" cat="Wine Drinking"/>
-						<heading id="Tondo" title="Tondo">
-							<definition value="The almost flat interior circle on the interior base of the cup, 
-								called the tondo, was the primary surface for painted decoration in the 
-								Black-figure or Red-figure styles of the 6th and 5th century BC. As the
-								representations would be covered with wine, the scenes would only be
-								revealed in stages as the wine was drained. They were often designed
-								with this in mind, with scenes created so that they would surprise or
-								titillate the drinker as they were revealed."/>
-						</heading>
-					</heading>
-					<heading id="Skyphos" title="Skyphos">
-						<synonym value="σκύφος"/>
-						<synonym value="skyphoi"/>
-						<implies facet="Culture" cat="Greek"/>
-						<implies facet="ActivityOrContext" cat="Wine Drinking"/>
-					</heading>
-				</heading>
-			</heading>
-			<heading id="Dish" title="Dish">
-				<synonym value="Dishes"/>
-			</heading>
-			<heading id="Flask" title="Flask">
-				<synonym value="Flasks"/>
-				<heading id="Alabastron" title="Alabastron">
-					<synonym value="αλάβαστρον"/>
-					<synonym value="alabastra"/>
-					<synonym value="alabastrons"/>
-				</heading>
-				<heading id="PilgrimsFlask" title="Pilgrims Flask">
-				<synonym value="Pilgrims Flasks"/>
-				<synonym value="Pilgrims' Flask"/>
-				<synonym value="Pilgrims' Flasks"/>
-				<synonym value="Pilgrim's Flask"/>
-				<synonym value="Pilgrim's Flasks"/>
-				<synonym value="Pilgrim Flask"/>
-				<synonym value="Pilgrim Flasks"/>
-			</heading>
-			</heading>
-			<heading id="Jar" title="Jar">
-				<synonym value="Jars"/>
-				<heading id="CanopicJar" title="Canopic Jar">
-					<synonym value="Canopic Jars"/>
-				</heading>
-				<heading id="DummyJar" title="Dummy Jar">
-					<synonym value="Dummy Jars"/>
-				</heading>
-			</heading>
-			<heading id="JugsPitchers" title="Jugs &amp; Pitchers">
-				<synonym value="Jugs"/>
-				<heading id="Juglet" title="Juglet">
-					<synonym value="Juglets"/>
-				</heading>
-				<heading id="WineJug" title="Wine Jug">
-					<synonym value="Wine Jugs"/>
-					<implies facet="ActivityOrContext" cat="Wine Drinking"/>
-					<heading id="Oinochoe" title="Oinochoe">
-						<synonym value="Οινοχόη"/>
-						<synonym value="Oenochoe"/>
-						<heading id="Olpe" title="Olpe">  <!-- Implies a sigmoid shape -->
-							<implies facet="Culture" cat="Corinthian"/>
-						</heading>
-					</heading>
-				</heading>
-			</heading>
-			<heading id="OfferingTable" title="Offering Table">
-				<synonym value="Offering Tables"/>
-			</heading>
-			<heading id="OilLamp" title="Oil Lamp">
-				<synonym value="Oil Lamps"/>
-			</heading>
-			<heading id="Plate" title="Plate">
-				<synonym value="Plates"/>
-			</heading>
-			<heading id="PotStand" title="Pot Stand">
-				<synonym value="Pot Stands"/>
-			</heading>
-			<heading id="Vase" title="Vase">
-				<synonym value="Vases"/>
-				<heading id="HesVase" title="Hes Vase">
-					<synonym value="Hes Vases"/>
-				</heading>
-			</heading>
-		</heading>
-		<heading id="PotteryByStyleOrType" title="By style or type" nomatch="true">
-			<heading id="BlackFigureWare" title="Black Figure ware">
-				<synonym value="Black-Figure ware"/>
-				<synonym value="'μελανόμορφα"/>
-				<implies facet="Color" cat="Black"/>
-				<implies facet="Color" cat="Red"/>
-				<implies facet="Collection" cat="ClassicalMediterranean"/>
-			</heading>
-			<heading id="BlackTopRedWare" title="Black-top red ware">
-				<synonym value="BTR"/>
-				<implies facet="Color" cat="Red"/>
-				<implies facet="Color" cat="Black"/>
-			</heading>
-			<heading id="CeladonWare" title="Celadon ware">
-				<synonym value="Celadon"/>
-				<implies facet="Color" cat="Celadon"/>
-			</heading>
-			<heading id="Lusterware" title="Lusterware">
-				<synonym value="Lusterware"/>
-				<synonym value="Lustre ware"/>
-				<synonym value="Lustreware"/>
-				<implies facet="TechniqueDesignDecoration" cat="MetallicGlaze"/>
-				<implies facet="Color" cat="Iridescent"/>
-			</heading>
-			<heading id="Plasticware" title="Plastic ware"/>
-			<heading id="Porcelain" title="Porcelain"/>
-			<heading id="RedFigureWare" title="Red Figure ware">
-				<synonym value="Red-Figure ware"/>
-				<synonym value="Red Figure pottery"/>
-				<synonym value="Red-Figure pottery"/>
-				<implies facet="Color" cat="Black"/>
-				<implies facet="Color" cat="Red"/>
-				<implies facet="Collection" cat="ClassicalMediterranean"/>
-			</heading>
-			<heading id="Whiteware" title="White ware">
-				<synonym value="whiteware"/>
-				<implies facet="Color" cat="White"/>
-			</heading>
-			<heading id="WhiteGroundWare" title="White ground ware">
-				<synonym value="WG ware"/>
-				<implies facet="Color" cat="White"/>
-			</heading>
-		</heading>
+	<heading id="Puppet" title="Puppet">
+		<synonym value="Puppets"/>
 	</heading>
 	<heading id="ScientificSamples" title="Scientific Samples">
 		<synonym value="Scientific Sample"/>
@@ -1143,9 +1239,20 @@
 	<heading id="SculpturedWorks" title="Sculptured Works">
 		<heading id="Ossuary" title="Ossuary">
 			<synonym value="Ossuaries"/>
-			<implies facet="ActivityOrContext" cat="Burial"/>
+			<implies facet="ActivityOrContext" cat="Burials"/>
 			<implies facet="ActivityOrContext" cat="Sculpting"/>
 			<implies facet="ActivityOrContext" cat="Carving"/>  <!-- could be stone carving or wood carving -->
+		</heading>
+	</heading>
+	<heading id="Sportsequipment" title="Sports equipment">
+		<implies facet="ActivityOrContext" cat="PlayingSports"/>
+		<heading id="Ball" title="Ball">
+			<implies facet="TechniqueDesignDecoration" cat="Spherical"/> <!-- check cat. -->
+			<synonym value="Balls"/>
+		</heading>
+		<heading id="ShinnyBall" title="Shinny Ball"> 
+			<implies facet="TechniqueDesignDecoration" cat="Spherical"/> <!-- check cat. -->			
+			<synonym value="Shinny Balls"/> 				
 		</heading>
 	</heading>
 	<heading id="Textiles" title="Textiles">
@@ -1371,4 +1478,894 @@
 			</heading>
 		</heading>
 	</heading>
+	<!-- The following were migrated from Activity or Context and need to be filed above -->
+		<heading id="Boilingstone" title="Boiling stone">
+			<synonym value="Boiling stones"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Mortar" title="Mortar">
+			<synonym value="Mortars"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Pestle" title="Pestle">
+			<synonym value="Pestles"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Mushboilingbasket" title="Mush-boiling basket">
+			<synonym value="Mush boiling basket"/> 					
+			<synonym value="Mush boiling baskets"/>
+			<synonym value="Mush-boiling baskets"/> 			
+			<synonym value="Boiling basket"/> 					
+			<synonym value="Boiling baskets"/> 	
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="Acornanvil" title="Acorn anvil"> 					
+			<synonym value="Acorn anvils"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="Mortarbasket" title="Mortar basket"> 					
+			<synonym value="Mortar baskets"/> 
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
+		</heading>
+		<heading id="Kettle" title="Kettle">
+			<synonym value="Kettles"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Winnowingbasket" title="Winnowing basket">
+			<synonym value="Winnowing baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Cookingbasket" title="Cooking basket">
+			<synonym value="Cooking baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Parchingbasket" title="Parching basket"> 					
+			<synonym value="Parching baskets"/> 
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="Siftingbasket" title="Sifting basket"> 					
+			<synonym value="Sifting baskets"/> 	
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="Groundstone" title="Groundstone">
+			<synonym value="Groundstones"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+			<heading id="Grindingstone" title="Grinding stone"> 					
+				<synonym value="Grinding stones"/> 				
+			</heading>
+			<heading id="Handstone" title="Handstone"> 					
+				<synonym value="Handstones"/> 				
+			</heading>
+			<heading id="Metate" title="Metate"> 					
+				<synonym value="Metates"/> 				
+			</heading>
+			<heading id="Mano" title="Mano">
+				<synonym value="Manos"/>
+				<synonym value="Handstone"/> 					
+				<synonym value="Handstones"/> 				
+			</heading>
+		</heading>
+		<heading id="CookingStone" title="Cooking Stone"> 					
+			<synonym value="Cooking Stones"/> 	
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
+		</heading>
+		<heading id="CookingVessel" title="Cooking Vessel"> 					
+			<synonym value="Cooking Vessels"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+			<heading id="CookingPot" title="Cooking Pot"> 					
+				<synonym value="Cooking Pots"/>
+				<synonym value="Pots"/>
+				<synonym value="Pot"/>				
+			</heading>
+			<heading id="CookingBowl" title="Cooking Bowl"> 					
+				<synonym value="Cooking Bowls"/> 				
+			</heading>
+			<heading id="CookingPan" title="Cooking Pan"> 					
+				<synonym value="Cooking Pan"/> 				
+			</heading>				
+		</heading>
+		<heading id="CookingStove" title="Cooking Stove"> 					
+			<synonym value="Cooking Stoves"/> 	
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="Oven" title="Oven"> 					
+			<synonym value="Ovens"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="SeedBeater" title="Seed Beater"> 					
+			<synonym value="Seed Beaters"/> 
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>				
+		</heading>
+		<heading id="MushStirrer" title="Mush Stirrer"> 					
+			<synonym value="Mush Stirrers"/> 
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="MushPaddle" title="Mush Paddle"> 					
+			<synonym value="Mush Paddles"/> 
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
+		</heading>
+		<heading id="Chocolatemold" title="Chocolate mold"> 					
+			<synonym value="Chocolate molds"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
+		</heading>
+		<heading id="Sifter" title="Sifter"> 					
+			<synonym value="Sifters"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>	
+		</heading>
+		<heading id="Strainer" title="Strainer"> 					
+			<synonym value="Strainers"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
+		</heading>
+		<heading id="Dippingbasket" title="Dipping basket"> 					
+			<synonym value="Dipping baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
+		</heading>
+		<heading id="Dish" title="Dish">
+			<synonym value="Dishes"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>
+			<heading id="FeastDish" title="Feast Dish"> 					
+				<synonym value="Feast Dishes"/> 				
+			</heading>
+		</heading>
+		<heading id="Spoon" title="Spoon"> 					
+			<synonym value="Spoons"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>		
+		</heading>
+		<heading id="Corkscrew" title="Corkscrew"> 					
+			<synonym value="Corkscrews"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
+		</heading>
+		<heading id="Platter" title="Platter"> 					
+			<synonym value="Platters"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
+		</heading>
+		<heading id="Fork" title="Fork"> 					
+			<synonym value="Forks"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
+		</heading>
+		<heading id="Plate" title="Plate">
+			<synonym value="Plates"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>
+			<excl value="photographic plate"/>
+			<excl value="photographic plate"/>
+			<excl value="negative"/>
+			<excl value="negatives"/>
+		</heading>
+		<heading id="Ladle" title="Ladle"> 					
+			<synonym value="Ladles"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
+		</heading>
+		<heading id="Bowl" title="Bowl">
+			<synonym value="Bowls"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>  <!-- need complex inferentiation to remove ritual bowls, etc. -->
+		</heading>
+		<heading id="Cup" title="Cup">
+			<synonym value="Cups"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>
+			<heading id="Goblet" title="Goblet">
+				<synonym value="Goblets"/>
+			</heading>
+			<heading id="Rhyton" title="Rhyton"> 					
+				<synonym value="Rhytons"/> 				
+			</heading>
+			<heading id="Stein" title="Stein"> 					
+				<synonym value="Steins"/> 				
+			</heading>
+		</heading>
+		<heading id="Servingbasket" title="Serving basket"> 					
+			<synonym value="Serving baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
+		</heading>
+		<heading id="Chafingdish" title="Chafing dish"> 					
+			<synonym value="Chafing dishes"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>		
+		</heading>
+		<heading id="Chocolatestirrer" title="Chocolate stirrer"> 					
+			<synonym value="Chocolate stirrers"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>	
+		</heading>
+		<heading id="Teapot" title="Teapot"> 					
+			<synonym value="Teapots"/>
+			<synonym value="Tea pot"/>
+			<synonym value="Tea pots"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
+		</heading>
+		<heading id="Coffeepot" title="Coffee pot"> 					
+			<synonym value="Coffee pots"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>		
+		</heading>
+		<heading id="Bottle" title="Bottle"> 					
+			<synonym value="Bottles"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+		</heading>
+		<heading id="Jar" title="Jar"> 					
+			<synonym value="Jars"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+		</heading>
+		<heading id="Storagebasket" title="Storage basket">
+			<heading id="Seedbasket" title="Seed basket"> 					
+				<synonym value="Seed baskets"/>
+				<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+			</heading>
+			<heading id="Acornbasket" title="Acorn basket"> 					
+				<synonym value="Acorn baskets"/>
+				<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+			</heading>
+		</heading>
+		<heading id="Canteen" title="Canteen"> 					
+			<synonym value="Canteens"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+		</heading>
+		<heading id="Olla" title="Olla">
+			<synonym value="Ollas"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>
+		</heading>
+		<heading id="Amphora" title="Amphora">
+			<synonym value="Amphoras"/>
+			<synonym value="Amphorae"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>
+		</heading>
+		<heading id="Basketrycaplid" title="Basketry cap (lid)"> 					
+			<synonym value="Basketry cap (lids)"/>
+			<synonym value="Basketry caps (lid)"/>
+			<synonym value="Basketry caps (lids)"/> 				
+		</heading>
+		<heading id="Hangingbasket" title="Hanging basket"> 					
+			<synonym value="Hanging baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>	
+		</heading>
+		<heading id="Funnel" title="Funnel">
+			<synonym value="Funnels"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>
+		</heading>
+		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->				
+			<synonym value="Abaci"/>
+			<synonym value="Abacuses"/>
+			<synonym value="Counting Frame"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>			
+		</heading>
+		<heading id="Counter" title="Counter"> 					
+			<synonym value="Counters"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>				
+		</heading>
+		<heading id="Coin" title="Coin">
+			<synonym value="Coins"/>
+			<synonym value="Coinage"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+			<!--These categories need cleaning -->
+			<heading id="Denomination" title="Denomination">
+				<heading id="Bronzedouble" title="Bronze double"> 					
+					<synonym value="Bronze doubles"/>
+					<implies facet="Materials" cat="Bronze"/>		
+				</heading>
+				<heading id="Notgeld" title="Notgeld"/>
+				<heading id="50centavos" title="50 centavos"/>
+			</heading>
+			<heading id="UnitedStatesCoins" title="United States Coins">
+				<synonym value="US/Dollar system"/>
+				<heading id="Penny" title="Penny">
+					<synonym value="Pennies"/>
+					<heading id="FlyingEaglePenny" title="Flying Eagle Penny"> 					
+						<synonym value="Flying Eagle Pennies"/>
+						<synonym value="Flying-Eagle Penny"/>
+						<synonym value="Flying-Eagle Pennies"/> 				
+					</heading>
+					<heading id="LincolnHeadPenny" title="Lincoln Head Penny"> 					
+						<synonym value="Lincoln Head Pennies"/>
+						<synonym value="Lincoln-Head Penny"/>
+						<synonym value="Lincoln-Head Pennies"/> 				
+					</heading>
+					<heading id="IndianHeadPenny" title="Indian head penny"> 					
+						<synonym value="Indian Head Pennies"/>
+						<synonym value="Indian-Head Penny"/>
+						<synonym value="Indian-Head Pennies"/> 				
+					</heading>
+				</heading>
+				<heading id="Nickel" title="Nickel">
+					<synonym value="Nickels"/>
+					<heading id="LibertyHeadNickel" title="Liberty Head Nickel"> 					
+						<synonym value="Liberty Head Nickels"/>
+						<synonym value="Liberty-Head Nickel"/>
+						<synonym value="Liberty-Head Nickels"/> 				
+					</heading>
+					<heading id="HalfDime" title="Half Dime"> 					
+						<synonym value="Half Dimes"/> 				
+					</heading>
+					<heading id="NickleThreeCent" title="Nickle Three Cent"> 					
+						<synonym value="Nickle Three Cents"/> 				
+					</heading>
+					<heading id="BuffaloHeadNickel" title="Buffalo Head Nickel"> 					
+						<synonym value="Buffalo Head Nickels"/> 				
+					</heading>
+				</heading>
+				<heading id="Dime" title="Dime">
+					<synonym value="Dimes"/>
+				</heading>
+				<heading id="Quarterdollar" title="Quarter">
+					<synonym value="Quarter-dollar"/>
+					<synonym value="Quarter-dollars"/>
+					<synonym value="Quarters"/>
+					<heading id="WashingtonQuarter" title="Washington Quarter"> 					
+						<synonym value="Washington Quarters"/> 				
+					</heading>
+				</heading>
+				<heading id="Halfdollar" title="Half-dollar">
+					<synonym value="Half-dollars"/>
+					<synonym value="Half dollar"/>
+					<synonym value="Half dollars"/>
+					<heading id="BayBridgeCommememorativeHalfDollar" title="Bay Bridge Commememorative Half-Dollar">
+						<synonym value="Bay Bridge Commememorative Half Dollar"/> 					
+						<synonym value="Bay Bridge Commememorative Half Dollars"/> 
+						<synonym value="Bay Bridge Commememorative Half-Dollar"/> 					
+						<synonym value="Bay Bridge Commememorative Half-Dollars"/> 
+						<synonym value="Bay Bridge Commem Half Dollar"/>
+					</heading>
+					<heading id="BenFranklinHalfDollarUncirculatedMintSet" title="Ben Franklin Half Dollar, Uncirculated Mint Set"/>
+					<heading id="KennedyHalfDollar" title="Kennedy Half Dollar"/>
+					<heading id="FranklinKennedyHalfDollars" title="Franklin &amp; Kennedy Half Dollars"/>
+					<heading id="DiamondJubileeCommemorativeHalfDollar" title="Diamond Jubilee Commemorative Half Dollar"/>
+					<heading id="MonroeDoctrineCommemorativeHalfDollar" title="Monroe Doctrine Commemorative Half Dollar"/>
+					<!-- Missing synonym? "40th commemorative" -->
+					<heading id="KennedyHalfDollar40thCommemorative" title="Kennedy Half Dollar, 40th Commemorative"/>
+					<heading id="KennedyHalfDollarproofset" title="Kennedy Half Dollar, proof set"/>
+					<heading id="KennedyHalfDollarUncirculatedMintSet" title="Kennedy Half Dollar, Uncirculated Mint Set"/>
+					<heading id="FranklinHalfDollar" title="Franklin Half Dollar"/>
+					<heading id="CoppedBustHalfDollar" title="Copped Bust Half Dollar"/>
+					<heading id="FranklinHalfDollarproofset" title="Franklin Half Dollar, proof set"/>
+					<heading id="LibertyStandingHalfDollar" title="Liberty Standing Half Dollar"/>
+					<heading id="GrantMemorialHalfDollar" title="Grant Memorial Half Dollar"/>
+					<heading id="ColumbianExpoCommemorativeHalfDollar" title="Columbian Expo. Commemorative Half Dollar"/>
+				</heading>
+				<heading id="Silverdollar" title="Silver dollar">
+					<heading id="EisenhowerUncirculatedSilverDollar" title="Eisenhower Uncirculated Silver Dollar"/>
+					<heading id="LibertyHeadSilverDollar" title="Liberty Head Silver Dollar"/>
+					<heading id="PeaceTypeSilverDollar" title="Peace Type Silver Dollar"/>
+				</heading>
+				<heading id="EmergencyWartimeCurrency" title="Emergency War Time Currency"/>
+				<heading id="Commemorative" title="Commemorative">
+					<synonym value="Medallion Commemorating Thologians"/>
+				</heading>
+			</heading>
+			<heading id="AncientGreek" title="Ancient Greek">
+				<heading id="Halfdrachma" title="Half drachma">
+					<synonym value="Half drachmas"/>
+					<synonym value="Half drachm"/>
+					<synonym value="Half drachms"/>
+					<synonym value="Half-drachma"/>
+					<synonym value="Hemidrachm"/>
+					<synonym value="Hemidrachms"/>
+					<synonym value="Hemidrachma"/>
+					<synonym value="Hemidrachmas"/>
+					<synonym value="Hemi-drachm"/>
+					<synonym value="Hemi-drachms"/>
+					<synonym value="Hemi-drachma"/>
+					<synonym value="Hemi-drachmas"/>
+					<synonym value="Half-drachmas"/>
+					<synonym value="Half-drachm"/>
+					<synonym value="Half-drachms"/>
+				</heading>
+				<heading id="Drachma" title="Drachma">
+					<synonym value="Drachmas"/>
+					<synonym value="Drachm"/>
+					<synonym value="Drachms"/>
+				</heading>
+				<heading id="Didrachm" title="Didrachm">
+					<synonym value="Two drachm"/>
+					<synonym value="Two drachms"/>
+					<synonym value="Two drachma"/>
+					<synonym value="Two drachmas"/>
+					<synonym value="Two-drachm"/>
+					<synonym value="Two-drachms"/>
+					<synonym value="Two-drachma"/>
+					<synonym value="Two-drachmas"/>
+					<synonym value="Didrachms"/>
+					<synonym value="Didrachma"/>
+					<synonym value="Didrachmas"/>
+				</heading>
+				<heading id="Tetradrachm" title="Tetradrachm">
+					<synonym value="Four drachm"/>
+					<synonym value="Four drachms"/>
+					<synonym value="Four drachma"/>
+					<synonym value="Four drachmas"/>
+					<synonym value="Four-drachm"/>
+					<synonym value="Four-drachms"/>
+					<synonym value="Four-drachma"/>
+					<synonym value="Four-drachmas"/>
+					<synonym value="Tetradrachms"/>
+					<synonym value="Tetradrachma"/>
+					<synonym value="Tetradrachmas"/>
+					<synonym value="Tetradrachm?"/>
+				</heading>
+				<heading id="Octodrachm" title="Octodrachm">
+					<synonym value="Eight drachm"/>
+					<synonym value="Eight drachms"/>
+					<synonym value="Eight drachma"/>
+					<synonym value="Eight drachmas"/>
+					<synonym value="Eight-drachm"/>
+					<synonym value="Eight-drachms"/>
+					<synonym value="Eight-drachma"/>
+					<synonym value="Eight-drachmas"/>
+					<synonym value="Octodrachms"/>
+					<synonym value="Octodrachma"/>
+					<synonym value="Octodrachmas"/>
+				</heading>
+				<heading id="Dekadrachm" title="Dekadrachm">
+					<synonym value="Ten drachm"/>
+					<synonym value="Ten drachms"/>
+					<synonym value="Ten drachma"/>
+					<synonym value="Ten drachmas"/>
+					<synonym value="Ten-drachm"/>
+					<synonym value="Ten-drachms"/>
+					<synonym value="Ten-drachma"/>
+					<synonym value="Ten-drachmas"/>
+					<synonym value="Dekadrachms"/>
+					<synonym value="Dekadrachma"/>
+					<synonym value="Dekadrachmas"/>
+				</heading>
+				<heading id="Hemiobol" title="Hemiobol">
+					<synonym value="Hemiobols"/>
+					<synonym value="Hemiobolus"/>
+					<synonym value="Hemioboluses"/>
+				</heading>
+				<heading id="Obol" title="Obol">
+					<synonym value="Obols"/>
+					<synonym value="Obolus"/>
+					<synonym value="Oboluses"/>
+				</heading>
+				<heading id="Diobol" title="Diobol">
+					<synonym value="Diobols"/>
+					<synonym value="Diobolus"/>
+					<synonym value="Dioboluses"/>
+				</heading>
+				<heading id="Triobol" title="Triobol">
+					<synonym value="Triobols"/>
+					<synonym value="Triobolus"/>
+					<synonym value="Trioboluses"/>
+				</heading>
+				<heading id="Tetrobol" title="Tetrobol">
+					<synonym value="Tetrobols"/>
+					<synonym value="Tetrobolus"/>
+					<synonym value="Tetroboluses"/>
+				</heading>
+				<heading id="Billonstater" title="Billon stater"/>
+				<heading id="SixthofStater" title="Sixth of Stater">
+					<synonym value="Sixths of Stater"/>
+				</heading>
+				<heading id="Stater" title="Stater">
+					<synonym value="Staters"/>
+				</heading>
+				<heading id="TwoStater" title="Two Stater">
+					<synonym value="Two staters"/>
+					<synonym value="Two-staters"/>
+					<synonym value="Two-staters"/>
+					<synonym value="2 stater"/>
+					<synonym value="2 staters"/>
+				</heading>
+				<heading id="Hemilitron" title="Hemilitron">
+					<synonym value="Hemilitrons"/>
+				</heading>
+				<heading id="Litra" title="Litra">
+					<synonym value="Litras"/>
+				</heading>
+				<heading id="16litraipiece" title="16 Litrai piece"/>
+				<heading id="Pentokion" title="Pentokion">
+					<synonym value="Pentokion"/>
+				</heading>
+				<heading id="Dekonkion" title="Dekonkion">
+					<synonym value="Dekonkions"/>
+				</heading>	
+			</heading>
+			<heading id="AncientPersianCoins" title="Ancient Persian Coins">
+				<heading id="Siglos" title="Siglos">
+					<heading id="2stater" title="2 stater"/>
+				</heading>
+			</heading>
+			<heading id="AncientRomanCoins" title="Ancient Roman Coins">
+				<heading id="Antoninianus" title="Antoninianus">
+					<synonym value="Antoninianvs"/>
+					<synonym value="Antioninianus"/>
+				</heading>
+				<heading id="Denarius" title="Denarius">
+					<heading id="DenariusSerrate" title="Denarius (Serrate)">
+						<synonym value="Denarius Serrati"/>
+					</heading>
+				</heading>
+				<heading id="Sestertius" title="Sestertius"/>
+				<heading id="Quinarius" title="Quinarius"/>
+				<heading id="Sextans" title="Sextans">
+					<heading id="Sextanssextantalstandard" title="Sextans (sextantal standard)"/>
+					<heading id="Sextansuncialstandard" title="Sextans (uncial standard)">
+						<synonym value="Sextans; uncial standrard"/>
+					</heading>
+				</heading>
+				<heading id="Aes" title="Aes">
+					<heading id="Aessemiuncialstandard" title="Aes - semiuncial standard">
+						<synonym value="Aes; semiuncial standard"/>
+					</heading>
+					<heading id="Aessextantalstandard" title="Aes - sextantal standard">
+						<synonym value="Aes (sextantal standard)"/>
+						<synonym value="Aes-(sextantal standard?)"/>
+						<synonym value="Aes; sextantal standard"/>
+					</heading>
+					<heading id="Aesuncialstandard" title="Aes - uncial standard">
+						<synonym value="Aes (uncial standard)"/>
+					</heading>
+					<heading id="Aesfolles" title="Aes folles">
+						<heading id="Aesfolles4" title="Aes folles (4)"/>
+						<heading id="AesfollesR3" title="Aes folles (R3)"/>
+						<heading id="AesfollesS" title="Aes folles (S)"/>
+						<heading id="AesfollesR4" title="Aes folles (R 4)"/>
+						<heading id="AesfollesR1" title="Aes folles (R1)"/>
+						<heading id="Aesfollesc1" title="Aes folles (c1)"/>
+					</heading>
+					<heading id="Aesgrave" title="Aes grave">
+						<heading id="Aesgravelibral" title="Aes grave; libral"/>
+						<heading id="Aesgraveuncia" title="Aes grave; uncia"/>
+						<heading id="Aesgravequadrans" title="Aes grave; quadrans"/>
+						<heading id="Aesgravetriens" title="Aes grave; triens"/>
+					</heading>
+					<heading id="Aesrude" title="Aes rude">
+						<heading id="Aesrudesextantalstand" title="Aes rude; sextantal stand"/>
+					</heading>
+					<heading id="Aessemis" title="Aes semis"/>
+				</heading>
+				<heading id="Aureus" title="Aureus"/>
+				<heading id="Cistophoros" title="Cistophoros"/>
+				<heading id="Quadrans" title="Quadrans">
+					<heading id="Quadranssemiuncialsta" title="Quadrans - semiuncial sta"/>
+					<heading id="Quadranssextantalstand" title="Quadrans (sextantal stand"/>
+					<heading id="Quadransuncialstandar" title="Quadrans - uncial standar"/>
+					<heading id="Quadransuncialstandard" title="Quadrans; uncial standard"/>
+				</heading>
+				<heading id="Constantinians" title="Constantinians"/>
+				<heading id="Semuncia" title="Semuncia"/>
+				<heading id="Dupondius" title="Dupondius"/>
+				<heading id="Semis" title="Semis">
+					<synonym value="Semis ?"/>
+					<heading id="Semissemiuncialstanda" title="Semis - semiuncial standa"/>
+					<heading id="Semissextantalstandard" title="Semis (sextantal standard">
+						<synonym value="Semis; sextantal standard"/>
+					</heading>
+				</heading>
+				<heading id="Triens" title="Triens">
+					<heading id="Triensuncialstandard" title="Triens - uncial standard">
+						<synonym value="Triens; uncial standard"/>
+					</heading>
+					<heading id="Trienssextantalstandard" title="Triens (sextantal standard)"/>
+				</heading>
+				<heading id="Quartunciasemilibrals" title="Quartuncia (semi-libral s"/>
+				<heading id="SydenhamQuartunciaGr" title="Sydenham:  Quartuncia; Gr"/>
+				<heading id="Uncia" title="Uncia">
+					<heading id="Unciatrientalstandard" title="Uncia - triental standard"/>
+					<heading id="Unciapostsemilibralst" title="Uncia (post-semilibral st"/>
+				</heading>
+				<heading id="TriaAssaria" title="Tria Assaria"/>
+			</heading>
+			<heading id="AncientByzantineCoins" title="Ancient Byzantine Coins"/>
+			<heading id="AncientHebrewCoins" title="Ancient Hebrew Coins">
+				<heading id="Shekel" title="Shekel"/>
+				<heading id="Doubleshekel" title="Double shekel"/>
+			</heading>
+			<heading id="GermanCoins" title="German Coins">
+				<heading id="1Pfenning" title="1 Pfenning"/>
+				<heading id="10Pfenning" title="10 Pfenning"/>
+				<heading id="5Pfenning" title="5 Pfenning"/>
+			</heading>
+		</heading>
+		<heading id="MoneyBox" title="Money Box">
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Purse" title="Purse">
+			<synonym value="Purses"/>
+			<synonym value="Handbag"/>
+			<synonym value="Handbags"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="MeshMeasure" title="Mesh Measure">
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Burdenbasket" title="Burden basket">
+			<synonym value="Burden baskets"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Carryingbasket" title="Carrying basket">
+			<synonym value="Carrying baskets"/>
+			<implies facet="ActivityOrContext" cat="BasketMaking"/>
+		</heading>
+		<heading id="Textilemanufacturesewing" title="Textile manufacture &amp; sewing">
+			<heading id="Textiles" title="Textiles">
+				<synonym value="Textile"/>
+				<heading id="Cloth" title="Cloth"/>
+				<heading id="Lace" title="Lace"/>
+				<heading id="Ribbon" title="Ribbon">
+					<synonym value="Ribbons"/>
+				</heading>
+			</heading>
+			<heading id="Needle" title="Needle">
+				<synonym value="Needles"/>
+			</heading>
+			<heading id="Awl" title="Awl">
+				<synonym value="Awls"/>
+			</heading>
+			<heading id="Needlecase" title="Needle case">
+				<synonym value="Needle cases"/>
+				<synonym value="Needlecase"/>
+				<synonym value="Needlecases"/>
+				<synonym value="Needle-case"/>
+				<synonym value="Needle-cases"/>
+			</heading>
+			<heading id="Thimble" title="Thimble">
+				<synonym value="Thimbles"/>
+			</heading>
+		</heading>
+		<heading id="Moneystone" title="Money stone">
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Seal" title="Seal"> <!-- exclude sea mammals and closures -->
+			<synonym value="Seals"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Granary" title="Granary">
+			<synonym value="Granaries"/>
+			<implies facet="ActivityOrContext" cat="FoodStorage"/>
+		</heading>
+		<heading id="Cradle" title="Cradle">
+			<synonym value="Cradles"/>
+			<implies facet="ActivityOrContext" cat="Childrearing"/>
+		</heading>
+		<heading id="BabyBasket" title="Baby Basket">
+			<synonym value="Baby Baskets"/>
+			<implies facet="ActivityOrContext" cat="Childrearing"/>
+		</heading>
+		<heading id="MedicalHealingitems" title="Medical &amp; Healing items">
+			<heading id="Doctoringbasket" title="Doctoring basket"> 					
+				<synonym value="Doctoring baskets"/>
+				<implies facet="ActivityOrContext" cat="Healing"/>			
+			</heading>
+			<heading id="Enemafunnel" title="Enema funnel"> 					
+				<synonym value="Enema funnels"/>
+				<implies facet="ActivityOrContext" cat="Healing"/>
+			</heading>
+		</heading>
+		<heading id="Ceremonialitems" title="Ceremonial items">
+			<heading id="Mandala" title="Mandala"> 					
+				<synonym value="Mandalas"/>
+				<synonym value="Dreamcatcher"/>
+				<synonym value="Dreamcatchers"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
+			</heading>
+			<heading id="Mask" title="Mask">
+				<synonym value="Masks"/>
+				<implies facet="TechniqueDesignorDecoration" cat="FigurativeOrRepresentational"/>
+			</heading>
+			<heading id="FeatheredStick" title="Feathered Stick"> 					
+				<synonym value="Feathered Sticks"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
+			</heading>
+			<heading id="Charmstone" title="Charmstone"> 					
+				<synonym value="Charmstones"/>
+				<synonym value="Charm stone"/>
+				<synonym value="Charm stones"/>
+				<synonym value="Charm-stone"/>
+				<synonym value="Charm-stones"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
+			</heading>
+			<heading id="Headdress" title="Headdress">
+				<synonym value="Headdresses"/>
+				<synonym value="Head dress"/>
+				<synonym value="Head dresses"/>
+				<synonym value="Head-dress"/>
+				<synonym value="Head-dresses"/>
+			</heading>
+			<heading id="Scarab" title="Scarab">
+				<synonym value="Scarabs"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
+			</heading>
+			<heading id="Ushabti" title="Ushabti"> 					
+				<synonym value="Ushabtis"/>
+				<synonym value="Shabti"/>
+				<synonym value="Shabtis"/>
+				<synonym value="Shawabti"/>
+				<synonym value="Shawabtis"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
+			</heading>
+			<heading id="Amulet" title="Amulet"> 					
+				<synonym value="Amulets"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>				
+			</heading>
+		</heading>
+		<heading id="Mala" title="Mala">
+			<synonym value="Malas"/>
+			<synonym value="Prayer beads"/>
+			<synonym value="Prayer bead"/>
+			<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Altar" title="Altar"> 					
+			<synonym value="Altars"/>
+			<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="Idol" title="Idol">				
+			<synonym value="Idols"/>
+			<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>		
+		</heading>
+		<heading id="PrayerMat" title="Prayer Mat"> 					
+			<synonym value="Prayer Mats"/>
+			<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="Shrine" title="Shrine"> 					
+			<synonym value="Shrines"/>
+			<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Scepter" title="Scepter"> 					
+			<synonym value="Scepters"/> 				
+		</heading>
+		<heading id="Wand" title="Wand"> 					
+			<synonym value="Wands"/> 				
+		</heading>
+		<heading id="Funeraryitems" title="Funerary items">
+			<heading id="Mummy" title="Mummy">
+				<synonym value="Mummies"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
+				<implies facet="ActivityOrContext" cat="Burials"/>
+				<heading id="Humanmummy" title="Human mummy"> 					
+					<synonym value="Human mummies"/>			
+				</heading>
+				<heading id="Catmummy" title="Cat mummy"> 					
+					<synonym value="Cat mummies"/> 				
+				</heading>
+				<heading id="Crocodilemummy" title="Crocodile mummy"> 					
+					<synonym value="Crocodile mummies"/> 				
+				</heading>
+				<heading id="Dogmummy" title="Dog mummy"> 					
+					<synonym value="Dog mummies"/> 				
+				</heading>
+				<heading id="Monkeymummy" title="Monkey mummy"> 					
+					<synonym value="Monkey mummies"/> 				
+				</heading>
+				<heading id="Fishmummy" title="Fish mummy"> 					
+					<synonym value="Fish mummies"/> 				
+				</heading>
+				<heading id="Lizardmummy" title="Lizard mummy"> 					
+					<synonym value="Lizard mummies"/> 				
+				</heading>
+				<heading id="Parrotmummy" title="Parrot mummy"> 					
+					<synonym value="Parrot mummies"/> 				
+				</heading>
+				<heading id="Snakemummy" title="Snake mummy"> 					
+					<synonym value="Snake mummies"/> 				
+				</heading>
+			</heading>
+			<heading id="Urn" title="Urn">
+				<synonym value="Urns"/>
+			</heading>
+			<heading id="Sarcophagus" title="Sarcophagus">
+				<synonym value="Sarcophogas"/>
+				<synonym value="Sarcophogases"/>
+				<synonym value="Sarcophagi"/>
+				<implies facet="ActivityOrContext" cat="Burials"/>
+			</heading>
+			<heading id="Coffin" title="Coffin">
+				<synonym value="Coffins"/>
+				<implies facet="ActivityOrContext" cat="Burials"/>
+			</heading>
+			<heading id="CanopicJar" title="Canopic Jar"> 					
+				<synonym value="Canopic Jars"/>
+				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
+			</heading>
+			<heading id="CanopicBox" title="Canopic Box"> 					
+				<synonym value="Canopic Boxes"/>
+				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>		
+			</heading>
+		</heading>
+		<heading id="Transportation" title="Transportation">
+			<heading id="TransportationByAir" title="By Air"  nomatch="true">
+				<heading id="Airplane" title="Airplane"/>
+			</heading>
+			<heading id="TransportationByLand" title="By Land"  nomatch="true">
+				<heading id="HorsebackRiding" title="Horseback Riding"/>
+			</heading>
+			<heading id="TransportationByWater" title="By Water"  nomatch="true">
+				<heading id="Galley" title="Galley"/>
+				<heading id="Canoe" title="Canoe">
+					<synonym value="Canoes"/>
+				</heading>
+				<heading id="Kayak" title="Kayak">
+					<synonym value="Kayaks"/>
+				</heading>
+				<heading id="Boat" title="Boat">
+					<synonym value="Boats"/>
+				</heading>
+				<heading id="Paddle" title="Paddle">
+					<synonym value="Paddles"/>
+					<synonym value="Oar"/>
+					<synonym value="Oars"/>
+				</heading>
+				<heading id="Boathook" title="Boat hook"/>
+			</heading>
+		</heading>
+		<heading id="FishingTrappingitems" title="Fishing &amp; Trapping items">
+			<heading id="Hook" title="Hook"> 					
+				<synonym value="Hooks"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>	
+			</heading>
+			<heading id="FishingLine" title="Fishing line"> 					
+				<synonym value="Fishing lines"/> 
+				<implies facet="ActivityOrContext" cat="Fishing"/>				
+			</heading>
+			<heading id="Harpoon" title="Harpoon"> 					
+				<synonym value="Harpoons"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>
+				<implies facet="ActivityOrContext" cat="Hunting"/>			
+			</heading>
+			<heading id="Net" title="Net"> 					
+				<synonym value="Nets"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>		
+			</heading>
+			<heading id="Sinker" title="Sinker"> 					
+				<synonym value="Sinkers"/> 
+				<implies facet="ActivityOrContext" cat="Fishing"/>	
+			</heading>
+			<heading id="Nethanger" title="Net hanger"> 					
+				<synonym value="Net hangers"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>	
+			</heading>
+			<heading id="Fishtrapbasket" title="Fish trap basket">
+				<synonym value="Fish-trap"/>
+				<synonym value="Fish-traps"/>
+				<synonym value="Fishtrap"/>
+				<synonym value="Fishtraps"/>					
+				<synonym value="Fish trap baskets"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>
+				<heading id="EelTrapBasket" title="Eel Trap Basket"> 					
+					<synonym value="Eel Trap Baskets"/>
+					<synonym value="Eel-Trap Basket"/>
+					<synonym value="Eel-Trap Baskets"/>				
+				</heading>
+				<heading id="Salmontrapbasket" title="Salmon trap basket"> 					
+					<synonym value="Salmon trap baskets"/>
+					<synonym value="Salmon-trap basket"/>
+					<synonym value="Salmon-trap baskets"/> 				
+				</heading>
+			</heading>
+			<heading id="Birdtrapbasket" title="Bird trap basket"> 					
+				<synonym value="Bird trap baskets"/>
+				<synonym value="Bird-trap basket"/>
+				<synonym value="Bird-trap baskets"/>
+				<implies facet="ActivityOrContext" cat="Hunting"/>		
+			</heading>
+			<heading id="Gig" title="Gig"> <!-- A trident or three-pringed spear for fishing -->		
+				<synonym value="Gigs"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>
+			</heading>
+			<heading id="Slitter" title="Slitter">
+				<heading id="EelSlitter" title="Eel Slitter"> 					
+					<synonym value="Eel Slitters"/>
+					<implies facet="ActivityOrContext" cat="Fishing"/>			
+				</heading>
+			</heading>
+			<heading id="Gorgehook" title="Gorge hook"> 					
+				<synonym value="Gorge hooks"/>
+				<implies facet="ActivityOrContext" cat="Fishing"/>	
+			</heading>
+		</heading>
+		<heading id="AnimalHusbandry" title="Animal Husbandry"/>
+		<heading id="Foodgatheringitems" title="Food gathering items">
+			<heading id="Gatheringbaskets" title="Gathering baskets">
+				<implies facet="ActivityOrContext" cat="Gathering"/>
+				<heading id="Acorngatheringbasket" title="Acorn-gathering basket">
+					<synonym value="Acorn gathering basket"/> 					
+					<synonym value="Acorn gathering baskets"/>
+					<synonym value="Acorn-gathering basket"/>
+					<synonym value="Acorn-gathering baskets"/>
+				</heading>
+				<heading id="Seedgatheringbasket" title="Seed-gathering basket">
+					<synonym value="Seed gathering basket"/> 					
+					<synonym value="Seed gathering baskets"/>
+					<synonym value="Seed-gathering basket"/>
+					<synonym value="Seed-gathering baskets"/> 
+				</heading>
+			</heading>
+		</heading>
 </taxonomy>
