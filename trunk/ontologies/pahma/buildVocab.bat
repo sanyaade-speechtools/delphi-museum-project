@@ -10,7 +10,7 @@
 @REM
 @REM Add each of the facets - EDIT HERE TO ADD MORE
 @REM
-@cat UseOrContext_taxonomy.xml Location_taxonomy.xml CulturalGroup_taxonomy.xml Materials_taxonomy.xml Technique_Design_Decoration_taxonomy.xml Color_taxonomy.xml | sed -e "/<?xml/d" -e "s/\t/ /g" >> mainVocab.xml
+@cat ObjectName_facet.xml Collection_facet.xml Activity_facet.xml Location_facet.xml Culture_facet.xml Materials_facet.xml Technique_Design_Decoration_facet.xml Color_facet.xml | sed -e "/<?xml/d" -e "s/\t/ /g" >> mainVocab.xml
 @REM
 @REM Put out the ending boilerplate for the facetmap
 @cat MainVocabFooter.txt >> mainVocab.xml
