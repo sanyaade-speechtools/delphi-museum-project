@@ -14,6 +14,7 @@
 		feather-dart headdress
 		Guttus (lamp feeder)
 		mandrel
+		night chant (Yeibichai)
 		Patera
 		powder horn
 		shuttle
@@ -37,6 +38,12 @@
 	</syntax_notes>
 	<heading id="ArchitecturalElements" title="Architectural Elements">
 		<synonym value="Architectural Element"/>
+		<heading id="Buildings" title="Buildings">
+			<heading id="Granary" title="Granary">
+				<synonym value="Granaries"/>
+				<implies facet="ActivityOrContext" cat="FoodStorage"/>
+			</heading>
+		</heading>
 		<heading id="Column" title="Column">
 			<synonym value="Columns"/>
 		</heading>
@@ -280,12 +287,6 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Cradle" title="Cradle">
-		<synonym value="Cradles"/>
-	</heading>
-	<heading id="BabyBasket" title="Baby Basket">
-		<synonym value="Baby Baskets"/>
-	</heading>
 	<heading id="AudioRecordings" title="Audio Recordings">
 		<synonym value="Audio Recording"/>
 		<heading id="DigitalAudio" title="Digital Audio">
@@ -306,38 +307,60 @@
 		<synonym value="Basket"/>
 		<heading id="BabyBasket" title="Baby Basket">
 			<synonym value="Baby Baskets"/>
+			<implies facet="ActivityOrContext" cat="Childrearing"/>
 		</heading>
-		<heading id="BurdenBasket" title="Burden Basket">
-			<synonym value="Burden Baskets"/>
+		<heading id="Basketrycaplid" title="Basketry Cap (Lid)"> 					
+			<synonym value="Basketry cap (lids)"/>
+			<synonym value="Basketry caps (lid)"/>
+			<synonym value="Basketry caps (lids)"/> 				
 		</heading>
-		<heading id="CarryingBasket" title="Carrying Basket">
-			<synonym value="Carrying Baskets"/>
+		<heading id="BasketBirdtrapbasket" title="Bird Trap Basket"> <!-- Should also be made a kind of trap (armament) -->			
+			<synonym value="Bird trap baskets"/>
+			<synonym value="Bird-trap basket"/>
+			<synonym value="Bird-trap baskets"/>
+			<implies facet="ActivityOrContext" cat="Hunting"/>		
+		</heading>
+		<heading id="Burdenbasket" title="Burden Basket">
+			<synonym value="Burden baskets"/>
+			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Carryingbasket" title="Carrying Basket">
+			<synonym value="Carrying baskets"/>
+			<implies facet="ActivityOrContext" cat="BasketMaking"/>
 		</heading>
 		<heading id="CookingBasket" title="Cooking Basket">
 			<synonym value="Cooking Baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
 		</heading>
 		<heading id="DecorativeBasket" title="Decorative Basket">
 			<synonym value="Decorative Baskets"/>
 		</heading>
-		<heading id="DippingBasket" title="Dipping Basket">
-			<synonym value="Dipping Baskets"/>
+		<heading id="Dippingbasket" title="Dipping Basket"> 					
+			<synonym value="Dipping baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
 		</heading>
 		<heading id="DoctoringBasket" title="Doctoring Basket">
 			<synonym value="Doctoring Baskets"/>
 		</heading>
-		<heading id="BasketFishTrapBasket" title="Fish Trap Basket"> <!-- Also a kind of trap (armament) -->
+		<heading id="BasketFishtrapbasket" title="Fish Trap Basket"> <!-- Also a kind of trap (armament) -->
 			<synonym value="Fish Trap Baskets"/>
 			<synonym value="Fish-trap Basket"/>
 			<synonym value="Fish-trap Baskets"/>
-			<heading id="EelTrapBasket" title="Eel Trap Basket"> <!-- Also a kind of trap (armament) -->
+			<synonym value="Fish-trap"/>
+			<synonym value="Fish-traps"/>
+			<synonym value="Fishtrap"/>
+			<synonym value="Fishtraps"/>					
+			<synonym value="Fish trap baskets"/>
+			<implies facet="ActivityOrContext" cat="Fishing"/>
+			<heading id="EelTrapBasket" title="Eel Trap Basket"> <!-- Also a kind of trap (armament) -->				
 				<synonym value="Eel Trap Baskets"/>
-				<synonym value="Eel-trap Basket"/>
-				<synonym value="Eel-trap Baskets"/>
+				<synonym value="Eel-Trap Basket"/>
+				<synonym value="Eel-Trap Baskets"/>				
 			</heading>
-			<heading id="SalmonTrapBasket" title="Salmon Trap Basket"> <!-- Also a kind of trap (armament) -->
-				<synonym value="Salmon Trap Baskets"/>
-				<synonym value="Salmon-trap Basket"/>
-				<synonym value="Salmon-trap Baskets"/>
+			<heading id="Salmontrapbasket" title="Salmon trap basket"> <!-- Also a kind of trap (armament) -->				
+				<synonym value="Salmon trap baskets"/>
+				<synonym value="Salmon-trap basket"/>
+				<synonym value="Salmon-trap baskets"/> 				
 			</heading>
 		</heading>
 		<heading id="GatheringBasket" title="Gathering Basket">
@@ -360,32 +383,48 @@
 		</heading>
 		<heading id="HangingBasket" title="Hanging Basket">
 			<synonym value="Hanging Baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodstorage"/>
 		</heading>
-		<heading id="MortarBasket" title="Mortar Basket">
-			<synonym value="Mortar Baskets"/>
+		<heading id="Mortarbasket" title="Mortar Basket"> 					
+			<synonym value="Mortar Baskets"/> 
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
 		</heading>
-		<heading id="MushBoilingBasket" title="Mush-boiling Basket">
+		<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
 			<synonym value="Mush-boiling Baskets"/>
 			<synonym value="Mush boiling Basket"/>
-			<synonym value="Mush boiling Baskets"/>
+			<synonym value="Mush boiling Baskets"/>			
+			<synonym value="Boiling basket"/> 					
+			<synonym value="Boiling baskets"/> 	
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>	
 		</heading>
 		<heading id="ParchingBasket" title="Parching Basket">
 			<synonym value="Parching Baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
 		</heading>
-		<heading id="ServingBasket" title="Serving Basket">
-			<synonym value="Serving Baskets"/>
+		<heading id="Servingbasket" title="Serving Basket"> 					
+			<synonym value="Serving baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>			
 		</heading>
 		<heading id="SiftingBasket" title="Sifting Basket">
 			<synonym value="Sifting Baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
 		</heading>
-		<heading id="StorageBasket" title="Storage Basket">
-			<synonym value="Storage Baskets"/>
+		<heading id="Storagebasket" title="Storage basket">
+			<heading id="Seedbasket" title="Seed basket"> 					
+				<synonym value="Seed baskets"/>
+				<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+			</heading>
+			<heading id="Acornbasket" title="Acorn basket"> 					
+				<synonym value="Acorn baskets"/>
+				<implies facet="ActivityOrContext" cat="Foodstorage"/>			
+			</heading>
 		</heading>
 		<heading id="TouristBasket" title="Tourist Basket">
 			<synonym value="Tourist Baskets"/>
 		</heading>
 		<heading id="WinnowingBasket" title="Winnowing Basket">
 			<synonym value="Winnowing Baskets"/>
+			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
 		</heading>
 	</heading>
 	<heading id="Beads" title="Beads">
@@ -690,6 +729,10 @@
 				<synonym value="Hes Vases"/>
 			</heading>
 		</heading>
+	</heading>
+	<heading id="Cradle" title="Cradle">
+		<synonym value="Cradles"/>
+		<implies facet="ActivityOrContext" cat="Childrearing"/>
 	</heading>
 	<heading id="Furniturefurnishings" title="Furniture &amp; furnishings">
 		<synonym value="Furniture"/>
@@ -1491,41 +1534,13 @@
 			<synonym value="Pestles"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
 		</heading>
-		<heading id="Mushboilingbasket" title="Mush-boiling basket">
-			<synonym value="Mush boiling basket"/> 					
-			<synonym value="Mush boiling baskets"/>
-			<synonym value="Mush-boiling baskets"/> 			
-			<synonym value="Boiling basket"/> 					
-			<synonym value="Boiling baskets"/> 	
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
-		</heading>
 		<heading id="Acornanvil" title="Acorn anvil"> 					
 			<synonym value="Acorn anvils"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
 		</heading>
-		<heading id="Mortarbasket" title="Mortar basket"> 					
-			<synonym value="Mortar baskets"/> 
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
-		</heading>
 		<heading id="Kettle" title="Kettle">
 			<synonym value="Kettles"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
-		</heading>
-		<heading id="Winnowingbasket" title="Winnowing basket">
-			<synonym value="Winnowing baskets"/>
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
-		</heading>
-		<heading id="Cookingbasket" title="Cooking basket">
-			<synonym value="Cooking baskets"/>
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
-		</heading>
-		<heading id="Parchingbasket" title="Parching basket"> 					
-			<synonym value="Parching baskets"/> 
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
-		</heading>
-		<heading id="Siftingbasket" title="Sifting basket"> 					
-			<synonym value="Sifting baskets"/> 	
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>			
 		</heading>
 		<heading id="Groundstone" title="Groundstone">
 			<synonym value="Groundstones"/>
@@ -1596,10 +1611,6 @@
 			<synonym value="Strainers"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
 		</heading>
-		<heading id="Dippingbasket" title="Dipping basket"> 					
-			<synonym value="Dipping baskets"/>
-			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
-		</heading>
 		<heading id="Dish" title="Dish">
 			<synonym value="Dishes"/>
 			<implies facet="ActivityOrContext" cat="Foodserving"/>
@@ -1652,10 +1663,6 @@
 				<synonym value="Steins"/> 				
 			</heading>
 		</heading>
-		<heading id="Servingbasket" title="Serving basket"> 					
-			<synonym value="Serving baskets"/>
-			<implies facet="ActivityOrContext" cat="Foodserving"/>			
-		</heading>
 		<heading id="Chafingdish" title="Chafing dish"> 					
 			<synonym value="Chafing dishes"/>
 			<implies facet="ActivityOrContext" cat="Foodserving"/>		
@@ -1682,16 +1689,6 @@
 			<synonym value="Jars"/>
 			<implies facet="ActivityOrContext" cat="Foodstorage"/>			
 		</heading>
-		<heading id="Storagebasket" title="Storage basket">
-			<heading id="Seedbasket" title="Seed basket"> 					
-				<synonym value="Seed baskets"/>
-				<implies facet="ActivityOrContext" cat="Foodstorage"/>			
-			</heading>
-			<heading id="Acornbasket" title="Acorn basket"> 					
-				<synonym value="Acorn baskets"/>
-				<implies facet="ActivityOrContext" cat="Foodstorage"/>			
-			</heading>
-		</heading>
 		<heading id="Canteen" title="Canteen"> 					
 			<synonym value="Canteens"/>
 			<implies facet="ActivityOrContext" cat="Foodstorage"/>			
@@ -1704,15 +1701,6 @@
 			<synonym value="Amphoras"/>
 			<synonym value="Amphorae"/>
 			<implies facet="ActivityOrContext" cat="Foodstorage"/>
-		</heading>
-		<heading id="Basketrycaplid" title="Basketry cap (lid)"> 					
-			<synonym value="Basketry cap (lids)"/>
-			<synonym value="Basketry caps (lid)"/>
-			<synonym value="Basketry caps (lids)"/> 				
-		</heading>
-		<heading id="Hangingbasket" title="Hanging basket"> 					
-			<synonym value="Hanging baskets"/>
-			<implies facet="ActivityOrContext" cat="Foodstorage"/>	
 		</heading>
 		<heading id="Funnel" title="Funnel">
 			<synonym value="Funnels"/>
@@ -2064,14 +2052,6 @@
 		<heading id="MeshMeasure" title="Mesh Measure">
 			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
 		</heading>
-		<heading id="Burdenbasket" title="Burden basket">
-			<synonym value="Burden baskets"/>
-			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Carryingbasket" title="Carrying basket">
-			<synonym value="Carrying baskets"/>
-			<implies facet="ActivityOrContext" cat="BasketMaking"/>
-		</heading>
 		<heading id="Textilemanufacturesewing" title="Textile manufacture &amp; sewing">
 			<heading id="Textiles" title="Textiles">
 				<synonym value="Textile"/>
@@ -2105,16 +2085,8 @@
 			<synonym value="Seals"/>
 			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
 		</heading>
-		<heading id="Granary" title="Granary">
-			<synonym value="Granaries"/>
-			<implies facet="ActivityOrContext" cat="FoodStorage"/>
-		</heading>
 		<heading id="Cradle" title="Cradle">
 			<synonym value="Cradles"/>
-			<implies facet="ActivityOrContext" cat="Childrearing"/>
-		</heading>
-		<heading id="BabyBasket" title="Baby Basket">
-			<synonym value="Baby Baskets"/>
 			<implies facet="ActivityOrContext" cat="Childrearing"/>
 		</heading>
 		<heading id="MedicalHealingitems" title="Medical &amp; Healing items">
@@ -2191,6 +2163,9 @@
 		<heading id="PrayerMat" title="Prayer Mat"> 					
 			<synonym value="Prayer Mats"/>
 			<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="PlasterCast" title="Plaster Cast"> 					
+			<synonym value="Plaster Casts"/>	
 		</heading>
 		<heading id="Shrine" title="Shrine"> 					
 			<synonym value="Shrines"/>
@@ -2310,30 +2285,6 @@
 			<heading id="Nethanger" title="Net hanger"> 					
 				<synonym value="Net hangers"/>
 				<implies facet="ActivityOrContext" cat="Fishing"/>	
-			</heading>
-			<heading id="Fishtrapbasket" title="Fish trap basket">
-				<synonym value="Fish-trap"/>
-				<synonym value="Fish-traps"/>
-				<synonym value="Fishtrap"/>
-				<synonym value="Fishtraps"/>					
-				<synonym value="Fish trap baskets"/>
-				<implies facet="ActivityOrContext" cat="Fishing"/>
-				<heading id="EelTrapBasket" title="Eel Trap Basket"> 					
-					<synonym value="Eel Trap Baskets"/>
-					<synonym value="Eel-Trap Basket"/>
-					<synonym value="Eel-Trap Baskets"/>				
-				</heading>
-				<heading id="Salmontrapbasket" title="Salmon trap basket"> 					
-					<synonym value="Salmon trap baskets"/>
-					<synonym value="Salmon-trap basket"/>
-					<synonym value="Salmon-trap baskets"/> 				
-				</heading>
-			</heading>
-			<heading id="Birdtrapbasket" title="Bird trap basket"> 					
-				<synonym value="Bird trap baskets"/>
-				<synonym value="Bird-trap basket"/>
-				<synonym value="Bird-trap baskets"/>
-				<implies facet="ActivityOrContext" cat="Hunting"/>		
 			</heading>
 			<heading id="Gig" title="Gig"> <!-- A trident or three-pringed spear for fishing -->		
 				<synonym value="Gigs"/>
