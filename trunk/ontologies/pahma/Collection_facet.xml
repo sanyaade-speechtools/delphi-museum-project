@@ -18,11 +18,15 @@
 		<heading id="Ziegelmaier" title="Paul Ziegelmaier"/>
 	</heading>
 	<heading id="FoundingCollections" title="FoundingCollections">
-		
+		<!-- Need to add these -->
 	</heading>
 	<heading id="AncientCultures" title="AncientCultures">
-		<heading id="AncientPeru" title="Ancient Peru"/>
-		<heading id="AncientEgypt" title="Ancient Egypt"/>
+		<heading id="AncientPeru" title="Ancient Peru">
+			<heading id="UhleExpeditions" title="Uhle Expeditions"/>
+		</heading>
+		<heading id="AncientEgypt" title="Ancient Egypt">
+			<heading id="ReisnerExpeditions" title="Reisner Expeditions"/>
+		</heading>
 		<heading id="ClassicalMediterranean" title="Classical Mediterranean Region">
 			<heading id="ClassicalEtruria" title="Classical Etruria">
 				<synonym value="Etruscan"/>
@@ -99,6 +103,7 @@
 		</heading>
 		<heading id="Catalog16" title="Catalog 16">
 			<synonym value="16-"/> <!-- Primary/only latch should be in ObjNumber column -->
+			<implies facet="Location" cat="SouthAmerica"/>
 		</heading>
 		<heading id="Catalog17" title="Catalog 17">
 			<synonym value="17-"/> <!-- Primary/only latch should be in ObjNumber column -->
@@ -107,6 +112,7 @@
 		</heading>
 		<heading id="Catalog18" title="Catalog 18">
 			<synonym value="18-"/> <!-- Primary/only latch should be in ObjNumber column -->
+			<implies facet="Location" cat="Malaysia"/>
 		</heading>
 		<heading id="Catalog19" title="Catalog 19">
 			<synonym value="19-"/> <!-- Primary/only latch should be in ObjNumber column -->
@@ -118,6 +124,7 @@
 		</heading>
 		<heading id="Catalog21" title="Catalog 21">
 			<synonym value="21-"/> <!-- Primary/only latch should be in ObjNumber column -->
+			<implies facet="ObjectName" cat="PlasterCast"/>
 		</heading>
 		<heading id="Catalog22" title="Catalog 22">
 			<synonym value="22-"/> <!-- Primary/only latch should be in ObjNumber column -->
@@ -150,18 +157,12 @@
 			<implies facet="Location" cat="NorthAmerica"/>
 		</heading>
 	</heading>
-	<heading id="AncientEgypt" title="Ancient Egypt">
-		<heading id="ReisnerExpeditions" title="Reisner Expeditions"/>
-	</heading>
-	<heading id="AncientPeru" title="Ancient Peru">
-		<heading id="UhleExpeditions" title="Uhle Expeditions"/>
-	</heading>
 	<heading id="BasketCollection" title="Basket Collection"/>
 	<heading id="CaliforniaArchaeology" title="California Archaeology"/>
 	<heading id="EuropeanPaleolithic" title="European Paleolithic"/>
 	<heading id="DorothyLiebesCollection" title="Dorothy Liebes Collection">
 		<synonym value="Liebes Collection"/>
-		<synonym value="[Dorothy Liebes Collection]"/>
+		<synonym value="from the Dorothy Liebes Collection"/>
 	</heading>
 	<heading id="UCDDCollections" title="U.C. Design Department Collection">
 		<synonym value="UCDD"/>
