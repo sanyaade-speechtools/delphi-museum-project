@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<taxonomy id="CulturalGroup" title="Cultural Group">
+<taxonomy id="Culture" title="Culture">
 	<description>This facet describes the culture(s) associated with an object
 		(<em><strong>who</strong></em> created or used it, or is depicted). The organization combines general
 		geographic range with cultural groupings.
@@ -7,11 +7,12 @@
 	<notes>While cultures tend to be associated with location, the range of a
 		culture does not neatly match political boundaries.
 	</notes>
-	<notes>	<!-- This is a temporary notes section.
-	    Terms to be added:
-	    	Mycenean/ Mycenian
+	<temporary_notes>
+	<!--
+		Terms to be added:
+	    		Mycenean/ Mycenian
 	-->
-	</notes>
+	</temporary_notes>
 	<syntax_notes> <!-- This is a temporary section, to speed up entry 
 		by making it easier to locate and copy syntax examples
 		<excl value="photographic plate"/>
@@ -2004,7 +2005,7 @@
 		</heading>
 		<heading id="Europeancultures" title="European cultures">
 			<heading id="European" title="European">
-				<heading id="Czechoslovakian" title="Czechoslovakian"/>
+				<heading id="Czechoslovakian" title="Czechoslovakian"/>  <!-- how to parse into Czech and Slovakian? -->
 				<heading id="English" title="English"/>
 				<heading id="French" title="French"/>
 				<heading id="German" title="German"/>
@@ -2016,6 +2017,7 @@
 				<heading id="Spain" title="Spain"/>
 				<heading id="Swedish" title="Swedish"/>
 				<heading id="Russian" title="Russian"/>
+				<heading id="Yugoslavian" title="Yugoslavian"/>  <!-- how to parse into Croatian, Bosnian, Serbian, etc.? -->
 			</heading>
 		</heading>
 		<heading id="Oceaniancultures" title="Oceanian cultures">
@@ -2026,13 +2028,124 @@
 			</heading>
 			<heading id="PolynesianCultures" title="Polynesian Cultures">
 				<heading id="Hawaiian" title="Hawaiian"/>
-				<heading id="Polynesian" title="Polynesian"/>
+				<heading id="Polynesian" title="Polynesian">
+					<heading id="EasternPolynesians" title="Eastern Polynesians">
+					<heading id="WesternPolynesians" title="Western Polynesians">
+				</heading>
 			</heading>
 		</heading>
 	</heading>
 	<heading id="AncientCultures" title="Ancient cultures">
 		<heading id="Corinthian" title="Corinthian"/>
 		<heading id="ProtoCorinthian" title="Proto-Corinthian"/>
+		<heading id="CelticTribes" title="Celtic tribes">
+			<heading id="BritishTribes" title="British tribes">
+				<synonym value="Brythonic tribes"/>
+				<heading id="ScottishTribes" title="Scottish tribes">
+					<heading id="Caledonii" title="Caledonii"/>
+					<heading id="Epidii" title="Epidii"/>
+					<heading id="Taexali" title="Taexali"/>
+					<heading id="Vacomagi" title="Vacomagi"/>
+					<heading id="Venicones" title="Venicones"/>
+				</heading>
+				<heading id="WelshTribes" title="Welsh tribes">
+					<heading id="Deceangli" title="Deceangli"/>
+					<heading id="Demetae" title="Demetae"/>
+					<heading id="Orduvices" title="Orduvices"/>
+					<heading id="Silures" title="Silures"/>
+				</heading>
+				<heading id="Atrebates" title="Atrebates">
+					<heading id="Belgae" title="Belgae"/>
+					<heading id="Regninses" title="Regninses"/>
+				</heading>
+				<heading id="Brigantes" title="Brigantes"/>
+				<heading id="Cantiaci" title="Cantiaci"/>
+				<heading id="Catuvellauni" title="Catuvellauni"/>
+				<heading id="Coritani" title="Coritani"/>
+				<heading id="Cornovii" title="Cornovii"/>
+				<heading id="Damnonii" title="Damnonii"/>
+				<heading id="Dobunni" title="Dobunni"/>
+				<heading id="Dumnonii" title="Dumnonii"/>
+				<heading id="Durotriges" title="Durotriges"/>
+				<heading id="Iceni" title="Iceni"/>
+				<heading id="Novantae" title="Novantae"/>
+				<heading id="Parisii" title="Parisii"/>
+				<heading id="Selcovae" title="Selcovae"/>
+				<heading id="Trinovantes" title="Trinovantes"/>
+				<heading id="Voltadini" title="Voltadini"/>
+			</heading>
+			<heading id="IberianTribes" title="Iberian tribes">
+				<synonym value="Ibiric tribes"/>
+				<heading id="Astures" title="Astures"/>
+				<heading id="Beroni" title="Beroni"/>
+				<heading id="Celtici" title="Celtici"/>
+				<heading id="Gallaeci" title="Gallaeci"/>
+				<heading id="Oretani" title="Oretani"/>
+				<heading id="Turmodigi" title="Turmodigi"/>
+				<heading id="TurdulorumOppida" title="TurdulorumOppida"/>
+				<heading id="Vaccaei" title="Vaccaei"/>
+			</heading>
+			<heading id="Celtibiri" title="Celtibiri"/>
+			<heading id="Latobici" title="Latobici"/>
+			<heading id="Scordisci" title="Scordisci"/>
+			<heading id="GallicTribes" title="Gallic tribes">
+				<heading id="Gauls" title="Gauls"/>
+			</heading>
+		</heading>
+		<heading id="IllyrianTribes" title="Illyrian tribes">
+			<heading id="Abri" title="Abri"/>
+			<heading id="Albani" title="Albani"/>
+			<heading id="Amantini" title="Amantini"/>
+			<heading id="Andizetes" title="Andizetes"/>
+			<heading id="Ardiaei" title="Ardiaei"/>
+			<heading id="Autariatae" title="Autariatae"/>
+			<heading id="Azali" title="Azali"/>
+			<heading id="Breuci" title="Breuci"/>
+			<heading id="Bylliones" title="Bylliones"/>
+			<heading id="Ceraunii" title="Ceraunii"/>
+			<heading id="Chelidones" title="Chelidones"/>
+			<heading id="Colapiani" title="Colapiani"/>
+			<heading id="Daesitiates" title="Daesitiates"/>
+			<heading id="Dalmatae" title="Dalmatae"/>
+			<heading id="Daors" title="Daors"/>
+			<heading id="Deramastae" title="Deramastae"/>
+			<heading id="Deuri" title="Deuri"/>
+			<heading id="Dindari" title="Dindari"/>
+			<heading id="Ditiones" title="Ditiones"/>
+			<heading id="Docleatae" title="Docleatae"/>
+			<heading id="Enchelei" title="Enchelei"/>
+			<heading id="Grabaei" title="Grabaei"/>
+			<heading id="Glintidiones" title="Glintidiones"/>
+			<heading id="Jasi" title="Jasi"/>
+			<heading id="Labeates" title="Labeates"/>
+			<heading id="Lopsi" title="Lopsi"/>
+			<heading id="Maezaei" title="Maezaei"/>
+			<heading id="Melcumani" title="Melcumani"/>
+			<heading id="Narensi" title="Narensi"/>
+			<heading id="Pannonians" title="Pannonians"/>
+			<heading id="Parthini" title="Parthini"/>
+			<heading id="Penestae" title="Penestae"/>
+			<heading id="Pirustae" title="Pirustae"/>
+			<heading id="Selepitani" title="Selepitani"/>
+			<heading id="Scirtati" title="Scirtati"/>
+			<heading id="Segestani" title="Segestani"/>
+			<heading id="Taulanti" title="Taulanti"/>
+		</heading>
+		<heading id="PhrygianTribes" title="Phrygian tribes">
+			<heading id="Bryges" title="Bryges"/>
+		</heading>
+		<heading id="ThracianTribes" title="Thracian tribes">
+			<heading id="Dardanii" title="Dardanii"/>  <!-- Thraco-Illyrian tribe -->
+			<heading id="Galabri" title="Galabri"/>
+			<heading id="Thunatae" title="Thunatae"/>
+		</heading>
+		<heading id="VeneticTribes" title="Venetic tribes">
+			<heading id="Carni" title="Carni"/>
+			<heading id="Catari" title="Catari"/>
+			<heading id="Histri" title="Histri"/>
+			<heading id="Japodes" title="Japodes"/>
+			<heading id="Liburni" title="Liburni"/>
+		</heading>
 	</heading>
 	<heading id="ArchaeologicalCultures" title="Archaeological cultures">
 		<heading id="AmericanArchaeologicalCultures" title="American Archaeological cultures">
