@@ -8,22 +8,29 @@
 	<notes>This facet and its coverage in the collections will continue to
 		improve with time as we enrich the model.
 	</notes>
+	<tempcollapse> <!-- Temporarily grouped to make it easier to view
+		and edit rest of facet -->
+	<!-- position- or attitude-related noise tokens for this facet -->
+	<noiseToken value="resting"/>
 	<noiseToken value="sitting"/>
 	<noiseToken value="seated"/>
 	<noiseToken value="standing"/>
-	<noiseToken value="resting"/>
+	<!-- age-related noise tokens for this facet -->
 	<noiseToken value="young"/>
-	<noiseToken value="ivory"/>
-	<noiseToken value="walrus ivory"/>
-	<noiseToken value="alabaster"/>
-	<!-- <noiseToken value="wood" /> -->
-	<noiseToken value="small"/>
+	<noiseToken value="old"/>
+	<!-- size-related noise tokens for this facet -->
 	<noiseToken value="minute"/>
-	<noiseToken value="hand painted"/>
+	<noiseToken value="small"/>
+	<noiseToken value="tiny"/>
+	<!-- material-related noise tokens for this facet -->
+	<noiseToken value="alabaster"/>
+	<!-- <noiseToken value="bone" /> Why is this commented out? -->
+	<noiseToken value="ivory"/>
 	<noiseToken value="stone"/>
-	<noiseToken value="cast"/>
-	<!-- <noiseToken value="bone" /> -->
-	<noiseToken value="[\n]"/>
+	<noiseToken value="walrus ivory"/>
+	<!-- <noiseToken value="wood" /> -->
+	<!-- number-related noise tokens for this facet -->
+	<noiseToken value="[\n]"/>  <!-- what is this for? -->
 	<!-- remove all numbers -->
 	<noiseToken value="one"/>
 	<noiseToken value="two"/>
@@ -35,10 +42,17 @@
 	<noiseToken value="eight"/>
 	<noiseToken value="nine"/>
 	<noiseToken value="ten"/>
+	<!-- term reductions for this facet -->
+	<reduce from="hand carved" to="carved"/>
+	<reduce from="hand-carved" to="carved"/>
+	<reduce from="handcarved" to="carved"/>
 	<reduce from="carved ivory" to="carved"/>
 	<reduce from="carved wood" to="carved"/>
 	<reduce from="carved wooden" to="carved"/>
 	<reduce from="carved bone" to="carved"/>
+	<reduce from="hand painted" to="painted"/>
+	<reduce from="hand-painted" to="painted"/>
+	<reduce from="handpainted" to="painted"/>
 	<!-- 
 		Group as 
 			
@@ -51,7 +65,8 @@
 	
 	Look for shape-motif for geom. Need to mine out of text as n-grams. Max n?
 	-->
-	<heading id="DesignOrDecoration" title="Design or Decoration">
+	</tempcollapse>
+	<heading id="DesignOrDecoration" title="Design or Decoration" nomatch="true">
 		<heading id="Abstract" title="Abstract"/>
 		<heading id="Amorphous" title="Amorphous">
 			<heading id="Globular" title="Globular">
@@ -623,7 +638,7 @@
 			<excl value="plain - twined"/>
 		</heading>
 	</heading>
-	<heading id="ShapeOrForm" title="Shape or Form">
+	<heading id="ShapeOrForm" title="Shape or Form" nomatch="true">
 		<heading id="Angular" title="Angular">
 			<heading id="Diamond" title="Diamond">
 				<excl value="diamond-like stone"/>
@@ -834,6 +849,39 @@
 			</heading>
 		</heading>
 	</heading>
+	<heading id="StoneToolIndustry" title="Stone Tool Industry" nomatch="true">
+		<heading id="Paleolithic" title="Paleolithic">
+			<heading id="LowerPaleolithic" title="Lower Paleolithic">
+				<synonym value="Old Stone Age"/>
+				<!-- The following are ordered by age (oldest first) -->
+				<heading id="Olduwan" title="Olduwan"/>
+				<heading id="Acheulean" title="Acheulean"/>
+				<heading id="AcheuloMousterian" title="Acheulo-Mousterian"/>
+			<heading id="MiddlePaleolithic" title="Middle Paleolithic">
+				<heading id="Mousterian" title="Mousterian"/>
+			</heading>
+			<heading id="UpperPaleolithic" title="Upper Paleolithic">
+				<heading id="Gravettian" title="Gravettian"/>
+				<heading id="Aurignacian" title="Aurignacian"/>
+			</heading>
+			</heading>
+		</heading>
+		<heading id="Mesolithic" title="Mesolithic">
+			<synonym value="Middle Stone Age"/>
+		</heading>
+		<heading id="Neolithic" title="Neolithic">
+			<synonym value="New Stone Age"/>
+			<heading id="PrePotteryNeolithic" title="Pre-Pottery Neolithic">
+				<heading id="PrePotteryNeolithicA" title="Pre-Pottery Neolithic A"/>
+				<heading id="PrePotteryNeolithicB" title="Pre-Pottery Neolithic B"/>
+			</heading>
+			<heading id="PotteryNeolithic" title="Pottery Neolithic"/>
+			<heading id="Chalcolithic" title="Chalcolithic"/>
+		</heading>
+	</heading>
+	<heading id="StyleOrType" title="StyleOrType" nomatch="true">
+		<heading id="BlackFigureWare" title="BlackFigureWare"/>
+	</heading>
 	<heading id="TechniqueOrManufacture" title="Technique or Manufacture">
 		<!-- Appliqué, unless beads aren't sewn to something but stand on their own -->
 		<heading id="BeadedSequinedEtc" title="Beaded, Sequined, etc.">
@@ -922,7 +970,49 @@
 				<synonym value="lattice-weave"/>
 				<synonym value="plaited"/>
 			</heading>
-			<heading id="Woventextiles" title="Woven (textiles)"/>
+			<heading id="Woventextiles" title="Woven (textiles)">
+				<synonym value="loomed"/> <!-- Be sure this doesn't preclude more specific matches -->
+				<synonym value="loom made"/>
+				<synonym value="loom-made"/>
+				<synonym value="loom woven"/>
+				<synonym value="loom-woven"/>
+				<heading id="BackBackLoomed" title="Backstrap Loomed">
+					<synonym value="Backstrap Loom"/>
+					<synonym value="Back Strap loom"/>
+					<synonym value="Backstrap-loomed"/>
+					<synonym value="Backstrap loom woven"/>
+				</heading>
+				<heading id="BeltLoomed" title="Belt Loomed">
+					<synonym value="Belt Loom"/>
+					<synonym value="Belt loom?"/>
+				</heading>
+				<heading id="FloorLoomed" title="Floor Loomed">
+					<synonym value="Floor Loom"/>
+					<synonym value="Floor loom?"/>
+				</heading>
+				<heading id="GirdleBackLoomed" title="Girdle-back Loomed">
+					<synonym value="Girdle-back Loom"/>
+					<synonym value="Girdle Back loom"/>
+				</heading>
+				<heading id="HandLoomed" title="Hand Loomed">
+					<synonym value="Hand Loom"/>
+					<synonym value="Hand-loomed"/>
+					<synonym value="Hand loom?"/>
+				</heading>
+				<heading id="MachineLoomed" title="Machine Loomed">
+					<synonym value="Machine Loom"/>
+					<synonym value="machine loomed (?)"/>
+				</heading>
+				<heading id="PeddleLoomed" title="Peddle Loomed">
+					<synonym value="Peddle Loom"/>
+				</heading>
+				<heading id="TreadleLoomed" title="Treadle Loomed">
+					<synonym value="Treadle Loom"/>
+					<synonym value="Treddle Loom"/>
+					<synonym value="Treadle-loomed"/>
+					<synonym value="Treadle Loom Woven"/>
+				</heading>
+			</heading>
 		</heading>
 	</heading>
 </taxonomy>
