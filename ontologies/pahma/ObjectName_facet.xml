@@ -12,8 +12,10 @@
 		feather-dart headdress
 		Guttus (lamp feeder)
 		mandrel
+		manta
 		night chant (Yeibichai)
 		Patera
+		selvedges
 		shuttle  (also loom)
 		sieve
 		   meal sieve
@@ -21,6 +23,7 @@
 		strigil
 		tumbler
 		utensils
+		Vajra
 		war bonnet
 		whisk
 		wreath
@@ -1511,6 +1514,35 @@
 				<synonym value="Burins"/> 				
 			</heading>
 		</heading>
+		<heading id="Textilemanufacturesewing" title="Textile manufacture &amp; sewing">
+			<heading id="Awl" title="Awl">
+				<synonym value="Awls"/>
+			</heading>
+			<heading id="Needle" title="Needle">
+				<synonym value="Needles"/>
+			</heading>
+			<heading id="Needlecase" title="Needle case">
+				<synonym value="Needle cases"/>
+				<synonym value="Needlecase"/>
+				<synonym value="Needlecases"/>
+				<synonym value="Needle-case"/>
+				<synonym value="Needle-cases"/>
+			</heading>
+			<heading id="Scissors" title="Scissors">
+				<synonym value="Scissor"/>
+			</heading>
+			<heading id="Textiles" title="Textiles">
+				<synonym value="Textile"/>
+				<heading id="Cloth" title="Cloth"/>
+				<heading id="Lace" title="Lace"/>
+				<heading id="Ribbon" title="Ribbon">
+					<synonym value="Ribbons"/>
+				</heading>
+			</heading>
+			<heading id="Thimble" title="Thimble">
+				<synonym value="Thimbles"/>
+			</heading>
+		</heading>
 		<heading id="Woodworking" title="Woodworking">
 			<heading id="Abrader" title="Abrader"> 					
 				<synonym value="Abraders"/> 				
@@ -1619,6 +1651,10 @@
 			<synonym value="Chocolate molds"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>		
 		</heading>
+		<heading id="Chocolatestirrer" title="Chocolate stirrer"> 					
+			<synonym value="Chocolate stirrers"/>
+			<implies facet="ActivityOrContext" cat="Foodserving"/>	
+		</heading>
 		<heading id="Sifter" title="Sifter"> 					
 			<synonym value="Sifters"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>	
@@ -1683,10 +1719,6 @@
 			<synonym value="Chafing dishes"/>
 			<implies facet="ActivityOrContext" cat="Foodserving"/>		
 		</heading>
-		<heading id="Chocolatestirrer" title="Chocolate stirrer"> 					
-			<synonym value="Chocolate stirrers"/>
-			<implies facet="ActivityOrContext" cat="Foodserving"/>	
-		</heading>
 		<heading id="Teapot" title="Teapot"> 					
 			<synonym value="Teapots"/>
 			<synonym value="Tea pot"/>
@@ -1722,7 +1754,7 @@
 			<synonym value="Funnels"/>
 			<implies facet="ActivityOrContext" cat="Foodstorage"/>
 		</heading>
-		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->				
+		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->			
 			<synonym value="Abaci"/>
 			<synonym value="Abacuses"/>
 			<synonym value="Counting Frame"/>
@@ -2067,32 +2099,6 @@
 		</heading>
 		<heading id="MeshMeasure" title="Mesh Measure">
 			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Textilemanufacturesewing" title="Textile manufacture &amp; sewing">
-			<heading id="Textiles" title="Textiles">
-				<synonym value="Textile"/>
-				<heading id="Cloth" title="Cloth"/>
-				<heading id="Lace" title="Lace"/>
-				<heading id="Ribbon" title="Ribbon">
-					<synonym value="Ribbons"/>
-				</heading>
-			</heading>
-			<heading id="Needle" title="Needle">
-				<synonym value="Needles"/>
-			</heading>
-			<heading id="Awl" title="Awl">
-				<synonym value="Awls"/>
-			</heading>
-			<heading id="Needlecase" title="Needle case">
-				<synonym value="Needle cases"/>
-				<synonym value="Needlecase"/>
-				<synonym value="Needlecases"/>
-				<synonym value="Needle-case"/>
-				<synonym value="Needle-cases"/>
-			</heading>
-			<heading id="Thimble" title="Thimble">
-				<synonym value="Thimbles"/>
-			</heading>
 		</heading>
 		<heading id="Moneystone" title="Money stone">
 			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
