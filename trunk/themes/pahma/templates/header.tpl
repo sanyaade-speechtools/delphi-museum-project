@@ -35,6 +35,7 @@
 					<a href="{$wwwroot}/modules/auth/logout.php">Sign Out</a>
 				{else}
 					<a href="{$wwwroot}/modules/auth/register.php">Register</a> | 
+					<a href="{$wwwroot}/modules/help/help.php">Help</a> | 
 					<a href="{$wwwroot}/modules/auth/login.php">Sign In</a>
 				{/if}
 			</div>
