@@ -3,6 +3,8 @@
  */
 package museum.delphi;
 
+import javax.swing.ImageIcon;
+
 /**
  * @author Patrick
  *
@@ -25,6 +27,18 @@ public class ImageInfo {
 	private int		height = 0;
 
 	private int		myHashCode = 0;
+
+	private int _debugLevel = 1;
+
+	protected void debug( int level, String str ){
+		if( level <= _debugLevel )
+			StringUtils.outputDebugStr(str);
+	}
+
+	protected void debugTrace( int level, Exception e ){
+		if( level <= _debugLevel )
+			StringUtils.outputExceptionTrace(e);
+	}
 
 	/**
 	 * Represents width/height, or 0 if unknown.
@@ -55,6 +69,31 @@ public class ImageInfo {
 			aspectR = (double)width/(double)height;
 		else
 			aspectR = UNKNOWN_ORIENTATION;
+	}
+
+	/**
+	 * Force the computation of the aspect ratio, if it is not already
+	 * set. Loads the image to set dimensions, and computes aspect.
+	 * @param basePath The path to the media repository root.
+	 * @return true if aspectR is known and (width >= height)
+	 */
+	public boolean computeAspectR( String basePath) {
+		if( aspectR != UNKNOWN_ORIENTATION ) {
+			return false;
+		}
+		try {
+			// We need to load one of the image variants (mid, thumb)
+			// and then compute and set the orientation
+		    ImageIcon image = new ImageIcon(basePath + path + "/" + filename);
+		    setWidth(image.getIconWidth());
+		    setHeight(image.getIconHeight());
+		} catch( RuntimeException e ) {
+			debug( 1, "Error encountered computing aspect ratios for image:[" +
+					path + "/" + filename+"]\n  " + e.toString() );
+			debugTrace( 2, e );
+			throw e;
+		}
+		return true;
 	}
 
 	/**
