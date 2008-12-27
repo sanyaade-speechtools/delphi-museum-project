@@ -32,6 +32,10 @@ public class StringUtils {
 		System.out.println( str );
 	}
 
+	public static void outputExceptionTrace( Exception e ){
+        e.printStackTrace( System.out );
+	}
+
 	public static String trimQuotes( String str ) {
 		int len = str.length();
 		String ret;
