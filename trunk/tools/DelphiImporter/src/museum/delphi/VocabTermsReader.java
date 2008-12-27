@@ -4,11 +4,8 @@
 package museum.delphi;
 
 import java.util.*;
-import java.util.regex.*;
 import java.io.*;
-
 import org.w3c.dom.*;
-//import javax.xml.parsers.*;
 
 /**
  * @author pschmitz
