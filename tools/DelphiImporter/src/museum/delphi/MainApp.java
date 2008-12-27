@@ -6,7 +6,6 @@ package museum.delphi;
 //import java.util.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
@@ -20,17 +19,11 @@ import java.awt.GridLayout;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
+//import org.w3c.dom.Node;
 
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -48,7 +41,7 @@ import javax.swing.ImageIcon;
 
 
 /**
- * @author Patrick
+ * @author pschmitz
  *
  */
 public class MainApp {
@@ -146,8 +139,9 @@ public class MainApp {
 				+ "This semantic index is stored in a Delphi database for use in the\n"
 				+ "faceted search browse UI.\n\n"
 				+ "Delphi was created by:\n"
-				+ "  Olga Amuzinskaya, Adrienne Hilgert, Jon Lesser, Patrick Schmitz,"
+				+ "  Olga Amuzinskaya, Michael Black, Adrienne Hilgert, Jon Lesser, Patrick Schmitz,"
 				+ " and Jerry Yu.\n"
+				+ "  Thanks to Aron Roberts for documentation and production support.\n"
 				+ "  Thanks as well to Eun Kyoung Choe for her UI assistance.\n");
 		}
 		return aboutText;
@@ -639,6 +633,7 @@ public class MainApp {
 			computeImageOrientationsMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					computeImageOrientations();
+					saveImagePathSQL();
 				}
 			});
 		}
@@ -650,20 +645,26 @@ public class MainApp {
 	 * Assumes the base path is set, and that there are variants under the thumbs.
 	 */
 	private void computeImageOrientations() {
-		// HACK HACK HACK
-		String pathBase = "D:/PAHMA/ObjImages/thumbs/";
 		if( imagePathsReader == null ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
 					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
+		// Let the user point to the base path for the images.
+		chooser.setSelectedFile(new File( imagePathsReader.getInFile() ));
+		chooser.setFileFilter(sqlfilter);
+		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+		String pathBase;
+	    if(returnVal != JFileChooser.APPROVE_OPTION)
+	    	return;
+    	pathBase = chooser.getSelectedFile().getPath();
 		debug(1,"Computing Image Orientations...");
 		try {
 			int nToProcessMax = Integer.MAX_VALUE;
 			int nToReport = 2500;
 			int nTillReport = nToReport;
 			int nProcessed = 0;
-			int nSkipped = 0;
 			Collection<ArrayList<ImageInfo>> allImgs = imagePathsReader.GetAllAsList();
 			java.util.Iterator<ArrayList<ImageInfo>> allImgsIterator = allImgs.iterator();
 			while( allImgsIterator.hasNext() ) {
@@ -671,44 +672,33 @@ public class MainApp {
 				java.util.ListIterator<ImageInfo> objImgIterator = imgsForId.listIterator();
 				while( objImgIterator.hasNext() ) {
 					ImageInfo ii = objImgIterator.next();
-					if( ii.getAspectR() != ImageInfo.UNKNOWN_ORIENTATION ) {
-						nSkipped++;
-						continue;
-					}
-					// We need to load one of the image variants (mid, thumb)
-					// and then compute and set the orientation
-					String fullRelPath = ii.path + "/" + ii.filename;
-			        ImageIcon image = new ImageIcon(pathBase+fullRelPath);
-			        ii.setWidth(image.getIconWidth());
-			        ii.setHeight(image.getIconHeight());
-			        debug(3, ii.toString() );
-					nProcessed++;
-					if( nProcessed >= nToProcessMax )
-						break;
-					if( --nTillReport <= 0 ) {
-				        debug(1, "Processed " + nProcessed + " entries" );
-						nTillReport = nToReport;
+					if(ii.computeAspectR(pathBase)) {
+						nProcessed++;
+						if( nProcessed >= nToProcessMax )
+							break;
+						if( --nTillReport <= 0 ) {
+					        debug(1, "Processed " + nProcessed + " entries" );
+							nTillReport = nToReport;
+						}
+				        debug(3, ii.toString() );
 					}
 				}
 				if( nProcessed >= nToProcessMax )
 					break;
 			}
-			// Now it is time to write the results. User can cancel if not interested.
-			String outFileName = imagePathsReader.getInFile();
-			chooser.setSelectedFile(new File( outFileName ));
-			chooser.setFileFilter(sqlfilter);
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		    	// TODO Check for existing file overwrite
-		        setStatus("Saving Updated Image Info to file: " + filename);
-		        imagePathsReader.writeContents(filename);
-		    }
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Computing Aspect ratios: ", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
 		}
+	}
+
+	private void saveImagePathSQL() {
+		// Write the current results. User can cancel if not interested.
+		String filename = getSafeOutfile(imagePathsReader.getInFile(),sqlfilter);
+	    if(filename != null) {
+	        setStatus("Saving Updated Image Info to file: " + filename);
+	        imagePathsReader.writeContents(filename);
+	    }
 	}
 
 	private JMenuItem getSaveSQLMediaInsertFileMenuItem() {
@@ -739,12 +729,8 @@ public class MainApp {
 				outFileName = outFileName.substring(0, lastSlash+1) + "mediaInsert.sql";
 			else
 				outFileName = "mediaInsert.sql";
-			chooser.setSelectedFile(new File( outFileName ));
-			chooser.setFileFilter(sqlfilter);
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		    	// TODO Check for existing file overwrite
+    		String filename = getSafeOutfile(outFileName,sqlfilter);
+		    if(filename != null) {
 		        setStatus("Saving SQL Media Load File to file: " + filename);
 		        imagePathsReader.writeSQLMediaTableInsertFile(filename);
 		    }
@@ -783,12 +769,8 @@ public class MainApp {
 				outFileName = outFileName.substring(0, lastSlash+1) + "mediaLoadFile.sql";
 			else
 				outFileName = "mediaLoadFile.sql";
-			chooser.setSelectedFile(new File( outFileName ));
-			chooser.setFileFilter(sqlfilter);
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		    	// TODO Check for existing file overwrite
+    		String filename = getSafeOutfile(outFileName,sqlfilter);
+		    if(filename != null) {
 		        setStatus("Saving SQL Media Load File to file: " + filename);
 		        imagePathsReader.writeSQLMediaTableLoadFile(filename);
 		    }
@@ -817,174 +799,13 @@ public class MainApp {
 		return buildObjectSQLMenuItem;
 	}
 
-	/**
-	 * Run through the metadata file, and gather up the ID, ObjectNumber,
-	 * Name/Title and Description information for insertion into the DB.
-	 */
 	private void buildObjectSQL() {
-    	String filename = null;
-    	String basefilename = null;
-    	String extension = ".sql";
-    	String currFilename = null;
-    	int iOutputFile;
-    	int nObjsOutMax = Integer.MAX_VALUE;
-    	int nObjsProcessedFile = 0;
-    	int nObjsProcessedTotal = 0;
-    	int nObjsSkippedTotal = 0;
-    	int nObjsPerDumpFile = 50000;
-    	String descMergeSeparator = "|";
-		ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
 		try {
 			debug(1,"Build Objects SQL...");
 			// We need to pick an output file
 			if( openMDFile() && metaDataReader != null ) {
-				// Have an open file - let's check the columns
-				// We need ObjectID, ObjectNumber, ObjectName, Description
-				// TODO These should be mapped in the ColConfig file, and then
-				// TODO we should check that the named columns are present.
-				int objIDCol = 0;
-				int objNumCol = 4;
-				int objNameCol = 5;
-				if( !columnNames[objIDCol].equalsIgnoreCase("ObjectID")
-					|| !columnNames[objNumCol].equalsIgnoreCase("ObjectNumber")
-					|| !columnNames[objNameCol].equalsIgnoreCase("ObjectName"))
-					throw new RuntimeException("BuildObjectSQL columns not as expected!");
-				/*
-			    int returnVal = chooser.showSaveDialog(getJFrame());
-			    if(returnVal != JFileChooser.APPROVE_OPTION)
-			    	return;
-		    	filename = chooser.getSelectedFile().getPath();
-		    	*/
-				filename = metaDataReader.getFileName();
-		    	int iDot = filename.lastIndexOf('.');
-		    	if( iDot<=0 )
-		    		throw new RuntimeException("BuildObjectSQL: bad output filename!");
-		    	/*
-		    	extension = filename.substring(iDot);
-		    	if(( filename.charAt(iDot-1) == '1' )
-		    		&& ( filename.charAt(iDot-2) == '_' ))
-		    		iDot -= 2;
-		    	 */
-		    	basefilename = filename.substring(0, iDot)+'_';
-				BufferedWriter objWriter = null;
-		    	iOutputFile = 0;
-				ArrayList<String> nextLine;
-				boolean fFirst = true;
-				boolean fWithNewlines = true;
-				int lastIDVal = -1;
-				ArrayList<String> lastStrings = new ArrayList<String>();
-				while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
-					if(nextLine.get(objIDCol).length() == 0) {
-						//debug( )
-						debug(2,"Skipping line with empty id" );
-						continue;
-					}
-					int id = Integer.parseInt(nextLine.get(objIDCol));
-					if( lastIDVal < 0 ) {
-						lastStrings.addAll(nextLine);
-						lastIDVal = id;
-						continue;
-					}
-					if( id == lastIDVal ) {
-						// TODO we should configure which columns go into SQL description
-						// We cannot merge objNum or Name, but we will allow out of order
-						// primary lines, and set these fields
-						if( lastStrings.get(objNumCol).length() == 0 )
-							lastStrings.set(objNumCol, nextLine.get(objNumCol));
-						if( lastStrings.get(objNameCol).length() == 0 )
-							lastStrings.set(objNameCol, nextLine.get(objNameCol));
-						// Merge description columns
-						for( int i=0; i<descrCols.size(); i++ ) {
-							// Take each description column and fold all white space
-							// (especially the newlines) into a single space.
-							int iCol = descrCols.get(i);
-							String desc = nextLine.get(iCol);
-							if(desc.length()!=0) {	// If new token is empty ("") skip it
-								String lastDesc = lastStrings.get(iCol);
-								if(lastDesc.length()==0)		// If old token is empty (""), just set
-									lastStrings.set(iCol, desc);
-								else if(!desc.equalsIgnoreCase(lastDesc)
-										&& !lastDesc.contains(desc)) {
-									lastStrings.set(iCol, lastDesc+descMergeSeparator+desc);
-									debug(2,"Combining descriptions for id: "+id+
-												" ["+lastStrings.get(iCol)+"]");
-								}
-							}
-						}
-						// Merge hiddenNotes columns
-						for( int iCol=0; iCol<DumpColumnConfigInfo.hiddenNotesCols.size(); iCol++ ) {
-							// Take each description column and fold all white space
-							// (especially the newlines) into a single space.
-							String hNote = nextLine.get(iCol);
-							if(hNote.length()!=0) {	// If new token is empty ("") skip it
-								String lastHNote = lastStrings.get(iCol);
-								if(lastHNote.length()==0)		// If old token is empty (""), just set
-									lastStrings.set(iCol, hNote);
-								else if(!hNote.equalsIgnoreCase(lastHNote)
-										&& !lastHNote.contains(hNote)) {
-									lastStrings.set(iCol, lastHNote+descMergeSeparator+hNote);
-									debug(2,"Combining descriptions for id: "+id+
-												" ["+lastStrings.get(iCol)+"]");
-								}
-							}
-						}
-						continue;
-					}
-					// Have a complete line - check for validity
-					String objNumStr = lastStrings.get(objNumCol);
-					if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
-						// Skip lines with no object number.
-						debug(1,"BuildObjectSQL: Discarding line for id (bad objNum): "+id );
-						nObjsSkippedTotal++;
-					} else {
-						if( objWriter == null ) {
-				        	nObjsProcessedFile = 0;
-				    		iOutputFile++;
-							fFirst = true;
-				    		currFilename = basefilename + iOutputFile + extension;
-							objWriter = new BufferedWriter(new FileWriter( currFilename ));
-							//objWriter.append("USE "+dbName+";");
-							//objWriter.newLine();
-							// INSERT ALL in order:
-							// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
-							objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, hiddenNotes, img_path, creation_time) VALUES" );
-							objWriter.newLine();
-						}
-						// Otherwise, now we output the info for the last Line, and then transfer
-						// the next line to Last line and loop
-						dumpSQLForObject( lastIDVal, lastStrings, objWriter, fFirst, fWithNewlines );
-						fFirst = false;
-						nObjsProcessedFile++;
-						nObjsProcessedTotal++;
-						if( nObjsProcessedTotal >= nObjsOutMax ) {
-							if(lastStrings.size() > 0)
-								dumpSQLForObject( lastIDVal, lastStrings, objWriter, false, fWithNewlines );
-							break;
-						}
-						if( nObjsProcessedFile >= nObjsPerDumpFile ) {
-							objWriter.append(";");
-							objWriter.flush();
-							objWriter.close();
-							objWriter = null;	// signal to open next one
-							debug(1,"Wrote "+nObjsProcessedFile+" objects to file: "+currFilename);
-						}
-					}
-					lastIDVal = id;
-					lastStrings = nextLine;
-				}
-				if( objWriter != null ) {
-					objWriter.append(";");
-					objWriter.newLine();
-					objWriter.append("SHOW WARNINGS;");
-					objWriter.flush();
-					objWriter.close();
-				}
-				debug(1,"Wrote "+nObjsProcessedTotal+" total objects. Skipped: "+nObjsSkippedTotal);
+				SQLUtils.writeObjectsSQL(metaDataReader, imagePathsReader);
 			}
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Could not create or other problem writing: "+
-										((filename==null)?"null":filename));
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Save Vocabulary File Error", JOptionPane.ERROR_MESSAGE);
@@ -992,132 +813,6 @@ public class MainApp {
 		}
 	}
 
-
-	private int dumpSQLInsertForObjectCat( int id, TaxoNode category, boolean inferred, int reliability,
-			BufferedWriter writer, boolean fFirst, boolean fWithNewlines ) {
-		String entry = "";
-		try {
-			if( !fFirst ) {
-				writer.append(',');
-				if( fWithNewlines )
-					writer.newLine();
-			}
-			// obj_id, cat_id, inferred, reliability
-			entry = "("+id+","+category.id+(inferred?",1,":",0,")+reliability+")";
-			writer.append(entry);
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Problem writing obj_cats entry: "+entry );
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-								"Categorization SQL Dump File Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-		// When we add the work to add the inferred cats, this will return non-zero
-		return 1;
-	}
-
-	private int dumpSQLLoadFileForObjectCat( int id, TaxoNode category, boolean inferred, int reliability,
-			BufferedWriter writer, boolean fFirst, boolean fWithNewlines ) {
-		String entry = "";
-		String sep = "|";
-		String newLn = "\n";
-		try {
-			// obj_id, cat_id, inferred, reliability
-			entry = id+sep+category.id+sep+(inferred?"1":"0")+sep+reliability+newLn;
-			writer.append(entry);
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Problem writing obj_cats entry: "+entry );
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-								"Categorization SQL Dump File Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-		// When we add the work to add the inferred cats, this will return non-zero
-		return 1;
-	}
-
-	private void dumpSQLForObject( int id, ArrayList<String> line, BufferedWriter writer,
-									boolean fFirst, boolean fWithNewlines ) {
-		try {
-			// TODO use function attribute to find this
-			int objNumCol = 4;
-			// TODO use function attribute to find this
-			int objNameCol = 5;
-			String name = (line.get(objNameCol).length() == 0)?"(no name)"
-					             :(line.get(objNameCol).replace("\"", "\\\"").replace("'", "\\'"));
-			ArrayList<ImageInfo> imgInfo = null;
-			if( imagePathsReader != null )
-				imgInfo = imagePathsReader.GetInfoForID(id);
-			// Gather all the description columns together and append
-			String description = "";
-			ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
-			boolean fFirstDescLine = true;
-			for( int i=0; i<descrCols.size(); i++ ) {
-				// Take each description column and fold all white space
-				// (especially the newlines) into a single space.
-				String newDescLine = line.get(descrCols.get(i)).trim();
-				if( newDescLine.isEmpty() )
-					continue;
-				newDescLine = newDescLine.replaceAll("[\\s]+", " " );
-				// There are some pipes as field separators when Description is merged
-				// from several lines or DB fields. Turn these into line breaks.
-				newDescLine = newDescLine.replaceAll("[|]", "<br />" );
-				//newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
-				newDescLine = newDescLine.replace("\"", "\\\"");
-				newDescLine = newDescLine.replace("'", "\\'");
-				if( fFirstDescLine )
-					fFirstDescLine = false;
-				else
-					description += "<br />";	// Join with line breaks between
-				description += newDescLine;
-			}
-			// Now do the hiddenNotes column
-			String hiddenNotes = "";
-			boolean fFirstHNLine = true;
-			for( int i=0; i<DumpColumnConfigInfo.hiddenNotesCols.size(); i++ ) {
-				// Take each hiddenNotes column and fold all white space
-				// (especially the newlines) into a single space.
-				String newHNLine = line.get(DumpColumnConfigInfo.hiddenNotesCols.get(i)).trim();
-				if( newHNLine.isEmpty() )
-					continue;
-				newHNLine = newHNLine.replaceAll("[\\s]+", " " );
-				//newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
-				newHNLine = newHNLine.replace("\"", "\\\"");
-				newHNLine = newHNLine.replace("'", "\\'");
-				if( fFirstHNLine )
-					fFirstHNLine = false;
-				else
-					hiddenNotes += " ";	// Join with spaces between
-				hiddenNotes += newHNLine;
-			}
-			// Deal with line separation
-			if( !fFirst ) {
-				writer.append(',');
-				if( fWithNewlines )
-					writer.newLine();
-			}
-			// Dump the data
-			writer.append("("+id+",\""+line.get(objNumCol).trim()+"\",\""+name+"\",\""
-							+description+"\",\""+hiddenNotes+"\",");
-			if(imgInfo == null)
-				writer.append("null,");
-			else {
-				ImageInfo info = imgInfo.get(0);
-				String imgPath = "\""+info.path + "/" + info.filename+"\",";
-				writer.append(imgPath);
-			}
-			writer.append("now())");
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Could not create or other problem writing MD SQL file." );
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"MD SQL Dump File Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-	}
 
 	/**
 	 * This method initializes jMenuItem
@@ -1140,16 +835,19 @@ public class MainApp {
 	private void categorizeObjects() {
 		debug(1,"Categorize Objects and generate association SQL...");
 		if( facetMapHashTree == null ) {
-			JOptionPane.showMessageDialog(getJFrame(), "You cannot categorize before the ontology has been loaded\n"
-										+ "Please load the ontology and then run this command.",
-				"Categorize error", JOptionPane.ERROR_MESSAGE);
-			return;
-		}
-		// Open the dump file
-		if( openMDFile() && metaDataReader != null ) {
+			JOptionPane.showMessageDialog(getJFrame(),
+					"You cannot categorize before the ontology has been loaded\n"
+					+ "Please load the ontology and then run this command.",
+					"Categorize error", JOptionPane.ERROR_MESSAGE);
+		} else if( !openMDFile() || metaDataReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(),
+					"You must specify a metadata source to categorize.\n",
+					"Categorize error", JOptionPane.ERROR_MESSAGE);
+		} else {
 			for( String facetName : facetMapHashTree.GetFacetNames()) {
 				metaDataReader.resetToLine1();
-				categorizeForFacet(facetName);
+				Categorizer.categorizeForFacet(metaDataReader, facetMapHashTree,
+												facetName, false, dbName);
 			}
 		}
 	}
@@ -1366,9 +1064,9 @@ public class MainApp {
 	}
 
 	/**
-	 * This method initializes burColumnList
-	 *
-	 * @return javax.swing.JLabel
+	 * Initialize the list of columns for which user can request to
+	 * Build Usage Reports.
+	 * @return javax.swing.JList set up with column names
 	 */
 	private JList getBURColumnList() {
 		if (burColumnList == null) {
@@ -1491,6 +1189,11 @@ public class MainApp {
 		return openMenuItem;
 	} */
 
+	/**
+	 * Opens an XML ontology file in Delphi format.
+	 * Format is documented on the project site.
+	 * @return TRUE if successfully opened and parsed
+	 */
 	protected boolean openOntologyFile() {
 		boolean opened = false;
 		try {
@@ -1551,6 +1254,11 @@ public class MainApp {
 		return opened;
 	}
 
+	/**
+	 * Opens a special vocabulary dump file in a fairly funky format.
+	 * @see VocabTermsReader for details
+	 * @return TRUE if successfully opened and parsed
+	 */
 	protected boolean openVocabFile() {
 		boolean opened = false;
 		try {
@@ -1594,56 +1302,12 @@ public class MainApp {
 			chooser.setFileFilter(xmlfilter);
 		    int returnVal = chooser.showOpenDialog(getJFrame());
 		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-				DocumentBuilder builder = factory.newDocumentBuilder();
 		    	File file = chooser.getSelectedFile();
 		    	String filename = file.getPath();
 		        debug(2,"Scanning column config info from file: " + filename);
 		        setStatus("Scanning column config info from file: " + filename);
-				Document colConfigDoc = builder.parse(file);
-				DumpColumnConfigInfo.PopulateFromConfigFile(colConfigDoc);
-				debug(2,"Col Sep is: ["+(char)(DumpColumnConfigInfo.getColumnSeparator())+"]");
-				if( _debugLevel>=2 ) {
-					System.out.print("Token seps for ObjectName are: " );
-					ArrayList<String> tokenSeps = DumpColumnConfigInfo.getTokenSeparators("ObjectName");
-					for( String sep:tokenSeps ) {
-						System.out.print("["+sep+"] " );
-					}
-					System.out.println();
-				}
-		        opened = true;
+		        opened = DumpColumnConfigInfo.OpenConfigFile(filename);
 		    }
-        } catch (SAXParseException spe) {
-            // Error generated by the parser
-            System.out.println("\n** Parsing error" + ", line " +
-                spe.getLineNumber() + ", uri " + spe.getSystemId());
-            System.out.println("   " + spe.getMessage());
-
-            // Use the contained exception, if any
-            Exception x = spe;
-
-            if (spe.getException() != null) {
-                x = spe.getException();
-            }
-
-            x.printStackTrace();
-        } catch (SAXException sxe) {
-            // Error generated by this application
-            // (or a parser-initialization error)
-            Exception x = sxe;
-
-            if (sxe.getException() != null) {
-                x = sxe.getException();
-            }
-
-            x.printStackTrace();
-		} catch( ParserConfigurationException pce ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Could not create output XML file",
-					"Open VocabularyFile Error", JOptionPane.ERROR_MESSAGE);
-            pce.printStackTrace();
-        } catch (IOException ioe) {
-            // I/O error
-            ioe.printStackTrace();
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
@@ -1695,8 +1359,7 @@ public class MainApp {
 			if( iDot >0 )
 				outFileName = outFileName.substring(0, iDot);
 			outFileName += "_"+(columnNames[colIndex].replaceAll("\\W", "_"))+"_Usage.txt";
-			chooser.setSelectedFile(new File( outFileName ));
-    		String filename = getSafeOutfile(null);
+    		String filename = getSafeOutfile(outFileName,null);
     		if( filename != null ) {
     			debug(1,"Saving column usage info to file: " + filename);
 		        setStatus("Saving usage report to file: " + filename);
@@ -1724,47 +1387,16 @@ public class MainApp {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
 			setStatus( "Building SQL Vocab load file...");
-    		String filename = getSafeOutfile(sqlfilter);
+    		String filename = getSafeOutfile(null,sqlfilter);
     		if( filename == null )
     			return;
 	        setStatus("Saving SQL Vocab Load to file: " + filename);
 	        try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-				// Set up the correct DB
-				 writer.append("USE "+dbName+";");
-				 writer.newLine();
-				 writer.append("truncate facets;");
-				 writer.newLine();
-				// First, let's populate the facets table
-				 writer.append("INSERT INTO facets( id, name, display_name, description, notes ) VALUES" );
-				 boolean fFirst = true;
-				for( Facet facet : facetMapHashTree.GetFacets() ) {
-					if( fFirst )
-						fFirst = false;
-					else
-						writer.append(',');
-					if(fWithNewlines)
-						writer.newLine();
-					writer.append("("+facet.id+",\""+facet.name+"\",\""+facet.displayName+"\", \'"
-										+facet.description+"\', \'" + facet.notes + "\')");
-				}
-				writer.append(';');
-				writer.newLine();
-				 writer.append("truncate categories;");
-				 writer.newLine();
-				// Now, let's populate the categories table
-				writer.append("INSERT INTO categories(id, parent_id, name, display_name, facet_id, select_mode, always_inferred) VALUES" );
-				writer.newLine();
-				fFirst = true;
-				for( Facet facet : facetMapHashTree.GetFacets() ) {
-					for( TaxoNode child : facet.children ) {
-						// for each child of the facet, dump. Mark as a root in facet.
-						dumpSQLForVocabNode( child, writer, true, fFirst, fWithNewlines );
-						fFirst = false;
-					}
-				}
-				writer.append(';');
-				writer.newLine();
+				SQLUtils.writeFacetsSQL( facetMapHashTree.GetFacets(),
+											dbName, writer, fWithNewlines );
+				SQLUtils.writeCategoriesSQL( facetMapHashTree.GetFacets(),
+											dbName, writer, fWithNewlines );
 				writer.flush();
 				writer.close();
 				debug(1, "Finished writing SQL Dump to file: "+filename);
@@ -1780,40 +1412,10 @@ public class MainApp {
 		}
 	}
 
-	// We insert all the fields in declaration order:
-	// id, parent_id, name, display_name, facet_id, select_mode, always_inferred
-	// Since the facet roots are TaxoNodes, the effective roots in all facets
-	// (i.e., the first level nodes, all will have non-null parents).
-	// We pass in a flag to simplify this (rather than checking if parent->parent is null).
-	// TODO Need to think about getting synonyms into DB to support
-	//  UI that lets people search for categories.
-	// What about token-based pattern model?
-	private void dumpSQLForVocabNode( TaxoNode node, BufferedWriter writer,
-			boolean fRootNode, boolean fFirst, boolean fWithNewlines ) {
-		try {
-			if( !fFirst ) {
-				writer.append(',');
-				if( fWithNewlines )
-					writer.newLine();
-			}
-			String parentID = (fRootNode || node.parent == null)?"null":Integer.toString(node.parent.id);
-			String select = (node.selectSingle)? "'single'":"'multiple'";
-			int infer = (node.inferredByChildren)? 1:0;
-			writer.append("("+node.id+","+parentID+",\""+node.name+"\",\""+node.displayName+"\","
-							+node.facetid+","+select+","+infer+")");
-			if( node.children != null )
-				for( TaxoNode child : node.children ) {
-					// Recurse for children. Note cannot be roots, nor first.
-					dumpSQLForVocabNode( child, writer, false, false, fWithNewlines );
-				}
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Error writing to SQL dump file." );
-		}
-	}
-
-	protected String getSafeOutfile( FileNameExtensionFilter filter ) {
+	protected String getSafeOutfile( String suggest, FileNameExtensionFilter filter ) {
     	String filename;
+    	if( suggest != null )
+    		chooser.setSelectedFile(new File( suggest ));
 		chooser.setFileFilter(filter);
 		while(true) {
 			int returnVal = chooser.showSaveDialog(getJFrame());
@@ -1843,40 +1445,23 @@ public class MainApp {
 	protected void saveVocabHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-    		String filename = getSafeOutfile(sqlfilter);
+    		String filename = getSafeOutfile(null,sqlfilter);
     		if( filename == null )
     			return;
-    		String tablename = fSaveHooks ? "hooks":"exclusions";
-	        setStatus("Saving SQL for "+tablename+" to file: " + filename);
+    		String action = fSaveHooks ? "hooks":"exclusions";
+	        setStatus("Saving SQL for "+action+" to file: " + filename);
 	        try {
-	    		setStatus( "Building SQL "+tablename+" Load file...");
+	    		setStatus( "Building SQL "+action+" Load file...");
 				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-				// Set up the correct DB
-				writer.append("USE "+dbName+";");
-				writer.newLine();
-				writer.append("truncate "+tablename+";");
-				writer.newLine();
-				// First, let's populate the hooks table
-				writer.append("INSERT INTO "+tablename+" ( cat_id, token ) VALUES" );
-				writer.newLine();
-				boolean fFirst = true;
-				for( Facet facet : facetMapHashTree.GetFacets() ) {
-					for( TaxoNode child : facet.children ) {
-						// for each child of the facet, dump.
-						// Once something has been saved, fFirst will be marked false.
-						fFirst = dumpHooksOrExclusionsSQLForVocabNode( child, fSaveHooks, writer,
-															true, fFirst, fWithNewlines );
-					}
-				}
-				writer.append(';');
-				writer.newLine();
+				SQLUtils.writeHooksOrExclusionsSQL(facetMapHashTree.GetFacets(),
+												dbName, fSaveHooks, writer, fWithNewlines);
 				writer.flush();
 				writer.close();
 				debug(1, "Finished writing SQL Dump to file: "+filename);
 				setStatus( "Finished writing SQL Dump to file: "+filename);
 			} catch( IOException e ) {
 	            e.printStackTrace();
-				throw new RuntimeException("Could not create (or write to) output file: " + filename);
+				throw new RuntimeException("Could not create output file: " + filename);
 			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -1885,78 +1470,11 @@ public class MainApp {
 		}
 	}
 
-	// We insert all the hooks, with category id associations
-	// This will be inefficient with all the entailment phrases, but
-	// it is just db rows and may make some search (kwd match to category) easier.
-	private boolean dumpHooksOrExclusionsSQLForVocabNode( TaxoNode node, boolean fSaveHooks, BufferedWriter writer,
-			boolean fRootNode, boolean fFirst, boolean fWithNewlines ) {
-		try {
-			if( fSaveHooks ) {
-				// Save the display name, even if marked as nomatch, since things like
-				// design motifs should show up if they enter "bird" in kwd.
-				if( !fFirst ) {
-					writer.append(',');
-					if( fWithNewlines )
-						writer.newLine();
-				}
-				// We use display names (in most cases) as hooks, but do not
-				// fold to lower in the TaxoNode structure. Hooks assumes all lower.
-				// TODO this should properly deal with Unicode collation mechanisms.
-				writer.append("("+node.id+",\""+node.displayName.toLowerCase()+"\")");
-				fFirst = false;
-				// Save any synonyms as hooks
-				if( node.synset != null )
-					for( String hook : node.synset ) {
-						if( !fFirst ) {
-							writer.append(',');
-							if( fWithNewlines )
-								writer.newLine();
-						}
-						writer.append("("+node.id+",\""+hook+"\")");
-						fFirst = false;
-					}
-			} else {
-				// Save any exclusions
-				if( node.exclset != null )
-					for( String excl : node.exclset ) {
-						if( !fFirst ) {
-							writer.append(',');
-							if( fWithNewlines )
-								writer.newLine();
-						}
-						writer.append("("+node.id+",\""+excl+"\")");
-						fFirst = false;
-					}
-			}
-			// Now recurse to catch children
-			if( node.children != null )
-				for( TaxoNode child : node.children ) {
-					// Recurse for children. Note cannot be roots, nor first.
-					fFirst = dumpHooksOrExclusionsSQLForVocabNode( child, fSaveHooks, writer,
-																	false, fFirst, fWithNewlines );
-				}
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Error writing to SQL dump file." );
-		}
-		return fFirst;
-	}
-
 	protected void saveVocabAsXML() {
 		try {
-			chooser.setFileFilter(xmlfilter);
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-				/*
-				int lastDot = filename.lastIndexOf('.');
-				String outfilename = null;
-				if( lastDot < 0 )
-					outfilename = filename + "_tax.xml";
-				else
-					outfilename = filename.substring(0, lastDot) + "_tax.xml";
-				*/
-		        writeXMLDocToFile(vocabOutputDoc, filename);
+    		String filename = getSafeOutfile(null,xmlfilter);
+		    if(filename != null) {
+		    	XMLUtils.writeXMLDocToFile(vocabOutputDoc, filename);
 		        setStatus("Saved Vocabulary as XML to file: " + filename);
 		    }
 		} catch( RuntimeException e ) {
@@ -1965,388 +1483,5 @@ public class MainApp {
             e.printStackTrace();
 		}
 	}
-
-	protected void writeXMLDocToFile(Document outputDoc, String outFileName) {
-		try {
-			//FileWriter writer = new FileWriter( outFileName );
-			final String encoding = "UTF-8";
-			OutputStreamWriter writer =
-				new OutputStreamWriter(new FileOutputStream(outFileName), encoding);
-			// Use a Transformer for output
-			TransformerFactory tFactory =
-		    TransformerFactory.newInstance();
-			Transformer transformer = tFactory.newTransformer();
-
-			DOMSource source = new DOMSource(outputDoc);
-			StreamResult result = new StreamResult(writer);
-			transformer.transform(source, result);
-			writer.close();
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Could not create output XML file: " + outFileName);
-		} catch (TransformerConfigurationException tce) {
-		  // Error generated by the parser
-		  System.out.println ("* Transformer Factory error");
-		  System.out.println("  " + tce.getMessage() );
-
-		   // Use the contained exception, if any
-		  Throwable x = tce;
-		  if (tce.getException() != null)
-		    x = tce.getException();
-		  x.printStackTrace();
-		} catch (TransformerException te) {
-		  // Error generated by the parser
-		  System.out.println ("* Transformation error");
-		  System.out.println("  " + te.getMessage() );
-
-		  // Use the contained exception, if any
-		  Throwable x = te;
-		  if (te.getException() != null)
-		    x = te.getException();
-		  x.printStackTrace();
-		}
-	} // close writeXMLDocToFile()
-
-	/**
-	 * @param facetName Name of a facet
-	 */
-	private void categorizeForFacet(String facetName ) {
-    	String filename = null;
-    	String basefilename = null;
-    	String extension = ".sql";
-    	String currFilename = null;
-    	boolean fDumpAsSQLInsert = false;
-    	int iOutputFile;
-    	int nObjCatsOutMax = Integer.MAX_VALUE;
-    	int nObjCatsReport = 100000;
-    	int nObjCatsTillReport;
-    	// Each line in the output file is about 20 chars max.
-    	// We want a max of 5 MB files, so we can take up to
-    	// 5000000 / 20 = 250000.
-    	// To be safer, we'll set it at 200K
-    	int nObjsCatsPerDumpFile = Integer.MAX_VALUE;
-    	int nObjCatsDumpedToFile = 0;
-    	int nObjCatsDumpedTotal = 0;
-    	int nObjsSkippedTotal = 0;
-    	// TODO get this from col config
-    	int objIDCol = 0;
-		int objNumCol = 4;
-    	// Hold the information for the Facet(s)
-    	DumpColumnConfigInfo[] colDumpInfo = null;
-		try {
-			// Open the dump file
-			if( columnNames == null || columnNames.length < 2 )
-				throw new RuntimeException("categorizeForFacet: DumpColConfig info not yet built!");
-			colDumpInfo = DumpColumnConfigInfo.getAllColumnInfo(columnNames);
-			int nCols = columnNames.length;
-			boolean[] skipCol = new boolean[nCols];
-			for( int iCol=0; iCol<nCols; iCol++ ) {
-				skipCol[iCol] = ( colDumpInfo[iCol].columnReliabilityForFacet(facetName) == 0);
-			}
-			filename = metaDataReader.getFileName();
-			// Find last slash or backslash (to allow for windows paths), to get basepath
-	    	int iSlash = Math.max(filename.lastIndexOf('/'), filename.lastIndexOf('\\'));
-	    	//int iDot = filename.lastIndexOf('.');
-	    	if( iSlash<=0 )
-	    		throw new RuntimeException("categorizeForFacet: odd input filename:\n"+filename);
-	    	basefilename = filename.substring(0, iSlash+1)+"obj_cats."+facetName+"_";
-			BufferedWriter objCatsWriter = null;
-	    	iOutputFile = 0;
-			ArrayList<String> nextLine;
-			boolean fFirst = true;
-			boolean fWithNewlines = true;
-			int lastIDVal = -1;
-			ArrayList<String> lastStrings = new ArrayList<String>();
-			HashMap<TaxoNode, Float> matchedCats = new HashMap<TaxoNode, Float>();
-			nObjCatsTillReport = nObjCatsReport;
-			// TODO - BUG: does not categorize last object in file.
-			while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
-				if(nextLine.get(objIDCol).length() == 0) {
-					debug(2,"Skipping line with empty id" );
-					continue;
-				}
-				int id = Integer.parseInt(nextLine.get(objIDCol));
-				if( lastIDVal < 0 ) {
-					lastStrings.addAll(nextLine);
-					lastIDVal = id;
-					continue;
-				}
-				if( id == lastIDVal ) {
-					// Consider merging the two lines, but only for the columns we care about.
-					// Separate them by '|' chars to ensure we tokenize in next step
-					// Note that we always skip col 0, the ID column
-					for(int i=1; i<nCols; i++ ) {
-						if(skipCol[i])				// Do not bother with misc cols
-							continue;
-						String nextToken = nextLine.get(i);
-						if(nextToken.length()==0)	// If new token is empty ("") skip it
-							continue;
-						String last = lastStrings.get(i);
-						if(last.length()==0)		// If old token is empty (""), just set
-							lastStrings.set(i, nextLine.get(i));
-						else if(nextLine.get(i).equalsIgnoreCase(last)
-								|| last.contains(nextLine.get(i)))
-							continue;
-						else
-							lastStrings.set(i, last+"|"+nextLine.get(i));
-						debug(2,"Combining "+columnNames[i]+ " for id: "+id+
-											" ["+lastStrings.get(i)+"]");
-					}
-					continue;
-				}
-				// Have a complete line. Check for validity
-				String objNumStr = lastStrings.get(objNumCol);
-				if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
-					// Skip lines with no object number.
-					debug(1,"CategorizeForFacet: Discarding line for id (bad objNum): "+id );
-					nObjsSkippedTotal++;
-				} else { //  Process a valid line
-					if( objCatsWriter == null ) {
-						nObjCatsDumpedToFile = 0;
-			    		iOutputFile++;
-						fFirst = true;
-			    		currFilename = basefilename + iOutputFile + extension;
-			    		objCatsWriter = new BufferedWriter(new FileWriter( currFilename ));
-			    		if( fDumpAsSQLInsert ) {
-				    		objCatsWriter.append("USE "+dbName+";");
-				    		objCatsWriter.newLine();
-				    		objCatsWriter.append("INSERT IGNORE INTO obj_cats(obj_id, cat_id, inferred, reliability) VALUES" );
-				    		objCatsWriter.newLine();
-			    		}
-					}
-					// Otherwise, now we output the info for the last Line, and then transfer
-					// the next line to Last line and loop
-					// We need to track the matches we have made, and the reliability assigned per column.
-					// If two columns generate the same category, then we use the higher reliability.
-					matchedCats.clear();
-					for(int i=1; i<nCols; i++ ) {
-						if(skipCol[i])				// Do not bother with misc cols
-							continue;
-						String source = lastStrings.get(i);
-						if( source.length() <= 1 )
-							continue;
-						categorizeObjectForFacet( lastIDVal, source,
-								facetName, colDumpInfo[i], matchedCats );
-					}
-					int nCatsDumped = dumpSQLForObjCatsOnFacet( lastIDVal, matchedCats,
-											objCatsWriter, fFirst, fWithNewlines, fDumpAsSQLInsert );
-					if( nCatsDumped > 0) {
-						nObjCatsDumpedTotal += nCatsDumped;
-						nObjCatsDumpedToFile += nCatsDumped;
-						nObjCatsTillReport -= nCatsDumped;
-						fFirst = false;
-					}
-					matchedCats.clear();
-					// BUG? We already ran against the line - why do this again?!?!
-					if( nObjCatsDumpedTotal >= nObjCatsOutMax ) {
-						if(lastStrings.size() > 0) {
-							for(int i=1; i<nCols; i++ ) {
-								if(skipCol[i])				// Do not bother with misc cols
-									continue;
-								String source = lastStrings.get(i);
-								if( source.length() <= 1 )
-									continue;
-								categorizeObjectForFacet( lastIDVal, source,
-										facetName, colDumpInfo[i], matchedCats );
-							}
-						}
-						break;
-					}
-					nCatsDumped = dumpSQLForObjCatsOnFacet( lastIDVal, matchedCats,
-							objCatsWriter, fFirst, fWithNewlines, fDumpAsSQLInsert );
-					if( nCatsDumped > 0) {
-						// Gratuitous since have already decided to quit
-						// nObjsProcessedTotal += nCatsFound;
-						fFirst = false;
-					}
-					if( nObjCatsDumpedToFile >= nObjsCatsPerDumpFile ) {
-						if( fDumpAsSQLInsert )
-							objCatsWriter.append(";");
-						objCatsWriter.flush();
-						objCatsWriter.close();
-						objCatsWriter = null;	// signal to open next one
-						debug(1,"Wrote "+nObjCatsDumpedToFile+" object categories to file: "+currFilename);
-					} else if( nObjCatsTillReport <= 0 ) {
-						debug(1,"Wrote "+nObjCatsDumpedToFile+" object categories to file: "+currFilename);
-						nObjCatsTillReport = nObjCatsReport;
-					}
-				}
-				lastIDVal = id;
-				lastStrings = nextLine;
-			}
-			if( objCatsWriter != null ) {
-				if( fDumpAsSQLInsert ) {
-					objCatsWriter.append(";");
-					objCatsWriter.newLine();
-					objCatsWriter.append("SHOW WARNINGS;");
-				}
-				objCatsWriter.flush();
-				objCatsWriter.close();
-			}
-			debug(1,"Wrote "+nObjCatsDumpedTotal+" total object categories for facet: "+facetName);
-		} catch( IOException e ) {
-            e.printStackTrace();
-			throw new RuntimeException("Could not create or other problem writing: "+
-										((filename==null)?"null":filename));
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Save Vocabulary File Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-	}
-
-	// Returns a set of tokens and words
-	private Pair<ArrayList<String>,ArrayList<String>> prepareSourceTokens( String source, DumpColumnConfigInfo colInfo ) {  //  @jve:decl-index=0:
-		ArrayList<String> tokens = new ArrayList<String>();
-		ArrayList<String> words = new ArrayList<String>();
-		// First we apply reduction. This cleans up certain oddities in the source
-		String reducedSource = source;
-		for(Pair<String, String> reduce : colInfo.reduceRules) {
-			reducedSource = reducedSource.replaceAll(reduce.first, reduce.second);
-		}
-		// Next, we tokenize with the token separators
-		String[] tokens_1;
-		if( colInfo.tokenSeparators.size() == 0 ) {
-			// throw new RuntimeException( "No Token separators for column: " + colInfo.name);
-			tokens_1 = new String[1];
-			tokens_1[0] = reducedSource;
-		} else {
-			String regex = "\\||"+colInfo.tokenSeparators.get(0);
-			for( int i=1; i<colInfo.tokenSeparators.size(); i++)
-				regex += "|"+colInfo.tokenSeparators.get(i);
-			tokens_1 = reducedSource.split(regex);
-		}
-		// Next, we further split up each token on space and certain punctuation and remove the noise items
-		// We also build the words list for Colors
-		for( int i=0; i< tokens_1.length; i++ ){
-			String[] words_1 = tokens_1[i].trim().split("[\\W&&[^\\-]]");
-			if( colInfo.noiseTokens.size() == 0 ){
-				tokens.add(tokens_1[i].trim());
-				for( int iW=0; iW<words_1.length; iW++)
-					words.add(words_1[iW].trim());
-			}
-			else {
-				StringBuilder sb = new StringBuilder();
-				for( int iW=0; iW<words_1.length; iW++)
-					if( !colInfo.noiseTokens.contains(words_1[iW]) ) {
-						if( iW > 0)
-							sb.append(' ');
-						String word = words_1[iW].trim();
-						sb.append(word);
-						words.add(word);
-					}
-				tokens.add(sb.toString());
-			}
-		}
-		return new Pair<ArrayList<String>,ArrayList<String>>(tokens, words);
-	}
-
-	private void categorizeObjectForFacet( int id, String source,
-			String facetName, DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
-		// Tokenize the string for this column
-		Pair<ArrayList<String>,ArrayList<String>> tokenPair
-				= prepareSourceTokens( source, colInfo );
-		float reliability = colInfo.columnReliabilityForFacet(facetName);
-		// Now, we try to find a category in the hashMap for each token
-		for( String token:tokenPair.first ) {
-			// Test where id is 317239 - how do we match FUR?
-			TaxoNode node = facetMapHashTree.FindNodeByHook(facetName,token);
-			if( node == null )
-				continue;
-			debug(3, "Obj:"+id+" matched on token: ["+token+"] facet: "+facetName);
-			// We have a candidate here. Check for the exclusions
-			if( node.exclset != null ) {
-				boolean fCatExcluded = false;
-				// TODO once we have collation based checking, remove this.
-				String tokenL = token.toLowerCase();
-				for( String excl:node.exclset ) {
-					// We'll have to consider whether and when to search
-					// the entire string for the exclusion. May need to put
-					// a flag on the exclusion terms.
-					if( tokenL.indexOf(excl) >= 0 ) {
-						fCatExcluded = true;
-						debug(3, "Obj:"+id+" match on token excluded on: ["+excl+"]");
-						break;
-					}
-				}
-				if( fCatExcluded )
-					continue;
-			}
-			// We have a TaxoNode match! Update matches with this node
-			updateMatches( matchedCats, reliability, node);
-			// Now, consider any pending implied nodes as well.
-			if(( node.impliedNodesPending != null ) && ( node.impliedNodesPending.size() > 0 ))
-				for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
-					updateMatches( matchedCats, reliability, node.impliedNodes.get(i));
-				}
-		}
-	}
-
-	private static void updateMatches(
-			HashMap<TaxoNode, Float> matchedCats,
-			float baseReliability,
-			TaxoNode node ) {
-		// If not yet matched, or if this reliability
-		// is greater than any previous match, set the value in the matchedCats.
-		Float ret = matchedCats.get(node); // returns null if not in hashMap
-		float priorRel = (ret==null)?0:ret.floatValue();
-		if( baseReliability > priorRel )
-			matchedCats.put(node, baseReliability);
-	}
-
-	private int dumpSQLForObjCatsOnFacet( int id, HashMap<TaxoNode, Float> matchedCats,
-			BufferedWriter writer, boolean fFirst, boolean fWithNewlines, boolean fDumpAsSQLInsert ) {
-		// We just consider each match in turn, and get all the inferred nodes.
-		HashMap<TaxoNode, Float> inferredCats =  new HashMap<TaxoNode, Float>();
-		for( TaxoNode node:matchedCats.keySet() ) {
-			Float ret = matchedCats.get(node); // returns null if not in hashMap
-			float currRel = (ret==null)?0:ret.floatValue();
-			node.AddInferredNodes(inferredCats, currRel);
-		}
-
-		int nCatsMatched = 0;
-		// Now we have sets of the Nodes we matched and inferred, to dump
-		// We dump the mached cats that are not in the inferred map, then the inferred list
-		for( TaxoNode node:matchedCats.keySet() ) {
-			if( !inferredCats.containsKey(node)) {
-				Float ret = matchedCats.get(node); // returns null if not in hashMap
-				float reliability = (ret==null)?0:ret.floatValue();
-				int iRel = Math.min(9,Math.round(10*reliability));
-				if( fDumpAsSQLInsert )
-					nCatsMatched += dumpSQLInsertForObjectCat(id, node, false, iRel, writer, fFirst, fWithNewlines );
-				else
-					nCatsMatched += dumpSQLLoadFileForObjectCat(id, node, false, iRel, writer, fFirst, fWithNewlines );
-				fFirst = false;
-			}
-		}
-		// Now emit the (remaining) inferred nodes
-		for( TaxoNode node:inferredCats.keySet() ) {
-			Float ret = inferredCats.get(node); // returns null if not in hashMap
-			float reliability = (ret==null)?0:ret.floatValue();
-			int iRel = Math.min(9,Math.round(10*reliability));
-			if( fDumpAsSQLInsert )
-				nCatsMatched += dumpSQLInsertForObjectCat(id, node, true, iRel, writer, fFirst, fWithNewlines );
-			else
-				nCatsMatched += dumpSQLLoadFileForObjectCat(id, node, true, iRel, writer, fFirst, fWithNewlines );
-			fFirst = false;
-		}
-		return nCatsMatched;
-	}
-
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	private JMenuItem getSaveMenuItem() {
-		if (saveMenuItem == null) {
-			saveMenuItem = new JMenuItem();
-			saveMenuItem.setText("Save");
-			saveMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
-					Event.CTRL_MASK, true));
-		}
-		return saveMenuItem;
-	}
-	 */
 
 }
