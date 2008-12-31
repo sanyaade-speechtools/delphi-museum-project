@@ -8,14 +8,15 @@
 	<notes><em>Note some of the grouping nodes, like mid-west?</em>
 	</notes>
 	<notes>For the purpose of alphabetization, leading qualifiers, adjectives,
-		articles, etc. were ignored.  For example:
-	&quot;Republic of Macedonia&quot; was treated as &quot;Macedonia&quot;;
-	&quot;Peoples&apos; Republic of China&quot; was treated as &quot;China&quot;;
-	&quot;State of the Vatican City&quot; was treated as &quot;Vatican City&quot;.
+		articles, etc. are ignored.  For example:
+	&quot;Republic of Macedonia&quot; is treated as &quot;Macedonia&quot;;
+	&quot;Peoples&apos; Republic of China&quot; is treated as &quot;China&quot;;
+	&quot;The Bahamas&quot; is treated as &quot;Bahamas&quot;;
+	&quot;State of the Vatican City&quot; is treated as &quot;Vatican City&quot;.
 	</notes>
 	<notes>
-	<!-- Insert the following syntax wherever a site is temporally narrow enough
-		to justify such an inference:
+	<!-- Insert the following syntax whenever a site was occupied for a discrete period
+		that is temporally narrow enough to justify such an inference:
 			<implies facet="Collection" cat="EuropeanPaleolithic"/>
 			<implies facet="CulturalGroup" cat="Hohokam"/>
 			<implies facet="Event" cat="SanFranciscoPanPacificExpo"/>
@@ -228,459 +229,460 @@
 			</heading>
 		</heading>
 		<heading id="EasternAfrica" title="Eastern Africa">  <!-- ALPHABETIZE! -->
-    <synonym value="East Africa"/>
-    <heading id="Ethiopia" title="Ethiopia">
-      <synonym value="Sheba"/>
-      <synonym value="Ityop'iya"/>
-      <heading id="AddisAbaba" title="Addis Ababa">
-        <heading id="Mercado" title="Mercado">
-          <synonym value="Addis Ababa market"/>
-        </heading>
-      </heading>
-      <heading id="Gondar" title="Gondar"/>
-      <heading id="Harar" title="Harar"/>
-      <heading id="Nazaret" title="Nazaret">
-        <synonym value="Nazarth"/>
-      </heading>
-      <heading id="Shashemeni" title="Shashemeni"/>
-      <heading id="Awash" title="Awash"/>
-      <heading id="NegelliBorera" title="Negelli Borera"/>
-      <heading id="DembiDollo" title="Dembi Dollo"/>
-      <heading id="Borea" title="Borea"/>
-      <heading id="Gambella" title="Gambella"/>
-      <heading id="Lalibela" title="Lalibela"/>
-      <heading id="Axum" title="Axum"/>
-      <heading id="Ambo" title="Ambo"/>
-      <heading id="Awasa" title="Awasa"/>
-      <heading id="Dese" title="Dese"/>
-      <heading id="AwashStation" title="Awash Station"/>
-      <heading id="Jijiga" title="Jijiga"/>
-      <heading id="Jimma" title="Jimma"/>
-      <heading id="Ghion" title="Ghion"/>
-      <heading id="Choaprovince" title="Choa province">
-        <synonym value="Shoa province"/>
-        <heading id="Saulettadistrict" title="Sauletta district"/>
-        <heading id="MelkaKontoure" title="Melka-Kontoure"/>
-      </heading>
-      <heading id="LakeBeseka" title="Lake Beseka"/>
-      <heading id="AddisAlam" title="Addis Alam"/>
-    </heading>
-    <heading id="Kenya" title="Kenya">
-      <heading id="Nairobi" title="Nairobi"/>
-      <heading id="TurkanaDistrict" title="Turkana District">
-        <heading id="Kalalokoilriver" title="Kalalokoil river"/>
-        <heading id="Muruaret" title="Muruaret">
-          <synonym value="Muruaret Hill"/>
-        </heading>
-      </heading>
-      <heading id="Basuba" title="Basuba"/>
-      <heading id="Mangai" title="Mangai"/>
-      <heading id="Tiriki" title="Tiriki"/>
-      <heading id="GobDogo" title="Gob Dogo"/>
-      <heading id="GobNebey" title="Gob Nebey"/>
-      <heading id="GobOre" title="Gob Ore"/>
-      <heading id="GobLogologo" title="Gob Logologo"/>
-      <heading id="GobUyam" title="Gob Uyam"/>
-      <heading id="GobChowule" title="Gob Chowule"/>
-      <heading id="GobWambile" title="Gob Wambile"/>
-      <heading id="GobDabalene" title="Gob Dabalene"/>
-      <heading id="GobEsimgalgidele" title="Gob Esimgalgidele"/>
-      <heading id="GobKorr" title="Gob Korr"/>
-      <heading id="Elementeita" title="Elementeita"/>
-    </heading>
-    <heading id="Eritrea" title="Eritrea">
-      <heading id="Asmara" title="Asmara">
-        <synonym value="Asmära"/>
-      </heading>
-      <heading id="Assab" title="Assab"/>
-      <heading id="Massawa" title="Massawa"/>
-      <heading id="Koken" title="Koken"/>
-    </heading>
-    <heading id="Djibouti" title="Djibouti">
-      <heading id="Djibouti" title="Djibouti"/>
-    </heading>
-    <heading id="Somalia" title="Somalia">
-      <heading id="Somaliland" title="Somaliland">
-        <heading id="Berbera" title="Berbera"/>
-      </heading>
-      <heading id="Mogadishu" title="Mogadishu"/>
-      <heading id="KarimHeganeh" title="Karim Heganeh"/>
-      <heading id="AbdulKadir" title="Abdul Kadir">
-        <synonym value="Abdul Qadr"/>
-      </heading>
-      <heading id="GaanLibah" title="Gaan Libah"/>
-    </heading>
-    <heading id="Tanzania" title="Tanzania">
-      <synonym value="Tanganyika"/>
-      <heading id="OlduvaiGorge" title="Olduvai Gorge"/>
-      <heading id="MbuluDistrict" title="Mbulu District"/>
-    </heading>
-    <heading id="Malawi" title="Malawi">
-      <heading id="Khamburavillage" title="Khambura village"/>
-      <heading id="Kisi" title="Kisi"/>
-      <heading id="ShireHighlands" title="Shire Highlands"/>
-      <heading id="LuchenyaPlateau" title="Luchenya Plateau"/>
-      <heading id="Motovillage" title="Moto village"/>
-      <heading id="PhopoHill" title="Phopo Hill"/>
-      <heading id="Nyanyangu" title="Nyanyangu"/>
-      <heading id="LakeChilwa" title="Lake Chilwa"/>
-      <heading id="Mwenerondoarea" title="Mwenerondo area">
-        <synonym value="Mwenerondo"/>
-      </heading>
-      <heading id="MosselBay" title="Mossel Bay"/>
-      <heading id="Tumbuka" title="Tumbuka"/>
-      <heading id="Chembe" title="Chembe">
-        <heading id="NyumguShrine" title="Nyumgu Shrine"/>
-      </heading>
-      <heading id="LiwondeBarraba" title="Liwonde Barraba"/>
-      <heading id="Chickwawa" title="Chickwawa"/>
-      <heading id="Kasungudistrict" title="Kasungu district">
-        <heading id="Chikarivillage" title="Chikari village"/>
-      </heading>
-      <heading id="CapeMacLearPeninsula" title="Cape MacLear Peninsula">
-        <heading id="MawudzuHill" title="Mawudzu Hill"/>
-        <heading id="Nkopearea" title="Nkope area"/>
-        <heading id="MdalaChikowa" title="Mdala Chikowa"/>
-        <heading id="Moto" title="Moto">
-          <synonym value="Moto village"/>
-        </heading>
-      </heading>
-      <heading id="Chikwawaregion" title="Chikwawa region">
-        <synonym value="Chickwawa"/>
-      </heading>
-      <heading id="Karongadistrict" title="Karonga district">
-        <heading id="Chaminade" title="Chaminade"/>
-        <heading id="Vinthukutu" title="Vinthukutu"/>
-        <heading id="ChaminadeWest" title="Chaminade West"/>
-        <heading id="SouthofUraha" title="South of Uraha"/>
-        <heading id="DeepBay" title="Deep Bay"/>
-      </heading>
-    </heading>
-    <heading id="SeychellesIslands" title="Seychelles Islands">
-      <heading id="MaheIsland" title="Mahe' Island">
-        <synonym value="Mahe Island"/>
-      </heading>
-    </heading>
+			<synonym value="East Africa"/>
+			<heading id="Eritrea" title="Eritrea">
+				<synonym value="Eretrea"/>
+				<heading id="Asmara" title="Asmara">
+					<synonym value="Asmära"/>
+				</heading>
+				<heading id="Assab" title="Assab"/>
+				<heading id="Koken" title="Koken"/>
+				<heading id="Massawa" title="Massawa"/>
+			</heading>
+			<heading id="Ethiopia" title="Ethiopia">
+				<synonym value="Sheba"/>
+				<synonym value="Ityop'iya"/>
+				<heading id="AddisAbaba" title="Addis Ababa">
+					<heading id="Mercado" title="Mercado">
+						<synonym value="Addis Ababa market"/>
+					</heading>
+				</heading>
+				<heading id="Gondar" title="Gondar"/>
+				<heading id="Harar" title="Harar"/>
+				<heading id="Nazaret" title="Nazaret">
+					<synonym value="Nazarth"/>
+				</heading>
+				<heading id="Shashemeni" title="Shashemeni"/>
+				<heading id="Awash" title="Awash"/>
+				<heading id="NegelliBorera" title="Negelli Borera"/>
+				<heading id="DembiDollo" title="Dembi Dollo"/>
+				<heading id="Borea" title="Borea"/>
+				<heading id="Gambella" title="Gambella"/>
+				<heading id="Lalibela" title="Lalibela"/>
+				<heading id="Axum" title="Axum"/>
+				<heading id="Ambo" title="Ambo"/>
+				<heading id="Awasa" title="Awasa"/>
+				<heading id="Dese" title="Dese"/>
+				<heading id="AwashStation" title="Awash Station"/>
+				<heading id="Jijiga" title="Jijiga"/>
+				<heading id="Jimma" title="Jimma"/>
+				<heading id="Ghion" title="Ghion"/>
+				<heading id="Choaprovince" title="Choa province">
+					<synonym value="Shoa province"/>
+					<heading id="Saulettadistrict" title="Sauletta district"/>
+					<heading id="MelkaKontoure" title="Melka-Kontoure"/>
+				</heading>
+				<heading id="LakeBeseka" title="Lake Beseka"/>
+				<heading id="AddisAlam" title="Addis Alam"/>
+			</heading>
+			<heading id="Kenya" title="Kenya">
+				<heading id="Nairobi" title="Nairobi"/>
+				<heading id="TurkanaDistrict" title="Turkana District">
+					<heading id="Kalalokoilriver" title="Kalalokoil river"/>
+					<heading id="Muruaret" title="Muruaret">
+						<synonym value="Muruaret Hill"/>
+					</heading>
+				</heading>
+				<heading id="Basuba" title="Basuba"/>
+				<heading id="Mangai" title="Mangai"/>
+				<heading id="Tiriki" title="Tiriki"/>
+				<heading id="GobDogo" title="Gob Dogo"/>
+				<heading id="GobNebey" title="Gob Nebey"/>
+				<heading id="GobOre" title="Gob Ore"/>
+				<heading id="GobLogologo" title="Gob Logologo"/>
+				<heading id="GobUyam" title="Gob Uyam"/>
+				<heading id="GobChowule" title="Gob Chowule"/>
+				<heading id="GobWambile" title="Gob Wambile"/>
+				<heading id="GobDabalene" title="Gob Dabalene"/>
+				<heading id="GobEsimgalgidele" title="Gob Esimgalgidele"/>
+				<heading id="GobKorr" title="Gob Korr"/>
+				<heading id="Elementeita" title="Elementeita"/>
+			</heading>
+			<heading id="DjiboutiCountry" title="Djibouti">
+				<heading id="DjiboutiCity" title="Djibouti"/>
+			</heading>
+			<heading id="Somalia" title="Somalia">
+				<heading id="Somaliland" title="Somaliland">
+					<heading id="Berbera" title="Berbera"/>
+				</heading>
+				<heading id="Mogadishu" title="Mogadishu"/>
+				<heading id="KarimHeganeh" title="Karim Heganeh"/>
+				<heading id="AbdulKadir" title="Abdul Kadir">
+					<synonym value="Abdul Qadr"/>
+				</heading>
+				<heading id="GaanLibah" title="Gaan Libah"/>
+			</heading>
+			<heading id="Tanzania" title="Tanzania">
+				<synonym value="Tanganyika"/>
+				<heading id="OlduvaiGorge" title="Olduvai Gorge"/>
+				<heading id="MbuluDistrict" title="Mbulu District"/>
+			</heading>
+			<heading id="Malawi" title="Malawi">
+				<heading id="Khamburavillage" title="Khambura village"/>
+				<heading id="Kisi" title="Kisi"/>
+				<heading id="ShireHighlands" title="Shire Highlands"/>
+				<heading id="LuchenyaPlateau" title="Luchenya Plateau"/>
+				<heading id="Motovillage" title="Moto village"/>
+				<heading id="PhopoHill" title="Phopo Hill"/>
+				<heading id="Nyanyangu" title="Nyanyangu"/>
+				<heading id="LakeChilwa" title="Lake Chilwa"/>
+				<heading id="Mwenerondoarea" title="Mwenerondo area">
+					<synonym value="Mwenerondo"/>
+				</heading>
+				<heading id="MosselBay" title="Mossel Bay"/>
+				<heading id="Tumbuka" title="Tumbuka"/>
+				<heading id="Chembe" title="Chembe">
+					<heading id="NyumguShrine" title="Nyumgu Shrine"/>
+				</heading>
+				<heading id="LiwondeBarraba" title="Liwonde Barraba"/>
+				<heading id="Chickwawa" title="Chickwawa"/>
+				<heading id="Kasungudistrict" title="Kasungu district">
+					<heading id="Chikarivillage" title="Chikari village"/>
+				</heading>
+				<heading id="CapeMacLearPeninsula" title="Cape MacLear Peninsula">
+					<heading id="MawudzuHill" title="Mawudzu Hill"/>
+					<heading id="Nkopearea" title="Nkope area"/>
+					<heading id="MdalaChikowa" title="Mdala Chikowa"/>
+					<heading id="Moto" title="Moto">
+						<synonym value="Moto village"/>
+					</heading>
+				</heading>
+				<heading id="Chikwawaregion" title="Chikwawa region">
+					<synonym value="Chickwawa"/>
+				</heading>
+				<heading id="Karongadistrict" title="Karonga district">
+					<heading id="Chaminade" title="Chaminade"/>
+					<heading id="Vinthukutu" title="Vinthukutu"/>
+					<heading id="ChaminadeWest" title="Chaminade West"/>
+					<heading id="SouthofUraha" title="South of Uraha"/>
+					<heading id="DeepBay" title="Deep Bay"/>
+				</heading>
+			</heading>
+			<heading id="SeychellesIslands" title="Seychelles Islands">
+				<heading id="MaheIsland" title="Mahe' Island">
+					<synonym value="Mahe Island"/>
+				</heading>
+			</heading>
 		</heading>
 		<heading id="SouthernAfrica" title="Southern Africa">  <!-- ALPHABETIZE! -->
-    <synonym value="South Africa"/>
-    <heading id="Madagascar" title="Madagascar">
-      <heading id="Antananarivo" title="Antananarivo"/>
-    </heading>
-    <heading id="RepublicofSouthAfrica" title="Republic of South Africa">
-      <heading id="Limpopoprovince" title="Limpopo province"/>
-      <heading id="Mpumalangaprovince" title="Mpumalanga province"/>
-      <heading id="KwazuluNatalprovince" title="Kwazulu-Natal province">
-        <heading id="Durban" title="Durban"/>
-      </heading>
-      <heading id="Gautengprovince" title="Gauteng province">
-        <heading id="Pretoria" title="Pretoria"/>
-        <heading id="Johannesburg" title="Johannesburg"/>
-        <heading id="Melville" title="Melville"/>
-        <heading id="Transvaalregion" title="Transvaal region">
-          <synonym value="Transvaal"/>
-          <heading id="CaveofHearths" title="Cave of Hearths"/>
-          <heading id="GladysvaleCave" title="Gladysvale Cave"/>
-          <heading id="MakapanLimeworks" title="Makapan Limeworks"/>
-          <heading id="MapungubweHill" title="Mapungubwe Hill"/>
-        </heading>
-        <heading id="Rooiwal" title="Rooiwal"/>
-      </heading>
-      <heading id="NorthWestprovince" title="North West province">
-        <heading id="Vryburg" title="Vryburg"/>
-        <heading id="Taung" title="Taung">
-          <heading id="OchreCave" title="Ochre Cave"/>
-        </heading>
-        <heading id="PowerHouseCave" title="Power House Cave"/>
-      </heading>
-      <heading id="OrangeFreeStateprovince" title="Orange Free State province">
-        <heading id="Zeekoigat" title="Zeekoigat"/>
-        <heading id="Clarens" title="Clarens"/>
-        <heading id="Bloemfontein" title="Bloemfontein"/>
-        <heading id="Thabanohee" title="Thabanohee"/>
-        <heading id="Thabanchu" title="Thabanchu"/>
-        <heading id="Harrismith" title="Harrismith"/>
-      </heading>
-      <heading id="Capeprovince" title="Cape province">
-        <heading id="WesternCapeprovince" title="Western Cape province">
-          <heading id="Mosselbaai" title="Mosselbaai">
-            <synonym value="Mossel Bay"/>
-          </heading>
-          <heading id="CapeTown" title="Cape Town"/>
-          <heading id="Montagu" title="Montagu">
-            <synonym value="Montagu Cave"/>
-          </heading>
-        </heading>
-        <heading id="NorthernCapeprovince" title="Northern Cape province">
-          <heading id="Rooidam" title="Rooidam"/>
-          <heading id="Doornlaagtesite" title="Doornlaagte site"/>
-          <heading id="PowersSite" title="Power's Site"/>
-          <heading id="Pneil" title="Pneil"/>
-          <heading id="Nooitgedaeht" title="Nooitgedaeht"/>
-          <heading id="Kimberley" title="Kimberley"/>
-          <heading id="RivertononVoal" title="Riverton-on-Voal">
-            <synonym value="Riverton-on-Vaal"/>
-          </heading>
-          <heading id="WonderwerkCave" title="Wonderwerk Cave"/>
-        </heading>
-        <heading id="EasternCapeprovince" title="Eastern Cape province">
-          <heading id="Maclear" title="Maclear"/>
-          <heading id="Umtata" title="Umtata"/>
-        </heading>
-        <heading id="BarklyWest" title="Barkly West"/>
-        <heading id="Taungsarea" title="Taungs area"/>
-        <heading id="BrakfonteinFarm" title="Brakfontein Farm"/>
-      </heading>
-      <heading id="Witkrans" title="Witkrans"/>
-      <heading id="Craddock" title="Craddock"/>
-      <heading id="Geelhoutboom" title="Geelhoutboom"/>
-    </heading>
-    <heading id="Mozambique" title="Mozambique">
-      <heading id="Maputo" title="Maputo"/>
-    </heading>
-    <heading id="Zimbabwe" title="Zimbabwe">
-      <synonym value="Rhodesia"/>
-      <synonym value="Southern Rhodesia"/>
-      <heading id="Harare" title="Harare"/>
-      <heading id="Bulawayo" title="Bulawayo"/>
-      <heading id="Mtoko" title="Mtoko"/>
-      <heading id="Gatoomaprovince" title="Gatooma province">
-        <heading id="Montanafarmsite" title="Montana farm site"/>
-      </heading>
-      <heading id="VictoriaFalls" title="Victoria Falls"/>
-      <heading id="GreatZimbabwe" title="Great Zimbabwe"/>
-      <heading id="GokomereHill" title="Gokomere Hill">
-        <heading id="TunnelCave" title="Tunnel Cave">
-          <synonym value="Tunnel site"/>
-        </heading>
-      </heading>
-      <heading id="Khamiruins" title="Khami ruins"/>
-      <heading id="MtetengweMoundsite" title="Mtetengwe Mound site"/>
-      <heading id="Sinoiacaves" title="Sinoia caves">
-        <synonym value="Chinhoy cave"/>
-        <synonym value="Chinhoyi"/>
-        <synonym value="Sinoia"/>
-      </heading>
-      <heading id="WoolandaleRanch" title="Woolandale Ranch">
-        <synonym value="Woolandale Ranch Mound 2"/>
-      </heading>
-      <heading id="UmgusaRiver" title="Umgusa River"/>
-    </heading>
-    <heading id="Namibia" title="Namibia">
-      <heading id="Ovamuo" title="Ovamuo"/>
-      <heading id="Windhoek" title="Windhoek"/>
-      <heading id="WalvisBay" title="Walvis Bay"/>
-      <heading id="Brandberg" title="Brandberg"/>
-      <heading id="ErongoMountainregion" title="Erongo Mountain region">
-        <heading id="GreatElephantShelter" title="Great Elephant Shelter"/>
-        <heading id="BleissnerShelter" title="Bleissner Shelter"/>
-        <heading id="PhillipCave" title="Phillip Cave"/>
-      </heading>
-      <heading id="KalkPlateau" title="Kalk Plateau">
-        <heading id="GoamusFarm" title="Goamus Farm"/>
-      </heading>
-      <heading id="Sambio" title="Sambio"/>
-      <heading id="NabaosFarm" title="Nabaos Farm"/>
-      <heading id="KaokeveldFarm" title="Kaokeveld Farm">
-        <synonym value="Farm 62"/>
-        <synonym value="Overholzer"/>
-      </heading>
-      <heading id="Spitzkopperegion" title="Spitzkoppe region">
-        <synonym value="Spitzkoppe"/>
-      </heading>
-      <heading id="Tses" title="Tses"/>
-    </heading>
-    <heading id="Lesotho" title="Lesotho">
-      <heading id="Maseru" title="Maseru"/>
-    </heading>
-    <heading id="Angola" title="Angola">
-      <heading id="Huambo" title="Huambo"/>
-      <heading id="Matafari" title="Matafari"/>
-      <heading id="Dundo" title="Dundo"/>
-      <heading id="FuriImine" title="Furi I mine"/>
-    </heading>
-    <heading id="Botswana" title="Botswana">
-      <heading id="Gaborone" title="Gaborone"/>
-      <heading id="Okavangodelta" title="Okavango delta">
-        <synonym value="Okovango"/>
-      </heading>
-      <heading id="Ngamiland" title="Ngamiland"/>
-      <heading id="Bechuanaland" title="Bechuanaland"/>
-    </heading>
-    <heading id="Swaziland" title="Swaziland">
-      <heading id="Mbabane" title="Mbabane"/>
-    </heading>
-    <heading id="Comoros" title="Comoros">
-      <heading id="Moroni" title="Moroni"/>
-    </heading>
-    <heading id="Zambia" title="Zambia">
-      <synonym value="Nothern Rhodesia"/>
-    </heading>
+			<synonym value="South Africa"/>
+			<heading id="Madagascar" title="Madagascar">
+			<heading id="Antananarivo" title="Antananarivo"/>
+			</heading>
+			<heading id="RepublicofSouthAfrica" title="Republic of South Africa">
+			<heading id="Limpopoprovince" title="Limpopo province"/>
+			<heading id="Mpumalangaprovince" title="Mpumalanga province"/>
+			<heading id="KwazuluNatalprovince" title="Kwazulu-Natal province">
+			<heading id="Durban" title="Durban"/>
+			</heading>
+			<heading id="Gautengprovince" title="Gauteng province">
+			<heading id="Pretoria" title="Pretoria"/>
+			<heading id="Johannesburg" title="Johannesburg"/>
+			<heading id="Melville" title="Melville"/>
+			<heading id="Transvaalregion" title="Transvaal region">
+			<synonym value="Transvaal"/>
+			<heading id="CaveofHearths" title="Cave of Hearths"/>
+			<heading id="GladysvaleCave" title="Gladysvale Cave"/>
+			<heading id="MakapanLimeworks" title="Makapan Limeworks"/>
+			<heading id="MapungubweHill" title="Mapungubwe Hill"/>
+			</heading>
+			<heading id="Rooiwal" title="Rooiwal"/>
+			</heading>
+			<heading id="NorthWestprovince" title="North West province">
+			<heading id="Vryburg" title="Vryburg"/>
+			<heading id="Taung" title="Taung">
+			<heading id="OchreCave" title="Ochre Cave"/>
+			</heading>
+			<heading id="PowerHouseCave" title="Power House Cave"/>
+			</heading>
+			<heading id="OrangeFreeStateprovince" title="Orange Free State province">
+			<heading id="Zeekoigat" title="Zeekoigat"/>
+			<heading id="Clarens" title="Clarens"/>
+			<heading id="Bloemfontein" title="Bloemfontein"/>
+			<heading id="Thabanohee" title="Thabanohee"/>
+			<heading id="Thabanchu" title="Thabanchu"/>
+			<heading id="Harrismith" title="Harrismith"/>
+			</heading>
+			<heading id="Capeprovince" title="Cape province">
+			<heading id="WesternCapeprovince" title="Western Cape province">
+			<heading id="Mosselbaai" title="Mosselbaai">
+			<synonym value="Mossel Bay"/>
+			</heading>
+			<heading id="CapeTown" title="Cape Town"/>
+			<heading id="Montagu" title="Montagu">
+			<synonym value="Montagu Cave"/>
+			</heading>
+			</heading>
+			<heading id="NorthernCapeprovince" title="Northern Cape province">
+			<heading id="Rooidam" title="Rooidam"/>
+			<heading id="Doornlaagtesite" title="Doornlaagte site"/>
+			<heading id="PowersSite" title="Power's Site"/>
+			<heading id="Pneil" title="Pneil"/>
+			<heading id="Nooitgedaeht" title="Nooitgedaeht"/>
+			<heading id="Kimberley" title="Kimberley"/>
+			<heading id="RivertononVoal" title="Riverton-on-Voal">
+			<synonym value="Riverton-on-Vaal"/>
+			</heading>
+			<heading id="WonderwerkCave" title="Wonderwerk Cave"/>
+			</heading>
+			<heading id="EasternCapeprovince" title="Eastern Cape province">
+			<heading id="Maclear" title="Maclear"/>
+			<heading id="Umtata" title="Umtata"/>
+			</heading>
+			<heading id="BarklyWest" title="Barkly West"/>
+			<heading id="Taungsarea" title="Taungs area"/>
+			<heading id="BrakfonteinFarm" title="Brakfontein Farm"/>
+			</heading>
+			<heading id="Witkrans" title="Witkrans"/>
+			<heading id="Craddock" title="Craddock"/>
+			<heading id="Geelhoutboom" title="Geelhoutboom"/>
+			</heading>
+			<heading id="Mozambique" title="Mozambique">
+			<heading id="Maputo" title="Maputo"/>
+			</heading>
+			<heading id="Zimbabwe" title="Zimbabwe">
+			<synonym value="Rhodesia"/>
+			<synonym value="Southern Rhodesia"/>
+			<heading id="Harare" title="Harare"/>
+			<heading id="Bulawayo" title="Bulawayo"/>
+			<heading id="Mtoko" title="Mtoko"/>
+			<heading id="Gatoomaprovince" title="Gatooma province">
+			<heading id="Montanafarmsite" title="Montana farm site"/>
+			</heading>
+			<heading id="VictoriaFalls" title="Victoria Falls"/>
+			<heading id="GreatZimbabwe" title="Great Zimbabwe"/>
+			<heading id="GokomereHill" title="Gokomere Hill">
+			<heading id="TunnelCave" title="Tunnel Cave">
+			<synonym value="Tunnel site"/>
+			</heading>
+			</heading>
+			<heading id="Khamiruins" title="Khami ruins"/>
+			<heading id="MtetengweMoundsite" title="Mtetengwe Mound site"/>
+			<heading id="Sinoiacaves" title="Sinoia caves">
+			<synonym value="Chinhoy cave"/>
+			<synonym value="Chinhoyi"/>
+			<synonym value="Sinoia"/>
+			</heading>
+			<heading id="WoolandaleRanch" title="Woolandale Ranch">
+			<synonym value="Woolandale Ranch Mound 2"/>
+			</heading>
+			<heading id="UmgusaRiver" title="Umgusa River"/>
+			</heading>
+			<heading id="Namibia" title="Namibia">
+			<heading id="Ovamuo" title="Ovamuo"/>
+			<heading id="Windhoek" title="Windhoek"/>
+			<heading id="WalvisBay" title="Walvis Bay"/>
+			<heading id="Brandberg" title="Brandberg"/>
+			<heading id="ErongoMountainregion" title="Erongo Mountain region">
+			<heading id="GreatElephantShelter" title="Great Elephant Shelter"/>
+			<heading id="BleissnerShelter" title="Bleissner Shelter"/>
+			<heading id="PhillipCave" title="Phillip Cave"/>
+			</heading>
+			<heading id="KalkPlateau" title="Kalk Plateau">
+			<heading id="GoamusFarm" title="Goamus Farm"/>
+			</heading>
+			<heading id="Sambio" title="Sambio"/>
+			<heading id="NabaosFarm" title="Nabaos Farm"/>
+			<heading id="KaokeveldFarm" title="Kaokeveld Farm">
+			<synonym value="Farm 62"/>
+			<synonym value="Overholzer"/>
+			</heading>
+			<heading id="Spitzkopperegion" title="Spitzkoppe region">
+			<synonym value="Spitzkoppe"/>
+			</heading>
+			<heading id="Tses" title="Tses"/>
+			</heading>
+			<heading id="Lesotho" title="Lesotho">
+			<heading id="Maseru" title="Maseru"/>
+			</heading>
+			<heading id="Angola" title="Angola">
+			<heading id="Huambo" title="Huambo"/>
+			<heading id="Matafari" title="Matafari"/>
+			<heading id="Dundo" title="Dundo"/>
+			<heading id="FuriImine" title="Furi I mine"/>
+			</heading>
+			<heading id="Botswana" title="Botswana">
+			<heading id="Gaborone" title="Gaborone"/>
+			<heading id="Okavangodelta" title="Okavango delta">
+			<synonym value="Okovango"/>
+			</heading>
+			<heading id="Ngamiland" title="Ngamiland"/>
+			<heading id="Bechuanaland" title="Bechuanaland"/>
+			</heading>
+			<heading id="Swaziland" title="Swaziland">
+			<heading id="Mbabane" title="Mbabane"/>
+			</heading>
+			<heading id="Comoros" title="Comoros">
+			<heading id="Moroni" title="Moroni"/>
+			</heading>
+			<heading id="Zambia" title="Zambia">
+			<synonym value="Nothern Rhodesia"/>
+			</heading>
 		</heading>
 		<heading id="WesternAfrica" title="Western Africa">  <!-- ALPHABETIZE! -->
-    <synonym value="West Africa"/>
-    <heading id="Mauritania" title="Mauritania">
-      <synonym value="Muritaniya"/>
-      <heading id="Nouakchottdistrict" title="Nouakchott district"/>
-      <heading id="Adrarregion" title="Adrar region">
-        <heading id="WadiArmakou" title="Wadi Armakou"/>
-        <heading id="Aderg" title="Aderg"/>
-        <heading id="TartelBeyyed" title="Tart el Beyyed">
-          <synonym value="El Beyyed"/>
-        </heading>
-        <heading id="Taz" title="Taz"/>
-        <heading id="Hamada" title="Hamada"/>
-        <heading id="Atar" title="Atar"/>
-        <heading id="Nouakchott" title="Nouakchott"/>
-        <heading id="Tazazmout" title="Tazazmout"/>
-      </heading>
-      <heading id="Braknaregion" title="Brakna region"/>
-      <heading id="Trarzaregion" title="Trarza region"/>
-      <heading id="HodhechCharguiregion" title="Hodh ech Chargui region"/>
-      <heading id="Tagantregion" title="Tagant region"/>
-      <heading id="DakhletNouadhibouregion" title="Dakhlet Nouadhibou region"/>
-      <heading id="TirisZemmourregion" title="Tiris Zemmour region"/>
-      <heading id="Assabaregion" title="Assaba region"/>
-      <heading id="Gorgolregion" title="Gorgol region"/>
-      <heading id="Guidimakaregion" title="Guidimaka region"/>
-      <heading id="HodhElGharbiregion" title="Hodh El Gharbi region"/>
-      <heading id="Inchiriregion" title="Inchiri region"/>
-      <heading id="Dakarregion" title="Dakar region"/>
-    </heading>
-    <heading id="Benin" title="Benin">
-      <heading id="PortoNovo" title="Porto Novo"/>
-    </heading>
-    <heading id="Togo" title="Togo">
-      <heading id="Lome" title="Lome"/>
-    </heading>
-    <heading id="Guinea" title="Guinea">
-      <heading id="Conakry" title="Conakry"/>
-    </heading>
-    <heading id="GuineaBissau" title="Guinea Bissau">
-      <heading id="Bissau" title="Bissau"/>
-    </heading>
-    <heading id="SierraLeone" title="Sierra Leone">
-      <heading id="Freetown" title="Freetown"/>
-    </heading>
-    <heading id="Liberia" title="Liberia">
-      <heading id="Monrovia" title="Monrovia"/>
-    </heading>
-    <heading id="Ghana" title="Ghana">
-      <heading id="Accra" title="Accra"/>
-      <heading id="Dawu" title="Dawu">
-        <synonym value="Dawn"/>
-      </heading>
-      <heading id="Legon" title="Legon"/>
-      <heading id="Adwuku" title="Adwuku"/>
-    </heading>
-    <heading id="Nigeria" title="Nigeria">
-      <heading id="Abuja" title="Abuja"/>
-      <heading id="Udi" title="Udi"/>
-      <heading id="Ife" title="Ife">
-        <heading id="IfaYemoo" title="Ifa Yemoo"/>
-      </heading>
-    </heading>
-    <heading id="Senegal" title="Senegal">
-      <heading id="Dakar" title="Dakar">
-        <synonym value="Dakar region"/>
-      </heading>
-      <heading id="Rufisque" title="Rufisque"/>
-    </heading>
-    <heading id="Mali" title="Mali">
-      <heading id="Bamako" title="Bamako"/>
-      <heading id="Karkarichinkat" title="Karkarichinkat"/>
-    </heading>
-    <heading id="Gabon" title="Gabon">
-      <heading id="Libreville" title="Libreville"/>
-    </heading>
-    <heading id="Gambia" title="Gambia">
-      <heading id="Banjul" title="Banjul"/>
-    </heading>
-    <heading id="CotedIvoire" title="Cote d'Ivoire">
-      <synonym value="Ivory Coast"/>
-      <heading id="Abidjan" title="Abidjan"/>
-      <heading id="Anyi" title="Anyi"/>
-    </heading>
-    <heading id="EquatorialGuinea" title="Equatorial Guinea">
-      <heading id="Malabo" title="Malabo"/>
-      <heading id="Bata" title="Bata"/>
-    </heading>
-    <heading id="Cameroon" title="Cameroon">
-      <heading id="Douala" title="Douala"/>
-      <heading id="Yaounde" title="Yaounde"/>
-    </heading>
-    <heading id="SaoTomePrincipe" title="Sao Tome &amp; Principe">
-      <heading id="SaoTome" title="Sao Tome"/>
-    </heading>
-    <heading id="BurkinaFaso" title="Burkina Faso">
-      <heading id="Ouagadougou" title="Ouagadougou"/>
-    </heading>
-    <heading id="CapeVerde" title="Cape Verde">
-      <synonym value="Ca'Verde"/>
-      <heading id="Praia" title="Praia"/>
-    </heading>
+			<synonym value="West Africa"/>
+			<heading id="Mauritania" title="Mauritania">
+			<synonym value="Muritaniya"/>
+			<heading id="Nouakchottdistrict" title="Nouakchott district"/>
+			<heading id="Adrarregion" title="Adrar region">
+			<heading id="WadiArmakou" title="Wadi Armakou"/>
+			<heading id="Aderg" title="Aderg"/>
+			<heading id="TartelBeyyed" title="Tart el Beyyed">
+			<synonym value="El Beyyed"/>
+			</heading>
+			<heading id="Taz" title="Taz"/>
+			<heading id="Hamada" title="Hamada"/>
+			<heading id="Atar" title="Atar"/>
+			<heading id="Nouakchott" title="Nouakchott"/>
+			<heading id="Tazazmout" title="Tazazmout"/>
+			</heading>
+			<heading id="Braknaregion" title="Brakna region"/>
+			<heading id="Trarzaregion" title="Trarza region"/>
+			<heading id="HodhechCharguiregion" title="Hodh ech Chargui region"/>
+			<heading id="Tagantregion" title="Tagant region"/>
+			<heading id="DakhletNouadhibouregion" title="Dakhlet Nouadhibou region"/>
+			<heading id="TirisZemmourregion" title="Tiris Zemmour region"/>
+			<heading id="Assabaregion" title="Assaba region"/>
+			<heading id="Gorgolregion" title="Gorgol region"/>
+			<heading id="Guidimakaregion" title="Guidimaka region"/>
+			<heading id="HodhElGharbiregion" title="Hodh El Gharbi region"/>
+			<heading id="Inchiriregion" title="Inchiri region"/>
+			<heading id="Dakarregion" title="Dakar region"/>
+			</heading>
+			<heading id="Benin" title="Benin">
+			<heading id="PortoNovo" title="Porto Novo"/>
+			</heading>
+			<heading id="Togo" title="Togo">
+			<heading id="Lome" title="Lome"/>
+			</heading>
+			<heading id="Guinea" title="Guinea">
+			<heading id="Conakry" title="Conakry"/>
+			</heading>
+			<heading id="GuineaBissau" title="Guinea Bissau">
+			<heading id="Bissau" title="Bissau"/>
+			</heading>
+			<heading id="SierraLeone" title="Sierra Leone">
+			<heading id="Freetown" title="Freetown"/>
+			</heading>
+			<heading id="Liberia" title="Liberia">
+			<heading id="Monrovia" title="Monrovia"/>
+			</heading>
+			<heading id="Ghana" title="Ghana">
+			<heading id="Accra" title="Accra"/>
+			<heading id="Dawu" title="Dawu">
+			<synonym value="Dawn"/>
+			</heading>
+			<heading id="Legon" title="Legon"/>
+			<heading id="Adwuku" title="Adwuku"/>
+			</heading>
+			<heading id="Nigeria" title="Nigeria">
+			<heading id="Abuja" title="Abuja"/>
+			<heading id="Udi" title="Udi"/>
+			<heading id="Ife" title="Ife">
+			<heading id="IfaYemoo" title="Ifa Yemoo"/>
+			</heading>
+			</heading>
+			<heading id="Senegal" title="Senegal">
+			<heading id="Dakar" title="Dakar">
+			<synonym value="Dakar region"/>
+			</heading>
+			<heading id="Rufisque" title="Rufisque"/>
+			</heading>
+			<heading id="Mali" title="Mali">
+			<heading id="Bamako" title="Bamako"/>
+			<heading id="Karkarichinkat" title="Karkarichinkat"/>
+			</heading>
+			<heading id="Gabon" title="Gabon">
+			<heading id="Libreville" title="Libreville"/>
+			</heading>
+			<heading id="Gambia" title="Gambia">
+			<heading id="Banjul" title="Banjul"/>
+			</heading>
+			<heading id="CotedIvoire" title="Cote d'Ivoire">
+			<synonym value="Ivory Coast"/>
+			<heading id="Abidjan" title="Abidjan"/>
+			<heading id="Anyi" title="Anyi"/>
+			</heading>
+			<heading id="EquatorialGuinea" title="Equatorial Guinea">
+			<heading id="Malabo" title="Malabo"/>
+			<heading id="Bata" title="Bata"/>
+			</heading>
+			<heading id="Cameroon" title="Cameroon">
+			<heading id="Douala" title="Douala"/>
+			<heading id="Yaounde" title="Yaounde"/>
+			</heading>
+			<heading id="SaoTomePrincipe" title="Sao Tome &amp; Principe">
+			<heading id="SaoTome" title="Sao Tome"/>
+			</heading>
+			<heading id="BurkinaFaso" title="Burkina Faso">
+			<heading id="Ouagadougou" title="Ouagadougou"/>
+			</heading>
+			<heading id="CapeVerde" title="Cape Verde">
+			<synonym value="Ca'Verde"/>
+			<heading id="Praia" title="Praia"/>
+			</heading>
 		</heading>
 		<heading id="CentralAfrica" title="Central Africa">  <!-- ALPHABETIZE! -->
-    <heading id="Zambia" title="Zambia">
-      <synonym value="Northern Rhodesia"/>
-      <heading id="Lusaka" title="Lusaka"/>
-      <heading id="KalamboFalls" title="Kalambo Falls">
-        <heading id="KalamboFallsSiteA" title="Kalambo Falls, Site A"/>
-        <heading id="KalamboFallsSiteB" title="Kalambo Falls, Site B"/>
-        <heading id="KalamboFallsSiteD" title="Kalambo Falls, Site D"/>
-      </heading>
-      <heading id="VictoriaFalls" title="Victoria Falls"/>
-      <heading id="ZambesiValley" title="Zambesi Valley"/>
-    </heading>
-    <heading id="CentralAfricanRepublic" title="Central African Republic">
-      <heading id="Bangui" title="Bangui"/>
-    </heading>
-    <heading id="Uganda" title="Uganda">
-      <heading id="Kampalu" title="Kampalu"/>
-      <heading id="NyabusoraKageraRiver" title="Nyabusora Kagera River"/>
-      <heading id="KanteyoreIsland" title="Kanteyore Island"/>
-      <heading id="Entebee" title="Entebee">
-        <synonym value="Entebee rock shelter"/>
-      </heading>
-      <heading id="Karamoja" title="Karamoja"/>
-      <heading id="OrichingaValley" title="Orichinga Valley"/>
-    </heading>
-    <heading id="Burundi" title="Burundi">
-      <heading id="Bujumbura" title="Bujumbura"/>
-      <heading id="Nyarunazi" title="Nyarunazi"/>
-    </heading>
-    <heading id="Rwanda" title="Rwanda">
-      <heading id="Kigali" title="Kigali"/>
-      <heading id="LakeVictoria" title="Lake Victoria"/>
-    </heading>
-    <heading id="DemocraticRepublicoftheCongo" title="Democratic Republic of the Congo">
-      <synonym value="Zaire"/>
-      <heading id="CentralBantu" title="Central Bantu"/>
-      <heading id="Kinshasa" title="Kinshasa">
-        <synonym value="Leopoldville"/>
-        <heading id="giteA" title="gite A"/>
-      </heading>
-      <heading id="Likasi" title="Likasi"/>
-      <heading id="Lubumbashi" title="Lubumbashi"/>
-      <heading id="Kasaiprovince" title="Kasai province"/>
-      <heading id="Shabaprovince" title="Shaba province"/>
-      <heading id="Kivuprovince" title="Kivu province">
-        <heading id="KasongoManiema" title="Kasongo-Maniema">
-          <synonym value="Kasongo-Maniema Site"/>
-        </heading>
-      </heading>
-      <heading id="Lukala" title="Lukala">
-        <synonym value="Tukala"/>
-      </heading>
-      <heading id="Manianga" title="Manianga"/>
-      <heading id="Katangaprovince" title="Katanga province">
-        <heading id="Sanga" title="Sanga"/>
-        <heading id="Katongo" title="Katongo"/>
-      </heading>
-    </heading>
-    <heading id="Congo" title="Congo">
-      <heading id="Brazzaville" title="Brazzaville"/>
-    </heading>
+			<heading id="Zambia" title="Zambia">
+			<synonym value="Northern Rhodesia"/>
+			<heading id="Lusaka" title="Lusaka"/>
+			<heading id="KalamboFalls" title="Kalambo Falls">
+			<heading id="KalamboFallsSiteA" title="Kalambo Falls, Site A"/>
+			<heading id="KalamboFallsSiteB" title="Kalambo Falls, Site B"/>
+			<heading id="KalamboFallsSiteD" title="Kalambo Falls, Site D"/>
+			</heading>
+			<heading id="VictoriaFalls" title="Victoria Falls"/>
+			<heading id="ZambesiValley" title="Zambesi Valley"/>
+			</heading>
+			<heading id="CentralAfricanRepublic" title="Central African Republic">
+			<heading id="Bangui" title="Bangui"/>
+			</heading>
+			<heading id="Uganda" title="Uganda">
+			<heading id="Kampalu" title="Kampalu"/>
+			<heading id="NyabusoraKageraRiver" title="Nyabusora Kagera River"/>
+			<heading id="KanteyoreIsland" title="Kanteyore Island"/>
+			<heading id="Entebee" title="Entebee">
+			<synonym value="Entebee rock shelter"/>
+			</heading>
+			<heading id="Karamoja" title="Karamoja"/>
+			<heading id="OrichingaValley" title="Orichinga Valley"/>
+			</heading>
+			<heading id="Burundi" title="Burundi">
+			<heading id="Bujumbura" title="Bujumbura"/>
+			<heading id="Nyarunazi" title="Nyarunazi"/>
+			</heading>
+			<heading id="Rwanda" title="Rwanda">
+			<heading id="Kigali" title="Kigali"/>
+			<heading id="LakeVictoria" title="Lake Victoria"/>
+			</heading>
+			<heading id="DemocraticRepublicoftheCongo" title="Democratic Republic of the Congo">
+			<synonym value="Zaire"/>
+			<heading id="CentralBantu" title="Central Bantu"/>
+			<heading id="Kinshasa" title="Kinshasa">
+			<synonym value="Leopoldville"/>
+			<heading id="giteA" title="gite A"/>
+			</heading>
+			<heading id="Likasi" title="Likasi"/>
+			<heading id="Lubumbashi" title="Lubumbashi"/>
+			<heading id="Kasaiprovince" title="Kasai province"/>
+			<heading id="Shabaprovince" title="Shaba province"/>
+			<heading id="Kivuprovince" title="Kivu province">
+			<heading id="KasongoManiema" title="Kasongo-Maniema">
+			<synonym value="Kasongo-Maniema Site"/>
+			</heading>
+			</heading>
+			<heading id="Lukala" title="Lukala">
+			<synonym value="Tukala"/>
+			</heading>
+			<heading id="Manianga" title="Manianga"/>
+			<heading id="Katangaprovince" title="Katanga province">
+			<heading id="Sanga" title="Sanga"/>
+			<heading id="Katongo" title="Katongo"/>
+			</heading>
+			</heading>
+			<heading id="Congo" title="Congo">
+			<heading id="Brazzaville" title="Brazzaville"/>
+			</heading>
 		</heading>
 	</heading>
 	<heading id="Europe" title="Europe">  <!-- ALPHABETIZE -->
@@ -1353,7 +1355,7 @@
 			<heading id="Ukraine" title="Ukraine"/>
 		</heading>
 	</heading>
-	<heading id="Asia" title="Asia">  <!-- Done -->
+	<heading id="Asia" title="Asia">  <!-- done -->
 		<heading id="CentralAsia" title="Central Asia">
 			<heading id="Afghanistan" title="Afghanistan">
 				<heading id="BokharaAfghan" title="Bokhara-Afghan"/>
@@ -1481,121 +1483,155 @@
 			<heading id="Bangladesh" title="Bangladesh"/>
 			<heading id="Bhutan" title="Bhutan"/>
 			<heading id="India" title="India">
-			<heading id="Rajasthan" title="Rajasthan">
-			  <heading id="Gangapur" title="Gangapur">
-			    <synonym value="Gangepur"/>
-			  </heading>
-			  <heading id="Beawar" title="Beawar"/>
-			  <heading id="Bassi" title="Bassi">
-			    <synonym value="Bussi"/>
-			    <synonym value="Basi"/>
-			  </heading>
-			  <heading id="UdaipurDistrict" title="Udaipur District">
-			    <heading id="Nathdwara" title="Nathdwara"/>
-			  </heading>
-			  <heading id="JaipurDistrict" title="Jaipur District">
-			    <synonym value="Jaihpur"/>
-			  </heading>
-			  <heading id="Molela" title="Molela"/>
-			</heading>
-			<heading id="UttarPradesh" title="Uttar Pradesh">
-			  <synonym value="Utter Pradesh"/>
-			  <heading id="AgraDstrict" title="Agra Dstrict"/>
-			  <heading id="Mathura" title="Mathura"/>
-			  <heading id="Moradabad" title="Moradabad"/>
-			  <heading id="Allahabad" title="Allahabad"/>
-			  <heading id="Lucknow" title="Lucknow"/>
-			  <heading id="SitapurDistrict" title="Sitapur District">
-			    <heading id="NadwadiaVillage" title="Nadwadia Village"/>
-			    <heading id="ChoonsaVillage" title="Choonsa Village"/>
-			  </heading>
-			  <heading id="BandaDistrict" title="Banda District"/>
-			  <heading id="MuzaffamagaiDistrict" title="Muzaffamagai District"/>
-			  <heading id="Jhansi" title="Jhansi"/>
-			  <heading id="BareillyDistrict" title="Bareilly District"/>
-			</heading>
-			<heading id="MadhyaPradesh" title="Madhya Pradesh">
-			  <heading id="Narmadavalley" title="Narmada valley"/>
-			  <heading id="Bhagwara" title="Bhagwara"/>
-			</heading>
-			<heading id="DelhiState" title="Delhi State">
-			  <heading id="Mayla" title="Mayla">
-			    <heading id="Baisakli" title="Baisakli"/>
-			  </heading>
-			  <heading id="NewDelhi" title="New Delhi">
-			    <heading id="KurolBoyh" title="Kurol Boyh">
-			      <heading id="AjimalKhanMarket" title="Ajimal Khan Market"/>
-			    </heading>
-			  </heading>
-			  <heading id="OldDelhi" title="Old Delhi"/>
-			</heading>
-			<heading id="Kerala" title="Kerala"/>
-			<heading id="Mysore" title="Mysore">
-			  <heading id="Karnataka" title="Karnataka"/>
-			</heading>
-			<heading id="Bengal" title="Bengal">
-			  <heading id="Kolkata" title="Kolkata">
-			    <synonym value="Calcutta"/>
-			  </heading>
-			  <heading id="Darjeeling" title="Darjeeling"/>
-			  <heading id="BirbhumDistrict" title="Birbhum District">
-			    <heading id="Suri" title="Suri"/>
-			  </heading>
-			  <heading id="Bankura" title="Bankura"/>
-			</heading>
-			<heading id="Mumbai" title="Mumbai">
-			  <synonym value="Bombay"/>
-			</heading>
-			<heading id="Kashmir" title="Kashmir"/>
-			<heading id="Kotah" title="Kotah"/>
-			<heading id="Punjab" title="Punjab"/>
-			<heading id="Shisadar" title="Shisadar"/>
-			<heading id="Surat" title="Surat"/>
-			<heading id="India" title="( India? )"/>
-			<heading id="Parsi" title="Parsi?"/>
-			<heading id="Chennai" title="Chennai">
-			  <synonym value="Madras"/>
-			</heading>
-			<heading id="Gujarat" title="Gujarat">
-			  <synonym value="Gugerat"/>
-			  <heading id="Kutch" title="Kutch">
-			    <synonym value="Cutch"/>
-			    <heading id="Bhuj" title="Bhuj"/>
-			  </heading>
-			  <heading id="Patan" title="Patan"/>
-			  <heading id="Ahmedabad" title="Ahmedabad"/>
-			  <heading id="SaurashtraRegion" title="Saurashtra Region"/>
-			</heading>
-			<heading id="Sindh" title="Sindh"/>
-			<heading id="Indiaunspecified" title="India (unspecified)"/>
-			<heading id="AndhraPradesh" title="Andhra Pradesh">
-			  <heading id="CuddappahDistrict" title="Cuddappah District"/>
-			</heading>
-			<heading id="Assam" title="Assam">
-			  <heading id="LushaiHills" title="Lushai Hills"/>
-			</heading>
-			<heading id="Bihar" title="Bihar">
-			  <heading id="Madhubani" title="Madhubani"/>
-			  <heading id="SantalParganas" title="Santal Parganas"/>
-			  <heading id="Ghurka" title="Ghurka"/>
-			</heading>
-			<heading id="Goa" title="Goa"/>
-			<heading id="HimachalPradesh" title="Himachal Pradesh"/>
-			<heading id="Maharashtra" title="Maharashtra"/>
-			<heading id="NEFA" title="N.E.F.A."/>
-			<heading id="Orissa" title="Orissa"/>
-			<heading id="CentralIndia" title="Central India"/>
-			<heading id="Bharat" title="Bharat"/>
-			<heading id="JammuandKashmir" title="Jammu and Kashmir"/>
-			<heading id="Haryana" title="Haryana"/>
-			<heading id="Karnataka" title="Karnataka"/>
-			<heading id="TamilNadu" title="Tamil Nadu"/>
-			<heading id="Sikkim" title="Sikkim"/>
-			<heading id="ArunchalPradesh" title="Arunchal Pradesh"/>
-			<heading id="Nagaland" title="Nagaland"/>
-			<!-- <heading id="Tripuraxxx" title="Tripura xxx?"/> -->
-			<!-- <heading id="Manipurxxx" title="Manipur xxx?"/> -->
-			<!-- <heading id="Meghalayaxxx" title="Meghalaya xxx?"/> -->
+				<synonym value="( India? )"/>
+				<synonym value="India (unspecified)"/>
+				<heading id="CentralIndia" title="Central India"/>
+				<heading id="IndianStates" title="States" nomatch="true">
+					<heading id="AndhraPradesh" title="Andhra Pradesh">
+						<heading id="CuddappahDistrict" title="Cuddappah District"/>
+					</heading>
+					<heading id="ArunachalPradesh" title="Arunachal Pradesh">
+						<synonym value="Arunchal Pradesh"/>
+						<synonym value="Northeast Frontier Area"/> <!-- original name of state -->
+						<synonym value="North east Frontier Area"/>
+						<synonym value="North-east Frontier Area"/>
+						<synonym value="N.E.F.A."/>
+					</heading>
+					<heading id="Assam" title="Assam">
+						<heading id="LushaiHills" title="Lushai Hills"/>
+					</heading>
+					<heading id="Bihar" title="Bihar">
+						<heading id="Ghurka" title="Ghurka"/>
+						<heading id="Madhubani" title="Madhubani"/>
+						<heading id="SantalParganas" title="Santal Parganas"/>
+					</heading>
+					<heading id="Chhattisgarh" title="Chhattisgarh"/>
+					<heading id="Goa" title="Goa"/>
+					<heading id="Gujarat" title="Gujarat">
+						<synonym value="Gugerat"/>
+						<heading id="Ahmedabad" title="Ahmedabad"/>
+						<heading id="Kutch" title="Kutch">
+							<synonym value="Cutch"/>
+							<heading id="Bhuj" title="Bhuj"/>
+						</heading>
+						<heading id="Patan" title="Patan"/>
+						<heading id="SaurashtraRegion" title="Saurashtra Region"/>
+						<heading id="Surat" title="Surat"/>
+					</heading>
+					<heading id="Haryana" title="Haryana"/>
+					<heading id="HimachalPradesh" title="Himachal Pradesh"/>
+					<heading id="JammuandKashmir" title="Jammu and Kashmir"/>
+					<heading id="Jharkland" title="Jharkland">  <!-- Carved out of the southern part of Bihar in November, 2000 -->
+						<heading id="Bokaro" title="Bokaro"/>
+						<heading id="Dhanbad" title="Dhanbad"/>
+						<heading id="Gumla" title="Gumla"/>
+						<heading id="Hazaribagh" title="Hazaribagh"/>
+						<heading id="Jamshedpur" title="Jamshedpur"/>
+						<heading id="Ranchi" title="Ranchi"/>
+						<heading id="Sindri" title="Sindri"/>
+					</heading>
+					<heading id="Karnataka" title="Karnataka">
+						<heading id="Mysuru" title="Mysuru">  <!-- India formally announced its intention to change 
+							the name in 2005, but as of 12/25/2008, this has not yet been completed. -->
+							<synonym value="Mysore"/>
+						</heading>
+					</heading>
+					<heading id="Kerala" title="Kerala"/>
+					<heading id="MadhyaPradesh" title="Madhya Pradesh">
+						<heading id="Bhagwara" title="Bhagwara"/>
+						<heading id="Narmadavalley" title="Narmada valley"/>
+					</heading>
+					<heading id="Maharashtra" title="Maharashtra">
+						<heading id="Mumbai" title="Mumbai">
+							<synonym value="Bombay"/>
+						</heading>
+					</heading>
+					<heading id="Manipur" title="Manipur"/>
+					<heading id="Meghalaya" title="Meghalaya"/>
+					<heading id="Mizoram" title="Mizoram"/>
+					<heading id="Nagaland" title="Nagaland"/>
+					<heading id="Orissa" title="Orissa"/>
+					<heading id="Punjab" title="Punjab"/>
+					<heading id="Rajasthan" title="Rajasthan">  <!-- done -->
+						<heading id="Bassi" title="Bassi">
+							<synonym value="Bussi"/>
+							<synonym value="Basi"/>
+						</heading>
+						<heading id="Beawar" title="Beawar"/>
+						<heading id="Gangapur" title="Gangapur">
+							<synonym value="Gangepur"/>
+						</heading>
+						<heading id="JaipurDistrict" title="Jaipur District">
+							<synonym value="Jaihpur"/>
+						</heading>
+						<heading id="Molela" title="Molela"/>
+						<heading id="UdaipurDistrict" title="Udaipur District">
+							<heading id="Bhil" title="Bhil"/>  <!-- Tribe, caste, or location? -->
+							<heading id="Mewar" title="Mewar"/>  <!-- Tribe, caste, or location? -->
+							<heading id="Nathdwara" title="Nathdwara"/>
+						</heading>
+					</heading>
+					<heading id="Sikkim" title="Sikkim"/>
+					<heading id="TamilNadu" title="Tamil Nadu">
+						<heading id="Chennai" title="Chennai">
+							<synonym value="Madras"/>
+						</heading>
+					</heading>
+					<heading id="Tripura" title="Tripura"/>
+					<heading id="UttarPradesh" title="Uttar Pradesh">  <!-- done -->
+						<synonym value="Utter Pradesh"/>
+						<heading id="AgraDistrict" title="Agra District">
+							<synonym value="Agra Dstrict"/>
+							<heading id="Agra" title="Agra"/>
+						</heading>
+						<heading id="Allahabad" title="Allahabad"/>
+						<heading id="BandaDistrict" title="Banda District"/>
+						<heading id="BareillyDistrict" title="Bareilly District"/>
+						<heading id="Jhansi" title="Jhansi"/>
+						<heading id="Lucknow" title="Lucknow"/>
+						<heading id="Mathura" title="Mathura"/>
+						<heading id="Moradabad" title="Moradabad"/>
+						<heading id="MuzaffamagaiDistrict" title="Muzaffamagai District"/>
+						<heading id="SitapurDistrict" title="Sitapur District">
+							<heading id="NadwadiaVillage" title="Nadwadia Village"/>
+							<heading id="ChoonsaVillage" title="Choonsa Village"/>
+						</heading>
+					</heading>
+					<heading id="Uttarakhand" title="Uttarakhand"/> <!-- Made a state on November 9, 2000 -->
+					<heading id="WestBengal" title="WestBengal">
+						<synonym value="Bengal"/>  <!-- Beware of East Bengal = Bangladesh -->
+						<heading id="Bankura" title="Bankura"/>
+						<heading id="BirbhumDistrict" title="Birbhum District">
+							<heading id="Suri" title="Suri"/>
+						</heading>
+						<heading id="Darjeeling" title="Darjeeling"/>
+						<heading id="Kolkata" title="Kolkata">
+							<synonym value="Calcutta"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="IndianUnionTerritories" title="Union Territories" nomatch="true">
+					<heading id="DelhiState" title="Delhi State">
+						<synonym value="Delhi State"/>
+						<heading id="Mayla" title="Mayla">
+							<heading id="Baisakli" title="Baisakli"/>
+						</heading>
+						<heading id="NewDelhi" title="New Delhi">
+							<heading id="KurolBoyh" title="Kurol Boyh">
+								<heading id="AjimalKhanMarket" title="Ajimal Khan Market"/>
+								</heading>
+							</heading>
+						<heading id="OldDelhi" title="Old Delhi"/>
+					</heading>
+					<heading id="Ponducherry" title="Ponducherry"/>
+				</heading>
+				<!-- xxxxxxxxxxxxxxxx CONTINUE TO ORGANIZE THE FOLLOWING xxxxxxxxxxxxxxxxxxxxxxxx -->
+				__<heading id="Kashmir" title="Kashmir"/>  <!-- a region covering India, Pakistan, and China -->
+				__<heading id="Kotah" title="Kotah"/>
+				<heading id="Shisadar" title="Shisadar"/>
+				<heading id="Parsi" title="Parsi?"/> <!-- Is this a cultural group? -->
+				<heading id="Sindh" title="Sindh"/> <!-- Is this a cultural group? -->
+				<heading id="Bharat" title="Bharat"/>  <!-- Appears to be a language, and not a region -->
 			</heading>
 			<heading id="MaldiveIslands" title="Maldive Islands"/>
 			<heading id="Nepal" title="Nepal">
@@ -2170,8 +2206,8 @@
 		</heading>
 		<heading id="Melanesia" title="Melanesia"/>
 	</heading>
-	<heading id="TheAmericas" title="The Americas">
-		<heading id="CaribbeanIslands" title="Caribbean Islands">  <!-- ALPHABETIZED -->
+	<heading id="TheAmericas" title="The Americas"><!-- All alphabetized except for Peru and United States -->
+		<heading id="CaribbeanIslands" title="Caribbean Islands">  <!-- done -->
 			<heading id="AntiguaandBarbuda" title="Antigua and Barbuda"/>
 			<heading id="TheBahamas" title="The Bahamas">
 				<synonym value="Bahamas"/>
@@ -2192,42 +2228,43 @@
 			<heading id="USVirginIslands" title="U.S. Virgin Islands"/>
 			<heading id="WestIndies" title="West Indies"/>
 		</heading>
-		<heading id="CentralAmerica" title="Central America">
+		<heading id="CentralAmerica" title="Central America">  <!-- done -->
 			<heading id="Belize" title="Belize">
-			<synonym value="British Honduras"/>
+				<synonym value="British Honduras"/>
 			</heading>
 			<heading id="CostaRica" title="Costa Rica"/>
 			<heading id="ElSalvador" title="El Salvador"/>
 			<heading id="Guatemala" title="Guatemala">
-			<heading id="Jutiapa" title="Jutiapa"/>
-			<heading id="Totonicapan" title="Totonicapan">
-			  <heading id="Totonicapan" title="Totonicapan"/>
-			</heading>
-			<heading id="Solola" title="Solola">
-			  <heading id="SanLucas" title="San Lucas"/>
-			</heading>
+				<heading id="Jutiapa" title="Jutiapa"/>
+				<heading id="Solola" title="Solola">
+					<heading id="SanLucas" title="San Lucas"/>
+				</heading>
+				<heading id="Totonicapan" title="Totonicapan">
+				  <heading id="Totonicapan" title="Totonicapan"/>
+				</heading>
 			</heading>
 			<heading id="Honduras" title="Honduras">
-			<heading id="IslasdelaBahia" title="Islas de la Bahia"/>
+				<heading id="IslasdelaBahia" title="Islas de la Bahia"/>
 			</heading>
 			<heading id="Nicaragua" title="Nicaragua"/>
 			<heading id="Panama" title="Panama">
-			<heading id="Chiriqui" title="Chiriqui"/>
-			<heading id="SanBlasIslands" title="San Blas Islands">
-			  <heading id="Cuna" title="Cuna"/>
-			</heading>
+				<heading id="Chiriqui" title="Chiriqui"/>
+				<heading id="SanBlasIslands" title="San Blas Islands">
+					<heading id="Cuna" title="Cuna"/>
+				</heading>
 			</heading>
 		</heading>
-		<heading id="SouthAmerica" title="South America">
-			<heading id="Bolivia" title="Bolivia">
+		<heading id="SouthAmerica" title="South America">  <!-- All alphabetized except for Peru -->
+			<heading id="Argentina" title="Argentina"/>  <!-- done -->
+			<heading id="Bolivia" title="Bolivia">  <!-- done -->
 				<heading id="Quichua" title="Quichua"/>
 			</heading>
-			<heading id="Brazil" title="Brazil">
+			<heading id="Brazil" title="Brazil">  <!-- done -->
 				<synonym value="Brasil"/>
 				<heading id="Amazonjungle" title="Amazon jungle"/>
 			</heading>
-			<heading id="Chile" title="Chile">
-			<heading id="Santiago" title="Santiago">
+			<heading id="Chile" title="Chile">  <!-- done -->
+				<heading id="Santiago" title="Santiago">
 			  <heading id="ElTemple" title="El Temple"/>
 			</heading>
 			<heading id="Pisagua" title="Pisagua">
@@ -2235,13 +2272,51 @@
 			  <heading id="GuacadePisaguaviejoNo2" title="Guaca de Pisagua, viejo, No. 2"/>
 			</heading>
 			</heading>
-			<heading id="Colombia" title="Colombia">
+			<heading id="Colombia" title="Colombia">  <!-- done -->
 				<heading id="Bolivar" title="Bolivar"/>
 			</heading>
-			<heading id="Peru" title="Peru">
+			<heading id="Ecuador" title="Ecuador">  <!-- done -->
+				<heading id="MantaBeachsite" title="Manta Beach site"/>
+			</heading>
+			<heading id="FrenchGuiana" title="French Guiana"/>  <!-- done -->
+			<heading id="GalapagosIslands" title="Galapagos Islands">  <!-- done -->
+				<synonym value="Galapagos"/>
+			</heading>
+			<heading id="Guyana" title="Guyana"/>  <!-- done -->
+			<heading id="Paraguay" title="Paraguay">  <!-- done -->
+				<heading id="Angayte" title="Angayte"/>
+				<heading id="Apiaca" title="Apiaca"/>
+				<heading id="Ashluslay" title="Ashluslay"/>
+				<heading id="Cadoca" title="Cadoca"/>
+				<heading id="Caiugua" title="Caiugua"/>
+				<heading id="Chamacoccos" title="Chamacoccos"/>
+				<heading id="ChamacoccosBrabos" title="Chamacoccos Brabos"/>
+				<heading id="ChamacoccosMansos" title="Chamacoccos Mansos"/>
+				<heading id="Choroti" title="Choroti"/>
+				<heading id="Cuximanapana" title="Cuximanapana"/>
+				<heading id="ElGranChaco" title="El Gran Chaco"/>
+				<heading id="Guato" title="Guato"/>
+				<heading id="Guana" title="Guana"/>
+				<heading id="Guarani" title="Guarani"/>
+				<heading id="Guayaquil" title="Guayaquil"/>
+				<heading id="Guyaquil" title="Guyaquil"/>
+				<heading id="Lengua" title="Lengua"/>
+				<heading id="Mataco" title="Mataco"/>
+				<heading id="Omiri" title="Omiri"/>
+				<heading id="Pareci" title="Pareci"/>
+				<heading id="Payagua" title="Payagua"/>
+				<heading id="PilcomayoRiver" title="Pilcomayo River"/>
+				<heading id="Sanapana" title="Sanapana"/>
+				<heading id="Tupi" title="Tupi"/>
+				<heading id="UpperParaguay" title="Upper Paraguay"/>
+			</heading>
+			<heading id="Peru" title="Peru"><!-- All of Peru needs reorganization based on valley system used in Museum -->
+				<synonym value="Perú"/>
+				<heading id="CoastalPeru" title="Coastal Peru">
+					<synonym value="Coastal Peru (unspecified)"/>
+				</heading>
 				<heading id="CasaChicasite" title="Casa Chica site"/>
 				<heading id="TecapaSite" title="Tecapa Site"/>
-				<heading id="CoastalPeruunspecified" title="Coastal Peru (unspecified)"/>
 				<heading id="ChicamaPV23" title="Chicama PV23"/>
 				<heading id="Chepan" title="Chepan"/>
 				<heading id="Coyuz" title="Coyuz"/>
@@ -2256,56 +2331,69 @@
 				<heading id="PampadelosQuinvales" title="Pampa de los Quinvales"/>
 				<heading id="Payta" title="Payta"/>
 				<heading id="NorthernPeru" title="Northern Peru">
-				  <heading id="NorthCoastunspecified" title="North Coast (unspecified)"/>
-				  <heading id="LambayequeRegion" title="Lambayeque Region">
-				    <heading id="HuacaBlanca" title="Huaca Blanca"/>
-				    <heading id="Mochevalley" title="Moche valley">
-				      <heading id="Trujillo" title="Trujillo">
-				        <heading id="HaciendadePampas" title="Hacienda de Pampas"/>
-				        <heading id="CerrodeTrapiche" title="Cerro de Trapiche"/>
-				        <heading id="Huaman" title="Huaman"/>
-				        <heading id="CerrodeTrujillo" title="Cerro de Trujillo"/>
-				      </heading>
-				      <heading id="GC" title="GC">
-				        <heading id="Chancan" title="Chancan">
-				          <synonym value="Chanchan"/>
-				          <synonym value="Chan Chan"/>
-				        </heading>
-				      </heading>
-				      <heading id="Moche" title="Moche">
-				        <heading id="HuacadelSol" title="Huaca del Sol">
-				          <synonym value="Huaca de Moche A"/>
-				        </heading>
-				        <heading id="HuacadeMocheA" title="Huaca de Moche A"/>
-				        <heading id="HuacadeMocheB" title="Huaca de Moche B"/>
-				        <heading id="HuacadeMocheC" title="Huaca de Moche C"/>
-				        <heading id="HuacadelaLuna" title="Huaca de la Luna">
-				          <synonym value="Huaca de Moche F"/>
-				        </heading>
-				        <heading id="HuacadeMocheD" title="Huaca de Moche D"/>
-				        <heading id="HuacadeMocheE" title="Huaca de Moche E"/>
-				        <heading id="MochesiteHSummitofCerroBlanco" title="Moche site H: Summit of Cerro Blanco"/>
-				        <heading id="HuacadeMocheG" title="Huaca de Moche G"/>
-				      </heading>
-				    </heading>
-				    <heading id="Chiclayo" title="Chiclayo"/>
-				  </heading>
-				  <heading id="SanMartinRegion" title="San Martín Region"/>
-				  <heading id="TumbesRegion" title="Tumbes Region"/>
-				  <heading id="AmazonasRegion" title="Amazonas Region"/>
-				  <heading id="CajamarcaRegion" title="Cajamarca Region">
-				    <heading id="VistaAlegre" title="Vista Alegre"/>
-				  </heading>
-				  <heading id="LaLibertadRegion" title="La Libertad Region">
-				    <heading id="Pacasmayovalley" title="Pacasmayo valley">
-				      <heading id="PacasmayoPV20" title="Pacasmayo PV20"/>
-				      <heading id="LaBarranca" title="La Barranca">
-				        <synonym value="Pacatnamu"/>
-				      </heading>
-				    </heading>
-				  </heading>
-				  <heading id="LoretoRegion" title="Loreto Region"/>
-				  <heading id="PiuraRegion" title="Piura Region"/>
+					<synonym value="North Coast (unspecified)"/>
+					<heading id="LambayequeRegion" title="Lambayeque Region">
+						<synonym value="Lambayeque"/>
+						<heading id="Chiclayo" title="Chiclayo"/>
+						<heading id="HuacaBlanca" title="Huaca Blanca"/>
+						<heading id="Mochevalley" title="Moche valley">
+							<heading id="GC" title="GC"> <!-- spell this out -->
+								<heading id="Chancan" title="Chancan">
+									<synonym value="Chanchan"/>
+									<synonym value="Chan Chan"/>
+								</heading>
+							</heading>
+							<heading id="Moche" title="Moche">
+								<heading id="HuacadelSol" title="Huaca del Sol">
+								<synonym value="Huaca de Moche A"/>
+								</heading>
+								<heading id="HuacadeMocheA" title="Huaca de Moche A"/>
+								<heading id="HuacadeMocheB" title="Huaca de Moche B"/>
+								<heading id="HuacadeMocheC" title="Huaca de Moche C"/>
+								<heading id="HuacadelaLuna" title="Huaca de la Luna">
+									<synonym value="Huaca de Moche F"/>
+								</heading>
+								<heading id="HuacadeMocheD" title="Huaca de Moche D"/>
+								<heading id="HuacadeMocheE" title="Huaca de Moche E"/>
+								<heading id="MochesiteHSummitofCerroBlanco" title="Moche site H: Summit of Cerro Blanco"/>
+								<heading id="HuacadeMocheG" title="Huaca de Moche G"/>
+							</heading>
+							<heading id="Trujillo" title="Trujillo">
+								<heading id="CerrodeTrapiche" title="Cerro de Trapiche"/>
+								<heading id="CerrodeTrujillo" title="Cerro de Trujillo"/>
+								<heading id="HaciendadePampas" title="Hacienda de Pampas"/>
+								<heading id="Huaman" title="Huaman"/>
+							</heading>
+						</heading>
+					</heading>
+					<heading id="SanMartinRegion" title="San Martín Region">
+						<synonym value="San Martin Region"/>
+						<synonym value="San Martín"/>
+						<synonym value="San Martin"/>
+					</heading>
+					<heading id="TumbesRegion" title="Tumbes Region">
+						<synonym value="Tumbes"/>
+					</heading>
+					<heading id="AmazonasRegion" title="Amazonas Region"/>
+					<heading id="CajamarcaRegion" title="Cajamarca Region">
+						<synonym value="Cajamarca"/>
+						<heading id="VistaAlegre" title="Vista Alegre"/>
+					</heading>
+					<heading id="LaLibertadRegion" title="La Libertad Region">
+						<synonym value="La Libertad "/>
+						<heading id="Pacasmayovalley" title="Pacasmayo valley">
+					<heading id="PacasmayoPV20" title="Pacasmayo PV20"/>
+					<heading id="LaBarranca" title="La Barranca">
+					<synonym value="Pacatnamu"/>
+					</heading>
+					</heading>
+					</heading>
+					<heading id="LoretoRegion" title="Loreto Region">
+						<synonym value="Loreto"/>
+					</heading>
+					<heading id="PiuraRegion" title="Piura Region">
+						<synonym value="Piura"/>
+					</heading>
 				</heading>
 				<heading id="CentralPeru" title="Central Peru">
 				  <heading id="AncashRegion" title="Ancash Region"/>
@@ -2463,894 +2551,935 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="Argentina" title="Argentina"/>
-			<heading id="Ecuador" title="Ecuador">
-			<heading id="MantaBeachsite" title="Manta Beach site"/>
+			<heading id="Suriname" title="Suriname"/>  <!-- done -->
+			<heading id="Uruguay" title="Uruguay"/>  <!-- done -->
+			<heading id="Venezuela" title="Venezuela">  <!-- done -->
+				<heading id="Amazonasstate" title="Amazonas state"/>
+				<heading id="Anzoateguistate" title="Anzoategui state"/>
+				<heading id="Apurestate" title="Apure state"/>
+				<heading id="Araguastate" title="Aragua state"/>
+				<heading id="Barinasstate" title="Barinas state"/>
+				<heading id="Bolivarstate" title="Bolivar state"/>
+				<heading id="Carabobostate" title="Carabobo state"/>
+				<heading id="Cojedesstate" title="Cojedes state"/>
+				<heading id="DeltaAmacurostate" title="Delta Amacuro state"/>
+				<heading id="DistritoFederal" title="Distrito Federal"/>
+				<heading id="ElMamon" title="El Mamon"/>
+				<heading id="Falconstate" title="Falcón state">
+					<heading id="Coro" title="Coro"/>
+					<heading id="HatoViejoDemocraciadist" title="Hato Viejo Democracia dist."/>
+					<heading id="Paraguanapeninsula" title="Paraguana peninsula">
+						<heading id="LaLuz" title="La Luz"/>
+					</heading>
+					<heading id="Urumaco" title="Urumaco"/>
+				</heading>
+				<heading id="Guaricostate" title="Guarico state"/>
+				<heading id="LaMontanita" title="La Montanita">
+					<heading id="Maravillasite" title="Maravilla site"/>
+				</heading>
+				<heading id="Larastate" title="Lara state"/>
+				<heading id="Machiqurg" title="Machiqurg"/>
+				<heading id="Meridastate" title="Merida state"/>
+				<heading id="Mirandastate" title="Miranda state"/>
+				<heading id="Monagasstate" title="Monagas state"/>
+				<heading id="NuevaEspartastate" title="Nueva Esparta state"/>
+				<heading id="Portuguesastate" title="Portuguesa state"/>
+				<heading id="Sucrestate" title="Sucre state"/>
+				<heading id="Tachirastate" title="Tachira state"/>
+				<heading id="Trujillostate" title="Trujillo state"/>
+				<heading id="Yaracuystate" title="Yaracuy state"/>
+				<heading id="Zuliastate" title="Zulia state">
+					<heading id="Perijadistrict" title="Perija district">
+					<heading id="RioMacoa" title="Rio Macoa"/>
+					</heading>
+				</heading>
 			</heading>
-			<heading id="Uruguay" title="Uruguay"/>
-			<heading id="Paraguay" title="Paraguay">
-			<heading id="Tupi" title="Tupi"/>
-			<heading id="UpperParaguay" title="Upper Paraguay"/>
-			<heading id="Sanapana" title="Sanapana"/>
-			<heading id="Payagua" title="Payagua"/>
-			<heading id="Pareci" title="Pareci"/>
-			<heading id="Omiri" title="Omiri"/>
-			<heading id="Mataco" title="Mataco"/>
-			<heading id="Lengua" title="Lengua"/>
-			<heading id="ElGranChaco" title="El Gran Chaco"/>
-			<heading id="Guyaquil" title="Guyaquil"/>
-			<heading id="Guato" title="Guato"/>
-			<heading id="Guarani" title="Guarani"/>
-			<heading id="Guana" title="Guana"/>
-			<heading id="Cuximanapana" title="Cuximanapana"/>
-			<heading id="Choroti" title="Choroti"/>
-			<heading id="PilcomayoRiver" title="Pilcomayo River"/>
-			<heading id="Chamacoccos" title="Chamacoccos"/>
-			<heading id="ChamacoccosMansos" title="Chamacoccos Mansos"/>
-			<heading id="ChamacoccosBrabos" title="Chamacoccos Brabos"/>
-			<heading id="Caiugua" title="Caiugua"/>
-			<heading id="Cadoca" title="Cadoca"/>
-			<heading id="Ashluslay" title="Ashluslay"/>
-			<heading id="Apiaca" title="Apiaca"/>
-			<heading id="Angayte" title="Angayte"/>
-			<heading id="Guayaquil" title="Guayaquil"/>
-			</heading>
-			<heading id="Venezuela" title="Venezuela">
-			<heading id="LaMontanita" title="La Montanita">
-			  <heading id="Maravillasite" title="Maravilla site"/>
-			</heading>
-			<heading id="Falconstate" title="Falcón state">
-			  <heading id="HatoViejoDemocraciadist" title="Hato Viejo Democracia dist."/>
-			  <heading id="Coro" title="Coro"/>
-			  <heading id="Paraguanapeninsula" title="Paraguana peninsula">
-			    <heading id="LaLuz" title="La Luz"/>
-			  </heading>
-			  <heading id="Urumaco" title="Urumaco"/>
-			</heading>
-			<heading id="ElMamon" title="El Mamon"/>
-			<heading id="Machiqurg" title="Machiqurg"/>
-			<heading id="Zuliastate" title="Zulia state">
-			  <heading id="Perijadistrict" title="Perija district">
-			    <heading id="RioMacoa" title="Rio Macoa"/>
-			  </heading>
-			</heading>
-			<heading id="Guaricostate" title="Guarico state"/>
-			<heading id="Bolivarstate" title="Bolivar state"/>
-			<heading id="Apurestate" title="Apure state"/>
-			<heading id="Barinasstate" title="Barinas state"/>
-			<heading id="Larastate" title="Lara state"/>
-			<heading id="Anzoateguistate" title="Anzoategui state"/>
-			<heading id="Monagasstate" title="Monagas state"/>
-			<heading id="DeltaAmacurostate" title="Delta Amacuro state"/>
-			<heading id="Meridastate" title="Merida state"/>
-			<heading id="Tachirastate" title="Tachira state"/>
-			<heading id="Trujillostate" title="Trujillo state"/>
-			<heading id="Portuguesastate" title="Portuguesa state"/>
-			<heading id="Cojedesstate" title="Cojedes state"/>
-			<heading id="Amazonasstate" title="Amazonas state"/>
-			<heading id="Sucrestate" title="Sucre state"/>
-			<heading id="NuevaEspartastate" title="Nueva Esparta state"/>
-			<heading id="DistritoFederal" title="Distrito Federal"/>
-			<heading id="Yaracuystate" title="Yaracuy state"/>
-			<heading id="Carabobostate" title="Carabobo state"/>
-			<heading id="Araguastate" title="Aragua state"/>
-			<heading id="Mirandastate" title="Miranda state"/>
-			</heading>
-			<heading id="Suriname" title="Suriname"/>
-			<heading id="FrenchGuiana" title="French Guiana"/>
-			<heading id="Guyana" title="Guyana"/>
-			<heading id="GalapagosIslands" title="Galapagos Islands"/>
 		</heading>
-		<heading id="NorthAmerica" title="North America">
-			<heading id="Canada" title="Canada">
-<heading id="NorthwesternTerritories" title="Northwestern Territories">
-  <heading id="SouthamptonIsland" title="Southampton Island">
-    <heading id="Southcentralarea" title="South central area"/>
-  </heading>
-  <heading id="MackenzieRiver" title="Mackenzie River">
-    <heading id="CapeBathurst" title="Cape Bathurst"/>
-    <heading id="FortMcPhersonarea" title="Fort McPherson area"/>
-  </heading>
-</heading>
-<heading id="BritishColumbia" title="British Columbia">
-  <heading id="QueenCharlotteIslands" title="Queen Charlotte Islands">
-    <heading id="MoresbyIsland" title="Moresby Island">
-      <heading id="Skedans" title="Skedans">
-        <synonym value="Koona"/>
-      </heading>
-    </heading>
-    <heading id="GrahamIsland" title="Graham Island">
-      <heading id="Masset" title="Masset"/>
-    </heading>
-  </heading>
-  <heading id="FraserRiver" title="Fraser River">
-    <heading id="EburneMound" title="Eburne Mound"/>
-    <heading id="AnnienvilleMound" title="Annienville Mound"/>
-    <heading id="MarpoleMound" title="Marpole Mound"/>
-  </heading>
-  <heading id="StPaulIslands" title="St. Paul Islands"/>
-  <heading id="RiversInlet" title="Rivers Inlet"/>
-  <heading id="VancouverIsland" title="Vancouver Island">
-    <heading id="Victoria" title="Victoria">
-      <heading id="ThunderbirdPark" title="Thunderbird Park"/>
-    </heading>
-    <heading id="ClayoquotSound" title="Clayoquot Sound"/>
-    <heading id="SaanichReserve" title="Saanich Reserve"/>
-    <heading id="PortRenfrew" title="Port Renfrew"/>
-    <heading id="WestcoastofVancouverIsland" title="West coast of Vancouver Island"/>
-    <heading id="Clayoquot" title="Clayoquot"/>
-    <heading id="QuatsinoNarrows" title="Quatsino Narrows"/>
-  </heading>
-  <heading id="NootkaSound" title="Nootka Sound"/>
-  <heading id="TurnourIsland" title="Turnour Island">
-    <heading id="Karlukwees" title="Karlukwees"/>
-  </heading>
-  <heading id="JohnstonTown" title="Johnston Town">
-    <synonym value="Kingfisher Fort"/>
-  </heading>
-  <heading id="OldTeslin" title="Old Teslin"/>
-  <heading id="AlertBay" title="Alert Bay"/>
-  <heading id="DouglasIsland" title="Douglas Island"/>
-  <heading id="Kitkatla" title="Kitkatla"/>
-  <heading id="Kamloops" title="Kamloops"/>
-  <heading id="PortSimpson" title="Port Simpson"/>
-  <heading id="FortWrangell" title="Fort Wrangell"/>
-  <heading id="Chilliwack" title="Chilliwack"/>
-  <heading id="Vancouver" title="Vancouver">
-    <heading id="UniversityofBritishColumbia" title="University of British Columbia"/>
-    <heading id="StanleyPark" title="Stanley Park"/>
-    <heading id="ExpositionPark" title="Exposition Park"/>
-  </heading>
-  <heading id="GilfordIsle" title="Gilford Isle"/>
-  <heading id="PyladesIsland" title="Pylades Island"/>
-  <heading id="NewWestminster" title="New Westminster"/>
-  <heading id="SmithInlet" title="Smith Inlet"/>
-  <heading id="KingcomeIsland" title="Kingcome Island"/>
-  <heading id="AnianIsland" title="Anian Island"/>
-  <heading id="Qualahaituk" title="Qualahaituk"/>
-  <heading id="KilkiteiVillage" title="Kilkitei Village"/>
-  <heading id="DigbyIsland" title="Digby Island">
-    <heading id="CharlesPoint" title="Charles Point"/>
-  </heading>
-</heading>
-<heading id="YukonTerritory" title="Yukon Territory">
-  <heading id="FortSelkirk" title="Fort Selkirk"/>
-  <heading id="Dawson" title="Dawson"/>
-  <heading id="Carcross" title="Carcross"/>
-  <heading id="Champagne" title="Champagne"/>
-  <heading id="Aishihik" title="Aishihik"/>
-  <heading id="Whitehorse" title="Whitehorse"/>
-  <heading id="DaltonPost" title="Dalton Post"/>
-  <heading id="Klukshu" title="Klukshu"/>
-  <heading id="MarshLake" title="Marsh Lake"/>
-  <heading id="PellyRiver" title="Pelly River"/>
-  <heading id="FortHamlun" title="Fort Hamlun"/>
-  <heading id="HerschelIsland" title="Herschel Island"/>
-  <heading id="HudsonsBayCo" title="Hudsons Bay Co."/>
-</heading>
-<heading id="NovaScotia" title="Nova Scotia">
-  <heading id="Mitown" title="Mitown"/>
-</heading>
-<heading id="Ontario" title="Ontario">
-  <heading id="Toronto" title="Toronto"/>
-  <heading id="QueticoProvincialPark" title="Quetico Provincial Park">
-    <heading id="LittleLakeEva" title="Little Lake Eva"/>
-  </heading>
-  <heading id="SixNationsReserve" title="Six Nations Reserve"/>
-</heading>
-<heading id="NewBrunswick" title="New Brunswick">
-  <heading id="MiramichiRiver" title="Miramichi River"/>
-  <heading id="Tobique" title="Tobique"/>
-</heading>
-<heading id="WesternCanada" title="Western Canada"/>
-<heading id="Quebec" title="Quebec">
-  <heading id="RupertHouse" title="Rupert House"/>
-  <heading id="Caughnawaga" title="Caughnawaga"/>
-  <heading id="Povungnituk" title="Povungnituk"/>
-  <heading id="GreatWhaleRiver" title="Great Whale River"/>
-</heading>
-<heading id="Alberta" title="Alberta">
-  <heading id="Gleichen" title="Gleichen"/>
-  <heading id="Cluny" title="Cluny"/>
-</heading>
-<heading id="BlackfootReservation" title="Blackfoot Reservation"/>
-<heading id="SouthernCanada" title="Southern Canada"/>
-<heading id="Saskatchewan" title="Saskatchewan">
-  <heading id="PlainsCreeReservation" title="Plains Cree Reservation">
-    <heading id="PoundmakerReserve" title="Poundmaker Reserve"/>
-    <heading id="PhileHillsAgency" title="Phile Hills Agency"/>
-  </heading>
-  <heading id="LittlePineReservation" title="Little Pine Reservation"/>
-  <heading id="LakeAthabasca" title="Lake Athabasca"/>
-</heading>
-<heading id="Manitoba" title="Manitoba"/>
-<heading id="Newfoundland" title="Newfoundland">
-  <heading id="Labrador" title="Labrador"/>
-</heading>
-<heading id="Nunavut" title="Nunavut"/>
-<heading id="PrinceEdwardIsland" title="Prince Edward Island"/>
+		<heading id="NorthAmerica" title="North America">  <!-- All alphabetized except for United States -->
+			<heading id="Canada" title="Canada">  <!-- done -->
+				<heading id="Alberta" title="Alberta">
+					<heading id="Cluny" title="Cluny"/>
+					<heading id="Gleichen" title="Gleichen"/>
+				</heading>
+				<heading id="BlackfootReservation" title="Blackfoot Reservation"/>
+				<heading id="BritishColumbia" title="British Columbia">
+					<heading id="AlertBay" title="Alert Bay"/>
+					<heading id="AnianIsland" title="Anian Island"/>
+					<heading id="Chilliwack" title="Chilliwack"/>
+					<heading id="DigbyIsland" title="Digby Island">
+						<heading id="CharlesPoint" title="Charles Point"/>
+					</heading>
+					<heading id="DouglasIsland" title="Douglas Island"/>
+					<heading id="FortWrangell" title="Fort Wrangell"/>
+					<heading id="FraserRiver" title="Fraser River">
+						<heading id="AnnienvilleMound" title="Annienville Mound"/>
+						<heading id="EburneMound" title="Eburne Mound"/>
+						<heading id="MarpoleMound" title="Marpole Mound"/>
+					</heading>
+					<heading id="GilfordIsle" title="Gilford Isle"/>
+					<heading id="JohnstonTown" title="Johnston Town">
+						<synonym value="Kingfisher Fort"/>
+					</heading>
+					<heading id="Kamloops" title="Kamloops"/>
+					<heading id="KilkiteiVillage" title="Kilkitei Village"/>
+					<heading id="KingcomeIsland" title="Kingcome Island"/>
+					<heading id="Kitkatla" title="Kitkatla"/>
+					<heading id="NewWestminster" title="New Westminster"/>
+					<heading id="NootkaSound" title="Nootka Sound"/>
+					<heading id="OldTeslin" title="Old Teslin"/>
+					<heading id="PortSimpson" title="Port Simpson"/>
+					<heading id="PyladesIsland" title="Pylades Island"/>
+					<heading id="Qualahaituk" title="Qualahaituk"/>
+					<heading id="QueenCharlotteIslands" title="Queen Charlotte Islands">
+						<heading id="GrahamIsland" title="Graham Island">
+							<heading id="Masset" title="Masset"/>
+						</heading>
+						<heading id="MoresbyIsland" title="Moresby Island">
+							<heading id="Skedans" title="Skedans">
+								<synonym value="Koona"/>
+							</heading>
+						</heading>
+					</heading>
+					<heading id="RiversInlet" title="Rivers Inlet"/>
+					<heading id="StPaulIslands" title="St. Paul Islands"/>
+					<heading id="SmithInlet" title="Smith Inlet"/>
+					<heading id="TurnourIsland" title="Turnour Island">
+						<heading id="Karlukwees" title="Karlukwees"/>
+					</heading>
+					<heading id="Vancouver" title="Vancouver">  <!-- Is this contained in Vancouver Island?  Or vice versa? -->
+						<heading id="ExpositionPark" title="Exposition Park"/>
+						<heading id="StanleyPark" title="Stanley Park"/>
+						<heading id="UniversityofBritishColumbia" title="University of British Columbia"/>
+					</heading>
+					<heading id="VancouverIsland" title="Vancouver Island">
+						<heading id="Clayoquot" title="Clayoquot"/>  <!-- Is this contained in Clayoquot Sound?  Or vice versa? -->
+						<heading id="ClayoquotSound" title="Clayoquot Sound"/>
+						<heading id="PortRenfrew" title="Port Renfrew"/>
+						<heading id="QuatsinoNarrows" title="Quatsino Narrows"/>
+						<heading id="SaanichReserve" title="Saanich Reserve"/>
+						<heading id="Victoria" title="Victoria">
+							<heading id="ThunderbirdPark" title="Thunderbird Park"/>
+						</heading>
+						<heading id="WestcoastofVancouverIsland" title="West coast of Vancouver Island"/>
+					</heading>
+				</heading>
+				<heading id="Manitoba" title="Manitoba"/>
+				<heading id="NewBrunswick" title="New Brunswick">
+					<heading id="MiramichiRiver" title="Miramichi River"/>
+					<heading id="Tobique" title="Tobique"/>
+				</heading>
+				<heading id="Newfoundland" title="Newfoundland">
+					<heading id="Labrador" title="Labrador"/>
+				</heading>
+				<heading id="NorthwesternTerritories" title="Northwestern Territories">
+					<heading id="MackenzieRiver" title="Mackenzie River">
+						<heading id="CapeBathurst" title="Cape Bathurst"/>
+						<heading id="FortMcPhersonarea" title="Fort McPherson area"/>
+					</heading>
+					<heading id="SouthamptonIsland" title="Southampton Island">
+						<heading id="Southcentralarea" title="South central area"/>
+					</heading>
+				</heading>
+				<heading id="NovaScotia" title="Nova Scotia">
+					<heading id="Mitown" title="Mitown"/>
+				</heading>
+				<heading id="Nunavut" title="Nunavut"/>
+				<heading id="Ontario" title="Ontario">
+					<heading id="QueticoProvincialPark" title="Quetico Provincial Park">
+						<heading id="LittleLakeEva" title="Little Lake Eva"/>
+					</heading>
+					<heading id="SixNationsReserve" title="Six Nations Reserve"/>
+					<heading id="Toronto" title="Toronto"/>
+				</heading>
+				<heading id="PrinceEdwardIsland" title="Prince Edward Island"/>
+				<heading id="Quebec" title="Quebec">
+					<synonym value="Québec"/>
+					<heading id="Caughnawaga" title="Caughnawaga"/>
+					<heading id="GreatWhaleRiver" title="Great Whale River"/>
+					<heading id="Povungnituk" title="Povungnituk"/>
+					<heading id="RupertHouse" title="Rupert House"/>
+				</heading>
+				<heading id="Saskatchewan" title="Saskatchewan">
+					<heading id="LakeAthabasca" title="Lake Athabasca"/>
+					<heading id="LittlePineReservation" title="Little Pine Reservation"/>
+					<heading id="PlainsCreeReservation" title="Plains Cree Reservation">
+						<heading id="PhileHillsAgency" title="Phile Hills Agency"/>
+						<heading id="PoundmakerReserve" title="Poundmaker Reserve"/>
+					</heading>
+				</heading>
+				<heading id="SouthernCanada" title="Southern Canada"/>
+				<heading id="WesternCanada" title="Western Canada"/>
+				<heading id="YukonTerritory" title="Yukon Territory">
+					<heading id="Aishihik" title="Aishihik"/>
+					<heading id="Carcross" title="Carcross"/>
+					<heading id="Champagne" title="Champagne"/>
+					<heading id="DaltonPost" title="Dalton Post"/>
+					<heading id="Dawson" title="Dawson"/>
+					<heading id="FortHamlun" title="Fort Hamlun"/>
+					<heading id="FortSelkirk" title="Fort Selkirk"/>
+					<heading id="HerschelIsland" title="Herschel Island"/>
+					<heading id="HudsonsBayCo" title="Hudsons Bay Co."/>
+					<heading id="Klukshu" title="Klukshu"/>
+					<heading id="MarshLake" title="Marsh Lake"/>
+					<heading id="PellyRiver" title="Pelly River"/>
+					<heading id="Whitehorse" title="Whitehorse"/>
+				</heading>
 			</heading>
-			<heading id="Greenland" title="Greenland">
-<heading id="Thule" title="Thule">
-  <synonym value="Northwest Greenland"/>
-  <synonym value="Dundas"/>
-</heading>
+			<heading id="Greenland" title="Greenland">  <!-- done -->
+				<heading id="Thule" title="Thule">
+					<synonym value="Dundas"/>
+					<synonym value="Northwest Greenland"/>
+				</heading>
 			</heading>
-			<heading id="Mexico" title="Mexico">
-<heading id="Chihuahuastate" title="Chihuahua state">
-  <synonym value="Chihuahua"/>
-  <heading id="Presidio" title="Presidio"/>
-  <heading id="Creel" title="Creel"/>
-  <heading id="Tarahumara" title="Tarahumara"/>
-  <heading id="Arechuyvo" title="Arechuyvo"/>
-</heading>
-<heading id="Jaliscostate" title="Jalisco state">
-  <synonym value="Jalisco"/>
-  <heading id="Guadalajara" title="Guadalajara"/>
-  <heading id="ASanAntonio" title="A. San Antonio"/>
-  <heading id="Ahuacapan" title="Ahuacapan"/>
-  <heading id="Alista" title="Alista"/>
-  <heading id="LosAltillos" title="Los Altillos"/>
-  <heading id="Amilpa" title="Amilpa"/>
-  <heading id="Apulco" title="Apulco"/>
-  <heading id="CerritoColorado" title="Cerrito Colorado"/>
-  <heading id="Chapala" title="Chapala"/>
-  <heading id="Chachahuatlan" title="Chachahuatlan"/>
-  <heading id="Tonala" title="Tonala">
-    <synonym value="Tonalá"/>
-  </heading>
-  <heading id="Tlaquepaque" title="Tlaquepaque"/>
-  <heading id="SanJoseTateposco" title="San Jose Tateposco"/>
-  <heading id="Arandas" title="Arandas"/>
-  <heading id="LakeChapala" title="Lake Chapala"/>
-  <heading id="Mascota" title="Mascota"/>
-  <heading id="Talpa" title="Talpa"/>
-  <heading id="Ayntla" title="Ayntla"/>
-  <heading id="Tuxcacuesco" title="Tuxcacuesco"/>
-  <heading id="SanGabriel" title="San Gabriel"/>
-  <heading id="Chiquistlan" title="Chiquistlan"/>
-  <heading id="Tapalpa" title="Tapalpa"/>
-  <heading id="Jazmin" title="Jazmín">
-    <synonym value="Jazmin"/>
-  </heading>
-  <heading id="Tenamaxtlan" title="Tenamaxtlan"/>
-  <heading id="Sayula" title="Sayula"/>
-</heading>
-<heading id="Sonorastate" title="Sonora state">
-  <heading id="Babispe" title="Babispe"/>
-  <heading id="Guaymas" title="Guaymas"/>
-  <heading id="BajaCalifornia" title="Baja California">
-    <heading id="Guadalupe" title="Guadalupe"/>
-  </heading>
-  <heading id="Enpalme" title="Enpalme"/>
-  <heading id="Alamos" title="Alamos"/>
-  <heading id="LosBocas" title="Los Bocas"/>
-  <heading id="MunicipiodeTrincheras" title="Municipio de Trincheras"/>
-  <heading id="Nogales" title="Nogales"/>
-  <heading id="PuntaLaCholea" title="Punta La Cholea"/>
-  <heading id="LaPlaya" title="La Playa"/>
-  <heading id="SanCarloCove" title="San Carlo Cove"/>
-  <heading id="SenoritaRLagoon" title="Senorita R. Lagoon"/>
-  <heading id="PuntaPenasco" title="Punta Penasco"/>
-  <heading id="Yavaros" title="Yavaros"/>
-  <heading id="Tibidhuachi" title="Tibidhuachi"/>
-  <heading id="Tonichi" title="Tonichi"/>
-  <heading id="Tesia" title="Tesia"/>
-  <heading id="Tetanchopo" title="Tetanchopo"/>
-  <heading id="ColoniaLerdo" title="Colonia Lerdo"/>
-  <heading id="Navojoa" title="Navojoa">
-    <heading id="Mayo" title="Mayo"/>
-  </heading>
-</heading>
-<heading id="Tlaxcalastate" title="Tlaxcala state"/>
-<heading id="VeracruzLlavestate" title="Veracruz-Llave state"/>
-<heading id="Zacatecasstate" title="Zacatecas state"/>
-<heading id="Yucatanstate" title="Yucatán state">
-  <synonym value="Yucatan"/>
-  <heading id="ChichenItza" title="Chichén Itzá">
-    <synonym value="Chichen Itza"/>
-  </heading>
-  <heading id="Maxcanu" title="Maxcanu"/>
-  <heading id="Merida" title="Mérida">
-    <synonym value="Merida"/>
-  </heading>
-  <heading id="HaciendaJalacal" title="Hacienda Jalacal"/>
-  <heading id="Ticul" title="Ticul"/>
-</heading>
-<heading id="Morelosstate" title="Morelos state">
-  <heading id="Cuernavaca" title="Cuernavaca"/>
-</heading>
-<heading id="Nayarit" title="Nayarit">
-  <heading id="JesusMaria" title="Jesus Maria">
-    <synonym value="Jesús María"/>
-  </heading>
-  <heading id="MesadeNayar" title="Mesa de Nayar"/>
-  <heading id="ElAire" title="El Aire"/>
-  <heading id="LaMesa" title="La Mesa"/>
-  <heading id="GuadalupeOcotan" title="Guadalupe Ocotan">
-    <synonym value="Guadalupe de Ocotan"/>
-    <synonym value="Guadalupe Ocotán"/>
-  </heading>
-  <heading id="ElLimon" title="El Limon">
-    <synonym value="El Limón"/>
-  </heading>
-</heading>
-<heading id="OaxacaMexicanstate" title="Oaxaca (Mexican state)">
-  <heading id="OaxacaMexicancity" title="Oaxaca (Mexican city)"/>
-  <heading id="Ocotlan" title="Ocotlan">
-    <synonym value="Ocotlán de Morelos"/>
-  </heading>
-  <heading id="Mitla" title="Mitla"/>
-  <heading id="Coyotepec" title="Coyotepec">
-    <synonym value="San Bartolo Coyotepec"/>
-  </heading>
-</heading>
-<heading id="Pueblastate" title="Puebla state">
-  <heading id="Acatlan" title="Acatlán">
-    <synonym value="Acatlan"/>
-  </heading>
-  <heading id="Pueblacity" title="Puebla city"/>
-  <heading id="Huauchinango" title="Huauchinango"/>
-  <heading id="Tehuacan" title="Tehuacán">
-    <synonym value="Tehuacan"/>
-  </heading>
-  <heading id="SantaMaraChicmecatitlan" title="Santa María Chicmecatitlan">
-    <synonym value="Santa Maria Chicmecatitlan"/>
-  </heading>
-  <heading id="Matamoros" title="Matamoros"/>
-  <heading id="SanPablito" title="San Pablito"/>
-  <heading id="Huehuetlilla" title="Huehuetlilla"/>
-  <heading id="SanPetlacatla" title="San Petlacatla"/>
-  <heading id="Zihuateutla" title="Zihuateutla"/>
-  <heading id="IzucardeMatamoros" title="Izucar de Matamoros">
-    <synonym value="Matamoros de Izucar"/>
-  </heading>
-</heading>
-<heading id="Sinaloastate" title="Sinaloa state"/>
-<heading id="Mexicostate" title="Mexico state">
-  <heading id="Metepec" title="Metepec"/>
-  <heading id="Toluca" title="Toluca"/>
-</heading>
-<heading id="MichoacandeOcampo" title="Michoacán  de Ocampo">
-  <synonym value="Michoacan"/>
-  <heading id="Tzintzuntzan" title="Tzintzuntzan"/>
-  <heading id="Patzcuaro" title="Pátzcuaro">
-    <synonym value="Patzcuaro"/>
-  </heading>
-  <heading id="Paracho" title="Paracho"/>
-  <heading id="Patamban" title="Patamban"/>
-  <heading id="Tocuaro" title="Tocuaro"/>
-  <heading id="Uruapan" title="Uruapan"/>
-  <heading id="Iquatzio" title="Iquatzio"/>
-  <heading id="Purepero" title="Purépero">
-    <synonym value="Purepero"/>
-  </heading>
-  <heading id="SantaFe" title="Santa Fe"/>
-  <heading id="Erongaricuaro" title="Erongaricuaro"/>
-  <heading id="Morelia" title="Morelia"/>
-  <heading id="Ocumicho" title="Ocumicho"/>
-  <heading id="Xochimilco" title="Xochimilco"/>
-  <heading id="Zacapu" title="Zacapu"/>
-</heading>
-<heading id="Chiapasstate" title="Chiapas state">
-  <synonym value="Chiapas"/>
-  <heading id="ChiapadeCorso" title="Chiapa de Corso"/>
-  <heading id="Rayon" title="Rayón">
-    <synonym value="Rayon"/>
-  </heading>
-  <heading id="Zinacantan" title="Zinacantan"/>
-  <heading id="Chamula" title="Chamula"/>
-  <heading id="AmatenangodelValle" title="Amatenango del Valle"/>
-  <heading id="Tapalapa" title="Tapalapa"/>
-  <heading id="Pantepec" title="Pantepec"/>
-  <heading id="Palenque" title="Palenque"/>
-  <heading id="Lacanja" title="Lacanjá">
-    <synonym value="Lacanja"/>
-  </heading>
-  <heading id="SanCristobal" title="San Cristobal">
-    <heading id="SanAndresLarrainzar" title="San Andrés Larráinzar">
-      <synonym value="San Andres Larrainzar"/>
-    </heading>
-    <heading id="Oxchuc" title="Oxchuc"/>
-  </heading>
-  <heading id="Tenejapa" title="Tenejapa"/>
-  <heading id="Cancuc" title="Cancuc"/>
-  <heading id="Huistan" title="Huistán">
-    <synonym value="Huistan"/>
-  </heading>
-  <heading id="LasAnimas" title="Las Animas"/>
-  <heading id="SanBartolomedelosLlanos" title="San Bartolomé de los Llanos">
-    <synonym value="San Bartolome de los Llanos"/>
-  </heading>
-  <heading id="Comitan" title="Comitán">
-    <synonym value="Comitan"/>
-  </heading>
-  <heading id="SanCristoballasCasas" title="San Cristobal las Casas"/>
-</heading>
-<heading id="Champechestate" title="Champeche state">
-  <heading id="Campeche" title="Campeche">
-    <synonym value="San Francisco de Campeche"/>
-  </heading>
-  <heading id="Tepakan" title="Tepakán">
-    <synonym value="Tepakan"/>
-  </heading>
-  <heading id="Lerma" title="Lerma"/>
-</heading>
-<heading id="Hidalgostate" title="Hidalgo state">
-  <synonym value="Hidalgo"/>
-  <heading id="LaCueva" title="La Cueva"/>
-  <heading id="SanMateo" title="San Mateo"/>
-  <heading id="SanMiguel" title="San Miguel"/>
-  <heading id="Ixmiquilpan" title="Ixmiquilpan"/>
-  <heading id="Acaxochitlan" title="Acaxochitlán">
-    <synonym value="Acaxochitlan"/>
-  </heading>
-  <heading id="Zimapan" title="Zimapan"/>
-  <heading id="ValledeMesquetal" title="Valle de Mesquetal"/>
-</heading>
-<heading id="CoahuiladeZaragozastate" title="Coahuila de Zaragoza state">
-  <synonym value="Coahuila"/>
-  <heading id="Saltillo" title="Saltillo"/>
-</heading>
-<heading id="Colimastate" title="Colima state"/>
-<heading id="Durangostate" title="Durango state">
-  <heading id="Canelas" title="Canelas"/>
-</heading>
-<heading id="Guanajuatostate" title="Guanajuato state">
-  <heading id="Leon" title="León">
-    <synonym value="Leon"/>
-    <synonym value="León de los Aldama"/>
-  </heading>
-  <heading id="Celaya" title="Celaya"/>
-  <heading id="Guanajuatocity" title="Guanajuato city"/>
-</heading>
-<heading id="Guerrerostate" title="Guerrero state">
-  <synonym value="Guerrero"/>
-  <heading id="Acapulco" title="Acapulco"/>
-  <heading id="Olinala" title="Olinala"/>
-  <heading id="Xochistlahuaca" title="Xochistlahuaca"/>
-  <heading id="Paintla" title="Paintla"/>
-  <heading id="Ayutla" title="Ayutla"/>
-  <heading id="Tecoanapa" title="Tecoanapa"/>
-  <heading id="SanMiguel" title="San Miguel"/>
-  <heading id="Ixcapaneca" title="Ixcapaneca"/>
-  <heading id="Ostotitlan" title="Ostotitlan"/>
-  <heading id="Copanatoyac" title="Copanatoyac"/>
-  <heading id="Axoxuca" title="Axoxuca"/>
-  <heading id="Huehuetonac" title="Huehuetonac"/>
-  <heading id="Huamuxtitlan" title="Huamuxtitlán">
-    <synonym value="Huamuxtitlan"/>
-  </heading>
-  <heading id="Tlalcozotitlan" title="Tlalcozotitlan"/>
-  <heading id="SanMartinPachivia" title="San Martin Pachivia"/>
-  <heading id="Hueycantenango" title="Hueycantenango"/>
-  <heading id="Cuetzala" title="Cuetzala"/>
-  <heading id="Tianguizolco" title="Tianguizolco"/>
-  <heading id="ZumpangodelRio" title="Zumpango del Rio"/>
-  <heading id="SanFrancisco" title="San Francisco"/>
-  <heading id="LaParota" title="La Parota"/>
-  <heading id="Naranjo" title="Naranjo"/>
-  <heading id="Amayaltepec" title="Amayaltepec"/>
-  <heading id="Potrerillo" title="Potrerillo"/>
-  <heading id="Tixtla" title="Tixtla"/>
-  <heading id="Taxco" title="Taxco"/>
-  <heading id="Tlamamaca" title="Tlamamaca"/>
-  <heading id="Tlapehuala" title="Tlapehuala"/>
-  <heading id="Pipichahuasco" title="Pipichahuasco"/>
-  <heading id="Tlamacasapa" title="Tlamacasapa"/>
-  <heading id="SanAgustinOapan" title="San Agustin Oapan"/>
-  <heading id="Churumuco" title="Churumuco"/>
-  <heading id="SanMiguelHuapan" title="San Miguel Huapan"/>
-  <heading id="ElPalmar" title="El Palmar"/>
-  <heading id="Acapetlahuaya" title="Acapetlahuaya">
-    <synonym value="Acapetlahyaya"/>
-  </heading>
-  <heading id="ValleLuz" title="Valle Luz"/>
-  <heading id="CuadrilladeSantaAnita" title="Cuadrilla de Santa Anita"/>
-  <heading id="Totozintla" title="Totozintla"/>
-  <heading id="Atenxoxola" title="Atenxoxola"/>
-  <heading id="Casahuamanche" title="Casahuamanche"/>
-  <heading id="Tlanipatla" title="Tlanipatla"/>
-  <heading id="Tlanixpatlan" title="Tlanixpatlan"/>
-  <heading id="Chiepetepec" title="Chiepetepec"/>
-  <heading id="ElLiman" title="El Liman"/>
-  <heading id="CoatepecdeLosCostales" title="Coatepec de Los Costales"/>
-  <heading id="Ajuchitlan" title="Ajuchitlán">
-    <synonym value="Ajuchitlan"/>
-  </heading>
-  <heading id="ElCoral" title="El Coral"/>
-  <heading id="Ameyahualco" title="Ameyahualco"/>
-  <heading id="Xalpatlahuac" title="Xalpatlahuac"/>
-</heading>
-<heading id="QuintanaRoostate" title="Quintana Roo state"/>
-<heading id="Tabascostate" title="Tabasco state"/>
-<heading id="Aguascalientesstate" title="Aguascalientes state"/>
-<heading id="QueretarodeArteagastate" title="Queretaro de Arteaga state"/>
-<heading id="BajaCaliforniastate" title="Baja California state">
-  <heading id="Picachopeaks" title="Picacho peaks"/>
-  <heading id="SanQuintin" title="San Quintin">
-    <synonym value="San Quentin"/>
-  </heading>
-  <heading id="SanMiguel" title="San Miguel"/>
-  <heading id="ArroyoLeon" title="Arroyo Leon"/>
-  <heading id="CanonManteca" title="Cañón Manteca">
-    <synonym value="Manteca"/>
-  </heading>
-  <heading id="Tijuana" title="Tijuana"/>
-  <heading id="LaHuerta" title="La Huerta">
-    <synonym value="La Huerta de Los Indios"/>
-  </heading>
-</heading>
-<heading id="BajaCaliforniaSurstate" title="Baja California Sur state"/>
+			<heading id="Mexico" title="Mexico">  <!-- done -->
+				<heading id="Aguascalientesstate" title="Aguascalientes state">
+					<synonym value="Aguascalientes"/>
+				</heading>
+				<heading id="BajaCaliforniastate" title="Baja California state">
+					<synonym value="Baja California"/>  <!-- Unless it's "Baja California Sur" -->
+					<heading id="Picachopeaks" title="Picacho peaks"/>
+					<heading id="SanQuintin" title="San Quintin">
+						<synonym value="San Quentin"/>
+					</heading>
+					<heading id="SanMiguel" title="San Miguel"/>
+					<heading id="ArroyoLeon" title="Arroyo Leon"/>
+					<heading id="CanonManteca" title="Cañón Manteca">
+						<synonym value="Manteca"/>
+					</heading>
+					<heading id="Tijuana" title="Tijuana"/>
+					<heading id="LaHuerta" title="La Huerta">
+						<synonym value="La Huerta de Los Indios"/>
+					</heading>
+				</heading>
+				<heading id="BajaCaliforniaSurstate" title="Baja California Sur state">
+					<synonym value="Baja California Sur"/>
+				</heading>
+				<heading id="Champechestate" title="Champeche state">
+					<synonym value="Champeche"/>
+					<heading id="Campeche" title="Campeche">
+						<synonym value="San Francisco de Campeche"/>
+					</heading>
+					<heading id="Lerma" title="Lerma"/>
+					<heading id="Tepakan" title="Tepakán">
+						<synonym value="Tepakan"/>
+					</heading>
+				</heading>
+				<heading id="Chiapasstate" title="Chiapas state">
+					<synonym value="Chiapas"/>
+					<heading id="AmatenangodelValle" title="Amatenango del Valle"/>
+					<heading id="Cancuc" title="Cancuc"/>
+					<heading id="Chamula" title="Chamula"/>
+					<heading id="ChiapadeCorso" title="Chiapa de Corso"/>
+					<heading id="Comitan" title="Comitán">
+						<synonym value="Comitan"/>
+					</heading>
+					<heading id="Huistan" title="Huistán">
+						<synonym value="Huistan"/>
+					</heading>
+					<heading id="Lacanja" title="Lacanjá">
+						<synonym value="Lacanja"/>
+					</heading>
+					<heading id="LasAnimas" title="Las Animas"/>
+					<heading id="Pantepec" title="Pantepec"/>
+					<heading id="Palenque" title="Palenque"/>
+					<heading id="SanCristobal" title="San Cristobal">
+						<heading id="SanAndresLarrainzar" title="San Andrés Larráinzar">
+							<synonym value="San Andres Larrainzar"/>
+						</heading>
+						<heading id="Oxchuc" title="Oxchuc"/>
+					</heading>
+					<heading id="Rayon" title="Rayón">
+						<synonym value="Rayon"/>
+					</heading>
+					<heading id="SanBartolomedelosLlanos" title="San Bartolomé de los Llanos">
+						<synonym value="San Bartolome de los Llanos"/>
+					</heading>
+					<heading id="SanCristoballasCasas" title="San Cristobal las Casas"/>
+					<heading id="Tapalapa" title="Tapalapa"/>
+					<heading id="Tenejapa" title="Tenejapa"/>
+					<heading id="Zinacantan" title="Zinacantan"/>
+				</heading>
+				<heading id="Chihuahuastate" title="Chihuahua state">
+					<synonym value="Chihuahua"/>
+					<heading id="Arechuyvo" title="Arechuyvo"/>
+					<heading id="Creel" title="Creel"/>
+					<heading id="Presidio" title="Presidio"/>  <!-- Needs exclusions for San Francisco's Presidio (and others?) -->
+					<heading id="Tarahumara" title="Tarahumara"/>
+				</heading>
+				<heading id="CoahuiladeZaragozastate" title="Coahuila de Zaragoza state">
+					<synonym value="Coahuila"/>
+					<synonym value="Coahuila de Zaragoza"/>
+					<heading id="Saltillo" title="Saltillo"/>
+				</heading>
+				<heading id="Colimastate" title="Colima state">
+					<synonym value="Colima"/>
+				</heading>
+				<heading id="Durangostate" title="Durango state">
+					<synonym value="Durango"/>  <!-- Check for exclusions (Texas?) -->
+					<heading id="Canelas" title="Canelas"/>
+				</heading>
+				<heading id="Guanajuatostate" title="Guanajuato state">
+					<heading id="Celaya" title="Celaya"/>
+					<heading id="Guanajuatocity" title="Guanajuato city"/>
+					<heading id="Leon" title="León">
+						<synonym value="Leon"/>
+						<synonym value="León de los Aldama"/>
+					</heading>
+				</heading>
+				<heading id="Guerrerostate" title="Guerrero state">
+					<synonym value="Guerrero"/>
+					<heading id="Acapetlahuaya" title="Acapetlahuaya">
+						<synonym value="Acapetlahyaya"/>
+					</heading>
+					<heading id="Acapulco" title="Acapulco"/>
+					<heading id="Ajuchitlan" title="Ajuchitlán">
+						<synonym value="Ajuchitlan"/>
+					</heading>
+					<heading id="Amayaltepec" title="Amayaltepec"/>
+					<heading id="Ameyahualco" title="Ameyahualco"/>
+					<heading id="Atenxoxola" title="Atenxoxola"/>
+					<heading id="Axoxuca" title="Axoxuca"/>
+					<heading id="Ayutla" title="Ayutla"/>
+					<heading id="Casahuamanche" title="Casahuamanche"/>
+					<heading id="Chiepetepec" title="Chiepetepec"/>
+					<heading id="Churumuco" title="Churumuco"/>
+					<heading id="CoatepecdeLosCostales" title="Coatepec de Los Costales"/>
+					<heading id="Copanatoyac" title="Copanatoyac"/>
+					<heading id="CuadrilladeSantaAnita" title="Cuadrilla de Santa Anita"/>
+					<heading id="Cuetzala" title="Cuetzala"/>
+					<heading id="ElCoral" title="El Coral"/>
+					<heading id="ElLiman" title="El Liman"/>
+					<heading id="ElPalmar" title="El Palmar"/>
+					<heading id="Huamuxtitlan" title="Huamuxtitlán">
+						<synonym value="Huamuxtitlan"/>
+					</heading>
+					<heading id="Huehuetonac" title="Huehuetonac"/>
+					<heading id="Hueycantenango" title="Hueycantenango"/>
+					<heading id="Ixcapaneca" title="Ixcapaneca"/>
+					<heading id="LaParota" title="La Parota"/>
+					<heading id="Naranjo" title="Naranjo"/>
+					<heading id="Olinala" title="Olinala"/>
+					<heading id="Ostotitlan" title="Ostotitlan"/>
+					<heading id="Paintla" title="Paintla"/>
+					<heading id="Pipichahuasco" title="Pipichahuasco"/>
+					<heading id="Potrerillo" title="Potrerillo"/>
+					<heading id="SanAgustinOapan" title="San Agustin Oapan"/>
+					<heading id="SanFrancisco" title="San Francisco"/>
+					<heading id="SanMartinPachivia" title="San Martin Pachivia"/>
+					<heading id="SanMiguel" title="San Miguel"/>
+					<heading id="SanMiguelHuapan" title="San Miguel Huapan"/>
+					<heading id="Taxco" title="Taxco"/>
+					<heading id="Tecoanapa" title="Tecoanapa"/>
+					<heading id="Tianguizolco" title="Tianguizolco"/>
+					<heading id="Tixtla" title="Tixtla"/>
+					<heading id="Tlalcozotitlan" title="Tlalcozotitlan"/>
+					<heading id="Tlamacasapa" title="Tlamacasapa"/>
+					<heading id="Tlamamaca" title="Tlamamaca"/>
+					<heading id="Tlanipatla" title="Tlanipatla"/>
+					<heading id="Tlanixpatlan" title="Tlanixpatlan"/>
+					<heading id="Tlapehuala" title="Tlapehuala"/>
+					<heading id="Totozintla" title="Totozintla"/>
+					<heading id="ValleLuz" title="Valle Luz"/>
+					<heading id="Xalpatlahuac" title="Xalpatlahuac"/>
+					<heading id="Xochistlahuaca" title="Xochistlahuaca"/>
+					<heading id="ZumpangodelRio" title="Zumpango del Rio"/>
+				</heading>
+				<heading id="Hidalgostate" title="Hidalgo state">
+					<synonym value="Hidalgo"/>
+					<heading id="Acaxochitlan" title="Acaxochitlán">
+						<synonym value="Acaxochitlan"/>
+					</heading>
+					<heading id="Ixmiquilpan" title="Ixmiquilpan"/>
+					<heading id="LaCueva" title="La Cueva"/>
+					<heading id="SanMateo" title="San Mateo"/>
+					<heading id="SanMiguel" title="San Miguel"/>
+					<heading id="ValledeMesquetal" title="Valle de Mesquetal"/>
+					<heading id="Zimapan" title="Zimapan"/>
+				</heading>
+				<heading id="Jaliscostate" title="Jalisco state">
+					<synonym value="Jalisco"/>
+					<heading id="Ahuacapan" title="Ahuacapan"/>
+					<heading id="Alista" title="Alista"/>
+					<heading id="Amilpa" title="Amilpa"/>
+					<heading id="Apulco" title="Apulco"/>
+					<heading id="Arandas" title="Arandas"/>
+					<heading id="Ayntla" title="Ayntla"/>
+					<heading id="CerritoColorado" title="Cerrito Colorado"/>
+					<heading id="Chachahuatlan" title="Chachahuatlan"/>
+					<heading id="Chapala" title="Chapala"/>
+					<heading id="Chiquistlan" title="Chiquistlan"/>
+					<heading id="Guadalajara" title="Guadalajara"/>
+					<heading id="Jazmin" title="Jazmín">
+						<synonym value="Jazmin"/>
+					</heading>
+					<heading id="LakeChapala" title="Lake Chapala"/>
+					<heading id="LosAltillos" title="Los Altillos"/>
+					<heading id="Mascota" title="Mascota"/>
+					<heading id="ASanAntonio" title="A. San Antonio"/>
+					<heading id="SanGabriel" title="San Gabriel"/>
+					<heading id="SanJoseTateposco" title="San Jose Tateposco"/>
+					<heading id="Sayula" title="Sayula"/>
+					<heading id="Talpa" title="Talpa"/>
+					<heading id="Tapalpa" title="Tapalpa"/>
+					<heading id="Tenamaxtlan" title="Tenamaxtlan"/>
+					<heading id="Tlaquepaque" title="Tlaquepaque"/>
+					<heading id="Tonala" title="Tonalá">
+						<synonym value="Tonala"/>
+					</heading>
+					<heading id="Tuxcacuesco" title="Tuxcacuesco"/>
+				</heading>
+				<heading id="Mexicostate" title="Mexico state">
+					<heading id="Metepec" title="Metepec"/>
+					<heading id="Toluca" title="Toluca"/>
+				</heading>
+				<heading id="MichoacandeOcampo" title="Michoacán de Ocampo">
+					<synonym value="Michoacan"/>
+					<synonym value="Michoacán  de Ocampo"/>
+					<synonym value="Michoacan de Ocampo"/>
+					<heading id="Erongaricuaro" title="Erongaricuaro"/>
+					<heading id="Iquatzio" title="Iquatzio"/>
+					<heading id="Morelia" title="Morelia"/>
+					<heading id="Ocumicho" title="Ocumicho"/>
+					<heading id="Paracho" title="Paracho"/>
+					<heading id="Patamban" title="Patamban"/>
+					<heading id="Patzcuaro" title="Pátzcuaro">
+						<synonym value="Patzcuaro"/>
+					</heading>
+					<heading id="Purepero" title="Purépero">
+						<synonym value="Purepero"/>
+					</heading>
+					<heading id="SantaFe" title="Santa Fe"/>
+					<heading id="Tzintzuntzan" title="Tzintzuntzan"/>
+					<heading id="Tocuaro" title="Tocuaro"/>
+					<heading id="Uruapan" title="Uruapan"/>
+					<heading id="Xochimilco" title="Xochimilco"/>
+					<heading id="Zacapu" title="Zacapu"/>
+				</heading>
+				<heading id="Morelosstate" title="Morelos state">
+					<synonym value="Morelos"/>
+					<heading id="Cuernavaca" title="Cuernavaca"/>
+				</heading>
+				<heading id="Nayarit" title="Nayarit">
+					<heading id="ElAire" title="El Aire"/>
+					<heading id="ElLimon" title="El Limón">
+						<synonym value="El Limon"/>
+					</heading>
+					<heading id="GuadalupeOcotan" title="Guadalupe Ocotán">
+						<synonym value="Guadalupe de Ocotan"/>
+						<synonym value="Guadalupe Ocotan"/>
+					</heading>
+					<heading id="JesusMaria" title="Jesús Maria">
+						<synonym value="Jesus María"/>
+					</heading>
+					<heading id="LaMesa" title="La Mesa"/>
+					<heading id="MesadeNayar" title="Mesa de Nayar"/>
+				</heading>
+				<heading id="OaxacaMexicanstate" title="Oaxaca state">
+					<synonym value="Oaxaca (Mexican state)"/>
+					<synonym value="Oaxaca"/>
+					<heading id="OaxacaMexicancity" title="Oaxaca city">
+						<synonym value="Oaxaca (Mexican city)"/>
+					</heading>
+					<heading id="Coyotepec" title="Coyotepec">
+						<synonym value="San Bartolo Coyotepec"/>
+					</heading>
+					<heading id="Mitla" title="Mitla"/>
+					<heading id="Ocotlan" title="Ocotlán">
+						<synonym value="Ocotlan de Morelos"/>
+						<synonym value="Ocotlán de Morelos"/>
+					</heading>
+				</heading>
+				<heading id="Pueblastate" title="Puebla state">
+					<heading id="Acatlan" title="Acatlán">
+						<synonym value="Acatlan"/>
+					</heading>
+					<heading id="Huauchinango" title="Huauchinango"/>
+					<heading id="Huehuetlilla" title="Huehuetlilla"/>
+					<heading id="IzucardeMatamoros" title="Izucar de Matamoros">
+						<synonym value="Matamoros de Izucar"/>
+					</heading>
+					<heading id="Matamoros" title="Matamoros"/>
+					<heading id="Pueblacity" title="Puebla city"/>
+					<heading id="SanPablito" title="San Pablito"/>
+					<heading id="SanPetlacatla" title="San Petlacatla"/>
+					<heading id="SantaMaraChicmecatitlan" title="Santa María Chicmecatitlan">
+						<synonym value="Santa Maria Chicmecatitlan"/>
+					</heading>
+					<heading id="Tehuacan" title="Tehuacán">
+						<synonym value="Tehuacan"/>
+					</heading>
+					<heading id="Zihuateutla" title="Zihuateutla"/>
+				</heading>
+				<heading id="QueretarodeArteagastate" title="Queretaro de Arteaga state">
+					<synonym value="Queretaro de Arteaga"/>
+				</heading>
+				<heading id="QuintanaRoostate" title="Quintana Roo state">
+					<synonym value="Quintana Roo"/>
+				</heading>
+				<heading id="Sinaloastate" title="Sinaloa state">
+					<synonym value="Sinaloa"/>
+				</heading>
+				<heading id="Sonorastate" title="Sonora state">
+					<heading id="Alamos" title="Alamos"/>
+					<heading id="Babispe" title="Babispe"/>
+					<heading id="BajaCalifornia" title="Baja California">
+						<heading id="Guadalupe" title="Guadalupe"/>
+					</heading>
+					<heading id="ColoniaLerdo" title="Colonia Lerdo"/>
+					<heading id="Enpalme" title="Enpalme"/>
+					<heading id="Guaymas" title="Guaymas"/>
+					<heading id="LaPlaya" title="La Playa"/>
+					<heading id="LosBocas" title="Los Bocas"/>
+					<heading id="MunicipiodeTrincheras" title="Municipio de Trincheras"/>
+					<heading id="Navojoa" title="Navojoa">
+						<heading id="Mayo" title="Mayo"/>
+					</heading>
+					<heading id="Nogales" title="Nogales"/>
+					<heading id="PuntaLaCholea" title="Punta La Cholea"/>
+					<heading id="PuntaPenasco" title="Punta Penasco"/>
+					<heading id="SanCarloCove" title="San Carlo Cove"/>
+					<heading id="SenoritaRLagoon" title="Senorita R. Lagoon"/>
+					<heading id="Tesia" title="Tesia"/>
+					<heading id="Tetanchopo" title="Tetanchopo"/>
+					<heading id="Tibidhuachi" title="Tibidhuachi"/>
+					<heading id="Tonichi" title="Tonichi"/>
+					<heading id="Yavaros" title="Yavaros"/>
+				</heading>
+				<heading id="Tabascostate" title="Tabasco state">
+					<synonym value="Tabasco"/>
+				</heading>
+				<heading id="Tlaxcalastate" title="Tlaxcala state">
+					<synonym value="Tlaxcala"/>
+				</heading>
+				<heading id="VeracruzLlavestate" title="Veracruz-Llave state">
+					<synonym value="Veracruz-Llave"/>
+				</heading>
+				<heading id="Yucatanstate" title="Yucatán state">
+					<synonym value="Yucatán"/>
+					<synonym value="Yucatan"/>
+					<heading id="ChichenItza" title="Chichén Itzá">
+						<synonym value="Chichen Itza"/>
+					</heading>
+					<heading id="HaciendaJalacal" title="Hacienda Jalacal"/>
+					<heading id="Maxcanu" title="Maxcanu"/>
+					<heading id="Merida" title="Mérida">
+						<synonym value="Merida"/>
+					</heading>
+					<heading id="Ticul" title="Ticul"/>
+				</heading>
+				<heading id="Zacatecasstate" title="Zacatecas state"/>
 			</heading>
 			<heading id="UnitedStates" title="United States">
     				<synonym value="United States of America"/>
 				<heading id="Stateunspecified" title="State unspecified">
+					<heading id="MasseysCavesite" title="Massey's Cave site"/>
+					<heading id="USANL1" title="USA-NL- 1">
+						<synonym value="USA-NL-1"/>
+					</heading>
+					<heading id="USANL2" title="USA-NL- 2">
+						<synonym value="USA-NL-2"/>
+					</heading>
+					<heading id="USANL3" title="USA-NL- 3">
+						<synonym value="USA-NL-3"/>
+					</heading>
+					<heading id="USANL4" title="USA-NL- 4">
+						<synonym value="USA-NL-4"/>
+					</heading>
+					<heading id="USANL5" title="USA-NL- 5">
+						<synonym value="USA-NL-5"/>
+					</heading>
+					<heading id="USANL6" title="USA-NL- 6">
+						<synonym value="USA-NL-6"/>
+					</heading>
+					<heading id="USANL7" title="USA-NL- 7">
+						<synonym value="USA-NL-7"/>
+					</heading>
+					<heading id="USANL8" title="USA-NL- 8">
+						<synonym value="USA-NL-8"/>
+					</heading>
+					<heading id="USANL9" title="USA-NL- 9">
+						<synonym value="USA-NL-9"/>
+					</heading>
+					<heading id="USANL10" title="USA-NL-10"/>
+					<heading id="USANL11" title="USA-NL-11"/>
+					<heading id="USANL12" title="USA-NL-12"/>
+					<heading id="USANL13" title="USA-NL-13"/>
+					<heading id="USANL14" title="USA-NL-14"/>
+					<heading id="USANL15" title="USA-NL-15"/>
+					<heading id="USANL16" title="USA-NL-16"/>
 					<heading id="WesternUnitedStates" title="Western United States"/>
-					<heading id="NoLocs" title="No Locs">
-						<heading id="USANL1" title="USA-NL- 1"/>
-						<heading id="USANL2" title="USA-NL- 2"/>
-						<heading id="USANL3" title="USA-NL- 3"/>
-						<heading id="USANL4" title="USA-NL- 4"/>
-						<heading id="USANL5" title="USA-NL- 5"/>
-						<heading id="USANL6" title="USA-NL- 6"/>
-						<heading id="USANL7" title="USA-NL- 7"/>
-						<heading id="USANL8" title="USA-NL- 8"/>
-						<heading id="USANL9" title="USA-NL- 9"/>
-						<heading id="USANL10" title="USA-NL-10"/>
-						<heading id="USANL11" title="USA-NL-11"/>
-						<heading id="USANL12" title="USA-NL-12"/>
-						<heading id="USANL13" title="USA-NL-13"/>
-						<heading id="USANL14" title="USA-NL-14"/>
-						<heading id="USANL15" title="USA-NL-15"/>
-						<heading id="USANL16" title="USA-NL-16"/>
-					</heading>
-      <heading id="MasseysCavesite" title="Massey's Cave site"/>
 				</heading>
-				<heading id="Southeasternstates" title="Southeastern states">
-      <heading id="SouthCarolina" title="South Carolina">
-        <heading id="Beaufort" title="Beaufort">
-          <heading id="HiltonHead" title="Hilton Head"/>
-        </heading>
-      </heading>
-      <heading id="Mississippi" title="Mississippi">
-        <heading id="Harrison" title="Harrison">
-          <heading id="PassChristian" title="Pass Christian"/>
-        </heading>
-      </heading>
-      <heading id="Georgia" title="Georgia">
-        <heading id="McIntosh" title="Mc Intosh">
-          <heading id="Darien" title="Darien"/>
-        </heading>
-      </heading>
-      <heading id="Florida" title="Florida">
-        <heading id="Everglades" title="Everglades"/>
-      </heading>
-      <heading id="Alabama" title="Alabama"/>
-      <heading id="NorthCarolina" title="North Carolina">
-        <heading id="CherokeeLodge" title="Cherokee Lodge"/>
-        <heading id="Richmond" title="Richmond">
-						<synonym value="PROVENIENCE = Richmond county, North Carolina"/>
-          <heading id="NCRi1" title="NC-Ri-1"/>
-        </heading>
-        <heading id="Horrycounty" title="Horry county">
-          <heading id="Greenville" title="Greenville">
-            <heading id="TarRiver" title="Tar River"/>
-          </heading>
-        </heading>
-      </heading>
-      <heading id="Tennessee" title="Tennessee">
-        <heading id="LillicoPlains" title="Lillico Plains"/>
-      </heading>
-      <heading id="AppalachianSummit" title="Appalachian Summit"/>
-      <heading id="Southeast" title="Southeast"/>
-				</heading>
-				<heading id="Northwesternstates" title="Northwestern states">
-					<heading id="Alaska" title="Alaska">
-					<heading id="NorthwestBeringSea" title="Northwest Bering Sea"/>
-					<heading id="AleutianIslands" title="Aleutian Islands">
-					  <heading id="WesternAleutians" title="Western Aleutians">
-					    <heading id="NearIslands" title="Near Islands">
-					      <heading id="AttuIsland" title="Attu Island"/>
-					      <heading id="AgattuIsland" title="Agattu Island"/>
-					      <heading id="ShemyaIsland" title="Shemya Island"/>
-					    </heading>
-					  </heading>
-					  <heading id="FoxIslands" title="Fox Islands">
-					    <heading id="UnalaskaIsland" title="Unalaska Island">
-					      <heading id="IliuLuik" title="Iliu Luik">
-					        <synonym value="City of Unalaska"/>
-					        <synonym value="Iliuliuk"/>
-					        <synonym value="Illiuliuk"/>
-					        <synonym value="Moolook"/>
-					        <synonym value="Oulioculiuk"/>
-					      </heading>
-					      <heading id="Unalaska" title="Unalaska">
-						<synonym value="Iluulux"/>
+				<heading id="Southeasternstates" title="Southeastern states">  <!-- done -->
+					<synonym value="Southeast"/> <!-- Check for exclusions -->
+					<heading id="Alabama" title="Alabama"/>
+					<heading id="AppalachianSummit" title="Appalachian Summit"/>
+					<heading id="Florida" title="Florida">
+						<heading id="TheEverglades" title="The Everglades">
+							<synonym value="Everglades"/>
 						</heading>
-					      <heading id="DutchHarbor" title="Dutch Harbor"/>
-					    </heading>
-					    <heading id="UmnakIsland" title="Umnak Island">
-					      <heading id="Nikolski" title="Nikolski"/>
-					    </heading>
-					  </heading>
-					  <heading id="CentralAleutians" title="Central Aleutians">
-					    <heading id="AndreanofIslands" title="Andreanof Islands">
-					      <heading id="AtkaIsland" title="Atka Island"/>
-					      <heading id="SaltIsland" title="Salt Island"/>
-					      <heading id="ChugulIsland" title="Chugul Island"/>
-					      <heading id="SeguamIsland" title="Seguam Island"/>
-					    </heading>
-					    <heading id="RatIslands" title="Rat Islands">
-					      <heading id="AmchitkaIsland" title="Amchitka Island"/>
-					    </heading>
-					  </heading>
-					  <heading id="Unalaska" title="Unalaska"/>
-					  <heading id="PribilofIslands" title="Pribilof Islands">
-					    <heading id="StPaulIsland" title="St. Paul Island"/>
-					    <heading id="StGeorgeIsland" title="St. George Island"/>
-					  </heading>
-					  <heading id="BelkofskiIsland" title="Belkofski Island ?"/>
-					  <heading id="IslandsoftheFourMountains" title="Islands of the Four Mountains">
-					    <heading id="KagamilIsland" title="Kagamil Island"/>
-					  </heading>
-					  <heading id="Aleutian" title="Aleutian"/>
-					  <heading id="Aleut" title="Aleut"/>
-					  <heading id="AleutianIslands" title="Aleutian Islands"/>
 					</heading>
-					<heading id="PointBarrow" title="Point Barrow"/>
-					<heading id="SoutheastAlaska" title="Southeast Alaska"/>
-					<heading id="Kodiakdistrict" title="Kodiak district">
-					  <heading id="KodiakIsland" title="Kodiak Island">
-					    <heading id="Chiniak" title="Chiniak"/>
-					    <heading id="StPaul" title="St. Paul"/>
-					    <heading id="Kaguyak" title="Kaguyak">
-					      <synonym value="Kaguiak"/>
-					    </heading>
-					    <heading id="Karluk" title="Karluk"/>
-					    <heading id="OldKaguiak" title="Old Kaguiak"/>
-					    <heading id="Kodiak" title="Kodiak"/>
-					  </heading>
-					  <heading id="UyakIsland" title="Uyak Island"/>
-					  <heading id="KarlukIsland" title="Karluk Island"/>
-					  <heading id="Kodiak" title="Kodiak"/>
+					<heading id="Georgia" title="Georgia">
+						<heading id="McIntosh" title="Mc Intosh">
+							<synonym value="McIntosh"/>
+							<synonym value="McIntosh county"/>
+							<synonym value="Mc Intosh county"/>
+							<heading id="Darien" title="Darien"/>
+						</heading>
 					</heading>
-					<heading id="Chilkat" title="Chilkat"/>
-					<heading id="Juneau" title="Juneau"/>
-					<heading id="Yakutat" title="Yakutat"/>
-					<heading id="AlexanderArchipelago" title="Alexander Archipelago">
-					  <heading id="BaranofIsland" title="Baranof Island">
-					    <heading id="Sitka" title="Sitka"/>
-					  </heading>
-					  <heading id="AdmiraltyIsland" title="Admiralty Island">
-					    <heading id="Angoon" title="Angoon"/>
-					    <heading id="KootanshooInlet" title="Kootanshoo Inlet"/>
-					  </heading>
-					  <heading id="PrinceofWalesIsland" title="Prince of Wales Island">
-					    <heading id="Howkan" title="Howkan"/>
-					  </heading>
-					  <heading id="ForresterIsland" title="Forrester Island"/>
+					<heading id="Mississippi" title="Mississippi">
+						<heading id="Harrison" title="Harrison">
+							<heading id="PassChristian" title="Pass Christian"/>
+						</heading>
 					</heading>
-					<heading id="Tyonek" title="Tyonek"/>
-					<heading id="Skidegate" title="Skidegate"/>
-					<heading id="CookInlet" title="Cook Inlet"/>
-					<heading id="KotzebueSound" title="Kotzebue Sound">
-					  <heading id="NoatakRiver" title="Noatak River">
-					    <heading id="HeadofNoatakRiver" title="Head of Noatak River"/>
-					  </heading>
-					  <heading id="KoowakRiver" title="Koowak River"/>
-					  <heading id="HeadofKotzebueSound" title="Head of Kotzebue Sound"/>
+					<heading id="SouthCarolina" title="South Carolina">
+						<heading id="Beaufort" title="Beaufort">
+							<heading id="HiltonHead" title="Hilton Head"/>
+						</heading>
 					</heading>
-					<heading id="Savonoski" title="Savonoski"/>
-					<heading id="NortonSound" title="Norton Sound">
-					  <heading id="Unalaklik" title="Unalaklik">
-					    <synonym value="Unalakluk"/>
-					  </heading>
-					  <heading id="Unalakleet" title="Unalakleet">
-					    <synonym value="Unalaklit"/>
-					  </heading>
-					  <heading id="GolovinBay" title="Golovin Bay"/>
-					  <heading id="NortonBay" title="Norton Bay"/>
+					<heading id="NorthCarolina" title="North Carolina">
+						<heading id="CherokeeLodge" title="Cherokee Lodge"/>
+						<heading id="NCHorrycounty" title="Horry county">
+							<heading id="Greenville" title="Greenville">
+								<heading id="TarRiver" title="Tar River"/>
+							</heading>
+						</heading>
+						<heading id="NCRichmondCounty" title="Richmond county">
+							<synonym value="PROVENIENCE = Richmond county, North Carolina"/>
+							<heading id="NCRi1" title="NC-Ri-1"/>
+						</heading>
 					</heading>
-					<heading id="BeringStrait" title="Bering Strait">
-					  <heading id="CoastofBeringStrait" title="Coast of Bering Strait">
-					    <heading id="CapePrinceofWales" title="Cape Prince of Wales"/>
-					  </heading>
+					<heading id="Tennessee" title="Tennessee">
+						<heading id="LillicoPlains" title="Lillico Plains"/>
 					</heading>
-					<heading id="TananaRiver" title="Tanana River"/>
-					<heading id="KingIsland" title="King Island"/>
-					<heading id="Paimiut" title="Paimiut">
-					  <synonym value="Pymuth"/>
+				</heading>
+				<heading id="Northwesternstates" title="Northwestern states"> <!-- All done except ALASKA -->
+					<heading id="Alaska" title="Alaska"> <!-- ALPHABETIZE -->
+						<synonym value="PROVENIENCE = Alaska"/>
+						<heading id="NorthwestBeringSea" title="Northwest Bering Sea"/>
+						<heading id="AleutianIslands" title="Aleutian Islands">
+						  <heading id="WesternAleutians" title="Western Aleutians">
+						    <heading id="NearIslands" title="Near Islands">
+						      <heading id="AttuIsland" title="Attu Island"/>
+						      <heading id="AgattuIsland" title="Agattu Island"/>
+						      <heading id="ShemyaIsland" title="Shemya Island"/>
+						    </heading>
+						  </heading>
+						  <heading id="FoxIslands" title="Fox Islands">
+						    <heading id="UnalaskaIsland" title="Unalaska Island">
+						      <heading id="IliuLuik" title="Iliu Luik">
+						        <synonym value="City of Unalaska"/>
+						        <synonym value="Iliuliuk"/>
+						        <synonym value="Illiuliuk"/>
+						        <synonym value="Moolook"/>
+						        <synonym value="Oulioculiuk"/>
+						      </heading>
+						      <heading id="Unalaska" title="Unalaska">
+							<synonym value="Iluulux"/>
+							</heading>
+						      <heading id="DutchHarbor" title="Dutch Harbor"/>
+						    </heading>
+						    <heading id="UmnakIsland" title="Umnak Island">
+						      <heading id="Nikolski" title="Nikolski"/>
+						    </heading>
+						  </heading>
+						  <heading id="CentralAleutians" title="Central Aleutians">
+						    <heading id="AndreanofIslands" title="Andreanof Islands">
+						      <heading id="AtkaIsland" title="Atka Island"/>
+						      <heading id="SaltIsland" title="Salt Island"/>
+						      <heading id="ChugulIsland" title="Chugul Island"/>
+						      <heading id="SeguamIsland" title="Seguam Island"/>
+						    </heading>
+						    <heading id="RatIslands" title="Rat Islands">
+						      <heading id="AmchitkaIsland" title="Amchitka Island"/>
+						    </heading>
+						  </heading>
+						  <heading id="Unalaska" title="Unalaska"/>
+						  <heading id="PribilofIslands" title="Pribilof Islands">
+						    <heading id="StPaulIsland" title="St. Paul Island"/>
+						    <heading id="StGeorgeIsland" title="St. George Island"/>
+						  </heading>
+						  <heading id="BelkofskiIsland" title="Belkofski Island ?"/>
+						  <heading id="IslandsoftheFourMountains" title="Islands of the Four Mountains">
+						    <heading id="KagamilIsland" title="Kagamil Island"/>
+						  </heading>
+						  <heading id="Aleutian" title="Aleutian"/>
+						  <heading id="Aleut" title="Aleut"/>
+						  <heading id="AleutianIslands" title="Aleutian Islands"/>
+						</heading>
+						<heading id="PointBarrow" title="Point Barrow"/>
+						<heading id="SoutheastAlaska" title="Southeast Alaska"/>
+						<heading id="Kodiakdistrict" title="Kodiak district">
+						  <heading id="KodiakIsland" title="Kodiak Island">
+						    <heading id="Chiniak" title="Chiniak"/>
+						    <heading id="StPaul" title="St. Paul"/>
+						    <heading id="Kaguyak" title="Kaguyak">
+						      <synonym value="Kaguiak"/>
+						    </heading>
+						    <heading id="Karluk" title="Karluk"/>
+						    <heading id="OldKaguiak" title="Old Kaguiak"/>
+						    <heading id="Kodiak" title="Kodiak"/>
+						  </heading>
+						  <heading id="UyakIsland" title="Uyak Island"/>
+						  <heading id="KarlukIsland" title="Karluk Island"/>
+						  <heading id="Kodiak" title="Kodiak"/>
+						</heading>
+						<heading id="Chilkat" title="Chilkat"/>
+						<heading id="Juneau" title="Juneau"/>
+						<heading id="Yakutat" title="Yakutat"/>
+						<heading id="AlexanderArchipelago" title="Alexander Archipelago">
+						  <heading id="BaranofIsland" title="Baranof Island">
+						    <heading id="Sitka" title="Sitka"/>
+						  </heading>
+						  <heading id="AdmiraltyIsland" title="Admiralty Island">
+						    <heading id="Angoon" title="Angoon"/>
+						    <heading id="KootanshooInlet" title="Kootanshoo Inlet"/>
+						  </heading>
+						  <heading id="PrinceofWalesIsland" title="Prince of Wales Island">
+						    <heading id="Howkan" title="Howkan"/>
+						  </heading>
+						  <heading id="ForresterIsland" title="Forrester Island"/>
+						</heading>
+						<heading id="Tyonek" title="Tyonek"/>
+						<heading id="Skidegate" title="Skidegate"/>
+						<heading id="CookInlet" title="Cook Inlet"/>
+						<heading id="KotzebueSound" title="Kotzebue Sound">
+						  <heading id="NoatakRiver" title="Noatak River">
+						    <heading id="HeadofNoatakRiver" title="Head of Noatak River"/>
+						  </heading>
+						  <heading id="KoowakRiver" title="Koowak River"/>
+						  <heading id="HeadofKotzebueSound" title="Head of Kotzebue Sound"/>
+						</heading>
+						<heading id="Savonoski" title="Savonoski"/>
+						<heading id="NortonSound" title="Norton Sound">
+						  <heading id="Unalaklik" title="Unalaklik">
+						    <synonym value="Unalakluk"/>
+						  </heading>
+						  <heading id="Unalakleet" title="Unalakleet">
+						    <synonym value="Unalaklit"/>
+						  </heading>
+						  <heading id="GolovinBay" title="Golovin Bay"/>
+						  <heading id="NortonBay" title="Norton Bay"/>
+						</heading>
+						<heading id="BeringStrait" title="Bering Strait">
+						  <heading id="CoastofBeringStrait" title="Coast of Bering Strait">
+						    <heading id="CapePrinceofWales" title="Cape Prince of Wales"/>
+						  </heading>
+						</heading>
+						<heading id="TananaRiver" title="Tanana River"/>
+						<heading id="KingIsland" title="King Island"/>
+						<heading id="Paimiut" title="Paimiut">
+						  <synonym value="Pymuth"/>
+						</heading>
+						<heading id="Kosorefski" title="Kosorefski"/>
+						<heading id="Ketchikan" title="Ketchikan"/>
+						<heading id="BristolBay" title="Bristol Bay">
+						  <heading id="AlaganokRiver" title="Alaganok River">
+						    <heading id="Alaganok" title="Alaganok"/>
+						  </heading>
+						  <heading id="AlaganakLakeDistrict" title="Alaganak Lake District"/>
+						  <heading id="UgashikRiver" title="Ugashik River"/>
+						  <heading id="Naknek" title="Naknek"/>
+						</heading>
+						<heading id="NorthernAlaska" title="Northern Alaska"/>
+						<heading id="CapeBarrow" title="Cape Barrow"/>
+						<heading id="Nome" title="Nome"/>
+						<heading id="Itiutiuk" title="Itiutiuk"/>
+						<heading id="NortonSoundtoBristolBay" title="Norton Sound to Bristol Bay"/>
+						<heading id="Anchorage" title="Anchorage"/>
+						<heading id="YesBay" title="Yes Bay"/>
+						<heading id="Coast" title="Coast"/>
+						<heading id="SouthernAlaska" title="Southern Alaska"/>
+						<heading id="CapeNome" title="Cape Nome"/>
+						<heading id="SewardPeninsula" title="Seward Peninsula">
+						  <heading id="PortClarence" title="Port Clarence"/>
+						  <heading id="LoppLagoon" title="Lopp Lagoon"/>
+						  <heading id="Cavia" title="Cavia"/>
+						</heading>
+						<heading id="SledgeIsland" title="Sledge Island"/>
+						<heading id="PointLay" title="Point Lay"/>
+						<heading id="KoukukRiver" title="Koukuk River">
+						  <synonym value="Koyiukuk River"/>
+						  <synonym value="Koyukuk River"/>
+						  <synonym value="Koukuk River"/>
+						</heading>
+						<heading id="StMichaelIsland" title="St. Michael Island"/>
+						<heading id="Shageluk" title="Shageluk"/>
+						<heading id="Kushunuk" title="Kushunuk"/>
+						<heading id="Malakleet" title="Malakleet"/>
+						<heading id="WesternAlaska" title="Western Alaska"/>
+						<heading id="Kuskokwim" title="Kuskokwim">
+						  <heading id="KuskokwimRiver" title="Kuskokwim River">
+						    <heading id="LowerKuskokwimRiver" title="Lower Kuskokwim River"/>
+						  </heading>
+						</heading>
+						<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
+						<heading id="Nulato" title="Nulato"/>
+						<heading id="StMichael" title="St. Michael"/>
+						<heading id="PrinceWilliamSound" title="Prince William Sound">
+						  <heading id="PortEtches" title="Port Etches"/>
+						</heading>
+						<heading id="LowerYukontoKuskokwim" title="Lower Yukon to Kuskokwim"/>
+						<heading id="CopperRiver" title="Copper River">
+						  <heading id="CopperRiverdelta" title="Copper River delta"/>
+						  <heading id="LowerCopperRiver" title="Lower Copper River"/>
+						</heading>
+						<heading id="NunivakIsland" title="Nunivak Island">
+						  <heading id="Mekoryuk" title="Mekoryuk"/>
+						</heading>
+						<heading id="Klukwan" title="Klukwan"/>
+						<heading id="Stebbins" title="Stebbins"/>
+						<heading id="OceanCape" title="Ocean Cape"/>
+						<heading id="AnnetteIsland" title="Annette Island">
+						  <heading id="NewMetlakatla" title="New Metlakatla">
+						    <synonym value="Metlakatla"/>
+						    <synonym value="New Metlakatla"/>
+						  </heading>
+						</heading>
+						<heading id="CapeVancouver" title="Cape Vancouver">
+						  <heading id="Kusilvak" title="Kusilvak"/>
+						  <heading id="Chalitmut" title="Chalitmut"/>
+						</heading>
+						<heading id="PastolikRiver" title="Pastolik River"/>
+						<heading id="Hoonah" title="Hoonah">
+						  <synonym value="Huna"/>
+						</heading>
+						<heading id="BeringSea" title="Bering Sea">
+						  <heading id="StephanIsland" title="Stephan Island">
+						    <heading id="Utjoik" title="Utjoik"/>
+						  </heading>
+						</heading>
+						<heading id="CapeYaktag" title="Cape Yaktag"/>
+						<heading id="Nuklukayet" title="Nuklukayet"/>
+						<heading id="CapeLisburne" title="Cape Lisburne"/>
+						<heading id="PointHope" title="Point Hope">
+						  <heading id="Tigara" title="Tigara"/>
+						  <heading id="Provenience" title="Provenience"/>
+						</heading>
+						<heading id="AmoknakIsland" title="Amoknak Island"/>
+						<heading id="Kosovefski" title="Kosovefski"/>
+						<heading id="Kammaoot" title="Kammaoot ?"/>
+						<heading id="Andreafsky" title="Andreafsky">
+						  <synonym value="St. Mary's"/>
+						</heading>
+						<heading id="KwidjakRiver" title="Kwidjak River"/>
+						<heading id="Anvik" title="Anvik"/>
+						<heading id="StevensVillage" title="Stevens Village"/>
+						<heading id="GeorgeCamp" title="George Camp"/>
+						<heading id="CapeRomanof" title="Cape Romanof"/>
+						<heading id="Skagway" title="Skagway"/>
+						<heading id="ChichgofIsland" title="Chichgof Island">
+						  <heading id="FreshwaterBay" title="Freshwater Bay"/>
+						</heading>
+						<heading id="Wainwright" title="Wainwright"/>
+						<heading id="WindslowIsland" title="Windslow Island"/>
+						<heading id="AlaskanInterior" title="Alaskan Interior"/>
+						<heading id="Katmai" title="Katmai"/>
+						<heading id="Nutchigdistrict" title="Nutchig district"/>
+						<heading id="HooperBay" title="Hooper Bay">
+						  <heading id="HooperBay" title="Hooper Bay">
+						    <synonym value="Askinuk"/>
+						  </heading>
+						</heading>
+						<heading id="CapeBlossom" title="Cape Blossom"/>
+						<heading id="BrooksRange" title="Brooks Range">
+						  <heading id="AnaktuvukPass" title="Anaktuvuk Pass"/>
+						</heading>
+						<heading id="Pastolik" title="Pastolik">
+						  <synonym value="Pashtol"/>
+						</heading>
+						<heading id="NorthSlope" title="North Slope">
+						  <heading id="ColvilleRiver" title="Colville River"/>
+						  <heading id="InaruRiver" title="Inaru River"/>
+						</heading>
+						<heading id="Marshall" title="Marshall"/>
+						<heading id="Mtoceyk" title="Mtoceyk ?"/>
+						<heading id="Nushagak" title="Nushagak"/>
+						<heading id="SouthwestCoast" title="Southwest Coast">
+						  <heading id="SouthwestCoastbelowYukonR" title="Southwest Coast below Yukon R."/>
+						</heading>
+						<heading id="Noorvik" title="Noorvik"/>
+						<heading id="LittleDiomedeIsland" title="Little Diomede Island"/>
+						<heading id="CapeRomanzof" title="Cape Romanzof"/>
+						<heading id="Haines" title="Haines"/>
+						<heading id="Kenai" title="Kenai"/>
+						<heading id="Allakaket" title="Allakaket"/>
+						<heading id="BeringSeaandNorth" title="Bering Sea and North"/>
+						<heading id="Palmer" title="Palmer"/>
+						<heading id="Northwest" title="Northwest"/>
+						<heading id="CapeDarby" title="Cape Darby"/>
+						<heading id="Northway" title="Northway"/>
+						<heading id="Kotzebue" title="Kotzebue"/>
+						<heading id="Chignik" title="Chignik"/>
+						<heading id="AmchitkaIsland" title="Amchitka Island"/>
+						<heading id="BirnirkSite" title="Birnirk Site"/>
+						<heading id="NuchekIsland" title="Nuchek Island"/>
+						<heading id="PointHope" title="Point Hope"/>
+						<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
+						<heading id="StMichael" title="St. Michael"/>
+						<heading id="StMichaelorTeller" title="St. Michael or Teller"/>
+						<heading id="Teller" title="Teller"/>
+						<heading id="UnavashikIsland" title="Unavashik Island"/>
+						  <heading id="FortyMile" title="Forty Mile"/>
+						  <heading id="FortyMileRiver" title="Forty Mile River"/>
+						  <heading id="PorcupineRiver" title="Porcupine River"/>
+						<heading id="PunukIslands" title="Punuk Islands"/>
+						<heading id="Homer" title="Homer"/>
+						<heading id="KnightIsland" title="Knight Island"/>
+						<heading id="Yukon" title="Yukon">
+						  <heading id="Yukonnorthward" title="Yukon northward"/>
+						  <heading id="WesternYukon" title="Western Yukon"/>
+						  <heading id="LowerYukon" title="Lower Yukon">
+						    <heading id="Knajkak" title="Knajkak"/>
+						    <heading id="MouthofYukonRiver" title="Mouth of Yukon River"/>
+						  </heading>
+						  <heading id="FortYukon" title="Fort Yukon"/>
+						  <heading id="MiddleYukon" title="Middle Yukon"/>
+						  <heading id="UpperYukon" title="Upper Yukon"/>
+						  <heading id="YukonRiver" title="Yukon River">
+						    <heading id="RussianMission" title="Russian Mission"/>
+						    <heading id="LowerYukonRiver" title="Lower Yukon River"/>
+						    <heading id="UpperYukonRiver" title="Upper Yukon River"/>
+						    <heading id="MiddleYukonRiver" title="Middle Yukon River"/>
+						  </heading>
+						</heading>
+						<heading id="Bethel" title="Bethel"/>
+						<heading id="Granaxcanuwu" title="Granaxcanuwu"/>
+						<heading id="Daxatkanada" title="Daxatkanada"/>
+						<heading id="PillsburyPoint" title="Pillsbury Point"/>
 					</heading>
-					<heading id="Kosorefski" title="Kosorefski"/>
-					<heading id="Ketchikan" title="Ketchikan"/>
-					<heading id="BristolBay" title="Bristol Bay">
-					  <heading id="AlaganokRiver" title="Alaganok River">
-					    <heading id="Alaganok" title="Alaganok"/>
-					  </heading>
-					  <heading id="AlaganakLakeDistrict" title="Alaganak Lake District"/>
-					  <heading id="UgashikRiver" title="Ugashik River"/>
-					  <heading id="Naknek" title="Naknek"/>
-					</heading>
-					<heading id="NorthernAlaska" title="Northern Alaska"/>
-					<heading id="CapeBarrow" title="Cape Barrow"/>
-					<heading id="Nome" title="Nome"/>
-					<heading id="Itiutiuk" title="Itiutiuk"/>
-					<heading id="NortonSoundtoBristolBay" title="Norton Sound to Bristol Bay"/>
-					<heading id="Anchorage" title="Anchorage"/>
-					<heading id="YesBay" title="Yes Bay"/>
-					<heading id="Coast" title="Coast"/>
-					<heading id="SouthernAlaska" title="Southern Alaska"/>
-					<heading id="CapeNome" title="Cape Nome"/>
-					<heading id="SewardPeninsula" title="Seward Peninsula">
-					  <heading id="PortClarence" title="Port Clarence"/>
-					  <heading id="LoppLagoon" title="Lopp Lagoon"/>
-					  <heading id="Cavia" title="Cavia"/>
-					</heading>
-					<heading id="SledgeIsland" title="Sledge Island"/>
-					<heading id="PointLay" title="Point Lay"/>
-					<heading id="KoukukRiver" title="Koukuk River">
-					  <synonym value="Koyiukuk River"/>
-					  <synonym value="Koyukuk River"/>
-					  <synonym value="Koukuk River"/>
-					</heading>
-					<heading id="StMichaelIsland" title="St. Michael Island"/>
-					<heading id="Shageluk" title="Shageluk"/>
-					<heading id="Kushunuk" title="Kushunuk"/>
-					<heading id="Malakleet" title="Malakleet"/>
-					<heading id="WesternAlaska" title="Western Alaska"/>
-					<heading id="Kuskokwim" title="Kuskokwim">
-					  <heading id="KuskokwimRiver" title="Kuskokwim River">
-					    <heading id="LowerKuskokwimRiver" title="Lower Kuskokwim River"/>
-					  </heading>
-					</heading>
-					<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
-					<heading id="Nulato" title="Nulato"/>
-					<heading id="StMichael" title="St. Michael"/>
-					<heading id="PrinceWilliamSound" title="Prince William Sound">
-					  <heading id="PortEtches" title="Port Etches"/>
-					</heading>
-					<heading id="LowerYukontoKuskokwim" title="Lower Yukon to Kuskokwim"/>
-					<heading id="CopperRiver" title="Copper River">
-					  <heading id="CopperRiverdelta" title="Copper River delta"/>
-					  <heading id="LowerCopperRiver" title="Lower Copper River"/>
-					</heading>
-					<heading id="NunivakIsland" title="Nunivak Island">
-					  <heading id="Mekoryuk" title="Mekoryuk"/>
-					</heading>
-					<heading id="Klukwan" title="Klukwan"/>
-					<heading id="Stebbins" title="Stebbins"/>
-					<heading id="OceanCape" title="Ocean Cape"/>
-					<heading id="AnnetteIsland" title="Annette Island">
-					  <heading id="NewMetlakatla" title="New Metlakatla">
-					    <synonym value="Metlakatla"/>
-					    <synonym value="New Metlakatla"/>
-					  </heading>
-					</heading>
-					<heading id="CapeVancouver" title="Cape Vancouver">
-					  <heading id="Kusilvak" title="Kusilvak"/>
-					  <heading id="Chalitmut" title="Chalitmut"/>
-					</heading>
-					<heading id="PastolikRiver" title="Pastolik River"/>
-					<heading id="Hoonah" title="Hoonah">
-					  <synonym value="Huna"/>
-					</heading>
-					<heading id="BeringSea" title="Bering Sea">
-					  <heading id="StephanIsland" title="Stephan Island">
-					    <heading id="Utjoik" title="Utjoik"/>
-					  </heading>
-					</heading>
-					<heading id="CapeYaktag" title="Cape Yaktag"/>
-					<heading id="Nuklukayet" title="Nuklukayet"/>
-					<heading id="CapeLisburne" title="Cape Lisburne"/>
-					<heading id="PointHope" title="Point Hope">
-					  <heading id="Tigara" title="Tigara"/>
-					  <heading id="Provenience" title="Provenience"/>
-					</heading>
-					<heading id="AmoknakIsland" title="Amoknak Island"/>
-					<heading id="Kosovefski" title="Kosovefski"/>
-					<heading id="Kammaoot" title="Kammaoot ?"/>
-					<heading id="Andreafsky" title="Andreafsky">
-					  <synonym value="St. Mary's"/>
-					</heading>
-					<heading id="KwidjakRiver" title="Kwidjak River"/>
-					<heading id="Anvik" title="Anvik"/>
-					<heading id="StevensVillage" title="Stevens Village"/>
-					<heading id="GeorgeCamp" title="George Camp"/>
-					<heading id="CapeRomanof" title="Cape Romanof"/>
-					<heading id="Skagway" title="Skagway"/>
-					<heading id="ChichgofIsland" title="Chichgof Island">
-					  <heading id="FreshwaterBay" title="Freshwater Bay"/>
-					</heading>
-					<heading id="Wainwright" title="Wainwright"/>
-					<heading id="WindslowIsland" title="Windslow Island"/>
-					<heading id="AlaskanInterior" title="Alaskan Interior"/>
-					<heading id="Katmai" title="Katmai"/>
-					<heading id="Nutchigdistrict" title="Nutchig district"/>
-					<heading id="HooperBay" title="Hooper Bay">
-					  <heading id="HooperBay" title="Hooper Bay">
-					    <synonym value="Askinuk"/>
-					  </heading>
-					</heading>
-					<heading id="CapeBlossom" title="Cape Blossom"/>
-					<heading id="BrooksRange" title="Brooks Range">
-					  <heading id="AnaktuvukPass" title="Anaktuvuk Pass"/>
-					</heading>
-					<heading id="Pastolik" title="Pastolik">
-					  <synonym value="Pashtol"/>
-					</heading>
-					<heading id="NorthSlope" title="North Slope">
-					  <heading id="ColvilleRiver" title="Colville River"/>
-					  <heading id="InaruRiver" title="Inaru River"/>
-					</heading>
-					<heading id="Marshall" title="Marshall"/>
-					<heading id="Mtoceyk" title="Mtoceyk ?"/>
-					<heading id="Nushagak" title="Nushagak"/>
-					<heading id="SouthwestCoast" title="Southwest Coast">
-					  <heading id="SouthwestCoastbelowYukonR" title="Southwest Coast below Yukon R."/>
-					</heading>
-					<heading id="Noorvik" title="Noorvik"/>
-					<heading id="LittleDiomedeIsland" title="Little Diomede Island"/>
-					<heading id="CapeRomanzof" title="Cape Romanzof"/>
-					<heading id="Haines" title="Haines"/>
-					<heading id="Kenai" title="Kenai"/>
-					<heading id="Allakaket" title="Allakaket"/>
-					<heading id="BeringSeaandNorth" title="Bering Sea and North"/>
-					<heading id="Palmer" title="Palmer"/>
-					<heading id="Northwest" title="Northwest"/>
-					<heading id="CapeDarby" title="Cape Darby"/>
-					<heading id="Northway" title="Northway"/>
-					<heading id="Kotzebue" title="Kotzebue"/>
-					<heading id="Chignik" title="Chignik"/>
-					<heading id="AmchitkaIsland" title="Amchitka Island"/>
-					<heading id="BirnirkSite" title="Birnirk Site"/>
-					<heading id="NuchekIsland" title="Nuchek Island"/>
-					<heading id="PointHope" title="Point Hope"/>
-					<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
-					<heading id="StMichael" title="St. Michael"/>
-					<heading id="StMichaelorTeller" title="St. Michael or Teller"/>
-					<heading id="Teller" title="Teller"/>
-					<heading id="UnavashikIsland" title="Unavashik Island"/>
-					<heading id="PROVENIENCEAlaska" title="PROVENIENCE = Alaska"/>
-					<heading id="unspecified" title="unspecified">
-					  <heading id="FortyMile" title="Forty Mile"/>
-					  <heading id="FortyMileRiver" title="Forty Mile River"/>
-					  <heading id="PorcupineRiver" title="Porcupine River"/>
-					</heading>
-					<heading id="PunukIslands" title="Punuk Islands"/>
-					<heading id="Homer" title="Homer"/>
-					<heading id="KnightIsland" title="Knight Island"/>
-					<heading id="Yukon" title="Yukon">
-					  <heading id="Yukonnorthward" title="Yukon northward"/>
-					  <heading id="WesternYukon" title="Western Yukon"/>
-					  <heading id="LowerYukon" title="Lower Yukon">
-					    <heading id="Knajkak" title="Knajkak"/>
-					    <heading id="MouthofYukonRiver" title="Mouth of Yukon River"/>
-					  </heading>
-					  <heading id="FortYukon" title="Fort Yukon"/>
-					  <heading id="MiddleYukon" title="Middle Yukon"/>
-					  <heading id="UpperYukon" title="Upper Yukon"/>
-					  <heading id="YukonRiver" title="Yukon River">
-					    <heading id="RussianMission" title="Russian Mission"/>
-					    <heading id="LowerYukonRiver" title="Lower Yukon River"/>
-					    <heading id="UpperYukonRiver" title="Upper Yukon River"/>
-					    <heading id="MiddleYukonRiver" title="Middle Yukon River"/>
-					  </heading>
-					</heading>
-					<heading id="Bethel" title="Bethel"/>
-					<heading id="Granaxcanuwu" title="Granaxcanuwu"/>
-					<heading id="Daxatkanada" title="Daxatkanada"/>
-					<heading id="PillsburyPoint" title="Pillsbury Point"/>
-					</heading>
-					<heading id="Idaho" title="Idaho">
+					<heading id="Idaho" title="Idaho"> <!-- done -->
 						<heading id="Bannock" title="Bannock">
 							<heading id="Pocatello" title="Pocatello"/>
 						</heading>
 						<heading id="SalmonRiverCanyon" title="Salmon River Canyon"/>
 					</heading>
-					<heading id="Oregon" title="Oregon">
+					<heading id="Oregon" title="Oregon"> <!-- done -->
 						<synonym value="PROVENIENCE = Oregon"/>
-						<heading id="CoosCounty" title="Coos County">
+						<heading id="EasternOregon" title="Eastern Oregon"/>  <!-- FIX -->
+						<heading id="NorthwestOregon" title="Northwest Oregon"/>  <!-- FIX -->
+						<heading id="Chemekets" title="Chemekets"/>
+						<heading id="ORClackamasCounty" title="Clackamas County">
+							<synonym value="Clackamas"/>
+							<synonym value="Clackamas Co."/>
+							<synonym value="OR-CL-NL"/>
+							<synonym value="OR-Clackamas-NL"/>
+							<heading id="OregonCity" title="Oregon City"/>
+						</heading>
+						<heading id="ORClatsopCounty" title="Clatsop County">
+							<synonym value="Clatsop"/>
+							<synonym value="Clatsop Co."/>
+							<synonym value="OR-CLT-NL"/>
+							<synonym value="OR-Clatsop-NL"/>
+							<heading id="FortStevens" title="Fort Stevens"/>
+						</heading>
+						<heading id="ORColumbiaCounty" title="Columbia County">
+							<synonym value="Columbia"/> <!-- Exclusions needed? -->
+							<synonym value="Columbia Co."/>
+							<synonym value="OR-CO-NL"/>
+							<synonym value="OR-Columbia-NL"/>
+							<heading id="StHelens" title="St. Helens"/>
+						</heading>
+						<heading id="ORCoosCounty" title="Coos County">
 							<synonym value="Coos"/> <!-- Needs exclusions for Coos Bay -->
 							<synonym value="Coos Co."/>
 							<synonym value="OR-CS-NL"/>
@@ -3368,7 +3497,7 @@
 							<heading id="LarsonsSlough" title="Larson's Slough"/>
 							<heading id="MyrtlePoint" title="Myrtle Point"/>
 						</heading>
-						<heading id="CurryCounty" title="Curry County">
+						<heading id="ORCurryCounty" title="Curry County">
 							<synonym value="Curry"/>
 							<synonym value="Curry Co."/>
 							<synonym value="OR-CU-NL"/>
@@ -3380,13 +3509,42 @@
 							<heading id="GoldBeach" title="Gold Beach"/>
 							<heading id="PortOrford" title="Port Orford"/>
 						</heading>
-						<heading id="JacksonCounty" title="Jackson County">
+						<heading id="ORDeschutesCounty" title="Deschutes County">
+							<synonym value="Deschutes"/>
+							<synonym value="Deschutes Co."/>
+							<synonym value="OR-DS-NL"/>
+						  <heading id="EastLake" title="East Lake"/>
+						</heading>
+						<heading id="ORDouglasCounty" title="Douglas County">  <!--Also in NV; Exclusions needed -->
+							<!-- <synonym value="Douglas"/>  Also in NV; Exclusions needed -->
+							<!-- <synonym value="Douglas Co."/>  Also in NV; Exclusions needed -->
+							<!-- Exclude "Douglas Place, Douglas Island -->
+							<synonym value="OR-DO-NL"/>
+							<synonym value="OR-Douglas-NL"/>
+							<heading id="BrewsterValley" title="Brewster Valley"/>
+						</heading>
+						<heading id="ORHarneyCounty" title="Harney County">
+							<synonym value="Harney"/>
+							<synonym value="Harney Co."/>
+							<synonym value="OR-HA-NL"/>
+							<heading id="FortRockCave" title="Fort Rock Cave"/>
+						</heading>
+						<heading id="ORJacksonCounty" title="Jackson County">
 							<synonym value="Jackson"/>
 							<synonym value="Jackson Co."/>
 							<synonym value="OR-JA-NL"/>
 							<heading id="Medford" title="Medford"/>
 						</heading>
-						<heading id="KlamathCounty" title="Klamath County">
+						<heading id="ORJeffersonCounty" title="Jefferson County">
+							<synonym value="Jefferson"/>
+							<synonym value="Jefferson Co."/>
+							<synonym value="OR-JE-NL"/>
+							<synonym value="OR-Jefferson-NL"/>
+							<heading id="WarmSprings" title="Warm Springs">
+								<heading id="WarmSpringsReservation" title="Warm Springs Reservation"/>
+							</heading>
+						</heading>
+						<heading id="ORKlamathCounty" title="Klamath County">
 							<synonym value="Klamath"/>
 							<synonym value="Klamath Co."/>
 							<synonym value="OR-KL-NL-1"/>
@@ -3406,13 +3564,21 @@
 							<heading id="KlamathReservation" title="Klamath Reservation"/>
 							<heading id="WilliamsonRiver" title="Williamson River"/>
 						</heading>
-						<heading id="LaneCounty" title="Lane County">
+						<heading id="ORLakeCounty" title="Lake County"> <!-- In CA, OR; needs exclusions -->
+							<!-- <synonym value="Lake"/> -->
+							<synonym value="Lake Co."/> <!-- In CA, OR; needs exclusions -->
+							<synonym value="OR-LK-NL"/>
+							<synonym value="OR-Lake-NL"/>
+							<heading id="HartLake" title="Hart Lake"/>
+						</heading>
+						<heading id="ORLaneCounty" title="Lane County">
 							<synonym value="Lane"/>
 							<synonym value="Lane Co."/>
 							<synonym value="OR-LA-NL"/>
+							<synonym value="OR-Lane-NL"/>
 							<heading id="BaileyHills" title="Bailey Hills"/>
 						</heading>
-						<heading id="LincolnCounty" title="Lincoln County">
+						<heading id="ORLincolnCounty" title="Lincoln County">
 							<synonym value="Lincoln"/>
 							<synonym value="Lincoln Co."/>
 							<synonym value="OR-LNC-NL"/>
@@ -3420,7 +3586,32 @@
 								<synonym value="Siletz Agency"/>
 							</heading>
 						</heading>
-						<heading id="MultnomahCounty" title="Multnomah County">
+						<heading id="ORLinnCounty" title="Linn County">
+							<synonym value="Linn"/>
+							<synonym value="Linn Co."/>
+							<synonym value="PROVENIENCE = Linn county, Oregon"/>
+							<synonym value="OR-LIN-NL"/>
+							<heading id="Mehama" title="Mehama"/>
+							<heading id="CalipooiaRiver" title="Calipooia River">
+								<heading id="ArchibaldMound2" title="Archibald Mound #2"/>
+								<heading id="FooteBlevinsMound3" title="Foote Blevins Mound #3"/>
+								<heading id="LlewelynMound" title="Llewelyn Mound"/>
+								<heading id="LlewelynMound1" title="Llewelyn Mound #1"/>
+								<heading id="LlewelynMound3" title="Llewelyn Mound #3"/>
+								<heading id="MackieMound" title="Mackie Mound"/>
+								<heading id="Rathmansfield" title="Rathmans field"/>
+								<heading id="YeatsMound" title="Yeat's Mound"/>
+							</heading>
+						</heading>
+						<heading id="ORMorrowCounty" title="Morrow County">
+							<synonym value="Morrow"/>
+							<synonym value="Morrow Co."/>
+							<synonym value="OR-MW-NL"/>
+							<synonym value="OR-MW-NL-1"/>
+							<synonym value="OR-MW-NL-2"/>
+							<synonym value="OR-Morrow-NL"/>
+						</heading>
+						<heading id="ORMultnomahCounty" title="Multnomah County">
 							<synonym value="Multnomah"/>
 							<synonym value="Multnomah Co."/>
 							<synonym value="OR-MU-NL"/>
@@ -3429,6 +3620,19 @@
 							<heading id="SauvieIsland" title="Sauvie Island">
 								<synonym value="Wappatoo Island"/>
 							</heading>
+						</heading>
+						<heading id="ORPolkCounty" title="Polk County">
+							<synonym value="Polk"/>
+							<synonym value="Polk Co."/>
+							<synonym value="OR-PO-NL"/>
+							<synonym value="OR-Polk-NL"/>
+							<heading id="GrandRondeReservation" title="Grand Ronde Reservation"/>
+						</heading>
+						<heading id="ORShermanCounty" title="Sherman County">
+							<synonym value="Sherman"/>
+							<synonym value="Sherman Co."/>
+							<synonym value="OR-SH-NL"/>
+							<synonym value="OR-Sherman-NL"/>
 						</heading>
 						<heading id="SouthernOregon" title="Southern Oregon">
 							<synonym value="S. Oregon"/>
@@ -3441,7 +3645,19 @@
 							</heading>
 							<heading id="SoutheasternOregon" title="Southeastern Oregon"/>
 						</heading>
-						<heading id="WascoCounty" title="Wasco County">
+						<heading id="ORUmatillaCounty" title="Umatilla County">
+							<synonym value="Umatilla"/>
+							<synonym value="Umatilla Co."/>
+							<synonym value="OR-UM-NL"/>
+							<synonym value="OR-Umatilla-NL"/>
+							<heading id="McNaryReservoir" title="McNary Reservoir">
+								<synonym value="OR-UM-5"/>
+							</heading>
+							<heading id="Pendleton" title="Pendleton"/>
+							<heading id="UmatillaReservation" title="Umatilla Reservation"/>
+						</heading>
+						<heading id="ORUmatillaNationalForest" title="Umatilla National Forest"/>
+						<heading id="ORWascoCounty" title="Wasco County">
 							<synonym value="Wasco"/>
 							<synonym value="Wasco Co."/>
 							<synonym value="OR-WS-NL"/>
@@ -3452,129 +3668,21 @@
 							<heading id="TheDalles" title="The Dalles"/>
 							<heading id="MosierCreek" title="Mosier Creek"/>
 						</heading>
-						<heading id="WesternOregon" title="Western Oregon">
-							<synonym value="W. Oregon"/>
-							<synonym value="Oregon Coast"/>
-						</heading>
-						<heading id="YamhillCounty" title="Yamhill County">
-							<synonym value="Yamhill"/>
-							<synonym value="Yamhill Co."/>
-							<synonym value="OR-YA-NL"/>
-						</heading>
-						
-						<heading id="ClatsopCounty" title="Clatsop County">
-							<synonym value="Clatsop"/>
-							<synonym value="Clatsop Co."/>
-						  <heading id="FortStevens" title="Fort Stevens"/>
-						  <heading id="OrCLTNL" title="Or-CLT-NL"/>
-						</heading>
-						<heading id="EasternOregon" title="Eastern Oregon"/>
-						<heading id="UmatillaCounty" title="Umatilla County">
-							<synonym value="Umatilla"/>
-							<synonym value="Umatilla Co."/>
-						  <heading id="UmatillaReservation" title="Umatilla Reservation"/>
-						  <heading id="Pendleton" title="Pendleton"/>
-						  <heading id="ORUMNL" title="OR-UM-NL"/>
-						  <heading id="ORUM5" title="OR-UM-5">
-						    <synonym value="McNary Reservoir"/>
-						  </heading>
-						</heading>
-						<heading id="Chemekets" title="Chemekets"/>
-						<heading id="NorthwestOregon" title="Northwest Oregon"/>
-						<heading id="DeschutesCounty" title="Deschutes County">
-							<synonym value="Deschutes"/>
-							<synonym value="Deschutes Co."/>
-							<synonym value="OR-DS-NL"/>
-						  <heading id="EastLake" title="East Lake"/>
-						</heading>
-						<heading id="ORLakeCounty" title="Lake County"> <!-- In CA, OR; needs exclusions -->
-							<!-- <synonym value="Lake"/> -->
-							<synonym value="Lake Co."/> <!-- In CA, OR; needs exclusions -->
-						  <heading id="HartLake" title="Hart Lake"/>
-						  <heading id="ORLKNL" title="OR-LK-NL"/>
-						</heading>
-						<heading id="ORUmatillaNationalForest" title="Umatilla National Forest"/>
-						<heading id="LinnCounty" title="Linn County">
-							<synonym value="Linn"/>
-							<synonym value="Linn Co."/>
-							<synonym value="PROVENIENCE = Linn county, Oregon"/>
-							<synonym value="OR-LIN-NL"/>
-							<heading id="Mehama" title="Mehama"/>
-							<heading id="CalipooiaRiver" title="Calipooia River">
-								<heading id="Rathmansfield" title="Rathmans field"/>
-								<heading id="FooteBlevinsMound3" title="Foote Blevins Mound #3"/>
-								<heading id="YeatsMound" title="Yeat's Mound"/>
-								<heading id="LlewelynMound1" title="Llewelyn Mound #1"/>
-								<heading id="LlewelynMound" title="Llewelyn Mound"/>
-								<heading id="LlewelynMound3" title="Llewelyn Mound #3"/>
-								<heading id="ArchibaldMound2" title="Archibald Mound #2"/>
-								<heading id="MackieMound" title="Mackie Mound"/>
-							</heading>
-						</heading>
-						<heading id="ClackamasCounty" title="Clackamas County">
-							<synonym value="Clackamas"/>
-							<synonym value="Clackamas Co."/>
-							<synonym value="OR-CL-NL"/>
-							<synonym value="OR-Clackamas-NL"/>
-							<heading id="OregonCity" title="Oregon City"/>
-						</heading>
-						<heading id="ORDouglasCounty" title="Douglas County">  <!--Also in NV; Exclusions needed -->
-							<!-- <synonym value="Douglas"/>  Also in NV; Exclusions needed -->
-							<!-- <synonym value="Douglas Co."/>  Also in NV; Exclusions needed -->
-							<!-- Exclude "Douglas Place, Douglas Island -->
-							<synonym value="OR-DO-NL"/>
-							<synonym value="OR-Douglas-NL"/>
-							<heading id="BrewsterValley" title="Brewster Valley"/>
-						</heading>
-						<heading id="ColumbiaCounty" title="Columbia County">
-							<synonym value="Columbia"/> <!-- Exclusions needed? -->
-							<synonym value="Columbia Co."/>
-							<synonym value="OR-CO-NL"/>
-							<synonym value="OR-Columbia-NL"/>
-							<heading id="StHelens" title="St. Helens"/>
-						</heading>
-						<heading id="HarneyCounty" title="Harney County">
-							<synonym value="Harney"/>
-							<synonym value="Harney Co."/>
-							<synonym value="OR-HA-NL"/>
-							<heading id="FortRockCave" title="Fort Rock Cave"/>
-						</heading>
-						<heading id="JeffersonCounty" title="Jefferson County">
-							<synonym value="Jefferson"/>
-							<synonym value="Jefferson Co."/>
-							<synonym value="OR-JE-NL"/>
-							<synonym value="OR-Jefferson-NL"/>
-							<heading id="WarmSprings" title="Warm Springs">
-								<heading id="WarmSpringsReservation" title="Warm Springs Reservation"/>
-							</heading>
-						</heading>
-						<heading id="MorrowCounty" title="Morrow County">
-							<synonym value="Morrow"/>
-							<synonym value="Morrow Co."/>
-							<synonym value="OR-MW-NL"/>
-							<synonym value="OR-MW-NL-1"/>
-							<synonym value="OR-MW-NL-2"/>
-							<synonym value="OR-Morrow-NL"/>
-						</heading>
-						<heading id="PolkCounty" title="Polk County">
-							<synonym value="Polk"/>
-							<synonym value="Polk Co."/>
-							<synonym value="OR-PO-NL"/>
-							<synonym value="OR-Polk-NL"/>
-							<heading id="GrandRondeReservation" title="Grand Ronde Reservation"/>
-						</heading>
-						<heading id="ShermanCounty" title="Sherman County">
-							<synonym value="Sherman"/>
-							<synonym value="Sherman Co."/>
-							<synonym value="OR-SH-NL"/>
-							<synonym value="OR-Sherman-NL"/>
-						</heading>
-						<heading id="WashingtonCounty" title="Washington County">
+						<heading id="ORWashingtonCounty" title="Washington County">
 							<!-- <synonym value="Washington"/> -->
 							<synonym value="Washington Co."/>
 							<synonym value="OR-WN-NL"/>
 							<synonym value="OR-Washington-NL"/>
 							<heading id="Tualatin" title="Tualatin"/>
+						</heading>
+						<heading id="WesternOregon" title="Western Oregon">
+							<synonym value="Oregon Coast"/>
+							<synonym value="W. Oregon"/>
+						</heading>
+						<heading id="ORYamhillCounty" title="Yamhill County">
+							<synonym value="Yamhill"/>
+							<synonym value="Yamhill Co."/>
+							<synonym value="OR-YA-NL"/>
 						</heading>
 					</heading>
 					<heading id="Montana" title="Montana"> <!-- done -->
@@ -3801,19 +3909,19 @@
 							</heading>
 						</heading>
 					</heading>
-					<heading id="Wyoming" title="Wyoming">
+					<heading id="Wyoming" title="Wyoming"> <!-- done -->
+						<heading id="Natrona" title="Natrona">
+							<heading id="Casper" title="Casper"/>
+						</heading>
+						<heading id="SiouxReservation" title="Sioux Reservation"/>
+						<heading id="Uinta" title="Uinta">
+							<heading id="FortBridger" title="Fort Bridger"/>
+						</heading>
 						<heading id="WindRiver" title="Wind River">
 							<heading id="WindRiverReservation" title="Wind River Reservation">
 								<heading id="CampBrown" title="Camp Brown"/>
 								<heading id="FortWashakie" title="Fort Washakie"/>
 							</heading>
-						</heading>
-						<heading id="SiouxReservation" title="Sioux Reservation"/>
-						<heading id="Natrona" title="Natrona">
-							<heading id="Casper" title="Casper"/>
-						</heading>
-						<heading id="Uinta" title="Uinta">
-							<heading id="FortBridger" title="Fort Bridger"/>
 						</heading>
 					</heading>
 					<heading id="NorthwestCoast" title="Northwest Coast"/>
@@ -3822,20 +3930,20 @@
 					<heading id="ColumbiaRiver" title="Columbia River"/>
 					<heading id="YellowstoneNationalPark" title="Yellowstone National Park"/>
 				</heading>
-				<heading id="Northeasternstates" title="Northeastern states">
+				<heading id="Northeasternstates" title="Northeastern states">  <!-- done -->
 					<synonym value="Northeast"/> <!-- Check for exclusions -->
 					<heading id="Connecticut" title="Connecticut"/>
 					<heading id="Delaware" title="Delaware"/>
-					<heading id="Massachusetts" title="Massachusetts">
-						<heading id="OldDeerfield" title="Old Deerfield"/>
-						<heading id="Boston" title="Boston"/>
-					</heading>
 					<heading id="NewHampshire" title="New Hampshire"/>
 					<heading id="NewJersey" title="New Jersey">
 						<synonym value="NEW JERSEY-NL-1"/>
 						<synonym value="NEW JERSEY-NL-2"/>
 						<synonym value="NEW JERSEY-NL-3"/>
 						<synonym value="NEW JERSEY-NL-4"/>
+						<synonym value="NJ-NL-1"/>
+						<synonym value="NJ-NL-2"/>
+						<synonym value="NJ-NL-3"/>
+						<synonym value="NJ-NL-4"/>
 						<heading id="Burlington" title="Burlington"/>
 						<heading id="Edinburg" title="Edinburg">
 							<synonym value="Assaupink"/>
@@ -3844,14 +3952,6 @@
 							<heading id="Trenton" title="Trenton"/>
 							<heading id="Yardville" title="Yardville"/>
 							<heading id="WhiteHorse" title="White Horse"/>
-						</heading>
-					</heading>
-					<heading id="Pennsylvania" title="Pennsylvania">
-						<heading id="Lycomingcounty" title="Lycoming county">
-							<heading id="BanksoftheSusquehannaRiver" title="Banks of the Susquehanna River">
-								<heading id="BankofSusquehannaRivernearWIlliamsport" title="Bank of Susquehanna River, near Williamsport"/>
-							</heading>
-							<heading id="Williamsport" title="Williamsport"/>
 						</heading>
 					</heading>
 					<heading id="NewYorkState" title="New York">
@@ -3884,6 +3984,18 @@
 						</heading>
 					</heading>
 					<heading id="Maryland" title="Maryland"/>
+					<heading id="Massachusetts" title="Massachusetts">
+						<heading id="Boston" title="Boston"/>
+						<heading id="OldDeerfield" title="Old Deerfield"/>
+					</heading>
+					<heading id="Pennsylvania" title="Pennsylvania">
+						<heading id="Lycomingcounty" title="Lycoming county">
+							<heading id="BanksoftheSusquehannaRiver" title="Banks of the Susquehanna River">
+								<heading id="BankofSusquehannaRivernearWIlliamsport" title="Bank of Susquehanna River, near Williamsport"/>
+							</heading>
+							<heading id="Williamsport" title="Williamsport"/>
+						</heading>
+					</heading>
 					<heading id="RhodeIsland" title="Rhode Island"/>
 					<heading id="Vermont" title="Vermont"/>
 					<heading id="Virginia" title="Virginia">
@@ -17996,27 +18108,30 @@
 					          </heading>
 					        </heading>
 					        <heading id="WhitePinecounty" title="White Pine county">
-					          <heading id="Trinomialsitenames" title="Trinomial site names">
+					        	<synonym value="PROVENIENCE = White Pine county, Nevada"/>
+					              <synonym value="Blue Jay Springs"/>
+					              <synonym value="Bluejay Springs"/>
+					              <synonym value="Cat Mountain Shelter"/>
+					              <synonym value="Pony Express Station"/>
+					              <synonym value="Smith Creek Cave"/>
+					              <synonym value="Whie Pinela"/>
+					              <synonym value="WP-X1"/>
+					              <synonym value="WP-X2"/>
 					            <heading id="NVWh2" title="NV-Wh- 2">
 					              <synonym value="NV-Wh-2"/>
 					            </heading>
-					            <heading id="NVWh12" title="NV-Wh-12"/>
-					            <heading id="NVWh26" title="NV-Wh-26"/>
-					            <heading id="NVWh27" title="NV-Wh-27"/>
-					            <heading id="NVWh28" title="NV-Wh-28"/>
-					          </heading>
-					          <heading id="Placenames" title="Place names">
-					            <heading id="PROVENIENCEWhitePinecountyNevada" title="PROVENIENCE = White Pine county, Nevada">
-					              <synonym value="Blue Jay Springs"/>
-					              <synonym value="Pony Express Station"/>
-					              <synonym value="Whie Pinela"/>
-					              <synonym value="Smith Creek Cave"/>
-					              <synonym value="Bluejay Springs"/>
-					              <synonym value="WP-X1"/>
-					              <synonym value="Cat Mountain Shelter"/>
-					              <synonym value="WP-X2"/>
+					            <heading id="NVWh12" title="NV-Wh-12">
+					            	<synonym value="26-Wh-12"/>
 					            </heading>
-					          </heading>
+					            <heading id="NVWh26" title="NV-Wh-26">
+					            	<synonym value="26-Wh-26"/>
+					            </heading>
+					            <heading id="NVWh27" title="NV-Wh-27">
+					            	<synonym value="26-Wh-27"/>
+					            </heading>
+					            <heading id="NVWh28" title="NV-Wh-28">
+					            	<synonym value="26-Wh-28"/>
+					            </heading>
 					        </heading>
 					        <heading id="EurekaCounty" title="Eureka County"/>
 					</heading>
@@ -18229,10 +18344,10 @@
 					        <heading id="CliffDwellers" title="Cliff Dwellers"/>
 					</heading>
 				</heading>
-				<heading id="Southerncentralstates" title="Southern central states">
+				<heading id="Southerncentralstates" title="Southern central states">  <!-- done -->
 					<heading id="Arkansas" title="Arkansas"/>
 					<heading id="Kansas" title="Kansas">
-						<heading id="Brown" title="Brown"> <!-- FIX!  Specify exclusions -->
+						<heading id="BrownCounty" title="Brown county"> <!-- FIX!  (was just "Brown") change back to Brown and specify exclusions -->
 						          <heading id="Horton" title="Horton"/>
 						</heading>
 						<heading id="Leavenworth" title="Leavenworth">
@@ -18240,44 +18355,44 @@
 						</heading>
 					</heading>
 					<heading id="Louisiana" title="Louisiana">
-        <heading id="IndianBend" title="Indian Bend"/>
-        <heading id="NewOrleans" title="New Orleans"/>
-        <heading id="JeffersonDavis" title="Jefferson Davis">
-          <heading id="Elton" title="Elton"/>
-        </heading>
-        <heading id="Terrebonne" title="Terrebonne">
-          <heading id="Dulac" title="Dulac"/>
-        </heading>
-        <heading id="Alexander" title="Alexander"/>
-        <heading id="StMary" title="St. Mary">
-          <heading id="Charenton" title="Charenton"/>
-        </heading>
-        <heading id="Allen" title="Allen">
-          <heading id="Kinder" title="Kinder"/>
-        </heading>
+						<heading id="Alexander" title="Alexander"/>
+						<heading id="Allen" title="Allen">
+							<heading id="Kinder" title="Kinder"/>
+						</heading>
+						<heading id="IndianBend" title="Indian Bend"/>
+						<heading id="JeffersonDavis" title="Jefferson Davis">
+							<heading id="Elton" title="Elton"/>
+						</heading>
+						<heading id="NewOrleans" title="New Orleans"/>
+						<heading id="StMary" title="St. Mary">
+							<heading id="Charenton" title="Charenton"/>
+						</heading>
+						<heading id="Terrebonne" title="Terrebonne">
+							<heading id="Dulac" title="Dulac"/>
+						</heading>
 					</heading>
 					<heading id="Missouri" title="Missouri">
-						<heading id="MissouriBotanicalGardens" title="Missouri Botanical Gardens"/>
-						<heading id="Jefferson" title="Jefferson"/>
 						<heading id="Franklincounty" title="Franklin county"/>
+						<heading id="Jefferson" title="Jefferson"/>
+						<heading id="MissouriBotanicalGardens" title="Missouri Botanical Gardens"/>
 					</heading>
 					<heading id="Oklahoma" title="Oklahoma">
-						<heading id="FortSill" title="Fort Sill"/>
 						<heading id="Caddo" title="Caddo">
 							<heading id="Anadarko" title="Anadarko"/>
 						</heading>
+						<heading id="FortSill" title="Fort Sill"/>
 						<heading id="Pittsburg" title="Pittsburg">
 							<heading id="McAlester" title="McAlester"/>
 						</heading>
 					</heading>
 					<heading id="Texas" title="Texas">
-        <heading id="Webb" title="Webb">
-          <heading id="Laredo" title="Laredo"/>
-        </heading>
-        <heading id="Polk" title="Polk">
-          <heading id="Livingston" title="Livingston"/>
-        </heading>
-        <heading id="FortStanton" title="Fort Stanton"/>
+						<heading id="FortStanton" title="Fort Stanton"/>
+						<heading id="TXPolkCounty" title="Polk">
+							<heading id="Livingston" title="Livingston"/>
+						</heading>
+						<heading id="TXWebbCounty" title="Webb">
+							<heading id="Laredo" title="Laredo"/>
+						</heading>
 					</heading>
 				</heading>
 				<heading id="Northerncentralstates" title="Northern central states">
@@ -18350,52 +18465,50 @@
       </heading>
 				</heading>
 			</heading>
-			<heading id="unspecified" title="unspecified">
+			<heading id="unspecified" title="unspecified">  <!-- done -->
 				<heading id="Albany" title="Albany"/>
+				<heading id="ArcticCircle" title="Arctic Circle"/>
+				<heading id="GreatPlains" title="Great Plains">
+					<heading id="CentralPlains" title="Central Plains"/>
+					<heading id="NorthernPlains" title="Northern Plains"/>
+					<heading id="SouthernPlains" title="Southern Plains"/>
+				</heading>
 				<heading id="Orca" title="Orca"/>
 				<heading id="StJohns" title="St. Johns"/>
 				<heading id="StikineRiver" title="Stikine River"/>
-				<heading id="region" title="region">
-					<heading id="GreatPlains" title="Great Plains">
-						<heading id="SouthernPlains" title="Southern Plains"/>
-						<heading id="NorthernPlains" title="Northern Plains"/>
-						<heading id="CentralPlains" title="Central Plains"/>
-					</heading>
-					<heading id="ArcticCircle" title="Arctic Circle"/>
-					<heading id="Subarctic" title="Subarctic">
-						<heading id="Pymiuth" title="Pymiuth"/>
-						<heading id="WesternSubarctic" title="Western Subarctic"/>
-					</heading>
+				<heading id="Subarctic" title="Subarctic">
+					<heading id="Pymiuth" title="Pymiuth"/>
+					<heading id="WesternSubarctic" title="Western Subarctic"/>
 				</heading>
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Unspecified" title="Unspecified">
-	    <heading id="Nambe" title="Nambe"/>
-	    <heading id="PROVENIENCEcontinentunspecified" title="PROVENIENCE = continent unspecified"/>
-	    <heading id="Unknown1" title="Unknown-1"/>
-	    <heading id="Unknown2" title="Unknown-2"/>
-	    <heading id="Unknown3" title="Unknown-3"/>
-	    <heading id="Unknown4" title="Unknown-4"/>
-	    <heading id="Unknown5" title="Unknown-5"/>
-	    <heading id="Unknown6" title="Unknown-6"/>
-	    <heading id="Unknown7" title="Unknown-7"/>
-	    <heading id="Unknown8" title="Unknown-8"/>
-	    <heading id="Unknown9" title="Unknown-9"/>
-	    <heading id="Unknown10" title="Unknown-10"/>
-	    <heading id="Unknown11" title="Unknown-11"/>
-	    <heading id="Unknown12" title="Unknown-12"/>
-	    <heading id="Unknown13" title="Unknown-13"/>
-	    <heading id="Unknown14" title="Unknown-14"/>
-	    <heading id="Unknown15" title="Unknown-15"/>
-	    <heading id="Unknown16" title="Unknown-16"/>
-	    <heading id="Unknown17" title="Unknown-17"/>
-	    <heading id="Unknown18" title="Unknown-18"/>
-	    <heading id="Unknown19" title="Unknown-19"/>
-	    <heading id="Unknown20" title="Unknown-20"/>
-	    <heading id="Unknown21" title="Unknown-21"/>
-	    <heading id="Unknown22" title="Unknown-22"/>
-	    <heading id="Unknown23" title="Unknown-23"/>
-	    <heading id="Unknown24" title="Unknown-24"/>
+	<heading id="Unspecified" title="Unspecified">  <!-- done -->
+		<synonym value="PROVENIENCE = continent unspecified"/>
+		<synonym value="Unknown-1"/>
+		<synonym value="Unknown-2"/>
+		<synonym value="Unknown-3"/>
+		<synonym value="Unknown-4"/>
+		<synonym value="Unknown-5"/>
+		<synonym value="Unknown-6"/>
+		<synonym value="Unknown-7"/>
+		<synonym value="Unknown-8"/>
+		<synonym value="Unknown-9"/>
+		<synonym value="Unknown-10"/>
+		<synonym value="Unknown-11"/>
+		<synonym value="Unknown-12"/>
+		<synonym value="Unknown-13"/>
+		<synonym value="Unknown-14"/>
+		<synonym value="Unknown-15"/>
+		<synonym value="Unknown-16"/>
+		<synonym value="Unknown-17"/>
+		<synonym value="Unknown-18"/>
+		<synonym value="Unknown-19"/>
+		<synonym value="Unknown-20"/>
+		<synonym value="Unknown-21"/>
+		<synonym value="Unknown-22"/>
+		<synonym value="Unknown-23"/>
+		<synonym value="Unknown-24"/>
+		<heading id="Nambe" title="Nambe"/>
 	</heading>
 </taxonomy>
