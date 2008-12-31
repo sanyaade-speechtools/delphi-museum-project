@@ -164,8 +164,41 @@
 				<heading id="Sheath" title="Sheath"> 					
 					<synonym value="Sheaths"/> 				
 				</heading>
-				<heading id="Sword" title="Sword"> 					
-					<synonym value="Swords"/> 				
+				<heading id="Sword" title="Sword">
+					<synonym value="Swords"/>
+					<heading id="TypesOfSwords" title="Types of swords" nomatch="true">
+						<heading id="Katana" title="Katana">
+							<synonym value="Katana"/>
+						</heading>
+						<heading id="LongSword" title="Long Sword">
+							<synonym value="Long Swords"/>
+						</heading>
+						<heading id="Rapier" title="Rapier">
+							<synonym value="Rapiers"/>
+						</heading>
+						<heading id="ShortSword" title="Short Sword">
+							<synonym value="Short Swords"/>
+							<heading id="SaxSword" title="Sax"/> <!-- check in OED -->
+						</heading>
+					</heading>
+					<heading id="PartsOfSwords" title="Parts of swords" nomatch="true">  <!-- Patrick: will this still match on the synonyms? -->
+						<heading id="Blade" title="Blade" nomatch="true">
+							<synonym value="Sword blade"/>
+							<synonym value="Sword blades"/>
+							<synonym value="Blade, sword"/>
+							<synonym value="Blades, sword"/>
+							<synonym value="Blades swords"/>
+						</heading>
+						<heading id="Hilt" title="Hilt">
+							<synonym value="Hilts"/>
+						</heading>
+						<heading id="Pommel" title="Pommel">
+							<synonym value="Pommel"/>
+						</heading>
+						<heading id="Tang" title="Tang">
+							<synonym value="Tangs"/>
+						</heading>
+					</heading>
 				</heading>
 			</heading>
 			<heading id="Firearms" title="Firearms">
