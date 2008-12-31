@@ -15,12 +15,12 @@
 		manta
 		night chant (Yeibichai)
 		Patera
+		scythe
 		selvedges
 		shuttle  (also loom)
 		sieve
 		   meal sieve
 		spray bottle
-		strigil
 		tumbler
 		utensils
 		Vajra
@@ -32,7 +32,8 @@
 	<syntax_notes> <!-- This is a temporary section, to speed up entry 
 		by making it easier to locate and copy syntax examples
 		<excl value="photographic plate"/>
-		<implies facet="ActivityOrContext" cat="Burials"/>
+		<implies facet="ActivityOrContext" cat="Burial"/>
+		<implies facet="ActivityOrContext" cat="Metallurgy"/>
 		<synonym value="Drawings"/>
 		-->
 	</syntax_notes>
@@ -141,22 +142,26 @@
 			</heading>
 			<heading id="Edgedweapons" title="Edged weapons">
 				<heading id="Bayonet" title="Bayonet"> <!--exclude "Spanish Bayonet"-->					
-					<synonym value="Bayonets"/> 				
+					<synonym value="Bayonets"/>
+					<implies facet="ActivityOrContext" cat="Metallurgy"/>
 				</heading>
 				<heading id="Blade" title="Blade"> 					
 					<synonym value="Blades"/> 				
 				</heading>
 				<heading id="Dagger" title="Dagger"> 					
-					<synonym value="Daggers"/> 				
+					<synonym value="Daggers"/>
+					<implies facet="ActivityOrContext" cat="Metallurgy"/>		
 				</heading>
 				<heading id="Knife" title="Knife"> 					
 					<synonym value="Knives"/> 				
 				</heading>
 				<heading id="Machete" title="Machete"> 					
-					<synonym value="Machetes"/> 				
+					<synonym value="Machetes"/>
+					<implies facet="ActivityOrContext" cat="Metallurgy"/>			
 				</heading>
 				<heading id="Parang" title="Parang"> 					
-					<synonym value="Parangs"/> 				
+					<synonym value="Parangs"/>
+					<implies facet="ActivityOrContext" cat="Metallurgy"/>	
 				</heading>
 				<heading id="Scabbard" title="Scabbard"> 					
 					<synonym value="Scabbards"/> 				
@@ -164,8 +169,9 @@
 				<heading id="Sheath" title="Sheath"> 					
 					<synonym value="Sheaths"/> 				
 				</heading>
-				<heading id="Sword" title="Sword">
-					<synonym value="Swords"/>
+				<heading id="Swords" title="Swords">
+					<synonym value="Sword"/>
+					<implies facet="ActivityOrContext" cat="Metallurgy"/>
 					<heading id="TypesOfSwords" title="Types of swords" nomatch="true">
 						<heading id="Katana" title="Katana">
 							<synonym value="Katana"/>
@@ -203,6 +209,7 @@
 			</heading>
 			<heading id="Firearms" title="Firearms">
 				<synonym value="Firearm"/>
+				<implies facet="ActivityOrContext" cat="Metallurgy"/>
 				<heading id="Cannon" title="Cannon"> 					
 					<synonym value="Cannons"/>
 					<excl value="Cannon Bone"/>
@@ -224,7 +231,6 @@
 						<synonym value="Rifles"/> 				
 					</heading>				
 				</heading>
-				
 			</heading>
 			<heading id="Propulsiveweapons" title="Propulsive weapons">
 				<synonym value="Propulsive weapon"/>
@@ -839,6 +845,7 @@
 				<synonym value="Torques"/>
 				<synonym value="Torc"/>
 				<synonym value="Torcs"/>
+				<implies facet="ActivityOrContext" cat="Metallurgy"/>
 			</heading>
 		</heading>
 		<heading id="ChestOrnamentation" title="Chest Ornamentation">
@@ -851,7 +858,8 @@
 			</heading>
 			<heading id="Fibula" title="Fibula"> 					
 				<synonym value="Fibulas"/>
-				<synonym value="Fibulae"/> 				
+				<synonym value="Fibulae"/>
+				<implies facet="ActivityOrContext" cat="Metallurgy"/>		
 			</heading>
 			<heading id="Pin" title="Pin"> 					
 				<synonym value="Pins"/> 				
@@ -1343,7 +1351,7 @@
 	<heading id="SculpturedWorks" title="Sculptured Works">
 		<heading id="Ossuary" title="Ossuary">
 			<synonym value="Ossuaries"/>
-			<implies facet="ActivityOrContext" cat="Burials"/>
+			<implies facet="ActivityOrContext" cat="Burial"/>
 			<implies facet="ActivityOrContext" cat="Sculpting"/>
 			<implies facet="ActivityOrContext" cat="Carving"/>  <!-- could be stone carving or wood carving -->
 		</heading>
@@ -1428,7 +1436,8 @@
 			<synonym value="Strigils"/> 
 			<synonym value="Stirgil"/> 					
 			<synonym value="Stirgils"/>
-			<synonym value="Grooming"/>			
+			<synonym value="Grooming"/>
+			<implies facet="ActivityOrContext" cat="Metallurgy"/>		
 		</heading>
 	</heading>
 	<heading id="Tools" title="Tools">			
@@ -1611,6 +1620,7 @@
 			</heading>
 		</heading>
 	</heading>
+	
 	<!-- The following were migrated from Activity or Context and need to be filed above -->
 		<heading id="Boilingstone" title="Boiling stone">
 			<synonym value="Boiling stones"/>
@@ -1630,6 +1640,7 @@
 		</heading>
 		<heading id="Kettle" title="Kettle">
 			<synonym value="Kettles"/>
+			<implies facet="ActivityOrContext" cat="Metallurgy"/>
 			<implies facet="ActivityOrContext" cat="Foodpreparation"/>
 		</heading>
 		<heading id="Groundstone" title="Groundstone">
@@ -1666,7 +1677,8 @@
 				<synonym value="Cooking Bowls"/> 				
 			</heading>
 			<heading id="CookingPan" title="Cooking Pan"> 					
-				<synonym value="Cooking Pan"/> 				
+				<synonym value="Cooking Pan"/>
+				<implies facet="ActivityOrContext" cat="Metallurgy"/>			
 			</heading>				
 		</heading>
 		<heading id="CookingStove" title="Cooking Stove"> 					
@@ -1809,6 +1821,7 @@
 		<heading id="Coin" title="Coin">
 			<synonym value="Coins"/>
 			<synonym value="Coinage"/>
+			<implies facet="ActivityOrContext" cat="Metallurgy"/>
 			<implies facet="ActivityOrContext" cat="CommerceAndTrade"/>
 			<!--These categories need cleaning -->
 			<heading id="Denomination" title="Denomination">
@@ -2245,7 +2258,7 @@
 			<heading id="Mummy" title="Mummy">
 				<synonym value="Mummies"/>
 				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>
-				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 				<heading id="Humanmummy" title="Human mummy"> 					
 					<synonym value="Human mummies"/>			
 				</heading>
@@ -2281,20 +2294,20 @@
 				<synonym value="Sarcophogas"/>
 				<synonym value="Sarcophogases"/>
 				<synonym value="Sarcophagi"/>
-				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 			</heading>
 			<heading id="Coffin" title="Coffin">
 				<synonym value="Coffins"/>
-				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 			</heading>
 			<heading id="CanopicJar" title="Canopic Jar"> 					
 				<synonym value="Canopic Jars"/>
-				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>			
 			</heading>
 			<heading id="CanopicBox" title="Canopic Box"> 					
 				<synonym value="Canopic Boxes"/>
-				<implies facet="ActivityOrContext" cat="Burials"/>
+				<implies facet="ActivityOrContext" cat="Burial"/>
 				<implies facet="ActivityOrContext" cat="ReligionSpirituality"/>		
 			</heading>
 		</heading>
