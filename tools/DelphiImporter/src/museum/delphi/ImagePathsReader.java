@@ -142,6 +142,7 @@ public class ImagePathsReader {
 		return imageInfoMap.size();
 	}
 
+	/* OBSOLETE superseded by the writeSQL* methods
 	public void writeContents( String outFileName ) {
 		try {
 			writer = new BufferedWriter(new FileWriter(outFileName));
@@ -171,6 +172,7 @@ public class ImagePathsReader {
 			throw new RuntimeException("Named file is a directory!: " + outFileName);
 		}
 	}
+	*/
 
 	/* OBSOLETE
 	public void writeSQLObjTableUpdates( String outFileName ) {
