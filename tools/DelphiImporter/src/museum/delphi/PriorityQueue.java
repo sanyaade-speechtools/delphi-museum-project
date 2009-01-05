@@ -231,7 +231,7 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 			 if(priority < minPrioToPrint)
 				 break;
 			 I item = pq.next();
-			 writer.append(item.toString()+" : "+priority);
+			 writer.append(priority+" : "+item.toString());
 			 if (numItemsPrinted < nTotalMinus1) {
 				 if(fWithNewlines)
 					 writer.newLine();
