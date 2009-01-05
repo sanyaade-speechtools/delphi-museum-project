@@ -190,7 +190,7 @@ public class MetaDataReader {
 		}
 	}
 
-	protected Counter<String> compileUsageForColumn(int iCol, int minLength, int maxLength, int maxLines ) {
+	protected Counter<String> compileUsageForColumn(int iCol, int minLength, int maxLength, int maxLines, MainApp app ) {
 		Counter<String> vocabCounts = null;
 		int nLinesEmpty = 0;
 		int nLinesTooLong = 0;
@@ -209,6 +209,7 @@ public class MetaDataReader {
 		//   e.g., if fragment(s) or "part of" there, or if preceded with "probably" or "maybe" or "possibly"
 		//         or if includes "?"
 		// TODO Need to detect when repeat of last line, and not bother with dupes.
+		// TODO Need to put main work into a worker thread, so can report back into UI.
 		String sepregex = "[;,]";
 		HashSet<String> noiseTokens = new HashSet<String>();
 		vocabCounts = new Counter<String>();
@@ -221,10 +222,17 @@ public class MetaDataReader {
 			resetToLine1();
 			String token = null;
 			while(((token = getNextLineColumn(iCol))!= null) && (currLine < maxLines)) {
-				if( currLine%reportFreq == 0)
+				if( currLine%reportFreq == 0) {
 					debug(1, "MDR.compileUsageForColumn("+iCol+") read "+currLine+" lines so far..."
 							+"\n  Skipped "+nLinesEmpty+" empty lines and "+nLinesTooLong+" too long lines"
 							+"\n  Found "+vocabCounts.size()+" distinct tokens (a total of: "+vocabCounts.totalCount()+" tokens)");
+					/* Don't bother - we're running in UI thread, so cannot see updates.
+					 * Once we put this into a worker thread, we can reconsider.
+					 if( app != null ) {
+						app.setStatus("Read "+currLine+" lines. Found "+vocabCounts.size()+" distinct tokens");
+					}
+					*/
+				}
 				if( token.length() < minLength ) {
 					nLinesEmpty++;
 					continue;
@@ -247,6 +255,8 @@ public class MetaDataReader {
 		debug(1, "MDR.compileUsageForColumn("+iCol+") read "+currLine+" lines."
 				+"\n  Skipped "+nLinesEmpty+" empty lines and "+nLinesTooLong+" too long lines"
 				+"\n  Found "+vocabCounts.size()+" distinct tokens (a total of: "+vocabCounts.totalCount()+" tokens)");
+		if( app != null )
+			app.setStatus("Read "+currLine+" lines. Found "+vocabCounts.size()+" distinct tokens");
 		return vocabCounts;
 	}
 
