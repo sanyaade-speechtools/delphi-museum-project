@@ -119,9 +119,12 @@ public class DumpColumnConfigInfo {
 		// TODO This should be configured as rules somehow.
 		// PAHMA-SPECIFIC - this must be generalized.
 		// If rules not initialized, should throw a not initialized exception
+		String asLower = objNumStr.toLowerCase();
 		boolean isValid = !objNumStr.isEmpty()
 						&& !objNumStr.contains("Acc")
 						&& !objNumStr.contains("Nature of contents:")
+						&& !asLower.contains("temp")
+						&& !asLower.contains("test")
 						&& !objNumStr.contains(".");
 		return isValid;
 	}
@@ -250,7 +253,7 @@ public class DumpColumnConfigInfo {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document colConfigDoc = builder.parse(filename);
+			Document colConfigDoc = builder.parse("file:"+filename);
 			DumpColumnConfigInfo.PopulateFromConfigFile(colConfigDoc);
 			debug(2,"Col Sep is: ["+(char)(DumpColumnConfigInfo.getColumnSeparator())+"]");
 			if( _debugLevel>=2 ) {
@@ -293,8 +296,8 @@ public class DumpColumnConfigInfo {
             debugTrace(1, pce);
 			throw new RuntimeException( tmp );
         } catch (IOException ioe) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: I/O Exception reading config file."
-				+"\n"+ioe.getMessage();
+			String tmp = "DumpColumnConfigInfo.OpenConfigFile: I/O Exception reading config file.\n File: \""
+				+filename+"\"\n"+ioe.getMessage();
 			debug(1, tmp);
             debugTrace(1, ioe);
 			throw new RuntimeException( tmp );
