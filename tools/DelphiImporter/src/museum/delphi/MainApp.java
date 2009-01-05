@@ -8,10 +8,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.awt.BorderLayout;
 import java.awt.Point;
+import java.awt.Color;
 import javax.swing.*;
 import javax.swing.filechooser.*;
+import javax.swing.text.DefaultEditorKit;
+
 import java.io.*;
 
 import java.awt.Dimension;
@@ -25,6 +29,7 @@ import org.xml.sax.SAXParseException;
 import org.w3c.dom.Document;
 //import org.w3c.dom.Node;
 
+import java.awt.Event;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -37,6 +42,11 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 */
 import javax.swing.ImageIcon;
+import java.awt.Rectangle;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JPanel;
+import javax.swing.JButton;
 
 
 
@@ -45,54 +55,57 @@ import javax.swing.ImageIcon;
  *
  */
 public class MainApp {
+	private JFileChooser chooser = null;
+	private FileNameExtensionFilter xmlFilter = null;
+	private FileNameExtensionFilter sqlFilter = null;
+	private FileNameExtensionFilter txtFilter = null;
+	private FileNameExtensionFilter dpfFilter = null;
+	private String columnNames[] = null;
+	private static final String dbName = "pahma_dev";
+	private static final String settingsFilename = "./settings";
+	private AppSettings appSettings = null;
+	private UserProjectInfo userProjInfo = null;  //  @jve:decl-index=0:
 
+	private Color bkgdTan = null;
 	private JFrame jFrame = null;  //  @jve:decl-index=0:visual-constraint="10,10"
 	private JPanel jContentPane = null;
 	private JMenuBar jJMenuBar = null;
 	private JMenu fileMenu = null;
-	//private JMenuItem openMenuItem = null;
-	//private JMenuItem saveMenuItem = null;
+	private JMenuItem newMenuItem = null;
+	private JMenuItem openMenuItem = null;
+	private JMenuItem saveMenuItem = null;
+	private JMenuItem saveAsMenuItem = null;
 	private JMenuItem exitMenuItem = null;
-	private JFileChooser chooser = null;
-	private FileNameExtensionFilter xmlfilter = null;
-	private FileNameExtensionFilter sqlfilter = null;
-	private VocabTermsReader vocabTermsReader = null;  //  @jve:decl-index=0:
-	private MetaDataReader metaDataReader = null;  //  @jve:decl-index=0:
-	private ImagePathsReader imagePathsReader = null;  //  @jve:decl-index=0:
-	private String columnNames[] = null;
-	private String dbName = "pahma_dev";
 
-	private JMenu vocabActionsMenu = null;
-	private JMenuItem openVocabMenuItem = null;
-	private JMenuItem saveVocabAsXMLMenuItem = null;
-	private JMenuItem loadVocabFromXMLMenuItem = null;
-	//private JMenuItem addVocabToDBMenuItem = null;
+	private JMenu editMenu = null;
+	private JMenuItem cutMenuItem = null;
+	private JMenuItem copyMenuItem = null;
+	private JMenuItem pasteMenuItem = null;
+
+	private JMenu analyzeMenu = null;
+	//Object Info Term Usage (requires ObjInfo file)
+	//Object/Concept Association (requires ObjInfo file and Ontology. Later with load variants and an option
+	private JMenuItem objInfoTermUsageMenuItem = null;
+	private JMenuItem objConceptAssocMenuItem = null;
+
+	private JMenu imagesMenu = null;
+	private JMenuItem computeImageOrientationsMenuItem = null;
+
+	private JMenu exportMenu = null;
+	private JMenuItem buildObjectSQLMenuItem = null;
+	private JMenu conceptOntologyMenu = null;
 	private JMenuItem saveOntologyAsSQLMenuItem = null;
+	private JMenuItem saveVocabAsXMLMenuItem = null;
 	private JMenuItem saveHooksAsSQLMenuItem = null;
 	private JMenuItem saveExclusionsAsSQLMenuItem = null;
-
-	private JMenu metaDataActionsMenu = null;
-	private JMenuItem openMDCfgFileMenuItem = null;
-	private JMenuItem openMDFileMenuItem = null;
-	private JMenuItem buildUsageReportMenuItem = null;
-
-	private JMenu objectActionsMenu = null;
-	private JMenuItem loadImagePathsMenuItem = null;
-	private JMenuItem computeImageOrientationsMenuItem = null;
-	//private JMenuItem saveObjectSQLUpdatesMenuItem = null;
+	private JMenu imagePathsMenu = null;
 	private JMenuItem saveSQLMediaLoadFileMenuItem = null;
 	private JMenuItem saveSQLMediaInsertFileMenuItem = null;
-	private JMenuItem buildObjectSQLMenuItem = null;
-	private JMenuItem categorizeObjectsMenuItem = null;
 
-	//private JMenu editMenu = null;
 	private JMenu helpMenu = null;
 	private JMenuItem aboutMenuItem = null;
-	//private JMenuItem cutMenuItem = null;
-	//private JMenuItem copyMenuItem = null;
-	//private JMenuItem pasteMenuItem = null;
 
-	private JDialog aboutDialog = null;  //  @jve:decl-index=0:visual-constraint="561,13"
+	private JDialog aboutDialog = null;  //  @jve:decl-index=0:visual-constraint="747,7"
 	private JPanel aboutContentPane = null;
 	private JLabel aboutVersionLabel = null;
 	private JTextPane aboutText = null;
@@ -100,7 +113,7 @@ public class MainApp {
 	private JPanel logoPanel = null;
 	private JLabel jImageLabel = null;
 
-	private JDialog buildUsageReportDialog = null;  //  @jve:decl-index=0:visual-constraint="105,376"
+	private JDialog buildUsageReportDialog = null;  //  @jve:decl-index=0:visual-constraint="66,566"
 	private JPanel buildUsageReportContentPane = null;
 	private JLabel buildUsageReportLabel = null;
 	private JList burColumnList;
@@ -108,15 +121,46 @@ public class MainApp {
 	//private JTextPane aboutText = null;
 	private JButton buildReportButton;
 
-	private Document vocabOutputDoc = null;  //  @jve:decl-index=0:
-	private DoubleHashTree vocabHashTree = null;
-	private DoubleHashTree facetMapHashTree = null;  //  @jve:decl-index=0:
 	private JTextField jStatusBarTextField = null;
 
 	private int _debugLevel = 1;
+	private JLabel jLabel_Project = null;
+	private JTextField jTextField_ProjName = null;
+	private JPanel jPanel_ObjInfo = null;
+	private JPanel jPanel_OntoInfo = null;
+	private JPanel jPanel_ImgPathsInfo = null;
+	private JTextField jTextField_ColConfigFile = null;
+	private JTextField jTextField_ObjInfoFile = null;
+	private JButton jButton_ColConfigBrowse = null;
+	private JButton jButton_ObjInfoBrowse = null;
+	private JTextField jTextField_OntologyFile = null;
+	private JTextField jTextField_VocabFile = null;
+	private JButton jButton_OntologyBrowse = null;
+	private JButton jButton_VocabBrowse = null;
+	private JTextField jTextField_ImgPathsFile = null;
+	private JButton jButton_ImgPathsBrowse = null;
+
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
 			StringUtils.outputDebugStr( str );
+	}
+
+	/**
+	 * This patches over the behavior in Swing that buttons fire on
+	 * SPACE rather than ENTER (go figure).
+	 * @param button
+	 */
+	public static void enterPressesWhenFocused(JButton button) {
+	    button.registerKeyboardAction(
+	        button.getActionForKeyStroke(
+	            KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false)),
+	            KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, false),
+	            JComponent.WHEN_FOCUSED);
+	    button.registerKeyboardAction(
+	        button.getActionForKeyStroke(
+	            KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true)),
+	            KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),
+	            JComponent.WHEN_FOCUSED);
 	}
 
 	/**
@@ -130,19 +174,23 @@ public class MainApp {
 			aboutText.setText(
 				  "This is an early version of the Delphi Import Manager application.\n\n"
 				+ "This application will assist in the import of ontology/taxonomy\n"
-				+ "from CSV files, with some cleaning and construction of the tree.\n\n"
-				+ "It will also provide a means to import CVS data dumps that have\n"
-				+ "text annotations of objects in named columns, with some tokenizing\n"
-				+ "and cleaning of this data to produce token annotations of the objects.\n"
-				+ "This data is then indexed against the imported taxonomies for term\n"
-				+ "association, to produce a semantic index of the collection.\n"
-				+ "This semantic index is stored in a Delphi database for use in the\n"
-				+ "faceted search browse UI.\n\n"
+				+ "from text (csv) files, with some cleaning and construction of the tree.\n\n"
+				+ "It will also provide a means to import object info text (csv) files that have\n"
+				+ "text annotations of objects in named columns. Delphi performs some tokenizing\n"
+				+ "and cleaning of this data to produce token annotations of the objects.\n\n"
+				+ "This object info is then processed to associate objects to a concept ontology,\n"
+				+ "and to infer additional concepts in the ontology, producing a\n"
+				+ "semantic index of the collection.\n\n"
+				+ "The object info, the ontology info and the semantic index can\n"
+				+ "be exported for loading into a Delphi database, which is used in the\n"
+				+ "faceted search and browse UI of the collections browser.\n\n"
+				+ "For more information, see the project site: \n"
+				+ "  http://code.google.com/p/delphi-museum-project/.\n\n"
+				+ "Delphi is maintained by:\n"
+				+ "  Michael Black, Aron Roberts, and Patrick Schmitz.\n"
 				+ "Delphi was created by:\n"
-				+ "  Olga Amuzinskaya, Michael Black, Adrienne Hilgert, Jon Lesser, Patrick Schmitz,"
-				+ " and Jerry Yu.\n"
-				+ "  Thanks to Aron Roberts for documentation and production support.\n"
-				+ "  Thanks as well to Eun Kyoung Choe for her UI assistance.\n");
+				+ "  Olga Amuzinskaya, Michael Black, Eun Kyoung Choe, Adrienne Hilgert, \n"
+				+ "  Jon Lesser, Patrick Schmitz, and Jerry Yu.\n" );
 		}
 		return aboutText;
 	}
@@ -156,15 +204,27 @@ public class MainApp {
 		if (logoPanel == null) {
 			//Toolkit toolkit = Toolkit.getDefaultToolkit();
 			//String imgPath = "D:/Patrick/_Grad school/Final Project/Src/delphi/trunk/tools/DelphiImporter/bin/museum/delphi/Delphi3_logo2.jpg";
-			String imgPath = "images/Delphi_logo2mid.jpg";
+			jLabel_Project = new JLabel();
+			jLabel_Project.setBounds(new Rectangle(22, 15, 75, 26));
+			jLabel_Project.setText("Project:");
+			jLabel_Project.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 18));
+			jLabel_Project.setBorder(BorderFactory.createEmptyBorder());
+			String imgPath = "images/Delphi_logo2sm.jpg";
 			ImageIcon logo = new ImageIcon(imgPath);
 			jImageLabel = new JLabel(logo, SwingConstants.CENTER);
-			jImageLabel.setBackground(java.awt.Color.black);
+			jImageLabel.setBounds(new Rectangle(590, 4, 83, 60));
+			jImageLabel.setBackground(bkgdTan);
 			logoPanel = new JPanel();
-			logoPanel.setLayout(new BorderLayout());
-			logoPanel.setBackground(java.awt.Color.black);
-			logoPanel.add(jImageLabel, BorderLayout.CENTER);
-			logoPanel.add(getJStatusBarTextField(), BorderLayout.SOUTH);
+			logoPanel.setLayout(null);
+			logoPanel.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 14));
+			logoPanel.setBackground(bkgdTan);
+			logoPanel.add(jImageLabel);
+			logoPanel.add(getJStatusBarTextField());
+			logoPanel.add(jLabel_Project, null);
+			logoPanel.add(getJTextField_ProjName(), null);
+			logoPanel.add(getJPanel_ObjInfo(), null);
+			logoPanel.add(getJPanel_OntoInfo(), null);
+			logoPanel.add(getJPanel_ImgPathsInfo(), null);
 		}
 		return logoPanel;
 	}
@@ -178,12 +238,354 @@ public class MainApp {
 		if (jStatusBarTextField == null) {
 			jStatusBarTextField = new JTextField();
 			jStatusBarTextField.setEditable(false);
+			jStatusBarTextField.setBounds(new Rectangle(0, 375, 690, 25));
+			jStatusBarTextField.setBorder(BorderFactory.createLoweredBevelBorder());
+			jStatusBarTextField.setBackground(java.awt.Color.white);
 		}
 		return jStatusBarTextField;
 	}
 
-	private void setStatus(String status){
+	protected void setStatus(String status){
 		jStatusBarTextField.setText(status);
+	}
+
+	/**
+	 * This method initializes jTextField_ProjName
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getJTextField_ProjName() {
+		if (jTextField_ProjName == null) {
+			jTextField_ProjName = new JTextField();
+			jTextField_ProjName.setBounds(new Rectangle(100, 17, 150, 24));
+			jTextField_ProjName.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			jTextField_ProjName.setBackground(bkgdTan);
+
+			jTextField_ProjName.addFocusListener(new java.awt.event.FocusAdapter() {
+				public void focusLost(java.awt.event.FocusEvent e) {
+					jTextField_ProjName.setBackground(bkgdTan);
+					String text = jTextField_ProjName.getText();
+					if( text != null && !text.isEmpty() ) {
+						userProjInfo.setName(text);
+				        updateUIForUserProjectInfo();
+					}
+				}
+				public void focusGained(java.awt.event.FocusEvent e) {
+					jTextField_ProjName.setBackground(Color.white);
+				}
+			});
+		}
+		return jTextField_ProjName;
+	}
+
+	/**
+	 * This method initializes jPanel_ObjInfo
+	 *
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getJPanel_ObjInfo() {
+		if (jPanel_ObjInfo == null) {
+			jPanel_ObjInfo = new JPanel();
+			jPanel_ObjInfo.setLayout(null);
+			jPanel_ObjInfo.setBounds(new Rectangle(15, 69, 660, 100));
+			jPanel_ObjInfo.setBorder(BorderFactory.createLineBorder(Color.black));
+			jPanel_ObjInfo.setBackground(bkgdTan);
+			JLabel jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 6, 150, 26));
+			jLabel.setText("Object Info:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 18));
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_ObjInfo.add(jLabel, null);
+			jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 36, 200, 26));
+			jLabel.setText("Column Configuration file:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 14));
+			jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_ObjInfo.add(jLabel, null);
+			jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 66, 200, 26));
+			jLabel.setText("Object Information file:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 14));
+			jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_ObjInfo.add(jLabel, null);
+			jPanel_ObjInfo.add(getJTextField_ColConfigFile(), null);
+			jPanel_ObjInfo.add(getJTextField_ObjInfoFile(), null);
+			jPanel_ObjInfo.add(getJButton_ColConfigBrowse(), null);
+			jPanel_ObjInfo.add(getJButton_ObjInfoBrowse(), null);
+		}
+		return jPanel_ObjInfo;
+	}
+
+	/**
+	 * This method initializes jPanel_OntoInfo
+	 *
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getJPanel_OntoInfo() {
+		if (jPanel_OntoInfo == null) {
+			jPanel_OntoInfo = new JPanel();
+			jPanel_OntoInfo.setLayout(null);
+			jPanel_OntoInfo.setBounds(new Rectangle(15, 179, 660, 100));
+			jPanel_OntoInfo.setBorder(BorderFactory.createLineBorder(Color.black));
+			jPanel_OntoInfo.setBackground(bkgdTan);
+			JLabel jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 6, 250, 26));
+			jLabel.setText("Vocabulary/Ontology Info:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 18));
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_OntoInfo.add(jLabel, null);
+			jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 36, 200, 26));
+			jLabel.setText("Ontology file:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 14));
+			jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_OntoInfo.add(jLabel, null);
+			jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 66, 200, 26));
+			jLabel.setText("Text (CSV) vocabulary file:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 14));
+			jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_OntoInfo.add(jLabel, null);
+			jPanel_OntoInfo.add(getJTextField_OntologyFile(), null);
+			jPanel_OntoInfo.add(getJTextField_VocabFile(), null);
+			jPanel_OntoInfo.add(getJButton_OntologyBrowse(), null);
+			jPanel_OntoInfo.add(getJButton_VocabBrowse(), null);
+		}
+		return jPanel_OntoInfo;
+	}
+
+	/**
+	 * This method initializes jPanel_ImgPathsInfo
+	 *
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getJPanel_ImgPathsInfo() {
+		if (jPanel_ImgPathsInfo == null) {
+			jPanel_ImgPathsInfo = new JPanel();
+			jPanel_ImgPathsInfo.setLayout(null);
+			jPanel_ImgPathsInfo.setBounds(new Rectangle(15, 289, 660, 70));
+			jPanel_ImgPathsInfo.setBorder(BorderFactory.createLineBorder(Color.black));
+			jPanel_ImgPathsInfo.setBackground(bkgdTan);
+			JLabel jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 6, 250, 26));
+			jLabel.setText("Image Paths Info:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 18));
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_ImgPathsInfo.add(jLabel, null);
+			jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(10, 36, 200, 26));
+			jLabel.setText("Image Paths file:");
+			jLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 14));
+			jLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			jLabel.setBorder(BorderFactory.createEmptyBorder());
+			jPanel_ImgPathsInfo.add(jLabel, null);
+			jPanel_ImgPathsInfo.add(getJTextField_ImgPathsFile(), null);
+			jPanel_ImgPathsInfo.add(getJButton_ImgPathsBrowse(), null);
+		}
+		return jPanel_ImgPathsInfo;
+	}
+
+	/**
+	 * This method initializes jTextField_ColConfigFile
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getJTextField_ColConfigFile() {
+		if (jTextField_ColConfigFile == null) {
+			jTextField_ColConfigFile = new JTextField();
+			jTextField_ColConfigFile.setBounds(new Rectangle(215, 40, 350, 21));
+			jTextField_ColConfigFile.addFocusListener(new java.awt.event.FocusAdapter() {
+				public void focusLost(java.awt.event.FocusEvent e) {
+					String text = jTextField_ColConfigFile.getText();
+					if( text != null && !text.isEmpty() )
+						setMDConfigFile(text);
+				}
+			});
+		}
+		return jTextField_ColConfigFile;
+	}
+
+	/**
+	 * This method initializes jTextField_ObjInfoFile
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getJTextField_ObjInfoFile() {
+		if (jTextField_ObjInfoFile == null) {
+			jTextField_ObjInfoFile = new JTextField();
+			jTextField_ObjInfoFile.setBounds(new Rectangle(215, 70, 350, 21));
+			jTextField_ObjInfoFile.addFocusListener(new java.awt.event.FocusAdapter() {
+				public void focusLost(java.awt.event.FocusEvent e) {
+					String text = jTextField_ObjInfoFile.getText();
+					if( text != null && !text.isEmpty() )
+						setMDFile(text);
+				}
+			});
+		}
+		return jTextField_ObjInfoFile;
+	}
+
+	/**
+	 * This method initializes jButton_ColConfigBrowse
+	 *
+	 * @return javax.swing.JButton
+	 */
+	private JButton getJButton_ColConfigBrowse() {
+		if (jButton_ColConfigBrowse == null) {
+			jButton_ColConfigBrowse = new JButton();
+			jButton_ColConfigBrowse.setBounds(new Rectangle(570, 40, 80, 20));
+			jButton_ColConfigBrowse.setText("Browse");
+			enterPressesWhenFocused(jButton_ColConfigBrowse);
+			//jButton_ColConfigBrowse.setBackground(bkgdTan);
+			jButton_ColConfigBrowse.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					browseToMDConfigFile();
+				}
+			});
+		}
+		return jButton_ColConfigBrowse;
+	}
+
+	/**
+	 * This method initializes jButton_ObjInfoBrowse
+	 *
+	 * @return javax.swing.JButton
+	 */
+	private JButton getJButton_ObjInfoBrowse() {
+		if (jButton_ObjInfoBrowse == null) {
+			jButton_ObjInfoBrowse = new JButton();
+			jButton_ObjInfoBrowse.setBounds(new Rectangle(570, 70, 80, 20));
+			jButton_ObjInfoBrowse.setText("Browse");
+			enterPressesWhenFocused(jButton_ObjInfoBrowse);
+			jButton_ObjInfoBrowse.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					browseToMDFile();
+				}
+			});
+		}
+		return jButton_ObjInfoBrowse;
+	}
+
+	/**
+	 * This method initializes jTextField_OntologyFile
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getJTextField_OntologyFile() {
+		if (jTextField_OntologyFile == null) {
+			jTextField_OntologyFile = new JTextField();
+			jTextField_OntologyFile.setBounds(new Rectangle(215, 40, 350, 21));
+			jTextField_OntologyFile.addFocusListener(new java.awt.event.FocusAdapter() {
+				public void focusLost(java.awt.event.FocusEvent e) {
+					String text = jTextField_OntologyFile.getText();
+					if( text != null && !text.isEmpty() )
+						setOntologyFile(text);
+				}
+			});
+		}
+		return jTextField_OntologyFile;
+	}
+
+	/**
+	 * This method initializes jTextField_VocabFile
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getJTextField_VocabFile() {
+		if (jTextField_VocabFile == null) {
+			jTextField_VocabFile = new JTextField();
+			jTextField_VocabFile.setBounds(new Rectangle(215, 70, 350, 21));
+			jTextField_VocabFile.addFocusListener(new java.awt.event.FocusAdapter() {
+				public void focusLost(java.awt.event.FocusEvent e) {
+					String text = jTextField_VocabFile.getText();
+					if( text != null && !text.isEmpty() )
+						setVocabFile(text);
+				}
+			});
+		}
+		return jTextField_VocabFile;
+	}
+
+	/**
+	 * This method initializes jButton_OntologyBrowse
+	 *
+	 * @return javax.swing.JButton
+	 */
+	private JButton getJButton_OntologyBrowse() {
+		if (jButton_OntologyBrowse == null) {
+			jButton_OntologyBrowse = new JButton();
+			jButton_OntologyBrowse.setBounds(new Rectangle(570, 40, 80, 20));
+			jButton_OntologyBrowse.setText("Browse");
+			enterPressesWhenFocused(jButton_OntologyBrowse);
+			jButton_OntologyBrowse.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					browseToOntologyFile();
+				}
+			});
+		}
+		return jButton_OntologyBrowse;
+	}
+
+	/**
+	 * This method initializes jButton_VocabBrowse
+	 *
+	 * @return javax.swing.JButton
+	 */
+	private JButton getJButton_VocabBrowse() {
+		if (jButton_VocabBrowse == null) {
+			jButton_VocabBrowse = new JButton();
+			jButton_VocabBrowse.setBounds(new Rectangle(570, 70, 80, 20));
+			jButton_VocabBrowse.setText("Browse");
+			enterPressesWhenFocused(jButton_VocabBrowse);
+			jButton_VocabBrowse.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					browseToVocabFile();
+				}
+			});
+		}
+		return jButton_VocabBrowse;
+	}
+
+	/**
+	 * This method initializes jTextField_ImgPathsFile
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getJTextField_ImgPathsFile() {
+		if (jTextField_ImgPathsFile == null) {
+			jTextField_ImgPathsFile = new JTextField();
+			jTextField_ImgPathsFile.setBounds(new Rectangle(215, 40, 350, 21));
+			jTextField_ImgPathsFile.addFocusListener(new java.awt.event.FocusAdapter() {
+				public void focusLost(java.awt.event.FocusEvent e) {
+					setImagePathsFile(jTextField_ImgPathsFile.getText());
+				}
+			});
+		}
+		return jTextField_ImgPathsFile;
+	}
+
+	/**
+	 * This method initializes jButton_ImgPathsBrowse
+	 *
+	 * @return javax.swing.JButton
+	 */
+	private JButton getJButton_ImgPathsBrowse() {
+		if (jButton_ImgPathsBrowse == null) {
+			jButton_ImgPathsBrowse = new JButton();
+			jButton_ImgPathsBrowse.setBounds(new Rectangle(570, 40, 80, 20));
+			jButton_ImgPathsBrowse.setText("Browse");
+			enterPressesWhenFocused(jButton_ImgPathsBrowse);
+			jButton_ImgPathsBrowse.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					browseToImagePathsFile();
+				}
+			});
+		}
+		return jButton_ImgPathsBrowse;
 	}
 
 	/**
@@ -195,11 +597,134 @@ public class MainApp {
 				MainApp application = new MainApp();
 				//application.chooser = new JFileChooser( new File("D:/PAHMA/VocabDump3b.txt"));
 				application.chooser = new JFileChooser( new File("C:/Patrick/Delphi"));
-				application.xmlfilter = new FileNameExtensionFilter( "XML files", "xml" );
-				application.sqlfilter = new FileNameExtensionFilter( "SQL files", "sql" );
+				application.xmlFilter = new FileNameExtensionFilter( "XML files", "xml" );
+				application.sqlFilter = new FileNameExtensionFilter( "SQL files", "sql" );
+				application.txtFilter = new FileNameExtensionFilter( "Text files", "txt" );
+				application.dpfFilter = new FileNameExtensionFilter( "Delphi Project files", "dpf" );
+				application.bkgdTan = new Color(242, 235, 207);
 				application.getJFrame().setVisible(true);
+				// Could allow a passed in filename at some future date.
+				application.appSettings = new AppSettings( settingsFilename );
+				String path = application.appSettings.getLastUserProjectPath();
+				if( path != null ) {
+					application.setUserProject( UserProjectInfo.loadFromPath( path ) );
+				} else {
+					application.createNewProjectFile();
+				}
 			}
 		});
+	}
+
+	private void setUserProject( UserProjectInfo upi ) {
+		userProjInfo = upi;
+		loadResourcesFromUserProjectInfo();
+		updateUIForUserProjectInfo();
+	}
+
+	private void updateUIForUserProjectInfo() {
+		if( userProjInfo == null ) {
+			// Clear all the menus that require state
+			// File menu
+			saveMenuItem.setEnabled(false);
+			saveAsMenuItem.setEnabled(false);
+			// Analyze Menu
+			objInfoTermUsageMenuItem.setEnabled(false);
+			objConceptAssocMenuItem.setEnabled(false);
+			// Images Menu
+			computeImageOrientationsMenuItem.setEnabled(false);
+			// Analyze Menu
+			buildObjectSQLMenuItem.setEnabled(false);
+			saveOntologyAsSQLMenuItem.setEnabled(false);
+			saveVocabAsXMLMenuItem.setEnabled(false);
+			saveHooksAsSQLMenuItem.setEnabled(false);
+			saveExclusionsAsSQLMenuItem.setEnabled(false);
+			saveSQLMediaLoadFileMenuItem.setEnabled(false);
+			saveSQLMediaInsertFileMenuItem.setEnabled(false);
+			// Clear all the text fields
+			jTextField_ProjName.setText("");
+			jTextField_ColConfigFile.setText("");
+			jTextField_ObjInfoFile.setText("");
+			jTextField_OntologyFile.setText("");
+			jTextField_VocabFile.setText("");
+			jTextField_ImgPathsFile.setText("");
+		} else {
+			// Set all the menus and related UI that require state
+			// File menu
+			boolean upiIsDirty = userProjInfo.isDirty();
+			saveMenuItem.setEnabled(upiIsDirty);
+			saveAsMenuItem.setEnabled(upiIsDirty);
+
+			String text = userProjInfo.getName();
+			if( text == null )
+				text = "";
+			jTextField_ProjName.setText(text);
+
+			text = userProjInfo.getMetadataConfigPath();
+			if( text == null )
+				text = "";
+			jTextField_ColConfigFile.setText(text);
+
+			// Analyze Menu
+			text = userProjInfo.getMetadataPath();
+			boolean metadataReady = (text != null)
+										&& (userProjInfo.metaDataReader != null );
+			if( text == null )
+				text = "";
+			jTextField_ObjInfoFile.setText(text);
+			text = userProjInfo.getOntologyPath();
+			boolean ontoReady = (text != null)
+									&& (userProjInfo.facetMapHashTree != null );
+			if( text == null )
+				text = "";
+			jTextField_OntologyFile.setText(text);
+			objInfoTermUsageMenuItem.setEnabled(metadataReady);
+			objConceptAssocMenuItem.setEnabled(metadataReady&&ontoReady);
+			// Images Menu
+			text = userProjInfo.getImagePathsPath();
+			boolean imagePathsReady = (text != null)
+										&& (userProjInfo.imagePathsReader != null);
+			if( text == null )
+				text = "";
+			jTextField_ImgPathsFile.setText(text);
+			computeImageOrientationsMenuItem.setEnabled(imagePathsReady);
+			// Export Menu
+			buildObjectSQLMenuItem.setEnabled(metadataReady);
+			saveOntologyAsSQLMenuItem.setEnabled(ontoReady);
+			text = userProjInfo.getVocabTermsPath();
+			boolean vocabReady = (text != null)
+									&& (userProjInfo.vocabHashTree != null );
+			if( text == null )
+				text = "";
+			jTextField_VocabFile.setText(text);
+			saveVocabAsXMLMenuItem.setEnabled(vocabReady);
+			saveHooksAsSQLMenuItem.setEnabled(ontoReady);
+			saveExclusionsAsSQLMenuItem.setEnabled(ontoReady);
+			saveSQLMediaLoadFileMenuItem.setEnabled(imagePathsReady);
+			saveSQLMediaInsertFileMenuItem.setEnabled(imagePathsReady);
+		}
+	}
+
+	private void loadResourcesFromUserProjectInfo() {
+		if( userProjInfo == null ) {
+			userProjInfo.vocabTermsReader = null;
+			userProjInfo.vocabHashTree = null;
+			userProjInfo.vocabOutputDoc = null;
+			userProjInfo.facetMapHashTree = null;
+			userProjInfo.metaDataReader = null;
+			userProjInfo.imagePathsReader = null;
+		} else {
+			String filename = null;
+			if(( filename = userProjInfo.getImagePathsPath()) != null )
+				loadImagePaths(filename);
+			if(( filename = userProjInfo.getVocabTermsPath()) != null )
+				loadVocabFile(filename);
+			if(( filename = userProjInfo.getOntologyPath()) != null )
+				loadOntology(filename);
+			if(( filename = userProjInfo.getMetadataConfigPath()) != null )
+				loadMDConfig(filename);
+			if(( filename = userProjInfo.getMetadataPath()) != null )
+				loadMetadata(filename);
+		}
 	}
 
 	/**
@@ -212,9 +737,9 @@ public class MainApp {
 			jFrame = new JFrame();
 			jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			jFrame.setJMenuBar(getJJMenuBar());
-			jFrame.setSize(532, 336);
+			jFrame.setSize(700, 450);
 			jFrame.setContentPane(getJContentPane());
-			jFrame.setTitle("Application");
+			jFrame.setTitle("Delphi");
 		}
 		return jFrame;
 	}
@@ -242,10 +767,13 @@ public class MainApp {
 		if (jJMenuBar == null) {
 			jJMenuBar = new JMenuBar();
 			jJMenuBar.add(getFileMenu());
-			//jJMenuBar.add(getEditMenu());
-			jJMenuBar.add(getVocabActionsMenu());
-			jJMenuBar.add(getDataActionsMenu());
-			jJMenuBar.add(getObjectActionsMenu());
+			jJMenuBar.add(getEditMenu());
+			jJMenuBar.add(getAnalyzeMenu());
+			jJMenuBar.add(getImagesMenu());
+			jJMenuBar.add(getExportMenu());
+			//jJMenuBar.add(getVocabActionsMenu());
+			//jJMenuBar.add(getDataActionsMenu());
+			//jJMenuBar.add(getObjectActionsMenu());
 			jJMenuBar.add(getHelpMenu());
 		}
 		return jJMenuBar;
@@ -259,12 +787,103 @@ public class MainApp {
 	private JMenu getFileMenu() {
 		if (fileMenu == null) {
 			fileMenu = new JMenu();
-			fileMenu.setText("App");
-			//fileMenu.add(getOpenMenuItem());
-			//fileMenu.add(getSaveMenuItem());
+			fileMenu.setText("File");
+			fileMenu.setMnemonic('F');
+			fileMenu.add(getNewMenuItem());
+			fileMenu.add(getOpenMenuItem());
+			fileMenu.add(getSaveMenuItem());
+			fileMenu.add(getSaveAsMenuItem());
 			fileMenu.add(getExitMenuItem());
 		}
 		return fileMenu;
+	}
+
+	/**
+	 * This method initializes the File->New jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 *
+	 */
+	private JMenuItem getNewMenuItem() {
+		if (newMenuItem == null) {
+			newMenuItem = new JMenuItem();
+			newMenuItem.setText("New Project...");
+			newMenuItem.setMnemonic('N');
+			newMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,
+					Event.CTRL_MASK, true));
+			newMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					createNewProjectFile();
+				}
+			} );
+		}
+		return newMenuItem;
+	}
+
+	/**
+	 * This method initializes the File->Open jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 *
+	 */
+	private JMenuItem getOpenMenuItem() {
+		if (openMenuItem == null) {
+			openMenuItem = new JMenuItem();
+			openMenuItem.setText("Open Project...");
+			openMenuItem.setMnemonic('O');
+			openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
+					Event.CTRL_MASK, true));
+			openMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					openProjectFile();
+				}
+			} );
+		}
+		return openMenuItem;
+	}
+
+	/**
+	 * This method initializes the File->Save jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 *
+	 */
+	private JMenuItem getSaveMenuItem() {
+		if (saveMenuItem == null) {
+			saveMenuItem = new JMenuItem();
+			saveMenuItem.setText("Save Project");
+			saveMenuItem.setMnemonic('S');
+			saveMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
+					Event.CTRL_MASK, true));
+			saveMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					saveProjectFile();
+				}
+			} );
+		}
+		return saveMenuItem;
+	}
+
+	/**
+	 * This method initializes the File->SaveAs jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 *
+	 */
+	private JMenuItem getSaveAsMenuItem() {
+		if (saveAsMenuItem == null) {
+			saveAsMenuItem = new JMenuItem();
+			saveAsMenuItem.setText("Save Project As...");
+			saveAsMenuItem.setMnemonic('A');
+			saveAsMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,
+					Event.CTRL_MASK, true));
+			saveAsMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					saveProjectFileAs();
+				}
+			} );
+		}
+		return saveAsMenuItem;
 	}
 
 
@@ -272,109 +891,322 @@ public class MainApp {
 	 * This method initializes jMenu
 	 *
 	 * @return javax.swing.JMenu
+	 */
 	private JMenu getEditMenu() {
 		if (editMenu == null) {
 			editMenu = new JMenu();
 			editMenu.setText("Edit");
+			editMenu.setMnemonic('E');
 			editMenu.add(getCutMenuItem());
 			editMenu.add(getCopyMenuItem());
 			editMenu.add(getPasteMenuItem());
 		}
 		return editMenu;
 	}
+
+	/**
+	 * This method initializes jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
 	 */
+	private JMenuItem getCutMenuItem() {
+		if (cutMenuItem == null) {
+			cutMenuItem = new JMenuItem(new DefaultEditorKit.CutAction());
+			cutMenuItem.setText("Cut");
+			cutMenuItem.setMnemonic('T');
+			cutMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X,
+					Event.CTRL_MASK, true));
+		}
+		return cutMenuItem;
+	}
+
+	/**
+	 * This method initializes jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getCopyMenuItem() {
+		if (copyMenuItem == null) {
+			copyMenuItem = new JMenuItem(new DefaultEditorKit.CopyAction());
+			copyMenuItem.setText("Copy");
+			copyMenuItem.setMnemonic('C');
+			copyMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,
+					Event.CTRL_MASK, true));
+		}
+		return copyMenuItem;
+	}
+
+	/**
+	 * This method initializes jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getPasteMenuItem() {
+		if (pasteMenuItem == null) {
+			pasteMenuItem = new JMenuItem(new DefaultEditorKit.PasteAction());
+			pasteMenuItem.setText("Paste");
+			pasteMenuItem.setMnemonic('P');
+			pasteMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_V,
+					Event.CTRL_MASK, true));
+		}
+		return pasteMenuItem;
+	}
+
+	/**
+	 * This method initializes the Analyze jMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getAnalyzeMenu() {
+		if (analyzeMenu == null) {
+			analyzeMenu = new JMenu();
+			analyzeMenu.setText("Analyze");
+			analyzeMenu.setMnemonic('A');
+			analyzeMenu.add(getObjInfoTermUsageMenuItem());
+			analyzeMenu.add(getObjConceptAssocMenuItem());
+		}
+		return analyzeMenu;
+	}
+
+	//Object/Concept Association (requires ObjInfo file and Ontology. Later with load variants and an option
+
+	/**
+	 * This method initializes Analyze->Object Info Term Usage jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getObjInfoTermUsageMenuItem() {
+		if (objInfoTermUsageMenuItem == null) {
+			objInfoTermUsageMenuItem = new JMenuItem();
+			objInfoTermUsageMenuItem.setText("Object Info Term Usage");
+			objInfoTermUsageMenuItem.setMnemonic('T');
+			objInfoTermUsageMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					JDialog burDialog = getBuildUsageReportDialog();
+					burDialog.pack();
+					Point loc = getJFrame().getLocation();
+					loc.translate(50, 50);
+					burDialog.setLocation(loc);
+					burDialog.setVisible(true);
+					debug(1,"Generate Usage report...");
+				}
+			} );
+		}
+		return objInfoTermUsageMenuItem;
+	}
+
+	/**
+	 * This method initializes Analyze->Object/Concept Association jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getObjConceptAssocMenuItem() {
+		if (objConceptAssocMenuItem == null) {
+			objConceptAssocMenuItem = new JMenuItem();
+			objConceptAssocMenuItem.setText("Object-Concept Association");
+			objConceptAssocMenuItem.setMnemonic('A');
+			objConceptAssocMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					categorizeObjects();
+					}
+			} );
+		}
+		return objConceptAssocMenuItem;
+	}
 
 	/**
 	 * This method initializes jMenu
 	 *
 	 * @return javax.swing.JMenu
 	 */
-	private JMenu getVocabActionsMenu() {
-		if (vocabActionsMenu == null) {
-			vocabActionsMenu = new JMenu();
-			vocabActionsMenu.setText("Vocabulary");
-			vocabActionsMenu.add(getOpenVocabMenuItem());
-			vocabActionsMenu.add(getSaveVocabAsXMLMenuItem());
-			vocabActionsMenu.add(getLoadVocabFromXMLMenuItem());
-			// vocabActionsMenu.add(getAddVocabToDBMenuItem());
-			vocabActionsMenu.add(getSaveOntologyAsSQLMenuItem());
-			vocabActionsMenu.add(getSaveHooksAsSQLMenuItem());
-			vocabActionsMenu.add(getSaveExclusionsAsSQLMenuItem());
-			saveVocabAsXMLMenuItem.setEnabled(false);
-			loadVocabFromXMLMenuItem.setEnabled(true);
-			//addVocabToDBMenuItem.setEnabled(false);
-			saveOntologyAsSQLMenuItem.setEnabled(false);
-			saveHooksAsSQLMenuItem.setEnabled(false);
-			saveExclusionsAsSQLMenuItem.setEnabled(false);
+	private JMenu getImagesMenu() {
+		if (imagesMenu == null) {
+			imagesMenu = new JMenu();
+			imagesMenu.setText("Images");
+			imagesMenu.setMnemonic('I');
+			imagesMenu.add(getComputeImageOrientationsMenuItem());
 		}
-		return vocabActionsMenu;
+		return imagesMenu;
 	}
 
 	/**
-	 * This method initializes jMenuItem
+	 * This method initializes the Images->Compute Orientations jMenuItem
 	 *
 	 * @return javax.swing.JMenuItem
 	 */
-	private JMenuItem getOpenVocabMenuItem() {
-		if (openVocabMenuItem == null) {
-			openVocabMenuItem = new JMenuItem();
-			openVocabMenuItem.setText("Open Text Vocabulary File...");
-			openVocabMenuItem.addActionListener(new ActionListener() {
+	private JMenuItem getComputeImageOrientationsMenuItem() {
+		if (computeImageOrientationsMenuItem == null) {
+			computeImageOrientationsMenuItem = new JMenuItem();
+			computeImageOrientationsMenuItem.setText("Compute Image Orientations...");
+			computeImageOrientationsMenuItem.setMnemonic('O');
+			computeImageOrientationsMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					if( openVocabFile() ) {
-						saveVocabAsXMLMenuItem.setEnabled(true);
-						// NYI addVocabToDBMenuItem.setEnabled(true);
-					}
-					debug(2,"Open Vocabulary File");
+					computeImageOrientations();
+					//saveImagePathSQL();
 				}
 			});
 		}
-		return openVocabMenuItem;
+		computeImageOrientationsMenuItem.setEnabled(false); // PROJ REWORK
+		return computeImageOrientationsMenuItem;
 	}
 
 	/**
-	 * This method initializes jMenuItem
+	 * This method initializes the Export jMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getExportMenu() {
+		if (exportMenu == null) {
+			exportMenu = new JMenu();
+			exportMenu.setText("Export");
+			exportMenu.setMnemonic('X');
+			exportMenu.add(getBuildObjectSQLMenuItem());
+			exportMenu.add(getConceptOntologyMenu());
+			exportMenu.add(getImagePathsMenu());
+			/*
+			exportMenu.add(getOpenVocabMenuItem());
+			exportMenu.add(getSaveVocabAsXMLMenuItem());
+			exportMenu.add(getLoadVocabFromXMLMenuItem());
+			// exportMenu.add(getAddVocabToDBMenuItem());
+			exportMenu.add(getSaveOntologyAsSQLMenuItem());
+			exportMenu.add(getSaveHooksAsSQLMenuItem());
+			exportMenu.add(getSaveExclusionsAsSQLMenuItem());
+			*/
+		}
+		return exportMenu;
+	}
+
+	/**
+	 * This method initializes Export->Object Info jMenuItem
 	 *
 	 * @return javax.swing.JMenuItem
 	 */
-	private JMenuItem getLoadVocabFromXMLMenuItem() {
-		if (loadVocabFromXMLMenuItem == null) {
-			loadVocabFromXMLMenuItem = new JMenuItem();
-			loadVocabFromXMLMenuItem.setText("Open Ontology File...");
-			loadVocabFromXMLMenuItem.addActionListener(new ActionListener() {
+	private JMenuItem getBuildObjectSQLMenuItem() {
+		if (buildObjectSQLMenuItem == null) {
+			buildObjectSQLMenuItem = new JMenuItem();
+			buildObjectSQLMenuItem.setText("Object Info...");
+			buildObjectSQLMenuItem.setMnemonic('O');
+			buildObjectSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					if( openOntologyFile() ) {
-						saveOntologyAsSQLMenuItem.setEnabled(true);
-						saveHooksAsSQLMenuItem.setEnabled(true);
-						saveExclusionsAsSQLMenuItem.setEnabled(true);
-						// NYI addVocabToDBMenuItem.setEnabled(true);
-						/*
-						TaxoNode node = facetMapHashTree.FindNodeByName("Color", "blue");
-						System.out.println( "Cat ID for blue is: " + node.id );
-						node = facetMapHashTree.FindNodeByName("Color", "brownish-black");
-						System.out.println( "Cat ID for brownish-black is: " + node.id );
-						if(( node = facetMapHashTree.FindNodeByName("Color", "jade green")) == null )
-							System.out.println( "No Cat ID for jade green!!!" );
-						else
-							System.out.println( "Cat ID for jade green is: " + node.id );
-						if(( node = facetMapHashTree.FindNodeByName("Color", "jade-colored")) == null )
-							System.out.println( "No Cat ID for jade-colored!!!" );
-						else
-							System.out.println( "Cat ID for jade-colored is: " + node.id );
-						if(( node = facetMapHashTree.FindNodeByName("Color", "Turquoise Green")) == null )
-							System.out.println( "No Cat ID for Turquoise Green!!!" );
-						else
-							System.out.println( "Cat ID for Turquoise Green is: " + node.id );
-						if(( node = facetMapHashTree.FindNodeByName("Material", "bronze")) == null )
-							System.out.println( "No Cat ID for bronze!!!" );
-						else
-							System.out.println( "Cat ID for bronze is: " + node.id );
-						 */
-					}
+					buildObjectSQL();
 				}
 			});
 		}
-		return loadVocabFromXMLMenuItem;
+		return buildObjectSQLMenuItem;
+	}
+
+	/**
+	 * This method initializes the Export->Concept Ontology jMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getConceptOntologyMenu() {
+		if (conceptOntologyMenu == null) {
+			conceptOntologyMenu = new JMenu();
+			conceptOntologyMenu.setText("Concept Ontology");
+			conceptOntologyMenu.setMnemonic('C');
+			conceptOntologyMenu.add(getSaveOntologyAsSQLMenuItem());
+			conceptOntologyMenu.add(getSaveHooksAsSQLMenuItem());
+			conceptOntologyMenu.add(getSaveExclusionsAsSQLMenuItem());
+			conceptOntologyMenu.add(getSaveVocabAsXMLMenuItem());
+		}
+		return conceptOntologyMenu;
+	}
+
+	/**
+	 * This method initializes the Export->Image Paths jMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getImagePathsMenu() {
+		if (imagePathsMenu == null) {
+			imagePathsMenu = new JMenu();
+			imagePathsMenu.setText("Image Paths");
+			imagePathsMenu.setMnemonic('I');
+			imagePathsMenu.add(getSaveSQLMediaLoadFileMenuItem());
+			imagePathsMenu.add(getSaveSQLMediaInsertFileMenuItem());
+		}
+		return imagePathsMenu;
+	}
+
+	private JMenuItem getSaveSQLMediaInsertFileMenuItem() {
+		if (saveSQLMediaInsertFileMenuItem == null) {
+			saveSQLMediaInsertFileMenuItem = new JMenuItem();
+			saveSQLMediaInsertFileMenuItem.setText("Save SQL Media Insert File...");
+			saveSQLMediaInsertFileMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveSQLMediaInsertFile();
+				}
+			});
+		}
+		saveSQLMediaInsertFileMenuItem.setEnabled(false); // PROJ REWORK
+		return saveSQLMediaInsertFileMenuItem;
+	}
+
+	private void saveSQLMediaInsertFile() {
+		if( userProjInfo.imagePathsReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		debug(1,"Saving SQL Media Insert File...");
+		try {
+			String outFileName = userProjInfo.imagePathsReader.getInFile();
+			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
+			if( lastSlash >= 0 )
+				outFileName = outFileName.substring(0, lastSlash+1) + "mediaInsert.sql";
+			else
+				outFileName = "mediaInsert.sql";
+    		String filename = getSafeOutfile(outFileName,sqlFilter);
+		    if(filename != null) {
+		        setStatus("Saving SQL Media Load File to file: " + filename);
+		        userProjInfo.imagePathsReader.writeSQLMediaTableInsertFile(filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Saving SQL Media Insert File: ", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
+	}
+
+	private JMenuItem getSaveSQLMediaLoadFileMenuItem() {
+		if (saveSQLMediaLoadFileMenuItem == null) {
+			saveSQLMediaLoadFileMenuItem = new JMenuItem();
+			saveSQLMediaLoadFileMenuItem.setText("Save SQL Media Load File...");
+			saveSQLMediaLoadFileMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					saveSQLMediaLoadFile();
+				}
+			});
+		}
+		saveSQLMediaLoadFileMenuItem.setEnabled(false); // PROJ REWORK
+		return saveSQLMediaLoadFileMenuItem;
+	}
+
+	private void saveSQLMediaLoadFile() {
+		if( userProjInfo.imagePathsReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		debug(1,"Saving SQL Media Load File...");
+		try {
+			String outFileName = userProjInfo.getImagePathsPath();
+			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
+			if( lastSlash >= 0 )
+				outFileName = outFileName.substring(0, lastSlash+1) + "mediaLoadFile.sql";
+			else
+				outFileName = "mediaLoadFile.sql";
+    		String filename = getSafeOutfile(outFileName,sqlFilter);
+		    if(filename != null) {
+		        setStatus("Saving SQL Media Load File to file: " + filename);
+		        userProjInfo.imagePathsReader.writeSQLMediaTableLoadFile(filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Saving SQL Media Load File: ", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+		}
 	}
 
 	/**
@@ -386,6 +1218,7 @@ public class MainApp {
 		if (saveVocabAsXMLMenuItem == null) {
 			saveVocabAsXMLMenuItem = new JMenuItem();
 			saveVocabAsXMLMenuItem.setText("Save Vocabulary as XML...");
+			saveVocabAsXMLMenuItem.setMnemonic('V');
 			saveVocabAsXMLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					saveVocabAsXML();
@@ -403,10 +1236,11 @@ public class MainApp {
 	private JMenuItem getSaveOntologyAsSQLMenuItem() {
 		if (saveOntologyAsSQLMenuItem == null) {
 			saveOntologyAsSQLMenuItem = new JMenuItem();
-			saveOntologyAsSQLMenuItem.setText("Save Vocabulary as SQL Load...");
+			saveOntologyAsSQLMenuItem.setText("Save Ontology as SQL Load...");
+			saveOntologyAsSQLMenuItem.setMnemonic('O');
 			saveOntologyAsSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					saveVocabAsSQL();
+					saveOntologyAsSQL();
 				}
 			});
 		}
@@ -422,6 +1256,7 @@ public class MainApp {
 		if (saveHooksAsSQLMenuItem == null) {
 			saveHooksAsSQLMenuItem = new JMenuItem();
 			saveHooksAsSQLMenuItem.setText("Save Hooks as SQL Load...");
+			saveHooksAsSQLMenuItem.setMnemonic('H');
 			saveHooksAsSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					saveVocabHooksOrExclusionsAsSQL( true );
@@ -440,6 +1275,7 @@ public class MainApp {
 		if (saveExclusionsAsSQLMenuItem == null) {
 			saveExclusionsAsSQLMenuItem = new JMenuItem();
 			saveExclusionsAsSQLMenuItem.setText("Save Exclusions as SQL Load...");
+			saveExclusionsAsSQLMenuItem.setMnemonic('E');
 			saveExclusionsAsSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					saveVocabHooksOrExclusionsAsSQL( false );
@@ -449,210 +1285,134 @@ public class MainApp {
 		return saveExclusionsAsSQLMenuItem;
 	}
 
-
-
 	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	private JMenuItem getAddVocabToDBMenuItem() {
-		if (addVocabToDBMenuItem == null) {
-			addVocabToDBMenuItem = new JMenuItem();
-			addVocabToDBMenuItem.setText("Add Vocabulary to DB...");
-			addVocabToDBMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					System.out.println("Add Vocabulary to DB");
-				}
-			});
-		}
-		return addVocabToDBMenuItem;
-	}
+	 * Creates a new project file, and sets the it to be the current project.
 	 */
-
-	/**
-	 * This method initializes jMenu
-	 *
-	 * @return javax.swing.JMenu
-	 */
-	private JMenu getDataActionsMenu() {
-		if (metaDataActionsMenu == null) {
-			metaDataActionsMenu = new JMenu();
-			metaDataActionsMenu.setText("MetaData");
-			metaDataActionsMenu.add(getOpenMDCfgFileMenuItem());
-			metaDataActionsMenu.add(getOpenMDFileMenuItem());
-			metaDataActionsMenu.add(getBuildUsageReportMenuItem());
-			openMDFileMenuItem.setEnabled(false);
-			buildUsageReportMenuItem.setEnabled(false);
-		}
-		return metaDataActionsMenu;
+	private void createNewProjectFile() {
+		UserProjectInfo upi = new UserProjectInfo( "New Project");
+		setUserProject( upi );
 	}
 
 	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
+	 * Opens an existing project file, and sets the it to be the current project.
 	 */
-	private JMenuItem getOpenMDCfgFileMenuItem() {
-		if (openMDCfgFileMenuItem == null) {
-			openMDCfgFileMenuItem = new JMenuItem();
-			openMDCfgFileMenuItem.setText("Open MetaData Config File...");
-			openMDCfgFileMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					debug(2,"Open MetaData Config File...");
-					if( openMDConfigFile() ) {
-						openMDFileMenuItem.setEnabled(true);
-					}
-				}
-			});
-		}
-		return openMDCfgFileMenuItem;
+	private void openProjectFile() {
+		chooser.setFileFilter(dpfFilter);
+		String startDir = appSettings.getLastUserProjectPath();
+    	if( startDir != null )
+    		chooser.setSelectedFile(new File( startDir ));
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+	    if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    	String filename = chooser.getSelectedFile().getPath();
+	    	try {
+		    	UserProjectInfo upi = UserProjectInfo.loadFromPath( filename );
+		    	if( upi != null )
+		    		setUserProject( upi );
+			} catch (RuntimeException e) {
+				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+						"Loading Project File Error", JOptionPane.ERROR_MESSAGE);
+			}
+	    }
 	}
 
 	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
+	 * Saves the current project file.
 	 */
-	private JMenuItem getOpenMDFileMenuItem() {
-		if (openMDFileMenuItem == null) {
-			openMDFileMenuItem = new JMenuItem();
-			openMDFileMenuItem.setText("Open MetaData File...");
-			openMDFileMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					if( openMDFile() ) {
-						buildUsageReportMenuItem.setEnabled(true);
-					}
-				}
-			});
+	private void saveProjectFile() {
+		try {
+			UserProjectInfo.saveToPath(userProjInfo, appSettings.getLastUserProjectPath());
+	        setStatus("Saved Project Info" );
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Save Project File Error", JOptionPane.ERROR_MESSAGE);
 		}
-		return openMDFileMenuItem;
 	}
 
 	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
+	 * Saves the current project file to a new file, and sets that to be the current project.
 	 */
-	private JMenuItem getBuildUsageReportMenuItem() {
-		if (buildUsageReportMenuItem == null) {
-			buildUsageReportMenuItem = new JMenuItem();
-			buildUsageReportMenuItem.setText("Build Usage Report...");
-			buildUsageReportMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					JDialog burDialog = getBuildUsageReportDialog();
-					burDialog.pack();
-					Point loc = getJFrame().getLocation();
-					loc.translate(50, 50);
-					burDialog.setLocation(loc);
-					burDialog.setVisible(true);
-					debug(1,"Generate Usage report...");
-				}
-			});
+	private void saveProjectFileAs() {
+		try {
+    		String filename = getSafeOutfile(null,dpfFilter);
+		    if(filename != null) {
+				UserProjectInfo.saveToPath(userProjInfo, filename);
+		    	appSettings.setLastUserProjectPath(filename);
+		        setStatus("Saved Project Info to file: " + filename);
+		    }
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+					"Save Project File Error", JOptionPane.ERROR_MESSAGE);
 		}
-		return buildUsageReportMenuItem;
 	}
 
 	/**
-	 * This method initializes jMenu
-	 *
-	 * @return javax.swing.JMenu
+	 * @return TRUE if successfully opened and parsed
 	 */
-	private JMenu getObjectActionsMenu() {
-		if (objectActionsMenu == null) {
-			objectActionsMenu = new JMenu();
-			objectActionsMenu.setText("Objects");
-			objectActionsMenu.add(getLoadImagePathsMenuItem());
-			objectActionsMenu.add(getComputeImageOrientationsMenuItem());
-			objectActionsMenu.add(getSaveSQLMediaInsertFileMenuItem());
-			/* OBSOLETE
-			objectActionsMenu.add(getSaveObjectSQLUpdatesMenuItem());
-			 */
-			objectActionsMenu.add(getSaveSQLMediaLoadFileMenuItem());
-			objectActionsMenu.add(getBuildObjectSQLMenuItem());
-			objectActionsMenu.add(getCategorizeObjectsMenuItem());
-		}
-		return objectActionsMenu;
+	private boolean browseToImagePathsFile() {
+		boolean opened = false;
+		chooser.setFileFilter(txtFilter);
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+	    if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    	String filename = chooser.getSelectedFile().getPath();
+	    	if( opened = setImagePathsFile(filename) ) {
+	    		jTextField_ImgPathsFile.setText(filename);
+	    	}
+	    }
+	    return opened;
 	}
 
 	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
+	 * @return TRUE if successfully opened and parsed
 	 */
-	private JMenuItem getLoadImagePathsMenuItem() {
-		if (loadImagePathsMenuItem == null) {
-			loadImagePathsMenuItem = new JMenuItem();
-			loadImagePathsMenuItem.setText("Load Image Paths...");
-			loadImagePathsMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					loadImagePaths();
-				}
-			});
+	private boolean setImagePathsFile( String filename ) {
+		boolean opened = false;
+        // TODO consider deferring this until we actually need it
+		if( opened = loadImagePaths( filename )) {
+	        userProjInfo.setImagePathsPath(filename);
+	        updateUIForUserProjectInfo();
 		}
-		return loadImagePathsMenuItem;
+	    return opened;
 	}
 
-	private void loadImagePaths() {
+	/**
+	 * @return TRUE if successfully opened and parsed
+	 */
+	private boolean loadImagePaths( String filename ) {
+		boolean opened = false;
+        // TODO consider deferring this until we actually need it
 		debug(1,"Loading Image paths...");
 		try {
-			chooser.setFileFilter(null);
-		    int returnVal = chooser.showOpenDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		        debug(1,"Scanning image paths from file: " + filename);
-		        setStatus("Scanning image paths from file: " + filename);
-		    	imagePathsReader = new ImagePathsReader(filename);
-		    	int nObjs = imagePathsReader.readInfo(Integer.MAX_VALUE, true);
-		        setStatus("Found: " + nObjs + " objects with images.");
-		        debug(2,"Found: " + nObjs + " objects with images.");
-		        debug(3, "Mid path for 3716: [mids/"
-		        		+imagePathsReader.GetSimpleSubPathForID(3716, null)+"]" );
-		        debug(3,"Thumb path for 5204: [thumbs/"
-		        		+imagePathsReader.GetSimpleSubPathForID(5204, null)+"]" );
-				computeImageOrientationsMenuItem.setEnabled(true);
-				//saveObjectSQLUpdatesMenuItem.setEnabled(true);
-				saveSQLMediaLoadFileMenuItem.setEnabled(true);
-				saveSQLMediaInsertFileMenuItem.setEnabled(true);
-		    }
+	        debug(1,"Scanning image paths from file: " + filename);
+	        setStatus("Scanning image paths from file: " + filename);
+	        userProjInfo.imagePathsReader = new ImagePathsReader(filename);
+	    	int nObjs = userProjInfo.imagePathsReader.readInfo(Integer.MAX_VALUE, true);
+	        setStatus("Found: " + nObjs + " objects with images.");
+	        debug(2,"Found: " + nObjs + " objects with images.");
+	        debug(3, "Mid path for 3716: [mids/"
+	        		+userProjInfo.imagePathsReader.GetSimpleSubPathForID(3716, null)+"]" );
+	        debug(3,"Thumb path for 5204: [thumbs/"
+	        		+userProjInfo.imagePathsReader.GetSimpleSubPathForID(5204, null)+"]" );
+			opened = true;
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Loading Image paths File Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
-	}
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	 */
-	private JMenuItem getComputeImageOrientationsMenuItem() {
-		if (computeImageOrientationsMenuItem == null) {
-			computeImageOrientationsMenuItem = new JMenuItem();
-			computeImageOrientationsMenuItem.setText("Compute Image Orientations...");
-			computeImageOrientationsMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					computeImageOrientations();
-					saveImagePathSQL();
-				}
-			});
-		}
-		computeImageOrientationsMenuItem.setEnabled(false);
-		return computeImageOrientationsMenuItem;
+	    return opened;
 	}
 
 	/**
 	 * Assumes the base path is set, and that there are variants under the thumbs.
 	 */
 	private void computeImageOrientations() {
-		if( imagePathsReader == null ) {
+		if( userProjInfo.imagePathsReader == null ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
 					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		// Let the user point to the base path for the images.
-		chooser.setSelectedFile(new File( imagePathsReader.getInFile() ));
-		chooser.setFileFilter(sqlfilter);
+		chooser.setSelectedFile(new File( userProjInfo.getImagePathsPath() ));
+		chooser.setFileFilter(sqlFilter);
 		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 		String pathBase;
@@ -665,7 +1425,7 @@ public class MainApp {
 			int nToReport = 2500;
 			int nTillReport = nToReport;
 			int nProcessed = 0;
-			Collection<ArrayList<ImageInfo>> allImgs = imagePathsReader.GetAllAsList();
+			Collection<ArrayList<ImageInfo>> allImgs = userProjInfo.imagePathsReader.GetAllAsList();
 			java.util.Iterator<ArrayList<ImageInfo>> allImgsIterator = allImgs.iterator();
 			while( allImgsIterator.hasNext() ) {
 				ArrayList<ImageInfo> imgsForId = allImgsIterator.next();
@@ -692,119 +1452,13 @@ public class MainApp {
 		}
 	}
 
-	private void saveImagePathSQL() {
-		// Write the current results. User can cancel if not interested.
-		String filename = getSafeOutfile(imagePathsReader.getInFile(),sqlfilter);
-	    if(filename != null) {
-	        setStatus("Saving Updated Image Info to file: " + filename);
-	        imagePathsReader.writeContents(filename);
-	    }
-	}
-
-	private JMenuItem getSaveSQLMediaInsertFileMenuItem() {
-		if (saveSQLMediaInsertFileMenuItem == null) {
-			saveSQLMediaInsertFileMenuItem = new JMenuItem();
-			saveSQLMediaInsertFileMenuItem.setText("Save SQL Media Insert File...");
-			saveSQLMediaInsertFileMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					saveSQLMediaInsertFile();
-				}
-			});
-		}
-		saveSQLMediaInsertFileMenuItem.setEnabled(false);
-		return saveSQLMediaInsertFileMenuItem;
-	}
-
-	private void saveSQLMediaInsertFile() {
-		if( imagePathsReader == null ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
-					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
-			return;
-		}
-		debug(1,"Saving SQL Media Insert File...");
-		try {
-			String outFileName = imagePathsReader.getInFile();
-			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
-			if( lastSlash >= 0 )
-				outFileName = outFileName.substring(0, lastSlash+1) + "mediaInsert.sql";
-			else
-				outFileName = "mediaInsert.sql";
-    		String filename = getSafeOutfile(outFileName,sqlfilter);
-		    if(filename != null) {
-		        setStatus("Saving SQL Media Load File to file: " + filename);
-		        imagePathsReader.writeSQLMediaTableInsertFile(filename);
-		    }
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Saving SQL Media Insert File: ", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-	}
-
-	private JMenuItem getSaveSQLMediaLoadFileMenuItem() {
-		if (saveSQLMediaLoadFileMenuItem == null) {
-			saveSQLMediaLoadFileMenuItem = new JMenuItem();
-			saveSQLMediaLoadFileMenuItem.setText("Save SQL Media Load File...");
-			saveSQLMediaLoadFileMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					saveSQLMediaLoadFile();
-				}
-			});
-		}
-		saveSQLMediaLoadFileMenuItem.setEnabled(false);
-		return saveSQLMediaLoadFileMenuItem;
-	}
-
-	private void saveSQLMediaLoadFile() {
-		if( imagePathsReader == null ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
-					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
-			return;
-		}
-		debug(1,"Saving SQL Media Load File...");
-		try {
-			String outFileName = imagePathsReader.getInFile();
-			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
-			if( lastSlash >= 0 )
-				outFileName = outFileName.substring(0, lastSlash+1) + "mediaLoadFile.sql";
-			else
-				outFileName = "mediaLoadFile.sql";
-    		String filename = getSafeOutfile(outFileName,sqlfilter);
-		    if(filename != null) {
-		        setStatus("Saving SQL Media Load File to file: " + filename);
-		        imagePathsReader.writeSQLMediaTableLoadFile(filename);
-		    }
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Saving SQL Media Load File: ", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
-	}
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	 */
-	private JMenuItem getBuildObjectSQLMenuItem() {
-		if (buildObjectSQLMenuItem == null) {
-			buildObjectSQLMenuItem = new JMenuItem();
-			buildObjectSQLMenuItem.setText("Build Objects SQL...");
-			buildObjectSQLMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					buildObjectSQL();
-				}
-			});
-		}
-		return buildObjectSQLMenuItem;
-	}
-
 	private void buildObjectSQL() {
 		try {
 			debug(1,"Build Objects SQL...");
 			// We need to pick an output file
-			if( openMDFile() && metaDataReader != null ) {
-				SQLUtils.writeObjectsSQL(metaDataReader, imagePathsReader);
+			if( userProjInfo.metaDataReader != null ) {
+				SQLUtils.writeObjectsSQL(userProjInfo.metaDataReader, columnNames,
+											userProjInfo.imagePathsReader);
 			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -818,7 +1472,6 @@ public class MainApp {
 	 * This method initializes jMenuItem
 	 *
 	 * @return javax.swing.JMenuItem
-	 */
 	private JMenuItem getCategorizeObjectsMenuItem() {
 		if (categorizeObjectsMenuItem == null) {
 			categorizeObjectsMenuItem = new JMenuItem();
@@ -831,22 +1484,24 @@ public class MainApp {
 		}
 		return categorizeObjectsMenuItem;
 	}
+	 */
 
 	private void categorizeObjects() {
 		debug(1,"Categorize Objects and generate association SQL...");
-		if( facetMapHashTree == null ) {
+		if( userProjInfo.facetMapHashTree == null ) {
 			JOptionPane.showMessageDialog(getJFrame(),
 					"You cannot categorize before the ontology has been loaded\n"
 					+ "Please load the ontology and then run this command.",
 					"Categorize error", JOptionPane.ERROR_MESSAGE);
-		} else if( !openMDFile() || metaDataReader == null ) {
+		} else if( userProjInfo.metaDataReader == null ) {
 			JOptionPane.showMessageDialog(getJFrame(),
 					"You must specify a metadata source to categorize.\n",
 					"Categorize error", JOptionPane.ERROR_MESSAGE);
 		} else {
-			for( String facetName : facetMapHashTree.GetFacetNames()) {
-				metaDataReader.resetToLine1();
-				Categorizer.categorizeForFacet(metaDataReader, facetMapHashTree,
+			for( String facetName : userProjInfo.facetMapHashTree.GetFacetNames()) {
+				userProjInfo.metaDataReader.resetToLine1();
+				Categorizer.categorizeForFacet(userProjInfo.metaDataReader, columnNames,
+												userProjInfo.facetMapHashTree,
 												facetName, false, dbName);
 			}
 		}
@@ -861,6 +1516,7 @@ public class MainApp {
 		if (helpMenu == null) {
 			helpMenu = new JMenu();
 			helpMenu.setText("Help");
+			helpMenu.setMnemonic('H');
 			helpMenu.add(getAboutMenuItem());
 		}
 		return helpMenu;
@@ -875,6 +1531,7 @@ public class MainApp {
 		if (exitMenuItem == null) {
 			exitMenuItem = new JMenuItem();
 			exitMenuItem.setText("Exit");
+			exitMenuItem.setMnemonic('X');
 			exitMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
@@ -893,6 +1550,7 @@ public class MainApp {
 		if (aboutMenuItem == null) {
 			aboutMenuItem = new JMenuItem();
 			aboutMenuItem.setText("About");
+			aboutMenuItem.setMnemonic('A');
 			aboutMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JDialog aboutDialog = getAboutDialog();
@@ -927,7 +1585,7 @@ public class MainApp {
 		if (aboutDialog == null) {
 			aboutDialog = new JDialog(getJFrame(), true);
 			aboutDialog.setTitle("About");
-			aboutDialog.setSize(new Dimension(526, 338));
+			aboutDialog.setSize(new Dimension(526, 460));
 			aboutDialog.setContentPane(getAboutContentPane());
 		}
 		return aboutDialog;
@@ -980,7 +1638,7 @@ public class MainApp {
 	private JLabel getAboutVersionLabel() {
 		if (aboutVersionLabel == null) {
 			aboutVersionLabel = new JLabel();
-			aboutVersionLabel.setText("Delphi Import Manager Version 0.1");
+			aboutVersionLabel.setText("Delphi Import Manager Version 0.2");
 			aboutVersionLabel.setHorizontalTextPosition(SwingConstants.CENTER);
 			aboutVersionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		}
@@ -1123,98 +1781,48 @@ public class MainApp {
 		return buildReportButton;
 	}
 
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	private JMenuItem getCutMenuItem() {
-		if (cutMenuItem == null) {
-			cutMenuItem = new JMenuItem();
-			cutMenuItem.setText("Cut");
-			cutMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X,
-					Event.CTRL_MASK, true));
-		}
-		return cutMenuItem;
-	}
-	 */
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	private JMenuItem getCopyMenuItem() {
-		if (copyMenuItem == null) {
-			copyMenuItem = new JMenuItem();
-			copyMenuItem.setText("Copy");
-			copyMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,
-					Event.CTRL_MASK, true));
-		}
-		return copyMenuItem;
-	}
-	 */
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	private JMenuItem getPasteMenuItem() {
-		if (pasteMenuItem == null) {
-			pasteMenuItem = new JMenuItem();
-			pasteMenuItem.setText("Paste");
-			pasteMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_V,
-					Event.CTRL_MASK, true));
-		}
-		return pasteMenuItem;
-	}
-	 */
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	 *
-	private JMenuItem getOpenMenuItem() {
-		if (openMenuItem == null) {
-			openMenuItem = new JMenuItem();
-			openMenuItem.setText("Open");
-			openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
-					Event.CTRL_MASK, true));
-			openMenuItem.addActionListener(new java.awt.event.ActionListener() {
-				public void actionPerformed(java.awt.event.ActionEvent e) {
-					openVocabFile();
-				}
-			} );
-		}
-		return openMenuItem;
-	} */
-
 	/**
 	 * Opens an XML ontology file in Delphi format.
 	 * Format is documented on the project site.
 	 * @return TRUE if successfully opened and parsed
 	 */
-	protected boolean openOntologyFile() {
+	protected boolean browseToOntologyFile() {
+		boolean opened = false;
+		chooser.setFileFilter(xmlFilter);
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+	    if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    	if( opened = setOntologyFile(chooser.getSelectedFile().getPath()))
+	    		jTextField_OntologyFile.setText(userProjInfo.getOntologyPath());
+	    }
+		return opened;
+	}
+
+	private boolean setOntologyFile(String filename) {
+		boolean opened = false;
+		if( opened = loadOntology( filename )) {
+	        userProjInfo.setOntologyPath(filename);
+	        updateUIForUserProjectInfo();
+		}
+		return opened;
+	}
+
+	private boolean loadOntology(String filename) {
 		boolean opened = false;
 		try {
-			chooser.setFileFilter(xmlfilter);
-		    int returnVal = chooser.showOpenDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-				DocumentBuilder builder = factory.newDocumentBuilder();
-		    	String filename = chooser.getSelectedFile().getPath();
-		        debug(1,"Scanning vocabulary from file: " + filename);
-		        setStatus("Scanning vocabulary from file: " + filename);
-				Document facetMapDoc = builder.parse(filename);
-				facetMapHashTree = new DoubleHashTree();
-		        facetMapHashTree.PopulateFromFacetMap(facetMapDoc);
-		        String s1 = "Found a total of " + facetMapHashTree.totalTermCount()
-        		+ " terms for "
-        		+ facetMapHashTree.totalConceptCount() + " concepts.";
-		        setStatus(s1);
-		        debug(1, s1);
-		        opened = true;
-		    }
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+	        debug(1,"Scanning vocabulary from file: " + filename);
+	        setStatus("Scanning vocabulary from file: " + filename);
+        // REWRITE - separate this and do it when open the userProjInfo
+			Document facetMapDoc = builder.parse(filename);
+			userProjInfo.facetMapHashTree = new DoubleHashTree();
+			userProjInfo.facetMapHashTree.PopulateFromFacetMap(facetMapDoc);
+	        String s1 = "Found a total of " + userProjInfo.facetMapHashTree.totalTermCount()
+    		+ " terms for "
+    		+ userProjInfo.facetMapHashTree.totalConceptCount() + " concepts.";
+	        setStatus(s1);
+	        debug(1, s1);
+	        opened = true;
         } catch (SAXParseException spe) {
             // Error generated by the parser
             System.out.println("\n** Parsing error" + ", line " +
@@ -1251,39 +1859,63 @@ public class MainApp {
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
-		return opened;
+	    return opened;
 	}
 
 	/**
-	 * Opens a special vocabulary dump file in a fairly funky format.
+	 * Lets the user choose a vocabulary file to open, and then calls
+	 * setVocabFile to open the file and set up a VocabTermsReader.
 	 * @see VocabTermsReader for details
 	 * @return TRUE if successfully opened and parsed
 	 */
-	protected boolean openVocabFile() {
+	protected boolean browseToVocabFile() {
 		boolean opened = false;
-		try {
-			chooser.setFileFilter(null);
-		    int returnVal = chooser.showOpenDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-				DocumentBuilder builder = factory.newDocumentBuilder();
-				vocabOutputDoc = builder.newDocument();
-		    	String filename = chooser.getSelectedFile().getPath();
-		        debug(1,"Scanning vocabulary from file: " + filename);
-		        setStatus("Scanning vocabulary from file: " + filename);
-		        vocabTermsReader = new VocabTermsReader(filename);
-		        vocabTermsReader.addSkipTerm("PAHMA Attributes");
-		        vocabTermsReader.addSkipTerm("Object Attributes");
-		        vocabHashTree =
-		        	vocabTermsReader.readTerms( Integer.MAX_VALUE, vocabOutputDoc,
-		        			"PAHMA AUT Collection Facets" );
-		        String s1 = "Scanned a total of " + vocabHashTree.totalTermCount()
-		        		+ " terms for "
-		        		+ vocabHashTree.totalConceptCount() + " concepts.";
-		        setStatus(s1);
-		        debug(1, s1);
-		        opened = true;
-		    }
+		chooser.setFileFilter(txtFilter);
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+	    if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    	if( opened = setVocabFile(chooser.getSelectedFile().getPath()))
+	    		jTextField_VocabFile.setText(userProjInfo.getVocabTermsPath());
+	    }
+	    return opened;
+	}
+
+	private boolean setVocabFile(String filename) {
+		boolean opened = false;
+		if( opened = loadVocabFile( filename ) ) {
+            userProjInfo.setVocabTermsPath(filename);
+            updateUIForUserProjectInfo();
+		}
+		return opened;
+	}
+	/**
+	 * Opens a special vocabulary dump file in a fairly funky format,
+	 * using the path specified.
+	 * Builds a table of the read terms and their relationships.
+	 * Also creates an XML model of the vocabulary.
+	 * On success, update the UserProjectInfo and related UI.
+	 * @see VocabTermsReader for details
+	 * @return TRUE if successfully opened and parsed
+	 */
+	private boolean loadVocabFile(String filename) {
+		boolean opened = false;
+    	try {
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			userProjInfo.vocabOutputDoc = builder.newDocument();
+	    	debug(1,"Scanning vocabulary from file: " + filename);
+	        setStatus("Scanning vocabulary from file: " + filename);
+	        userProjInfo.vocabTermsReader = new VocabTermsReader(filename);
+	        userProjInfo.vocabTermsReader.addSkipTerm("PAHMA Attributes");
+	        userProjInfo.vocabTermsReader.addSkipTerm("Object Attributes");
+	        userProjInfo.vocabHashTree =
+	        	userProjInfo.vocabTermsReader.readTerms( Integer.MAX_VALUE, userProjInfo.vocabOutputDoc,
+	        			"PAHMA AUT Collection Facets" );
+	        String s1 = "Scanned a total of " + userProjInfo.vocabHashTree.totalTermCount()
+	        		+ " terms for "
+	        		+ userProjInfo.vocabHashTree.totalConceptCount() + " concepts.";
+	        setStatus(s1);
+	        debug(1, s1);
+	        opened = true;
 		} catch( ParserConfigurationException pce ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Could not create output XML file",
 					"Open VocabularyFile Error", JOptionPane.ERROR_MESSAGE);
@@ -1293,21 +1925,35 @@ public class MainApp {
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
+	    return opened;
+	}
+
+	protected boolean browseToMDConfigFile() {
+		boolean opened = false;
+		chooser.setFileFilter(xmlFilter);
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+	    if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    	String filename = chooser.getSelectedFile().getPath();
+	        if( opened = setMDConfigFile(filename) )
+		        jTextField_ColConfigFile.setText(filename);
+	    }
 		return opened;
 	}
 
-	protected boolean openMDConfigFile() {
+	private boolean setMDConfigFile(String filename) {
+		boolean opened = false;
+		if( opened = loadMDConfig( filename )) {
+	        userProjInfo.setMetadataConfigPath(filename);
+	        updateUIForUserProjectInfo();
+		}
+		return opened;
+	}
+	protected boolean loadMDConfig( String filename ) {
 		boolean opened = false;
 		try {
-			chooser.setFileFilter(xmlfilter);
-		    int returnVal = chooser.showOpenDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	File file = chooser.getSelectedFile();
-		    	String filename = file.getPath();
-		        debug(2,"Scanning column config info from file: " + filename);
-		        setStatus("Scanning column config info from file: " + filename);
-		        opened = DumpColumnConfigInfo.OpenConfigFile(filename);
-		    }
+	        debug(2,"Scanning column config info from file: " + filename);
+	        setStatus("Scanning column config info from file: " + filename);
+	        opened = DumpColumnConfigInfo.OpenConfigFile(filename);
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
@@ -1316,31 +1962,48 @@ public class MainApp {
 		return opened;
 	}
 
-	protected boolean openMDFile() {
+	protected boolean browseToMDFile() {
+		boolean opened = false;
+		chooser.setFileFilter(txtFilter);
+	    int returnVal = chooser.showOpenDialog(getJFrame());
+	    if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    	String filename = chooser.getSelectedFile().getPath();
+	        if( opened = setMDFile(filename) )
+		        jTextField_ObjInfoFile.setText(filename);
+	    }
+		return opened;
+	}
+
+	private boolean setMDFile(String filename) {
+		boolean opened = false;
+		if( opened = loadMetadata( filename )) {
+	        userProjInfo.setMetadataPath(filename);
+	        updateUIForUserProjectInfo();
+		}
+		return opened;
+	}
+
+	protected boolean loadMetadata( String filename ) {
 		boolean opened = false;
 		try {
-			chooser.setFileFilter(null);
-		    int returnVal = chooser.showOpenDialog(getJFrame());
-		    if(returnVal == JFileChooser.APPROVE_OPTION) {
-		    	String filename = chooser.getSelectedFile().getPath();
-		        debug(2,"Scanning column names from file: " + filename);
-		        setStatus("Scanning column names from file: " + filename);
-		        int colSep = DumpColumnConfigInfo.getColumnSeparator();
-		        if( !Character.isDefined(colSep) )
-					throw new RuntimeException( "No Column separator configured!" );
-		        metaDataReader = new MetaDataReader(filename, colSep );
-		        columnNames = metaDataReader.readColumnHeaders();
-		        setStatus("Found: " + columnNames.length + " columns.");
-		        if( !(columnNames[0]).equalsIgnoreCase("objectid") )
-					throw new RuntimeException( "Column 0 in metadata dump file is not ObjectID: "
-												+ columnNames[0]);
-		        debug(2,"Found: " + columnNames.length + " columns.");
-		        if( _debugLevel >= 2 )
-			        for( String str : columnNames ) {
-				        System.out.println("Column name: " + str );
-			        }
-		        opened = true;
-		    }
+	        debug(2,"Scanning column names from file: " + filename);
+	        setStatus("Scanning column names from file: " + filename);
+	        int colSep = DumpColumnConfigInfo.getColumnSeparator();
+	        if( !Character.isDefined(colSep) )
+				throw new RuntimeException( "No Column separator configured!" );
+        // REWRITE - separate this and do it when open the userProjInfo
+	        userProjInfo.metaDataReader = new MetaDataReader(filename, colSep );
+	        columnNames = userProjInfo.metaDataReader.readColumnHeaders();
+	        setStatus("Found: " + columnNames.length + " columns.");
+	        if( !(columnNames[0]).equalsIgnoreCase("objectid") )
+				throw new RuntimeException( "Column 0 in metadata dump file is not ObjectID: "
+											+ columnNames[0]);
+	        debug(2,"Found: " + columnNames.length + " columns.");
+	        if( _debugLevel >= 2 )
+		        for( String str : columnNames ) {
+			        System.out.println("Column name: " + str );
+		        }
+	        opened = true;
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
@@ -1353,8 +2016,9 @@ public class MainApp {
 		boolean built = false;
 		try {
 			setStatus( "Building usage report...");
-			Counter<String> vocabCounts = metaDataReader.compileUsageForColumn(colIndex, 2, 100, -1 );
-			String outFileName = metaDataReader.getFileName();
+			Counter<String> vocabCounts =
+				userProjInfo.metaDataReader.compileUsageForColumn(colIndex, 2, 100, -1, this );
+			String outFileName = userProjInfo.metaDataReader.getFileName();
 			int iDot = outFileName.lastIndexOf('.');
 			if( iDot >0 )
 				outFileName = outFileName.substring(0, iDot);
@@ -1383,31 +2047,32 @@ public class MainApp {
 		return built;
 	}
 
-	protected void saveVocabAsSQL() {
+	protected void saveOntologyAsSQL() {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-			setStatus( "Building SQL Vocab load file...");
-    		String filename = getSafeOutfile(null,sqlfilter);
+			setStatus( "Building SQL Ontology load file...");
+			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$", ".sql");
+    		String filename = getSafeOutfile(suggest,sqlFilter);
     		if( filename == null )
     			return;
-	        setStatus("Saving SQL Vocab Load to file: " + filename);
+	        setStatus("Saving SQL Ontology Load to file: " + filename);
 	        try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-				SQLUtils.writeFacetsSQL( facetMapHashTree.GetFacets(),
+				SQLUtils.writeFacetsSQL( userProjInfo.facetMapHashTree.GetFacets(),
 											dbName, writer, fWithNewlines );
-				SQLUtils.writeCategoriesSQL( facetMapHashTree.GetFacets(),
+				SQLUtils.writeCategoriesSQL( userProjInfo.facetMapHashTree.GetFacets(),
 											dbName, writer, fWithNewlines );
 				writer.flush();
 				writer.close();
-				debug(1, "Finished writing SQL Dump to file: "+filename);
-				setStatus( "Finished writing SQL Dump to file: "+filename);
+				debug(1, "Finished writing Ontology to SQL file: "+filename);
+				setStatus( "Finished writing Ontology to SQL file: "+filename);
 			} catch( IOException e ) {
 	            e.printStackTrace();
-				throw new RuntimeException("Could not create (or write to) output file: " + filename);
+				throw new RuntimeException("saveOntologyAsSQL: Could not create (or write to) output file: " + filename);
 			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Build Usage Report Error", JOptionPane.ERROR_MESSAGE);
+											"Save Ontology As SQL Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
 	}
@@ -1423,7 +2088,6 @@ public class MainApp {
 		    	return null;
 		    else {
 		    	filename = chooser.getSelectedFile().getPath();
-		    	// TODO Check for existing file overwrite
 		    	File newFile = new File( filename );
 		    	if( !newFile.exists() )
 		    		break;
@@ -1445,7 +2109,9 @@ public class MainApp {
 	protected void saveVocabHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-    		String filename = getSafeOutfile(null,sqlfilter);
+			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$",
+					(fSaveHooks ? "Hooks.sql":"Exclusions.sql"));
+    		String filename = getSafeOutfile(suggest,sqlFilter);
     		if( filename == null )
     			return;
     		String action = fSaveHooks ? "hooks":"exclusions";
@@ -1453,7 +2119,7 @@ public class MainApp {
 	        try {
 	    		setStatus( "Building SQL "+action+" Load file...");
 				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-				SQLUtils.writeHooksOrExclusionsSQL(facetMapHashTree.GetFacets(),
+				SQLUtils.writeHooksOrExclusionsSQL(userProjInfo.facetMapHashTree.GetFacets(),
 												dbName, fSaveHooks, writer, fWithNewlines);
 				writer.flush();
 				writer.close();
@@ -1472,9 +2138,9 @@ public class MainApp {
 
 	protected void saveVocabAsXML() {
 		try {
-    		String filename = getSafeOutfile(null,xmlfilter);
+    		String filename = getSafeOutfile(null,xmlFilter);
 		    if(filename != null) {
-		    	XMLUtils.writeXMLDocToFile(vocabOutputDoc, filename);
+		    	XMLUtils.writeXMLDocToFile(userProjInfo.vocabOutputDoc, filename);
 		        setStatus("Saved Vocabulary as XML to file: " + filename);
 		    }
 		} catch( RuntimeException e ) {
