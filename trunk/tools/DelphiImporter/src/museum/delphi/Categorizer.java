@@ -31,6 +31,7 @@ public class Categorizer {
 	 * @param facetName facet to categorize
 	 */
 	public static void categorizeForFacet(MetaDataReader metaDataReader,
+			String columnNames[],
 			DoubleHashTree facetMapHashTree, String facetName,
 			boolean fDumpAsSQLInsert, String dbName ) {
     	String filename = null;
@@ -54,7 +55,6 @@ public class Categorizer {
 		int objNumCol = 4;
     	// Hold the information for the Facet(s)
     	DumpColumnConfigInfo[] colDumpInfo = null;
-		String columnNames[] = metaDataReader.readColumnHeaders();
 		try {
 			// Open the dump file
 			if( columnNames == null || columnNames.length < 2 )
@@ -111,7 +111,7 @@ public class Categorizer {
 							continue;
 						else
 							lastStrings.set(i, last+"|"+nextLine.get(i));
-						debug(2,"Combining "+columnNames[i]+ " for id: "+id+
+						debug(3,"Combining "+columnNames[i]+ " for id: "+id+
 											" ["+lastStrings.get(i)+"]");
 					}
 					continue;
