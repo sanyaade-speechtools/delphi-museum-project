@@ -223,8 +223,6 @@ public class SQLUtils {
 	// Since the facet roots are TaxoNodes, the effective roots in all facets
 	// (i.e., the first level nodes, all will have non-null parents).
 	// We pass in a flag to simplify this (rather than checking if parent->parent is null).
-	// TODO Need to think about getting synonyms into DB to support
-	//  UI that lets people search for categories.
 	// What about token-based pattern model?
 	public static void writeCategorySQL( TaxoNode node, BufferedWriter writer,
 			boolean fRootNode, boolean fFirst, boolean fWithNewlines ) {
@@ -261,6 +259,7 @@ public class SQLUtils {
 	 * @param imagePathsReader pass in non-NULL to add image path info
 	 */
 	public static void writeObjectsSQL( MetaDataReader metaDataReader,
+										String columnNames[],
 										ImagePathsReader imagePathsReader ) {
     	String filename = null;
     	String basefilename = null;
@@ -276,10 +275,9 @@ public class SQLUtils {
 		ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
 		try {
 			debug(1,"Build Objects SQL...");
-			String columnNames[] = metaDataReader.readColumnHeaders();
 			// We need ObjectID, ObjectNumber, ObjectName, Description
 			// TODO These should be mapped in the ColConfig file, and then
-			// TODO we should check that the named columns are present.
+			//      we should check that the named columns are present.
 			int objIDCol = 0;
 			int objNumCol = 4;
 			int objNameCol = 5;
@@ -313,10 +311,10 @@ public class SQLUtils {
 			ArrayList<String> lastStrings = new ArrayList<String>();
 			while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
 				if(nextLine.get(objIDCol).length() == 0) {
-					//debug( )
 					debug(2,"Skipping line with empty id" );
 					continue;
 				}
+
 				int id = Integer.parseInt(nextLine.get(objIDCol));
 				if( lastIDVal < 0 ) {
 					lastStrings.addAll(nextLine);
@@ -324,7 +322,6 @@ public class SQLUtils {
 					continue;
 				}
 				if( id == lastIDVal ) {
-					// TODO we should configure which columns go into SQL description
 					// We cannot merge objNum or Name, but we will allow out of order
 					// primary lines, and set these fields
 					if( lastStrings.get(objNumCol).length() == 0 )
@@ -372,7 +369,7 @@ public class SQLUtils {
 				String objNumStr = lastStrings.get(objNumCol);
 				if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
 					// Skip lines with no object number.
-					debug(1,"BuildObjectSQL: Discarding line for id (bad objNum): "+id );
+					debug(2,"writeObjectsSQL: Discarding line for id (bad objNum): "+id );
 					nObjsSkippedTotal++;
 				} else {
 					if( objWriter == null ) {
