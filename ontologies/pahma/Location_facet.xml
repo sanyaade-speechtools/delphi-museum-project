@@ -17,11 +17,11 @@
 	<notes>
 	<!-- Insert the following syntax whenever a site was occupied for a discrete period
 		that is temporally narrow enough to justify such an inference:
-			<implies facet="Collection" cat="EuropeanPaleolithic"/>
-			<implies facet="CulturalGroup" cat="Hohokam"/>
-			<implies facet="Event" cat="SanFranciscoPanPacificExpo"/>
-			<implies facet="Period" cat="EuropeanMedieval"/>
-			<implies facet="Location" cat="CountryVaticanCity"/>
+			<implies facet="Collection_facet" cat="EuropeanPaleolithic"/>
+			<implies facet="Culture_facet" cat="Hohokam"/>
+			<implies facet="Event_facet" cat="SanFranciscoPanPacificExpo"/>
+			<implies facet="Period_facet" cat="EuropeanMedieval"/>
+			<implies facet="Location_facet" cat="CountryVaticanCity"/>
 	-->
 	<!-- National Forests, National Parks, State Forests, etc. -->
 	</notes>
@@ -901,7 +901,7 @@
 								<heading id="TempleOfJanus" title="Temple of Janus"/>
 							</heading>
 							<heading id="RomeVaticanCity" title="Vatican City">
-								<implies facet="Location" cat="StateOfTheVaticanCity"/>
+								<implies facet="Location_facet" cat="StateOfTheVaticanCity"/>
 								<heading id="Vatican" title="Vatican">
 									<synonym value="The Vatican"/>
 								</heading>
@@ -1119,7 +1119,7 @@
 			<heading id="StateOfTheVaticanCity" title="State of the Vatican City">
 				<synonym value="Stato della Città del Vaticano"/>
 				<synonym value="Holy See"/>
-				<implies facet="Location" cat="RomeVaticanCity"/>
+				<implies facet="Location_facet" cat="RomeVaticanCity"/>
 			</heading>
 		</heading>
 		<heading id="WesternEurope" title="Western Europe">  <!-- Done -->
@@ -1309,7 +1309,9 @@
 					<heading id="Lackford" title="Lackford"/>
 					<heading id="Lakenheath" title="Lakenheath"/>
 					<heading id="Liverpool" title="Liverpool"/>
-					<heading id="London" title="London"/>
+					<heading id="London" title="London">
+						<heading id="TowerHillLondon" title="Tower Hill"/>
+					</heading>
 					<heading id="Longport" title="Longport"/>
 					<heading id="Longton" title="Longton"/>
 					<heading id="Lowestoft" title="Lowestoft"/>
