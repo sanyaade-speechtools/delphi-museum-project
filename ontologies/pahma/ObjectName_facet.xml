@@ -3,18 +3,22 @@
 	<notes><!-- This is a temporary notes section.
 	    Terms to be added:
 	    	balloons
+		bedspread
 		bones
 		   wildcat bones
 		bonnet
 		button-seal
 		cocoon rattle
 		curling iron
+		doily
 		feather-dart headdress
 		Guttus (lamp feeder)
 		mandrel
 		manta
 		night chant (Yeibichai)
 		Patera
+		placecard
+		placemat
 		scythe
 		selvedges
 		shuttle  (also loom)
@@ -122,6 +126,14 @@
 			<heading id="CannonBall" title="Cannon Ball"> 					
 				<synonym value="Cannon Balls"/>			
 			</heading>
+			<heading id="GrapeShot" title="Grape Shot"> <!-- Exclude the fruit -->				
+				<synonym value="Grapeshot"/>			
+			</heading>
+			<heading id="MusketBall" title="Musket Ball">				
+				<synonym value="Musket Balls"/>
+				<synonym value="Musketball"/>
+				<synonym value="Musketballs"/>			
+			</heading>
 			<heading id="PowderHorn" title="Powder Horn"> 					
 				<synonym value="Powder Horns"/>			
 			</heading>
@@ -173,14 +185,29 @@
 					<synonym value="Sword"/>
 					<implies facet="ActivityOrContext" cat="Metallurgy"/>
 					<heading id="TypesOfSwords" title="Types of swords" nomatch="true">
+						<heading id="Cutlass" title="Cutlass">
+							<synonym value="Cutlasses"/>
+						</heading>
+						<heading id="Epee" title="Epée">
+							<synonym value="Epees"/>
+							<synonym value="Epees"/>
+						</heading>
+						<heading id="Foil" title="Foil">
+							<synonym value="Foils"/>
+						</heading>
 						<heading id="Katana" title="Katana">
-							<synonym value="Katana"/>
+							<synonym value="Katanas"/>
 						</heading>
 						<heading id="LongSword" title="Long Sword">
 							<synonym value="Long Swords"/>
 						</heading>
 						<heading id="Rapier" title="Rapier">
 							<synonym value="Rapiers"/>
+						</heading>
+						<heading id="Sabre" title="Sabre">
+							<synonym value="Sabres"/>
+							<synonym value="Saber"/>
+							<synonym value="Sabers"/>
 						</heading>
 						<heading id="ShortSword" title="Short Sword">
 							<synonym value="Short Swords"/>
