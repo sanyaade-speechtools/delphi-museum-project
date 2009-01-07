@@ -33,6 +33,87 @@
 			• Other prose dates
 		-->
 	</notes>
+	<heading id="Civilizations" value="Civilizations">
+		<heading id="AncientGreece" value="Ancient Greece">
+		    <heading id="AncientGreeceGeometricPeriod" value="Geometric Period (1000-700 BC)"> <!-- Need to craft exclusions and synonyms -->
+		        <implies facet="Period_facet" cat="ExactYear1000BC"/>
+		        <implies facet="Period_facet" cat="ExactYear999BC"/>
+		        <implies facet="Period_facet" cat="ExactYear998BC"/>
+		            <!-- and so on, until... -->
+		        <implies facet="Period_facet" cat="ExactYear702BC"/>
+		        <implies facet="Period_facet" cat="ExactYear701BC"/>
+		        <implies facet="Period_facet" cat="ExactYear700BC"/>
+		    </heading>
+		    <heading id="AncientGreeceOrientalizingPeriod" value="Orientalizing Period? (700?-630? BC)"/> <!-- Need to craft exclusions and synonyms -->
+		    <heading id="AncientGreeceArchaicPeriod" value="Archaic Period (660-480 BC)"> <!-- Need to craft exclusions and synonyms -->
+		        <heading id="AncientGreeceEarlyArchaicPeriod" value="Early Archaic Period (660-580 BC)"> <!-- Need to craft exclusions and synonyms -->
+		            <implies facet="Period_facet" cat="ExactYear660BC"/>
+		            <implies facet="Period_facet" cat="ExactYear659BC"/>
+		            <implies facet="Period_facet" cat="ExactYear658BC"/>
+		                <!-- and so on, until... -->
+		            <implies facet="Period_facet" cat="ExactYear582BC"/>
+		            <implies facet="Period_facet" cat="ExactYear581BC"/>
+		            <implies facet="Period_facet" cat="ExactYear580BC"/>
+		        </heading>
+		        <heading id="AncientGreeceMiddleArchaicPeriod" value="Middle Archaic Period (580-535 BC)"> <!-- Need to craft exclusions and synonyms -->
+		            <implies facet="Period_facet" cat="ExactYear580BC"/>
+		            <implies facet="Period_facet" cat="ExactYear579BC"/>
+		            <implies facet="Period_facet" cat="ExactYear578BC"/>
+		                <!-- and so on, until... -->
+		            <implies facet="Period_facet" cat="ExactYear537BC"/>
+		            <implies facet="Period_facet" cat="ExactYear536BC"/>
+		            <implies facet="Period_facet" cat="ExactYear535BC"/>
+		        </heading>
+		        <heading id="AncientGreeceLateArchaicPeriod" value="Late Archaic Period (540-480 BC)"> <!-- Need to craft exclusions and synonyms -->
+		            <implies facet="Period_facet" cat="ExactYear540BC"/>
+		            <implies facet="Period_facet" cat="ExactYear539BC"/>
+		            <implies facet="Period_facet" cat="ExactYear538BC"/>
+		                <!-- and so on, until... -->
+		            <implies facet="Period_facet" cat="ExactYear482BC"/>
+		            <implies facet="Period_facet" cat="ExactYear481BC"/>
+		            <implies facet="Period_facet" cat="ExactYear480BC"/>
+		        </heading>
+		    </heading>
+		    <heading id="AncientGreeceClassicalPeriod" value="Classical Period (480-330 BC)"> <!-- Need to craft exclusions and synonyms -->
+		        <heading id="AncientGreeceEarlyClassicalPeriod" value="Early Classical Period (480-450 BC)"> <!-- Need to craft exclusions and synonyms -->
+		            <implies facet="Period_facet" cat="ExactYear580BC"/>
+		            <implies facet="Period_facet" cat="ExactYear579BC"/>
+		            <implies facet="Period_facet" cat="ExactYear578BC"/>
+		                <!-- and so on, until... -->
+		            <implies facet="Period_facet" cat="ExactYear452BC"/>
+		            <implies facet="Period_facet" cat="ExactYear451BC"/>
+		            <implies facet="Period_facet" cat="ExactYear450BC"/>
+		        </heading>
+		        <heading id="AncientGreeceLateFifthCentury" value="Late Fifth Century, BC"> <!-- Need to craft exclusions and synonyms -->
+		            <implies facet="Period_facet" cat="ExactYear450BC"/>
+		            <implies facet="Period_facet" cat="ExactYear449BC"/>
+		            <implies facet="Period_facet" cat="ExactYear448BC"/>
+		                <!-- and so on, until... -->
+		            <implies facet="Period_facet" cat="ExactYear403BC"/>
+		            <implies facet="Period_facet" cat="ExactYear402BC"/>
+		            <implies facet="Period_facet" cat="ExactYear401BC"/>
+		        </heading>
+		        <heading id="AncientGreeceFourthCentury" value="Fourth Century, BC"> <!-- Need to craft exclusions and synonyms -->
+		            <implies facet="Period_facet" cat="ExactYear400BC"/>
+		            <implies facet="Period_facet" cat="ExactYear399BC"/>
+		            <implies facet="Period_facet" cat="ExactYear398BC"/>
+		                <!-- and so on, until... -->
+		            <implies facet="Period_facet" cat="ExactYear303BC"/>
+		            <implies facet="Period_facet" cat="ExactYear302BC"/>
+		            <implies facet="Period_facet" cat="ExactYear301BC"/>
+		        </heading>
+		    </heading>
+		    <heading id="AncientGreeceHellenisticPeriod" value="Hellenistic Period (330-100 BC)"> <!-- Need to craft exclusions and synonyms -->
+		        <implies facet="Period_facet" cat="ExactYear330BC"/>
+		        <implies facet="Period_facet" cat="ExactYear329BC"/>
+		        <implies facet="Period_facet" cat="ExactYear328BC"/>
+		            <!-- and so on, until... -->
+		        <implies facet="Period_facet" cat="ExactYear102BC"/>
+		        <implies facet="Period_facet" cat="ExactYear101BC"/>
+		        <implies facet="Period_facet" cat="ExactYear100BC"/>
+		    </heading>
+		</heading>
+	</heading>
 	<heading id="ExactYear" value="Exact Year">
 		<heading id="ExactYear5000BC" value="5000 BC">
 			<synonym value="5000 B.C."/>
