@@ -14,6 +14,8 @@
 		Escutcheon
 		    keyhole escutcheon
 		feather-dart headdress
+		Fireplace tools
+		    Fireplace fan piece (what is this?)
 		Guttus (lamp feeder)
 		mandrel
 		manta
@@ -589,6 +591,9 @@
 			<heading id="Skirt" title="Skirt"> <!-- Might be confused with the frilly bit around a mattress, hovercraft, or christmas tree -->
 				<synonym value="Skirts"/>
 			</heading>
+		    <heading id="WeddingDress" title="Wedding Dress"> <!-- Card for 7-6432 -->
+		        <synonym value="Wedding Dresses"/>  <!-- ADD: implies Marriage -->
+		    </heading>
 		</heading>
 		<heading id="Footwear" title="Footwear">
 			<heading id="Shoes" title="Shoes">
@@ -873,7 +878,8 @@
 		<heading id="GrassGame" title="Grass game">
 			<synonym value="Grass games"/>
 		</heading>
-	</heading>
+	    <heading id="Monopoly" title="Monopoly"/>  <!-- from card 7-7236 -->
+	
 	<heading id="Jewelry" title="Jewelry">
 		<synonym value="Jewellery"/>
 		<synonym value="Jewelery"/>
@@ -1445,37 +1451,6 @@
 			<synonym value="Shinny Balls"/> 				
 		</heading>
 	</heading>
-	<heading id="Textiles" title="Textiles">
-		<synonym value="Textile"/>
-		<synonym value="RGM Yardage"/>
-		<heading id="Bedding" title="Bedding">
-			<heading id="Blanket" title="Blanket"> 					
-				<synonym value="Blankets"/> 				
-			</heading>
-			<heading id="Headrest" title="Headrest"> 					
-				<synonym value="Headrests"/> 				
-			</heading>
-			<heading id="Pillow" title="Pillow"> 					
-				<synonym value="Pillows"/> 				
-			</heading>
-			<heading id="MatSleeping" title="Mat, Sleeping"/>
-			<heading id="Canopy" title="Canopy"> 					
-				<synonym value="Canopies"/> 				
-			</heading>
-		</heading>
-		<heading id="Flags" title="Flags"> 					
-			<synonym value="Flag"/>
-			<heading id="Pennant" title="Pennant"> 					
-				<synonym value="Pennants"/> 				
-			</heading>			
-		</heading>
-		<heading id="PrayerMat" title="Prayer Mat"> 					
-			<synonym value="Prayer Mats"/> 				
-		</heading>
-		<heading id="Tablecloth" title="Tablecloth">
-			<synonym value="Tablecloths"/>
-		</heading>
-	</heading>
 	<heading id="Toiletarticles" title="Toilet articles">
 		<synonym value="Toiletries"/>
 		<heading id="Comb" title="Comb"> 					
@@ -1665,18 +1640,59 @@
 			    </heading>
 			</heading>
 			<heading id="Textiles" title="Textiles">
-				<synonym value="Textile"/>
-				<heading id="Cloth" title="Cloth"/>
-				<heading id="Lace" title="Lace"/>
+			    <synonym value="Cloth"/>
+			    <synonym value="Fabric"/>
+			    <synonym value="Fabrics"/>
+			    <synonym value="Textile"/>
+			    <synonym value="RGM Yardage"/>
+			    <heading id="LaceTextiles" title="Lace Textiles">
+    				<heading id="Lace" title="Lace"> <!-- Exclude shoelaces, if necessary -->
+    				    <heading id="BobbinLace" title="Bobbin Lace"> <!-- exclude sewing machine part -->
+    				        <synonym value="Pillow Lace"/>
+    				        <heading id="HonitonBobbinLace" title="Honiton Bobbin Lace"/>
+    				    </heading>
+    				    <heading id="BedfordshireLace" title="Bedfordshire Lace"/>
+    				    <heading id="BruggeLace" title="Brugge Lace"/>
+    				    <heading id="IdrijaLace" title="Idrija Lace"/>
+    				    <heading id="TorchonLace" title="Torchon Lace"/>
+    				</heading>
+			    </heading>
 				<heading id="Ribbon" title="Ribbon">
 					<synonym value="Ribbons"/>
 				</heading>
+			    <heading id="Bedding" title="Bedding">
+			        <heading id="Blanket" title="Blanket"> 					
+			            <synonym value="Blankets"/> 				
+			        </heading>
+			        <heading id="Headrest" title="Headrest"> 					
+			            <synonym value="Headrests"/> 				
+			        </heading>
+			        <heading id="Pillow" title="Pillow"> 					
+			            <synonym value="Pillows"/> 				
+			        </heading>
+			        <heading id="MatSleeping" title="Mat, Sleeping"/>
+			        <heading id="Canopy" title="Canopy"> 					
+			            <synonym value="Canopies"/> 				
+			        </heading>
+			    </heading>
+			    <heading id="Flags" title="Flags">
+			        <synonym value="Flag"/>
+			        <heading id="Pennant" title="Pennant"> 					
+			            <synonym value="Pennants"/> 				
+			        </heading>			
+			    </heading>
+			    <heading id="PrayerMat" title="Prayer Mat">
+			        <synonym value="Prayer Mats"/> 				
+			    </heading>
+			    <heading id="Tablecloth" title="Tablecloth">
+			        <synonym value="Tablecloths"/>
+			    </heading>
 			</heading>
-			<heading id="Thimble" title="Thimble">
+		    <heading id="Thimble" title="Thimble">
 				<synonym value="Thimbles"/>
 			</heading>
 		</heading>
-		<heading id="Woodworking" title="Woodworking">
+		<heading id="WoodworkingTools" title="Woodworking Tools">
 			<heading id="Abrader" title="Abrader"> 					
 				<synonym value="Abraders"/> 				
 			</heading>
