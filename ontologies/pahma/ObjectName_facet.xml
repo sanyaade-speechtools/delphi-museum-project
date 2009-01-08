@@ -1659,6 +1659,10 @@
 			</heading>
 			<heading id="Scissors" title="Scissors">
 				<synonym value="Scissor"/>
+			    <heading id="BetelScissors" title="Betel Scissors">
+			        <synonym value="Betel Scissor"/>
+			        <definition value="for slicing Areca palm nuts"/>
+			    </heading>
 			</heading>
 			<heading id="Textiles" title="Textiles">
 				<synonym value="Textile"/>
@@ -1746,7 +1750,10 @@
 		<heading id="CookingVessel" title="Cooking Vessel"> 					
 			<synonym value="Cooking Vessels"/>
 			<implies facet="Activity_facet" cat="Foodpreparation"/>
-			<heading id="CookingPot" title="Cooking Pot"> 					
+		    <heading id="Basin" title="Basin"> 	<!-- any needed exclusions? -->			
+		        <synonym value="Basins"/> 				
+		    </heading>
+		    <heading id="CookingPot" title="Cooking Pot"> 					
 				<synonym value="Cooking Pots"/>
 				<synonym value="Pots"/>
 				<synonym value="Pot"/>				
@@ -1755,8 +1762,10 @@
 				<synonym value="Cooking Bowls"/> 				
 			</heading>
 			<heading id="CookingPan" title="Cooking Pan"> 					
-				<synonym value="Cooking Pan"/>
-				<implies facet="Activity_facet" cat="Metallurgy"/>			
+				<synonym value="Cooking Pans"/>
+			    <synonym value="Pan"/>
+			    <synonym value="Pans"/>
+				<implies facet="Activity_facet" cat="Metallurgy"/>
 			</heading>				
 		</heading>
 		<heading id="CookingStove" title="Cooking Stove"> 					
@@ -1816,10 +1825,25 @@
 			<synonym value="Spoons"/>
 			<implies facet="Activity_facet" cat="Foodserving"/>		
 		</heading>
-		<heading id="Corkscrew" title="Corkscrew"> 					
-			<synonym value="Corkscrews"/>
-			<implies facet="Activity_facet" cat="Foodserving"/>			
-		</heading>
+        <heading id="BottleOpeners" title="Bottle Openers"> 					
+            <synonym value="Bottle Opener"/>
+            <implies facet="Activity_facet" cat="Foodserving"/>
+            <heading id="CapLifter" title="Caplifter"> 					
+                <synonym value="Caplifters"/>
+                <synonym value="Cap lifter"/>
+                <synonym value="Cap lifters"/>
+                <synonym value="Cap-lifter"/>
+                <synonym value="Cap-lifters"/>
+                <implies facet="Activity_facet" cat="Foodserving"/>			
+            </heading>
+            <heading id="Corkscrew" title="Corkscrew"> 					
+                <synonym value="Corkscrews"/>
+                <implies facet="Activity_facet" cat="Foodserving"/>
+                <heading id="SlidingBarrelCorkscrew" title="Sliding Barrel Corkscrew"> 					
+                    <synonym value="Sliding Barrel Corkscrews"/>		
+                </heading>
+            </heading>
+        </heading>
 		<heading id="Platter" title="Platter"> 					
 			<synonym value="Platters"/>
 			<implies facet="Activity_facet" cat="Foodserving"/>			
