@@ -19,7 +19,7 @@ public class TaxoNode {
 	public ArrayList<String> synset;	// Synonyms/alt terms for this node
 	public ArrayList<String> exclset;	// Synonyms/alt terms for this node
 	// This is a list of TaxoNodes, which may be in other facets.
-	// ince each Taxonode is tied to a facet, this is okay, and just
+	// Since each Taxonode is tied to a facet, this is okay, and just
 	// affords arcs across facets, making a linked graph.
 	public ArrayList<TaxoNode> impliedNodes;	// Other than ascendants
 	// We may get forward references to nodes, and keep them to resolve later
