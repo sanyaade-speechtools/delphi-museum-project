@@ -57,11 +57,16 @@ import javax.swing.JButton;
 public class MainApp {
 	private JFileChooser chooser = null;
 	private FileNameExtensionFilter xmlFilter = null;
+	private final String xmlWildcard = "*.xml";  //  @jve:decl-index=0:
 	private FileNameExtensionFilter sqlFilter = null;
+	//private final String sqlWildcard = "*.sql";  //  @jve:decl-index=0:
 	private FileNameExtensionFilter txtFilter = null;
+	private final String txtWildcard = "*.txt";  //  @jve:decl-index=0:
 	private FileNameExtensionFilter dpfFilter = null;
+	//private final String dpfWildcard = "*.dpf";
 	private String columnNames[] = null;
-	private static final String dbName = "pahma_dev";
+	// TODO Let the user set this.
+	private static final String dbName = "pahma_dev";  //  @jve:decl-index=0:
 	private static final String settingsFilename = "./settings";
 	private AppSettings appSettings = null;
 	private UserProjectInfo userProjInfo = null;  //  @jve:decl-index=0:
@@ -73,6 +78,7 @@ public class MainApp {
 	private JMenu fileMenu = null;
 	private JMenuItem newMenuItem = null;
 	private JMenuItem openMenuItem = null;
+	private JMenuItem copyProjMenuItem = null;
 	private JMenuItem saveMenuItem = null;
 	private JMenuItem saveAsMenuItem = null;
 	private JMenuItem exitMenuItem = null;
@@ -87,6 +93,7 @@ public class MainApp {
 	//Object/Concept Association (requires ObjInfo file and Ontology. Later with load variants and an option
 	private JMenuItem objInfoTermUsageMenuItem = null;
 	private JMenuItem objConceptAssocMenuItem = null;
+	private JMenuItem objConceptAssocByFacetMenuItem = null;
 
 	private JMenu imagesMenu = null;
 	private JMenuItem computeImageOrientationsMenuItem = null;
@@ -606,10 +613,19 @@ public class MainApp {
 				// Could allow a passed in filename at some future date.
 				application.appSettings = new AppSettings( settingsFilename );
 				String path = application.appSettings.getLastUserProjectPath();
+		    	UserProjectInfo upi = null;
 				if( path != null ) {
-					application.setUserProject( UserProjectInfo.loadFromPath( path ) );
-				} else {
-					application.createNewProjectFile();
+			    	try {
+				    	upi = UserProjectInfo.loadFromPath( path );
+				    	if( upi != null )
+				    		application.setUserProject( upi );
+					} catch (RuntimeException e) {
+						JOptionPane.showMessageDialog(application.getJFrame(), "Error encountered:\n" + e.toString(),
+								"Loading Project File Error", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+				if( upi == null ) {
+					application.createNewProjectFile(null);
 				}
 			}
 		});
@@ -625,11 +641,13 @@ public class MainApp {
 		if( userProjInfo == null ) {
 			// Clear all the menus that require state
 			// File menu
+			copyProjMenuItem.setEnabled(false);
 			saveMenuItem.setEnabled(false);
 			saveAsMenuItem.setEnabled(false);
 			// Analyze Menu
 			objInfoTermUsageMenuItem.setEnabled(false);
 			objConceptAssocMenuItem.setEnabled(false);
+			objConceptAssocByFacetMenuItem.setEnabled(false);
 			// Images Menu
 			computeImageOrientationsMenuItem.setEnabled(false);
 			// Analyze Menu
@@ -650,9 +668,10 @@ public class MainApp {
 		} else {
 			// Set all the menus and related UI that require state
 			// File menu
+			copyProjMenuItem.setEnabled(true);  // Can copy any open project
+			saveAsMenuItem.setEnabled(true);	// ditto
 			boolean upiIsDirty = userProjInfo.isDirty();
 			saveMenuItem.setEnabled(upiIsDirty);
-			saveAsMenuItem.setEnabled(upiIsDirty);
 
 			String text = userProjInfo.getName();
 			if( text == null )
@@ -679,6 +698,7 @@ public class MainApp {
 			jTextField_OntologyFile.setText(text);
 			objInfoTermUsageMenuItem.setEnabled(metadataReady);
 			objConceptAssocMenuItem.setEnabled(metadataReady&&ontoReady);
+			objConceptAssocByFacetMenuItem.setEnabled(metadataReady&&ontoReady);
 			// Images Menu
 			text = userProjInfo.getImagePathsPath();
 			boolean imagePathsReady = (text != null)
@@ -791,6 +811,7 @@ public class MainApp {
 			fileMenu.setMnemonic('F');
 			fileMenu.add(getNewMenuItem());
 			fileMenu.add(getOpenMenuItem());
+			fileMenu.add(getCopyProjMenuItem());
 			fileMenu.add(getSaveMenuItem());
 			fileMenu.add(getSaveAsMenuItem());
 			fileMenu.add(getExitMenuItem());
@@ -807,13 +828,13 @@ public class MainApp {
 	private JMenuItem getNewMenuItem() {
 		if (newMenuItem == null) {
 			newMenuItem = new JMenuItem();
-			newMenuItem.setText("New Project...");
+			newMenuItem.setText("New Project");
 			newMenuItem.setMnemonic('N');
 			newMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,
 					Event.CTRL_MASK, true));
 			newMenuItem.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					createNewProjectFile();
+					createNewProjectFile(null);
 				}
 			} );
 		}
@@ -843,6 +864,28 @@ public class MainApp {
 	}
 
 	/**
+	 * This method initializes the File->Copy jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 *
+	 */
+	private JMenuItem getCopyProjMenuItem() {
+		if (copyProjMenuItem == null) {
+			copyProjMenuItem = new JMenuItem();
+			copyProjMenuItem.setText("Copy Current Project");
+			copyProjMenuItem.setMnemonic('C');
+			copyProjMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,
+					Event.CTRL_MASK, true));
+			copyProjMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					createNewProjectFile(userProjInfo);
+				}
+			} );
+		}
+		return copyProjMenuItem;
+	}
+
+	/**
 	 * This method initializes the File->Save jMenuItem
 	 *
 	 * @return javax.swing.JMenuItem
@@ -857,7 +900,10 @@ public class MainApp {
 					Event.CTRL_MASK, true));
 			saveMenuItem.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					saveProjectFile();
+					if( appSettings.getLastUserProjectPath() == null )
+						saveProjectFileAs();
+					else
+						saveProjectFile();
 				}
 			} );
 		}
@@ -964,6 +1010,7 @@ public class MainApp {
 			analyzeMenu.setMnemonic('A');
 			analyzeMenu.add(getObjInfoTermUsageMenuItem());
 			analyzeMenu.add(getObjConceptAssocMenuItem());
+			analyzeMenu.add(getObjConceptAssocByFacetMenuItem());
 		}
 		return analyzeMenu;
 	}
@@ -1007,11 +1054,30 @@ public class MainApp {
 			objConceptAssocMenuItem.setMnemonic('A');
 			objConceptAssocMenuItem.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					categorizeObjects();
+					categorizeObjects( true );
 					}
 			} );
 		}
 		return objConceptAssocMenuItem;
+	}
+
+	/**
+	 * This method initializes Analyze->Object/Concept Association jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getObjConceptAssocByFacetMenuItem() {
+		if (objConceptAssocByFacetMenuItem == null) {
+			objConceptAssocByFacetMenuItem = new JMenuItem();
+			objConceptAssocByFacetMenuItem.setText("Object-Concept Association By Facet");
+			objConceptAssocByFacetMenuItem.setMnemonic('F');
+			objConceptAssocByFacetMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					categorizeObjects( false );
+					}
+			} );
+		}
+		return objConceptAssocByFacetMenuItem;
 	}
 
 	/**
@@ -1288,8 +1354,12 @@ public class MainApp {
 	/**
 	 * Creates a new project file, and sets the it to be the current project.
 	 */
-	private void createNewProjectFile() {
-		UserProjectInfo upi = new UserProjectInfo( "New Project");
+	private void createNewProjectFile(UserProjectInfo pattern) {
+		UserProjectInfo upi = new UserProjectInfo( "New Project" );
+		if( pattern != null )
+			upi.copyFrom(pattern);
+		//String lastPath =
+		appSettings.setLastUserProjectPath(null);
 		setUserProject( upi );
 	}
 
@@ -1298,7 +1368,7 @@ public class MainApp {
 	 */
 	private void openProjectFile() {
 		chooser.setFileFilter(dpfFilter);
-		String startDir = appSettings.getLastUserProjectPath();
+		String startDir = appSettings.getLastUserProjectFolder()+"*.dpf";
     	if( startDir != null )
     		chooser.setSelectedFile(new File( startDir ));
 	    int returnVal = chooser.showOpenDialog(getJFrame());
@@ -1306,8 +1376,10 @@ public class MainApp {
 	    	String filename = chooser.getSelectedFile().getPath();
 	    	try {
 		    	UserProjectInfo upi = UserProjectInfo.loadFromPath( filename );
-		    	if( upi != null )
+		    	if( upi != null ) {
+		    		appSettings.setLastUserProjectPath(filename);
 		    		setUserProject( upi );
+		    	}
 			} catch (RuntimeException e) {
 				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 						"Loading Project File Error", JOptionPane.ERROR_MESSAGE);
@@ -1333,7 +1405,7 @@ public class MainApp {
 	 */
 	private void saveProjectFileAs() {
 		try {
-    		String filename = getSafeOutfile(null,dpfFilter);
+    		String filename = getSafeOutfile(appSettings.getLastUserProjectFolder()+"*.dpf",dpfFilter);
 		    if(filename != null) {
 				UserProjectInfo.saveToPath(userProjInfo, filename);
 		    	appSettings.setLastUserProjectPath(filename);
@@ -1345,12 +1417,21 @@ public class MainApp {
 		}
 	}
 
+	private void setChooserStartFor( String filename, String extPattern ) {
+		String path = filename;
+		if( path!=null )
+			path = 	StringUtils.getBaseDirForPath(path);
+		if( path!=null )
+    		chooser.setSelectedFile(new File( path+extPattern ));
+	}
+
 	/**
 	 * @return TRUE if successfully opened and parsed
 	 */
 	private boolean browseToImagePathsFile() {
 		boolean opened = false;
 		chooser.setFileFilter(txtFilter);
+		setChooserStartFor( userProjInfo.getImagePathsPath(), txtWildcard );
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -1467,26 +1548,7 @@ public class MainApp {
 		}
 	}
 
-
-	/**
-	 * This method initializes jMenuItem
-	 *
-	 * @return javax.swing.JMenuItem
-	private JMenuItem getCategorizeObjectsMenuItem() {
-		if (categorizeObjectsMenuItem == null) {
-			categorizeObjectsMenuItem = new JMenuItem();
-			categorizeObjectsMenuItem.setText("Categorize Objects...");
-			categorizeObjectsMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					categorizeObjects();
-				}
-			});
-		}
-		return categorizeObjectsMenuItem;
-	}
-	 */
-
-	private void categorizeObjects() {
+	private void categorizeObjects( boolean fAllFacets ) {
 		debug(1,"Categorize Objects and generate association SQL...");
 		if( userProjInfo.facetMapHashTree == null ) {
 			JOptionPane.showMessageDialog(getJFrame(),
@@ -1498,11 +1560,30 @@ public class MainApp {
 					"You must specify a metadata source to categorize.\n",
 					"Categorize error", JOptionPane.ERROR_MESSAGE);
 		} else {
-			for( String facetName : userProjInfo.facetMapHashTree.GetFacetNames()) {
-				userProjInfo.metaDataReader.resetToLine1();
+			String filename = userProjInfo.getMetadataPath();
+			// Find last slash or backslash (to allow for windows paths), to get basepath
+	    	int iSlash = Math.max(filename.lastIndexOf('/'), filename.lastIndexOf('\\'));
+	    	if( iSlash<=0 )
+	    		throw new RuntimeException("categorizeForFacet: odd input filename:\n"+filename);
+	    	String basefilename = filename.substring(0, iSlash+1)+"obj_cats_";
+			userProjInfo.metaDataReader.resetToLine1();
+			if( !fAllFacets ) {
+				JOptionPane.showMessageDialog(getJFrame(),
+						"Single facet concept association is net yet implemented.\n",
+						"Categorize error", JOptionPane.ERROR_MESSAGE);
+				/* TODO - choose the right facet
+				String facetName = Need to let user choose this via UI;
+		    	basefilename += facetName)+"_";
 				Categorizer.categorizeForFacet(userProjInfo.metaDataReader, columnNames,
 												userProjInfo.facetMapHashTree,
-												facetName, false, dbName);
+												facetName, basefilename, false, dbName);
+				 */
+			} else {
+		    	basefilename += "all_";
+				Categorizer.categorizeForFacet(userProjInfo.metaDataReader, columnNames,
+												userProjInfo.facetMapHashTree,
+												null /*Do all facets at once */,
+												basefilename, false, dbName);
 			}
 		}
 	}
@@ -1789,6 +1870,7 @@ public class MainApp {
 	protected boolean browseToOntologyFile() {
 		boolean opened = false;
 		chooser.setFileFilter(xmlFilter);
+		setChooserStartFor( userProjInfo.getOntologyPath(), xmlWildcard );
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	if( opened = setOntologyFile(chooser.getSelectedFile().getPath()))
@@ -1871,6 +1953,7 @@ public class MainApp {
 	protected boolean browseToVocabFile() {
 		boolean opened = false;
 		chooser.setFileFilter(txtFilter);
+		setChooserStartFor( userProjInfo.getVocabTermsPath(), txtWildcard );
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	if( opened = setVocabFile(chooser.getSelectedFile().getPath()))
@@ -1931,6 +2014,7 @@ public class MainApp {
 	protected boolean browseToMDConfigFile() {
 		boolean opened = false;
 		chooser.setFileFilter(xmlFilter);
+		setChooserStartFor( userProjInfo.getMetadataConfigPath(), xmlWildcard );
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -1965,6 +2049,7 @@ public class MainApp {
 	protected boolean browseToMDFile() {
 		boolean opened = false;
 		chooser.setFileFilter(txtFilter);
+		setChooserStartFor( userProjInfo.getMetadataPath(), txtWildcard );
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -2138,7 +2223,7 @@ public class MainApp {
 
 	protected void saveVocabAsXML() {
 		try {
-    		String filename = getSafeOutfile(null,xmlFilter);
+    		String filename = getSafeOutfile(userProjInfo.getOntologyPath(),xmlFilter);
 		    if(filename != null) {
 		    	XMLUtils.writeXMLDocToFile(userProjInfo.vocabOutputDoc, filename);
 		        setStatus("Saved Vocabulary as XML to file: " + filename);
