@@ -142,14 +142,14 @@ public class DoubleHashTree {
 
 	public TaxoNode FindNodeByHook( int facetID, String hook ) {
 		FacetInfo facet = facetsByID.get(facetID);
-		// TODO This should be getting a CollationKey, not mapping to lower
-		return ( facet == null )? null:facet.hookMap.get(hook.toLowerCase());
+		// TODO This should be getting a CollationKey
+		return ( facet == null )? null:facet.hookMap.get(hook);
 	}
 
 	public TaxoNode FindNodeByHook( String facetName, String hook ) {
 		FacetInfo facet = facetsByName.get(facetName);
-		// TODO This should be getting a CollationKey, not mapping to lower
-		return ( facet == null )? null:facet.hookMap.get(hook.toLowerCase());
+		// TODO This should be getting a CollationKey
+		return ( facet == null )? null:facet.hookMap.get(hook);
 	}
 
 	public TaxoNode FindNodeByID( int facetID, int id ) {
