@@ -93,6 +93,24 @@ public class UserProjectInfo implements Serializable {
 		}
 	}
 
+	public void copyFrom( UserProjectInfo upi ) {
+		// copy all the paths
+		this.vocabTermsPath = upi.vocabTermsPath;
+		this.ontologyPath = upi.ontologyPath;
+		this.metadataConfigPath = upi.metadataConfigPath;
+		this.metadataPath = upi.metadataPath;
+		this.imagePathsPath = upi.imagePathsPath;
+		// Clear all the transients - force a reload when set paths
+		vocabTermsReader = null;
+		vocabHashTree = null;
+		vocabOutputDoc = null;
+		facetMapHashTree = null;
+		metaDataReader = null;
+		imagePathsReader = null;
+		dirty = true;
+
+	}
+
 	public String getName() {
 		return name;
 	}
