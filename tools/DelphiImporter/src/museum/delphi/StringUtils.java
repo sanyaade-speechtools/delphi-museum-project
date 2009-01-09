@@ -102,4 +102,10 @@ public class StringUtils {
 		return null;
 	}
 
+	public static String getBaseDirForPath( String path ) {
+		// Find last slash or backslash (to allow for windows paths), to get basepath
+    	int iSlash = Math.max(path.lastIndexOf('/'), path.lastIndexOf('\\'));
+    	return ( iSlash>0 )? path.substring(0, iSlash+1):null;
+	}
+
 }
