@@ -513,46 +513,40 @@ public class SQLUtils {
 		}
 	}
 
-	public static int writeObjCatsOnFacetSQL( int id, HashMap<TaxoNode, Float> matchedCats,
+	public static int writeObjCatsSQL( int id,
+			HashMap<TaxoNode, Float> matchedCats, HashMap<TaxoNode, Float> inferredCats,
 			BufferedWriter writer, boolean fFirst, boolean fWithNewlines, boolean fDumpAsSQLInsert ) {
-		// We just consider each match in turn, and get all the inferred nodes.
-		HashMap<TaxoNode, Float> inferredCats =  new HashMap<TaxoNode, Float>();
-		for( TaxoNode node:matchedCats.keySet() ) {
-			Float ret = matchedCats.get(node); // returns null if not in hashMap
-			float currRel = (ret==null)?0:ret.floatValue();
-			node.AddInferredNodes(inferredCats, currRel);
-		}
 
 		int nCatsMatched = 0;
 		// Now we have sets of the Nodes we matched and inferred, to dump
-		// We dump the mached cats that are not in the inferred map, then the inferred list
+		// We dump the matched cats that are not in the inferred map, then the inferred list
 		for( TaxoNode node:matchedCats.keySet() ) {
-			if( !inferredCats.containsKey(node)) {
-				Float ret = matchedCats.get(node); // returns null if not in hashMap
-				float reliability = (ret==null)?0:ret.floatValue();
-				int iRel = Math.min(9,Math.round(10*reliability));
-				if( fDumpAsSQLInsert )
-					nCatsMatched += writeObjectCatInsertSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
-				else
-					nCatsMatched += writeObjectCatLoadFileSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
-				fFirst = false;
-			}
+			Float ret = matchedCats.get(node); // returns null if not in hashMap
+			float reliability = (ret==null)?0:ret.floatValue();
+			int iRel = Math.min(9,Math.round(10*reliability));
+			if( fDumpAsSQLInsert )
+				writeObjectCatInsertSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
+			else
+				writeObjectCatLoadFileSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
+			nCatsMatched++;
+			fFirst = false;
 		}
-		// Now emit the (remaining) inferred nodes
+		// Now emit the inferred nodes
 		for( TaxoNode node:inferredCats.keySet() ) {
 			Float ret = inferredCats.get(node); // returns null if not in hashMap
 			float reliability = (ret==null)?0:ret.floatValue();
 			int iRel = Math.min(9,Math.round(10*reliability));
 			if( fDumpAsSQLInsert )
-				nCatsMatched += writeObjectCatInsertSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
+				writeObjectCatInsertSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
 			else
-				nCatsMatched += writeObjectCatLoadFileSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
+				writeObjectCatLoadFileSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
+			nCatsMatched++;
 			fFirst = false;
 		}
 		return nCatsMatched;
 	}
 
-	private static int writeObjectCatInsertSQL( int id, TaxoNode category, boolean inferred, int reliability,
+	private static void writeObjectCatInsertSQL( int id, TaxoNode category, boolean inferred, int reliability,
 			BufferedWriter writer, boolean fFirst, boolean fWithNewlines ) {
 		String entry = "";
 		try {
@@ -574,11 +568,9 @@ public class SQLUtils {
             debugTrace(2, e);
 			throw new RuntimeException( tmp );
 		}
-		// When we add the work to add the inferred cats, this will return non-zero
-		return 1;
 	}
 
-	private static int writeObjectCatLoadFileSQL( int id, TaxoNode category, boolean inferred, int reliability,
+	private static void writeObjectCatLoadFileSQL( int id, TaxoNode category, boolean inferred, int reliability,
 			BufferedWriter writer, boolean fFirst, boolean fWithNewlines ) {
 		String entry = "";
 		String sep = "|";
@@ -597,8 +589,6 @@ public class SQLUtils {
             debugTrace(2, e);
 			throw new RuntimeException( tmp );
 		}
-		// When we add the work to add the inferred cats, this will return non-zero
-		return 1;
 	}
 
 
