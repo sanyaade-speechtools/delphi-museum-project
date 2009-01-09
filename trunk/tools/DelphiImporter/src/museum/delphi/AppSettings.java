@@ -12,6 +12,10 @@ public class AppSettings {
 	private static final String keyValueSep = "=";
 	private static final String lastUserProjectPathKey = "LUPP";
 	private String lastUserProjectPath = null;
+	private static final String lastUserProjectFolderKey = "LUPF";
+	private String lastUserProjectFolder = null;
+	// TODO: keep track of last folder for projects, even if clear the path
+	// TODO: keep track of last few projects, for "recent" menu.
 
 	private static int _debugLevel = 1;
 
@@ -40,6 +44,8 @@ public class AppSettings {
 				String[] keyValue = line.split( keyValueSep, 2 );
 				if( keyValue[0].equals(lastUserProjectPathKey) )
 					lastUserProjectPath = keyValue[1];
+				if( keyValue[0].equals(lastUserProjectFolderKey) )
+					lastUserProjectFolder = keyValue[1];
 			}
 		// END   Reading settings
 		} catch (FileNotFoundException e) {
@@ -60,6 +66,7 @@ public class AppSettings {
 			BufferedWriter writer = new BufferedWriter(new FileWriter( settingsFilename ));
 		// BEGIN Writing settings
 			writer.append(lastUserProjectPathKey+keyValueSep+lastUserProjectPath+'\n');
+			writer.append(lastUserProjectFolderKey+keyValueSep+lastUserProjectFolder+'\n');
 		// END   Writing settings
 			writer.flush();
 			writer.close();
@@ -78,7 +85,11 @@ public class AppSettings {
 
 	public void setLastUserProjectPath( String path ) {
 		lastUserProjectPath = path;
+		lastUserProjectFolder = StringUtils.getBaseDirForPath(path);
 		saveSettings();
 	}
 
+	public String getLastUserProjectFolder() {
+		return lastUserProjectFolder;
+	}
 }
