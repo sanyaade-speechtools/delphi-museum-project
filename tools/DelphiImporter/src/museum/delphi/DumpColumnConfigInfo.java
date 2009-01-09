@@ -16,6 +16,18 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
 public class DumpColumnConfigInfo {
+
+	protected static class MineInfoForColumn {
+		protected String facetName = null;
+		protected float reliability = 0;
+		protected boolean filterTokenOnMatch = true;
+		protected MineInfoForColumn(String fname, float rel, boolean filter ) {
+			facetName = fname;
+			reliability = rel;
+			filterTokenOnMatch = filter;
+		}
+	}
+
 	private static int columnSeparator = -1;
 	private static HashMap<String, DumpColumnConfigInfo> columnInfoMap = null;
 	protected static PriorityQueue<Integer> descColsPQ = null;
@@ -28,10 +40,9 @@ public class DumpColumnConfigInfo {
 	protected ArrayList<String> tokenSeparators;
 	protected ArrayList<String> noiseTokens;
 	protected ArrayList<Pair<String,String>> reduceRules;
-	protected ArrayList<Pair<String,Float>> facetsToMine;
-	// TODO Add array of integers that indicate how to build description.
-	// TODO Value <0 means do not use column, and value >=0 indicates order for descr.
-
+	// Consider making mineInfo a static inner class, and add rule to filter matched
+	// tokens from further matching.
+	protected ArrayList<MineInfoForColumn> facetsToMine;
 	// TODO Add variables that store the ID column index, the ObjNum index,
 	// and the Name/Title index. Provide setter/getters.
 
@@ -101,10 +112,33 @@ public class DumpColumnConfigInfo {
 		return GetColInfo(forColumn, "getReduceRules").reduceRules;
 	}
 
+	/**
+	 * @return true if column mined for any facet, else false.
+	 */
+	public boolean columnMinedForAnyFacet() {
+		for( MineInfoForColumn info : facetsToMine ) {
+			if( info.reliability > 0 )
+				return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @param facetName The facet for which to return reliability.
+	 * @return true if column mined for this facet, else false.
+	 */
+	public boolean columnMinedForFacet( String facetName ) {
+		return (columnReliabilityForFacet(facetName) != 0);
+	}
+
+	/**
+	 * @param facetName The facet for which to return reliability.
+	 * @return reliability if set, else 0 if facet not mined from this column
+	 */
 	public float columnReliabilityForFacet( String facetName ) {
-		for( Pair<String,Float> info : facetsToMine ) {
-			if( info.first.equalsIgnoreCase(facetName) )
-				return info.second;
+		for( MineInfoForColumn info : facetsToMine ) {
+			if( info.facetName.equalsIgnoreCase(facetName) )
+				return info.reliability;
 		}
 		return 0;
 	}
@@ -130,11 +164,11 @@ public class DumpColumnConfigInfo {
 	}
 
 	public static float columnReliabilityForFacet( String forColumn, String facetName ) {
-		ArrayList<Pair<String,Float>> facetsToMine =
+		ArrayList<MineInfoForColumn> facetsToMine =
 			GetColInfo(forColumn, "columnReliabilityForFacet").facetsToMine;
-		for( Pair<String,Float> info : facetsToMine ) {
-			if( info.first.equalsIgnoreCase(facetName) )
-				return info.second;
+		for( MineInfoForColumn info : facetsToMine ) {
+			if( info.facetName.equalsIgnoreCase(facetName) )
+				return info.reliability;
 		}
 		return 0;
 	}
@@ -176,7 +210,7 @@ public class DumpColumnConfigInfo {
 				ArrayList<String> tokenSeparators = new ArrayList<String>();
 				ArrayList<String> noiseTokens = new ArrayList<String>();
 				ArrayList<Pair<String,String>> reduceRules = new ArrayList<Pair<String,String>>();
-				ArrayList<Pair<String,Float>> facetsToMine = new ArrayList<Pair<String,Float>>();
+				ArrayList<MineInfoForColumn> facetsToMine = new ArrayList<MineInfoForColumn>();
 		    	String function = colInfoEl.getAttribute( "function" );
 		    	if( function.equals("hiddenNotes"))
 		    		hiddenNotesCols.add(iCol);
@@ -218,9 +252,13 @@ public class DumpColumnConfigInfo {
 				    else if( childEl.getNodeName().equals( "facetInfo" ) ) {
 				    	String fName = childEl.getAttribute( "name" );
 				    	String relevStr = childEl.getAttribute( "relevancy" );
+				    	String filterStr = childEl.getAttribute( "filterTokenOnMatch" );
 				    	if( fName != null && relevStr != null) {
 					    	float rel = Float.parseFloat(relevStr);
-					    	facetsToMine.add(new Pair<String, Float>(fName, rel));
+					    	// Note filter defaults to true if not set
+					    	boolean filter = ( filterStr == null )
+					    						|| Boolean.parseBoolean(filterStr);
+					    	facetsToMine.add(new MineInfoForColumn(fName, rel, filter));
 				    	}
 				    }
 				    else
