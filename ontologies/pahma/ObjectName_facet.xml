@@ -42,12 +42,15 @@
 		wreath
 	-->
 	</notes>
-	<syntax_notes> <!-- This is a temporary section, to speed up entry
-		by making it easier to locate and copy syntax examples
-		<excl value="photographic plate"/>
+	<syntax_notes> 
+		<!-- This is a temporary section, to speed up entry
+		by making it easier to locate and copy syntax examples:
+		
 		<implies facet="Activity_facet" cat="Burial"/>
 		<implies facet="Activity_facet" cat="Metallurgy"/>
 		<synonym value="Drawings"/>
+		<excl value="photographic plate"/>
+		<excl value="Black Oak"/>
 		-->
 	</syntax_notes>
 	<heading id="ArchitecturalElements" title="Architectural Elements">
@@ -114,6 +117,8 @@
 			</heading>
 			<heading id="Shield" title="Shield"> 					
 				<synonym value="Shields"/>
+				<excl value="Goldweight"/>  <!-- Ashanti goldweights are sometimes made with a shield motif -->
+				<excl value="Ashanti"/>  <!-- Ashanti goldweights are sometimes made with a shield motif -->
 				<heading id="Boss" title="Boss"> 					
 					<synonym value="Bosses"/> <!-- exclude managers -->	
 				</heading>	
@@ -135,7 +140,7 @@
 			<heading id="CannonBall" title="Cannon Ball"> 					
 				<synonym value="Cannon Balls"/>			
 			</heading>
-		    <heading id="GrapeShot" title="Grape Shot"> <!-- Exclude the fruit -->				
+		    <heading id="GrapeShot" title="Grape Shot">			
 		        <synonym value="Grapeshot"/>			
 		    </heading>
 		    <heading id="MusketBall" title="Musket Ball">				
@@ -162,7 +167,9 @@
 				</heading>
 			</heading>
 			<heading id="Edgedweapons" title="Edged weapons">
-				<heading id="Bayonet" title="Bayonet"> <!--exclude "Spanish Bayonet"-->					
+				<heading id="Bayonet" title="Bayonet">	
+					<excl value="Spanish Bayonet"/>
+					<excl value="Spanish Bayonets"/>
 					<synonym value="Bayonets"/>
 				    <implies facet="Activity_facet" cat="Metallurgy"/>
 				</heading>
@@ -185,7 +192,8 @@
 					<implies facet="Activity_facet" cat="Metallurgy"/>	
 				</heading>
 			    <heading id="Pike" title="Pike"> 					
-			        <synonym value="Pikes"/>  <!-- Need to exclude the fish -->	
+			        <synonym value="Pikes"/>
+			    	<excl value="Fish"/>  <!-- Trying to exclude the fish sense of pike.  Needs work. -->	
 			    </heading>
 			    <heading id="PoleWeapons" title="Pole Weapons">
 			        <synonym value="Pole Weapon"/>
@@ -613,12 +621,14 @@
 				<synonym value="Skirts"/>
 			</heading>
 		    <heading id="WeddingDress" title="Wedding Dress"> <!-- Card for 7-6432 -->
-		        <synonym value="Wedding Dresses"/>  <!-- ADD: implies Marriage -->
+		        <synonym value="Wedding Dresses"/> 
+		    	<implies facet="Activity_facet" cat="BridalAdornment"/>
 		    </heading>
 		</heading>
 		<heading id="Footwear" title="Footwear">
 			<heading id="Shoes" title="Shoes">
 				<synonym value="Shoe"/>
+				<implies facet="Activity_facet" cat="ShoeMaking"/>
 			</heading>
 		</heading>
 		<heading id="Headwear" title="Headwear">
@@ -636,6 +646,7 @@
 			</heading>
 			<heading id="Hat" title="Hat">
 				<synonym value="Hats"/>
+				<implies facet="Activity_facet" cat="Millinery"/>
 			</heading>
 			<heading id="Headband" title="Headband">
 				<synonym value="Headbands"/>
@@ -893,6 +904,24 @@
             <implies facet="Activity_facet" cat="Foodserving"/>
             <excl value="photographic plate"/>
             <excl value="photographic plate"/>
+        	<excl value="Silver plate"/>
+        	<excl value="Silver-plate"/>
+        	<excl value="Silver plated"/>
+        	<excl value="Silver-plated"/>
+        	<excl value="Silverplate"/>
+        	<excl value="Silverplated"/>
+        	<excl value="Gold plate"/>
+        	<excl value="Gold-plate"/>
+        	<excl value="Gold plated"/>
+        	<excl value="Gold-plated"/>
+        	<excl value="Goldplate"/>
+        	<excl value="Goldplated"/>
+        	<excl value="Copper plate"/>
+        	<excl value="Copper-plate"/>
+        	<excl value="Copper plated"/>
+        	<excl value="Copper-plated"/>
+        	<excl value="Copperplate"/>
+        	<excl value="Copperplated"/>
             <excl value="negative"/>
             <excl value="negatives"/>
         </heading>
@@ -963,7 +992,10 @@
         <heading id="CookingVessel" title="Cooking Vessel">
             <synonym value="Cooking Vessels"/>
             <implies facet="Activity_facet" cat="Foodpreparation"/>
-            <heading id="Basin" title="Basin"> 	<!-- any needed exclusions? -->
+            <heading id="Basin" title="Basin">
+            	<excl value="Great Basin"/>
+            	<excl value="Basin and Plain"/>
+            	<excl value="Basin &amp; Plain"/>
                 <synonym value="Basins"/> 				
             </heading>
             <heading id="CookingPot" title="Cooking Pot">
@@ -1219,7 +1251,11 @@
 			<heading id="Circlet" title="Circlet"> 					
 				<synonym value="Circlets"/> 				
 			</heading>
-			<heading id="Crown" title="Crown">	<!-- will need exclusions -->
+			<heading id="Crown" title="Crown">	<!-- other exclusions? -->
+				<excl value="Dental Crown"/>
+				<excl value="Dental Crowns"/>
+				<excl value="Tooth Crown"/>
+				<excl value="Tooth Crowns"/>
 				<synonym value="Crowns"/> 				
 			</heading>
 			<heading id="Earring" title="Earring">
@@ -1250,7 +1286,13 @@
 					<synonym value="Half Banjos"/>
 				</heading>
 			</heading>
-			<heading id="Bulla" title="Bulla"> <!-- Not to include "tympanic bulla" or "auditory bulla" -->			
+			<heading id="Bulla" title="Bulla"> 
+				<excl value="Tympanic Bulla"/>
+				<excl value="Tympanic Bullas"/>
+				<excl value="Tympanic Bullae"/>
+				<excl value="Auditory Bulla"/>
+				<excl value="Auditory Bullas"/>
+				<excl value="Auditory Bullae"/>
 				<synonym value="Bullas"/>
 				<synonym value="Bullae"/>
 			</heading>
@@ -1277,7 +1319,9 @@
 			<synonym value="Stringed instrument"/>
 			<synonym value="Chordophones"/> 					
 			<synonym value="Chordophone"/>
-			<heading id="Banjo" title="Banjo">  <!-- Exclude abalone "banjo", "Haliotis, banjo type" -->
+			<heading id="Banjo" title="Banjo">
+				<excl value="Abalone"/>  <!-- Excludes abalone "banjo" -->
+				<excl value="Haliotis"/>  <!-- Excludes "Haliotis, banjo type" -->
 				<synonym value="Banjos"/>
 				<synonym value="Banjoes"/>
 				<heading id="GourdBanjo" title="Gourd Banjo">
@@ -1362,7 +1406,11 @@
 				<synonym value="Bangles"/> 				
 			</heading>
 			<heading id="Beater" title="Beater"> 					
-				<synonym value="Beaters"/> 				
+				<synonym value="Beaters"/> 
+				<excl value="Seed Beater"/>
+				<excl value="Seed Beaters"/>
+				<excl value="Seed-Beater"/>
+				<excl value="Seed-Beaters"/>
 			</heading>
 			<heading id="Xylophone" title="Xylophone"> 					
 				<synonym value="Xylophones"/> 				
@@ -1470,7 +1518,15 @@
 		<heading id="Umbrella" title="Umbrella"> 					
 			<synonym value="Umbrellas"/> 				
 		</heading>
-		<heading id="Pipe" title="Pipe">  <!-- exclude musical instruments & plumbing -->
+		<heading id="Pipe" title="Pipe">
+			<excl value="Lead pipe"/>  <!-- excludes pipe for plumbing -->
+			<excl value="Lead pipes"/>  <!-- excludes pipe for plumbing -->
+			<excl value="Copper pipe"/>  <!-- excludes pipe for plumbing -->
+			<excl value="Copper pipes"/>  <!-- excludes pipe for plumbing -->
+			<excl value="music"/>  <!-- excludes musical instruments -->
+			<excl value="musical"/>  <!-- excludes musical instruments -->
+			<excl value="instrument"/>  <!-- excludes musical instruments -->
+			<excl value="instruments"/>  <!-- excludes musical instruments -->
 			<synonym value="Pipes"/>
 			<heading id="OpiumPipe" title="OpiumPipe">
 				<synonym value="Opium Pipes"/>
@@ -1936,8 +1992,10 @@
 			    <synonym value="Textile"/>
 			    <synonym value="RGM Yardage"/>
 			    <heading id="LaceTextiles" title="Lace Textiles">
-    				<heading id="Lace" title="Lace"> <!-- Exclude shoelaces, if necessary -->
-    				    <heading id="BobbinLace" title="Bobbin Lace"> <!-- exclude sewing machine part -->
+    				<heading id="Lace" title="Lace">
+    					<excl value="Shoe Lace"/>
+    					<excl value="Shoe Laces"/>
+    				    <heading id="BobbinLace" title="Bobbin Lace">
     				        <synonym value="Pillow Lace"/>
     				        <heading id="HonitonBobbinLace" title="Honiton Bobbin Lace"/>
     				    </heading>
@@ -2367,6 +2425,9 @@
 			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
 		</heading>
 		<heading id="Seal" title="Seal"> <!-- exclude sea mammals and closures -->
+			<excl value="Marine"/>
+			<excl value="Pinniped"/>
+			<excl value="Sea Lion"/>
 			<synonym value="Seals"/>
 			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
 		</heading>
