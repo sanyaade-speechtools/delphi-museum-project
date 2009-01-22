@@ -3,17 +3,28 @@
 	<description>This facet describes what the activity depicted on, or implied by, an
 		object.
 	</description>
+	<syntax_notes> 
+		<!-- This is a temporary section, to speed up entry
+			by making it easier to locate and copy syntax examples:
+			
+			<implies facet="Activity_facet" cat="Millinery"/>
+			<implies facet="Activity_facet" cat="Metallurgy"/>
+			<synonym value="Drawings"/>
+			<excl value="photographic plate"/>
+			<excl value="Black Oak"/>
+		-->
+	</syntax_notes>
 	<heading id="ArtistryCraftsmanship" title="Artistry &amp; Craftsmanship">
 		<heading id="BasketMaking" title="Basket Making">
 			<synonym value="Basket weaving"/>
 			<synonym value="Basketry"/>
 		</heading>
-		<heading id="Carving" title="Carving"> <!-- exclusion needed for noun (versus verb) -->	
+		<heading id="Carving" title="Carving"> 
 			<synonym value="Woodcarving"/>
 			<synonym value="Woodcarvings"/>
 			<synonym value="Wood-carvings"/>			
 		</heading>
-		<heading id="Drawing" title="Drawing">  <!-- exclusion needed for noun (versus verb) -->
+		<heading id="Drawing" title="Drawing">
 			<synonym value="Drawn"/>
 			<synonym value="Sketching"/>
 			<synonym value="Sketched"/>
@@ -23,7 +34,16 @@
 			<synonym value="Metalwork"/>
 			<synonym value="Metal work"/>
 		</heading>
-		<heading id="Painting" title="Painting"> <!-- exclusion needed for noun (versus verb) -->
+		<heading id="Millinery" title="Millinery">
+			<synonym value="Milliner"/>
+			<synonym value="Hat making"/>
+			<synonym value="Hat maker"/>
+			<synonym value="Hat-making"/>
+			<synonym value="Hat-maker"/>
+			<synonym value="Hatmaking"/>
+			<synonym value="Hatmaker"/>
+		</heading>
+		<heading id="Painting" title="Painting">
 			<synonym value="Paintings"/> 				
 		</heading>
 		<heading id="Photography" title="Photography">
@@ -37,12 +57,25 @@
 		<heading id="Sculpting" title="Sculpting"> 					
 			<synonym value="Sculpture"/> 				
 		</heading>
+		<heading id="ShoeMaking" title="Shoe Making">
+			<synonym value="Shoemaking"/>
+			<synonym value="Shoe making"/>
+			<synonym value="Shoe-making"/>
+			<synonym value="Cobbler"/>
+			<synonym value="Cobblers"/>
+			<synonym value="Shoe maker"/>
+			<synonym value="Shoe-maker"/>
+			<synonym value="Shoemaker"/>
+		</heading>
 		<heading id="Weaving" title="Weaving"/> 					
 	</heading>
-	<heading id="Building" title="Building"> <!-- exclude the noun -->
+	<heading id="Building" title="Building"> 
+		<excl value="Buildings"/> <!-- helps exclude the noun sense of "building" -->
+		<excl value="a building"/> <!-- helps exclude the noun sense of "building" -->
+		<excl value="the building"/> <!-- helps exclude the noun sense of "building" -->
 		<heading id="Constructing" title="Constructing"/>
 		<heading id="Erecting" title="Erecting"/>
-		<heading id="Raising" title="Raising"/> <!-- Be careful of other meanings -->
+		<heading id="Raising" title="Raising"/> <!-- Be careful of other meanings.  Exclusions needed? -->
 	</heading>
 	<heading id="Celebrating" title="Celebrating"/>
 	<heading id="CeremoniesFestivalsHolidays" title="Ceremonies, Festivals, &amp; Holidays">  <!-- keep this separate from Religion & Spirituality -->
@@ -119,7 +152,8 @@
 			</heading>
 			<heading id="MourningCeremonies" title="Mourning Ceremonies">
 				<synonym value="Mourning Ceremony"/>
-				<synonym value="Wake"/> <!-- exclusions needed -->
+				<synonym value="Wake"/>
+				<excl value="Wake up"/> <!-- helps exclude the verb sense of "wake" -->
 				<synonym value="Mourning"/>
 			</heading>
 		</heading>
