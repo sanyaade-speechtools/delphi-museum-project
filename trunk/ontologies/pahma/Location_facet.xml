@@ -15,16 +15,28 @@
 	&quot;State of the Vatican City&quot; is treated as &quot;Vatican City&quot;.
 	</notes>
 	<notes>
-	<!-- Insert the following syntax whenever a site was occupied for a discrete period
-		that is temporally narrow enough to justify such an inference:
+		<!-- National Forests, National Parks, State Forests, etc. -->
+	</notes>
+	<syntax_notes> 
+		<!-- This is a temporary section, to speed up entry
+			by making it easier to locate and copy syntax examples:
+			
+			<implies facet="Activity_facet" cat="Burial"/>
+			<implies facet="Activity_facet" cat="Metallurgy"/>
+			<synonym value="Drawings"/>
+			<excl value="photographic plate"/>
+			<excl value="Black Oak"/>
+			
+			Insert the following syntax whenever a site was occupied for a discrete period
+			that is temporally narrow enough to justify such an inference:
+			
 			<implies facet="Collection_facet" cat="EuropeanPaleolithic"/>
 			<implies facet="Culture_facet" cat="Hohokam"/>
 			<implies facet="Event_facet" cat="SanFranciscoPanPacificExpo"/>
 			<implies facet="Period_facet" cat="EuropeanMedieval"/>
 			<implies facet="Location_facet" cat="CountryVaticanCity"/>
-	-->
-	<!-- National Forests, National Parks, State Forests, etc. -->
-	</notes>
+		-->
+	</syntax_notes>
 	<heading id="Africa" title="Africa">  <!-- ALPHABETIZE -->
 		<heading id="NorthernAfrica" title="Northern Africa">  <!-- Done -->
 			<synonym value="North Africa"/>
@@ -2855,7 +2867,9 @@
 					<synonym value="Chihuahua"/>
 					<heading id="Arechuyvo" title="Arechuyvo"/>
 					<heading id="Creel" title="Creel"/>
-					<heading id="ChihuahuaPresidio" title="Presidio"/>  <!-- Needs exclusions for San Francisco's Presidio (and others?) -->
+					<heading id="ChihuahuaPresidio" title="Presidio">  
+						<excl value="San Francisco"/>  <!-- Exclusion for San Francisco's Presidio (need others?) -->
+					</heading>
 					<heading id="Satevo" title="Satevó"> <!-- from card with 3-19266-19413, etc. -->
 						<synonym value="Satevo"/>
 					</heading>
@@ -2873,7 +2887,8 @@
 					<synonym value="Colima"/>
 				</heading>
 				<heading id="Durangostate" title="Durango state">
-					<synonym value="Durango"/>  <!-- Check for exclusions (Texas?) -->
+					<excl value="Texas"/>
+					<synonym value="Durango"/>
 					<heading id="Canelas" title="Canelas"/>
 				</heading>
 				<heading id="Guanajuatostate" title="Guanajuato state">
@@ -3129,7 +3144,7 @@
 				<heading id="Zacatecasstate" title="Zacatecas state"/>
 			</heading>
 			<heading id="UnitedStates" title="United States">
-    				<synonym value="United States of America"/>
+    			<synonym value="United States of America"/>
 				<heading id="Stateunspecified" title="State unspecified">
 					<heading id="MasseysCavesite" title="Massey's Cave site"/>
 					<heading id="USANL1" title="USA-NL- 1">
@@ -3169,7 +3184,8 @@
 					<heading id="WesternUnitedStates" title="Western United States"/>
 				</heading>
 				<heading id="Southeasternstates" title="Southeastern states">  <!-- done -->
-					<synonym value="Southeast"/> <!-- Check for exclusions -->
+					<synonym value="Southeast"/> <!-- Check for other exclusions -->
+					<excl value="Southeast Asia"/>
 					<heading id="Alabama" title="Alabama"/>
 					<heading id="AppalachianSummit" title="Appalachian Summit"/>
 					<heading id="Florida" title="Florida">
@@ -3538,7 +3554,7 @@
 							<heading id="StHelens" title="St. Helens"/>
 						</heading>
 						<heading id="ORCoosCounty" title="Coos County">
-							<synonym value="Coos"/> <!-- Needs exclusions for Coos Bay -->
+							<synonym value="Coos"/>
 							<synonym value="Coos Co."/>
 							<synonym value="OR-CS-NL"/>
 							<heading id="Bandon" title="Bandon"/>
@@ -3573,10 +3589,17 @@
 							<synonym value="OR-DS-NL"/>
 						  <heading id="EastLake" title="East Lake"/>
 						</heading>
-						<heading id="ORDouglasCounty" title="Douglas County">  <!--Also in NV; Exclusions needed -->
-							<!-- <synonym value="Douglas"/>  Also in NV; Exclusions needed -->
-							<!-- <synonym value="Douglas Co."/>  Also in NV; Exclusions needed -->
-							<!-- Exclude "Douglas Place, Douglas Island -->
+						<heading id="ORDouglasCounty" title="Douglas County">  
+							<excl value="NV"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Nev"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Nevada"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="WA"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Wash"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Washington"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Douglas Place"/>
+							<excl value="Douglas Island"/>
+							<synonym value="Douglas"/>
+							<synonym value="Douglas Co."/>
 							<synonym value="OR-DO-NL"/>
 							<synonym value="OR-Douglas-NL"/>
 							<heading id="BrewsterValley" title="Brewster Valley"/>
@@ -3622,9 +3645,12 @@
 							<heading id="KlamathReservation" title="Klamath Reservation"/>
 							<heading id="WilliamsonRiver" title="Williamson River"/>
 						</heading>
-						<heading id="ORLakeCounty" title="Lake County"> <!-- In CA, OR; needs exclusions -->
-							<!-- <synonym value="Lake"/> -->
-							<synonym value="Lake Co."/> <!-- In CA, OR; needs exclusions -->
+						<heading id="ORLakeCounty" title="Lake County">
+							<excl value="CA"/>  <!--There's a Lake Co. in CA and OR -->
+							<excl value="Calif"/>  <!--There's a Lake Co. in CA and OR -->
+							<excl value="Caifornia"/>  <!--There's a Lake Co. in CA and OR -->
+							<excl value="Lill: Island Mound, Lake County"/>
+							<synonym value="Lake Co."/>
 							<synonym value="OR-LK-NL"/>
 							<synonym value="OR-Lake-NL"/>
 							<heading id="HartLake" title="Hart Lake"/>
@@ -3807,10 +3833,17 @@
 							<synonym value="Cowlitz Co."/>
 							<heading id="WACowlitzNL" title="WA-Cowlitz-NL"/>
 						</heading>
-						<heading id="WADouglasCounty" title="Douglas County">   <!--In NV, OR, & WA; Exclusions needed -->
-							<!-- <synonym value="Douglas"/>   In NV, OR, & WA; Exclusions needed -->
-							<!-- <synonym value="Douglas Co."/>   In NV, OR, & WA; Exclusions needed -->
-							<!-- Exclude "Douglas Place, Douglas Island -->
+						<heading id="WADouglasCounty" title="Douglas County">
+							<excl value="NV"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Nev"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Nevada"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="OR"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Ore"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Oregon"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Douglas Place"/>
+							<excl value="Douglas Island"/>
+							<synonym value="Douglas"/>
+							<synonym value="Douglas Co."/>
 							<heading id="MasonCity" title="Mason City"/>
 						</heading>
 						<heading id="EasternWashington" title="Eastern Washington"/>
@@ -3909,7 +3942,8 @@
 							<heading id="Tonasket" title="Tonasket"/>
 						</heading>
 						<heading id="PacificCounty" title="Pacific County">
-							<!-- <synonym value="Pacific"/>  Disambiguate with multiple exclusions? -->
+							<excl value="Ocean"/>
+							<synonym value="Pacific"/>  <!-- Disambiguate with multiple exclusions? -->
 							<synonym value="Pacific Co."/>
 							<heading id="WillapaBay" title="Willapa Bay"/>
 						</heading>
@@ -4437,7 +4471,7 @@
 					    </heading>
 					</heading>
 					<heading id="California" title="California">
-<heading id="_Countynotspecified" title="_County not specified">
+						<heading id="_Countynotspecified" title="_County not specified">  <!-- Remove ? -->
 				          <heading id="BearCreek" title="Bear Creek"/>
 				          <heading id="KernRiver" title="Kern River"/>
 				          <heading id="LittleStonyCreek" title="Little Stony Creek"/>
@@ -4557,8 +4591,7 @@
 				          </heading>
 				          <heading id="Woodward" title="Woodward"/>
 </heading>
-<heading id="Alamedacounty" title="Alameda county">
-				          <heading id="Trinomialsitenames" title="Trinomial site names">
+						<heading id="Alamedacounty" title="Alameda county">
 				            <heading id="CAAla328" title="CA-Ala-328">
 				              <synonym value="Newark #1 A,B"/>
 				              <synonym value="Patterson mound"/>
@@ -4745,8 +4778,6 @@
 				            </heading>
 				            <heading id="CAAla259" title="CA-Ala-259"/>
 				            <heading id="CAAla138" title="CA-Ala-138"/>
-				          </heading>
-				          <heading id="Placenames" title="Place names">
 				            <heading id="SanLorenzo" title="San Lorenzo"/>
 				            <heading id="Albany" title="Albany"/>
 				            <heading id="Pleasanton" title="Pleasanton">
@@ -4762,9 +4793,8 @@
 				            <heading id="NearBrooklyn" title="Near Brooklyn"/>
 				            <heading id="CavenearAltamont" title="Cave near Altamont"/>
 				            <heading id="BrooklynShellmound" title="Brooklyn Shellmound"/>
-				          </heading>
 </heading>
-<heading id="Kerncounty" title="Kern county">
+						<heading id="Kerncounty" title="Kern county">
 				          <heading id="Placenames" title="Place names">
 				            <heading id="Buttonwillow" title="Buttonwillow">
 				              <synonym value="CA-Ker-49"/>
@@ -5035,257 +5065,254 @@
 				            </heading>
 				            
 				        </heading>
-				        <heading id="Modoccounty" title="Modoc county">
-				          <heading id="Trinomialsitenames" title="Trinomial site names">
-				            <heading id="CAMod27" title="CA-Mod- 27">
+				        <heading id="Modoccounty" title="Modoc county">  <!-- done -->
+				        	<synonym value="CA-Mod-NL"/>
+				        	<synonym value="CA-Mod-NL-1"/>
+				        	<synonym value="CA-Mod-NL-2"/>
+				        	<synonym value="CA-Mod-NL-3"/>
+				        	<synonym value="CA-Mod-NL-4"/>
+				        	<synonym value="CA-Mod-NL-5"/>
+				        	<synonym value="CA-Mod-NL-6"/>
+				        	<heading id="CAMod3" title="CA-Mod- 3">
+				        		<synonym value="CA-Mod-3"/>
+				        		<synonym value="Petroglyph Point Cave 3 (Heizer)"/>
+				        	</heading>
+				        	<heading id="CAMod16" title="CA-Mod- 16">
+				        		<synonym value="CA-Mod-16"/>
+				        		<synonym value="Mod-X1"/>
+				        	</heading>
+				        	<heading id="CAMod17" title="CA-Mod- 17">
+				        		<synonym value="CA-Mod-17"/>
+				        		<synonym value="Steward's 13 Pc."/>
+				        		<synonym value="Ahl's Modoc Lava Beds"/>
+				        		<synonym value="Heizer's Sis-5"/>
+				        		<synonym value="Fern Cave"/>
+				        	</heading>
+				        	<heading id="CAMod18" title="CA-Mod- 18">
+				        		<synonym value="CA-Mod-18"/>
+				        		<synonym value="Mod-X2"/>
+				        	</heading>
+				        	<heading id="CAMod23" title="CA-Mod- 23">
+				        		<synonym value="CA-Mod-23"/>
+				        		<synonym value="Steward's 11 Pt-Pc (part)"/>
+				        	</heading>
+				        	<heading id="CAMod25" title="CA-Mod- 25">
+				        		<synonym value="CA-Mod-25"/>
+				        		<synonym value="Mod-X3"/>
+				        	</heading>
+				        	<heading id="CAMod26" title="CA-Mod- 26">
+				        		<synonym value="CA-Mod-26"/>
+				        	</heading>
+				        	<heading id="CAMod27" title="CA-Mod- 27">
 				              <synonym value="CA-Mod-27"/>
 				              <synonym value="Mod-X4"/>
-				            </heading>
-				            <heading id="CAMod49" title="CA-Mod- 49">
+				        	</heading>
+				        	<heading id="CAMod29" title="CA-Mod- 29">
+				        		<synonym value="CA-Mod-29"/>
+				        		<synonym value="GM1"/>
+				        		<synonym value="Mod-X7"/>
+				        	</heading>
+				        	<heading id="CAMod30" title="CA-Mod- 30">
+				        		<synonym value="CA-Mod-30"/>
+				        		<synonym value="GM2"/>
+				        		<synonym value="Mod-X8"/>
+				        	</heading>
+				        	<heading id="CAMod32" title="CA-Mod- 32">
+				        		<synonym value="CA-Mod-32"/>
+				        		<synonym value="GM3"/>
+				        		<synonym value="Mod-X9"/>
+				        	</heading>
+				        	<heading id="CAMod34" title="CA-Mod- 34">
+				        		<synonym value="CA-Mod-34"/>
+				        		<synonym value="Cow Head Lake site"/>
+				        	</heading>
+				        	<heading id="CAMod35" title="CA-Mod- 35">
+				        		<synonym value="CA-Mod-35"/>
+				        		<synonym value="Mod-X10"/>
+				        	</heading>
+				        	<heading id="CAMod36" title="CA-Mod- 36">
+				        		<synonym value="CA-Mod-36"/>
+				        		<synonym value="Mod-X11"/>
+				        		<synonym value="Mod-XA"/>
+				        	</heading>
+				        	<heading id="CAMod37" title="CA-Mod- 37">
+				        		<synonym value="CA-Mod-37"/>
+				        		<synonym value="Mod-XB"/>
+				        		<synonym value="Mod-X12"/>
+				        	</heading>
+				        	<heading id="CAMod38" title="CA-Mod- 38">
+				        		<synonym value="CA-Mod-38"/>
+				        		<synonym value="Mod-XC"/>
+				        		<synonym value="Mod-X13"/>
+				        	</heading>
+				        	<heading id="CAMod39" title="CA-Mod- 39">
+				        		<synonym value="CA-Mod-39"/>
+				        		<synonym value="Mod-XD"/>
+				        		<synonym value="Mod-X14"/>
+				        	</heading>
+				        	<heading id="CAMod40" title="CA-Mod- 40">
+				        		<synonym value="CA-Mod-40"/>
+				        		<synonym value="Mod-X16"/>
+				        	</heading>
+				        	<heading id="CAMod41" title="CA-Mod- 41">
+				        		<synonym value="CA-Mod-41"/>
+				        		<synonym value="Mod-X17"/>
+				        	</heading>
+				        	<heading id="CAMod42" title="CA-Mod- 42">
+				        		<synonym value="CA-Mod-42"/>
+				        		<synonym value="Mod-X18"/>
+				        	</heading>
+				        	<heading id="CAMod43" title="CA-Mod- 43">
+				        		<synonym value="CA-Mod-43"/>
+				        		<synonym value="Mod-X19"/>
+				        	</heading>
+				        	<heading id="CAMod44" title="CA-Mod- 44">
+				        		<synonym value="CA-Mod-44"/>
+				        		<synonym value="Mod-X20"/>
+				        	</heading>
+				        	<heading id="CAMod45" title="CA-Mod- 45">
+				        		<synonym value="CA-Mod-45"/>
+				        		<synonym value="Mod-X21"/>
+				        	</heading>
+				        	<heading id="CAMod46" title="CA-Mod- 46">
+				        		<synonym value="CA-Mod-46"/>
+				        		<synonym value="Mod-X22"/>
+				        	</heading>
+				        	<heading id="CAMod47" title="CA-Mod- 47">
+				        		<synonym value="CA-Mod-47"/>
+				        	</heading>
+				        	<heading id="CAMod48" title="CA-Mod- 48">
+				        		<synonym value="CA-Mod-48"/>
+				        		<synonym value="Mod-X24"/>
+				        	</heading>
+				        	<heading id="CAMod49" title="CA-Mod- 49">
 				              <synonym value="CA-Mod-49"/>
 				              <synonym value="Mod-X25"/>
-				            </heading>
-				            <heading id="CAMod206" title="CA-Mod-206"/>
-				            <heading id="CAMod213" title="CA-Mod-213"/>
-				            <heading id="CAMod219" title="CA-Mod-219"/>
-				            <heading id="CAMod225" title="CA-Mod-225"/>
+				        	</heading>
+				        	<heading id="CAMod50" title="CA-Mod- 50">
+				        		<synonym value="CA-Mod-50"/>
+				        		<synonym value="Mod-X25"/>
+				        	</heading>
+				        	<heading id="CAMod55" title="CA-Mod- 55">
+				        		<synonym value="CA-Mod-55"/>
+				        	</heading>
+				        	<heading id="CAMod59" title="CA-Mod- 59">
+				        		<synonym value="CA-Mod-59"/>
+				        		<synonym value="Mod-Y5"/>
+				        	</heading>
+				        	<heading id="CAMod60" title="CA-Mod- 60">
+				        		<synonym value="CA-Mod-60"/>
+				        	</heading>
+				        	<heading id="CAMod61" title="CA-Mod- 61">
+				        		<synonym value="CA-Mod-61"/>
+				        	</heading>
+				        	<heading id="CAMod71" title="CA-Mod- 71">
+				        		<synonym value="CA-Mod-71"/>
+				        	</heading>
+				        	<heading id="CAMod77" title="CA-Mod- 77">
+				        		<synonym value="CA-Mod-77"/>
+				        	</heading>
+				        	<heading id="CAMod82" title="CA-Mod- 82">
+				        		<synonym value="CA-Mod-82"/>
+				        	</heading>
+				        	<heading id="CAMod83" title="CA-Mod- 83">
+				        		<synonym value="CA-Mod-83"/>
+				        	</heading>
+				        	<heading id="CAMod84" title="CA-Mod- 84">
+				        		<synonym value="CA-Mod-84"/>
+				        	</heading>
+				        	<heading id="CAMod85" title="CA-Mod- 85">
+				        		<synonym value="CA-Mod-85"/>
+				        	</heading>
+				        	<heading id="CAMod87" title="CA-Mod- 87">
+				        		<synonym value="CA-Mod-87"/>
+				        	</heading>
+				        	<heading id="CAMod88" title="CA-Mod- 88">
+				        		<synonym value="CA-Mod-88"/>
+				        	</heading>
+				        	<heading id="CAMod91" title="CA-Mod- 91">
+				        		<synonym value="CA-Mod-91"/>
+				        	</heading>
+				        	<heading id="CAMod95" title="CA-Mod- 95">
+				        		<synonym value="CA-Mod-95"/>
+				        	</heading>
+				        	<heading id="CAMod96" title="CA-Mod- 96">
+				        		<synonym value="CA-Mod-96"/>
+				        	</heading>
+				        	<heading id="CAMod97" title="CA-Mod- 97">
+				        		<synonym value="CA-Mod-97"/>
+				        	</heading>
+				        	<heading id="CAMod100" title="CA-Mod-100"/>
+				        	<heading id="CAMod101" title="CA-Mod-101"/>
+				        	<heading id="CAMod104" title="CA-Mod-104"/>
+				        	<heading id="CAMod105" title="CA-Mod-105"/>
+				        	<heading id="CAMod107" title="CA-Mod-107"/>
+				        	<heading id="CAMod108" title="CA-Mod-108"/>
+				        	<heading id="CAMod110" title="CA-Mod-110"/>
+				        	<heading id="CAMod113" title="CA-Mod-113"/>
+				        	<heading id="CAMod115" title="CA-Mod-115"/>
+				        	<heading id="CAMod119" title="CA-Mod-119"/>
+				        	<heading id="CAMod128" title="CA-Mod-128"/>
+				        	<heading id="CAMod195" title="CA-Mod-195"/>
+				        	<heading id="CAMod196" title="CA-Mod-196"/>
+				        	<heading id="CAMod197" title="CA-Mod-197"/>
+				        	<heading id="CAMod198" title="CA-Mod-198"/>
+				        	<heading id="CAMod199" title="CA-Mod-199"/>
+				        	<heading id="CAMod200" title="CA-Mod-200"/>
+				        	<heading id="CAMod201" title="CA-Mod-201"/>
+				        	<heading id="CAMod202" title="CA-Mod-202"/>
+				        	<heading id="CAMod203" title="CA-Mod-203"/>
+				        	<heading id="CAMod204" title="CA-Mod-204"/>
+				        	<heading id="CAMod205" title="CA-Mod-205"/>
+				        	<heading id="CAMod206" title="CA-Mod-206"/>
+				        	<heading id="CAMod207" title="CA-Mod-207"/>
+				        	<heading id="CAMod208" title="CA-Mod-208"/>
+				        	<heading id="CAMod210" title="CA-Mod-210"/>
+				        	<heading id="CAMod211" title="CA-Mod-211"/>
+				        	<heading id="CAMod212" title="CA-Mod-212"/>
+				        	<heading id="CAMod213" title="CA-Mod-213"/>
+				        	<heading id="CAMod214" title="CA-Mod-214"/>
+				        	<heading id="CAMod215" title="CA-Mod-215"/>
+				        	<heading id="CAMod216" title="CA-Mod-216"/>
+				        	<heading id="CAMod217" title="CA-Mod-217"/>
+				        	<heading id="CAMod218" title="CA-Mod-218"/>
+				        	<heading id="CAMod219" title="CA-Mod-219"/>
+				        	<heading id="CAMod220" title="CA-Mod-220"/>
+				        	<heading id="CAMod221" title="CA-Mod-221"/>
+				        	<heading id="CAMod222" title="CA-Mod-222"/>
+				        	<heading id="CAMod223" title="CA-Mod-223"/>
+				        	<heading id="CAMod224" title="CA-Mod-224"/>
+				        	<heading id="CAMod225" title="CA-Mod-225"/>
 				            <heading id="CAMod226" title="CA-Mod-226"/>
-				            <heading id="CAMod59" title="CA-Mod- 59">
-				              <synonym value="CA-Mod-59"/>
-				              <synonym value="Mod-Y5"/>
-				            </heading>
-				            <heading id="CAMod61" title="CA-Mod- 61">
-				              <synonym value="CA-Mod-61"/>
-				            </heading>
-				            <heading id="CAMod48" title="CA-Mod- 48">
-				              <synonym value="CA-Mod-48"/>
-				              <synonym value="Mod-X24"/>
-				            </heading>
-				            <heading id="CAModNL6" title="CA-Mod-NL-6"/>
-				            <heading id="CAModNL5" title="CA-Mod-NL-5"/>
-				            <heading id="CAModNL4" title="CA-Mod-NL-4"/>
-				            <heading id="CAModNL3" title="CA-Mod-NL-3"/>
-				            <heading id="CAModNL2" title="CA-Mod-NL-2"/>
-				            <heading id="CAModNL1" title="CA-Mod-NL-1"/>
-				            <heading id="CAMod204" title="CA-Mod-204"/>
-				            <heading id="CAMod16" title="CA-Mod- 16">
-				              <synonym value="CA-Mod-16"/>
-				              <synonym value="Mod-X1"/>
-				            </heading>
-				            <heading id="CAMod17" title="CA-Mod- 17">
-				              <synonym value="CA-Mod-17"/>
-				              <synonym value="Steward's 13 Pc."/>
-				              <synonym value="Ahl's Modoc Lava Beds"/>
-				              <synonym value="Heizer's Sis-5"/>
-				              <synonym value="Fern Cave"/>
-				            </heading>
-				            <heading id="CAMod18" title="CA-Mod- 18">
-				              <synonym value="CA-Mod-18"/>
-				              <synonym value="Mod-X2"/>
-				            </heading>
-				            <heading id="CAMod197" title="CA-Mod-197"/>
-				            <heading id="CAMod203" title="CA-Mod-203"/>
-				            <heading id="CAMod210" title="CA-Mod-210"/>
-				            <heading id="CAMod211" title="CA-Mod-211"/>
-				            <heading id="CAMod212" title="CA-Mod-212"/>
-				            <heading id="CAMod214" title="CA-Mod-214"/>
-				            <heading id="CAMod215" title="CA-Mod-215"/>
-				            <heading id="CAMod23" title="CA-Mod- 23">
-				              <synonym value="CA-Mod-23"/>
-				              <synonym value="Steward's 11 Pt-Pc (part)"/>
-				            </heading>
-				            <heading id="CAMod237" title="CA-Mod-237"/>
+				        	<heading id="CAMod227" title="CA-Mod-227"/>
+				        	<heading id="CAMod228" title="CA-Mod-228"/>
+				        	<heading id="CAMod229" title="CA-Mod-229"/>
+				        	<heading id="CAMod230" title="CA-Mod-230"/>
+				        	<heading id="CAMod231" title="CA-Mod-231"/>
+				        	<heading id="CAMod232" title="CA-Mod-232"/>
+				        	<heading id="CAMod233" title="CA-Mod-233"/>
+				        	<heading id="CAMod235" title="CA-Mod-235"/>
+				        	<heading id="CAMod236" title="CA-Mod-236"/>
+				        	<heading id="CAMod237" title="CA-Mod-237"/>
 				            <heading id="CAMod238" title="CA-Mod-238"/>
-				            <heading id="CAMod29" title="CA-Mod- 29">
-				              <synonym value="CA-Mod-29"/>
-				              <synonym value="GM1"/>
-				              <synonym value="Mod-X7"/>
-				            </heading>
-				            <heading id="CAMod30" title="CA-Mod- 30">
-				              <synonym value="CA-Mod-30"/>
-				              <synonym value="GM2"/>
-				              <synonym value="Mod-X8"/>
-				            </heading>
-				            <heading id="CAMod34" title="CA-Mod- 34">
-				              <synonym value="CA-Mod-34"/>
-				              <synonym value="Cow Head Lake site"/>
-				            </heading>
-				            <heading id="CAMod40" title="CA-Mod- 40">
-				              <synonym value="CA-Mod-40"/>
-				              <synonym value="Mod-X16"/>
-				            </heading>
-				            <heading id="CAMod32" title="CA-Mod- 32">
-				              <synonym value="CA-Mod-32"/>
-				              <synonym value="GM3"/>
-				              <synonym value="Mod-X9"/>
-				            </heading>
-				            <heading id="CAMod339" title="CA-Mod-339"/>
+				        	<heading id="CAMod239" title="CA-Mod-239"/>
+				        	<heading id="CAMod240" title="CA-Mod-240"/>
+				        	<heading id="CAMod241" title="CA-Mod-241"/>
+				        	<heading id="CAMod242" title="CA-Mod-242"/>
+				        	<heading id="CAMod243" title="CA-Mod-243"/>
+				        	<heading id="CAMod245" title="CA-Mod-245"/>
+				        	<heading id="CAMod246" title="CA-Mod-246"/>
+				        	<heading id="CAMod247" title="CA-Mod-247"/>
+				        	<heading id="CAMod249" title="CA-Mod-249"/>
+				        	<heading id="CAMod339" title="CA-Mod-339"/>
 				            <heading id="CAMod340" title="CA-Mod-340"/>
 				            <heading id="CAMod341" title="CA-Mod-341"/>
 				            <heading id="CAMod342" title="CA-Mod-342"/>
-				            <heading id="CAMod35" title="CA-Mod- 35">
-				              <synonym value="CA-Mod-35"/>
-				              <synonym value="Mod-X10"/>
-				            </heading>
-				            <heading id="CAMod3" title="CA-Mod- 3">
-				              <synonym value="CA-Mod-3"/>
-				              <synonym value="Petroglyph Point Cave 3 (Heizer)"/>
-				            </heading>
-				            <heading id="CAMod25" title="CA-Mod- 25">
-				              <synonym value="CA-Mod-25"/>
-				              <synonym value="Mod-X3"/>
-				            </heading>
-				            <heading id="CAMod26" title="CA-Mod- 26">
-				              <synonym value="CA-Mod-26"/>
-				            </heading>
-				            <heading id="CAMod36" title="CA-Mod- 36">
-				              <synonym value="CA-Mod-36"/>
-				              <synonym value="Mod-X11"/>
-				              <synonym value="Mod-XA"/>
-				            </heading>
-				            <heading id="CAMod37" title="CA-Mod- 37">
-				              <synonym value="CA-Mod-37"/>
-				              <synonym value="Mod-XB"/>
-				              <synonym value="Mod-X12"/>
-				            </heading>
-				            <heading id="CAMod38" title="CA-Mod- 38">
-				              <synonym value="CA-Mod-38"/>
-				              <synonym value="Mod-XC"/>
-				              <synonym value="Mod-X13"/>
-				            </heading>
-				            <heading id="CAMod39" title="CA-Mod- 39">
-				              <synonym value="CA-Mod-39"/>
-				              <synonym value="Mod-XD"/>
-				              <synonym value="Mod-X14"/>
-				            </heading>
-				            <heading id="CAMod41" title="CA-Mod- 41">
-				              <synonym value="CA-Mod-41"/>
-				              <synonym value="Mod-X17"/>
-				            </heading>
-				            <heading id="CAMod42" title="CA-Mod- 42">
-				              <synonym value="CA-Mod-42"/>
-				              <synonym value="Mod-X18"/>
-				            </heading>
-				            <heading id="CAMod43" title="CA-Mod- 43">
-				              <synonym value="CA-Mod-43"/>
-				              <synonym value="Mod-X19"/>
-				            </heading>
-				            <heading id="CAMod44" title="CA-Mod- 44">
-				              <synonym value="CA-Mod-44"/>
-				              <synonym value="Mod-X20"/>
-				            </heading>
-				            <heading id="CAMod45" title="CA-Mod- 45">
-				              <synonym value="CA-Mod-45"/>
-				              <synonym value="Mod-X21"/>
-				            </heading>
-				            <heading id="CAMod46" title="CA-Mod- 46">
-				              <synonym value="CA-Mod-46"/>
-				              <synonym value="Mod-X22"/>
-				            </heading>
-				            <heading id="CAMod47" title="CA-Mod- 47">
-				              <synonym value="CA-Mod-47"/>
-				            </heading>
-				            <heading id="CAMod50" title="CA-Mod- 50">
-				              <synonym value="CA-Mod-50"/>
-				              <synonym value="Mod-X25"/>
-				            </heading>
-				            <heading id="CAMod55" title="CA-Mod- 55">
-				              <synonym value="CA-Mod-55"/>
-				            </heading>
-				            <heading id="CAMod71" title="CA-Mod- 71">
-				              <synonym value="CA-Mod-71"/>
-				            </heading>
-				            <heading id="CAMod77" title="CA-Mod- 77">
-				              <synonym value="CA-Mod-77"/>
-				            </heading>
-				            <heading id="CAMod82" title="CA-Mod- 82">
-				              <synonym value="CA-Mod-82"/>
-				            </heading>
-				            <heading id="CAMod83" title="CA-Mod- 83">
-				              <synonym value="CA-Mod-83"/>
-				            </heading>
-				            <heading id="CAMod84" title="CA-Mod- 84">
-				              <synonym value="CA-Mod-84"/>
-				            </heading>
-				            <heading id="CAMod85" title="CA-Mod- 85">
-				              <synonym value="CA-Mod-85"/>
-				            </heading>
-				            <heading id="CAMod87" title="CA-Mod- 87">
-				              <synonym value="CA-Mod-87"/>
-				            </heading>
-				            <heading id="CAMod88" title="CA-Mod- 88">
-				              <synonym value="CA-Mod-88"/>
-				            </heading>
-				            <heading id="CAMod91" title="CA-Mod- 91">
-				              <synonym value="CA-Mod-91"/>
-				            </heading>
-				            <heading id="CAMod95" title="CA-Mod- 95">
-				              <synonym value="CA-Mod-95"/>
-				            </heading>
-				            <heading id="CAMod96" title="CA-Mod- 96">
-				              <synonym value="CA-Mod-96"/>
-				            </heading>
-				            <heading id="CAMod97" title="CA-Mod- 97">
-				              <synonym value="CA-Mod-97"/>
-				            </heading>
-				            <heading id="CAMod100" title="CA-Mod-100"/>
-				            <heading id="CAMod101" title="CA-Mod-101"/>
-				            <heading id="CAMod104" title="CA-Mod-104"/>
-				            <heading id="CAMod105" title="CA-Mod-105"/>
-				            <heading id="CAMod107" title="CA-Mod-107"/>
-				            <heading id="CAMod108" title="CA-Mod-108"/>
-				            <heading id="CAMod110" title="CA-Mod-110"/>
-				            <heading id="CAMod113" title="CA-Mod-113"/>
-				            <heading id="CAMod115" title="CA-Mod-115"/>
-				            <heading id="CAMod119" title="CA-Mod-119"/>
-				            <heading id="CAMod128" title="CA-Mod-128"/>
-				            <heading id="CAMod196" title="CA-Mod-196"/>
-				            <heading id="CAMod198" title="CA-Mod-198"/>
-				            <heading id="CAMod199" title="CA-Mod-199"/>
-				            <heading id="CAMod200" title="CA-Mod-200"/>
-				            <heading id="CAMod201" title="CA-Mod-201"/>
-				            <heading id="CAMod202" title="CA-Mod-202"/>
-				            <heading id="CAMod205" title="CA-Mod-205"/>
-				            <heading id="CAMod207" title="CA-Mod-207"/>
-				            <heading id="CAMod208" title="CA-Mod-208"/>
-				            <heading id="CAMod216" title="CA-Mod-216"/>
-				            <heading id="CAMod217" title="CA-Mod-217"/>
-				            <heading id="CAMod218" title="CA-Mod-218"/>
-				            <heading id="CAMod220" title="CA-Mod-220"/>
-				            <heading id="CAMod221" title="CA-Mod-221"/>
-				            <heading id="CAMod222" title="CA-Mod-222"/>
-				            <heading id="CAMod223" title="CA-Mod-223"/>
-				            <heading id="CAMod224" title="CA-Mod-224"/>
-				            <heading id="CAMod227" title="CA-Mod-227"/>
-				            <heading id="CAMod228" title="CA-Mod-228"/>
-				            <heading id="CAMod229" title="CA-Mod-229"/>
-				            <heading id="CAMod230" title="CA-Mod-230"/>
-				            <heading id="CAMod231" title="CA-Mod-231"/>
-				            <heading id="CAMod232" title="CA-Mod-232"/>
-				            <heading id="CAMod233" title="CA-Mod-233"/>
-				            <heading id="CAMod235" title="CA-Mod-235"/>
-				            <heading id="CAMod236" title="CA-Mod-236"/>
-				            <heading id="CAMod239" title="CA-Mod-239"/>
-				            <heading id="CAMod240" title="CA-Mod-240"/>
-				            <heading id="CAMod241" title="CA-Mod-241"/>
-				            <heading id="CAMod242" title="CA-Mod-242"/>
-				            <heading id="CAMod243" title="CA-Mod-243"/>
-				            <heading id="CAMod245" title="CA-Mod-245"/>
-				            <heading id="CAMod246" title="CA-Mod-246"/>
-				            <heading id="CAMod247" title="CA-Mod-247"/>
-				            <heading id="CAMod249" title="CA-Mod-249"/>
-				            <heading id="CAMod60" title="CA-Mod- 60">
-				              <synonym value="CA-Mod-60"/>
-				            </heading>
-				            <heading id="CAModNL" title="CA-Mod-NL"/>
-				            <heading id="CAMod195" title="CA-Mod-195"/>
-				          </heading>
-				          <heading id="Placenames" title="Place names">
 				            <heading id="Alturas" title="Alturas"/>
 				            <heading id="Adin" title="Adin"/>
 				            <heading id="ModocBattlefield" title="Modoc Battlefield"/>
 				            <heading id="GooseLake" title="Goose Lake">
-				              <heading id="NearWillowRanch" title="Near Willow Ranch"/>
+								<heading id="NearWillowRanch" title="Near Willow Ranch"/>
 				            </heading>
 				            <heading id="FortBidwell" title="Fort Bidwell"/>
 				            <heading id="CowheadLake" title="Cowhead Lake"/>
@@ -5294,14 +5321,12 @@
 				            <heading id="Likely" title="Likely"/>
 				            <heading id="NearSurprise" title="Near Surprise"/>
 				            <heading id="Cedarville" title="Cedarville">
-				              <heading id="CedarvilleArea" title="Cedarville Area"/>
+								<heading id="CedarvilleArea" title="Cedarville Area"/>
 				            </heading>
 				            <heading id="KlamathRiver" title="Klamath River"/>
 				            <heading id="Eagleville" title="Eagleville"/>
-				          </heading>
 				        </heading>
 				        <heading id="Mercedcounty" title="Merced county">
-				          <heading id="Trinomialsitename" title="Trinomial site name">
 				            <heading id="CAMer5" title="CA-Mer- 5">
 				              <synonym value="CA-Mer-5"/>
 				            </heading>
@@ -5404,14 +5429,10 @@
 				            <heading id="CAMerNL" title="CA-Mer-NL">
 				              <synonym value="Merced County, no loc."/>
 				            </heading>
-				          </heading>
-				          <heading id="Placenames" title="Place names">
 				            <heading id="MercedFalls" title="Merced Falls"/>
 				            <heading id="LosBanos" title="Los Banos"/>
-				          </heading>
 				        </heading>
 				        <heading id="Monocounty" title="Mono county">
-				          <heading id="Trinomialsitenames" title="Trinomial site names">
 				            <heading id="CAMno5" title="CA-Mno- 5">
 				              <synonym value="CA-Mno-5"/>
 				              <synonym value="Chalk Grade (Mallery)"/>
@@ -5800,24 +5821,21 @@
 				            <heading id="CAMno122" title="CA-Mno-122"/>
 				            <heading id="CAMno123" title="CA-Mno-123"/>
 				            <heading id="CAMno124" title="CA-Mno-124"/>
-				          </heading>
-				          <heading id="Placenames" title="Place names">
 				            <heading id="AdobeMeadows" title="Adobe Meadows"/>
 				            <heading id="MineralPark" title="Mineral Park"/>
 				            <heading id="LeeVining" title="Lee Vining"/>
 				            <heading id="MonoLake" title="Mono Lake"/>
 				            <heading id="HotCreek" title="Hot Creek">
-				              <heading id="IndianCamp" title="Indian Camp"/>
+								<heading id="IndianCamp" title="Indian Camp"/>
 				            </heading>
 				            <heading id="CasaDiablo" title="Casa Diablo"/>
 				            <heading id="Bridgeport" title="Bridgeport"/>
 				            <heading id="Benton" title="Benton"/>
 				            <heading id="BentonStation" title="Benton Station"/>
 				            <heading id="Bodie" title="Bodie"/>
-				          </heading>
+				       
 				        </heading>
 				        <heading id="Marincounty" title="Marin county">
-				          <heading id="Trinomialsitenames" title="Trinomial site names">
 				            <heading id="CAMrn76" title="CA-Mrn- 76">
 				              <synonym value="CA-Mrn-76"/>
 				              <synonym value="Nelson 76"/>
@@ -6136,14 +6154,10 @@
 				              <synonym value="Nelson 11"/>
 				              <synonym value="Alto Site"/>
 				            </heading>
-				          </heading>
-				          <heading id="Placenames" title="Place names">
 				            <heading id="DillonBeach" title="Dillon Beach"/>
 				            <heading id="TomalesBay" title="Tomales Bay"/>
-				          </heading>
 				        </heading>
 				        <heading id="Maderacounty" title="Madera county">
-				          <heading id="Trinomialsitenames" title="Trinomial site names">
 				            <heading id="CAMad3" title="CA-Mad- 3">
 				              <synonym value="CA-Mad-3"/>
 				              <synonym value="GWH 77"/>
@@ -6269,8 +6283,6 @@
 				              <synonym value="GWH 140"/>
 				              <synonym value="J-98"/>
 				            </heading>
-				          </heading>
-				          <heading id="Placenames" title="Place names">
 				            <heading id="Ahwahnee" title="Ahwahnee"/>
 				            <heading id="BassLake" title="Bass Lake"/>
 				            <heading id="SouthFork" title="South Fork"/>
@@ -6282,10 +6294,8 @@
 				            <heading id="FresnoRiver" title="Fresno River"/>
 				            <heading id="Picayune" title="Picayune"/>
 				            <heading id="Chowchilla" title="Chowchilla"/>
-				          </heading>
 				        </heading>
 	        <heading id="SanDiegocounty" title="San Diego county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CASDi109" title="CA-SDi-109">
 	              <synonym value="Old Butterfield Stage Stop"/>
 	              <synonym value="Vallecito County Park"/>
@@ -6344,7 +6354,6 @@
 	              <synonym value="Dos Cabezos Spring"/>
 	              <synonym value="Treganza's site 6"/>
 	            </heading>
-	          </heading>
 	          <heading id="Placenames" title="Place names">
 	            <heading id="Banner" title="Banner"/>
 	            <heading id="Coronado" title="Coronado"/>
@@ -8692,7 +8701,6 @@
 	          </heading>
 	        </heading>
 	        <heading id="Orangecounty" title="Orange county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CAOraNL1" title="CA-Ora-NL-1">
 	              <synonym value="Orange County, no loc."/>
 	            </heading>
@@ -8708,13 +8716,9 @@
 	              <synonym value="CA-Ora-57"/>
 	              <synonym value="UNB 15"/>
 	            </heading>
-	          </heading>
-	          <heading id="Placenames" title="Place names">
 	            <heading id="MissionSanJuanCapistrano" title="Mission San Juan Capistrano"/>
-	          </heading>
 	        </heading>
 	        <heading id="Napacounty" title="Napa county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CANap12" title="CA-Nap- 12">
 	              <synonym value="CA-Nap-12"/>
 	            </heading>
@@ -9093,8 +9097,6 @@
 	            <heading id="CANap200" title="CA-Nap-200">
 	              <synonym value="Site #6"/>
 	            </heading>
-	          </heading>
-	          <heading id="Placenames" title="Place names">
 	            <heading id="Calistoga" title="Calistoga"/>
 								<heading id="Chiles" title="Chiles"/>
 	            <heading id="GoddardMound" title="Goddard Mound"/>
@@ -9108,36 +9110,30 @@
 	            <heading id="Woodardsite" title="Woodard site"/>
 	            <heading id="YountBurialGround" title="Yount Burial Ground"/>
 	            <heading id="Yountville" title="Yountville"/>
-	          </heading>
 	        </heading>
 	        <heading id="SanBenitocounty" title="San Benito county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CASBn1" title="CA-SBn- 1">
 	              <synonym value="CA-SBn-1"/>
 	              <synonym value="San Juan Bautista Mission"/>
 	            </heading>
-	            <heading id="CASBn9" title="CA-SBn- 9">
+	        	<heading id="CASBn2" title="CA-SBn- 2">
+	        		<synonym value="CA-SBn-2"/>
+	        	</heading>
+	        	<heading id="CASBn3" title="CA-SBn- 3">
+	        		<synonym value="CA-SBn-3"/>
+	        	</heading>
+	        	<heading id="CASBn8" title="CA-SBn- 8">
+	        		<synonym value="CA-SBn-8"/>
+	        	</heading>
+	        	<heading id="CASBn9" title="CA-SBn- 9">
 	              <synonym value="CA-SBn-9"/>
-	            </heading>
-	            <heading id="CASBn2" title="CA-SBn- 2">
-	              <synonym value="CA-SBn-2"/>
-	            </heading>
-	            <heading id="CASBn3" title="CA-SBn- 3">
-	              <synonym value="CA-SBn-3"/>
-	            </heading>
-	            <heading id="CASBn8" title="CA-SBn- 8">
-	              <synonym value="CA-SBn-8"/>
 	            </heading>
 	            <heading id="CASBn10" title="CA-SBn-10"/>
 	            <heading id="CASBnNL" title="CA-SBn-NL"/>
-	          </heading>
-	          <heading id="Placenames" title="Place names">
 	            <heading id="SanJuanBautista" title="San Juan Bautista"/>
 	            <heading id="TresPinosCreek" title="Tres Pinos Creek"/>
-	          </heading>
 	        </heading>
 	        <heading id="Plumascounty" title="Plumas county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CAPlu5" title="CA-Plu- 5">
 	              <synonym value="CA-Plu-5"/>
 	              <synonym value="Durrell 7"/>
@@ -9220,22 +9216,24 @@
 	              <synonym value="Plumas County, no loc."/>
 	              <synonym value="Taylorsville"/>
 	            </heading>
-	          </heading>
-	          <heading id="Placenames" title="Place names">
-	            <heading id="IndianValley" title="Indian Valley"/>
-	            <heading id="Greenville" title="Greenville"/>
-	            <heading id="BigMeadows" title="Big Meadows"/>
-	            <heading id="OldCariboo" title="Old Cariboo"/>
-	            <heading id="LakeAlmanor" title="Lake Almanor"/>
-	            <heading id="HedricksRanch" title="Hedricks Ranch"/>
-	            <heading id="LastChanceCreek" title="Last Chance Creek"/>
-	            <heading id="Quincy" title="Quincy"/>
-	            <heading id="Prattville" title="Prattville"/>
-	            <heading id="Genesee" title="Genesee"/>
-	          </heading>
+	        	<heading id="BigMeadows" title="Big Meadows"/>
+	        	<heading id="Genesee" title="Genesee"/>
+	        	<heading id="Greenville" title="Greenville"/>
+	        	<heading id="HedricksRanch" title="Hedricks Ranch"/>
+	        	<heading id="IndianValley" title="Indian Valley"/>
+	        	<heading id="LakeAlmanor" title="Lake Almanor"/>
+	        	<heading id="LastChanceCreek" title="Last Chance Creek"/>
+	        	<heading id="OldCariboo" title="Old Cariboo"/>
+	        	<heading id="Prattville" title="Prattville"/>
+	        	<heading id="Quincy" title="Quincy"/>
 	        </heading>
-	        <heading id="Lakecounty" title="Lake county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
+	        <heading id="CALakecounty" title="Lake county">
+	        	<excl value="OR"/>  <!--There's a Lake Co. in CA and OR -->
+	        	<excl value="Oreg"/>  <!--There's a Lake Co. in CA and OR -->
+	        	<excl value="Oregon"/>  <!--There's a Lake Co. in CA and OR -->
+	        	<excl value="Lill: Island Mound, Lake County"/>
+	        	<synonym value="Lake Co."/>
+	        	<synonym value="CA-Lake"/>
 	            <heading id="CALak194" title="CA-Lak-194"/>
 	            <heading id="CALak203" title="CA-Lak-203"/>
 	            <heading id="CALak140" title="CA-Lak-140">
@@ -9442,8 +9440,6 @@
 	            <heading id="CALak38" title="CA-Lak- 38">
 	              <synonym value="CA-Lak-38"/>
 	            </heading>
-	          </heading>
-	          <heading id="Placenames" title="Place names">
 	            <heading id="UpperLakeRancheriasNS" title="Upper Lake Rancherias (N &amp; S)"/>
 	            <heading id="BankRanch" title="Bank Ranch"/>
 	            <heading id="CacheCreekRancheria" title="Cache Creek Rancheria"/>
@@ -9473,10 +9469,8 @@
 	            <heading id="BucksnortCreek" title="Bucksnort Creek"/>
 	            <heading id="Manakee" title="Manakee"/>
 	            <heading id="WooldridgeRanch" title="Wooldridge Ranch"/>
-	          </heading>
 	        </heading>
 	        <heading id="Placercounty" title="Placer county">
-	          <heading id="Placenames" title="Place names">
 	            <heading id="EastAuburn" title="East Auburn"/>
 	            <heading id="Loomis" title="Loomis"/>
 	            <heading id="MartisValley" title="Martis Valley"/>
@@ -9495,8 +9489,6 @@
 	            </heading>
 	            <heading id="Roseville" title="Roseville"/>
 	            <heading id="FrenchCreek" title="French Creek"/>
-	          </heading>
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CAPla39" title="CA-Pla- 39">
 	              <synonym value="CA-Pla-39"/>
 	            </heading>
@@ -9550,10 +9542,8 @@
 	              <synonym value="Placer County, no loc."/>
 	            </heading>
 	            <heading id="CAPla414" title="CA-Pla-414"/>
-	          </heading>
 	        </heading>
 	        <heading id="Riversidecounty" title="Riverside county">
-	          <heading id="Trinomialsitenames" title="Trinomial site names">
 	            <heading id="CARiv51" title="CA-Riv-51">
 	              <synonym value="Bee Rock Mesa"/>
 	            </heading>
@@ -9637,8 +9627,6 @@
 	            <heading id="CARivNL" title="CA-Riv-NL">
 	              <synonym value="Riverside County, no loc."/>
 	            </heading>
-	          </heading>
-	          <heading id="Placenames" title="Place names">
 	            <heading id="AguanahgaValley" title="Aguanahga Valley"/>
 	            <heading id="IndianWells" title="Indian Wells"/>
 	            <heading id="CabezonReservation" title="Cabezon Reservation"/>
@@ -9660,7 +9648,6 @@
 	            <heading id="TorrosReservation" title="Torros Reservation"/>
 	            <heading id="Temecula" title="Temecula"/>
 	            <heading id="Indio" title="Indio"/>
-	          </heading>
 	        </heading>
 	        <heading id="Lassencounty" title="Lassen county">
 	          <heading id="Trinomialsitenames" title="Trinomial site names">
@@ -14026,7 +14013,15 @@
 	            </heading>
 	          </heading>
 	          <heading id="Placenames" title="Place names">
-	            <heading id="Antler" title="Antler"/> <!-- FIX!  Specify exclusions -->
+	            <heading id="Antler" title="Antler">
+	            	<excl value="Deer"/>
+	            	<excl value="Moose"/>
+	            	<excl value="Reindeer"/>
+	            	<excl value="Doe"/>
+	            	<excl value="Elk"/>
+	            	<excl value="Caribou"/>
+	            	<excl value="Horn"/>
+	          	</heading>
 	            <heading id="Baird" title="Baird"/>
 	            <heading id="Burney" title="Burney">
 	              <heading id="BurneyFalls" title="Burney Falls"/>
@@ -17260,10 +17255,17 @@
 							</heading>
 							<heading id="ScorpionHill" title="Scorpion Hill"/>
 						</heading>
-						<heading id="NVDouglascounty" title="Douglas county">   <!--In NV, OR, & WA; Exclusions needed -->
-							<!-- <synonym value="Douglas"/>   In NV, OR, & WA; Exclusions needed -->
-							<!-- <synonym value="Douglas Co."/>   In NV, OR, & WA; Exclusions needed -->
-							<!-- Exclude "Douglas Place, Douglas Island -->
+						<heading id="NVDouglascounty" title="Douglas county">
+							<excl value="OR"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Ore"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Oregon"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="WA"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Wash"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Washington"/>  <!--There's a Douglas Co. in NV, OR, and WA -->
+							<excl value="Douglas Place"/>
+							<excl value="Douglas Island"/>
+							<synonym value="Douglas"/>
+							<synonym value="Douglas Co."/>
 							<synonym value="PROVENIENCE = Douglas county, Nevada"/>
 							<synonym value="Alp-X-7"/> <!-- I think this is a mistake; Perhaps Alpine County, CA? -->
 							<synonym value="Behind &quot;Mountain House"/>
