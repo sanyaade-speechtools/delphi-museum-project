@@ -576,6 +576,17 @@
 			<heading id="Netsuke" title="Netsuke"/>
 			<heading id="Belt" title="Belt">
 				<synonym value="Belts"/>
+				<excl value="Door Belt"/>
+				<excl value="Door Belts"/>
+				<excl value="Doorbelt"/>
+				<excl value="Doorbelts"/>
+				<excl value="Door-Belt"/>
+				<excl value="Door-Belts"/>
+				<excl value="Door Belt Locks"/>
+				<excl value="Doorbelt Lock"/>
+				<excl value="Doorbelt Locks"/>
+				<excl value="Door-Belt Lock"/>
+				<excl value="Door-Belt Locks"/>
 			</heading>
 			<heading id="Button" title="Button">
 				<synonym value="Buttons"/>
@@ -964,12 +975,15 @@
                 <synonym value="Cap lifter"/>
                 <synonym value="Cap lifters"/>
                 <synonym value="Cap-lifter"/>
-                <synonym value="Cap-lifters"/>
-                <implies facet="Activity_facet" cat="Foodserving"/>			
+                <synonym value="Cap-lifters"/>		
             </heading>
+        	<heading id="CanKeyOpener" title="Can Key Opener">
+        		<synonym value="Can Key Openers"/>
+        		<synonym value="Can-Key Opener"/>
+        		<synonym value="Can-Key Openers"/>
+        	</heading>
             <heading id="Corkscrew" title="Corkscrew">
                 <synonym value="Corkscrews"/>
-                <implies facet="Activity_facet" cat="Foodserving"/>
                 <heading id="SlidingBarrelCorkscrew" title="Sliding Barrel Corkscrew">
                     <synonym value="Sliding Barrel Corkscrews"/>		
                 </heading>
@@ -1770,7 +1784,7 @@
 			<synonym value="Yarn Samples"/>
 		</heading>
 	</heading>
-	<heading id="SculpturedWorks" title="Sculptured Works">
+	<heading id="SculptedWorks" title="Sculpted Works">
 		<heading id="Ossuary" title="Ossuary">
 			<synonym value="Ossuaries"/>
 			<implies facet="Activity_facet" cat="Burial"/>
@@ -1895,16 +1909,16 @@
 				<synonym value="Martingales"/> 				
 			</heading>
 		</heading>
-		<heading id="Awl" title="Awl"> 					
+		<heading id="Awl" title="Awl">
 			<synonym value="Awls"/>
 			<heading id="BasketAwl" title="Basket awl"> 					
 				<synonym value="Basket awls"/> 				
 			</heading>			
 		</heading>
-		<heading id="Chisel" title="Chisel"> 					
+		<heading id="Chisel" title="Chisel">
 			<synonym value="Chisels"/> 				
 		</heading>
-		<heading id="Drill" title="Drill"> 					
+		<heading id="Drill" title="Drill">
 			<synonym value="Drills"/> 				
 		</heading>
 		<heading id="FireStarters" title="Fire starters">
@@ -1922,29 +1936,197 @@
 				<synonym value="Lighters"/>
 			</heading>
 		</heading>
-		<heading id="Key" title="Key"> 					
-			<synonym value="Keys"/>
-			<heading id="BarrelKey" title="Barrel Key"> 					
-				<synonym value="Barrel Keys"/> 
-				<synonym value="Barrell Key"/> 
-				<synonym value="Barrell Keys"/> 			
+		<heading id="LocksAndKeys" title="Locks &amp; Keys"> 
+			<heading id="Keys" title="Keys"> 					
+				<synonym value="Key"/>  <!-- May need exclusions -->
+				<excl value="Key Frame"/>
+				<excl value="Key Lime"/>
+				<excl value="Can Key Opener"/>
+				<!-- <excl value="Unwinding Key"/>  Is this a key or an exclusion candidate ? -->
+				<heading id="BarrelKey" title="Barrel Key">
+					<synonym value="Barrel Keys"/> 
+					<synonym value="Barrell Key"/> 
+					<synonym value="Barrell Keys"/>
+					<synonym value="Pipe Key"/>
+					<synonym value="Pipe Keys"/>
+					<synonym value="Pipe-Key"/>
+					<synonym value="Pipe-Keys"/>
+					<synonym value="Barrel-Key"/>
+					<synonym value="Barrel-Keys"/>
+					<synonym value="Barrell-Key"/> 
+					<synonym value="Barrell-Keys"/>
+				</heading>
+				<heading id="CorrugatedKey" title="Corrugated Key">
+					<synonym value="Corrugated Keys"/> 
+					<synonym value="Corrugated-Key"/> 
+					<synonym value="Corrugated-Keys"/>
+				</heading>
+				<heading id="DoubleBittedKey" title="Double-Bitted Key">
+					<synonym value="Double-Bitted Keys"/> 
+					<synonym value="Double Bitted Key"/> 
+					<synonym value="Double Bitted Keys"/>
+				</heading>
+				<heading id="FlatKey" title="Flat Key">
+					<synonym value="Flat Keys"/> 
+					<synonym value="Flat-Key"/> 
+					<synonym value="Flat-Keys"/>
+				</heading>
+				<heading id="FoldingKey" title="Folding Key">
+					<synonym value="Folding Keys"/> 
+					<synonym value="Folding-Key"/> 
+					<synonym value="Folding-Keys"/>
+				</heading>
+				<heading id="NightKey" title="Night Key">
+					<synonym value="Night Keys"/> 
+					<synonym value="Night-Key"/> 
+					<synonym value="Night-Keys"/>
+				</heading>
+				<heading id="SkeletonKey" title="Skeleton Key">
+					<synonym value="Skeleton Keys"/> 		
+				</heading>
+				<heading id="StopKey" title="Stop Key">
+					<synonym value="Stop Keys"/> 
+					<synonym value="Stop-Key"/> 
+					<synonym value="Stop-Keys"/>
+				</heading>
+				<heading id="WardedKey" title="Warded Key">
+					<synonym value="Warded Keys"/> 
+					<synonym value="Warded-Key"/> 
+					<synonym value="Warded-Keys"/>
+				</heading>
+				<heading id="WingKey" title="Wing Key">
+					<synonym value="Wing Keys"/> 
+					<synonym value="Wing-Key"/> 
+					<synonym value="Wing-Keys"/>
+				</heading>
 			</heading>
-			<heading id="SkeletonKey" title="Skeleton Key"> 					
-				<synonym value="Skeleton Keys"/> 		
-			</heading>		
+			<heading id="Locks" title="Locks">
+				<synonym value="Lock"/>
+				<excl value="Hair in lock"/>
+				<excl value="Lock of Hair"/>
+				<excl value="Falling locks"/>
+				<excl value="Locks down neck"/>
+				<excl value="Locks falling down neck"/>
+				<excl value="Falling in two locks"/>
+				<excl value="Scalp lock"/>
+				<excl value="Flint-lock"/>
+				<excl value="Flint lock"/>
+				<excl value="Flintlock"/>
+				<heading id="BankLocks" title="Bank Locks">
+					<synonym value="Bank Lock"/> 
+					<heading id="Safe" title="Safe">  <!-- Needs exclusions -->
+						<synonym value="Safes"/> 
+					</heading>
+					<heading id="Vault" title="Vault">  <!-- Needs exclusions -->
+						<synonym value="Vaults"/> 
+					</heading>		
+				</heading>
+				<heading id="BitKeyLock" title="Bit-Key Lock">
+					<synonym value="Bit-Key Locks"/>
+					<synonym value="Bit Key Lock"/>
+					<synonym value="Bit Key Locks"/>
+					<synonym value="Bitkey Lock"/>
+					<synonym value="Bitkey Locks"/>
+				</heading>
+				<heading id="CombinationLock" title="Combination Lock">
+					<synonym value="Combination Locks"/>
+					<synonym value="Dial Lock"/>
+					<synonym value="Dial Locks"/>
+					<synonym value="Permutation Lock"/>
+					<synonym value="Permutation Locks"/>
+					<synonym value="Puzzle Lock"/>
+					<synonym value="Puzzle Locks"/>
+				</heading>
+				<heading id="CutLock" title="Cut Lock">
+					<synonym value="Cut Locks"/>
+				</heading>
+				<heading id="CylinderLock" title="Cylinder Lock">
+					<synonym value="Cylinder Locks"/>
+				</heading>
+				<heading id="DeadBoltLock" title="Dead Bolt">
+					<synonym value="Dead Bolts"/>
+					<synonym value="Deadbolt"/>
+					<synonym value="Deadbolts"/>
+					<synonym value="Dead-Bolt"/>
+					<synonym value="Dead-Bolts"/>	
+					<synonym value="Dead Bolt Lock"/>
+					<synonym value="Dead Bolt Locks"/>
+					<synonym value="DeadBolt Lock"/>
+					<synonym value="DeadBolt Locks"/>
+					<synonym value="Dead-Bolt Lock"/>
+					<synonym value="Dead-Bolt Locks"/>
+				</heading>
+				<heading id="DoorBeltLock" title="Door Belt">
+					<synonym value="Door Belts"/>
+					<synonym value="Doorbelt"/>
+					<synonym value="Doorbelts"/>
+					<synonym value="Door-Belt"/>
+					<synonym value="Door-Belts"/>
+					<synonym value="Door Belt Locks"/>
+					<synonym value="Doorbelt Lock"/>
+					<synonym value="Doorbelt Locks"/>
+					<synonym value="Door-Belt Lock"/>
+					<synonym value="Door-Belt Locks"/>
+				</heading>
+				<heading id="HaspLock" title="Hasp Lock">
+					<synonym value="Hasp Locks"/>
+				</heading>
+				<heading id="MortiseLock" title="Mortise Lock">
+					<synonym value="Mortise Locks"/>
+					<synonym value="Mortice Lock"/>
+					<synonym value="Mortice Locks"/>
+					<synonym value="Mortise-Lock"/>
+					<synonym value="Mortise-Locks"/>
+					<synonym value="Mortice-Lock"/>
+					<synonym value="Mortice-Locks"/>
+				</heading>
+				<heading id="NightLatch" title="Night Latch">
+					<synonym value="Night Latches"/>
+					<synonym value="Night-Latch"/>
+					<synonym value="Night-Latches"/>
+					<synonym value="Dead Latch"/>
+					<synonym value="Dead Latches"/>
+					<synonym value="Dead-Latch"/>
+					<synonym value="Dead-Latches"/>
+				</heading>
+				<heading id="Padlock" title="Padlock">
+					<synonym value="Padlocks"/>
+				</heading>
+				<heading id="StraightLock" title="Straight-Lock">
+					<synonym value="Straight-Locks"/>
+					<synonym value="Straight Lock"/>
+					<synonym value="Straight Locks"/>
+					<synonym value="Straightlock"/>
+					<synonym value="Straightlocks"/>
+				</heading>
+				<heading id="TimeLock" title="Time-Lock">
+					<synonym value="Time-Locks"/>
+					<synonym value="Timelock"/>
+					<synonym value="Timelocks"/>
+				</heading>
+				<heading id="TubularLock" title="Tubular-Lock">
+					<synonym value="Tubular-Locks"/>
+					<synonym value="Tubular Lock"/>
+					<synonym value="Tubular Locks"/>
+					<synonym value="Tube-Lock"/>
+					<synonym value="Tube-Locks"/>
+					<synonym value="Tube Lock"/>
+					<synonym value="Tube Locks"/>
+				</heading>
+			</heading>
 		</heading>
-		<heading id="MaintenanceRepair" title="Maintenance &amp; Repair"> 					
-			<heading id="Sharpener" title="Sharpener"> 					
+		<heading id="MaintenanceRepair" title="Maintenance &amp; Repair">
+			<heading id="Sharpener" title="Sharpener">
 				<synonym value="Sharpeners"/> 				
 			</heading>
-			<heading id="Whetstone" title="Whetstone"> 					
+			<heading id="Whetstone" title="Whetstone">
 				<synonym value="Whetstones"/> 				
 			</heading>				
 		</heading>
-		<heading id="Rope" title="Rope"> 					
+		<heading id="Rope" title="Rope">
 			<synonym value="Ropes"/> 				
 		</heading>
-		<heading id="Sickle" title="Sickle"> 					
+		<heading id="Sickle" title="Sickle">
 			<synonym value="Sickles"/> 				
 		</heading>
 		<heading id="StoneTools" title="Stone tools">
@@ -2068,19 +2250,17 @@
 	</heading>
 	
 	<!-- The following were migrated from Activity or Context and need to be filed above -->
-        <heading id="CookingStove" title="Cooking Stove"> 					
+        <heading id="CookingStove" title="Cooking Stove">
 			<synonym value="Cooking Stoves"/> 	
 			<implies facet="Activity_facet" cat="Foodpreparation"/>			
 		</heading>
-		
-        
-		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->			
+		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->
 			<synonym value="Abaci"/>
 			<synonym value="Abacuses"/>
 			<synonym value="Counting Frame"/>
 			<implies facet="Activity_facet" cat="CommerceAndTrade"/>			
 		</heading>
-		<heading id="Counter" title="Counter"> 					
+		<heading id="Counter" title="Counter">
 			<synonym value="Counters"/>
 			<implies facet="Activity_facet" cat="CommerceAndTrade"/>				
 		</heading>
