@@ -698,18 +698,13 @@
 						<!-- DUPE BAD - needs disambiguation or clarification.
 						     The other version is much richer, and should be merged with this one. -->
 						<heading id="Maidu" title="Maidu">
+							<synonym value="Maidu (?)"/>
+							<synonym value="Maidu (uncertain)"/>
 							<heading id="MaiduNishiam" title="Maidu, Nishiam"/>
 							<heading id="Concow" title="Concow"/>
 							<heading id="NortheasternMaidu" title="Northeastern Maidu"/>
-							<!-- We should reconsider modeling these "uncertain" categories, to simply
-									 associate the parent with no child. -->
-							<heading id="Maiduuncertain" title="Maidu (uncertain)">
-								<synonym value="Maidu (?)"/>
-								<!-- DUPE - needs disambiguation or clarification -->
-								<heading id="Nisenan" title="Nisenan (?)"/>
-							</heading>
-							<!-- DUPE - needs disambiguation or clarification -->
 							<heading id="Nisenan" title="Nisenan">
+								<synonym value="Nisenan (?)"/>
 								<synonym value="Southern Maidu"/>
 							</heading>
 						</heading>
@@ -764,15 +759,25 @@
 						</heading>
 						<heading id="Diegueno" title="Diegueño">
 							<synonym value="Diegueno"/>
-							<heading id="DieguenoNorthern" title="Diegueno, Northern"/>
-							<heading id="Kumeyaay" title="Kumeyaay"/>
-							<heading id="SouthernDiegueno" title="Southern Diegueno"/>
-							<heading id="NorthernDiegueno" title="Northern Diegueno"/>
 							<heading id="Kamia" title="Kamia"/>
+							<heading id="Kumeyaay" title="Kumeyaay"/>
+							<heading id="NorthernDiegueno" title="Northern Diegueno">
+								<synonym value="Diegueno, Northern"/>
+								<synonym value="Diegueño, Northern"/>
+								<synonym value="Diegueno: Northern"/>
+								<synonym value="Diegueño: Northern"/>
+							</heading>
+							<heading id="SouthernDiegueno" title="Southern Diegueno">
+								<synonym value="Diegueno, Southern"/>
+								<synonym value="Diegueño, Southern"/>
+								<synonym value="Diegueno: Southern"/>
+								<synonym value="Diegueño: Southern"/>
+							</heading>
 						</heading>
 						<heading id="Cupeo" title="Cupeo">
 							<!-- DUPE - needs disambiguation or clarification -->
-							<heading id="Cupeno" title="Cupeno">
+							<heading id="Cupeno" title="Cupeño">
+								<synonym value="Cupeno"/>
 								<synonym value="Agua Caliente"/>
 							</heading>
 						</heading>
@@ -843,15 +848,13 @@
 								<synonym value="S Pomo"/>
 							</heading>
 							<heading id="LittleLake" title="Little Lake"/> -->
-							<!-- We should reconsider modeling these "uncertain" categories, to simply
-									 associate the parent with no child. -->
-					<!-- 		<heading id="Pomouncertain" title="Pomo (uncertain)">
-								<synonym value="Pomo (?)"/>
-							</heading> 
+					<!-- 		
 						</heading>-->
 						</note>
 						<heading id="Pomo" title="Pomo">
 							<synonym value="Poma"/>
+							<synonym value="Pomo (?)"/>
+							<synonym value="Pomo (uncertain)"/>
 							<heading id="Kashaya" title="Kashaya">
 								<synonym value="Kashia"/>
 								<synonym value="Kacia"/>
@@ -1165,39 +1168,26 @@
 						</heading>
 						<heading id="RoundValleyReservation" title="Round Valley Reservation"/>
 						<heading id="Wiyot" title="Wiyot">
+							<!-- DUPE - matches synonymn in another category. Needs disambiguation or clarification -->
 							<synonym value="So-lot-luck"/>
 							<synonym value="So-lah-te-luk"/>
 							<synonym value="Wishosk"/>
-							<heading id="LowerMadRiver" title="Lower Mad River">
+							<synonym value="Viard"/>
+							<heading id="LowerMadRiver" title="Lower Mad River Wiyot">
 								<synonym value="da-sulatelu"/>
 								<synonym value="Batawat"/>
-								<synonym value="Wishosk"/>
 							</heading>
-							<heading id="HumboldtBay" title="Humboldt Bay">
-								<synonym value="Viard"/>
-								<synonym value="Wishosk"/>
-							</heading>
-							<heading id="EelRiver" title="Eel River">
-								<!-- DUPE - synonym matches another category. Needs disambiguation or clarification -->
-								<synonym value="Wiyot"/>
-								<synonym value="Viard"/>
-							</heading>
+							<heading id="HumboldtBay" title="Humboldt Bay Wiyot"/>
+							<heading id="EelRiver" title="Eel River Wiyot"/>
 						</heading>
 						<heading id="Yahi" title="Yahi">
-							<!-- We should reconsider modeling these "uncertain" categories, to simply
-									 associate the parent with no child. -->
-							<heading id="Yahiuncertain" title="Yahi (uncertain)">
-								<synonym value="Yahi(?)"/>
-							</heading>
+							<synonym value="Yahi(?)"/>
+							<synonym value="Yahi (uncertain)"/>
 						</heading>
-						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Yana" title="Yana">
+							<synonym value="Yana (?)"/>
+							<synonym value="Yana (uncertain)"/>
 							<heading id="NorthernYana" title="Northern Yana"/>
-							<!-- We should reconsider modeling these "uncertain" categories, to simply
-									 associate the parent with no child. -->
-							<heading id="Yanauncertain" title="Yana (uncertain)">
-								<synonym value="Yana (?)"/>
-							</heading>
 						</heading>
 						<heading id="Yuki" title="Yuki">
 							<synonym value="Yuke"/>
@@ -1297,7 +1287,6 @@
 								<synonym value="Coast Yurok"/>
 							</heading>
 						</heading>
-						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Salinan" title="Salinan"/>
 						<heading id="Sinkyone" title="Sinkyone">
 							<synonym value="Kaikomas"/>
@@ -1396,20 +1385,15 @@
 							<synonym value="Lessics"/>
 						</heading>
 						<heading id="Nongatl" title="Nongatl">
-								<synonym value="Noan'-kakhl"/>
-								<synonym value="Nungkah"/>
-								<synonym value="Kittel'"/>
-								<synonym value="Si'-az"/>
-								<synonym value="Saia"/>
-								<synonym value="Siaws"/>
-								<synonym value="S-yars"/>
-								<synonym value="Siahs"/>
-								<synonym value="Sians"/>
-							</heading>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Shasta" title="Shasta">
-							<!-- DUPE - needs disambiguation or clarification -->
-							<heading id="NewRiverShasta" title="New River Shasta"/>
+							<synonym value="Noan'-kakhl"/>
+							<synonym value="Nungkah"/>
+							<synonym value="Kittel'"/>
+							<synonym value="Si'-az"/>
+							<synonym value="Saia"/>
+							<synonym value="Siaws"/>
+							<synonym value="S-yars"/>
+							<synonym value="Siahs"/>
+							<synonym value="Sians"/>
 						</heading>
 						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Whilkut" title="Whilkut">
@@ -1512,27 +1496,26 @@
 							<synonym value="Ylackas"/>
 							<synonym value="Wilakke"/>
 						</heading>
-					<!--	<heading id="Wintu" title="Wintu">     Merge these, then delete 
-							<synonym value="Northern Wintun"/>
-							<heading id="Wintuntribes" title="Wintun tribes"/>
-							<heading id="Wintuuncertain" title="Wintu (uncertain)"/>
-							<heading id="McCloudRiverIndian" title="McCloud River Indian"/>
-							<heading id="MiddleWintun" title="Middle Wintun"/>
-						</heading> -->
 						<heading id="Wintu" title="Wintu">
+							<synonym value="Wintun tribes"/>
+							<synonym value="Wintu (uncertain)"/>
 							<synonym value="Win-toon"/>
 							<synonym value="Northern Wintun"/>
 							<synonym value="Mountain Diggers"/>
-							<!-- DUPE of category names - needs disambiguation or clarification -->
-							<synonym value="Shasta"/>
 							<synonym value="Trinity Wintu"/>
 							<synonym value="Trinity"/>
 							<synonym value="Xatukwi-wa"/>
 							<synonym value="Khatukeyu"/>
 							<heading id="Nomtipom" title="Nomtipom"/>
+							<heading id="ShastaWintu" title="Shasta Wintu">
+								<synonym value="Shasta"/>
+								<heading id="NewRiverShastaWintu" title="New River Shasta Wintu"/>
+							</heading>
 							<heading id="Wenemem" title="Wenem-em">
 								<synonym value="Wenemem"/>
 							</heading>
+							<heading id="McCloudRiverIndian" title="McCloud River Indian"/>
+							<heading id="MiddleWintun" title="Middle Wintun"/>
 							<heading id="Dawpom" title="Dawpom"/>
 							<heading id="elpom" title="?elpom"/>
 							<heading id="abalpom" title="'abal-pom"/>
@@ -1550,17 +1533,14 @@
 						<heading id="Kawaiisu" title="Kawaiisu"/>
 						<heading id="Paiute" title="Paiute">
 							<heading id="NorthernPaiute" title="Northern Paiute">
+								<synonym value="Northern Paiute (?)"/>
+								<synonym value="Northern Paiute (uncertain)"/>
 								<synonym value="Paviotso"/>
 								<heading id="Wadadokado" title="Wadadokado"/>
 								<heading id="FallonPaiute" title="Fallon Paiute">
 									<heading id="NorthernPaiuteTovusidokadolivingatFallonReservationNevada" title="Northern Paiute (Tovusidokado), living at Fallon Reservation, Nevada."/>
 								</heading>
 								<heading id="PyramidLakePaiute" title="Pyramid Lake Paiute"/>
-								<!-- We should reconsider modeling these "uncertain" categories, to simply
-								     associate the parent with no child. -->
-								<heading id="NorthernPaiuteuncertain" title="Northern Paiute (uncertain)">
-									<synonym value="Northern Paiute (?)"/>
-								</heading>
 								<heading id="NorthernPaiuteNevada" title="Northern Paiute, Nevada"/>
 								<heading id="MonoLakePaiute" title="Mono Lake Paiute">
 									<heading id="NorthernPaiutekutsavidokadoMonoLake" title="Northern Paiute (kutsavi dokado), Mono Lake"/>
@@ -1574,17 +1554,14 @@
 						</heading>
 						<heading id="Shoshone" title="Shoshone">
 							<synonym value="Shoshoni"/>
+							<synonym value="Shoshone (?)"/>
+							<synonym value="Shoshone (uncertain)"/>
 							<heading id="EasternShoshone" title="Eastern Shoshone"/>
 							<heading id="Shoshoneantribes" title="Shoshonean tribes"/>
 							<heading id="WesternShoshone" title="Western Shoshone"/>
 							<heading id="Panamint" title="Panamint">
 								<synonym value="Koso"/>
 								<synonym value="Timbasha"/>
-							</heading>
-							<!-- We should reconsider modeling these "uncertain" categories, to simply
-									 associate the parent with no child. -->
-							<heading id="Shoshoneuncertain" title="Shoshone (uncertain)">
-								<synonym value="Shoshone (?)"/>
 							</heading>
 							<heading id="WindRiverShoshoneWyoming" title="Wind River Shoshone, Wyoming"/>
 						</heading>
