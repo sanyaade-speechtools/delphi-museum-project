@@ -16,6 +16,7 @@
 		Escutcheon
 		    keyhole escutcheon
 		feather-dart headdress
+			<implies facet="Materials_facet" cat="Feathers"/>
 		Fireplace tools
 		    Fireplace fan piece (what is this?)
 		Fish knife
@@ -56,9 +57,28 @@
 	<heading id="ArchitecturalElements" title="Architectural Elements">
 		<synonym value="Architectural Element"/>
 		<heading id="BuildingsOrStructures" title="Buildings or Structures" nomatch="true">
+			<heading id="Dancehouse" title="Dancehouse">
+				<synonym value="Dancehouses"/>
+				<synonym value="Dance house"/>
+				<synonym value="Dance houses"/>
+				<synonym value="Dance-house"/>
+				<synonym value="Dance-houses"/>
+			</heading>
 			<heading id="Granary" title="Granary">
 				<synonym value="Granaries"/>
 				<implies facet="Activity_facet" cat="FoodStorage"/>
+			</heading>
+			<heading id="House" title="House">
+				<synonym value="Houses"/>
+				<implies facet="Activity_facet" cat="FoodStorage"/>
+			</heading>
+			<excl value="Goldweight"/>  <!-- Ashanti goldweights are sometimes made with a shield motif -->
+			<heading id="Roundhouse" title="Roundhouse">
+				<synonym value="Roundhouses"/>
+				<synonym value="Round house"/>
+				<synonym value="Round houses"/>
+				<synonym value="Round-house"/>
+				<synonym value="Round-houses"/>
 			</heading>
 			<heading id="Tipi" title="Tipi">
 				<synonym value="Tipis"/>
@@ -118,7 +138,6 @@
 			<heading id="Shield" title="Shield"> 					
 				<synonym value="Shields"/>
 				<excl value="Goldweight"/>  <!-- Ashanti goldweights are sometimes made with a shield motif -->
-				<excl value="Ashanti"/>  <!-- Ashanti goldweights are sometimes made with a shield motif -->
 				<heading id="Boss" title="Boss"> 					
 					<synonym value="Bosses"/> <!-- exclude managers -->	
 				</heading>	
@@ -132,7 +151,13 @@
 				<synonym value="Armor-piercing shells"/>
 			</heading>
 			<heading id="Arrow" title="Arrow"> 					
-				<synonym value="Arrows"/>		
+				<synonym value="Arrows"/>
+				<heading id="PartsOfArrow" title="Parts of arrow" nomatch="true"> 					
+					<heading id="Fletching" title="Fletching"> 					
+						<synonym value="Fletchings"/>
+						<implies facet="Materials_facet" cat="Feathers"/>
+					</heading>			
+				</heading>
 			</heading>
 			<heading id="Bullet" title="Bullet"> 					
 				<synonym value="Bullets"/>			
@@ -361,7 +386,18 @@
 				<synonym value="Handstamps"/> 				
 			</heading>
 			<heading id="Painting" title="Painting"> 					
-				<synonym value="Paintings"/> 				
+				<synonym value="Paintings"/>
+				<heading id="Diptych" title="Diptych">
+					<synonym value="Diptychs"/>
+				</heading>
+				<heading id="Semi-diptych" title="Semi-diptych">
+					<synonym value="Semi-Diptychs"/>
+					<synonym value="SemiDiptych"/>
+					<synonym value="SemiDiptychs"/>
+				</heading>
+				<heading id="Triptych" title="Triptych">
+					<synonym value="Triptychs"/>
+				</heading>
 			</heading>
 			<heading id="Photograph" title="Photograph">
 				<synonym value="Photographs"/>				
@@ -1865,7 +1901,22 @@
 				</heading>			
 			</heading>
 			<heading id="Yoke" title="Yoke"> 					
-				<synonym value="Yokes"/> 				
+				<synonym value="Yokes"/>
+				<excl value="Blouse"/>
+				<excl value="Blouses"/>
+				<excl value="Blusa"/>
+				<excl value="Blusas"/>
+				<excl value="Dress"/>
+				<excl value="Dresses"/>
+				<excl value="Huipil"/>
+				<excl value="Huipils"/>
+				<excl value="Netsuke"/>
+				<excl value="Parka"/>
+				<excl value="Parkas"/>
+				<excl value="Shirt"/>
+				<excl value="Shirts"/>
+				<excl value="Tunic"/>
+				<excl value="Tunics"/>
 			</heading>
 		</heading>
 		<heading id="HorseTack" title="Horse Tack">
@@ -2638,6 +2689,7 @@
 			</heading>
 			<heading id="FeatheredStick" title="Feathered Stick"> 					
 				<synonym value="Feathered Sticks"/>
+				<implies facet="Materials_facet" cat="Feathers"/>
 				<implies facet="Activity_facet" cat="ReligionSpirituality"/>
 			</heading>
 			<heading id="Charmstone" title="Charmstone"> 					
