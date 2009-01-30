@@ -64,7 +64,7 @@ We'll consider each of these in turn, but first will cover some utilities that w
 ==DB Connection configuration==
 We need to configure the information about where the DB is, what the database is called, and what the permissions are. Right now, we have tested connections to MySQL and MSSQL databases (the former is what Delphi uses, and the latter is used by some CMS and DAM systems,  including Extensis Portfolio and Gallery Systems' TMS). For JDBC, the string is fairly straightforward. Here are examples of the two supported protocols:
 {{{
-"jdbc:mysql://sierra.ist.berkeley.edu:3031/pahma_dev?user=dbuser&password=xxx"
+"jdbc:mysql://server.domain.edu:1234/dbname?user=dbuser&password=xxx"
 "jdbc:sqlserver://169.123.456.789;databaseName=TMS;user=dbuser;password=xxx"
 }}}
 The "jdbc" string identifies our connection protocol, and is required. The second token identifies the DB type, an also determines the format of the rest of the string. An server must be specified (with a name or IP address). Depending on the DB, you use different parameters to specify the database name, user and password.
