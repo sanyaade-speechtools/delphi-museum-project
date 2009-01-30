@@ -1,12 +1,11 @@
 #summary Describes current work to improve tools usability and workflow for deploying Delphi.
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="1" />
 
 = Introduction =
 
 The tools began as a set of core capabilities for NLP, text mining, statistical reporting, etc., with a minimal UI to invoke the tools. This required considerable knowledge of the system to be useful, and so was not very user-friendly. We have been working to remedy this with a number of projects, mostly around refactoring code, conducting a simple needs assessment and application redesign, and then looking at other workflow issues (primarily around database access). Notes for this are gathered below.
-
-=Ideas for Workspace model for Delphi tools=
-==Basic Rework (mostly complete)==
+----
+=Reworking Workspace model for Delphi tools(mostly complete)=
 _Note: this has mostly be accomplished as of Jan 2009. We reworked the UI to be project based. The tool remembers the most recent project. Projects contain path references to resources, and reload the resources when the project is opened. Menus are now structured around verbs, although it has been difficult to choose menu labels for actions like _{perform the text-mining function on the object metadata to extract the concept-associations for concepts represented in the referenced ontology}_. We also refactored a lot of code to make maintenance easier._
 
 The current Delphi tools require users to load resources in a specific order, with little help on the dependencies. There is also no help on recently opened files, and similar functionality. A major problem is the lack of obvious workflow for a given project.
@@ -52,8 +51,8 @@ Rework menus based upon above. E.g.,
   * Image Paths
     * As SQL Insert Statement
     * As SQL Loadfile (later with option to connect to DB). Incremental?
-
-==Rework to connect directly to databases (in progress)==
+----
+=Reworking Tools to connect directly to databases (in progress)==
 There are a number of steps in the workflow that are cumbersome, and require some care from a human to run sql commands or other scripts from the command line. This makes it harder for museum folks to handle the workflow themselves. These steps include:
   # Extracting metadata from the existing CMS database
   # Running filters and noise reduction tools to remove extraneous metadata and to elide certain classes of strings (like currencies).
@@ -61,7 +60,7 @@ There are a number of steps in the workflow that are cumbersome, and require som
   # Loading concept associations (the results of text mining) into a database.
 
 We'll consider each of these in turn, but first will cover some utilities that will be needed for any of this:
-===DB Connection configuration===
+==DB Connection configuration==
 We need to configure the information about where the DB is, what the database is called, and what the permissions are. Right now, we have tested connections to MySQL and MSSQL databases (the former is what Delphi uses, and the latter is used by some CMS and DAM systems,  including Extensis Portfolio and Gallery Systems' TMS). For JDBC, the string is fairly straightforward. Here are examples of the two supported protocols:
 {{{
 "jdbc:mysql://sierra.ist.berkeley.edu:3031/pahma_dev?user=dbuser&password=xxx"
