@@ -1395,7 +1395,6 @@
 							<synonym value="Siahs"/>
 							<synonym value="Sians"/>
 						</heading>
-						<!-- DUPE - needs disambiguation or clarification -->
 						<heading id="Whilkut" title="Whilkut">
 							<synonym value="Redwood Indian"/>
 						</heading>
@@ -2212,15 +2211,34 @@
 			<heading id="Japodes" title="Japodes"/>
 			<heading id="Liburni" title="Liburni"/>
 		</heading>
-	</heading>
-	<heading id="ArchaeologicalCultures" title="Archaeological cultures">
-		<heading id="AmericanArchaeologicalCultures" title="American Archaeological cultures">
+		<heading id="NorthAmericanCultures" title="North American Cultures">
 			<heading id="Anasazi" title="Anasazi"/>
 			<heading id="Hohokam" title="Hohokam"/>
-				<implies facet="Location_facet" cat="Arizona"/>
+			<implies facet="Location_facet" cat="Arizona"/>
 			<heading id="Mogollon" title="Mogollon"/>
 			<heading id="MountainCahuilla" title="Mountain Cahuilla"/>
 			<heading id="Patayan" title="Patayan"/>
 		</heading>		
 	</heading>
+	<!--<heading id="AncientCultures" title="AncientCultures">
+		<heading id="EuropeanPaleolithic" title="European Paleolithic"/>
+		<heading id="AncientPeru" title="Ancient Peru">
+			<heading id="UhleExpeditions" title="Uhle Expeditions"/>
+		</heading>
+		<heading id="AncientEgypt" title="Ancient Egypt">
+			<heading id="ReisnerExpeditions" title="Reisner Expeditions"/>
+		</heading>
+		<heading id="ClassicalMediterranean" title="Classical Mediterranean Region">
+			<heading id="ClassicalEtruria" title="Classical Etruria">
+				<synonym value="Etruscan"/>
+			</heading>
+			<heading id="ClassicalGreece" title="Classical Greece"/>
+			<heading id="ClassicalRome" title="Classical Rome">
+				<synonym value="Imperial Rome"/>
+				<synonym value="Republican Rome"/>
+				<synonym value="Roman Republic"/>
+			</heading>
+		</heading>
+		<heading id="Mesopotamia" title="Mesopotamia"/>
+	</heading> -->
 </taxonomy>
