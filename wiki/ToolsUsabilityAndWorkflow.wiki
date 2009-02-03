@@ -71,3 +71,45 @@ The "jdbc" string identifies our connection protocol, and is required. The secon
 
 Initially, we will just configure this as a string. although later we could expand on this to separately configure the protocol, machine, db, etc. and make it easier for users.
 Note that we may not be using the same DB for different functions, especially in the case of the source for object metadata versus the Delphi DBs used.
+
+Note that we may not be using the same DB for different functions, especially in the case of the source for object metadata versus the Delphi DBs used. There are at least four connections we want to maintain:
+  # CMS DB for object MD. May be multiples for some systems (e.g., TMS has multiple DBs that store info).
+  # Image information DB. May be in Object Info DB, or in a separate DAM.
+  # Delphi for ontologies. May be the running Delphi system, or may not
+  # Delphi for running system (may be multiple, given tiered WebFarm scenario).
+
+For 1) we need to describe authentication to CMS and assume we can get at multiple DBs in the CMS. Thus, describe server, protocol, user, password, and configure the DBs when we describe the extraction model (in a separate manner). Raises questions:
+
+  * What is the format of the DB extraction config (XML, DB via form, etc.). Assume XML for now, and that it looks something like ColConfig.xml.
+  * What is the relationship of the DB extraction file to ColConfig.xml? Assume that we need to have the same set of columns (destinations for DB extraction, sources for MD mining). Can we unify these? E.g., can we describe sources in DB for each column in ColConfig.xml? Maybe, but it could get messy for those tables/columns in DB that split into various columns depending upon the types. However, rather than naming the columns as strings, we could enforce coherence. ColConfig validation would require that columns named in DB extraction are defined for processing, and that there is a source defined for each processing column. Implies a unified configuration with two sections:
+{{{
+<delphiMetadataConfig>
+  <dbSourceInfo>
+    <dbServerInfo protocol="{mysql,sqlserver}" location="{name or address}" port="any port specifier"
+                user="username" passwd="pass" />
+    <source>
+      <table db="dbname" name="tablename" joinkey="colname">
+        <column name="colname" destination="procColName">
+          <filter ... />
+        </column>
+      <table>
+    </source>
+  </dbSourceInfo>
+  <!-- Note that the following is largely as is from ColConfig.xml -->
+  <processingInfo>
+    <colSep value=","/>
+    <encoding value="UTF-8"/>
+    <colInfo name="ObjectType">
+      ...
+    </colInfo>
+    ...
+  </processingInfo>
+</delphiMetadataConfig>
+}}}
+For the source info, we need to consider a join that produces a set of rows, within which we get columns. The columns are named or indexed, and note that some are from different tables. 
+
+Also, still need to figure out:
+  * filters: regexp to disqualify a row
+  * qualifiers: regexp to (positively) qualify which rows are selected
+  * noise reduction: regexp to remove strings from results
+  * obfuscation: regexp to replace strings (like currency values) in results
