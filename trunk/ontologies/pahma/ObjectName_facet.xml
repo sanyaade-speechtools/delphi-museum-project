@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<taxonomy id="ObjectName" title="Object Name or Type">
+<taxonomy id="ObjectName" title="Object Name">
 	<notes><!-- This is a temporary notes section.
 	    Terms to be added:
 		ashtray
@@ -8,11 +8,13 @@
 		bones
 		   wildcat bones
 		bonnet
+		bullroarer
 		button-seal
 		cheese scoop
 		cocoon rattle
 		curling iron
 		doily
+		Easter Egg
 		Escutcheon
 		    keyhole escutcheon
 		feather-dart headdress
@@ -246,6 +248,8 @@
 				</heading>
 				<heading id="Swords" title="Swords">
 					<synonym value="Sword"/>
+					<excl value="Weaving"/>
+					<excl value="Weaver's Sword"/>
 					<implies facet="Activity_facet" cat="Metallurgy"/>
 					<heading id="TypesOfSwords" title="Types of swords" nomatch="true">
 						<heading id="Cutlass" title="Cutlass">
@@ -291,6 +295,13 @@
 						</heading>
 						<heading id="Pommel" title="Pommel">
 							<synonym value="Pommel"/>
+						</heading>
+						<heading id="SwordGuard" title="Sword Guard">
+							<synonym value="Swordguard"/>
+							<synonym value="Swordguards"/>
+							<synonym value="Sword Guard"/>
+							<synonym value="Sword Guards"/>
+							<synonym value="Tsuba"/>
 						</heading>
 						<heading id="Tang" title="Tang">
 							<synonym value="Tangs"/>
@@ -927,303 +938,422 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Cradle" title="Cradle">
-		<synonym value="Cradles"/>
-		<implies facet="Activity_facet" cat="Childrearing"/>
-	</heading>
-    <heading id="FoodPreparationItems" title="Food Preparation Items" nomatch="true">
-        <synonym value="Food Preparation"/>
-        <synonym value="Preparing Food"/>
-        <synonym value="Cooking"/>
-        <heading id="Platter" title="Platter">
-            <synonym value="Platters"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>			
-        </heading>
-        <heading id="Dish" title="Dish">
-            <synonym value="Dishes"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>
-            <heading id="FeastDish" title="Feast Dish"> 					
-                <synonym value="Feast Dishes"/> 				
-            </heading>
-        </heading>
-        <heading id="Plate" title="Plate">
-            <synonym value="Plates"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>
-            <excl value="photographic plate"/>
-            <excl value="photographic plate"/>
-        	<excl value="Silver plate"/>
-        	<excl value="Silver-plate"/>
-        	<excl value="Silver plated"/>
-        	<excl value="Silver-plated"/>
-        	<excl value="Silverplate"/>
-        	<excl value="Silverplated"/>
-        	<excl value="Gold plate"/>
-        	<excl value="Gold-plate"/>
-        	<excl value="Gold plated"/>
-        	<excl value="Gold-plated"/>
-        	<excl value="Goldplate"/>
-        	<excl value="Goldplated"/>
-        	<excl value="Copper plate"/>
-        	<excl value="Copper-plate"/>
-        	<excl value="Copper plated"/>
-        	<excl value="Copper-plated"/>
-        	<excl value="Copperplate"/>
-        	<excl value="Copperplated"/>
-            <excl value="negative"/>
-            <excl value="negatives"/>
-        </heading>
-        <heading id="Ladle" title="Ladle">
-            <synonym value="Ladles"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>			
-        </heading>
-        <heading id="Bowl" title="Bowl">
-            <synonym value="Bowls"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>  <!-- need complex inferentiation to remove ritual bowls, etc. -->
-        </heading>
-        <heading id="Chafingdish" title="Chafing dish">
-            <synonym value="Chafing dishes"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>		
-        </heading>
-        
-        <heading id="Canteen" title="Canteen"> 					
-            <synonym value="Canteens"/>
-            <implies facet="Activity_facet" cat="Foodstorage"/>			
-        </heading>
-        <heading id="Olla" title="Olla">
-            <synonym value="Ollas"/>
-            <implies facet="Activity_facet" cat="Foodstorage"/>
-        </heading>
-        <heading id="Amphora" title="Amphora">
-            <synonym value="Amphoras"/>
-            <synonym value="Amphorae"/>
-            <implies facet="Activity_facet" cat="Foodstorage"/>
-        </heading>
-        <heading id="Funnel" title="Funnel">
-            <synonym value="Funnels"/>
-            <implies facet="Activity_facet" cat="Foodstorage"/>
-        </heading>
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        <heading id="BottleOpeners" title="Bottle Openers">
-            <synonym value="Bottle Opener"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>
-            <heading id="CapLifter" title="Caplifter">
-                <synonym value="Caplifters"/>
-                <synonym value="Cap lifter"/>
-                <synonym value="Cap lifters"/>
-                <synonym value="Cap-lifter"/>
-                <synonym value="Cap-lifters"/>		
-            </heading>
-        	<heading id="CanKeyOpener" title="Can Key Opener">
-        		<synonym value="Can Key Openers"/>
-        		<synonym value="Can-Key Opener"/>
-        		<synonym value="Can-Key Openers"/>
-        	</heading>
-            <heading id="Corkscrew" title="Corkscrew">
-                <synonym value="Corkscrews"/>
-                <heading id="SlidingBarrelCorkscrew" title="Sliding Barrel Corkscrew">
-                    <synonym value="Sliding Barrel Corkscrews"/>		
-                </heading>
-            </heading>
-        </heading>
-        <heading id="Chocolatemold" title="Chocolate mold">
-            <synonym value="Chocolate molds"/>
-            <implies facet="Activity_facet" cat="Foodpreparation"/>
-            <implies facet="ObjectName_facet" cat="Chocolate"/>
-        </heading>
-        <heading id="Chocolatestirrer" title="Chocolate stirrer">
-            <synonym value="Chocolate stirrers"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>
-            <implies facet="ObjectName_facet" cat="Chocolate"/>
-        </heading>
-        <heading id="CookingStone" title="Cooking Stone">
-            <synonym value="Cooking Stones"/> 	
-            <implies facet="Activity_facet" cat="Foodpreparation"/>		
-        </heading>
-        <heading id="CookingVessel" title="Cooking Vessel">
-            <synonym value="Cooking Vessels"/>
-            <implies facet="Activity_facet" cat="Foodpreparation"/>
-            <heading id="Basin" title="Basin">
-            	<excl value="Great Basin"/>
-            	<excl value="Basin and Plain"/>
-            	<excl value="Basin &amp; Plain"/>
-                <synonym value="Basins"/> 				
-            </heading>
-            <heading id="CookingPot" title="Cooking Pot">
-                <synonym value="Cooking Pots"/>
-                <synonym value="Pots"/>
-                <synonym value="Pot"/>				
-            </heading>
-            <heading id="CookingBowl" title="Cooking Bowl">
-                <synonym value="Cooking Bowls"/> 				
-            </heading>
-            <heading id="CookingPan" title="Cooking Pan">
-                <synonym value="Cooking Pans"/>
-                <synonym value="Pan"/>
-                <synonym value="Pans"/>
-                <implies facet="Activity_facet" cat="Metallurgy"/>
-            </heading>				
-        </heading>
-        <heading id="Graters" title="Graters">
-            <synonym value="Grater"/> 
-            <heading id="CheeseGrater" title="Cheese Grater">
-                <synonym value="Cheese Graters"/>		
-            </heading>
-            <heading id="CoconutGrater" title="Coconut Grater">
-                <synonym value="Karakudan"/>
-                <synonym value="Coconut Graters"/>		
-            </heading>	
-        </heading>
-        <heading id="Huller" title="Huller">
-            <synonym value="Hullers"/> 				
-        </heading>
-        <heading id="ItemsForBoiling" title="Items for Boiling">
-            <heading id="Boilingstone" title="Boiling stone">
-                <synonym value="Boiling stones"/>
-                <implies facet="Activity_facet" cat="Foodpreparation"/>
-            </heading>
-            <heading id="Coffeepot" title="Coffee pot"> 					
-                <synonym value="Coffee pots"/>
-                <implies facet="Activity_facet" cat="Foodserving"/>		
-            </heading>
-            <heading id="Kettle" title="Kettle">
-                <synonym value="Kettles"/>
-                <implies facet="Activity_facet" cat="Metallurgy"/>  <!-- are all kettles made of metal? -->
-                <implies facet="Activity_facet" cat="Foodpreparation"/>
-            </heading>
-            <heading id="Teapot" title="Teapot"> 					
-                <synonym value="Teapots"/>
-                <synonym value="Tea pot"/>
-                <synonym value="Tea pots"/>
-                <implies facet="Activity_facet" cat="Foodserving"/>			
-            </heading>
-        </heading>
-        <heading id="ItemsForGrindingAndCrushing" title="Items for Grinding &amp; Crushing">
-            <heading id="Acornanvil" title="Acorn anvil">
-                <synonym value="Acorn anvils"/>
-                <implies facet="Activity_facet" cat="Foodpreparation"/>			
-            </heading>
-            <heading id="Groundstone" title="Groundstone">
-                <synonym value="Groundstones"/>
-                <synonym value="Ground stone"/> 
-                <synonym value="Groundstone"/> 
-                <synonym value="Ground-stone"/> 
-                <synonym value="Ground-stones"/> 
-                <implies facet="Activity_facet" cat="Foodpreparation"/>
-                <heading id="Grindingstone" title="Grinding stone">
-                    <synonym value="Grinding stones"/> 
-                    <heading id="ManoAndMetate" title="Mano &amp; Metate">
-                        <heading id="Metate" title="Metate">
-                            <synonym value="Metates"/> 				
-                        </heading>
-                        <heading id="Mano" title="Mano (handstone)">
-                            <synonym value="Mano"/>
-                            <synonym value="Manos"/>
-                            <synonym value="Handstone"/> 					
-                            <synonym value="Handstones"/> 				
-                        </heading>
-                    </heading>
-                    <heading id="MortarAndPestle" title="Mortar &amp; Pestle">
-                        <heading id="Mortar" title="Mortar">
-                            <synonym value="Mortars"/>
-                            <implies facet="Activity_facet" cat="Foodpreparation"/>
-                        </heading>
-                        <heading id="Pestle" title="Pestle">
-                            <synonym value="Pestles"/>
-                            <implies facet="Activity_facet" cat="Foodpreparation"/>
-                        </heading>
-                    </heading>
-                </heading>
-            </heading>
-        </heading>
-        <heading id="Oven" title="Oven">
-            <synonym value="Ovens"/>
-            <implies facet="Activity_facet" cat="Foodpreparation"/>			
-        </heading>
-        <heading id="MushPaddle" title="Mush Paddle">
-            <synonym value="Mush Paddles"/> 
-            <implies facet="Activity_facet" cat="Foodpreparation"/>	
-            <implies facet="ObjectName_facet" cat="Mush"/>
-        </heading>
-        <heading id="MushStirrer" title="Mush Stirrer">
-            <synonym value="Mush Stirrers"/> 
-            <implies facet="Activity_facet" cat="Foodpreparation"/>	
-            <implies facet="ObjectName_facet" cat="Mush"/>
-        </heading>
-        <heading id="SeedBeater" title="Seed Beater">
-            <synonym value="Seed Beaters"/> 
-            <implies facet="Activity_facet" cat="Foodpreparation"/>				
-        </heading>
-        <heading id="Sifter" title="Sifter">
-            <synonym value="Sifters"/>
-            <implies facet="Activity_facet" cat="Foodpreparation"/>	
-        </heading>
-        <heading id="Strainer" title="Strainer">
-            <synonym value="Strainers"/>
-            <implies facet="Activity_facet" cat="Foodpreparation"/>
-        </heading>
-        <heading id="Utensils" title="Utensils">
-            <synonym value="Utensil"/> 	
-            <implies facet="Activity_facet" cat="Eating"/>	
-            <heading id="Fork" title="Fork"> 					
-                <synonym value="Forks"/>
-                <implies facet="Activity_facet" cat="Foodserving"/>			
-            </heading>
-            <heading id="Spoon" title="Spoon"> 					
-                <synonym value="Spoons"/>
-                <implies facet="Activity_facet" cat="Foodserving"/>
-                <heading id="CheeseScoop" title="Cheese Scoop"> 
-                    <synonym value="Cheese Scoops"/>
-                    <implies facet="Activity_facet" cat="Cheese"/>
-                </heading>
-                <heading id="SoupSpoon" title="Soup Spoon"> 
-                    <synonym value="Soup Spoons"/>
-                    <implies facet="Activity_facet" cat="Soup"/>
-                </heading>
-            </heading>
-        </heading>
-    </heading>
-    <heading id="FoodAndDrinks" title="FoodAndDrinks">
-        <heading id="Beer" title="Beer">
-            <synonym value="Beers"/>
-        </heading>
-        <heading id="Cheese" title="Cheese">
-            <synonym value="Cheeses"/>
-        </heading>
-        <heading id="Chocolate" title="Chocolate">
-            <synonym value="Chocolates"/>
-        </heading>
-        <heading id="Mush" title="Mush"/>
-        <heading id="Soup" title="Soup">
-            <synonym value="Soups"/>
-        </heading>
-        <heading id="WeddingCake" title="Wedding Cake">
-            <synonym value="Wedding Cakes"/>
-        </heading>
-        <heading id="Wine" title="Wine">
-            <synonym value="Wines"/>
-        </heading>
-    </heading>
-	<heading id="Furniturefurnishings" title="Furniture &amp; furnishings">
-		<synonym value="Furniture"/>
-		<heading id="Bed" title="Bed">
-			<synonym value="Beds"/>
-		</heading>
-		<heading id="Chair" title="Chair">
-			<synonym value="Chairs"/>
-		</heading>
-		<heading id="HangingMirror" title="Hanging Mirror">
-			<synonym value="Hanging Mirrors"/>
-		</heading>
-		<heading id="Rug" title="Rug">
-			<synonym value="Rugs"/>
-			<heading id="Runner" title="Runner"> <!-- Might be confused with the bipedally ambulating athlete -->
-				<synonym value="Runners"/>
+	<heading id="DomesticItems" title="Domestic Items">
+		<synonym value="Domestic Items"/>
+		<heading id="FoodPreparationItems" title="Food Preparation Items" nomatch="true">
+			<synonym value="Food Preparation"/>
+			<synonym value="Preparing Food"/>
+			<synonym value="Cooking"/>   
+			<heading id="Amphora" title="Amphora">
+				<synonym value="Amphoras"/>
+				<synonym value="Amphorae"/>
+				<implies facet="Activity_facet" cat="Foodstorage"/>
+			</heading>
+			<heading id="BottleOpeners" title="Bottle Openers">
+				<synonym value="Bottle Opener"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>
+				<heading id="CapLifter" title="Caplifter">
+					<synonym value="Caplifters"/>
+					<synonym value="Cap lifter"/>
+					<synonym value="Cap lifters"/>
+					<synonym value="Cap-lifter"/>
+					<synonym value="Cap-lifters"/>		
+				</heading>
+				<heading id="CanKeyOpener" title="Can Key Opener">
+					<synonym value="Can Key Openers"/>
+					<synonym value="Can-Key Opener"/>
+					<synonym value="Can-Key Openers"/>
+				</heading>
+				<heading id="Corkscrew" title="Corkscrew">
+					<synonym value="Corkscrews"/>
+					<heading id="SlidingBarrelCorkscrew" title="Sliding Barrel Corkscrew">
+						<synonym value="Sliding Barrel Corkscrews"/>		
+					</heading>
+				</heading>
+			</heading>
+			<heading id="Bowl" title="Bowl">
+				<synonym value="Bowls"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>  <!-- need complex inferentiation to remove ritual bowls, etc. -->
+			</heading>
+			<heading id="Canteen" title="Canteen">
+				<synonym value="Canteens"/>
+				<implies facet="Activity_facet" cat="Foodstorage"/>			
+			</heading>
+			<heading id="Chafingdish" title="Chafing dish">
+				<synonym value="Chafing dishes"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>		
+			</heading>
+			<heading id="Chocolatemold" title="Chocolate mold">
+				<synonym value="Chocolate molds"/>
+				<implies facet="Activity_facet" cat="Foodpreparation"/>
+				<implies facet="ObjectName_facet" cat="Chocolate"/>
+			</heading>
+			<heading id="Chocolatestirrer" title="Chocolate stirrer">
+				<synonym value="Chocolate stirrers"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>
+				<implies facet="ObjectName_facet" cat="Chocolate"/>
+			</heading>
+			<heading id="CookingStone" title="Cooking Stone">
+				<synonym value="Cooking Stones"/> 	
+				<implies facet="Activity_facet" cat="Foodpreparation"/>		
+			</heading>
+			<heading id="CookingVessel" title="Cooking Vessel">
+				<synonym value="Cooking Vessels"/>
+				<implies facet="Activity_facet" cat="Foodpreparation"/>
+				<heading id="Basin" title="Basin">
+					<excl value="Great Basin"/>
+					<excl value="Basin and Plain"/>
+					<excl value="Basin &amp; Plain"/>
+					<synonym value="Basins"/> 				
+				</heading>
+				<heading id="CookingPot" title="Cooking Pot">
+					<synonym value="Cooking Pots"/>
+					<synonym value="Pots"/>
+					<synonym value="Pot"/>				
+				</heading>
+				<heading id="CookingBowl" title="Cooking Bowl">
+					<synonym value="Cooking Bowls"/> 				
+				</heading>
+				<heading id="CookingPan" title="Cooking Pan">
+					<synonym value="Cooking Pans"/>
+					<synonym value="Pan"/>
+					<synonym value="Pans"/>
+					<implies facet="Activity_facet" cat="Metallurgy"/>
+				</heading>				
+			</heading>
+			<heading id="Dish" title="Dish">
+				<synonym value="Dishes"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>
+				<heading id="FeastDish" title="Feast Dish"> 					
+					<synonym value="Feast Dishes"/> 				
+				</heading>
+			</heading>
+			<heading id="Funnel" title="Funnel">
+				<synonym value="Funnels"/>
+				<excl value="Enema Funnel"/>
+				<excl value="Enema Funnels"/>
+				<implies facet="Activity_facet" cat="Foodstorage"/>
+			</heading>
+			<heading id="Graters" title="Graters">
+				<synonym value="Grater"/> 
+				<heading id="CheeseGrater" title="Cheese Grater">
+					<synonym value="Cheese Graters"/>		
+				</heading>
+				<heading id="CoconutGrater" title="Coconut Grater">
+					<synonym value="Karakudan"/>
+					<synonym value="Coconut Graters"/>		
+				</heading>	
+			</heading>
+			<heading id="Huller" title="Huller">
+				<synonym value="Hullers"/> 				
+			</heading>
+			<heading id="ItemsForBoiling" title="Items for Boiling">
+				<heading id="Boilingstone" title="Boiling stone">
+					<synonym value="Boiling stones"/>
+					<implies facet="Activity_facet" cat="Foodpreparation"/>
+				</heading>
+				<heading id="Coffeepot" title="Coffee pot"> 					
+					<synonym value="Coffee pots"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>		
+				</heading>
+				<heading id="Kettle" title="Kettle">
+					<synonym value="Kettles"/>
+					<implies facet="Activity_facet" cat="Metallurgy"/>  <!-- are all kettles made of metal? -->
+					<implies facet="Activity_facet" cat="Foodpreparation"/>
+				</heading>
+				<heading id="Teapot" title="Teapot"> 					
+					<synonym value="Teapots"/>
+					<synonym value="Tea pot"/>
+					<synonym value="Tea pots"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>			
+				</heading>
+			</heading>
+			<heading id="ItemsForGrindingAndCrushing" title="Items for Grinding &amp; Crushing">
+				<heading id="Acornanvil" title="Acorn anvil">
+					<synonym value="Acorn anvils"/>
+					<implies facet="Activity_facet" cat="Foodpreparation"/>			
+				</heading>
+				<heading id="Groundstone" title="Groundstone">
+					<synonym value="Groundstones"/>
+					<synonym value="Ground stone"/> 
+					<synonym value="Groundstone"/> 
+					<synonym value="Ground-stone"/> 
+					<synonym value="Ground-stones"/> 
+					<implies facet="Activity_facet" cat="Foodpreparation"/>
+					<heading id="Grindingstone" title="Grinding stone">
+						<synonym value="Grinding stones"/> 
+						<heading id="ManoAndMetate" title="Mano &amp; Metate">
+							<heading id="Metate" title="Metate">
+								<synonym value="Metates"/> 				
+							</heading>
+							<heading id="Mano" title="Mano (handstone)">
+								<synonym value="Mano"/>
+								<synonym value="Manos"/>
+								<synonym value="Handstone"/> 					
+								<synonym value="Handstones"/> 				
+							</heading>
+						</heading>
+						<heading id="MortarAndPestle" title="Mortar &amp; Pestle">
+							<heading id="Mortar" title="Mortar">
+								<synonym value="Mortars"/>
+								<implies facet="Activity_facet" cat="Foodpreparation"/>
+							</heading>
+							<heading id="Pestle" title="Pestle">
+								<synonym value="Pestles"/>
+								<implies facet="Activity_facet" cat="Foodpreparation"/>
+							</heading>
+						</heading>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="Ladle" title="Ladle">
+				<synonym value="Ladles"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>			
+			</heading>
+			<heading id="Olla" title="Olla">
+				<synonym value="Ollas"/>
+				<implies facet="Activity_facet" cat="Foodstorage"/>
+			</heading>
+			<heading id="Oven" title="Oven">
+				<synonym value="Ovens"/>
+				<implies facet="Activity_facet" cat="Foodpreparation"/>			
+			</heading>
+			<heading id="MushPaddle" title="Mush Paddle">
+				<synonym value="Mush Paddles"/> 
+				<implies facet="Activity_facet" cat="Foodpreparation"/>	
+				<implies facet="ObjectName_facet" cat="Mush"/>
+			</heading>
+			<heading id="MushStirrer" title="Mush Stirrer">
+				<synonym value="Mush Stirrers"/> 
+				<implies facet="Activity_facet" cat="Foodpreparation"/>	
+				<implies facet="ObjectName_facet" cat="Mush"/>
+			</heading>
+			<heading id="Plate" title="Plate">
+				<synonym value="Plates"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>
+				<excl value="photographic plate"/>
+				<excl value="photographic plate"/>
+				<excl value="Silver plate"/>
+				<excl value="Silver-plate"/>
+				<excl value="Silver plated"/>
+				<excl value="Silver-plated"/>
+				<excl value="Silverplate"/>
+				<excl value="Silverplated"/>
+				<excl value="Gold plate"/>
+				<excl value="Gold-plate"/>
+				<excl value="Gold plated"/>
+				<excl value="Gold-plated"/>
+				<excl value="Goldplate"/>
+				<excl value="Goldplated"/>
+				<excl value="Copper plate"/>
+				<excl value="Copper-plate"/>
+				<excl value="Copper plated"/>
+				<excl value="Copper-plated"/>
+				<excl value="Copperplate"/>
+				<excl value="Copperplated"/>
+				<excl value="negative"/>
+				<excl value="negatives"/>
+			</heading>
+			<heading id="Platter" title="Platter">
+				<synonym value="Platters"/>
+				<implies facet="Activity_facet" cat="Foodserving"/>			
+			</heading>
+			<heading id="SeedBeater" title="Seed Beater">
+				<synonym value="Seed Beaters"/> 
+				<implies facet="Activity_facet" cat="Foodpreparation"/>				
+			</heading>
+			<heading id="Sifter" title="Sifter">
+				<synonym value="Sifters"/>
+				<implies facet="Activity_facet" cat="Foodpreparation"/>	
+			</heading>
+			<heading id="Strainer" title="Strainer">
+				<synonym value="Strainers"/>
+				<implies facet="Activity_facet" cat="Foodpreparation"/>
+			</heading>
+			<heading id="Utensils" title="Utensils">
+				<synonym value="Utensil"/> 	
+				<implies facet="Activity_facet" cat="Eating"/>	
+				<heading id="Fork" title="Fork"> 					
+					<synonym value="Forks"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>			
+				</heading>
+				<heading id="Spoon" title="Spoon"> 					
+					<synonym value="Spoons"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>
+					<heading id="CheeseScoop" title="Cheese Scoop"> 
+						<synonym value="Cheese Scoops"/>
+						<implies facet="Activity_facet" cat="Cheese"/>
+					</heading>
+					<heading id="SoupSpoon" title="Soup Spoon"> 
+						<synonym value="Soup Spoons"/>
+						<implies facet="Activity_facet" cat="Soup"/>
+					</heading>
+				</heading>
 			</heading>
 		</heading>
-		<heading id="Table" title="Table">
-			<synonym value="Tables"/>
-			<heading id="Desk" title="Desk">
-				<synonym value="Desks"/>
+		<heading id="FoodAndDrinks" title="FoodAndDrinks">
+			<heading id="Beer" title="Beer">
+				<synonym value="Beers"/>
+			</heading>
+			<heading id="Cheese" title="Cheese">
+				<synonym value="Cheeses"/>
+			</heading>
+			<heading id="Chocolate" title="Chocolate">
+				<synonym value="Chocolates"/>
+			</heading>
+			<heading id="Mush" title="Mush"/>
+			<heading id="Soup" title="Soup">
+				<synonym value="Soups"/>
+			</heading>
+			<heading id="WeddingCake" title="Wedding Cake">
+				<synonym value="Wedding Cakes"/>
+			</heading>
+			<heading id="Wine" title="Wine">
+				<synonym value="Wines"/>
+			</heading>
+		</heading>
+		<heading id="Furniturefurnishings" title="Furniture &amp; furnishings">
+			<synonym value="Furniture"/>
+			<heading id="Bed" title="Bed">
+				<synonym value="Beds"/>
+			</heading>
+			<heading id="Chair" title="Chair">
+				<synonym value="Chairs"/>
+			</heading>
+			<heading id="Cradle" title="Cradle">
+				<synonym value="Cradles"/>
+				<implies facet="Activity_facet" cat="Childrearing"/>
+			</heading>
+			<heading id="HangingMirror" title="Hanging Mirror">
+				<synonym value="Hanging Mirrors"/>
+			</heading>
+			<heading id="Rug" title="Rug">
+				<synonym value="Rugs"/>
+				<heading id="Runner" title="Runner"> <!-- Might be confused with the bipedally ambulating athlete -->
+					<synonym value="Runners"/>
+				</heading>
+			</heading>
+			<heading id="Table" title="Table">
+				<synonym value="Tables"/>
+				<heading id="Desk" title="Desk">
+					<synonym value="Desks"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="Toiletarticles" title="Toilet articles">
+			<synonym value="Toiletries"/>
+			<heading id="Comb" title="Comb"> 					
+				<synonym value="Combs"/>
+				<synonym value="Grooming"/>			
+			</heading>
+			<heading id="Hairbrush" title="Hairbrush"> 					
+				<synonym value="Hairbrushes"/>
+				<synonym value="Grooming"/>			
+			</heading>
+			<heading id="Hairpin" title="Hairpin">
+				<synonym value="Hair Pin"/>
+				<synonym value="Grooming"/>
+			</heading>
+			<heading id="LouseKiller" title="Louse Killer"> 					
+				<synonym value="Louse Killers"/>
+				<synonym value="Lice Killer"/>
+				<synonym value="Lice Killers"/>
+				<synonym value="Grooming"/>		
+			</heading>
+			<heading id="Mirror" title="Mirror"> 					
+				<synonym value="Mirrors"/>
+				<synonym value="Grooming"/>	
+			</heading>
+			<heading id="Scissors" title="Scissors">
+				<synonym value="Scissor"/>
+				<synonym value="Shears"/>
+				<synonym value="Shear"/>
+				<!-- <synonym value="Grooming"/> this needs multiple inferentiation -->
+			</heading>
+			<heading id="Soap" title="Soap"> 					
+				<synonym value="Soaps"/>
+				<synonym value="Grooming"/>
+			</heading>
+			<heading id="Strigil" title="Strigil"> 
+				<synonym value="Strigils"/> 
+				<synonym value="Stirgil"/> 					
+				<synonym value="Stirgils"/>
+				<synonym value="Grooming"/>
+				<implies facet="Activity_facet" cat="Metallurgy"/>		
+			</heading>
+		</heading>
+	</heading>
+	<heading id="Events" title="Events">
+		<heading id="Ceremonies" title="Ceremonies">
+			<synonym value="Ceremony"/>
+		</heading>
+		<heading id="Coronations" title="Coronations">
+			<synonym value="Coronation"/>
+		</heading>
+		<heading id="Dances" title="Dances">
+			<synonym value="Dance"/>
+			<heading id="BadjucaDance" title="Badjuca Dance">
+				<synonym value="Badjuca Dances"/>
+				<synonym value="Badjuca"/>
+				<implies facet="Culture_facet" cat="EasternPomo"/>
+			</heading>
+			<heading id="DjaneDance" title="Djane Dance">
+				<synonym value="Djane Dances"/>
+				<synonym value="Djane"/>
+				<implies facet="Culture_facet" cat="EasternPomo"/>
+			</heading>
+			<heading id="GilakDance" title="Gilak Dance">
+				<synonym value="Gilak Dances"/>
+				<synonym value="Gilak"/>
+				<implies facet="Culture_facet" cat="EasternPomo"/>
+			</heading>
+			<heading id="KalimatotoDance" title="Kalimatoto Dance">
+				<synonym value="Kalimatoto Dances"/>
+				<synonym value="Kalimatoto"/>
+				<implies facet="Culture_facet" cat="EasternPomo"/>
+			</heading>
+			<heading id="LoleDance" title="Lole Dance">
+				<synonym value="Lole Dances"/>
+				<synonym value="Lole"/>
+				<implies facet="Culture_facet" cat="EasternPomo"/>
+			</heading>
+			<heading id="XshlingakDance" title="Xshlingak Dance">
+				<synonym value="Xshlingak Dances"/>
+				<synonym value="Xshlingak"/>
+				<implies facet="Culture_facet" cat="EasternPomo"/>
+			</heading>
+		</heading>
+		<heading id="Gatherings" title="Gatherings">
+			<synonym value="Gathering"/>
+		</heading>
+		<heading id="Holidays" title="Holidays">
+			<synonym value="Holiday"/>
+			<heading id="Christmas" title="Christmas">
+				<synonym value="Christmases"/>
+				<synonym value="Christmasses"/>
+			</heading>
+		</heading>
+		<heading id="Weddings" title="Weddings">
+			<synonym value="Wedding"/>
+			<synonym value="Marriage"/>
+			<synonym value="Marriages"/>
+		</heading>
+		<heading id="InternationalFairsExpos" title="International Fairs &amp; Expos">
+			<synonym value="World's Fair"/>
+			<synonym value="Worlds' Fair"/>
+			<synonym value="Worlds Fair"/>
+			<synonym value="World Fair"/>
+			<synonym value="World's Expo"/>
+			<synonym value="Worlds' Expo"/>
+			<synonym value="Worlds Expo"/>
+			<synonym value="World Expo"/>
+			<synonym value="World's Exposition"/>
+			<synonym value="Worlds' Exposition"/>
+			<synonym value="Worlds Exposition"/>
+			<synonym value="World Exposition"/>
+			<heading id="PanAmericanExpo" title="Pan-American Expo.">
+				<synonym value="Pan-American Expo"/>
+				<synonym value="Pan-American Exposition"/>
 			</heading>
 		</heading>
 	</heading>
@@ -1837,48 +1967,6 @@
 		<heading id="ShinnyBall" title="Shinny Ball"> 
 		    <implies facet="TechniqueDesignDecoration_facet" cat="Spherical"/> <!-- check cat. -->			
 			<synonym value="Shinny Balls"/> 				
-		</heading>
-	</heading>
-	<heading id="Toiletarticles" title="Toilet articles">
-		<synonym value="Toiletries"/>
-		<heading id="Comb" title="Comb"> 					
-			<synonym value="Combs"/>
-			<synonym value="Grooming"/>			
-		</heading>
-		<heading id="Hairbrush" title="Hairbrush"> 					
-			<synonym value="Hairbrushes"/>
-			<synonym value="Grooming"/>			
-		</heading>
-		<heading id="Hairpin" title="Hairpin">
-			<synonym value="Hair Pin"/>
-			<synonym value="Grooming"/>
-		</heading>
-		<heading id="LouseKiller" title="Louse Killer"> 					
-			<synonym value="Louse Killers"/>
-			<synonym value="Lice Killer"/>
-			<synonym value="Lice Killers"/>
-			<synonym value="Grooming"/>		
-		</heading>
-		<heading id="Mirror" title="Mirror"> 					
-			<synonym value="Mirrors"/>
-			<synonym value="Grooming"/>	
-		</heading>
-		<heading id="Scissors" title="Scissors">
-			<synonym value="Scissor"/>
-			<synonym value="Shears"/>
-			<synonym value="Shear"/>
-			<!-- <synonym value="Grooming"/> this needs multiple inferentiation -->
-		</heading>
-		<heading id="Soap" title="Soap"> 					
-			<synonym value="Soaps"/>
-			<synonym value="Grooming"/>
-		</heading>
-		<heading id="Strigil" title="Strigil"> 
-			<synonym value="Strigils"/> 
-			<synonym value="Stirgil"/> 					
-			<synonym value="Stirgils"/>
-			<synonym value="Grooming"/>
-			<implies facet="Activity_facet" cat="Metallurgy"/>		
 		</heading>
 	</heading>
 	<heading id="Tools" title="Tools">
