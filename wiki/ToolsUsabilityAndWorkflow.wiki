@@ -39,8 +39,8 @@ Rework menus based upon above. E.g.,
   * Copy
   * Paste
 ====Analyze====
-  * Object Info Term Usage (requires ObjInfo file)
-  * Object/Concept Association (requires ObjInfo file and Ontology. Later with load variants and an option to connect to DB). Incremental? [Do this as wizard that sets options for reporting and output]
+  * Object Info Term Usage (requires !ObjInfo file)
+  * Object/Concept Association (requires !ObjInfo file and Ontology. Later with load variants and an option to connect to DB). Incremental? [Do this as wizard that sets options for reporting and output]
 ====Images====
   * Compute Orientations [Separate export operation]
 ====Export====
@@ -62,7 +62,7 @@ There are a number of steps in the workflow that are cumbersome, and require som
 
 We'll consider each of these in turn, but first will cover some utilities that will be needed for any of this:
 ==DB Connection configuration==
-We need to configure the information about where the DB is, what the database is called, and what the permissions are. Right now, we have tested connections to MySQL and MSSQL databases (the former is what Delphi uses, and the latter is used by some CMS and DAM systems,  including Extensis Portfolio and Gallery Systems' TMS). For JDBC, the string is fairly straightforward. Here are examples of the two supported protocols:
+We need to configure the information about where the DB is, what the database is called, and what the permissions are. Right now, we have tested connections to !MySQL and MSSQL databases (the former is what Delphi uses, and the latter is used by some CMS and DAM systems,  including Extensis Portfolio and Gallery Systems' TMS). For JDBC, the string is fairly straightforward. Here are examples of the two supported protocols:
 {{{
 "jdbc:mysql://server.domain.edu:1234/dbname?user=dbuser&password=xxx"
 "jdbc:sqlserver://169.123.456.789;databaseName=TMS;user=dbuser;password=xxx"
@@ -76,12 +76,12 @@ Note that we may not be using the same DB for different functions, especially in
   # CMS DB for object MD. May be multiples for some systems (e.g., TMS has multiple DBs that store info).
   # Image information DB. May be in Object Info DB, or in a separate DAM.
   # Delphi for ontologies. May be the running Delphi system, or may not
-  # Delphi for running system (may be multiple, given tiered WebFarm scenario).
+  # Delphi for running system (may be multiple, given tiered !WebFarm scenario).
 
 For 1) we need to describe authentication to CMS and assume we can get at multiple DBs in the CMS. Thus, describe server, protocol, user, password, and configure the DBs when we describe the extraction model (in a separate manner). Raises questions:
 
-  * What is the format of the DB extraction config (XML, DB via form, etc.). Assume XML for now, and that it looks something like ColConfig.xml.
-  * What is the relationship of the DB extraction file to ColConfig.xml? Assume that we need to have the same set of columns (destinations for DB extraction, sources for MD mining). Can we unify these? E.g., can we describe sources in DB for each column in ColConfig.xml? Maybe, but it could get messy for those tables/columns in DB that split into various columns depending upon the types. However, rather than naming the columns as strings, we could enforce coherence. ColConfig validation would require that columns named in DB extraction are defined for processing, and that there is a source defined for each processing column. Implies a unified configuration with two sections:
+  * What is the format of the DB extraction config (XML, DB via form, etc.). Assume XML for now, and that it looks something like !ColConfig.xml.
+  * What is the relationship of the DB extraction file to !ColConfig.xml? Assume that we need to have the same set of columns (destinations for DB extraction, sources for MD mining). Can we unify these? E.g., can we describe sources in DB for each column in !ColConfig.xml? Maybe, but it could get messy for those tables/columns in DB that split into various columns depending upon the types. However, rather than naming the columns as strings, we could enforce coherence. !ColConfig validation would require that columns named in DB extraction are defined for processing, and that there is a source defined for each processing column. Implies a unified configuration with two sections:
 {{{
 <delphiMetadataConfig>
   <dbSourceInfo>
