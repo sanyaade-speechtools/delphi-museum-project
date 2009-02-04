@@ -499,9 +499,10 @@
 			<synonym value="Carrying baskets"/>
 			<implies facet="Activity_facet" cat="BasketMaking"/>
 		</heading>
-		<heading id="CookingBasket" title="Cooking Basket">
+		<heading id="CookingBasketBaskets" title="Cooking Basket">
 			<synonym value="Cooking Baskets"/>
 			<implies facet="Activity_facet" cat="Foodpreparation"/>
+			<implies facet="ObjectName_facet" cat="CookingBasketHeating"/>
 		</heading>
 		<heading id="DecorativeBasket" title="Decorative Basket">
 			<synonym value="Decorative Baskets"/>
@@ -830,7 +831,7 @@
 	        </heading>
 	    </heading>
 	</heading>
-	<heading id="ContainersVesselsPottery" title="ContainersVesselsPottery">
+	<heading id="ContainersAndVessels" title="Containers &amp; Vessels">
 		<heading id="Pottery" title="Pottery">
 		    <implies facet="Materials_facet" cat="Clay"/>
 			<synonym value="Pot"/>
@@ -956,7 +957,13 @@
 	            <synonym value="Steins"/> 				
 	        </heading>
 	    </heading>
-	    <heading id="Dish" title="Dish">
+		<heading id="CoffeepotVessel" title="Coffee pot"> 					
+			<synonym value="Coffee pots"/>
+			<implies facet="Activity_facet" cat="Foodserving"/>
+			<implies facet="Activity_facet" cat="CoffeeDrinking"/>
+			<implies facet="ObjectName_facet" cat="CoffeepotHeating"/>
+		</heading>
+		<heading id="Dish" title="Dish">
 			<synonym value="Dishes"/>
 		</heading>
 		<heading id="Flask" title="Flask">
@@ -1005,6 +1012,19 @@
 					</heading>
 				</heading>
 			</heading>
+		</heading>
+		<heading id="KettleVessels" title="Kettle">
+			<synonym value="Kettles"/>
+			<implies facet="Activity_facet" cat="Metallurgy"/>  <!-- are all kettles made of metal? -->
+			<implies facet="Activity_facet" cat="Foodpreparation"/>
+			<implies facet="ObjectName_facet" cat="KettleHeating"/>
+		</heading>
+		<heading id="TeapotVessels" title="Teapot"> 					
+			<synonym value="Teapots"/>
+			<synonym value="Tea pot"/>
+			<synonym value="Tea pots"/>
+			<implies facet="Activity_facet" cat="Foodserving"/>
+			<implies facet="ObjectName_facet" cat="TeapotHeating"/>
 		</heading>
 		<heading id="Porringer" title="Porringer">
 			<synonym value="Porringers"/>
@@ -1414,9 +1434,47 @@
 				<synonym value="Canteens"/>
 				<implies facet="Activity_facet" cat="Foodstorage"/>			
 			</heading>
-			<heading id="Chafingdish" title="Chafing dish">
-				<synonym value="Chafing dishes"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>		
+			<heading id="FoodHeatingDevices" title="Food Heating Devices">
+				<heading id="Boilingstone" title="Boiling stone">
+					<synonym value="Boiling stones"/>
+					<implies facet="Activity_facet" cat="Foodpreparation"/>
+				</heading>
+				<heading id="Chafingdish" title="Chafing dish">
+					<synonym value="Chafing dishes"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>		
+				</heading>
+				<heading id="CoffeepotHeating" title="Coffee pot"> 					
+					<synonym value="Coffee pots"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>
+					<implies facet="Activity_facet" cat="CoffeeDrinking"/>
+					<implies facet="ObjectName_facet" cat="CoffeepotVessel"/>
+				</heading>
+				<heading id="CookingBasketHeating" title="Cooking Basket">
+					<synonym value="Cooking Baskets"/>
+					<implies facet="Activity_facet" cat="Foodpreparation"/>
+					<implies facet="ObjectName_facet" cat="CookingBasketBaskets"/>
+				</heading>
+				<heading id="CookingStone" title="Cooking Stone">
+					<synonym value="Cooking Stones"/> 	
+					<implies facet="Activity_facet" cat="Foodpreparation"/>		
+				</heading>
+				<heading id="CookingStove" title="Cooking Stove">
+					<synonym value="Cooking Stoves"/> 	
+					<implies facet="Activity_facet" cat="Foodpreparation"/>			
+				</heading>
+				<heading id="KettleHeating" title="Kettle">
+					<synonym value="Kettles"/>
+					<implies facet="Activity_facet" cat="Metallurgy"/>  <!-- are all kettles made of metal? -->
+					<implies facet="Activity_facet" cat="Foodpreparation"/>
+					<implies facet="ObjectName_facet" cat="KettleVessels"/>
+				</heading>
+				<heading id="TeapotHeating" title="Teapot">
+					<synonym value="Teapots"/>
+					<synonym value="Tea pot"/>
+					<synonym value="Tea pots"/>
+					<implies facet="Activity_facet" cat="Foodserving"/>
+					<implies facet="ObjectName_facet" cat="TeapotVessels"/>
+				</heading>
 			</heading>
 			<heading id="Chocolatemold" title="Chocolate mold">
 				<synonym value="Chocolate molds"/>
@@ -1427,14 +1485,6 @@
 				<synonym value="Chocolate stirrers"/>
 				<implies facet="Activity_facet" cat="Foodserving"/>
 				<implies facet="ObjectName_facet" cat="Chocolate"/>
-			</heading>
-			<heading id="CookingStone" title="Cooking Stone">
-				<synonym value="Cooking Stones"/> 	
-				<implies facet="Activity_facet" cat="Foodpreparation"/>		
-			</heading>
-			<heading id="CookingStove" title="Cooking Stove">
-				<synonym value="Cooking Stoves"/> 	
-				<implies facet="Activity_facet" cat="Foodpreparation"/>			
 			</heading>
 			<heading id="CookingVessel" title="Cooking Vessel">
 				<synonym value="Cooking Vessels"/>
@@ -1485,27 +1535,6 @@
 			</heading>
 			<heading id="Huller" title="Huller">
 				<synonym value="Hullers"/> 				
-			</heading>
-			<heading id="ItemsForBoiling" title="Items for Boiling">
-				<heading id="Boilingstone" title="Boiling stone">
-					<synonym value="Boiling stones"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>
-				</heading>
-				<heading id="Coffeepot" title="Coffee pot"> 					
-					<synonym value="Coffee pots"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>		
-				</heading>
-				<heading id="Kettle" title="Kettle">
-					<synonym value="Kettles"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/>  <!-- are all kettles made of metal? -->
-					<implies facet="Activity_facet" cat="Foodpreparation"/>
-				</heading>
-				<heading id="Teapot" title="Teapot"> 					
-					<synonym value="Teapots"/>
-					<synonym value="Tea pot"/>
-					<synonym value="Tea pots"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>			
-				</heading>
 			</heading>
 			<heading id="ItemsForGrindingAndCrushing" title="Items for Grinding &amp; Crushing">
 				<heading id="Acornanvil" title="Acorn anvil">
