@@ -618,6 +618,85 @@
 			<synonym value="Ring Bead"/>
 		</heading>
 	</heading>
+	<heading id="Ceremonialitems" title="Ceremonial items">
+		<heading id="Mandala" title="Mandala"> 					
+			<synonym value="Mandalas"/>
+			<synonym value="Dreamcatcher"/>
+			<synonym value="Dreamcatchers"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Mask" title="Mask">
+			<synonym value="Masks"/>
+			<implies facet="TechniqueDesignDecoration_facet" cat="FigurativeOrRepresentational"/>
+		</heading>
+		<heading id="FeatheredStick" title="Feathered Stick"> 					
+			<synonym value="Feathered Sticks"/>
+			<implies facet="Materials_facet" cat="Feathers"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Charmstone" title="Charmstone"> 					
+			<synonym value="Charmstones"/>
+			<synonym value="Charm stone"/>
+			<synonym value="Charm stones"/>
+			<synonym value="Charm-stone"/>
+			<synonym value="Charm-stones"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="Headdress" title="Headdress">
+			<synonym value="Headdresses"/>
+			<synonym value="Head dress"/>
+			<synonym value="Head dresses"/>
+			<synonym value="Head-dress"/>
+			<synonym value="Head-dresses"/>
+		</heading>
+		<heading id="Scarab" title="Scarab">
+			<synonym value="Scarabs"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Ushabti" title="Ushabti"> 					
+			<synonym value="Ushabtis"/>
+			<synonym value="Shabti"/>
+			<synonym value="Shabtis"/>
+			<synonym value="Shawabti"/>
+			<synonym value="Shawabtis"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="Amulet" title="Amulet"> 					
+			<synonym value="Amulets"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>				
+		</heading>
+		<heading id="Mala" title="Mala">
+			<synonym value="Malas"/>
+			<synonym value="Prayer beads"/>
+			<synonym value="Prayer bead"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Altar" title="Altar"> 					
+			<synonym value="Altars"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="Idol" title="Idol">				
+			<synonym value="Idols"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>		
+		</heading>
+		<heading id="PrayerMat" title="Prayer Mat"> 					
+			<synonym value="Prayer Mats"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="PlasterCast" title="Plaster Cast"> 					
+			<synonym value="Plaster Casts"/>	
+		</heading>
+		<heading id="Shrine" title="Shrine"> 					
+			<synonym value="Shrines"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="Scepter" title="Scepter"> 					
+			<synonym value="Scepters"/> 				
+		</heading>
+		<heading id="Wand" title="Wand"> 					
+			<synonym value="Wands"/> 				
+		</heading>
+	</heading>
 	<heading id="ClothingorCostume" title="Clothing or Costume">
 		<heading id="Accessories" title="Accessories">
 			<heading id="Netsuke" title="Netsuke"/>
@@ -938,6 +1017,362 @@
 			</heading>
 		</heading>
 	</heading>
+	<heading id="CurrencyRelatedItems" title="Currency &amp; related items">
+		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->
+			<synonym value="Abaci"/>
+			<synonym value="Abacuses"/>
+			<synonym value="Counting Frame"/>
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>			
+		</heading>
+		<heading id="Counter" title="Counter">
+			<synonym value="Counters"/>
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>				
+		</heading>
+		<heading id="Coin" title="Coin">
+			<synonym value="Coins"/>
+			<synonym value="Coinage"/>
+			<implies facet="Activity_facet" cat="Metallurgy"/>
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+			<!--These categories need cleaning -->
+			<heading id="Denomination" title="Denomination">
+				<heading id="Bronzedouble" title="Bronze double"> 					
+					<synonym value="Bronze doubles"/>
+				    <implies facet="Materials_facet" cat="Bronze"/>		
+				</heading>
+				<heading id="Notgeld" title="Notgeld"/>
+				<heading id="50centavos" title="50 centavos"/>
+			</heading>
+			<heading id="UnitedStatesCoins" title="United States Coins">
+				<synonym value="US/Dollar system"/>
+				<heading id="Penny" title="Penny">
+					<synonym value="Pennies"/>
+					<heading id="FlyingEaglePenny" title="Flying Eagle Penny"> 					
+						<synonym value="Flying Eagle Pennies"/>
+						<synonym value="Flying-Eagle Penny"/>
+						<synonym value="Flying-Eagle Pennies"/> 				
+					</heading>
+					<heading id="LincolnHeadPenny" title="Lincoln Head Penny"> 					
+						<synonym value="Lincoln Head Pennies"/>
+						<synonym value="Lincoln-Head Penny"/>
+						<synonym value="Lincoln-Head Pennies"/> 				
+					</heading>
+					<heading id="IndianHeadPenny" title="Indian head penny"> 					
+						<synonym value="Indian Head Pennies"/>
+						<synonym value="Indian-Head Penny"/>
+						<synonym value="Indian-Head Pennies"/> 				
+					</heading>
+				</heading>
+				<heading id="Nickel" title="Nickel">
+					<synonym value="Nickels"/>
+					<heading id="LibertyHeadNickel" title="Liberty Head Nickel"> 					
+						<synonym value="Liberty Head Nickels"/>
+						<synonym value="Liberty-Head Nickel"/>
+						<synonym value="Liberty-Head Nickels"/> 				
+					</heading>
+					<heading id="HalfDime" title="Half Dime"> 					
+						<synonym value="Half Dimes"/> 				
+					</heading>
+					<heading id="NickleThreeCent" title="Nickle Three Cent"> 					
+						<synonym value="Nickle Three Cents"/> 				
+					</heading>
+					<heading id="BuffaloHeadNickel" title="Buffalo Head Nickel"> 					
+						<synonym value="Buffalo Head Nickels"/> 				
+					</heading>
+				</heading>
+				<heading id="Dime" title="Dime">
+					<synonym value="Dimes"/>
+				</heading>
+				<heading id="Quarterdollar" title="Quarter">
+					<synonym value="Quarter-dollar"/>
+					<synonym value="Quarter-dollars"/>
+					<synonym value="Quarters"/>
+					<heading id="WashingtonQuarter" title="Washington Quarter"> 					
+						<synonym value="Washington Quarters"/> 				
+					</heading>
+				</heading>
+				<heading id="Halfdollar" title="Half-dollar">
+					<synonym value="Half-dollars"/>
+					<synonym value="Half dollar"/>
+					<synonym value="Half dollars"/>
+					<heading id="BayBridgeCommememorativeHalfDollar" title="Bay Bridge Commememorative Half-Dollar">
+						<synonym value="Bay Bridge Commememorative Half Dollar"/> 					
+						<synonym value="Bay Bridge Commememorative Half Dollars"/> 
+						<synonym value="Bay Bridge Commememorative Half-Dollar"/> 					
+						<synonym value="Bay Bridge Commememorative Half-Dollars"/> 
+						<synonym value="Bay Bridge Commem Half Dollar"/>
+					</heading>
+					<heading id="BenFranklinHalfDollarUncirculatedMintSet" title="Ben Franklin Half Dollar, Uncirculated Mint Set"/>
+					<heading id="KennedyHalfDollar" title="Kennedy Half Dollar"/>
+					<heading id="FranklinKennedyHalfDollars" title="Franklin &amp; Kennedy Half Dollars"/>
+					<heading id="DiamondJubileeCommemorativeHalfDollar" title="Diamond Jubilee Commemorative Half Dollar"/>
+					<heading id="MonroeDoctrineCommemorativeHalfDollar" title="Monroe Doctrine Commemorative Half Dollar"/>
+					<!-- Missing synonym? "40th commemorative" -->
+					<heading id="KennedyHalfDollar40thCommemorative" title="Kennedy Half Dollar, 40th Commemorative"/>
+					<heading id="KennedyHalfDollarproofset" title="Kennedy Half Dollar, proof set"/>
+					<heading id="KennedyHalfDollarUncirculatedMintSet" title="Kennedy Half Dollar, Uncirculated Mint Set"/>
+					<heading id="FranklinHalfDollar" title="Franklin Half Dollar"/>
+					<heading id="CoppedBustHalfDollar" title="Copped Bust Half Dollar"/>
+					<heading id="FranklinHalfDollarproofset" title="Franklin Half Dollar, proof set"/>
+					<heading id="LibertyStandingHalfDollar" title="Liberty Standing Half Dollar"/>
+					<heading id="GrantMemorialHalfDollar" title="Grant Memorial Half Dollar"/>
+					<heading id="ColumbianExpoCommemorativeHalfDollar" title="Columbian Expo. Commemorative Half Dollar"/>
+				</heading>
+				<heading id="Silverdollar" title="Silver dollar">
+					<heading id="EisenhowerUncirculatedSilverDollar" title="Eisenhower Uncirculated Silver Dollar"/>
+					<heading id="LibertyHeadSilverDollar" title="Liberty Head Silver Dollar"/>
+					<heading id="PeaceTypeSilverDollar" title="Peace Type Silver Dollar"/>
+				</heading>
+				<heading id="EmergencyWartimeCurrency" title="Emergency War Time Currency"/>
+				<heading id="Commemorative" title="Commemorative">
+					<synonym value="Medallion Commemorating Thologians"/>
+				</heading>
+			</heading>
+			<heading id="AncientGreekCoins" title="Ancient Greek Coins">
+				<heading id="Halfdrachma" title="Half drachma">
+					<synonym value="Half drachmas"/>
+					<synonym value="Half drachm"/>
+					<synonym value="Half drachms"/>
+					<synonym value="Half-drachma"/>
+					<synonym value="Hemidrachm"/>
+					<synonym value="Hemidrachms"/>
+					<synonym value="Hemidrachma"/>
+					<synonym value="Hemidrachmas"/>
+					<synonym value="Hemi-drachm"/>
+					<synonym value="Hemi-drachms"/>
+					<synonym value="Hemi-drachma"/>
+					<synonym value="Hemi-drachmas"/>
+					<synonym value="Half-drachmas"/>
+					<synonym value="Half-drachm"/>
+					<synonym value="Half-drachms"/>
+				</heading>
+				<heading id="Drachma" title="Drachma">
+					<synonym value="Drachmas"/>
+					<synonym value="Drachm"/>
+					<synonym value="Drachms"/>
+				</heading>
+				<heading id="Didrachm" title="Didrachm">
+					<synonym value="Two drachm"/>
+					<synonym value="Two drachms"/>
+					<synonym value="Two drachma"/>
+					<synonym value="Two drachmas"/>
+					<synonym value="Two-drachm"/>
+					<synonym value="Two-drachms"/>
+					<synonym value="Two-drachma"/>
+					<synonym value="Two-drachmas"/>
+					<synonym value="Didrachms"/>
+					<synonym value="Didrachma"/>
+					<synonym value="Didrachmas"/>
+				</heading>
+				<heading id="Tetradrachm" title="Tetradrachm">
+					<synonym value="Four drachm"/>
+					<synonym value="Four drachms"/>
+					<synonym value="Four drachma"/>
+					<synonym value="Four drachmas"/>
+					<synonym value="Four-drachm"/>
+					<synonym value="Four-drachms"/>
+					<synonym value="Four-drachma"/>
+					<synonym value="Four-drachmas"/>
+					<synonym value="Tetradrachms"/>
+					<synonym value="Tetradrachma"/>
+					<synonym value="Tetradrachmas"/>
+					<synonym value="Tetradrachm?"/>
+				</heading>
+				<heading id="Octodrachm" title="Octodrachm">
+					<synonym value="Eight drachm"/>
+					<synonym value="Eight drachms"/>
+					<synonym value="Eight drachma"/>
+					<synonym value="Eight drachmas"/>
+					<synonym value="Eight-drachm"/>
+					<synonym value="Eight-drachms"/>
+					<synonym value="Eight-drachma"/>
+					<synonym value="Eight-drachmas"/>
+					<synonym value="Octodrachms"/>
+					<synonym value="Octodrachma"/>
+					<synonym value="Octodrachmas"/>
+				</heading>
+				<heading id="Dekadrachm" title="Dekadrachm">
+					<synonym value="Ten drachm"/>
+					<synonym value="Ten drachms"/>
+					<synonym value="Ten drachma"/>
+					<synonym value="Ten drachmas"/>
+					<synonym value="Ten-drachm"/>
+					<synonym value="Ten-drachms"/>
+					<synonym value="Ten-drachma"/>
+					<synonym value="Ten-drachmas"/>
+					<synonym value="Dekadrachms"/>
+					<synonym value="Dekadrachma"/>
+					<synonym value="Dekadrachmas"/>
+				</heading>
+				<heading id="Hemiobol" title="Hemiobol">
+					<synonym value="Hemiobols"/>
+					<synonym value="Hemiobolus"/>
+					<synonym value="Hemioboluses"/>
+				</heading>
+				<heading id="Obol" title="Obol">
+					<synonym value="Obols"/>
+					<synonym value="Obolus"/>
+					<synonym value="Oboluses"/>
+				</heading>
+				<heading id="Diobol" title="Diobol">
+					<synonym value="Diobols"/>
+					<synonym value="Diobolus"/>
+					<synonym value="Dioboluses"/>
+				</heading>
+				<heading id="Triobol" title="Triobol">
+					<synonym value="Triobols"/>
+					<synonym value="Triobolus"/>
+					<synonym value="Trioboluses"/>
+				</heading>
+				<heading id="Tetrobol" title="Tetrobol">
+					<synonym value="Tetrobols"/>
+					<synonym value="Tetrobolus"/>
+					<synonym value="Tetroboluses"/>
+				</heading>
+				<heading id="Billonstater" title="Billon stater"/>
+				<heading id="SixthofStater" title="Sixth of Stater">
+					<synonym value="Sixths of Stater"/>
+				</heading>
+				<heading id="Stater" title="Stater">
+					<synonym value="Staters"/>
+				</heading>
+				<heading id="TwoStater" title="Two Stater">
+					<synonym value="Two staters"/>
+					<synonym value="Two-staters"/>
+					<synonym value="Two-staters"/>
+					<synonym value="2 stater"/>
+					<synonym value="2 staters"/>
+				</heading>
+				<heading id="Hemilitron" title="Hemilitron">
+					<synonym value="Hemilitrons"/>
+				</heading>
+				<heading id="Litra" title="Litra">
+					<synonym value="Litras"/>
+				</heading>
+				<heading id="16litraipiece" title="16 Litrai piece"/>
+				<heading id="Pentokion" title="Pentokion">
+					<synonym value="Pentokion"/>
+				</heading>
+				<heading id="Dekonkion" title="Dekonkion">
+					<synonym value="Dekonkions"/>
+				</heading>	
+			</heading>
+			<heading id="AncientPersianCoins" title="Ancient Persian Coins">
+				<heading id="Siglos" title="Siglos">
+					<heading id="2stater" title="2 stater"/>
+				</heading>
+			</heading>
+			<heading id="AncientRomanCoins" title="Ancient Roman Coins">
+				<heading id="Antoninianus" title="Antoninianus">
+					<synonym value="Antoninianvs"/>
+					<synonym value="Antioninianus"/>
+				</heading>
+				<heading id="Denarius" title="Denarius">
+					<heading id="DenariusSerrate" title="Denarius (Serrate)">
+						<synonym value="Denarius Serrati"/>
+					</heading>
+				</heading>
+				<heading id="Sestertius" title="Sestertius"/>
+				<heading id="Quinarius" title="Quinarius"/>
+				<heading id="Sextans" title="Sextans">
+					<heading id="Sextanssextantalstandard" title="Sextans (sextantal standard)"/>
+					<heading id="Sextansuncialstandard" title="Sextans (uncial standard)">
+						<synonym value="Sextans; uncial standrard"/>
+					</heading>
+				</heading>
+				<heading id="Aes" title="Aes">
+					<heading id="Aessemiuncialstandard" title="Aes - semiuncial standard">
+						<synonym value="Aes; semiuncial standard"/>
+					</heading>
+					<heading id="Aessextantalstandard" title="Aes - sextantal standard">
+						<synonym value="Aes (sextantal standard)"/>
+						<synonym value="Aes-(sextantal standard?)"/>
+						<synonym value="Aes; sextantal standard"/>
+					</heading>
+					<heading id="Aesuncialstandard" title="Aes - uncial standard">
+						<synonym value="Aes (uncial standard)"/>
+					</heading>
+					<heading id="Aesfolles" title="Aes folles">
+						<heading id="Aesfolles4" title="Aes folles (4)"/>
+						<heading id="AesfollesR3" title="Aes folles (R3)"/>
+						<heading id="AesfollesS" title="Aes folles (S)"/>
+						<heading id="AesfollesR4" title="Aes folles (R 4)"/>
+						<heading id="AesfollesR1" title="Aes folles (R1)"/>
+						<heading id="Aesfollesc1" title="Aes folles (c1)"/>
+					</heading>
+					<heading id="Aesgrave" title="Aes grave">
+						<heading id="Aesgravelibral" title="Aes grave; libral"/>
+						<heading id="Aesgraveuncia" title="Aes grave; uncia"/>
+						<heading id="Aesgravequadrans" title="Aes grave; quadrans"/>
+						<heading id="Aesgravetriens" title="Aes grave; triens"/>
+					</heading>
+					<heading id="Aesrude" title="Aes rude">
+						<heading id="Aesrudesextantalstand" title="Aes rude; sextantal stand"/>
+					</heading>
+					<heading id="Aessemis" title="Aes semis"/>
+				</heading>
+				<heading id="Aureus" title="Aureus"/>
+				<heading id="Cistophoros" title="Cistophoros"/>
+				<heading id="Quadrans" title="Quadrans">
+					<heading id="Quadranssemiuncialsta" title="Quadrans - semiuncial sta"/>
+					<heading id="Quadranssextantalstand" title="Quadrans (sextantal stand"/>
+					<heading id="Quadransuncialstandar" title="Quadrans - uncial standar"/>
+					<heading id="Quadransuncialstandard" title="Quadrans; uncial standard"/>
+				</heading>
+				<heading id="Constantinians" title="Constantinians"/>
+				<heading id="Semuncia" title="Semuncia"/>
+				<heading id="Dupondius" title="Dupondius"/>
+				<heading id="Semis" title="Semis">
+					<synonym value="Semis ?"/>
+					<heading id="Semissemiuncialstanda" title="Semis - semiuncial standa"/>
+					<heading id="Semissextantalstandard" title="Semis (sextantal standard">
+						<synonym value="Semis; sextantal standard"/>
+					</heading>
+				</heading>
+				<heading id="Triens" title="Triens">
+					<heading id="Triensuncialstandard" title="Triens - uncial standard">
+						<synonym value="Triens; uncial standard"/>
+					</heading>
+					<heading id="Trienssextantalstandard" title="Triens (sextantal standard)"/>
+				</heading>
+				<heading id="Quartunciasemilibrals" title="Quartuncia (semi-libral s"/>
+				<heading id="SydenhamQuartunciaGr" title="Sydenham:  Quartuncia; Gr"/>
+				<heading id="Uncia" title="Uncia">
+					<heading id="Unciatrientalstandard" title="Uncia - triental standard"/>
+					<heading id="Unciapostsemilibralst" title="Uncia (post-semilibral st"/>
+				</heading>
+				<heading id="TriaAssaria" title="Tria Assaria"/>
+			</heading>
+			<heading id="AncientByzantineCoins" title="Ancient Byzantine Coins"/>
+			<heading id="AncientHebrewCoins" title="Ancient Hebrew Coins">
+				<heading id="Shekel" title="Shekel"/>
+				<heading id="Doubleshekel" title="Double shekel"/>
+			</heading>
+			<heading id="GermanCoins" title="German Coins">
+				<heading id="1Pfenning" title="1 Pfenning"/>
+				<heading id="10Pfenning" title="10 Pfenning"/>
+				<heading id="5Pfenning" title="5 Pfenning"/>
+			</heading>
+		</heading>
+		<heading id="MoneyBox" title="Money Box">
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Moneystone" title="Money stone">
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Purse" title="Purse">
+			<synonym value="Purses"/>
+			<synonym value="Handbag"/>
+			<synonym value="Handbags"/>
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="Seal" title="Seal"> <!-- exclude sea mammals and closures -->
+			<excl value="Marine"/>
+			<excl value="Pinniped"/>
+			<excl value="Sea Lion"/>
+			<synonym value="Seals"/>
+			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+		</heading>
+	</heading>
 	<heading id="DomesticItems" title="Domestic Items">
 		<synonym value="Domestic Items"/>
 		<heading id="FoodPreparationItems" title="Food Preparation Items" nomatch="true">
@@ -996,6 +1431,10 @@
 			<heading id="CookingStone" title="Cooking Stone">
 				<synonym value="Cooking Stones"/> 	
 				<implies facet="Activity_facet" cat="Foodpreparation"/>		
+			</heading>
+			<heading id="CookingStove" title="Cooking Stove">
+				<synonym value="Cooking Stoves"/> 	
+				<implies facet="Activity_facet" cat="Foodpreparation"/>			
 			</heading>
 			<heading id="CookingVessel" title="Cooking Vessel">
 				<synonym value="Cooking Vessels"/>
@@ -1357,6 +1796,104 @@
 			</heading>
 		</heading>
 	</heading>
+	<heading id="FishingTrappingitems" title="Fishing &amp; Trapping items">
+		<heading id="Hook" title="Hook"> 					
+			<synonym value="Hooks"/>
+			<implies facet="Activity_facet" cat="Fishing"/>	
+		</heading>
+		<heading id="FishingLine" title="Fishing line"> 					
+			<synonym value="Fishing lines"/> 
+			<implies facet="Activity_facet" cat="Fishing"/>				
+		</heading>
+		<heading id="Harpoon" title="Harpoon"> 					
+			<synonym value="Harpoons"/>
+			<implies facet="Activity_facet" cat="Fishing"/>
+			<implies facet="Activity_facet" cat="Hunting"/>			
+		</heading>
+		<heading id="Net" title="Net"> 					
+			<synonym value="Nets"/>
+			<implies facet="Activity_facet" cat="Fishing"/>	
+		</heading>
+		<heading id="Sinker" title="Sinker"> 					
+			<synonym value="Sinkers"/> 
+			<implies facet="Activity_facet" cat="Fishing"/>	
+		</heading>
+		<heading id="Nethanger" title="Net hanger"> 					
+			<synonym value="Net hangers"/>
+			<implies facet="Activity_facet" cat="Fishing"/>	
+		</heading>
+		<heading id="Gig" title="Gig"> <!-- A trident or three-pringed spear for fishing -->		
+			<synonym value="Gigs"/>
+			<implies facet="Activity_facet" cat="Fishing"/>
+		</heading>
+		<heading id="Slitter" title="Slitter">
+			<heading id="EelSlitter" title="Eel Slitter"> 					
+				<synonym value="Eel Slitters"/>
+				<implies facet="Activity_facet" cat="Fishing"/>			
+			</heading>
+		</heading>
+		<heading id="Gorgehook" title="Gorge hook"> 					
+			<synonym value="Gorge hooks"/>
+			<implies facet="Activity_facet" cat="Fishing"/>	
+		</heading>
+	</heading>
+	<heading id="Funeraryitems" title="Funerary items">
+		<heading id="Mummy" title="Mummy">
+			<synonym value="Mummies"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="Activity_facet" cat="Burial"/>
+			<heading id="Humanmummy" title="Human mummy"> 					
+				<synonym value="Human mummies"/>			
+			</heading>
+			<heading id="Catmummy" title="Cat mummy"> 					
+				<synonym value="Cat mummies"/> 				
+			</heading>
+			<heading id="Crocodilemummy" title="Crocodile mummy"> 					
+				<synonym value="Crocodile mummies"/> 				
+			</heading>
+			<heading id="Dogmummy" title="Dog mummy"> 					
+				<synonym value="Dog mummies"/> 				
+			</heading>
+			<heading id="Monkeymummy" title="Monkey mummy"> 					
+				<synonym value="Monkey mummies"/> 				
+			</heading>
+			<heading id="Fishmummy" title="Fish mummy"> 					
+				<synonym value="Fish mummies"/> 				
+			</heading>
+			<heading id="Lizardmummy" title="Lizard mummy"> 					
+				<synonym value="Lizard mummies"/> 				
+			</heading>
+			<heading id="Parrotmummy" title="Parrot mummy"> 					
+				<synonym value="Parrot mummies"/> 				
+			</heading>
+			<heading id="Snakemummy" title="Snake mummy"> 					
+				<synonym value="Snake mummies"/> 				
+			</heading>
+		</heading>
+		<heading id="Urn" title="Urn">
+			<synonym value="Urns"/>
+		</heading>
+		<heading id="Sarcophagus" title="Sarcophagus">
+			<synonym value="Sarcophogas"/>
+			<synonym value="Sarcophogases"/>
+			<synonym value="Sarcophagi"/>
+			<implies facet="Activity_facet" cat="Burial"/>
+		</heading>
+		<heading id="Coffin" title="Coffin">
+			<synonym value="Coffins"/>
+			<implies facet="Activity_facet" cat="Burial"/>
+		</heading>
+		<heading id="CanopicJar" title="Canopic Jar"> 					
+			<synonym value="Canopic Jars"/>
+			<implies facet="Activity_facet" cat="Burial"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+		</heading>
+		<heading id="CanopicBox" title="Canopic Box"> 					
+			<synonym value="Canopic Boxes"/>
+			<implies facet="Activity_facet" cat="Burial"/>
+			<implies facet="Activity_facet" cat="ReligionSpirituality"/>		
+		</heading>
+	</heading>
 	<heading id="Games" title="Games">
 		<synonym value="Game"/>
 		<implies facet="Activity_facet" cat="PlayingGames"/>
@@ -1488,6 +2025,16 @@
 			<heading id="Pendant" title="Pendant">
 				<synonym value="Pendants"/>
 			</heading>
+		</heading>
+	</heading>
+	<heading id="MedicalHealingitems" title="Medical &amp; Healing items">
+		<heading id="Doctoringbasket" title="Doctoring basket"> 					
+			<synonym value="Doctoring baskets"/>
+			<implies facet="Activity_facet" cat="Healing"/>			
+		</heading>
+		<heading id="Enemafunnel" title="Enema funnel"> 					
+			<synonym value="Enema funnels"/>
+			<implies facet="Activity_facet" cat="Healing"/>
 		</heading>
 	</heading>
 	<heading id="Musicrelateditems" title="Music">
@@ -2263,7 +2810,10 @@
 			</heading>				
 		</heading>
 		<heading id="Rope" title="Rope">
-			<synonym value="Ropes"/> 				
+			<synonym value="Ropes"/> 
+			<heading id="MeshMeasure" title="Mesh Measure">
+				<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+			</heading>
 		</heading>
 		<heading id="Sickle" title="Sickle">
 			<synonym value="Sickles"/> 				
@@ -2387,602 +2937,26 @@
 			</heading>
 		</heading>
 	</heading>
-	
-	<!-- The following were migrated from Activity or Context and need to be filed above -->
-        <heading id="CookingStove" title="Cooking Stove">
-			<synonym value="Cooking Stoves"/> 	
-			<implies facet="Activity_facet" cat="Foodpreparation"/>			
+	<heading id="VehiclesAndTransportation" title="Vehicles &amp; Transportation">
+		<heading id="Airplane" title="Airplane"/>
+		<heading id="Boats" title="Boats">
+			<synonym value="Boat"/>
+			<heading id="Galley" title="Galley"/>
+			<heading id="Canoe" title="Canoe">
+				<synonym value="Canoes"/>
+			</heading>
+			<heading id="Kayak" title="Kayak">
+				<synonym value="Kayaks"/>
+			</heading>
+			<heading id="Boat" title="Boat">
+				<synonym value="Boats"/>
+			</heading>
+			<heading id="Paddle" title="Paddle">
+				<synonym value="Paddles"/>
+				<synonym value="Oar"/>
+				<synonym value="Oars"/>
+			</heading>
+			<heading id="Boathook" title="Boat hook"/>
 		</heading>
-		<heading id="Abacus" title="Abacus"> <!--exclude column/architrave interface -->
-			<synonym value="Abaci"/>
-			<synonym value="Abacuses"/>
-			<synonym value="Counting Frame"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>			
-		</heading>
-		<heading id="Counter" title="Counter">
-			<synonym value="Counters"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>				
-		</heading>
-		<heading id="Coin" title="Coin">
-			<synonym value="Coins"/>
-			<synonym value="Coinage"/>
-			<implies facet="Activity_facet" cat="Metallurgy"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-			<!--These categories need cleaning -->
-			<heading id="Denomination" title="Denomination">
-				<heading id="Bronzedouble" title="Bronze double"> 					
-					<synonym value="Bronze doubles"/>
-				    <implies facet="Materials_facet" cat="Bronze"/>		
-				</heading>
-				<heading id="Notgeld" title="Notgeld"/>
-				<heading id="50centavos" title="50 centavos"/>
-			</heading>
-			<heading id="UnitedStatesCoins" title="United States Coins">
-				<synonym value="US/Dollar system"/>
-				<heading id="Penny" title="Penny">
-					<synonym value="Pennies"/>
-					<heading id="FlyingEaglePenny" title="Flying Eagle Penny"> 					
-						<synonym value="Flying Eagle Pennies"/>
-						<synonym value="Flying-Eagle Penny"/>
-						<synonym value="Flying-Eagle Pennies"/> 				
-					</heading>
-					<heading id="LincolnHeadPenny" title="Lincoln Head Penny"> 					
-						<synonym value="Lincoln Head Pennies"/>
-						<synonym value="Lincoln-Head Penny"/>
-						<synonym value="Lincoln-Head Pennies"/> 				
-					</heading>
-					<heading id="IndianHeadPenny" title="Indian head penny"> 					
-						<synonym value="Indian Head Pennies"/>
-						<synonym value="Indian-Head Penny"/>
-						<synonym value="Indian-Head Pennies"/> 				
-					</heading>
-				</heading>
-				<heading id="Nickel" title="Nickel">
-					<synonym value="Nickels"/>
-					<heading id="LibertyHeadNickel" title="Liberty Head Nickel"> 					
-						<synonym value="Liberty Head Nickels"/>
-						<synonym value="Liberty-Head Nickel"/>
-						<synonym value="Liberty-Head Nickels"/> 				
-					</heading>
-					<heading id="HalfDime" title="Half Dime"> 					
-						<synonym value="Half Dimes"/> 				
-					</heading>
-					<heading id="NickleThreeCent" title="Nickle Three Cent"> 					
-						<synonym value="Nickle Three Cents"/> 				
-					</heading>
-					<heading id="BuffaloHeadNickel" title="Buffalo Head Nickel"> 					
-						<synonym value="Buffalo Head Nickels"/> 				
-					</heading>
-				</heading>
-				<heading id="Dime" title="Dime">
-					<synonym value="Dimes"/>
-				</heading>
-				<heading id="Quarterdollar" title="Quarter">
-					<synonym value="Quarter-dollar"/>
-					<synonym value="Quarter-dollars"/>
-					<synonym value="Quarters"/>
-					<heading id="WashingtonQuarter" title="Washington Quarter"> 					
-						<synonym value="Washington Quarters"/> 				
-					</heading>
-				</heading>
-				<heading id="Halfdollar" title="Half-dollar">
-					<synonym value="Half-dollars"/>
-					<synonym value="Half dollar"/>
-					<synonym value="Half dollars"/>
-					<heading id="BayBridgeCommememorativeHalfDollar" title="Bay Bridge Commememorative Half-Dollar">
-						<synonym value="Bay Bridge Commememorative Half Dollar"/> 					
-						<synonym value="Bay Bridge Commememorative Half Dollars"/> 
-						<synonym value="Bay Bridge Commememorative Half-Dollar"/> 					
-						<synonym value="Bay Bridge Commememorative Half-Dollars"/> 
-						<synonym value="Bay Bridge Commem Half Dollar"/>
-					</heading>
-					<heading id="BenFranklinHalfDollarUncirculatedMintSet" title="Ben Franklin Half Dollar, Uncirculated Mint Set"/>
-					<heading id="KennedyHalfDollar" title="Kennedy Half Dollar"/>
-					<heading id="FranklinKennedyHalfDollars" title="Franklin &amp; Kennedy Half Dollars"/>
-					<heading id="DiamondJubileeCommemorativeHalfDollar" title="Diamond Jubilee Commemorative Half Dollar"/>
-					<heading id="MonroeDoctrineCommemorativeHalfDollar" title="Monroe Doctrine Commemorative Half Dollar"/>
-					<!-- Missing synonym? "40th commemorative" -->
-					<heading id="KennedyHalfDollar40thCommemorative" title="Kennedy Half Dollar, 40th Commemorative"/>
-					<heading id="KennedyHalfDollarproofset" title="Kennedy Half Dollar, proof set"/>
-					<heading id="KennedyHalfDollarUncirculatedMintSet" title="Kennedy Half Dollar, Uncirculated Mint Set"/>
-					<heading id="FranklinHalfDollar" title="Franklin Half Dollar"/>
-					<heading id="CoppedBustHalfDollar" title="Copped Bust Half Dollar"/>
-					<heading id="FranklinHalfDollarproofset" title="Franklin Half Dollar, proof set"/>
-					<heading id="LibertyStandingHalfDollar" title="Liberty Standing Half Dollar"/>
-					<heading id="GrantMemorialHalfDollar" title="Grant Memorial Half Dollar"/>
-					<heading id="ColumbianExpoCommemorativeHalfDollar" title="Columbian Expo. Commemorative Half Dollar"/>
-				</heading>
-				<heading id="Silverdollar" title="Silver dollar">
-					<heading id="EisenhowerUncirculatedSilverDollar" title="Eisenhower Uncirculated Silver Dollar"/>
-					<heading id="LibertyHeadSilverDollar" title="Liberty Head Silver Dollar"/>
-					<heading id="PeaceTypeSilverDollar" title="Peace Type Silver Dollar"/>
-				</heading>
-				<heading id="EmergencyWartimeCurrency" title="Emergency War Time Currency"/>
-				<heading id="Commemorative" title="Commemorative">
-					<synonym value="Medallion Commemorating Thologians"/>
-				</heading>
-			</heading>
-			<heading id="AncientGreekCoins" title="Ancient Greek Coins">
-				<heading id="Halfdrachma" title="Half drachma">
-					<synonym value="Half drachmas"/>
-					<synonym value="Half drachm"/>
-					<synonym value="Half drachms"/>
-					<synonym value="Half-drachma"/>
-					<synonym value="Hemidrachm"/>
-					<synonym value="Hemidrachms"/>
-					<synonym value="Hemidrachma"/>
-					<synonym value="Hemidrachmas"/>
-					<synonym value="Hemi-drachm"/>
-					<synonym value="Hemi-drachms"/>
-					<synonym value="Hemi-drachma"/>
-					<synonym value="Hemi-drachmas"/>
-					<synonym value="Half-drachmas"/>
-					<synonym value="Half-drachm"/>
-					<synonym value="Half-drachms"/>
-				</heading>
-				<heading id="Drachma" title="Drachma">
-					<synonym value="Drachmas"/>
-					<synonym value="Drachm"/>
-					<synonym value="Drachms"/>
-				</heading>
-				<heading id="Didrachm" title="Didrachm">
-					<synonym value="Two drachm"/>
-					<synonym value="Two drachms"/>
-					<synonym value="Two drachma"/>
-					<synonym value="Two drachmas"/>
-					<synonym value="Two-drachm"/>
-					<synonym value="Two-drachms"/>
-					<synonym value="Two-drachma"/>
-					<synonym value="Two-drachmas"/>
-					<synonym value="Didrachms"/>
-					<synonym value="Didrachma"/>
-					<synonym value="Didrachmas"/>
-				</heading>
-				<heading id="Tetradrachm" title="Tetradrachm">
-					<synonym value="Four drachm"/>
-					<synonym value="Four drachms"/>
-					<synonym value="Four drachma"/>
-					<synonym value="Four drachmas"/>
-					<synonym value="Four-drachm"/>
-					<synonym value="Four-drachms"/>
-					<synonym value="Four-drachma"/>
-					<synonym value="Four-drachmas"/>
-					<synonym value="Tetradrachms"/>
-					<synonym value="Tetradrachma"/>
-					<synonym value="Tetradrachmas"/>
-					<synonym value="Tetradrachm?"/>
-				</heading>
-				<heading id="Octodrachm" title="Octodrachm">
-					<synonym value="Eight drachm"/>
-					<synonym value="Eight drachms"/>
-					<synonym value="Eight drachma"/>
-					<synonym value="Eight drachmas"/>
-					<synonym value="Eight-drachm"/>
-					<synonym value="Eight-drachms"/>
-					<synonym value="Eight-drachma"/>
-					<synonym value="Eight-drachmas"/>
-					<synonym value="Octodrachms"/>
-					<synonym value="Octodrachma"/>
-					<synonym value="Octodrachmas"/>
-				</heading>
-				<heading id="Dekadrachm" title="Dekadrachm">
-					<synonym value="Ten drachm"/>
-					<synonym value="Ten drachms"/>
-					<synonym value="Ten drachma"/>
-					<synonym value="Ten drachmas"/>
-					<synonym value="Ten-drachm"/>
-					<synonym value="Ten-drachms"/>
-					<synonym value="Ten-drachma"/>
-					<synonym value="Ten-drachmas"/>
-					<synonym value="Dekadrachms"/>
-					<synonym value="Dekadrachma"/>
-					<synonym value="Dekadrachmas"/>
-				</heading>
-				<heading id="Hemiobol" title="Hemiobol">
-					<synonym value="Hemiobols"/>
-					<synonym value="Hemiobolus"/>
-					<synonym value="Hemioboluses"/>
-				</heading>
-				<heading id="Obol" title="Obol">
-					<synonym value="Obols"/>
-					<synonym value="Obolus"/>
-					<synonym value="Oboluses"/>
-				</heading>
-				<heading id="Diobol" title="Diobol">
-					<synonym value="Diobols"/>
-					<synonym value="Diobolus"/>
-					<synonym value="Dioboluses"/>
-				</heading>
-				<heading id="Triobol" title="Triobol">
-					<synonym value="Triobols"/>
-					<synonym value="Triobolus"/>
-					<synonym value="Trioboluses"/>
-				</heading>
-				<heading id="Tetrobol" title="Tetrobol">
-					<synonym value="Tetrobols"/>
-					<synonym value="Tetrobolus"/>
-					<synonym value="Tetroboluses"/>
-				</heading>
-				<heading id="Billonstater" title="Billon stater"/>
-				<heading id="SixthofStater" title="Sixth of Stater">
-					<synonym value="Sixths of Stater"/>
-				</heading>
-				<heading id="Stater" title="Stater">
-					<synonym value="Staters"/>
-				</heading>
-				<heading id="TwoStater" title="Two Stater">
-					<synonym value="Two staters"/>
-					<synonym value="Two-staters"/>
-					<synonym value="Two-staters"/>
-					<synonym value="2 stater"/>
-					<synonym value="2 staters"/>
-				</heading>
-				<heading id="Hemilitron" title="Hemilitron">
-					<synonym value="Hemilitrons"/>
-				</heading>
-				<heading id="Litra" title="Litra">
-					<synonym value="Litras"/>
-				</heading>
-				<heading id="16litraipiece" title="16 Litrai piece"/>
-				<heading id="Pentokion" title="Pentokion">
-					<synonym value="Pentokion"/>
-				</heading>
-				<heading id="Dekonkion" title="Dekonkion">
-					<synonym value="Dekonkions"/>
-				</heading>	
-			</heading>
-			<heading id="AncientPersianCoins" title="Ancient Persian Coins">
-				<heading id="Siglos" title="Siglos">
-					<heading id="2stater" title="2 stater"/>
-				</heading>
-			</heading>
-			<heading id="AncientRomanCoins" title="Ancient Roman Coins">
-				<heading id="Antoninianus" title="Antoninianus">
-					<synonym value="Antoninianvs"/>
-					<synonym value="Antioninianus"/>
-				</heading>
-				<heading id="Denarius" title="Denarius">
-					<heading id="DenariusSerrate" title="Denarius (Serrate)">
-						<synonym value="Denarius Serrati"/>
-					</heading>
-				</heading>
-				<heading id="Sestertius" title="Sestertius"/>
-				<heading id="Quinarius" title="Quinarius"/>
-				<heading id="Sextans" title="Sextans">
-					<heading id="Sextanssextantalstandard" title="Sextans (sextantal standard)"/>
-					<heading id="Sextansuncialstandard" title="Sextans (uncial standard)">
-						<synonym value="Sextans; uncial standrard"/>
-					</heading>
-				</heading>
-				<heading id="Aes" title="Aes">
-					<heading id="Aessemiuncialstandard" title="Aes - semiuncial standard">
-						<synonym value="Aes; semiuncial standard"/>
-					</heading>
-					<heading id="Aessextantalstandard" title="Aes - sextantal standard">
-						<synonym value="Aes (sextantal standard)"/>
-						<synonym value="Aes-(sextantal standard?)"/>
-						<synonym value="Aes; sextantal standard"/>
-					</heading>
-					<heading id="Aesuncialstandard" title="Aes - uncial standard">
-						<synonym value="Aes (uncial standard)"/>
-					</heading>
-					<heading id="Aesfolles" title="Aes folles">
-						<heading id="Aesfolles4" title="Aes folles (4)"/>
-						<heading id="AesfollesR3" title="Aes folles (R3)"/>
-						<heading id="AesfollesS" title="Aes folles (S)"/>
-						<heading id="AesfollesR4" title="Aes folles (R 4)"/>
-						<heading id="AesfollesR1" title="Aes folles (R1)"/>
-						<heading id="Aesfollesc1" title="Aes folles (c1)"/>
-					</heading>
-					<heading id="Aesgrave" title="Aes grave">
-						<heading id="Aesgravelibral" title="Aes grave; libral"/>
-						<heading id="Aesgraveuncia" title="Aes grave; uncia"/>
-						<heading id="Aesgravequadrans" title="Aes grave; quadrans"/>
-						<heading id="Aesgravetriens" title="Aes grave; triens"/>
-					</heading>
-					<heading id="Aesrude" title="Aes rude">
-						<heading id="Aesrudesextantalstand" title="Aes rude; sextantal stand"/>
-					</heading>
-					<heading id="Aessemis" title="Aes semis"/>
-				</heading>
-				<heading id="Aureus" title="Aureus"/>
-				<heading id="Cistophoros" title="Cistophoros"/>
-				<heading id="Quadrans" title="Quadrans">
-					<heading id="Quadranssemiuncialsta" title="Quadrans - semiuncial sta"/>
-					<heading id="Quadranssextantalstand" title="Quadrans (sextantal stand"/>
-					<heading id="Quadransuncialstandar" title="Quadrans - uncial standar"/>
-					<heading id="Quadransuncialstandard" title="Quadrans; uncial standard"/>
-				</heading>
-				<heading id="Constantinians" title="Constantinians"/>
-				<heading id="Semuncia" title="Semuncia"/>
-				<heading id="Dupondius" title="Dupondius"/>
-				<heading id="Semis" title="Semis">
-					<synonym value="Semis ?"/>
-					<heading id="Semissemiuncialstanda" title="Semis - semiuncial standa"/>
-					<heading id="Semissextantalstandard" title="Semis (sextantal standard">
-						<synonym value="Semis; sextantal standard"/>
-					</heading>
-				</heading>
-				<heading id="Triens" title="Triens">
-					<heading id="Triensuncialstandard" title="Triens - uncial standard">
-						<synonym value="Triens; uncial standard"/>
-					</heading>
-					<heading id="Trienssextantalstandard" title="Triens (sextantal standard)"/>
-				</heading>
-				<heading id="Quartunciasemilibrals" title="Quartuncia (semi-libral s"/>
-				<heading id="SydenhamQuartunciaGr" title="Sydenham:  Quartuncia; Gr"/>
-				<heading id="Uncia" title="Uncia">
-					<heading id="Unciatrientalstandard" title="Uncia - triental standard"/>
-					<heading id="Unciapostsemilibralst" title="Uncia (post-semilibral st"/>
-				</heading>
-				<heading id="TriaAssaria" title="Tria Assaria"/>
-			</heading>
-			<heading id="AncientByzantineCoins" title="Ancient Byzantine Coins"/>
-			<heading id="AncientHebrewCoins" title="Ancient Hebrew Coins">
-				<heading id="Shekel" title="Shekel"/>
-				<heading id="Doubleshekel" title="Double shekel"/>
-			</heading>
-			<heading id="GermanCoins" title="German Coins">
-				<heading id="1Pfenning" title="1 Pfenning"/>
-				<heading id="10Pfenning" title="10 Pfenning"/>
-				<heading id="5Pfenning" title="5 Pfenning"/>
-			</heading>
-		</heading>
-		<heading id="MoneyBox" title="Money Box">
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Purse" title="Purse">
-			<synonym value="Purses"/>
-			<synonym value="Handbag"/>
-			<synonym value="Handbags"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="MeshMeasure" title="Mesh Measure">
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Moneystone" title="Money stone">
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Seal" title="Seal"> <!-- exclude sea mammals and closures -->
-			<excl value="Marine"/>
-			<excl value="Pinniped"/>
-			<excl value="Sea Lion"/>
-			<synonym value="Seals"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Cradle" title="Cradle">
-			<synonym value="Cradles"/>
-			<implies facet="Activity_facet" cat="Childrearing"/>
-		</heading>
-		<heading id="MedicalHealingitems" title="Medical &amp; Healing items">
-			<heading id="Doctoringbasket" title="Doctoring basket"> 					
-				<synonym value="Doctoring baskets"/>
-				<implies facet="Activity_facet" cat="Healing"/>			
-			</heading>
-			<heading id="Enemafunnel" title="Enema funnel"> 					
-				<synonym value="Enema funnels"/>
-				<implies facet="Activity_facet" cat="Healing"/>
-			</heading>
-		</heading>
-		<heading id="Ceremonialitems" title="Ceremonial items">
-			<heading id="Mandala" title="Mandala"> 					
-				<synonym value="Mandalas"/>
-				<synonym value="Dreamcatcher"/>
-				<synonym value="Dreamcatchers"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-			</heading>
-			<heading id="Mask" title="Mask">
-				<synonym value="Masks"/>
-				<implies facet="TechniqueDesignDecoration_facet" cat="FigurativeOrRepresentational"/>
-			</heading>
-			<heading id="FeatheredStick" title="Feathered Stick"> 					
-				<synonym value="Feathered Sticks"/>
-				<implies facet="Materials_facet" cat="Feathers"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-			</heading>
-			<heading id="Charmstone" title="Charmstone"> 					
-				<synonym value="Charmstones"/>
-				<synonym value="Charm stone"/>
-				<synonym value="Charm stones"/>
-				<synonym value="Charm-stone"/>
-				<synonym value="Charm-stones"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
-			</heading>
-			<heading id="Headdress" title="Headdress">
-				<synonym value="Headdresses"/>
-				<synonym value="Head dress"/>
-				<synonym value="Head dresses"/>
-				<synonym value="Head-dress"/>
-				<synonym value="Head-dresses"/>
-			</heading>
-			<heading id="Scarab" title="Scarab">
-				<synonym value="Scarabs"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-			</heading>
-			<heading id="Ushabti" title="Ushabti"> 					
-				<synonym value="Ushabtis"/>
-				<synonym value="Shabti"/>
-				<synonym value="Shabtis"/>
-				<synonym value="Shawabti"/>
-				<synonym value="Shawabtis"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
-			</heading>
-			<heading id="Amulet" title="Amulet"> 					
-				<synonym value="Amulets"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>				
-			</heading>
-    		<heading id="Mala" title="Mala">
-    			<synonym value="Malas"/>
-    			<synonym value="Prayer beads"/>
-    			<synonym value="Prayer bead"/>
-    			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-    		</heading>
-    		<heading id="Altar" title="Altar"> 					
-    			<synonym value="Altars"/>
-    			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
-    		</heading>
-    		<heading id="Idol" title="Idol">				
-    			<synonym value="Idols"/>
-    			<implies facet="Activity_facet" cat="ReligionSpirituality"/>		
-    		</heading>
-    		<heading id="PrayerMat" title="Prayer Mat"> 					
-    			<synonym value="Prayer Mats"/>
-    			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
-    		</heading>
-    		<heading id="PlasterCast" title="Plaster Cast"> 					
-    			<synonym value="Plaster Casts"/>	
-    		</heading>
-    		<heading id="Shrine" title="Shrine"> 					
-    			<synonym value="Shrines"/>
-    			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-    		</heading>
-    		<heading id="Scepter" title="Scepter"> 					
-    			<synonym value="Scepters"/> 				
-    		</heading>
-    		<heading id="Wand" title="Wand"> 					
-    			<synonym value="Wands"/> 				
-    		</heading>
-		</heading>
-		<heading id="Funeraryitems" title="Funerary items">
-			<heading id="Mummy" title="Mummy">
-				<synonym value="Mummies"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-				<heading id="Humanmummy" title="Human mummy"> 					
-					<synonym value="Human mummies"/>			
-				</heading>
-				<heading id="Catmummy" title="Cat mummy"> 					
-					<synonym value="Cat mummies"/> 				
-				</heading>
-				<heading id="Crocodilemummy" title="Crocodile mummy"> 					
-					<synonym value="Crocodile mummies"/> 				
-				</heading>
-				<heading id="Dogmummy" title="Dog mummy"> 					
-					<synonym value="Dog mummies"/> 				
-				</heading>
-				<heading id="Monkeymummy" title="Monkey mummy"> 					
-					<synonym value="Monkey mummies"/> 				
-				</heading>
-				<heading id="Fishmummy" title="Fish mummy"> 					
-					<synonym value="Fish mummies"/> 				
-				</heading>
-				<heading id="Lizardmummy" title="Lizard mummy"> 					
-					<synonym value="Lizard mummies"/> 				
-				</heading>
-				<heading id="Parrotmummy" title="Parrot mummy"> 					
-					<synonym value="Parrot mummies"/> 				
-				</heading>
-				<heading id="Snakemummy" title="Snake mummy"> 					
-					<synonym value="Snake mummies"/> 				
-				</heading>
-			</heading>
-			<heading id="Urn" title="Urn">
-				<synonym value="Urns"/>
-			</heading>
-			<heading id="Sarcophagus" title="Sarcophagus">
-				<synonym value="Sarcophogas"/>
-				<synonym value="Sarcophogases"/>
-				<synonym value="Sarcophagi"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-			</heading>
-			<heading id="Coffin" title="Coffin">
-				<synonym value="Coffins"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-			</heading>
-			<heading id="CanopicJar" title="Canopic Jar"> 					
-				<synonym value="Canopic Jars"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
-			</heading>
-			<heading id="CanopicBox" title="Canopic Box"> 					
-				<synonym value="Canopic Boxes"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>		
-			</heading>
-		</heading>
-		<heading id="Transportation" title="Transportation">
-			<heading id="TransportationByAir" title="By Air"  nomatch="true">
-				<heading id="Airplane" title="Airplane"/>
-			</heading>
-			<heading id="TransportationByLand" title="By Land"  nomatch="true">
-				<heading id="HorsebackRiding" title="Horseback Riding"/>
-			</heading>
-			<heading id="TransportationByWater" title="By Water"  nomatch="true">
-				<heading id="Galley" title="Galley"/>
-				<heading id="Canoe" title="Canoe">
-					<synonym value="Canoes"/>
-				</heading>
-				<heading id="Kayak" title="Kayak">
-					<synonym value="Kayaks"/>
-				</heading>
-				<heading id="Boat" title="Boat">
-					<synonym value="Boats"/>
-				</heading>
-				<heading id="Paddle" title="Paddle">
-					<synonym value="Paddles"/>
-					<synonym value="Oar"/>
-					<synonym value="Oars"/>
-				</heading>
-				<heading id="Boathook" title="Boat hook"/>
-			</heading>
-		</heading>
-		<heading id="FishingTrappingitems" title="Fishing &amp; Trapping items">
-			<heading id="Hook" title="Hook"> 					
-				<synonym value="Hooks"/>
-				<implies facet="Activity_facet" cat="Fishing"/>	
-			</heading>
-			<heading id="FishingLine" title="Fishing line"> 					
-				<synonym value="Fishing lines"/> 
-				<implies facet="Activity_facet" cat="Fishing"/>				
-			</heading>
-			<heading id="Harpoon" title="Harpoon"> 					
-				<synonym value="Harpoons"/>
-				<implies facet="Activity_facet" cat="Fishing"/>
-				<implies facet="Activity_facet" cat="Hunting"/>			
-			</heading>
-			<heading id="Net" title="Net"> 					
-				<synonym value="Nets"/>
-				<implies facet="Activity_facet" cat="Fishing"/>		
-			</heading>
-			<heading id="Sinker" title="Sinker"> 					
-				<synonym value="Sinkers"/> 
-				<implies facet="Activity_facet" cat="Fishing"/>	
-			</heading>
-			<heading id="Nethanger" title="Net hanger"> 					
-				<synonym value="Net hangers"/>
-				<implies facet="Activity_facet" cat="Fishing"/>	
-			</heading>
-			<heading id="Gig" title="Gig"> <!-- A trident or three-pringed spear for fishing -->		
-				<synonym value="Gigs"/>
-				<implies facet="Activity_facet" cat="Fishing"/>
-			</heading>
-			<heading id="Slitter" title="Slitter">
-				<heading id="EelSlitter" title="Eel Slitter"> 					
-					<synonym value="Eel Slitters"/>
-					<implies facet="Activity_facet" cat="Fishing"/>			
-				</heading>
-			</heading>
-			<heading id="Gorgehook" title="Gorge hook"> 					
-				<synonym value="Gorge hooks"/>
-				<implies facet="Activity_facet" cat="Fishing"/>	
-			</heading>
-		</heading>
-		<heading id="AnimalHusbandry" title="Animal Husbandry"/>
-		<heading id="Foodgatheringitems" title="Food gathering items">
-			<heading id="Gatheringbaskets" title="Gathering baskets">
-				<implies facet="Activity_facet" cat="Gathering"/>
-				<heading id="Acorngatheringbasket" title="Acorn-gathering basket">
-					<synonym value="Acorn gathering basket"/> 					
-					<synonym value="Acorn gathering baskets"/>
-					<synonym value="Acorn-gathering basket"/>
-					<synonym value="Acorn-gathering baskets"/>
-				</heading>
-				<heading id="Seedgatheringbasket" title="Seed-gathering basket">
-					<synonym value="Seed gathering basket"/> 					
-					<synonym value="Seed gathering baskets"/>
-					<synonym value="Seed-gathering basket"/>
-					<synonym value="Seed-gathering baskets"/> 
-				</heading>
-			</heading>
-		</heading>
+	</heading>
 </taxonomy>
