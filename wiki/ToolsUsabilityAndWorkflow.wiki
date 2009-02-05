@@ -88,10 +88,16 @@ For 1) we need to describe authentication to CMS and assume we can get at multip
     <dbServerInfo protocol="{mysql,sqlserver}" location="{name or address}" port="any port specifier"
                 user="username" passwd="pass" />
     <source>
-      <table db="dbname" name="tablename" joinkey="colname">
-        <column name="colname" destination="procColName">
-          <filter ... />
+      <table db="dbname" name="table1">
+        <column type="local" name="col1" destination="procColName" />
+        <column type="joined" name="col3" destination="procColName"
+                 localkey="keycolname" jointable="table2" joinkey="colname">
+          <!-- joinconstraint only legal under column type="joined" -->
+          <joinconstraint where="where_clause" />
         </column>
+        <rowfilter where="where_clause" />
+        <elide match="regexp_pattern" />
+        <replace match="regexp_pattern" pattern="replace_pattern" />
       <table>
     </source>
   </dbSourceInfo>
@@ -106,10 +112,8 @@ For 1) we need to describe authentication to CMS and assume we can get at multip
   </processingInfo>
 </delphiMetadataConfig>
 }}}
-For the source info, we need to consider a join that produces a set of rows, within which we get columns. The columns are named or indexed, and note that some are from different tables. 
-
-Also, still need to figure out:
-  * filters: regexp to disqualify a row
-  * qualifiers: regexp to (positively) qualify which rows are selected
-  * noise reduction: regexp to remove strings from results
-  * obfuscation: regexp to replace strings (like currency values) in results
+Some discussion of the elements/features:
+<dl>
+<dt><code>delphiMetadataConfig</code></dt>
+<dd>This is the root wrapping element for our configuration documents. It takes no attributes</dd>
+</dl>
