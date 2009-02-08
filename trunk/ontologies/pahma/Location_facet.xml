@@ -2343,6 +2343,11 @@
 			<heading id="Argentina" title="Argentina"/>  <!-- done -->
 			<heading id="Bolivia" title="Bolivia">  <!-- done -->
 				<heading id="Quichua" title="Quichua"/>
+				<heading id="TiwanakuSite" title="Tiwanaku">
+					<synonym value="Tiahuanaco"/>
+					<synonym value="Tiahuanacu"/>
+					<implies facet="Culture_facet" cat="TiwanakuCulture"/>
+				</heading>
 			</heading>
 			<heading id="Brazil" title="Brazil">  <!-- done -->
 				<synonym value="Brasil"/>
@@ -2402,10 +2407,6 @@
 				</heading>
 				<heading id="CasaChicasite" title="Casa Chica site"/>
 				<heading id="TecapaSite" title="Tecapa Site"/>
-				<heading id="ChicamaValley" title="Chicama Valley">
-					<!-- <heading id="Cupisnique" title="Cupisnique"/>  Is a culture, not a place -->
-				</heading>
-				<heading id="ChicamaPV23" title="Chicama PV23"/>
 				<heading id="Chepan" title="Chepan"/>
 				<heading id="Coyuz" title="Coyuz"/>
 				<heading id="Paracas" title="Paracas"/>
@@ -2422,6 +2423,7 @@
 					<synonym value="North Coast (unspecified)"/>
 					<heading id="LambayequeRegion" title="Lambayeque Region">
 						<synonym value="Lambayeque"/>
+						<synonym value="Lambayeque Valley"/>
 						<heading id="Chiclayo" title="Chiclayo"/>
 						<heading id="HuacaBlanca" title="Huaca Blanca"/>
 						<heading id="Mochevalley" title="Moche valley">
@@ -2454,6 +2456,11 @@
 							</heading>
 						</heading>
 					</heading>
+					<heading id="ChicamaValley" title="Chicama Valley">
+						<synonym value="Chicama"/>
+						<heading id="ChicamaPV23" title="Chicama PV23"/>
+						<!-- <heading id="Cupisnique" title="Cupisnique"/>  Is a culture, not a place -->
+					</heading>
 					<heading id="SanMartinRegion" title="San Martín Region">
 						<synonym value="San Martin Region"/>
 						<synonym value="San Martín"/>
@@ -2484,54 +2491,54 @@
 					</heading>
 				</heading>
 				<heading id="CentralPeru" title="Central Peru">
-				  <heading id="AncashRegion" title="Ancash Region"/>
-				  <heading id="HuanucoRegion" title="Huánuco Region"/>
-				  <heading id="PascoRegion" title="Pasco Region"/>
-				  <heading id="CallaoRegion" title="Callao Region">
-				    <heading id="ConstitutionalProvinceofCallao" title="Constitutional Province of Callao"/>
-				  </heading>
-				  <heading id="JuninRegion" title="Junín Region"/>
-				  <heading id="LimaRegion" title="Lima Region">
-				    <heading id="Limavalley" title="Lima valley">
-				      <heading id="Magdelena" title="Magdelena"/>
-				      <heading id="HaciendaNieveria" title="Hacienda Nieveria"/>
-				      <heading id="Cajamarquillaruins" title="Cajamarquilla (ruins)"/>
-				    </heading>
-				    <heading id="Rimacvalley" title="Rimac valley">
-				      <heading id="Nieveria" title="Nieveria"/>
-				    </heading>
-				    <heading id="Chancayvalley" title="Chancay valley">
-				      <heading id="ChancaySiteA" title="Chancay Site A"/>
-				      <heading id="ChancaySiteB" title="Chancay Site B"/>
-				      <heading id="ChancaySiteC" title="Chancay Site C"/>
-				      <heading id="ChancaySiteD" title="Chancay Site D"/>
-				      <heading id="ChancaySiteE" title="Chancay Site E"/>
-				      <heading id="HuaralViejo" title="Huaral Viejo"/>
-				      <heading id="ChancayPuerto" title="Chancay Puerto"/>
-				      <heading id="LaMina" title="La Mina">
-				        <heading id="CemeteryofLaMina" title="Cemetery of La Mina"/>
-				      </heading>
-				      <heading id="CaleradeLauren" title="Calera de Lauren">
-				        <synonym value="Galera de Laueu"/>
-				        <heading id="SiteB" title="Site B"/>
-				      </heading>
-				      <heading id="Retes" title="Retes"/>
-				    </heading>
-				    <heading id="Pachacamac" title="Pachacamac"/>
-				    <heading id="Chinchavalley" title="Chincha valley">
-				      <heading id="SiteA" title="Site A"/>
-				      <heading id="SiteB" title="Site B"/>
-									<heading id="SiteC" title="Site C"/>
-				      <heading id="SiteD" title="Site D"/>
-				      <heading id="SiteE" title="Site E"/>
-				    </heading>
-				    <heading id="SupeDistrict" title="Supe District">
-				      <heading id="Paramonga" title="Paramonga"/>
-				    </heading>
-				  </heading>
-				  <heading id="UcayaliRegion" title="Ucayali Region">
-				    <heading id="UcayaliRiver" title="Ucayali River"/>
-				  </heading>
+					<heading id="AncashRegion" title="Ancash Region"/>
+					<heading id="HuanucoRegion" title="Huánuco Region"/>
+					<heading id="PascoRegion" title="Pasco Region"/>
+					<heading id="CallaoRegion" title="Callao Region">
+						<heading id="ConstitutionalProvinceofCallao" title="Constitutional Province of Callao"/>
+					</heading>
+					<heading id="JuninRegion" title="Junín Region"/>
+					<heading id="LimaRegion" title="Lima Region">
+						<heading id="Limavalley" title="Lima valley">
+						<heading id="Magdelena" title="Magdelena"/>
+						<heading id="HaciendaNieveria" title="Hacienda Nieveria"/>
+						<heading id="Cajamarquillaruins" title="Cajamarquilla (ruins)"/>
+					</heading>
+						<heading id="Rimacvalley" title="Rimac valley">
+							<heading id="Nieveria" title="Nieveria"/>
+						</heading>
+						<heading id="Chancayvalley" title="Chancay valley">
+							<heading id="ChancaySiteA" title="Chancay Site A"/>
+							<heading id="ChancaySiteB" title="Chancay Site B"/>
+							<heading id="ChancaySiteC" title="Chancay Site C"/>
+							<heading id="ChancaySiteD" title="Chancay Site D"/>
+							<heading id="ChancaySiteE" title="Chancay Site E"/>
+							<heading id="HuaralViejo" title="Huaral Viejo"/>
+							<heading id="ChancayPuerto" title="Chancay Puerto"/>
+							<heading id="LaMina" title="La Mina">
+								<heading id="CemeteryofLaMina" title="Cemetery of La Mina"/>
+							</heading>
+							<heading id="CaleradeLauren" title="Calera de Lauren">
+								<synonym value="Galera de Laueu"/>
+								<heading id="SiteB" title="Site B"/>
+							</heading>
+							<heading id="Retes" title="Retes"/>
+						</heading>
+						<heading id="Pachacamac" title="Pachacamac"/>
+						<heading id="Chinchavalley" title="Chincha valley">
+							<heading id="SiteA" title="Site A"/>
+							<heading id="SiteB" title="Site B"/>
+							<heading id="SiteC" title="Site C"/>
+							<heading id="SiteD" title="Site D"/>
+							<heading id="SiteE" title="Site E"/>
+						</heading>
+						<heading id="SupeDistrict" title="Supe District">
+						<heading id="Paramonga" title="Paramonga"/>
+					</heading>
+					</heading>
+					<heading id="UcayaliRegion" title="Ucayali Region">
+						<heading id="UcayaliRiver" title="Ucayali River"/>
+					</heading>
 				</heading>
 				<heading id="SouthernPeru" title="Southern Peru">
 					<heading id="ApurimacRegion" title="Apurímac Region"/>
@@ -2565,19 +2572,19 @@
 					</heading>
 					<heading id="IcaRegion" title="Ica Region">
 					<heading id="Icavalley" title="Ica valley">
-					  <heading id="Galagarza" title="Galagarza">
-					    <heading id="GalagarzaSiteA" title="Galagarza Site A"/>
-										<heading id="GalagarzaSiteB" title="Galagarza Site B"/>
-					  </heading>
-					  <heading id="Ocucaje" title="Ocucaje">
-					    <heading id="OcucajeSiteA" title="Ocucaje Site A"/>
-					    <heading id="OcucajeSiteB" title="Ocucaje Site B"/>
-					    <heading id="OcucajeSiteC" title="Ocucaje Site C"/>
-					    <heading id="OcucajeSiteD" title="Ocucaje Site D"/>
-					    <heading id="OcucajeSiteE" title="Ocucaje Site E"/>
-					    <heading id="OcucajeSiteF" title="Ocucaje Site F"/>
-					    <heading id="OcucajeSiteG" title="Ocucaje Site G"/>
-					  </heading>
+						<heading id="Galagarza" title="Galagarza">
+							<heading id="GalagarzaSiteA" title="Galagarza Site A"/>
+							<heading id="GalagarzaSiteB" title="Galagarza Site B"/>
+						</heading>
+						<heading id="Ocucaje" title="Ocucaje">
+							<heading id="OcucajeSiteA" title="Ocucaje Site A"/>
+							<heading id="OcucajeSiteB" title="Ocucaje Site B"/>
+							<heading id="OcucajeSiteC" title="Ocucaje Site C"/>
+							<heading id="OcucajeSiteD" title="Ocucaje Site D"/>
+							<heading id="OcucajeSiteE" title="Ocucaje Site E"/>
+							<heading id="OcucajeSiteF" title="Ocucaje Site F"/>
+							<heading id="OcucajeSiteG" title="Ocucaje Site G"/>
+						</heading>
 					  <heading id="LaVenta" title="La Venta"/>
 					  <heading id="Tate" title="Tate"/>
 					  <heading id="Santiago" title="Santiago">
