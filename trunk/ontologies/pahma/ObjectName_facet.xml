@@ -60,6 +60,21 @@
 	<heading id="ArchitecturalElements" title="Architectural Elements">
 		<synonym value="Architectural Element"/>
 		<heading id="BuildingsOrStructures" title="Buildings or Structures" nomatch="true">
+			<heading id="Barkhouse" title="Bark house">
+				<synonym value="Barkhouses"/>
+				<synonym value="Barkhouse"/>
+				<synonym value="Bark houses"/>
+				<synonym value="Bark-house"/>
+				<synonym value="Bark-houses"/>
+				<implies facet="Materials_facet" cat="Bark"/>
+			</heading>
+			<heading id="Brushhouse" title="Brush house">
+				<synonym value="Brushhouses"/>
+				<synonym value="Brushhouse"/>
+				<synonym value="Brush houses"/>
+				<synonym value="Brush-house"/>
+				<synonym value="Brush-houses"/>
+			</heading>
 			<heading id="Dancehouse" title="Dancehouse">
 				<synonym value="Dancehouses"/>
 				<synonym value="Dance house"/>
@@ -512,8 +527,10 @@
 			<synonym value="Dipping baskets"/>
 			<implies facet="Activity_facet" cat="Foodpreparation"/>		
 		</heading>
-		<heading id="DoctoringBasket" title="Doctoring Basket">
-			<synonym value="Doctoring Baskets"/>
+		<heading id="DoctoringbasketBaskets" title="Doctoring basket"> 					
+			<synonym value="Doctoring baskets"/>
+			<implies facet="Activity_facet" cat="Healing"/>	
+			<implies facet="ObjectName_facet" cat="DoctoringbasketMedical"/>
 		</heading>
 		<heading id="BasketFishtrapbasket" title="Fish Trap Basket"> <!-- Also a kind of trap (armament) -->
 			<synonym value="Fish Trap Baskets"/>
@@ -581,6 +598,10 @@
 		<heading id="SiftingBasket" title="Sifting Basket">
 			<synonym value="Sifting Baskets"/>
 			<implies facet="Activity_facet" cat="Foodpreparation"/>			
+		</heading>
+		<heading id="SoupBasketBaskets" title="Soup basket"> 					
+			<synonym value="Soup baskets"/>
+			<implies facet="Activity_facet" cat="Foodpreparation"/>	
 		</heading>
 		<heading id="Storagebasket" title="Storage basket">
 			<heading id="Seedbasket" title="Seed basket"> 					
@@ -1656,11 +1677,11 @@
 					<implies facet="Activity_facet" cat="Foodserving"/>
 					<heading id="CheeseScoop" title="Cheese Scoop"> 
 						<synonym value="Cheese Scoops"/>
-						<implies facet="Activity_facet" cat="Cheese"/>
+						<implies facet="Activity_facet" cat="Eating"/>
 					</heading>
 					<heading id="SoupSpoon" title="Soup Spoon"> 
 						<synonym value="Soup Spoons"/>
-						<implies facet="Activity_facet" cat="Soup"/>
+						<implies facet="Activity_facet" cat="Eating"/>
 					</heading>
 				</heading>
 			</heading>
@@ -1675,6 +1696,11 @@
 				<excl value="Root-beer"/>
 				<excl value="Root-beers"/>
 			</heading>
+			<heading id="Bread" title="Bread">
+				<synonym value="Breads"/>
+				<synonym value="Loaf"/>
+				<synonym value="Loaves"/>
+			</heading>
 			<heading id="Cheese" title="Cheese">
 				<synonym value="Cheeses"/>
 			</heading>
@@ -1684,6 +1710,9 @@
 			<heading id="Mush" title="Mush"/>
 			<heading id="Soup" title="Soup">
 				<synonym value="Soups"/>
+				<heading id="AcornSoup" title="Acorn Soup">
+					<synonym value="Soups"/>
+				</heading>
 			</heading>
 			<heading id="WeddingCake" title="Wedding Cake">
 				<synonym value="Wedding Cakes"/>
@@ -2069,9 +2098,10 @@
 		</heading>
 	</heading>
 	<heading id="MedicalHealingitems" title="Medical &amp; Healing items">
-		<heading id="Doctoringbasket" title="Doctoring basket"> 					
+		<heading id="DoctoringbasketMedical" title="Doctoring basket"> 					
 			<synonym value="Doctoring baskets"/>
-			<implies facet="Activity_facet" cat="Healing"/>			
+			<implies facet="Activity_facet" cat="Healing"/>
+			<implies facet="ObjectName_facet" cat="DoctoringbasketBaskets"/>
 		</heading>
 		<heading id="Enemafunnel" title="Enema funnel"> 					
 			<synonym value="Enema funnels"/>
