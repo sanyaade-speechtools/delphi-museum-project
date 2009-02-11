@@ -85,20 +85,17 @@ For 1) we need to describe authentication to CMS and assume we can get at multip
 {{{
 <delphiMetadataConfig>
   <dbSourceInfo>
-    <dbServerInfo protocol="{mysql,sqlserver}" location="{name or address}" port="any port specifier"
+    <dbServerInfo protocol="{mysql,sqlserver}" host="{name or address}" port="any port specifier"
                 user="username" passwd="pass" />
-    <source>
-      <table db="dbname" name="table1">
-        <column type="local" name="col1" destination="procColName" />
-        <column type="joined" name="col3" destination="procColName"
-                 localkey="keycolname" jointable="table2" joinkey="colname">
-          <!-- joinconstraint only legal under column type="joined" -->
-          <joinconstraint where="where_clause" />
-        </column>
-        <rowfilter where="where_clause" />
-        <elide match="regexp_pattern" />
-        <replace match="regexp_pattern" pattern="replace_pattern" />
-      <table>
+    <source db="dbname" table="tablename">
+      <column name="col1" destination="procColName" />
+      <joincolumn name="col3" destination="procColName"
+               localkey="keycolname" jointable="table2" joinkey="colname">
+        <constraint where="where_clause" />
+      </joincolumn>
+      <rowfilter where="where_clause" />
+      <elide match="regexp_pattern" />
+      <replace match="regexp_pattern" pattern="replace_pattern" />
     </source>
   </dbSourceInfo>
   <!-- Note that the following is largely as is from ColConfig.xml -->
@@ -114,6 +111,122 @@ For 1) we need to describe authentication to CMS and assume we can get at multip
 }}}
 Some discussion of the elements/features:
 <dl>
-<dt><code>delphiMetadataConfig</code></dt>
-<dd>This is the root wrapping element for our configuration documents. It takes no attributes</dd>
+  <dt>delphiMetadataConfig</dt>
+  <dd>This is the root wrapping element for our configuration documents. It takes no attributes.<br> This can contain two children: dbSourceInfo and processingInfo:<dl>
+  <dt>dbSourceInfo</dt>
+  <dd>This contains the information needed to connect to and extract data from a
+    database of object metadata. This may be a collections management system or
+    a data warehouse, or some other source.<br>
+    This can contain two children: dbServerInfo
+    and source:<dl>
+  <dt>dbServerInfo</dt>
+  <dd>This element provides general information needed to connect to the
+    database server.<br>
+    It supports the following attributes:<dl>
+  <dt>protocol</dt>
+  <dd>The type of RDBMS server to connect to. At this point, the only supported
+    protocols are "mysql" and "sqlserver". </dd>
+  <dt>host</dt>
+  <dd>A host name or IP address for the server. </dd>
+  <dt>port</dt>
+  <dd><em>Optional.</em> This is available in case the server communicates on a
+    non-standard port.</dd>
+  <dt>user</dt>
+  <dd>The name of a user with read privileges on the database(s) and table(s)
+    referenced in the source section.</dd>
+  <dt>passwd</dt>
+  <dd>The associated password for the user. Because this is stored in free text,
+    this configuration file must be kept secure. In a future version, this can
+    be left blank and the user will be prompted when a connection is attempted.</dd>
+  </dl> </dd>
+  <dt>source</dt>
+  <dd>Contains the specification of data sources.<br>
+    The source element supports the following attributes:<dl>
+  <dt><i>db</i></dt>
+  <dd>The name of the database to use. </dd>
+  <dt><i>table</i></dt>
+  <dd>The name of a table to select from. </dd>
+  </dl> 
+    The source element can contain several children that
+    specify data columns and processing rules:<dl>
+  <dt>column</dt>
+  <dd>Describes a column to select data from. <br>
+    The column element supports the following attributes:<dl>
+  <dt><i>name</i></dt>
+  <dd>The name of the column in the current table. </dd>
+  <dt><i>destination</i></dt>
+  <dd>The name of the virtual destination column to which to add data from this
+    source column. </dd>
+  </dl></dd>
+  <dt>joincolumn</dt>
+  <dd>Describes a column to select data from, by joining another table with this
+    table. <br>
+    The joincolumn element supports the following attributes:<dl>
+  <dt><i>jointable</i></dt>
+  <dd>The name of a table to join. </dd>
+  <dt><i>name</i></dt>
+  <dd>The name of the column in the referenced join table. </dd>
+  <dt><i>localkey</i></dt>
+  <dd>Specifies the local column used to join another table. </dd>
+  <dt><i>joinkey</i></dt>
+  <dd>Specifies the column in <em>jointable</em> used to join to the local
+    table. </dd>
+  <dt><i>destination</i></dt>
+  <dd>The name of the virtual destination column to which to add data from this
+    source column. </dd>
+  </dl>
+    The joincolumn element can have a single constraint
+    child:<dl>
+  <dt><i>constraint</i></dt>
+  <dd>Specifies a constraint on the join <br>
+    The constraint element supports a single attribute:<dl>
+  <dt><i>where</i></dt>
+  <dd>A legal where clause for the given protocol. The clause should be written
+    such that rows in the join table will only be included when the clause is
+    true. The clause can contain multiple sub-clauses, joined by OR and AND
+    operators, with parentheses, NOT operators, etc. </dd>
+  </dl>  </dd>
+  </dl> 
+</dd>
+  <dt>rowfilter</dt>
+  <dd>Specifies a rule used to exclude rows from this table. <br>
+    The rowfilter element supports the following attributes:<dl>
+  <dt><i>where</i></dt>
+  <dd>A legal where clause for the given protocol. The clause should be written
+    such that when true, the row will be filtered out. The clause can contain
+    multiple sub-clauses, joined by OR and AND operators, with parentheses, NOT
+    operators, etc. </dd>
+  </dl></dd>
+  <dt>elide</dt>
+  <dd>Specifies a rule for removing certain text patterns (e.g., administrative
+    comments). <br>
+    The elide element supports the following attributes:<dl>
+  <dt><i>match</i></dt>
+  <dd>A legal regexp pattern that will be removed (replaced with an empty
+    string). </dd>
+  </dl></dd>
+  <dt>replace</dt>
+  <dd>Specifies a rule for replacing certain text patterns (e.g., to obfuscate
+    currency values).<br>
+    The replace element supports the following attributes:<dl>
+  <dt><i>match</i></dt>
+  <dd>A legal regexp pattern that will be matched in the data, and replaced
+    according to <em>pattern</em>.. </dd>
+  <dt><i>pattern</i></dt>
+  <dd>The string to replace the match. This can contain regexp pattern
+    references from the <em>match</em> pattern. </dd>
+  </dl></dd>
+  </dl> 
+  </dd>
+  </dl> </dd>
+  <dt>processingInfo</dt>
+  <dd>This is the main section describing the columns in the logical metadata
+    source used for text mining, to associate concepts to objects. The columns
+    of this logical metadata source may come from a text file, or from a
+    database source (configured in a dbSourceInfo
+    section). It has some general setup children and then a sequence of column
+    descriptions.<br>
+    <i>The details of the schema for this are described elsewhere - reference or
+    include.</i> </dd>
+  </dl></dd>
 </dl>
