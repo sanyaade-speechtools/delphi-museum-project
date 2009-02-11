@@ -1,0 +1,243 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Notes on Metadata Extraction schema</title>
+<style>
+body {font-family: Arial, Helvetica, sans; }
+h2, h3, h4 {text-transform: uppercase;}
+p.spaced, ol.spaced li {line-height:1.6em;}
+p.caption {text-align:center; font-weight:bold;}
+pre.xml {font-size:0.7em; background-color: #eeeeee; padding:10px;}
+blockquote.excerpt {font-size:0.85em;line-height:1.2em; padding-left:5px; padding-right:10px; text-align:justify;}
+dt { font-family: Courier New, courier, fixed; }
+@media screen {
+  body { padding: 0.25in 0.5in 0.25in 0.5in; }
+  }
+</style></head>
+
+<body>
+
+<h2>Notes on Metadata Extraction schema</h2>
+<h4>DB Connection configuration</h4>
+<p>We need to configure the information about where the DB is, what the database
+is called, and what the permissions are. Right now, we have tested connections
+to MySQL and MSSQL databases (the former is what Delphi uses, and the latter is
+used by some CMS and DAM systems,&nbsp; including Extensis Portfolio and Gallery
+Systems' TMS). For JDBC, the string is fairly straightforward. Here are examples
+of the two supported protocols:</p>
+<blockquote>
+  <p>&quot;<code>jdbc:mysql://sierra.ist.berkeley.edu:3031/pahma_dev?user=dbuser&amp;password=xxx</code>&quot;</p>
+  <p>&quot;<code>jdbc:sqlserver://169.123.456.789;databaseName=TMS;user=dbuser;password=xxx</code>&quot;</p>
+</blockquote>
+<p>
+The &quot;jdbc&quot; string identifies our connection protocol, and is required.
+The second token identifies the DB type, an also determines the format of the
+rest of the string. An server must be specified (with a name or IP address).
+Depending on the DB, you use different parameters to specify the database name,
+user and password.</p>
+<p><a name="DB_Connection_configuration">Initially, we will just configure this
+as a string. although later we could expand on this to separately configure the
+protocol, machine, db, etc. and make it easier for users. Note that we may not
+be using the same DB for different functions, especially in the case of the
+source for object metadata versus the Delphi DBs used.</a></p>
+<p>Note that we may not be using the same DB for different functions, especially
+in the case of the source for object metadata versus the Delphi DBs used. There
+are at least four connections we want to maintain:</p>
+<ol>
+  <li>CMS DB for object MD. May be multiples for some systems (e.g., TMS has
+    multiple DBs that store info). </li>
+  <li>Image information DB. May be in Object Info DB, or in a separate DAM.</li>
+  <li>Delphi for ontologies. May be the running Delphi system, or may not </li>
+  <li>Delphi for running system (may be multiple, given tiered WebFarm
+    scenario). </li>
+</ol>
+<p>For 1) we need to describe authentication to CMS and assume we can get at
+multiple DBs in the CMS. Thus, describe server, protocol, user, password, and
+configure the DBs when we describe the extraction model (in a separate manner).
+Raises questions:</p>
+<ul>
+  <li>What is the format of the DB extraction config (XML, DB via form, etc.).
+    Assume XML for now, and that it looks something like ColConfig<a href="http://code.google.com/p/delphi-museum-project/w/edit/ColConfig">?</a>.xml.</li>
+  <li>What is the relationship of the DB extraction file to ColConfig<a href="http://code.google.com/p/delphi-museum-project/w/edit/ColConfig">?</a>.xml?
+    Assume that we need to have the same set of columns (destinations for DB
+    extraction, sources for MD mining). Can we unify these? E.g., can we
+    describe sources in DB for each column in ColConfig<a href="http://code.google.com/p/delphi-museum-project/w/edit/ColConfig">?</a>.xml?
+    Maybe, but it could get messy for those tables/columns in DB that split into
+    various columns depending upon the types. However, rather than naming the
+    columns as strings, we could enforce coherence. ColConfig<a href="http://code.google.com/p/delphi-museum-project/w/edit/ColConfig">?</a>
+    validation would require that columns named in DB extraction are defined for
+    processing, and that there is a source defined for each processing column.
+    Implies a unified configuration with two sections:</li>
+  <pre>&lt;delphiMetadataConfig&gt;
+&nbsp; &lt;dbSourceInfo&gt;
+&nbsp; &nbsp; &lt;dbServerInfo protocol=&quot;{mysql,sqlserver}&quot; host=&quot;{name or address}&quot; port=&quot;any port specifier&quot;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; user=&quot;username&quot; passwd=&quot;pass&quot; /&gt;
+&nbsp; &nbsp; &lt;source db=&quot;dbname&quot; table=&quot;tablename&quot;&gt;
+&nbsp; &nbsp; &nbsp; &lt;column name=&quot;col1&quot; destination=&quot;procColName&quot; /&gt;
+&nbsp; &nbsp; &nbsp; &lt;joincolumn name=&quot;col3&quot; destination=&quot;procColName&quot;
+               localkey=&quot;keycolname&quot; jointable=&quot;table2&quot; joinkey=&quot;colname&quot;&gt;
+        &lt;constraint where=&quot;where_clause&quot; /&gt;
+&nbsp; &nbsp; &nbsp; &lt;/joincolumn&gt;
+&nbsp; &nbsp; &nbsp; &lt;rowfilter where=&quot;where_clause&quot; /&gt;
+&nbsp; &nbsp; &nbsp; &lt;elide match=&quot;regexp_pattern&quot; /&gt;
+&nbsp; &nbsp; &nbsp; &lt;replace match=&quot;regexp_pattern&quot; pattern=&quot;replace_pattern&quot; /&gt;
+&nbsp; &nbsp; &lt;/source&gt;
+&nbsp; &lt;/dbSourceInfo&gt;
+&nbsp; <span class="com">&lt;!-- Note that the following is largely as is from ColConfig.xml --&gt;
+&nbsp; &lt;processingInfo&gt;
+&nbsp; &nbsp; &lt;colSep value=&quot;,&quot;/&gt;
+&nbsp; &nbsp; &lt;encoding value=&quot;UTF-8&quot;/&gt;
+&nbsp; &nbsp; &lt;colInfo name=&quot;ObjectType&quot;&gt;
+&nbsp; &nbsp; &nbsp; ...
+&nbsp; &nbsp; &lt;/colInfo&gt;
+&nbsp; &nbsp; ...
+&nbsp; &lt;/processingInfo&gt;
+&lt;/delphiMetadataConfig&gt;</pre>
+</ul>
+<p>Some discussion of the elements/features:</p>
+<dl>
+  <dt>delphiMetadataConfig</dt>
+  <dd>This is the root wrapping element for our configuration documents. It
+    takes no attributes.&nbsp;<br>
+    This can contain two children: <code>&lt;dbSourceInfo&gt;</code>
+    and <code>&lt;processingInfo&gt;</code>:<dl>
+  <dt>dbSourceInfo</dt>
+  <dd>This contains the information needed to connect to and extract data from a
+    database of object metadata. This may be a collections management system or
+    a data warehouse, or some other source.<br>
+    This can contain two children: <code>&lt;dbServerInfo&gt;</code>
+    and <code>&lt;source&gt;</code>:<dl>
+  <dt>dbServerInfo</dt>
+  <dd>This element provides general information needed to connect to the
+    database server.&nbsp;<br>
+    It supports the following attributes:<dl>
+  <dt>protocol</dt>
+  <dd>The type of RDBMS server to connect to. At this point, the only supported
+    protocols are &quot;mysql&quot; and &quot;sqlserver&quot;. </dd>
+  <dt>host</dt>
+  <dd>A host name or IP address for the server. </dd>
+  <dt>port</dt>
+  <dd><em>Optional.</em> This is available in case the server communicates on a
+    non-standard port.</dd>
+  <dt>user</dt>
+  <dd>The name of a user with read privileges on the database(s) and table(s)
+    referenced in the <code>&lt;source&gt;</code> section.</dd>
+  <dt>passwd</dt>
+  <dd>The associated password for the user. Because this is stored in free text,
+    this configuration file must be kept secure. In a future version, this can
+    be left blank and the user will be prompted when a connection is attempted.</dd>
+  </dl> </dd>
+  <dt>source</dt>
+  <dd>Contains the specification of data sources.<br>
+    The <code>&lt;source&gt;</code> element supports the following attributes:<dl>
+  <dt><i>db</i></dt>
+  <dd>The name of the database to use. </dd>
+  <dt><i>table</i></dt>
+  <dd>The name of a table to select from. </dd>
+  </dl> 
+    The <code>&lt;source&gt;</code> element can contain several children that
+    specify data columns and processing rules:<dl>
+  <dt>column</dt>
+  <dd>Describes a column to select data from. <br>
+    The <code>&lt;column&gt;</code> element supports the following attributes:<dl>
+  <dt><i>name</i></dt>
+  <dd>The name of the column in the current table. </dd>
+  <dt><i>destination</i></dt>
+  <dd>The name of the virtual destination column to which to add data from this
+    source column. </dd>
+  </dl></dd>
+  <dt>joincolumn</dt>
+  <dd>Describes a column to select data from, by joining another table with this
+    table. <br>
+    The <code>&lt;joincolumn&gt;</code> element supports the following attributes:<dl>
+  <dt><i>jointable</i></dt>
+  <dd>The name of a table to join. </dd>
+  <dt><i>name</i></dt>
+  <dd>The name of the column in the referenced join table. </dd>
+  <dt><i>localkey</i></dt>
+  <dd>Specifies the local column used to join another table. </dd>
+  <dt><i>joinkey</i></dt>
+  <dd>Specifies the column in <em>jointable</em> used to join to the local
+    table. </dd>
+  <dt><i>destination</i></dt>
+  <dd>The name of the virtual destination column to which to add data from this
+    source column. </dd>
+  </dl>
+    The <code>&lt;joincolumn&gt;</code> element can have a single <code>&lt;constraint&gt;</code>
+    child:<dl>
+  <dt><i>constraint</i></dt>
+  <dd>Specifies a constraint on the join <br>
+    The <code>&lt;constraint&gt;</code> element supports a single attribute:<dl>
+  <dt><i>where</i></dt>
+  <dd>A legal where clause for the given protocol. The clause should be written
+    such that rows in the join table will only be included when the clause is
+    true. The clause can contain multiple sub-clauses, joined by OR and AND
+    operators, with parentheses, NOT operators, etc. </dd>
+  </dl>  </dd>
+  </dl> 
+</dd>
+  <dt>rowfilter</dt>
+  <dd>Specifies a rule used to exclude rows from this table. <br>
+    The <code>&lt;rowfilter&gt;</code> element supports the following attributes:<dl>
+  <dt><i>where</i></dt>
+  <dd>A legal where clause for the given protocol. The clause should be written
+    such that when true, the row will be filtered out. The clause can contain
+    multiple sub-clauses, joined by OR and AND operators, with parentheses, NOT
+    operators, etc. </dd>
+  </dl></dd>
+  <dt>elide</dt>
+  <dd>Specifies a rule for removing certain text patterns (e.g., administrative
+    comments). <br>
+    The <code>&lt;elide&gt;</code> element supports the following attributes:<dl>
+  <dt><i>match</i></dt>
+  <dd>A legal regexp pattern that will be removed (replaced with an empty
+    string). </dd>
+  </dl></dd>
+  <dt>replace</dt>
+  <dd>Specifies a rule for replacing certain text patterns (e.g., to obfuscate
+    currency values).<br>
+    The <code>&lt;replace&gt;</code> element supports the following attributes:<dl>
+  <dt><i>match</i></dt>
+  <dd>A legal regexp pattern that will be matched in the data, and replaced
+    according to <em>pattern</em>.. </dd>
+  <dt><i>pattern</i></dt>
+  <dd>The string to replace the match. This can contain regexp pattern
+    references from the <em>match</em> pattern. </dd>
+  </dl></dd>
+  </dl> 
+  </dd>
+  </dl> </dd>
+  <dt>processingInfo</dt>
+  <dd>This is the main section describing the columns in the logical metadata
+    source used for text mining, to associate concepts to objects. The columns
+    of this logical metadata source may come from a text file, or from a
+    database source (configured in a <code>&lt;dbSourceInfo&gt;</code>
+    section). It has some general setup children and then a sequence of column
+    descriptions.&nbsp;<br>
+    <i>The details of the schema for this are described elsewhere - reference or
+    include.</i> </dd>
+  </dl></dd>
+  <dt>source</dt>
+  <dd>This is<br>
+    This can contain two children: <code>&lt;dbServerInfo&gt;</code>
+    and <code>&lt;source&gt;</code>:<dl>
+  <dt>dbServerInfo</dt>
+  <dd>This is </dd>
+  <dt>source</dt>
+  <dd>This is </dd>
+  </dl> </dd>
+  <dt>dbSourceInfo</dt>
+  <dd>This is </dd>
+  <dt>dbSourceInfo</dt>
+  <dd>This is </dd>
+</dl>
+
+</span>
+
+</body>
+
+</html>
