@@ -4,6 +4,26 @@
 	var templateVarsJSON = eval({$templateVarsJSON});
 //]]>
 </script>
+<script type="text/javascript" charset="utf-8">
+{literal}
+//<![CDATA[
+function doViewCard(e, num) {
+  $('#detail_image').css("visibility","hidden");
+  $('#pop_screen').css("display","block");
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	return false;
+}
+function doHideCard(e) {
+  $('#detail_image').css("visibility","visible");
+  $('#pop_screen').css("display","none");
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	return false;
+}
+//]]>
+{/literal}
+</script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.flash.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.tabs.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
@@ -124,6 +144,9 @@
 				<h3>Object Number</h3>
 				<p>{$objnum}</p>
 			{/if}
+			{if $showCatCardLink }
+				<h3><a href="" onClick="doViewCard(event, {$catCardNum});return false;">View Catalog Card Image(s)</a></h3>
+			{/if}
 			<h2 id="cats_label">Concepts</h2>
 			{section name=facet loop=$facetinfo}
 				<h3 class="facet_name">{$facetinfo[facet].facet}</h3>
@@ -132,5 +155,15 @@
 		</div>
 		<br class="clear" />
 
+		{if $showCatCardLink }
+			<div id="pop_screen" 
+			    style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:#FFF; display:none;" >
+			  <div id="vcc_inner" 
+			    style="position:absolute; top:10px; left:15px; width:770px; height:500px; background-color:#F8F8F8; border:2px solid #cdcdc9; padding:0 10px;" >
+					<h3 style="float:right"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
+					<h2>Showing Catalog Cards for cardid: {$catCardNum}</h2>
+				</div>
+			</div>
+		{/if}
 
 {include file="footer.tpl"}
