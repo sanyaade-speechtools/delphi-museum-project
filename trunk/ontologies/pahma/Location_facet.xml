@@ -1913,79 +1913,221 @@
 			<heading id="Vietnam" title="Vietnam"/>
 		</heading>
 	</heading>
-	<heading id="Oceania" title="Oceania">
+	<heading id="Oceania" title="Oceania">  <!-- done -->
 		<synonym value="South Pacific Islands"/>
+		<synonym value="South Pacific"/>
 		<heading id="AmericanSamoa" title="American Samoa">
-		  <synonym value="Territory of American Samoa"/>
-		  <synonym value="Amerika Samoa"/>
-		  <synonym value="Samoa Amelika"/>
-		  <heading id="TutuilaIsland" title="Tutuila Island">
-		    <synonym value="Tituila"/>
-		    <heading id="PagoPago" title="Pago Pago"/>
-		  </heading>
-		  <heading id="AunuuIsland" title="Aunu'u Island"/>
-		  <heading id="ManuaIslands" title="Manu'a Islands">
-		    <synonym value="Manua Islands"/>
-		    <heading id="OfuIsland" title="Ofu Island"/>
-		    <heading id="TauIsland" title="Ta'u Island">
-		      <synonym value="Tau Island"/>
-		    </heading>
-		    <heading id="OlosegaIsland" title="Olosega Island"/>
-		  </heading>
+			<synonym value="Territory of American Samoa"/>
+			<synonym value="Amerika Samoa"/>
+			<synonym value="Samoa Amelika"/>
+			<heading id="AunuuIsland" title="Aunu'u Island">
+				<synonym value="Aunuu Island"/>
+				<synonym value="Aunu'u"/>
+			</heading>
+			<heading id="ManuaIslands" title="Manu'a Islands">
+				<synonym value="Manua Islands"/>
+				<heading id="OfuIsland" title="Ofu Island"/>
+				<heading id="TauIsland" title="Ta'u Island">
+					<synonym value="Tau Island"/>
+				</heading>
+				<heading id="OlosegaIsland" title="Olosega Island"/>
+			</heading>
+			<heading id="TutuilaIsland" title="Tutuila Island">
+				<synonym value="Tutuila"/>
+				<synonym value="Tituila"/>
+				<heading id="PagoPago" title="Pago Pago"/>
+			</heading>
 		</heading>
 		<heading id="Australia" title="Australia">
-		  <heading id="WesternAustralia" title="Western Australia">
-		    <heading id="Geraldton" title="Geraldton"/>
-		    <heading id="Coolgardie" title="Coolgardie"/>
-		    <heading id="Perth" title="Perth"/>
-		    <heading id="Albany" title="Albany"/>
-		    <heading id="Derby" title="Derby"/>
-		    <heading id="Wyndham" title="Wyndham"/>
-		  </heading>
-		  <heading id="SouthAustralia" title="South Australia">
-		    <heading id="Adelaide" title="Adelaide"/>
-		    <heading id="PortAugusta" title="Port Augusta"/>
-		  </heading>
-		  <heading id="NorthernTerritory" title="Northern Territory">
-		    <heading id="AliceSprings" title="Alice Springs"/>
-		    <heading id="Darwin" title="Darwin"/>
-		  </heading>
-		  <heading id="Queensland" title="Queensland">
-		    <heading id="Cloncurry" title="Cloncurry"/>
-		    <heading id="Cooktown" title="Cooktown"/>
-		    <heading id="Cairns" title="Cairns"/>
-		    <heading id="Townsville" title="Townsville"/>
-		    <heading id="Brisbane" title="Brisbane"/>
-		    <heading id="Charleville" title="Charleville"/>
-		    <heading id="Rockhampton" title="Rockhampton"/>
-		  </heading>
-		  <heading id="NewSouthWales" title="New South Wales">
-		    <heading id="Sydney" title="Sydney"/>
-		    <heading id="Canberra" title="Canberra"/>
-		    <heading id="Newcastle" title="Newcastle"/>
-		    <heading id="Bourke" title="Bourke"/>
-		  </heading>
-		  <heading id="Victoria" title="Victoria">
-		    <heading id="Melbourne" title="Melbourne"/>
-		  </heading>
-		  <heading id="Tasmania" title="Tasmania">
-		    <heading id="Hobart" title="Hobart"/>
-		  </heading>
-		  <heading id="MelvilleIsland" title="Melville Island">
-		    <heading id="FortDundas" title="Fort Dundas"/>
-		    <heading id="GardenPoint" title="Garden Point"/>
-		  </heading>
+			<heading id="NewSouthWales" title="New South Wales">
+				<heading id="Sydney" title="Sydney"/>
+				<heading id="Canberra" title="Canberra"/>
+				<heading id="Newcastle" title="Newcastle"/>
+				<heading id="Bourke" title="Bourke"/>
+			</heading>
+			<heading id="NorthernTerritory" title="Northern Territory">
+				<heading id="AliceSprings" title="Alice Springs"/>
+				<heading id="Darwin" title="Darwin"/>
+				<heading id="MelvilleIsland" title="Melville Island">
+					<heading id="FortDundas" title="Fort Dundas"/>
+					<heading id="GardenPoint" title="Garden Point"/>
+				</heading>
+			</heading>
+			<heading id="Queensland" title="Queensland">
+				<heading id="Cloncurry" title="Cloncurry"/>
+				<heading id="Cooktown" title="Cooktown"/>
+				<heading id="Cairns" title="Cairns"/>
+				<heading id="Townsville" title="Townsville"/>
+				<heading id="Brisbane" title="Brisbane"/>
+				<heading id="Charleville" title="Charleville"/>
+				<heading id="Rockhampton" title="Rockhampton"/>
+			</heading>
+			<heading id="SouthAustralia" title="South Australia">
+				<heading id="Adelaide" title="Adelaide"/>
+				<heading id="PortAugusta" title="Port Augusta"/>
+			</heading>
+			<heading id="Tasmania" title="Tasmania">
+				<heading id="Hobart" title="Hobart"/>
+			</heading>
+			<heading id="Victoria" title="Victoria">
+				<heading id="Melbourne" title="Melbourne"/>
+			</heading>
+			<heading id="WesternAustralia" title="Western Australia">
+				<heading id="Geraldton" title="Geraldton"/>
+				<heading id="Coolgardie" title="Coolgardie"/>
+				<heading id="Perth" title="Perth"/>
+				<heading id="Albany" title="Albany"/>
+				<heading id="Derby" title="Derby"/>
+				<heading id="Wyndham" title="Wyndham"/>
+			</heading>
 		</heading>
 		<heading id="Belau" title="Belau"/>
 		<heading id="CookIslands" title="Cook Islands">
 			<heading id="RarotongaIsland" title="Rarotonga Island"/>
 		</heading>
 	    <heading id="FrenchPolynesia" title="French Polynesia">
-			<heading id="Tahiti" title="Tahiti"/>
-			<heading id="BoraBora" title="Bora Bora"/>
+	    	<heading id="BoraBora" title="Bora Bora"/>
+	    	<heading id="Tahiti" title="Tahiti"/>
 		</heading>
-		<heading id="Guam" title="Guam"/>
-		<heading id="Kiribati" title="Kiribati"/>
+		<heading id="HawaiianIslands" title="Hawaiian Islands">
+			<synonym value="Mahale"/> <!-- I don't know the island this is on -->
+			<synonym value="Kanague"/> <!-- I don't know the island this is on -->
+			<heading id="Hawaii" title="Hawaii">
+				<synonym value="HAWAII-NL"/>
+				<synonym value="HI-NL"/>
+				<synonym value="HAWAII-NL-1"/>
+				<synonym value="HI-NL-1"/>
+				<synonym value="HAWAII-NL-2"/>
+				<synonym value="HI-NL-2"/>
+				<synonym value="HAWAII-NL-3"/>
+				<synonym value="HI-NL-4"/>
+				<synonym value="HAWAII-NL-5"/>
+				<synonym value="HI-NL-4"/>
+				<heading id="Hilo" title="Hilo"/>
+				<heading id="Kileno" title="Kileno"/>
+				<heading id="PunaCoast" title="Puna Coast"/>
+				<heading id="Punaluu" title="Punaluu"/>
+			</heading>
+			<heading id="Kahoolawe" title="Kahoolawe"/>
+			<heading id="Kauai" title="Kauai">
+				<heading id="KilaueaPlantation" title="Kilauea Plantation"/>
+			</heading>
+			<heading id="Lanai" title="Lanai"/>
+			<heading id="Maui" title="Maui">
+				<heading id="Kanaio" title="Kanaio"/>
+			</heading>
+			<heading id="Niihau" title="Niihau"/>
+			<heading id="Oahu" title="Oahu">
+				<heading id="Honolulu" title="Honolulu"/>
+				<heading id="Waiahole" title="Waiahole"/>
+			</heading>
+		</heading>
+		<heading id="Indonesia" title="Indonesia">
+			<heading id="Bali" title="Bali"/>
+			<heading id="Borneo" title="Borneo"/>
+			<heading id="Celebes" title="Celebes"/>
+			<heading id="Java" title="Java"/>
+			<heading id="Sumatra" title="Sumatra"/>
+		</heading>
+		<heading id="Kiribati" title="Kiribati">
+			<heading id="GilbertIslands" title="Gilbert Islands">
+				<synonym value="Kingsmill Group"/>
+				<synonym value="Kingsmill Islands"/>
+				<synonym value="Tungaru"/>
+				<heading id="AbaiangIsland" title="Abaiang Island">
+					<synonym value="Abaiang"/>
+					<heading id="TuarabuVillage" title="Tuarabu Village">
+						<synonym value="Tuarabu"/>
+					</heading>
+				</heading>
+				<heading id="AbemamaIsland" title="Abemama Island">
+					<synonym value="Abemama"/>
+					<heading id="KariatebikeVillage" title="Kariatebike Village">
+						<synonym value="Kariatebike"/>
+					</heading>
+				</heading>
+				<heading id="AranukaIsland" title="Aranuka Island">
+					<synonym value="Aranuka"/>
+					<heading id="TakaeangVillage" title="Takaeang Village">
+						<synonym value="Takaeang"/>
+					</heading>
+				</heading>
+				<heading id="AroraeIsland" title="Arorae Island">
+					<synonym value="Arorae"/>
+					<heading id="RoretiVillage" title="Roreti Village">
+						<synonym value="Roreti"/>
+					</heading>
+				</heading>
+				<heading id="BeruIsland" title="Beru Island">
+					<synonym value="Beru"/>
+					<heading id="TaubukinberuVillage" title="Taubukinberu Village">
+						<synonym value="Taubukinberu"/>
+					</heading>
+				</heading>
+				<heading id="ButaritariIsland" title="Butaritari Island">
+					<synonym value="Butaritari"/>
+					<heading id="ButaritariVillage" title="Butaritari Village"/>
+				</heading>
+				<heading id="KuriaIsland" title="Kuria Island">
+					<synonym value="Kuria"/>
+					<heading id="TabontebikeVillage" title="Tabontebike Village">
+						<synonym value="Tabontebike"/>
+					</heading>
+				</heading>
+				<heading id="MaianaIsland" title="Maiana Island">
+					<synonym value="Maiana"/>
+					<heading id="TebwangetuaVillage" title="Tebwangetua Village">
+						<synonym value="Tebwangetua"/>
+					</heading>
+				</heading>
+				<heading id="MakinIsland" title="Makin Island">
+					<synonym value="Makin"/>
+					<heading id="MakinVillage" title="Makin Village"/>
+				</heading>
+				<heading id="MarakeiIsland" title="Marakei Island">
+					<synonym value="Marakei"/>
+					<heading id="RawannawiVillage" title="Rawannawi Village">
+						<synonym value="Rawannawi"/>
+					</heading>
+				</heading>
+				<heading id="NikunauIsland" title="Nikunau Island">
+					<synonym value="Nikunau"/>
+					<heading id="RungataVillage" title="Rungata Village">
+						<synonym value="Rungata"/>
+					</heading>
+				</heading>
+				<heading id="NonoutiIsland" title="Nonouti Island">
+					<synonym value="Nonouti"/>
+					<heading id="TeuabuVillage" title="Teuabu Village">
+						<synonym value="Teuabu"/>
+					</heading>
+				</heading>
+				<heading id="OnotoaIsland" title="Onotoa Island">
+					<synonym value="Onotoa"/>
+					<heading id="BuarikiVillage" title="Buariki Village"> <!-- Disambiguate from same village name on Tabiteuea -->
+						<synonym value="Buariki"/> <!-- Disambiguate from same village name on Tabiteuea -->
+					</heading>
+				</heading>
+				<heading id="TabiteueaIsland" title="Tabiteuea Island">
+					<synonym value="Tabiteuea"/>
+					<heading id="BuarikiVillage" title="Buariki Village"> <!-- Disambiguate from same village name on Onotoa -->
+						<synonym value="Buariki"/> <!-- Disambiguate from same village name on Onotoa -->
+					</heading>
+				</heading>
+				<heading id="TamanaIsland" title="Tamana Island">
+					<synonym value="Tamana"/>
+					<heading id="BakakaVillage" title="Bakaka Village">
+						<synonym value="Bakaka"/>
+					</heading>
+				</heading>
+				<heading id="TarawaIsland" title="Tarawa Island">
+					<synonym value="Tarawa"/>
+					<heading id="BairikiVillage" title="Bairiki Village">
+						<synonym value="Bairiki"/>
+					</heading>
+				</heading>
+			</heading>
+		</heading>
 		<heading id="MarshallIslands" title="Marshall Islands"/>
 	    <heading id="Melanesia" title="Melanesia">
 	        <heading id="Fiji" title="Fiji">
@@ -2071,35 +2213,6 @@
 	    		<synonym value="PNG"/>
 	    		<synonym value="P.N.G."/>
 	    		<synonym value="New Guinea"/>
-	    		<heading id="MaprikHillsArea" title="Maprik Hills area">
-	    			<synonym value="Maprik district"/>
-	    			<heading id="Woseraarea" title="Wosera area">
-	    				<heading id="BovmagumVillage" title="Bovmagum Village"/>
-	    				<heading id="ChinunumguVillage" title="Chinunumgu Village"/>
-	    			</heading>
-	    			<heading id="ApangaiVillage" title="Apangai Village"/>
-	    			<heading id="MamblebVillage" title="Mambleb Village"/>
-	    			<heading id="NanangoVillage" title="Nanango Village"/>
-	    			<heading id="UlupuVillage" title="Ulupu Village"/>
-	    			<heading id="YemilikumVillage" title="Yemilikum Village"/>
-	    			<heading id="RomaVillage" title="Roma Village"/>
-	    			<heading id="SagisikVillage" title="Sagisik Village"/>
-	    			<heading id="Abange" title="Abange"/>
-	    			<heading id="Abelam" title="Abelam">
-	    				<heading id="ChiginambuVillage" title="Chiginambu Village"/>
-	    				<heading id="WoraVillage" title="Wora Village"/>
-	    				<heading id="KalabuVillage" title="Kalabu Village"/>
-	    			</heading>
-	    		</heading>
-	    		<heading id="DanmoreeIsland" title="Danmoree Island">
-	    			<heading id="FlyRiver" title="Fly River"/>
-	    		</heading>
-	    		<heading id="EasternHighlandsProvince" title="Eastern Highlands Province">
-	    			<synonym value="Eastern Highlands"/>
-	    			<heading id="Goroka" title="Goroka">
-	    				<synonym value="Garoka"/>
-	    			</heading>
-	    		</heading>
 	    		<heading id="BismarckArchipelago" title="Bismarck Archipelago">
 	    			<heading id="Manusprovince" title="Manus province">
 	    				<heading id="AdmiraltyIslands" title="Admiralty Islands">
@@ -2147,6 +2260,35 @@
 	    				<heading id="MalaiIsland" title="Malai Island"/>
 	    			</heading>
 	    		</heading>
+	    		<heading id="DanmoreeIsland" title="Danmoree Island">
+	    			<heading id="FlyRiver" title="Fly River"/>
+	    		</heading>
+	    		<heading id="EasternHighlandsProvince" title="Eastern Highlands Province">
+	    			<synonym value="Eastern Highlands"/>
+	    			<heading id="Goroka" title="Goroka">
+	    				<synonym value="Garoka"/>
+	    			</heading>
+	    		</heading>
+	    		<heading id="MaprikHillsArea" title="Maprik Hills area">
+	    			<synonym value="Maprik district"/>
+	    			<heading id="Woseraarea" title="Wosera area">
+	    				<heading id="BovmagumVillage" title="Bovmagum Village"/>
+	    				<heading id="ChinunumguVillage" title="Chinunumgu Village"/>
+	    			</heading>
+	    			<heading id="ApangaiVillage" title="Apangai Village"/>
+	    			<heading id="MamblebVillage" title="Mambleb Village"/>
+	    			<heading id="NanangoVillage" title="Nanango Village"/>
+	    			<heading id="UlupuVillage" title="Ulupu Village"/>
+	    			<heading id="YemilikumVillage" title="Yemilikum Village"/>
+	    			<heading id="RomaVillage" title="Roma Village"/>
+	    			<heading id="SagisikVillage" title="Sagisik Village"/>
+	    			<heading id="Abange" title="Abange"/>
+	    			<heading id="Abelam" title="Abelam">
+	    				<heading id="ChiginambuVillage" title="Chiginambu Village"/>
+	    				<heading id="WoraVillage" title="Wora Village"/>
+	    				<heading id="KalabuVillage" title="Kalabu Village"/>
+	    			</heading>
+	    		</heading>
 	    		<heading id="MilneBayProvince" title="Milne Bay Province">
 	    			<synonym value="Milne Bay"/>
 	    			<heading id="LouisiadeArchipelago" title="LouisiadeArchipelago"/>
@@ -2159,35 +2301,27 @@
 	    				<heading id="KitavaIsland" title="Kitava Island"/>
 	    			</heading>
 	    		</heading>
-	    		<heading id="SepikPlains" title="Sepik Plains">
-	    			<heading id="JamaVillage" title="Jama Village"/>
-	    			<heading id="YentchamanguaVillage" title="Yentchamangua Village"/>
-	    		</heading>
-	    		<heading id="Rigodistrict" title="Rigo district"/>
 	    		<heading id="PortMoresbycoast" title="Port Moresby coast"/>
 	    		<heading id="PapuaNewGuineaEastcoast" title="East coast"/>
 	    		<heading id="PapuanGulf" title="Papuan Gulf">
 	    			<heading id="KiwaiIsland" title="Kiwai Island"/>
 	    		</heading>
+	    		<heading id="SepikPlains" title="Sepik Plains">
+	    			<heading id="JamaVillage" title="Jama Village"/>
+	    			<heading id="YentchamanguaVillage" title="Yentchamangua Village"/>
+	    		</heading>
+	    		<heading id="Rigodistrict" title="Rigo district"/>
 	    	</heading>
 	    </heading>
-		<heading id="SolomonIslands" title="Solomon Islands">
-			<heading id="Bougainville" title="Bougainville"/>
-			<synonym value="Bowgainville"/>
-		</heading>
-		<heading id="Vanuatu" title="Vanuatu"/>
 		<heading id="FederatedStatesOfMicronesia" title="Federated States of Micronesia">
 			<synonym value="Micronesia"/>
-			<heading id="Mokil Atoll" title="Mokil Atoll"/>
-			<heading id="GilbertIslands" title="Gilbert Islands">
-			<heading id="KingsmillGroup" title="Kingsmill Group"/>
-			<heading id="MakinIsland" title="Makin Island"/>
-			</heading>
 			<heading id="CarolineIslands" title="Caroline Islands">
     			<heading id="MortlockIsland" title="Mortlock Island"/>
     			<heading id="ChuukIsland" title="Chuuk Island">  <!-- New name; since 1990 -->
     			    <synonym value="Truk Island"/>
-    				<heading id="TrukLagoon" title="Truk Lagoon"/>
+    				<heading id="ChuukLagoon" title="Chuuk Lagoon">
+    					<synonym value="Truk Lagoon"/>
+    				</heading>
     			</heading>
     			<heading id="Ponape" title="Ponape"/>
     			<heading id="Nukuor" title="Nukuor">
@@ -2196,124 +2330,129 @@
     			</heading>
     			<heading id="Kusan" title="Kusan"/>
 			</heading>
-	  	</heading>
+			<heading id="Mokil Atoll" title="Mokil Atoll"/>
+		</heading>
 	  	<heading id="Nauru" title="Nauru"/>
 	    <heading id="NewZealand" title="New Zealand">
 	    	<heading id="NewZealandSouthIsland" title="South Island, New Zealand">
 	    		<heading id="NewZealandNelsonProvince" title="Nelson Province"/>
 	    	</heading>
 	    </heading>
-	    <heading id="PitcairnIslands" title="Pitcairn Islands">
+		<heading id="Niue" title="Niue"/>
+		<heading id="NorthernMarianaIslands" title="Northern Mariana Islands">
+			<synonym value="Northern Mariana"/>
+			<heading id="Guam" title="Guam">
+				<synonym value="Guahan"/>
+				<heading id="AganaAirport" title="Agaña Airport"/>
+			</heading>
+		</heading>
+		<heading id="Palau" title="Palau"/>
+		<heading id="Philippines" title="Philippines">
+			<synonym value="Philippinas"/>
+			<synonym value="The Philippines"/>
+			<synonym value="Phillipines"/>
+			<synonym value="The Phillipines"/>
+			<heading id="MindaroIsland" title="Mindaro Island">
+				<synonym value="Mindoro"/>
+			</heading>
+			<heading id="MindanaoIsland" title="Mindanao Island">
+				<heading id="DavaoProvince" title="Davao Province"/>
+			</heading>
+			<heading id="LuzonIsland" title="Luzon Island">
+				<heading id="KalingaApayaoProvince" title="Kalinga Apayao Province">
+					<synonym value="Kalinga"/>
+				</heading>
+				<heading id="IfugaoProvince" title="Ifugao Province"/>
+				<heading id="IsabelaProvince" title="Isabela Province"/>
+				<heading id="AbraProvince" title="Abra Province">
+					<heading id="Manago" title="Manago"/>
+				</heading>
+				<heading id="QuirinoProvince" title="Quirino Province"/>
+				<heading id="PangasinamProvince" title="Pangasinam Province"/>
+				<heading id="MountainProvince" title="Mountain Province">
+					<heading id="Bontoc" title="Bontoc"/>
+					<heading id="Igorot" title="Igorot"/>
+				</heading>
+				<heading id="LaUnionProvince" title="La Union Province">
+					<heading id="Ilocano" title="Ilocano"/>
+				</heading>
+				<heading id="RizalProvince" title="Rizal Province">
+					<heading id="Manila" title="Manila">
+						<heading id="BarrioofSantaAna" title="Barrio of Santa Ana"/>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="VisayanGroup" title="Visayan Group"/>
+			<heading id="PalawanIsland" title="Palawan Island"/>
+			<heading id="CebuIsland" title="Cebu Island"/>
+			<heading id="BoholIsland" title="Bohol Island"/>
+			<heading id="SamarIsland" title="Samar Island"/>
+			<heading id="NegrosIsland" title="Negros Island"/>
+			<heading id="BasilanIsland" title="Basilan Island"/>
+			<heading id="SuluArchipelago" title="Sulu Archipelago">
+				<heading id="Moro" title="Moro"/>
+			</heading>
+		</heading>
+		<heading id="PitcairnIslands" title="Pitcairn Islands">
 			<synonym value="Pitcairn Island"/>
 			<synonym value="Pitcairn"/>
 			<synonym value="PCN"/>
 		</heading>
+		<heading id="Polynesia" title="Polynesia">
+			<heading id="Marquesas" title="Marquesas"/>
+			<heading id="WallisandFutuna" title="Wallis and Futuna"/>
+			<heading id="Tokelau" title="Tokelau"/>
+		</heading>
 		<heading id="Samoa" title="Samoa">
-		  <synonym value="Independent State of Somoa"/>
-		  <synonym value="Western Samoa"/>
-		  <synonym value="German Samoa"/>
-		  <synonym value="Navigators Islands"/>
-		  <synonym value="Malo Sa'oloto Tuto'atasi o Somoa"/>
-		  <heading id="SavaiiIsland" title="Savai'i Island"/>
-		  <heading id="UpoluIsland" title="Upolu Island"/>
+			<synonym value="Independent State of Somoa"/>
+			<synonym value="Western Samoa"/>
+			<synonym value="German Samoa"/>
+			<synonym value="Navigators Islands"/>
+			<synonym value="Malo Sa'oloto Tuto'atasi o Somoa"/>
+			<heading id="SavaiiIsland" title="Savai'i Island"/>
+			<heading id="UpoluIsland" title="Upolu Island"/>
+		</heading>
+		<heading id="SolomonIslands" title="Solomon Islands">
+			<heading id="Bougainville" title="Bougainville">
+				<synonym value="Bowgainville"/>
+			</heading>
+			<heading id="SantaCruzIslandGroup" title="Santa Cruz Island Group">
+				<heading id="SantaCruzIslandSolomonIslands" title="Santa Cruz Island">  <!-- Disambiguate from CA channel island -->
+					<heading id="AlhambraBay" title="Alhambra Bay"/>
+				</heading>
+			</heading>
+			<heading id="NewGeorgiaIsland" title="New Georgia Island">
+				<heading id="MorovoLagoon" title="Morovo Lagoon"/>
+			</heading>
 		</heading>
 		<heading id="Tonga" title="Tonga">
-		  <heading id="Tongatabu" title="Tongatabu"/>
-		  <heading id="Haeno" title="Haeno"/>
+			<heading id="Tongatabu" title="Tongatabu"/>
+			<heading id="Haeno" title="Haeno"/>
 		</heading>
 		<heading id="Tuvalu" title="Tuvalu">
-		  <heading id="Ellice" title="Ellice"/>
+			<heading id="Ellice" title="Ellice"/>
 		</heading>
-		<!-- The rest of this facet needs cleaning and organization -->
-		<heading id="Palau" title="Palau"/>
-		<heading id="NorthernMarianaIslands" title="Northern Mariana Islands"/>
-		<heading id="Niue" title="Niue"/>
-		<heading id="HawaiianIslands" title="Hawaiian Islands">
-		  <heading id="Kauai" title="Kauai">
-		    <heading id="KilaueaPlantation" title="Kilauea Plantation"/>
-		  </heading>
-		  <heading id="Niihau" title="Niihau"/>
-		  <heading id="Oahu" title="Oahu">
-		    <heading id="Honolulu" title="Honolulu"/>
-		    <heading id="Waiahole" title="Waiahole"/>
-		  </heading>
-		  <heading id="Hawaii" title="Hawaii">
-		    <heading id="Kileno" title="Kileno"/>
-		    <heading id="Hilo" title="Hilo"/>
-		    <heading id="PunaCoast" title="Puna Coast"/>
-		    <heading id="HAWAIINL1" title="HAWAII-NL-1"/>
-		    <heading id="HAWAIINL2" title="HAWAII-NL-2"/>
-		    <heading id="HAWAIINL3" title="HAWAII-NL-3"/>
-		    <heading id="HAWAIINL4" title="HAWAII-NL-4"/>
-		    <heading id="Punaluu" title="Punaluu"/>
-		  </heading>
-		  <heading id="Kahoolawe" title="Kahoolawe"/>
-		  <heading id="Lanai" title="Lanai"/>
-		  <heading id="Maui" title="Maui">
-		    <heading id="Kanaio" title="Kanaio"/>
-		  </heading>
-				<!-- place the following into their proper islands -->
-		    <heading id="Mahale" title="Mahale"/>
-		    <heading id="Kanague" title="Kanague"/>
-		</heading>
-		<heading id="Indonesia" title="Indonesia">
-		  <heading id="Borneo" title="Borneo"/>
-		  <heading id="Java" title="Java"/>
-		  <heading id="Sumatra" title="Sumatra"/>
-		  <heading id="Celebes" title="Celebes"/>
-		  <heading id="Bali" title="Bali"/>
-		</heading>
-		<heading id="Philippines" title="Philippines">
-		  <synonym value="Philippinas"/>
-		  <synonym value="The Philippines"/>
-		  <synonym value="Phillipines"/>
-		  <synonym value="The Phillipines"/>
-		  <heading id="MindaroIsland" title="Mindaro Island">
-		    <synonym value="Mindoro"/>
-		  </heading>
-		  <heading id="MindanaoIsland" title="Mindanao Island">
-		    <heading id="DavaoProvince" title="Davao Province"/>
-		  </heading>
-		  <heading id="LuzonIsland" title="Luzon Island">
-		    <heading id="KalingaApayaoProvince" title="Kalinga Apayao Province">
-		      <synonym value="Kalinga"/>
-		    </heading>
-		    <heading id="IfugaoProvince" title="Ifugao Province"/>
-		    <heading id="IsabelaProvince" title="Isabela Province"/>
-		    <heading id="AbraProvince" title="Abra Province">
-		      <heading id="Manago" title="Manago"/>
-		    </heading>
-		    <heading id="QuirinoProvince" title="Quirino Province"/>
-		    <heading id="PangasinamProvince" title="Pangasinam Province"/>
-		    <heading id="MountainProvince" title="Mountain Province">
-		      <heading id="Bontoc" title="Bontoc"/>
-		      <heading id="Igorot" title="Igorot"/>
-		    </heading>
-		    <heading id="LaUnionProvince" title="La Union Province">
-		      <heading id="Ilocano" title="Ilocano"/>
-		    </heading>
-		    <heading id="RizalProvince" title="Rizal Province">
-		      <heading id="Manila" title="Manila">
-		        <heading id="BarrioofSantaAna" title="Barrio of Santa Ana"/>
-		      </heading>
-		    </heading>
-		  </heading>
-		  <heading id="VisayanGroup" title="Visayan Group"/>
-		  <heading id="PalawanIsland" title="Palawan Island"/>
-		  <heading id="CebuIsland" title="Cebu Island"/>
-		  <heading id="BoholIsland" title="Bohol Island"/>
-		  <heading id="SamarIsland" title="Samar Island"/>
-		  <heading id="NegrosIsland" title="Negros Island"/>
-		  <heading id="BasilanIsland" title="Basilan Island"/>
-		  <heading id="SuluArchipelago" title="Sulu Archipelago">
-		    <heading id="Moro" title="Moro"/>
-		  </heading>
-		</heading>
-		<heading id="Polynesia" title="Polynesia">
-		  <heading id="Marquesas" title="Marquesas"/>
-		  <heading id="WallisandFutuna" title="Wallis and Futuna"/>
-		  <heading id="Tokelau" title="Tokelau"/>
-		</heading>
+		<heading id="Vanuatu" title="Vanuatu">
+			<synonym value="New Hebrides"/>
+			<heading id="MaloIsland" title="Malo Island"/>
+			<heading id="EspirituSantoIsland" title="Espiritu Santo Island"/>
+			<heading id="MalekulaIsland" title="Malekula Island">
+				<synonym value="Malekula"/>
+			</heading>
+			<heading id="AmbrymIsland" title="Ambrym Island">
+				<synonym value="Ambrym"/>
+				<heading id="Fanla" title="Fanla"/>
+			</heading>
+			<heading id="EfateIsland" title="Efate Island">
+				<synonym value="Efate"/>
+				<heading id="PortVilla" title="Port Villa"/>
+				<heading id="MeliBay" title="Meli Bay">
+					<heading id="FilaIsland" title="Fila Island"/>
+					<synonym value="Fila"/>
+				</heading>
+			</heading>
+			<heading id="Tanna" title="Tanna"/>
+		</heading>		
 	</heading>
 	<heading id="TheAmericas" title="The Americas"><!-- All alphabetized except for Peru and United States -->
 		<heading id="CaribbeanIslands" title="Caribbean Islands">  <!-- done -->
@@ -18419,7 +18558,7 @@
 					<heading id="Arkansas" title="Arkansas"/>
 					<heading id="Kansas" title="Kansas">
 						<heading id="BrownCounty" title="Brown county"> <!-- FIX!  (was just "Brown") change back to Brown and specify exclusions -->
-						          <heading id="Horton" title="Horton"/>
+							<heading id="Horton" title="Horton"/>
 						</heading>
 						<heading id="Leavenworth" title="Leavenworth">
 							<heading id="FortLeavenworth" title="Fort Leavenworth"/>
