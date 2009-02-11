@@ -75,6 +75,8 @@ $res->free();
 
 //$t->assign('showObjNum', currUserHasPerm( 'ViewBaseCMSInfo' ));
 $t->assign('showObjNum', true);
+$t->assign('showCatCardLink', true);
+$t->assign('catCardNum', 42);
 
 
 //---------------------------------
