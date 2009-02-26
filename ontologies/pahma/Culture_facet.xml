@@ -7,7 +7,8 @@
 	<notes>While cultures tend to be associated with location, the range of a
 		culture does not neatly match political boundaries.
 	</notes>
-	<FUTURE_REVISION_NOTES>
+	<notes>
+		Notes for a future revision:
 		In a future revision, it might be useful to make this into a "who" facet.
 		Such a "who" facet would have these major sub-facets:
 			• Person (personal name of specific person)
@@ -17,20 +18,19 @@
 			• Rank (e.g., royalty, serf, slave, caste)
 			• Gender (e.g., male, female, hermaphrodite)
 			• Age (e.g., adult, elderly, adolescent, child)
-	</FUTURE_REVISION_NOTES>
-	<temporary_notes>
-	<!--
-		Terms to be added:
-	    		Mycenean/ Mycenian
-	    		Shoteah Pomo
-	-->
-	</temporary_notes>
-	<syntax_notes> <!-- This is a temporary section, to speed up entry 
+	</notes>
+	<notes>
+	Terms to be added:
+	    Mycenean/ Mycenian
+	   	Shoteah Pomo
+	
+	</notes>
+	<syntax_notes> 
+		This is a temporary section, to speed up entry 
 		by making it easier to locate and copy syntax examples
 		<excl value="photographic plate"/>
 		<implies facet="Activity_facet" cat="Burial"/>
 		<synonym value="Drawings"/>
-		-->
 	</syntax_notes>
 	<heading id="ModernCultures" title="Modern cultures">
 		<heading id="Africancultures" title="African cultures">
@@ -816,58 +816,19 @@
 								<synonym value="Ku'mnom"/>
 							</heading>
 						</heading>
-						<note>
-						<!-- DUPE BAD - needs disambiguation or clarification.
-								The other one is much richer and should be merged with this one. -->
-					<!-- 	<heading id="Pomo" title="Pomo"> Make sure all of these terms are included below, then delete
-							<heading id="KashayaPomo" title="Kashaya Pomo">
-								<synonym value="Pomo, S.W."/>
-								<synonym value="S.W. Pomo"/>
-								<synonym value="Kashaya"/>
-								<synonym value="Southwestern Pomo"/>
-								<synonym value="Kashia Pomo"/>
-								<synonym value="Kashia"/>
-							</heading>
-							<heading id="EasternPomo" title="Eastern Pomo"/>
-							<heading id="NorthernPomo" title="Northern Pomo">
-								<synonym value="N. Pomo"/>
-							</heading> -->
-							<!-- DUPE -  using the parent name as synonym here. 
-							       This needs disambiguation or clarification -->
-					<!-- 		<heading id="Pomoan" title="Pomoan">
-								<synonym value="Pomo"/>
-							</heading>
-							<heading id="CentralPomo" title="Central Pomo">
-								<heading id="PomoNCentral" title="Pomo, N. Central">
-									<synonym value="North Central Pomo"/>
-								</heading>
-							</heading>
-							<heading id="CoastalPomo" title="Coastal Pomo"/>
-							<heading id="NorthwesternPomo" title="Northwestern Pomo">
-								<synonym value="NW Pomo"/>
-								<synonym value="N.W. Pomo"/>
-							</heading>
-							<heading id="NortheasternPomo" title="Northeastern Pomo">
-								<synonym value="NE Pomo"/>
-								<synonym value="N.E. Pomo"/>
-							</heading>
-							<heading id="SoutheasternPomo" title="Southeastern Pomo">
-								<synonym value="SE Pomo"/>
-								<synonym value="S.E. Pomo"/>
-							</heading>
-							<heading id="SouthernPomo" title="Southern Pomo">
-								<synonym value="S. Pomo"/>
-								<synonym value="S Pomo"/>
-							</heading>
-							<heading id="LittleLake" title="Little Lake"/> -->
-					<!-- 		
-						</heading>-->
-						</note>
 						<heading id="Pomo" title="Pomo">
 							<synonym value="Poma"/>
 							<synonym value="Pomo (?)"/>
 							<synonym value="Pomo (uncertain)"/>
+							<synonym value="NW Pomo"/>  <!-- Should these be their own grouping? -->
+							<synonym value="N.W. Pomo"/> <!-- Should these be their own grouping? -->
+							<synonym value="Coastal Pomo"/> <!-- Should these be their own grouping? -->
+							<synonym value="Eastern Pomo"/> <!-- Should these be their own grouping? -->
 							<heading id="Kashaya" title="Kashaya">
+								<synonym value="Pomo, S.W."/>
+								<synonym value="S.W. Pomo"/>
+								<synonym value="Southwestern Pomo"/>
+								<synonym value="Kashia Pomo"/>
 								<synonym value="Kashia"/>
 								<synonym value="Kacia"/>
 								<synonym value="Kacaya"/>
@@ -889,13 +850,14 @@
 								</heading>
 							</heading>
 							<heading id="SouthernPomo" title="Southern Pomo">
-								<synonym value="Gallinomero"/>
 								<synonym value="Cainameros"/>
 								<synonym value="Cainemeros"/>
 								<synonym value="Calajomanes"/>
+								<synonym value="Chamay"/>
 								<synonym value="Calle-namares"/>
 								<synonym value="Canaumanos"/>
 								<synonym value="Canimares"/>
+								<synonym value="Gallinomero"/>
 								<synonym value="Gallinomeros"/>
 								<synonym value="Gallonimero"/>
 								<synonym value="Gallynomeros"/>
@@ -905,7 +867,6 @@
 								<synonym value="Kianamares"/>
 								<synonym value="Kyanamara"/>
 								<synonym value="Kainama"/>
-								<synonym value="Steppe Indians"/>
 								<synonym value="Kalme"/>
 								<synonym value="Kaime"/>
 								<synonym value="Musalakon"/>
@@ -918,9 +879,11 @@
 								<synonym value="Mu-sal-la-kun"/>
 								<synonym value="Muscalcon"/>
 								<synonym value="Musulacon"/>
-								<synonym value="Chamay"/>
 								<synonym value="Mahilkaune"/>
 								<synonym value="Ma-hin-kow"/>
+								<synonym value="S. Pomo"/>
+								<synonym value="S Pomo"/>
+								<synonym value="Steppe Indians"/>
 								<synonym value="We-sha-chum-mi"/>
 								<synonym value="We-shum tat-tah"/>
 								<synonym value="Yutaya"/>
@@ -928,10 +891,8 @@
 								<heading id="HealdsburgIndians" title="Healdsburg Indians"/>
 							</heading>
 							<heading id="CentralPomo" title="Central Pomo">
-								<heading id="Boya" title="Boya">
-									<synonym value="Bo'yah"/>
-									<synonym value="Bo-i-os"/>
-								</heading>
+								<synonym value="Pomo, N. Central"/>
+								<synonym value="North Central Pomo"/>
 								<heading id="Bokeya" title="Bokeya">
 									<synonym value="Pdataya"/>
 									<synonym value="Danokeya"/>
@@ -941,31 +902,14 @@
 									<synonym value="Bokea"/>
 									<synonym value="Bokeya"/>
 								</heading>
+								<heading id="Boya" title="Boya">
+									<synonym value="Bo'yah"/>
+									<synonym value="Bo-i-os"/>
+								</heading>
 								<heading id="Kanoa" title="Kanoa">
 									<synonym value="Kan-ho'-ah"/>
 									<synonym value="Knoya"/>
 									<synonym value="Kanowa"/>
-								</heading>
-								<heading id="Yokaya" title="Yokaya">
-									<synonym value="Yokai"/>
-									<synonym value="Yokei"/>
-									<synonym value="Yukae"/>
-									<synonym value="Yukai"/>
-									<synonym value="Yokayo"/>
-									<synonym value="Llokaya"/>
-									<synonym value="Uk-a-is"/>
-									<synonym value="Ukiah"/>
-									<synonym value="Ukias"/>
-									<synonym value="Ya-ki-a"/>
-									<synonym value="Yohios"/>
-									<synonym value="Yo-kai-a"/>
-									<synonym value="Yokaia"/>
-									<synonym value="Yo-kai-ah"/>
-									<synonym value="Yokaiya"/>
-									<synonym value="Yokia"/>
-									<synonym value="Yo-ki-ah"/>
-									<synonym value="Yolhios"/>
-									<synonym value="Yukaya"/>
 								</heading>
 								<heading id="Lema" title="Lema">
 									<synonym value="La-ma"/>
@@ -1001,8 +945,30 @@
 								<heading id="Yobakeya" title="Yobakeya">
 									<synonym value="Ubak-hea"/>
 								</heading>
+								<heading id="Yokaya" title="Yokaya">
+									<synonym value="Yokai"/>
+									<synonym value="Yokei"/>
+									<synonym value="Yukae"/>
+									<synonym value="Yukai"/>
+									<synonym value="Yokayo"/>
+									<synonym value="Llokaya"/>
+									<synonym value="Uk-a-is"/>
+									<synonym value="Ukiah"/>
+									<synonym value="Ukias"/>
+									<synonym value="Ya-ki-a"/>
+									<synonym value="Yohios"/>
+									<synonym value="Yo-kai-a"/>
+									<synonym value="Yokaia"/>
+									<synonym value="Yo-kai-ah"/>
+									<synonym value="Yokaiya"/>
+									<synonym value="Yokia"/>
+									<synonym value="Yo-ki-ah"/>
+									<synonym value="Yolhios"/>
+									<synonym value="Yukaya"/>
+								</heading>
 							</heading>
 							<heading id="NorthernPomo" title="Northern Pomo">
+								<synonym value="N. Pomo"/>
 								<heading id="Comacho" title="Comacho">
 									<synonym value="Ko-ma-cho"/>
 								</heading>
@@ -1102,34 +1068,14 @@
 								</heading>
 							</heading>
 							<heading id="NortheasternPomo" title="Northeastern Pomo">
-								<heading id="Yemabak" title="Yemabak"/>
-								<heading id="Shekom" title="She-kom">
-									<synonym value="cigom"/>
-									<synonym value="Che-com"/>
-									<synonym value="Cigom"/>
-									<synonym value="Shigom"/>
-									<synonym value="She'-kum"/>
-									<synonym value="She-gum-ba"/>
-								</heading>
+								<synonym value="NE Pomo"/>
+								<synonym value="N.E. Pomo"/>
 								<heading id="Dahhohabe" title="Dah-ho-habe">
 									<synonym value="Habe-napo"/>
 									<synonym value="Danoxa"/>
 									<synonym value="Danoha"/>
 									<synonym value="Dan-no-kah"/>
 									<synonym value="Di-noo-ha-vah"/>
-								</heading>
-								<heading id="Xowalek" title="Xowalek">
-									<synonym value="Howalek"/>
-									<synonym value="Ho-al-lek"/>
-									<synonym value="Quoi-lack"/>
-									<synonym value="Hwoi-lak"/>
-								</heading>
-								<heading id="Kayau" title="Kayau">
-									<synonym value="Kaiyau"/>
-									<synonym value="Hayiau"/>
-									<synonym value="Ki-yow'-bah"/>
-									<synonym value="ki-ou"/>
-									<synonym value="Mayi"/>
 								</heading>
 								<heading id="Kabenapo" title="Kabenapo">
 									<synonym value="Habe-napo"/>
@@ -1140,6 +1086,13 @@
 									<synonym value="Nonapoti"/>
 									<synonym value="Shabegok"/>
 								</heading>
+								<heading id="Kayau" title="Kayau">
+									<synonym value="Kaiyau"/>
+									<synonym value="Hayiau"/>
+									<synonym value="Ki-yow'-bah"/>
+									<synonym value="ki-ou"/>
+									<synonym value="Mayi"/>
+								</heading>
 								<heading id="KuLanapo" title="KuLanapo">
 									<synonym value="Hula-napo"/>
 									<synonym value="Bohanapwena"/>
@@ -1148,8 +1101,25 @@
 									<synonym value="Ku'-lenap'-po"/>
 									<synonym value="Hoo-la-nap-o"/>
 								</heading>
+								<heading id="Shekom" title="She-kom">
+									<synonym value="cigom"/>
+									<synonym value="Che-com"/>
+									<synonym value="Cigom"/>
+									<synonym value="Shigom"/>
+									<synonym value="She'-kum"/>
+									<synonym value="She-gum-ba"/>
+								</heading>
+								<heading id="Xowalek" title="Xowalek">
+									<synonym value="Howalek"/>
+									<synonym value="Ho-al-lek"/>
+									<synonym value="Quoi-lack"/>
+									<synonym value="Hwoi-lak"/>
+								</heading>
+								<heading id="Yemabak" title="Yemabak"/>
 							</heading>
 							<heading id="SoutheasternPomo" title="Southeastern Pomo">
+								<synonym value="SE Pomo"/>
+								<synonym value="S.E. Pomo"/>
 								<heading id="Howkuma" title="How-ku-ma">
 									<synonym value="le'makma"/>
 									<synonym value="ka'ugu'ma"/>
