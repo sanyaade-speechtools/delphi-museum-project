@@ -35,7 +35,7 @@
 		********************
 	</notes>
 	<heading id="ModernCultures" title="Modern cultures">
-		<heading id="Africancultures" title="African cultures">
+		<heading id="ModernAfricancultures" title="African cultures">
 			<heading id="Ibibio" title="Ibibio"/>
 			<heading id="Ngere" title="Ngere"/>
 			<heading id="Igala" title="Igala"/>
@@ -57,7 +57,7 @@
 				<synonym value="Pondo"/>
 			</heading>
 			<heading id="AMbete" title="A-Mbete"/>
-			<heading id="Anyi" title="Anyi">
+			<heading id="AnyiTribe" title="Anyi">
 				<synonym value="Agni"/>
 			</heading>
 			<heading id="Atye" title="Atye">
@@ -78,12 +78,12 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="Ambo" title="Ambo"/>
+			<heading id="AmboTribe" title="Ambo"/>
 			<heading id="WesternAfrica" title="Western Africa">
 				<heading id="Yoruba" title="Yoruba"/>
 				<heading id="BaBembe" title="Ba Bembe"/>
 				<heading id="BaBinji" title="Ba Binji"/>
-				<heading id="Benin" title="Benin"/>
+				<heading id="BeninTribe" title="Benin"/>
 				<heading id="Ibo" title="Ibo"/>
 				<heading id="BaLega" title="Ba Lega"/>
 				<heading id="BaLuba" title="Ba Luba"/>
@@ -120,14 +120,14 @@
 			</heading>
 			<heading id="EasternAfrica" title="Eastern Africa">
 				<heading id="Maasai" title="Maasai"/>
-				<heading id="Afar" title="Afar"/>
-				<heading id="Asmara" title="Asmara"/>
+				<heading id="AfarTribe" title="Afar"/>
+				<heading id="AsmaraTribe" title="Asmara"/>
 				<heading id="Kikuyu" title="Kikuyu"/>
 			</heading>
-			<heading id="SouthernAfrica" title="Southern Africa">
+			<heading id="SouthernAfricanTribes" title="Southern Africa">
 				<heading id="Zulu" title="Zulu"/>
 			</heading>
-			<heading id="CentralAfrica" title="Central Africa">
+			<heading id="CentralAfricanTribes" title="Central Africa">
 				<heading id="Sonye" title="Sonye"/>
 				<heading id="Luba" title="Luba"/>
 			</heading>
@@ -135,12 +135,12 @@
 				<heading id="Chokwe" title="Chokwe"/>
 			</heading>
 		</heading>
-		<heading id="Americancultures" title="American cultures">
+		<heading id="ModernAmericancultures" title="American cultures">
 			<heading id="CaribbeanCultures" title="Caribbean Cultures">
 				<heading id="AfroCuban" title="Afro-Cuban"/>
 				<heading id="CaribIndians" title="Carib Indians"/>
 			</heading>
-			<heading id="NorthAmericanCultures" title="North American Cultures">
+			<heading id="ModernNorthAmericanCultures" title="North American Cultures">
 				<heading id="AfricanAmericanCultures" title="African-American">
 					<synonym value="African American"/>
 					<heading id="Gullah" title="Gullah"/>
@@ -154,7 +154,7 @@
 				<heading id="NorthAmericanNativeCultures" title="North American Native Cultures">
 					<heading id="Arctictribes" title="Arctic tribes">
 						<heading id="AlaskanTribes" title="Alaskan Tribes">
-							<heading id="Aleut" title="Aleut">
+							<heading id="AleutTribe" title="Aleut">
 								<heading id="Attu" title="Attu">
 									<heading id="WesternAttu" title="Western Attu"/>
 								</heading>
@@ -228,8 +228,6 @@
 								<synonym value="Ugashak"/>
 							</heading>
 							<heading id="YupikEskimo" title="Yupik Eskimo"/>
-							
-							
 						</heading>
 						<heading id="GreenlandTribes" title="Greenland Tribes"/>
 						<heading id="KookPugunoot" title="Kook-Pugunoot"/>
@@ -431,7 +429,6 @@
 									<synonym value="Amador"/>
 								</heading>
 							</heading>
-							<heading id="PlainsMiwok" title="Plains Miwok"/>
 						</heading>
 						<heading id="Yokuts" title="Yokuts">
 							<heading id="Mitcahai" title="Mitcahai"/> <!-- This needs to be placed in the correct Yokut group -->
@@ -709,8 +706,6 @@
 							<synonym value="Bettol'"/>
 							<synonym value="Pet'-tol'"/>
 						</heading>
-						<!-- DUPE BAD - needs disambiguation or clarification.
-						     The other version is much richer, and should be merged with this one. -->
 						<heading id="Maidu" title="Maidu">
 							<synonym value="Maidu (?)"/>
 							<synonym value="Maidu (uncertain)"/>
@@ -1382,7 +1377,7 @@
 						<heading id="Whilkut" title="Whilkut">
 							<synonym value="Redwood Indian"/>
 						</heading>
-						<heading id="BearRiver" title="Bear River">
+						<heading id="BearRiverTribe" title="Bear River">
 							<synonym value="Bear River, Humboldt"/>
 							<!-- DUPE - synonym matches another category. Needs disambiguation or clarification -->
 							<synonym value="Wiyot"/>
@@ -1570,12 +1565,12 @@
 					</heading>
 					<heading id="Mexicantribes" title="Mexican tribes">
 						<heading id="Huichol" title="Huichol"/>
-						<heading id="Zapotec" title="Zapotec"/>
-						<heading id="Maya" title="Maya"/>
-						<heading id="Nahua" title="Nahua"/>
-						<heading id="Seri" title="Seri"/>
+						<heading id="MayaModern" title="Maya"/>
 						<heading id="Mayo" title="Mayo"/>
 						<heading id="Mexican" title="Mexican"/>
+						<heading id="Nahua" title="Nahua"/>
+						<heading id="Seri" title="Seri"/>
+						<heading id="Zapotec" title="Zapotec"/>
 					</heading>
 					<heading id="Northeasttribes" title="Northeast tribes">
 						<heading id="Nipmuck" title="Nipmuck"/>
@@ -1620,34 +1615,33 @@
 						<heading id="Aztalan" title="Aztalan"/>
 					</heading>
 					<heading id="NorthwestCoasttribes" title="Northwest Coast tribes">
-						<heading id="Clatsop" title="Clatsop"/>
 						<heading id="BellaBella" title="Bella Bella"/>
+						<heading id="ChastaCosta" title="Chasta Costa">
+							<synonym value="Shasta Costa"/>
+						</heading>
 						<heading id="Chehalis" title="Chehalis"/>
+						<heading id="Clatsop" title="Clatsop"/>
 						<heading id="FraserRivertribes" title="Fraser River tribes"/>
+						<heading id="Haida" title="Haida"/>
+						<heading id="Kwakiutl" title="Kwakiutl">
+							<synonym value="Kwakiutl (?)"/>
+						</heading>
 						<heading id="Makah" title="Makah"/>
 						<heading id="Nootka" title="Nootka">
 							<synonym value="Nutka"/>
 							<synonym value="Nucka"/>
 						</heading>
-						<heading id="Kwakiutl" title="Kwakiutl">
-							<synonym value="Kwakiutl (?)"/>
-						</heading>
-						<heading id="Haida" title="Haida"/>
+						<heading id="Quileute" title="Quileute"/>
 						<heading id="Tlingit" title="Tlingit">
 							<synonym value="Tlinkit"/>
 							<heading id="InlandTlingit" title="Inland Tlingit">
-								<!-- DUPE - needs disambiguation or clarification -->
 								<heading id="Teslin" title="Teslin"/>
 							</heading>
 						</heading>
 						<heading id="Tututni" title="Tututni"/>
-						<heading id="Quileute" title="Quileute"/>
 						<heading id="Twana" title="Twana"/>
 						<heading id="Tsimshian" title="Tsimshian">
 							<heading id="CoastTsimshian" title="Coast Tsimshian"/>
-						</heading>
-						<heading id="ChastaCosta" title="Chasta Costa">
-							<synonym value="Shasta Costa"/>
 						</heading>
 						<heading id="ColumbiaRivertribes" title="Columbia River tribes"/>
 						<heading id="Nitinat" title="Nitinat"/>
@@ -1692,19 +1686,16 @@
 						</heading>
 					</heading>
 					<heading id="Plainstribes" title="Plains tribes">
+						<synonym value="Plains tribe (unspecified)"/>
 						<heading id="Comanche" title="Comanche"/>
 						<heading id="Arikara" title="Arikara"/>
 						<heading id="Assiniboin" title="Assiniboin"/>
 						<heading id="Blood" title="Blood"/>
 						<heading id="Cheyenne" title="Cheyenne"/>
 						<heading id="Arapaho" title="Arapaho"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Atakapa" title="Atakapa">
-							<synonym value="Attacapa"/>
-						</heading>
 						<heading id="Kiowa" title="Kiowa"/>
 						<heading id="Crow" title="Crow">
-							<heading id="Crowprobably" title="Crow (probably)"/>
+							<synonym value="Crow (probably)"/>
 						</heading>
 						<heading id="NorthernPlainstribes" title="Northern Plains tribes"/>
 						<heading id="Sioux" title="Sioux">
@@ -1746,17 +1737,16 @@
 						</heading>
 						<heading id="Pawnee" title="Pawnee"/>
 						<heading id="Wichita" title="Wichita"/>
-						<heading id="Plainstribeunspecified" title="Plains tribe (unspecified)"/>
 					</heading>
 					<heading id="Plateautribes" title="Plateau tribes">
-						<heading id="Bannock" title="Bannock"/>
+						<heading id="BannockTribe" title="Bannock"/>
+						<heading id="Colville" title="Colville"/>
 						<heading id="EasternOregontribes" title="Eastern Oregon tribes"/>
 						<heading id="EasternWashingtontribes" title="Eastern Washington tribes"/>
 						<heading id="Klikitat" title="Klikitat"/>
-						<heading id="NezPerce" title="Nez Perce"/>
-						<heading id="Colville" title="Colville"/>
-						<heading id="Miniconjou" title="Miniconjou"/>
 						<heading id="Lillooet" title="Lillooet"/>
+						<heading id="NezPerce" title="Nez Perce"/>
+						<heading id="Miniconjou" title="Miniconjou"/>
 						<heading id="Sanpoil" title="Sanpoil"/>
 						<heading id="ThompsonRivertribes" title="Thompson River tribes"/>
 						<heading id="Umatilla" title="Umatilla"/>
@@ -1768,29 +1758,30 @@
 						<heading id="Yakima" title="Yakima"/>
 					</heading>
 					<heading id="Southeasttribes" title="Southeast tribes">
-						<heading id="Southeasterntribes" title="Southeastern tribes"/>
+						<synonym value="Southeastern tribes"/>
+						<heading id="AlabamaTribe" title="Alabama">
+							<synonym value="Alibamu"/>
+						</heading>
+						<heading id="Atakapa" title="Atakapa">
+							<synonym value="Attacapa"/>
+						</heading>
+						<heading id="CaddoTribe" title="Caddo"/>
+						<heading id="Cherokee" title="Cherokee"/>
+						<heading id="Chitimacha" title="Chitimacha"/>
 						<heading id="Creek" title="Creek"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Atakapa" title="Atakapa"/>
 						<heading id="Houma" title="Houma">
 							<synonym value="Huma"/>
 						</heading>
 						<heading id="Koasati" title="Koasati">
 							<synonym value="Coushatta"/>
 						</heading>
+						<heading id="Roanoke" title="Roanoke"/>
 						<heading id="Seminole" title="Seminole"/>
 						<heading id="Tunica" title="Tunica"/>
-						<heading id="Alabama" title="Alabama">
-							<synonym value="Alibamu"/>
-						</heading>
-						<heading id="Chitimacha" title="Chitimacha"/>
-						<heading id="Caddo" title="Caddo"/>
-						<heading id="Cherokee" title="Cherokee"/>
-						<heading id="Roanoke" title="Roanoke"/>
 					</heading>
 					<heading id="Southwesttribes" title="Southwest tribes">
 						<heading id="PuebloTribes" title="Pueblo Tribes">
-							<heading id="Acoma" title="Acoma">
+							<heading id="AcomaTribe" title="Acoma">
 								<synonym value="Acomita"/>
 							</heading>
 							<heading id="Laguna" title="Laguna"/>
@@ -1873,58 +1864,38 @@
 						</heading>
 					</heading>
 					<heading id="SubArctictribes" title="Sub-Arctic tribes">
-						<heading id="Chugach" title="Chugach">
-							<synonym value="Chugachigmiut"/>
-						</heading>
-						<heading id="Atka" title="Atka"/>
-						<heading id="Chilcotin" title="Chilcotin"/>
-						<heading id="Cree" title="Cree"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Teslin" title="Teslin"/>
-						<heading id="Tutchone" title="Tutchone"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Han" title="Han"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Kutchin" title="Kutchin"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Tanana" title="Tanana"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Ahtna" title="Ahtna"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Tanaina" title="Tanaina"/>
-						<!-- DUPE - needs disambiguation or clarification -->
-						<heading id="Ingalik" title="Ingalik"/>
-						<heading id="Montagnais" title="Montagnais"/>
-						<heading id="Tagish" title="Tagish"/>
-						<heading id="Tahltan" title="Tahltan"/>
 						<heading id="Athabaskan" title="Athabaskan">
 							<heading id="AlaskanAthapaskantribes" title="Alaskan Athapaskan tribes">
 								<synonym value="Alaskan Athabascan"/>
 							</heading>
 							<heading id="NorthernAthapaskantribes" title="Northern Athapaskan tribes">
 								<synonym value="Northern Athabascan"/>
-								<!-- DUPE - needs disambiguation or clarification -->
 								<heading id="Ahtna" title="Ahtna"/>
 								<heading id="Carrier" title="Carrier"/>
 								<heading id="Eyak" title="Eyak"/>
-								<!-- DUPE - needs disambiguation or clarification -->
 								<heading id="Han" title="Han"/>
-								<!-- DUPE - needs disambiguation or clarification -->
 								<heading id="Ingalik" title="Ingalik"/>
 								<heading id="Koyukon" title="Koyukon"/>
-								<!-- DUPE - needs disambiguation or clarification -->
-								<heading id="Tanaina" title="Tanaina"/>
-								<!-- DUPE - needs disambiguation or clarification -->
-								<heading id="Tanana" title="Tanana"/>
-								<!-- DUPE - needs disambiguation or clarification -->
 								<heading id="Kutchin" title="Kutchin"/>
+								<heading id="Tanaina" title="Tanaina"/>
+								<heading id="Tanana" title="Tanana"/>
 							</heading>
 						</heading>
+						<heading id="Atka" title="Atka"/>
+						<heading id="Chilcotin" title="Chilcotin"/>
+						<heading id="Chugach" title="Chugach">
+							<synonym value="Chugachigmiut"/>
+						</heading>
+						<heading id="Cree" title="Cree"/>
+						<heading id="Tutchone" title="Tutchone"/>
+						<heading id="Montagnais" title="Montagnais"/>
+						<heading id="Tagish" title="Tagish"/>
+						<heading id="Tahltan" title="Tahltan"/>
 					</heading>
 				</heading>
 				<heading id="SpanishAmericanCultures" title="Spanish-American"/>
 			</heading>
-			<heading id="SouthAmericanCultures" title="South American Cultures">
+			<heading id="ModernSouthAmericanCultures" title="South American Cultures">
 				<heading id="SouthAmericanIndianCultures" title="South American Indian Cultures">
 					<heading id="Arguorna" title="Arguorna"/>
 					<heading id="Goajiraindians" title="Goajira indians">
@@ -1955,7 +1926,7 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Asiancultures" title="Asian cultures">
+		<heading id="ModernAsiancultures" title="Asian cultures">
 			<heading id="Chinese" title="Chinese"/>
 			<heading id="Kota" title="Kota"/>
 			<heading id="Tungus" title="Tungus"/>
@@ -1965,7 +1936,7 @@
 			    <heading id="Sikh" title="Sikh"/>
 			</heading>
 		</heading>
-		<heading id="Europeancultures" title="European cultures">
+		<heading id="ModernEuropeancultures" title="European cultures">
 			<heading id="European" title="European">
 				<heading id="Czechoslovakian" title="Czechoslovakian"/>  <!-- how to parse into Czech and Slovakian? -->
 				<heading id="English" title="English"/>
@@ -1982,7 +1953,7 @@
 				<heading id="Yugoslavian" title="Yugoslavian"/>  <!-- how to parse into Croatian, Bosnian, Serbian, etc.? -->
 			</heading>
 		</heading>
-		<heading id="Oceaniancultures" title="Oceanian cultures">
+		<heading id="ModernOceaniancultures" title="Oceanian cultures">
 			<heading id="Australiancultures" title="Australian cultures">
 				<heading id="Australianaborigines" title="Australian aborigines"/>
 			</heading>
@@ -2062,13 +2033,12 @@
 				<heading id="Polynesian" title="Polynesian">
 					<heading id="EasternPolynesians" title="Eastern Polynesians"/>
 					<heading id="WesternPolynesians" title="Western Polynesians"/>
-				
 			</heading>
 		</heading>
 	</heading>
 	</heading>
 	<heading id="AncientCultures" title="Ancient cultures">
-		<heading id="WidespreadCultures" title="Widespread Cultures">
+		<heading id="WidespreadAncientCultures" title="Widespread Cultures">
 			<heading id="Acheulean" title="Acheulean">
 				<heading id="Chellean" title="Chellean">
 					<synonym value="Chelean"/>
@@ -2083,7 +2053,7 @@
 			</heading>
 			<heading id="Solutrean" title="Solutrean"/>
 		</heading>
-		<heading id="EuropeanCultures" title="European Cultures">
+		<heading id="AncientEuropeanCultures" title="European Cultures">
 			<heading id="AncientGreece" title="Ancient Greece">
 				<synonym value="Greek"/>
 					<!-- questionable, but I think most people entering this term are looking for things from Ancient Greece -->
@@ -2220,13 +2190,13 @@
 				<heading id="Liburni" title="Liburni"/>
 			</heading>
 		</heading>
-		<heading id="MesoAmericanCultures" title="Mesoamerican Cultures">
+		<heading id="AncientMesoAmericanCultures" title="Mesoamerican Cultures">
 			<heading id="Aztec" title="Aztec">
 				<synonym value="Aztecs"/>
 				<synonym value="Azteca"/>
 				<synonym value="Azteka"/>
 			</heading>
-			<heading id="Maya" title="Maya">
+			<heading id="MayaAncient" title="Maya">
 				<synonym value="Mayas"/>
 				<synonym value="Mayan"/>
 				<synonym value="Mayans"/>
@@ -2242,7 +2212,7 @@
 				<synonym value="Toltecans"/>
 			</heading>
 		</heading>
-		<heading id="NearEasternCultures" title="Near Eastern Cultures">
+		<heading id="AncientNearEasternCultures" title="Near Eastern Cultures">
 			<heading id="Babylonian" title="Babylonian"/>
 			<heading id="Bactrian" title="Bactrian"/>
 			<heading id="Mesopotamia" title="Mesopotamia"/>
@@ -2250,7 +2220,7 @@
 			<heading id="Persian" title="Persian"/>
 			<heading id="Sumerian" title="Sumerian"/>
 		</heading>
-		<heading id="NorthAmericanCultures" title="North American Cultures">
+		<heading id="AncientNorthAmericanCultures" title="North American Cultures">
 			<heading id="Anasazi" title="Anasazi"/>
 			<heading id="Hohokam" title="Hohokam">
 				<implies facet="Location_facet" cat="Arizona"/>
@@ -2259,8 +2229,8 @@
 			<heading id="MountainCahuilla" title="Mountain Cahuilla"/>
 			<heading id="Patayan" title="Patayan"/>
 		</heading>		
-		<heading id="SouthAmericanCultures" title="South American Cultures">
-			<heading id="AndeanCultures" title="AndeanCultures">
+		<heading id="AncientSouthAmericanCultures" title="South American Cultures">
+			<heading id="AncientAndeanCultures" title="AndeanCultures">
 				<heading id="Chavin" title="Chavin">
 					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
 						<implies facet="Period_facet" cat="900BC-200BC"/> -->
