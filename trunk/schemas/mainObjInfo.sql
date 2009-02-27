@@ -80,7 +80,7 @@ CREATE TABLE `media` (
   `path`          VARCHAR(255) NULL,
 	-- If we need to distinguish actual mime-types (e.g., among different image types)
 	-- we can expand this, or add a mime-type as well. Seems like overkill.
-  `type`          ENUM ('image', 'audio', 'video' ) NOT NULL DEFAULT 'image',
+  `type`          ENUM ('image', 'catCard', 'audio', 'video' ) NOT NULL DEFAULT 'image',
 	-- width, height are NULL for audio, or if unknown
   `width`         INT(5) UNSIGNED NULL,    
   `height`        INT(5) UNSIGNED NULL,
