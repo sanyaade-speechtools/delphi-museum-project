@@ -103,8 +103,16 @@ Raises questions:</p>
   <dt>delphiMetadataConfig</dt>
   <dd>This is the root wrapping element for our configuration documents. It
     takes no attributes.&nbsp;<br>
-    This can contain two children: <code>&lt;dbSourceInfo&gt;</code>
-    and <code>&lt;processingInfo&gt;</code>:<dl>
+    This contains either a <code>&lt;fileSourceInfo&gt;</code>
+    child or a <code>&lt;dbSourceInfo&gt;</code>
+    child, and must contain a <code>&lt;processingInfo&gt;</code> child:<dl>
+  <dt>fileSourceInfo</dt>
+  <dd>This is used when the metadata comes from a CSV file.. <br>
+    The <code>&lt;fileSourceInfo&gt;</code> element supports the following attributes:<dl>
+  <dt><i>path</i></dt>
+  <dd>The path to the source file. </dd>
+  </dl>
+ </dd>
   <dt>dbSourceInfo</dt>
   <dd>This contains the information needed to connect to and extract data from a
     database of object metadata. This may be a collections management system or
@@ -132,15 +140,30 @@ Raises questions:</p>
     be left blank and the user will be prompted when a connection is attempted.</dd>
   </dl> </dd>
   <dt>source</dt>
-  <dd>Contains the specification of data sources.<br>
+  <dd>Contains the specification of data sources. Each source represents a table
+    of data, although some values may be obtained by joining to other tables
+    (e.g., to convert from a typeID to a type name). Where there are association
+    tables that will have more than one value per object, this is modeled as a
+    separate source. This is why each source must specify the ObjID column, so
+    associate information back to an object. Note that the ObjID column has the
+    implicit destination column &quot;ObjectID&quot;.<br>
     The <code>&lt;source&gt;</code> element supports the following attributes:<dl>
   <dt><i>db</i></dt>
   <dd>The name of the database to use. </dd>
   <dt><i>table</i></dt>
   <dd>The name of a table to select from. </dd>
   </dl> 
-    The <code>&lt;source&gt;</code> element can contain several children that
-    specify data columns and processing rules:<dl>
+    The <code>&lt;source&gt;</code> element must contain one <code>&lt;objidcolumn&gt;</code>
+    child, and can contain multiple <code>&lt;column&gt;</code> and <code>&lt;joincolumn&gt;</code>
+    children. Additional children
+    specify processing rules:<dl>
+  <dt>objidcolumn</dt>
+  <dd>Describes the column in which the primary object ID key is found, and by
+    which all metadata is bound to a given object. <br>
+    The <code>&lt;objidcolumn&gt;</code> element supports the following attributes:<dl>
+  <dt><i>name</i></dt>
+  <dd>The name of the column in the current table. </dd>
+  </dl></dd>
   <dt>column</dt>
   <dd>Describes a column to select data from. <br>
     The <code>&lt;column&gt;</code> element supports the following attributes:<dl>
@@ -154,6 +177,11 @@ Raises questions:</p>
   <dd>Describes a column to select data from, by joining another table with this
     table. <br>
     The <code>&lt;joincolumn&gt;</code> element supports the following attributes:<dl>
+  <dt><i>joindb</i></dt>
+  <dd>The name of the database (if not the current db) in which <em>jointable</em>
+    is defined. This must also be on the same server instance, and the user
+    specified on the <code>&lt;dbServerInfo&gt;</code> element must have access
+    privileges. </dd>
   <dt><i>jointable</i></dt>
   <dd>The name of a table to join. </dd>
   <dt><i>name</i></dt>
