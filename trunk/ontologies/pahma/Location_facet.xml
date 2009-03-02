@@ -6,19 +6,20 @@
 		political divisions of the world.
 	</description>
 	<notes><em>Note some of the grouping nodes, like mid-west?</em>
-	</notes>
-	<notes>For the purpose of alphabetization, leading qualifiers, adjectives,
+	
+	***********************
+	For the purpose of alphabetization, leading qualifiers, adjectives,
 		articles, etc. are ignored.  For example:
 	&quot;Republic of Macedonia&quot; is treated as &quot;Macedonia&quot;;
 	&quot;Peoples&apos; Republic of China&quot; is treated as &quot;China&quot;;
 	&quot;The Bahamas&quot; is treated as &quot;Bahamas&quot;;
 	&quot;State of the Vatican City&quot; is treated as &quot;Vatican City&quot;.
-	</notes>
-	<notes>
-		<!-- National Forests, National Parks, State Forests, etc. -->
-	</notes>
-	<syntax_notes> 
-		<!-- This is a temporary section, to speed up entry
+	
+	***********************
+		Would like to group National Forests, National Parks, State Forests, etc.
+		
+	***********************
+			This is a temporary section, to speed up entry
 			by making it easier to locate and copy syntax examples:
 			
 			<implies facet="Activity_facet" cat="Burial"/>
@@ -35,8 +36,7 @@
 			<implies facet="Event_facet" cat="SanFranciscoPanPacificExpo"/>
 			<implies facet="Period_facet" cat="EuropeanMedieval"/>
 			<implies facet="Location_facet" cat="CountryVaticanCity"/>
-		-->
-	</syntax_notes>
+	</notes>
 	<heading id="Africa" title="Africa">  <!-- ALPHABETIZE -->
 		<heading id="NorthernAfrica" title="Northern Africa">  <!-- Done -->
 			<synonym value="North Africa"/>
@@ -1892,6 +1892,7 @@
 			</heading>
 		</heading>
 		<heading id="SoutheastAsia" title="Southeast Asia">
+			<synonym value="indochina"/>
 			<heading id="Brunei" title="Brunei"/>
 			<heading id="Burma" title="Burma">
 				<heading id="ChinHills" title="Chin Hills">
@@ -4337,8 +4338,7 @@
 							<heading id="Ruin55" title="Ruin 55"/>
 							<heading id="Ruin57" title="Ruin 57"/>
 							<heading id="Ruin58" title="Ruin 58"/>
-					    	
-					    	<heading id="Alpine" title="Alpine"/>  <!-- Disambiguate with Alpine co., CA -->
+					    	<heading id="AlpineApacheArizona" title="Alpine"/>  <!-- Disambiguate with Alpine co., CA -->
 					    	<heading id="BadgerCreek" title="Badger Creek"/>
 					    	<heading id="BrokenFluteCave" title="Broken Flute Cave"/>
 					    	<heading id="BurkeRanch" title="Burke Ranch"/>
@@ -4407,30 +4407,31 @@
 					    </heading>
 					    <heading id="HopiReservation" title="Hopi Reservation">
 					    	<synonym value="Hopi"/>
-					      <heading id="ThirdMesa" title="Third Mesa"/>
-					      <heading id="SecondMesa" title="Second Mesa"/>
-					      <heading id="Hano" title="Hano"/>
-					      <heading id="Polacca" title="Polacca"/>
-					      <heading id="FirstMesa" title="First Mesa"/>
-					      <heading id="Sichomovi" title="Sichomovi"/>
-					      <heading id="Hotevilla" title="Hotevilla"/>
-					      <heading id="Oraibi" title="Oraibi"/>
-					      <heading id="Walpi" title="Walpi"/>
-					      <heading id="Sipaulovi" title="Sipaulovi"/>
-					      <heading id="Bacavi" title="Bacavi"/>
-					      <heading id="Shungopavi" title="Shungopavi"/>
-					      <heading id="Mishongnovi" title="Mishongnovi"/>
-					      <heading id="OraibiWash" title="Oraibi Wash"/>
-					      
+					    	<implies facet="Culture_facet" cat="HopiIndians"/>
+							<heading id="ThirdMesa" title="Third Mesa"/>
+							<heading id="SecondMesa" title="Second Mesa"/>
+							<heading id="Hano" title="Hano"/>
+							<heading id="Polacca" title="Polacca"/>
+							<heading id="FirstMesa" title="First Mesa"/>
+							<heading id="Sichomovi" title="Sichomovi"/>
+							<heading id="Hotevilla" title="Hotevilla"/>
+							<heading id="Oraibi" title="Oraibi"/>
+							<heading id="Walpi" title="Walpi"/>
+							<heading id="Sipaulovi" title="Sipaulovi"/>
+							<heading id="Bacavi" title="Bacavi"/>
+							<heading id="Shungopavi" title="Shungopavi"/>
+							<heading id="Mishongnovi" title="Mishongnovi"/>
+							<heading id="OraibiWash" title="Oraibi Wash"/>
 					    </heading>
 					    <heading id="KoLauwala" title="KoLauwa la">
 					      <synonym value="Koluwala:wa"/>
 					    </heading>
 					    <heading id="PapagoReservation" title="Papago Reservation">
-					      <heading id="SantaRosa" title="Santa Rosa"/>
-					      <heading id="Sells" title="Sells"/>
-					      <heading id="Tracy" title="Tracy"/>
-					      <heading id="Quijotoa" title="Quijotoa"/>
+					    	<implies facet="Culture_facet" cat="PapagoIndians"/>
+					    	<heading id="Quijotoa" title="Quijotoa"/>
+							<heading id="SantaRosaArizona" title="Santa Rosa"/>
+							<heading id="Sells" title="Sells"/>
+							<heading id="Tracy" title="Tracy"/>
 					    </heading>
 					    <heading id="Navajocounty" title="Navajo county">
 					    	<synonym value="PROVENIENCE = Navajo county, Arizona"/>
