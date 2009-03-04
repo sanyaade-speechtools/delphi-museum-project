@@ -6,14 +6,21 @@
 </script>
 <script type="text/javascript" charset="utf-8">
 {literal}
+// Move to details.js
 //<![CDATA[
-function doViewCard(e, num) {
+function doViewCard(e) {
   $('#detail_image').css("visibility","hidden");
+	setCatCardImage("{/literal}{$catCardMediaItems[0].img_path}{literal}");
   $('#pop_screen').css("display","block");
 	e.cancelBubble = true;
 	if (e.stopPropagation) e.stopPropagation();
 	return false;
 }
+
+function setCatCardImage(srcURL) {
+	$('#cat_card_image').attr("src", srcURL);
+}
+
 function doHideCard(e) {
   $('#detail_image').css("visibility","visible");
   $('#pop_screen').css("display","none");
@@ -144,8 +151,10 @@ function doHideCard(e) {
 				<h3>Object Number</h3>
 				<p>{$objnum}</p>
 			{/if}
-			{if $showCatCardLink }
-				<h3><a href="" onClick="doViewCard(event, {$catCardNum});return false;">View Catalog Card Image(s)</a></h3>
+			{if $hasCatCardMedia }
+				<h3><a href="" onClick="doViewCard(event);return false;">View Catalog Card Image{if $numCatCardMediaItems > 1 }s{/if}</a></h3>
+			{else}
+				<h4>No Catalog Card Images for this object</h4>
 			{/if}
 			<h2 id="cats_label">Concepts</h2>
 			{section name=facet loop=$facetinfo}
@@ -155,13 +164,24 @@ function doHideCard(e) {
 		</div>
 		<br class="clear" />
 
-		{if $showCatCardLink }
+		{if $hasCatCardMedia }
 			<div id="pop_screen" 
 			    style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:#FFF; display:none;" >
 			  <div id="vcc_inner" 
-			    style="position:absolute; top:10px; left:15px; width:770px; height:500px; background-color:#F8F8F8; border:2px solid #cdcdc9; padding:0 10px;" >
+			    style="position:absolute; top:10px; left:15px; width:760px; height:580px; background-color:#F8F8F8; border:2px solid #cdcdc9; padding:0 15px;" >
 					<h3 style="float:right"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
-					<h2>Showing Catalog Cards for cardid: {$catCardNum}</h2>
+					<h2>Catalog Card{if $numCatCardMediaItems > 1 }s{/if} for object:</h2>
+					<img id="cat_card_image" width="650px" src="foo" />
+					{if $numCatCardMediaItems > 1 }
+						<h3>Additional views</h3>
+						{section name=item loop=$catCardMediaItems}
+							<span class="catCard_thumbnail">
+								<img width="120px" src="{$catCardMediaItems[item].img_path}" 
+								      style="margin:5px; cursor:pointer; border:solid black 1px;"
+											onclick="setCatCardImage('{$catCardMediaItems[item].img_path}');" />
+							</span>
+						{/section}
+					{/if}
 				</div>
 			</div>
 		{/if}

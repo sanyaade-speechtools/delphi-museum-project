@@ -75,8 +75,6 @@ $res->free();
 
 //$t->assign('showObjNum', currUserHasPerm( 'ViewBaseCMSInfo' ));
 $t->assign('showObjNum', true);
-$t->assign('showCatCardLink', true);
-$t->assign('catCardNum', 42);
 
 
 //---------------------------------
@@ -88,14 +86,16 @@ if (PEAR::isError($res)) {
     die($res->getMessage());
 }
 
-// If nothing is found, send to object not found.
-if ( $res->numRows() <= 1 ){
-	$t->assign('hasAdditionalMedia', false);
-}else{
-	$t->assign('hasAdditionalMedia', true);
-	
-	$additionalMediaItems = array();
-	while ($row = $res->fetchRow()) {
+$additionalMediaItems = array();
+$catCardMediaItems = array();
+while ($row = $res->fetchRow()) {
+	if( $row['type'] == 'catCard' ) {
+		$catCardInfo = array(	'img_path' => $CFG->catCards."/".$row['path'],
+								'img_ar' => $row['aspectr'],
+									'width' => $row['width'],
+									'height' => $row['height'] );
+		array_push($catCardMediaItems, $catCardInfo);
+	} else if( $row['type'] == 'image' ) {
 		$lastSlash = strrpos($row['path'], "/")+1;
 		if( $lastSlash === false ) {
 			$path = substr($row['path'], 0, -4);
@@ -120,9 +120,18 @@ if ( $res->numRows() <= 1 ){
 									'thumb' => outputSimpleImage($imageOptions)
 						);
 		array_push($additionalMediaItems, $additionalMediaItem);
-
+	} else { // unimplemented type
+	 die( "Support for media of type: ".$row['type']." not yet implemented.");
 	}
+}
+if(count($additionalMediaItems) > 1 ) {
+	$t->assign("hasAdditionalMedia", true);
 	$t->assign("additionalMediaItems", $additionalMediaItems);
+}
+if(count($catCardMediaItems) > 0 ) {
+	$t->assign("hasCatCardMedia", true);
+	$t->assign("catCardMediaItems", $catCardMediaItems);
+	$t->assign("numCatCardMediaItems", count($catCardMediaItems));
 }
 // Free the result
 $res->free();
