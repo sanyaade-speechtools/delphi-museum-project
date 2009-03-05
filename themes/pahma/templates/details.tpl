@@ -161,6 +161,8 @@ function doHideCard(e) {
 				<h3 class="facet_name">{$facetinfo[facet].facet}</h3>
 				{$facetinfo[facet].items}
 			{/section}
+			<br />
+			<h3><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}">Problem or Issue with this object?</a></h3>
 		</div>
 		<br class="clear" />
 

@@ -19,8 +19,11 @@ Starred<span class="requiredFieldIndicator">*</span> items are required.</p>
 	<label for="email">Your email <span class="requiredFieldIndicator">*</span></label>
 	<input class="delphiFormInput" type="text" name="email" value="{$email}" id="email"/>
 
+	<label for="subject">Subject <span class="requiredFieldIndicator">*</span></label>
+	<input class="delphiFormInput" type="text" name="subject" value="{$subject}" id="subject" style="width:400px"/>
+
 	<label for="message">Your comment or question <span class="requiredFieldIndicator">*</span></label>
-	<textarea class="delphiFormInput" name="message" rows="8" cols="40">{$message}</textarea>
+	<textarea class="delphiFormInput" name="message" rows="8" cols="40" style="width:400px">{$message}</textarea>
 	
 	<div class="buttonRow">
 		<input type="submit" name="submit" value="Submit"/>
