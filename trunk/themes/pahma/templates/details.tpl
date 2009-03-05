@@ -162,7 +162,7 @@ function doHideCard(e) {
 				{$facetinfo[facet].items}
 			{/section}
 			<br />
-			<h3><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}">Problem or Issue with this object?</a></h3>
+			<h3><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}&objId={$id}">Problem or Issue with this object?</a></h3>
 		</div>
 		<br class="clear" />
 
@@ -174,6 +174,7 @@ function doHideCard(e) {
 					<h3 style="float:right"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
 					<h2>Catalog Card{if $numCatCardMediaItems > 1 }s{/if} for object:</h2>
 					<img id="cat_card_image" width="650px" src="foo" />
+					<h3 style="float:right; font-weight:normal"><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}&objId={$id}">Problem or Issue with this object's catalog card(s)?</a></h3>
 					{if $numCatCardMediaItems > 1 }
 						<h3>Additional views</h3>
 						{section name=item loop=$catCardMediaItems}

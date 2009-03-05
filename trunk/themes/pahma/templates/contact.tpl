@@ -24,6 +24,9 @@ Starred<span class="requiredFieldIndicator">*</span> items are required.</p>
 
 	<label for="message">Your comment or question <span class="requiredFieldIndicator">*</span></label>
 	<textarea class="delphiFormInput" name="message" rows="8" cols="40" style="width:400px">{$message}</textarea>
+	{if $objId > 0 }
+	<input type="hidden" name="objid" value="{$objId}"/>
+	{/if}
 	
 	<div class="buttonRow">
 		<input type="submit" name="submit" value="Submit"/>
