@@ -476,55 +476,82 @@
 		<prefix value="manufactured with "/>
 		<prefix value="manufactured from "/>
 		<heading id="Trees" title="Trees">
-			<synonym value="wooden"/>
-			<synonym value="of wood"/>
-			<heading id="Alder" title="Alder"/>
-			<heading id="Banana" title="Banana">
-				<synonym value="Bananas"/>
-				<synonym value="Banana seed"/>
-				<synonym value="Banana seeds"/>
-			</heading>
-			<heading id="Birch" title="Birch">
-				<heading id="Hazel" title="Hazel"/>
-			</heading>
-			<heading id="Cedar" title="Cedar"/>
-			<heading id="Coconut" title="Coconut">
-				<synonym value="Coconuts"/>
-				<heading id="CoconutShell" title="Coconut Shell">
-					<synonym value="Coconut Shells"/>
+			<heading id="TypesOfTrees" title="Types of Trees" nomatch="true">
+				<heading id="Alder" title="Alder"/>
+				<heading id="Banana" title="Banana">
+					<synonym value="Bananas"/>
+					<synonym value="Banana seed"/>
+					<synonym value="Banana seeds"/>
 				</heading>
-			</heading>
-			<heading id="Conifer" title="Conifer">
-				<heading id="Fir" title="Fir"/>
-				<heading id="Juniper" title="Juniper">
-					<synonym value="Junipers"/>
-					<synonym value="Juniper seed"/>
-					<synonym value="Juniper seeds"/>
+				<heading id="Birch" title="Birch">
+					<heading id="Hazel" title="Hazel"/>
 				</heading>
-				<heading id="Pine" title="Pine">
-					<synonym value="Pinenut"/>
-					<synonym value="Pinenuts"/>
-					<synonym value="Pine nut"/>
-					<synonym value="Pine nuts"/>
-					<synonym value="Pine-nut"/>
-					<synonym value="Pine-nuts"/>
-					<heading id="BigConepine" title="Big Cone pine"/>
-					<heading id="Bullpine" title="Bullpine"/>
-					<heading id="Diggerpine" title="Digger pine"/>
-					<heading id="Nutmegpine" title="'Nutmeg pine'"/>
-					<heading id="Sugarpine" title="Sugar pine">
-						<synonym value="Sugarpine"/>
-						<synonym value="Pinus lambertiniana"/>
+				<heading id="Cedar" title="Cedar"/>
+				<heading id="Coconut" title="Coconut">
+					<synonym value="Coconuts"/>
+					<heading id="CoconutShell" title="Coconut Shell">
+						<synonym value="Coconut Shells"/>
 					</heading>
 				</heading>
-				<heading id="Redwood" title="Redwood"/>
+				<heading id="Conifer" title="Conifer">
+					<heading id="Fir" title="Fir"/>
+					<heading id="Juniper" title="Juniper">
+						<synonym value="Junipers"/>
+						<synonym value="Juniper seed"/>
+						<synonym value="Juniper seeds"/>
+					</heading>
+					<heading id="Pine" title="Pine">
+						<synonym value="Pinenut"/>
+						<synonym value="Pinenuts"/>
+						<synonym value="Pine nut"/>
+						<synonym value="Pine nuts"/>
+						<synonym value="Pine-nut"/>
+						<synonym value="Pine-nuts"/>
+						<heading id="BigConepine" title="Big Cone pine"/>
+						<heading id="Bullpine" title="Bullpine"/>
+						<heading id="Diggerpine" title="Digger pine"/>
+						<heading id="Nutmegpine" title="'Nutmeg pine'"/>
+						<heading id="Sugarpine" title="Sugar pine">
+							<synonym value="Sugarpine"/>
+							<synonym value="Pinus lambertiniana"/>
+						</heading>
+					</heading>
+					<heading id="Redwood" title="Redwood"/>
+				</heading>
+				<heading id="Maple" title="Maple"/>
+				<heading id="Oak" title="Oak"/>
+				<heading id="Spruce" title="Spruce"/>
+				<heading id="Willow" title="Willow"/>
+				<heading id="Yew" title="Yew"/>
+				<heading id="Yucca" title="Yucca"/>
 			</heading>
-			<heading id="Maple" title="Maple"/>
-			<heading id="Oak" title="Oak"/>
-			<heading id="Spruce" title="Spruce"/>
-			<heading id="Willow" title="Willow"/>
-			<heading id="Yew" title="Yew"/>
-			<heading id="Yucca" title="Yucca"/>
+			<heading id="PartsOfTrees" title="Parts of Trees" nomatch="true">
+				<heading id="TreeBark" title="Bark"/>
+				<heading id="TreeBranch" title="Branch">
+					<synonym value="wooden"/>
+				</heading>
+				<heading id="TreeRoot" title="Root">
+					<synonym value="Roots"/>
+					<excl value="Root Beer"/>
+					<excl value="Man-root"/>
+					<excl value="Man root"/>
+				</heading>
+				<heading id="TreeTrunk" title="Trunk"/>
+			</heading>
+			<heading id="ProductsOfTrees" title="Products of Trees" nomatch="true">
+				<heading id="TreeLog" title="Log">
+					<synonym value="Logs"/>
+				</heading>
+				<heading id="Timber" title="Timber">
+					<synonym value="Timbers"/>
+					<synonym value="Timbered"/>
+				</heading>
+				<heading id="Lumber" title="Lumber"/>
+				<heading id="Wood" title="Wood">
+					<synonym value="wooden"/>
+					<synonym value="of wood"/>
+				</heading>
+			</heading>
 		</heading>
 		<heading id="Shrubs" title="Shrubs">
 			<heading id="Cercis" title="Cercis"/>
