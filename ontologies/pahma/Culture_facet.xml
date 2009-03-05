@@ -21,6 +21,35 @@
 	</notes>
 	<heading id="ModernCultures" title="Modern cultures">
 		<heading id="ModernAfricancultures" title="African cultures">
+			<heading id="NorthernAfricanGroups" title="North Africa" nomatch="true">
+				<heading id="AlgerianGroups" title="Algerian">
+					<implies facet="Location_facet" cat="Algeria"/>
+				</heading>
+				<heading id="EgyptianGroups" title="Egyptian">
+					<implies facet="Location_facet" cat="EgyptCountry"/>
+				</heading>
+				<heading id="NubianGroups" title="Nubian">
+					<!-- <implies facet="Location_facet" cat="NubiaCountry"/> For when we can link to past locations -->
+				</heading>
+				<heading id="TuaregGroups" title="Tuareg">
+					<synonym value="Imuhagh"/>
+					<synonym value="Itargiyen"/>
+					<synonym value="Touareg"/>
+					<synonym value="Twareg"/>
+				</heading>
+			</heading>
+			<heading id="HornOfAfricaTribe" title="Horn of Africa" nomatch="true">
+				
+			</heading>
+			<heading id="EastAndSouthAfrica" title="East &amp; South Africa" nomatch="true">
+				
+			</heading>
+			<heading id="CentralAfricanTribes" title="Central Africa" nomatch="true">
+				
+			</heading>
+			<heading id="WestAfricanTribes" title="West Africa" nomatch="true">
+				
+			</heading>
 			<heading id="AmaMpondoTribe" title="Ama-Mpondo">
 				<synonym value="Pondo"/>
 			</heading>
@@ -43,7 +72,6 @@
 				<synonym value="Labi"/>
 			</heading>
 			<heading id="MfinuTribe" title="Mfinu"/>
-			<heading id="NgereTribe" title="Ngere"/>
 			<heading id="SongoTribe" title="Songo"/>
 			<heading id="TsogoTribe" title="Tsogo">
 				<synonym value="Shogo"/>
@@ -112,6 +140,7 @@
 				<heading id="MendeTribe" title="Mende"/>
 				<heading id="MiniankaTribe" title="Minianka"/>
 				<heading id="MossiTribe" title="Mossi"/>
+				<heading id="NgereTribe" title="Ngere"/>
 				<heading id="SenufoTribe" title="Senufo"/>
 				<heading id="UrhoboTribe" title="Urhobo"/>
 				<heading id="WeTribe" title="We">
@@ -261,7 +290,7 @@
 						</heading>
 					</heading>
 					<heading id="CaliforniaTribes" title="California Tribes">
-						<heading id="NorthwesternCaliforniatribes" title="Northwestern tribes" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+						<heading id="NorthwesternCaliforniatribes" title="Northwestern tribes" nomatch="true">
 							<synonym value="Hupa-Chilula-Whilkut"/>
 							<heading id="CahtoIndians" title="Cahto">
 								<synonym value="Chato"/>
@@ -415,7 +444,7 @@
 								</heading>
 							</heading>
 							<heading id="SouthernAthabascanIndians" title="Southern Athabascans">
-								<heading id="AthabascansofLowerMadRiver" title="Lower Mad River" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+								<heading id="AthabascansofLowerMadRiver" title="Lower Mad River" nomatch="true">
 									<synonym value="Athabascans of Lower Mad River"/>
 								</heading>
 								<heading id="BearRiverIndians" title="Bear River">
@@ -516,7 +545,7 @@
 								<heading id="EelRiverIndians" title="Eel River Wiyot"/>
 							</heading>
 						</heading>
-						<heading id="NortheasternCaliforniatribes" title="Northeastern tribes" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+						<heading id="NortheasternCaliforniatribes" title="Northeastern tribes" nomatch="true">
 							<heading id="AchumawiPitRiverIndians" title="Achumawi (Pit River)">
 								<synonym value="Achumawi"/>
 								<synonym value="Pit River"/>
@@ -557,7 +586,7 @@
 								<synonym value="Yana (uncertain)"/>
 							</heading>
 						</heading>
-						<heading id="NorthCentralCaliforniatribes" title="North Central tribes" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+						<heading id="NorthCentralCaliforniatribes" title="North Central tribes" nomatch="true">
 							<heading id="MaiduIndians" title="Maidu">
 								<synonym value="Maidu (?)"/>
 								<synonym value="Maidu (uncertain)"/>
@@ -637,12 +666,14 @@
 									<synonym value="Northern Moquelumnan"/>
 									<heading id="TulivoniIndians" title="Tulivoni">
 										<synonym value="Tu'-le-am'-me"/>
+										<synonym value="Tu-le-am-me"/>
+										<synonym value="Tu'leam'me"/>
 										<synonym value="Tu'-le-yo'-me"/>
 									</heading>
 									<heading id="OleyomiIndians" title="Oleyomi">
 										<synonym value="O'la-am'-me"/>
 										<synonym value="O'-la-yo'-me"/>
-										<synonym value="ole'yome"/>
+										<synonym value="Ole'yome"/>
 									</heading>
 								</heading>
 							</heading>
@@ -1106,7 +1137,7 @@
 								<heading id="WitukomnomIndians" title="Witukomno'm"/>
 							</heading>
 						</heading>
-						<heading id="SouthCentralCaliforniatribes" title="South Central tribes" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+						<heading id="SouthCentralCaliforniatribes" title="South Central tribes" nomatch="true">
 							<heading id="CostanoanIndians" title="Costanoan"/>
 							<heading id="OhloneIndians" title="Ohlone">
 								<synonym value="Mutsun"/>
@@ -1366,7 +1397,7 @@
 										<synonym value="Tugites"/>
 										<synonym value="Tomchom"/>
 									</heading>
-									<heading id="EastSideOfSanJoaquinIndians" value="(East San Joaquin)" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+									<heading id="EastSideOfSanJoaquinIndians" value="(East San Joaquin)" nomatch="true">
 										<synonym value="East Side of San Joaquin Tribal Name Uncertain"/>
 										<synonym value="Aplagamne"/>
 										<synonym value="Bozenats"/>
@@ -1388,7 +1419,7 @@
 										<synonym value="Lakisamne"/>
 										<synonym value="Pitemis"/>
 									</heading>
-									<heading id="LowerMercedIndians" value="(Lower Merced)" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+									<heading id="LowerMercedIndians" value="(Lower Merced)" nomatch="true">
 										<synonym value="Lower Merced, Tribal Name Uncertain"/> 
 										<synonym value="Chineguis"/>
 										<synonym value="Yunate"/>
@@ -1426,7 +1457,7 @@
 								<heading id="WobonutcIndians" title="Wobonutc"/>
 							</heading>
 						</heading>
-						<heading id="SouthwesternCaliforniatribes" title="Southwestern tribes" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+						<heading id="SouthwesternCaliforniatribes" title="Southwestern tribes" nomatch="true">
 							<heading id="CahuillaIndians" title="Cahuilla"> 
 								<synonym value="Cahahaguillas"/>
 								<synonym value="Coahuilla"/>
@@ -1465,21 +1496,21 @@
 									</heading>
 								</heading>
 								<heading id="IslandChumashIndians" title="Island Chumash">
-									<heading id="SantaCruzIslandChumashIndians" title="Santa Cruz Island" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+									<heading id="SantaCruzIslandChumashIndians" title="Santa Cruz Island" nomatch="true">
 										<synonym value="Mi'tcu'mac"/>
 										<synonym value="Mi'tcumac"/>
 										<synonym value="Mitcu'mac"/>
 										<synonym value="Mitcumac"/>
 										<synonym value="Santa Cruz Island Chumash"/>
 									</heading>
-									<heading id="SantaRosaIslandChumashIndians" title="Santa Rosa Island" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+									<heading id="SantaRosaIslandChumashIndians" title="Santa Rosa Island" nomatch="true">
 										<synonym value="Tcu'mac"/>
 										<synonym value="Tcumac"/>
 										<synonym value="Hel-a-wac-sku-yu"/>
 										<synonym value="Helawacskuyu"/>
 										<synonym value="Santa Cruz Island Chumash"/>
 									</heading>
-									<heading id="SanMiguelIslandChumashIndians" title="San Miguel Island" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+									<heading id="SanMiguelIslandChumashIndians" title="San Miguel Island" nomatch="true">
 										<synonym value="Santa Cruz Island Chumash"/>
 									</heading>
 								</heading>
@@ -1634,7 +1665,7 @@
 								<synonym value="Mohinyam"/>
 							</heading>
 						</heading>
-						<heading id="DesertCaliforniatribes" title="Desert tribes" nomatch="true">  <!-- i.e., match this concept, but not this term -->
+						<heading id="DesertCaliforniatribes" title="Desert tribes" nomatch="true">
 							<synonym value="California Desert"/>
 							<!-- Eastern Mono -->
 							<!-- Kitanemuk -->
