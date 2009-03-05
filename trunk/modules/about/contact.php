@@ -13,16 +13,21 @@ if(isset($_POST['submit'])){
 	if(!strlen($_POST['message']) > 0){
 		array_push($msg, "You must enter a message.");
 	}
+
+	if(!strlen($_POST['subject']) > 0) {
+		$_POST['subject'] = 'Feedback on Delphi';
+	}
 	
 	if(count($msg) > 0){
 		$t->assign('name', cleanFormData($_POST['name']));
 		$t->assign('email', cleanFormData($_POST['email']));
 		$t->assign('message', cleanFormData($_POST['message']));
+		$t->assign('subject', cleanFormData($_POST['subject']));
 		$t->assign('messages', $msg);
 	} else {
 		$nameTo = "Delphi Feedback";
 		$emailTo = $CFG->contactEmail;
-		$subj = "New message from Delphi's feedback form";
+		$subj = cleanFormData($_POST['subject']);
 		$plaintextmsg = cleanFormData($_POST['message']);
 		$htmlmsg = cleanFormData($_POST['message']);
 		$emailFrom = $_POST['email'];
@@ -56,6 +61,11 @@ if( isset($_SESSION['id']) ) {
 	}
 }
 
+if( isset( $_GET['objNum'] ) ) {
+	$t->assign('subject', 'Feedback on Object: '.$_GET['objNum']);
+} else {
+	$t->assign('subject', 'Feedback on Delphi');
+}
 $t->display('contact.tpl');
 
 ?>
