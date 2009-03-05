@@ -18,6 +18,7 @@ if(isset($_POST['submit'])){
 		$_POST['subject'] = 'Feedback on Delphi';
 	}
 	
+	
 	if(count($msg) > 0){
 		$t->assign('name', cleanFormData($_POST['name']));
 		$t->assign('email', cleanFormData($_POST['email']));
@@ -34,6 +35,9 @@ if(isset($_POST['submit'])){
 		$nameFrom = cleanFormData($_POST['name']);
 
 		if(sendDelphiMail($nameTo, $emailTo, $subj, $plaintextmsg, $htmlmsg, $emailFrom, $nameFrom)){
+			if(isset($_POST['objid']) and strlen($_POST['objid']) > 0) {
+				$t->assign('objid', $_POST['objid']);
+			}
 			$t->display('contactSent.tpl');
 			die();
 		} else {
@@ -65,6 +69,11 @@ if( isset( $_GET['objNum'] ) ) {
 	$t->assign('subject', 'Feedback on Object: '.$_GET['objNum']);
 } else {
 	$t->assign('subject', 'Feedback on Delphi');
+}
+if( isset( $_GET['objId'] ) ) {
+	$t->assign('objId', $_GET['objId']);
+} else {
+	$t->assign('objId', -1);
 }
 $t->display('contact.tpl');
 
