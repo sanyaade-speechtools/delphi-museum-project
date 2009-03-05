@@ -457,7 +457,14 @@
 							<token value="panthers" combine="prefix"/>
 						</heading>
 						<heading id="Leopard" title="Leopard" nomatch="true" astoken="plural"/>
-						<heading id="Lion" title="Lion" nomatch="true" astoken="plural"/>
+						<heading id="Lion" title="Lion" nomatch="true" astoken="plural">
+							<token value="lion"/>
+							<token value="lions" combine="prefix"/>
+							<heading id="NameanLion" title="Namean Lion" nomatch="true" astoken="plural">
+								<token value="Namean lion"/>
+								<token value="Namean lions" combine="prefix"/>
+							</heading>
+						</heading>
 						<heading id="MonkeyOrApe" title="Monkey or Ape" nomatch="true">
 							<token value="monkey"/>
 							<token value="monkeys" combine="prefix"/>
@@ -832,14 +839,15 @@
 				<synonym value="discoid"/>
 				<synonym value="discoidal"/>
 			</heading>
-			<heading id="LensShaped" title="Lens Shaped">
+			<heading id="LensShaped" title="Lentoid (lens-shaped)">
+				<synonym value="lens shaped"/>
 				<synonym value="lens-shaped"/>
 				<synonym value="lentoid"/>
 			</heading>
 			<heading id="Oval" title="Oval">
 				<synonym value="ovoid"/>
 			</heading>
-			<heading id="Piriform" title="Piriform (Pear shaped)">
+			<heading id="Piriform" title="Piriform (Pear-shaped)">
 				<synonym value="Piriform"/>
 				<synonym value="Pear shaped"/>
 				<synonym value="Pear-shaped"/>
@@ -850,6 +858,11 @@
 				<synonym value="hooplet"/>
 				<synonym value="hooplets"/>
 				<synonym value="diadem"/>
+			</heading>
+			<heading id="SpindleShaped" title="Fusiform (spindle-shaped)">
+				<synonym value="Fusiform"/>
+				<synonym value="Spindle shaped"/>
+				<synonym value="Spindle-shaped"/>
 			</heading>
 			<heading id="Toroid" title="Toroid (Donut-shaped)">
 				<synonym value="Torus"/>
