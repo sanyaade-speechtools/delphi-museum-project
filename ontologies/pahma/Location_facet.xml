@@ -57,13 +57,14 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="Chad" title="Chad">
+			<heading id="ChadCountry" title="Chad">
 				<heading id="NoDjamena" title="NoDjamena">
 					<synonym value="N'djamena"/>
 				</heading>
 			</heading>
-			<heading id="Egypt" title="Egypt">
+			<heading id="EgyptCountry" title="Egypt">
 				<synonym value="Misr"/>
+				<implies facet="Culture_facet" cat="EgyptianGroups"/>
 				<heading id="NorthernLowerEgypt" title="Northern (Lower) Egypt">
 					<heading id="Alexandria" title="Alexandria"/>
 					<heading id="Atfieh" title="Atfieh"/>
@@ -2392,7 +2393,18 @@
 			<heading id="NegrosIsland" title="Negros Island"/>
 			<heading id="BasilanIsland" title="Basilan Island"/>
 			<heading id="SuluArchipelago" title="Sulu Archipelago">
-				<heading id="Moro" title="Moro"/>
+				<heading id="JoloIsland" title="Jolo Island">
+					<synonym value="Jolo"/>
+					<synonym value="Jolo I."/>
+					<synonym value="Jolo Is."/>
+					<synonym value="Jolo Isl."/>
+				</heading>
+				<heading id="Moro" title="Moro Island">
+					<synonym value="Moro"/>
+					<synonym value="Moro I."/>
+					<synonym value="Moro Is."/>
+					<synonym value="Moro Isl."/>
+				</heading>
 			</heading>
 		</heading>
 		<heading id="PitcairnIslands" title="Pitcairn Islands">
