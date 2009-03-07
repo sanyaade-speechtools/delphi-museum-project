@@ -227,20 +227,61 @@
 		</heading>
 	</heading>
 	<heading id="Dancing" title="Dancing"/>
+	<heading id="DrugUse" title="Drug Use">
+		<heading id="AlcoholicDrugs" title="Alcohol">
+			<heading id="DrugsAlcoholBeer" title="Drinking Beer" nomatch="true"/>
+			<heading id="DrugsAlcoholLiqour" title="Drinking Liquor" nomatch="true"/>
+			<heading id="DrugsAlcoholWine" title="Drinking Wine" nomatch="true"/>
+		</heading>
+		<heading id="HallucinogenicDrugs" title="Hallucinogens"/>
+		<heading id="AnySmoking" title="Smoking">
+			<heading id="CannibisSmoking" title="Cannibis smoking">
+				<synonym value="Smoking cannibis"/>
+				<synonym value="Smoking marijuana"/>
+			</heading>
+			<heading id="OpiumSmoking" title="Opium smoking">
+				<synonym value="Smoking opium"/>
+			</heading>
+			<heading id="TobaccoSmoking" title="Tobacco smoking">
+				<synonym value="Smoking tobacco"/>
+			</heading>
+		</heading>
+		<heading id="SniffedDrugs" title="SniffedDrugs">
+			<!-- others?  Or should this be merged? -->
+			<heading id="SnuffDrug" title="Snuff"/>
+		</heading>
+		<heading id="StimulantDrugs" title="Stimulants">
+			<heading id="DrugsCaffeine" title="CaffeineUse" nomatch="true">
+				<heading id="CoffeeCaffeineStimulant" title="Coffee"/>
+				<heading id="TeaCaffeineStimulant" title="Tea"/>
+			</heading>
+		</heading>
+	</heading>
 	<heading id="EatingDrinking" title="Eating &amp; Drinking">
 		<heading id="Drinking" title="Drinking">
 			<synonym value="Imbibing"/>
 			<heading id="DrinkingAlcohol" title="Drinking Alcohol">
 				<heading id="BeerDrinking" title="Beer Drinking">
 					<synonym value="Drinking Beer"/>
+					<implies facet="Activity_facet" cat="DrugsAlcoholBeer"/>
+				</heading>
+				<heading id="LiquorDrinking" title="Liquor Drinking">
+					<synonym value="Drinking Liquor"/>
+					<implies facet="Activity_facet" cat="DrugsAlcoholLiqour"/>
 				</heading>
 				<heading id="WineDrinking" title="Wine Drinking">
 					<synonym value="Drinking Wine"/>
+					<implies facet="Activity_facet" cat="DrugsAlcoholWine"/>
 				</heading>
 			</heading>
 			<heading id="OtherDrinking" title="Other Drinking">
 				<heading id="CoffeeDrinking" title="Coffee Drinking">
 					<synonym value="Drinking Coffee"/>
+					<implies facet="Activity_facet" cat="CoffeeCaffeineStimulant"/>
+				</heading>
+				<heading id="TeaDrinking" title="Tea Drinking">
+					<synonym value="Drinking Tea"/>
+					<implies facet="Activity_facet" cat="TeaCaffeineStimulant"/>
 				</heading>
 			</heading>
 		</heading>
