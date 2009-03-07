@@ -75,9 +75,14 @@
 						<synonym value="Sotho-Tswana"/>
 					</heading>
 					<heading id="HereroTribe" title="Herero"/>
+					<heading id="MpondoTribe" title="Mpondo">
+						<synonym value="Ama-Mpondo"/>
+						<synonym value="Pondo"/>
+					</heading>
 					<heading id="NguniTribe" title="Nguni"/>
 					<heading id="TswanaTribe" title="Tswana"/>
 					<heading id="VendaTribe" title="Venda"/>
+					<heading id="XhosaTribe" title="Xhosa"/>
 					<heading id="ZuluTribe" title="Zulu"/>
 				</heading>
 				<heading id="SouthWestAfricanTribes" title="Southwest Africa" nomatch="true">
@@ -101,6 +106,19 @@
 				</heading>
 			</heading>
 			<heading id="CentralAfricanTribes" title="Central Africa" nomatch="true">
+				<heading id="BembeTribe" title="Bembe">
+					<synonym value="Ba-Bembe"/>
+					<synonym value="Ba Bembe"/>
+					<synonym value="Babembe"/>
+					<synonym value="Beembe"/>
+					<synonym value="Mbembe"/>
+					<synonym value="Wabembe"/>
+					<implies facet="Location_facet" cat="DemocraticRepublicoftheCongo"/>
+				</heading>
+				<heading id="BenaLuluaTribe" title="Bena Lulua">
+					<synonym value="Lulua"/>
+					<implies facet="Location_facet" cat="DemocraticRepublicoftheCongo"/>
+				</heading>
 				<heading id="ChokweTribe" title="Chokwe"/>
 				<heading id="CongoBrazzavilleTribes" title="Congo-Brazzaville">
 					<heading id="BwendeTribe" title="Bwende"/>
@@ -116,6 +134,7 @@
 						<synonym value="Azande"/>
 						<synonym value="Zande"/>
 					</heading>
+					<heading id="BaBinjiTribe" title="Ba Binji"/>
 					<heading id="BaPendeTribe" title="Ba Pende">
 						<synonym value="Ba-Pende"/>
 						<synonym value="Ba Pende"/>
@@ -147,6 +166,7 @@
 					</heading>
 					<heading id="MangbetuTribe" title="Mangbetu"/>
 					<heading id="MbalaTribe" title="Mbala"/>
+					<heading id="MfinuTribe" title="Mfinu"/>
 					<heading id="SalampasuTribe" title="Salampasu">
 						<synonym value="Asalampasu"/>
 						<synonym value="Basalampasu"/>
@@ -164,6 +184,14 @@
 					</heading>
 					<heading id="SukuTribe" title="Suku"/>
 				</heading>
+				<heading id="LegaTribe" title="Lega">
+					<synonym value="Ba-Lega"/>
+					<synonym value="Ba Lega"/>
+					<synonym value="Balega"/>
+					<synonym value="Rega"/>
+					<synonym value="Warega"/>
+					<implies facet="Location_facet" cat="DemocraticRepublicoftheCongo"/>
+				</heading>
 				<heading id="LoziTribe" title="Lozi"/>
 				<heading id="LuchaziTribe" title="Luchazi"/>
 				<heading id="LundaTribe" title="Lunda"/>
@@ -172,90 +200,147 @@
 				</heading>
 				<heading id="MbundaTribe" title="Mbunda"/>
 				<heading id="SoliTribe" title="Soli"/>
+				<heading id="SongoTribe" title="Songo"/>
 				<heading id="TotelaTribe" title="Totela"/>
 			</heading>
 			<heading id="WestAfricanTribes" title="West Africa" nomatch="true">
-				<!-- Still working on this and the rest below -->
-			</heading>
-			<heading id="AmaMpondoTribe" title="Ama-Mpondo">
-				<synonym value="Pondo"/>
-			</heading>
-			<heading id="AMbeteTribe" title="A-Mbete"/>
-			<heading id="AnyiTribe" title="Anyi">
-				<synonym value="Agni"/>
-			</heading>
-			<heading id="AtyeTribe" title="Atye">
-				<synonym value="Akye"/>
-				<synonym value="Attie"/>
-			</heading>
-			<heading id="BaViliTribe" title="Ba Vili"/>
-			<heading id="BenaLuluaTribe" title="Bena Lulua"/>
-			<heading id="FonTribe" title="Fon"/>
-			<heading id="KranTribe" title="Kran"/>
-			<heading id="LobiTribe" title="Lobi">
-				<synonym value="Labi"/>
-			</heading>
-			<heading id="MfinuTribe" title="Mfinu"/>
-			<heading id="SongoTribe" title="Songo"/>
-			<heading id="TsogoTribe" title="Tsogo">
-				<synonym value="Shogo"/>
-			</heading>
-			<heading id="WesternAfricanGroups" title="Western Africa">
-				<heading id="AshantiTribe" title="Ashanti">
-					<synonym value="Asante"/>
-				</heading>
-				<heading id="BaBembeTribe" title="Ba Bembe"/>
-				<heading id="BaBinjiTribe" title="Ba Binji"/>
-				<heading id="BaLegaTribe" title="Ba Lega"/>
-				<heading id="BambaraTribe" title="Bambara"/>
-				<heading id="BauleTribe" title="Baule"/>
-				<heading id="BeninTribe" title="Benin"/>
-				<heading id="BeteTribe" title="Bete"/>
-				<heading id="BetiPahuinGroup" title="Beti-Pahuin">
-					<heading id="BaneTribe" title="Bane"/>
-					<heading id="EtonTribe" title="Eton">
-						<heading id="EtonBetiTribe" title="Eton-Beti"/>
-						<heading id="EtonBelouaTribe" title="Eton-Beloua"/>
-						<heading id="BelouaEtonTribe" title="Beloua-Eton"/>
-					</heading>
+				<heading id="CameroonTribes" title="Cameroon" nomatch="true">
+					<implies facet="Location_facet" cat="CameroonCountry"/>
+					<heading id="BamumTribe" title="Bamum"/>
 					<heading id="EwondoTribe" title="Ewondo">
 						<synonym value="Yaunde"/>
 					</heading>
+					<heading id="HideTribe" title="Hide"/> <!-- Needs exclusions or complex inference -->
+					<heading id="KapsikiTribe" title="Kapsiki">
+						<synonym value="Higi"/>
+					</heading>
+					<heading id="MafaTribe" title="Mafa"/>
+					<heading id="MandanaTribe" title="Mandana"/>
+				</heading>
+				<heading id="FonTribe" title="Fon"/>
+				<heading id="KutaTribe" title="Kuta"/>
+				<heading id="GabonTribes" title="Gabon" nomatch="true">
+					<implies facet="Location_facet" cat="GabonCountry"/>
 					<heading id="FangTribe" title="Fang"/>
-					<heading id="MbidaMbaneTribe" title="Mbida-Mbane"/>
-					<heading id="Mvog-NyengeTribe" title="Mvog-Nyenge"/>
+					<heading id="TsogoTribe" title="Tsogo">
+						<synonym value="Mitsogho"/>
+						<synonym value="Shogo"/>
+					</heading>
+					<heading id="ViliTribe" title="Vili">
+						<synonym value="Ba Vili"/>
+					</heading>
 				</heading>
-				<heading id="BoboTribe" title="Bobo"/>
-				<heading id="BamanaTribe" title="Bamana"/>
-				<heading id="DanTribe" title="Dan">
-					<synonym value="Yacuba"/>
+				<heading id="GhanaTribes" title="Ghana" nomatch="true">
+					<implies facet="Location_facet" cat="GhanaCountry"/>
+					<heading id="AshantiTribe" title="Ashanti">
+						<synonym value="Asante"/>
+					</heading>
+					<heading id="GaTribe" title="Ga"/>
+					<heading id="LobiTribe" title="Lobi"/>
 				</heading>
-				<heading id="DogonTribe" title="Dogon"/>
-				<heading id="GuroTribe" title="Guro">
-					<synonym value="Kweni"/>
+				<heading id="IvoryCoastTribes" title="Ivory Coast" nomatch="true">
+					<implies facet="Location_facet" cat="CotedIvoire"/>
+					<heading id="AnyiTribe" title="Anyi">
+						<synonym value="Agni"/>
+					</heading>
+					<heading id="AtyeTribe" title="Atye">
+						<synonym value="Akye"/>
+						<synonym value="Attie"/>
+					</heading>
+					<heading id="BauleTribe" title="Baule"/>
+					<heading id="BeteTribe" title="Bete"/>
+					<heading id="DanTribe" title="Dan">
+						<synonym value="Yacuba"/>
+					</heading>
+					<heading id="GuroTribe" title="Guro">
+						<synonym value="Kweni"/>
+					</heading>
+					<heading id="MauTribe" title="Mau"/>
+					<heading id="NgereKranTribe" title="Ngere Kran"/>
+					<heading id="SenufoTribe" title="Senufo"/>
+					<heading id="WeTribe" title="We">
+						<synonym value="Wee"/>
+					</heading>
+					<heading id="WobeTribe" title="Wobe"/>
+					<heading id="YaureTribe" title="Yaure">
+						<synonym value="Baoule"/>
+						<synonym value="Baule"/>
+						<synonym value="Yaoure"/>
+					</heading>
 				</heading>
-				<heading id="IbibioTribe" title="Ibibio"/>
-				<heading id="IgalaTribe" title="Igala"/>
-				<heading id="IgboPeople" title="Igbo">
-					<synonym value="Ibo"/>
-					<synonym value="Iboe"/>
-					<synonym value="Ebo"/>
-					<synonym value="Eboe"/>
-					<synonym value="Eboans"/>
-					<synonym value="Heebo"/>
+				<heading id="LiberianTribes" title="Liberia" nomatch="true">
+					<implies facet="Location_facet" cat="LiberiaCountry"/>
+					<heading id="BandiTribe" title="Bandi"/>
+					<heading id="BassaTribe" title="Bassa"/>
+					<heading id="KpelleTribe" title="Kpelle"/>
+					<heading id="KranTribe" title="Kran"/>
+					<heading id="LomaTribe" title="Loma"/>
 				</heading>
-				<heading id="MalinkeTribe" title="Malinke"/>
+				<heading id="MaliTribes" title="Mali" nomatch="true">
+					<implies facet="Location_facet" cat="MaliCountry"/>
+					<heading id="BambaraTribe" title="Bambara">
+						<synonym value="Bamana"/>
+					</heading>
+					<heading id="DogonTribe" title="Dogon"/>
+					<heading id="MalinkeTribe" title="Malinke"/>
+					<heading id="MiniankaTribe" title="Minianka">
+						<synonym value="Bamana"/>
+					</heading>
+					<heading id="SonghaiTribe" title="Songhai"/>
+				</heading>
+				<heading id="MbeteTribe" title="Mbete">
+					<synonym value="A-Mbete"/>
+					<synonym value="Ambete"/>
+				</heading>
+				<heading id="MendeTribe" title="Mende">
+					<synonym value="Mendi"/>
+				</heading>
+				<heading id="NigerianTribes" title="Nigeria" nomatch="true">
+					<implies facet="Location_facet" cat="Nigeria"/>
+					<heading id="BeninTribe" title="Benin">
+						<synonym value="Bibi"/>
+					</heading>
+					<heading id="BiromTribe" title="Birom"/>
+					<heading id="FulaniTribe" title="Fulani"/>
+					<heading id="HausaTribe" title="Hausa"/>
+					<heading id="IbibioTribe" title="Ibibio"/>
+					<heading id="IgboPeople" title="Igbo">
+						<synonym value="Ibo"/>
+						<synonym value="Iboe"/>
+						<synonym value="Ebo"/>
+						<synonym value="Eboe"/>
+						<synonym value="Eboans"/>
+						<synonym value="Heebo"/>
+					</heading>
+					<heading id="IgalaTribe" title="Igala"/>
+					<heading id="IjoTribe" title="Ijo"/>
+					<heading id="JarawaTribe" title="Jarawa"/>
+					<heading id="KagoroTribe" title="Kagoro"/>
+					<heading id="KanuriTribe" title="Kanuri"/>
+					<heading id="KofyarTribe" title="Kofyar"/>
+					<heading id="KoroTribe" title="Koro"/>
+					<heading id="MarghiTribe" title="Marghi"/>
+					<heading id="NgereTribe" title="Ngere"/>
+					<heading id="RukubaTribe" title="Rukuba"/>
+					<heading id="TivTribe" title="Tiv"/>
+					<heading id="UrhoboTribe" title="Urhobo">
+						<synonym value="Uhrobo"/>
+					</heading>
+					<heading id="YorubaPeople" title="Yoruba"/>
+				</heading>
+				<heading id="KonoTribe" title="Kono"/>
 				<heading id="MendeTribe" title="Mende"/>
-				<heading id="MiniankaTribe" title="Minianka"/>
-				<heading id="MossiTribe" title="Mossi"/>
-				<heading id="NgereTribe" title="Ngere"/>
-				<heading id="SenufoTribe" title="Senufo"/>
-				<heading id="UrhoboTribe" title="Urhobo"/>
-				<heading id="WeTribe" title="We">
-					<synonym value="Wee"/>
+				<heading id="UpperVoltaTribes" title="Upper Volta" nomatch="true">
+					<heading id="BoboTribe" title="Bobo"/>
+					<heading id="DagariTribe" title="Dagari"/>
+					<heading id="LobiTribe" title="Lobi">
+						<synonym value="Labi"/>
+					</heading>
+					<heading id="MossiTribe" title="Mossi">
+						<synonym value="Mosi"/>
+					</heading>
+					<heading id="NunumaTribe" title="Nunuma"/>
 				</heading>
-				<heading id="YaureTribe" title="Yaure"/>
-				<heading id="YorubaPeople" title="Yoruba"/>
 			</heading>
 		</heading>
 		<heading id="ModernAmericancultures" title="American cultures">
