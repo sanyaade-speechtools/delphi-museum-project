@@ -346,7 +346,54 @@
 		<heading id="ModernAmericancultures" title="American cultures">
 			<heading id="CaribbeanCultures" title="Caribbean cultures">
 				<heading id="AfroCuban" title="Afro-Cuban"/>
-				<heading id="CaribIndians" title="Carib Indians"/>
+				<heading id="ArawakTribe" title="Arawak">
+					<synonym value="Arawak Indians"/>
+					<synonym value="Arawakan"/>
+					<synonym value="Arawakans"/>
+					<synonym value="Arawaks"/>
+				</heading>
+				<heading id="CaribIndians" title="Carib">
+					<synonym value="Carib Indians"/>
+					<synonym value="Cariban"/>
+					<synonym value="Caribans"/>
+					<synonym value="Caribs"/>
+					<excl value="Island Carib"/>
+					<excl value="Island Caribs"/>
+				</heading>
+				<heading id="CubanPeople" title="Cuban">
+					<synonym value="Cubans"/>
+				</heading>
+				<heading id="GarifunaTribe" title="Garifuna">
+					<synonym value="Garifuna Indians"/>
+					<synonym value="Garifunas"/>
+				</heading>
+				<heading id="HaitianPeople" title="Haitian">
+					<synonym value="Haitians"/>
+				</heading>
+				<heading id="InyeriTribe" title="Inyeri">
+					<synonym value="Inyeri Indians"/>
+					<synonym value="Inyeris"/>
+					<synonym value="Island Carib"/>
+					<synonym value="Island Caribs"/>
+				</heading>
+				<heading id="JamaicanPeople" title="Jamaican">
+					<synonym value="Jamaicans"/>
+				</heading>
+				<heading id="KalipunaTribe" title="Kalipuna">
+					<synonym value="Kalipunas"/>
+					<synonym value="Kalipuna Indians"/>
+					<synonym value="Kaliphuna"/>
+					<synonym value="Kaliphunas"/>
+					<synonym value="Kaliphuna Indians"/>
+				</heading>
+				<heading id="ShebayoTribe" title="Shebayo">
+					<synonym value="Shebayo Indians"/>
+					<synonym value="Shebayos"/>
+				</heading>
+				<heading id="TainoTribe" title="Taino">
+					<synonym value="Taino Indians"/>
+					<synonym value="Tainos"/>
+				</heading>
 			</heading>
 			<heading id="ModernNorthAmericanCultures" title="North American cultures">
 				<heading id="NorthAmericanHistoricCultures" title="No. Amer. historic cultures">
@@ -356,7 +403,7 @@
 					<synonym value="United States Historic"/>
 					<heading id="AfricanAmericanCultures" title="African-American">
 						<synonym value="African American"/>
-						<heading id="Gullah" title="Gullah"/>
+						<synonym value="Gullah"/>
 					</heading>
 					<heading id="AsianAmericanCultures" title="Asian-American">
 						<synonym value="Asian American"/>
@@ -374,16 +421,41 @@
 						<synonym value="Noonataney"/>
 						<heading id="AlaskanTribes" title="Alaskan Tribes">
 							<heading id="AleutTribe" title="Aleut">
-								<heading id="Attu" title="Attu">
-									<heading id="WesternAttu" title="Western Attu"/>
+								<synonym value="Aleuts"/>
+								<heading id="WesternAleutTribe" title="Western Aleut">
+									<heading id="Attu" title="Attu">
+										<synonym value="Western Attu"/>
+									</heading>
 								</heading>
-								<heading id="WesternAleut" title="Western Aleut"/>
-								<heading id="EasternAleut" title="Eastern Aleut"/>
+								<heading id="EasternAleutTribe" title="Eastern Aleut"/>
 							</heading>
-							<heading id="Aluttiq" title="Aluttiq"/>
+							<heading id="Aluttiq" title="Aluttiq">
+								<heading id="ChugachIndians" title="Chugach">
+									<synonym value="Chugachigmiut"/>
+									<synonym value="Chugachmiut"/>
+								</heading>
+								<heading id="KenaiEskimo" title="Kenai Eskimo">
+									<synonym value="Kenai Eskimos"/>
+								</heading>
+								<heading id="KoniagTribe" title="Koniag">
+									<synonym value="Koniag"/>
+									<synonym value="Kodiak Eskimo"/>
+									<synonym value="Kodiak Eskimos"/>
+								</heading>
+								<heading id="PacificEskimo" title="Pacific Eskimo">
+									<synonym value="Kodiak Eskimos"/>
+								</heading>
+								<heading id="UgashikEskimo" title="Ugashik Eskimo">
+									<synonym value="Ugashik Eskimos"/>
+									<synonym value="Ugashak"/>
+									<synonym value="Ugashak Eskimos"/>
+								</heading>
+								<heading id="UnegkurmiutTribe" title="Unegkurmiut">
+									<synonym value="Unegkurmiuts"/>
+								</heading>
+							</heading>
 							<heading id="CentralYupikEskimo" title="Central Yup'ik Eskimo"/>
 							<heading id="Inupiaq" title="Inupiaq"/>
-							<heading id="Koniag" title="Koniag"/>
 							<heading id="SiberianYupikEskimo" title="Siberian Yupik Eskimo"/>
 							<heading id="Yupik" title="Yup'ik"/>
 						</heading>
@@ -413,9 +485,7 @@
 							<heading id="KalugademiutEskimo" title="Kaluga-de-miut Eskimo">
 								<synonym value="Kayaligmiut"/>
 							</heading>
-							<heading id="KenaiEskimo" title="Kenai Eskimo"/>
 							<heading id="KingIslandEskimo" title="King Island Eskimo"/>
-							<heading id="KodiakEskimo" title="Kodiak Eskimo"/>
 							<heading id="KotzebueSoundEskimo" title="Kotzebue Sound Eskimo"/>
 							<heading id="KugmallitEskimo" title="Kugmallit Eskimo">
 								<synonym value="Kogmollick"/>
@@ -437,14 +507,10 @@
 							<heading id="NunamiutEskimo" title="Nunamiut Eskimo"/>
 							<heading id="NunatagmiutEskimo" title="Nunatagmiut Eskimo"/>
 							<heading id="NunivakIslandEskimo" title="Nunivak Island Eskimo"/>
-							<heading id="PacificEskimo" title="Pacific Eskimo"/>
 							<heading id="PointBarrowEskimo" title="Point Barrow Eskimo"/>
 							<heading id="PointHopeEskimo" title="Point Hope Eskimo"/>
 							<heading id="SiberianEskimo" title="Siberian Eskimo"/>
 							<heading id="StLawrenceIslandEskimo" title="St. Lawrence Island Eskimo"/>
-							<heading id="UgashikEskimo" title="Ugashik Eskimo">
-								<synonym value="Ugashak"/>
-							</heading>
 							<heading id="YupikEskimo" title="Yupik Eskimo"/>
 						</heading>
 						<heading id="GreenlandicTribes" title="Greenlandic Tribes">
@@ -596,7 +662,7 @@
 							<heading id="SinkyoneIndians" title="Sinkyone">
 								<synonym value="Kaikomas"/>
 								<synonym value="Tulbush"/>
-								<heading id="NorthernSinkyoneIndians" title="Northern Sinkyone">
+								<heading id="NorthernSinkyoneIndians" title="Northern Sinkyone"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 									<synonym value="Lo'lanko"/>
 									<synonym value="Lolonko"/>
 									<synonym value="Flonho"/>
@@ -611,7 +677,7 @@
 									<synonym value="Loolanko"/>
 									<synonym value="Lolanko"/>
 								</heading>
-								<heading id="ShelterCoveSinkyoneIndians" title="Shelter Cove Sinkyone"> <!-- TRIM this from the UI -->
+								<heading id="ShelterCoveSinkyoneIndians" title="Shelter Cove Sinkyone"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 									<synonym value="Mankya"/>
 									<synonym value="Bankya"/>
 									<synonym value="Usal"/>
@@ -840,13 +906,13 @@
 									<synonym value="Pomo"/>
 									<synonym value="Northern Coast Miwok"/>
 									<synonym value="Northern Moquelumnan"/>
-									<heading id="TulivoniIndians" title="Tulivoni">
+									<heading id="TulivoniIndians" title="Tulivoni"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 										<synonym value="Tu'-le-am'-me"/>
 										<synonym value="Tu-le-am-me"/>
 										<synonym value="Tu'leam'me"/>
 										<synonym value="Tu'-le-yo'-me"/>
 									</heading>
-									<heading id="OleyomiIndians" title="Oleyomi">
+									<heading id="OleyomiIndians" title="Oleyomi"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 										<synonym value="O'la-am'-me"/>
 										<synonym value="O'-la-yo'-me"/>
 										<synonym value="Ole'yome"/>
@@ -1093,7 +1159,7 @@
 										<synonym value="ShO-da-kai Pomo"/>
 										<synonym value="co'dakai"/>
 										<synonym value="Shodakhai"/>
-										<heading id="CatcamkauIndians" title="Catcamkau">
+										<heading id="CatcamkauIndians" title="Catcamkau"> <!-- Trim from UI -->
 											<synonym value="Chamkhai"/>
 											<synonym value="Shachamkau"/>
 											<synonym value="Teamkawi"/>
@@ -1708,7 +1774,6 @@
 										<synonym value="Ventureo"/>  <!-- In some cases, the tilde-n is completely omitted -->
 										<synonym value="Ventureño Chumash"/>
 										<synonym value="Ventureno Chumash"/>
-										<!-- Does this imply Mission Indians? -->
 									</heading>
 								</heading>
 								<heading id="NorthernCoastalChumash" title="Northern Coastal Chumash">
@@ -1868,7 +1933,7 @@
 						</heading>
 						<heading id="KawaiisuIndians" title="Kawaiisu"/>
 						<heading id="PaiuteIndians" title="Paiute">
-							<heading id="NorthernPaiuteIndians" title="Northern Paiute">
+							<heading id="NorthernPaiuteIndians" title="Northern Paiute"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 								<synonym value="Kutsavi Dokado"/>
 								<synonym value="Northern Paiute, Nevada"/>
 								<synonym value="Northern Paiute (Kutsavi Dokado), Mono Lake"/>
@@ -1881,7 +1946,7 @@
 								<heading id="PyramidLakePaiuteIndians" title="Pyramid Lake Paiute"/>
 								<heading id="WadadokadoIndians" title="Wadadokado"/>
 							</heading>
-							<heading id="SouthernPaiuteIndians" title="Southern Paiute">
+							<heading id="SouthernPaiuteIndians" title="Southern Paiute"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 								<heading id="KaibabPaiuteIndians" title="Kaibab Paiute"/>
 								<heading id="MoapaPaiuteIndians" title="Moapa Paiute"/>
 								<heading id="ShivwitsPaiuteIndians" title="Shivwits Paiute"/>
@@ -1970,6 +2035,13 @@
 								<synonym value="Bella Bella"/>
 								<synonym value="Heiltsuk"/>
 							</heading>
+							<heading id="KwakwakawakwIndians" title="Kwakwaka'wakw (Kwakiutl)" nomatch="true">
+								<synonym value="Kwakwaka'wakw"/>
+								<synonym value="Kwakwakawakw"/>
+								<synonym value="Kwakiutl"/>
+								<synonym value="Kwakiult"/>
+								<synonym value="Kwakiutl (?)"/>
+							</heading>
 							<heading id="NuxalkBellacoolaIndians" title="Nuxalk (Bellacoola)">
 								<synonym value="Bellacoola"/>
 								<synonym value="Bella-coola"/>
@@ -1978,7 +2050,24 @@
 							</heading>
 						</heading>
 						<heading id="NorthernNWCoastIndians" title="Northern Northwest Coast">
-							<!-- In progress -->
+							<heading id="HaidaIndians" title="Haida">
+								<synonym value="Haidan"/>
+								<synonym value="Haidans"/>
+								<synonym value="Haidas"/>
+							</heading>
+							<heading id="TlingitIndians" title="Tlingit">
+								<synonym value="Tlingits"/>
+								<synonym value="Tlinkit"/>
+								<synonym value="Tlinkits"/>
+								<header value="Inland Tlingit"> <!-- TRIM this from the UI -->
+									<synonym value="Teslin"/>
+								</header>
+							</heading>
+							<heading id="TsimshianIndians" title="Tsimshian">
+								<synonym value="Tsimshians"/>
+								<synonym value="Coast Tsimshian"/>
+								<synonym value="Coast Tsimshians"/>
+							</heading>
 						</heading>
 						<heading id="SouthernNWCoastIndians" title="Southern Northwest Coast">
 							<heading id="ChinookIndians" title="Chinook">
@@ -2002,12 +2091,11 @@
 								<synonym value="Tututni"/>
 							</heading>
 						</heading>
-						
+						<heading id="ChehalisIndians" title="Chehalis"/>
 						<!-- The following to be organized and incorporated above -->
 						<heading id="ChastaCostaIndians" title="Chasta Costa">
 							<synonym value="Shasta Costa"/>
 						</heading>
-						<heading id="ChehalisIndians" title="Chehalis"/>
 						<heading id="ClatsopIndians" title="Clatsop"/>
 						<heading id="ColumbiaRivertribes" title="Columbia River tribes"/>
 						<!-- Comox -->
@@ -2019,14 +2107,9 @@
 						<heading id="CowlitzIndians" title="Cowlitz"/>
 						<heading id="FraserRivertribes" title="Fraser River tribes"/>
 						<!-- Gitskyan -->
-						<heading id="HaidaIndians" title="Haida"/>
 						<!-- Haisla -->
 						<heading id="KitamaatIndians" title="Kitamaat">
 							<synonym value="Haisla"/>
-						</heading>
-						<heading id="KwakiutlIndians" title="Kwakiutl">
-							<synonym value="Kwakiult"/>
-							<synonym value="Kwakiutl (?)"/>
 						</heading>
 						<!-- Lkungen -->
 						<!-- Lower Fraser -->
@@ -2035,8 +2118,8 @@
 						<!-- Niska -->
 						<heading id="NitinatIndians" title="Nitinat"/>
 						<heading id="Oregontribes" title="Oregon tribes">
-							<heading id="WesternOregontribes" title="Western Oregon tribes"/>
-							<heading id="WesternOregontype" title="Western Oregon type"/>
+							<synonym value="Western Oregon tribes"/>
+							<synonym value="Western Oregon type"/>
 						</heading>
 						<!-- Pentlach -->
 						<heading id="PuyallupIndians" title="Puyallup">
@@ -2062,77 +2145,228 @@
 						</heading>
 						<heading id="SwinomishIndians" title="Swinomish"/>
 						<heading id="Tillamook" title="Tillamook"/>
-						<heading id="TlingitIndians" title="Tlingit">
-							<synonym value="Tlinkit"/>
-							<header value="Inland Tlingit"> <!-- TRIM this from the UI -->
-								<synonym value="Teslin"/>
-							</header>
-						</heading>
-						<heading id="TsimshianIndians" title="Tsimshian">
-							<synonym value="Coast Tsimshian"/>
-						</heading>
 						<heading id="TwanaIndians" title="Twana"/>
 						<heading id="UpperUmpqua" title="Upper Umpqua"/>
 						<heading id="Washingtontribes" title="Washington tribes">
-							<heading id="WesternWashingtontribes" title="Western Washington tribes"/>
+							<synonym value="Western Washington tribes"/>
 						</heading>
 					</heading>
-					<heading id="Plainstribes" title="Plains tribes">
+					<heading id="Plainstribes" title="Plains tribes">  <!-- Purposefully made a synonym of both Prarie tribes and Plains tribes -->
+						<synonym value="Northern Plains tribes"/>
 						<synonym value="Plains tribe (unspecified)"/>
-						<heading id="ComancheIndians" title="Comanche"/>
-						<heading id="ArikaraIndians" title="Arikara"/>
+						<synonym value="Plains and Prairie tribes"/>
+						<synonym value="Prairie tribes"/>
+						<synonym value="Southern Plains tribes"/>
+						<heading id="ArapahoIndians" title="Arapaho">
+							<synonym value="Arapahos"/>
+						</heading>
 						<heading id="AssiniboinIndians" title="Assiniboin"/>
+						<heading id="BannockIndians" title="Bannock"/>
+						<heading id="BlackfootIndians" title="Blackfoot">
+							<synonym value="Blackfeet"/>
+							<synonym value="Blackfeets"/>
+							<synonym value="Blackfoots"/>
+							<synonym value="Blackfoot (Canada)"/>
+							<synonym value="Blackfoot (US)"/>
+						</heading>
 						<heading id="BloodIndians" title="Blood"/>
+						<heading id="CherokeeIndians" title="Cherokee"/>
 						<heading id="CheyenneIndians" title="Cheyenne"/>
-						<heading id="ArapahoIndians" title="Arapaho"/>
-						<heading id="KiowaIndians" title="Kiowa"/>
+						<heading id="ComancheIndians" title="Comanche"/>
+						<heading id="CreeIndians" title="Cree">
+							<synonym value="Plains Cree"/>
+						</heading>
 						<heading id="CrowIndians" title="Crow">
 							<synonym value="Crow (probably)"/>
+							<excl value="Bird"/>
+							<excl value="Birds"/>
 						</heading>
-						<heading id="NorthernPlainstribes" title="Northern Plains tribes"/>
+						<heading id="GrosVentreIndians" title="Gros Ventre">
+							<synonym value="Gros Ventres"/>
+							<synonym value="Gros-Ventre"/>
+							<synonym value="Gros-Ventres"/>
+						</heading>
+						<heading id="KiowaIndians" title="Kiowa">
+							<synonym value="Kiowan"/>
+							<synonym value="Kiowans"/>
+							<synonym value="Kiowas"/>
+						</heading>
+						<heading id="PieganIndians" title="Piegan"/>
+						<heading id="PlainsOjibwaIndians" title="Plains Ojibwa"/>
 						<heading id="SiouxIndians" title="Sioux">
 							<synonym value="Dakota"/>
 							<header value="Sioux from Pine Ridge Reservation, South Dakota"> <!-- TRIM this from the UI -->
 								<implies facet="Location_facet" cat="PineRidgeReservation"/>
 							</header>
-							<heading id="BruleIndians" title="Brule"/>
-							<heading id="HunkpapaIndians" title="Hunkpapa"/>
-							<heading id="OglalaIndians" title="Oglala">
-								<synonym value="Oglala Sioux"/>
+							<heading id="IsantiSiouxIndians" title="Santee">
+								<synonym value="Isanti"/>
+								<synonym value="Isantian"/>
+								<synonym value="Isantians"/>
+								<synonym value="Isantis"/>
+								<synonym value="Eastern Dakota"/>
+								<synonym value="Eastern Dakotan"/>
+								<synonym value="Eastern Dakotans"/>
+								<synonym value="Eastern Dakotas"/>
+								<synonym value="Santee Dakota"/>
+								<synonym value="Santee Dakotan"/>
+								<synonym value="Santee Dakotans"/>
+								<synonym value="Santee Dakotas"/>
+								<heading id="MdewakantonwanIndians" title="Mdewakantonwan">
+									<synonym value="Mdewakantonwans"/>
+								</heading>
+								<heading id="SisitonwanIndians" title="Sisitonwan">
+									<synonym value="Sisitonwans"/>
+									<synonym value="Sisseton"/>
+									<synonym value="Sissetons"/>
+								</heading>
+								<heading id="WahpekuteIndians" title="Wahpekute">
+									<synonym value="Wahpekutes"/>
+								</heading>
+								<heading id="WahpetonIndians" title="Wahpeton">
+									<synonym value="Wahpetons"/>
+								</heading>
 							</heading>
-							<heading id="SanteeDakotaIndians" title="Santee Dakota"/>
-							<heading id="SissetonIndians" title="Sisseton"/>
-							<heading id="TetonDakotaIndians" title="Teton Dakota"/>
-							<heading id="WahpetonIndians" title="Wahpeton"/>
-							<heading id="YanktonnaiIndians" title="Yanktonnai">
+							<heading id="YanktonIndians" title="Yankton">
+								<synonym value="Ihanktonwan"/>
+								<synonym value="Ihanktonwana"/>
+								<synonym value="Ihanktonwanas"/>
+								<synonym value="Ihanktonwans"/>
+								<synonym value="Nakoda"/>
+								<synonym value="Nakodan"/>
+								<synonym value="Nakodans"/>
+								<synonym value="Nakodas"/>
+								<synonym value="Western Dakota"/>
+								<synonym value="Western Dakotan"/>
+								<synonym value="Western Dakotans"/>
+								<synonym value="Western Dakotas"/>
+								<synonym value="Yanktonai"/>
+								<synonym value="Yanktonaian"/>
+								<synonym value="Yanktonaians"/>
+								<synonym value="Yanktonais"/>
+								<synonym value="Yanktonnai"/>
+								<synonym value="Yanktonnaian"/>
+								<synonym value="Yanktonnaians"/>
+								<synonym value="Yanktonnais"/>
 								<synonym value="Yanktonai Dakota"/>
+								<synonym value="Yanktons"/>
+							</heading>
+							<heading id="TetonDakotaIndians" title="Teton">
+								<synonym value="Teton Dakota"/>
+								<synonym value="Teton Dakotan"/>
+								<synonym value="Teton Dakotans"/>
+								<synonym value="Teton Dakotas"/>
+								<synonym value="Tetonwan"/>
+								<synonym value="Tetonwans"/>
+								<excl value="Grand Teton"/>  <!-- To exclude the mountains -->
+								<excl value="Grand Tetons"/>  <!-- ibid. -->
+								<heading id="HunkpapaIndians" title="Hunkpapa">
+									<synonym value="Hunkpapan"/>
+									<synonym value="Hunkpapans"/>
+									<synonym value="Hunkpapas"/>
+								</heading>
+								<heading id="ItazipacolaIndians" title="Itazipacola">
+									<synonym value="Sans Arcs"/>
+									<synonym value="Itazipacolan"/>
+									<synonym value="Itazipacolans"/>
+									<synonym value="Itazipacolas"/>
+								</heading>
+								<heading id="MinniconjouIndians" title="Minniconjou">
+									<synonym value="Minniconjouan"/>
+									<synonym value="Minniconjouans"/>
+									<synonym value="Minniconjous"/>
+								</heading>
+								<heading id="OglalaIndians" title="Oglala">
+									<synonym value="Oglala Sioux"/>
+								</heading>
+								<heading id="OohenonpaIndians" title="Oohenonpa">
+									<synonym value="Oohenonpan"/>
+									<synonym value="Oohenonpans"/>
+									<synonym value="Oohenonpas"/>
+								</heading>
+								<heading id="SicanguIndians" title="Sicangu">
+									<synonym value="Brule"/>
+									<synonym value="Brulé"/>
+									<synonym value="Brules"/>
+									<synonym value="Brulés"/>
+								</heading>
+								<heading id="SihasapaIndians" title="Sihasapa">
+									<synonym value="Sihasapan"/>
+									<synonym value="Sihasapans"/>
+									<synonym value="Sihasapas"/>
+								</heading>
 							</heading>
 						</heading>
-						<heading id="OmahaIndians" title="Omaha"/>
-						<heading id="OsageIndians" title="Osage"/>
-						<heading id="OtoIndians" title="Oto"/>
-						<heading id="PieganIndians" title="Piegan"/>
-						<heading id="PlainsandPrairietribes" title="Plains and Prairie tribes"/>
-						<heading id="PlainsCreeIndians" title="Plains Cree"/>
-						<heading id="PlainsOjibwaIndians" title="Plains Ojibwa"/>
-						<heading id="PoncaIndians" title="Ponca"/>
-						<heading id="PrairieTribes" title="Prairie tribes"/>
-						<heading id="SouthernPlainsTribes" title="Southern Plains tribes"/>
-						<heading id="BlackfootIndians" title="Blackfoot">
-							<heading id="BlackfootCanadaIndians" title="Blackfoot (Canada)"/>
-							<heading id="BlackfootUSIndians" title="Blackfoot (US)"/>
 						</heading>
-						<heading id="HidatsaIndians" title="Hidatsa">
-							<heading id="HidatsaSioux" title="Hidatsa Sioux"/>
+					<heading id="Prarietribes" title="Prarie tribes">
+						<synonym value="Plains and Prairie tribes"/>  <!-- Purposefully made a synonym of both Prarie tribes and Plains tribes -->
+						<synonym value="Prairie tribes"/>
+						<!-- <heading id="IowaIndians" title="Iowa"/>  Problematic -->
+						<heading id="KansaIndians" title="Kansa">
+							<!-- <synonym value="Kansan"/>  Problematic -->
+							<!-- <synonym value="Kansans"/>  Problematic -->
+							<!-- <synonym value="Kansas"/>  Problematic -->
+							<synonym value="Kaw"/>
+							<synonym value="Kaws"/>
 						</heading>
-						<heading id="PawneeIndians" title="Pawnee"/>
-						<heading id="WichitaIndians" title="Wichita"/>
+						<heading id="MandanHidatsaArikaraNation" title="Mandan, Hidatsa, &amp; Arikara nation"> <!-- This is probably too long for UI, but what is better short version? -->
+							<heading id="ArikaraIndians" title="Arikara">
+								<synonym value="Arikaras"/>
+								<synonym value="Arikaree"/>
+								<synonym value="Ree"/>
+								<synonym value="Sahnish"/>
+							</heading>
+							<heading id="HidatsaIndians" title="Hidatsa">
+								<synonym value="Hidatsa Sioux"/>
+								<synonym value="Hidatsas"/>
+								<synonym value="Minnetaree"/>
+								<synonym value="Minnetarees"/>
+								<synonym value="Nuxbaaga"/>
+								<synonym value="Nuxbaagan"/>
+								<synonym value="Nuxbaagans"/>
+								<synonym value="Nuxbaagas"/>
+							</heading>
+							<heading id="MandanIndians" title="Mandan">
+								<synonym value="Mandans"/>
+							</heading>
+						</heading>
+						<heading id="OmahaIndians" title="Omaha">  <!-- Disambiguate from the city -->
+							<synonym value="Omahan"/>
+							<synonym value="Omahans"/>
+							<synonym value="Omahas"/>
+						</heading>
+						<heading id="OsageIndians" title="Osage">
+							<synonym value="Osages"/>
+						</heading>
+						<heading id="OtoeIndians" title="Otoe">
+							<synonym value="Oto"/>
+							<synonym value="Otos"/>
+							<synonym value="Otoes"/>
+						</heading>
+						<heading id="PawneeIndians" title="Pawnee">
+							<synonym value="Pawnees"/>
+							<synonym value="Paneassa"/>
+							<synonym value="Paneassan"/>
+							<synonym value="Paneassans"/>
+							<synonym value="Paneassas"/>
+							<synonym value="Pari"/>
+							<synonym value="Pariki"/>
+							<synonym value="Parikis"/>
+						</heading>
+						<heading id="PoncaIndians" title="Ponca">
+							<synonym value="Poncan"/>
+							<synonym value="Poncans"/>
+							<synonym value="Poncas"/>
+						</heading>
+						<heading id="WichitaIndians" title="Wichita">  <!-- Disambiguate from the city -->
+							<synonym value="Wichitan"/>
+							<synonym value="Wichitans"/>
+							<synonym value="Wichitas"/>
+						</heading>
 					</heading>
 					<heading id="Plateautribes" title="Plateau tribes">
-						<heading id="BannockIndians" title="Bannock"/>
+						<synonym value="Eastern Oregon tribes"/>
+						<synonym value="Eastern Washington tribes"/>
 						<heading id="ColvilleIndians" title="Colville"/>
-						<heading id="EasternOregonTribes" title="Eastern Oregon tribes"/>
-						<heading id="EasternWashingtonTribes" title="Eastern Washington tribes"/>
 						<heading id="KlikitatIndians" title="Klikitat"/>
 						<heading id="LillooetIndians" title="Lillooet"/>
 						<heading id="NezPerceIndians" title="Nez Perce"/>
@@ -2156,7 +2390,6 @@
 							<synonym value="Attacapa"/>
 						</heading>
 						<heading id="CaddoIndians" title="Caddo"/>
-						<heading id="CherokeeIndians" title="Cherokee"/>
 						<heading id="ChitimachaIndians" title="Chitimacha"/>
 						<heading id="CreekIndians" title="Creek"/>
 						<heading id="HoumaIndians" title="Houma">
@@ -2281,10 +2514,6 @@
 						</heading>
 						<heading id="AtkaIndians" title="Atka"/>
 						<heading id="ChilcotinIndians" title="Chilcotin"/>
-						<heading id="ChugachIndians" title="Chugach">
-							<synonym value="Chugachigmiut"/>
-						</heading>
-						<heading id="CreeIndians" title="Cree"/>
 						<heading id="TutchoneIndians" title="Tutchone"/>
 						<heading id="MontagnaisIndians" title="Montagnais"/>
 						<heading id="TagishIndians" title="Tagish"/>
@@ -2645,6 +2874,9 @@
 					<implies facet="Period_facet" cat="900BC-200BC"/> -->
 			</heading>
 			<heading id="MountainCahuillaIndians" title="Mountain Cahuilla"/>
+			<heading id="NWCoastTradition" title="NW Coast Tradition">
+				<synonym value="Northwest Coast Tradition"/>
+			</heading>
 			<heading id="PatayanIndians" title="Patayan">
 				<!-- <implies facet="Period_facet" cat="Precolumbian"/>
 					<implies facet="Period_facet" cat="700AD-1550AD"/> -->
