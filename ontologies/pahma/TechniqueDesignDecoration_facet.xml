@@ -69,7 +69,7 @@
 	Look for shape-motif for geom. Need to mine out of text as n-grams. Max n?
 	-->
 
-	<heading id="DesignOrDecoration" title="Design or Decoration" nomatch="true">
+	<heading id="DesignOrDecoration" title="Design or Decoration" noMatch="true">
 		<heading id="Abstract" title="Abstract"/>
 		<heading id="Amorphous" title="Amorphous">
 			<heading id="Globular" title="Globular">
@@ -78,7 +78,7 @@
 		</heading>
 		<!-- No evidence for this, and unclear how to characterize vs. Color:polychromatic.
 		 <heading id="Chromatic" title="Chromatic"/> -->
-		<heading id="FigurativeOrRepresentational" title="Figurative or Representational" nomatch="true">
+		<heading id="FigurativeOrRepresentational" title="Figurative or Representational" noMatch="true">
 			<!-- These are really fallbacks if we do not latch anything underneath -->
 			<synonym value="figurative"/>
 			<synonym value="figure"/>
@@ -254,38 +254,38 @@
 				<token value="creatures" combine="prefix"/>
 				<token value="imaginary creature"/>
 				<token value="imaginary creatures" combine="prefix"/>
-				<heading id="Bird" title="Bird" nomatch="true" astoken="plural">
+				<heading id="Bird" title="Bird" noMatch="true" astoken="plural">
 					<token value="feather"/>
 					<token value="wing"/>
 					<token value="talon"/>
 					<token value="beak"/>
-					<heading id="Crane" title="Crane" nomatch="true" astoken="plural"/>
-					<heading id="Chicken" title="Chicken" nomatch="true" astoken="plural"/>
-					<heading id="Condor" title="Condor" nomatch="true" astoken="plural"/>
-					<heading id="Cormorant" title="Cormorant" nomatch="true" astoken="plural"/>
-					<heading id="Crow" title="Crow" nomatch="true" astoken="plural"/>
-					<heading id="Dove" title="Dove" nomatch="true" astoken="plural"/>
-					<heading id="Duck" title="Duck" nomatch="true" astoken="plural"/>
-					<heading id="Eagle" title="Eagle" nomatch="true" astoken="plural"/>
-					<heading id="Goose" title="Goose" nomatch="true">
+					<heading id="Crane" title="Crane" noMatch="true" astoken="plural"/>
+					<heading id="Chicken" title="Chicken" noMatch="true" astoken="plural"/>
+					<heading id="Condor" title="Condor" noMatch="true" astoken="plural"/>
+					<heading id="Cormorant" title="Cormorant" noMatch="true" astoken="plural"/>
+					<heading id="Crow" title="Crow" noMatch="true" astoken="plural"/>
+					<heading id="Dove" title="Dove" noMatch="true" astoken="plural"/>
+					<heading id="Duck" title="Duck" noMatch="true" astoken="plural"/>
+					<heading id="Eagle" title="Eagle" noMatch="true" astoken="plural"/>
+					<heading id="Goose" title="Goose" noMatch="true">
 						<token value="geese"/>
 					</heading>
-					<heading id="Hawk" title="Hawk" nomatch="true" astoken="plural"/>
+					<heading id="Hawk" title="Hawk" noMatch="true" astoken="plural"/>
 					<heading id="Hummingbird" title="Hummingbird" astoken="plural"/>
 					<heading id="Ibis" title="Ibis"/>
 					<heading id="Meadowlark" title="Meadowlark"/>
-					<heading id="Ostrich" title="Ostrich" nomatch="true" astoken="plural"/>
-					<heading id="Owl" title="Owl" nomatch="true" astoken="plural"/>
-					<heading id="Parrot" title="Parrot" nomatch="true" astoken="plural"/>
-					<heading id="Peacock" title="Peacock" nomatch="true" astoken="plural"/>
-					<heading id="Pelican" title="Pelican" nomatch="true">
+					<heading id="Ostrich" title="Ostrich" noMatch="true" astoken="plural"/>
+					<heading id="Owl" title="Owl" noMatch="true" astoken="plural"/>
+					<heading id="Parrot" title="Parrot" noMatch="true" astoken="plural"/>
+					<heading id="Peacock" title="Peacock" noMatch="true" astoken="plural"/>
+					<heading id="Pelican" title="Pelican" noMatch="true">
 						<token value="pelican"/>
 						<token value="pelicans"/>
 						<token value="pelikan"/>
 					</heading>
-					<heading id="Penguin" title="Penguin" nomatch="true" astoken="plural"/>
-					<heading id="Phoenix" title="Phoenix" nomatch="true" astoken="noplural"/>
-					<heading id="Quail" title="Quail" nomatch="true" astoken="plural">
+					<heading id="Penguin" title="Penguin" noMatch="true" astoken="plural"/>
+					<heading id="Phoenix" title="Phoenix" noMatch="true" astoken="noplural"/>
+					<heading id="Quail" title="Quail" noMatch="true" astoken="plural">
 						<heading id="QuailCrest" title="Quail Crest">
 							<synonym value="quail crests"/>
 							<synonym value="quail crest decoration"/>
@@ -294,33 +294,33 @@
 							<synonym value="quail crests decoration"/>
 						</heading>
 					</heading>
-					<heading id="Raven" title="Raven" nomatch="true" astoken="plural"/>
+					<heading id="Raven" title="Raven" noMatch="true" astoken="plural"/>
 					<heading id="RedWingedBlackbird" title="RedWinged Blackbird">
 						<synonym value="red-wing blackbird"/>
 						<synonym value="redwinged blackbird"/>
 					</heading>
-					<heading id="Roadrunner" title="Roadrunner" nomatch="true" astoken="plural"/>
-					<heading id="Sparrow" title="Sparrow" nomatch="true" astoken="plural"/>
-					<heading id="Swan" title="Swan" nomatch="true" astoken="plural"/>
+					<heading id="Roadrunner" title="Roadrunner" noMatch="true" astoken="plural"/>
+					<heading id="Sparrow" title="Sparrow" noMatch="true" astoken="plural"/>
+					<heading id="Swan" title="Swan" noMatch="true" astoken="plural"/>
 					<heading id="Thunderbird" title="Thunderbird">
 						<synonym value="thunderbird"/>
 						<excl value="thunderbird park"/>
 					</heading>
 				</heading>
-				<heading id="WaterAnimals" title="Water Animals (Fish, Marine mammals, Shellfish, etc.)" nomatch="true">
-					<heading id="Fish" title="Fish" nomatch="true">
+				<heading id="WaterAnimals" title="Water Animals (Fish, Marine mammals, Shellfish, etc.)" noMatch="true">
+					<heading id="Fish" title="Fish" noMatch="true">
 						<token value="fish"/>
 						<token value="fresh water fish"/>
 						<token value="fishes" combine="prefix"/>
-						<heading id="Eel" title="Eel" nomatch="true" astoken="noplural"/>
-						<heading id="Salmon" title="Salmon" nomatch="true" astoken="noplural"/>
-						<heading id="Sculpin" title="Sculpin" nomatch="true" astoken="noplural"/>
-						<heading id="Seashell" title="Seashell" nomatch="true" astoken="plural">
-							<heading id="Scallop" title="Scallop" nomatch="true" astoken="plural"/>
+						<heading id="Eel" title="Eel" noMatch="true" astoken="noplural"/>
+						<heading id="Salmon" title="Salmon" noMatch="true" astoken="noplural"/>
+						<heading id="Sculpin" title="Sculpin" noMatch="true" astoken="noplural"/>
+						<heading id="Seashell" title="Seashell" noMatch="true" astoken="plural">
+							<heading id="Scallop" title="Scallop" noMatch="true" astoken="plural"/>
 						</heading>
 						<heading id="Starfish" title="Starfish"/>
 					</heading>
-					<heading id="MarineMammals" title="Marine Mammals" nomatch="true">
+					<heading id="MarineMammals" title="Marine Mammals" noMatch="true">
 						<!-- Note dolphin is mostly used as design -->
 						<heading id="Dolphin" title="Dolphin">
 							<synonym value="Dolphins"/>
@@ -334,10 +334,10 @@
 							<synonym value="killer whale"/>
 							<synonym value="orca"/>
 						</heading>
-						<heading id="Seal" title="Seal" nomatch="true" astoken="plural"/>
-						<!-- No evidence of use as design <heading id="SeaLion" title="Sea Lion" nomatch="true"> -->
-						<heading id="Walrus" title="Walrus" nomatch="true" astoken="plural"/>
-						<heading id="Whale" title="Whale" nomatch="true" astoken="plural">
+						<heading id="Seal" title="Seal" noMatch="true" astoken="plural"/>
+						<!-- No evidence of use as design <heading id="SeaLion" title="Sea Lion" noMatch="true"> -->
+						<heading id="Walrus" title="Walrus" noMatch="true" astoken="plural"/>
+						<heading id="Whale" title="Whale" noMatch="true" astoken="plural">
 							<heading id="BelugaWhale" title="Beluga Whale">
 								<token value="beluga whale"/>
 								<token value="beluga whales" combine="prefix"/>
@@ -348,15 +348,15 @@
 					</heading>
 				</heading>
 				<heading id="AmphibiansAndReptiles" title="Amphibians and Reptiles">
-					<heading id="Alligator" title="Alligator" nomatch="true" astoken="plural"/>
+					<heading id="Alligator" title="Alligator" noMatch="true" astoken="plural"/>
 					<heading id="Crocodile" title="Crocodile">
 						<synonym value="Crocodiles"/>
 						<excl value="mummified crocodile"/>
 						<excl value="material:  crocodile"/>
 					</heading>
 					<heading id="Dragon" title="Dragon"/>
-					<heading id="Frog" title="Frog" nomatch="true" astoken="plural"/>
-					<heading id="Lizard" title="Lizard" nomatch="true" astoken="plural">
+					<heading id="Frog" title="Frog" noMatch="true" astoken="plural"/>
+					<heading id="Lizard" title="Lizard" noMatch="true" astoken="plural">
 						<heading id="HornedToad" title="Horned Toad">
 							<synonym value="Horned Toads"/>
 						</heading>
@@ -365,118 +365,118 @@
 						</heading>
 					</heading>
 					<heading id="Serpent" title="Serpent"/>
-					<heading id="Snake" title="Snake" nomatch="true" astoken="plural">
-						<heading id="Rattlesnake" title="Rattlesnake" nomatch="true" astoken="plural"/>
-						<heading id="Cobra" title="Cobra" nomatch="true" astoken="plural"/>
+					<heading id="Snake" title="Snake" noMatch="true" astoken="plural">
+						<heading id="Rattlesnake" title="Rattlesnake" noMatch="true" astoken="plural"/>
+						<heading id="Cobra" title="Cobra" noMatch="true" astoken="plural"/>
 					</heading>
-					<heading id="Toad" title="Toad" nomatch="true" astoken="plural"/>
-					<heading id="Tortoise" title="Tortoise" nomatch="true" astoken="plural"/>
-					<heading id="Turtle" title="Turtle" nomatch="true" astoken="plural"/>
+					<heading id="Toad" title="Toad" noMatch="true" astoken="plural"/>
+					<heading id="Tortoise" title="Tortoise" noMatch="true" astoken="plural"/>
+					<heading id="Turtle" title="Turtle" noMatch="true" astoken="plural"/>
 				</heading>
-				<heading id="Insects" title="Insects" nomatch="true">
-					<heading id="Butterfly" title="Butterfly" nomatch="true" astoken="plural"/>
-					<heading id="Cockroach" title="Cockroach" nomatch="true" astoken="noplural"/>
-					<heading id="Grasshopper" title="Grasshopper" nomatch="true" astoken="plural"/>
-					<heading id="Louse" title="Louse" nomatch="true" astoken="noplural"/>
+				<heading id="Insects" title="Insects" noMatch="true">
+					<heading id="Butterfly" title="Butterfly" noMatch="true" astoken="plural"/>
+					<heading id="Cockroach" title="Cockroach" noMatch="true" astoken="noplural"/>
+					<heading id="Grasshopper" title="Grasshopper" noMatch="true" astoken="plural"/>
+					<heading id="Louse" title="Louse" noMatch="true" astoken="noplural"/>
 					<heading id="Scorpion" title="Scorpion">
 						<synonym value="scorpions"/>
 						<excl value="scorpion bay"/>
 						<excl value="scorpion hill"/>
 					</heading>
-					<heading id="Spider" title="Spider" nomatch="true">
+					<heading id="Spider" title="Spider" noMatch="true">
 						<token value="spider"/>
 						<token value="water-spider"/>
-						<heading id="SpiderWeb" title="Spider Web" nomatch="true" astoken="noplural"/>
+						<heading id="SpiderWeb" title="Spider Web" noMatch="true" astoken="noplural"/>
 					</heading>
-					<heading id="Worm" title="Worm" nomatch="true" astoken="plural"/>
+					<heading id="Worm" title="Worm" noMatch="true" astoken="plural"/>
 				</heading>
-				<heading id="LandMammals" title="Land Mammals" nomatch="true">
-					<heading id="DomesticMammals" title="Domestic Mammals" nomatch="true">
-						<heading id="Cat" title="Cat" nomatch="true" astoken="plural"/>
-						<heading id="Dog" title="Dog" nomatch="true" astoken="plural"/>
-						<heading id="Pig" title="Pig" nomatch="true" astoken="plural"/>
-						<heading id="Goat" title="Goat" nomatch="true" astoken="plural"/>
-						<heading id="Sheep" title="Sheep" nomatch="true" astoken="plural"/>
-						<heading id="Horse" title="Horse" nomatch="true" astoken="plural"/>
-						<heading id="Llama" title="Llama" nomatch="true" astoken="plural"/>
-						<heading id="Bull" title="Bull" nomatch="true" astoken="plural"/>
+				<heading id="LandMammals" title="Land Mammals" noMatch="true">
+					<heading id="DomesticMammals" title="Domestic Mammals" noMatch="true">
+						<heading id="Cat" title="Cat" noMatch="true" astoken="plural"/>
+						<heading id="Dog" title="Dog" noMatch="true" astoken="plural"/>
+						<heading id="Pig" title="Pig" noMatch="true" astoken="plural"/>
+						<heading id="Goat" title="Goat" noMatch="true" astoken="plural"/>
+						<heading id="Sheep" title="Sheep" noMatch="true" astoken="plural"/>
+						<heading id="Horse" title="Horse" noMatch="true" astoken="plural"/>
+						<heading id="Llama" title="Llama" noMatch="true" astoken="plural"/>
+						<heading id="Bull" title="Bull" noMatch="true" astoken="plural"/>
 						<heading id="Oxen" title="Oxen"/>
 					</heading>
-					<heading id="SmallWildMammals" title="Small Wild Mammals" nomatch="true">
-						<heading id="Bat" title="Bat" nomatch="true" astoken="plural"/>
-						<heading id="Beaver" title="Beaver" nomatch="true" astoken="plural"/>
-						<heading id="BobcatOrLynx" title="Bobcat Or Lynx" nomatch="true">
+					<heading id="SmallWildMammals" title="Small Wild Mammals" noMatch="true">
+						<heading id="Bat" title="Bat" noMatch="true" astoken="plural"/>
+						<heading id="Beaver" title="Beaver" noMatch="true" astoken="plural"/>
+						<heading id="BobcatOrLynx" title="Bobcat Or Lynx" noMatch="true">
 							<token value="bobcat"/>
 							<token value="bobcats" combine="prefix"/>
 							<token value="lynx"/>
 							<token value="lynxes" combine="prefix"/>
 						</heading>
-						<heading id="Marten" title="Marten" nomatch="true" astoken="plural"/>
-						<heading id="Mink" title="Mink" nomatch="true" astoken="plural"/>
-						<heading id="Otter" title="Otter" nomatch="true">
+						<heading id="Marten" title="Marten" noMatch="true" astoken="plural"/>
+						<heading id="Mink" title="Mink" noMatch="true" astoken="plural"/>
+						<heading id="Otter" title="Otter" noMatch="true">
 							<token value="otter"/>
 							<token value="otters" combine="prefix"/>
 							<token value="land otter"/>
 							<token value="land otters" combine="prefix"/>
 						</heading>
-						<heading id="Porcupine" title="Porcupine" nomatch="true" astoken="plural"/>
-						<heading id="RabbitOrHare" title="Rabbit or Hare" nomatch="true">
+						<heading id="Porcupine" title="Porcupine" noMatch="true" astoken="plural"/>
+						<heading id="RabbitOrHare" title="Rabbit or Hare" noMatch="true">
 							<token value="rabbit"/>
 							<token value="rabbits" combine="prefix"/>
 							<token value="hare"/>
 							<token value="hares" combine="prefix"/>
 						</heading>
-						<heading id="Squirrel" title="Squirrel" nomatch="true" astoken="plural"/>
-						<heading id="Weasel" title="Weasel" nomatch="true" astoken="plural"/>
+						<heading id="Squirrel" title="Squirrel" noMatch="true" astoken="plural"/>
+						<heading id="Weasel" title="Weasel" noMatch="true" astoken="plural"/>
 					</heading>
-					<heading id="LargeWildMammals" title="Large Wild Mammals" nomatch="true">
-						<heading id="Antelope" title="Antelope" nomatch="true" astoken="plural"/>
-						<heading id="Bear" title="Bear" nomatch="true" astoken="plural">
+					<heading id="LargeWildMammals" title="Large Wild Mammals" noMatch="true">
+						<heading id="Antelope" title="Antelope" noMatch="true" astoken="plural"/>
+						<heading id="Bear" title="Bear" noMatch="true" astoken="plural">
 							<heading id="GrizzlyBear" title="Grizzly Bear"/>
 							<heading id="PolarBear" title="Polar Bear"/>
 						</heading>
-						<heading id="Boar" title="Boar" nomatch="true" astoken="plural"/>
-						<heading id="Camel" title="Camel" nomatch="true" astoken="plural"/>
-						<heading id="Coyote" title="Coyote" nomatch="true" astoken="plural"/>
-						<heading id="Deer" title="Deer" nomatch="true">
+						<heading id="Boar" title="Boar" noMatch="true" astoken="plural"/>
+						<heading id="Camel" title="Camel" noMatch="true" astoken="plural"/>
+						<heading id="Coyote" title="Coyote" noMatch="true" astoken="plural"/>
+						<heading id="Deer" title="Deer" noMatch="true">
 							<token value="deer"/>
 						</heading>
-						<heading id="Fox" title="Fox" nomatch="true" astoken="plural">
-							<heading id="RedFox" title="Red Fox" nomatch="true" astoken="plural"/>
-							<heading id="WhiteFox" title="White Fox" nomatch="true" astoken="plural"/>
+						<heading id="Fox" title="Fox" noMatch="true" astoken="plural">
+							<heading id="RedFox" title="Red Fox" noMatch="true" astoken="plural"/>
+							<heading id="WhiteFox" title="White Fox" noMatch="true" astoken="plural"/>
 						</heading>
-						<heading id="Elephant" title="Elephant" nomatch="true" astoken="plural"/>
+						<heading id="Elephant" title="Elephant" noMatch="true" astoken="plural"/>
 						<!-- no evidence of use as design  -->
 						<!-- giraffe, hippo, zebra, gazelle, -->
-						<heading id="Jackal" title="Jackal" nomatch="true" astoken="plural"/>
-						<heading id="Jaguar" title="Jaguar" nomatch="true">
+						<heading id="Jackal" title="Jackal" noMatch="true" astoken="plural"/>
+						<heading id="Jaguar" title="Jaguar" noMatch="true">
 							<token value="jaguar"/>
 							<token value="jaguars" combine="prefix"/>
 							<token value="panther"/>
 							<token value="panthers" combine="prefix"/>
 						</heading>
-						<heading id="Leopard" title="Leopard" nomatch="true" astoken="plural"/>
-						<heading id="Lion" title="Lion" nomatch="true" astoken="plural">
+						<heading id="Leopard" title="Leopard" noMatch="true" astoken="plural"/>
+						<heading id="Lion" title="Lion" noMatch="true" astoken="plural">
 							<token value="lion"/>
 							<token value="lions" combine="prefix"/>
-							<heading id="NameanLion" title="Namean Lion" nomatch="true" astoken="plural">
+							<heading id="NameanLion" title="Namean Lion" noMatch="true" astoken="plural">
 								<token value="Namean lion"/>
 								<token value="Namean lions" combine="prefix"/>
 							</heading>
 						</heading>
-						<heading id="MonkeyOrApe" title="Monkey or Ape" nomatch="true">
+						<heading id="MonkeyOrApe" title="Monkey or Ape" noMatch="true">
 							<token value="monkey"/>
 							<token value="monkeys" combine="prefix"/>
 							<token value="ape"/>
 							<token value="apes" combine="prefix"/>
 						</heading>
-						<heading id="MountainGoat" title="Mountain Goat" nomatch="true" astoken="plural"/>
-						<heading id="Tiger" title="Tiger" nomatch="true" astoken="plural"/>
-						<heading id="Wolf" title="Wolf" nomatch="true">
+						<heading id="MountainGoat" title="Mountain Goat" noMatch="true" astoken="plural"/>
+						<heading id="Tiger" title="Tiger" noMatch="true" astoken="plural"/>
+						<heading id="Wolf" title="Wolf" noMatch="true">
 							<token value="wolf"/>
 							<token value="wolves" combine="prefix"/>
 						</heading>
-						<heading id="Wolverine" title="Wolverine" nomatch="true" astoken="plural"/>
+						<heading id="Wolverine" title="Wolverine" noMatch="true" astoken="plural"/>
 					</heading>
 				</heading>
 			</heading>
@@ -503,7 +503,7 @@
 				<suffix value=" print"/>
 				<suffix value=" prints"/>
 				<suffix value=" quillwork"/>
-				<heading id="Flower" title="Flower" nomatch="true">
+				<heading id="Flower" title="Flower" noMatch="true">
 					<token value="flower"/>
 					<token value="flowerd"/>
 					<token value="flowered"/>
@@ -512,40 +512,40 @@
 					<synonym value="floral decorated"/>
 					<synonym value="floral decorated"/>
 					<synonym value="floral beaded design"/>
-					<heading id="Lotus" title="Lotus" nomatch="true" astoken="noplural"/>
-					<heading id="Petal" title="Petal" nomatch="true"/>
-					<heading id="Rose" title="Rose" nomatch="true">
+					<heading id="Lotus" title="Lotus" noMatch="true" astoken="noplural"/>
+					<heading id="Petal" title="Petal" noMatch="true"/>
+					<heading id="Rose" title="Rose" noMatch="true">
 						<synonym value="rosette"/>
 						<synonym value="rosettes"/>
 					</heading>
-					<heading id="SquashBlossom" title="Squash-blossom" nomatch="true" astoken="plural"/>
-					<heading id="Tulip" title="Tulip" nomatch="true"/>
+					<heading id="SquashBlossom" title="Squash-blossom" noMatch="true" astoken="plural"/>
+					<heading id="Tulip" title="Tulip" noMatch="true"/>
 				</heading>
-				<heading id="FruitAndVegetables" title="Fruit and Vegetables" nomatch="true">
+				<heading id="FruitAndVegetables" title="Fruit and Vegetables" noMatch="true">
 					<token value="fruit"/>
-					<heading id="Apple" title="Apple" nomatch="true" astoken="plural"/>
-					<heading id="Acorn" title="Acorn" nomatch="true" astoken="plural"/>
-					<heading id="Grain" title="Grain" nomatch="true" astoken="noplural">
-						<heading id="Barley" title="Barley" nomatch="true" astoken="noplural"/>
-						<heading id="Corn" title="Corn" nomatch="true" astoken="noplural">
-							<heading id="Maize" title="Maize" nomatch="true" astoken="noplural"/>
+					<heading id="Apple" title="Apple" noMatch="true" astoken="plural"/>
+					<heading id="Acorn" title="Acorn" noMatch="true" astoken="plural"/>
+					<heading id="Grain" title="Grain" noMatch="true" astoken="noplural">
+						<heading id="Barley" title="Barley" noMatch="true" astoken="noplural"/>
+						<heading id="Corn" title="Corn" noMatch="true" astoken="noplural">
+							<heading id="Maize" title="Maize" noMatch="true" astoken="noplural"/>
 						</heading>
-						<heading id="Wheat" title="Wheat" nomatch="true" astoken="noplural"/>
+						<heading id="Wheat" title="Wheat" noMatch="true" astoken="noplural"/>
 					</heading>
-					<heading id="Pear" title="Pear" nomatch="true" astoken="noplural"/>
-					<heading id="Gourd" title="Gourd" nomatch="true" astoken="noplural">
+					<heading id="Pear" title="Pear" noMatch="true" astoken="noplural"/>
+					<heading id="Gourd" title="Gourd" noMatch="true" astoken="noplural">
 						<token value="Squash"/>
 					</heading>
 				</heading>
-				<heading id="Leaf" title="Leaf" nomatch="true" astoken="noplural">
+				<heading id="Leaf" title="Leaf" noMatch="true" astoken="noplural">
 					<synonym value="leaflike"/>
 					<synonym value="leaf-like"/>
-					<heading id="LaurelLeaf" title="Laurel-Leaf" nomatch="true" astoken="noplural"/>
+					<heading id="LaurelLeaf" title="Laurel-Leaf" noMatch="true" astoken="noplural"/>
 				</heading>
-				<heading id="Tree" title="Tree" nomatch="true">
+				<heading id="Tree" title="Tree" noMatch="true">
 					<token value="tree"/>
 					<token value="trees"/>
-					<heading id="PineTree" title="Pine Tree" nomatch="true">
+					<heading id="PineTree" title="Pine Tree" noMatch="true">
 						<token value="pinetree"/>
 						<token value="pinetrees"/>
 						<token value="pine tree"/>
@@ -636,7 +636,7 @@
 				<excl value="star fish"/>
 				<excl value="star chart"/>
 			</heading>
-			<heading id="Sun" title="Sun" nomatch="true">
+			<heading id="Sun" title="Sun" noMatch="true">
 				<synonym value="sun-shaped"/>
 				<synonym value="sun figure"/>
 				<synonym value="representing the sun"/>
@@ -657,7 +657,7 @@
 			<excl value="plain - twined"/>
 		</heading>
 	</heading>
-	<heading id="ShapeOrForm" title="Shape or Form" nomatch="true">
+	<heading id="ShapeOrForm" title="Shape or Form" noMatch="true">
 		<heading id="Angular" title="Angular">
 			<heading id="Diamond" title="Diamond">
 				<excl value="diamond-like stone"/>
@@ -680,7 +680,7 @@
 				<synonym value="rectangle"/>
 				<synonym value="rounded rectangle"/>
 				<synonym value="rounded rectangular"/>
-				<heading id="Square" title="Square" nomatch="true">
+				<heading id="Square" title="Square" noMatch="true">
 					<synonym value="square cut"/>
 					<synonym value="square-cut"/>
 					<synonym value="square braid"/>
@@ -874,7 +874,7 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="StoneToolIndustry" title="Stone Tool Industry" nomatch="true">
+	<heading id="StoneToolIndustry" title="Stone Tool Industry" noMatch="true">
 		<heading id="Paleolithic" title="Paleolithic">
 			<heading id="LowerPaleolithic" title="Lower Paleolithic">
 				<synonym value="Old Stone Age"/>
@@ -904,7 +904,7 @@
 			<heading id="Chalcolithic" title="Chalcolithic"/>
 		</heading>
 	</heading>
-	<heading id="StyleOrType" title="StyleOrType" nomatch="true">
+	<heading id="StyleOrType" title="StyleOrType" noMatch="true">
 		<heading id="BlackFigureWare" title="BlackFigureWare"/>
 	</heading>
 	<heading id="TechniqueOrManufacture" title="Technique or Manufacture">
