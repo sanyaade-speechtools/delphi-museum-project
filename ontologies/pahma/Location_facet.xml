@@ -3177,36 +3177,66 @@
 					<heading id="Whitehorse" title="Whitehorse"/>
 				</heading>
 			</heading>
-			<heading id="Greenland" title="Greenland">  <!-- done -->
+			<heading id="GreenlandCountry" title="Greenland">  <!-- done -->
 				<heading id="Thule" title="Thule">
 					<synonym value="Dundas"/>
 					<synonym value="Northwest Greenland"/>
 				</heading>
 			</heading>
-			<heading id="Mexico" title="Mexico">  <!-- done -->
-				<heading id="Aguascalientesstate" title="Aguascalientes state">
+			<heading id="MexicoCountry" title="Mexico">  <!-- done -->
+				<heading id="AguascalientesStMX" title="Aguascalientes state">
 					<synonym value="Aguascalientes"/>
 				</heading>
-				<heading id="BajaCaliforniastate" title="Baja California state">
-					<synonym value="Baja California"/>  <!-- Unless it's "Baja California Sur" -->
-					<heading id="Picachopeaks" title="Picacho peaks"/>
-					<heading id="SanQuintin" title="San Quintin">
-						<synonym value="San Quentin"/>
+				<heading id="BajaCaliforniaMX" title="Baja California">
+					<heading id="BajaCalNorteMX" title="Baja California Norte state">
+						<synonym value="Baja California Norte"/>
+						<synonym value="Baja California state"/>
+						<excl value="Sur"/> <!-- Unless it's "Baja California Sur" -->
+						<heading id="ArroyoLeon" title="Arroyo Leon">
+							<synonym value="Arroyo Léon"/>
+							<synonym value="Arroyo León"/>
+						</heading>
+						<heading id="CanonManteca" title="Cañón Manteca">
+							<synonym value="Cañon Manteca"/>
+							<synonym value="Canón Manteca"/>
+							<synonym value="Canon Manteca"/>
+							<synonym value="Manteca"/>
+							<synonym value="Manteca Cañón"/>
+							<synonym value="Manteca Cañon"/>
+							<synonym value="Manteca Canón"/>
+							<synonym value="Manteca Canon"/>
+							<synonym value="Manteca Canyon"/>
+						</heading>
+						<heading id="Guadalupe" title="Guadalupe"/>
+						<heading id="LaHuerta" title="La Huerta">
+							<synonym value="La Huerta de Los Indios"/>
+						</heading>
+						<heading id="Picachopeaks" title="Picacho peaks"/>
+						<heading id="SanMiguel" title="San Miguel"/>
+						<heading id="SanQuintin" title="San Quintin">
+							<synonym value="San Quentin"/>
+							<excl value="Prison"/>  <!-- Disambiguates from facility in Marin co., California -->
+							<excl value="Penitentiary"/>  <!-- Ibid. -->
+						</heading>
+						<heading id="Tijuana" title="Tijuana"/>
 					</heading>
-					<heading id="SanMiguel" title="San Miguel"/>
-					<heading id="ArroyoLeon" title="Arroyo Leon"/>
-					<heading id="CanonManteca" title="Cañón Manteca">
-						<synonym value="Manteca"/>
-					</heading>
-					<heading id="Tijuana" title="Tijuana"/>
-					<heading id="LaHuerta" title="La Huerta">
-						<synonym value="La Huerta de Los Indios"/>
+					<heading id="BajaCalSurMX" title="Baja California Sur state">
+						<synonym value="Baja California Sur"/>
+						<excl value="Norte"/> <!-- Unless it's "Baja California Norte" -->
+						<heading id="MasseysCavesiteBCSMX" title="Massey's Cave site">
+							<synonym value="Massey's Cave"/>
+							<synonym value="Massey's Caves"/>
+							<synonym value="Masseys Cave"/>
+							<synonym value="Masseys Caves"/>
+							<synonym value="Masseys Cave site"/>
+							<synonym value="Masseys' Cave"/>
+							<synonym value="Masseys' Caves"/>
+							<synonym value="Masseys' Cave site"/>
+							<implies facet="Culture_facet" cat="LasPalmasCulture"/>
+						</heading>
 					</heading>
 				</heading>
-				<heading id="BajaCaliforniaSurstate" title="Baja California Sur state">
-					<synonym value="Baja California Sur"/>
-				</heading>
-				<heading id="Champechestate" title="Champeche state">
+				<heading id="ChampecheStateMX" title="Champeche state">
 					<synonym value="Champeche"/>
 					<heading id="Campeche" title="Campeche">
 						<synonym value="San Francisco de Campeche"/>
@@ -3216,7 +3246,7 @@
 						<synonym value="Tepakan"/>
 					</heading>
 				</heading>
-				<heading id="Chiapasstate" title="Chiapas state">
+				<heading id="ChiapasStateMX" title="Chiapas state">
 					<synonym value="Chiapas"/>
 					<heading id="AmatenangodelValle" title="Amatenango del Valle"/>
 					<heading id="Cancuc" title="Cancuc"/>
@@ -3251,7 +3281,7 @@
 					<heading id="Tenejapa" title="Tenejapa"/>
 					<heading id="Zinacantan" title="Zinacantan"/>
 				</heading>
-				<heading id="Chihuahuastate" title="Chihuahua state">
+				<heading id="ChihuahuaStateMX" title="Chihuahua state">
 					<synonym value="Chihuahua"/>
 					<heading id="Arechuyvo" title="Arechuyvo"/>
 					<heading id="Creel" title="Creel"/>
@@ -3266,20 +3296,20 @@
 					</heading>
 					<heading id="Tarahumara" title="Tarahumara"/>
 				</heading>
-				<heading id="CoahuiladeZaragozastate" title="Coahuila de Zaragoza state">
+				<heading id="CoahuilaZaragMX" title="Coahuila de Zaragoza state">
 					<synonym value="Coahuila"/>
 					<synonym value="Coahuila de Zaragoza"/>
 					<heading id="Saltillo" title="Saltillo"/>
 				</heading>
-				<heading id="Colimastate" title="Colima state">
+				<heading id="ColimaStateMX" title="Colima state">
 					<synonym value="Colima"/>
 				</heading>
-				<heading id="Durangostate" title="Durango state">
+				<heading id="DurangoStateMX" title="Durango state">
 					<excl value="Texas"/>
 					<synonym value="Durango"/>
 					<heading id="Canelas" title="Canelas"/>
 				</heading>
-				<heading id="Guanajuatostate" title="Guanajuato state">
+				<heading id="GuanajuatoStateMX" title="Guanajuato state">
 					<heading id="Celaya" title="Celaya"/>
 					<heading id="Guanajuatocity" title="Guanajuato city"/>
 					<heading id="Leon" title="León">
@@ -3287,7 +3317,7 @@
 						<synonym value="León de los Aldama"/>
 					</heading>
 				</heading>
-				<heading id="Guerrerostate" title="Guerrero state">
+				<heading id="GuerreroStateMX" title="Guerrero state">
 					<synonym value="Guerrero"/>
 					<heading id="Acapetlahuaya" title="Acapetlahuaya">
 						<synonym value="Acapetlahyaya"/>
@@ -3345,7 +3375,7 @@
 					<heading id="Xochistlahuaca" title="Xochistlahuaca"/>
 					<heading id="ZumpangodelRio" title="Zumpango del Rio"/>
 				</heading>
-				<heading id="Hidalgostate" title="Hidalgo state">
+				<heading id="HidalgoStateMX" title="Hidalgo state">
 					<synonym value="Hidalgo"/>
 					<heading id="Acaxochitlan" title="Acaxochitlán">
 						<synonym value="Acaxochitlan"/>
@@ -3357,7 +3387,7 @@
 					<heading id="ValledeMesquetal" title="Valle de Mesquetal"/>
 					<heading id="Zimapan" title="Zimapan"/>
 				</heading>
-				<heading id="Jaliscostate" title="Jalisco state">
+				<heading id="JaliscoStateMX" title="Jalisco state">
 					<synonym value="Jalisco"/>
 					<heading id="Ahuacapan" title="Ahuacapan"/>
 					<heading id="Alista" title="Alista"/>
@@ -3389,11 +3419,11 @@
 					</heading>
 					<heading id="Tuxcacuesco" title="Tuxcacuesco"/>
 				</heading>
-				<heading id="Mexicostate" title="Mexico state">
+				<heading id="MexicoStateMX" title="Mexico state">
 					<heading id="Metepec" title="Metepec"/>
 					<heading id="Toluca" title="Toluca"/>
 				</heading>
-				<heading id="MichoacandeOcampo" title="Michoacán de Ocampo">
+				<heading id="MichoacanOcampMX" title="Michoacán de Ocampo state">
 					<synonym value="Michoacan"/>
 					<synonym value="Michoacán  de Ocampo"/>
 					<synonym value="Michoacan de Ocampo"/>
@@ -3416,11 +3446,11 @@
 					<heading id="Xochimilco" title="Xochimilco"/>
 					<heading id="Zacapu" title="Zacapu"/>
 				</heading>
-				<heading id="Morelosstate" title="Morelos state">
+				<heading id="MorelosStateMX" title="Morelos state">
 					<synonym value="Morelos"/>
 					<heading id="Cuernavaca" title="Cuernavaca"/>
 				</heading>
-				<heading id="Nayarit" title="Nayarit">
+				<heading id="NayaritStateMX" title="Nayarit">
 					<heading id="ElAire" title="El Aire"/>
 					<heading id="ElLimon" title="El Limón">
 						<synonym value="El Limon"/>
@@ -3435,7 +3465,7 @@
 					<heading id="LaMesa" title="La Mesa"/>
 					<heading id="MesadeNayar" title="Mesa de Nayar"/>
 				</heading>
-				<heading id="OaxacaMexicanstate" title="Oaxaca state">
+				<heading id="OaxacaStateMX" title="Oaxaca state">
 					<synonym value="Oaxaca (Mexican state)"/>
 					<synonym value="Oaxaca"/>
 					<heading id="OaxacaMexicancity" title="Oaxaca city">
@@ -3450,7 +3480,7 @@
 						<synonym value="Ocotlán de Morelos"/>
 					</heading>
 				</heading>
-				<heading id="Pueblastate" title="Puebla state">
+				<heading id="PueblaStateMX" title="Puebla state">
 					<heading id="Acatlan" title="Acatlán">
 						<synonym value="Acatlan"/>
 					</heading>
@@ -3471,21 +3501,18 @@
 					</heading>
 					<heading id="Zihuateutla" title="Zihuateutla"/>
 				</heading>
-				<heading id="QueretarodeArteagastate" title="Queretaro de Arteaga state">
+				<heading id="QueretaroArteMX" title="Queretaro de Arteaga state">
 					<synonym value="Queretaro de Arteaga"/>
 				</heading>
-				<heading id="QuintanaRoostate" title="Quintana Roo state">
+				<heading id="QuintanaRooMX" title="Quintana Roo state">
 					<synonym value="Quintana Roo"/>
 				</heading>
-				<heading id="Sinaloastate" title="Sinaloa state">
+				<heading id="SinaloaStateMX" title="Sinaloa state">
 					<synonym value="Sinaloa"/>
 				</heading>
-				<heading id="Sonorastate" title="Sonora state">
+				<heading id="SonoraStateMX" title="Sonora state">
 					<heading id="Alamos" title="Alamos"/>
 					<heading id="Babispe" title="Babispe"/>
-					<heading id="BajaCalifornia" title="Baja California">
-						<heading id="Guadalupe" title="Guadalupe"/>
-					</heading>
 					<heading id="ColoniaLerdo" title="Colonia Lerdo"/>
 					<heading id="Enpalme" title="Enpalme"/>
 					<heading id="Guaymas" title="Guaymas"/>
@@ -3506,16 +3533,16 @@
 					<heading id="Tonichi" title="Tonichi"/>
 					<heading id="Yavaros" title="Yavaros"/>
 				</heading>
-				<heading id="Tabascostate" title="Tabasco state">
+				<heading id="TabascoStateMX" title="Tabasco state">
 					<synonym value="Tabasco"/>
 				</heading>
-				<heading id="Tlaxcalastate" title="Tlaxcala state">
+				<heading id="TlaxcalaStateMX" title="Tlaxcala state">
 					<synonym value="Tlaxcala"/>
 				</heading>
-				<heading id="VeracruzLlavestate" title="Veracruz-Llave state">
+				<heading id="VeracruzLlaveMX" title="Veracruz-Llave state">
 					<synonym value="Veracruz-Llave"/>
 				</heading>
-				<heading id="Yucatanstate" title="Yucatán state">
+				<heading id="YucatanStateMX" title="Yucatán state">
 					<synonym value="Yucatán"/>
 					<synonym value="Yucatan"/>
 					<heading id="ChichenItza" title="Chichén Itzá">
@@ -3529,48 +3556,36 @@
 					</heading>
 					<heading id="Ticul" title="Ticul"/>
 				</heading>
-				<heading id="Zacatecasstate" title="Zacatecas state"/>
+				<heading id="ZacatecasStateMX" title="Zacatecas state"/>
 			</heading>
 			<heading id="UnitedStates" title="United States">
     			<synonym value="United States of America"/>
-				<heading id="Stateunspecified" title="State unspecified">
-					<heading id="MasseysCavesite" title="Massey's Cave site"/>
-					<heading id="USANL1" title="USA-NL-1">
-						<synonym value="USA-NL- 1"/>
-					</heading>
-					<heading id="USANL2" title="USA-NL-2">
-						<synonym value="USA-NL- 2"/>
-					</heading>
-					<heading id="USANL3" title="USA-NL-3">
-						<synonym value="USA-NL- 3"/>
-					</heading>
-					<heading id="USANL4" title="USA-NL-4">
-						<synonym value="USA-NL- 4"/>
-					</heading>
-					<heading id="USANL5" title="USA-NL-5">
-						<synonym value="USA-NL- 5"/>
-					</heading>
-					<heading id="USANL6" title="USA-NL-6">
-						<synonym value="USA-NL- 6"/>
-					</heading>
-					<heading id="USANL7" title="USA-NL-7">
-						<synonym value="USA-NL- 7"/>
-					</heading>
-					<heading id="USANL8" title="USA-NL-8">
-						<synonym value="USA-NL- 8"/>
-					</heading>
-					<heading id="USANL9" title="USA-NL-9">
-						<synonym value="USA-NL- 9"/>
-					</heading>
-					<heading id="USANL10" title="USA-NL-10"/>
-					<heading id="USANL11" title="USA-NL-11"/>
-					<heading id="USANL12" title="USA-NL-12"/>
-					<heading id="USANL13" title="USA-NL-13"/>
-					<heading id="USANL14" title="USA-NL-14"/>
-					<heading id="USANL15" title="USA-NL-15"/>
-					<heading id="USANL16" title="USA-NL-16"/>
-					<heading id="WesternUnitedStates" title="Western United States"/>
-				</heading>
+				<synonym value="USA-NL-1"/>
+				<synonym value="USA-NL- 1"/>
+				<synonym value="USA-NL-2"/>
+				<synonym value="USA-NL- 2"/>
+				<synonym value="USA-NL-3"/>
+				<synonym value="USA-NL- 3"/>
+				<synonym value="USA-NL-4"/>
+				<synonym value="USA-NL- 4"/>
+				<synonym value="USA-NL-5"/>
+				<synonym value="USA-NL- 5"/>
+				<synonym value="USA-NL-6"/>
+				<synonym value="USA-NL- 6"/>
+				<synonym value="USA-NL-7"/>
+				<synonym value="USA-NL- 7"/>
+				<synonym value="USA-NL-8"/>
+				<synonym value="USA-NL- 8"/>
+				<synonym value="USA-NL-9"/>
+				<synonym value="USA-NL- 9"/>
+				<synonym value="USA-NL-10"/>
+				<synonym value="USA-NL-11"/>
+				<synonym value="USA-NL-12"/>
+				<synonym value="USA-NL-13"/>
+				<synonym value="USA-NL-14"/>
+				<synonym value="USA-NL-15"/>
+				<synonym value="USA-NL-16"/>
+				<synonym value="Western United States"/>
 				<heading id="Southeasternstates" title="Southeastern states">  <!-- done -->
 					<synonym value="Southeast"/> <!-- Check for other exclusions -->
 					<excl value="Southeast Asia"/>
@@ -3618,6 +3633,8 @@
 				<heading id="Northwesternstates" title="Northwestern states"> <!-- All done except ALASKA -->
 					<heading id="Alaska" title="Alaska"> <!-- ALPHABETIZE -->
 						<synonym value="PROVENIENCE = Alaska"/>
+						<synonym value="Pymiuth"/> <!-- Where is this?  (from USA, subarctic) -->
+						<synonym value="Western Subarctic"/> <!-- Where is this?  (from USA, subarctic) -->
 						<heading id="NorthwestBeringSea" title="Northwest Bering Sea"/>
 						<heading id="AleutianIslands" title="Aleutian Islands">
 						  <heading id="WesternAleutians" title="Western Aleutians">
@@ -9489,7 +9506,7 @@
 									<heading id="CACCo135" title="CA-CCo-135">
 										<synonym value="Farrar Site"/>
 										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Farrar Site"/> -->
 										<synonym value="Farrar"/>
 									</heading>
 									<heading id="CACCo137" title="CA-CCo-137">
@@ -9501,7 +9518,7 @@
 										<synonym value="Hotchkiss Mound A, B, C-138"/>
 										<synonym value="Hotchkiss Site"/>
 										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Hotchkiss Site"/> -->
 									</heading>
 									<heading id="CACCo139" title="CA-CCo-139">
 										<synonym value="Simone Mound"/>
@@ -12265,6 +12282,7 @@
 										<synonym value="CA-SJo-16"/>
 										<synonym value="P.M. Jones Mound #1"/>
 										<synonym value="Stockton, mound #1"/>
+										<excl value="Yoruba"/> <!-- Quick fix until I learn why Yoruba objects are latching -->
 									</heading>
 									<heading id="CASJo20" title="CA-SJo- 20">
 										<synonym value="CA-SJo-20"/>
@@ -17285,7 +17303,11 @@
 											<heading id="SanorSiteSBrbraCA" title="Sanor Site"/>
 										</heading>
 									</heading>
-									<heading id="GuadalupeSBrbraCA" title="Guadalupe"/>
+									<heading id="GuadalupeSBrbraCA" title="Guadalupe">
+										<excl value="Mexico"/> <!-- Disambiguates from Baja California location -->
+										<excl value="Baja"/> <!-- Disambiguates from Baja California location -->
+										<excl value="BC"/> <!-- Disambiguates from Baja California location -->
+									</heading>
 									<heading id="MoresIslSBrbraCA" title="Mores Island"/>
 									<heading id="SiquocValley" title="Siquoc Valley"/>
 									<heading id="SantaBarbaraIsland" title="Santa Barbara Island"/>
@@ -17814,6 +17836,7 @@
 									</heading>
 									<heading id="CASBa515" title="CA-SBa-515">
 										<synonym value="Jones' Guadalupe"/>
+										<implies facet="Location_facet" cat="GuadalupeSBrbraCA"/>
 									</heading>
 									<heading id="CASBa516" title="CA-SBa-516">
 										<synonym value="Bower's camp #3"/>
@@ -19720,7 +19743,7 @@
 			        <heading id="Platteville" title="Platteville"/>
 			      </heading>
 			      <heading id="Iowa" title="Iowa"/>
-							</heading>
+				</heading>
 				<heading id="SouthernGreatLakesstates" title="Southern Great Lakes states">
 					<heading id="Ohio" title="Ohio">
 						<heading id="Hamilton" title="Hamilton">
@@ -19740,9 +19763,8 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="unspecified" title="unspecified">  <!-- done -->
+			<!-- <heading id="unspecified" title="unspecified">  LOCATE/REFILE OR ELIMINATE
 				<heading id="Albany" title="Albany"/>
-				<heading id="ArcticCircle" title="Arctic Circle"/>
 				<heading id="GreatPlains" title="Great Plains">
 					<heading id="CentralPlains" title="Central Plains"/>
 					<heading id="NorthernPlains" title="Northern Plains"/>
@@ -19751,39 +19773,7 @@
 				<heading id="Orca" title="Orca"/>
 				<heading id="StJohns" title="St. Johns"/>
 				<heading id="StikineRiver" title="Stikine River"/>
-				<heading id="Subarctic" title="Subarctic">
-					<heading id="Pymiuth" title="Pymiuth"/>
-					<heading id="WesternSubarctic" title="Western Subarctic"/>
-				</heading>
-			</heading>
+			</heading> -->
 		</heading>
-	</heading>
-	<heading id="Unspecified" title="Unspecified">  <!-- done -->
-		<synonym value="PROVENIENCE = continent unspecified"/>
-		<synonym value="Unknown-1"/>
-		<synonym value="Unknown-2"/>
-		<synonym value="Unknown-3"/>
-		<synonym value="Unknown-4"/>
-		<synonym value="Unknown-5"/>
-		<synonym value="Unknown-6"/>
-		<synonym value="Unknown-7"/>
-		<synonym value="Unknown-8"/>
-		<synonym value="Unknown-9"/>
-		<synonym value="Unknown-10"/>
-		<synonym value="Unknown-11"/>
-		<synonym value="Unknown-12"/>
-		<synonym value="Unknown-13"/>
-		<synonym value="Unknown-14"/>
-		<synonym value="Unknown-15"/>
-		<synonym value="Unknown-16"/>
-		<synonym value="Unknown-17"/>
-		<synonym value="Unknown-18"/>
-		<synonym value="Unknown-19"/>
-		<synonym value="Unknown-20"/>
-		<synonym value="Unknown-21"/>
-		<synonym value="Unknown-22"/>
-		<synonym value="Unknown-23"/>
-		<synonym value="Unknown-24"/>
-		<heading id="Nambe" title="Nambe"/>
 	</heading>
 </taxonomy>
