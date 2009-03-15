@@ -2276,14 +2276,16 @@
 				</heading>
 				<heading id="OnotoaIsland" title="Onotoa Island">
 					<synonym value="Onotoa"/>
-					<heading id="BuarikiVillage" title="Buariki Village"> <!-- Disambiguate from same village name on Tabiteuea -->
-						<synonym value="Buariki"/> <!-- Disambiguate from same village name on Tabiteuea -->
+					<heading id="BuarikiVillageOnotoa" title="Buariki Village">
+						<synonym value="Buariki"/>
+						<excl value="Tabiteuea"/> <!-- Disambiguates from same village name on Tabiteuea -->
 					</heading>
 				</heading>
 				<heading id="TabiteueaIsland" title="Tabiteuea Island">
 					<synonym value="Tabiteuea"/>
-					<heading id="BuarikiVillage" title="Buariki Village"> <!-- Disambiguate from same village name on Onotoa -->
-						<synonym value="Buariki"/> <!-- Disambiguate from same village name on Onotoa -->
+					<heading id="BuarikiVillageTabiteuea" title="Buariki Village">
+						<synonym value="Buariki"/> 
+						<excl value="Onotoa"/> <!-- Disambiguates from same village name on Onotoa -->
 					</heading>
 				</heading>
 				<heading id="TamanaIsland" title="Tamana Island">
@@ -15196,270 +15198,345 @@
 								<synonym value="Kern County, CA, no loc"/>
 								<synonym value="Kern County, CA, no loc."/>
 								<heading id="PlaceNamesKernCA" title="Place Names" noMatch="true">
-									<heading id="Buttonwillow" title="Buttonwillow">
-										<synonym value="CA-Ker-49"/>
+									<heading id="BlackHillsKernCA" title="Black Hills"/>
+									<heading id="BuenaVistaHlsKernCA" title="Buena Vista Hills">
+										<heading id="TulamniuMdsKernCA" title="Tulamniu Mounds"/>
 									</heading>
-									<heading id="PiuteMountain" title="Piute Mountain"/>
-									<heading id="IsabellaLake" title="Isabella Lake"/>
-									<heading id="CalienteSForkKernRancheria" title="Caliente-S.Fork Kern Rancheria"/>
+									<heading id="BuenaVistaLkBdKernCA" title="Buena Vista Lake Bed">
+										<heading id="PelicanIslKernCA" title="Pelican Island"/> <!-- 35.211ºN; 119.268ºW -->
+									</heading>
+									<heading id="ButtonwillowKernCA" title="Buttonwillow"/>
+									<!-- <heading id="CalienteSForkKernRancheria" title="Caliente-S.Fork Kern Rancheria"/> -->
+									<heading id="CalienteCaveKernCA" title="Caliente Cave"/>
+									<heading id="CanebrakeCanyKernCA" title="Canebrake Canyon"/>
+									<heading id="ElkGroveKernCA" title="Elk Grove"/>
+									<heading id="ElkHillsKernCA" title="Elk Hills"/>
+									<heading id="FortTejonKernCA" title="Fort Tejon"/>
+									<heading id="GooseLakeKernCA" title="Goose Lake"/>
+									<heading id="HotSpringsKernCA" title="Hot Springs"/>
+									<heading id="IndianWellsKernCA" title="Indian Wells"/>
+									<heading id="IsabellaKernCA" title="Isabella"/>
+									<heading id="IsabellaResvrKernCA" title="Isabella Reservoir">
+										<synonym value="Isabella Lake"/>
+										<synonym value="Lake Isabella"/>
+										<synonym value="Isabella Resv"/>
+										<synonym value="Isabella Resv."/>
+									</heading>
+									<heading id="KelsoVallKernCA" title="Kelso Valley"/>
+									<heading id="KernLakeKernCA" title="Kern Lake"/>
+									<heading id="KernRiverKernCA" title="Kern River">
+										<heading id="SouthForkofKernRiver" title="South Fork">
+											<synonym value="South Fork of Kern River"/>
+										</heading>
+									</heading>
 									<heading id="KernValley" title="Kern Valley"/>
-									<heading id="WeldonKelsoCanyonRancheria" title="Weldon-Kelso Canyon Rancheria"/>
-									<heading id="CanebrakeCanyon" title="Canebrake Canyon"/>
-									<heading id="SouthForkofKernRiver" title="South Fork of Kern River"/>
-									<heading id="KelsoValley" title="Kelso Valley"/>
-									<heading id="HotSprings" title="Hot Springs"/>
-									<heading id="TehachapiMountains" title="Tehachapi Mountains"/>
-									<heading id="Loraine" title="Loraine"/>
-									<heading id="FortTejon" title="Fort Tejon"/>
-									<heading id="Piute" title="Piute"/>
-									<heading id="Kernville" title="Kernville"/>
+									<heading id="KernvilleKernCA" title="Kernville"/>
+									<heading id="LoraineKernCA" title="Loraine"/>
 									<heading id="MirandaRancheria" title="Miranda Rancheria"/>
-									<heading id="TejonRanch" title="Tejon Ranch"/>
-									<heading id="Tejon" title="Tejon"/>
-									<heading id="Onyx" title="Onyx"/>
-									<heading id="WalkerBasin" title="Walker Basin">
-										<heading id="CalienteCreek" title="Caliente Creek"/>
-										<heading id="KelsoCanon" title="Kelso Canon"/>
+									<heading id="OnyxKernCA" title="Onyx"/>
+									<heading id="PiuteKernCA" title="Piute"/>
+									<heading id="PiuteMtKernCA" title="Piute Mountain"/>
+									<heading id="SanEmidioRKernCA" title="San Emidio Ranch"/>
+									<heading id="ShrierRanchKernCA" title="Shrier Ranch">
+										<synonym value="Shrier Ranch Site"/>
 									</heading>
-									<heading id="VeeLake" title="Vee Lake"/>
-									<heading id="Isabella" title="Isabella"/>
-									<heading id="Weldon" title="Weldon"/>
-									<heading id="KernLake" title="Kern Lake"/>
-									<heading id="BlackHills" title="Black Hills"/>
-									<heading id="IndianWells" title="Indian Wells"/>
-									<heading id="SanEmidioRanch" title="San Emidio Ranch"/>
+									<heading id="TehachapiMtsKernCA" title="Tehachapi Mountains"/>
+									<heading id="TejonKernCA" title="Tejon">
+										<heading id="TejonRanchKernCA" title="Tejon Ranch"/>
+									</heading>
+									<heading id="VeeLakeKernCA" title="Vee Lake"/>
+									<heading id="WalkerBasinKernCA" title="Walker Basin">
+										<heading id="WeldonKernCA" title="Weldon">
+											<heading id="CalienteCrKernCA" title="Caliente Creek"/>
+											<heading id="KelsoCanyonRancheria" title="Kelso Canyon Rancheria">
+												<synonym value="Weldon-Kelso Canyon Rancheria"/>
+												<synonym value="Kelso Canon"/>
+												<synonym value="Kelso Cañon"/>
+												<synonym value="Kelso Canyon"/>
+											</heading>
+										</heading>
+									</heading>
 								</heading>
 								<heading id="TrinomialSitesKernCA" title="Trinomial site names" noMatch="true">
-									<heading id="CAKer1" title="CA-Ker- 1">
-										<synonym value="CA-Ker-1"/>
+									<heading id="CAKer1" title="CA-Ker-1">
+										<synonym value="CA-Ker- 1"/>
+										<synonym value="CA-Ker-  1"/>
 										<synonym value="Isabella Resv. #1"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer2" title="CA-Ker- 2">
-										<synonym value="CA-Ker-2"/>
+									<heading id="CAKer2" title="CA-Ker-2">
+										<synonym value="CA-Ker- 2"/>
+										<synonym value="CA-Ker-  2"/>
 										<synonym value="Isabella Resv. #2"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer4" title="CA-Ker- 4">
-										<synonym value="CA-Ker-4"/>
+									<heading id="CAKer4" title="CA-Ker-4">
+										<synonym value="CA-Ker- 4"/>
+										<synonym value="CA-Ker-  4"/>
 										<synonym value="Isabella Resv. #4"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer5" title="CA-Ker- 5">
-										<synonym value="CA-Ker-5"/>
+									<heading id="CAKer5" title="CA-Ker-5">
+										<synonym value="CA-Ker- 5"/>
+										<synonym value="CA-Ker-  5"/>
 										<synonym value="Isabella Resv. #5"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer6" title="CA-Ker- 6">
-										<synonym value="CA-Ker-6"/>
+									<heading id="CAKer6" title="CA-Ker-6">
+										<synonym value="CA-Ker- 6"/>
+										<synonym value="CA-Ker-  6"/>
 										<synonym value="Isabella Resv. #6"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer7" title="CA-Ker- 7">
-										<synonym value="CA-Ker-7"/>
+									<heading id="CAKer7" title="CA-Ker-7">
+										<synonym value="CA-Ker- 7"/>
+										<synonym value="CA-Ker-  7"/>
 										<synonym value="Isabella Resv. #7"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer8" title="CA-Ker- 8">
-										<synonym value="CA-Ker-8"/>
+									<heading id="CAKer8" title="CA-Ker-8">
+										<synonym value="CA-Ker- 8"/>
+										<synonym value="CA-Ker-  8"/>
 										<synonym value="Isabella Resv. #8"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer9" title="CA-Ker- 9">
-										<synonym value="CA-Ker-9"/>
+									<heading id="CAKer9" title="CA-Ker-9">
+										<synonym value="CA-Ker- 9"/>
+										<synonym value="CA-Ker-  9"/>
 										<synonym value="Isabella Resv. #9"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer10" title="CA-Ker- 10">
-										<synonym value="CA-Ker-10"/>
+									<heading id="CAKer10" title="CA-Ker-10">
+										<synonym value="CA-Ker- 10"/>
 										<synonym value="Isabella Resv. #10"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer11" title="CA-Ker- 11">
-										<synonym value="CA-Ker-11"/>
+									<heading id="CAKer11" title="CA-Ker-11">
+										<synonym value="CA-Ker- 11"/>
 										<synonym value="Isabella Resv. #11"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer12" title="CA-Ker- 12">
-										<synonym value="CA-Ker-12"/>
+									<heading id="CAKer12" title="CA-Ker-12">
+										<synonym value="CA-Ker- 12"/>
 										<synonym value="Isabella Resv. #12"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer14" title="CA-Ker- 14">
-										<synonym value="CA-Ker-14"/>
+									<heading id="CAKer14" title="CA-Ker-14">
+										<synonym value="CA-Ker- 14"/>
 										<synonym value="Isabella Resv. #14"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer15" title="CA-Ker- 15">
-										<synonym value="CA-Ker-15"/>
+									<heading id="CAKer15" title="CA-Ker-15">
+										<synonym value="CA-Ker- 15"/>
 										<synonym value="Steward's 104 Pc."/>
 										<synonym value="Isabella Resv. #15"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer16" title="CA-Ker- 16">
-										<synonym value="CA-Ker-16"/>
+									<heading id="CAKer16" title="CA-Ker-16">
+										<synonym value="CA-Ker- 16"/>
 										<synonym value="Isabella Resv. #16"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer18" title="CA-Ker- 18">
-										<synonym value="CA-Ker-18"/>
+									<heading id="CAKer18" title="CA-Ker-18">
+										<synonym value="CA-Ker- 18"/>
 										<synonym value="Isabella Resv. #18"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer20" title="CA-Ker- 20">
-										<synonym value="CA-Ker-20"/>
+									<heading id="CAKer20" title="CA-Ker-20">
+										<synonym value="CA-Ker- 20"/>
 										<synonym value="Isabella Resv. #20"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer21" title="CA-Ker- 21">
-										<synonym value="CA-Ker-21"/>
+									<heading id="CAKer21" title="CA-Ker-21">
+										<synonym value="CA-Ker- 21"/>
 										<synonym value="Isabella Resv. #21"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer22" title="CA-Ker- 22">
-										<synonym value="CA-Ker-22"/>
+									<heading id="CAKer22" title="CA-Ker-22">
+										<synonym value="CA-Ker- 22"/>
 										<synonym value="Isabella Resv. #22"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer23" title="CA-Ker- 23">
-										<synonym value="CA-Ker-23"/>
+									<heading id="CAKer23" title="CA-Ker-23">
+										<synonym value="CA-Ker- 23"/>
 										<synonym value="Isabella Resv. #23"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer26" title="CA-Ker- 26">
-										<synonym value="CA-Ker-26"/>
+									<heading id="CAKer26" title="CA-Ker-26">
+										<synonym value="CA-Ker- 26"/>
 										<synonym value="Isabella Resv. #26"/>
+										<implies facet="Location_facet" cat="IsabellaResvrKernCA"/>
 									</heading>
-									<heading id="CAKer29" title="CA-Ker- 29">
-										<synonym value="CA-Ker-29"/>
+									<heading id="CAKer29" title="CA-Ker-29">
+										<synonym value="CA-Ker- 29"/>
 										<synonym value="Caliente cave (Riddell)"/>
+										<implies facet="Location_facet" cat="CalienteCaveKernCA"/>
 									</heading>
-									<heading id="CAKer30" title="CA-Ker- 30">
-										<synonym value="CA-Ker-30"/>
+									<heading id="CAKer30" title="CA-Ker-30">
+										<synonym value="CA-Ker- 30"/>
 										<synonym value="Gifford-Schenck 1"/>
 									</heading>
-									<heading id="CAKer31" title="CA-Ker- 31">
-										<synonym value="CA-Ker-31"/>
+									<heading id="CAKer31" title="CA-Ker-31">
+										<synonym value="CA-Ker- 31"/>
 										<synonym value="Gifford-Schenck 2"/>
 									</heading>
-									<heading id="CAKer32" title="CA-Ker- 32">
-										<synonym value="CA-Ker-32"/>
+									<heading id="CAKer32" title="CA-Ker-32">
+										<synonym value="CA-Ker- 32"/>
 										<synonym value="Gifford-Schenck 3"/>
 									</heading>
-									<heading id="CAKer33" title="CA-Ker- 33">
-										<synonym value="CA-Ker-33"/>
+									<heading id="CAKer33" title="CA-Ker-33">
+										<synonym value="CA-Ker- 33"/>
 										<synonym value="Gifford-Schenck 4"/>
 										<synonym value="Pelican Is."/>
+										<implies facet="Location_facet" cat="PelicanIslKernCA"/>
 									</heading>
-									<heading id="CAKer34" title="CA-Ker- 34">
-										<synonym value="CA-Ker-34"/>
+									<heading id="CAKer34" title="CA-Ker-34">
+										<synonym value="CA-Ker- 34"/>
 										<synonym value="Gifford-Schenck 5"/>
 										<synonym value="Elk Grove 5"/>
+										<implies facet="Location_facet" cat="ElkGroveKernCA"/>
 									</heading>
-									<heading id="CAKer35" title="CA-Ker- 35">
-										<synonym value="CA-Ker-35"/>
+									<heading id="CAKer35" title="CA-Ker-35">
+										<synonym value="CA-Ker- 35"/>
 										<synonym value="Gifford-Schenck 6"/>
 										<synonym value="Elk Grove 6"/>
+										<implies facet="Location_facet" cat="ElkGroveKernCA"/>
 									</heading>
-									<heading id="CAKer36" title="CA-Ker- 36">
-										<synonym value="CA-Ker-36"/>
+									<heading id="CAKer36" title="CA-Ker-36">
+										<synonym value="CA-Ker- 36"/>
 										<synonym value="Gifford-Schenck 7"/>
 										<synonym value="Elk Grove 7"/>
+										<implies facet="Location_facet" cat="ElkGroveKernCA"/>
 									</heading>
-									<heading id="CAKer37" title="CA-Ker- 37">
-										<synonym value="CA-Ker-37"/>
+									<heading id="CAKer37" title="CA-Ker-37">
+										<synonym value="CA-Ker- 37"/>
 										<synonym value="Gifford-Schenck 8"/>
 										<synonym value="Goose Lake 8"/>
+										<implies facet="Location_facet" cat="GooseLakeKernCA"/>
 									</heading>
-									<heading id="CAKer38" title="CA-Ker- 38">
-										<synonym value="CA-Ker-38"/>
+									<heading id="CAKer38" title="CA-Ker-38">
+										<synonym value="CA-Ker- 38"/>
 										<synonym value="Gifford-Schenck 9"/>
 										<synonym value="Goose Lake 9"/>
+										<implies facet="Location_facet" cat="GooseLakeKernCA"/>
 									</heading>
-									<heading id="CAKer39" title="CA-Ker- 39">
-										<synonym value="CA-Ker-39"/>
+									<heading id="CAKer39" title="CA-Ker-39">
+										<synonym value="CA-Ker- 39"/>
 										<synonym value="Hewes 39"/>
 										<synonym value="Wedel 1"/>
 										<synonym value="Tulamniu Md. #1"/>
+										<implies facet="Location_facet" cat="TulamniuMdsKernCA"/>
 									</heading>
-									<heading id="CAKer40" title="CA-Ker- 40">
-										<synonym value="CA-Ker-40"/>
+									<heading id="CAKer40" title="CA-Ker-40">
+										<synonym value="CA-Ker- 40"/>
 										<synonym value="Hewes 40"/>
 										<synonym value="Wedel 3"/>
 										<synonym value="Tulamniu Md. #3"/>
+										<implies facet="Location_facet" cat="TulamniuMdsKernCA"/>
 									</heading>
-									<heading id="CAKer41" title="CA-Ker- 41">
-										<synonym value="CA-Ker-41"/>
+									<heading id="CAKer41" title="CA-Ker-41">
+										<synonym value="CA-Ker- 41"/>
 										<synonym value="Hewes 41"/>
 										<synonym value="Wedel 4"/>
 										<synonym value="Tulamniu Md. #4"/>
+										<implies facet="Location_facet" cat="TulamniuMdsKernCA"/>
 									</heading>
-									<heading id="CAKer42" title="CA-Ker- 42">
-										<synonym value="CA-Ker-42"/>
+									<heading id="CAKer42" title="CA-Ker-42">
+										<synonym value="CA-Ker- 42"/>
 										<synonym value="Tulamniu Md. #5"/>
 										<synonym value="Hewes 42"/>
+										<implies facet="Location_facet" cat="TulamniuMdsKernCA"/>
 									</heading>
-									<heading id="CAKer44" title="CA-Ker- 44">
-										<synonym value="CA-Ker-44"/>
+									<heading id="CAKer44" title="CA-Ker-44">
+										<synonym value="CA-Ker- 44"/>
 										<synonym value="Gifford-Schenck 37"/>
 									</heading>
-									<heading id="CAKer45" title="CA-Ker- 45">
-										<synonym value="CA-Ker-45"/>
+									<heading id="CAKer45" title="CA-Ker-45">
+										<synonym value="CA-Ker- 45"/>
 										<synonym value="Gifford-Schenck 10"/>
 										<synonym value="Goose Lake 10"/>
+										<implies facet="Location_facet" cat="GooseLakeKernCA"/>
 									</heading>
-									<heading id="CAKer46" title="CA-Ker- 46">
-										<synonym value="CA-Ker-46"/>
+									<heading id="CAKer46" title="CA-Ker-46">
+										<synonym value="CA-Ker- 46"/>
 										<synonym value="Gifford-Schenck 11"/>
 										<synonym value="Goose Lake 11"/>
+										<implies facet="Location_facet" cat="GooseLakeKernCA"/>
 									</heading>
-									<heading id="CAKer47" title="CA-Ker- 47">
-										<synonym value="CA-Ker-47"/>
+									<heading id="CAKer47" title="CA-Ker-47">
+										<synonym value="CA-Ker- 47"/>
 										<synonym value="Gifford-Schenck 12"/>
 										<synonym value="Goose Lake 12"/>
+										<implies facet="Location_facet" cat="GooseLakeKernCA"/>
 									</heading>
-									<heading id="CAKer48" title="CA-Ker- 48">
-										<synonym value="CA-Ker-48"/>
+									<heading id="CAKer48" title="CA-Ker-48">
+										<synonym value="CA-Ker- 48"/>
 										<synonym value="Gifford-Schenck 13"/>
 									</heading>
-									<heading id="CAKer49" title="CA-Ker- 49">
-										<synonym value="CA-Ker-49"/>
+									<heading id="CAKer49" title="CA-Ker-49">
+										<synonym value="CA-Ker- 49"/>
 										<synonym value="Gifford-Schenck 14"/>
-										<synonym value="Buttonwillow"/>
+										<implies facet="Location_facet" cat="ButtonwillowKernCA"/>
 									</heading>
-									<heading id="CAKer50" title="CA-Ker- 50">
-										<synonym value="CA-Ker-50"/>
+									<heading id="CAKer50" title="CA-Ker-50">
+										<synonym value="CA-Ker- 50"/>
 										<synonym value="Gifford-Schenck 15"/>
 										<synonym value="Site 15 Elk Hills (Strong)"/>
+										<implies facet="Location_facet" cat="ElkHillsKernCA"/>
 									</heading>
-									<heading id="CAKer51" title="CA-Ker- 51">
-										<synonym value="CA-Ker-51"/>
+									<heading id="CAKer51" title="CA-Ker-51">
+										<synonym value="CA-Ker- 51"/>
 										<synonym value="Gifford-Schenck 16"/>
 									</heading>
-									<heading id="CAKer52" title="CA-Ker- 52">
-										<synonym value="CA-Ker-52"/>
+									<heading id="CAKer52" title="CA-Ker-52">
+										<synonym value="CA-Ker- 52"/>
 										<synonym value="Gifford-Schenck 17"/>
 									</heading>
-									<heading id="CAKer53" title="CA-Ker- 53">
-										<synonym value="CA-Ker-53"/>
+									<heading id="CAKer53" title="CA-Ker-53">
+										<synonym value="CA-Ker- 53"/>
 										<synonym value="Gifford-Schenck 18"/>
 									</heading>
-									<heading id="CAKer60" title="CA-Ker- 60">
-										<synonym value="CA-Ker-60"/>
+									<heading id="CAKer60" title="CA-Ker-60">
+										<synonym value="CA-Ker- 60"/>
 										<synonym value="Gifford-Schenck 33"/>
 										<synonym value="Wedel 2"/>
 										<synonym value="Tulamniu Md. #2"/>
+										<implies facet="Location_facet" cat="TulamniuMdsKernCA"/>
 									</heading>
-									<heading id="CAKer74" title="CA-Ker- 74">
-										<synonym value="CA-Ker-74"/>
-										<synonym value="Shrier Ranch Site"/>
+									<heading id="CAKer74" title="CA-Ker-74">
+										<synonym value="CA-Ker- 74"/>
+										<implies facet="Location_facet" cat="ShrierRanchKernCA"/>
 									</heading>
 									<heading id="CAKer107" title="CA-Ker-107"/>
 									<heading id="CAKer116" title="CA-Ker-116"/>
 									<heading id="CAKer185" title="CA-Ker-185"/>
 									<heading id="CAKer240" title="CA-Ker-240"/>
-									<heading id="CAKerNL3" title="CA-Ker-NL- 3">
-										<synonym value="CA-Ker-NL-3"/>
+									<heading id="CAKerNL3" title="CA-Ker-NL-3">
+										<synonym value="CA-Ker-NL- 3"/>
 										<synonym value="Property of Peary Emerson, 8 miles south of Bakersfield."/>
+										<!-- Add inference for place name -->
 									</heading>
-									<heading id="CAKerNL4" title="CA-Ker-NL- 4">
-										<synonym value="CA-Ker-NL-4"/>
+									<heading id="CAKerNL4" title="CA-Ker-NL-4">
+										<synonym value="CA-Ker-NL- 4"/>
 										<synonym value="Cave, Packsaddle Creek, Kern River, Kern Co., Calif."/>
+										<!-- Add inference for place name -->
 									</heading>
-									<heading id="CAKerNL5" title="CA-Ker-NL- 5">
-										<synonym value="CA-Ker-NL-5"/>
+									<heading id="CAKerNL5" title="CA-Ker-NL-5">
+										<synonym value="CA-Ker-NL- 5"/>
 										<synonym value="Cave, nr. &quot;Goat Ranch, s. of Peterson's ranch, South Fork of Kern River, Kern Co., Cal."/>
+										<!-- Add inference for place name -->
 									</heading>
-									<heading id="CAKerNL6" title="CA-Ker-NL- 6">
-										<synonym value="CA-Ker-NL-6"/>
+									<heading id="CAKerNL6" title="CA-Ker-NL-6">
+										<synonym value="CA-Ker-NL- 6"/>
 										<synonym value="Near Goose Lake, Kern Co., Calif."/>
+										<implies facet="Location_facet" cat="GooseLakeKernCA"/>
 									</heading>
 									<heading id="CAKerNL10" title="CA-Ker-NL-10">
 										<synonym value="Buena Vista Hills near Tulamniu sites, Kern Co."/>
+										<implies facet="Location_facet" cat="BuenaVistaHlsKernCA"/>
 									</heading>
 									<heading id="CAKerNL11" title="CA-Ker-NL-11">
-										<synonym value="Elk Hills"/>
+										<implies facet="Location_facet" cat="ElkHillsKernCA"/>
 									</heading>
 									<heading id="CAKerNL14" title="CA-Ker-NL-14"/>
 								</heading>
@@ -17964,9 +18041,8 @@
 							  </heading>
 							</heading>
 						</heading>
-						<heading id="_Countynotspecified" title="_County not specified">  <!-- Remove ? -->
+						<!-- <heading id="_Countynotspecified" title="_County not specified">  LOCATE/REFILE OR ELIMINATE
 				          <heading id="BearCreek" title="Bear Creek"/>
-				          <heading id="KernRiver" title="Kern River"/>
 				          <heading id="LittleStonyCreek" title="Little Stony Creek"/>
 				          <heading id="HamburgBar" title="Hamburg Bar"/>
 				          <heading id="HullsValley" title="Hulls Valley"/>
@@ -18040,12 +18116,10 @@
 				            <heading id="PeckwanPlace" title="Peckwan Place"/>
 				          </heading>
 				          <heading id="SanJoaquinRiver" title="San Joaquin River">
-				            <heading id="SouthforkSanJoaquinRiver" title="South fork, San Joaquin River"/>
-				            <heading id="UpperSanJoaquinRiver" title="Upper San Joaquin River"/>
-				            <heading id="SouthernSanJoaquin" title="Southern San Joaquin"/>
+					            <heading id="SouthforkSanJoaquinRiver" title="South fork, San Joaquin River"/>
+					            <heading id="UpperSanJoaquinRiver" title="Upper San Joaquin River"/>
+					            <heading id="SouthernSanJoaquin" title="Southern San Joaquin"/>
 				          </heading>
-				          <heading id="RedMountain" title="Red Mountain"/>
-				          <heading id="RedRockIsland" title="Red Rock Island"/>
 				          <heading id="SouthernMinesCountry" title="Southern Mines Country"/>
 				          <heading id="SpeegleRanch" title="Speegle Ranch"/>
 				          <heading id="SulphurCreek" title="Sulphur Creek"/>
@@ -18074,7 +18148,7 @@
 				            <synonym value="CA-Sac-64"/>
 				          </heading>
 				          <heading id="Woodward" title="Woodward"/>
-						</heading>
+				          </heading> -->
 					</heading>
 					<heading id="Nevada" title="Nevada">
 						<synonym value="NEVADA-NL-1"/>
@@ -19460,7 +19534,7 @@
 					          <heading id="Chimayo" title="Chimayo"/>
 					          <heading id="Tesuque" title="Tesuque"/>
 					          <heading id="SantaFe" title="Santa Fe"/>
-					          <heading id="Nambe" title="Nambe"/>
+					          <!-- <heading id="Nambe" title="Nambe"/> I think this is only a culture, not also a place -->
 					          <heading id="Pojoaque" title="Pojoaque"/>
 					          <heading id="SanIldefonso" title="San Ildefonso"/>
 					        </heading>
