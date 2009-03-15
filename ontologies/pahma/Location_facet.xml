@@ -22,24 +22,6 @@
 			State Forests
 			Missions
 			Reservations and Rancherias
-	***********************
-			This is a temporary section, to speed up entry
-			by making it easier to locate and copy syntax examples:
-			
-			<implies facet="Activity_facet" cat="Burial"/>
-			<implies facet="Activity_facet" cat="Metallurgy"/>
-			<synonym value="Drawings"/>
-			<excl value="photographic plate"/>
-			<excl value="Black Oak"/>
-			
-			Insert the following syntax whenever a site was occupied for a discrete period
-			that is temporally narrow enough to justify such an inference:
-			
-			<implies facet="Collection_facet" cat="EuropeanPaleolithic"/>
-			<implies facet="Culture_facet" cat="HohokamIndians"/>
-			<implies facet="Event_facet" cat="SanFranciscoPanPacificExpo"/>
-			<implies facet="Period_facet" cat="EuropeanMedieval"/>
-			<implies facet="Location_facet" cat="CountryVaticanCity"/>
 	</notes>
 	<heading id="Africa" title="Africa">  <!-- ALPHABETIZE -->
 		<heading id="NorthernAfrica" title="Northern Africa">  <!-- Done -->
@@ -959,7 +941,6 @@
 				<synonym value="Republika e Shqipërisë"/>  <!-- in Albanian, formal name -->
 				<synonym value="Shqipëria"/>  <!-- in Albanian, common abbreviation -->
 				<synonym value="Shqipnija"/>  <!-- in Gheg Albanian -->
-				<heading id="Albania" title="Albania"/>
 			</heading>
 			<heading id="Italy" title="Italy">
 				<heading id="Sardinia" title="Sardinia">
@@ -1042,12 +1023,7 @@
 							<heading id="RomanForum" title="Forum">
 								<heading id="TempleOfJanus" title="Temple of Janus"/>
 							</heading>
-							<heading id="RomeVaticanCity" title="Vatican City">
-								<implies facet="Location_facet" cat="StateOfTheVaticanCity"/>
-								<heading id="Vatican" title="Vatican">
-									<synonym value="The Vatican"/>
-								</heading>
-							</heading>
+							<heading id="RomeVaticanCity" title="Vatican City" noMatch="true"/>
 							<heading id="VillaAlbani" title="Villa Albani"/>
 						</heading>
 						<heading id="HadriansVilla" title="Hadrian's Villa">
@@ -1127,7 +1103,8 @@
 				</heading>
 			</heading>
 			<heading id="Greece" title="Greece">
-			<heading id="Crete" title="Crete">				<heading id="Naxos" title="Naxos"/>
+			<heading id="Crete" title="Crete">				
+				<heading id="Naxos" title="Naxos"/>
 				<heading id="Vasiliki" title="Vasiliki"/>
 			</heading>
 			<heading id="Attica" title="Attica">
@@ -1135,7 +1112,9 @@
 				<heading id="Antikythera" title="Antikythera"/>
 				<heading id="AthensGreece" title="Athens">
 					<heading id="AcropolisAthens" title="Acropolis"/>
+					<heading id="BarbakeionCollegeAthens" title="Barbakeion College"/>
 					<heading id="LyksionAthens" title="Lyksion"/>
+					<heading id="NationalMuseumAthens" title="National Museum, Athens"/>
 				</heading>
 				<heading id="Eleusis" title="Eleusis"/>
 				<heading id="Hydra" title="Hydra"/>
@@ -1249,7 +1228,7 @@
 			<heading id="Mediterraneanregion" title="Mediterranean region">
 			  <heading id="Anavarza" title="Anavarza"/>
 			  <heading id="Antakya" title="Antakya">
-			    <synonym value="Antioch"/>
+			    <synonym value="Antioch"/> <!-- Disambiguate from California city -->
 			  </heading>
 			</heading>
 			<heading id="EasternAnatoliaregion" title="Eastern Anatolia region">
@@ -1261,6 +1240,8 @@
 			<heading id="StateOfTheVaticanCity" title="State of the Vatican City">
 				<synonym value="Stato della Città del Vaticano"/>
 				<synonym value="Holy See"/>
+				<synonym value="Vatican"/>
+				<synonym value="The Vatican"/>
 				<implies facet="Location_facet" cat="RomeVaticanCity"/>
 			</heading>
 		</heading>
@@ -1818,7 +1799,7 @@
 				</heading>
 				<heading id="IndianUnionTerritories" title="Union Territories" noMatch="true">
 					<heading id="DelhiState" title="Delhi State">
-						<synonym value="Delhi State"/>
+						<synonym value="Delhi"/>
 						<heading id="Mayla" title="Mayla">
 							<heading id="Baisakli" title="Baisakli"/>
 						</heading>
@@ -3782,7 +3763,6 @@
 						<heading id="KoukukRiver" title="Koukuk River">
 						  <synonym value="Koyiukuk River"/>
 						  <synonym value="Koyukuk River"/>
-						  <synonym value="Koukuk River"/>
 						</heading>
 						<heading id="StMichaelIsland" title="St. Michael Island"/>
 						<heading id="Shageluk" title="Shageluk"/>
@@ -3812,10 +3792,9 @@
 						<heading id="Stebbins" title="Stebbins"/>
 						<heading id="OceanCape" title="Ocean Cape"/>
 						<heading id="AnnetteIsland" title="Annette Island">
-						  <heading id="NewMetlakatla" title="New Metlakatla">
-						    <synonym value="Metlakatla"/>
-						    <synonym value="New Metlakatla"/>
-						  </heading>
+							  <heading id="NewMetlakatla" title="New Metlakatla">
+							  	<synonym value="Metlakatla"/>
+							  </heading>
 						</heading>
 						<heading id="CapeVancouver" title="Cape Vancouver">
 						  <heading id="Kusilvak" title="Kusilvak"/>
@@ -3857,9 +3836,7 @@
 						<heading id="Katmai" title="Katmai"/>
 						<heading id="Nutchigdistrict" title="Nutchig district"/>
 						<heading id="HooperBay" title="Hooper Bay">
-						  <heading id="HooperBay" title="Hooper Bay">
 						    <synonym value="Askinuk"/>
-						  </heading>
 						</heading>
 						<heading id="CapeBlossom" title="Cape Blossom"/>
 						<heading id="BrooksRange" title="Brooks Range">
@@ -4519,23 +4496,58 @@
 							<heading id="ColoradoRiverReservation" title="Colorado River Reservation"/>
 						</heading>
 					    <heading id="YumaCounty" title="Yuma county">
-					    	<heading id="YumaYumaCounty" title="Yuma"/>
-					    	<heading id="CastleDomePeakYumaCounty" title="Castle Dome Peak"/>
-					    	<heading id="TinajosAltosYumaCounty" title="Tinajos Altos">
+					    	<heading id="BlytheYumaCoAZ" title="Blythe">
+					    		<synonym value="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
+					    		<synonym value="Blythe-King of Arizona (Kofa) trail"/>
+					    	</heading>
+					    	<heading id="CastleDomePeakYumaCoAZ" title="Castle Dome Peak"/>
+					    	<heading id="DomeRockMtsYumaCoAZ" title="Dome Rock Mountains">
+					    		<heading id="TuleSpringsYumaCoAZ" title="Tule Springs">
+					    			<synonym value="Tule Springs, Dome Rock Mountains Western Yuma County"/>
+					    		</heading>
+					    	</heading>
+					    	<heading id="GilaRiverYumaCoAZ" title="Gila River">
+					    		<heading id="RollsYumaCoAZ" title="Rolls">
+					    			<synonym value="Rolls, on Gila River"/>
+					    		</heading>
+					    	</heading>
+					    	<heading id="GraniteSpurSiding" title="Granite Spur Siding"/>
+					    	<heading id="HorseTanksTrailYumaCoAZ" title="Horse Tanks Trail">
+					    		<synonym value="Palo Verde-Horse Tanks Trail Western Yuma County"/>
+					    		<synonym value="Palo Verde-Horse Tanks Trail"/>
+					    	</heading>
+					    	<heading id="KingArizonaTrailYumaCoAZ" title="King of Arizona Trail">
+					    		<synonym value="King of Arizona"/>
+					    		<synonym value="Kofa trail"/>
+					    		<synonym value="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
+					    		<synonym value="Blythe-King of Arizona (Kofa) trail"/>
+					    		<synonym value="Palomas-Kofa Trail, South Section"/>
+					    		<synonym value="Palomas-Kofa Trail"/>
+					    	</heading>
+					    	<heading id="PaloVerdeYumaCoAZ" title="Palo Verde">
+					    		<synonym value="Palo Verde-Horse Tanks Trail Western Yuma County"/>
+					    		<synonym value="Palo Verde-Horse Tanks Trail"/>
+					    	</heading>
+					    	<heading id="PalomasYumaCoAZ" title="Palomas">
+					    		<synonym value="Palomas-Kofa Trail, South Section"/>
+					    		<synonym value="Palomas-Kofa Trail"/>
+					    	</heading>
+					    	<heading id="SomertonYumaCoAZ" title="Somerton">
+					    		<synonym value="Somerton, Yuma county"/>
+					    	</heading>
+					    	<heading id="TinajosAltosYumaCoAZ" title="Tinajos Altos">
 					        	<synonym value="High Tanks"/>
 					      	</heading>
-					    	<heading id="YumaVallYumaCounty" title="Yuma Valley"/>
-							<heading id="SomertonYumacounty" title="Somerton">
-								<synonym value="Somerton, Yuma county"/>
-							</heading>
-							<heading id="GraniteSpurSiding" title="Granite Spur Siding"/>
-							<heading id="BlytheKingofArizonaKofatrailCentralYumaCounty" title="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
-							<heading id="PaloVerdeHorseTanksTrailWesternYumaCounty" title="Palo Verde-Horse Tanks Trail Western Yuma County"/>
-							<heading id="TuleSpringsDomeRockMountainsWesternYumaCounty" title="Tule Springs, Dome Rock Mountains Western Yuma County"/>
-							<heading id="TysonWashCentralYumaCounty" title="Tyson Wash, Central Yuma County"/>
-							<heading id="PalomasKofaTrailSouthSection" title="Palomas-Kofa Trail, South Section"/>
-							<heading id="WhiteTanksSiteWhiteTankMountains" title="White Tanks Site, White Tank Mountains"/>
-							<heading id="RollsonGilaRiver" title="Rolls, on Gila River"/>
+					    	<heading id="TysonWashYumaCoAZ" title="Tyson Wash">
+					    		<synonym value="Tyson Wash, Central Yuma County"/>
+					    	</heading>
+					    	<heading id="WhiteTankMtsYumaCoAZ" title="White Tank Mountains">
+					    		<heading id="WhiteTanksSiteYumaCoAZ" title="White Tanks Site">
+					    			<synonym value="White Tanks Site, White Tank Mountains"/>
+					    		</heading>
+					    	</heading>
+					    	<heading id="YumaYumaCoAZ" title="Yuma"/>
+					    	<heading id="YumaVallYumaCoAZ" title="Yuma Valley"/>
 					    </heading>
 					    <heading id="JedditoWash" title="Jeddito Wash"/>
 					    <heading id="Apachecounty" title="Apache county">
@@ -8807,21 +8819,34 @@
 								<synonym value="Alameda County, CA, no loc"/>
 								<synonym value="Alameda County, CA, no loc."/>
 								<heading id="PlaceNamesAlamedaCA" title="Place Names" noMatch="true">
-									<heading id="AlamedaMoundAlamedaCounty" title="Alameda Mound">
-										<synonym value="CA-Ala-NL-15"/>
+									<heading id="AlamedaCityAlamedaCounty" title="Alameda">
+										<heading id="AlamedaMdAlamedaCA" title="Alameda mound"/>
 									</heading>
-									<heading id="AlbanyAlamedaCounty" title="Albany"/>
-									<heading id="BerkeleyAlamedaCounty" title="Berkeley"/>
-									<heading id="BrooklynShellmoundAlamedaCounty" title="Brooklyn Shellmound"/>
+									<heading id="AlbanyAlamedaCA" title="Albany"/>
+									<heading id="ArroyoMochoAlamedaCA" title="Arroyo Mocho">
+										<heading id="ArroyoMocho1AlamedaCA" title="Arroyo Mocho site 1">
+											<synonym value="Arroyo Mocho 1"/>
+										</heading>
+										<heading id="ArroyoMocho2AlamedaCA" title="Arroyo Mocho site 2">
+											<synonym value="Arroyo Mocho 2"/>
+										</heading>
+									</heading>
+									<heading id="BerkeleyAlamedaCA" title="Berkeley">
+										<heading id="MortarRockParkAlamedaCA" title="Mortar Rock Park"/>
+										<heading id="UCBerkFacultyClub" title="UC Berkeley Faculty Club"/>
+										<heading id="WestBerkeleyMdAlamedaCA" title="West Berkeley shellmound">
+											<synonym value="Berkeley Mound"/>
+											<synonym value="Berkeley Md"/>
+											<synonym value="Berkeley Shellmound"/>
+											<synonym value="West Berkeley Mound"/>
+											<synonym value="West Berkeley Md"/>
+										</heading>
+									</heading>
 									<heading id="CavenearAltamontAlamedaCounty" title="Cave near Altamont"/>
-									<heading id="EmeryvilleAlamedaCounty" title="Emeryville"/>
-									<heading id="NearBrooklynAlamedaCounty" title="Near Brooklyn"/>
-									<heading id="NilesAlamedaCounty" title="Niles"/>
-									<heading id="OaklandAlamedaCounty" title="Oakland"/>
-									<heading id="PleasantonAlamedaCounty" title="Pleasanton">
-										<synonym value="Castlewood Country Club"/>
+									<heading id="EmeryvilleAlamedaCounty" title="Emeryville">
+										<heading id="EmeryvilleMdAlamedaCounty" title="Emeryville Shellmound"/>
 									</heading>
-									<heading id="SanJoseAlamedaCA" title="San Jose">
+									<heading id="FremontAlamedaCA" title="Fremont">
 										<heading id="MissionSanJoseCA" title="Mission San Jose">
 											<synonym value="Mission San José"/>
 											<synonym value="San Jose Mission"/>
@@ -8835,8 +8860,22 @@
 											</heading>
 										</heading>
 									</heading>
-									<heading id="SanLorenzoAlamedaCounty" title="San Lorenzo"/>
-									<heading id="SatherTractAlamedaCounty" title="Sather Tract"/>
+									<heading id="HaywardAlamedaCounty" title="Hayward">
+										<heading id="MtEdenHaywardCA" title="Mt. Eden"/>
+									</heading>
+									<heading id="NewarkAlamedaCounty" title="Newark">
+										<heading id="SanFranciscoMdAlamedaCA" title="San Francisco Mound"/>
+									</heading>
+									<heading id="NilesAlamedaCounty" title="Niles"/>
+									<heading id="OaklandAlamedaCounty" title="Oakland">
+										<heading id="BrooklynMdAlamedaCounty" title="Brooklyn Shellmound"/>
+										<heading id="NearBrooklynAlamedaCounty" title="Near Brooklyn"/>
+										<heading id="SatherTractAlamedaCA" title="Sather Tract"/>
+									</heading>
+									<heading id="PleasantonAlamedaCounty" title="Pleasanton">
+										<synonym value="Castlewood Country Club"/>
+									</heading>
+									<heading id="SanLorenzoAlamedaCA" title="San Lorenzo"/>
 								</heading>
 								<heading id="TrinomialSitesAlamedaCA" title="Trinomial site names" noMatch="true">
 									<heading id="CAAla1" title="CA-Ala-1">
@@ -8844,14 +8883,15 @@
 										<synonym value="CA-Ala-  1"/>
 										<implies facet="Location_facet" cat="MissionSanJoseCA"/> 
 									</heading>
-									<heading id="CAAla2" title="CA-Ala- 2">
-										<synonym value="CA-Ala-2"/>
-										<synonym value="Mission San Jose cemetery"/>
+									<heading id="CAAla2" title="CA-Ala-2">
+										<synonym value="CA-Ala- 2"/>
+										<synonym value="CA-Ala-  2"/>
 										<synonym value="Ohlone cemetery"/>
 										<implies facet="Location_facet" cat="MissionCemeterySanJoseCA"/> 
 									</heading>
-									<heading id="CAAla7" title="CA-Ala- 7">
-										<synonym value="CA-Ala-7"/>
+									<heading id="CAAla7" title="CA-Ala-7">
+										<synonym value="CA-Ala- 7"/>
+										<synonym value="CA-Ala-  7"/>
 										<synonym value="Nelson 323a"/>
 									</heading>
 									<heading id="CAAla9" title="CA-Ala-9">
@@ -8859,110 +8899,98 @@
 										<synonym value="CA-Ala-  9"/>
 										<synonym value="Hematite 9"/> <!-- Is this a place name? -->
 									</heading>
-									<heading id="CAAla11" title="CA-Ala- 11">
-										<synonym value="CA-Ala-11"/>
+									<heading id="CAAla11" title="CA-Ala-11">
+										<synonym value="CA-Ala- 11"/>
 									</heading>
-									<heading id="CAAla12" title="CA-Ala- 12">
-										<synonym value="CA-Ala-12"/>
+									<heading id="CAAla12" title="CA-Ala-12">
+										<synonym value="CA-Ala- 12"/>
 									</heading>
-									<heading id="CAAla13" title="CA-Ala- 13">
-										<synonym value="CA-Ala-13"/>
+									<heading id="CAAla13" title="CA-Ala-13">
+										<synonym value="CA-Ala- 13"/>
 									</heading>
 									<heading id="CAAla14" title="CA-Ala-14">
 										<synonym value="CA-Ala- 14"/>
-										<synonym value="Mortar Rock Park"/>
 										<implies facet="Location_facet" cat="MortarRockParkAlamedaCA"/> 
-										<heading id="MortarRockParkAlamedaCA" title="Mortar Rock Park"/>
 									</heading>
-									<heading id="CAAla16" title="CA-Ala- 16">
-										<synonym value="CA-Ala-16"/>
+									<heading id="CAAla16" title="CA-Ala-16">
+										<synonym value="CA-Ala- 16"/>
 									</heading>
-									<heading id="CAAla17" title="CA-Ala- 17">
-										<synonym value="CA-Ala-17"/>
+									<heading id="CAAla17" title="CA-Ala-17">
+										<synonym value="CA-Ala- 17"/>
 									</heading>
-									<heading id="CAAla20" title="CA-Ala- 20">
-										<synonym value="CA-Ala-20"/>
+									<heading id="CAAla20" title="CA-Ala-20">
+										<synonym value="CA-Ala- 20"/>
 									</heading>
-									<heading id="CAAla23" title="CA-Ala- 23">
-										<synonym value="CA-Ala-23"/>
+									<heading id="CAAla23" title="CA-Ala-23">
+										<synonym value="CA-Ala- 23"/>
 									</heading>
-									<heading id="CAAla25" title="CA-Ala- 25">
-										<synonym value="CA-Ala-25"/>
-										<synonym value="Arroyo Mocho 1"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+									<heading id="CAAla25" title="CA-Ala-25">
+										<synonym value="CA-Ala- 25"/>
+										<implies facet="Location_facet" cat="ArroyoMocho1AlamedaCA"/>
 									</heading>
-									<heading id="CAAla26" title="CA-Ala- 26">
-										<synonym value="CA-Ala-26"/>
-										<synonym value="Arroyo Mocho 2"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+									<heading id="CAAla26" title="CA-Ala-26">
+										<synonym value="CA-Ala- 26"/>
+										<implies facet="Location_facet" cat="ArroyoMocho2AlamedaCA"/>
 									</heading>
-									<heading id="CAAla28" title="CA-Ala- 28">
-										<synonym value="CA-Ala-28"/>
+									<heading id="CAAla28" title="CA-Ala-28">
+										<synonym value="CA-Ala- 28"/>
 									</heading>
-									<heading id="CAAla30" title="CA-Ala- 30">
-										<synonym value="CA-Ala-30"/>
+									<heading id="CAAla30" title="CA-Ala-30">
+										<synonym value="CA-Ala- 30"/>
 									</heading>
-									<heading id="CAAla42" title="CA-Ala- 42">
-										<synonym value="CA-Ala-42"/>
+									<heading id="CAAla42" title="CA-Ala-42">
+										<synonym value="CA-Ala- 42"/>
 										<synonym value="Jensen site"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="JensenSiteAlamedaCA"/> -->
+										<!-- <heading id="JensenSiteAlamedaCA" title="Jensen site"/> -->
 									</heading>
-									<heading id="CAAla43" title="CA-Ala- 43">
-										<synonym value="CA-Ala-43"/>
+									<heading id="CAAla43" title="CA-Ala-43">
+										<synonym value="CA-Ala- 43"/>
 										<synonym value="De Avillo site"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="DeAvilloSiteAlamedaCA"/> -->
+										<!-- <heading id="DeAvilloSiteAlamedaCA" title="De Avillo site"/> -->
 									</heading>
-									<heading id="CAAla45" title="CA-Ala- 45">
-										<synonym value="CA-Ala-45"/>
+									<heading id="CAAla45" title="CA-Ala-45">
+										<synonym value="CA-Ala- 45"/>
 										<synonym value="Derby site"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="DerbySiteAlamedaCA"/> -->
+										<!-- <heading id="DerbySiteAlamedaCA" title="Derby site"/> -->
 									</heading>
-									<heading id="CAAla47" title="CA-Ala- 47">
-										<synonym value="CA-Ala-47"/>
+									<heading id="CAAla47" title="CA-Ala-47">
+										<synonym value="CA-Ala- 47"/>
 									</heading>
-									<heading id="CAAla48" title="CA-Ala- 48">
-										<synonym value="CA-Ala-48"/>
+									<heading id="CAAla48" title="CA-Ala-48">
+										<synonym value="CA-Ala- 48"/>
 										<synonym value="Burkholder site"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="BurkholderSiteAlamedaCA"/> -->
+										<!-- <heading id="BurkholderSiteAlamedaCA" title="Burkholder site"/> -->
 									</heading>
-									<heading id="CAAla50" title="CA-Ala- 50">
-										<synonym value="CA-Ala-50"/>
+									<heading id="CAAla50" title="CA-Ala-50">
+										<synonym value="CA-Ala- 50"/>
 									</heading>
-									<heading id="CAAla51" title="CA-Ala- 51">
-										<synonym value="CA-Ala-51"/>
+									<heading id="CAAla51" title="CA-Ala-51">
+										<synonym value="CA-Ala- 51"/>
 									</heading>
-									<heading id="CAAla52" title="CA-Ala- 52">
-										<synonym value="CA-Ala-52"/>
+									<heading id="CAAla52" title="CA-Ala-52">
+										<synonym value="CA-Ala- 52"/>
 									</heading>
-									<heading id="CAAla53" title="CA-Ala- 53">
-										<synonym value="CA-Ala-53"/>
+									<heading id="CAAla53" title="CA-Ala-53">
+										<synonym value="CA-Ala- 53"/>
 									</heading>
-									<heading id="CAAla55" title="CA-Ala- 55">
-										<synonym value="CA-Ala-55"/>
+									<heading id="CAAla55" title="CA-Ala-55">
+										<synonym value="CA-Ala- 55"/>
 									</heading>
 									<heading id="CAAla138" title="CA-Ala-138"/>
 									<heading id="CAAla259" title="CA-Ala-259"/>
 									<heading id="CAAla305" title="CA-Ala-305"/>
 									<heading id="CAAla307" title="CA-Ala-307">
-										<synonym value="West Berkeley shellmound"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="WestBerkeleyMdAlamedaCA"/>
 									</heading>
 									<heading id="CAAla308" title="CA-Ala-308">
-										<synonym value="UC Berkeley Faculty Club"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="UCBerkFacultyClub"/>
 									</heading>
 									<heading id="CAAla309" title="CA-Ala-309">
-										<synonym value="Emeryville shellmound"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="EmeryvilleMdAlamedaCounty"/>
 									</heading>
 									<heading id="CAAla316" title="CA-Ala-316"/>
 									<heading id="CAAla317" title="CA-Ala-317"/>
@@ -8972,13 +9000,12 @@
 										<synonym value="Patterson mound"/>
 										<synonym value="Coyote Hills"/>
 										<synonym value="San Francisco Mound #328"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="SanFranciscoMdAlamedaCA"/>
 									</heading>
 									<heading id="CAAla329" title="CA-Ala-329">
 										<synonym value="Ryan mound"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="RyanMdAlamedaCA"/> -->
+										<!-- <heading id="RyanMdAlamedaCA" title="Ryan mound"/> -->
 									</heading>
 									<heading id="CAAla330" title="CA-Ala-330"/>
 									<heading id="CAAla477" title="CA-Ala-477"/>
@@ -9007,29 +9034,24 @@
 										<synonym value="CA-Ala-NL- 9"/>
 									</heading>
 									<heading id="CAAlaNL10" title="CA-Ala-NL-10">
-										<synonym value="Mt. Eden"/>
+										<implies facet="Location_facet" cat="MtEdenHaywardCA"/>
 									</heading>
 									<heading id="CAAlaNL11" title="CA-Ala-NL-11">
 										<synonym value="Berkeley Mound"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="BerkeleyAlamedaCA"/>
 									</heading>
 									<heading id="CAAlaNL12" title="CA-Ala-NL-12">
-										<synonym value="Berkeley"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="BerkeleyAlamedaCA"/>
 									</heading>
 									<heading id="CAAlaNL13" title="CA-Ala-NL-13"/>
 									<heading id="CAAlaNL14" title="CA-Ala-NL-14">
 										<synonym value="1000 Oaks"/>
-										<synonym value="Thousand Oaks"/><!-- Disambiguate ? -->
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<synonym value="Thousand Oaks"/> <!-- Disambiguate ? -->
+										<!-- <implies facet="Location_facet" cat="ThousandOaksAlamedaCA"/> -->
+										<!-- <heading id="ThousandOaksAlamedaCA" title="Thousand Oaks"/> -->
 									</heading>
 									<heading id="CAAlaNL15" title="CA-Ala-NL-15">
-										<synonym value="Alameda mound"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="AlamedaMdAlamedaCA"/>
 									</heading>
 									<heading id="CAAlaNL16" title="CA-Ala-NL-16"/>
 									<heading id="CAAlaNL17" title="CA-Ala-NL-17">
@@ -9038,9 +9060,7 @@
 										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 									</heading>
 									<heading id="CAAlaNL18" title="CA-Ala-NL-18">
-										<synonym value="Pleasanton"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="PleasantonAlamedaCounty"/>
 									</heading>
 								</heading>
 							</heading>
@@ -9142,9 +9162,7 @@
 									<heading id="CAAma56" title="CA-Ama-56">
 										<synonym value="Jones Ranch"/>
 									</heading>
-									<heading id="CAAmaNL1" title="CA-Ama-NL-1">
-										<synonym value="Amador County, no loc."/>
-									</heading>
+									<heading id="CAAmaNL1" title="CA-Ama-NL-1"/>
 								</heading>
 							</heading>
 							<heading id="Calaverascounty" title="Calaveras county">
@@ -9371,43 +9389,45 @@
 								<synonym value="Contra Costa County, CA, no loc"/>
 								<synonym value="Contra Costa County, CA, no loc."/>
 								<heading id="PlaceNamesCCostaCA" title="Place Names" noMatch="true">
-									<heading id="BrentwoodCCostaCA" title="Brentwood">
-								      <synonym value="CA-CCo-NL- 3"/>
-								    </heading>
-									<heading id="OrindaCCostaCA" title="Orinda">
-								      <heading id="OrindaCountryClub" title="Orinda Country Club">
-								        <synonym value="CA-CCo-142"/>
-								      </heading>
-								    </heading>
+									<heading id="AntiochCCostaCA" title="Antioch"/>  <!-- Disambiguate from Syrian city -->
+									<heading id="BethelIslandCCoCA" title="Bethel Island"/>
+									<heading id="BradfordIsland" title="Bradford Island"/>
+									<heading id="BrentwoodCCoCA" title="Brentwood"/>
+									<heading id="ConcordCCoCA" title="Concord"/>
+									<heading id="ElCerritoCCoCA" title="El Cerrito">
+										<heading id="PointIsabelCCoCA" title="Pt. Isabel"/>
+									</heading>
+									<heading id="ElSobranteCCoCA" title="El Sobrante"/>
+									<heading id="JerseyIslandCCoCA" title="Jersey Island"/>
+									<heading id="LafayetteCCoCA" title="Lafayette"/>
 									<heading id="OakleyCCostaCA" title="Oakley"/>
-								    <heading id="ElCerrito" title="El Cerrito">
-								      <synonym value="CA-CCo-NL-11"/>
+									<heading id="OrindaCCostaCA" title="Orinda">
+								      	<heading id="OrindaCountryClub" title="Orinda Country Club"/>
 								    </heading>
 									<heading id="RichmondCCostaCA" title="Richmond">
+										<heading id="EllisLandingCCoCA" title="Ellis Landing"/>
 										<heading id="HuntersPointCCostaCA" title="Hunters Point"/>
-								    </heading>
-								    <heading id="BradfordIsland" title="Bradford Island"/>
-									<heading id="AntiochCCostaCA" title="Antioch"/>  <!-- Disambiguate from Syrian city -->
-									<heading id="RedRockIslandCCostaCA" title="Red Rock Island">
-								      <synonym value="Richmond"/>
-								    </heading>
+										<heading id="PointRichmondCCostaCA" title="Point Richmond">
+											<heading id="WinehavenMdCCostaCA" title="Winehaven Mound"/>
+										</heading>
+										<heading id="RedRockIslandCCostaCA" title="Red Rock Island"/>
+									</heading>
+								    <heading id="WalnutCreekCCoCA" title="Walnut Creek"/>
 							  	</heading>
 								<heading id="TrinomialSitesCCostaCA" title="Trinomial site name">
-						    		<heading id="CACCo1" title="CA-CCo- 1">
-										<synonym value="CA-CCo-1"/>
-						    			<synonym value="Bethel Island"/>
-						    			<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-						    			<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+						    		<heading id="CACCo1" title="CA-CCo-1">
+										<synonym value="CA-CCo- 1"/>
+						    			<implies facet="Location_facet" cat="BethelIslandCCoCA"/>
 									</heading>
-									<heading id="CACCo4" title="CA-CCo- 4">
-										<synonym value="CA-CCo-4"/>
+									<heading id="CACCo4" title="CA-CCo-4">
+										<synonym value="CA-CCo- 4"/>
 										<synonym value="Slater"/>
 									</heading>
-									<heading id="CACCo5" title="CA-CCo- 5">
-										<synonym value="CA-CCo-5"/>
+									<heading id="CACCo5" title="CA-CCo-5">
+										<synonym value="CA-CCo- 5"/>
 									</heading>
-									<heading id="CACCo8" title="CA-CCo- 8">
-										<synonym value="CA-CCo-8"/>
+									<heading id="CACCo8" title="CA-CCo-8">
+										<synonym value="CA-CCo- 8"/>
 									</heading>
 									<heading id="CACCo10" title="CA-CCo-10">
 										<synonym value="CA-CCo- 10"/>
@@ -9417,7 +9437,7 @@
 										<synonym value="CA-CCo- 11"/>
 										<synonym value="Hansen site"/>
 										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Hansen site"/> -->
 									</heading>
 									<heading id="CACCo12" title="CA-CCo- 12">
 										<synonym value="CA-CCo-12"/>
@@ -9429,7 +9449,7 @@
 										<synonym value="CA-CCo-14"/>
 										<synonym value="Sherwood"/>
 										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Sherwood"/> -->
 									</heading>
 									<heading id="CACCo15" title="CA-CCo- 15">
 										<synonym value="CA-CCo-15"/>
@@ -9443,7 +9463,7 @@
 										<synonym value="CA-CCo-19"/>
 										<synonym value="Read site"/>
 										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Read site"/> -->
 									</heading>
 									<heading id="CACCo20" title="CA-CCo- 20">
 										<synonym value="CA-CCo-20"/>
@@ -9451,6 +9471,8 @@
 									<heading id="CACCo23" title="CA-CCo- 23">
 										<synonym value="CA-CCo-23"/>
 										<synonym value="Hansen"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Hansen site"/> -->
 									</heading>
 									<heading id="CACCo24" title="CA-CCo- 24">
 										<synonym value="CA-CCo-24"/>
@@ -9472,9 +9494,8 @@
 									</heading>
 									<heading id="CACCo137" title="CA-CCo-137">
 										<synonym value="Monument site"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										<synonym value="Concord Man C-137"/>
+										<implies facet="Location_facet" cat="ConcordCCoCA"/>
 									</heading>
 									<heading id="CACCo138" title="CA-CCo-138">
 										<synonym value="Hotchkiss Mound A, B, C-138"/>
@@ -9504,9 +9525,7 @@
 										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 									</heading>
 									<heading id="CACCo142" title="CA-CCo-142">
-										<synonym value="Orinda Country Club"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="OrindaCountryClub"/>
 									</heading>
 									<heading id="CACCo143" title="CA-CCo-143"/>
 									<heading id="CACCo144" title="CA-CCo-144"/>
@@ -9532,9 +9551,7 @@
 									</heading>
 									<heading id="CACCo151" title="CA-CCo-151">
 										<synonym value="Philippi"/>
-										<synonym value="El Sobrante"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="ElSobranteCCoCA"/>
 									</heading>
 									<heading id="CACCo152" title="CA-CCo-152"/>
 									<heading id="CACCo153" title="CA-CCo-153">
@@ -9566,11 +9583,10 @@
 									</heading>
 									<heading id="CACCo238" title="CA-CCo-238"/>
 									<heading id="CACCo241" title="CA-CCo-241">
+										<synonym value="Barber's Concord"/>
 										<synonym value="Nelson 250"/>
 										<synonym value="Galinda Pumping Station"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
-										<synonym value="Barber's Concord"/>
+										<implies facet="Location_facet" cat="ConcordCCoCA"/>
 									</heading>
 									<heading id="CACCo242" title="CA-CCo-242">
 										<synonym value="Loud 420"/>
@@ -9654,9 +9670,7 @@
 										<synonym value="Nelson 290"/>
 									</heading>
 									<heading id="CACCo295" title="CA-CCo-295">
-										<synonym value="Ellis Landing"/>
-										<!-- <implies facet="Location_facet" cat="EllisLandingCCoCA"/>  -->
-										<!-- <heading id="EllisLandingCCoCA" title="Ellis Landing" noMatch="true"/> -->
+										<implies facet="Location_facet" cat="EllisLandingCCoCA"/> 
 										<synonym value="Nelson 295"/>
 									</heading>
 									<heading id="CACCo297" title="CA-CCo-297">
@@ -9664,9 +9678,8 @@
 									</heading>
 									<heading id="CACCo298" title="CA-CCo-298">
 										<synonym value="Barker's &quot;Small site nearer to Richmond than 300"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										<synonym value="Nelson 298"/>
+										<implies facet="Location_facet" cat="RichmondCCostaCA"/>
 									</heading>
 									<heading id="CACCo299" title="CA-CCo-299">
 										<synonym value="Nelson 299"/>
@@ -9674,21 +9687,17 @@
 									<heading id="CACCo300" title="CA-CCo-300">
 										<synonym value="Stege site"/>
 										<synonym value="Barker's Richmond"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										<synonym value="Nelson 300"/>
+										<implies facet="Location_facet" cat="RichmondCCostaCA"/>
 									</heading>
 									<heading id="CACCo301" title="CA-CCo-301">
 										<synonym value="Barker's Pt. Isabel"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										<synonym value="Nelson 301"/>
+										<implies facet="Location_facet" cat="PointIsabelCCoCA"/>
 									</heading>
 									<heading id="CACCo302" title="CA-CCo-302">
 										<synonym value="Nelson 302"/>
-										<synonym value="Pt. Isabel"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="PointIsabelCCoCA"/>
 									</heading>
 									<heading id="CACCo306" title="CA-CCo-306"/>
 									<heading id="CACCo307" title="CA-CCo-307"/>
@@ -9704,14 +9713,14 @@
 									<heading id="CACCoNL2" title="CA-CCo-NL-2">
 										<synonym value="CA-CCo-NL- 2"/>
 										<synonym value="Wild Cat Creek"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="WildCatCreekCCoCA"/> -->
+										<!-- <heading id="WildCatCreekCCoCA" title="Wild Cat Creek"/> -->
 									</heading>
 									<heading id="CACCoNL3" title="CA-CCo-NL-3">
 										<synonym value="CA-CCo-NL- 3"/>
 										<synonym value="Brentwood"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="BrentwoodCCoCA"/> -->
+										<!--  -->
 									</heading>
 									<heading id="CACCoNL4" title="CA-CCo-NL-4">
 										<synonym value="CA-CCo-NL- 4"/>
@@ -9722,75 +9731,53 @@
 									<heading id="CACCoNL7" title="CA-CCo-NL-7">
 										<synonym value="CA-CCo-NL- 7"/>
 										<synonym value="Martinez"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="MartinezCCoCA"/> -->
+										<!-- <heading id="MartinezCCoCA" title="Martinez"/> -->
 									</heading>
 									<heading id="CACCoNL8" title="CA-CCo-NL-8">
 										<synonym value="CA-CCo-NL- 8"/>
 									</heading>
 									<heading id="CACCoNL9" title="CA-CCo-NL-9">
 										<synonym value="CA-CCo-NL- 9"/>
-										<synonym value="Walnut Creek"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="WalnutCreekCCoCA"/>
 									</heading>
 									<heading id="CACCoNL10" title="CA-CCo-NL-10">
-										<synonym value="El Cerrito"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<heading id="ElCerritoCCoCA" title="El Cerrito"/>
 									</heading>
 									<heading id="CACCoNL11" title="CA-CCo-NL-11">
-										<synonym value="El Cerrito"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="ElCerritoCCoCA"/>
 									</heading>
 									<heading id="CACCoNL12" title="CA-CCo-NL-12">
-										<synonym value="Richmond"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="RichmondCCostaCA"/>
 									</heading>
 									<heading id="CACCoNL13" title="CA-CCo-NL-13">
-										<synonym value="Concord"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <implies facet="Location_facet" cat="ConcordCCoCA"/> -->
 										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 									</heading>
 									<heading id="CACCoNL14" title="CA-CCo-NL-14">
-										<synonym value="Lafayette"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="LafayetteCCoCA"/>
 									</heading>
 									<heading id="CACCoNL15" title="CA-CCo-NL-15">
-										<synonym value="Walnut Creek"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="WalnutCreekCCoCA"/>
 									</heading>
 									<heading id="CACCoNL16" title="CA-CCo-NL-16">
-										<synonym value="Winehaven Mound"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="WinehavenMdCCostaCA"/>
 									</heading>
 									<heading id="CACCoNL17" title="CA-CCo-NL-17"/>
 									<heading id="CACCoNL18" title="CA-CCo-NL-18">
 										<synonym value="Jersey Island #1"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="JerseyIslandCCoCA"/>
 									</heading>
 									<heading id="CACCoNL21" title="CA-CCo-NL-21">
-										<synonym value="Lafayette"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="LafayetteCCoCA"/>
 									</heading>
 									<heading id="CACCoNL23" title="CA-CCo-NL-23">
 										<synonym value="Maxey Site"/>
-										<synonym value="Lafayette"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="LafayetteCCoCA"/>
 									</heading>
 									<heading id="CACCoNL24" title="CA-CCo-NL-24">
 										<synonym value="Donor's Ranch"/>
-										<synonym value="Lafayette"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="LafayetteCCoCA"/>
 									</heading>
 									<heading id="CACCoNL25" title="CA-CCo-NL-25"/>
 									<heading id="CACCoNL26" title="CA-CCo-NL-26">
@@ -9801,8 +9788,7 @@
 									<heading id="CACCoNL27" title="CA-CCo-NL-27"/>
 									<heading id="CACCoNL28" title="CA-CCo-NL-28">
 										<synonym value="Jersey Island #2"/>
-										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location_facet" cat="JerseyIslandCCoCA"/>
 									</heading>
 						  		</heading>
 							</heading>
@@ -19721,7 +19707,6 @@
 			        </heading>
 			        <heading id="Pipestone" title="Pipestone">
 			          <heading id="Pipestonequarry" title="Pipestone quarry"/>
-			          <heading id="Pipestone" title="Pipestone"/>
 			        </heading>
 			        <heading id="Cass" title="Cass">
 			          <heading id="LeechLake" title="Leech Lake"/>
