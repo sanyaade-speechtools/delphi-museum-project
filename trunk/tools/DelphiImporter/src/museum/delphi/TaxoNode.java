@@ -253,7 +253,7 @@ public class TaxoNode {
 	public void AddInferredNodes(ArrayList<TaxoNode> list) {
 		// while parents not null and inferredByChidren, add to list.
 		// If find a node already in list, can assume we're done, since its
-		// inferreds must also already be there
+		// inferred nodes must also already be there
 		// TODO include the implies nodes for each node, and not just ascendants
 		TaxoNode ascendant = parent;
 		while( ascendant != null && ascendant.inferredByChildren
@@ -268,6 +268,7 @@ public class TaxoNode {
 		// If find a node already in list, can assume we're done, since its
 		// inferreds must also already be there
 		// TODO include the implies nodes for each node, and not just ascendants
+// XXX need to recurse. Each step does 1) parent and 2) impliedNodes
 		TaxoNode ascendant = parent;
 		while( ascendant != null && ascendant.inferredByChildren ) {
 			Float ret = map.get(ascendant); // returns null if not in hashMap
