@@ -27,8 +27,15 @@ public class MetaDataReader {
 
 	private int _debugLevel = 1;
 	private String filename;
+	private String columnNames[] = null;
 	private int colSep;
+	private int nCols = 0;
+	private int objIDCol = -1;
 	private int currLine;
+	// These are used to merge strings from multiple lines.
+	private int lastIDVal = -1;
+	private ArrayList<String> lastStrings = new ArrayList<String>();
+
 	// TODO we should put the encoding into the colconfig file.
 	//private static String encoding = "ISO-8859-1";
 	private static String encoding = "UTF-8";
@@ -37,15 +44,21 @@ public class MetaDataReader {
 	// top level stuff like title, xsl spreadsheet, etc.
 	// Could provide a convenience method in here to build the
 	// default one with just a passed name default to Delphi or something.
-	public MetaDataReader( String inFileName, int inColSep ) {
+	public MetaDataReader( String inFileName, int inColSep, int numColumns, int objectIDColumnIndex ) {
 		try {
 			filename = inFileName;
 			colSep = inColSep;
+			if( objectIDColumnIndex < 0 )
+				throw new RuntimeException("Illegal value for objectIDColumnIndex: "
+											+ objectIDColumnIndex);
+			objIDCol = objectIDColumnIndex;
+			nCols = numColumns;
 			//reader = new BufferedReader(new FileReader(filename));
 			reader = new BufferedReader(
 			          new InputStreamReader(new FileInputStream(filename),
 			        		  encoding));
 			currLine = 0;
+			columnNames = readColumnHeaders();
 			//skipTerms = new HashSet<String>();
 		} catch (FileNotFoundException e) {
 			throw new RuntimeException("Could not open input file: " + inFileName);
@@ -79,8 +92,64 @@ public class MetaDataReader {
 		return null;
 	}
 	*/
+	protected Pair<Integer,ArrayList<String>> getNextObjectAsColumns() {
+		ArrayList<String> nextLine = null;
+		Pair<Integer,ArrayList<String>> returnValue = null;
+		boolean fMoreLines = true;
+		while( fMoreLines ) {
+			int id = -1;
+			if((nextLine = getNextLineAsColumns()) == null) {
+				fMoreLines = false;
+				// Handle case of empty file.
+				if( lastStrings.size() == 0 )
+					break;
+			} else {
+				// Look at new line and consider merging with previous
+				if(nextLine.get(objIDCol).length() == 0) {
+					debug(2,"Skipping line with empty id" );
+					continue;
+				}
+				id = Integer.parseInt(nextLine.get(objIDCol));
+				if( lastIDVal < 0 ) {
+					lastStrings.addAll(nextLine);
+					lastIDVal = id;
+					continue;
+				}
+				if( id == lastIDVal ) {
+					// Consider merging the two lines, but only for the columns we care about.
+					// Separate them by '|' chars to ensure we tokenize in next step
+					// Note that we always skip col 0, the ID column
+					for(int i=1; i<nCols; i++ ) {
+						String nextToken = nextLine.get(i);
+						if(nextToken.length()==0)	// If new token is empty ("") skip it
+							continue;
+						String last = lastStrings.get(i);
+						if(last.length()==0)		// If old token is empty (""), just set
+							lastStrings.set(i, nextLine.get(i));
+						else if(nextLine.get(i).equalsIgnoreCase(last)
+								|| last.contains(nextLine.get(i)))
+							continue;
+						else
+							lastStrings.set(i, last+"|"+nextLine.get(i));
+						debug(4,"Combining column["+i+"] for id: "+id+
+											" ["+lastStrings.get(i)+"]");
+					}
+					continue;
+				}
+			}
+			// Have a full set of info for an object. Pass the lastStrings
+			returnValue = new Pair<Integer,ArrayList<String>>(lastIDVal, lastStrings);
+			lastIDVal = id;
+			lastStrings = nextLine;
+		}
+		return returnValue;
+	}
 
-	protected ArrayList<String> getNextLineAsColumns() {
+	// TODO - this should be private. We should expose an interface that returns the next set of
+	// columns for a given ID. This should do the line combining for the client. It will be
+	// stateful, in that it will hold the last read line, but that is okay (localizes state
+	// here, anyway. One variant returns array, another hashMap, etc.
+	private ArrayList<String> getNextLineAsColumns() {
 		// We will read chars up to newlines, parsing as we go.
 		// If we hit a quote at the start, then we run to match a quote, even running over newlines
 		// When not balancing a quote, run to colSep for a token, or to end of line.
@@ -147,7 +216,7 @@ public class MetaDataReader {
 	}
 
 
-	protected String getNextLineColumn(int iCol) {
+	private String getNextLineColumn(int iCol) {
 		ArrayList<String> tokens = getNextLineAsColumns();
 		if( tokens != null ) {
 			if( iCol >= tokens.size() ) {
@@ -160,15 +229,33 @@ public class MetaDataReader {
 		return null;
 	}
 
-	protected String[] readColumnHeaders() {
+	private String[] readColumnHeaders() {
 		if( currLine != 0 )
 			throw new RuntimeException( "MDR.readColumnHeaders called when not at line 0");
 		ArrayList<String> tokens = getNextLineAsColumns();
 		if( tokens == null )
-			return null;
+			throw new RuntimeException( "MDR.readColumnHeaders could not read any headers!");
 		String[] arrTokens = new String[tokens.size()];
 		debug(1, "MDR.readColHdrs found "+tokens.size()+" column names." );
 		return tokens.toArray(arrTokens);
+	}
+
+	public final String[] getColumnNames() {
+		return columnNames;
+	}
+
+	public final String getColumnName( int iCol ) {
+		if(iCol < 0 || iCol > columnNames.length )
+			return null;
+		return columnNames[iCol];
+	}
+
+	public int getColumnIndex( String colName ) {
+		for( int iCol=0; iCol < columnNames.length; iCol++ ) {
+			if( colName.equals(columnNames[iCol]) )
+				return iCol;
+		}
+		return -1;
 	}
 
 	protected void resetToLine1() {
@@ -179,9 +266,12 @@ public class MetaDataReader {
 				reader = null;
 				reader = new BufferedReader(new FileReader(filename));
 				currLine= 0;
-				getNextLineAsColumns();	// Git first line and discard
+				getNextLineAsColumns();	// Get first line and discard
 			} else
 				debug(1, "MDR.resetToline1: Already at line 1 in file: "+filename);
+			lastIDVal = -1;
+			lastStrings = new ArrayList<String>();
+
 		} catch (FileNotFoundException e) {
 			throw new RuntimeException("Could not (re-)open input file: " + filename);
 		} catch (IOException e) {
