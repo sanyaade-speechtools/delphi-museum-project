@@ -11,9 +11,20 @@ import java.util.HashMap;
 
 /**
  * @author pschmitz
+ * Also maintains a pair of class static hashMaps of inference info,
+ * indexed respectively by required and excluded concepts.
  *
  */
+// TODO make this an instance with instances of DoubleHashTree for facet info.
+// Main should create the DoubleHashTree, and pass it in here when creating an instance.
 public class Categorizer {
+	public static final int COMPLEX_INFER_NONE = 0;
+	public static final int COMPLEX_INFER_1_STEP = 1;
+	public static final int COMPLEX_INFER_3_STEPS = 3;
+	public static final int COMPLEX_INFER_5_STEPS = 5;
+	private HashMap<Integer,ArrayList<ComplexInference>> inferencesByReqID = null;
+	private HashMap<Integer,ArrayList<ComplexInference>> inferencesByExclID = null;
+	private DoubleHashTree facetMapHashTree = null;
 
 	private static int _debugLevel = 1;
 
@@ -27,18 +38,61 @@ public class Categorizer {
 			StringUtils.outputExceptionTrace(e);
 	}
 
+	public Categorizer( DoubleHashTree facetMapHashTree ) {
+		if( facetMapHashTree == null )
+			throw new RuntimeException("Categorizer must have non-null facetMap!");
+		inferencesByReqID = new HashMap<Integer,ArrayList<ComplexInference>>();
+		inferencesByExclID = new HashMap<Integer,ArrayList<ComplexInference>>();
+		this.facetMapHashTree = facetMapHashTree;
+	}
+
+	/**
+	 * mapComplexInference sets up the hashMaps references for the passed ComplexInferece.
+	 * For each CI in the system, need to map it for doing the inferencing work.
+	 * @param ci
+	 */
+	public void mapComplexInference( ComplexInference ci ) {
+		// First add all the required ids to the associated map
+		for( TaxoNode node : ci.required ) {
+			ArrayList<ComplexInference> currlist = inferencesByReqID.get(node.id);
+			if( currlist == null ) {
+				currlist = new ArrayList<ComplexInference>();
+				currlist.add(ci);
+				inferencesByReqID.put(node.id, currlist);
+			} else if( !currlist.contains(ci)) {
+				currlist.add(ci);
+			} else {
+				throw new RuntimeException("Adding duplicate ComplexInference: "+ ci.toString()
+											+" for required id: " + node.id);
+			}
+		}
+		// Now add all the excluded ids to the associated map
+		for( TaxoNode node : ci.excluded ) {
+			ArrayList<ComplexInference> currlist = inferencesByExclID.get(node.id);
+			if( currlist == null ) {
+				currlist = new ArrayList<ComplexInference>();
+				currlist.add(ci);
+				inferencesByExclID.put(node.id, currlist);
+			} else if( !currlist.contains(ci)) {
+				currlist.add(ci);
+			} else {
+				throw new RuntimeException("Adding duplicate ComplexInference: "+ ci.toString()
+						+" for excluded id: " + node.id);
+			}
+		}
+	}
+
 	/**
 	 * Processes the object metadata to produce concept associations
 	 * @param metaDataReader the object metadata source
-	 * @param columnNames the configured column names in the metadata source
-	 * @param facetMapHashTree the concept ontology, by facet
 	 * @param facetName the name of the facet, or null to do all at once
+	 * @param complexInferenceSteps use one of COMPLEX_INFER_* constants, or #steps max.
+	 *          If after n steps no new inferences are found, it will also stop.
 	 * @param fDumpAsSQLInsert set TRUE for an insert statement, FALSE for a loadfile
 	 * @param dbName the name of the DB to be used.
 	 */
-	public static void categorizeForFacet(MetaDataReader metaDataReader,
-			String columnNames[],
-			DoubleHashTree facetMapHashTree, String facetName,
+	public void categorizeForFacet(MetaDataReader metaDataReader, String facetName,
+			int complexInferenceSteps,
 			String basefilename, boolean fDumpAsSQLInsert, String dbName ) {
     	String filename = null;
     	String extension = ".sql";
@@ -57,14 +111,12 @@ public class Categorizer {
     	int nObjCatsDumpedTotal = 0;
     	int nObjsSkippedTotal = 0;
     	// TODO get this from col config
-    	int objIDCol = 0;
 		int objNumCol = 4;
     	// Hold the information for the Facet(s)
     	DumpColumnConfigInfo[] colDumpInfo = null;
 		try {
 			// Open the dump file
-			if( columnNames == null || columnNames.length < 2 )
-				throw new RuntimeException("categorizeForFacet: DumpColConfig info not yet built!");
+			String columnNames[] = metaDataReader.getColumnNames();
 			colDumpInfo = DumpColumnConfigInfo.getAllColumnInfo(columnNames);
 			int nCols = columnNames.length;
 			// Since we run through lots of lines, cache the skip columns info for speed
@@ -76,62 +128,19 @@ public class Categorizer {
 			}
 			BufferedWriter objCatsWriter = null;
 	    	iOutputFile = 0;
-			ArrayList<String> nextLine;
 			boolean fFirst = true;
 			boolean fWithNewlines = true;
-			int lastIDVal = -1;
-			ArrayList<String> lastStrings = new ArrayList<String>();
 			HashMap<TaxoNode, Float> matchedCats = new HashMap<TaxoNode, Float>();
 			nObjCatsTillReport = nObjCatsReport;
-			boolean fMoreLines = true;
-			while( fMoreLines ) {
-				int id = -1;
-				if((nextLine = metaDataReader.getNextLineAsColumns()) == null) {
-					fMoreLines = false;
-					// Handle case of empty file.
-					if( lastStrings.size() == 0 )
-						break;
-				} else {
-					// Look at new line and consider merging with previous
-					if(nextLine.get(objIDCol).length() == 0) {
-						debug(2,"Skipping line with empty id" );
-						continue;
-					}
-					id = Integer.parseInt(nextLine.get(objIDCol));
-					if( lastIDVal < 0 ) {
-						lastStrings.addAll(nextLine);
-						lastIDVal = id;
-						continue;
-					}
-					if( id == lastIDVal ) {
-						// Consider merging the two lines, but only for the columns we care about.
-						// Separate them by '|' chars to ensure we tokenize in next step
-						// Note that we always skip col 0, the ID column
-						for(int i=1; i<nCols; i++ ) {
-							if(skipCol[i])				// Do not bother with misc cols
-								continue;
-							String nextToken = nextLine.get(i);
-							if(nextToken.length()==0)	// If new token is empty ("") skip it
-								continue;
-							String last = lastStrings.get(i);
-							if(last.length()==0)		// If old token is empty (""), just set
-								lastStrings.set(i, nextLine.get(i));
-							else if(nextLine.get(i).equalsIgnoreCase(last)
-									|| last.contains(nextLine.get(i)))
-								continue;
-							else
-								lastStrings.set(i, last+"|"+nextLine.get(i));
-							debug(4,"Combining "+columnNames[i]+ " for id: "+id+
-												" ["+lastStrings.get(i)+"]");
-						}
-						continue;
-					}
-				}
+			Pair<Integer,ArrayList<String>> objInfo = null;
+			while((objInfo = metaDataReader.getNextObjectAsColumns()) != null ) {
+				int id = objInfo.first;
+				ArrayList<String> objStrings = objInfo.second;
 				// Have a complete line. Check for validity
-				String objNumStr = lastStrings.get(objNumCol);
+				String objNumStr = objStrings.get(objNumCol);
 				if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
 					// Skip lines with no object number.
-					debug(1,"CategorizeForFacet: Discarding line for id (bad objNum): "+lastIDVal );
+					debug(1,"CategorizeForFacet: Discarding line for id (bad objNum): "+id );
 					nObjsSkippedTotal++;
 				} else { //  Process a valid line
 					if( objCatsWriter == null ) {
@@ -155,19 +164,43 @@ public class Categorizer {
 					for(int i=1; i<nCols; i++ ) {
 						if(skipCol[i])				// Do not bother with misc cols
 							continue;
-						String source = lastStrings.get(i);
+						String source = objStrings.get(i);
 						if( source.length() <= 1 )
 							continue;
 						if( facetName != null )
-							categorizeObjectForFacet( lastIDVal, source, lastStrings,
-								facetName, colDumpInfo[i], facetMapHashTree, matchedCats );
+							categorizeObjectForFacet( id, source, objStrings,
+								facetName, colDumpInfo[i], matchedCats );
 						else
-							categorizeObjectForAllFacets( lastIDVal, source, lastStrings,
-									colDumpInfo[i], facetMapHashTree, matchedCats );
+							categorizeObjectForAllFacets( id, source, objStrings,
+									colDumpInfo[i], matchedCats );
 					}
-					HashMap<TaxoNode, Float> inferredCats = addSimpleInferences(matchedCats);
+					// Now we handle inferences. First get all the simple inferences,
+					// including inherited (ascendant) concepts, and simple declarations.
+					HashMap<TaxoNode, Float> inferredCats = deriveSimpleInferences(matchedCats);
+					// Now filter the matched cats that are inferred
 					filterMatchedInferences( matchedCats, inferredCats);
-					int nCatsDumped = SQLUtils.writeObjCatsSQL( lastIDVal,
+					// Now we consider complex inferences.
+					if(complexInferenceSteps >= Categorizer.COMPLEX_INFER_1_STEP) {
+						// Merge the matched and inferred cats for complex inferencing
+						HashMap<TaxoNode, Float> allCats = new HashMap<TaxoNode, Float>();
+						allCats.putAll(matchedCats);
+						allCats.putAll(inferredCats);
+						int nStepsLeft = complexInferenceSteps;
+						while(nStepsLeft>0) {
+							HashMap<TaxoNode, Float> newlyInferredCats =
+											deriveComplexInferences(allCats, false);
+							if(newlyInferredCats.size()>0) {
+								nStepsLeft--;
+								// Add all the new cats to the set of inferred ones.
+								inferredCats.putAll(newlyInferredCats);
+								// And to the set we infer from
+								allCats.putAll(newlyInferredCats);
+							} else {
+								nStepsLeft = 0;		// Stop looping - nothing new found
+							}
+						}
+					}
+					int nCatsDumped = SQLUtils.writeObjCatsSQL( id,
 											matchedCats, inferredCats, objCatsWriter,
 											fFirst, fWithNewlines, fDumpAsSQLInsert );
 					matchedCats.clear();
@@ -191,8 +224,6 @@ public class Categorizer {
 					if( nObjCatsDumpedTotal >= nObjCatsOutMax )
 						break;
 				}
-				lastIDVal = id;
-				lastStrings = nextLine;
 			}
 			if( objCatsWriter != null ) {
 				if( fDumpAsSQLInsert ) {
@@ -221,9 +252,9 @@ public class Categorizer {
 		}
 	}
 
-	private static void categorizeObjectForFacet( int id, String source, ArrayList<String> allStrings,
+	private void categorizeObjectForFacet( int id, String source, ArrayList<String> allStrings,
 			String facetName, DumpColumnConfigInfo colInfo,
-			DoubleHashTree facetMapHashTree, HashMap<TaxoNode, Float> matchedCats ) {
+			HashMap<TaxoNode, Float> matchedCats ) {
 		// Tokenize the string for this column
 		Pair<ArrayList<String>,ArrayList<String>> tokenPair
 				= prepareSourceTokens( source, colInfo );
@@ -249,9 +280,8 @@ public class Categorizer {
 		}
 	}
 
-	private static void categorizeObjectForAllFacets( int id, String source, ArrayList<String> allStrings,
-			DumpColumnConfigInfo colInfo,
-			DoubleHashTree facetMapHashTree, HashMap<TaxoNode, Float> matchedCats ) {
+	private void categorizeObjectForAllFacets( int id, String source, ArrayList<String> allStrings,
+			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
 		// Tokenize the string for this column. First list is tokens, second is words.
 		Pair<ArrayList<String>,ArrayList<String>> tokenPair
 				= prepareSourceTokens( source, colInfo );
@@ -318,12 +348,10 @@ public class Categorizer {
 
 	/**
 	 * Adds all the simply inferred concepts for the set of matched concepts.
-	 * Also removes all matched concepts that were otherwise inferred, so we
-	 * do not duplicate the entries in the index.
 	 * @param matchedCats the set of matched concepts
 	 * @return the set of inferred concepts
 	 */
-	protected static HashMap<TaxoNode, Float> addSimpleInferences(
+	protected static HashMap<TaxoNode, Float> deriveSimpleInferences(
 						HashMap<TaxoNode, Float> matchedCats) {
 		HashMap<TaxoNode, Float> inferredCats = new HashMap<TaxoNode, Float>();
 		// We just consider each match in turn, and get all the inferred nodes.
@@ -331,6 +359,175 @@ public class Categorizer {
 			Float ret = matchedCats.get(node); // returns null if not in hashMap
 			float currRel = (ret==null)?0:ret.floatValue();
 			node.AddInferredNodes(inferredCats, currRel);
+		}
+		return inferredCats;
+	}
+
+	/**
+	 * Adds all the complex inferred concepts for the passed set of matched concepts.
+	 * @param matchedCats the set of matched concepts
+	 * @param fCheckMatchedConcepts if true, will also consider rules that infer
+	 *                     concepts already in matchedCats. If false, skips these.
+	 *                     Can be used to check for stronger relevance.
+	 * @return the set of inferred concepts
+	 */
+	protected HashMap<TaxoNode, Float> deriveComplexInferences(
+						HashMap<TaxoNode, Float> matchedCats,
+						boolean fCheckMatchedConcepts) {
+		class MatchInfo {
+			public ComplexInference ci = null;
+			public int nReq = 0;
+			public float reqMatches[] = null;
+			public int nExcl = 0;
+			public boolean exclMatches[] = null;
+			public MatchInfo(ComplexInference newci) {
+				ci = newci;
+				nReq = ci.required.size();
+				reqMatches = new float[nReq];
+				for( int i=0; i<nReq; i++ ) {
+					reqMatches[i] = 0;
+				}
+				if( ci.excluded != null && ci.excluded.size() > 0) {
+					nExcl = ci.excluded.size();
+					exclMatches = new boolean[nExcl];
+					for( int i=0; i<nExcl; i++ ) {
+						exclMatches[i] = false;
+					}
+				}
+			}
+
+			public void setReq( int id, float relevance ) {
+				for( int i = 0; i<nReq; i++ ) {
+					TaxoNode node = ci.required.get(i);
+					if( node.id == id ) {
+						reqMatches[i] = relevance;
+					}
+				}
+			}
+
+			public void setExcl( int id ) {
+				for( int i = 0; i<nExcl; i++ ) {
+					TaxoNode node = ci.excluded.get(i);
+					if( node.id == id ) {
+						exclMatches[i] = true;
+					}
+				}
+			}
+		}
+
+		// This is used to track the matched required and excluded concepts
+		ArrayList<MatchInfo> matches = new ArrayList<MatchInfo>();
+
+		HashMap<TaxoNode, Float> inferredCats = new HashMap<TaxoNode, Float>();
+		// We look at each matched cat, gathering up all the possible complex
+		// inferences. We may need to match all the required concepts, and none
+		// of the excluded ones, so we have to keep track of all we see.
+		// We could make this a lot smarter about minimal requirements, but it
+		// does not seem merited at this point. We could keep a boolean at the top
+		// for "foundAtLeastOneForAnyRule" on both required and excluded, and then
+		// skip further processing, but it is hardly worth it at this point.
+		for( TaxoNode node:matchedCats.keySet() ) {
+			Float ret = matchedCats.get(node); // Should never return null!
+			float currRel = (ret==null)?0:ret.floatValue();
+			if( currRel > 0 ) {
+				// See if it is required in any complex inference.
+				ArrayList<ComplexInference> aci = inferencesByReqID.get(node.id);
+				if( aci != null ) {
+					// For each complex inference the current node may infer...
+					for( ComplexInference ci: aci ) {
+						// Consider those where ci.infer is NOT in matchedCats?
+						Float rel = fCheckMatchedConcepts?null:matchedCats.get(ci.infer);
+						if((rel == null) || (rel.floatValue() <= 0)) {
+							boolean fFound = false;
+							for( MatchInfo mi:matches ) {
+								if( mi.ci == ci ) {		// If already tracking this CI
+									fFound = true;		// Note we found it
+									mi.setReq(node.id, currRel);	// Set relevance
+								}
+							}
+							if( !fFound ) {				// Add a new Match tracker
+								MatchInfo mi = new MatchInfo(ci);
+								mi.setReq(node.id, currRel);
+								matches.add(mi);
+							}
+						}
+					}
+				} // Close if node is a requirement for any CIs
+				// Now, run through the same process for exclusions
+				// Note: concept can be both a requirement and an exclusion, in different CI's
+				aci = inferencesByExclID.get(node.id);
+				if( aci != null ) {
+					// For each complex inference the current node may infer...
+					for( ComplexInference ci: aci ) {
+						boolean fFound = false;
+						for( MatchInfo mi:matches ) {
+							if( mi.ci == ci ) {		// If already tracking this CI
+								fFound = true;		// Note we found it
+								mi.setExcl(node.id);// Mark exclusion
+							}
+						}
+						if( !fFound ) {				// Add a new Match tracker
+							MatchInfo mi = new MatchInfo(ci);
+							mi.setExcl(node.id);// Mark exclusion
+							matches.add(mi);
+						}
+					}
+				} // Close if node is an exclusion for any CIs
+			}
+		} // Close for-each matchedCats
+		// Now, we consider all the MatchInfos to see if any CI's are inferred
+		for( MatchInfo mi:matches ) {
+			boolean fRequireAll = mi.ci.fRequireAll;
+			boolean fReqFailure = false;
+			float relevanceAccum = fRequireAll?1:0;
+			for( int i = 0; i<mi.nReq; i++ ) {
+				if( mi.reqMatches[i] == 0 ) {
+					if( fRequireAll ) {
+						fReqFailure = true;
+						break;
+					} // else cannot contribute to the accumulated relevance
+				} else if(fRequireAll) {
+					// Accumulate running total for relevance.
+					// Assume rule is 1- (product of (1-r)'s)
+					relevanceAccum *= 1-mi.reqMatches[i];
+				} else {
+					// Accumulate running total for relevance.
+					// Assume rule is max relevance.
+					if( mi.reqMatches[i] > relevanceAccum) {
+						relevanceAccum = mi.reqMatches[i];
+					}
+				}
+			}
+			if( fReqFailure ) {
+				debug(2, "Requirements failed for inference: " + mi.ci.name);
+				continue;
+			} else {
+				if( fRequireAll ) {
+					relevanceAccum = 1-relevanceAccum;
+				}
+			}
+			// Now, consider the exclusions.
+			boolean fExcludeAll = mi.ci.fExcludeAll;
+			boolean fExclFound = false;
+			for( int i = 0; i<mi.nReq; i++ ) {
+				if( mi.exclMatches[i] ) {	// If this exclusion found
+					fExclFound = true;		// note
+					if( !fExcludeAll ) {	// If exclude any, we're done
+						break;
+					}
+				} else if(fExcludeAll) {	// If exclusion not found, and need all
+					fExclFound = false;		// Indicate failure to exclude, and done.
+					break;
+				}
+			}
+			if( fExclFound ) {
+				debug(2, "Inference failed on exclusions: " + mi.ci.name);
+				continue;
+			}
+			// Have all the requirements, and did not exclude, so add this to inferred concepts
+			debug(1, "Adding inference: " + mi.ci.name + "("+mi.ci.infer.name+")"
+								+" with relevance: " + relevanceAccum);
+			inferredCats.put(mi.ci.infer, relevanceAccum);
 		}
 		return inferredCats;
 	}
