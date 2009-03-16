@@ -64,7 +64,6 @@ public class MainApp {
 	private final String txtWildcard = "*.txt";  //  @jve:decl-index=0:
 	private FileNameExtensionFilter dpfFilter = null;
 	//private final String dpfWildcard = "*.dpf";
-	private String columnNames[] = null;
 	// TODO Let the user set this.
 	private static final String dbName = "pahma_dev";  //  @jve:decl-index=0:
 	private static final String settingsFilename = "./settings";
@@ -1538,7 +1537,7 @@ public class MainApp {
 			debug(1,"Build Objects SQL...");
 			// We need to pick an output file
 			if( userProjInfo.metaDataReader != null ) {
-				SQLUtils.writeObjectsSQL(userProjInfo.metaDataReader, columnNames,
+				SQLUtils.writeObjectsSQL(userProjInfo.metaDataReader,
 											userProjInfo.imagePathsReader);
 			}
 		} catch( RuntimeException e ) {
@@ -1574,15 +1573,14 @@ public class MainApp {
 				/* TODO - choose the right facet
 				String facetName = Need to let user choose this via UI;
 		    	basefilename += facetName)+"_";
-				Categorizer.categorizeForFacet(userProjInfo.metaDataReader, columnNames,
-												userProjInfo.facetMapHashTree,
+				userProjInfo.categorizer.categorizeForFacet(userProjInfo.metaDataReader,
 												facetName, basefilename, false, dbName);
 				 */
 			} else {
 		    	basefilename += "all_";
-				Categorizer.categorizeForFacet(userProjInfo.metaDataReader, columnNames,
-												userProjInfo.facetMapHashTree,
+		    	userProjInfo.categorizer.categorizeForFacet(userProjInfo.metaDataReader,
 												null /*Do all facets at once */,
+												Categorizer.COMPLEX_INFER_5_STEPS,
 												basefilename, false, dbName);
 			}
 		}
@@ -1809,6 +1807,7 @@ public class MainApp {
 	 */
 	private JList getBURColumnList() {
 		if (burColumnList == null) {
+			String columnNames[] = userProjInfo.metaDataReader.getColumnNames();
 			String[] allButObjID = new String[columnNames.length-1];
 			System.arraycopy(columnNames, 1, allButObjID, 0, columnNames.length-1);
 			burColumnList = new JList(allButObjID);
@@ -1898,6 +1897,7 @@ public class MainApp {
         // REWRITE - separate this and do it when open the userProjInfo
 			Document facetMapDoc = builder.parse(filename);
 			userProjInfo.facetMapHashTree = new DoubleHashTree();
+			userProjInfo.categorizer = new Categorizer(userProjInfo.facetMapHashTree);
 			userProjInfo.facetMapHashTree.PopulateFromFacetMap(facetMapDoc);
 	        String s1 = "Found a total of " + userProjInfo.facetMapHashTree.totalTermCount()
     		+ " terms for "
@@ -2025,25 +2025,31 @@ public class MainApp {
 	}
 
 	private boolean setMDConfigFile(String filename) {
-		boolean opened = false;
-		if( opened = loadMDConfig( filename )) {
+		Pair<Boolean, DBMetaDataReader> mdInfo = loadMDConfig( filename );
+		if( mdInfo.first ) {
 	        userProjInfo.setMetadataConfigPath(filename);
-	        updateUIForUserProjectInfo();
+	        if(mdInfo.second != null)
+	        	userProjInfo.dbMetaDataReader = mdInfo.second;
+			updateUIForUserProjectInfo();
 		}
-		return opened;
+		return mdInfo.first;
 	}
-	protected boolean loadMDConfig( String filename ) {
-		boolean opened = false;
+
+	protected Pair<Boolean, DBMetaDataReader> loadMDConfig( String filename ) {
+		Pair<Boolean, DBMetaDataReader> retVal = null;
 		try {
 	        debug(2,"Scanning column config info from file: " + filename);
 	        setStatus("Scanning column config info from file: " + filename);
-	        opened = DumpColumnConfigInfo.OpenConfigFile(filename);
+	        MetaDataConfigManager mdcfgMgr = new MetaDataConfigManager(filename);
+	        boolean opened = mdcfgMgr.GetDumpColConfigInfo();
+	        DBMetaDataReader dbmdRdr = mdcfgMgr.GetDBSourceInfo();
+	        retVal = new Pair<Boolean, DBMetaDataReader>(opened, dbmdRdr);
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
-		return opened;
+		return retVal;
 	}
 
 	protected boolean browseToMDFile() {
@@ -2074,11 +2080,14 @@ public class MainApp {
 	        debug(2,"Scanning column names from file: " + filename);
 	        setStatus("Scanning column names from file: " + filename);
 	        int colSep = DumpColumnConfigInfo.getColumnSeparator();
+	        int nColumns = DumpColumnConfigInfo.getNumColumns();
+	        int objectIDColumnIndex = DumpColumnConfigInfo.getIdColumnIndex();
 	        if( !Character.isDefined(colSep) )
 				throw new RuntimeException( "No Column separator configured!" );
         // REWRITE - separate this and do it when open the userProjInfo
-	        userProjInfo.metaDataReader = new MetaDataReader(filename, colSep );
-	        columnNames = userProjInfo.metaDataReader.readColumnHeaders();
+	        userProjInfo.metaDataReader = new MetaDataReader(filename, colSep,
+	        									nColumns, objectIDColumnIndex );
+	        String columnNames[] = userProjInfo.metaDataReader.getColumnNames();
 	        setStatus("Found: " + columnNames.length + " columns.");
 	        if( !(columnNames[0]).equalsIgnoreCase("objectid") )
 				throw new RuntimeException( "Column 0 in metadata dump file is not ObjectID: "
@@ -2107,7 +2116,7 @@ public class MainApp {
 			int iDot = outFileName.lastIndexOf('.');
 			if( iDot >0 )
 				outFileName = outFileName.substring(0, iDot);
-			outFileName += "_"+(columnNames[colIndex].replaceAll("\\W", "_"))+"_Usage.txt";
+			outFileName += "_"+(userProjInfo.metaDataReader.getColumnName(colIndex).replaceAll("\\W", "_"))+"_Usage.txt";
     		String filename = getSafeOutfile(outFileName,null);
     		if( filename != null ) {
     			debug(1,"Saving column usage info to file: " + filename);
