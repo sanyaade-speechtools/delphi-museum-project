@@ -15,6 +15,7 @@ import org.w3c.dom.*;
  */
 public class DoubleHashTree {
 	private int _debugLevel = 1;
+	private HashMap<Integer, TaxoNode> idMap = null;
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
@@ -35,14 +36,14 @@ public class DoubleHashTree {
 		// TODO the nameMap should take a CollationKey, not a String
 		private HashMap<String, TaxoNode>  hookMap = null;
 		private HashMap<String, TaxoNode>  strIDMap = null;
-		private HashMap<Integer, TaxoNode> idMap = null;
+		private HashMap<Integer, TaxoNode> idMap = null; // pointer to a shared map
 		private Facet                      facet = null;
 
-		protected FacetInfo(Facet facet) {
+		protected FacetInfo(Facet facet, HashMap<Integer, TaxoNode> sharedIdMap) {
 			this.facet = facet;
 			hookMap = new HashMap<String, TaxoNode>();
 			strIDMap = new HashMap<String, TaxoNode>();
-			idMap = new HashMap<Integer, TaxoNode>();
+			idMap = sharedIdMap;
 		}
 
 		protected void AddTaxoNodeToMap( TaxoNode node, String hook, Integer id ) {
@@ -75,11 +76,12 @@ public class DoubleHashTree {
 	}
 
 	public void AddFacet( Facet facet ) {
-	    FacetInfo fInfo = new FacetInfo(facet);
-	    facetsByName.put(facet.name, fInfo);
-	    facetsByID.put(facet.id, fInfo);
+	    FacetInfo facetInfo = new FacetInfo(facet, idMap);
+	    facetsByName.put(facet.name, facetInfo);
+	    facetsByID.put(facet.id, facetInfo);
 	}
 
+	// TODO These should not be here. Should be part of a Categorizer instance.
 	private HashMap<String,FacetInfo> facetsByName = null;
 	private HashMap<Integer,FacetInfo> facetsByID = null;
 	private int nCatsPerFacetMax = 10000;
@@ -87,13 +89,11 @@ public class DoubleHashTree {
 	public DoubleHashTree() {
 		facetsByName = new HashMap<String,FacetInfo>();
 		facetsByID = new HashMap<Integer,FacetInfo>();
+		idMap = new HashMap<Integer, TaxoNode>();
 	}
 
 	public int totalConceptCount() {
-		int total = 0;
-		for( FacetInfo fI : facetsByName.values() )
-			total += fI.idMap.size();
-		return total;
+		return idMap.size();
 	}
 
 	public int totalTermCount() {
@@ -101,16 +101,6 @@ public class DoubleHashTree {
 		for( FacetInfo fI : facetsByName.values() )
 			total += fI.hookMap.size();
 		return total;
-	}
-
-	public int facetSize(String name) {
-		FacetInfo facet = facetsByName.get(name);
-		return ( facet == null )? 0:facet.idMap.size();
-	}
-
-	public int facetSize(int id) {
-		FacetInfo facet = facetsByID.get(id);
-		return ( facet == null )? 0:facet.idMap.size();
 	}
 
 	public ArrayList<Facet> GetFacets() {
@@ -126,6 +116,7 @@ public class DoubleHashTree {
 
 	/*
 	public Collection<TaxoNode> GetAllTaxoNodes() {
+		// This would work again with a shared idmap.
 		return idMap.values();
 	}
 	*/
@@ -152,67 +143,9 @@ public class DoubleHashTree {
 		return ( facet == null )? null:facet.hookMap.get(hook);
 	}
 
-	public TaxoNode FindNodeByID( int facetID, int id ) {
-		FacetInfo facet = facetsByID.get(facetID);
-		return ( facet == null )? null:facet.idMap.get(id);
+	public TaxoNode FindNodeByID( int id ) {
+		return idMap.get(id);
 	}
-
-	public TaxoNode FindNodeByID( String facetName, int id ) {
-		FacetInfo facet = facetsByName.get(facetName);
-		return ( facet == null )? null:facet.idMap.get(id);
-	}
-
-	/*
-	public void AddNode( String cn, int termID, int parentID ) {
-		// Create a node, add to tables, if parent non-null, find
-		// and set link.
-		TaxoNode parentNode = null;
-		if( parentID >= 0 ) {
-			parentNode = idMap.get( parentID );
-			if( parentNode == null ) {
-				if( verbose )
-					System.out.println( "Adding node before parent: "
-						+ name + " (idx[" + id + "] parentidx["
-						 + parentID + "]" );
-				// Now we will synthesize an empty parent node for forward refs
-				parentNode = new TaxoNode( "<UNK>", parentID, null );
-				idMap.put( parentID, parentNode );
-			}
-		}
-		TaxoNode node = idMap.get( id );
-		if( node != null ) {
-			// See if we are resolving a forward reference
-			if( node.name == "<UNK>" ) {
-				node.name = name;
-				AddNamedNodeToMap( name, node );
-				node.parent = parentNode;
-				if( verbose )
-					System.out.println( "Resolving fwd reference: "
-						+ name + " idx[" + id + "] parentidx["
-						 + parentID + "]" );
-			}
-			else if( node.parent != parentNode ) {
-				String str = "Adding node: " + name + " under: ";
-				str += ((parentNode == null )?"none":parentNode.name);
-				str += " but already under: ";
-				str += ((node.parent == null )?"none":node.parent.name );
-				throw new RuntimeException( str );
-			}
-		}
-		else {
-			node = new TaxoNode( name, id, parentNode );
-			idMap.put( id, node );
-			AddNamedNodeToMap( name, node );
-			if( verbose ) {
-				System.out.print("Adding " + ((parentNode==null)? "root":"child") + " node:"
-						+ name + " (idx[" + id + "]" );
-				if( parentNode != null )
-					System.out.print( " under parent: [" + parentNode.name + "]" );
-				System.out.println();
-			}
-		}
-	} // AddNode
-	*/
 
 	protected void AddTaxoNodeToMap( String facetName, TaxoNode node, String name, Integer id ) {
 		FacetInfo facet = facetsByName.get(facetName);
@@ -243,26 +176,14 @@ public class DoubleHashTree {
 		facet.AddNodeToNameMap(node, name);
 	}
 
-	/*
 	public boolean IsRoot( int id ) {
 		TaxoNode node = idMap.get( id );
 		if( node == null )
 			throw new RuntimeException( "Unknown node index passed to IsRoot: " + id );
 		return node.isRoot();
 	}
-	*/
 
-	/*
-	public ArrayList<TaxoNode> GetInferredCategories( int forCategory ) {
-		TaxoNode nodeForCat = idMap.get( forCategory );
-		if( nodeForCat == null )
-			throw new RuntimeException(
-					"Unknown category id passed to GetInferredCategories: "
-					+ forCategory );
-		return GetInferredCategories( nodeForCat );
-	}
-	*/
-
+	/* This should be done via TaxoNode interface
 	public ArrayList<TaxoNode> GetInferredCategories( TaxoNode nodeForCat ) {
 		ArrayList<TaxoNode> retList = new ArrayList<TaxoNode>();
 		debug( 2, "Checking inferred Categories for : " + nodeForCat.name );
@@ -277,10 +198,10 @@ public class DoubleHashTree {
 				debug( 2, "Adding inferred (parent) Category: "
 											+ nodeForCat.name );
 			}
-			/*
+			*
 			 * TODO Need to rework this to deal with implied nodes
 			 * New name map assumes unique names. This should extent to handle
-			 * namespaced ndoes per facet, but then should require unique name in
+			 * namespaced nodes per facet, but then should require unique name in
 			 * facet, or else we cannot use them as ID values.
 			 * We also have to ensure that we are working with an ID based nameMap.
 			 * Can we set a mode for safety, or just be careful??
@@ -305,12 +226,13 @@ public class DoubleHashTree {
 						debug(2, "Adding inferred Category: " + infNm );
 					}
 				}
-			  */
+			  // END TODO
 			nodeForCat = nodeForCat.parent;
 			fAtBase = false;
 		}
 		return retList;
 	}
+	*/
 
 	protected final String	supportsName		= "supports";
 	protected final String	inferName			= "inferFromChildren";
@@ -366,7 +288,7 @@ public class DoubleHashTree {
 			    Facet facet = new Facet( name, displayName, facetID,
 			    						description, notes, false, single,
 			    						  sort, rootHTitle, supports );
-			    FacetInfo fInfo = new FacetInfo(facet);
+			    FacetInfo fInfo = new FacetInfo(facet, idMap);
 			    facetsByName.put(name, fInfo);
 			    facetsByID.put(facetID, fInfo);
 			    taxoRoot.setAttribute( "catID", String.valueOf(facet.id) );
@@ -376,10 +298,8 @@ public class DoubleHashTree {
 			// Now we're done parsing, so we can do the second pass, resolving forward
 			// references on implied links, etc.
 			// First, do the pending implied nodes
-			for( FacetInfo facet : facetsByID.values() ) {
-				for( TaxoNode tnode : facet.idMap.values() ) {
-					tnode.ResolvePendingImpliedNodes(this);
-				}
+			for( TaxoNode tnode : idMap.values() ) {
+				tnode.ResolvePendingImpliedNodes(this);
 			}
 		} catch(Exception ex) {
 			System.err.println("Exception: " + ex.getMessage());
@@ -452,6 +372,8 @@ public class DoubleHashTree {
 				    String selectMode = childEl.getAttribute( selectModeName );
 				    boolean single = ((selectMode.length() > 0 )			// not empty string - is there
 	    					&& selectMode.equalsIgnoreCase("single"));
+				    // TODO If either asToken is set, noMatch should default to TRUE
+				    // Why? If we use entailment strings, the name should not latch
 				    String noMatchStr = childEl.getAttribute( noMatchName );
 				    boolean nomatch = ((noMatchStr.length() > 0 )			// not empty string - is there
 	    					&& noMatchStr.equalsIgnoreCase("true"));
@@ -638,173 +560,4 @@ public class DoubleHashTree {
 			facet.AddNodeToNameMap( node, syn );
 		}
 	}
-
-	/*
-	// Takes a result set for a table query of object to keyword associations,
-	// and then considers the table is sets of rows based upon the baseID value,
-	// checking each of the keywords for the given baseIndex for ascendancy relations.
-	// Marks rows of baseID, keywordID values that are inferable.
-	// Note: ASSUMES that the result set is from a query ordered by baseID.
-	// Also REQUIRES that results set is scrollable and updatable.
-	public int MarkInferablesInTable(
-			ResultSet	rs,				// results set from query on kw table
-			String		baseIDColName, 	// Name of the baseID column
-			String		kwIDColName, 	// Name of the keyword ID column
-			String		inferableColName, // Name of the inferable column
-			ArrayList<Integer> exceptionKWIDs ) // List of keywords never to mark inferred
-	{
-		// We need to have a treemap already so we can chec ascendancy.
-		if( idMap.size() <= 0 )
-	    	throw new RuntimeException( "No KW tree to use for MarkInferablesInTable!");
-		int markedCount = 0;
-		try {
-			int currBaseID = -1;
-			// Declare a list of rowNum, kwID pairs that we check against next one
-			ArrayList<Pair<Integer, Integer>> keywordsForBase =
-					new ArrayList<Pair<Integer, Integer>>(20);
-			//for( int iRow = 0; rs.next(); iRow++ ) {
-			int iRow = 0;
-			while( rs.next() ) {
-				iRow = rs.getRow();
-				if( iRow % 1000 == 0 )
-					debug( 1, "MarkInferablesInTable: Processed " + iRow + " rows...");
-				int baseID = rs.getInt(baseIDColName);
-			    if(( baseID == 0 ) && rs.wasNull() )
-			    	throw new RuntimeException( "MarkInferablesInTable got NULL baseID index value!");
-			    int kwIdx = rs.getInt(kwIDColName);
-			    if(( kwIdx == 0 ) && rs.wasNull() )
-			    	throw new RuntimeException( "MarkInferablesInTable got NULL kwID index value!");
-			    if( !idMap.containsKey( kwIdx ))
-			    	throw new RuntimeException( "MarkInferablesInTable got Unknown kwID index value: " + kwIdx );
-			    // Now we see if we are beginning a new baseID
-			    if( baseID != currBaseID ) {
-			    	currBaseID = baseID;
-			    	keywordsForBase.clear();
-			    	if( !exceptionKWIDs.contains( kwIdx ))
-			    		keywordsForBase.add( new Pair<Integer, Integer>( iRow, kwIdx ) );
-			    	else
-			    		debug( 1, "Skipping excepted node: " + kwIdx );
-
-			    }
-			    else if( exceptionKWIDs.contains( kwIdx )) {
-			    	// Skip these - leave them alone, and leave them out of the list
-		    		debug( 1, "Skipping excepted node: " + kwIdx );
-			    }
-			    else { // Not the first kw for this base, so check against the others
-		        	// TODO: We need to have a list of exceptions to this, so that where
-		        	// we are moving categories out of a path (like the genre) we can leave
-		        	// those as not inferable.
-			    	boolean fAddKW = true;	// unless we determine otherwise...
-			    	for( int i=0; i<keywordsForBase.size(); i++ ) {
-			    		Pair<Integer, Integer> pair = keywordsForBase.get(i);
-						// Work around a bug with next() after a call to absolute();
-			    		if( kwIdx == pair.getSecond() ) {
-			    			fAddKW = false;
-			    			break;
-			    		}
-			    		int cmpResult = CmpAscendancy( kwIdx, pair.getSecond() );
-			    		if( cmpResult == 0 ) // if unrelated, just continue
-			    			continue;
-		    			// add a work item for the keyword, and then we're done with it.
-			    		if( cmpResult < 0 ) {	 // newKw is an ascendant of existing one.
-			    			// just mark it as inferable and then bail.
-			    			rs.updateByte( inferableColName, (byte)1 );
-			    			//rs.updateInt( inferableColName, 1 );
-			    			rs.updateRow();
-			    			markedCount++;
-			    			// Note we do NOT add new one to the list, since it is inferable
-			    			fAddKW = false;
-			    		}
-			    		else {				 // newKw is a descendant of existing one.
-			    			rs.absolute(pair.getFirst());		// Seek to that row
-			    			rs.updateByte( inferableColName, (byte)1 );	// Mark it
-			    			//rs.updateInt( inferableColName, 1 );
-			    			rs.updateRow();
-			    			markedCount++;
-			    			rs.absolute(iRow);					// Seek back to this row
-			    			// Remove the inferable one from the list so we stop considering it
-			    			keywordsForBase.remove(i);
-			    			// New one is added below.
-			    		}
-		    			break;	// We can stop looking since we found an issue
-			    	}
-			    	if( fAddKW )
-		    			// Add the new kw to the list
-				    	keywordsForBase.add( new Pair<Integer, Integer>( iRow, kwIdx ) );
-			    }
-			}
-			debug( 1, "MarkInferablesInTable: Completed processing of " + iRow + " rows...");
-		} catch(SQLException ex) {
-			System.err.println("SQLException: " + ex.getMessage());
-		}
-		return markedCount;
-	} // MarkInferablesInTable
-*/
-/*
-	// Takes a result set for a table query of object to keyword associations,
-	// and then considers the table as sets of rows based upon the baseID value,
-	// checking each of the keywords for the given baseIndex for ascendancy relations.
-	// Returns  list of pairs of baseID, keywordID values that should be marked inferable.
-	// Note: ASSUMES that the result set is from a query ordered by baseID.
-	public ArrayList<Pair<Integer, Integer>> CheckTableForInferables(
-			ResultSet	rs,				// results set from query on kw table
-			String		baseIDColName, 	// Name of the baseID column
-			String		kwIDColName ) 		// Name of the keyword ID column
-	{
-		ArrayList<Pair<Integer, Integer>> retList = new ArrayList<Pair<Integer, Integer>>();
-		// We need to have a treemap already so we can chec ascendancy.
-		if( idMap.size() <= 0 )
-	    	throw new RuntimeException( "No KW tree to use for CheckTableForInferables!");
-		try {
-			int currBaseID = -1;
-			ArrayList<Integer> keywordsForBase = new ArrayList<Integer>(20);
-			while (rs.next()) {
-			    int baseID = rs.getInt(baseIDColName);
-			    if(( baseID == 0 ) && rs.wasNull() )
-			    	throw new RuntimeException( "CheckTableForInferables got NULL baseID index value!");
-			    int kwIdx = rs.getInt(kwIDColName);
-			    if(( kwIdx == 0 ) && rs.wasNull() )
-			    	throw new RuntimeException( "CheckTableForInferables got NULL kwID index value!");
-			    if( !idMap.containsKey( kwIdx ))
-			    	throw new RuntimeException( "CheckTableForInferables got Unknown kwID index value: " + kwIdx );
-			    // Now we see if we are beginning a new baseID
-			    if( baseID != currBaseID ) {
-			    	currBaseID = baseID;
-			    	keywordsForBase.clear();
-			    	keywordsForBase.add( kwIdx );
-			    }
-			    else { // Not the first kw for this base, so check against the others
-			    	boolean fAddKW = true;	// unless we determine otherwise...
-			    	for( int i=0; i<keywordsForBase.size(); i++ ) {
-			    		int cmpResult = CmpAscendancy( kwIdx, keywordsForBase.get(i) );
-			    		if( cmpResult == 0 ) // if unrelated, just continue
-			    			continue;
-		    			// add a work item for the keyword, and then we're done with it.
-		    			Pair<Integer, Integer> newWorkItem;
-			    		if( cmpResult < 0 ) {	 // newKw is an ascendant of existing one.
-			    			newWorkItem = new Pair<Integer, Integer>( currBaseID, kwIdx );
-			    			// Note we do NOT add new one to the list, since it is inferable
-			    			fAddKW = false;
-			    		}
-			    		else {				 // newKw is a descendant of existing one.
-			    			newWorkItem = new Pair<Integer, Integer>( currBaseID, keywordsForBase.get(i) );
-			    			// Remove the inferable one from the list so we stop considering it
-			    			keywordsForBase.remove(i);
-			    			// New one is added below.
-			    		}
-		    			retList.add( newWorkItem );
-		    			break;	// We can stop looking since we found an issue
-			    	}
-			    	if( fAddKW )
-		    			// Add the new kw to the list
-				    	keywordsForBase.add( kwIdx );
-			    }
-			}
-		} catch(SQLException ex) {
-			System.err.println("SQLException: " + ex.getMessage());
-		}
-		return retList;
-	} // CheckTableForInferables
-*/
-
 }
