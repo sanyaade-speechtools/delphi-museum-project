@@ -259,7 +259,6 @@ public class SQLUtils {
 	 * @param imagePathsReader pass in non-NULL to add image path info
 	 */
 	public static void writeObjectsSQL( MetaDataReader metaDataReader,
-										String columnNames[],
 										ImagePathsReader imagePathsReader ) {
     	String filename = null;
     	String basefilename = null;
@@ -271,102 +270,28 @@ public class SQLUtils {
     	int nObjsProcessedTotal = 0;
     	int nObjsSkippedTotal = 0;
     	int nObjsPerDumpFile = 50000;
-    	String descMergeSeparator = "|";
-		ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
 		try {
 			debug(1,"Build Objects SQL...");
 			// We need ObjectID, ObjectNumber, ObjectName, Description
-			// TODO These should be mapped in the ColConfig file, and then
-			//      we should check that the named columns are present.
-			int objIDCol = 0;
-			int objNumCol = 4;
-			int objNameCol = 5;
-			if( !columnNames[objIDCol].equalsIgnoreCase("ObjectID")
-				|| !columnNames[objNumCol].equalsIgnoreCase("ObjectNumber")
-				|| !columnNames[objNameCol].equalsIgnoreCase("ObjectName"))
-				throw new RuntimeException("BuildObjectSQL columns not as expected!");
-			/*
-		    int returnVal = chooser.showSaveDialog(getJFrame());
-		    if(returnVal != JFileChooser.APPROVE_OPTION)
-		    	return;
-	    	filename = chooser.getSelectedFile().getPath();
-	    	*/
+			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
+
 			filename = metaDataReader.getFileName();
 	    	int iDot = filename.lastIndexOf('.');
 	    	if( iDot<=0 )
 	    		throw new RuntimeException("BuildObjectSQL: bad output filename!");
-	    	/*
-	    	extension = filename.substring(iDot);
-	    	if(( filename.charAt(iDot-1) == '1' )
-	    		&& ( filename.charAt(iDot-2) == '_' ))
-	    		iDot -= 2;
-	    	 */
+
 	    	basefilename = filename.substring(0, iDot)+'_';
 			BufferedWriter objWriter = null;
 	    	iOutputFile = 0;
-			ArrayList<String> nextLine;
 			boolean fFirst = true;
 			boolean fWithNewlines = true;
-			int lastIDVal = -1;
-			ArrayList<String> lastStrings = new ArrayList<String>();
-			while((nextLine = metaDataReader.getNextLineAsColumns()) != null ) {
-				if(nextLine.get(objIDCol).length() == 0) {
-					debug(2,"Skipping line with empty id" );
-					continue;
-				}
+			Pair<Integer,ArrayList<String>> objInfo = null;
+			while((objInfo = metaDataReader.getNextObjectAsColumns()) != null ) {
+				int id = objInfo.first;
+				ArrayList<String> objStrings = objInfo.second;
 
-				int id = Integer.parseInt(nextLine.get(objIDCol));
-				if( lastIDVal < 0 ) {
-					lastStrings.addAll(nextLine);
-					lastIDVal = id;
-					continue;
-				}
-				if( id == lastIDVal ) {
-					// We cannot merge objNum or Name, but we will allow out of order
-					// primary lines, and set these fields
-					if( lastStrings.get(objNumCol).length() == 0 )
-						lastStrings.set(objNumCol, nextLine.get(objNumCol));
-					if( lastStrings.get(objNameCol).length() == 0 )
-						lastStrings.set(objNameCol, nextLine.get(objNameCol));
-					// Merge description columns
-					for( int i=0; i<descrCols.size(); i++ ) {
-						// Take each description column and fold all white space
-						// (especially the newlines) into a single space.
-						int iCol = descrCols.get(i);
-						String desc = nextLine.get(iCol);
-						if(desc.length()!=0) {	// If new token is empty ("") skip it
-							String lastDesc = lastStrings.get(iCol);
-							if(lastDesc.length()==0)		// If old token is empty (""), just set
-								lastStrings.set(iCol, desc);
-							else if(!desc.equalsIgnoreCase(lastDesc)
-									&& !lastDesc.contains(desc)) {
-								lastStrings.set(iCol, lastDesc+descMergeSeparator+desc);
-								debug(2,"Combining descriptions for id: "+id+
-											" ["+lastStrings.get(iCol)+"]");
-							}
-						}
-					}
-					// Merge hiddenNotes columns
-					for( int iCol=0; iCol<DumpColumnConfigInfo.hiddenNotesCols.size(); iCol++ ) {
-						// Take each description column and fold all white space
-						// (especially the newlines) into a single space.
-						String hNote = nextLine.get(iCol);
-						if(hNote.length()!=0) {	// If new token is empty ("") skip it
-							String lastHNote = lastStrings.get(iCol);
-							if(lastHNote.length()==0)		// If old token is empty (""), just set
-								lastStrings.set(iCol, hNote);
-							else if(!hNote.equalsIgnoreCase(lastHNote)
-									&& !lastHNote.contains(hNote)) {
-								lastStrings.set(iCol, lastHNote+descMergeSeparator+hNote);
-								debug(2,"Combining descriptions for id: "+id+
-											" ["+lastStrings.get(iCol)+"]");
-							}
-						}
-					}
-					continue;
-				}
 				// Have a complete line - check for validity
-				String objNumStr = lastStrings.get(objNumCol);
+				String objNumStr = objStrings.get(objNumCol);
 				if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
 					// Skip lines with no object number.
 					debug(2,"writeObjectsSQL: Discarding line for id (bad objNum): "+id );
@@ -378,8 +303,6 @@ public class SQLUtils {
 						fFirst = true;
 			    		currFilename = basefilename + iOutputFile + extension;
 						objWriter = new BufferedWriter(new FileWriter( currFilename ));
-						//objWriter.append("USE "+dbName+";");
-						//objWriter.newLine();
 						// INSERT ALL in order:
 						// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
 						objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, hiddenNotes, img_path, creation_time) VALUES" );
@@ -387,15 +310,12 @@ public class SQLUtils {
 					}
 					// Otherwise, now we output the info for the last Line, and then transfer
 					// the next line to Last line and loop
-					writeObjectSQL( lastIDVal, lastStrings, objWriter,
+					writeObjectSQL( id, objStrings, objWriter,
 										fFirst, fWithNewlines, imagePathsReader );
 					fFirst = false;
 					nObjsProcessedFile++;
 					nObjsProcessedTotal++;
 					if( nObjsProcessedTotal >= nObjsOutMax ) {
-						if(lastStrings.size() > 0)
-							writeObjectSQL( lastIDVal, lastStrings, objWriter,
-												false, fWithNewlines, imagePathsReader  );
 						break;
 					}
 					if( nObjsProcessedFile >= nObjsPerDumpFile ) {
@@ -406,8 +326,6 @@ public class SQLUtils {
 						debug(1,"Wrote "+nObjsProcessedFile+" objects to file: "+currFilename);
 					}
 				}
-				lastIDVal = id;
-				lastStrings = nextLine;
 			}
 			if( objWriter != null ) {
 				objWriter.append(";");
@@ -433,10 +351,8 @@ public class SQLUtils {
 	public static void writeObjectSQL( int id, ArrayList<String> line, BufferedWriter writer,
 			boolean fFirst, boolean fWithNewlines, ImagePathsReader imagePathsReader ) {
 		try {
-			// TODO use function attribute to find this
-			int objNumCol = 4;
-			// TODO use function attribute to find this
-			int objNameCol = 5;
+			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
+			int objNameCol = DumpColumnConfigInfo.getNameColumnIndex();
 			String name = (line.get(objNameCol).length() == 0)?"(no name)"
 					:(line.get(objNameCol).replace("\"", "\\\"").replace("'", "\\'"));
 			ArrayList<ImageInfo> imgInfo = null;
