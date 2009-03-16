@@ -270,15 +270,16 @@
 					</heading>
 					<heading id="Panapolis" title="Panapolis"/>
 					<heading id="QusEgypt" title="Qus"/>
-					<heading id="Shurafa" title="Shurafa"/>
-					<heading id="Thebes"   title="Thebes">
-						<heading id="Karnak" title="Karnak"/>
-						<heading id="Luxor" title="Luxor"/>
+					<heading id="ShurafaEgypt" title="Shurafa"/>
+					<heading id="ThebesEgypt"   title="Thebes">
+						<excl value="Greece"/>
+						<heading id="KarnakEgypt" title="Karnak"/>
+						<heading id="LuxorEgypt" title="Luxor"/>
 						<heading id="SheikhabhelKurna" title="Sheikh abh el Kurna">
 							<synonym value="Sheik ab el Gurna"/>
 						</heading>
 					</heading>
-					<heading id="Tukh" title="Tukh"/>				
+					<heading id="TukhEgypt" title="Tukh"/>				
 				</heading>
 				<heading id="Sinaipeninsula" title="Sinai peninsula">
 					<heading id="ElArish" title="El Arish"/>
@@ -980,7 +981,6 @@
 						<synonym value="Milano"/>
 					</heading>
 					<heading id="SanMarino" title="San Marino"/>
-					<heading id="SanLazzaro" title="San Lazzaro"/>
 					<heading id="Ravenna" title="Ravenna"/>
 					<heading id="Turin" title="Turin">
 						<synonym value="Torino"/>
@@ -1145,7 +1145,10 @@
 			      <synonym value="Lebadia"/>
 			    </heading>
 			    <heading id="Akraiphia" title="Akraiphia"/>
-			    <heading id="Thebes" title="Thebes"/>
+			    <heading id="ThebesGreece" title="Thebes">
+			    	<synonym value="Thívai"/>
+			    	<excl value="Egypt"/>
+			    </heading>
 			  </heading>
 			  <heading id="Locris" title="Locris">
 			    <synonym value="Lokris"/>
@@ -2709,9 +2712,10 @@
 				<heading id="Amazonjungle" title="Amazon jungle"/>
 			</heading>
 			<heading id="Chile" title="Chile">  <!-- done -->
-				<heading id="Santiago" title="Santiago">
-			  <heading id="ElTemple" title="El Temple"/>
-			</heading>
+				<heading id="SantiagoChile" title="Santiago">
+					<excl value="Peru"/>
+			  		<heading id="ElTempleChile" title="El Temple"/>
+				</heading>
 			<heading id="Pisagua" title="Pisagua">
 			  <heading id="Guacadelapuntadepichalonumber1" title="Guaca de la punta de pichalo, number 1"/>
 			  <heading id="GuacadePisaguaviejoNo2" title="Guaca de Pisagua, viejo, No. 2"/>
@@ -2950,8 +2954,9 @@
 								<heading id="OcucajeSiteG" title="Ocucaje Site G"/>
 							</heading>
 							<heading id="PuebloNuevo" title="Pueblo Nuevo"/>
-							<heading id="Santiago" title="Santiago">
+							<heading id="SantiagoPeru" title="Santiago">
 								<heading id="SantiagoSiteS" title="Santiago Site S"/>
+								<excl value="Chile"/>
 							</heading>
 							<heading id="Tate" title="Tate"/>
 						</heading>
@@ -3534,7 +3539,9 @@
 					<heading id="Navojoa" title="Navojoa">
 						<heading id="Mayo" title="Mayo"/>
 					</heading>
-					<heading id="Nogales" title="Nogales"/>
+					<heading id="NogalesMX" title="Nogales">
+						<excl value="Arizona"/>
+					</heading>
 					<heading id="PuntaLaCholea" title="Punta La Cholea"/>
 					<heading id="PuntaPenasco" title="Punta Penasco"/>
 					<heading id="SanCarloCove" title="San Carlo Cove"/>
@@ -3628,9 +3635,9 @@
 					</heading>
 					<heading id="NorthCarolina" title="North Carolina">
 						<heading id="CherokeeLodge" title="Cherokee Lodge"/>
-						<heading id="NCHorrycounty" title="Horry county">
-							<heading id="Greenville" title="Greenville">
-								<heading id="TarRiver" title="Tar River"/>
+						<heading id="HorryCoNC" title="Horry county">
+							<heading id="GreenvilleHorryNC" title="Greenville">
+								<heading id="TarRiverHorryNC" title="Tar River"/>
 							</heading>
 						</heading>
 						<heading id="NCRichmondCounty" title="Richmond county">
@@ -3643,172 +3650,232 @@
 					</heading>
 				</heading>
 				<heading id="Northwesternstates" title="Northwestern states"> <!-- All done except ALASKA -->
+					<synonym value="Northwest Coast"/>
 					<heading id="Alaska" title="Alaska"> <!-- ALPHABETIZE -->
 						<synonym value="PROVENIENCE = Alaska"/>
 						<synonym value="Pymiuth"/> <!-- Where is this?  (from USA, subarctic) -->
 						<synonym value="Western Subarctic"/> <!-- Where is this?  (from USA, subarctic) -->
-						<heading id="NorthwestBeringSea" title="Northwest Bering Sea"/>
-						<heading id="AleutianIslands" title="Aleutian Islands">
-						  <heading id="WesternAleutians" title="Western Aleutians">
-						    <heading id="NearIslands" title="Near Islands">
-						      <heading id="AttuIsland" title="Attu Island"/>
-						      <heading id="AgattuIsland" title="Agattu Island"/>
-						      <heading id="ShemyaIsland" title="Shemya Island"/>
-						    </heading>
-						  </heading>
-						  <heading id="FoxIslands" title="Fox Islands">
-						    <heading id="UnalaskaIsland" title="Unalaska Island">
-						      <heading id="IliuLuik" title="Iliu Luik">
-						        <synonym value="City of Unalaska"/>
-						        <synonym value="Iliuliuk"/>
-						        <synonym value="Illiuliuk"/>
-						        <synonym value="Moolook"/>
-						        <synonym value="Oulioculiuk"/>
-						      </heading>
-						      <heading id="Unalaska" title="Unalaska">
-							<synonym value="Iluulux"/>
-							</heading>
-						      <heading id="DutchHarbor" title="Dutch Harbor"/>
-						    </heading>
-						    <heading id="UmnakIsland" title="Umnak Island">
-						      <heading id="Nikolski" title="Nikolski"/>
-						    </heading>
-						  </heading>
-						  <heading id="CentralAleutians" title="Central Aleutians">
-						    <heading id="AndreanofIslands" title="Andreanof Islands">
-						      <heading id="AtkaIsland" title="Atka Island"/>
-						      <heading id="SaltIsland" title="Salt Island"/>
-						      <heading id="ChugulIsland" title="Chugul Island"/>
-						      <heading id="SeguamIsland" title="Seguam Island"/>
-						    </heading>
-						    <heading id="RatIslands" title="Rat Islands">
-						      <heading id="AmchitkaIsland" title="Amchitka Island"/>
-						    </heading>
-						  </heading>
-						  <heading id="Unalaska" title="Unalaska"/>
-						  <heading id="PribilofIslands" title="Pribilof Islands">
-						    <heading id="StPaulIsland" title="St. Paul Island"/>
-						    <heading id="StGeorgeIsland" title="St. George Island"/>
-						  </heading>
-						  <heading id="BelkofskiIsland" title="Belkofski Island ?"/>
-						  <heading id="IslandsoftheFourMountains" title="Islands of the Four Mountains">
-						    <heading id="KagamilIsland" title="Kagamil Island"/>
-						  </heading>
-						  <heading id="Aleutian" title="Aleutian"/>
-						  <heading id="Aleut" title="Aleut"/>
-						  <heading id="AleutianIslands" title="Aleutian Islands"/>
-						</heading>
-						<heading id="PointBarrow" title="Point Barrow"/>
+						<heading id="AlaskanInterior" title="Alaskan Interior"/>
+						<heading id="NorthernAlaska" title="Northern Alaska"/>
 						<heading id="SoutheastAlaska" title="Southeast Alaska"/>
-						<heading id="Kodiakdistrict" title="Kodiak district">
-						  <heading id="KodiakIsland" title="Kodiak Island">
-						    <heading id="Chiniak" title="Chiniak"/>
-						    <heading id="StPaul" title="St. Paul"/>
-						    <heading id="Kaguyak" title="Kaguyak">
-						      <synonym value="Kaguiak"/>
-						    </heading>
-						    <heading id="Karluk" title="Karluk"/>
-						    <heading id="OldKaguiak" title="Old Kaguiak"/>
-						    <heading id="Kodiak" title="Kodiak"/>
-						  </heading>
-						  <heading id="UyakIsland" title="Uyak Island"/>
-						  <heading id="KarlukIsland" title="Karluk Island"/>
-						  <heading id="Kodiak" title="Kodiak"/>
+						<heading id="SouthernAlaska" title="Southern Alaska"/>
+						<heading id="WesternAlaska" title="Western Alaska"/>
+						<heading id="SouthwestCoast" title="Southwest Coast">
+							<heading id="SouthwestCoastbelowYukonR" title="Southwest Coast below Yukon R."/>
 						</heading>
-						<heading id="Chilkat" title="Chilkat"/>
-						<heading id="Juneau" title="Juneau"/>
-						<heading id="Yakutat" title="Yakutat"/>
+						
+						
+						<heading id="AleutianIslands" title="Aleutian Islands">
+							<heading id="WesternAleutians" title="Western Aleutians">
+								<heading id="NearIslands" title="Near Islands">
+									<heading id="AttuIsland" title="Attu Island"/>
+									<heading id="AgattuIsland" title="Agattu Island"/>
+									<heading id="ShemyaIsland" title="Shemya Island"/>
+								</heading>
+							</heading>
+							<heading id="FoxIslands" title="Fox Islands">
+								<heading id="UnalaskaIsland" title="Unalaska Island">
+									<heading id="IliuLuik" title="Iliu Luik">
+										<synonym value="City of Unalaska"/>
+										<synonym value="Iliuliuk"/>
+										<synonym value="Illiuliuk"/>
+										<synonym value="Moolook"/>
+										<synonym value="Oulioculiuk"/>
+									</heading>
+									<heading id="Unalaska" title="Unalaska">
+										<synonym value="Iluulux"/>
+									</heading>
+									<heading id="DutchHarbor" title="Dutch Harbor"/>
+								</heading>
+								<heading id="UmnakIsland" title="Umnak Island">
+									<heading id="Nikolski" title="Nikolski"/>
+								</heading>
+							</heading>
+							<heading id="CentralAleutians" title="Central Aleutians">
+								<heading id="AndreanofIslands" title="Andreanof Islands">
+									<heading id="AtkaIsland" title="Atka Island"/>
+									<heading id="SaltIsland" title="Salt Island"/>
+									<heading id="ChugulIsland" title="Chugul Island"/>
+									<heading id="SeguamIsland" title="Seguam Island"/>
+								</heading>
+								<heading id="RatIslands" title="Rat Islands">
+									<heading id="AmchitkaIsland" title="Amchitka Island"/>
+								</heading>
+							</heading>
+							<heading id="PribilofIslands" title="Pribilof Islands">
+								<heading id="StPaulIsland" title="St. Paul Island"/>
+								<heading id="StGeorgeIsland" title="St. George Island"/>
+							</heading>
+							<heading id="BelkofskiIsland" title="Belkofski Island ?"/>
+							<heading id="IslandsoftheFourMountains" title="Islands of the Four Mountains">
+								<heading id="KagamilIsland" title="Kagamil Island"/>
+							</heading>
+							<heading id="Aleutian" title="Aleutian"/>
+							<heading id="Aleut" title="Aleut"/>
+							<heading id="AleutianIslands" title="Aleutian Islands"/>
+						</heading>
 						<heading id="AlexanderArchipelago" title="Alexander Archipelago">
-						  <heading id="BaranofIsland" title="Baranof Island">
-						    <heading id="Sitka" title="Sitka"/>
-						  </heading>
-						  <heading id="AdmiraltyIsland" title="Admiralty Island">
-						    <heading id="Angoon" title="Angoon"/>
-						    <heading id="KootanshooInlet" title="Kootanshoo Inlet"/>
-						  </heading>
-						  <heading id="PrinceofWalesIsland" title="Prince of Wales Island">
-						    <heading id="Howkan" title="Howkan"/>
-						  </heading>
-						  <heading id="ForresterIsland" title="Forrester Island"/>
+							<heading id="AdmiraltyIsland" title="Admiralty Island">
+								<heading id="Angoon" title="Angoon"/>
+								<heading id="KootanshooInlet" title="Kootanshoo Inlet"/>
+							</heading>
+							<heading id="BaranofIsland" title="Baranof Island">
+								<heading id="Sitka" title="Sitka"/>
+							</heading>
+							<heading id="ForresterIsland" title="Forrester Island"/>
+							<heading id="PrinceofWalesIsland" title="Prince of Wales Island">
+								<heading id="Howkan" title="Howkan"/>
+							</heading>
 						</heading>
-						<heading id="Tyonek" title="Tyonek"/>
-						<heading id="Skidegate" title="Skidegate"/>
-						<heading id="CookInlet" title="Cook Inlet"/>
-						<heading id="KotzebueSound" title="Kotzebue Sound">
-						  	<heading id="NoatakRiver" title="Noatak River">
-						    	<heading id="HeadofNoatakRiver" title="Head of Noatak River"/>
-						  	</heading>
-						  	<heading id="KoowakRiver" title="Koowak River"/>
-						  	<heading id="HeadofKotzebueSound" title="Head of Kotzebue Sound"/>
+						<heading id="AmoknakIsland" title="Amoknak Island"/>
+						<heading id="Anchorage" title="Anchorage"/>
+						<heading id="Andreafsky" title="Andreafsky">
+							<synonym value="St. Mary's"/>
 						</heading>
-						<heading id="Savonoski" title="Savonoski"/>
-						<heading id="NortonSound" title="Norton Sound">
-						  <heading id="Unalaklik" title="Unalaklik">
-						    <synonym value="Unalakluk"/>
-						  </heading>
-						  <heading id="Unalakleet" title="Unalakleet">
-						    <synonym value="Unalaklit"/>
-						  </heading>
-						  <heading id="GolovinBay" title="Golovin Bay"/>
-						  <heading id="NortonBay" title="Norton Bay"/>
+						<heading id="AnnetteIsland" title="Annette Island">
+							<heading id="NewMetlakatla" title="New Metlakatla">
+								<synonym value="Metlakatla"/>
+							</heading>
+						</heading>
+						<heading id="Anvik" title="Anvik"/>
+						<heading id="BeringSea" title="Bering Sea">
+							<heading id="StephanIsland" title="Stephan Island">
+								<heading id="Utjoik" title="Utjoik"/>
+							</heading>
 						</heading>
 						<heading id="BeringStrait" title="Bering Strait">
-						  <heading id="CoastofBeringStrait" title="Coast of Bering Strait">
-						    <heading id="CapePrinceofWales" title="Cape Prince of Wales"/>
-						  </heading>
+							<heading id="CoastofBeringStrait" title="Coast of Bering Strait">
+								<heading id="CapePrinceofWales" title="Cape Prince of Wales"/>
+							</heading>
 						</heading>
-						<heading id="TananaRiver" title="Tanana River"/>
-						<heading id="KingIsland" title="King Island"/>
-						<heading id="Paimiut" title="Paimiut">
-						  <synonym value="Pymuth"/>
-						</heading>
-						<heading id="Kosorefski" title="Kosorefski"/>
-						<heading id="Ketchikan" title="Ketchikan"/>
+						<heading id="BirnirkSite" title="Birnirk Site"/>
 						<heading id="BristolBay" title="Bristol Bay">
-						  <heading id="AlaganokRiver" title="Alaganok River">
-						    <heading id="Alaganok" title="Alaganok"/>
-						  </heading>
-						  <heading id="AlaganakLakeDistrict" title="Alaganak Lake District"/>
-						  <heading id="UgashikRiver" title="Ugashik River"/>
-						  <heading id="Naknek" title="Naknek"/>
+							<heading id="AlaganokRiver" title="Alaganok River">
+								<heading id="Alaganok" title="Alaganok"/>
+							</heading>
+							<heading id="AlaganakLakeDistrict" title="Alaganak Lake District"/>
+							<heading id="Naknek" title="Naknek"/>
+							<heading id="UgashikRiver" title="Ugashik River"/>
+							</heading>
+						<heading id="BrooksRange" title="Brooks Range">
+							<heading id="AnaktuvukPass" title="Anaktuvuk Pass"/>
 						</heading>
-						<heading id="NorthernAlaska" title="Northern Alaska"/>
 						<heading id="CapeBarrow" title="Cape Barrow"/>
-						<heading id="Nome" title="Nome"/>
-						<heading id="Itiutiuk" title="Itiutiuk"/>
-						<heading id="NortonSoundtoBristolBay" title="Norton Sound to Bristol Bay"/>
-						<heading id="Anchorage" title="Anchorage"/>
-						<heading id="YesBay" title="Yes Bay"/>
-						<heading id="Coast" title="Coast"/>
-						<heading id="SouthernAlaska" title="Southern Alaska"/>
+						<heading id="CapeBlossom" title="Cape Blossom"/>
+						<heading id="CapeDarby" title="Cape Darby"/>
+						<heading id="CapeLisburne" title="Cape Lisburne"/>
 						<heading id="CapeNome" title="Cape Nome"/>
-						<heading id="SewardPeninsula" title="Seward Peninsula">
-						  <heading id="PortClarence" title="Port Clarence"/>
-						  <heading id="LoppLagoon" title="Lopp Lagoon"/>
-						  <heading id="Cavia" title="Cavia"/>
+						<heading id="CapeYaktag" title="Cape Yaktag"/>
+						<heading id="CapeRomanof" title="Cape Romanof"/>
+						<heading id="CapeRomanzof" title="Cape Romanzof"/>
+						<heading id="CapeVancouver" title="Cape Vancouver">
+							<heading id="Kusilvak" title="Kusilvak"/>
+							<heading id="Chalitmut" title="Chalitmut"/>
 						</heading>
-						<heading id="SledgeIsland" title="Sledge Island"/>
-						<heading id="PointLay" title="Point Lay"/>
+						<heading id="ChichgofIsland" title="Chichgof Island">
+							<heading id="FreshwaterBay" title="Freshwater Bay"/>
+						</heading>
+						<heading id="Chilkat" title="Chilkat"/> <!-- Is this a place name as well as a culture? -->
+						<heading id="CookInlet" title="Cook Inlet"/>
+						<heading id="GeorgeCamp" title="George Camp"/>
+						<heading id="Hoonah" title="Hoonah">
+							<synonym value="Huna"/>
+						</heading>
+						<heading id="HooperBay" title="Hooper Bay">
+							<synonym value="Askinuk"/>
+						</heading>
+						<heading id="Itiutiuk" title="Itiutiuk"/>
+						<heading id="Juneau" title="Juneau"/>
+						<heading id="Kammaoot" title="Kammaoot ?"/>
+						<heading id="Ketchikan" title="Ketchikan"/>
+						<heading id="KingIsland" title="King Island"/>
+						<heading id="Klukwan" title="Klukwan"/>
+						<heading id="Kosorefski" title="Kosorefski"/>
 						<heading id="KoukukRiver" title="Koukuk River">
-						  <synonym value="Koyiukuk River"/>
-						  <synonym value="Koyukuk River"/>
+							<synonym value="Koyiukuk River"/>
+							<synonym value="Koyukuk River"/>
 						</heading>
-						<heading id="StMichaelIsland" title="St. Michael Island"/>
-						<heading id="Shageluk" title="Shageluk"/>
 						<heading id="Kushunuk" title="Kushunuk"/>
-						<heading id="Malakleet" title="Malakleet"/>
-						<heading id="WesternAlaska" title="Western Alaska"/>
 						<heading id="Kuskokwim" title="Kuskokwim">
-						  <heading id="KuskokwimRiver" title="Kuskokwim River">
-						    <heading id="LowerKuskokwimRiver" title="Lower Kuskokwim River"/>
-						  </heading>
+							<heading id="KuskokwimRiver" title="Kuskokwim River">
+								<heading id="LowerKuskokwimRiver" title="Lower Kuskokwim River"/>
+							</heading>
 						</heading>
-						<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
+						<heading id="KotzebueSound" title="Kotzebue Sound">
+							<heading id="HeadofKotzebueSound" title="Head of Kotzebue Sound"/>
+							<heading id="KoowakRiver" title="Koowak River"/>
+							<heading id="NoatakRiver" title="Noatak River">
+								<heading id="HeadofNoatakRiver" title="Head of Noatak River"/>
+							</heading>
+						</heading>
+						<heading id="Malakleet" title="Malakleet"/>
+						<heading id="Nome" title="Nome"/>
+						<heading id="NorthSlope" title="North Slope">
+							<heading id="ColvilleRiver" title="Colville River"/>
+							<heading id="InaruRiver" title="Inaru River"/>
+						</heading>
+						<heading id="NortonSound" title="Norton Sound">
+							<heading id="GolovinBay" title="Golovin Bay"/>
+							<heading id="NortonBay" title="Norton Bay"/>
+							<heading id="Unalakleet" title="Unalakleet">
+								<synonym value="Unalaklit"/>
+							</heading>
+							<heading id="Unalaklik" title="Unalaklik">
+								<synonym value="Unalakluk"/>
+							</heading>
+						</heading>
+						<heading id="Nuklukayet" title="Nuklukayet"/>
 						<heading id="Nulato" title="Nulato"/>
-						<heading id="StMichael" title="St. Michael"/>
-						<heading id="PrinceWilliamSound" title="Prince William Sound">
-						  <heading id="PortEtches" title="Port Etches"/>
+						<heading id="Paimiut" title="Paimiut">
+							<synonym value="Pymuth"/>
 						</heading>
+						<heading id="Pastolik" title="Pastolik">
+							<synonym value="Pashtol"/>
+						</heading>
+						<heading id="PointBarrow" title="Point Barrow"/>
+						<heading id="PointHope" title="Point Hope">
+							<heading id="Tigara" title="Tigara"/>
+						</heading>
+						<heading id="PointLay" title="Point Lay"/>
+						<heading id="PrinceWilliamSound" title="Prince William Sound">
+							<heading id="PortEtches" title="Port Etches"/>
+						</heading>
+						<heading id="Savonoski" title="Savonoski"/>
+						<heading id="SewardPeninsula" title="Seward Peninsula">
+							<heading id="Cavia" title="Cavia"/>
+							<heading id="LoppLagoon" title="Lopp Lagoon"/>
+							<heading id="PortClarence" title="Port Clarence"/>
+						</heading>
+						<heading id="Shageluk" title="Shageluk"/>
+						<heading id="Skidegate" title="Skidegate"/>
+						<heading id="SledgeIsland" title="Sledge Island"/>
+						<heading id="Stebbins" title="Stebbins"/>
+						<heading id="TananaRiver" title="Tanana River"/>
+						<heading id="Tyonek" title="Tyonek"/>
+						<heading id="Wainwright" title="Wainwright"/>
+						<heading id="WindslowIsland" title="Windslow Island"/>
+						<heading id="Yakutat" title="Yakutat"/>
+						<heading id="YesBay" title="Yes Bay"/>
+						
+						<heading id="NorthwestBeringSea" title="Northwest Bering Sea"/>
+						<heading id="Kodiakdistrict" title="Kodiak district">
+						  	<heading id="KodiakIsland" title="Kodiak Island">
+						    	<heading id="Chiniak" title="Chiniak"/>
+						    	<heading id="StPaulKodiakAK" title="St. Paul"/>
+						  		<heading id="KaguyakKodiakAK" title="Kaguyak">
+						      		<synonym value="Kaguiak"/>
+						    	</heading>
+						    	<heading id="Karluk" title="Karluk"/>
+						    	<heading id="OldKaguiak" title="Old Kaguiak"/>
+						    	<heading id="Kodiak" title="Kodiak"/>
+						  	</heading>
+						  <heading id="UyakIsland" title="Uyak Island"/>
+						  <heading id="KarlukIsland" title="Karluk Island"/>
+						</heading>
+						<heading id="NortonSoundtoBristolBay" title="Norton Sound to Bristol Bay"/>
+						<heading id="StMichael" title="St. Michael"/>
+						<heading id="StMichaelIsland" title="St. Michael Island"/>
+						<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
 						<heading id="LowerYukontoKuskokwim" title="Lower Yukon to Kuskokwim"/>
 						<heading id="CopperRiver" title="Copper River">
 						  <heading id="CopperRiverdelta" title="Copper River delta"/>
@@ -3817,91 +3884,29 @@
 						<heading id="NunivakIsland" title="Nunivak Island">
 						  <heading id="Mekoryuk" title="Mekoryuk"/>
 						</heading>
-						<heading id="Klukwan" title="Klukwan"/>
-						<heading id="Stebbins" title="Stebbins"/>
 						<heading id="OceanCape" title="Ocean Cape"/>
-						<heading id="AnnetteIsland" title="Annette Island">
-							  <heading id="NewMetlakatla" title="New Metlakatla">
-							  	<synonym value="Metlakatla"/>
-							  </heading>
-						</heading>
-						<heading id="CapeVancouver" title="Cape Vancouver">
-						  <heading id="Kusilvak" title="Kusilvak"/>
-						  <heading id="Chalitmut" title="Chalitmut"/>
-						</heading>
 						<heading id="PastolikRiver" title="Pastolik River"/>
-						<heading id="Hoonah" title="Hoonah">
-						  <synonym value="Huna"/>
-						</heading>
-						<heading id="BeringSea" title="Bering Sea">
-						  <heading id="StephanIsland" title="Stephan Island">
-						    <heading id="Utjoik" title="Utjoik"/>
-						  </heading>
-						</heading>
-						<heading id="CapeYaktag" title="Cape Yaktag"/>
-						<heading id="Nuklukayet" title="Nuklukayet"/>
-						<heading id="CapeLisburne" title="Cape Lisburne"/>
-						<heading id="PointHope" title="Point Hope">
-						  <heading id="Tigara" title="Tigara"/>
-						</heading>
-						<heading id="AmoknakIsland" title="Amoknak Island"/>
+						
 						<heading id="Kosovefski" title="Kosovefski"/>
-						<heading id="Kammaoot" title="Kammaoot ?"/>
-						<heading id="Andreafsky" title="Andreafsky">
-						  <synonym value="St. Mary's"/>
-						</heading>
 						<heading id="KwidjakRiver" title="Kwidjak River"/>
-						<heading id="Anvik" title="Anvik"/>
 						<heading id="StevensVillage" title="Stevens Village"/>
-						<heading id="GeorgeCamp" title="George Camp"/>
-						<heading id="CapeRomanof" title="Cape Romanof"/>
 						<heading id="Skagway" title="Skagway"/>
-						<heading id="ChichgofIsland" title="Chichgof Island">
-						  <heading id="FreshwaterBay" title="Freshwater Bay"/>
-						</heading>
-						<heading id="Wainwright" title="Wainwright"/>
-						<heading id="WindslowIsland" title="Windslow Island"/>
-						<heading id="AlaskanInterior" title="Alaskan Interior"/>
 						<heading id="Katmai" title="Katmai"/>
 						<heading id="Nutchigdistrict" title="Nutchig district"/>
-						<heading id="HooperBay" title="Hooper Bay">
-						    <synonym value="Askinuk"/>
-						</heading>
-						<heading id="CapeBlossom" title="Cape Blossom"/>
-						<heading id="BrooksRange" title="Brooks Range">
-						  <heading id="AnaktuvukPass" title="Anaktuvuk Pass"/>
-						</heading>
-						<heading id="Pastolik" title="Pastolik">
-						  <synonym value="Pashtol"/>
-						</heading>
-						<heading id="NorthSlope" title="North Slope">
-						  <heading id="ColvilleRiver" title="Colville River"/>
-						  <heading id="InaruRiver" title="Inaru River"/>
-						</heading>
 						<heading id="Marshall" title="Marshall"/>
 						<heading id="Mtoceyk" title="Mtoceyk ?"/>
 						<heading id="Nushagak" title="Nushagak"/>
-						<heading id="SouthwestCoast" title="Southwest Coast">
-						  <heading id="SouthwestCoastbelowYukonR" title="Southwest Coast below Yukon R."/>
-						</heading>
 						<heading id="Noorvik" title="Noorvik"/>
 						<heading id="LittleDiomedeIsland" title="Little Diomede Island"/>
-						<heading id="CapeRomanzof" title="Cape Romanzof"/>
 						<heading id="Haines" title="Haines"/>
 						<heading id="Kenai" title="Kenai"/>
 						<heading id="Allakaket" title="Allakaket"/>
 						<heading id="BeringSeaandNorth" title="Bering Sea and North"/>
 						<heading id="Palmer" title="Palmer"/>
-						<heading id="Northwest" title="Northwest"/>
-						<heading id="CapeDarby" title="Cape Darby"/>
 						<heading id="Northway" title="Northway"/>
 						<heading id="Kotzebue" title="Kotzebue"/>
 						<heading id="Chignik" title="Chignik"/>
-						<heading id="AmchitkaIsland" title="Amchitka Island"/>
-						<heading id="BirnirkSite" title="Birnirk Site"/>
 						<heading id="NuchekIsland" title="Nuchek Island"/>
-						<heading id="PointHope" title="Point Hope"/>
-						<heading id="StLawrenceIsland" title="St. Lawrence Island"/>
 						<heading id="StMichael" title="St. Michael"/>
 						<heading id="StMichaelorTeller" title="St. Michael or Teller"/>
 						<heading id="Teller" title="Teller"/>
@@ -3934,13 +3939,13 @@
 						<heading id="Daxatkanada" title="Daxatkanada"/>
 						<heading id="PillsburyPoint" title="Pillsbury Point"/>
 					</heading>
-					<heading id="Idaho" title="Idaho"> <!-- done -->
+					<heading id="IdahoState" title="Idaho"> <!-- done -->
 						<heading id="Bannock" title="Bannock">
 							<heading id="Pocatello" title="Pocatello"/>
 						</heading>
 						<heading id="SalmonRiverCanyon" title="Salmon River Canyon"/>
 					</heading>
-					<heading id="Oregon" title="Oregon"> <!-- done -->
+					<heading id="OregonState" title="Oregon"> <!-- done -->
 						<synonym value="PROVENIENCE = Oregon"/>
 						<heading id="EasternOregon" title="Eastern Oregon"/>  <!-- FIX -->
 						<heading id="NorthwestOregon" title="Northwest Oregon"/>  <!-- FIX -->
@@ -3992,7 +3997,9 @@
 							<heading id="ChetcoRiver" title="Chetco River">
 								<heading id="MouthofChetcoRiver" title="Mouth of Chetco River"/>
 							</heading>
-							<heading id="ElkRiver" title="Elk River"/>
+							<heading id="ElkRiverOR" title="Elk River">
+								<excl value="Minnesota"/>
+							</heading>
 							<heading id="GoldBeach" title="Gold Beach"/>
 							<heading id="PortOrford" title="Port Orford"/>
 						</heading>
@@ -4184,7 +4191,7 @@
 							<synonym value="OR-YA-NL"/>
 						</heading>
 					</heading>
-					<heading id="Montana" title="Montana"> <!-- done -->
+					<heading id="MontanaState" title="Montana"> <!-- done -->
 						<heading id="AvonValley" title="Avon Valley"/>
 						<heading id="BigHorn" title="Big Horn">
 							<heading id="LittleBighorn" title="Little Bighorn"/>
@@ -4205,7 +4212,7 @@
 						</heading>
 						<heading id="GlacierNationalPark" title="Glacier National Park"/>
 					</heading>
-					<heading id="Washington" title="Washington"> <!-- done -->
+					<heading id="WashingtonState" title="Washington"> <!-- done -->
 						<heading id="AsotinCounty" title="Asotin County">
 							<synonym value="Asotin"/>
 							<synonym value="Asotin Co."/>
@@ -4300,28 +4307,25 @@
 							<synonym value="Klicktat"/>
 							<synonym value="Klicktat Co."/>
 							<heading id="MillersIsland" title="Millers Island">
+								<synonym value="dp: OR-Miller's I., WASHINGTON; Columbia River; Miller's Island"/>
 								<!--<heading id="Site3" title="Site 3"/>   Disambiguate -->
 								<!--<heading id="Site4" title="Site 4"/>   Disambiguate -->
 								<!--<heading id="Site5" title="Site 5"/>   Disambiguate -->
 								<heading id="WAKL63" title="WA-KL-63">
 									<synonym value="45KL63"/>
 									<synonym value="45-KL-63"/>
-									<synonym value="dp: OR-Miller's I., WASHINGTON; Columbia River; Miller's Island"/>
 								</heading>
 								<heading id="WAKL242" title="WA-KL-242">
 									<synonym value="45KL242"/>
 									<synonym value="45-KL-242"/>
-									<synonym value="dp: OR-Miller's I., WASHINGTON; Columbia River; Miller's Island"/>
 								</heading>
 								<heading id="WAKL267" title="WA-KL-267">
 									<synonym value="45KL267"/>
 									<synonym value="45-KL-267"/>
-									<synonym value="dp: OR-Miller's I., WASHINGTON; Columbia River; Miller's Island"/>
 								</heading>
 								<heading id="WAKL424" title="WA-KL-424">
 									<synonym value="45KL424"/>
 									<synonym value="45-KL-424"/>
-									<synonym value="dp: OR-Miller's I., WASHINGTON; Columbia River; Miller's Island"/>
 								</heading>
 							</heading>
 							<heading id="PetroglyphPoint" title="Petroglyph Point"/>
@@ -4421,7 +4425,7 @@
 							</heading>
 						</heading>
 					</heading>
-					<heading id="Wyoming" title="Wyoming"> <!-- done -->
+					<heading id="WyomingState" title="Wyoming"> <!-- done -->
 						<heading id="Natrona" title="Natrona">
 							<heading id="Casper" title="Casper"/>
 						</heading>
@@ -4436,7 +4440,6 @@
 							</heading>
 						</heading>
 					</heading>
-					<heading id="NorthwestCoast" title="Northwest Coast"/>
 					<heading id="ColumbiaRiverBasin" title="Columbia River Basin"/>
 					<heading id="ColumbiaPlateau" title="Columbia Plateau"/>
 					<heading id="ColumbiaRiver" title="Columbia River"/>
@@ -4697,85 +4700,88 @@
 					    </heading>
 					    <heading id="Navajocounty" title="Navajo county">
 					    	<synonym value="PROVENIENCE = Navajo county, Arizona"/>
-				    		<synonym value="Bidahochi Pueblo"/>
-				    		<synonym value="Dogoszzhi Biko"/>
-					      <heading id="NitsieCanyon" title="Nitsie Canyon"/>
-					      <heading id="TannerSprings" title="Tanner Springs"/>
-					      <heading id="Snowflake" title="Snowflake"/>
-					      <heading id="KeamsCanyon" title="Keams Canyon"/>
-					      <heading id="Sikyatki" title="Sikyatki"/>
-					      <heading id="Site1054" title="Site 1054">
-					        <synonym value="Bidahochi Pueblo"/>
-					      </heading>
-					      <heading id="Site2628" title="Site 2628">
-					        <synonym value="Dogoszzhi Biko"/>
-					      </heading>
-					      <heading id="Homolovi" title="Homolovi"/>
-					      <heading id="ShowlowRuin" title="Showlow Ruin"/>
-					      <heading id="ShowLow" title="Show Low"/>
-					      <heading id="WhiteCone" title="White Cone"/>
-					      <heading id="NavajoHeadSprings" title="Navajo Head Springs"/>
-					      <heading id="RedLakes" title="Red Lakes"/>
-					      <heading id="KinishbaRuin" title="Kinishba Ruin"/>
-					      <heading id="Whiteriver" title="Whiteriver"/>
-					      <heading id="Winslow" title="Winslow"/>
-					      <heading id="Awatovi" title="Awatovi"/>
-					      <heading id="Chilchinbito" title="Chilchinbito"/>
-					      <heading id="Jeddito" title="Jeddito"/>
-					      <heading id="Kayenta" title="Kayenta"/>
-					      <heading id="GourdCave" title="Gourd Cave"/>
-					      <heading id="TsegiCanyon" title="Tsegi Canyon"/>
-					      <heading id="Chilchintaboko" title="Chilchintaboko"/>
-					      <heading id="BetatakinRuin" title="Betatakin Ruin"/>
-					      <heading id="KeetSeelRuin" title="Keet Seel Ruin"/>
-					      <heading id="Awatori" title="Awatori"/>
-					      <heading id="Pinon" title="Pinon"/>
-					      <heading id="Holbrook" title="Holbrook"/>
-					      <heading id="MtStJoseph" title="Mt. St. Joseph"/>
-					      <heading id="Awatobi" title="Awatobi"/>
-					      <heading id="Shonto" title="Shonto"/>
-					      <heading id="GadiyahiMission" title="Gadiyahi Mission"/>
-					      <heading id="WestFlat" title="West Flat"/>
-					      <heading id="FreemanHollow" title="Freeman Hollow"/>
-					      <heading id="Lakeside" title="Lakeside"/>
-					      <heading id="DryLake" title="Dry Lake"/>
-					      <heading id="Dennebito" title="Dennebito"/>
-					      <heading id="EchoCave" title="Echo Cave"/>
-					      <heading id="HeadSprings" title="Head Springs"/>
-					      <heading id="AZSilverCrNL1" title="AZ-Silver Cr-NL- 1"/>
-					      <heading id="AZSilverCrNL2" title="AZ-Silver Cr-NL- 2"/>
-					      <heading id="AZSilverCrNL3" title="AZ-Silver Cr-NL- 3"/>
-					      <heading id="AZSilverCrNL12" title="AZ-Silver Cr-NL-12"/>
-					      <heading id="AZSilverCrNL4" title="AZ-Silver Cr-NL- 4"/>
-					      <heading id="AZSilverCrNL5" title="AZ-Silver Cr-NL- 5"/>
-					      <heading id="AZSilverCrNL6" title="AZ-Silver Cr-NL- 6"/>
-					      <heading id="AZSilverCrNL7" title="AZ-Silver Cr-NL- 7"/>
-					      <heading id="AZSilverCrNL8" title="AZ-Silver Cr-NL- 8"/>
-					      <heading id="AZSilverCrNL9" title="AZ-Silver Cr-NL- 9"/>
-					      <heading id="AZSilverCrNL10" title="AZ-Silver Cr-NL-10"/>
-					      <heading id="AZSilverCrNL11" title="AZ-Silver Cr-NL-11"/>
-					      <heading id="AZNavajoCounty" title="AZ-Navajo County"/>
+					    	<synonym value="AZ-Navajo County"/>
+					    	<synonym value="AZ-Silver Cr-NL- 1"/>
+					    	<synonym value="AZ-Silver Cr-NL- 2"/>
+					    	<synonym value="AZ-Silver Cr-NL- 3"/>
+					    	<synonym value="AZ-Silver Cr-NL-12"/>
+					    	<synonym value="AZ-Silver Cr-NL- 4"/>
+					    	<synonym value="AZ-Silver Cr-NL- 5"/>
+					    	<synonym value="AZ-Silver Cr-NL- 6"/>
+					    	<synonym value="AZ-Silver Cr-NL- 7"/>
+					    	<synonym value="AZ-Silver Cr-NL- 8"/>
+					    	<synonym value="AZ-Silver Cr-NL- 9"/>
+					    	<synonym value="AZ-Silver Cr-NL-10"/>
+					    	<synonym value="AZ-Silver Cr-NL-11"/>
+					    	<heading id="AwatoviNavajoAZ" title="Awatovi">
+					    		<synonym value="Awatori"/> <!-- Misspelling -->
+					    		<synonym value="Awatobi"/>
+					    	</heading>
+					    	<heading id="BetatakinNavajoAZ" title="Betatakin Ruin"/>
+					    	<heading id="BidahochiPuebAZ" title="Bidahochi Pueblo">
+					    		<synonym value="Site 1054"/>
+							</heading>
+					    	<heading id="ChilchinbitoAZ" title="Chilchinbito"/>
+					    	<heading id="ChilchintabokoAZ" title="Chilchintaboko"/>
+					    	<heading id="DennebitoAZ" title="Dennebito"/>
+					    	<heading id="DogoszzhiBikoAZ" title="Dogoszzhi Biko">
+					    		<synonym value="Site 2628"/>
+							</heading>
+					    	<heading id="DryLakeNavajoAZ" title="Dry Lake"/>
+					    	<heading id="EchoCaveNavajoAZ" title="Echo Cave"/>
+					    	<heading id="FreemanHollowAZ" title="Freeman Hollow"/>
+					    	<heading id="GadiyahiMissionAZ" title="Gadiyahi Mission"/>
+					    	<heading id="GourdCaveAZ" title="Gourd Cave"/>
+					    	<heading id="HeadSpringsAZ" title="Head Springs"/>
+					    	<heading id="HomoloviNavajoAZ" title="Homolovi"/>
+					    	<heading id="JedditoNavajoAZ" title="Jeddito"/>
+					    	<heading id="LakesideNavajoAZ" title="Lakeside"/>
+					    	<heading id="KayentaNavajoAZ" title="Kayenta"/>
+					    	<heading id="KeamsCynNavajoAZ" title="Keams Canyon"/>
+					    	<heading id="KeetSeelRuinAZ" title="Keet Seel Ruin"/>
+					    	<heading id="KinishbaRuinAZ" title="Kinishba Ruin"/>
+					    	<heading id="MtStJosephAZ" title="Mt. St. Joseph"/>
+					    	<heading id="NavajoHeadSprsAZ" title="Navajo Head Springs"/>
+					    	<heading id="NitsieCanyonAZ" title="Nitsie Canyon"/>
+					    	<heading id="RedLakesNavajoAZ" title="Red Lakes"/>
+					    	<heading id="ShowLowNavajoAZ" title="Show Low">
+								<synonym value="Showlow Ruin"/>
+								<synonym value="Showlow Ruins"/>
+								<synonym value="Show Low Ruin"/>
+								<synonym value="Show Low Ruins"/>
+							</heading>
+					    	<heading id="ShontoNavajoAZ" title="Shonto"/>
+					    	<heading id="SikyatkiAZ" title="Sikyatki"/>
+					    	<heading id="SnowflakeAZ" title="Snowflake"/>
+					    	<heading id="TannerSpringsAZ" title="Tanner Springs"/>
+					    	<heading id="TsegiCynNavajoAZ" title="Tsegi Canyon"/>
+					    	<heading id="WestFlatNavajoAZ" title="West Flat"/>
+					    	<heading id="WhiteConeNavajoAZ" title="White Cone"/>
+							<heading id="WhiteRivNavajoAZ" title="Whiteriver"/>
+					    	<heading id="WinslowNavajoAZ" title="Winslow"/>
+					    	<heading id="PinonNavajoAZ" title="Pinon"/>
+					    	<heading id="HolbrookNavajoAZ" title="Holbrook"/>
 					    </heading>
 					    <heading id="Coconinocounty" title="Coconino county">
-					      <heading id="BoxCanyon" title="Box Canyon"/>
-					      <heading id="CowSprings" title="Cow Springs"/>
-					      <heading id="Flagstaff" title="Flagstaff"/>
-					      <heading id="CoalMineMesa" title="Coal Mine Mesa"/>
-					      <heading id="CanyonDiablo" title="Canyon Diablo"/>
-					      <heading id="LeesFerry" title="Lees Ferry">
-					        <synonym value="Lee's Ferry"/>
-					      </heading>
-					      <heading id="Sedona" title="Sedona"/>
-					      <heading id="Williams" title="Williams"/>
-					      <heading id="Moenkopi" title="Moenkopi"/>
-					      <heading id="NavajoReservation" title="Navajo Reservation"/>
-					      <heading id="MedicineCave" title="Medicine Cave"/>
-					      <heading id="RedLake" title="Red Lake"/>
-					      <heading id="WalnutCanyon" title="Walnut Canyon"/>
-					      <heading id="Wupatki" title="Wupatki">
-					        <synonym value="Woptiki"/>
-					        <synonym value="Wupatiki"/>
-					      </heading>
+					      	<heading id="BoxCanyon" title="Box Canyon"/>
+					    	<heading id="CanyonDiablo" title="Canyon Diablo"/>
+					    	<heading id="CoalMineMesa" title="Coal Mine Mesa"/>
+					    	<heading id="CowSprings" title="Cow Springs"/>
+					      	<heading id="Flagstaff" title="Flagstaff"/>
+					      	<heading id="LeesFerry" title="Lees Ferry">
+					        	<synonym value="Lee's Ferry"/>
+					      	</heading>
+					    	<heading id="MedicineCave" title="Medicine Cave"/>
+					    	<heading id="Moenkopi" title="Moenkopi"/>
+					      	<heading id="NavajoReservation" title="Navajo Reservation"/>
+					    	<heading id="RedLake" title="Red Lake"/>
+					    	<heading id="Sedona" title="Sedona"/>
+					    	<heading id="WalnutCanyon" title="Walnut Canyon"/>
+					    	<heading id="Williams" title="Williams"/>
+					    	<heading id="Wupatki" title="Wupatki">
+					    		<synonym value="Woptiki"/>
+					    		<synonym value="Wupatiki"/>
+					    	</heading>
 					    </heading>
 					    <heading id="Pimacounty" title="Pima county">
 					      <heading id="SanXavierReservation" title="San Xavier Reservation">
@@ -4788,22 +4794,22 @@
 					    </heading>
 					    <heading id="Pinalcounty" title="Pinal county">
 					    	<synonym value="PROVENIENCE = Pinal county, Arizona"/>
-					      <heading id="RayPinalAZ" title="Ray"/>
-					      <heading id="CasaGrande" title="Casa Grande"/>
+					    	<heading id="Bapchule" title="Bapchule">
+					    		<synonym value="Bapchale"/>
+					    	</heading>
+					    	<heading id="CasaGrande" title="Casa Grande">
+					      		<synonym value="Casa Grande Ruin"/>
+					      		<synonym value="Casa Grande Ruins"/>
+					      		<heading id="TurkeyHouseRuin" title="Turkey House Ruin"/>
+					      	</heading>
+					    	<heading id="FortSacaton" title="Fort Sacaton"/>
 					    	<heading id="GreweSitePinalAZ" title="Grewe Site"/>
-					      <heading id="CasaGrandeRuins" title="Casa Grande Ruins"/>
-					    	<heading id="SacatonPinalAZ" title="Sacaton"/>
-					      <heading id="PicachoPeak" title="Picacho Peak"/>
-					      <heading id="Snaketown" title="Snaketown"/>
 					    	<heading id="OraclePinalAZ" title="Oracle"/>
-					      <heading id="Bapchule" title="Bapchule">
-					        <synonym value="Bapchale"/>
-					      </heading>
-					      <heading id="CasaGrandeRuins" title="Casa Grande Ruins">
-					        <heading id="TurkeyHouseRuin" title="Turkey House Ruin"/>
-					      </heading>
-					      <heading id="FortSacaton" title="Fort Sacaton"/>
-					       <heading id="Santan" title="Santan"/>
+					    	<heading id="PicachoPeak" title="Picacho Peak"/>
+					    	<heading id="RayPinalAZ" title="Ray"/>
+					    	<heading id="SacatonPinalAZ" title="Sacaton"/>
+					    	<heading id="Santan" title="Santan"/>
+					    	<heading id="Snaketown" title="Snaketown"/>
 					    </heading>
 					    <heading id="AllentownRuin" title="Allentown Ruin"/>
 					    <heading id="Yavapaicounty" title="Yavapai county">
@@ -4821,26 +4827,25 @@
 								<heading id="SycamoreCreek" title="Sycamore Creek"/>
 							</heading>
 							<heading id="CliffCity" title="Cliff City"/>
-							<heading id="SkullValley" title="Skull Valley"/>
-							<heading id="Simmons" title="Simmons"/>
-							<heading id="SugarLoaf" title="Sugar Loaf"/>
-							<heading id="CampVerde" title="Camp Verde"/>
+					    	<heading id="SkullVallYavapaiAZ" title="Skull Valley"/>
+					    	<heading id="SimmonsYavapaiAZ" title="Simmons"/>
+					    	<heading id="SugarLoafYavapaiAZ" title="Sugar Loaf"/>
+					    	<heading id="CampVerdeYavapaiAZ" title="Camp Verde"/>
 							<heading id="MontezumaCastle" title="Montezuma Castle"/>
-							<heading id="Seligman" title="Seligman"/>
-							<heading id="Tuzigoot" title="Tuzigoot"/>
+							<heading id="SeligmanYavapaiAZ" title="Seligman"/>
+					    	<heading id="TuzigootYavapaiAZ" title="Tuzigoot"/>
 							<heading id="CampeVerdeHill" title="Campe Verde Hill"/>
-							<heading id="TableMountain" title="Table Mountain"/>
-							<heading id="PageSprings" title="Page Springs"/>
-							<heading id="BlackMesa" title="Black Mesa"/>
-							<heading id="YeagerCanyon" title="Yeager Canyon"/>
-							<heading id="Jerome" title="Jerome"/>
+					    	<heading id="TableMtYavapaiAZ" title="Table Mountain"/>
+					    	<heading id="PageSprYavapaiAZ" title="Page Springs"/>
+					    	<heading id="BlackMesaYavapaiAZ" title="Black Mesa"/>
+					    	<heading id="YeagerCynYavapaiAZ" title="Yeager Canyon"/>
+					    	<heading id="JeromeYavapaiAZ" title="Jerome"/>
 							<heading id="AmericanRanch" title="American Ranch"/>
-							<heading id="CherryCreek" title="Cherry Creek"/>
-							<heading id="Cleator" title="Cleator"/>
-							<heading id="HockberryMountain" title="Hockberry Mountain">
+					    	<heading id="CherryCkYavapaiAZ" title="Cherry Creek"/>
+					    	<heading id="CleatorYavapaiAZ" title="Cleator"/>
+					    	<heading id="HockberryMtYavapaiAZ" title="Hockberry Mountain">
 							    <synonym value="Hackberry Mountain"/>
 							</heading>
-							<heading id="Seligman" title="Seligman"/>
 							<heading id="VerdeValley" title="Verde Valley"/>
 					    </heading>
 					    <heading id="MtEden" title="Mt. Eden"/>
@@ -4848,47 +4853,47 @@
 					    <heading id="CostelloRanch" title="Costello Ranch"/>
 					    <heading id="MiddleGilaDistrict" title="Middle Gila District"/>
 					    <heading id="SantaCruzcountyAZ" title="Santa Cruz county">
-					      	<heading id="Nogales" title="Nogales"/>
+					      	<heading id="NogalesAZ" title="Nogales">
+					      		<excl value="Mexico"/>
+					      	</heading>
 					    </heading>
 					    <heading id="Abiquin" title="Abiquin"/>
 					    <heading id="Maricopacounty" title="Maricopa county">
-					      <heading id="FortMcDowell" title="Fort McDowell"/>
-					      <heading id="GilaBend" title="Gila Bend"/>
-					      <heading id="SaltRiverReservation" title="Salt River Reservation"/>
-					      <heading id="Phoenix" title="Phoenix"/>
-					      <heading id="CampMcDowell" title="Camp McDowell"/>
-					      <heading id="CaveCreek" title="Cave Creek"/>
-					      <heading id="LosHornos" title="Los Hornos"/>
-					      <heading id="RioVerde" title="Rio Verde"/>
-					      <heading id="MesquiteWash" title="Mesquite Wash"/>
-					      <heading id="AZPuebloGrande" title="Pueblo Grande"/> <!-- Also a Pueblo Grande in NV -->
-					      <heading id="LosMuertos" title="Los Muertos"/>
+					      	<heading id="FortMcDowell" title="Fort McDowell"/>
+					    	<heading id="GilaBendMrcpAZ" title="Gila Bend"/>
+					      	<heading id="SaltRiverReservation" title="Salt River Reservation"/>
+					    	<heading id="PhoenixMrcpAZ" title="Phoenix"/>
+					      	<heading id="CampMcDowell" title="Camp McDowell"/>
+					    	<heading id="CaveCkMrcpAZ" title="Cave Creek"/>
+					    	<heading id="LosHornosMrcpAZ" title="Los Hornos"/>
+					    	<heading id="RioVerdeMrcpAZ" title="Rio Verde"/>
+					      	<heading id="MesquiteWash" title="Mesquite Wash"/>
+					      	<heading id="AZPuebloGrande" title="Pueblo Grande"/> <!-- Also a Pueblo Grande in NV -->
+					      	<heading id="LosMuertos" title="Los Muertos"/>
 					    </heading>
-					    <heading id="SycamoreCreek" title="Sycamore Creek"/>
-					    <heading id="WhiteRiver" title="White River"/>
 					    <heading id="PierreCanyon" title="Pierre Canyon"/>
 					    <heading id="Cochisecounty" title="Cochise county">
-					      <heading id="Tombstone" title="Tombstone"/>
-					      <heading id="SanPedro" title="San Pedro"/>
+					      	<heading id="Tombstone" title="Tombstone"/>
+					    	<heading id="SanPedroMrcpAZ" title="San Pedro"/>
 					    </heading>
-					    <heading id="FortApache" title="Fort Apache"/>
+						<heading id="FortApacheMrcpAZ" title="Fort Apache"/>
 					    <heading id="Gilacounty" title="Gila county">
-					      <heading id="Payson" title="Payson"/>
-					      <heading id="TheodoreRooseveltDam" title="Theodore Roosevelt Dam"/>
-					      <heading id="Globe" title="Globe"/>
-					      <heading id="GlobeDistrict" title="Globe District"/>
-					      <heading id="SanCarlosAgency" title="San Carlos Agency"/>
-					      <heading id="SanCarlosReservation" title="San Carlos Reservation">
-					        <heading id="Bylas" title="Bylas"/>
-					      </heading>
-					      <heading id="AZGIlaCounty" title="AZ-GIla County"/>
+					    	<synonym value="AZ-GIla County"/>
+							<heading id="Payson" title="Payson"/>
+							<heading id="TheodoreRooseveltDam" title="Theodore Roosevelt Dam"/>
+							<heading id="Globe" title="Globe"/>
+							<heading id="GlobeDistrict" title="Globe District"/>
+							<heading id="SanCarlosAgency" title="San Carlos Agency"/>
+							<heading id="SanCarlosReservation" title="San Carlos Reservation">
+					        	<heading id="Bylas" title="Bylas"/>
+					      	</heading>
 					    </heading>
 					    <heading id="WhiteMountain" title="White Mountain"/>
 					    <heading id="PaintedDesert" title="Painted Desert"/>
 					    <heading id="SouthMesa" title="South Mesa"/>
 					    <heading id="Mohavecounty" title="Mohave county">
-					      <heading id="PeachSprings" title="Peach Springs"/>
-					      <heading id="SecretPassCave2fillBlackRange" title="Secret Pass, Cave #2 fill, Black Range"/>
+					      	<heading id="PeachSprings" title="Peach Springs"/>
+					      	<heading id="SecretPassCave2fillBlackRange" title="Secret Pass, Cave #2 fill, Black Range"/>
 					    </heading>
 					    <heading id="CasaBlanca" title="Casa Blanca"/>
 					    <heading id="SaltRiver" title="Salt River"/>
@@ -4896,11 +4901,11 @@
 					    <heading id="Sagir" title="Sagir"/>
 					    <heading id="BlackMountain" title="Black Mountain"/>
 					    <heading id="NorthernArizona" title="Northern Arizona">
-					      <heading id="NortheasternArizona" title="Northeastern Arizona"/>
+					      	<heading id="NortheasternArizona" title="Northeastern Arizona"/>
 					    </heading>
 					    <heading id="GrandCanyon" title="Grand Canyon"/>
 					    <heading id="BlackMountainStore" title="Black Mountain Store"/>
-					    <heading id="Needles" title="Needles"/>
+					    <heading id="NeedlesAZ" title="Needles"/>
 					    <heading id="BowieCanyon" title="Bowie Canyon"/>
 					    <heading id="ArizonaJ13" title="Arizona-J-13"/>
 					    <heading id="GardenValley" title="Garden Valley"/>
@@ -4915,7 +4920,7 @@
 					      <heading id="AZGrahamCounty" title="AZ-Graham County"/>
 					    </heading>
 					</heading>
-					<heading id="Colorado" title="Colorado">
+					<heading id="ColoradoState" title="Colorado">
 					    <heading id="ProwersCounty" title="Prowers County"/>
 					    <heading id="Montezumacounty" title="Montezuma county">
 					      <heading id="Dolores" title="Dolores"/>
@@ -5059,7 +5064,7 @@
 									<heading id="StonyfordSaltSprings" title="Stonyford Salt Springs">
 										<synonym value="Stonyford"/> <!-- Disambiguate? -->
 									</heading>
-									<heading id="SycamoreColusaCounty" title="Sycamore" noMatch="true"/>
+									<heading id="SycamoreColusaCA" title="Sycamore" noMatch="true"/>
 								</heading>
 								<heading id="TrinomialSitesColusaCA" title="Trinomial site names" noMatch="true">
 									<heading id="CACol1" title="CA-Col-1">
@@ -5097,7 +5102,7 @@
 									<heading id="CACol11" title="CA-Col-11"/>
 									<heading id="CACol12" title="CA-Col-12">
 										<synonym value="Sycamore, Munson Basin"/>
-										<implies facet="Location_facet" cat="SycamoreColusaCounty"/>
+										<implies facet="Location_facet" cat="SycamoreColusaCA"/>
 									</heading>
 									<heading id="CACol13" title="CA-Col-13"/>
 									<heading id="CACol14" title="CA-Col-14"/>
@@ -12912,6 +12917,7 @@
 								<synonym value="Solano County, CA, no loc"/>
 								<synonym value="Solano County, CA, no loc."/>
 								<heading id="PlaceNamesSolanoCA" title="Place Names" noMatch="true">
+									<heading id="BeniciaSolanoCA" title="Benicia"/>
 									<heading id="CordeliaSolanoCA" title="Cordelia"/>
 									<heading id="VallejoSolanoCA" title="Vallejo"/>
 								</heading>
@@ -12962,6 +12968,12 @@
 										<synonym value="SW-11"/>
 										<synonym value="Car-X-1"/>
 									</heading>
+									<heading id="CASol13" title="CA-Sol-13">
+										<synonym value="CA-Sol- 13"/>
+										<synonym value="CA-Sol-13"/>
+										<synonym value="SW-13"/>
+										<synonym value="Cross Slough"/>
+									</heading>
 									<heading id="CASol14" title="CA-Sol- 14">
 										<synonym value="CA-Sol-14"/>
 										<synonym value="Carq-X-3"/>
@@ -13002,7 +13014,7 @@
 									</heading>
 									<heading id="CASol237" title="CA-Sol-237">
 										<synonym value="Nelson 237"/>
-										<synonym value="Benicia"/>
+										<implies facet="Location_facet" cat="BeniciaSolanoCA"/>
 									</heading>
 									<heading id="CASol240" title="CA-Sol-240">
 										<synonym value="Lucchetti Site"/>
@@ -13010,11 +13022,6 @@
 										<synonym value="Siebe"/>
 										<synonym value="Lucchetti"/>
 										<synonym value="Luccetti site"/>
-									</heading><heading id="CrossSloughCASol13" title="CA-Sol-13">
-										<synonym value="CA-Sol- 13"/>
-										<synonym value="CA-Sol-13"/>
-										<synonym value="SW-13"/>
-										<synonym value="Cross Slough"/>
 									</heading>
 									<heading id="CASol241" title="CA-Sol-241">
 										<synonym value="Sol-242"/>
@@ -13050,6 +13057,7 @@
 									<heading id="DuncanPtSonomaCA" title="Duncan Point">
 										<heading id="DuncansLanding" title="Duncan's Landing"/>
 									</heading>
+									<heading id="FortRossSonomaCA" title="Fort Ross"/>
 									<heading id="GeyservilleSonomaCA" title="Geyserville"/>
 									<heading id="HauptRanch" title="Haupt Ranch"/>
 									<heading id="Healdsburg" title="Healdsburg"/>
@@ -13391,7 +13399,7 @@
 										<synonym value="Pomo 23 (Stewert)"/>
 									</heading>
 									<heading id="CASon190" title="CA-Son-190">
-										<synonym value="Fort Ross"/>
+										<implies facet="Location_facet" cat="FortRossSonomaCA"/>
 									</heading>
 									<heading id="CASon196" title="CA-Son-196"/>
 									<heading id="CASon199" title="CA-Son-199">
@@ -16583,7 +16591,7 @@
 									</heading>
 									<heading id="LewisCreekTulareCA" title="Lewis Creek"/>
 									<heading id="TuleRiverResTulareCA" title="Tule River Reservation"/>
-									<heading id="WhiteRiverTulareCA" title="White River"/>
+									<heading id="WhiteRivTulareCA" title="White River"/>
 								</heading>
 								<heading id="TrinomialSitesTulareCA" title="Trinomial site names" noMatch="true">
 									<heading id="CATul1" title="CA-Tul- 1">
@@ -18137,7 +18145,6 @@
 				          <heading id="BearCreek" title="Bear Creek"/>
 				          <heading id="LittleStonyCreek" title="Little Stony Creek"/>
 				          <heading id="HamburgBar" title="Hamburg Bar"/>
-				          <heading id="HullsValley" title="Hulls Valley"/>
 				          <heading id="NorthernCalifornia" title="Northern California">
 				            <heading id="NortheasternCalifornia" title="Northeastern California">
 				              <heading id="SulphurCreek" title="Sulphur Creek"/>
@@ -18213,15 +18220,12 @@
 				          </heading>
 				          <heading id="SouthernMinesCountry" title="Southern Mines Country"/>
 				          <heading id="SpeegleRanch" title="Speegle Ranch"/>
-				          <heading id="SulphurCreek" title="Sulphur Creek"/>
 				          <heading id="Valayo" title="Valayo ?"/>
 				          <heading id="ValentinoMission" title="Valentino Mission"/>
 				          <heading id="VanDuzenRiver" title="Van Duzen River"/>
 				          <heading id="Daquerro" title="Daquerro"/>
 				          <heading id="MosquitoMound" title="Mosquito Mound"/>
 				          <heading id="CountyLineMound" title="County Line Mound"/>
-				          <heading id="Eagleville" title="Eagleville"/>
-				          <heading id="PointMugu" title="Point Mugu"/>
 				          <heading id="AllenSite" title="Allen Site"/>
 				          <heading id="SalmonFalls" title="Salmon Falls"/>
 				          <heading id="DaltonSite" title="Dalton Site">
@@ -18577,7 +18581,7 @@
 								<heading id="EldoradoWashjunctionwithColoradoRiver" title="Eldorado Wash, junction with Colorado River"/>
 								<heading id="GlendaleClarkNV" title="Glendale"/> <!-- Disambiguate -->
 								<heading id="GypsumCave" title="Gypsum Cave"/>
-								<heading id="LasVegas" title="Las Vegas"/>
+								<heading id="LasVegasNV" title="Las Vegas"/>
 								<heading id="LostCityPuebloGrandeNV" title="Lost City (Pueblo Grande)" noMatch="true"/>
 								<heading id="Moapa" title="Moapa"/>
 								<heading id="PaiuteCaveOvertonFill" title="Paiute Cave (Overton fill)" noMatch="true"/>
@@ -19698,59 +19702,60 @@
 					        </heading>
 					        <heading id="OjoCaliente" title="Ojo Caliente"/>
 					        <heading id="RioGrandeValley" title="Rio Grande Valley"/>
-					        <heading id="Mimbres" title="Mimbres"/>
+					        <heading id="MimbresNM" title="Mimbres"/>
 					        <heading id="GrantCounty" title="Grant County">
 					          <heading id="SantaRita" title="Santa Rita"/>
 					        </heading>
 					        <heading id="SanMiguelcounty" title="San Miguel county">
-					          <heading id="LasVegas" title="Las Vegas"/>
-					          <heading id="Pecos" title="Pecos"/>
+					          <heading id="LasVegasNM" title="Las Vegas"/>
+					          <heading id="PecosNM" title="Pecos"/>
 					        </heading>
 					        <heading id="Bernalillocounty" title="Bernalillo county">
 					          <heading id="Albuquerque" title="Albuquerque"/>
-					          <heading id="Isleta" title="Isleta"/>
+					          <heading id="IsletaNM" title="Isleta"/>
 					        </heading>
 					</heading>
 					<heading id="UtahState" title="Utah">
 					    <synonym value="PROVENIENCE = Utah"/>
 				        <heading id="BoxElder" title="Box Elder">
-				          <heading id="PoleCreek" title="Pole Creek"/>
-				          <heading id="GrouseCreekMountains" title="Grouse Creek Mountains"/>
-				          <heading id="DavisFarm" title="Davis Farm"/>
-				          <heading id="BrighamCity" title="Brigham City"/>
+						<heading id="PoleCreek" title="Pole Creek"/>
+						<heading id="GrouseCreekMountains" title="Grouse Creek Mountains"/>
+						<heading id="DavisFarm" title="Davis Farm"/>
+						<heading id="BrighamCity" title="Brigham City"/>
 				        </heading>
 				        <heading id="SanJuancounty" title="San Juan county">
 				            <synonym value="PROVENIENCE = San Juan county, Utah"/>
                             <heading id="AlkaliRidge" title="Alkali Ridge"/>
                             <heading id="Blanding" title="Blanding"/>
                             <heading id="Segir" title="Segir"/>
-                            <heading id="GrandGulch" title="Grand Gulch"/>
-                            <heading id="GrandGulch1" title="Grand Gulch #1"/>
-                            <heading id="GrandGulch2" title="Grand Gulch #2"/>
-                            <heading id="GrandGulch3" title="Grand Gulch #3"/>
-                            <heading id="GrandGulch4" title="Grand Gulch #4"/>
-                            <heading id="GrandGulch5" title="Grand Gulch #5"/>
-                            <heading id="GrandGulch6" title="Grand Gulch #6"/>
-                            <heading id="GrandGulch7" title="Grand Gulch #7"/>
-                            <heading id="GrandGulch8" title="Grand Gulch #8"/>
-                            <heading id="GrandGulch9" title="Grand Gulch #9"/>
-                            <heading id="GrandGulch10" title="Grand Gulch #10"/>
-                            <heading id="GrandGulch11" title="Grand Gulch #11"/>
-                            <heading id="GrandGulch12" title="Grand Gulch #12"/>
-                            <heading id="GrandGulch13" title="Grand Gulch #13"/>
-                            <heading id="GrandGulch14" title="Grand Gulch #14"/>
-                            <heading id="GrandGulch15" title="Grand Gulch #15"/>
-                            <heading id="GrandGulch16" title="Grand Gulch #16"/>
-                            <heading id="GrandGulch17" title="Grand Gulch #17"/>
-                            <heading id="GrandGulch18" title="Grand Gulch #18"/>
-                            <heading id="GrandGulch19" title="Grand Gulch #19"/>
-                            <heading id="GrandGulch20" title="Grand Gulch #20"/>
-                            <heading id="GrandGulch21" title="Grand Gulch #21"/>
-                            <heading id="GrandGulch24" title="Grand Gulch #24"/>
-                            <heading id="GrandGulch25" title="Grand Gulch #25"/>
-                            <heading id="GrandGulch26" title="Grand Gulch #26"/>
-                            <heading id="GrandGulch27" title="Grand Gulch #27"/>
-                            <heading id="GrandGulch28" title="Grand Gulch #28"/>
+                            <heading id="GrandGulch" title="Grand Gulch">
+                            	<synonym value="Grand Gulch #1"/>
+                            	<synonym value="Grand Gulch #2"/>
+                            	<synonym value="Grand Gulch #3"/>
+                            	<synonym value="Grand Gulch #4"/>
+                            	<synonym value="Grand Gulch #5"/>
+                            	<synonym value="Grand Gulch #6"/>
+                            	<synonym value="Grand Gulch #7"/>
+                            	<synonym value="Grand Gulch #8"/>
+                            	<synonym value="Grand Gulch #9"/>
+                            	<synonym value="Grand Gulch #10"/>
+                            	<synonym value="Grand Gulch #11"/>
+                            	<synonym value="Grand Gulch #12"/>
+                            	<synonym value="Grand Gulch #13"/>
+                            	<synonym value="Grand Gulch #14"/>
+                            	<synonym value="Grand Gulch #15"/>
+                            	<synonym value="Grand Gulch #16"/>
+                            	<synonym value="Grand Gulch #17"/>
+                            	<synonym value="Grand Gulch #18"/>
+                            	<synonym value="Grand Gulch #19"/>
+                            	<synonym value="Grand Gulch #20"/>
+                            	<synonym value="Grand Gulch #21"/>
+                            	<synonym value="Grand Gulch #24"/>
+                            	<synonym value="Grand Gulch #25"/>
+                            	<synonym value="Grand Gulch #26"/>
+                            	<synonym value="Grand Gulch #27"/>
+                            	<synonym value="Grand Gulch #28"/>
+                            </heading>
 				        </heading>
 				        <heading id="Uintah" title="Uintah">
                             <heading id="Ouray" title="Ouray"/>
@@ -19896,12 +19901,14 @@
 				      	<heading id="CassCountyMN" title="Cass">
 				      		<heading id="LeechLake" title="Leech Lake"/>
 				      	</heading>
-			      		<heading id="ElkRiver" title="Elk River"/>
+			      		<heading id="ElkRiverMN" title="Elk River">
+			      			<excl value="Oregon"/>
+			      		</heading>
 			      		<heading id="Pipestone" title="Pipestone">
 			      			<heading id="Pipestonequarry" title="Pipestone quarry"/>
 			      		</heading>
 			      		<heading id="RamseyCountyMN" title="Ramsey">
-				          	<heading id="StPaul" title="St. Paul"/>
+				          	<heading id="StPaulMN" title="St. Paul"/>
 				        </heading>
 				        <heading id="StLouis" title="St. Louis">
 				          	<heading id="Duluth" title="Duluth"/>
