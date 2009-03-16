@@ -2429,7 +2429,9 @@
 							<heading id="SiaTribe" title="Sia">
 								<synonym value="Zia"/>
 							</heading>
-							<heading id="NambeTribe" title="Nambe"/>
+							<heading id="NambeTribe" title="Nambé">
+								<synonym value="Nambe"/>
+							</heading>
 							<heading id="CochitiTribe" title="Cochiti"/>
 							<heading id="ZuniTribe" title="Zuni">
 								<synonym value="Zuñi"/>
@@ -2681,7 +2683,8 @@
 			</heading>
 			<heading id="Solutrean" title="Solutrean"/>
 		</heading>
-		<heading id="AncientEuropeanCultures" title="European Cultures">
+		<heading id="AncientAfricanCultures" title="Ancient Africa"/>
+		<heading id="AncientEuropeanCultures" title="Ancient Europe">
 			<heading id="AncientGreece" title="Ancient Greece">
 				<synonym value="Greek"/>
 					<!-- questionable, but I think most people entering this term are looking for things from Ancient Greece -->
@@ -2821,144 +2824,160 @@
 				<heading id="Liburni" title="Liburni"/>
 			</heading>
 		</heading>
-		<heading id="AncientMesoAmericanCultures" title="Mesoamerican Cultures">
-			<heading id="Aztec" title="Aztec">
-				<synonym value="Aztecs"/>
-				<synonym value="Azteca"/>
-				<synonym value="Azteka"/>
+		<heading id="AncientAsianCultures" title="Ancient Asia">
+			<heading id="AncientFarEasternCultures" title="Far Eastern Cultures">
+				<heading id="AinuCulture" title="Ainu">
+					<implies facet="Location_facet" cat="JapanCounty"/>
+				</heading>
+				<heading id="HunCulture" title="Huns"/>
+				<heading id="JomonCulture" title="Jomon">  <!-- Some consider it a culture, not just a period -->
+					<implies facet="Location_facet" cat="JapanCounty"/>
+				</heading>
+				<heading id="MongolCulture" title="Mongol"/>
+				<heading id="MughalCulture" title="Mughal"/>
 			</heading>
-			<heading id="MayaAncient" title="Maya">
-				<synonym value="Mayas"/>
-				<synonym value="Mayan"/>
-				<synonym value="Mayans"/>
-			</heading>
-			<heading id="Olmec" title="Olmec">
-				<synonym value="Olmecs"/>
-				<synonym value="Olmecan"/>
-				<synonym value="Olmecans"/>
-			</heading>
-			<heading id="Toltec" title="Toltec">
-				<synonym value="Toltecs"/>
-				<synonym value="Toltecan"/>
-				<synonym value="Toltecans"/>
-			</heading>
-		</heading>
-		<heading id="AncientNearEasternCultures" title="Near Eastern Cultures">
-			<heading id="BabylonianGroups" title="Babylonian"/>
-			<heading id="BactrianGroups" title="Bactrian"/>
-			<heading id="MesopotamianGroups" title="Mesopotamian">
-				<synonym value="Mesopotamia"/>
-			</heading>
-			<heading id="NabateanGroups" title="Nabatean"/>
-			<heading id="PersianGroups" title="Persian">
-				<synonym value="Persia"/>
-			</heading>
-			<heading id="SumerianGroups" title="Sumerian">
-				<synonym value="Sumer"/>
+			<heading id="AncientNearEasternCultures" title="Near Eastern Cultures">
+				<heading id="BabylonianGroups" title="Babylonian"/>
+				<heading id="BactrianGroups" title="Bactrian"/>
+				<heading id="MesopotamianGroups" title="Mesopotamian">
+					<synonym value="Mesopotamia"/>
+				</heading>
+				<heading id="NabateanGroups" title="Nabatean"/>
+				<heading id="PersianGroups" title="Persian">
+					<synonym value="Persia"/>
+				</heading>
+				<heading id="SumerianGroups" title="Sumerian">
+					<synonym value="Sumer"/>
+				</heading>
 			</heading>
 		</heading>
-		<heading id="AncientNorthAmericanCultures" title="North American Cultures">
-			<heading id="AncientPuebloPeople" title="Ancient Pueblo People">
-				<synonym value="Ancestral Pueblo People"/>
-				<synonym value="Ancestral Puebloans"/>
-				<synonym value="Anasazi"/>
+		<heading id="AncientOceanianCultures" title="Ancient Oceania"/>
+		<heading id="AncientOceanianCultures" title="Ancient America">
+			<heading id="AncientMesoAmericanCultures" title="Ancient Mesoamerica">
+				<heading id="Aztec" title="Aztec">
+					<synonym value="Aztecs"/>
+					<synonym value="Azteca"/>
+					<synonym value="Azteka"/>
+				</heading>
+				<heading id="MayaAncient" title="Maya">
+					<synonym value="Mayas"/>
+					<synonym value="Mayan"/>
+					<synonym value="Mayans"/>
+				</heading>
+				<heading id="Olmec" title="Olmec">
+					<synonym value="Olmecs"/>
+					<synonym value="Olmecan"/>
+					<synonym value="Olmecans"/>
+				</heading>
+				<heading id="Toltec" title="Toltec">
+					<synonym value="Toltecs"/>
+					<synonym value="Toltecan"/>
+					<synonym value="Toltecans"/>
+				</heading>
 			</heading>
-			<heading id="HohokamIndians" title="Hohokam">
-				<implies facet="Location_facet" cat="Arizona"/>
-				<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-					<implies facet="Period_facet" cat="1AD-1450AD"/> -->
-			</heading>
-			<heading id="LasPalmasCulture" title="Las Palmas">
-				<synonym value="Las Palmas culture"/>
-				<synonym value="Las Palmas tradition"/>
-				<synonym value="Los Palmas"/>
-			</heading>
-			<heading id="MogollonIndians" title="Mogollón">
-				<synonym value="Mogollon"/>
-				<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-					<implies facet="Period_facet" cat="900BC-200BC"/> -->
-			</heading>
-			<heading id="MountainCahuillaIndians" title="Mountain Cahuilla"/>
-			<heading id="NWCoastTradition" title="NW Coast Tradition">
-				<synonym value="Northwest Coast Tradition"/>
-			</heading>
-			<heading id="PatayanIndians" title="Patayan">
-				<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-					<implies facet="Period_facet" cat="700AD-1550AD"/> -->
-			</heading>
-			<heading id="SouthernNWCoastTradition" title="S. NW Coast Tradition">
-				<synonym value="Southern Northwest Coast Tradition"/>
-			</heading>
-		</heading>		
-		<heading id="AncientSouthAmericanCultures" title="South American Cultures">
-			<heading id="AncientAndeanCultures" title="Andean Cultures">
-				<heading id="ChavinCulture" title="Chavin">
+			<heading id="AncientNorthAmericanCultures" title="Ancient North America">
+				<heading id="AncientPuebloPeople" title="Ancient Pueblo People">
+					<synonym value="Ancestral Pueblo People"/>
+					<synonym value="Ancestral Puebloans"/>
+					<synonym value="Anasazi"/>
+				</heading>
+				<heading id="HohokamIndians" title="Hohokam">
+					<implies facet="Location_facet" cat="Arizona"/>
+					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
+						<implies facet="Period_facet" cat="1AD-1450AD"/> -->
+				</heading>
+				<heading id="LasPalmasCulture" title="Las Palmas">
+					<synonym value="Las Palmas culture"/>
+					<synonym value="Las Palmas tradition"/>
+					<synonym value="Los Palmas"/>
+				</heading>
+				<heading id="MogollonIndians" title="Mogollón">
+					<synonym value="Mogollon"/>
 					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
 						<implies facet="Period_facet" cat="900BC-200BC"/> -->
 				</heading>
-				<heading id="ChimuCulture" title="Chimú">
-					<synonym value="Chimús"/>
-					<synonym value="Chimu"/>
-					<synonym value="Chimus"/>
-					<implies facet="Location_facet" cat="Peru"/>
-				<!--<implies facet="Period_facet" cat="Precolumbian"/>
-					<implies facet="Period_facet" cat="100-800AD"/> -->
+				<heading id="MountainCahuillaIndians" title="Mountain Cahuilla"/>
+				<heading id="NWCoastTradition" title="NW Coast Tradition">
+					<synonym value="Northwest Coast Tradition"/>
 				</heading>
-				<heading id="CupisniqueCulture" title="Cupisnique">
-				<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-					 <implies facet="Period_facet" cat="1000-1500AD"/> -->
+				<heading id="PatayanIndians" title="Patayan">
+					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
+						<implies facet="Period_facet" cat="700AD-1550AD"/> -->
 				</heading>
-				<heading id="IncaCulture" title="Inca">
-					<synonym value="Incan"/>
-					<synonym value="Incas"/>
-					<synonym value="Incans"/>
-					<implies facet="Location_facet" cat="Peru"/>
+				<heading id="SouthernNWCoastTradition" title="S. NW Coast Tradition">
+					<synonym value="Southern Northwest Coast Tradition"/>
 				</heading>
-				<heading id="MochicaCulture" title="Mochica">
-					<synonym value="Moche"/>
-					<synonym value="Moché"/>
-					<synonym value="Moches"/>
-					<synonym value="Mochés"/>
-					<synonym value="Mochicas"/>
-					<synonym value="Mochican"/>
-					<synonym value="Mochicans"/>
-					<implies facet="Location_facet" cat="Peru"/>
-				</heading>
-				<heading id="NascaCulture" title="Nasca">
-					<synonym value="Nascas"/>
-					<synonym value="Nascan"/>
-					<synonym value="Nascans"/>
-					<synonym value="Nazca"/>
-					<synonym value="Nazcas"/>
-					<synonym value="Nazcan"/>
-					<synonym value="Nazcans"/>
-					<implies facet="Location_facet" cat="Peru"/>
-				<!--<implies facet="Period_facet" cat="Precolumbian"/>
-				<implies facet="Period_facet" cat="1100BC-750AD"/> -->
-				</heading>
-				<heading id="TiwanakuCulture" title="Tiwanaku">
-					<synonym value="Tiwanakuan"/>
-					<synonym value="Tiwanakuans"/>
-					<synonym value="Tiwanakus"/>
-					<synonym value="Tiahuanaco"/>
-					<synonym value="Tiahuanacu"/>
-					<synonym value="Tiahuanacos"/>
-					<synonym value="Tiahuanacus"/>
-					<synonym value="Tiahuanacoan"/>
-					<synonym value="Tiahuanacuan"/>
-					<synonym value="Tiahuanacoans"/>
-					<synonym value="Tiahuanacuans"/>
-					<implies facet="Location_facet" cat="Bolivia"/>
-				<!--<implies facet="Period_facet" cat="Precolumbian"/>
-					<implies facet="Period_facet" cat="1500BC-1000AD"/> -->
-				</heading>
-				<heading id="Wari" title="Wari">
-					<synonym value="Waris"/>
-					<synonym value="Huari"/>
-					<synonym value="Huaris"/>
-					<implies facet="Location_facet" cat="Peru"/>
-				<!--<implies facet="Period_facet" cat="Precolumbian"/>
-					<implies facet="Period_facet" cat="500-900AD"/> -->
+			</heading>		
+			<heading id="AncientSouthAmericanCultures" title="Ancient South America">
+				<heading id="AncientAndeanCultures" title="Andean Cultures">
+					<heading id="ChavinCulture" title="Chavin">
+						<!-- <implies facet="Period_facet" cat="Precolumbian"/>
+							<implies facet="Period_facet" cat="900BC-200BC"/> -->
+					</heading>
+					<heading id="ChimuCulture" title="Chimú">
+						<synonym value="Chimús"/>
+						<synonym value="Chimu"/>
+						<synonym value="Chimus"/>
+						<implies facet="Location_facet" cat="Peru"/>
+						<!--<implies facet="Period_facet" cat="Precolumbian"/>
+							<implies facet="Period_facet" cat="100-800AD"/> -->
+					</heading>
+					<heading id="CupisniqueCulture" title="Cupisnique">
+						<!-- <implies facet="Period_facet" cat="Precolumbian"/>
+							<implies facet="Period_facet" cat="1000-1500AD"/> -->
+					</heading>
+					<heading id="IncaCulture" title="Inca">
+						<synonym value="Incan"/>
+						<synonym value="Incas"/>
+						<synonym value="Incans"/>
+						<implies facet="Location_facet" cat="Peru"/>
+					</heading>
+					<heading id="MochicaCulture" title="Mochica">
+						<synonym value="Moche"/>
+						<synonym value="Moché"/>
+						<synonym value="Moches"/>
+						<synonym value="Mochés"/>
+						<synonym value="Mochicas"/>
+						<synonym value="Mochican"/>
+						<synonym value="Mochicans"/>
+						<implies facet="Location_facet" cat="Peru"/>
+					</heading>
+					<heading id="NascaCulture" title="Nasca">
+						<synonym value="Nascas"/>
+						<synonym value="Nascan"/>
+						<synonym value="Nascans"/>
+						<synonym value="Nazca"/>
+						<synonym value="Nazcas"/>
+						<synonym value="Nazcan"/>
+						<synonym value="Nazcans"/>
+						<implies facet="Location_facet" cat="Peru"/>
+						<!--<implies facet="Period_facet" cat="Precolumbian"/>
+							<implies facet="Period_facet" cat="1100BC-750AD"/> -->
+					</heading>
+					<heading id="TiwanakuCulture" title="Tiwanaku">
+						<synonym value="Tiwanakuan"/>
+						<synonym value="Tiwanakuans"/>
+						<synonym value="Tiwanakus"/>
+						<synonym value="Tiahuanaco"/>
+						<synonym value="Tiahuanacu"/>
+						<synonym value="Tiahuanacos"/>
+						<synonym value="Tiahuanacus"/>
+						<synonym value="Tiahuanacoan"/>
+						<synonym value="Tiahuanacuan"/>
+						<synonym value="Tiahuanacoans"/>
+						<synonym value="Tiahuanacuans"/>
+						<implies facet="Location_facet" cat="Bolivia"/>
+						<!--<implies facet="Period_facet" cat="Precolumbian"/>
+							<implies facet="Period_facet" cat="1500BC-1000AD"/> -->
+					</heading>
+					<heading id="Wari" title="Wari">
+						<synonym value="Waris"/>
+						<synonym value="Huari"/>
+						<synonym value="Huaris"/>
+						<implies facet="Location_facet" cat="Peru"/>
+						<!--<implies facet="Period_facet" cat="Precolumbian"/>
+							<implies facet="Period_facet" cat="500-900AD"/> -->
+					</heading>
 				</heading>
 			</heading>
 		</heading>
