@@ -15,6 +15,10 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+// TODO This class does not present a clean model: the static class members are ugly.
+// It should be rewritten to support a static class factory that takes the config
+// file as input and produces a class instance with most of the information.
+// Callers will have to be adjusted to use an instance rather than the Class.
 public class DumpColumnConfigInfo {
 
 	protected static class MineInfoForColumn {
@@ -29,6 +33,9 @@ public class DumpColumnConfigInfo {
 	}
 
 	private static int columnSeparator = -1;
+	private static int objectIDColumnIndex = -1;
+	private static int museumIDColumnIndex = -1;
+	private static int nameColumnIndex = -1;
 	private static HashMap<String, DumpColumnConfigInfo> columnInfoMap = null;
 	protected static PriorityQueue<Integer> descColsPQ = null;
 	protected static ArrayList<Integer> hiddenNotesCols = null;
@@ -68,6 +75,28 @@ public class DumpColumnConfigInfo {
 
 	public static int getColumnSeparator() {
 		return columnSeparator;
+	}
+
+	public static int getNumColumns() {
+		return columnInfoMap.size();
+	}
+
+	public static int getIdColumnIndex() {
+		if( objectIDColumnIndex < 0 )
+			throw new RuntimeException("DumpColumnConfigInfo.getIdColumnIndex: Module not initialized.");
+		return objectIDColumnIndex;
+	}
+
+	public static int getMuseumIdColumnIndex() {
+		if( museumIDColumnIndex < 0 )
+			throw new RuntimeException("DumpColumnConfigInfo.getMuseumIdColumnIndex: Module not initialized.");
+		return museumIDColumnIndex;
+	}
+
+	public static int getNameColumnIndex() {
+		if( nameColumnIndex < 0 )
+			throw new RuntimeException("DumpColumnConfigInfo.getNameColumnIndex: Module not initialized.");
+		return nameColumnIndex;
 	}
 
 	private static DumpColumnConfigInfo GetColInfo( String forColumn, String detail ) {
@@ -174,7 +203,7 @@ public class DumpColumnConfigInfo {
 	}
 
 	public static void PopulateFromConfigFile(
-			Document	document )		// Xml doc with tree
+			Element	processingInfoNode )		// Xml doc with tree
 	{
 		int nAdded = 0;
 		try {
@@ -183,12 +212,15 @@ public class DumpColumnConfigInfo {
 				columnInfoMap = null;
 				descColsPQ = null;
 				hiddenNotesCols = null;
+				objectIDColumnIndex = -1;
+				museumIDColumnIndex = -1;
+				nameColumnIndex = -1;
 			}
 			columnInfoMap = new HashMap<String, DumpColumnConfigInfo>();
 			descColsPQ = new PriorityQueue<Integer>();
 			hiddenNotesCols = new ArrayList<Integer>();
-			// First, get the column separator.
-			NodeList colSepNodes = document.getElementsByTagName( "colSep" );
+			// Get the column separator.
+			NodeList colSepNodes = processingInfoNode.getElementsByTagName( "colSep" );
 			// Only use the first one.
 			if( colSepNodes.getLength() <= 0 )
 				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: missing colSep node.");
@@ -198,7 +230,7 @@ public class DumpColumnConfigInfo {
 				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: bad colSep node (must be 1 char).");
 			columnSeparator = colSepValue.charAt(0);
 			// Next, get the info children of the root.
-			NodeList colNodes = document.getElementsByTagName( "colInfo" );
+			NodeList colNodes = processingInfoNode.getElementsByTagName( "colInfo" );
 			// For each info element, need to get all the fields.
 			int nCols = colNodes.getLength();
 			for( int iCol = 0; iCol < nCols; iCol++) {
@@ -212,8 +244,15 @@ public class DumpColumnConfigInfo {
 				ArrayList<Pair<String,String>> reduceRules = new ArrayList<Pair<String,String>>();
 				ArrayList<MineInfoForColumn> facetsToMine = new ArrayList<MineInfoForColumn>();
 		    	String function = colInfoEl.getAttribute( "function" );
-		    	if( function.equals("hiddenNotes"))
+		    	if( function.equals("hiddenNotes")) {
 		    		hiddenNotesCols.add(iCol);
+		    	} else if( function.equals("id")) {
+		    		objectIDColumnIndex = iCol;
+		    	} else if( function.equals("museumid")) {
+		    		museumIDColumnIndex = iCol;
+		    	} else if( function.equals("name")) {
+		    		nameColumnIndex = iCol;
+		    	}
 		    	String descOrderStr = colInfoEl.getAttribute( "descriptionOrder" );
 		    	double descOrder = -1;
 		    	if( !descOrderStr.isEmpty()) {
@@ -286,66 +325,4 @@ public class DumpColumnConfigInfo {
 		}
 	} // PopulateFromConfigFile
 
-	public static boolean OpenConfigFile( String filename) {
-		boolean opened = false;
-		try {
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document colConfigDoc = builder.parse("file:"+filename);
-			DumpColumnConfigInfo.PopulateFromConfigFile(colConfigDoc);
-			debug(2,"Col Sep is: ["+(char)(DumpColumnConfigInfo.getColumnSeparator())+"]");
-			if( _debugLevel>=2 ) {
-				System.out.print("Token seps for ObjectName are: " );
-				ArrayList<String> tokenSeps = DumpColumnConfigInfo.getTokenSeparators("ObjectName");
-				for( String sep:tokenSeps ) {
-					System.out.print("["+sep+"] " );
-				}
-				System.out.println();
-			}
-	        opened = true;
-        } catch (SAXParseException spe) {
-            // Error generated by the parser
-            // Use the contained exception, if any
-            Exception x = spe;
-            if (spe.getException() != null)
-                x = spe.getException();
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: SAXParseException:"
-				+"\n  line:"+spe.getLineNumber() + ", uri " + spe.getSystemId()
-				+"\n  " + spe.getMessage()
-				+"\n  " + x.getMessage();
-			debug(1, tmp);
-            debugTrace(1, x);
-			throw new RuntimeException( tmp );
-        } catch (SAXException sxe) {
-            // Error generated by this application (or a parser-initialization error)
-            Exception x = sxe;
-            if (sxe.getException() != null) {
-                x = sxe.getException();
-            }
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: SAXException parsing config file."
-				+"\n"+ x.getMessage();
-			debug(1, tmp);
-            debugTrace(1, x);
-			throw new RuntimeException( tmp );
-		} catch( ParserConfigurationException pce ) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: Exception parsing config file."
-				+"\n"+pce.getMessage();
-			debug(1, tmp);
-            debugTrace(1, pce);
-			throw new RuntimeException( tmp );
-        } catch (IOException ioe) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: I/O Exception reading config file.\n File: \""
-				+filename+"\"\n"+ioe.getMessage();
-			debug(1, tmp);
-            debugTrace(1, ioe);
-			throw new RuntimeException( tmp );
-		} catch( RuntimeException e ) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: Error encountered reading config file."
-				+"\n"+e.getMessage();
-			debug(1, tmp);
-            debugTrace(1, e);
-			throw new RuntimeException( tmp );
-		}
-		return opened;
-	}
 }
