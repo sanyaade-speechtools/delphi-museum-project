@@ -19,9 +19,11 @@ public class UserProjectInfo implements Serializable {
 	public transient Document vocabOutputDoc = null;  //  @jve:decl-index=0:
 	private String ontologyPath = null;
 	public transient DoubleHashTree facetMapHashTree = null;  //  @jve:decl-index=0:
+	public transient Categorizer categorizer = null;  //  @jve:decl-index=0:
 	private String metadataConfigPath = null;
 	private String metadataPath = null;
 	public transient MetaDataReader metaDataReader = null;
+	public transient DBMetaDataReader dbMetaDataReader = null;
 	private String imagePathsPath = null;
 	public transient ImagePathsReader imagePathsReader = null;
 	private transient boolean dirty = false;
@@ -105,7 +107,9 @@ public class UserProjectInfo implements Serializable {
 		vocabHashTree = null;
 		vocabOutputDoc = null;
 		facetMapHashTree = null;
+		categorizer = null;
 		metaDataReader = null;
+		dbMetaDataReader = null;
 		imagePathsReader = null;
 		dirty = true;
 
