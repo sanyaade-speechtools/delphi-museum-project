@@ -16,7 +16,7 @@
 		
 		*********************** 
 		
-		Would like to group: 
+		Would also like to group: 
 		National Forests, 
 		National Parks,
 		State Forests,
@@ -3802,91 +3802,307 @@
 					<heading id="Alaska" title="Alaska"> <!-- ALPHABETIZE -->
 						<synonym value="PROVENIENCE = Alaska"/>
 						<synonym value="Western Subarctic"/> <!-- Where is this?  (from USA, subarctic) -->
-						<heading id="AlaskanInterior" title="Alaskan Interior"/>
-						<heading id="NorthernAlaska" title="Northern Alaska"/>
-						<heading id="SoutheastAlaska" title="Southeast Alaska"/>
-						<heading id="SouthernAlaska" title="Southern Alaska"/>
+						<heading id="AlaskanInterior" title="Alaskan Interior">
+							<heading id="DenaliDivAK" title="Denali"/>
+							<heading id="FairbanksNoStarDivAK" title="Fairbanks North Star"/>
+							<heading id="SEFairbanksDivAK" title="Southeast Fairbanks"/>
+							<heading id="YukonKoyukukDivAK" title="Yukon-Koyukuk">
+								<synonym value="Lower Yukon to Kuskokwim"/>
+								<synonym value="Yukon northward"/>
+								<synonym value="Western Yukon"/>
+								<heading id="Allakaket" title="Allakaket"/>
+								<heading id="Anvik" title="Anvik"/>
+								<heading id="FortYukon" title="Fort Yukon"/>
+								<heading id="KoukukRiver" title="Koukuk River">
+									<synonym value="Koyiukuk River"/>
+									<synonym value="Koyukuk River"/>
+								</heading>
+								<heading id="Nulato" title="Nulato"/>
+								<heading id="Shageluk" title="Shageluk"/>
+								<heading id="StevensVillage" title="Stevens Village"/>
+								<heading id="TananaRiver" title="Tanana River"/>
+								<heading id="LowerYukon" title="Lower Yukon">
+									<heading id="Knajkak" title="Knajkak"/>
+									<heading id="MouthofYukonRiver" title="Mouth of Yukon River"/>
+								</heading>
+								<heading id="MiddleYukon" title="Middle Yukon"/>
+								<heading id="UpperYukon" title="Upper Yukon"/>
+								<heading id="YukonRiver" title="Yukon River">
+									<heading id="RussianMission" title="Russian Mission"/>
+									<heading id="LowerYukonRiver" title="Lower Yukon River"/>
+									<heading id="UpperYukonRiver" title="Upper Yukon River"/>
+									<heading id="MiddleYukonRiver" title="Middle Yukon River"/>
+								</heading>
+							</heading>
+						</heading>
+						<heading id="NorthernAlaska" title="Northern Alaska">
+							<heading id="NorthSlopeDivAK" title="North Slope">
+								<heading id="ColvilleRiver" title="Colville River"/>
+								<heading id="InaruRiver" title="Inaru River"/>
+								<heading id="KarlukIsland" title="Karluk Island"/>
+								<heading id="PointHope" title="Point Hope">
+									<heading id="Tigara" title="Tigara"/>
+								</heading>
+								<heading id="PointLay" title="Point Lay"/>
+								<heading id="Wainwright" title="Wainwright"/>
+							</heading>
+							<heading id="NWArcticBrghAK" title="Northwest Arctic Borough">
+								<synonym value="Northwest Arctic"/>
+								<synonym value="Northwest Arctic Division"/>
+								<heading id="BaldwinPeninAK" title="Baldwin Peninsula">
+									<!-- Baldwin Peninsula is a peninsula located on the Arctic Circle in the 
+										northwestern region of the U.S. state of Alaska, at 66°33′N 161°55′W. 
+										It extends 72 km (45 miles) into Kotzebue Sound from the Alaska
+										mainland and defines the south boundary of Hotham Inlet. It is 2-19 km
+										(1-12 miles) wide. The city of Kotzebue is at the end of the peninsula -->
+									<heading id="KotzebueSound" title="Kotzebue Sound">
+										<synonym value="Head of Kotzebue Sound"/>
+										<heading id="KoowakRiver" title="Koowak River"/>
+										<heading id="Kotzebue" title="Kotzebue"/>
+										<heading id="NoatakRiver" title="Noatak River">
+											<synonym value="Head of Noatak River"/>
+										</heading>
+									</heading>
+								</heading>
+								<heading id="Noorvik" title="Noorvik">
+									<!-- 66°50′14″N 161°2′12″W (66.837130, -161.036641) -->
+									<implies facet="Culture_facet" cat="InupiaqTribe"/>
+								</heading>
+							</heading>
+						</heading>
+						<heading id="SoutheastAlaska" title="Southeast Alaska">
+							<heading id="KetchikanGtwyDivAK" title="Ketchikan Gateway">
+								<heading id="RevillagigedoIslAK" title="Revillagigedo Island">
+									<synonym value="Revillagigedo"/>
+									<heading id="KetchikanTown" title="Ketchikan">
+										<synonym value="Ketchican"/>
+									</heading>
+								</heading>
+							</heading>
+							<heading id="JuneauDivAK" title="Juneau"/>
+							<heading id="PrWalesHyderCenAK" title="Prince of Wales-Hyder">
+								<synonym value="Prince of Wales-Hyder Census Area"/>
+								<synonym value="Prince of Wales-Outer Ketchikan"/>
+								<heading id="AnnetteIsland" title="Annette Island">
+									<heading id="NewMetlakatla" title="New Metlakatla">
+										<!--  55°7′37″N 131°34′35″W (55.126916, -131.576393) -->
+										<synonym value="Metlakatla"/>
+										<excl value="BC"/>
+										<excl value="B.C."/>
+										<excl value="British Columbia"/>
+										<excl value="Canada"/>
+										<excl value="Old Metlakatla"/>
+									</heading>
+								</heading>
+							</heading>
+						</heading>
+						<heading id="SouthernAlaska" title="Southern Alaska">
+							<heading id="AleutianIslDivAK2" title="Aleutian Islands" noMatch="true">
+								<heading id="BelkofskiIsland2" title="Belkofski Island" noMatch="true"/>
+								<heading id="CentralAleutians2" title="Central Aleutians" noMatch="true">
+									<heading id="AndreanofIslandsAK2" title="Andreanof Islands" noMatch="true">
+										<heading id="AtkaIslandAK2" title="Atka Island" noMatch="true"/>
+										<heading id="SaltIslandAK2" title="Salt Island" noMatch="true"/>
+										<heading id="ChugulIslandAK2" title="Chugul Island" noMatch="true"/>
+										<heading id="SeguamIslandAK2" title="Seguam Island" noMatch="true"/>
+									</heading>
+									<heading id="RatIslandsAK2" title="Rat Islands" noMatch="true">
+										<heading id="AmchitkaIsland2" title="Amchitka Island" noMatch="true"/>
+									</heading>
+								</heading>
+								<heading id="FoxIslandsAK2" title="Fox Islands" noMatch="true">
+									<heading id="UnalaskaIslAK2" title="Unalaska Island" noMatch="true">
+										<heading id="IliuLuikAK2" title="Iliu Luik" noMatch="true"/>
+										<heading id="UnalaskaAK2" title="Unalaska" noMatch="true"/>
+										<heading id="DutchHarborAK2" title="Dutch Harbor" noMatch="true"/>
+									</heading>
+									<heading id="UmnakIsland2" title="Umnak Island" noMatch="true">
+										<heading id="NikolskiAK2" title="Nikolski" noMatch="true"/>
+									</heading>
+								</heading>
+								<heading id="IslandsFourMtsAK2" title="Islands of the Four Mountains" noMatch="true">
+									<heading id="KagamilIsland2" title="Kagamil Island" noMatch="true"/>
+								</heading>
+								<heading id="PribilofIslands2" title="Pribilof Islands" noMatch="true">
+									<heading id="StPaulIsland2" title="St. Paul Island" noMatch="true"/>
+									<heading id="StGeorgeIsland2" title="St. George Island" noMatch="true"/>
+								</heading>
+								<heading id="UyakIsland2" title="Uyak Island" noMatch="true"/>
+								<heading id="WesternAleutians2" title="Western Aleutians" noMatch="true">
+									<heading id="NearIslands2" title="Near Islands" noMatch="true">
+										<heading id="AttuIsland2" title="Attu Island" noMatch="true"/>
+										<heading id="AgattuIsland2" title="Agattu Island" noMatch="true"/>
+										<heading id="ShemyaIsland2" title="Shemya Island" noMatch="true"/>
+									</heading>
+								</heading>
+							</heading>
+							<heading id="KenaiPeninsDivAK" title="Kenai Peninsula">
+								<synonym value="Kenai"/>
+							</heading>
+						</heading>
 						<heading id="WesternAlaska" title="Western Alaska"/>
 						<heading id="SouthwestCoast" title="Southwest Coast">
-							<heading id="SWCoastbelowYukonR" title="Below Yukon River">
-								<synonym value="Southwest Coast below Yukon R"/>
-								<synonym value="Southwest Coast below Yukon R."/>
-								<synonym value="Southwest Coast below Yukon River"/>
+							<synonym value="Below Yukon River"/>
+							<synonym value="Southwest Coast below Yukon R"/>
+							<synonym value="Southwest Coast below Yukon R."/>
+							<synonym value="Southwest Coast below Yukon River"/>
+							<heading id="AleutianIslDivAK" title="Aleutian Islands">
+								<implies facet="Culture_facet" cat="AleutTribe"/>
+								<implies facet="Location_facet" cat="AleutianIslDivAK2"/>
+								<heading id="BelkofskiIsland" title="Belkofski Island ?">
+									<implies facet="Location_facet" cat="BelkofskiIsland2"/>
+								</heading>
+								<heading id="CentralAleutians" title="Central Aleutians">
+									<implies facet="Location_facet" cat="CentralAleutians2"/>
+									<heading id="AndreanofIslandsAK" title="Andreanof Islands">
+										<implies facet="Location_facet" cat="AndreanofIslandsAK2"/>
+										<heading id="AtkaIslandAK" title="Atka Island">
+											<implies facet="Location_facet" cat="AtkaIslandAK2"/>
+										</heading>
+										<heading id="SaltIslandAK" title="Salt Island">
+											<implies facet="Location_facet" cat="SaltIslandAK2"/>
+										</heading>
+										<heading id="ChugulIslandAK" title="Chugul Island">
+											<implies facet="Location_facet" cat="ChugulIslandAK2"/>
+										</heading>
+										<heading id="SeguamIslandAK" title="Seguam Island">
+											<implies facet="Location_facet" cat="SeguamIslandAK2"/>
+										</heading>
+									</heading>
+									<heading id="RatIslandsAK" title="Rat Islands">
+										<implies facet="Location_facet" cat="RatIslandsAK2"/>
+										<heading id="AmchitkaIsland" title="Amchitka Island">
+											<implies facet="Location_facet" cat="AmchitkaIsland2"/>
+										</heading>
+									</heading>
+								</heading>
+								<heading id="FoxIslandsAK" title="Fox Islands">
+									<implies facet="Location_facet" cat="FoxIslandsAK2"/>
+									<heading id="UnalaskaIslAK" title="Unalaska Island">
+										<implies facet="Location_facet" cat="UnalaskaIslAK2"/>
+										<heading id="IliuLuikAK" title="Iliu Luik"> <!-- Same as Unalaska city? -->
+											<synonym value="Iliuliuk"/>
+											<synonym value="Illiuliuk"/>
+											<synonym value="Moolook"/>
+											<synonym value="Oulioculiuk"/>
+											<implies facet="Location_facet" cat="IliuLuikAK2"/>
+										</heading>
+										<heading id="UnalaskaAK" title="Unalaska"> <!-- Same as Iliu Luik? -->
+											<synonym value="City of Unalaska"/>
+											<synonym value="Iluulux"/>
+											<implies facet="Location_facet" cat="UnalaskaAK2"/>
+										</heading>
+										<heading id="DutchHarborAK" title="Dutch Harbor">
+											<implies facet="Location_facet" cat="DutchHarborAK2"/>
+										</heading>
+									</heading>
+									<heading id="UmnakIsland" title="Umnak Island">
+										<implies facet="Location_facet" cat="UmnakIsland2"/>
+										<heading id="NikolskiAK" title="Nikolski">
+											<implies facet="Location_facet" cat="NikolskiAK2"/>
+										</heading>
+									</heading>
+								</heading>
+								<heading id="IslandsFourMtsAK" title="Islands of the Four Mountains">
+									<implies facet="Location_facet" cat="IslandsFourMtsAK2"/>
+									<heading id="KagamilIsland" title="Kagamil Island">
+										<implies facet="Location_facet" cat="KagamilIsland2"/>
+									</heading>
+								</heading>
+								<heading id="PribilofIslands" title="Pribilof Islands">
+									<implies facet="Location_facet" cat="PribilofIslands2"/>
+									<heading id="StPaulIsland" title="St. Paul Island">
+										<implies facet="Location_facet" cat="StPaulIsland2"/>
+									</heading>
+									<heading id="StGeorgeIsland" title="St. George Island">
+										<implies facet="Location_facet" cat="StGeorgeIsland2"/>
+									</heading>
+								</heading>
+								<heading id="UyakIsland" title="Uyak Island">
+									<implies facet="Location_facet" cat="UyakIsland2"/>
+								</heading>
+								<heading id="WesternAleutians" title="Western Aleutians">
+									<implies facet="Location_facet" cat="WesternAleutians2"/>
+									<heading id="NearIslands" title="Near Islands">
+										<implies facet="Location_facet" cat="NearIslands2"/>
+										<heading id="AttuIsland" title="Attu Island">
+											<implies facet="Location_facet" cat="AttuIsland2"/>
+										</heading>
+										<heading id="AgattuIsland" title="Agattu Island">
+											<implies facet="Location_facet" cat="AgattuIsland2"/>
+										</heading>
+										<heading id="ShemyaIsland" title="Shemya Island">
+											<implies facet="Location_facet" cat="ShemyaIsland2"/>
+										</heading>
+									</heading>
+								</heading>
+							</heading>
+							<heading id="BethelDivAK" title="Bethel">
+								<synonym value="Bethel district"/>
+								<synonym value="Bethel division"/>
+								<synonym value="Bethel recording district"/>
+								<excl value="California"/>
+								<excl value="CCo"/>
+								<excl value="Contra Costa"/>
+								<heading id="Andreafsky" title="Andreafsky">
+									<synonym value="St. Mary's"/>
+									<implies facet="Culture_facet" cat="YupikTribe"/>
+								</heading>
+							</heading>
+							<heading id="BristolBayDivAK" title="Bristol Bay Borough">
+								<synonym value="Bristol Bay"/>
+								<heading id="AlaganokRiver" title="Alaganok River">
+									<heading id="Alaganok" title="Alaganok"/>
+								</heading>
+								<heading id="AlaganakLakeDistrict" title="Alaganak Lake District"/>
+								<heading id="Naknek" title="Naknek"/>
+								<heading id="Savonoski" title="Savonoski"/>
+								<heading id="UgashikRiver" title="Ugashik River"/>
+							</heading>
+							<heading id="DillinghamDivAK" title="Dillingham"/>
+							<heading id="KodiakIslDivAK" title="Kodiak Island">
+								<heading id="ChiniakAK" title="Chiniak"/>
+								<heading id="KaguyakKodiakAK" title="Kaguyak">
+									<synonym value="Kaguiak"/>
+									<heading id="OldKaguiakAK" title="Old Kaguiak"/>
+								</heading>
+								<heading id="KarlukTownAK" title="Karluk">
+									<excl value="Karluk Island"/>
+								</heading>
+								<heading id="KodiakTownAK" title="Kodiak"/>
+								<heading id="StPaulKodiakAK" title="St. Paul"/>
+							</heading>
+							<heading id="LakePeninsDivAK" title="Lake and Peninsula"/>
+							<heading id="MatanuskaSustnDivAK" title="Matanuska-Susitna"/>
+							<heading id="NomeCensAreaAK" title="Nome Census Area">
+								<heading id="CapeNome" title="Cape Nome"/>
+								<heading id="CapeRomanof" title="Cape Romanof"/>
+								<heading id="LittleDiomedeIsland" title="Little Diomede Island">
+									<synonym value="Ignaluk"/> <!-- Native name -->
+									<synonym value="Krusenstern Island"/> <!-- Toponym honoring the Baltic German explorer Adam Johann von Krusenstern (1770–1846) -->
+									<excl value="Hawaii"/> <!-- "Krusenstern Islands" was also applied to islands in the NW Hawaiian Islands -->
+									<excl value="Ailuk"/> <!-- "Krusenstern Island" was also applied to Ailuk in the Marshall Islands -->
+									<excl value="Marshall"/> <!-- Ibid. -->
+									<excl value="Marshalls"/> <!-- Ibid. -->
+									<excl value="Tikehau"/> <!-- "Krusenstern Island" was also applied to Tikehau in the Tuamotus -->
+									<excl value="Tuamotu"/> <!-- Ibid. -->
+									<excl value="Tuamotus"/> <!-- Ibid. -->
+								</heading>
+								<heading id="NortonSound" title="Norton Sound">
+									<heading id="GolovinBay" title="Golovin Bay"/>
+									<heading id="NortonBay" title="Norton Bay"/>
+									<heading id="Unalakleet" title="Unalakleet">
+										<synonym value="Unalaklit"/>
+									</heading>
+									<heading id="Unalaklik" title="Unalaklik">
+										<synonym value="Unalakluk"/>
+									</heading>
+								</heading>
 							</heading>
 						</heading> 
 						
 						<!-- _______________ORGANIZED______________ -->
-						<heading id="AleutianIslDivAK" title="Aleutian Islands">
-							<implies facet="Culture_facet" cat="AleutTribe"/>
-							<heading id="BelkofskiIsland" title="Belkofski Island ?"/>
-							<heading id="CentralAleutians" title="Central Aleutians">
-								<heading id="AndreanofIslands" title="Andreanof Islands">
-									<heading id="AtkaIsland" title="Atka Island"/>
-									<heading id="SaltIsland" title="Salt Island"/>
-									<heading id="ChugulIsland" title="Chugul Island"/>
-									<heading id="SeguamIsland" title="Seguam Island"/>
-								</heading>
-								<heading id="RatIslands" title="Rat Islands">
-									<heading id="AmchitkaIsland" title="Amchitka Island"/>
-								</heading>
-							</heading>
-							<heading id="FoxIslands" title="Fox Islands">
-								<heading id="UnalaskaIslAK" title="Unalaska Island">
-									<heading id="IliuLuikAK" title="Iliu Luik"> <!-- Same as Unalaska city? -->
-										<synonym value="Iliuliuk"/>
-										<synonym value="Illiuliuk"/>
-										<synonym value="Moolook"/>
-										<synonym value="Oulioculiuk"/>
-									</heading>
-									<heading id="UnalaskaAK" title="Unalaska"> <!-- Same as Iliu Luik? -->
-										<synonym value="City of Unalaska"/>
-										<synonym value="Iluulux"/>
-									</heading>
-									<heading id="DutchHarbor" title="Dutch Harbor"/>
-								</heading>
-								<heading id="UmnakIsland" title="Umnak Island">
-									<heading id="Nikolski" title="Nikolski"/>
-								</heading>
-							</heading>
-							<heading id="IslandsFourMtsAK" title="Islands of the Four Mountains">
-								<heading id="KagamilIsland" title="Kagamil Island"/>
-							</heading>
-							<heading id="PribilofIslands" title="Pribilof Islands">
-								<heading id="StPaulIsland" title="St. Paul Island"/>
-								<heading id="StGeorgeIsland" title="St. George Island"/>
-							</heading>
-							<heading id="UyakIsland" title="Uyak Island"/>
-							<heading id="WesternAleutians" title="Western Aleutians">
-								<heading id="NearIslands" title="Near Islands">
-									<heading id="AttuIsland" title="Attu Island"/>
-									<heading id="AgattuIsland" title="Agattu Island"/>
-									<heading id="ShemyaIsland" title="Shemya Island"/>
-								</heading>
-							</heading>
-						</heading>
 						<heading id="AnchorageDivAK" title="Anchorage"/>
-						<heading id="BethelDivAK" title="Bethel">
-							<synonym value="Bethel district"/>
-							<synonym value="Bethel division"/>
-							<synonym value="Bethel recording district"/>
-							<excl value="California"/>
-							<excl value="CCo"/>
-							<excl value="Contra Costa"/>
-							<heading id="Andreafsky" title="Andreafsky">
-								<synonym value="St. Mary's"/>
-								<implies facet="Culture_facet" cat="YupikTribe"/>
-							</heading>
-						</heading>
-						<heading id="BristolBayDivAK" title="Bristol Bay">
-							<heading id="AlaganokRiver" title="Alaganok River">
-								<heading id="Alaganok" title="Alaganok"/>
-							</heading>
-							<heading id="AlaganakLakeDistrict" title="Alaganak Lake District"/>
-							<heading id="Naknek" title="Naknek"/>
-							<heading id="UgashikRiver" title="Ugashik River"/>
-						</heading>
-						<heading id="DillinghamDivAK" title="Dillingham"/>
-						<heading id="FairbanksNoStarDivAK" title="Fairbanks North Star"/>
 						<heading id="HainesDivAK" title="Haines"/>
 						<heading id="HoonahAngoonCenAreaAK" title="Hoonah-Angoon Census Area">
 							<heading id="Hoonah" title="Hoonah">
@@ -3894,93 +4110,6 @@
 							</heading>
 							<heading id="Klukwan" title="Klukwan">
 								<implies facet="Culture_facet" cat="ChilkatTlingitTribe"/>
-							</heading>
-						</heading>
-						<heading id="JuneauDivAK" title="Juneau"/>
-						<heading id="KenaiPeninsDivAK" title="Kenai Peninsula">
-							<synonym value="Kenai"/>
-						</heading>
-						<heading id="KetchikanGtwyDivAK" title="Ketchikan Gateway">
-							<heading id="RevillagigedoIslAK" title="Revillagigedo Island">
-								<synonym value="Revillagigedo"/>
-								<heading id="KetchikanTown" title="Ketchikan">
-									<synonym value="Ketchican"/>
-								</heading>
-							</heading>
-						</heading>
-						<heading id="KodiakIslDivAK" title="Kodiak Island">
-							<heading id="ChiniakAK" title="Chiniak"/>
-							<heading id="KaguyakKodiakAK" title="Kaguyak">
-								<synonym value="Kaguiak"/>
-								<heading id="OldKaguiakAK" title="Old Kaguiak"/>
-							</heading>
-							<heading id="KarlukTownAK" title="Karluk">
-								<excl value="Karluk Island"/>
-							</heading>
-							<heading id="KodiakTownAK" title="Kodiak"/>
-							<heading id="StPaulKodiakAK" title="St. Paul"/>
-						</heading>
-						<heading id="MatanuskaSustnDivAK" title="Matanuska-Susitna"/>
-						<heading id="NomeCensAreaAK" title="Nome Census Area">
-							<heading id="CapeNome" title="Cape Nome"/>
-							<heading id="LittleDiomedeIsland" title="Little Diomede Island">
-								<synonym value="Ignaluk"/> <!-- Native name -->
-								<synonym value="Krusenstern Island"/> <!-- Toponym honoring the Baltic German explorer Adam Johann von Krusenstern (1770–1846) -->
-								<excl value="Hawaii"/> <!-- "Krusenstern Islands" was also applied to islands in the NW Hawaiian Islands -->
-								<excl value="Ailuk"/> <!-- "Krusenstern Island" was also applied to Ailuk in the Marshall Islands -->
-								<excl value="Marshall"/> <!-- Ibid. -->
-								<excl value="Marshalls"/> <!-- Ibid. -->
-								<excl value="Tikehau"/> <!-- "Krusenstern Island" was also applied to Tikehau in the Tuamotus -->
-								<excl value="Tuamotu"/> <!-- Ibid. -->
-								<excl value="Tuamotus"/> <!-- Ibid. -->
-							</heading>
-						</heading>
-						<heading id="NorthSlopeDivAK" title="North Slope">
-							<heading id="ColvilleRiver" title="Colville River"/>
-							<heading id="InaruRiver" title="Inaru River"/>
-							<heading id="KarlukIsland" title="Karluk Island"/>
-							<heading id="PointHope" title="Point Hope">
-								<heading id="Tigara" title="Tigara"/>
-							</heading>
-							<heading id="PointLay" title="Point Lay"/>
-							<heading id="Wainwright" title="Wainwright"/>
-						</heading>
-						<heading id="NWArcticBrghAK" title="Northwest Arctic Borough">
-							<synonym value="Northwest Arctic"/>
-							<synonym value="Northwest Arctic Division"/>
-							<heading id="BaldwinPeninAK" title="Baldwin Peninsula">
-								<!-- Baldwin Peninsula is a peninsula located on the Arctic Circle in the 
-									northwestern region of the U.S. state of Alaska, at 66°33′N 161°55′W. 
-									It extends 72 km (45 miles) into Kotzebue Sound from the Alaska
-									mainland and defines the south boundary of Hotham Inlet. It is 2-19 km
-									(1-12 miles) wide. The city of Kotzebue is at the end of the peninsula -->
-								<heading id="KotzebueSound" title="Kotzebue Sound">
-									<synonym value="Head of Kotzebue Sound"/>
-									<heading id="KoowakRiver" title="Koowak River"/>
-									<heading id="Kotzebue" title="Kotzebue"/>
-									<heading id="NoatakRiver" title="Noatak River">
-										<synonym value="Head of Noatak River"/>
-									</heading>
-								</heading>
-							</heading>
-							<heading id="Noorvik" title="Noorvik">
-								<!-- 66°50′14″N 161°2′12″W (66.837130, -161.036641) -->
-								<implies facet="Culture_facet" cat="InupiaqTribe"/>
-							</heading>
-						</heading>
-						<heading id="PrWalesHyderCenAK" title="Prince of Wales-Hyder">
-							<synonym value="Prince of Wales-Hyder Census Area"/>
-							<synonym value="Prince of Wales-Outer Ketchikan"/>
-							<heading id="AnnetteIsland" title="Annette Island">
-								<heading id="NewMetlakatla" title="New Metlakatla">
-									<!--  55°7′37″N 131°34′35″W (55.126916, -131.576393) -->
-									<synonym value="Metlakatla"/>
-									<excl value="BC"/>
-									<excl value="B.C."/>
-									<excl value="British Columbia"/>
-									<excl value="Canada"/>
-									<excl value="Old Metlakatla"/>
-								</heading>
 							</heading>
 						</heading>
 						<heading id="SitkaDivAK" title="Sitka">
@@ -3996,41 +4125,12 @@
 							<heading id="Skagway" title="Skagway"/>
 							<heading id="Yakutat" title="Yakutat"/>
 						</heading>
-						<heading id="SEFairbanksDivAK" title="Southeast Fairbanks"/>
 						<heading id="ValdezCordovaDivAK" title="Valdez-Cordova">
 							<heading id="Chilkat" title="Chilkat"/> <!-- As a place: Chilkat, Valdez-Cordova, Alaska 99574 -->
 						</heading>
 						<heading id="WadeHamptonDivAK" title="Wade-Hampton"/>
 						<heading id="WrangellPetersbDivAK" title="Wrangell-Petersburg">
 							<heading id="StikineRiver" title="Stikine River"/>
-						</heading>
-						<heading id="YukonKoyukukDivAK" title="Yukon-Koyukuk">
-							<synonym value="Lower Yukon to Kuskokwim"/>
-							<synonym value="Yukon northward"/>
-							<synonym value="Western Yukon"/>
-							<heading id="Allakaket" title="Allakaket"/>
-							<heading id="Anvik" title="Anvik"/>
-							<heading id="FortYukon" title="Fort Yukon"/>
-							<heading id="KoukukRiver" title="Koukuk River">
-								<synonym value="Koyiukuk River"/>
-								<synonym value="Koyukuk River"/>
-							</heading>
-							<heading id="Nulato" title="Nulato"/>
-							<heading id="Shageluk" title="Shageluk"/>
-							<heading id="StevensVillage" title="Stevens Village"/>
-							<heading id="TananaRiver" title="Tanana River"/>
-							<heading id="LowerYukon" title="Lower Yukon">
-								<heading id="Knajkak" title="Knajkak"/>
-								<heading id="MouthofYukonRiver" title="Mouth of Yukon River"/>
-							</heading>
-							<heading id="MiddleYukon" title="Middle Yukon"/>
-							<heading id="UpperYukon" title="Upper Yukon"/>
-							<heading id="YukonRiver" title="Yukon River">
-								<heading id="RussianMission" title="Russian Mission"/>
-								<heading id="LowerYukonRiver" title="Lower Yukon River"/>
-								<heading id="UpperYukonRiver" title="Upper Yukon River"/>
-								<heading id="MiddleYukonRiver" title="Middle Yukon River"/>
-							</heading>
 						</heading>
 						
 						<!-- _____________NOT ORGANIZED_____________ -->
@@ -4069,8 +4169,7 @@
 						<heading id="CapeDarby" title="Cape Darby"/>
 						<heading id="CapeLisburne" title="Cape Lisburne"/>
 						<heading id="CapeYaktag" title="Cape Yaktag"/>
-						<heading id="CapeRomanof" title="Cape Romanof"/>
-						<heading id="CapeRomanzof" title="Cape Romanzof"/>
+						<heading id="CapeRomanzof" title="Cape Romanzof"/> <!-- same as Cape Romanof? -->
 						<heading id="CapeVancouver" title="Cape Vancouver">
 							<heading id="Kusilvak" title="Kusilvak"/>
 							<heading id="Chalitmut" title="Chalitmut"/>
@@ -4110,16 +4209,6 @@
 						<heading id="Marshall" title="Marshall"/>
 						<heading id="Mtoceyk" title="Mtoceyk ?"/>
 						<heading id="Northway" title="Northway"/>
-						<heading id="NortonSound" title="Norton Sound">
-							<heading id="GolovinBay" title="Golovin Bay"/>
-							<heading id="NortonBay" title="Norton Bay"/>
-							<heading id="Unalakleet" title="Unalakleet">
-								<synonym value="Unalaklit"/>
-							</heading>
-							<heading id="Unalaklik" title="Unalaklik">
-								<synonym value="Unalakluk"/>
-							</heading>
-						</heading>
 						<heading id="NortonSoundtoBristolBay" title="Norton Sound to Bristol Bay"/>
 						<heading id="Nuklukayet" title="Nuklukayet"/>
 						<heading id="NuchekIsland" title="Nuchek Island"/>
@@ -4145,7 +4234,6 @@
 							<heading id="PortEtches" title="Port Etches"/>
 						</heading>
 						<heading id="PunukIslands" title="Punuk Islands"/>
-						<heading id="Savonoski" title="Savonoski"/>
 						<heading id="SewardPeninsula" title="Seward Peninsula">
 							<heading id="CaviaAK" title="Cavia"/>
 							<heading id="LoppLagoon" title="Lopp Lagoon"/>
