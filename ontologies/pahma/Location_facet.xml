@@ -3219,6 +3219,12 @@
 					<heading id="Kitkatla" title="Kitkatla"/>
 					<heading id="NewWestminster" title="New Westminster"/>
 					<heading id="NootkaSound" title="Nootka Sound"/>
+					<heading id="OldMetlakatlaBCCA" title="Old Metlakatla">
+						<synonym value="Metlakatla"/>
+						<excl value="AK"/>
+						<excl value="Alaska"/>
+						<excl value="New Metlakatla"/>
+					</heading>
 					<heading id="OldTeslin" title="Old Teslin"/>
 					<heading id="PortSimpson" title="Port Simpson"/>
 					<heading id="PyladesIsland" title="Pylades Island"/>
@@ -3235,6 +3241,7 @@
 					</heading>
 					<heading id="RiversInlet" title="Rivers Inlet"/>
 					<heading id="StPaulIslands" title="St. Paul Islands"/>
+					<heading id="Skidegate" title="Skidegate"/>
 					<heading id="SmithInlet" title="Smith Inlet"/>
 					<heading id="TurnourIsland" title="Turnour Island">
 						<heading id="Karlukwees" title="Karlukwees"/>
@@ -3809,8 +3816,6 @@
 						</heading> 
 						
 						<!-- _______________ORGANIZED______________ -->
-						<heading id="CountiesAK" title="Counties" noMatch="true">
-						</heading>
 						<heading id="AleutianIslDivAK" title="Aleutian Islands">
 							<implies facet="Culture_facet" cat="AleutTribe"/>
 							<heading id="BelkofskiIsland" title="Belkofski Island ?"/>
@@ -3861,9 +3866,16 @@
 						</heading>
 						<heading id="AnchorageDivAK" title="Anchorage"/>
 						<heading id="BethelDivAK" title="Bethel">
+							<synonym value="Bethel district"/>
+							<synonym value="Bethel division"/>
+							<synonym value="Bethel recording district"/>
 							<excl value="California"/>
 							<excl value="CCo"/>
 							<excl value="Contra Costa"/>
+							<heading id="Andreafsky" title="Andreafsky">
+								<synonym value="St. Mary's"/>
+								<implies facet="Culture_facet" cat="YupikTribe"/>
+							</heading>
 						</heading>
 						<heading id="BristolBayDivAK" title="Bristol Bay">
 							<heading id="AlaganokRiver" title="Alaganok River">
@@ -3876,6 +3888,14 @@
 						<heading id="DillinghamDivAK" title="Dillingham"/>
 						<heading id="FairbanksNoStarDivAK" title="Fairbanks North Star"/>
 						<heading id="HainesDivAK" title="Haines"/>
+						<heading id="HoonahAngoonCenAreaAK" title="Hoonah-Angoon Census Area">
+							<heading id="Hoonah" title="Hoonah">
+								<synonym value="Huna"/>
+							</heading>
+							<heading id="Klukwan" title="Klukwan">
+								<implies facet="Culture_facet" cat="ChilkatTlingitTribe"/>
+							</heading>
+						</heading>
 						<heading id="JuneauDivAK" title="Juneau"/>
 						<heading id="KenaiPeninsDivAK" title="Kenai Peninsula">
 							<synonym value="Kenai"/>
@@ -3901,8 +3921,19 @@
 							<heading id="StPaulKodiakAK" title="St. Paul"/>
 						</heading>
 						<heading id="MatanuskaSustnDivAK" title="Matanuska-Susitna"/>
-						<heading id="NomeDivAK" title="Nome">
+						<heading id="NomeCensAreaAK" title="Nome Census Area">
 							<heading id="CapeNome" title="Cape Nome"/>
+							<heading id="LittleDiomedeIsland" title="Little Diomede Island">
+								<synonym value="Ignaluk"/> <!-- Native name -->
+								<synonym value="Krusenstern Island"/> <!-- Toponym honoring the Baltic German explorer Adam Johann von Krusenstern (1770–1846) -->
+								<excl value="Hawaii"/> <!-- "Krusenstern Islands" was also applied to islands in the NW Hawaiian Islands -->
+								<excl value="Ailuk"/> <!-- "Krusenstern Island" was also applied to Ailuk in the Marshall Islands -->
+								<excl value="Marshall"/> <!-- Ibid. -->
+								<excl value="Marshalls"/> <!-- Ibid. -->
+								<excl value="Tikehau"/> <!-- "Krusenstern Island" was also applied to Tikehau in the Tuamotus -->
+								<excl value="Tuamotu"/> <!-- Ibid. -->
+								<excl value="Tuamotus"/> <!-- Ibid. -->
+							</heading>
 						</heading>
 						<heading id="NorthSlopeDivAK" title="North Slope">
 							<heading id="ColvilleRiver" title="Colville River"/>
@@ -3914,15 +3945,52 @@
 							<heading id="PointLay" title="Point Lay"/>
 							<heading id="Wainwright" title="Wainwright"/>
 						</heading>
-						<heading id="NWArcticDivAK" title="Northwest Arctic"/>
-						<heading id="PrWalesOKetchDivAK" title="Prince of Wales-Outer Ketchikan">
+						<heading id="NWArcticBrghAK" title="Northwest Arctic Borough">
+							<synonym value="Northwest Arctic"/>
+							<synonym value="Northwest Arctic Division"/>
+							<heading id="BaldwinPeninAK" title="Baldwin Peninsula">
+								<!-- Baldwin Peninsula is a peninsula located on the Arctic Circle in the 
+									northwestern region of the U.S. state of Alaska, at 66°33′N 161°55′W. 
+									It extends 72 km (45 miles) into Kotzebue Sound from the Alaska
+									mainland and defines the south boundary of Hotham Inlet. It is 2-19 km
+									(1-12 miles) wide. The city of Kotzebue is at the end of the peninsula -->
+								<heading id="KotzebueSound" title="Kotzebue Sound">
+									<synonym value="Head of Kotzebue Sound"/>
+									<heading id="KoowakRiver" title="Koowak River"/>
+									<heading id="Kotzebue" title="Kotzebue"/>
+									<heading id="NoatakRiver" title="Noatak River">
+										<synonym value="Head of Noatak River"/>
+									</heading>
+								</heading>
+							</heading>
+							<heading id="Noorvik" title="Noorvik">
+								<!-- 66°50′14″N 161°2′12″W (66.837130, -161.036641) -->
+								<implies facet="Culture_facet" cat="InupiaqTribe"/>
+							</heading>
+						</heading>
+						<heading id="PrWalesHyderCenAK" title="Prince of Wales-Hyder">
+							<synonym value="Prince of Wales-Hyder Census Area"/>
+							<synonym value="Prince of Wales-Outer Ketchikan"/>
 							<heading id="AnnetteIsland" title="Annette Island">
 								<heading id="NewMetlakatla" title="New Metlakatla">
+									<!--  55°7′37″N 131°34′35″W (55.126916, -131.576393) -->
 									<synonym value="Metlakatla"/>
+									<excl value="BC"/>
+									<excl value="B.C."/>
+									<excl value="British Columbia"/>
+									<excl value="Canada"/>
+									<excl value="Old Metlakatla"/>
 								</heading>
 							</heading>
 						</heading>
-						<heading id="SitkaDivAK" title="Sitka"/>
+						<heading id="SitkaDivAK" title="Sitka">
+							<heading id="Daxatkanada" title="Daxatkanada">
+								<synonym value="SIT- 244"/>
+								<synonym value="SIT-0244"/>
+								<synonym value="SIT-244"/>
+								<implies facet="Culture_facet" cat="TlingitIndians"/>
+							</heading>
+						</heading>
 						<heading id="Skagway" title="Skagway-Yakutat-Angoon">
 							<heading id="Angoon1" title="Angoon"/>
 							<heading id="Skagway" title="Skagway"/>
@@ -3964,16 +4032,6 @@
 								<heading id="MiddleYukonRiver" title="Middle Yukon River"/>
 							</heading>
 						</heading>
-						<heading id="CensusAreasAK" title="Census Areas" noMatch="true">
-							<heading id="HoonahAngoonCenAreaAK" title="Hoonah-Angoon Census Area">
-								<heading id="Hoonah" title="Hoonah">
-									<synonym value="Huna"/>
-								</heading>
-								<heading id="Klukwan" title="Klukwan">
-									<implies facet="Culture_facet" cat="ChilkatTlingitTribe"/>
-								</heading>
-							</heading>
-						</heading>
 						
 						<!-- _____________NOT ORGANIZED_____________ -->
 						<heading id="AlexanderArchipelago" title="Alexander Archipelago">
@@ -3990,9 +4048,6 @@
 							</heading>
 						</heading>
 						<heading id="AmoknakIsland" title="Amoknak Island"/>
-						<heading id="Andreafsky" title="Andreafsky">
-							<synonym value="St. Mary's"/>
-						</heading>
 						<heading id="BeringSea" title="Bering Sea">
 							<heading id="StephanIsland" title="Stephan Island">
 								<heading id="Utjoik" title="Utjoik"/>
@@ -4029,11 +4084,10 @@
 							<heading id="CopperRiverdelta" title="Copper River delta"/>
 							<heading id="LowerCopperRiver" title="Lower Copper River"/>
 						</heading>
-						<heading id="Daxatkanada" title="Daxatkanada"/>
 						<heading id="FortyMile" title="Forty Mile"/>
 						<heading id="FortyMileRiver" title="Forty Mile River"/>
 						<heading id="GeorgeCamp" title="George Camp"/>
-						<heading id="Granaxcanuwu" title="Granaxcanuwu"/>
+						<heading id="Granaxcanuwu" title="Granaxcanuwu"/> <!-- No Google results -->
 						<heading id="Homer" title="Homer"/>
 						<heading id="HooperBay" title="Hooper Bay">
 							<synonym value="Askinuk"/>
@@ -4043,16 +4097,8 @@
 						<heading id="Katmai" title="Katmai"/>
 						<heading id="KingIsland" title="King Island"/>
 						<heading id="KnightIsland" title="Knight Island"/>
-						<heading id="Kosorefski" title="Kosorefski"/>
-						<heading id="Kosovefski" title="Kosovefski"/>
-						<heading id="Kotzebue" title="Kotzebue"/>
-						<heading id="KotzebueSound" title="Kotzebue Sound">
-							<heading id="HeadofKotzebueSound" title="Head of Kotzebue Sound"/>
-							<heading id="KoowakRiver" title="Koowak River"/>
-							<heading id="NoatakRiver" title="Noatak River">
-								<heading id="HeadofNoatakRiver" title="Head of Noatak River"/>
-							</heading>
-						</heading>
+						<heading id="Kosorefski" title="Kosorefski"/> <!-- No Google results -->
+						<heading id="Kosovefski" title="Kosovefski"/> <!-- No Google results -->
 						<heading id="Kushunuk" title="Kushunuk"/>
 						<heading id="Kuskokwim" title="Kuskokwim">
 							<heading id="KuskokwimRiver" title="Kuskokwim River">
@@ -4060,11 +4106,9 @@
 							</heading>
 						</heading>
 						<heading id="KwidjakRiver" title="Kwidjak River"/>
-						<heading id="LittleDiomedeIsland" title="Little Diomede Island"/>
-						<heading id="Malakleet" title="Malakleet"/>
+						<heading id="Malakleet" title="Malakleet"/> <!-- No Google results -->
 						<heading id="Marshall" title="Marshall"/>
 						<heading id="Mtoceyk" title="Mtoceyk ?"/>
-						<heading id="Noorvik" title="Noorvik"/>
 						<heading id="Northway" title="Northway"/>
 						<heading id="NortonSound" title="Norton Sound">
 							<heading id="GolovinBay" title="Golovin Bay"/>
@@ -4107,7 +4151,6 @@
 							<heading id="LoppLagoon" title="Lopp Lagoon"/>
 							<heading id="PortClarence" title="Port Clarence"/>
 						</heading>
-						<heading id="Skidegate" title="Skidegate"/>
 						<heading id="SledgeIsland" title="Sledge Island"/>
 						<heading id="StebbinsAK" title="Stebbins"/>
 						<heading id="StLawrenceIslAK" title="St. Lawrence Island"/>
@@ -5158,19 +5201,15 @@
 							<heading id="MissNuesSenSoledad" title="Nuestra Señora de la Soledad" noMatch="true"/>
 							<heading id="MissSBuenaventura" title="San Buenaventura" noMatch="true"/>
 							<heading id="MissSCarlosBorrCarm" title="San Carlos Borromeo de Carmel" noMatch="true"/>
-							<heading id="MissSDiegoAlcala" title="San Diego de Alcalá" noMatch="true"/> <!-- Insert:  -->
-							<heading id="MissSFernandoReyEs" title="San Fernando Rey de España" noMatch="true"/>
-								heading id="SanFernandoMiss" title="San Fernando Mission"
-								<!-- Insert: <implies facet="Location_facet" cat="MissSFernandoReyEs"/> -->
+							<heading id="MissSDiegoAlcala" title="San Diego de Alcalá" noMatch="true"/>
+							<heading id="MissSFernandoReyEs" title="San Fernando Rey de España" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSFernandoReyEs"/> -->
 							<heading id="MissSFranciscoAsis" title="San Francisco de Asís" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSFranciscoAsis"/> -->
 							<heading id="MissSFranciscoSola" title="San Francisco Solano" noMatch="true"/>
-							<heading id="MissSGabrielArc" title="San Gabriel Arcángel" noMatch="true"/>
-								heading id="SanGabrielMission" title="San Gabriel Mission"
-								<!-- Insert: <implies facet="Location_facet" cat="MissSGabrielArc"/> -->
-							<heading id="MissSanJose" title="San José" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSanJose"/> -->
+							<heading id="MissSGabrielArc" title="San Gabriel Arcángel" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSGabrielArc"/> -->
+							<heading id="MissSanJose" title="San José de Guadalupe" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSanJose"/> -->
 							<heading id="MissSJuanBautista" title="San Juan Bautista" noMatch="true"/>
 							<heading id="MissSJuanCapistra" title="San Juan Capistrano" noMatch="true"/>
-							<heading id="MissSLObispoTolos" title="San Luis Obispo de Tolosa" noMatch="true"/>
+							<heading id="MissSLObispoTolos" title="San Luís Obispo de Tolosa" noMatch="true"/>
 							<heading id="MissSLReyFrancia" title="San Luis Rey de Francia" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSLReyFrancia"/> -->
 							<heading id="MissSMiguelArcang" title="San Miguel Arcángel" noMatch="true"/> <!-- Insert: <implies facet="Location_facet" cat="MissSMiguelArcang"/> -->
 							<heading id="MissSRafaelArcan" title="San Rafael Arcángel" noMatch="true"/>
@@ -16236,11 +16275,22 @@
 									<heading id="CarmelMntryCA" title="Carmel">
 										<heading id="CarmelMission" title="Carmel Mission">
 											<synonym value="Mission San Carlos"/>
+											<synonym value="Mission San Carlos Borroméo"/>
 											<synonym value="Mission San Carlos Borromeo"/>
+											<synonym value="Mission San Carlos Borroméo de Carmel"/>
 											<synonym value="Mission San Carlos Borromeo de Carmel"/>
+											<synonym value="Mission San Carlos Borroméo de Carmelo"/>
+											<synonym value="Mission San Carlos Borromeo de Carmelo"/>
+											<synonym value="San Carlos Borroméo de Carmel"/>
+											<synonym value="San Carlos Borroméo de Carmelo"/>
+											<synonym value="San Carlos Borroméo de Carmel Mission"/>
+											<synonym value="San Carlos Borroméo de Carmelo Mission"/>
+											<synonym value="San Carlos Borroméo Mission"/>
+											<synonym value="San Carlos Borromeo Mission"/>
 											<synonym value="San Carlos Borromeo de Carmel"/>
 											<synonym value="San Carlos Borromeo de Carmel Mission"/>
-											<synonym value="San Carlos Borromeo Mission"/>
+											<synonym value="San Carlos Borromeo de Carmelo"/>
+											<synonym value="San Carlos Borromeo de Carmelo Mission"/>
 											<synonym value="San Carlos Mission"/>
 											<implies facet="Location_facet" cat="MissSCarlosBorrCarm"/>
 										</heading>
@@ -18201,8 +18251,7 @@
 										</heading>
 										<heading id="ArchRock" title="Arch Rock"/>
 										<heading id="CASCrI135" title="CA-SCrI-135">
-											<synonym
-												value="Smuggler's Cover (Schumacher) (part only)"/>
+											<synonym value="Smuggler's Cover (Schumacher) (part only)"/>
 										</heading>
 										<heading id="CASCrINL1" title="CA-SCrI-NL-1"/>
 
@@ -18634,7 +18683,8 @@
 									<heading id="CAVen276" title="CA-Ven-276"/>
 								</heading>
 							</heading>
-						</heading> <!-- <heading id="_Countynotspecified" title="_County not specified">  LOCATE/REFILE OR ELIMINATE
+						</heading> 
+						<!-- <heading id="_Countynotspecified" title="_County not specified">  LOCATE/REFILE OR ELIMINATE
 				          <heading id="BearCreek" title="Bear Creek"/>
 				          <heading id="LittleStonyCreek" title="Little Stony Creek"/>
 				          <heading id="HamburgBar" title="Hamburg Bar"/>
@@ -20497,7 +20547,8 @@
 						<heading id="NorthernGreatLakes" title="Northern Great Lakes"/>
 					</heading>
 				</heading>
-			</heading> <!--  LOCATE/REFILE OR ELIMINATE
+			</heading> 
+			<!--  LOCATE/REFILE OR ELIMINATE
 				<heading id="GreatPlains" title="Great Plains">
 					<heading id="CentralPlains" title="Central Plains"/>
 					<heading id="NorthernPlains" title="Northern Plains"/>
