@@ -2538,61 +2538,109 @@
 		    <heading id="Belau" title="Belau"/>
 		    <implies facet="Culture_facet" cat="MicronesianCulture"/>
 		</heading>
-		<heading id="Philippines" title="Philippines">
+		<heading id="PhilippinesCountry" title="Philippines">
 			<synonym value="Philippinas"/>
 			<synonym value="The Philippines"/>
 			<synonym value="Phillipines"/>
 			<synonym value="The Phillipines"/>
 		    <synonym value="Filipino"/>
-			<heading id="MindaroIsland" title="Mindaro Island">
-				<synonym value="Mindoro"/>
+			<heading id="LuzonIslGrpPhilipp" title="Luzon (North) Group">
+				<synonym value="Luzon Islands"/>
+				<synonym value="Luzon Island Group"/>
+				<synonym value="Luzon Group"/>
+				<heading id="LuzonIslPhilipp" title="Luzon Island">
+					<synonym value="Luzon"/>
+					<heading id="AbraProvince" title="Abra Province">
+						<synonym value="Abra"/>
+						<heading id="Manago" title="Manago"/> <!-- Culture ? -->
+					</heading>
+					<heading id="IfugaoProvince" title="Ifugao Province">
+						<synonym value="Ifugao"/>
+					</heading>
+					<heading id="IsabelaProvince" title="Isabela Province">
+						<synonym value="Isabela"/>
+					</heading>
+					<heading id="KalingaApayaoProvince" title="Kalinga Apayao Province">
+						<synonym value="Kalinga"/> <!-- Is just a culture, or also a place? -->
+						<synonym value="Kalinga Apayao"/>
+					</heading>
+					<heading id="LaUnionProvince" title="La Union Province">
+						<synonym value="La Union"/>
+						<heading id="Ilocano" title="Ilocano"/> <!-- Is just a culture, or also a place? -->
+					</heading>
+					<heading id="MountainProvince" title="Mountain Province">
+						<heading id="Bontoc" title="Bontoc"/> <!-- Is just a culture, or also a place? -->
+						<heading id="Igorot" title="Igorot"/> <!-- Is just a culture, or also a place? -->
+					</heading>
+					<heading id="PangasinamProvince" title="Pangasinam Province">
+						<synonym value="Pangasinam"/>
+					</heading>
+					<heading id="QuirinoProvince" title="Quirino Province">
+						<synonym value="Quirino"/>
+					</heading>
+					<heading id="RizalProvince" title="Rizal Province">
+						<synonym value="Rizal"/>
+						<heading id="Manila" title="Manila">
+							<heading id="BarrioofSantaAna" title="Barrio of Santa Ana"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="MindoroIslPhilip" title="Mindoro Island">
+					<synonym value="Mindaro"/>
+					<synonym value="Mindaro"/>
+				</heading>
 			</heading>
-			<heading id="MindanaoIsland" title="Mindanao Island">
-				<heading id="DavaoProvince" title="Davao Province"/>
-			</heading>
-			<heading id="LuzonIsland" title="Luzon Island">
-				<heading id="KalingaApayaoProvince" title="Kalinga Apayao Province">
-					<synonym value="Kalinga"/>
+			<heading id="MindanaoIslGrpPhilip" title="Mindanao (South) Group">
+				<synonym value="Gran Molucas"/>
+				<synonym value="Great Mollucas"/>
+				<synonym value="Mindanao"/>
+				<synonym value="Mindanao Island"/>
+				<synonym value="Mindanao Island Group"/>
+				<synonym value="Mindanao Islands"/>
+				<synonym value="Mindanao Group"/>
+				<heading id="BasilanIslPhilipp" title="Basilan Island">
+					<synonym value="Basilan"/>
 				</heading>
-				<heading id="IfugaoProvince" title="Ifugao Province"/>
-				<heading id="IsabelaProvince" title="Isabela Province"/>
-				<heading id="AbraProvince" title="Abra Province">
-					<heading id="Manago" title="Manago"/>
+				<heading id="MindanaoIslPhilipp" title="Mindanao Island">
+					<heading id="DavaoProvince" title="Davao Province">
+						<synonym value="Davao"/>
+					</heading>
 				</heading>
-				<heading id="QuirinoProvince" title="Quirino Province"/>
-				<heading id="PangasinamProvince" title="Pangasinam Province"/>
-				<heading id="MountainProvince" title="Mountain Province">
-					<heading id="Bontoc" title="Bontoc"/>
-					<heading id="Igorot" title="Igorot"/>
-				</heading>
-				<heading id="LaUnionProvince" title="La Union Province">
-					<heading id="Ilocano" title="Ilocano"/>
-				</heading>
-				<heading id="RizalProvince" title="Rizal Province">
-					<heading id="Manila" title="Manila">
-						<heading id="BarrioofSantaAna" title="Barrio of Santa Ana"/>
+				<heading id="SuluArchipelPhilipp" title="Sulu Archipelago">
+					<heading id="JoloIslandPhil" title="Jolo Island">
+						<synonym value="Jolo"/>
+						<synonym value="Jolo I."/>
+						<synonym value="Jolo Is."/>
+						<synonym value="Jolo Isl."/>
+					</heading>
+					<heading id="MoroIslandPhil" title="Moro Island">
+						<synonym value="Moro"/>
+						<synonym value="Moro I."/>
+						<synonym value="Moro Is."/>
+						<synonym value="Moro Isl."/>
 					</heading>
 				</heading>
 			</heading>
-			<heading id="VisayanGroup" title="Visayan Group"/>
-			<heading id="PalawanIsland" title="Palawan Island"/>
-			<heading id="CebuIsland" title="Cebu Island"/>
-			<heading id="BoholIsland" title="Bohol Island"/>
-			<heading id="SamarIsland" title="Samar Island"/>
-			<heading id="NegrosIsland" title="Negros Island"/>
-			<heading id="BasilanIsland" title="Basilan Island"/>
-			<heading id="SuluArchipelago" title="Sulu Archipelago">
-				<heading id="JoloIsland" title="Jolo Island">
-					<synonym value="Jolo"/>
-					<synonym value="Jolo I."/>
-					<synonym value="Jolo Is."/>
-					<synonym value="Jolo Isl."/>
+			<heading id="VisayanGroup" title="Visayan (Central) Group">
+				<synonym value="Visayan"/>
+				<synonym value="Visayan Group"/>
+				<synonym value="Visayan Islands"/>
+				<synonym value="Visayans"/>
+				<synonym value="Visayas"/>
+				<synonym value="Visayas Group"/>
+				<synonym value="Visayas Islands"/>
+				<heading id="BoholIsland" title="Bohol Island">
+					<synonym value="Bohol"/>
 				</heading>
-				<heading id="Moro" title="Moro Island">
-					<synonym value="Moro"/>
-					<synonym value="Moro I."/>
-					<synonym value="Moro Is."/>
-					<synonym value="Moro Isl."/>
+				<heading id="CebuIsland" title="Cebu Island">
+					<synonym value="Cebu"/>
+				</heading>
+				<heading id="NegrosIsland" title="Negros Island"/>
+				<heading id="PalawanIsland" title="Palawan Island">
+					<synonym value="Palawan"/>
+				</heading>
+				<heading id="SamarIsland" title="Samar Island">
+					<synonym value="Samar"/>
 				</heading>
 			</heading>
 		</heading>
@@ -5667,8 +5715,10 @@
 									<heading id="PalermoButteCA" title="Palermo"/> <!-- Disambiguate -->
 									<heading id="MooretownButteCA" title="Mooretown"/>
 									<heading id="GridleyButteCA" title="Gridley">
-										<heading id="GridleyCoxMound" title="Gridley, Cox Mound"/>
-										<heading id="NearGridley" title="Near Gridley"/>
+										<heading id="GridleyCoxMound" title="Cox Mound">
+											<synonym value="Gridley, Cox Mound"/>
+										</heading>
+										<synonym value="Near Gridley"/>
 									</heading>
 									<heading id="OrovilleButteCA" title="Oroville">
 										<heading id="VolcanoOrovilleArea" title="Volcano, Oroville Area"/>
@@ -7642,20 +7692,25 @@
 								<heading id="PlacesModocCA" title="Place Names" noMatch="true">
 									<heading id="AlturasModocCA" title="Alturas"/>
 									<heading id="AdinModocCA" title="Adin"/>
-									<heading id="ModocBattlefield" title="Modoc Battlefield"/>
-									<heading id="GooseLakeModocCA" title="Goose Lake">
-										<heading id="NearWillowRanch" title="Near Willow Ranch"/>
-									</heading>
-									<heading id="FortBidwellModocCA" title="Fort Bidwell"/>
-									<heading id="CowheadLakeModocCA" title="Cowhead Lake"/>
-									<heading id="TuleLakeCenter" title="Tule Lake Center"/>
-									<heading id="LikelyRancheria" title="Likely Rancheria"/> <!-- <heading id="LikelyModocCA" title="Likely"/> Disambiguate -->
-									<heading id="NearSurprise" title="Near Surprise"/>
 									<heading id="Cedarville" title="Cedarville">
 										<heading id="CedarvilleArea" title="Cedarville Area"/>
 									</heading>
-									<heading id="KlamathRiverModocCA" title="Klamath River"/> <!-- Disambiguate from other counties -->
+									<heading id="CowheadLakeModocCA" title="Cowhead Lake"/>
 									<heading id="EaglevilleModocCA" title="Eagleville"/>
+									<heading id="FortBidwellModocCA" title="Fort Bidwell"/>
+									<heading id="GooseLakeModocCA" title="Goose Lake">
+										<heading id="WillowRanch" title="Willow Ranch">
+											<synonym value="Near Willow Ranch"/>
+										</heading>
+									</heading>
+									<heading id="TuleLakeCenter" title="Tule Lake Center"/>
+									<heading id="KlamathRiverModocCA" title="Klamath River"/> <!-- Disambiguate from other counties -->
+									<heading id="LikelyRancheria" title="Likely Rancheria"/>
+									<!-- <heading id="LikelyModocCA" title="Likely"/> Disambiguate -->
+									<heading id="ModocBattlefield" title="Modoc Battlefield"/>
+									<heading id="SurpriseModocCA" title="Surprise"> <!-- Disambiguate from the emotion -->
+										<synonym value="Near Surprise"/>
+									</heading>
 								</heading>
 								<heading id="TrinomModocCA" title="Trinomial site names" noMatch="true">
 									<heading id="CAMod3" title="CA-Mod- 3">
@@ -8127,29 +8182,28 @@
 								<synonym value="Placer County, CA, no loc"/>
 								<synonym value="Placer County, CA, no loc."/>
 								<heading id="PlacesPlacerCA" title="Place Names" noMatch="true">
-									<heading id="EastAuburnPlacerCA" title="East Auburn"/>
-									<heading id="LoomisPlacerCA" title="Loomis"/>
-									<heading id="MartisValley" title="Martis Valley"/>
-									<heading id="RocklinPlacerCA" title="Rocklin">
-										<heading id="CloverValley" title="Clover Valley"/>
-									</heading>
-									<heading id="WeimarPlacerCA" title="Weimar"> <!-- Disambiguate -->
-										<synonym value="Near Weimar"/>
-									</heading>
-									<heading id="HeraldMdPlacerCA" title="Herald Mound"/>
-									<heading id="LincolnPlacerCA" title="Lincoln"/> <!-- Disambiguate -->
-									<heading id="DonnerPlacerCA" title="Donner"/>
-									<heading id="SquawCreekPlacerCA" title="Squaw Creek"/>
 									<heading id="BearRiverPlacerCA" title="Bear River">
 										<heading id="DogBarPlacerCA" title="Dog Bar"/>
 									</heading>
-									<heading id="RosevillePlacerCA" title="Roseville"/>
+									<heading id="CloverValley" title="Clover Valley"/>
+									<heading id="DonnerPlacerCA" title="Donner"/>
+									<heading id="EastAuburnPlacerCA" title="East Auburn"/>
 									<heading id="FrenchCreekPlacerCA" title="French Creek"/>
+									<heading id="HeraldMdPlacerCA" title="Herald Mound"/>
+									<heading id="LincolnPlacerCA" title="Lincoln"/> <!-- Disambiguate -->
+									<heading id="LoomisPlacerCA" title="Loomis"/>
+									<heading id="MartisValley" title="Martis Valley"/>
+									<heading id="RocklinPlacerCA" title="Rocklin"/>
+									<heading id="RosevillePlacerCA" title="Roseville"/>
+									<heading id="SquawCreekPlacerCA" title="Squaw Creek"/>
+									<heading id="WeimarPlacerCA" title="Weimar"> <!-- Disambiguate from german city, period -->
+										<synonym value="Near Weimar"/>
+									</heading>
 								</heading>
 								<heading id="TrinomPlacerCA" title="Trinomial site names" noMatch="true">
 									<heading id="CAPla4" title="CA-Pla- 4">
 										<synonym value="CA-Pla-4"/>
-										<synonym value="Lincoln Mound"/>
+										<synonym value="Lincoln Mound"/> <!-- yyy -->
 									</heading>
 									<heading id="CAPla5" title="CA-Pla- 5">
 										<synonym value="CA-Pla-5"/>
@@ -9644,12 +9698,20 @@
 										</heading>
 									</heading>
 									<heading id="NewarkAlaCA" title="Newark">
-										<heading id="SanFranciscoMdAlamedaCA" title="San Francisco Mound"/>
+										<heading id="SanFranciscoMdAlamedaCA" title="San Francisco Mound"/> <!-- NB: not in SF -->
 									</heading>
 									<heading id="NilesAlaCA" title="Niles"/>
 									<heading id="OaklandAlaCA" title="Oakland">
-										<heading id="BrooklynMdAlaCA" title="Brooklyn Shellmound"/>
-										<heading id="NearBrooklynAlaCA" title="Near Brooklyn"/>
+										<heading id="BrooklynAlaCA" title="Brooklyn"> <!-- What is this area called now? -->
+											<synonym value="Near Brooklyn"/>
+											<excl value="New York"/>
+											<excl value="NY"/>
+											<heading id="BrooklynMdAlaCA" title="Brooklyn Shellmound">
+												<synonym value="Brooklyn Md"/>
+												<synonym value="Brooklyn Md."/>
+												<synonym value="Brooklyn Mound"/>
+											</heading>
+										</heading>
 										<heading id="SatherTractAlamedaCA" title="Sather Tract"/>
 									</heading>
 									<heading id="PleasantonAlamedaCA" title="Pleasanton">
@@ -10758,12 +10820,10 @@
 										<synonym value="Nelson 2"/>
 									</heading>
 									<heading id="CAMrn3" title="CA-Mrn-3">
-										<synonym value="Becker"/>
-										<!-- What is this? -->
+										<synonym value="Becker"/> <!-- What is this? -->
 										<synonym value="CA-Mrn- 3"/>
 										<synonym value="CA-Mrn-  3"/>
 										<synonym value="Nelson 3"/>
-										<synonym value="Sausalito Shellmound"/>
 										<implies facet="Location_facet" cat="SausalitoMdMarinCA"/>
 									</heading>
 									<heading id="CAMrn7" title="CA-Mrn-7">
@@ -16732,6 +16792,9 @@
 										<synonym value="San Antonio de Padua Mission"/>
 										<implies facet="Location_facet" cat="MissSAntonioPadua"/>
 									</heading>
+									<heading id="MontereyMntCA" title="Monterey">
+										<synonym value="Near Monterey"/>
+									</heading>
 									<heading id="MossLandingMntryCA" title="Moss Landing">
 										<heading id="MossLandingSite1" title="Site 1, Moss Landing"/>
 									</heading>
@@ -16745,7 +16808,6 @@
 										<implies facet="Location_facet" cat="MissNuesSenSoledad"/>
 									</heading>
 									<heading id="PtPinosMntryCA" title="Pt. Pinos"/>
-									<heading id="NearMonterey" title="Near Monterey"/>
 									<heading id="Hill35AMntryCA" title="Hill 35A"/>
 								</heading>
 								<heading id="TrinomMntryCA" title="Trinomial site names" noMatch="true">
@@ -18086,10 +18148,14 @@
 									<heading id="CASBr73" title="CA-SBr- 73">
 										<synonym value="CA-SBr-73"/>
 										<synonym value="Rattlesnake Rock"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Steward 53"/>
 										<synonym value="Ross 12"/>
 										<synonym value="Daggett:1:1"/>
 										<synonym value="Yermo Petroglyphs #68"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr74" title="CA-SBr- 74">
 										<synonym value="CA-SBr-74"/>
@@ -18137,46 +18203,74 @@
 										<synonym value="Mitchell's Cavern"/>
 										<synonym value="Tecopa Cave"/>
 										<synonym value="El Pakira"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr118" title="CA-SBr-118">
 										<synonym value="Old Woman Spring"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr123" title="CA-SBr-123">
 										<synonym value="Wood's Mountains"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr146" title="CA-SBr-146"/>
 									<heading id="CASBr227" title="CA-SBr-227">
 										<synonym value="Salt Springs C"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr229" title="CA-SBr-229">
 										<synonym value="Salt Springs E"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr230" title="CA-SBr-230">
 										<synonym value="Salt Springs F"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr231" title="CA-SBr-231">
 										<synonym value="Salt Springs G"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr232" title="CA-SBr-232">
 										<synonym value="Salt Springs H"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr233" title="CA-SBr-233">
 										<synonym value="Salt Springs I"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr234" title="CA-SBr-234">
 										<synonym value="Salt Springs J"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr236" title="CA-SBr-236">
 										<synonym value="Salt Springs L"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr237" title="CA-SBr-237">
 										<synonym value="Salt Springs M"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr240" title="CA-SBr-240">
 										<synonym value="Salt Springs P"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr241" title="CA-SBr-241">
 										<synonym value="Salt Springs Q"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr242" title="CA-SBr-242">
 										<synonym value="Cronese A"/>
@@ -18233,15 +18327,23 @@
 									</heading>
 									<heading id="CASBr262" title="CA-SBr-262">
 										<synonym value="Lake Mojave Bay Bar"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr264" title="CA-SBr-264">
 										<synonym value="Beach at outlet"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr267" title="CA-SBr-267">
 										<synonym value="One of the Lake Mojave Spits"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr268" title="CA-SBr-268">
 										<synonym value="One of the Lake Mojave Beaches"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr277" title="CA-SBr-277"/>
 									<heading id="CASBr283" title="CA-SBr-283"/>
@@ -18250,6 +18352,8 @@
 									<heading id="CASBr287" title="CA-SBr-287"/>
 									<heading id="CASBr288" title="CA-SBr-288">
 										<synonym value="Rustler Rock shelter"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBr289" title="CA-SBr-289"/>
 									<heading id="CASBr291" title="CA-SBr-291"/>
@@ -18265,6 +18369,8 @@
 									<heading id="CASBr317" title="CA-SBr-317"/>
 									<heading id="CASBr541" title="CA-SBr-541">
 										<synonym value="Baker Site"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 								</heading>
 							</heading>
@@ -18323,14 +18429,20 @@
 									<heading id="CASDi3" title="CA-SDi- 3">
 										<synonym value="CA-SDi-3"/>
 										<synonym value="Sweetwater site (Carter)"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASDi5" title="CA-SDi- 5">
 										<synonym value="CA-SDi-5"/>
 										<synonym value="San Pasqual State Monument"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASDi6" title="CA-SDi- 6">
 										<synonym value="CA-SDi-6"/>
 										<synonym value="Pala Asistencia Mission"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASDi8" title="CA-SDi- 8">
 										<synonym value="CA-SDi-8"/>
@@ -18347,10 +18459,14 @@
 									<heading id="CASDi91" title="CA-SDi- 91">
 										<synonym value="CA-SDi-91"/>
 										<synonym value="Mountain Palm Springs"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASDi109" title="CA-SDi-109">
 										<synonym value="Old Butterfield Stage Stop"/>
 										<synonym value="Vallecito County Park"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASDi175" title="CA-SDi-175">
 										<synonym value="Part of Treganza's site 3"/>
@@ -18363,6 +18479,8 @@
 									</heading>
 									<heading id="CASDi183" title="CA-SDi-183">
 										<synonym value="Dos Cabezos Spring"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Treganza's site 6"/>
 									</heading>
 									<heading id="CASDi241" title="CA-SDi-241">
@@ -18370,6 +18488,8 @@
 									</heading>
 									<heading id="CASDiNL1" title="CA-SDi-NL-1">
 										<synonym value="East San Diego County (Lillard)"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASDiNL2" title="CA-SDi-NL-2"/>
 									<heading id="CASDiNL3" title="CA-SDi-NL-3"/>
@@ -18701,7 +18821,9 @@
 										</heading>
 									</heading>
 									<heading id="SkeletonIsland" title="Skeleton Island"/>
-									<heading id="YtiasNearLompoc" title="Ytias Near Lompoc"/>
+									<heading id="YtiasNearLompoc" title="Ytias">
+										<synonym value="Ytias Near Lompoc"/>
+									</heading>
 									<heading id="RogersSite14SBrbraCA" title="Rogers Site 14">
 										<synonym value="CA-SBa-14"/>
 									</heading>
@@ -18813,6 +18935,8 @@
 										<synonym value="CA-SBa-42"/>
 										<synonym value="Rogers 42"/>
 										<synonym value="E side Goleta Slough"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBa43" title="CA-SBa- 43">
 										<synonym value="CA-SBa-43"/>
@@ -18837,11 +18961,15 @@
 										<synonym value="CA-SBa-47"/>
 										<synonym value="Rogers 47"/>
 										<synonym value="S side of Goleta Slough"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Goleta campus 2"/>
 									</heading>
 									<heading id="CASBa48" title="CA-SBa- 48">
 										<synonym value="CA-SBa-48"/>
 										<synonym value="S side of Goleta Slough"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Goleta campus 1"/>
 										<synonym value="Rogers 48"/>
 									</heading>
@@ -18853,6 +18981,8 @@
 									<heading id="CASBa79" title="CA-SBa- 79">
 										<synonym value="CA-SBa-79"/>
 										<synonym value="Dos Pueblos"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Rogers 79"/>
 									</heading>
 									<heading id="CASBa89" title="CA-SBa- 89">
@@ -18863,16 +18993,22 @@
 									<heading id="CASBa96" title="CA-SBa- 96">
 										<synonym value="CA-SBa-96"/>
 										<synonym value="Gaviota 2"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Rogers 96"/>
 									</heading>
 									<heading id="CASBa97" title="CA-SBa- 97">
 										<synonym value="CA-SBa-97"/>
 										<synonym value="Gaviota 1"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Rogers 97"/>
 									</heading>
 									<heading id="CASBa100" title="CA-SBa-100">
 										<synonym value="SBMNH 98"/>
 										<synonym value="County Farm of Rogers site P"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBa106" title="CA-SBa-106">
 										<synonym value="Rogers Tecolote Rd. Cut"/>
@@ -18880,6 +19016,8 @@
 									<heading id="CASBa109" title="CA-SBa-109">
 										<synonym value="San Marcos Rancho"/>
 										<synonym value="San Marcos Asistencia"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBa114" title="CA-SBa-114">
 										<synonym value="Camp #2"/>
@@ -18888,6 +19026,8 @@
 									<heading id="CASBa123" title="CA-SBa-123">
 										<synonym value="SBMNH 123"/>
 										<synonym value="Alexander"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<excl value="Louisiana"/>
 										<excl value="Valley"/>
 										<excl value="Archipelago"/>
@@ -18924,6 +19064,8 @@
 										<synonym value="Ru-10"/>
 										<synonym value="Sudden Site 4"/>
 										<synonym value="Wild Horse Creek"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBa211" title="CA-SBa-211">
 										<synonym value="RU-11"/>
@@ -18939,12 +19081,16 @@
 									</heading>
 									<heading id="CASBa231" title="CA-SBa-231">
 										<synonym value="Seal Rock"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="RU-31"/>
 									</heading>
 									<heading id="CASBa237" title="CA-SBa-237">
 										<synonym value="Ru-37"/>
 										<synonym value="Sajachu"/>
 										<synonym value="Rennie site"/>
+										<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBa242" title="CA-SBa-242">
 										<synonym value="Ytias"/>
@@ -18982,8 +19128,8 @@
 										<synonym value="Kallawasa"/>
 										<synonym value="Calabosa Village"/>
 										<synonym value="Kalahuasa"/>
-										<synonym value="calahuasa"/>
-										<synonym value="callahuasa"/>
+										<synonym value="Calahuasa"/>
+										<synonym value="Callahuasa"/>
 									</heading>
 									<heading id="CASBa518" title="CA-SBa-518">
 										<implies facet="Location_facet" cat="SantaInesMission"/>
