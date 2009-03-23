@@ -352,6 +352,14 @@
 					<synonym value="Arawakans"/>
 					<synonym value="Arawaks"/>
 				</heading>
+				<heading id="BarbadosPeople" title="Barbados">
+					<synonym value="Barbados Indians"/>
+				</heading>
+				<heading id="BermudaPeople" title="Bermuda">
+					<synonym value="Bermuda Indians"/>
+					<synonym value="Bermudan"/>
+					<synonym value="Bermudans"/>
+				</heading>
 				<heading id="CaribIndians" title="Carib">
 					<synonym value="Carib Indians"/>
 					<synonym value="Cariban"/>
@@ -386,6 +394,10 @@
 					<synonym value="Kaliphunas"/>
 					<synonym value="Kaliphuna Indians"/>
 				</heading>
+				<heading id="PuertoRicanPeople" title="Puerto Rica">
+					<synonym value="Puerto Rican"/>
+					<synonym value="Puerto Ricans"/>
+				</heading>
 				<heading id="ShebayoTribe" title="Shebayo">
 					<synonym value="Shebayo Indians"/>
 					<synonym value="Shebayos"/>
@@ -395,7 +407,13 @@
 					<synonym value="Tainos"/>
 				</heading>
 			</heading>
-			<heading id="ModernNorthAmericanCultures" title="North American cultures">
+			<heading id="ModernCentralAmericanCultures" title="Central American cultures">
+				<heading id="CostaRicanGroups" title="Costa Rico">
+					<heading id="BorucaIndians" title="Boruca"/>
+					<heading id="TalamancanIndians" title="Talamancan"/>
+				</heading>
+			</heading>
+				<heading id="ModernNorthAmericanCultures" title="North American cultures">
 				<heading id="NorthAmericanHistoricCultures" title="No. Amer. historic cultures">
 					<synonym value="North America Unspecified"/>
 					<synonym value="North American Historic"/>
@@ -1988,12 +2006,20 @@
 						</heading>
 					</heading>
 					<heading id="MexicanTribes" title="Mexican tribes">
+						<heading id="CoraIndians" title="Cora"/>
 						<heading id="HuicholIndians" title="Huichol"/>
 						<heading id="MayaIndiansModern" title="Maya"/>
 						<heading id="MayoIndians" title="Mayo"/>
 						<heading id="MexicanIndians" title="Mexican"/>
 						<heading id="NahuaIndians" title="Nahua"/>
+						<heading id="NazatecIndians" title="Nazatec"/>
+						<heading id="PapagoIndians" title="Papago"/>
+						<heading id="PopolocoIndians" title="Popoloco"/>
+						<heading id="PopolucaIndians" title="Popoluca"/>
 						<heading id="SeriIndians" title="Seri"/>
+						<heading id="TarascanIndians" title="Tarascan"/>
+						<heading id="WarihioIndians" title="Warihio"/>
+						<heading id="YaquiIndians" title="Yaqui"/>
 						<heading id="ZapotecIndians" title="Zapotec"/>
 					</heading>
 					<heading id="NortheastTribes" title="Northeast tribes">
@@ -2072,9 +2098,6 @@
 								<heading id="InlandTlingitTribe" title="Inland Tlingit">
 									<synonym value="Teslin"/>
 								</heading>
-									
-								
-								
 							</heading>
 							<heading id="TsimshianIndians" title="Tsimshian">
 								<synonym value="Tsimshians"/>
@@ -2537,45 +2560,71 @@
 				</heading>
 				<heading id="SpanishAmericanCultures" title="Spanish-American"/>
 			</heading>
-			<heading id="ModernSouthAmericanCultures" title="South American Cultures">
-				<heading id="SouthAmericanIndianCultures" title="South American Indian Cultures">
-					<heading id="BrazilianIndCultures" title="Brazilian Indian Cultures">
-						<heading id="FulnioIndians" title="Fulnio"/>
-						<heading id="HuamueIndians" title="Huamue"/>
-						<heading id="MaueIndians" title="Maue"/>
-						<heading id="PacaraIndians" title="Pacara"/>
-						<heading id="PancararuIndians" title="Pancararu"/>
-						<heading id="ParintintinIndians" title="Parintintin"/>
-						<heading id="PernambuceIndians" title="Pernambuce"/>
-						<heading id="TashaIndians" title="Tasha"/>
+			<heading id="ModernSouthAmericanCultures" title="South American cultures">
+				<heading id="ArguornaIndians" title="Arguorna"/> <!-- Where is this group from? -->
+				<heading id="BrazilianIndCultures" title="Brazilian Indian Cultures">
+					<heading id="FulnioIndians" title="Fulnio"/>
+					<heading id="HuamueIndians" title="Huamue"/>
+					<heading id="MaueIndians" title="Maue"/>
+					<heading id="PacaraIndians" title="Pacara"/>
+					<heading id="PancararuIndians" title="Pancararu"/>
+					<heading id="ParintintinIndians" title="Parintintin"/>
+					<heading id="PernambuceIndians" title="Pernambuce"/>
+					<heading id="TashaIndians" title="Tasha"/>
+					<heading id="XinguIndians" title="Xingu tribes">
+						<heading id="AwetiIndians" title="Aweti"/>
+						<heading id="KalapaloIndians" title="Kalapalo"/>
+						<heading id="KamaiuraIndians" title="Kamaiurá"/>
+						<heading id="KayapoIndians" title="Kayapó"/>
+						<heading id="KuikuroIndians" title="Kuikuro"/>
+						<heading id="MatipuIndians" title="Matipu"/>
+						<heading id="MehinakoIndians" title="Mehinako"/>
+						<heading id="NahukuaIndians" title="Nahukuá"/>
+						<heading id="SuyaIndians" title="Suyá"/>
+						<heading id="TrumaiIndians" title="Trumai"/>
+						<heading id="WauraIndians" title="Waura"/>
+						<heading id="YawalapitiIndians" title="Yawalapiti"/>
 					</heading>
-					<heading id="ArguornaIndians" title="Arguorna"/>
+				</heading>
+				<heading id="ColumbianTribes" title="Columbian tribes">
 					<heading id="GoajiraIndians" title="Goajira indians">
-						<heading id="GoajiraPeninsulaIndians" title="Goajira Peninsula"/>
-						<heading id="LagunadelPajaroIndians" title="Laguna del Pajaro"/>
+						<heading id="GoajiraPeninsulaIndians" title="Goajira Peninsula indians"/>
+						<heading id="LagunadelPajaroIndians" title="Laguna del Pajaro indians"/>
 					</heading>
+				</heading>
+				<heading id="EcuadoranTribes" title="Ecuadoran tribes">
+					<heading id="AquarunaIndians" title="Aquaruna indians"/>
+					<heading id="JivaroIndians" title="Jivaro indians"/>
+				</heading>
+				<heading id="MatiloursIndians" title="Matilours indians"> <!-- Where is this group from? -->
+					<synonym value="Matilours"/>
+					<synonym value="Yosa division of Matilours indians"/>
+				</heading>
+				<heading id="ParaguayanTribes" title="Paraguayan tribes">
+					<heading id="AchIndians" title="Ach"/>
+					<heading id="AngaiteIndians" title="Angaite">
+						<synonym value="Angayite"/>
+					</heading>
+					<heading id="AyoreoIndians" title="Ayoreo"/>
+					<heading id="CadocaIndians" title="Cadoca"/>
+					<heading id="ChamacocoIndians" title="Chamacoco"/>
+					<heading id="ChimanapanaIndians" title="Chimanapana"/>
+					<heading id="ChiripaIndians" title="Chiripa"/>
+					<heading id="EnxetIndians" title="Enxet"/>
+					<heading id="GuanaIndians" title="Guana"/>
+					<heading id="LenguaIndians" title="Lengua"/>
+					<heading id="MacaIndians" title="Maca"/>
+					<heading id="ManguiIndians" title="Mangui"/>
+					<heading id="MbyaIndians" title="Mbya"/>
+					<heading id="NivacleIndians" title="Nivacle"/>
+					<heading id="PaiTavyteraIndians" title="Pai Tavytera"/>
+					<heading id="SanapanaIndians" title="Sanapana">
+						<synonym value="Sampana"/>
+					</heading>
+					<heading id="TotobiegosodeIndians" title="Totobiegosode"/>
+				</heading>
+				<heading id="VenezuelanTribes" title="Venezuelan tribes">
 					<heading id="MacoitaIndians" title="Macoita indians"/>
-					<heading id="MatiloursIndians" title="Matilours indians">
-						<synonym value="Matilours"/>
-						<synonym value="Yosa division of Matilours indians"/>
-					</heading>
-					<heading id="ParaguayIndianTribes" title="Paraguay indian tribes">
-						<heading id="AchIndians" title="Ach"/>
-						<heading id="AngaiteIndians" title="Angaite"/>
-						<heading id="AyoreoIndians" title="Ayoreo"/>
-						<heading id="ChamacocoIndians" title="Chamacoco"/>
-						<heading id="ChiripaIndians" title="Chiripa"/>
-						<heading id="EnxetIndians" title="Enxet"/>
-						<heading id="GuanaIndians" title="Guana"/>
-						<heading id="MacaIndians" title="Maca"/>
-						<heading id="ManguiIndians" title="Mangui"/>
-						<heading id="MbyaIndians" title="Mbya"/>
-						<heading id="NivacleIndians" title="Nivacle"/>
-						<heading id="PaiTavyteraIndians" title="Pai Tavytera"/>
-						<heading id="SanapanaIndians" title="Sanapana"/>
-						<heading id="TotobiegosodeIndians" title="Totobiegosode"/>
-					</heading>
-					<heading id="XinguIndians" title="Xingu"/>
 				</heading>
 			</heading>
 		</heading>
