@@ -2636,6 +2636,7 @@
 		</heading>
 		<heading id="ModernAsiancultures" title="Asian cultures">
 			<heading id="ChineseGroupsModern" title="Chinese"/>
+			<heading id="KotaGroups" title="Kota"/>
 			<heading id="RussianGroups" title="Russian Cultures">
 				<heading id="ChukotkoKamchatkanGrps" title="Chukotko-Kamchatkan peoples">
 					<heading id="AlyutorsModern" title="Alyutor">
@@ -2678,18 +2679,139 @@
 					<implies facet="Location_facet" cat="MongoliaCountry"/>
 				</heading>
 			</heading>
-			<heading id="KotaGroups" title="Kota"/>
-			<heading id="TungusGroups" title="Tungus"/>
-		    <heading id="TurkishGroups" title="Turkish"/>
-			<heading id="SouthAsianGroups" title="South Asian Cultures">
+			<heading id="SouthAsianGroups" title="Southern Asia" noMatch="true">
 				<heading id="MewarTribe" title="Mewar"/>
-			    <heading id="SikhCulture" title="Sikh"/>
+				<heading id="SikhCulture" title="Sikh"/>
 				<heading id="SindhiGroup" title="Sindhi">
 					<synonym value="Sindhis"/>
 					<synonym value="Sindh"/>
 					<implies facet="Location_facet" cat="SindhPakistan"/>
 				</heading>
 			</heading>
+			<heading id="SEAsianGroups" title="Southeast Asia" noMatch="true">
+				<heading id="PhilippineGroups" title="Philippine groups">
+					<synonym value="Filippino"/>
+					<synonym value="Filippinos"/>
+					<heading id="AtaPhilippTribe" title="Ata Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Ata"/>
+						<synonym value="Atas"/>
+					</heading>
+					<heading id="BagoboTribe" title="Bagobo Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Bagobo"/>
+						<synonym value="Bagobos"/>
+					</heading>
+					<heading id="BikolTribe" title="Bikol Tribe"> <!-- Religion = Christian -->
+						<synonym value="Bikol"/>
+						<synonym value="Bikols"/>
+					</heading>
+					<heading id="BisayaTribe" title="Bisaya Tribe"> <!-- Religion = Christian -->
+						<synonym value="Bisaya"/>
+						<synonym value="Bisayan"/>
+						<synonym value="Bisayans"/>
+						<synonym value="Bisayas"/>
+					</heading>
+					<heading id="CagayanTribe" title="Cagayan Tribe"> <!-- Religion = Christian -->
+						<synonym value="Cagayan"/>
+						<synonym value="Cagayans"/>
+					</heading>
+					<heading id="GaddangTribe" title="Gaddang Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Gaddang"/>
+						<synonym value="Gaddangs"/>
+					</heading>
+					<heading id="IfugaoTribe" title="Ifugao Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Ifugao"/>
+						<synonym value="Ifugaos"/>
+					</heading>
+					<heading id="IgorotTribes" title="Igorot Tribes"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Igorot"/>
+						<synonym value="Igorots"/>
+						<heading id="BontocTribe" title="Bontoc Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+							<synonym value="Bontoc"/>
+							<synonym value="Bontocs"/>
+						</heading>
+						<heading id="KankanaiTribe" title="Kankanai Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+							<synonym value="Kankanai"/>
+							<synonym value="Kankanais"/>
+						</heading>
+						<heading id="NabaloiTribe" title="Nabaloi Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+							<synonym value="Nabaloi"/>
+							<synonym value="Nabalois"/>
+						</heading>
+					</heading>
+					<heading id="IlokanoTribe" title="Ilokano Tribe"> <!-- Religion = Christian -->
+						<synonym value="Ilokano"/>
+						<synonym value="Ilokanos"/>
+					</heading>
+					<heading id="IlongotTribe" title="Ilongot Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Ilongot"/>
+						<synonym value="Ilongots"/>
+					</heading>
+					<heading id="KalingaTribe" title="Kalinga Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Kalinga"/>
+						<synonym value="Kalingas"/>
+					</heading>
+					<heading id="MandayaTribe" title="Mandaya Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Mandaya"/>
+						<synonym value="Mandayan"/>
+						<synonym value="Mandayans"/>
+						<synonym value="Mandayas"/>
+					</heading>
+					<heading id="MangayanTribes" title="Mangayan Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Mangayan"/>
+						<synonym value="Mangayans"/>
+						<heading id="BuhidTribe" title="Buhid Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+							<synonym value="Buhid"/>
+							<synonym value="Buhids"/>
+						</heading>
+						<heading id="HanunooTribe" title="Hanunó'o Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+							<synonym value="Hanunó'o"/>
+							<synonym value="Hanunó'os"/>
+							<synonym value="Hanunóo"/>
+							<synonym value="Hanunóos"/>
+							<synonym value="Hanunoo"/>
+							<synonym value="Hanunoos"/>
+						</heading>
+					</heading>
+					<heading id="ManoboTribe" title="Manobo Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Manobo"/>
+						<synonym value="Manobos"/>
+					</heading>
+					<heading id="MoroTribe" title="Moro Tribe"> <!-- Religion = Islam -->
+						<synonym value="Moro"/>
+						<synonym value="Moros"/>
+					</heading>
+					<heading id="NegritoGroups" title="Negrito groups"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Negrito"/>
+						<synonym value="Negritos"/>
+						<heading id="BatakTribe" title="Batak Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+							<synonym value="Batak"/>
+							<synonym value="Bataks"/>
+						</heading>
+					</heading>
+					<heading id="PampangaTribe" title="Pampanga Tribe"> <!-- Religion = Christian -->
+						<synonym value="Pampanga"/>
+						<synonym value="Pampangas"/>
+					</heading>
+					<heading id="PangasinanTribe" title="Pangasinan Tribe"> <!-- Religion = Christian -->
+						<synonym value="Pangasinan"/>
+						<synonym value="Pangasinans"/>
+					</heading>
+					<heading id="TagalogTribe" title="Tagalog Tribe"> <!-- Religion = Christian -->
+						<synonym value="Tagalog"/>
+						<synonym value="Tagalogs"/>
+					</heading>
+					<heading id="TinggianTribe" title="Tinggian Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Tinggian"/>
+						<synonym value="Tinggians"/>
+					</heading>
+					<heading id="TirurayTribe" title="Tiruray Tribe"> <!-- Religion = "Pagan" (?= Local) -->
+						<synonym value="Tiruray"/>
+						<synonym value="Tirurays"/>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="TungusGroups" title="Tungus"/>
+		    <heading id="TurkishGroups" title="Turkish"/>
 		</heading>
 		<heading id="ModernEuropeancultures" title="European cultures">
 			<heading id="EuropeanGroups" title="European">
