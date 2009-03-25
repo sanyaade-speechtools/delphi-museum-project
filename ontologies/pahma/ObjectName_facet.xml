@@ -517,6 +517,20 @@
 			<synonym value="Ring Bead"/>
 		</heading>
 	</heading>
+	<!-- Ignore until filled out (just experimenting)
+	<heading id="BiolRemains" title="Biological Remains">
+		<heading id="BiologicalBones" title="Bones">
+			
+		</heading>
+		<heading id="BiologicalShells" title="Shells">
+			<heading id="ClamShells" title="Clam shells">
+				<heading id="SaxidomusNuttalli" title="Butternut Clam">
+					<synonym value="Saxidomus nuttalli"/>
+				</heading>
+			</heading>
+		</heading>
+	</heading>
+	-->
 	<heading id="Ceremonialitems" title="Ceremonial items">
 		<heading id="Mandala" title="Mandala">
 			<synonym value="Mandalas"/>
@@ -4009,22 +4023,78 @@
 		<heading id="Airplane" title="Airplane"/>
 		<heading id="Boats" title="Boats">
 			<synonym value="Boat"/>
-			<heading id="Galley" title="Galley"/>
-			<heading id="Canoe" title="Canoe">
-				<synonym value="Canoes"/>
+			<excl value="Boat-shape"/>
+			<excl value="Boat-shaped"/>
+			<excl value="Boat shaped"/>
+			<heading id="BoatRelatedTools" title="Boat-related tools">
+				<heading id="Anchor" title="Anchor">
+					<synonym value="Anchors"/>
+					<excl value="to anchor"/>
+					<excl value="hanging"/>
+				</heading>
+				<heading id="AnchorStone" title="Anchor stone">
+					<synonym value="Anchor stones"/>
+					<synonym value="Anchor-stone"/>
+					<synonym value="Anchor-stones"/>
+					<synonym value="Anchorstone"/>
+					<synonym value="Anchorstones"/>
+				</heading>
+				<heading id="Boathook" title="Boat hook"/>
+				<heading id="Paddle" title="Paddle">
+					<synonym value="Paddles"/>
+					<synonym value="Oar"/>
+					<synonym value="Oars"/>
+				</heading>
 			</heading>
-			<heading id="Kayak" title="Kayak">
-				<synonym value="Kayaks"/>
+			<heading id="PartsOfBoats" title="Parts of Boats">
+				<synonym value="Boat part"/>
+				<synonym value="Boat part?"/>
+				<synonym value="Boat parts"/>
+				<synonym value="Boat parts?"/>
+				<heading id="BoatCanopy" title="Boat Canopy">
+					<synonym value="Boat Canopies"/>
+				</heading>
+				<heading id="BoatProw" title="Prow"/>
+				<heading id="Rudder" title="Rudder">
+					<synonym value="Rudders"/>
+				</heading>
+				<heading id="RudderPost" title="Rudder Post">
+					<synonym value="Rudder posts"/>
+				</heading>
+				<heading id="SteeringOar" title="Steering Oar">
+					<synonym value="Steering Oars"/>
+				</heading>
 			</heading>
-			<heading id="Boat" title="Boat">
-				<synonym value="Boats"/>
+			<heading id="TypesOfBoats" title="Types of Boats">
+				<heading id="Canoe" title="Canoe">
+					<synonym value="Canoes"/>
+				</heading>
+				<heading id="Galley" title="Galley"/>
+				<heading id="Kayak" title="Kayak">
+					<synonym value="Kayaks"/>
+				</heading>
+				<heading id="ModelBoat" title="Model boat">
+					<synonym value="Boat Model"/>
+					<synonym value="Boat Models"/>
+					<synonym value="Model boats"/>
+				</heading>
+				<heading id="OutriggerCanoe" title="Outrigger">
+					<synonym value="Outriggers"/>
+				</heading>
+				<heading id="RowBoat" title="Rowboat">
+					<synonym value="Rowboats"/>
+					<synonym value="Row-boat"/>
+					<synonym value="Row-boats"/>
+					<synonym value="Row boat"/>
+					<synonym value="Row boats"/>
+				</heading>
+				<heading id="SampanBoat" title="Sampan">
+					<synonym value="Sampans"/>
+				</heading>
+				<heading id="UmiakBoat" title="Umiak">
+					<synonym value="Umiaks"/>
+				</heading>
 			</heading>
-			<heading id="Paddle" title="Paddle">
-				<synonym value="Paddles"/>
-				<synonym value="Oar"/>
-				<synonym value="Oars"/>
-			</heading>
-			<heading id="Boathook" title="Boat hook"/>
 		</heading>
 	</heading>
 </taxonomy>
