@@ -445,24 +445,6 @@
 				<heading id="OlduvaiGorge" title="Olduvai Gorge"/>
 			</heading>
 			<heading id="Malawi" title="Malawi">
-				<heading id="Khamburavillage" title="Khambura village"/>
-				<heading id="Kisi" title="Kisi"/>
-				<heading id="ShireHighlands" title="Shire Highlands"/>
-				<heading id="LuchenyaPlateau" title="Luchenya Plateau"/>
-				<heading id="PhopoHill" title="Phopo Hill"/>
-				<heading id="Nyanyangu" title="Nyanyangu"/>
-				<heading id="LakeChilwa" title="Lake Chilwa"/>
-				<heading id="Mwenerondoarea" title="Mwenerondo area">
-					<synonym value="Mwenerondo"/>
-				</heading>
-				<heading id="Tumbuka" title="Tumbuka"/>
-				<heading id="Chembe" title="Chembe">
-					<heading id="NyumguShrine" title="Nyumgu Shrine"/>
-				</heading>
-				<heading id="LiwondeBarraba" title="Liwonde Barraba"/>
-				<heading id="Kasungudistrict" title="Kasungu district">
-					<heading id="Chikarivillage" title="Chikari village"/>
-				</heading>
 				<heading id="CapeMacLearPeninsula" title="Cape MacLear Peninsula">
 					<heading id="MawudzuHill" title="Mawudzu Hill"/>
 					<heading id="Nkopearea" title="Nkope area"/>
@@ -470,6 +452,9 @@
 					<heading id="Moto" title="Moto">
 						<synonym value="Moto village"/>
 					</heading>
+				</heading>
+				<heading id="Chembe" title="Chembe">
+					<heading id="NyumguShrine" title="Nyumgu Shrine"/>
 				</heading>
 				<heading id="Chikwawaregion" title="Chikwawa region">
 					<synonym value="Chickwawa"/>
@@ -481,6 +466,23 @@
 					<heading id="SouthofUraha" title="South of Uraha"/>
 					<heading id="DeepBay" title="Deep Bay"/>
 				</heading>
+				<heading id="Kasungudistrict" title="Kasungu district">
+					<heading id="Chikarivillage" title="Chikari village"/>
+				</heading>
+				<heading id="Khamburavillage" title="Khambura village">
+					<synonym value="Khambura"/>
+				</heading>
+				<heading id="Kisi" title="Kisi"/>
+				<heading id="LakeChilwa" title="Lake Chilwa"/>
+				<heading id="LiwondeBarraba" title="Liwonde Barraba"/>
+				<heading id="LuchenyaPlateau" title="Luchenya Plateau"/>
+				<heading id="Mwenerondoarea" title="Mwenerondo area">
+					<synonym value="Mwenerondo"/>
+				</heading>
+				<heading id="Nyanyangu" title="Nyanyangu"/>
+				<heading id="PhopoHill" title="Phopo Hill"/>
+				<heading id="ShireHighlands" title="Shire Highlands"/>
+				<heading id="Tumbuka" title="Tumbuka"/>
 			</heading>
 			<heading id="SeychellesIslands" title="Seychelles Islands"> <!-- Done -->
 				<heading id="MaheIsland" title="Mahe' Island">
@@ -672,6 +674,7 @@
 				<heading id="Inchiriregion" title="Inchiri region"/>
 				<heading id="Dakarregion" title="Dakar region">
 					<excl value="Senegal"/>
+					<excl value="Sénégal"/>
 				</heading>
 			</heading>
 			<heading id="BeninCountry" title="Benin">
@@ -707,7 +710,8 @@
 				</heading>
 				<heading id="UdiNigeria" title="Udi"/>
 			</heading>
-			<heading id="SenegalCountry" title="Senegal">
+			<heading id="SenegalCountry" title="Sénégal">
+				<synonym value="Senegal"/>
 				<heading id="DakarSenegal" title="Dakar">
 					<synonym value="Dakar region"/>
 					<excl value="Mauritania"/>
@@ -1208,6 +1212,7 @@
 				<heading id="Valletta" title="Valletta"/>
 			</heading>
 			<heading id="Turkey" title="Turkey">
+				<synonym value="Türkiye"/>
 				<heading id="Anatolia" title="Anatolia">
 					<heading id="SouthwesternAnatolia" title="Southwestern Anatolia"/>
 					<heading id="WesternAnatolia" title="Western Anatolia"/>
@@ -3385,6 +3390,7 @@
 				</heading>
 			</heading>
 			<heading id="MexicoCountry" title="Mexico"> <!-- done -->
+				<synonym value="México"/>
 				<heading id="AguascalientesStMX" title="Aguascalientes state">
 					<synonym value="Aguascalientes"/>
 				</heading>
@@ -9663,7 +9669,37 @@
 									</heading>
 									<heading id="BerkeleyAlamedaCA" title="Berkeley">
 										<heading id="MortarRockParkAlaCA" title="Mortar Rock Park"/>
-										<heading id="UCBerkFacultyClub" title="UC Berkeley Faculty Club"/>
+										<heading id="NorthBerkeleyAlaCA" title="North Berkeley"/>
+										<heading id="UCBerkCampus" title="UC Berkeley Campus">
+											<synonym value="U.C.B."/>
+											<synonym value="UCB"/>
+											<synonym value="UC"/>
+											<synonym value="U.C. Berkeley"/>
+											<synonym value="U.C. Berkley"/>
+											<synonym value="UC Berkeley"/>
+											<synonym value="UC Berkley"/>
+											<synonym value="Berkeley University"/>
+											<heading id="UCBerkAnthroDept" title="Dept. of Anthropology">
+												<synonym value="Anthro Dept"/>
+												<synonym value="Anthro Dept."/>
+												<synonym value="Anthro. Dept"/>
+												<synonym value="Anthro. Dept."/>
+												<synonym value="Anthropology Dept"/>
+												<synonym value="Anthropology Dept."/>
+												<synonym value="Anthropology Department"/>
+												<synonym value="Department of Anthropology"/>
+												<synonym value="Dept of Anthropology"/>
+											</heading>
+											<heading id="UCBerkFacultyClub" title="Faculty Club">
+												<synonym value="UC Berkeley Faculty Club"/>
+												<synonym value="U.C. Berkeley Faculty Club"/>
+											</heading>
+											<heading id="UCBerkAnthroMus" title="Museum of Anthropology">
+												<synonym value="Anthropology Museum"/>
+												<synonym value="Hearst Museum"/>
+												<synonym value="Lowie Museum"/>
+											</heading>
+										</heading>
 										<heading id="WestBerkeleyMdAlaCA" title="West Berkeley shellmound">
 											<synonym value="Berkeley Mound"/>
 											<synonym value="Berkeley Md"/>
@@ -19354,7 +19390,7 @@
 					<heading id="Nevada" title="Nevada">
 						<synonym value="NEVADA-NL-1"/>
 						<synonym value="NEVADA-NL-2"/>
-						<heading id="NellieSpringRd" title="Nellie Spring Rd">
+						<heading id="NellieSpringRd" title="Nellie Spring Rd">  <!-- Trim from UI -->
 							<synonym value="Stream north of Nellie Spring Rd. junction and &quot;circles&quot; high on canyon side"/>
 						</heading>
 						<heading id="DuckValleyReserv" title="Duck Valley Reservation"/>
@@ -19373,248 +19409,366 @@
 						</heading>
 						<heading id="ChurchillCoNV" title="Churchill county">
 							<synonym value="PROVENIENCE = Churchill county, Nevada"/>
-							<synonym value="Allen Springs"/>
-							<synonym value="Cache Cave"/>
+							<synonym value="NV-Churchill"/>
+							<synonym value="Burial #1"/>
 							<synonym value="Cave 17 NAS"/>
 							<synonym value="CH-X-94"/>
 							<synonym value="CH-X1"/>
 							<synonym value="Ch-X2"/>
 							<synonym value="CH-X4"/>
-							<synonym value="Clambake Site"/>
-							<synonym value="Cocanour"/>
-							<synonym value="Cold Springs"/>
-							<synonym value="Rock Spring"/>
-							<synonym value="Price Site"/>
-							<synonym value="UC Survey 1937 #5"/>
-							<synonym value="Wildcat Cave"/>
-							<synonym value="W-15"/>
-							<synonym value="Humboldt Cave"/>
-							<synonym value="Wagon Jack Shelter"/>
-							<synonym value="Forgotten Cave"/>
-							<synonym value="Boot Slough Site"/>
-							<synonym value="Fallen-In Cave"/>
-							<synonym value="Granite Point Cave"/>
-							<synonym value="Seven Devils Hot Springs"/>
-							<synonym value="Tufa-coated Metate Site"/>
-							<synonym value="Burial #1"/>
-							<synonym value="Rocky Ben Site"/>
-							<synonym value="CCC Cave"/>
-							<synonym value="Fish Cave"/>
-							<synonym value="Burnt Cave"/>
-							<synonym value="Pelican Island"/>
-							<synonym value="Humboldt Lakebed"/>
-							<synonym value="Gaines Ranch"/>
-							<synonym value="Flat Top Cave #1"/>
-							<synonym value="Eastgate Rock Shelter"/>
-							<synonym value="Grimes Petroglyph"/>
-							<synonym value="Huntington Site"/>
-							<synonym value="Smokey Dan Cave"/>
-							<synonym value="Near Hazen"/>
-							<synonym value="Hathaway Beach"/>
-							<synonym value="Lake Bed"/>
-							<synonym value="Spirit Cave"/>
-							<synonym value="Grimes Point Petroglyphs"/>
-							<synonym value="Boot Instep Site"/>
-							<synonym value="Leonard Rockshelter"/>
-							<synonym value="Hidden Cave"/>
-							<synonym value="Loud #19"/>
-							<synonym value="Rock Springs"/>
-							<synonym value="White Plains"/>
-							<synonym value="Hill Ranch"/>
-							<synonym value="Ocala Cave"/>
-							<synonym value="NAS 1-4"/>
-							<synonym value="NPC 1-1-0"/>
-							<synonym value="NV-Churchill"/>
-							<synonym value="Sunset Guano Cave"/>
-							<synonym value="Eastgave Cave"/>
-							<synonym value="Lakebed below Hidden Cave"/>
-							<synonym value="Boot Instep Area"/>
-							<synonym value="Boonjing Wash Site"/>
-							<synonym value="Middlegate"/>
-							<synonym value="Fish Cave Flats"/>
-							<synonym value="Allen Springs (possibly)"/>
-							<synonym value="Lovelock"/>
-							<synonym value="Dune Springs"/>
-							<synonym value="Pumice Beach site"/>
-							<synonym value="Smokey Den Cave"/>
-							<synonym value="Carson Sink"/>
-							<synonym value="Lee Hot Springs"/>
-							<synonym value="Salt Wells"/>
-							<synonym value="Near Stillwater"/>
-							<synonym value="Wheeler's Site 1-43 (perhaps)"/>
-							<synonym value="Stillwater Marsh Ridge"/>
-							<synonym value="Smith Ranch"/>
 							<synonym value="Indian Quarry ?"/>
+							<!-- <synonym value="Lake Bed"/> Disambiguate -->
+							<synonym value="NPC 1-1-0"/>
+							<synonym value="UC Survey 1937 #5"/>
+							<synonym value="W-15"/>
 							<heading id="PlacesChurchillNV" title="Place Names" noMatch="true">
+								<heading id="AllenSprChNV" title="Allen Springs">
+									<synonym value="Allen Springs (possibly)"/>
+								</heading>
+								<heading id="BoonjingWashChNV" title="Boonjing Wash">
+									<synonym value="Boonjing Wash Site"/>
+								</heading>
+								<heading id="BootInstepChNV" title="Boot Instep Site">
+									<synonym value="Boot Instep"/> <!-- Disambiguate if shoe parts ontology grows -->
+									<synonym value="Boot Instep Area"/>
+								</heading>
+								<heading id="BootSloughChNV" title="Boot Slough">
+									<synonym value="Boot Slough Site"/>
+								</heading>
+								<heading id="BurntCaveChNV" title="Burnt Cave"/>
+								<heading id="CCCCaveChNV" title="CCC Cave"/>
+								<heading id="CacheCaveChNV" title="Cache Cave"/>
+								<heading id="CarsonDesertNV" title="Carson Desert">
+									<heading id="CarsonSinkNV" title="Carson Sink">
+										<heading id="ClambakeSiteNV" title="Clambake Site"/>
+										<heading id="StillwaterMRidgeNV" title="Stillwater Marsh Ridge"/> <!-- Lat: 39.61417 Long: -118.44972 -->
+									</heading>
+								</heading>
 								<heading id="ClamshellLakeSite" title="Clamshell Lake Site"/>
-								<heading id="Stillwater" title="Stillwater"/>
-								<heading id="StillwaterReservation" title="Stillwater Reservation"/>
-								<heading id="HumboldtLake" title="Humboldt Lake"/>
+								<heading id="CocanourChNV" title="Cocanour"/>
+								<heading id="ColdSprChNV" title="Cold Springs"/>
+								<heading id="DuneSprChNV" title="Dune Springs"/>
+								<heading id="DynamiteCaveChNV" title="Dynamite Cave"/>
+								<heading id="EastgaveCaveChNV" title="Eastgave Cave">
+									<synonym value="Eastgate Rock Shelter"/>
+								</heading>
+								<heading id="FallenInCaveChNV" title="Fallen-In Cave"/>
+								<heading id="FishCaveChNV" title="Fish Cave">
+									<heading id="FishCaveFlatsChNV" title="Fish Cave Flats"/>
+								</heading>
+								<heading id="FlatTopCaveChNV" title="Flat Top Cave">
+									<synonym value="Flat Top Cave #1"/>
+								</heading>
+								<heading id="ForgottenCaveChNV" title="Forgotten Cave"/>
+								<heading id="GainesRanchChNV" title="Gaines Ranch">
+									<synonym value="Gaine Ranch"/>
+									<synonym value="Gaine's Ranch"/>
+									<synonym value="Gaines' Ranch"/>
+								</heading>
+								<heading id="GranitePtCaveChNV" title="Granite Point Cave"/>
+								<heading id="GrimesPtPetroChNV" title="Grimes Point Petroglyphs">
+									<synonym value="Grimes Petroglyph"/>
+									<synonym value="Grimes Petroglyphs"/>
+									<synonym value="Grimes Point Petroglyph"/>
+								</heading>
+								<heading id="GutPastureChNV" title="Gut Pasture"/> <!-- Where beer bellies go upon retirement? -->
+								<heading id="HathawayBeachChNV" title="Hathaway Beach"/>
+								<heading id="HazenChNV" title="Hazen">
+									<!-- 	Latitude: 39.56528
+											Longitude: -119.04528 -->
+								</heading>
+								<heading id="HiddenCaveChNV" title="Hidden Cave">
+									<heading id="HiddenCaveLBedChNV" title="Lakebed below Hidden Cave"/>
+								</heading>
+								<heading id="HillRanchChNV" title="Hill Ranch"/>
+								<heading id="HumboldtCaveChNV" title="Humboldt Cave">
+									<synonym value="Humbolt Cave"/>
+								</heading>
+								<heading id="HumboldtLkbdChNV" title="Humboldt Lakebed"> <!-- Verify that this is in Churchill co. -->
+									<synonym value="Humboldt Lake bed"/>
+									<synonym value="Humbolt Lakebed"/>
+									<synonym value="Humbolt Lake bed"/>
+								</heading>
+								<heading id="HuntingtonSChNV" title="Huntington Site"/>
+								<heading id="LeeHotSprChNV" title="Lee Hot Springs">
+									<synonym value="Lee Hot Spring"/>
+									<synonym value="Lee Hotspring"/>
+									<synonym value="Lee Hotsprings"/>
+								</heading>
+								<heading id="LeonardRockshChNV" title="Leonard Rockshelter"/>
+								<heading id="LovelockCaveChNV" title="Lovelock Cave">
+									<synonym value="Lovelock"/> <!-- There is a city by this name, but in PAHMA context refers only to this cave -->
+									<synonym value="Sunset Guano Cave"/> <!-- Earlier name for this cave -->
+								</heading>
+								<heading id="ManoBeachChNV" title="Mano Beach"/>
+								<heading id="MiddlegateChNV" title="Middlegate"/>
+								<heading id="OcalaCaveChNV" title="Ocala Cave"/>
+								<heading id="PelicanIslChNV" title="Pelican Island"/>
+								<heading id="PriceSiteChNV" title="Price Site"/>
+								<heading id="PumiceBeachChNV" title="Pumice Beach site">
+									<synonym value="Pumice Beach"/>
+								</heading>
+								<heading id="RattleSnHCaveChNV" title="Rattlesnake Hill Caves">
+									<synonym value="Rattlesnake Hill"/>
+									<synonym value="Rattlesnake Hill Cave"/>
+								</heading>
+								<heading id="ReidMtnChNV" title="Reid Mountain">
+									<synonym value="Reid Mt"/>
+									<synonym value="Reid Mt."/>
+									<synonym value="Reid Mtn"/>
+									<synonym value="Reid Mtn."/>
+								</heading>
+								<heading id="RockSpringsChNV" title="Rock Springs">
+									<synonym value="Rock Spring"/>
+								</heading>
+								<heading id="RockyBenChNV" title="Rocky Ben Site">
+									<synonym value="Rocky Ben"/>
+								</heading>
+								<heading id="RussellSiteChNV" title="Russell Site"/>
+								<heading id="SaltCaveChNV" title="Salt Cave"/>
+								<heading id="SaltWellsChNV" title="Salt Wells">
+									<synonym value="Salt Well"/>
+								</heading>
+								<heading id="SevenDevilsHSprChNV" title="Seven Devils Hot Springs">
+									<synonym value="Seven Devils Hot Spring"/>
+									<synonym value="Seven Devils Hotspring"/>
+									<synonym value="Seven Devils Hotsprings"/>
+									<synonym value="Seven-Devils Hot Spring"/>
+									<synonym value="Seven-Devils Hot Springs"/>
+									<synonym value="Seven-Devils Hotspring"/>
+									<synonym value="Seven-Devils Hotsprings"/>
+								</heading>
+								<heading id="SmithRanchChNV" title="Smith Ranch"/>
+								<heading id="SmokeyDanCChNV" title="Smokey Dan Cave">
+									<synonym value="Smoky Den Cave"/>
+								</heading>
+								<heading id="SpiritCaveChNV" title="Spirit Cave"/>
+								<heading id="StillwaterChNV" title="Stillwater">
+									<synonym value="Near Stillwater"/>
+									<heading id="StillwaterPtCChNV" title="Stillwater Point Cave"/>
+								</heading>
+								<heading id="StillwaterReservChNV" title="Stillwater Reservation"/>
+								<heading id="TufaMetateChNV" title="Tufa-coated Metate Site"/>
+								<heading id="WagonJackShChNV" title="Wagon Jack Shelter"/>
+								<heading id="WhitePlainsChNV" title="White Plains"/>
+								<heading id="WildcatCChNV" title="Wildcat Cave"/>
+								<heading id="WindmillSChNV" title="Windmill Site"/>
+								<heading id="WonderstoneCChNV" title="Wonderstone Cave"/>
 							</heading>
 							<heading id="TrinomChurchillNV" title="Trinomial site names" noMatch="true">
-								<heading id="NVCh1" title="NV-Ch- 1">
-									<synonym value="NV-Ch-1"/>
+								<heading id="NVCh1" title="NV-Ch-1">
+									<synonym value="NV-Ch- 1"/>
+									<synonym value="NV-Ch-  1"/>
+									<implies facet="Location_facet" cat="HiddenCaveLBedChNV"/>
 								</heading>
-								<heading id="NVCh2" title="NV-Ch- 2">
-									<synonym value="NV-Ch-2"/>
+								<heading id="NVCh2" title="NV-Ch-2">
+									<synonym value="NV-Ch- 2"/>
+									<synonym value="NV-Ch-  2"/>
 								</heading>
-								<heading id="NVCh3" title="NV-Ch- 3">
-									<synonym value="NV-Ch-3"/>
+								<heading id="NVCh3" title="NV-Ch-3">
+									<synonym value="NV-Ch- 3"/>
+									<synonym value="NV-Ch-  3"/>
+									<implies facet="Location_facet" cat="GrimesPtPetroChNV"/>
 								</heading>
-								<heading id="NVCh5" title="NV-Ch- 5">
-									<synonym value="NV-Ch-5"/>
+								<heading id="NVCh5" title="NV-Ch-5">
+									<synonym value="NV-Ch- 5"/>
+									<synonym value="NV-Ch-  5"/>
 								</heading>
-								<heading id="NVCh6" title="NV-Ch- 6">
-									<synonym value="NV-Ch-6"/>
+								<heading id="NVCh6" title="NV-Ch-6">
+									<synonym value="NV-Ch- 6"/>
+									<synonym value="NV-Ch-  6"/>
 								</heading>
-								<heading id="NVCh7" title="NV-Ch- 7">
-									<synonym value="NV-Ch-7"/>
+								<heading id="NVCh7" title="NV-Ch-7">
+									<synonym value="NV-Ch- 7"/>
+									<synonym value="NV-Ch-  7"/>
 								</heading>
-								<heading id="NVCh8" title="NV-Ch- 8">
-									<synonym value="NV-Ch-8"/>
-									<synonym value="Cache Cave"/>
-								</heading>
-								<heading id="NVCh8orCh12orCh15" title="NV-Ch- 8 or Ch-12 or Ch-15">
+								<heading id="NVCh8" title="NV-Ch-8">
+									<synonym value="NV-Ch- 8"/>
+									<synonym value="NV-Ch-  8"/>
 									<synonym value="NV-Ch-8 or Ch-12 or Ch-15"/>
+									<synonym value="NV-Ch- 8 or Ch-12 or Ch-15"/>
+									<implies facet="Location_facet" cat="CacheCaveChNV"/>
 								</heading>
-								<heading id="NVCh9" title="NV-Ch- 9">
-									<synonym value="NV-Ch-9"/>
+								<heading id="NVCh9" title="NV-Ch-9">
+									<synonym value="NV-Ch- 9"/>
+									<synonym value="NV-Ch-  9"/>
 								</heading>
-								<heading id="NVCh10" title="NV-Ch- 10">
-									<synonym value="NV-Ch-10"/>
+								<heading id="NVCh10" title="NV-Ch-10">
+									<synonym value="NV-Ch- 10"/>
 								</heading>
-								<heading id="NVCh11" title="NV-Ch- 11">
-									<synonym value="NV-Ch-11"/>
+								<heading id="NVCh11" title="NV-Ch-11">
+									<synonym value="NV-Ch- 11"/>
 								</heading>
-								<heading id="NVCh12" title="NV-Ch- 12">
-									<synonym value="NV-Ch-12"/>
-									<synonym value="Granite Point Cave"/>
-								</heading>
-								<heading id="NVCh12orCh15" title="NV-Ch- 12 or Ch-15">
+								<heading id="NVCh12" title="NV-Ch-12">
+									<synonym value="NV-Ch- 12"/>
 									<synonym value="NV-Ch-12 or Ch-15"/>
+									<synonym value="NV-Ch- 12 or Ch-15"/>
+									<synonym value="NV-Ch-8 or Ch-12 or Ch-15"/>
+									<synonym value="NV-Ch- 8 or Ch-12 or Ch-15"/>
+									<implies facet="Location_facet" cat="GranitePtCaveChNV"/>
 								</heading>
-								<heading id="NVCh13" title="NV-Ch- 13">
-									<synonym value="NV-Ch-13"/>
+								<heading id="NVCh13" title="NV-Ch-13">
+									<synonym value="NV-Ch- 13"/>
 								</heading>
-								<heading id="NVCh14" title="NV-Ch- 14">
-									<synonym value="NV-Ch-14"/>
-									<synonym value="Leonard Rockshelter"/>
+								<heading id="NVCh14" title="NV-Ch-14">
+									<synonym value="NV-Ch- 14"/>
+									<implies facet="Location_facet" cat="LeonardRockshChNV"/>
 								</heading>
-								<heading id="NVCh15" title="NV-Ch- 15">
-									<synonym value="NV-Ch-15"/>
-									<synonym value="Humboldt Lakebed"/>
+								<heading id="NVCh15" title="NV-Ch-15">
+									<synonym value="NV-Ch- 15"/>
+									<synonym value="NV-Ch-12 or Ch-15"/>
+									<synonym value="NV-Ch- 12 or Ch-15"/>
+									<synonym value="NV-Ch-8 or Ch-12 or Ch-15"/>
+									<synonym value="NV-Ch- 8 or Ch-12 or Ch-15"/>
+									<implies facet="Location_facet" cat="HumboldtLkbdChNV"/>
 								</heading>
-								<heading id="NVCh16" title="NV-Ch- 16">
-									<synonym value="NV-Ch-16"/>
-									<synonym value="NV-Ch-16"/>
-									<synonym value="Hidden Cave"/>
+								<heading id="NVCh16" title="NV-Ch-16">
+									<synonym value="NV-Ch- 16"/>
+									<implies facet="Location_facet" cat="HiddenCaveChNV"/>
 								</heading>
-								<heading id="NVCh18" title="NV-Ch- 18">
-									<synonym value="NV-Ch-18"/>
+								<heading id="NVCh18" title="NV-Ch-18">
+									<synonym value="NV-Ch- 18"/>
 									<synonym value="Loud's site 18"/>
-									<synonym value="Lovelock"/>
-									<synonym value="Sunset Guano Cave"/>
+									<implies facet="Location_facet" cat="LovelockCaveChNV"/>
 								</heading>
-								<heading id="NVCh19" title="NV-Ch- 19">
-									<synonym value="NV-Ch-19"/>
+								<heading id="NVCh19" title="NV-Ch-19">
+									<synonym value="NV-Ch- 19"/>
 								</heading>
-								<heading id="NVCh20" title="NV-Ch- 20">
-									<synonym value="NV-Ch-20"/>
+								<heading id="NVCh20" title="NV-Ch-20">
+									<synonym value="NV-Ch- 20"/>
 								</heading>
-								<heading id="NVCh21" title="NV-Ch- 21">
-									<synonym value="NV-Ch-21"/>
+								<heading id="NVCh21" title="NV-Ch-21">
+									<synonym value="NV-Ch- 21"/>
 								</heading>
-								<heading id="NVCh22" title="NV-Ch- 22">
-									<synonym value="NV-Ch-22"/>
+								<heading id="NVCh22" title="NV-Ch-22">
+									<synonym value="NV-Ch- 22"/>
 								</heading>
-								<heading id="NVCh23" title="NV-Ch- 23">
-									<synonym value="NV-Ch-23"/>
+								<heading id="NVCh23" title="NV-Ch-23">
+									<synonym value="NV-Ch- 23"/>
 								</heading>
-								<heading id="NVCh24" title="NV-Ch- 24">
-									<synonym value="NV-Ch-24"/>
+								<heading id="NVCh24" title="NV-Ch-24">
+									<synonym value="NV-Ch- 24"/>
 									<synonym value="Loud #19"/>
 									<synonym value="NAS 1-4"/>
-									<synonym value="Ocala Cave"/>
+									<implies facet="Location_facet" cat="OcalaCaveChNV"/>
 								</heading>
-								<heading id="NVCh25" title="NV-Ch- 25">
-									<synonym value="NV-Ch-25"/>
+								<heading id="NVCh25" title="NV-Ch-25">
+									<synonym value="NV-Ch- 25"/>
+									<implies facet="Location_facet" cat="FallenInCaveChNV"/>
 								</heading>
-								<heading id="NVCh26" title="NV-Ch- 26">
-									<synonym value="NV-Ch-26"/>
+								<heading id="NVCh26" title="NV-Ch-26">
+									<synonym value="NV-Ch- 26"/>
+									<implies facet="Location_facet" cat="BurntCaveChNV"/>
 								</heading>
-								<heading id="NVCh28" title="NV-Ch- 28">
-									<synonym value="NV-Ch-28"/>
+								<heading id="NVCh28" title="NV-Ch-28">
+									<synonym value="NV-Ch- 28"/>
 								</heading>
-								<heading id="NVCh29" title="NV-Ch- 29">
-									<synonym value="NV-Ch-29"/>
+								<heading id="NVCh29" title="NV-Ch-29">
+									<synonym value="NV-Ch- 29"/>
 								</heading>
-								<heading id="NVCh35" title="NV-Ch- 35">
-									<synonym value="NV-Ch-35"/>
-									<synonym value="Humboldt Cave"/>
+								<heading id="NVCh35" title="NV-Ch-35">
+									<synonym value="NV-Ch- 35"/>
+									<implies facet="Location_facet" cat="HumboldtCaveChNV"/>
 								</heading>
-								<heading id="NVCh36" title="NV-Ch- 36">
-									<synonym value="NV-Ch-36"/>
-									<synonym value="Eastgave Cave"/>
+								<heading id="NVCh36" title="NV-Ch-36">
+									<synonym value="NV-Ch- 36"/>
+									<implies facet="Location_facet" cat="EastgaveCaveChNV"/>
 								</heading>
-								<heading id="NVCh39" title="NV-Ch- 39">
-									<synonym value="NV-Ch-39"/>
-									<synonym value="Pelican Island"/>
+								<heading id="NVCh37" title="NV-Ch-37">
+									<synonym value="NV-Ch- 37"/>
 								</heading>
-								<heading id="NVCh40" title="NV-Ch- 40">
-									<synonym value="NV-Ch-40"/>
+								<heading id="NVCh39" title="NV-Ch-39">
+									<synonym value="NV-Ch- 39"/>
+									<implies facet="Location_facet" cat="PelicanIslChNV"/>
 								</heading>
-								<heading id="NVCh42" title="NV-Ch- 42">
-									<synonym value="NV-Ch-42"/>
+								<heading id="NVCh40" title="NV-Ch-40">
+									<synonym value="NV-Ch- 40"/>
+									<implies facet="Location_facet" cat="HuntingtonSChNV"/>
 								</heading>
-								<heading id="NVCh43" title="NV-Ch- 43">
-									<synonym value="NV-Ch-43"/>
+								<heading id="NVCh42" title="NV-Ch-42">
+									<synonym value="NV-Ch- 42"/>
 								</heading>
-								<heading id="NVCh44" title="NV-Ch- 44">
-									<synonym value="NV-Ch-44"/>
-									<synonym value="Forgotten Cave"/>
+								<heading id="NVCh43" title="NV-Ch-43">
+									<synonym value="NV-Ch- 43"/>
 								</heading>
-								<heading id="NVCh46" title="NV-Ch- 46">
-									<synonym value="NV-Ch-46"/>
-									<synonym value="Carson Sink"/>
-									<synonym value="Clambake Site"/>
+								<heading id="NVCh44" title="NV-Ch-44">
+									<synonym value="NV-Ch- 44"/>
+									<implies facet="Location_facet" cat="ForgottenCaveChNV"/>
 								</heading>
-								<heading id="NVCh53" title="NV-Ch- 53">
-									<synonym value="NV-Ch-53"/>
+								<heading id="NVCh46" title="NV-Ch-46">
+									<synonym value="NV-Ch- 46"/>
+									<implies facet="Location_facet" cat="ClambakeSiteNV"/>
 								</heading>
-								<heading id="NVCh54" title="NV-Ch- 54">
-									<synonym value="NV-Ch-54"/>
-									<synonym value="Burnt Cave"/>
-									<synonym value="CCC Cave"/>
+								<heading id="NVCh48" title="NV-Ch-48">
+									<synonym value="NV-Ch- 48"/>
+									<implies facet="Location_facet" cat="ManoBeachChNV"/>
 								</heading>
-								<heading id="NVCh54a" title="NV-Ch- 54a">
-									<synonym value="NV-Ch-54a"/>
+								<heading id="NVCh49" title="NV-Ch-49">
+									<synonym value="NV-Ch- 49"/>
+									<implies facet="Location_facet" cat="DynamiteCaveChNV"/>
 								</heading>
-								<heading id="NVCh56" title="NV-Ch- 56">
-									<synonym value="NV-Ch-56"/>
+								<heading id="NVCh50" title="NV-Ch-50">
+									<synonym value="NV-Ch- 50"/>
+									<implies facet="Location_facet" cat="GutPastureChNV"/>
 								</heading>
-								<heading id="NVCh59" title="NV-Ch- 59">
-									<synonym value="NV-Ch-59"/>
+								<heading id="NVCh53" title="NV-Ch-53">
+									<synonym value="NV-Ch- 53"/>
+									<implies facet="Location_facet" cat="FlatTopCaveChNV"/>
 								</heading>
-								<heading id="NVCh60" title="NV-Ch- 60">
-									<synonym value="NV-Ch-60"/>
+								<heading id="NVCh54" title="NV-Ch-54">
+									<synonym value="NV-Ch- 54"/>
+									<implies facet="Location_facet" cat="CCCCaveChNV"/>
 								</heading>
-								<heading id="NVCh63" title="NV-Ch- 63">
-									<synonym value="NV-Ch-63"/>
+								<heading id="NVCh54a" title="NV-Ch-54a">
+									<synonym value="NV-Ch- 54a"/>
 								</heading>
-								<heading id="NVCh65" title="NV-Ch- 65">
-									<synonym value="NV-Ch-65"/>
-									<synonym value="Carson Sink"/>
+								<heading id="NVCh55" title="NV-Ch-55">
+									<synonym value="NV-Ch- 55"/>
+									<implies facet="Location_facet" cat="SaltCaveChNV"/>
 								</heading>
-								<heading id="NVCh66" title="NV-Ch- 66">
-									<synonym value="NV-Ch-66"/>
-									<synonym value="Carson Sink"/>
-									<synonym value="Stillwater Marsh Ridge"/>
+								<heading id="NVCh56" title="NV-Ch-56">
+									<synonym value="NV-Ch- 56"/>
 								</heading>
-								<heading id="NVCh67" title="NV-Ch- 67">
-									<synonym value="NV-Ch-67"/>
+								<heading id="NVCh57" title="NV-Ch-57">
+									<synonym value="NV-Ch- 57"/>
+									<implies facet="Location_facet" cat="SevenDevilsHSprChNV"/>
 								</heading>
-								<heading id="NVCh69" title="NV-Ch- 69">
-									<synonym value="NV-Ch-69"/>
+								<heading id="NVCh58" title="NV-Ch-58">
+									<synonym value="NV-Ch- 58"/>
+								</heading>
+								<heading id="NVCh59" title="NV-Ch-59">
+									<synonym value="NV-Ch- 59"/>
+								</heading>
+								<heading id="NVCh60" title="NV-Ch-60">
+									<synonym value="NV-Ch- 60"/>
+									<synonym value="Wheeler's Site 1-43 (perhaps)"/>
+								</heading>
+								<heading id="NVCh61" title="NV-Ch-61">
+									<synonym value="NV-Ch- 61"/>
+									<implies facet="Location_facet" cat="HathawayBeachChNV"/>
+								</heading>
+								<heading id="NVCh62" title="NV-Ch-62">
+									<synonym value="NV-Ch- 62"/>
+									<implies facet="Location_facet" cat="WildcatCChNV"/>
+								</heading>
+								<heading id="NVCh63" title="NV-Ch-63">
+									<synonym value="NV-Ch- 63"/>
+									<implies facet="Location_facet" cat="TufaMetateChNV"/>
+								</heading>
+								<heading id="NVCh65" title="NV-Ch-65">
+									<synonym value="NV-Ch- 65"/>
+									<implies facet="Location_facet" cat="CarsonSinkNV"/>
+								</heading>
+								<heading id="NVCh66" title="NV-Ch-66">
+									<synonym value="NV-Ch- 66"/>
+									<implies facet="Location_facet" cat="StillwaterMRidgeNV"/>
+								</heading>
+								<heading id="NVCh67" title="NV-Ch-67">
+									<synonym value="NV-Ch- 67"/>
+									<implies facet="Location_facet" cat="DuneSprChNV"/>
+								</heading>
+								<heading id="NVCh69" title="NV-Ch-69">
+									<synonym value="NV-Ch- 69"/>
 								</heading>
 								<heading id="NVCh70" title="NV-Ch-70">
 									<synonym value="NV-Ch- 70"/>
@@ -19624,9 +19778,19 @@
 								</heading>
 								<heading id="NVCh76" title="NV-Ch-76">
 									<synonym value="NV-Ch- 76"/>
+									<implies facet="Location_facet" cat="SmokeyDanCChNV"/>
+								</heading>
+								<heading id="NVCh77" title="NV-Ch-77">
+									<synonym value="NV-Ch- 77"/>
+									<implies facet="Location_facet" cat="PumiceBeachChNV"/>
+								</heading>
+								<heading id="NVCh78" title="NV-Ch-78">
+									<synonym value="NV-Ch- 78"/>
+									<implies facet="Location_facet" cat="ReidMtnChNV"/>
 								</heading>
 								<heading id="NVCh79" title="NV-Ch-79">
 									<synonym value="NV-Ch- 79"/>
+									<implies facet="Location_facet" cat="BootSloughChNV"/>
 								</heading>
 								<heading id="NVCh77" title="NV-Ch-77">
 									<synonym value="NV-Ch- 77"/>
@@ -19639,43 +19803,61 @@
 								</heading>
 								<heading id="NVCh83" title="NV-Ch-83">
 									<synonym value="NV-Ch- 83"/>
-									<synonym value="Price Site"/>
+									<implies facet="Location_facet" cat="PriceSiteChNV"/>
 								</heading>
 								<heading id="NVCh86" title="NV-Ch-86">
 									<synonym value="NV-Ch- 86"/>
-									<synonym value="Burial #1"/>
+									<!-- <synonym value="Burial #1"/>  Disambiguate with complex inference -->
+								</heading>
+								<heading id="NVCh87" title="NV-Ch-87">
+									<synonym value="NV-Ch- 87"/>
+									<implies facet="Location_facet" cat="RattleSnHCaveChNV"/>
 								</heading>
 								<heading id="NVCh89" title="NV-Ch-89">
 									<synonym value="NV-Ch- 89"/>
+									<implies facet="Location_facet" cat="BootInstepChNV"/>
+								</heading>
+								<heading id="NVCh90" title="NV-Ch-90">
+									<synonym value="NV-Ch- 90"/>
+									<implies facet="Location_facet" cat="WonderstoneCChNV"/>
+								</heading>
+								<heading id="NVCh91" title="NV-Ch-91">
+									<synonym value="NV-Ch- 91"/>
+									<implies facet="Location_facet" cat="FishCaveFlatsChNV"/>
 								</heading>
 								<heading id="NVCh92" title="NV-Ch-92">
 									<synonym value="NV-Ch- 92"/>
+									<implies facet="Location_facet" cat="RockyBenChNV"/>
 								</heading>
 								<heading id="NVCh93" title="NV-Ch-93">
 									<synonym value="NV-Ch- 93"/>
 								</heading>
 								<heading id="NVCh97" title="NV-Ch-97">
 									<synonym value="NV-Ch- 97"/>
+									<implies facet="Location_facet" cat="SmithRanchChNV"/>
 								</heading>
-								<heading id="NVCh108" title="NV-Ch-108"/>
+								<heading id="NVCh98" title="NV-Ch-98">
+									<synonym value="NV-Ch- 98"/>
+									<implies facet="Location_facet" cat="StillwaterPtCChNV"/>
+								</heading>
+								<heading id="NVCh99" title="NV-Ch-99">
+									<synonym value="NV-Ch- 99"/>
+									<implies facet="Location_facet" cat="RussellSiteChNV"/>
+								</heading>
+								<heading id="NVCh101" title="NV-Ch-101">
+									<implies facet="Location_facet" cat="WindmillSChNV"/>
+								</heading>
+								<heading id="NVCh108" title="NV-Ch-108"/>  <!-- Need to finish #107 to 126 from NV concordance -->
 								<heading id="NVCh114" title="NV-Ch-114">
 									<synonym value="Near Hazen"/>
+									<implies facet="Location_facet" cat="HazenChNV"/>
 								</heading>
 								<heading id="NVCh119" title="NV-Ch-119"/>
-								<heading id="NVCh126" title="NV-Ch-126"/>
-								<heading id="NVCh159" title="NV-Ch-159"/>
-								<heading id="NVCh37" title="NV-Ch-37">
-									<synonym value="NV-Ch- 37"/>
-								</heading>
-								<heading id="NVCh57" title="NV-Ch-57">
-									<synonym value="NV-Ch- 57"/>
-								</heading>
 								<heading id="NVCh121" title="NV-Ch-121"/>
 								<heading id="NVCh122" title="NV-Ch-122"/>
+								<heading id="NVCh126" title="NV-Ch-126"/>
 								<heading id="NVCh145" title="NV-Ch-145"/>
-								<heading id="NVCh61" title="NV-Ch-61">
-									<synonym value="NV-Ch- 61"/>
-								</heading>
+								<heading id="NVCh159" title="NV-Ch-159"/>
 							</heading>
 						</heading>
 						<heading id="ClarkCoNV" title="Clark county">
@@ -19710,9 +19892,9 @@
 									<implies facet="Location_facet" cat="PaiuteCaveOvertonFill"/>
 								</heading>
 								<heading id="NVCl14" title="NV-Cl-14">
-									<synonym value="NV-Cl- 5"/>
-									<synonym value="NV-Cl-5"/>
-									<synonym value="26-Cl-5"/>
+									<synonym value="NV-Cl- 14"/>
+									<synonym value="NV-Cl-14"/>
+									<synonym value="26-Cl-14"/>
 									<synonym value="NV-Pub-Grand"/>
 									<synonym value="26-Pub-Grand"/>
 									<synonym value="NV-Pub- Grand"/>
@@ -19730,43 +19912,53 @@
 								</heading>
 								<heading id="NVCl132" title="NV-Cl-132">
 									<synonym value="26-Cl-132"/>
-									<synonym value="Baron's Cave #1"/> <!-- <synonym value="Cave 1"/> Disambiguate -->
+									<synonym value="Baron's Cave #1"/>
+									<!-- <synonym value="Cave 1"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl133" title="NV-Cl-133">
 									<synonym value="26-Cl-133"/>
-									<synonym value="Baron's Cave #2"/> <!-- <synonym value="Cave 2"/> Disambiguate -->
+									<synonym value="Baron's Cave #2"/>
+									<!-- <synonym value="Cave 2"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl134" title="NV-Cl-134">
 									<synonym value="26-Cl-134"/>
-									<synonym value="Baron's Cave #3"/> <!-- <synonym value="Cave 3"/> Disambiguate -->
+									<synonym value="Baron's Cave #3"/>
+									<!-- <synonym value="Cave 3"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl135" title="NV-Cl-135">
 									<synonym value="26-Cl-135"/>
-									<synonym value="Baron's Cave #4"/> <!-- <synonym value="Cave 4"/> Disambiguate -->
+									<synonym value="Baron's Cave #4"/>
+									<!-- <synonym value="Cave 4"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl136" title="NV-Cl-136">
 									<synonym value="26-Cl-136"/>
-									<synonym value="Baron's Cave #5"/> <!-- <synonym value="Cave 5"/> Disambiguate -->
+									<synonym value="Baron's Cave #5"/>
+									<!-- <synonym value="Cave 5"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl137" title="NV-Cl-137">
 									<synonym value="26-Cl-137"/>
-									<synonym value="Baron's Cave #6"/> <!-- <synonym value="Cave 6"/> Disambiguate -->
+									<synonym value="Baron's Cave #6"/>
+									<!-- <synonym value="Cave 6"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl138" title="NV-Cl-138">
 									<synonym value="26-Cl-138"/>
-									<synonym value="Baron's Cave #7"/> <!-- <synonym value="Cave 7"/> Disambiguate -->
+									<synonym value="Baron's Cave #7"/>
+									<!-- <synonym value="Cave 7"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl139" title="NV-Cl-139">
 									<synonym value="26-Cl-139"/>
-									<synonym value="Baron's Cave #8"/> <!-- <synonym value="Cave 8"/> Disambiguate -->
+									<synonym value="Baron's Cave #8"/>
+									<!-- <synonym value="Cave 8"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl140" title="NV-Cl-140">
 									<synonym value="26-Cl-140"/>
-									<synonym value="Baron's Cave #9"/> <!-- <synonym value="Cave 9"/> Disambiguate -->
+									<synonym value="Baron's Cave #9"/>
+									<!-- <synonym value="Cave 9"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl141" title="NV-Cl-141">
 									<synonym value="26-Cl-141"/>
-									<synonym value="Baron's Cave #10"/> <!-- <synonym value="Cave 10"/> Disambiguate -->
+									<synonym value="Baron's Cave #10"/>
+									<!-- <synonym value="Cave 10"/> Disambiguate -->
 								</heading>
 								<heading id="NVCl142" title="NV-Cl-142">
 									<synonym value="26-Cl-142"/>
@@ -19810,29 +20002,29 @@
 								<heading id="LakeTahoeDouglasNV" title="Lake Tahoe" noMatch="true"/>
 							</heading>
 							<heading id="TrinomDouglasNV" title="Trinomial site names" noMatch="true">
-								<heading id="NVDo1" title="NV-Do- 1">
-									<synonym value="NV-Do-1"/>
+								<heading id="NVDo1" title="NV-Do-1">
+									<synonym value="NV-Do- 1"/>
 									<synonym value="NV-Douglas-1"/>
 									<synonym value="26-Do-1"/>
 									<synonym value="26-Douglas-1"/>
 									<synonym value="Do-1"/>
 								</heading>
-								<heading id="NVDo2" title="NV-Do- 2">
-									<synonym value="NV-Do-2"/>
+								<heading id="NVDo2" title="NV-Do-2">
+									<synonym value="NV-Do- 2"/>
 									<synonym value="NV-Douglas-2"/>
 									<synonym value="26-Do-2"/>
 									<synonym value="26-Douglas-2"/>
 									<synonym value="Do-2"/>
 								</heading>
-								<heading id="NVDo3" title="NV-Do- 3">
-									<synonym value="NV-Do-3"/>
+								<heading id="NVDo3" title="NV-Do-3">
+									<synonym value="NV-Do- 3"/>
 									<synonym value="NV-Douglas-3"/>
 									<synonym value="26-Do-3"/>
 									<synonym value="26-Douglas-3"/>
 									<synonym value="Do-3"/>
 								</heading>
-								<heading id="NVDo4" title="NV-Do- 4">
-									<synonym value="NV-Do-4"/>
+								<heading id="NVDo4" title="NV-Do-4">
+									<synonym value="NV-Do- 4"/>
 									<synonym value="NV-Douglas-4"/>
 									<synonym value="26-Do-4"/>
 									<synonym value="26-Douglas-4"/>
@@ -19975,90 +20167,100 @@
 								<heading id="WinnemuccaHumboldtNV" title="Winnemucca"/>
 							</heading>
 							<heading id="TrinomHumboldtNV" title="Trinomial site names" noMatch="true">
-								<heading id="NVHu1" title="NV-Hu- 1">
-									<synonym value="NV-Hu-1"/>
+								<heading id="NVHu1" title="NV-Hu-1">
+									<synonym value="NV-Hu- 1"/>
+									<synonym value="NV-Hu-  1"/>
 								</heading>
-								<heading id="NVHu11" title="NV-Hu- 11">
-									<synonym value="NV-Hu-11"/>
+								<heading id="NVHu11" title="NV-Hu-11">
+									<synonym value="NV-Hu- 11"/>
 								</heading>
-								<heading id="NVHu12" title="NV-Hu- 12"/>
-								<heading id="NVHu13" title="NV-Hu- 13">
-									<synonym value="NV-Hu-13"/>
+								<heading id="NVHu12" title="NV-Hu-12">
+									<synonym value="NV-Hu- 12"/>
 								</heading>
-								<heading id="NVHu14" title="NV-Hu- 14">
-									<synonym value="NV-Hu-14"/>
+								<heading id="NVHu13" title="NV-Hu-13">
+									<synonym value="NV-Hu- 13"/>
 								</heading>
-								<heading id="NVHu16" title="NV-Hu- 16">
-									<synonym value="NV-Hu-16"/>
+								<heading id="NVHu14" title="NV-Hu-14">
+									<synonym value="NV-Hu- 14"/>
 								</heading>
-								<heading id="NVHu17" title="NV-Hu- 17">
-									<synonym value="NV-Hu-17"/>
+								<heading id="NVHu16" title="NV-Hu-16">
+									<synonym value="NV-Hu- 16"/>
 								</heading>
-								<heading id="NVHu20" title="NV-Hu- 20">
-									<synonym value="NV-Hu-20"/>
+								<heading id="NVHu17" title="NV-Hu-17">
+									<synonym value="NV-Hu- 17"/>
 								</heading>
-								<heading id="NVHu21" title="NV-Hu- 21">
-									<synonym value="NV-Hu-21"/>
+								<heading id="NVHu20" title="NV-Hu-20">
+									<synonym value="NV-Hu- 20"/>
 								</heading>
-								<heading id="NVHu22" title="NV-Hu- 22">
-									<synonym value="NV-Hu-22"/>
+								<heading id="NVHu21" title="NV-Hu-21">
+									<synonym value="NV-Hu- 21"/>
 								</heading>
-								<heading id="NVHu23" title="NV-Hu- 23">
-									<synonym value="NV-Hu-23"/>
+								<heading id="NVHu22" title="NV-Hu-22">
+									<synonym value="NV-Hu- 22"/>
 								</heading>
-								<heading id="NVHu24" title="NV-Hu- 24">
-									<synonym value="NV-Hu-24"/>
+								<heading id="NVHu23" title="NV-Hu-23">
+									<synonym value="NV-Hu- 23"/>
 								</heading>
-								<heading id="NVHu25" title="NV-Hu- 25">
-									<synonym value="NV-Hu-25"/>
+								<heading id="NVHu24" title="NV-Hu-24">
+									<synonym value="NV-Hu- 24"/>
+								</heading>
+								<heading id="NVHu25" title="NV-Hu-25">
+									<synonym value="NV-Hu- 25"/>
 								</heading>
 								<heading id="NVHu300" title="NV-Hu-300"/>
 								<heading id="NVHu301" title="NV-Hu-301"/>
 								<heading id="NVHu302" title="NV-Hu-302">
 									<synonym value="Pink Point Site"/>
+									<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+									<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 								</heading>
 								<heading id="NVHu303" title="NV-Hu-303">
 									<synonym value="Metate One Site"/>
+									<!-- <implies facet="Location_facet" cat="yyyyyyyyy"/> -->
+									<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 								</heading>
 							</heading>
 						</heading>
-						<heading id="LanderCoNV" title="Lander county">
+						<heading id="LanderCoNV" title="Lander county"> <!-- Done -->
 							<synonym value="PROVENIENCE = Lander county, Nevada"/>
-							<synonym value="Blossom Spring"/>
-							<synonym value="Sand Hill"/>
-							<synonym value="Reese River Bridge"/>
-							<synonym value="Vaughn Ranch Site"/>
-							<synonym value="Bateman Springs"/>
-							<synonym value="Reese River Valley"/>
-							<synonym value="Vaughn Ranch"/>
-							<synonym value="Reese River A (?)"/>
-							<synonym value="Shoshone Summit"/>
-							<synonym value="Hickison Summit"/>
-							<synonym value="Ackerman Springs"/>
-							<synonym value="Potts Cave"/>
-							<synonym value="Reese River"/>
-							<synonym value="Hot Springs Ranch"/>
 							<heading id="PlacesLanderNV" title="Place Names" noMatch="true">
-								<heading id="ReeseRiverA" title="Reese River A"/>
+								<heading id="AckermanSprNV" title="Ackerman Springs"/>
+								<heading id="BatemanSprNV" title="Bateman Springs"/>
+								<heading id="BlossomSprNV" title="Blossom Spring"/>
+								<heading id="HickisonSummNV" title="Hickison Summit"/>
+								<heading id="HotSprRanchNV" title="Hot Springs Ranch"/>
+								<heading id="PottsCaveNV" title="Potts Cave"/>
+								<heading id="ReeseRVallNV" title="Reese River Valley">
+									<heading id="ReeseRiverNV" title="Reese River">
+										<synonym value="Reese River A"/>
+										<synonym value="Reese River A (?)"/>
+										<synonym value="Reese River Bridge"/>
+									</heading>
+								</heading>
+								<heading id="VaughnRanchNV" title="Vaughn Ranch">
+									<synonym value="Vaughn Ranch Site"/>
+								</heading>
+								<heading id="SandHillNV" title="Sand Hill"/>
+								<heading id="ShoshoneSummNV" title="Shoshone Summit"/>
 							</heading>
 							<heading id="TrinomLanderNV" title="Trinomial site names" noMatch="true">
-								<heading id="NVLa1" title="NV-La- 1">
-									<synonym value="NV-La-1"/>
+								<heading id="NVLa1" title="NV-La-1">
+									<synonym value="NV-La- 1"/>
 								</heading>
-								<heading id="NVLa2" title="NV-La- 2">
-									<synonym value="NV-La-2"/>
+								<heading id="NVLa2" title="NV-La-2">
+									<synonym value="NV-La- 2"/>
 								</heading>
-								<heading id="NVLa3" title="NV-La- 3">
-									<synonym value="NV-La-3"/>
+								<heading id="NVLa3" title="NV-La-3">
+									<synonym value="NV-La- 3"/>
 								</heading>
-								<heading id="NVLa4" title="NV-La- 4">
-									<synonym value="NV-La-4"/>
+								<heading id="NVLa4" title="NV-La-4">
+									<synonym value="NV-La- 4"/>
 								</heading>
-								<heading id="NVLa8" title="NV-La- 8">
-									<synonym value="NV-La-8"/>
+								<heading id="NVLa8" title="NV-La-8">
+									<synonym value="NV-La- 8"/>
 								</heading>
-								<heading id="NVLa9" title="NV-La- 9">
-									<synonym value="NV-La-9"/>
+								<heading id="NVLa9" title="NV-La-9">
+									<synonym value="NV-La- 9"/>
 								</heading>
 								<heading id="NVLa11" title="NV-La-11"/>
 								<heading id="NVLa13" title="NV-La-13"/>
@@ -20402,6 +20604,10 @@
 							<synonym value="Smelser Pass"/>
 							<synonym value="Louds Site #5"/>
 							<heading id="PlacesPershingNV" title="Place Names" noMatch="true">
+								<heading id="HumboldtLake" title="Humboldt Lake"> <!-- was missplaced in Humboldt co., NV -->
+									<!-- 	Latitude: 40.00306
+											Longitude: -118.62056 -->
+								</heading>
 								<heading id="LovelockPershingNV" title="Lovelock">
 									<synonym value="Lovelock, city of"/>
 								</heading>
@@ -20785,7 +20991,7 @@
 						</heading>
 						<heading id="Pinawa" title="Pinawa"/>
 						<heading id="SpurRanch" title="Spur Ranch"/>
-						<heading id="PariaRiver" title="Paria River"/>
+						<heading id="PariaRiverUTAZ" title="Paria River"/>
 						<heading id="NavajoReservSW" title="Navajo Reservation">
 							<heading id="KitsilRuin" title="Kitsil Ruin"/>
 						</heading>
