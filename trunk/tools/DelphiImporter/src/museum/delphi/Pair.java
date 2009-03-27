@@ -24,7 +24,8 @@ public class Pair<F,S> {
     second = pSecond;
   }
 
-  public boolean equals(Object o) {
+  @Override
+public boolean equals(Object o) {
     if (this == o) return true;
     if (!(o instanceof Pair)) return false;
 
@@ -36,14 +37,16 @@ public class Pair<F,S> {
     return true;
   }
 
-  public int hashCode() {
+  @Override
+public int hashCode() {
     int result;
     result = (first != null ? first.hashCode() : 0);
     result = 29 * result + (second != null ? second.hashCode() : 0);
     return result;
   }
 
-  public String toString() {
+  @Override
+public String toString() {
     return "(" + getFirst() + ", " + getSecond() + ")";
   }
 
