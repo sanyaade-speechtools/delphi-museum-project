@@ -47,6 +47,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.JMenu;
 
 
 
@@ -96,6 +97,9 @@ public class MainApp {
 
 	private JMenu imagesMenu = null;
 	private JMenuItem computeImageOrientationsMenuItem = null;
+
+	private JMenu importMenu = null;
+	private JMenuItem fromDBMenuItem = null;
 
 	private JMenu exportMenu = null;
 	private JMenuItem buildObjectSQLMenuItem = null;
@@ -149,6 +153,11 @@ public class MainApp {
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
 			StringUtils.outputDebugStr( str );
+	}
+
+	protected void debugTrace( int level, Exception e ) {
+		if( level <= _debugLevel )
+			StringUtils.outputExceptionTrace(e);
 	}
 
 	/**
@@ -595,6 +604,42 @@ public class MainApp {
 	}
 
 	/**
+	 * This method initializes importMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getImportMenu() {
+		if (importMenu == null) {
+			importMenu = new JMenu();
+			importMenu.setText("Import");
+			importMenu.setMnemonic('I');
+			importMenu.add(getFromDBMenuItem());
+		}
+		return importMenu;
+	}
+
+	/**
+	 * This method initializes the Images->Compute Orientations jMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getFromDBMenuItem() {
+		if (fromDBMenuItem == null) {
+			fromDBMenuItem = new JMenuItem();
+			fromDBMenuItem.setText("From Database...");
+			fromDBMenuItem.setMnemonic('D');
+			fromDBMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					importMetadataFromDB();
+				}
+			});
+		}
+		fromDBMenuItem.setEnabled(false);
+		return fromDBMenuItem;
+	}
+
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -730,6 +775,7 @@ public class MainApp {
 			userProjInfo.vocabOutputDoc = null;
 			userProjInfo.facetMapHashTree = null;
 			userProjInfo.metaDataReader = null;
+			userProjInfo.dbMetaDataReader = null;
 			userProjInfo.imagePathsReader = null;
 		} else {
 			String filename = null;
@@ -739,8 +785,14 @@ public class MainApp {
 				loadVocabFile(filename);
 			if(( filename = userProjInfo.getOntologyPath()) != null )
 				loadOntology(filename);
-			if(( filename = userProjInfo.getMetadataConfigPath()) != null )
+			if(( filename = userProjInfo.getMetadataConfigPath()) != null ) {
 				loadMDConfig(filename);
+				Pair<Boolean, DBMetaDataReader> mdInfo = loadMDConfig( filename );
+				if( mdInfo.first ) {
+			        if(mdInfo.second != null)
+			        	userProjInfo.dbMetaDataReader = mdInfo.second;
+				}
+			}
 			if(( filename = userProjInfo.getMetadataPath()) != null )
 				loadMetadata(filename);
 		}
@@ -789,6 +841,7 @@ public class MainApp {
 			jJMenuBar.add(getEditMenu());
 			jJMenuBar.add(getAnalyzeMenu());
 			jJMenuBar.add(getImagesMenu());
+			jJMenuBar.add(getImportMenu());
 			jJMenuBar.add(getExportMenu());
 			//jJMenuBar.add(getVocabActionsMenu());
 			//jJMenuBar.add(getDataActionsMenu());
@@ -1088,8 +1141,9 @@ public class MainApp {
 		if (imagesMenu == null) {
 			imagesMenu = new JMenu();
 			imagesMenu.setText("Images");
-			imagesMenu.setMnemonic('I');
+			imagesMenu.setMnemonic('M');
 			imagesMenu.add(getComputeImageOrientationsMenuItem());
+			imagesMenu.add(getImportMenu());
 		}
 		return imagesMenu;
 	}
@@ -1348,6 +1402,73 @@ public class MainApp {
 			});
 		}
 		return saveExclusionsAsSQLMenuItem;
+	}
+
+	private void importMetadataFromDB() {
+		int answer = JOptionPane.showConfirmDialog(getJFrame(),
+							"Begin metadata import from database?",
+							"Metadata import from database", JOptionPane.OK_CANCEL_OPTION);
+		if( answer == JOptionPane.YES_OPTION ) {
+			try{
+				String colNames[] = DumpColumnConfigInfo.getColumnNames();
+				userProjInfo.dbMetaDataReader.prepareSources(colNames);
+				// Ask user to save info to a file.
+				String outFileName;
+				if(( outFileName = userProjInfo.getMetadataPath()) == null ) {
+					outFileName = userProjInfo.metaDataReader.getFileName();
+					int iDot = outFileName.lastIndexOf('.');
+					if( iDot > 0 )
+						outFileName = outFileName.substring(0, iDot);
+					outFileName += "_dump.txt";
+				}
+	    		String filename = getSafeOutfile(outFileName,txtFilter);
+	    		if( filename != null ) {
+	    			debug(1,"Saving metadata from DB to file: " + filename);
+					setStatus( "Saving metadata from DB to file...");
+			        try {
+						BufferedWriter writer = new BufferedWriter(
+												  new OutputStreamWriter(
+													new FileOutputStream(filename),"UTF8"));
+						String separator = "" + DumpColumnConfigInfo.getColumnSeparator();
+						// Write the col headings
+						int nCols = colNames.length;
+						for(int iCol=0; iCol<nCols; iCol++) {
+							writer.write(colNames[iCol]);
+							if( iCol < nCols-1)
+								writer.write(separator);
+							else
+								writer.newLine();
+						}
+						Pair<Integer,ArrayList<String>> nextObjInfo;
+						int nStringCols = nCols-1;
+						// Write the data
+						while((nextObjInfo = userProjInfo.dbMetaDataReader.getNextObjectAsColumns())
+								!= null ) {
+							writer.write(nextObjInfo.first+separator);
+							ArrayList<String> colStrings = nextObjInfo.second;
+							for(int iCol=0; iCol<nStringCols; iCol++) {
+								writer.write(colStrings.get(iCol));
+								if( iCol < nCols-1)
+									writer.write(separator);
+								else
+									writer.newLine();
+							}
+						}
+						writer.flush();
+						writer.close();
+					} catch( IOException e ) {
+			            e.printStackTrace();
+						throw new RuntimeException("Could not create output file: " + filename);
+					}
+					// If we successfully write the metadata, update the path.
+					userProjInfo.setMetadataPath(filename);
+			    }
+			} catch (RuntimeException re ) {
+				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + re.getMessage(),
+						"Metadata import from database: ", JOptionPane.ERROR_MESSAGE);
+				debugTrace(1, re);
+			}
+		}
 	}
 
 	/**
