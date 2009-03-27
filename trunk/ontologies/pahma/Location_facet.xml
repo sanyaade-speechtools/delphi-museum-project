@@ -23,9 +23,8 @@
 		Missions (done),
 		Reservations and Rancherias
 	</notes>
-	<heading id="Africa" title="Africa">
-		<!-- ALPHABETIZE -->
-		<heading id="NorthernAfrica" title="Northern Africa"> <!--  Done -->
+	<heading id="Africa" title="Africa"> <!-- done -->
+		<heading id="NorthernAfrica" title="Northern Africa">
 			<synonym value="North Africa"/>
 			<heading id="Algeria" title="Algeria">
 				<heading id="Algiers" title="Algiers"/>
@@ -355,9 +354,16 @@
 				<heading id="Tunis" title="Tunis"/>
 			</heading>
 		</heading>
-		<heading id="EasternAfrica" title="Eastern Africa"> <!--  ALPHABETIZE! -->
+		<heading id="EasternAfrica" title="Eastern Africa">
 			<synonym value="East Africa"/>
+			<synonym value="East African"/>
+			<synonym value="East Africans"/>
+			<heading id="DjiboutiCountry" title="Djibouti"> <!-- Done -->
+				<heading id="DjiboutiCity" title="Djibouti"/>
+			</heading>
 			<heading id="Eritrea" title="Eritrea"> <!-- Done -->
+				<synonym value="Eritrean"/>
+				<synonym value="Eritreans"/>
 				<synonym value="Eretrea"/>
 				<heading id="Asmara" title="Asmara">
 					<synonym value="Asmära"/>
@@ -367,6 +373,8 @@
 				<heading id="Massawa" title="Massawa"/>
 			</heading>
 			<heading id="Ethiopia" title="Ethiopia"> <!-- Done -->
+				<synonym value="Ethiopian"/>
+				<synonym value="Ethiopians"/>
 				<synonym value="Sheba"/>
 				<synonym value="Ityop'iya"/>
 				<heading id="AddisAbaba" title="Addis Ababa">
@@ -403,46 +411,49 @@
 				<heading id="Shashemeni" title="Shashemeni"/>
 			</heading>
 			<heading id="Kenya" title="Kenya">
+				<synonym value="Kenyan"/>
+				<synonym value="Kenyans"/>
+				<heading id="Elementeita" title="Elementeita"/>
 				<heading id="Nairobi" title="Nairobi"/>
+				<heading id="Basuba" title="Basuba"/>
+				<heading id="GobChowule" title="Gob Chowule village">
+					<synonym value="Gob Chowule"/>
+				</heading>
+				<heading id="GobDabalene" title="Gob Dabalene village">
+					<synonym value="Gob Dabalene"/>
+				</heading>
+				<heading id="GobDogo" title="Gob Dogo village">
+					<synonym value="Gob Dogo"/>
+				</heading>
+				<heading id="GobEsimgalgidele" title="Gob Esimgalgidele village">
+					<synonym value="Gob Esimgalgidele"/>
+				</heading>
+				<heading id="GobKorr" title="Gob Korr village">
+					<synonym value="Gob Korr"/>
+				</heading>
+				<heading id="GobLogologo" title="Gob Logologo village">
+					<synonym value="Gob Logologo"/>
+				</heading>
+				<heading id="GobNebey" title="Gob Nebey village">
+					<synonym value="Gob Nebey"/>
+				</heading>
+				<heading id="GobOre" title="Gob Ore village">
+					<synonym value="Gob Ore"/>
+				</heading>
+				<heading id="GobUyam" title="Gob Uyam village">
+					<synonym value="Gob Uyam"/>
+				</heading>
+				<heading id="GobWambile" title="Gob Wambile village">
+					<synonym value="Gob Wambile"/>
+				</heading>
+				<heading id="Mangai" title="Mangai"/>
+				<heading id="Tiriki" title="Tiriki"/>
 				<heading id="TurkanaDistrict" title="Turkana District">
 					<heading id="Kalalokoilriver" title="Kalalokoil river"/>
 					<heading id="Muruaret" title="Muruaret">
 						<synonym value="Muruaret Hill"/>
 					</heading>
 				</heading>
-				<heading id="Basuba" title="Basuba"/>
-				<heading id="Mangai" title="Mangai"/>
-				<heading id="Tiriki" title="Tiriki"/>
-				<heading id="GobDogo" title="Gob Dogo"/>
-				<heading id="GobNebey" title="Gob Nebey"/>
-				<heading id="GobOre" title="Gob Ore"/>
-				<heading id="GobLogologo" title="Gob Logologo"/>
-				<heading id="GobUyam" title="Gob Uyam"/>
-				<heading id="GobChowule" title="Gob Chowule"/>
-				<heading id="GobWambile" title="Gob Wambile"/>
-				<heading id="GobDabalene" title="Gob Dabalene"/>
-				<heading id="GobEsimgalgidele" title="Gob Esimgalgidele"/>
-				<heading id="GobKorr" title="Gob Korr"/>
-				<heading id="Elementeita" title="Elementeita"/>
-			</heading>
-			<heading id="DjiboutiCountry" title="Djibouti"> <!-- Done -->
-				<heading id="DjiboutiCity" title="Djibouti"/>
-			</heading>
-			<heading id="Somalia" title="Somalia"> <!-- Done -->
-				<heading id="AbdulKadir" title="Abdul Kadir">
-					<synonym value="Abdul Qadr"/>
-				</heading>
-				<heading id="GaanLibah" title="Gaan Libah"/>
-				<heading id="KarimHeganeh" title="Karim Heganeh"/>
-				<heading id="Mogadishu" title="Mogadishu"/>
-				<heading id="Somaliland" title="Somaliland">
-					<heading id="Berbera" title="Berbera"/>
-				</heading>
-			</heading>
-			<heading id="Tanzania" title="Tanzania"> <!-- Done -->
-				<synonym value="Tanganyika"/>
-				<heading id="MbuluDistrict" title="Mbulu District"/>
-				<heading id="OlduvaiGorge" title="Olduvai Gorge"/>
 			</heading>
 			<heading id="Malawi" title="Malawi">
 				<heading id="CapeMacLearPeninsula" title="Cape MacLear Peninsula">
@@ -489,117 +500,79 @@
 					<synonym value="Mahe Island"/>
 				</heading>
 			</heading>
-		</heading>
-		<heading id="SouthernAfrica" title="Southern Africa"> <!--  ALPHABETIZE! -->
-			<heading id="MadagascarCountry" title="Madagascar">
-				<heading id="Antananarivo" title="Antananarivo"/>
+			<heading id="Somalia" title="Somalia"> <!-- Done -->
+				<synonym value="Somali"/>
+				<synonym value="Somalis"/>
+				<synonym value="Somalian"/>
+				<synonym value="Somalians"/>
+				<heading id="AbdulKadir" title="Abdul Kadir">
+					<synonym value="Abdul Qadr"/>
+				</heading>
+				<heading id="GaanLibah" title="Gaan Libah"/>
+				<heading id="KarimHeganeh" title="Karim Heganeh"/>
+				<heading id="Mogadishu" title="Mogadishu"/>
+				<heading id="Somaliland" title="Somaliland">
+					<heading id="Berbera" title="Berbera"/>
+				</heading>
 			</heading>
-			<heading id="RepublicofSouthAfrica" title="Republic of South Africa">
-				<synonym value="South Africa"/>
-				<heading id="Limpopoprovince" title="Limpopo province"/>
-				<heading id="Mpumalangaprovince" title="Mpumalanga province"/>
-				<heading id="KwazuluNatalprovince" title="Kwazulu-Natal province">
-					<heading id="Durban" title="Durban"/>
+			<heading id="TanzaniaCountry" title="Tanzania"> <!-- Done -->
+				<synonym value="Tanganyika"/>
+				<synonym value="Tanzanian"/>
+				<synonym value="Tanzanians"/>
+				<heading id="Balangdalelu" title="Balangdalelu"/>
+				<heading id="DarEsSalaam" title="Dar-es-Salaam">
+					<synonym value="Dar-es-Saalam"/>
 				</heading>
-				<heading id="Gautengprovince" title="Gauteng province">
-					<heading id="Pretoria" title="Pretoria"/>
-					<heading id="Johannesburg" title="Johannesburg"/>
-					<heading id="Melville" title="Melville"/>
-					<heading id="Transvaalregion" title="Transvaal region">
-						<synonym value="Transvaal"/>
-						<heading id="CaveofHearths" title="Cave of Hearths"/>
-						<heading id="GladysvaleCave" title="Gladysvale Cave"/>
-						<heading id="MakapanLimeworks" title="Makapan Limeworks"/>
-						<heading id="MapungubweHill" title="Mapungubwe Hill"/>
+				<heading id="MbuluDistrict" title="Mbulu District">
+					<heading id="AshanGuwang" title="Ashan-Guwang village"/>
+					<heading id="DatlaaVillTanz" title="Datlaa village">
+						<synonym value="Datla"/>
+						<synonym value="Datla village"/>
+						<synonym value="Datlaa"/>
 					</heading>
-					<heading id="Rooiwal" title="Rooiwal"/>
+					<heading id="GuwangwVill" title="Guwangw village"/>
+					<heading id="MurrayVill" title="Murray village"/>
+					<heading id="TangoGuwang" title="Tango-Guwang village">
+						<synonym value="Tango-Guwangw village"/>
+					</heading>
 				</heading>
-				<heading id="NorthWestprovince" title="North West province">
-					<heading id="Vryburg" title="Vryburg"/>
-					<heading id="Taung" title="Taung">
-						<heading id="OchreCave" title="Ochre Cave"/>
-					</heading>
-					<heading id="PowerHouseCave" title="Power House Cave"/>
+				<heading id="OlduvaiGorge" title="Olduvai Gorge"/>
+			</heading>
+		</heading>
+		<heading id="SouthernAfrica" title="Southern Africa">
+			<heading id="AngolaCountry" title="Angola">
+				<synonym value="Angolan"/>
+				<synonym value="Angolans"/>
+				<heading id="Dundo" title="Dundo"/>
+				<heading id="FuriImine" title="Furi I mine"/>
+				<heading id="Huambo" title="Huambo"/>
+				<heading id="Matafari" title="Matafari"/>
+			</heading>
+			<heading id="BotswanaCountry" title="Botswana">
+				<heading id="Bechuanaland" title="Bechuanaland"/>
+				<heading id="Gaborone" title="Gaborone"/>
+				<heading id="Ngamiland" title="Ngamiland"/>
+				<heading id="Okavangodelta" title="Okavango delta">
+					<synonym value="Okovango"/>
 				</heading>
-				<heading id="OrangeFreeStateprovince" title="Orange Free State province">
-					<heading id="Zeekoigat" title="Zeekoigat"/>
-					<heading id="Clarens" title="Clarens"/>
-					<heading id="Bloemfontein" title="Bloemfontein"/>
-					<heading id="Thabanohee" title="Thabanohee"/>
-					<heading id="Thabanchu" title="Thabanchu"/>
-					<heading id="Harrismith" title="Harrismith"/>
-				</heading>
-				<heading id="Capeprovince" title="Cape province">
-					<heading id="WesternCapeprovince" title="Western Cape province">
-						<heading id="Mosselbaai" title="Mosselbaai">
-							<synonym value="Mossel Bay"/>
-						</heading>
-						<heading id="CapeTown" title="Cape Town"/>
-						<heading id="Montagu" title="Montagu">
-							<synonym value="Montagu Cave"/>
-						</heading>
-					</heading>
-					<heading id="NorthernCapeProvince" title="Northern Cape province">
-						<heading id="Rooidam" title="Rooidam"/>
-						<heading id="Doornlaagtesite" title="Doornlaagte site"/>
-						<heading id="PowersSite" title="Power's Site"/>
-						<heading id="Pneil" title="Pneil"/>
-						<heading id="Nooitgedaeht" title="Nooitgedaeht"/>
-						<heading id="Kimberley" title="Kimberley"/>
-						<heading id="RivertononVoal" title="Riverton-on-Voal">
-							<synonym value="Riverton-on-Vaal"/>
-						</heading>
-						<heading id="WonderwerkCave" title="Wonderwerk Cave"/>
-					</heading>
-					<heading id="EasternCapeProvince" title="Eastern Cape province">
-						<heading id="Maclear" title="Maclear"/>
-						<heading id="Umtata" title="Umtata"/>
-					</heading>
-					<heading id="BarklyWest" title="Barkly West"/>
-					<heading id="Taungsarea" title="Taungs area"/>
-					<heading id="BrakfonteinFarm" title="Brakfontein Farm"/>
-				</heading>
-				<heading id="Witkrans" title="Witkrans"/>
-				<heading id="Craddock" title="Craddock"/>
-				<heading id="Geelhoutboom" title="Geelhoutboom"/>
+			</heading>
+			<heading id="ComorosCountry" title="Comoros">
+				<heading id="Moroni" title="Moroni"/>
+			</heading>
+			<heading id="LesothoCountry" title="Lesotho">
+				<heading id="Maseru" title="Maseru"/>
+			</heading>
+			<heading id="MadagascarCountry" title="Madagascar">
+				<synonym value="Malagasi"/>
+				<synonym value="Malagasis"/>
+				<heading id="Antananarivo" title="Antananarivo"/>
 			</heading>
 			<heading id="MozambiqueCountry" title="Mozambique">
 				<heading id="Maputo" title="Maputo"/>
 			</heading>
-			<heading id="ZimbabweCountry" title="Zimbabwe">
-				<synonym value="Rhodesia"/>
-				<synonym value="Southern Rhodesia"/>
-				<heading id="Harare" title="Harare"/>
-				<heading id="Bulawayo" title="Bulawayo"/>
-				<heading id="Mtoko" title="Mtoko"/>
-				<heading id="Gatoomaprovince" title="Gatooma province">
-					<heading id="Montanafarmsite" title="Montana farm site"/>
-				</heading>
-				<heading id="VictoriaFallsZimbabwe" title="Victoria Falls"> <!-- Crosses border to Zambia -->
-					<implies facet="Location_facet" cat="VictoriaFallsZambia"/>
-				</heading>
-				<heading id="GreatZimbabwe" title="Great Zimbabwe"/>
-				<heading id="GokomereHill" title="Gokomere Hill">
-					<heading id="TunnelCave" title="Tunnel Cave">
-						<synonym value="Tunnel site"/>
-					</heading>
-				</heading>
-				<heading id="Khamiruins" title="Khami ruins"/>
-				<heading id="MtetengweMoundsite" title="Mtetengwe Mound site"/>
-				<heading id="Sinoiacaves" title="Sinoia caves">
-					<synonym value="Chinhoy cave"/>
-					<synonym value="Chinhoyi"/>
-					<synonym value="Sinoia"/>
-				</heading>
-				<heading id="WoolandaleRanch" title="Woolandale Ranch">
-					<synonym value="Woolandale Ranch Mound 2"/>
-				</heading>
-				<heading id="UmgusaRiver" title="Umgusa River"/>
-			</heading>
 			<heading id="NamibiaCountry" title="Namibia">
-				<heading id="Ovamuo" title="Ovamuo"/>
-				<heading id="Windhoek" title="Windhoek"/>
-				<heading id="WalvisBay" title="Walvis Bay"/>
+				<synonym value="Namibian"/>
+				<synonym value="Namibians"/>
 				<heading id="Brandberg" title="Brandberg"/>
 				<heading id="ErongoMountainregion" title="Erongo Mountain region">
 					<heading id="GreatElephantShelter" title="Great Elephant Shelter"/>
@@ -609,46 +582,186 @@
 				<heading id="KalkPlateau" title="Kalk Plateau">
 					<heading id="GoamusFarm" title="Goamus Farm"/>
 				</heading>
-				<heading id="Sambio" title="Sambio"/>
-				<heading id="NabaosFarm" title="Nabaos Farm"/>
 				<heading id="KaokeveldFarm" title="Kaokeveld Farm">
 					<synonym value="Farm 62"/>
 					<synonym value="Overholzer"/>
 				</heading>
+				<heading id="NabaosFarm" title="Nabaos Farm"/>
+				<heading id="Ovamuo" title="Ovamuo"/>
+				<heading id="Sambio" title="Sambio"/>
 				<heading id="Spitzkopperegion" title="Spitzkoppe region">
 					<synonym value="Spitzkoppe"/>
 				</heading>
 				<heading id="Tses" title="Tses"/>
+				<heading id="WalvisBay" title="Walvis Bay"/>
+				<heading id="Windhoek" title="Windhoek"/>
 			</heading>
-			<heading id="LesothoCountry" title="Lesotho">
-				<heading id="Maseru" title="Maseru"/>
-			</heading>
-			<heading id="AngolaCountry" title="Angola">
-				<heading id="Huambo" title="Huambo"/>
-				<heading id="Matafari" title="Matafari"/>
-				<heading id="Dundo" title="Dundo"/>
-				<heading id="FuriImine" title="Furi I mine"/>
-			</heading>
-			<heading id="BotswanaCountry" title="Botswana">
-				<heading id="Gaborone" title="Gaborone"/>
-				<heading id="Okavangodelta" title="Okavango delta">
-					<synonym value="Okovango"/>
+			<heading id="RepublicofSouthAfrica" title="Republic of South Africa">
+				<synonym value="South Africa"/>
+				<synonym value="South African"/>
+				<synonym value="South Africans"/>
+				<heading id="Capeprovince" title="Cape province">
+					<heading id="EasternCapeProvince" title="Eastern Cape province">
+						<heading id="Craddock" title="Craddock"/>
+						<heading id="Geelhoutboom" title="Geelhoutboom"/>
+						<heading id="Maclear" title="Maclear"/>
+						<heading id="Umtata" title="Umtata"/>
+					</heading>
+					<heading id="NorthernCapeProvince" title="Northern Cape province">
+						<heading id="BarklyWest" title="Barkly West"/>
+						<heading id="Doornlaagtesite" title="Doornlaagte site"/>
+						<heading id="Kimberley" title="Kimberley"/>
+						<heading id="Nooitgedaeht" title="Nooitgedaeht"/>
+						<heading id="Pneil" title="Pneil"/>
+						<heading id="PowersSite" title="Power's Site"/>
+						<heading id="RivertononVoal" title="Riverton-on-Voal">
+							<synonym value="Riverton-on-Vaal"/>
+						</heading>
+						<heading id="Rooidam" title="Rooidam"/>
+						<heading id="WonderwerkCave" title="Wonderwerk Cave"/>
+					</heading>
+					<heading id="WesternCapeprovince" title="Western Cape province">
+						<heading id="CapeTown" title="Cape Town"/>
+						<heading id="Montagu" title="Montagu">
+							<synonym value="Montagu Cave"/>
+						</heading>
+						<heading id="Mosselbaai" title="Mosselbaai">
+							<synonym value="Mossel Bay"/>
+						</heading>
+					</heading>
 				</heading>
-				<heading id="Ngamiland" title="Ngamiland"/>
-				<heading id="Bechuanaland" title="Bechuanaland"/>
+				<heading id="Gautengprovince" title="Gauteng province">
+					<heading id="BrakfonteinFarm" title="Brakfontein Farm"/>
+					<heading id="Johannesburg" title="Johannesburg"/>
+					<heading id="Melville" title="Melville"/>
+					<heading id="Pretoria" title="Pretoria"/>
+					<heading id="Rooiwal" title="Rooiwal"/>
+					<heading id="Transvaalregion" title="Transvaal region">
+						<synonym value="Transvaal"/>
+						<heading id="CaveofHearths" title="Cave of Hearths"/>
+						<heading id="GladysvaleCave" title="Gladysvale Cave"/>
+						<heading id="MakapanLimeworks" title="Makapan Limeworks"/>
+						<heading id="MapungubweHill" title="Mapungubwe Hill"/>
+					</heading>
+				</heading>
+				<heading id="KwazuluNatalprovince" title="Kwazulu-Natal province">
+					<heading id="Durban" title="Durban"/>
+				</heading>
+				<heading id="Limpopoprovince" title="Limpopo province"/>
+				<heading id="Mpumalangaprovince" title="Mpumalanga province"/>
+				<heading id="NorthWestprovince" title="North West province">
+					<heading id="PowerHouseCave" title="Power House Cave"/>
+					<heading id="Taung" title="Taung">
+						<synonym value="Taungs area"/>
+						<heading id="OchreCave" title="Ochre Cave"/>
+					</heading>
+					<heading id="Vryburg" title="Vryburg"/>
+				</heading>
+				<heading id="OrangeFreeStateprovince" title="Orange Free State province">
+					<heading id="Bloemfontein" title="Bloemfontein"/>
+					<heading id="Clarens" title="Clarens"/>
+					<heading id="Harrismith" title="Harrismith"/>
+					<heading id="Thabanchu" title="Thabanchu"/>
+					<heading id="Thabanohee" title="Thabanohee"/>
+					<heading id="Witkrans" title="Witkrans"/> <!-- Latitude. -27.5166667°, Longitude. 26.2333333° -->
+					<heading id="Zeekoigat" title="Zeekoigat"/>
+				</heading>
 			</heading>
 			<heading id="SwazilandCountry" title="Swaziland">
 				<heading id="Mbabane" title="Mbabane"/>
 			</heading>
-			<heading id="ComorosCountry" title="Comoros">
-				<heading id="Moroni" title="Moroni"/>
+			<heading id="ZimbabweCountry" title="Zimbabwe">
+				<synonym value="Rhodesia"/>
+				<synonym value="Rhodesian"/>
+				<synonym value="Rhodesians"/>
+				<synonym value="Southern Rhodesia"/>
+				<heading id="Bulawayo" title="Bulawayo"/>
+				<heading id="Gatoomaprovince" title="Gatooma province">
+					<heading id="Montanafarmsite" title="Montana farm site"/>
+				</heading>
+				<heading id="GreatZimbabwe" title="Great Zimbabwe"/>
+				<heading id="Harare" title="Harare"/>
+				<heading id="GokomereHill" title="Gokomere Hill">
+					<heading id="TunnelCave" title="Tunnel Cave">
+						<synonym value="Tunnel site"/>
+					</heading>
+				</heading>
+				<heading id="Khamiruins" title="Khami ruins"/>
+				<heading id="MtetengweMoundsite" title="Mtetengwe Mound site"/>
+				<heading id="Mtoko" title="Mtoko"/>
+				<heading id="Sinoiacaves" title="Sinoia caves">
+					<synonym value="Chinhoy cave"/>
+					<synonym value="Chinhoyi"/>
+					<synonym value="Sinoia"/>
+				</heading>
+				<heading id="UmgusaRiver" title="Umgusa River"/>
+				<heading id="VictoriaFallsZimbabwe" title="Victoria Falls"> <!-- Crosses border to Zambia -->
+					<implies facet="Location_facet" cat="VictoriaFallsZambia"/>
+				</heading>
+				<heading id="WoolandaleRanch" title="Woolandale Ranch">
+					<synonym value="Woolandale Ranch Mound 2"/>
+				</heading>
 			</heading>
 		</heading>
-		<heading id="WesternAfrica" title="Western Africa"> <!--  ALPHABETIZE! -->
+		<heading id="WesternAfrica" title="Western Africa">
 			<synonym value="West Africa"/>
+			<synonym value="West African"/>
+			<synonym value="West Africans"/>
+			<synonym value="Western African"/>
+			<synonym value="Western Africans"/>
+			<heading id="BeninCountry" title="Benin">
+				<heading id="PortoNovo" title="Porto Novo"/>
+			</heading>
+			<heading id="BurkinaFaso" title="Burkina Faso">
+				<heading id="Ouagadougou" title="Ouagadougou"/>
+			</heading>
+			<heading id="CameroonCountry" title="Cameroon">
+				<heading id="Douala" title="Douala"/>
+				<heading id="Yaounde" title="Yaounde"/>
+			</heading>
+			<heading id="CapeVerde" title="Cape Verde">
+				<synonym value="Ca'Verde"/>
+				<heading id="Praia" title="Praia"/>
+			</heading>
+			<heading id="CotedIvoire" title="Cote d'Ivoire">
+				<synonym value="Ivory Coast"/>
+				<heading id="Abidjan" title="Abidjan"/>
+				<heading id="Anyi" title="Anyi"/>
+			</heading>
+			<heading id="EquatorialGuinea" title="Equatorial Guinea">
+				<heading id="Bata" title="Bata"/>
+				<heading id="Malabo" title="Malabo"/>
+			</heading>
+			<heading id="GabonCountry" title="Gabon">
+				<heading id="Libreville" title="Libreville"/>
+			</heading>
+			<heading id="GambiaCountry" title="Gambia">
+				<heading id="Banjul" title="Banjul"/>
+			</heading>
+			<heading id="GhanaCountry" title="Ghana">
+				<heading id="Accra" title="Accra"/>
+				<heading id="Adwuku" title="Adwuku"/>
+				<heading id="DawuGhana" title="Dawu">
+					<synonym value="Dawn"/>
+				</heading>
+				<heading id="LegonGhana" title="Legon"/>
+			</heading>
+			<heading id="Guinea" title="Guinea">
+				<heading id="Conakry" title="Conakry"/>
+			</heading>
+			<heading id="GuineaBissau" title="Guinea Bissau">
+				<heading id="Bissau" title="Bissau"/>
+			</heading>
+			<heading id="LiberiaCountry" title="Liberia">
+				<heading id="Monrovia" title="Monrovia"/>
+			</heading>
+			<heading id="MaliCountry" title="Mali">
+				<heading id="Bamako" title="Bamako"/>
+				<heading id="Karkarichinkat" title="Karkarichinkat"/>
+			</heading>
 			<heading id="MauritaniaCountry" title="Mauritania">
 				<synonym value="Muritaniya"/>
-				<heading id="Nouakchottdistrict" title="Nouakchott district"/>
+				<heading id="Assabaregion" title="Assaba region"/>
 				<heading id="Adrarregion" title="Adrar region">
 					<heading id="WadiArmakou" title="Wadi Armakou"/>
 					<heading id="AdergMauritania" title="Aderg"/>
@@ -662,46 +775,20 @@
 					<heading id="Tazazmout" title="Tazazmout"/>
 				</heading>
 				<heading id="Braknaregion" title="Brakna region"/>
-				<heading id="Trarzaregion" title="Trarza region"/>
-				<heading id="HodhechCharguiregion" title="Hodh ech Chargui region"/>
-				<heading id="Tagantregion" title="Tagant region"/>
-				<heading id="DakhletNouadhibouregion" title="Dakhlet Nouadhibou region"/>
-				<heading id="TirisZemmourregion" title="Tiris Zemmour region"/>
-				<heading id="Assabaregion" title="Assaba region"/>
-				<heading id="Gorgolregion" title="Gorgol region"/>
-				<heading id="Guidimakaregion" title="Guidimaka region"/>
-				<heading id="HodhElGharbiregion" title="Hodh El Gharbi region"/>
-				<heading id="Inchiriregion" title="Inchiri region"/>
 				<heading id="Dakarregion" title="Dakar region">
 					<excl value="Senegal"/>
 					<excl value="Sénégal"/>
 				</heading>
-			</heading>
-			<heading id="BeninCountry" title="Benin">
-				<heading id="PortoNovo" title="Porto Novo"/>
-			</heading>
-			<heading id="TogoCountry" title="Togo">
-				<heading id="Lome" title="Lome"/>
-			</heading>
-			<heading id="Guinea" title="Guinea">
-				<heading id="Conakry" title="Conakry"/>
-			</heading>
-			<heading id="GuineaBissau" title="Guinea Bissau">
-				<heading id="Bissau" title="Bissau"/>
-			</heading>
-			<heading id="SierraLeoneCountry" title="Sierra Leone">
-				<heading id="Freetown" title="Freetown"/>
-			</heading>
-			<heading id="LiberiaCountry" title="Liberia">
-				<heading id="Monrovia" title="Monrovia"/>
-			</heading>
-			<heading id="GhanaCountry" title="Ghana">
-				<heading id="Accra" title="Accra"/>
-				<heading id="Adwuku" title="Adwuku"/>
-				<heading id="DawuGhana" title="Dawu">
-					<synonym value="Dawn"/>
-				</heading>
-				<heading id="LegonGhana" title="Legon"/>
+				<heading id="DakhletNouadhibouregion" title="Dakhlet Nouadhibou region"/>
+				<heading id="Gorgolregion" title="Gorgol region"/>
+				<heading id="Guidimakaregion" title="Guidimaka region"/>
+				<heading id="HodhechCharguiregion" title="Hodh ech Chargui region"/>
+				<heading id="HodhElGharbiregion" title="Hodh El Gharbi region"/>
+				<heading id="Inchiriregion" title="Inchiri region"/>
+				<heading id="Nouakchottdistrict" title="Nouakchott district"/>
+				<heading id="Tagantregion" title="Tagant region"/>
+				<heading id="TirisZemmourregion" title="Tiris Zemmour region"/>
+				<heading id="Trarzaregion" title="Trarza region"/>
 			</heading>
 			<heading id="NigeriaCountry" title="Nigeria">
 				<heading id="Abuja" title="Abuja"/>
@@ -709,6 +796,9 @@
 					<heading id="IfaYemoo" title="Ifa Yemoo"/>
 				</heading>
 				<heading id="UdiNigeria" title="Udi"/>
+			</heading>
+			<heading id="SaoTomePrincipe" title="Sao Tome &amp; Principe">
+				<heading id="SaoTome" title="Sao Tome"/>
 			</heading>
 			<heading id="SenegalCountry" title="Sénégal">
 				<synonym value="Senegal"/>
@@ -718,41 +808,66 @@
 				</heading>
 				<heading id="Rufisque" title="Rufisque"/>
 			</heading>
-			<heading id="MaliCountry" title="Mali">
-				<heading id="Bamako" title="Bamako"/>
-				<heading id="Karkarichinkat" title="Karkarichinkat"/>
+			<heading id="SierraLeoneCountry" title="Sierra Leone">
+				<heading id="Freetown" title="Freetown"/>
 			</heading>
-			<heading id="GabonCountry" title="Gabon">
-				<heading id="Libreville" title="Libreville"/>
-			</heading>
-			<heading id="GambiaCountry" title="Gambia">
-				<heading id="Banjul" title="Banjul"/>
-			</heading>
-			<heading id="CotedIvoire" title="Cote d'Ivoire">
-				<synonym value="Ivory Coast"/>
-				<heading id="Abidjan" title="Abidjan"/>
-				<heading id="Anyi" title="Anyi"/>
-			</heading>
-			<heading id="EquatorialGuinea" title="Equatorial Guinea">
-				<heading id="Malabo" title="Malabo"/>
-				<heading id="Bata" title="Bata"/>
-			</heading>
-			<heading id="CameroonCountry" title="Cameroon">
-				<heading id="Douala" title="Douala"/>
-				<heading id="Yaounde" title="Yaounde"/>
-			</heading>
-			<heading id="SaoTomePrincipe" title="Sao Tome &amp; Principe">
-				<heading id="SaoTome" title="Sao Tome"/>
-			</heading>
-			<heading id="BurkinaFaso" title="Burkina Faso">
-				<heading id="Ouagadougou" title="Ouagadougou"/>
-			</heading>
-			<heading id="CapeVerde" title="Cape Verde">
-				<synonym value="Ca'Verde"/>
-				<heading id="Praia" title="Praia"/>
+			<heading id="TogoCountry" title="Togo">
+				<heading id="Lome" title="Lome"/>
 			</heading>
 		</heading>
-		<heading id="CentralAfrica" title="Central Africa"> <!--  ALPHABETIZE! -->
+		<heading id="CentralAfrica" title="Central Africa">
+			<heading id="BurundiCountry" title="Burundi">
+				<heading id="Bujumbura" title="Bujumbura"/>
+				<heading id="Nyarunazi" title="Nyarunazi"/>
+			</heading>
+			<heading id="CentralAfricanRepublic" title="Central African Republic">
+				<heading id="Bangui" title="Bangui"/>
+			</heading>
+			<heading id="CongoCountry" title="Congo">
+				<heading id="Brazzaville" title="Brazzaville"/>
+				<heading id="Leopoldville" title="Leopoldville"/>
+			</heading>
+			<heading id="DemocraticRepublicoftheCongo" title="Democratic Republic of the Congo">
+				<synonym value="Zaire"/>
+				<heading id="CentralBantu" title="Central Bantu"/> <!-- Is a place, or just a cultural group? -->
+				<heading id="Kasaiprovince" title="Kasai province"/>
+				<heading id="Katangaprovince" title="Katanga province">
+					<heading id="Katongo" title="Katongo"/>
+					<heading id="Sanga" title="Sanga"/>
+				</heading>
+				<heading id="Kinshasa" title="Kinshasa">
+					<synonym value="Leopoldville"/>
+					<heading id="giteA" title="gite A"/>
+				</heading>
+				<heading id="Kivuprovince" title="Kivu province">
+					<heading id="KasongoManiema" title="Kasongo-Maniema">
+						<synonym value="Kasongo-Maniema Site"/>
+					</heading>
+				</heading>
+				<heading id="Likasi" title="Likasi"/>
+				<heading id="Lubumbashi" title="Lubumbashi"/>
+				<heading id="Lukala" title="Lukala">
+					<synonym value="Tukala"/>
+				</heading>
+				<heading id="Manianga" title="Manianga"/>
+				<heading id="Shabaprovince" title="Shaba province"/>
+			</heading>
+			<heading id="RwandaCountry" title="Rwanda">
+				<heading id="Kigali" title="Kigali"/>
+				<heading id="LakeVictoria" title="Lake Victoria"/>
+			</heading>
+			<heading id="UgandaCountry" title="Uganda">
+				<heading id="Entebee" title="Entebee">
+					<synonym value="Entebee rock shelter"/>
+				</heading>
+				<heading id="Kampalu" title="Kampalu"/>
+				<heading id="KanteyoreIsland" title="Kanteyore Island"/>
+				<heading id="Karamoja" title="Karamoja">
+					<implies facet="Culture_facet" cat="MagosianCulture"/> <!-- Type site for the Magosian -->
+				</heading>
+				<heading id="OrichingaValley" title="Orichinga Valley"/>
+				<heading id="NyabusoraKageraRiver" title="Nyabusora Kagera River"/>
+			</heading>
 			<heading id="ZambiaCountry" title="Zambia">
 				<synonym value="Northern Rhodesia"/>
 				<synonym value="Nothern Rhodesia"/>
@@ -764,58 +879,6 @@
 				</heading>
 				<heading id="VictoriaFallsZambia" title="Victoria Falls" noMatch="true"/> <!-- Crosses border to Zimbabwe -->
 				<heading id="ZambesiValley" title="Zambesi Valley"/>
-			</heading>
-			<heading id="CentralAfricanRepublic" title="Central African Republic">
-				<heading id="Bangui" title="Bangui"/>
-			</heading>
-			<heading id="UgandaCountry" title="Uganda">
-				<heading id="Entebee" title="Entebee">
-					<synonym value="Entebee rock shelter"/>
-				</heading>
-				<heading id="Kampalu" title="Kampalu"/>
-				<heading id="NyabusoraKageraRiver" title="Nyabusora Kagera River"/>
-				<heading id="KanteyoreIsland" title="Kanteyore Island"/>
-				<heading id="Karamoja" title="Karamoja">
-					<implies facet="Culture_facet" cat="MagosianCulture"/> <!-- Type site for the Magosian -->
-				</heading>
-				<heading id="OrichingaValley" title="Orichinga Valley"/>
-			</heading>
-			<heading id="BurundiCountry" title="Burundi">
-				<heading id="Bujumbura" title="Bujumbura"/>
-				<heading id="Nyarunazi" title="Nyarunazi"/>
-			</heading>
-			<heading id="RwandaCountry" title="Rwanda">
-				<heading id="Kigali" title="Kigali"/>
-				<heading id="LakeVictoria" title="Lake Victoria"/>
-			</heading>
-			<heading id="DemocraticRepublicoftheCongo" title="Democratic Republic of the Congo">
-				<synonym value="Zaire"/>
-				<heading id="CentralBantu" title="Central Bantu"/>
-				<heading id="Kinshasa" title="Kinshasa">
-					<synonym value="Leopoldville"/>
-					<heading id="giteA" title="gite A"/>
-				</heading>
-				<heading id="Likasi" title="Likasi"/>
-				<heading id="Lubumbashi" title="Lubumbashi"/>
-				<heading id="Kasaiprovince" title="Kasai province"/>
-				<heading id="Shabaprovince" title="Shaba province"/>
-				<heading id="Kivuprovince" title="Kivu province">
-					<heading id="KasongoManiema" title="Kasongo-Maniema">
-						<synonym value="Kasongo-Maniema Site"/>
-					</heading>
-				</heading>
-				<heading id="Lukala" title="Lukala">
-					<synonym value="Tukala"/>
-				</heading>
-				<heading id="Manianga" title="Manianga"/>
-				<heading id="Katangaprovince" title="Katanga province">
-					<heading id="Sanga" title="Sanga"/>
-					<heading id="Katongo" title="Katongo"/>
-				</heading>
-			</heading>
-			<heading id="CongoCountry" title="Congo">
-				<heading id="Brazzaville" title="Brazzaville"/>
-				<heading id="Leopoldville" title="Leopoldville"/>
 			</heading>
 		</heading>
 	</heading>
@@ -947,6 +1010,7 @@
 		</heading>
 		<heading id="SouthernEurope" title="Southern Europe"> <!-- ALPHABETIZE! -->
 			<heading id="Albania" title="Albania">
+				<synonym value="Albanian"/>
 				<synonym value="Albaētia"/>
 				<synonym value="Arbanētia"/>
 				<synonym value="Shqipëri"/> <!-- in Albanian, common name -->
@@ -955,12 +1019,15 @@
 				<synonym value="Shqipnija"/> <!-- in Gheg Albanian -->
 			</heading>
 			<heading id="Italy" title="Italy">
+				<synonym value="Italian"/>
 				<heading id="Sardinia" title="Sardinia">
+					<synonym value="Sardinian"/>
 					<heading id="Cagliari" title="Cagliari"/>
 					<heading id="SettimoSanPietro" title="Settimo San Pietro"/>
 				</heading>
 				<heading id="SouthernItaly" title="Southern Italy">
 					<synonym value="South Italy"/>
+					<synonym value="Southern Italian"/>
 					<heading id="Apulia" title="Apulia">
 						<heading id="Taranto" title="Taranto">
 							<synonym value="Tarentum"/>
@@ -988,6 +1055,7 @@
 				</heading>
 				<heading id="NorthernItaly" title="Northern Italy">
 					<synonym value="North Italy"/>
+					<synonym value="Northern Italian"/>
 					<heading id="Milan" title="Milan">
 						<synonym value="Milano"/>
 					</heading>
@@ -1001,6 +1069,7 @@
 					</heading>
 				</heading>
 				<heading id="CentralItaly" title="Central Italy">
+					<synonym value="Central Italian"/>
 					<heading id="Anagni" title="Anagni"/>
 					<heading id="Arezzo" title="Arezzo"/>
 					<heading id="Bieda" title="Bieda"/>
@@ -1107,6 +1176,7 @@
 					<heading id="Vulci" title="Vulci"/>
 				</heading>
 				<heading id="Sicily" title="Sicily">
+					<synonym value="Sicilian"/>
 					<heading id="GelaItaly" title="Gela"/>
 					<heading id="PalermoItaly" title="Palermo"/>
 					<heading id="Selinunte" title="Selinunte"/>
@@ -1203,6 +1273,8 @@
 				</heading>
 			</heading>
 			<heading id="RepublicofMacedonia" title="Republic of Macedonia">
+				<synonym value="Macedonian"/>
+				<synonym value="Macedonians"/>
 				<synonym value="Rupublic of Macedonia"/>
 				<heading id="Monastir" title="Monastir">
 					<synonym value="Bitola"/>
@@ -1212,12 +1284,31 @@
 				<heading id="Valletta" title="Valletta"/>
 			</heading>
 			<heading id="Turkey" title="Turkey">
+				<synonym value="Turkish"/>
 				<synonym value="Türkiye"/>
+				<heading id="Aegeanregion" title="Aegean region">
+					<heading id="Aydin" title="Aydin">
+						<synonym value="Tralles"/>
+					</heading>
+					<heading id="Pergamon" title="Pergamon"/>
+					<heading id="Smyrna" title="Smyrna">
+						<synonym value="Izmir"/>
+						<synonym value="Smyrne"/>
+					</heading>
+				</heading>
 				<heading id="Anatolia" title="Anatolia">
 					<heading id="SouthwesternAnatolia" title="Southwestern Anatolia"/>
 					<heading id="WesternAnatolia" title="Western Anatolia"/>
-					<heading id="WesternCentralAnatolia" title="Western Central Anatolia"/>
-					<heading id="CentralAnatolia" title="Central Anatolia"/>
+				</heading>
+				<heading id="BlackSearegion" title="Black Sea region">
+					<heading id="Trabzon" title="Trabzon"/>
+				</heading>
+				<heading id="CentralAnatoliaregion" title="Central Anatolia region">
+					<synonym value="Central Anatolia"/>
+					<synonym value="Western Central Anatolia"/>
+					<heading id="Ankara" title="Ankara"/>
+					<heading id="Konia" title="Konia"/>
+					<heading id="Ladik" title="Ladik"/>
 				</heading>
 				<heading id="KurdishTurkey" title="Kurdish Turkey"/>
 				<heading id="Marmararegion" title="Marmara region">
@@ -1229,24 +1320,6 @@
 					</heading>
 					<heading id="Aeolis" title="Aeolis"/>
 					<heading id="Bursa" title="Bursa"/>
-				</heading>
-				<heading id="Aegeanregion" title="Aegean region">
-					<heading id="Smyrna" title="Smyrna">
-						<synonym value="Izmir"/>
-						<synonym value="Smyrne"/>
-					</heading>
-					<heading id="Pergamon" title="Pergamon"/>
-					<heading id="Aydin" title="Aydin">
-						<synonym value="Tralles"/>
-					</heading>
-				</heading>
-				<heading id="BlackSearegion" title="Black Sea region">
-					<heading id="Trabzon" title="Trabzon"/>
-				</heading>
-				<heading id="CentralAnatoliaregion" title="Central Anatolia region">
-					<heading id="Ankara" title="Ankara"/>
-					<heading id="Konia" title="Konia"/>
-					<heading id="Ladik" title="Ladik"/>
 				</heading>
 				<heading id="Mediterraneanregion" title="Mediterranean region">
 					<heading id="Anavarza" title="Anavarza"/>
@@ -1271,8 +1344,11 @@
 			</heading>
 		</heading>
 		<heading id="WesternEurope" title="Western Europe"> <!--  Done -->
+			<synonym value="Westen European"/>
 			<heading id="Belgium" title="Belgium">
+				<synonym value="Belgian"/>
 				<heading id="Flanders" title="Flanders">
+					<synonym value="Flemish"/>
 					<heading id="Brussels" title="Brussels"/>
 					<heading id="Mechlin" title="Mechlin"/>
 					<heading id="Bruges" title="Bruges"/>
@@ -1282,6 +1358,11 @@
 				</heading>
 			</heading>
 			<heading id="France" title="France">
+				<synonym value="French"/>
+				<synonym value="Francais"/>
+				<synonym value="Français"/>
+				<synonym value="Francaise"/>
+				<synonym value="Françaisw"/>
 				<heading id="Aquitaine" title="Aquitaine">
 					<heading id="Dordogne" title="Dordogne">
 						<heading id="CombeCapelle" title="Combe Capelle"/>
@@ -1357,11 +1438,9 @@
 				<heading id="Brittany" title="Brittany">
 					<synonym value="Bretagne"/>
 				</heading>
-				<heading id="RhoneAlpes" title="Rhone-Alpes">
-					<heading id="Lyon" title="Lyon">
-						<synonym value="Lugdunum"/>
-					</heading>
-					<heading id="StationdeSoyon" title="Station de Soyon"/>
+				<heading id="Limousin" title="Limousin">
+					<heading id="PuydeLacan" title="Puy-de-Lacan"/>
+					<heading id="Limoges" title="Limoges"/>
 				</heading>
 				<heading id="MidPyrenees" title="Mid-Pyrenees">
 					<heading id="Ariege" title="Ariege">
@@ -1378,19 +1457,25 @@
 				<heading id="PoitouCharentes" title="Poitou-Charentes">
 					<heading id="LaQuina" title="La Quina"/>
 				</heading>
-				<heading id="Limousin" title="Limousin">
-					<heading id="PuydeLacan" title="Puy-de-Lacan"/>
-					<heading id="Limoges" title="Limoges"/>
+				<heading id="RhoneAlpes" title="Rhone-Alpes">
+					<heading id="Lyon" title="Lyon">
+						<synonym value="Lugdunum"/>
+					</heading>
+					<heading id="StationdeSoyon" title="Station de Soyon"/>
 				</heading>
-				<heading id="Ireland" title="Ireland"/>
+				</heading>
+			<heading id="Ireland" title="Ireland">
+				<synonym value="Irish"/>
 			</heading>
 			<heading id="Portugal" title="Portugal">
+				<synonym value="Portugese"/>
 				<heading id="TagusValley" title="Tagus Valley">
 					<heading id="ValedoForno" title="Vale do Forno"/>
 				</heading>
 			</heading>
 			<heading id="Netherlands" title="Netherlands">
 				<synonym value="Holland"/>
+				<synonym value="Dutch"/>
 				<heading id="Delft" title="Delft"/>
 				<heading id="Dordrecht" title="Dordrecht">
 					<synonym value="Dort"/>
@@ -1406,6 +1491,9 @@
 				<heading id="ZuydreZee" title="Zuydre Zee"/>
 			</heading>
 			<heading id="Spain" title="Spain">
+				<synonym value="Espana"/>
+				<synonym value="España"/>
+				<synonym value="Spanish"/>
 				<heading id="Andalucia" title="Andalucia"/>
 				<heading id="Artes" title="Artes"/>
 				<heading id="Catavina" title="Catavina"/>
@@ -1415,6 +1503,10 @@
 				<heading id="Seville" title="Seville"/>
 			</heading>
 			<heading id="UnitedKingdom" title="United Kingdom">
+				<synonym value="Britain"/>
+				<synonym value="Great Britain"/>
+				<synonym value="UK"/>
+				<synonym value="U.K."/>
 				<heading id="ChannelIslandsUK" title="Channel Islands">
 					<excl value="Anacapa"/>
 					<excl value="San Clemente"/>
@@ -1494,39 +1586,65 @@
 				</heading>
 				<heading id="IsleofMan" title="Isle of Man"/>
 				<heading id="NorthernIrelandUK" title="Northern Ireland (U.K.)">
+					<synonym value="North Ireland"/>
+					<synonym value="Northern Ireland"/>
 					<heading id="GiantsCauseway" title="Giants Causeway"/>
 				</heading>
-				<heading id="OrkneyIslands" title="Orkney Islands"/>
-				<heading id="Scotland" title="Scotland"/>
+				<heading id="OrkneyIslands" title="Orkney Islands">
+					<synonym value="Orkney"/>
+				</heading>
+				<heading id="Scotland" title="Scotland">
+					<synonym value="Scottish"/>
+				</heading>
 				<heading id="ShetlandIslands" title="Shetland Islands"/>
-				<heading id="Wales" title="Wales"/>
+				<heading id="Wales" title="Wales">
+					<synonym value="Welsh"/>
+				</heading>
 			</heading>
 		</heading>
 		<heading id="EasternEurope" title="Eastern Europe"> <!-- Done -->
-			<heading id="Belarus" title="Belarus"/>
-			<heading id="Estonia" title="Estonia"/>
-			<heading id="Latvia" title="Latvia"/>
-			<heading id="Lithuania" title="Lithuania"/>
+			<synonym value="Eastern European"/>
+			<heading id="Belarus" title="Belarus">
+				<synonym value="Belarussian"/>
+			</heading>
+			<heading id="Estonia" title="Estonia">
+				<synonym value="Estonian"/>
+			</heading>
+			<heading id="Latvia" title="Latvia">
+				<synonym value="Latvian"/>
+			</heading>
+			<heading id="Lithuania" title="Lithuania">
+				<synonym value="Lithuanian"/>
+			</heading>
 			<heading id="Moldova" title="Moldova">
+				<synonym value="Moldovan"/>
 				<synonym value="Moldavia"/>
+				<synonym value="Moldavian"/>
 				<heading id="Bessarabia" title="Bessarabia"/>
 			</heading>
-			<heading id="Ukraine" title="Ukraine"/>
+			<heading id="Ukraine" title="Ukraine">
+				<synonym value="Ukrainian"/>
+			</heading>
 		</heading>
 	</heading>
 	<heading id="Asia" title="Asia"> <!-- done -->
+		<synonym value="Asian"/>
 		<heading id="CentralAsia" title="Central Asia">
+			<synonym value="Central Asian"/>
 			<heading id="Afghanistan" title="Afghanistan">
+				<synonym value="Afghani"/>
 				<heading id="BokharaAfghan" title="Bokhara-Afghan"/>
 				<heading id="Istalif" title="Istalif"/>
 				<heading id="Kandahar" title="Kandahar"/>
 			</heading>
 			<heading id="Armenia" title="Armenia">
+				<synonym value="Armenian"/>
 				<heading id="Erivan" title="Erivan">
 					<synonym value="Yerevan"/>
 				</heading>
 			</heading>
 			<heading id="Azerbaijan" title="Azerbaijan">
+				<synonym value="Azerbaijani"/>
 				<heading id="Karabagh" title="Karabagh"/>
 				<heading id="Kazak" title="Kazak"/>
 				<heading id="Shemaka" title="Shemaka">
@@ -1534,6 +1652,7 @@
 				</heading>
 			</heading>
 			<heading id="China" title="China">
+				<synonym value="Chinese"/>
 				<synonym value="Zhonghua"/>
 				<synonym value="Ch'ien Lung"/> <!-- Is this a place or is this emperor Qianlong? -->
 				<synonym value="Kien-Lung"/> <!-- Is this a place or is this emperor Qianlong? -->
@@ -1662,24 +1781,41 @@
 				</heading>
 			</heading>
 			<heading id="GeorgiaCountry" title="Georgia">
+				<synonym value="Georgian"/>
 				<excl value="Darien"/> <!-- Disambiguates from US State -->
 				<excl value="McIntosh"/> <!-- Ibid. -->
 				<heading id="Kheusuretiregion" title="Kheusureti region">
 					<heading id="Shatilivillage" title="Shatili village"/>
 				</heading>
 			</heading>
-			<heading id="Kazakhstan" title="Kazakhstan"/>
-			<heading id="Kyrgyzstan" title="Kyrgyzstan"/>
+			<heading id="Kazakhstan" title="Kazakhstan">
+				<synonym value="Kazahkstan"/>
+				<synonym value="Kazahkstani"/>
+				<synonym value="Kazakhstani"/>
+			</heading>
+			<heading id="Kyrgyzstan" title="Kyrgyzstan">
+				<synonym value="Kyrgyzstani"/>
+			</heading>
 			<heading id="MongoliaCountry" title="Mongolia">
+				<synonym value="Mongol"/>
+				<synonym value="Mongols"/>
+				<synonym value="Mongolian"/>
+				<synonym value="Mongolians"/>
 				<synonym value="Outer Mongolia"/>
 				<heading id="Ulaanbaatar" title="Ulaanbaatar"/>
 			</heading>
 			<heading id="Russia" title="Russia">
+				<synonym value="Russian"/>
+				<synonym value="Russians"/>
+				<synonym value="Soviet"/>
+				<synonym value="Soviets"/>
 				<heading id="Kamchatkaregion" title="Kamchatka region">
 					<synonym value="Kamchatka peninsula"/>
 				</heading>
 				<heading id="OrenbergRussia" title="Orenberg"/>
 				<heading id="SiberiaRussia" title="Siberia">
+					<synonym value="Siberian"/>
+					<synonym value="Siberians"/>
 					<heading id="GreatDiomedeIsland" title="Great Diomede Island">
 						<synonym value="Big Diomede Island"/>
 						<synonym value="Ostrov Ratmanova"/>
@@ -1689,6 +1825,8 @@
 			<heading id="Tajikistan" title="Tajikistan"/>
 			<heading id="Turkmenistan" title="Turkmenistan"/>
 			<heading id="Uzbekistan" title="Uzbekistan">
+				<synonym value="Uzbekistani"/>
+				<synonym value="Uzbekistanis"/>
 				<heading id="Bokhara" title="Bokhara"/>
 				<heading id="BokharaYomud" title="Bokhara-Yomud"/>
 				<heading id="Saryk" title="Saryk"/>
@@ -1696,6 +1834,9 @@
 			</heading>
 		</heading>
 		<heading id="Indiansubcontinent" title="Indian subcontinent">
+			<synonym value="South Asia"/>
+			<synonym value="South Asian"/>
+			<synonym value="South Asians"/>
 			<heading id="AndamanIslands" title="Andaman Islands"/>
 			<heading id="Bangladesh" title="Bangladesh"/>
 			<heading id="Bhutan" title="Bhutan"/>
@@ -1703,7 +1844,9 @@
 				<synonym value="( India? )"/>
 				<synonym value="India (unspecified)"/>
 				<heading id="CentralIndia" title="Central India"/>
-				<heading id="IndianStates" title="States" noMatch="true">
+				<heading id="IndianStates" title="States" noMatch="true"> <!-- Needs to be subdivided by large regions -->
+					<synonym value="Asian Indian"/>
+					<synonym value="Asian Indians"/>
 					<heading id="AndhraPradesh" title="Andhra Pradesh">
 						<heading id="CuddappahDistrict" title="Cuddappah District"/>
 					</heading>
@@ -1816,7 +1959,10 @@
 					</heading>
 					<heading id="Uttarakhand" title="Uttarakhand"/> <!-- Made a state on November 9, 2000 -->
 					<heading id="WestBengal" title="WestBengal">
-						<synonym value="Bengal"/> <!-- Beware of East Bengal = Bangladesh -->
+						<synonym value="Bengal"/>
+						<synonym value="Bengali"/>
+						<synonym value="Bengalis"/>
+						<excl value="East Bengal"/> <!-- Beware of East Bengal = Bangladesh -->
 						<heading id="Bankura" title="Bankura"/>
 						<heading id="BirbhumDistrict" title="Birbhum District">
 							<heading id="Suri" title="Suri"/>
@@ -1841,10 +1987,23 @@
 						<heading id="OldDelhi" title="Old Delhi"/>
 					</heading>
 					<heading id="Ponducherry" title="Ponducherry"/>
-				</heading> <!-- _____________ CONTINUE TO ORGANIZE THE FOLLOWING _____________ --> <!-- <heading id="Kashmir" title="Kashmir"/>  a region covering India, Pakistan, and China --> <!-- <heading id="Kotah" title="Kotah"/> --> <!-- <heading id="Shisadar" title="Shisadar"/> --> <!-- <heading id="Parsi" title="Parsi?"/> Is this a cultural group? --> <!-- <heading id="Bharat" title="Bharat"/> Appears to be a language, and not a region -->
+				</heading> 
+				<!-- _____________ CONTINUE TO ORGANIZE THE FOLLOWING _____________ --> 
+				<!-- <heading id="Kashmir" title="Kashmir"/>  a region covering India, Pakistan, and China --> 
+				<!-- <heading id="Kotah" title="Kotah"/> --> 
+				<!-- <heading id="Shisadar" title="Shisadar"/> --> 
+				<!-- <heading id="Parsi" title="Parsi?"/> Is this a cultural group? --> 
+				<!-- <heading id="Bharat" title="Bharat"/> Appears to be a language, and not a region -->
 			</heading>
-			<heading id="MaldiveIslands" title="Maldive Islands"/>
+			<heading id="MaldiveIslands" title="Maldive Islands">
+				<synonym value="Maldive"/>
+				<synonym value="Maldives"/>
+				<synonym value="Maldivan"/>
+				<synonym value="Maldivans"/>
+			</heading>
 			<heading id="Nepal" title="Nepal">
+				<synonym value="Nepali"/>
+				<synonym value="Nepalis"/>
 				<heading id="Bhadgaon" title="Bhadgaon"/>
 				<heading id="Kathmandu" title="Kathmandu"/>
 				<heading id="Manang" title="Manang"/>
@@ -1853,21 +2012,47 @@
 			</heading>
 			<heading id="NicobarIslands" title="Nicobar Islands"/>
 			<heading id="Pakistan" title="Pakistan">
+				<synonym value="Pakistani"/>
+				<synonym value="Pakistanis"/>
 				<heading id="SindhPakistan" title="Sindh"/>
 			</heading>
 			<heading id="SriLanka" title="Sri Lanka">
+				<synonym value="Sri Lankan"/>
+				<synonym value="Sri Lankans"/>
 				<synonym value="Ceylon"/>
 			</heading>
 			<heading id="Tibet" title="Tibet">
+				<synonym value="Tibetan"/>
+				<synonym value="Tibetans"/>
 				<implies facet="Location_facet" cat="XizangprovinceTibet"/> <!-- For benefit of Chinese worldview -->
+				<heading id="AndoTibet" title="Ando"/>
+				<heading id="HimalayasTibet" title="Himalayas"/>  <!-- NB: also Nepal, Bhutan, India, Pakistan, Burma, and Afghanistan -->
+				<heading id="LadakhTibet" title="Ladakh"/>
 			</heading>
 		</heading>
 		<heading id="MiddleEast" title="Middle East">
-			<heading id="Bahrain" title="Bahrain"/>
-			<heading id="Cyprus" title="Cyprus"/>
-			<heading id="Iran" title="Iran">
+			<synonym value="Middle Eastern"/>
+			<synonym value="Middle Easterner"/>
+			<synonym value="Middle Easterners"/>
+			<heading id="Bahrain" title="Bahrain">
+				<synonym value="Bahraini"/>
+				<synonym value="Bahrainis"/>
+			</heading>
+			<heading id="Cyprus" title="Cyprus">
+				<synonym value="Cypriot"/>
+				<synonym value="Cypriots"/>
+			</heading>
+			<heading id="Iran" title="Iran"> <!-- Alphabetize -->
+				<synonym value="Iranian"/>
+				<synonym value="Iranians"/>
 				<synonym value="Persia"/>
-				<heading id="Kurdistan" title="Kurdistan"/>
+				<synonym value="Persian"/>
+				<synonym value="Persians"/>
+				<heading id="Kurdistan" title="Kurdistan">
+					<synonym value="Kurd"/>
+					<synonym value="Kurds"/>
+					<synonym value="Kurdish"/>
+				</heading>
 				<heading id="Luristanprovince" title="Luristan province">
 					<synonym value="Lorestan province"/>
 				</heading>
@@ -1932,6 +2117,8 @@
 				</heading>
 			</heading>
 			<heading id="Iraq" title="Iraq">
+				<synonym value="Iraqi"/>
+				<synonym value="Iraqis"/>
 				<heading id="Baghdad" title="Baghdad"/>
 				<heading id="Irbil" title="Irbil"/>
 				<heading id="Karkuk" title="Karkuk"/>
@@ -1939,6 +2126,8 @@
 				<heading id="UrAncientCity" title="Ur"/>
 			</heading>
 			<heading id="Israel" title="Israel">
+				<synonym value="Israeli"/>
+				<synonym value="Israelis"/>
 				<heading id="Bethlehem" title="Bethlehem"/>
 				<heading id="Eleutheropolis" title="Eleutheropolis"/>
 				<heading id="Haifa" title="Haifa"/>
@@ -1962,6 +2151,8 @@
 					</heading>
 				</heading>
 				<heading id="Palestine" title="Palestine">
+					<synonym value="Palestinian"/>
+					<synonym value="Palestinians"/>
 					<heading id="WestBank" title="West Bank"/>
 					<heading id="GazaStrip" title="Gaza Strip"/>
 				</heading>
@@ -1971,9 +2162,12 @@
 				<heading id="Petra" title="Petra"/>
 			</heading>
 			<heading id="Kuwait" title="Kuwait">
+				<synonym value="Kuwaiti"/>
+				<synonym value="Kuwaitis"/>
 				<heading id="Kuwaitcity" title="Kuwait city"/>
 			</heading>
 			<heading id="Lebanon" title="Lebanon">
+				<synonym value="Lebanese"/>
 				<heading id="BayofJanica" title="Bay of Janica"/>
 				<heading id="Beirut" title="Beirut"/>
 				<heading id="Byblos" title="Byblos"/>
@@ -1993,9 +2187,16 @@
 					<synonym value="صيدا"/>
 				</heading>
 			</heading>
-			<heading id="Oman" title="Oman"/>
-			<heading id="Qatar" title="Qatar"/>
+			<heading id="Oman" title="Oman">
+				<synonym value="Omani"/>
+				<synonym value="Omanis"/>
+			</heading>
+			<heading id="Qatar" title="Qatar">
+				<synonym value="Qatari"/>
+				<synonym value="Qataris"/>
+			</heading>
 			<heading id="SaudiArabia" title="Saudi Arabia">
+				<synonym value="Saudi Arabian"/>
 				<heading id="Jeddah" title="Jeddah"/>
 				<heading id="Mecca" title="Mecca"/>
 				<heading id="Medina" title="Medina"/>
@@ -2003,6 +2204,8 @@
 				<heading id="Tabuk" title="Tabuk"/>
 			</heading>
 			<heading id="Syria" title="Syria"> <!-- done -->
+				<synonym value="Syrian"/>
+				<synonym value="Syrians"/>
 				<heading id="AleppoSyria" title="Aleppo"/>
 				<heading id="BaniasSyria" title="Banias">
 					<synonym value="Cesarea Philippi"/>
@@ -2043,11 +2246,15 @@
 				<heading id="AbuDhabi" title="Abu Dhabi"/>
 			</heading>
 			<heading id="Yemen" title="Yemen">
+				<synonym value="Yemeni"/>
+				<synonym value="Yemenis"/>
 				<heading id="Socotra" title="Socotra"/>
 			</heading>
 		</heading>
 		<heading id="FarEast" title="Far East">
+			<synonym value="Far Eastern"/>
 			<heading id="JapanCounty" title="Japan">
+				<synonym value="Japanese"/>
 				<heading id="AkitaJapan" title="Akita"/>
 				<heading id="Hidachiprovince" title="Hidachi province">
 					<heading id="Ibarakiprefecture" title="Ibaraki prefecture"/>
@@ -2088,11 +2295,26 @@
 				<heading id="Yokohama" title="Yokohama"/>
 			</heading>
 			<heading id="HongKong" title="Hong Kong"/>
-			<heading id="KoreaSouth" title="Korea (South)"/>
-			<heading id="KoreaNorth" title="Korea (North)"/>
+			<heading id="KoreaBoth" title="Korea">
+				<synonym value="Korean"/>
+				<synonym value="Koreans"/>
+				<heading id="KoreaSouth" title="Korea (South)">
+					<synonym value="South Korea"/>
+					<synonym value="South Korean"/>
+					<synonym value="South Koreans"/>
+				</heading>
+				<heading id="KoreaNorth" title="Korea (North)">
+					<synonym value="North Korea"/>
+					<synonym value="North Korean"/>
+					<synonym value="North Koreans"/>
+				</heading>
+			</heading>
 			<heading id="Macau" title="Macau"/>
 			<heading id="Taiwan" title="Taiwan">
+				<synonym value="Taiwanese"/>
 				<synonym value="Formosa"/>
+				<synonym value="Formosan"/>
+				<synonym value="Formosans"/>
 				<synonym value="Chung-hua Min-kuo"/>
 				<implies facet="Location_facet" cat="TaiwanprovinceTaiwan"/> <!-- To accommodate a Chinese viewpoint -->
 			</heading>
@@ -2101,6 +2323,7 @@
 			<synonym value="Indochina"/>
 			<heading id="Brunei" title="Brunei"/>
 			<heading id="Burma" title="Burma">
+				<synonym value="Burmese"/>
 				<heading id="ChinHills" title="Chin Hills">
 					<heading id="Chin" title="Chin"/>
 					<heading id="Tiddimvillage" title="Tiddim village"/>
@@ -2109,15 +2332,40 @@
 				<heading id="Rangoon" title="Rangoon"/>
 			</heading>
 			<heading id="Cambodia" title="Cambodia">
+				<synonym value="Cambodian"/>
+				<synonym value="Cambodians"/>
 				<synonym value="Kampuchea"/>
+				<synonym value="Kampuchean"/>
+				<synonym value="Kampucheans"/>
 			</heading>
-			<heading id="EastTimor" title="East Timor"/>
-			<heading id="Laos" title="Laos"/>
-			<heading id="Malaysia" title="Malaysia"/>
+			<heading id="EastTimor" title="East Timor">
+				<synonym value="East Timorese"/>
+			</heading>
+			<heading id="Laos" title="Laos">
+				<synonym value="Loatian"/>
+				<synonym value="Loatians"/>
+			</heading>
+			<heading id="Malaysia" title="Malaysia">
+				<synonym value="Malaysian"/>
+				<synonym value="Malaysians"/>
+			</heading>
 			<heading id="Thailand" title="Thailand">
 				<synonym value="Siam"/>
+				<synonym value="Siamese"/>
+				<synonym value="Thai"/>
+				<synonym value="Thais"/>
 			</heading>
-			<heading id="Vietnam" title="Vietnam"/>
+			<heading id="VietnamBoth" title="Vietnam">
+				<synonym value="Vietnamese"/>
+				<heading id="VietnamSouth" title="Vietnam (South)">
+					<synonym value="South Vietnam"/>
+					<synonym value="South Vietnamese"/>
+				</heading>
+				<heading id="VietnamNorth" title="Vietnam (North)">
+					<synonym value="North Vietnam"/>
+					<synonym value="North Vietnamese"/>
+				</heading>
+			</heading>
 		</heading>
 	</heading>
  	<heading id="Oceania" title="Oceania"> <!-- done -->
@@ -2950,60 +3198,105 @@
 			</heading>
 			<heading id="Peru" title="Peru"> <!-- All of Peru needs reorganization based on valley system used in Museum -->
 				<synonym value="Perú"/>
+				<!-- _____________ ORGANIZED _______________ -->
 				<heading id="CoastalPeru" title="Coastal Peru">
 					<synonym value="Coastal Peru (unspecified)"/>
+					<heading id="PeruFarNorthCoast" title="Far North Coast"/>
+					<heading id="PeruNorthCoast" title="North Coast">
+						<heading id="PeruChepen" title="Chepen"/>
+						<heading id="ChicamaValley" title="Chicama Valley">
+							<synonym value="Chicama"/>
+							<heading id="ChicamaPV23" title="Chicama PV23"/>
+							<heading id="HuacaPrietaPeru" title="Huaca Prieta"/>
+						</heading>
+						<heading id="LaLibertadRegion" title="La Libertad Region">
+							<synonym value="La Libertad "/>
+							<heading id="Pacasmayovalley" title="Pacasmayo valley">
+								<heading id="PacasmayoPV20" title="Pacasmayo PV20"/>
+								<heading id="LaBarranca" title="La Barranca">
+									<synonym value="Pacatnamu"/>
+								</heading>
+							</heading>
+						</heading>
+						<heading id="LambayequeDepto" title="Depto. Lambayeque">
+							<synonym value="Lambayeque"/>
+							<synonym value="Lambayeque Region"/>
+							<synonym value="Lambayeque Valley"/>
+							<heading id="Chiclayo" title="Chiclayo">
+								<heading id="PeruMorrope" title="Mórrope"/>
+							</heading>
+							<heading id="HuacaBlanca" title="Huaca Blanca"/>
+							<heading id="Mochevalley" title="Moche valley"> 
+								<!-- <heading id="GC" title="GC"> What is this? spell this out -->
+								<heading id="Chancan" title="Chancan">
+									<synonym value="Chanchan"/>
+									<synonym value="Chan Chan"/>
+								</heading> 
+								<!-- </heading> -->
+								<heading id="Moche" title="Moche">
+									<heading id="HuacadeMocheB" title="Huaca de Moche B"/>
+									<heading id="HuacadeMocheC" title="Huaca de Moche C"/>
+									<heading id="HuacadeMocheD" title="Huaca de Moche D"/>
+									<heading id="HuacadeMocheE" title="Huaca de Moche E"/>
+									<heading id="HuacadeMocheG" title="Huaca de Moche G"/>
+									<heading id="HuacadelaLuna" title="Huaca de la Luna">
+										<synonym value="Huaca de Moche F"/>
+									</heading>
+									<heading id="HuacadelSol" title="Huaca del Sol">
+										<synonym value="Huaca de Moche A"/>
+									</heading>
+									<heading id="MochesiteHSummitofCerroBlanco" title="Moche site H: Summit of Cerro Blanco"/>
+								</heading>
+								<heading id="Trujillo" title="Trujillo">
+									<heading id="CerrodeTrapiche" title="Cerro de Trapiche"/>
+									<heading id="CerrodeTrujillo" title="Cerro de Trujillo"/>
+									<heading id="HaciendadePampas" title="Hacienda de Pampas"/>
+									<heading id="Huaman" title="Huaman"/>
+								</heading>
+							</heading>
+						</heading>
+						<heading id="PeruMotupe" title="Motupe"/>
+						<heading id="PeruViru" title="Motupe"/>
+						bbb
+					</heading>
+					<heading id="PeruCentralCoast" title="Central Coast"/>
+					<heading id="PeruSouthCoast" title="South Coast"/>
+					<heading id="PeruFarSouthCoast" title="Far South Coast"/>
 				</heading>
-				<heading id="CasaChicasite" title="Casa Chica site"/>
-				<heading id="TecapaSite" title="Tecapa Site"/>
-				<heading id="Chepan" title="Chepan"/>
-				<heading id="Coyuz" title="Coyuz"/>
-				<heading id="Paracas" title="Paracas"/>
+				<heading id="HighlandPeru" title="Highland Peru">
+					<heading id="PeruNorthHighlands" title="North Highlands"/>
+					<heading id="PeruCentralHighlands" title="Central Highlands"/>
+					<heading id="PeruSouthHighlands" title="South Highlands"/>
+				</heading>
+				<heading id="PeruEasternPeru" title="Eastern Peru"/>
+				<!-- ___________ NOT ORGANIZED _____________ -->
+				
 				<heading id="Campapiro" title="Campapiro">
 					<synonym value="Campopiro"/>
 				</heading>
+				<heading id="CasaChicasite" title="Casa Chica site"/>
+				<heading id="Chepan" title="Chepan"/>
+				<heading id="Coyuz" title="Coyuz"/>
+				<heading id="LaEmina" title="La Emina"/>
 				<heading id="Limatambo" title="Limatambo"/>
 				<heading id="MarcaHuamachuco" title="Marca Huamachuco"/>
-				<heading id="Tacala" title="Tacala"/>
-				<heading id="LaEmina" title="La Emina"/>
 				<heading id="PampadelosQuinvales" title="Pampa de los Quinvales"/>
+				<heading id="Paracas" title="Paracas"/>
 				<heading id="Payta" title="Payta"/>
+				<heading id="Tacala" title="Tacala"/>
+				<heading id="TecapaSite" title="Tecapa Site"/>
 				<heading id="NorthernPeru" title="Northern Peru">
 					<synonym value="North Coast (unspecified)"/>
-					<heading id="LambayequeRegion" title="Lambayeque Region">
-						<synonym value="Lambayeque"/>
-						<synonym value="Lambayeque Valley"/>
-						<heading id="Chiclayo" title="Chiclayo"/>
-						<heading id="HuacaBlanca" title="Huaca Blanca"/>
-						<heading id="Mochevalley" title="Moche valley"> <!-- <heading id="GC" title="GC"> What is this? spell this out -->
-							<heading id="Chancan" title="Chancan">
-								<synonym value="Chanchan"/>
-								<synonym value="Chan Chan"/>
-							</heading> <!-- </heading> -->
-							<heading id="Moche" title="Moche">
-								<heading id="HuacadeMocheB" title="Huaca de Moche B"/>
-								<heading id="HuacadeMocheC" title="Huaca de Moche C"/>
-								<heading id="HuacadeMocheD" title="Huaca de Moche D"/>
-								<heading id="HuacadeMocheE" title="Huaca de Moche E"/>
-								<heading id="HuacadeMocheG" title="Huaca de Moche G"/>
-								<heading id="HuacadelaLuna" title="Huaca de la Luna">
-									<synonym value="Huaca de Moche F"/>
-								</heading>
-								<heading id="HuacadelSol" title="Huaca del Sol">
-									<synonym value="Huaca de Moche A"/>
-								</heading>
-								<heading id="MochesiteHSummitofCerroBlanco" title="Moche site H: Summit of Cerro Blanco"/>
-							</heading>
-							<heading id="Trujillo" title="Trujillo">
-								<heading id="CerrodeTrapiche" title="Cerro de Trapiche"/>
-								<heading id="CerrodeTrujillo" title="Cerro de Trujillo"/>
-								<heading id="HaciendadePampas" title="Hacienda de Pampas"/>
-								<heading id="Huaman" title="Huaman"/>
-							</heading>
-						</heading>
+					<heading id="AmazonasRegion" title="Amazonas Region"/>
+					<heading id="CajamarcaRegion" title="Cajamarca Region">
+						<synonym value="Cajamarca"/>
+						<heading id="VistaAlegre" title="Vista Alegre"/>
 					</heading>
-					<heading id="ChicamaValley" title="Chicama Valley">
-						<synonym value="Chicama"/>
-						<heading id="ChicamaPV23" title="Chicama PV23"/>
+					<heading id="LoretoRegion" title="Loreto Region">
+						<synonym value="Loreto"/>
+					</heading>
+					<heading id="PiuraRegion" title="Piura Region">
+						<synonym value="Piura"/>
 					</heading>
 					<heading id="SanMartinRegion" title="San Martín Region">
 						<synonym value="San Martin Region"/>
@@ -3013,63 +3306,35 @@
 					<heading id="TumbesRegion" title="Tumbes Region">
 						<synonym value="Tumbes"/>
 					</heading>
-					<heading id="AmazonasRegion" title="Amazonas Region"/>
-					<heading id="CajamarcaRegion" title="Cajamarca Region">
-						<synonym value="Cajamarca"/>
-						<heading id="VistaAlegre" title="Vista Alegre"/>
-					</heading>
-					<heading id="LaLibertadRegion" title="La Libertad Region">
-						<synonym value="La Libertad "/>
-						<heading id="Pacasmayovalley" title="Pacasmayo valley">
-							<heading id="PacasmayoPV20" title="Pacasmayo PV20"/>
-							<heading id="LaBarranca" title="La Barranca">
-								<synonym value="Pacatnamu"/>
-							</heading>
-						</heading>
-					</heading>
-					<heading id="LoretoRegion" title="Loreto Region">
-						<synonym value="Loreto"/>
-					</heading>
-					<heading id="PiuraRegion" title="Piura Region">
-						<synonym value="Piura"/>
-					</heading>
 				</heading>
 				<heading id="CentralPeru" title="Central Peru">
 					<heading id="AncashRegion" title="Ancash Region"/>
-					<heading id="HuanucoRegion" title="Huánuco Region"/>
-					<heading id="PascoRegion" title="Pasco Region"/>
 					<heading id="CallaoRegion" title="Callao Region">
-						<heading id="ConstitutionalProvinceofCallao"
-							title="Constitutional Province of Callao"/>
+						<synonym value="Constitutional Province of Callao"/>
+						<heading id="CanetePeru" title="Cañete">
+							<synonym value="Canete"/>
+						</heading>
 					</heading>
+					<heading id="HuanucoRegion" title="Huánuco Region"/>
 					<heading id="JuninRegion" title="Junín Region"/>
 					<heading id="LimaRegion" title="Lima Region">
-						<heading id="Limavalley" title="Lima valley">
-							<heading id="Magdelena" title="Magdelena"/>
-							<heading id="HaciendaNieveria" title="Hacienda Nieveria"/>
-							<heading id="Cajamarquillaruins" title="Cajamarquilla (ruins)"/>
-						</heading>
-						<heading id="Rimacvalley" title="Rimac valley">
-							<heading id="Nieveria" title="Nieveria"/>
-						</heading>
 						<heading id="Chancayvalley" title="Chancay valley">
+							<heading id="CaleradeLauren" title="Calera de Lauren">
+								<synonym value="Galera de Laueu"/>
+								<heading id="CaleraDeLaurenSiteB" title="Calera de Lauren, Site B"/>
+							</heading>
 							<heading id="ChancaySiteA" title="Chancay Site A"/>
 							<heading id="ChancaySiteB" title="Chancay Site B"/>
 							<heading id="ChancaySiteC" title="Chancay Site C"/>
 							<heading id="ChancaySiteD" title="Chancay Site D"/>
 							<heading id="ChancaySiteE" title="Chancay Site E"/>
-							<heading id="HuaralViejo" title="Huaral Viejo"/>
 							<heading id="ChancayPuerto" title="Chancay Puerto"/>
+							<heading id="HuaralViejo" title="Huaral Viejo"/>
 							<heading id="LaMina" title="La Mina">
 								<heading id="CemeteryofLaMina" title="Cemetery of La Mina"/>
 							</heading>
-							<heading id="CaleradeLauren" title="Calera de Lauren">
-								<synonym value="Galera de Laueu"/>
-								<heading id="CaleraDeLaurenSiteB" title="Calera de Lauren, Site B"/>
-							</heading>
 							<heading id="Retes" title="Retes"/>
 						</heading>
-						<heading id="Pachacamac" title="Pachacamac"/>
 						<heading id="Chinchavalley" title="Chincha valley">
 							<heading id="ChinchaValleySiteA" title="Chincha Valley, Site A"/>
 							<heading id="ChinchaValleySiteB" title="Chincha Valley, Site B"/>
@@ -3077,10 +3342,20 @@
 							<heading id="ChinchaValleySiteD" title="Chincha Valley, Site D"/>
 							<heading id="ChinchaValleySiteE" title="Chincha Valley, Site E"/>
 						</heading>
+						<heading id="Limavalley" title="Lima valley">
+							<heading id="Magdelena" title="Magdelena"/>
+							<heading id="HaciendaNieveria" title="Hacienda Nieveria"/>
+							<heading id="Cajamarquillaruins" title="Cajamarquilla (ruins)"/>
+						</heading>
+						<heading id="Pachacamac" title="Pachacamac"/>
+						<heading id="Rimacvalley" title="Rimac valley">
+							<heading id="Nieveria" title="Nieveria"/>
+						</heading>
 						<heading id="SupeDistrict" title="Supe District">
 							<heading id="Paramonga" title="Paramonga"/>
 						</heading>
 					</heading>
+					<heading id="PascoRegion" title="Pasco Region"/>
 					<heading id="UcayaliRegion" title="Ucayali Region">
 						<heading id="UcayaliRiver" title="Ucayali River"/>
 					</heading>
@@ -3115,7 +3390,21 @@
 						<heading id="PaucartamboProvince" title="Paucartambo Province"/>
 						<heading id="Sacsahuaman" title="Sacsahuaman"/>
 					</heading>
+					<heading id="HuancavelicaRegion" title="Huancavelica Region"/>
 					<heading id="IcaRegion" title="Ica Region">
+						<heading id="Ancon" title="Ancon">
+							<heading id="AnconSiteA" title="Ancon Site A"/>
+							<heading id="AnconSiteB" title="Ancon Site B"/>
+							<heading id="AnconSiteC" title="Ancon Site C"/>
+							<heading id="AnconSiteD" title="Ancon Site D"/>
+							<heading id="AnconSiteE" title="Ancon Site E"/>
+							<heading id="AnconSiteH" title="Ancon Site H"/>
+							<heading id="AnconSiteM" title="Ancon Site M"/>
+							<heading id="AnconSiteP" title="Ancon Site P"/>
+							<heading id="AnconSiteT" title="Ancon Site T"/>
+							<heading id="AnconSiteX" title="Ancon Site X"/>
+							<heading id="Copacabana" title="Copacabana"/>
+						</heading>
 						<heading id="Icavalley" title="Ica valley">
 							<heading id="Chulpaca" title="Chulpaca">
 								<heading id="ChulpacaSiteM" title="Chulpaca Site M"/>
@@ -3168,31 +3457,17 @@
 								<heading id="Nazca" title="Nazca"/>
 							</heading>
 						</heading>
-						<heading id="Ancon" title="Ancon">
-							<heading id="AnconSiteA" title="Ancon Site A"/>
-							<heading id="AnconSiteB" title="Ancon Site B"/>
-							<heading id="AnconSiteC" title="Ancon Site C"/>
-							<heading id="AnconSiteD" title="Ancon Site D"/>
-							<heading id="AnconSiteE" title="Ancon Site E"/>
-							<heading id="AnconSiteH" title="Ancon Site H"/>
-							<heading id="AnconSiteM" title="Ancon Site M"/>
-							<heading id="AnconSiteP" title="Ancon Site P"/>
-							<heading id="AnconSiteT" title="Ancon Site T"/>
-							<heading id="AnconSiteX" title="Ancon Site X"/>
-							<heading id="Copacabana" title="Copacabana"/>
-						</heading>
 					</heading>
-					<heading id="HuancavelicaRegion" title="Huancavelica Region"/>
 					<heading id="MadredeDiosRegion" title="Madre de Dios Region"/>
 					<heading id="MoqueguaRegion" title="Moquegua Region"/>
-					<heading id="TacnaRegion" title="Tacna Region"/>
-					<heading id="PunoRegion" title="Puno Region"/>
 					<heading id="Piscovalley" title="Pisco valley">
 						<heading id="TamboColorado" title="Tambo Colorado">
 							<synonym value="Tombo Colorado"/>
 						</heading>
 						<heading id="GuayaGrande" title="Guaya Grande"/>
 					</heading>
+					<heading id="PunoRegion" title="Puno Region"/>
+					<heading id="TacnaRegion" title="Tacna Region"/>
 				</heading>
 			</heading>
 			<heading id="Suriname" title="Suriname"/> <!--  done -->
@@ -4631,9 +4906,9 @@
 						<heading id="AsotinCounty" title="Asotin County">
 							<synonym value="Asotin"/>
 							<synonym value="Asotin Co."/>
-							<heading id="WAAsotinNL" title="WA-Asotin-NL">
-								<synonym value="Asotin on GR Cat. 12 databases; chgd EL 9/95."/>
-							</heading>
+							<synonym value="WA-Asotin-NL"/>
+							<synonym value="Asotin on GR Cat. 12 databases"/>
+							<synonym value="Asotin on GR Cat. 12 databases; chgd EL 9/95."/>
 						</heading>
 						<heading id="BentonCounty" title="Benton County">
 							<synonym value="Benton"/>
@@ -4661,8 +4936,7 @@
 							<synonym value="Clallam Co."/>
 							<synonym value="WA-CL-NL"/>
 							<synonym value="WA-Clallam-NL"/>
-							<synonym
-								value="name created for Cat.12 Spec. in Washington-Callum B (#12-89)"/>
+							<synonym value="name created for Cat.12 Spec. in Washington-Callum B (#12-89)"/>
 							<heading id="CapeFlattery" title="Cape Flattery"/>
 							<heading id="LaPush" title="La Push"/>
 							<heading id="NeahBay" title="Neah Bay"/>
@@ -4692,8 +4966,8 @@
 							<synonym value="Gray's Harbor Co."/>
 							<synonym value="Grays' Harbor Co."/>
 							<heading id="Aberdeen" title="Aberdeen"/>
-							<heading id="LakeQuinault" title="Lake Quinault"/>
 							<heading id="GraysHarbor" title="Grays Harbor"/>
+							<heading id="LakeQuinault" title="Lake Quinault"/>
 						</heading>
 						<heading id="HoodsInlet" title="Hoods Inlet"/>
 						<heading id="JeffersonCoWA" title="Jefferson County">
@@ -4777,20 +5051,22 @@
 						<heading id="OkanoganCounty" title="Okanogan County">
 							<synonym value="Okanogan"/>
 							<synonym value="Okanogan Co."/>
-							<heading id="ColvilleIndianReservation"
-								title="Colville Indian Reservation"/>
+							<heading id="ColvlIndReserv" title="Colville Indian Res.">
+								<synonym value="Colville Indian Reservation"/>
+							</heading>
 							<heading id="Nespelem" title="Nespelem"/>
 							<heading id="Tonasket" title="Tonasket"/>
 						</heading>
 						<heading id="PacificCounty" title="Pacific County">
-							<excl value="Ocean"/> <!-- <synonym value="Pacific"/>  Disambiguate with multiple exclusions? -->
+							<excl value="Ocean"/> 
+							<!-- <synonym value="Pacific"/>  Disambiguate with multiple exclusions? -->
 							<synonym value="Pacific Co."/>
 							<heading id="WillapaBay" title="Willapa Bay"/>
 						</heading>
 						<heading id="PierceCounty" title="Pierce County">
 							<synonym value="Pierce"/>
 							<synonym value="Pierce Co."/>
-							<heading id="PuyallupReservation" title="Puyallup Reservation"/>
+							<heading id="PuyallupReserv" title="Puyallup Reservation"/>
 						</heading>
 						<heading id="PugetSound" title="Puget Sound"/>
 						<heading id="SanJuanCoWA" title="San Juan County">
@@ -5713,26 +5989,28 @@
 								<synonym value="Butte County, CA, no loc."/>
 								<heading id="PlacesButteCA" title="Place Names" noMatch="true">
 									<heading id="BidwellRanchButteCA" title="Bidwell Ranch"/>
-									<heading id="ChicoButteCA" title="Chico"/>
 									<heading id="BiggsButteCA" title="Biggs"/>
+									<heading id="ChicoButteCA" title="Chico"/>
 									<heading id="DogwoodCreekButteCA" title="Dogwood Creek"/>
 									<heading id="MickeyRanchButteCA" title="Mickey Ranch"/>
 									<heading id="MilsapBarButteCA" title="Milsap Bar"/>
-									<heading id="PalermoButteCA" title="Palermo"/> <!-- Disambiguate -->
-									<heading id="MooretownButteCA" title="Mooretown"/>
+									<heading id="PalermoButteCA" title="Palermo">
+										<excl value="Italy"/> <!-- Disambiguates from Italian city -->
+									</heading>
 									<heading id="GridleyButteCA" title="Gridley">
+										<synonym value="Near Gridley"/>
 										<heading id="GridleyCoxMound" title="Cox Mound">
 											<synonym value="Gridley, Cox Mound"/>
 										</heading>
-										<synonym value="Near Gridley"/>
+									</heading>
+									<heading id="MooretownButteCA" title="Mooretown"/>
+									<heading id="NelsonButteCA" title="Nelson"> <!-- Disambiguate -->
+										<synonym value="Near Nelson"/>
 									</heading>
 									<heading id="OrovilleButteCA" title="Oroville">
 										<heading id="VolcanoOrovilleArea" title="Volcano, Oroville Area"/>
 									</heading>
 									<heading id="PulgaButteCA" title="Pulga"/>
-									<heading id="NelsonButteCA" title="Nelson"> <!-- Disambiguate -->
-										<synonym value="Near Nelson"/>
-									</heading>
 								</heading>
 								<heading id="TrinomButteCA" title="Trinomial site names" noMatch="true">
 									<heading id="CABut5" title="CA-But- 5">
