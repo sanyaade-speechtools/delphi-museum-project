@@ -3,19 +3,15 @@ package museum.delphi;
 import java.util.ArrayList;
 
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
-public class DBMetaDataReader {
+public abstract class DBMetaDataReader {
 
-	/*** how to store all the info - this is generic, not protocol specific.
-	Need to model each source as a class, etc.
-	Column is a local class of the source.
-	JoinColumn subclasses this? May be no need, despite overlap.
-	Source has:
-		ArrayList<Column> that has both columns types (yes on subclass)
-		RowFilter info (only one)
-		ArrayList<something> that specifies replace rules
-		ArrayList<something> that specifies elide rules (combine with above?)
-	*/
+	protected String host;
+	protected String user;
+	protected String password;
+	protected ArrayList<DBSourceInfo> sources;
+
 	private static int _debugLevel = 1;
 
 	protected static void debug( int level, String str ) {
@@ -29,12 +25,48 @@ public class DBMetaDataReader {
 	}
 
 	protected DBMetaDataReader(Element dbSourceInfoNode) {
-		// Must be overridden for each protocol
+		final String myName = "DBMetaDataReader.Ctor: ";
+	    host = dbSourceInfoNode.getAttribute( "host" );
+	    if( host.length() <= 0 )
+			throw new RuntimeException(myName+"No host specified.");
+	    user = dbSourceInfoNode.getAttribute( "user" );
+	    if( user.length() <= 0 )
+			throw new RuntimeException(myName+"No user name specified.");
+	    password = dbSourceInfoNode.getAttribute( "passwd" );
+	    if( password.length() <= 0 )
+			throw new RuntimeException(myName+"No password specified.");
+		sources = new ArrayList<DBSourceInfo>();
+		scanDBSourceInfo(dbSourceInfoNode);
+	    debug( 2, "DBMetaDataReader.Ctor: Added "+sources.size()+" sources.");
 	}
 
-	protected Pair<Integer,ArrayList<String>> getNextObjectAsColumns() {
-		Pair<Integer,ArrayList<String>> returnValue = null;
-		// Code here!
-		return returnValue;
+	protected void scanDBSourceInfo(Element dbSourceInfoNode) {
+		NodeList srcNodes = dbSourceInfoNode.getElementsByTagName( "source" );
+		if( srcNodes.getLength() < 1 ) {  // Must define at least one.
+			throw new RuntimeException(
+					"DBMetaDataReader: file must have at least one source element.");
+		}
+		// For each info element, need to get all the fields.
+		int nSrcs = srcNodes.getLength();
+		for( int iSrc = 0; iSrc < nSrcs; iSrc++) {
+		    Element srcInfoEl = (Element)srcNodes.item(iSrc);
+		    DBSourceInfo srcInfo = DBSourceInfo.createFromConfig(srcInfoEl);
+		    sources.add(srcInfo);
+		    debug( 2, "DBMetaDataReader.scanDBSourceInfo: Added src for: "
+		    		+srcInfo.dbName+":"+srcInfo.tableName);
+		}
 	}
+
+	/**
+	 * Subclasses must define this method. Can be used to initiate queries, set up caches,
+	 * etc. When data is fetched, it must conform to the passed columns.
+	 * @param destColumns specifies the names and order of logical columns to return.
+	 */
+	protected abstract void prepareSources(String destColumns[]);
+
+	protected abstract boolean hasNext();
+	protected abstract void setCursor(int value) throws IndexOutOfBoundsException;
+	protected abstract int getCursor() throws IllegalStateException;
+
+	protected abstract Pair<Integer,ArrayList<String>> getNextObjectAsColumns();
 }
