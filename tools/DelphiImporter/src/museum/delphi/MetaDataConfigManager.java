@@ -4,7 +4,6 @@
 package museum.delphi;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -78,25 +77,25 @@ public class MetaDataConfigManager {
             if (sxe.getException() != null) {
                 x = sxe.getException();
             }
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: SAXException parsing config file."
+			String tmp = "MetaDataConfigManager.OpenConfigFile: SAXException parsing config file."
 				+"\n"+ x.getMessage();
 			debug(1, tmp);
             debugTrace(1, x);
 			throw new RuntimeException( tmp );
 		} catch( ParserConfigurationException pce ) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: Exception parsing config file."
+			String tmp = "MetaDataConfigManager.OpenConfigFile: Exception parsing config file."
 				+"\n"+pce.getMessage();
 			debug(1, tmp);
             debugTrace(1, pce);
 			throw new RuntimeException( tmp );
         } catch (IOException ioe) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: I/O Exception reading config file.\n File: \""
+			String tmp = "MetaDataConfigManager.OpenConfigFile: I/O Exception reading config file.\n File: \""
 				+filename+"\"\n"+ioe.getMessage();
 			debug(1, tmp);
             debugTrace(1, ioe);
 			throw new RuntimeException( tmp );
 		} catch( RuntimeException e ) {
-			String tmp = "DumpColumnConfigInfo.OpenConfigFile: Error encountered reading config file."
+			String tmp = "MetaDataConfigManager.OpenConfigFile: Error encountered reading config file."
 				+"\n"+e.getMessage();
 			debug(1, tmp);
             debugTrace(1, e);
@@ -105,11 +104,18 @@ public class MetaDataConfigManager {
 
 	}
 
+	protected String getConfigFilename() {
+		return cfgFilename;
+	}
+
 	// TODO when we fix DumpColConfigInfo, this will return an object
 	protected boolean GetDumpColConfigInfo() {
-		DumpColumnConfigInfo.PopulateFromConfigFile(processingInfoNode);
-		return true;
-
+		if(processingInfoNode!=null) {
+			DumpColumnConfigInfo.PopulateFromConfigFile(processingInfoNode);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -122,8 +128,18 @@ public class MetaDataConfigManager {
 		// Check protocol attributes of dbSourceInfoNode element to choose the subclass.
 		// This should ideally be configured, but we'll hard code it for now.
 		DBMetaDataReader reader = null;
-		if( attribute is sql server )
-			reader = new SQLServerMetaDataReader(dbSourceInfoNode);
+		if(dbSourceInfoNode != null) {
+			String protocolAttr = dbSourceInfoNode.getAttribute("protocol");
+	    	if( protocolAttr.equals("sqlserver")) {
+				reader = new SQLServerMetaDataReader(dbSourceInfoNode);
+	    	} else if( protocolAttr.equals("mysql")) {
+				throw new RuntimeException(
+					"MetaDataConfigManager.GetDBSourceInfo: DB protocol: "+protocolAttr + " is not yet implemented.");
+	    	} else {
+				throw new RuntimeException(
+						"MetaDataConfigManager.GetDBSourceInfo: Unknown DB protocol: "+protocolAttr);
+	    	}
+		}
 		return reader;
 	}
 
