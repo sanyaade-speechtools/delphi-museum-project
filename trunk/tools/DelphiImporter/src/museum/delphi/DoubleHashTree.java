@@ -293,7 +293,7 @@ public class DoubleHashTree {
 			    facetsByID.put(facetID, fInfo);
 			    taxoRoot.setAttribute( "catID", String.valueOf(facet.id) );
 				// This cast is stupid - facet subclasses TaxoNode!!!
-			    AddCategoriesFromNode( taxoRoot, (TaxoNode)facet, facetID, facetID, null, null );
+			    AddCategoriesFromNode( taxoRoot, facet, facetID, facetID, null, null );
 			}
 			// Now we're done parsing, so we can do the second pass, resolving forward
 			// references on implied links, etc.
