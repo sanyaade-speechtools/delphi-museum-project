@@ -284,7 +284,8 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 	  * Returns a clone of this priority queue.  Modifications to one will not
 	  * affect modifications to the other.
 	  */
-	 public PriorityQueue<I> clone() {
+	 @Override
+	public PriorityQueue<I> clone() {
 		 PriorityQueue<I> clonePQ = new PriorityQueue<I>();
 		 clonePQ.size = size;
 		 clonePQ.capacity = capacity;
