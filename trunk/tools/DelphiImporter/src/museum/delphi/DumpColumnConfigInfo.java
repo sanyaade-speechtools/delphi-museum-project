@@ -2,6 +2,7 @@ package museum.delphi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -99,6 +100,12 @@ public class DumpColumnConfigInfo {
 		if( returnVal == null)
 			throw new RuntimeException("DumpColumnConfigInfo."+detail+": Bad column name:"+forColumn);
 		return returnVal;
+	}
+
+	protected static String[] getColumnNames() {
+		Set<String> mapKeys = columnInfoMap.keySet();
+		String[] columnNames = new String[mapKeys.size()];
+		return mapKeys.toArray(columnNames);
 	}
 
 	protected static DumpColumnConfigInfo[] getAllColumnInfo( String[] columnNames) {
