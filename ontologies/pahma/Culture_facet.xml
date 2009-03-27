@@ -48,8 +48,43 @@
 			</heading>
 			<heading id="EastAndSouthAfrica" title="East &amp; South Africa" noMatch="true">
 				<heading id="EastAfricaNorthTribes" title="East Africa (North)" noMatch="true">
+					<heading id="BarabaigTribe" title="Barabaig"/>
+					<heading id="DatogaTribe" title="Datoga"/>
 					<heading id="HadzaTribe" title="Hadza">
 						<synonym value="Tindiga"/>
+					</heading>
+					<heading id="IraqwTribe" title="Iraqw">
+						<synonym value="Iraqw people"/>
+						<implies facet="Location_facet" cat="TanzaniaCountry"/>
+						<heading id="IraqwAkonaayClan" title="Akonaay clan">
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwEtlaweClan" title="Etlawe clan">
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwGurtiClan" title="Gurti clan">
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwHayFissoClan" title="Hay-Fisso clan">
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwHayGhaymoClan" title="Hay-Ghaymo clan"> <!-- Same as Hay-Gharmo clan? -->
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwHayGharmoClan" title="Hay-Gharmo clan"> <!-- Same as Hay-Ghaymo clan? -->
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwHayLoloClan" title="Hay-Lolo clan"/>
+						<heading id="IraqwHayOamoClan" title="Hay-Oamo clan">
+							<synonym value="Hay-Qamo clan"/>
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwHayParetoClan" title="Hay-Pareto clan">
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
+						<heading id="IraqwHaySankaClan" title="Hay-Sanka clan">
+							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+						</heading>
 					</heading>
 					<heading id="KambaTribe" title="Kamba"/>
 					<heading id="KikuyuTribe" title="Kikuyu"/>
@@ -2441,7 +2476,9 @@
 							<synonym value="Coushatta"/>
 						</heading>
 						<heading id="RoanokeIndians" title="Roanoke"/>
-						<heading id="SeminoleIndians" title="Seminole"/>
+						<heading id="SeminoleIndians" title="Seminole">
+							<implies facet="Location_facet" cat="FloridaState"/>
+						</heading>
 						<heading id="Tunica" title="Tunica"/>
 					</heading>
 					<heading id="Southwesttribes" title="Southwest tribes">
