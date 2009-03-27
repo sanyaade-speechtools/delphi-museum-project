@@ -148,11 +148,13 @@ public class ImageInfo {
 		return aspectR;
 	}
 
+	@Override
 	public String toString() {
 		return( "Path: " + path + '/' + filename + " W: " + width + " H: " + height
 			+ " aR: " + getAspectR() + (isLandscape() ? " Landscape":" Portrait") );
 	}
 
+	@Override
 	public boolean equals( Object oThat ) {
 		if ( this == oThat ) return true;
 		if ( !(oThat instanceof ImageInfo) ) return false;
@@ -160,6 +162,7 @@ public class ImageInfo {
 		return( this.path.equals(that.path) && this.filename.equals(that.filename) );
 	}
 
+	@Override
 	public int hashCode() {
 		if( myHashCode == 0 ) {
 			myHashCode = 13;		// Start with a non-zero prime
