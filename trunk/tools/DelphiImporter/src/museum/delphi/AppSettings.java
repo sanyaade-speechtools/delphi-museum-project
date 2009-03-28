@@ -30,6 +30,8 @@ public class AppSettings {
 	}
 
 	public AppSettings( String filename ) {
+		if( filename == null || filename.isEmpty() )
+			throw new RuntimeException("AppSettings must be created with valid filename");
 		settingsFilename = filename;
 		loadSettings();
 	}
@@ -85,7 +87,11 @@ public class AppSettings {
 
 	public void setLastUserProjectPath( String path ) {
 		lastUserProjectPath = path;
-		lastUserProjectFolder = StringUtils.getBaseDirForPath(path);
+		if( path != null && !path.isEmpty()) {
+			lastUserProjectFolder = StringUtils.getBaseDirForPath(path);
+		} else {
+			lastUserProjectFolder = null;
+		}
 		saveSettings();
 	}
 
