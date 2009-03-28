@@ -202,7 +202,7 @@ public class DBSourceInfo {
 			Pattern matchP = Pattern.compile(match);
 			textRules.add( new Pair<Pattern, String>(matchP, pattern) );
 			} catch (PatternSyntaxException pse) {
-				debug(1, "DBSourceInfo.processPatterns: Bad pattern\n"+pse.getMessage());
+				debug(1, "DBSourceInfo.addReplacePattern: Bad pattern\n"+pse.getMessage());
 			}
 	}
 
@@ -211,7 +211,7 @@ public class DBSourceInfo {
 			Pattern matchP = Pattern.compile(match);
 			textRules.add( new Pair<Pattern, String>(matchP, "") );
 			} catch (PatternSyntaxException pse) {
-				debug(1, "DBSourceInfo.processPatterns: Bad pattern\n"+pse.getMessage());
+				debug(1, "DBSourceInfo.addElidePattern: Bad pattern\n"+pse.getMessage());
 			}
 	}
 
