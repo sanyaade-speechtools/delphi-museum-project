@@ -11,7 +11,7 @@
 		Terms to add:
 		• Palmetted
 		• Guilloche (n) "architectural ornamentation resembling braided or interlaced ribbons"
-	
+		• Lanceolate
 	</notes>
 	<!-- position- or attitude-related noise tokens for this facet -->
 	<noiseToken value="resting"/>
@@ -76,8 +76,6 @@
 				<synonym value="globule"/>
 			</heading>
 		</heading>
-		<!-- No evidence for this, and unclear how to characterize vs. Color:polychromatic.
-		 <heading id="Chromatic" title="Chromatic"/> -->
 		<heading id="FigurativeOrRepresentational" title="Figurative or Representational" noMatch="true">
 			<!-- These are really fallbacks if we do not latch anything underneath -->
 			<synonym value="figurative"/>
@@ -580,14 +578,23 @@
 			look at incuse as general marker
 			-->
 		</heading>
-		
 		<heading id="LinearDesign" title="Linear Design">
 			<synonym value="Linear Decoration"/>
 			<synonym value="Linear Pattern"/>
 			<!-- This is where we need  a NEAR operator (or at least an AND), to catch things like "linear indented pattern" -->
-			<heading id="Crenellated" title="Crenellated"/>
+			<heading id="Checkered" title="Checkered">
+				<synonym value="Checkering"/>
+			</heading>
+			<heading id="Crenellated" title="Crenellated">
+				<synonym value="Crenellate"/>
+				<synonym value="Crenellation"/>
+				<synonym value="Crenellations"/>
+			</heading>
 			<heading id="Dentate" title="Dentate">
 				<synonym value="Dentated"/>
+			</heading>
+			<heading id="Hachured" title="Hachured">
+				<synonym value="Hachures"/>
 			</heading>
 			<heading id="LinearMeander" title="Linear Meander">
 				<heading id="GreekKey" title="Greek Key">
