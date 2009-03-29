@@ -3204,15 +3204,18 @@
 					<heading id="PeruFarNorthCoast" title="Far North Coast"/>
 					<heading id="PeruNorthCoast" title="North Coast">
 						<heading id="PeruChepen" title="Chepen"/>
-						<heading id="ChicamaValley" title="Chicama Valley">
+						<heading id="ChicamaValley" title="Chicama Valley"> <!-- PV 23 -->
 							<synonym value="Chicama"/>
-							<heading id="ChicamaPV23" title="Chicama PV23"/>
+							<synonym value="Chicama PV23"/>
+							<synonym value="PV23"/>
 							<heading id="HuacaPrietaPeru" title="Huaca Prieta"/>
 						</heading>
 						<heading id="LaLibertadRegion" title="La Libertad Region">
 							<synonym value="La Libertad "/>
-							<heading id="Pacasmayovalley" title="Pacasmayo valley">
-								<heading id="PacasmayoPV20" title="Pacasmayo PV20"/>
+							<heading id="Pacasmayovalley" title="Pacasmayo valley"> <!-- PV 20 -->
+								<synonym value="Pacasmayo"/>
+								<synonym value="Pacasmayo PV20"/>
+								<synonym value="PV20"/>
 								<heading id="LaBarranca" title="La Barranca">
 									<synonym value="Pacatnamu"/>
 								</heading>
@@ -3257,7 +3260,6 @@
 						</heading>
 						<heading id="PeruMotupe" title="Motupe"/>
 						<heading id="PeruViru" title="Motupe"/>
-						bbb
 					</heading>
 					<heading id="PeruCentralCoast" title="Central Coast"/>
 					<heading id="PeruSouthCoast" title="South Coast"/>
@@ -3275,15 +3277,15 @@
 					<synonym value="Campopiro"/>
 				</heading>
 				<heading id="CasaChicasite" title="Casa Chica site"/>
-				<heading id="Chepan" title="Chepan"/>
-				<heading id="Coyuz" title="Coyuz"/>
-				<heading id="LaEmina" title="La Emina"/>
+				<heading id="ChepanPeru" title="Chepan"/>
+				<heading id="CoyuzPeru" title="Coyuz"/>
+				<heading id="LaEminaPeru" title="La Emina"/>
 				<heading id="Limatambo" title="Limatambo"/>
 				<heading id="MarcaHuamachuco" title="Marca Huamachuco"/>
-				<heading id="PampadelosQuinvales" title="Pampa de los Quinvales"/>
-				<heading id="Paracas" title="Paracas"/>
-				<heading id="Payta" title="Payta"/>
-				<heading id="Tacala" title="Tacala"/>
+				<heading id="PampadeLQuinvPeru" title="Pampa de los Quinvales"/>
+				<heading id="ParacasPeru" title="Paracas"/>
+				<heading id="PaytaPeru" title="Payta"/>
+				<heading id="TacalaPeru" title="Tacala"/>
 				<heading id="TecapaSite" title="Tecapa Site"/>
 				<heading id="NorthernPeru" title="Northern Peru">
 					<synonym value="North Coast (unspecified)"/>
@@ -3363,15 +3365,23 @@
 				<heading id="SouthernPeru" title="Southern Peru">
 					<heading id="ApurimacRegion" title="Apurímac Region"/>
 					<heading id="ArequipaRegion" title="Arequipa Region">
-						<heading id="Acarivalley" title="Acari valley">
-							<heading id="TamboViejo" title="Tambo Viejo"/>
+						<heading id="AcariVallPeru" title="Acári valley"> <!-- PV 74 -->
+							<synonym value="Acari valley"/>
+							<synonym value="PV74"/>
+							<heading id="HachaViejo" title="Hacha"/>
+							<heading id="HuaratoViejo" title="Huarato">
+								<synonym value="PV74-20"/>
+							</heading>
+							<heading id="TamboViejo" title="Tambo Viejo">
+								<synonym value="PV74-1"/>
+							</heading>
 						</heading>
-						<heading id="Allancay" title="Allancay">
+						<heading id="AllancayPeru" title="Allancay">
 							<synonym value="Allangay"/>
 						</heading>
 						<heading id="CayllomaMine" title="Caylloma Mine"/>
-						<heading id="Chala" title="Chala"/>
-						<heading id="Yaucavalley" title="Yauca valley">
+						<heading id="ChalaPeru" title="Chala"/>
+						<heading id="YaucaVallPeru" title="Yauca valley">
 							<heading id="Mochica" title="Mochica"/>
 						</heading>
 					</heading>
@@ -3392,7 +3402,7 @@
 					</heading>
 					<heading id="HuancavelicaRegion" title="Huancavelica Region"/>
 					<heading id="IcaRegion" title="Ica Region">
-						<heading id="Ancon" title="Ancon">
+						<heading id="AnconPeru" title="Ancon">
 							<heading id="AnconSiteA" title="Ancon Site A"/>
 							<heading id="AnconSiteB" title="Ancon Site B"/>
 							<heading id="AnconSiteC" title="Ancon Site C"/>
@@ -3405,7 +3415,7 @@
 							<heading id="AnconSiteX" title="Ancon Site X"/>
 							<heading id="Copacabana" title="Copacabana"/>
 						</heading>
-						<heading id="Icavalley" title="Ica valley">
+						<heading id="IcaVallPeru" title="Ica valley">
 							<heading id="Chulpaca" title="Chulpaca">
 								<heading id="ChulpacaSiteM" title="Chulpaca Site M"/>
 							</heading>
@@ -3435,26 +3445,97 @@
 							</heading>
 							<heading id="Tate" title="Tate"/>
 						</heading>
-						<heading id="NazcaProvince" title="Nazca Province">
+						<heading id="NazcaVallPeru" title="Nazca valley">
 							<synonym value="Nasca"/>
-							<synonym value="Nasca District"/>
-							<synonym value="Nasca Province"/>
 							<synonym value="Nazca"/>
-							<synonym value="Nazca District"/>
-							<heading id="Nazcavalley" title="Nazca valley">
-								<synonym value="Nasca valley"/>
-								<heading id="NacoroGrande" title="Nacoro Grande"/>
-								<heading id="Cacatilla" title="Cacatilla"/>
-								<heading id="Cahuachi" title="Cahuachi"/>
-								<heading id="Soisongo" title="Soisongo"/>
-								<heading id="Congalla" title="Congalla"/>
-								<heading id="Pangaravi" title="Pangaravi"/>
-								<heading id="Poromo" title="Poromo"/>
-								<heading id="RavineofNazca" title="Ravine of Nazca"/>
-								<heading id="Trancas" title="Trancas"/>
-								<heading id="Tunga" title="Tunga"/>
-								<heading id="Usaka" title="Usaka"/>
-								<heading id="Nazca" title="Nazca"/>
+							<synonym value="Nasca valley"/>
+							<heading id="NacoroGrande" title="Nacoro Grande"/>
+							<heading id="Cacatilla" title="Cacatilla"/>
+							<heading id="Cahuachi" title="Cahuachi"/>
+							<heading id="Soisongo" title="Soisongo"/>
+							<heading id="Congalla" title="Congalla"/>
+							<heading id="Pangaravi" title="Pangaravi"/>
+							<heading id="Poromo" title="Poromo"/>
+							<heading id="RavineofNazca" title="Ravine of Nazca"/>
+							<heading id="Trancas" title="Trancas"/>
+							<heading id="Tunga" title="Tunga"/>
+							<heading id="Usaka" title="Usaka"/>
+							<heading id="Nazca" title="Nazca"/>
+						</heading>
+						<heading id="PoromaVallPeru" title="Poroma Valley"> <!-- PV 71 -->
+							<heading id="CoparaPeru" title="Copara"> <!-- 14° 59' 0" South, 74° 53' 0" West -->
+								<synonym value="PV71-9,12,17-18,22-24"/>
+								<synonym value="PV71-9"/>
+								<synonym value="PV71-12"/>
+								<synonym value="PV71-22"/>
+								<synonym value="PV71-23"/>
+								<heading id="CoparaIIIPeru" title="Copara III">
+									<synonym value="PV71-17"/>
+								</heading>
+								<heading id="CoparaIVPeru" title="Copara IV">
+									<synonym value="PV71-18"/>
+								</heading>
+								<heading id="CoparaVIIPeru" title="Copara VII">
+									<synonym value="PV71-24"/>
+								</heading>
+							</heading>
+							<heading id="CorralonesPeru" title="Corralones">
+								<heading id="CorralonesVPeru" title="Corralones V">
+									<synonym value="PV71-38"/>
+								</heading>
+							</heading>
+							<heading id="PoromaPeru" title="Poroma">
+								<synonym value="PV71-1-7"/>
+								<synonym value="PV71-1"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-2"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-3"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-5"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-6"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-7"/> <!-- Trancas or Poroma? -->
+								<heading id="PoromaIVPeru" title="Poroma IV">
+									<synonym value="PV71-4"/>
+								</heading>
+								<heading id="PoromaVPeru" title="Poroma V">
+									<synonym value="PV71-40"/>
+								</heading>
+							</heading>
+							<heading id="HdaTrancasPeru" title="Trancas">
+								<synonym value="Hacienda Trancas"/>
+								<synonym value="Hda. Trancas"/>
+								<synonym value="Las Trancas"/>
+								<synonym value="PV71-1-10,11,19-21"/>
+								<synonym value="PV71-1"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-2"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-3"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-5"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-6"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-7"/> <!-- Trancas or Poroma? -->
+								<synonym value="PV71-8"/>
+								<synonym value="PV71-9"/>
+								<synonym value="PV71-10"/>
+								<synonym value="PV71-11"/>
+								<synonym value="PV71-19"/>
+								<synonym value="PV71-20"/>
+								<synonym value="PV71-21"/>
+							</heading>
+							<heading id="TungaPeru" title="Tunga">
+								<synonym value="PV71-26-29"/>
+								<synonym value="PV71-26"/>
+								<synonym value="PV71-28"/>
+								<synonym value="PV71-29"/>
+								<heading id="TungaIIPeru" title="Tunga II">
+									<synonym value="PV71-27"/>
+								</heading>
+							</heading>
+							<heading id="UsacaPeru" title="Usaca">
+								<synonym value="PV71-37"/>
+							</heading>
+						</heading>
+						<heading id="TarugaVallPeru" title="Taruga Valley"> <!-- PV 70 -->
+							<heading id="AtarcoPeru" title="Atarco">
+								<heading id="AtarcoIIPeru" title="Atarco II">
+									<synonym value="PV70-5"/>
+								</heading>
 							</heading>
 						</heading>
 					</heading>
@@ -4005,6 +4086,7 @@
 					<synonym value="Sinaloa"/>
 				</heading>
 				<heading id="SonoraStateMX" title="Sonora state">
+					<synonym value="Sonora"/>
 					<heading id="Alamos" title="Alamos"/>
 					<heading id="Babispe" title="Babispe"/>
 					<heading id="ColoniaLerdo" title="Colonia Lerdo"/>
@@ -4043,7 +4125,7 @@
 					<synonym value="Yucatan"/>
 					<heading id="ChichenItza" title="Chichén Itzá">
 						<synonym value="Chichen Itza"/>
-						<implies facet="Culture_facet" cat="MayaAncient"/>
+						<implies facet="Culture_facet" cat="MayaAncientCivMX"/>
 					</heading>
 					<heading id="HaciendaJalacal" title="Hacienda Jalacal"/>
 					<heading id="Maxcanu" title="Maxcanu"/>
@@ -4052,7 +4134,9 @@
 					</heading>
 					<heading id="Ticul" title="Ticul"/>
 				</heading>
-				<heading id="ZacatecasStateMX" title="Zacatecas state"/>
+				<heading id="ZacatecasStateMX" title="Zacatecas state">
+					<synonym value="Zacatecas"/>
+				</heading>
 			</heading>
 			<heading id="UnitedStates" title="United States">
 				<synonym value="United States of America"/>
@@ -4602,9 +4686,7 @@
 						</heading> 
 		
 						<!-- _____________NOT ORGANIZED_____________ -->
-						 <!-- No Encarta results -->
 						<heading id="BirnirkSite" title="Birnirk Site"/> <!-- No Encarta results -->
-						 <!-- No Encarta results -->
 						<heading id="Granaxcanuwu" title="Granaxcanuwu"/> <!-- No Encarta results --> <!-- No Google results -->
 						<heading id="Itiutiuk" title="Itiutiuk"/> <!-- No Encarta results --> <!-- No Google results -->
 						<heading id="Kammaoot" title="Kammaoot ?"/> <!-- No Encarta results --> <!-- No Google results -->
@@ -5226,495 +5308,498 @@
 				<heading id="Southwesternstates" title="Southwestern states">
 					<heading id="FourCornersRegion" title="Four Corners Region">
 						<heading id="SWPuebloRegions" title="Pueblo districts">
-							<heading id="RioGrandeBasinNM" title="I. Rio Grande Basin">
+							<heading id="RioGrandeBasinSW" title="I. Rio Grande Basin">
 								<synonym value="Rio Grande Basin"/>
-								<heading id="PajaritoParkDisNM" title="1. Pajarito Park District">
+								<heading id="PajaritoParkDistSW" title="1. Pajarito Park District">
 									<synonym value="Pajarito Park District"/>
 								</heading>
-								<heading id="PecosPuebloDisNM" title="2. Pecos Pueblo District">
+								<heading id="PecosPuebloDistSW" title="2. Pecos Pueblo District">
 									<synonym value="Pecos Pueblo District"/>
 								</heading>
-								<heading id="GranQuiviraDisNM" title="3. Gran Quivira District">
+								<heading id="GranQuiviraDistSW" title="3. Gran Quivira District">
 									<synonym value="Gran Quivira District"/>
 								</heading>
-								<heading id="JemezDistNM" title="4. Jemez District">
+								<heading id="JemezDistSW" title="4. Jemez District">
 									<synonym value="Jemez District"/>
 								</heading>
-								<heading id="AcomaDistNM" title="5. Acoma District">
+								<heading id="AcomaDistSW" title="5. Acoma District">
 									<synonym value="Acoma District"/>
 								</heading>
 							</heading>
-							<heading id="SanJuanBasinNM" title="II. San Juan Basin">
+							<heading id="SanJuanBasinSW" title="II. San Juan Basin">
 								<synonym value="San Juan Basin"/>
-								<heading id="AztecDistNM" title="1. Aztec District">
+								<heading id="AztecDistSW" title="1. Aztec District">
 									<synonym value="Aztec District"/>
 								</heading>
-								<heading id="MesaVerdeDistNM" title="2. Mesa Verde District">
+								<heading id="MesaVerdeDistSW" title="2. Mesa Verde District">
 									<synonym value="Mesa Verde District"/>
 								</heading>
-								<heading id="ChacoCynDistNM" title="3. Chaco Canyon District">
+								<heading id="ChacoCynDistSW" title="3. Chaco Canyon District">
 									<synonym value="Chaco Canyon District"/>
 								</heading>
-								<heading id="CynChellyDistNM" title="4. Canyon de Chelly District">
+								<heading id="CynChellyDistSW" title="4. Canyon de Chelly District">
 									<synonym value="Canyon de Chelly District"/>
 								</heading>
-								<heading id="BluffDistNM" title="5. Bluff District">
+								<heading id="BluffDistSW" title="5. Bluff District">
 									<synonym value="Bluff District"/>
 								</heading>
 							</heading>
-							<heading id="LittleColoBasinNM" title="III. Little Colorado Basin">
+							<heading id="LittleColoBasinSW" title="III. Little Colorado Basin">
 								<synonym value="Little Colorado Basin"/>
-								<heading id="TusayanDistNM" title="1. Tusayan District">
+								<heading id="TusayanDistSW" title="1. Tusayan District">
 									<synonym value="Tusayan District"/>
 								</heading>
-								<heading id="FlagstaffDistNM" title="2. Flagstaff District">
+								<heading id="FlagstaffDistSW" title="2. Flagstaff District">
 									<synonym value="Flagstaff District"/>
 								</heading>
-								<heading id="HolbrookDistNM" title="3. Holbrook District">
+								<heading id="HolbrookDistSW" title="3. Holbrook District">
 									<synonym value="Holbrook District"/>
 								</heading>
 								<heading id="ZufiiDistM" title="4. Zufii District">
 									<synonym value="Zufii District"/>
 								</heading>
 							</heading>
-							<heading id="GilaBasinNM" title="IV. Gila Basin">
+							<heading id="GilaBasinSW" title="IV. Gila Basin">
 								<synonym value="Gila Basin"/>
-								<heading id="EioVerdeDistNM" title="1. Eio Verde District">
+								<heading id="EioVerdeDistSW" title="1. Eio Verde District">
 									<synonym value="Eio Verde District"/>
 								</heading>
-								<heading id="SanCarlosDistNM" title="2. San Carlos District">
+								<heading id="SanCarlosDistSW" title="2. San Carlos District">
 									<synonym value="San Carlos District"/>
 								</heading>
-								<heading id="LowerGilaDistNM" title="3. Lower Gila District">
+								<heading id="LowerGilaDistSW" title="3. Lower Gila District">
 									<synonym value="Lower Gila District"/>
 								</heading>
-								<heading id="MiddleGilaDistNM" title="4. Middle Gila District">
+								<heading id="MiddleGilaDistSW" title="4. Middle Gila District">
 									<synonym value="Middle Gila District"/>
 								</heading>
-								<heading id="UpperGilaDistNM" title="5. Upper Gila District">
+								<heading id="UpperGilaDistSW" title="5. Upper Gila District">
 									<synonym value="Upper Gila District"/>
 								</heading>
-								<heading id="SanFranRivDistNM" title="6. San Francisco River District">
+								<heading id="SanFranRivDistSW" title="6. San Francisco River District">
 									<synonym value="San Francisco River District"/>
 								</heading>
 							</heading>
 						</heading>
 						<heading id="Arizona" title="Arizona">
-						<synonym value="PROVENIENCE = Arizona"/>
-						<heading id="Abiquin" title="Abiquin"/>
-						<heading id="AllentownRuin" title="Allentown Ruin"/>
-						<heading id="Apachecounty" title="Apache county">
-							<synonym value="PROVENIENCE = Apache county, Arizona"/>
-							<synonym value="Ruin 25"/>
-							<synonym value="Ruin 28"/>
-							<synonym value="Ruin 29"/>
-							<synonym value="Ruin 32"/>
-							<synonym value="Ruin 38"/>
-							<synonym value="Ruin 39 and 40"/>
-							<synonym value="Ruin 39"/>
-							<synonym value="Ruin 48"/>
-							<synonym value="Ruin 53"/>
-							<synonym value="Ruin 55"/>
-							<synonym value="Ruin 57"/>
-							<synonym value="Ruin 58"/>
-							<heading id="AlpineApacheAZ" title="Alpine"/> <!-- Disambiguate with Alpine co., CA -->
-							<heading id="BadgerCreekAZ" title="Badger Creek"/>
-							<heading id="BrokenFluteCAZ" title="Broken Flute Cave"/>
-							<heading id="BurkeRanchAZ" title="Burke Ranch"/>
-							<heading id="CanyonChellyAZ" title="Canyon de Chelly">
-								<synonym value="PROVENIENCE = Canyon de Chelly, Arizona"/>
-								<heading id="WhiteHouse" title="White House"/>
+							<synonym value="PROVENIENCE = Arizona"/>
+							<heading id="Abiquin" title="Abiquin"/>
+							<heading id="AllentownRuin" title="Allentown Ruin"/>
+							<heading id="Apachecounty" title="Apache county">
+								<synonym value="PROVENIENCE = Apache county, Arizona"/>
+								<synonym value="Ruin 25"/>
+								<synonym value="Ruin 28"/>
+								<synonym value="Ruin 29"/>
+								<synonym value="Ruin 32"/>
+								<synonym value="Ruin 38"/>
+								<synonym value="Ruin 39 and 40"/>
+								<synonym value="Ruin 39"/>
+								<synonym value="Ruin 48"/>
+								<synonym value="Ruin 53"/>
+								<synonym value="Ruin 55"/>
+								<synonym value="Ruin 57"/>
+								<synonym value="Ruin 58"/>
+								<heading id="AlpineApacheAZ" title="Alpine"/> <!-- Disambiguate with Alpine co., CA -->
+								<heading id="BadgerCreekAZ" title="Badger Creek"/>
+								<heading id="BrokenFluteCAZ" title="Broken Flute Cave"/>
+								<heading id="BurkeRanchAZ" title="Burke Ranch"/>
+								<heading id="CanyonChellyAZ" title="Canyon de Chelly">
+									<synonym value="PROVENIENCE = Canyon de Chelly, Arizona"/>
+									<heading id="WhiteHouse" title="White House"/>
+								</heading>
+								<heading id="CanyonMuertoAZ" title="Canyon del Muerto"/>
+								<heading id="ChambersAZ" title="Chambers"/>
+								<heading id="ChinleAZ" title="Chinle"/>
+								<heading id="CornfieldsDisAZ" title="Cornfields District">
+									<synonym value="Cornfields"/>
+									<synonym value="Cornfield's District"/>
+									<synonym value="AZ-Cornfields-NL"/>
+									<synonym value="AZ-Cornfields-NL- 1"/>
+									<synonym value="AZ-Cornfields-NL- 2"/>
+									<synonym value="AZ-Cornfields-NL- 3"/>
+									<synonym value="AZ-Cornfields-NL- 4"/>
+									<synonym value="AZ-Cornfields-NL- 5"/>
+									<synonym value="AZ-Cornfields-NL- 6"/>
+									<synonym value="AZ-Cornfields-NL- 7"/>
+									<synonym value="AZ-Cornfields-NL- 8"/>
+									<synonym value="AZ-Cornfields-NL- 9"/>
+									<synonym value="AZ-Cornfields-NL-1"/>
+									<synonym value="AZ-Cornfields-NL-2"/>
+									<synonym value="AZ-Cornfields-NL-3"/>
+									<synonym value="AZ-Cornfields-NL-4"/>
+									<synonym value="AZ-Cornfields-NL-5"/>
+									<synonym value="AZ-Cornfields-NL-6"/>
+									<synonym value="AZ-Cornfields-NL-7"/>
+									<synonym value="AZ-Cornfields-NL-8"/>
+									<synonym value="AZ-Cornfields-NL-9"/>
+									<synonym value="AZ-Cornfields-NL-10"/>
+									<synonym value="AZ-Cornfields-NL-11"/>
+									<synonym value="AZ-Cornfields-NL-12"/>
+									<synonym value="AZ-Cornfields-NL-13"/>
+									<synonym value="AZ-Cornfields-NL-14"/>
+								</heading>
+								<heading id="CottonwoodSpAZ" title="Cottonwood Spring"/>
+								<heading id="EagleRockAZ" title="Eagle Rock"/>
+								<heading id="FortDefianceAZ" title="Fort Defiance"/>
+								<heading id="GanadoAZ" title="Ganado"/>
+								<heading id="HouckAZ" title="Houck"/>
+								<heading id="HubbellTrPostAZ" title="Hubbell Trading Post"/>
+								<heading id="KinlicheeAZ" title="Kinlichee"/>
+								<heading id="LukachukaiAZ" title="Lukachukai"/>
+								<heading id="LuptonAZ" title="Lupton"/>
+								<heading id="MackeyRanchAZ" title="Mackey Ranch"/>
+								<heading id="NazliniAZ" title="Nazlini"/>
+								<heading id="NutriosoAZ" title="Nutrioso"/>
+								<heading id="OrtegaRanchAZ" title="Ortega Ranch"/>
+								<heading id="PineSprAZ" title="Pine Springs"/>
+								<heading id="PrayerRockAZ" title="Prayer Rock"/>
+								<heading id="SawmillAZ" title="Sawmill"/>
+								<heading id="SitkyatkiAZ" title="Sitkyatki"/>
+								<heading id="SpringervilleAZ" title="Springerville"/>
+								<heading id="SteamboatCynAZ" title="Steamboat Canyon"/>
+								<heading id="StJohnsAZ" title="St. Johns"/>
+								<heading id="SunriseSprAZ" title="Sunrise Springs"/>
+								<heading id="TeecNosPosAZ" title="Teec Nos Pos"/>
+								<heading id="WhiteMtsAZ" title="White Mountains">
+									<heading id="MayaSprAZ" title="Maya Springs"/>
+								</heading>
+								<heading id="WideRuinAZ" title="Wide Ruin"/>
+								<heading id="WindowRockAZ" title="Window Rock"/>
 							</heading>
-							<heading id="CanyonMuertoAZ" title="Canyon del Muerto"/>
-							<heading id="ChambersAZ" title="Chambers"/>
-							<heading id="ChinleAZ" title="Chinle"/>
-							<heading id="CornfieldsDisAZ" title="Cornfields District">
-								<synonym value="Cornfields"/>
-								<synonym value="Cornfield's District"/>
-								<synonym value="AZ-Cornfields-NL"/>
-								<synonym value="AZ-Cornfields-NL- 1"/>
-								<synonym value="AZ-Cornfields-NL- 2"/>
-								<synonym value="AZ-Cornfields-NL- 3"/>
-								<synonym value="AZ-Cornfields-NL- 4"/>
-								<synonym value="AZ-Cornfields-NL- 5"/>
-								<synonym value="AZ-Cornfields-NL- 6"/>
-								<synonym value="AZ-Cornfields-NL- 7"/>
-								<synonym value="AZ-Cornfields-NL- 8"/>
-								<synonym value="AZ-Cornfields-NL- 9"/>
-								<synonym value="AZ-Cornfields-NL-1"/>
-								<synonym value="AZ-Cornfields-NL-2"/>
-								<synonym value="AZ-Cornfields-NL-3"/>
-								<synonym value="AZ-Cornfields-NL-4"/>
-								<synonym value="AZ-Cornfields-NL-5"/>
-								<synonym value="AZ-Cornfields-NL-6"/>
-								<synonym value="AZ-Cornfields-NL-7"/>
-								<synonym value="AZ-Cornfields-NL-8"/>
-								<synonym value="AZ-Cornfields-NL-9"/>
-								<synonym value="AZ-Cornfields-NL-10"/>
-								<synonym value="AZ-Cornfields-NL-11"/>
-								<synonym value="AZ-Cornfields-NL-12"/>
-								<synonym value="AZ-Cornfields-NL-13"/>
-								<synonym value="AZ-Cornfields-NL-14"/>
+							<heading id="ArizonaJ13" title="Arizona-J-13"/>
+							<heading id="BigFields" title="Big Fields"/>
+							<heading id="BlackMountain" title="Black Mountain">
+								<heading id="BlackMountainStore" title="Black Mountain Store"/>
 							</heading>
-							<heading id="CottonwoodSpAZ" title="Cottonwood Spring"/>
-							<heading id="EagleRockAZ" title="Eagle Rock"/>
-							<heading id="FortDefianceAZ" title="Fort Defiance"/>
-							<heading id="GanadoAZ" title="Ganado"/>
-							<heading id="HouckAZ" title="Houck"/>
-							<heading id="HubbellTrPostAZ" title="Hubbell Trading Post"/>
-							<heading id="KinlicheeAZ" title="Kinlichee"/>
-							<heading id="LukachukaiAZ" title="Lukachukai"/>
-							<heading id="LuptonAZ" title="Lupton"/>
-							<heading id="MackeyRanchAZ" title="Mackey Ranch"/>
-							<heading id="NazliniAZ" title="Nazlini"/>
-							<heading id="NutriosoAZ" title="Nutrioso"/>
-							<heading id="OrtegaRanchAZ" title="Ortega Ranch"/>
-							<heading id="PineSprAZ" title="Pine Springs"/>
-							<heading id="PrayerRockAZ" title="Prayer Rock"/>
-							<heading id="SawmillAZ" title="Sawmill"/>
-							<heading id="SitkyatkiAZ" title="Sitkyatki"/>
-							<heading id="SpringervilleAZ" title="Springerville"/>
-							<heading id="SteamboatCynAZ" title="Steamboat Canyon"/>
-							<heading id="StJohnsAZ" title="St. Johns"/>
-							<heading id="SunriseSprAZ" title="Sunrise Springs"/>
-							<heading id="TeecNosPosAZ" title="Teec Nos Pos"/>
-							<heading id="WhiteMtsAZ" title="White Mountains">
-								<heading id="MayaSprAZ" title="Maya Springs"/>
+							<heading id="BowieCanyon" title="Bowie Canyon"/>
+							<heading id="CasaBlanca" title="Casa Blanca"/>
+							<heading id="Cochisecounty" title="Cochise county">
+								<heading id="SanPedroMrcpAZ" title="San Pedro"/>
+								<heading id="Tombstone" title="Tombstone"/>
 							</heading>
-							<heading id="WideRuinAZ" title="Wide Ruin"/>
-							<heading id="WindowRockAZ" title="Window Rock"/>
-						</heading>
-						<heading id="ArizonaJ13" title="Arizona-J-13"/>
-						<heading id="BigFields" title="Big Fields"/>
-						<heading id="BlackMountain" title="Black Mountain">
-							<heading id="BlackMountainStore" title="Black Mountain Store"/>
-						</heading>
-						<heading id="BowieCanyon" title="Bowie Canyon"/>
-						<heading id="CasaBlanca" title="Casa Blanca"/>
-						<heading id="Cochisecounty" title="Cochise county">
-							<heading id="SanPedroMrcpAZ" title="San Pedro"/>
-							<heading id="Tombstone" title="Tombstone"/>
-						</heading>
-						<heading id="Cochisestronghold" title="Cochise stronghold"/>
-						<heading id="Coconinocounty" title="Coconino county">
-							<heading id="BoxCanyon" title="Box Canyon"/>
-							<heading id="CanyonDiablo" title="Canyon Diablo"/>
-							<heading id="CoalMineMesa" title="Coal Mine Mesa"/>
-							<heading id="CowSprings" title="Cow Springs"/>
-							<heading id="Flagstaff" title="Flagstaff"/>
-							<heading id="LeesFerry" title="Lees Ferry">
-								<synonym value="Lee's Ferry"/>
-							</heading>
-							<heading id="MedicineCave" title="Medicine Cave"/>
-							<heading id="Moenkopi" title="Moenkopi"/>
-							<heading id="NavajoReservCoco" title="Navajo Reservation"/>
-							<heading id="PaintedDesert" title="Painted Desert"/>
-							<heading id="RedLake" title="Red Lake"/>
-							<heading id="Sedona" title="Sedona"/>
-							<heading id="WalnutCanyon" title="Walnut Canyon"/>
-							<heading id="Williams" title="Williams"/>
-							<heading id="Wupatki" title="Wupatki">
-								<synonym value="Woptiki"/>
-								<synonym value="Wupatiki"/>
-							</heading>
-						</heading>
-						<heading id="CostelloRanch" title="Costello Ranch"/>
-						<heading id="FortApacheMrcpAZ" title="Fort Apache"/>
-						<heading id="GardenValley" title="Garden Valley"/>
-						<heading id="Gilacounty" title="Gila county">
-							<synonym value="AZ-GIla County"/>
-							<heading id="Globe" title="Globe"/>
-							<heading id="GlobeDistrict" title="Globe District"/>
-							<heading id="Payson" title="Payson"/>
-							<heading id="SanCarlosAgency" title="San Carlos Agency"/>
-							<heading id="SanCarlosReservation" title="San Carlos Reservation">
-								<heading id="Bylas" title="Bylas"/>
-							</heading>
-							<heading id="TheodoreRooseveltDam" title="Theodore Roosevelt Dam"/>
-						</heading>
-						<heading id="GilaRiver" title="Gila River"/>
-						<heading id="Grahamcounty" title="Graham county">
-							<synonym value="AZ-Graham County"/>
-							<heading id="DeweyFlat" title="Dewey Flat"/>
-						</heading>
-						<heading id="GrandCanyon" title="Grand Canyon"/>
-						<heading id="Greenleecounty" title="Greenlee county"/>
-						<heading id="HopiReservation" title="Hopi Reservation">
-							<synonym value="Hopi"/>
-							<implies facet="Culture_facet" cat="HopiIndians"/>
-							<heading id="Bacavi" title="Bacavi"/>
-							<heading id="FirstMesa" title="First Mesa"/>
-							<heading id="Hano" title="Hano"/>
-							<heading id="Hotevilla" title="Hotevilla"/>
-							<heading id="Mishongnovi" title="Mishongnovi"/>
-							<heading id="OraibiWash" title="Oraibi Wash"/>
-							<heading id="Polacca" title="Polacca"/>
-							<heading id="SecondMesa" title="Second Mesa"/>
-							<heading id="Shungopavi" title="Shungopavi"/>
-							<heading id="Sichomovi" title="Sichomovi"/>
-							<heading id="Sipaulovi" title="Sipaulovi"/>
-							<heading id="ThirdMesa" title="Third Mesa"/>
-							<heading id="Oraibi" title="Oraibi"/>
-							<heading id="Walpi" title="Walpi"/>
-						</heading>
-						<heading id="KoLauwala" title="KoLauwa la">
-							<synonym value="Koluwala:wa"/>
-						</heading>
-						<heading id="LaPazcounty" title="La Paz county">
-							<heading id="Bouse" title="Bouse">
-								<synonym value="Bouse site"/>
-								<synonym value="Bouse North Central Yuma County- per ledger"/>
-							</heading>
-							<heading id="ColoRivReservAZ" title="Colorado River Reservation"/>
-							<heading id="Parker" title="Parker"/>
-						</heading>
-						<heading id="Maricopacounty" title="Maricopa county">
-							<heading id="CampMcDowell" title="Camp McDowell"/>
-							<heading id="CaveCkMrcpAZ" title="Cave Creek"/>
-							<heading id="FortMcDowell" title="Fort McDowell"/>
-							<heading id="GilaBendMrcpAZ" title="Gila Bend"/>
-							<heading id="LosHornosMrcpAZ" title="Los Hornos"/>
-							<heading id="LosMuertos" title="Los Muertos"/>
-							<heading id="MesquiteWash" title="Mesquite Wash"/>
-							<heading id="PhoenixMrcpAZ" title="Phoenix"/>
-							<heading id="AZPuebloGrande" title="Pueblo Grande"/> <!-- Also a Pueblo Grande in NV -->
-							<heading id="RioVerdeMrcpAZ" title="Rio Verde"/>
-							<heading id="SaltRiverReservation" title="Salt River Reservation"/>
-						</heading>
-						<heading id="Mohavecounty" title="Mohave county">
-							<heading id="PeachSprings" title="Peach Springs"/>
-							<heading id="SecretPass" title="Secret Pass">
-								<synonym value="Secret Pass, Cave #2 fill, Black Range"/>
-							</heading>
-						</heading>
-						<heading id="MtEdenAZ" title="Mt. Eden">
-							<excl value="California"/>
-							<excl value="Hayward"/>
-						</heading>
-						<heading id="Navajocounty" title="Navajo county">
-							<synonym value="PROVENIENCE = Navajo county, Arizona"/>
-							<synonym value="AZ-Navajo County"/>
-							<synonym value="AZ-Silver Cr-NL-1"/>
-							<synonym value="AZ-Silver Cr-NL- 1"/>
-							<synonym value="AZ-Silver Cr-NL-2"/>
-							<synonym value="AZ-Silver Cr-NL- 2"/>
-							<synonym value="AZ-Silver Cr-NL-3"/>
-							<synonym value="AZ-Silver Cr-NL- 3"/>
-							<synonym value="AZ-Silver Cr-NL-4"/>
-							<synonym value="AZ-Silver Cr-NL- 4"/>
-							<synonym value="AZ-Silver Cr-NL-5"/>
-							<synonym value="AZ-Silver Cr-NL- 5"/>
-							<synonym value="AZ-Silver Cr-NL-6"/>
-							<synonym value="AZ-Silver Cr-NL- 6"/>
-							<synonym value="AZ-Silver Cr-NL-7"/>
-							<synonym value="AZ-Silver Cr-NL- 7"/>
-							<synonym value="AZ-Silver Cr-NL-8"/>
-							<synonym value="AZ-Silver Cr-NL- 8"/>
-							<synonym value="AZ-Silver Cr-NL-9"/>
-							<synonym value="AZ-Silver Cr-NL- 9"/>
-							<synonym value="AZ-Silver Cr-NL-10"/>
-							<synonym value="AZ-Silver Cr-NL-11"/>
-							<synonym value="AZ-Silver Cr-NL-12"/>
-							<heading id="AwatoviNavajoAZ" title="Awatovi">
-								<synonym value="Awatori"/> <!-- Misspelling -->
-								<synonym value="Awatobi"/>
-							</heading>
-							<heading id="BetatakinNavajoAZ" title="Betatakin Ruin"/>
-							<heading id="BidahochiPuebAZ" title="Bidahochi Pueblo">
-								<synonym value="Site 1054"/>
-							</heading>
-							<heading id="ChilchinbitoAZ" title="Chilchinbito"/>
-							<heading id="ChilchintabokoAZ" title="Chilchintaboko"/>
-							<heading id="DennebitoAZ" title="Dennebito"/>
-							<heading id="DogoszzhiBikoAZ" title="Dogoszzhi Biko">
-								<synonym value="Site 2628"/>
-							</heading>
-							<heading id="DryLakeNavajoAZ" title="Dry Lake"/>
-							<heading id="EchoCaveNavajoAZ" title="Echo Cave"/>
-							<heading id="FreemanHollowAZ" title="Freeman Hollow"/>
-							<heading id="GadiyahiMissionAZ" title="Gadiyahi Mission"/>
-							<heading id="GourdCaveAZ" title="Gourd Cave"/>
-							<heading id="HeadSpringsAZ" title="Head Springs"/>
-							<heading id="HomoloviNavajoAZ" title="Homolovi"/>
-							<heading id="JedditoNavajoAZ" title="Jeddito">
-								<heading id="JedditoWash" title="Jeddito Wash"/>
-							</heading>
-							<heading id="LakesideNavajoAZ" title="Lakeside"/>
-							<heading id="KayentaNavajoAZ" title="Kayenta"/>
-							<heading id="KeamsCynNavajoAZ" title="Keams Canyon"/>
-							<heading id="KeetSeelRuinAZ" title="Keet Seel Ruin"/>
-							<heading id="KinishbaRuinAZ" title="Kinishba Ruin"/>
-							<heading id="MtStJosephAZ" title="Mt. St. Joseph"/>
-							<heading id="NavajoHeadSprsAZ" title="Navajo Head Springs"/>
-							<heading id="NitsieCanyonAZ" title="Nitsie Canyon"/>
-							<heading id="RedLakesNavajoAZ" title="Red Lakes"/>
-							<heading id="ShowLowNavajoAZ" title="Show Low">
-								<synonym value="Showlow Ruin"/>
-								<synonym value="Showlow Ruins"/>
-								<synonym value="Show Low Ruin"/>
-								<synonym value="Show Low Ruins"/>
-							</heading>
-							<heading id="ShontoNavajoAZ" title="Shonto"/>
-							<heading id="SikyatkiAZ" title="Sikyatki"/>
-							<heading id="SnowflakeAZ" title="Snowflake"/>
-							<heading id="TannerSpringsAZ" title="Tanner Springs"/>
-							<heading id="TsegiCynNavajoAZ" title="Tsegi Canyon"/>
-							<heading id="WestFlatNavajoAZ" title="West Flat"/>
-							<heading id="WhiteConeNavajoAZ" title="White Cone"/>
-							<heading id="WhiteRivNavajoAZ" title="Whiteriver"/>
-							<heading id="WinslowNavajoAZ" title="Winslow"/>
-							<heading id="PinonNavajoAZ" title="Pinon"/>
-							<heading id="HolbrookNavajoAZ" title="Holbrook"/>
-						</heading>
-						<heading id="NeedlesAZ" title="Needles"/>
-						<heading id="NorthernArizona" title="Northern Arizona">
-							<synonym value="Northeastern Arizona"/>
-						</heading>
-						<heading id="Onebabi" title="Onebabi"/>
-						<heading id="Paloparado" title="Paloparado"/>
-						<heading id="PapagoReservation" title="Papago Reservation">
-							<implies facet="Culture_facet" cat="PapagoIndians"/>
-							<heading id="Quijotoa" title="Quijotoa"/>
-							<heading id="SantaRosaArizona" title="Santa Rosa"/>
-							<heading id="Sells" title="Sells"/>
-							<heading id="Tracy" title="Tracy"/>
-						</heading>
-						<heading id="PierreCanyon" title="Pierre Canyon"/>
-						<heading id="Pimacounty" title="Pima county">
-							<heading id="PimaReservation" title="Pima Reservation"/>
-							<heading id="SanXavierReservation" title="San Xavier Reservation">
-								<heading id="SanXavierMission" title="San Xavier Mission"/>
-							</heading>
-							<heading id="Tecolate" title="Tecolate"/>
-							<heading id="Tucson" title="Tucson"/>
-							<heading id="UniversityRuins" title="University Ruins"/>
-						</heading>
-						<heading id="Pinalcounty" title="Pinal county">
-							<synonym value="PROVENIENCE = Pinal county, Arizona"/>
-							<heading id="Bapchule" title="Bapchule">
-								<synonym value="Bapchale"/>
-							</heading>
-							<heading id="CasaGrande" title="Casa Grande">
-								<synonym value="Casa Grande Ruin"/>
-								<synonym value="Casa Grande Ruins"/>
-								<heading id="TurkeyHouseRuin" title="Turkey House Ruin"/>
-							</heading>
-							<heading id="FortSacaton" title="Fort Sacaton"/>
-							<heading id="GreweSitePinalAZ" title="Grewe Site"/>
-							<heading id="OraclePinalAZ" title="Oracle"/>
-							<heading id="PicachoPeak" title="Picacho Peak"/>
-							<heading id="RayPinalAZ" title="Ray"/>
-							<heading id="SacatonPinalAZ" title="Sacaton"/>
-							<heading id="Santan" title="Santan"/>
-							<heading id="Snaketown" title="Snaketown"/>
-						</heading>
-						<heading id="Sagir" title="Sagir"/>
-						<heading id="SaltRiver" title="Salt River"/>
-						<heading id="SaltRiverValley" title="Salt River Valley"/>
-						<heading id="SantaCruzcountyAZ" title="Santa Cruz county">
-							<heading id="NogalesAZ" title="Nogales">
-								<excl value="Mexico"/>
-							</heading>
-						</heading>
-						<heading id="SouthMesa" title="South Mesa"/>
-						<heading id="WhiteMountain" title="White Mountain"/>
-						<heading id="Yavapaicounty" title="Yavapai county">
-							<synonym value="PROVENIENCE = Yavapai county, Arizona"/>
-							<heading id="AmericanRanch" title="American Ranch"/>
-							<heading id="BlackMesaYavapaiAZ" title="Black Mesa"/>
-							<heading id="CampVerdeYavapaiAZ" title="Camp Verde"/>
-							<heading id="CampeVerdeHill" title="Campe Verde Hill"/>
-							<heading id="CherryCkYavapaiAZ" title="Cherry Creek"/>
-							<heading id="Clarkdale" title="Clarkdale"/>
-							<heading id="CleatorYavapaiAZ" title="Cleator"/>
-							<heading id="CliffCity" title="Cliff City"/>
-							<heading id="HockberryMtYavapaiAZ" title="Hockberry Mountain">
-								<synonym value="Hackberry Mountain"/>
-							</heading>
-							<heading id="InscriptionCanyon" title="Inscription Canyon"/>
-							<heading id="JeromeYavapaiAZ" title="Jerome"/>
-							<heading id="KingBrothersRuin" title="King Brothers Ruin"/>
-							<heading id="Mayer" title="Mayer"/>
-							<heading id="MontezumaCastle" title="Montezuma Castle"/>
-							<heading id="PageSprYavapaiAZ" title="Page Springs"/>
-							<heading id="PecksLake" title="Pecks Lake"/>
-							<heading id="PeeplesValley" title="Peeple's Valley"/>
-							<heading id="Prescott" title="Prescott"/>
-							<heading id="SeligmanYavapaiAZ" title="Seligman"/>
-							<heading id="SimmonsYavapaiAZ" title="Simmons"/>
-							<heading id="SkullVallYavapaiAZ" title="Skull Valley"/>
-							<heading id="SugarLoafYavapaiAZ" title="Sugar Loaf"/>
-							<heading id="TableMtYavapaiAZ" title="Table Mountain"/>
-							<heading id="TontoSprings" title="Tonto Springs"/>
-							<heading id="TuzigootYavapaiAZ" title="Tuzigoot"/>
-							<heading id="VerdeRiver" title="Verde River">
-								<heading id="SycamoreCreek" title="Sycamore Creek"/>
-							</heading>
-							<heading id="VerdeValley" title="Verde Valley"/>
-							<heading id="WilliamsonValley" title="Williamson Valley"/>
-							<heading id="YeagerCynYavapaiAZ" title="Yeager Canyon"/>
-						</heading>
-						<heading id="YerbaBuena" title="Yerba Buena"/>
-						<heading id="YumaCounty" title="Yuma county">
-							<heading id="BlytheYumaCoAZ" title="Blythe">
-								<synonym
-									value="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
-								<synonym value="Blythe-King of Arizona (Kofa) trail"/>
-							</heading>
-							<heading id="CastleDomePeakYumaCoAZ" title="Castle Dome Peak"/>
-							<heading id="DomeRockMtsYumaCoAZ" title="Dome Rock Mountains">
-								<synonym value="Dome Rock Mountain"/>
-								<heading id="TuleSpringsYumaCoAZ" title="Tule Springs">
-									<synonym value="Dome Rock Mountains Western Yuma County"/>
-									<synonym value="Tule Springs, Dome Rock Mountains Western Yuma County"/>
-									<synonym value="Tule Springs"/>
+							<heading id="Cochisestronghold" title="Cochise stronghold"/>
+							<heading id="Coconinocounty" title="Coconino county">
+								<heading id="BoxCanyon" title="Box Canyon"/>
+								<heading id="CanyonDiablo" title="Canyon Diablo"/>
+								<heading id="CoalMineMesa" title="Coal Mine Mesa"/>
+								<heading id="CowSprings" title="Cow Springs"/>
+								<heading id="Flagstaff" title="Flagstaff"/>
+								<heading id="LeesFerry" title="Lees Ferry">
+									<synonym value="Lee's Ferry"/>
+								</heading>
+								<heading id="MedicineCave" title="Medicine Cave"/>
+								<heading id="Moenkopi" title="Moenkopi"/>
+								<heading id="NavajoReservCoco" title="Navajo Reservation"/>
+								<heading id="PaintedDesert" title="Painted Desert"/>
+								<heading id="RedLake" title="Red Lake"/>
+								<heading id="Sedona" title="Sedona"/>
+								<heading id="WalnutCanyon" title="Walnut Canyon"/>
+								<heading id="Williams" title="Williams"/>
+								<heading id="Wupatki" title="Wupatki">
+									<synonym value="Woptiki"/>
+									<synonym value="Wupatiki"/>
 								</heading>
 							</heading>
-							<heading id="GilaRiverYumaCoAZ" title="Gila River">
-								<heading id="RollsYumaCoAZ" title="Rolls">
-									<synonym value="Rolls, on Gila River"/>
+							<heading id="CostelloRanch" title="Costello Ranch"/>
+							<heading id="FortApacheMrcpAZ" title="Fort Apache"/>
+							<heading id="GardenValley" title="Garden Valley"/>
+							<heading id="Gilacounty" title="Gila county">
+								<synonym value="AZ-GIla County"/>
+								<heading id="Globe" title="Globe"/>
+								<heading id="GlobeDistrict" title="Globe District"/>
+								<heading id="Payson" title="Payson"/>
+								<heading id="SanCarlosAgency" title="San Carlos Agency"/>
+								<heading id="SanCarlosReservation" title="San Carlos Reservation">
+									<heading id="Bylas" title="Bylas"/>
+								</heading>
+								<heading id="TheodoreRooseveltDam" title="Theodore Roosevelt Dam"/>
+							</heading>
+							<heading id="GilaRiver" title="Gila River"/>
+							<heading id="Grahamcounty" title="Graham county">
+								<synonym value="AZ-Graham County"/>
+								<heading id="DeweyFlat" title="Dewey Flat"/>
+							</heading>
+							<heading id="GrandCanyon" title="Grand Canyon"/>
+							<heading id="Greenleecounty" title="Greenlee county"/>
+							<heading id="HopiReservation" title="Hopi Reservation">
+								<synonym value="Hopi"/>
+								<implies facet="Culture_facet" cat="HopiIndians"/>
+								<heading id="Bacavi" title="Bacavi"/>
+								<heading id="FirstMesa" title="First Mesa"/>
+								<heading id="Hano" title="Hano"/>
+								<heading id="Hotevilla" title="Hotevilla"/>
+								<heading id="Mishongnovi" title="Mishongnovi"/>
+								<heading id="OraibiWash" title="Oraibi Wash"/>
+								<heading id="Polacca" title="Polacca"/>
+								<heading id="SecondMesa" title="Second Mesa"/>
+								<heading id="Shungopavi" title="Shungopavi"/>
+								<heading id="Sichomovi" title="Sichomovi"/>
+								<heading id="Sipaulovi" title="Sipaulovi"/>
+								<heading id="ThirdMesa" title="Third Mesa"/>
+								<heading id="Oraibi" title="Oraibi"/>
+								<heading id="Walpi" title="Walpi"/>
+							</heading>
+							<heading id="KoLauwala" title="KoLauwa la">
+								<synonym value="Koluwala:wa"/>
+							</heading>
+							<heading id="LaPazcounty" title="La Paz county">
+								<heading id="Bouse" title="Bouse">
+									<synonym value="Bouse site"/>
+									<synonym value="Bouse North Central Yuma County- per ledger"/>
+								</heading>
+								<heading id="ColoRivReservAZ" title="Colorado River Reservation"/>
+								<heading id="Parker" title="Parker"/>
+							</heading>
+							<heading id="Maricopacounty" title="Maricopa county">
+								<heading id="CampMcDowell" title="Camp McDowell"/>
+								<heading id="CaveCkMrcpAZ" title="Cave Creek"/>
+								<heading id="FortMcDowell" title="Fort McDowell"/>
+								<heading id="GilaBendMrcpAZ" title="Gila Bend"/>
+								<heading id="LosHornosMrcpAZ" title="Los Hornos"/>
+								<heading id="LosMuertos" title="Los Muertos"/>
+								<heading id="MesquiteWash" title="Mesquite Wash"/>
+								<heading id="PhoenixMrcpAZ" title="Phoenix"/>
+								<heading id="AZPuebloGrande" title="Pueblo Grande"/> <!-- Also a Pueblo Grande in NV -->
+								<heading id="RioVerdeMrcpAZ" title="Rio Verde"/>
+								<heading id="SaltRiverReservation" title="Salt River Reservation"/>
+							</heading>
+							<heading id="Mohavecounty" title="Mohave county">
+								<heading id="PeachSprings" title="Peach Springs"/>
+								<heading id="SecretPass" title="Secret Pass">
+									<synonym value="Secret Pass, Cave #2 fill, Black Range"/>
 								</heading>
 							</heading>
-							<heading id="GraniteSpurSiding" title="Granite Spur Siding"/>
-							<heading id="HorseTanksTrailYumaCoAZ" title="Horse Tanks Trail">
-								<synonym value="Palo Verde-Horse Tanks Trail Western Yuma County"/>
-								<synonym value="Palo Verde-Horse Tanks Trail"/>
+							<heading id="MtEdenAZ" title="Mt. Eden">
+								<excl value="California"/>
+								<excl value="Hayward"/>
 							</heading>
-							<heading id="KingArizonaTrailYumaCoAZ" title="King of Arizona Trail">
-								<synonym value="King of Arizona"/>
-								<synonym value="Kofa trail"/>
-								<synonym
-									value="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
-								<synonym value="Blythe-King of Arizona (Kofa) trail"/>
-								<synonym value="Palomas-Kofa Trail, South Section"/>
-								<synonym value="Palomas-Kofa Trail"/>
+							<heading id="Navajocounty" title="Navajo county">
+								<synonym value="PROVENIENCE = Navajo county, Arizona"/>
+								<synonym value="AZ-Navajo County"/>
+								<synonym value="AZ-Silver Cr-NL-1"/>
+								<synonym value="AZ-Silver Cr-NL- 1"/>
+								<synonym value="AZ-Silver Cr-NL-2"/>
+								<synonym value="AZ-Silver Cr-NL- 2"/>
+								<synonym value="AZ-Silver Cr-NL-3"/>
+								<synonym value="AZ-Silver Cr-NL- 3"/>
+								<synonym value="AZ-Silver Cr-NL-4"/>
+								<synonym value="AZ-Silver Cr-NL- 4"/>
+								<synonym value="AZ-Silver Cr-NL-5"/>
+								<synonym value="AZ-Silver Cr-NL- 5"/>
+								<synonym value="AZ-Silver Cr-NL-6"/>
+								<synonym value="AZ-Silver Cr-NL- 6"/>
+								<synonym value="AZ-Silver Cr-NL-7"/>
+								<synonym value="AZ-Silver Cr-NL- 7"/>
+								<synonym value="AZ-Silver Cr-NL-8"/>
+								<synonym value="AZ-Silver Cr-NL- 8"/>
+								<synonym value="AZ-Silver Cr-NL-9"/>
+								<synonym value="AZ-Silver Cr-NL- 9"/>
+								<synonym value="AZ-Silver Cr-NL-10"/>
+								<synonym value="AZ-Silver Cr-NL-11"/>
+								<synonym value="AZ-Silver Cr-NL-12"/>
+								<heading id="AwatoviNavajoAZ" title="Awatovi">
+									<synonym value="Awatori"/> <!-- Misspelling -->
+									<synonym value="Awatobi"/>
+								</heading>
+								<heading id="BetatakinNavajoAZ" title="Betatakin Ruin"/>
+								<heading id="BidahochiPuebAZ" title="Bidahochi Pueblo">
+									<synonym value="Site 1054"/>
+								</heading>
+								<heading id="ChilchinbitoAZ" title="Chilchinbito"/>
+								<heading id="ChilchintabokoAZ" title="Chilchintaboko"/>
+								<heading id="DennebitoAZ" title="Dennebito"/>
+								<heading id="DogoszzhiBikoAZ" title="Dogoszzhi Biko">
+									<synonym value="Site 2628"/>
+								</heading>
+								<heading id="DryLakeNavajoAZ" title="Dry Lake"/>
+								<heading id="EchoCaveNavajoAZ" title="Echo Cave"/>
+								<heading id="FreemanHollowAZ" title="Freeman Hollow"/>
+								<heading id="GadiyahiMissionAZ" title="Gadiyahi Mission"/>
+								<heading id="GourdCaveAZ" title="Gourd Cave"/>
+								<heading id="HeadSpringsAZ" title="Head Springs"/>
+								<heading id="HomoloviNavajoAZ" title="Homolovi"/>
+								<heading id="JedditoNavajoAZ" title="Jeddito">
+									<heading id="JedditoWash" title="Jeddito Wash"/>
+								</heading>
+								<heading id="LakesideNavajoAZ" title="Lakeside"/>
+								<heading id="KayentaNavajoAZ" title="Kayenta"/>
+								<heading id="KeamsCynNavajoAZ" title="Keams Canyon"/>
+								<heading id="KeetSeelRuinAZ" title="Keet Seel Ruin"/>
+								<heading id="KinishbaRuinAZ" title="Kinishba Ruin"/>
+								<heading id="MtStJosephAZ" title="Mt. St. Joseph"/>
+								<heading id="NavajoHeadSprsAZ" title="Navajo Head Springs"/>
+								<heading id="NitsieCanyonAZ" title="Nitsie Canyon"/>
+								<heading id="RedLakesNavajoAZ" title="Red Lakes"/>
+								<heading id="ShowLowNavajoAZ" title="Show Low">
+									<synonym value="Showlow Ruin"/>
+									<synonym value="Showlow Ruins"/>
+									<synonym value="Show Low Ruin"/>
+									<synonym value="Show Low Ruins"/>
+								</heading>
+								<heading id="ShontoNavajoAZ" title="Shonto"/>
+								<heading id="SikyatkiAZ" title="Sikyatki"/>
+								<heading id="SnowflakeAZ" title="Snowflake"/>
+								<heading id="TannerSpringsAZ" title="Tanner Springs"/>
+								<heading id="TsegiCynNavajoAZ" title="Tsegi Canyon"/>
+								<heading id="WestFlatNavajoAZ" title="West Flat"/>
+								<heading id="WhiteConeNavajoAZ" title="White Cone"/>
+								<heading id="WhiteRivNavajoAZ" title="Whiteriver"/>
+								<heading id="WinslowNavajoAZ" title="Winslow"/>
+								<heading id="PinonNavajoAZ" title="Pinon"/>
+								<heading id="HolbrookNavajoAZ" title="Holbrook"/>
 							</heading>
-							<heading id="PaloVerdeYumaCoAZ" title="Palo Verde">
-								<synonym value="Palo Verde-Horse Tanks Trail Western Yuma County"/>
-								<synonym value="Palo Verde-Horse Tanks Trail"/>
+							<heading id="NeedlesAZ" title="Needles"/>
+							<heading id="NorthernArizona" title="Northern Arizona">
+								<synonym value="Northeastern Arizona"/>
 							</heading>
-							<heading id="PalomasYumaCoAZ" title="Palomas">
-								<synonym value="Palomas-Kofa Trail, South Section"/>
-								<synonym value="Palomas-Kofa Trail"/>
+							<heading id="Onebabi" title="Onebabi"/>
+							<heading id="Paloparado" title="Paloparado"/>
+							<heading id="PapagoReservation" title="Papago Reservation">
+								<implies facet="Culture_facet" cat="PapagoIndians"/>
+								<heading id="Quijotoa" title="Quijotoa"/>
+								<heading id="SantaRosaArizona" title="Santa Rosa"/>
+								<heading id="Sells" title="Sells"/>
+								<heading id="Tracy" title="Tracy"/>
 							</heading>
-							<heading id="SomertonYumaCoAZ" title="Somerton">
-								<synonym value="Somerton, Yuma county"/>
+							<heading id="PierreCanyon" title="Pierre Canyon"/>
+							<heading id="Pimacounty" title="Pima county">
+								<heading id="PimaReservation" title="Pima Reservation"/>
+								<heading id="SanXavierReservation" title="San Xavier Reservation">
+									<heading id="SanXavierMission" title="San Xavier Mission"/>
+								</heading>
+								<heading id="Tecolate" title="Tecolate"/>
+								<heading id="Tucson" title="Tucson"/>
+								<heading id="UniversityRuins" title="University Ruins"/>
 							</heading>
-							<heading id="TinajosAltosYumaCoAZ" title="Tinajos Altos">
-								<synonym value="High Tanks"/>
+							<heading id="Pinalcounty" title="Pinal county">
+								<synonym value="PROVENIENCE = Pinal county, Arizona"/>
+								<heading id="Bapchule" title="Bapchule">
+									<synonym value="Bapchale"/>
+								</heading>
+								<heading id="CasaGrande" title="Casa Grande">
+									<synonym value="Casa Grande Ruin"/>
+									<synonym value="Casa Grande Ruins"/>
+									<heading id="TurkeyHouseRuin" title="Turkey House Ruin"/>
+								</heading>
+								<heading id="FortSacaton" title="Fort Sacaton"/>
+								<heading id="GreweSitePinalAZ" title="Grewe Site"/>
+								<heading id="OraclePinalAZ" title="Oracle"/>
+								<heading id="PicachoPeak" title="Picacho Peak"/>
+								<heading id="RayPinalAZ" title="Ray"/>
+								<heading id="SacatonPinalAZ" title="Sacaton"/>
+								<heading id="Santan" title="Santan"/>
+								<heading id="Snaketown" title="Snaketown"/>
 							</heading>
-							<heading id="TysonWashYumaCoAZ" title="Tyson Wash">
-								<synonym value="Tyson Wash, Central Yuma County"/>
-							</heading>
-							<heading id="WhiteTankMtsYumaCoAZ" title="White Tank Mountains">
-								<heading id="WhiteTanksSiteYumaCoAZ" title="White Tanks Site">
-									<synonym value="White Tanks Site, White Tank Mountains"/>
+							<heading id="Sagir" title="Sagir"/>
+							<heading id="SaltRiver" title="Salt River"/>
+							<heading id="SaltRiverValley" title="Salt River Valley"/>
+							<heading id="SantaCruzcountyAZ" title="Santa Cruz county">
+								<heading id="NogalesAZ" title="Nogales">
+									<excl value="Mexico"/>
 								</heading>
 							</heading>
-							<heading id="YumaYumaCoAZ" title="Yuma"/>
-							<heading id="YumaVallYumaCoAZ" title="Yuma Valley"/>
+							<heading id="SellsPlainAZ" title="Sells Plain">
+								<heading id="JackRabbitRuinAZ" title="Jack Rabbit Ruin"/>
+							</heading>
+							<heading id="SouthMesa" title="South Mesa"/>
+							<heading id="WhiteMountain" title="White Mountain"/>
+							<heading id="Yavapaicounty" title="Yavapai county">
+								<synonym value="PROVENIENCE = Yavapai county, Arizona"/>
+								<heading id="AmericanRanchAZ" title="American Ranch"/>
+								<heading id="BlackMesaYavapaiAZ" title="Black Mesa"/>
+								<heading id="CampVerdeYavapaiAZ" title="Camp Verde"/>
+								<heading id="CampeVerdeHillAZ" title="Campe Verde Hill"/>
+								<heading id="CherryCkYavapaiAZ" title="Cherry Creek"/>
+								<heading id="ClarkdaleAZ" title="Clarkdale"/>
+								<heading id="CleatorYavapaiAZ" title="Cleator"/>
+								<heading id="CliffCityAZ" title="Cliff City"/>
+								<heading id="HockberryMtYavapaiAZ" title="Hockberry Mountain">
+									<synonym value="Hackberry Mountain"/>
+								</heading>
+								<heading id="InscriptionCynAZ" title="Inscription Canyon"/>
+								<heading id="JeromeYavapaiAZ" title="Jerome"/>
+								<heading id="KingBrothersRuin" title="King Brothers Ruin"/>
+								<heading id="MayerAZ" title="Mayer"/>
+								<heading id="MontezumaCastle" title="Montezuma Castle"/>
+								<heading id="PageSprYavapaiAZ" title="Page Springs"/>
+								<heading id="PecksLakeAZ" title="Pecks Lake"/>
+								<heading id="PeeplesVallAZ" title="Peeple's Valley"/>
+								<heading id="PrescottAZ" title="Prescott"/>
+								<heading id="SeligmanYavapaiAZ" title="Seligman"/>
+								<heading id="SimmonsYavapaiAZ" title="Simmons"/>
+								<heading id="SkullVallYavapaiAZ" title="Skull Valley"/>
+								<heading id="SugarLoafYavapaiAZ" title="Sugar Loaf"/>
+								<heading id="TableMtYavapaiAZ" title="Table Mountain"/>
+								<heading id="TontoSprAZ" title="Tonto Springs"/>
+								<heading id="TuzigootYavapaiAZ" title="Tuzigoot"/>
+								<heading id="VerdeRiverAZ" title="Verde River">
+									<heading id="SycamoreCreek" title="Sycamore Creek"/>
+								</heading>
+								<heading id="VerdeValleyAZ" title="Verde Valley"/>
+								<heading id="WilliamsonValley" title="Williamson Valley"/>
+								<heading id="YeagerCynYavapaiAZ" title="Yeager Canyon"/>
+							</heading>
+							<heading id="YerbaBuenaAZ" title="Yerba Buena"/>
+							<heading id="YumaCountyAZ" title="Yuma county">
+								<heading id="BlytheYumaCoAZ" title="Blythe">
+									<synonym
+										value="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
+									<synonym value="Blythe-King of Arizona (Kofa) trail"/>
+								</heading>
+								<heading id="CastleDomePeakYumaCoAZ" title="Castle Dome Peak"/>
+								<heading id="DomeRockMtsYumaCoAZ" title="Dome Rock Mountains">
+									<synonym value="Dome Rock Mountain"/>
+									<heading id="TuleSpringsYumaCoAZ" title="Tule Springs">
+										<synonym value="Dome Rock Mountains Western Yuma County"/>
+										<synonym value="Tule Springs, Dome Rock Mountains Western Yuma County"/>
+										<synonym value="Tule Springs"/>
+									</heading>
+								</heading>
+								<heading id="GilaRiverYumaCoAZ" title="Gila River">
+									<heading id="RollsYumaCoAZ" title="Rolls">
+										<synonym value="Rolls, on Gila River"/>
+									</heading>
+								</heading>
+								<heading id="GraniteSpurSiding" title="Granite Spur Siding"/>
+								<heading id="HorseTanksTrailYumaCoAZ" title="Horse Tanks Trail">
+									<synonym value="Palo Verde-Horse Tanks Trail Western Yuma County"/>
+									<synonym value="Palo Verde-Horse Tanks Trail"/>
+								</heading>
+								<heading id="KingArizonaTrailYumaCoAZ" title="King of Arizona Trail">
+									<synonym value="King of Arizona"/>
+									<synonym value="Kofa trail"/>
+									<synonym
+										value="Blythe-King of Arizona (Kofa) trail, Central Yuma County"/>
+									<synonym value="Blythe-King of Arizona (Kofa) trail"/>
+									<synonym value="Palomas-Kofa Trail, South Section"/>
+									<synonym value="Palomas-Kofa Trail"/>
+								</heading>
+								<heading id="PaloVerdeYumaCoAZ" title="Palo Verde">
+									<synonym value="Palo Verde-Horse Tanks Trail Western Yuma County"/>
+									<synonym value="Palo Verde-Horse Tanks Trail"/>
+								</heading>
+								<heading id="PalomasYumaCoAZ" title="Palomas">
+									<synonym value="Palomas-Kofa Trail, South Section"/>
+									<synonym value="Palomas-Kofa Trail"/>
+								</heading>
+								<heading id="SomertonYumaCoAZ" title="Somerton">
+									<synonym value="Somerton, Yuma county"/>
+								</heading>
+								<heading id="TinajosAltosYumaCoAZ" title="Tinajos Altos">
+									<synonym value="High Tanks"/>
+								</heading>
+								<heading id="TysonWashYumaCoAZ" title="Tyson Wash">
+									<synonym value="Tyson Wash, Central Yuma County"/>
+								</heading>
+								<heading id="WhiteTankMtsYumaCoAZ" title="White Tank Mountains">
+									<heading id="WhiteTanksSiteYumaCoAZ" title="White Tanks Site">
+										<synonym value="White Tanks Site, White Tank Mountains"/>
+									</heading>
+								</heading>
+								<heading id="YumaYumaCoAZ" title="Yuma"/>
+								<heading id="YumaVallYumaCoAZ" title="Yuma Valley"/>
+							</heading>
 						</heading>
-					</heading>
 						<heading id="ColoradoState" title="Colorado">
 							<heading id="ProwersCounty" title="Prowers County"/>
 							<heading id="Montezumacounty" title="Montezuma county">
@@ -5840,13 +5925,17 @@
 								<excl value="Rio Arriba"/>
 								<excl value="Utah"/>
 								<excl value="Washington"/>
-								<heading id="Crystal" title="Crystal"/>
+								<heading id="ChacoCanyon" title="Chaco Canyon">
+									<implies facet="Location_facet" cat="ChacoCynDistSW"/>
+									<heading id="PuebloBonito" title="Pueblo Bonito">
+										<synonym value="Pueblo Bonito Ruin"/>
+										<synonym value="Pueblo Bonito Ruins"/>
+									</heading>
+								</heading>
+								<heading id="Crystal" title="Crystal"/> <!-- Need exclusions -->
+								<heading id="Farmington" title="Farmington"/>
 								<heading id="TwoGreyHills" title="Two Grey Hills"/>
 								<heading id="Toadlena" title="Toadlena"/>
-								<heading id="Farmington" title="Farmington"/>
-								<heading id="ChacoCanyon" title="Chaco Canyon">
-									<heading id="PuebloBonito" title="Pueblo Bonito"/>
-								</heading>
 							</heading>
 							<heading id="SanMiguelcounty" title="San Miguel county">
 								<heading id="LasVegasNM" title="Las Vegas"/>
@@ -5854,14 +5943,14 @@
 							</heading>
 							<heading id="SantaFeCoNM" title="Santa Fe county">
 								<heading id="ChimayoNM" title="Chimayo"/>
-								<heading id="TesuqueNM" title="Tesuque"/>
-								<heading id="SantaFeSFNM" title="Santa Fe"/>
 								<heading id="NambePueblo" title="Nambé Pueblo">
 									<synonym value="Nambe"/> <!-- often used as abbreviation, unfortunately -->
 									<synonym value="Nambé"/>
 								</heading>
 								<heading id="Pojoaque" title="Pojoaque"/>
 								<heading id="SanIldefonso" title="San Ildefonso"/>
+								<heading id="SantaFeSFNM" title="Santa Fe"/>
+								<heading id="TesuqueNM" title="Tesuque"/>
 							</heading>
 							<heading id="Taoscounty" title="Taos county">
 								<heading id="Penasco" title="Penasco"/>
@@ -6266,20 +6355,21 @@
 										<heading id="MitchellResort" title="Mitchell Resort"/>
 									</heading>
 									<heading id="BricelandHumboldtCA" title="Briceland"/>
-									<heading id="BrickyardMoundHumboldtCA" title="Brickyard Mound"/>
+									<heading id="BrickyardMdHumboldtCA" title="Brickyard Mound"/>
 									<heading id="BridgevilleHumboldtCA" title="Bridgeville"/>
 									<heading id="CapeMendocino" title="Cape Mendocino"/>
-									<heading id="ChalkMountainHumboldtCA" title="Chalk Mountain"/>
-									<heading id="DiggerPointHumboldtCA" title="Digger Point"/>
+									<heading id="ChalkMtnHumboldtCA" title="Chalk Mountain"/>
+									<heading id="DiggerPtHumboldtCA" title="Digger Point"/>
 									<heading id="EurekaHumboldtCA" title="Eureka"/>
 									<heading id="EurekaMound" title="Eureka Mound"/>
 									<heading id="FernCanyonHumboldtCA" title="Fern Canyon"/>
 									<heading id="GoldBluffHumboldtCA" title="Gold Bluff"/>
-									<heading id="HoopaReservation" title="Hoopa Reservation"/>
+									<heading id="HoopaReserv" title="Hoopa Reservation"/>
 									<heading id="HoopaValley" title="Hoopa Valley">
 										<synonym value="Hupa Valley"/>
-										<heading id="CaptainJohnsRanch" title="Captain John's Ranch"/>
-										<heading id="CaptainJohnsRanch" title="Captain Johns Ranch"/>
+										<heading id="CaptainJohnsRanch" title="Captain Johns Ranch">
+											<synonym value="Captain John's Ranch"/>
+										</heading>
 										<heading id="HoslerRanch" title="Hosler Ranch"/>
 									</heading>
 									<heading id="HumboldtBay" title="Humboldt Bay">
@@ -6439,8 +6529,7 @@
 									<heading id="WashekHumboldtCA" title="Wa shek"/>
 								</heading>
 								<heading id="TrinomHumboldtCA" title="Trinomial site names" noMatch="true">
-									<heading id="CAHum001to035" title="CA-Hum-1 to -35"
-										noMatch="true">
+									<heading id="CAHum001to035" title="CA-Hum-1 to -35" noMatch="true">
 										<heading id="CAHum1" title="CA-Hum-1">
 											<synonym value="CA-Hum- 1"/>
 											<synonym value="CA-Hum-  1"/>
@@ -6452,22 +6541,19 @@
 											<synonym value="Wiyot 2 (Loud)"/>
 											<synonym value="Beach Site"/>
 											<synonym value="Robert Beach Site"/>
-											<implies facet="Location_facet"
-												cat="RobertBeachHumboldtCA"/>
+											<implies facet="Location_facet" cat="RobertBeachHumboldtCA"/>
 										</heading>
 										<heading id="CAHum6" title="CA-Hum-6">
 											<synonym value="CA-Hum- 6"/>
 											<synonym value="CA-Hum-  6"/>
 											<synonym value="Wiyot 6 (Loud)"/>
-											<implies facet="Location_facet"
-												cat="ChumiOrDjomeHumboldtCA"/>
+											<implies facet="Location_facet" cat="ChumiOrDjomeHumboldtCA"/>
 										</heading>
 										<heading id="CAHum10" title="CA-Hum-10">
 											<synonym value="CA-Hum- 10"/>
 											<synonym value="Wiyot 10 (Loud)"/>
 											<implies facet="Location_facet" cat="ShoHumboldtCA"/>
-											<implies facet="Location_facet"
-												cat="TokelibowokHumboldtCA"/>
+											<implies facet="Location_facet" cat="TokelibowokHumboldtCA"/>
 										</heading>
 										<heading id="CAHum11" title="CA-Hum-11">
 											<synonym value="CA-Hum- 11"/>
@@ -6487,8 +6573,7 @@
 										<heading id="CAHum23" title="CA-Hum-23">
 											<synonym value="CA-Hum- 23"/>
 											<synonym value="Wiyot 23 (Loud)"/>
-											<implies facet="Location_facet"
-												cat="DigawethatkilOrTekewethatklHumboldtCA"/>
+											<implies facet="Location_facet" cat="DigawethatkilHumboldtCA"/>
 										</heading>
 										<heading id="CAHum25" title="CA-Hum-25">
 											<synonym value="CA-Hum- 25"/>
@@ -6501,8 +6586,7 @@
 										<heading id="CAHum33" title="CA-Hum-33">
 											<synonym value="CA-Hum- 33"/>
 											<synonym value="Wiyot 33 (Loud)"/>
-											<implies facet="Location_facet"
-												cat="TapotOrHowetotolHumboldtCA"/>
+											<implies facet="Location_facet" cat="TapotHumboldtCA"/>
 										</heading>
 										<heading id="CAHum34" title="CA-Hum-34">
 											<synonym value="CA-Hum- 34"/>
@@ -20155,7 +20239,7 @@
 								<heading id="GypsumCave" title="Gypsum Cave"/>
 								<heading id="LasVegasNV" title="Las Vegas"/>
 								<heading id="LostCityPuebloGrandeNV" title="Lost City (Pueblo Grande)" noMatch="true"/>
-								<heading id="Moapa" title="Moapa"/>
+								<heading id="MoapaNV" title="MoapaNV"/>
 								<heading id="PaiuteCaveOvertonFill" title="Paiute Cave (Overton fill)" noMatch="true"/>
 								<heading id="OldCrescent" title="Old Crescent"/>
 								<heading id="ScorpionHill" title="Scorpion Hill"/>
@@ -21348,32 +21432,7 @@
 					</heading>
 				</heading>
 				<heading id="Northerncentralstates" title="Northern central states">
-					<heading id="Nebraska" title="Nebraska"/>
-					<heading id="SouthDakota" title="South Dakota">
-						<heading id="FortSully" title="Fort Sully"/>
-						<heading id="GregorySouthDakota" title="Gregory">
-							<heading id="Herrick" title="Herrick"/>
-						</heading>
-						<heading id="PineRidge" title="Pine Ridge"/>
-						<heading id="PineRidgeReservation" title="Pine Ridge Reservation">
-							<heading id="WoundedKnee" title="Wounded Knee"/>
-							<heading id="PineRidgeAgency" title="Pine Ridge Agency"/>
-						</heading>
-						<heading id="Todd" title="Todd">
-							<heading id="RosebudReservation" title="Rosebud Reservation"/>
-							<heading id="Rosebud" title="Rosebud"/>
-							<heading id="Mission" title="Mission"/>
-						</heading>
-					</heading>
-					<heading id="NorthDakota" title="North Dakota">
-						<heading id="Rolette" title="Rolette">
-							<heading id="TurtleMountainReservation"
-								title="Turtle Mountain Reservation"/>
-						</heading>
-						<heading id="StandingRockReservation" title="Standing Rock Reservation">
-							<heading id="FortYates" title="Fort Yates"/>
-						</heading>
-					</heading>
+					<heading id="Iowa" title="Iowa"/>
 					<heading id="Minnesota" title="Minnesota">
 						<heading id="CassCountyMN" title="Cass">
 							<heading id="LeechLake" title="Leech Lake"/>
@@ -21391,27 +21450,52 @@
 							<heading id="Duluth" title="Duluth"/>
 						</heading>
 					</heading>
+					<heading id="Nebraska" title="Nebraska"/>
+					<heading id="NorthDakota" title="North Dakota">
+						<heading id="Rolette" title="Rolette">
+							<heading id="TurtleMtnReservND" title="Turtle Mountain Reservation"/>
+						</heading>
+						<heading id="StandingRockReservND" title="Standing Rock Reservation">
+							<heading id="FortYates" title="Fort Yates"/>
+						</heading>
+					</heading>
+					<heading id="SouthDakota" title="South Dakota">
+						<heading id="FortSully" title="Fort Sully"/>
+						<heading id="GregorySouthDakota" title="Gregory">
+							<heading id="Herrick" title="Herrick"/>
+						</heading>
+						<heading id="PineRidge" title="Pine Ridge"/>
+						<heading id="PineRidgeReservation" title="Pine Ridge Reservation">
+							<heading id="PineRidgeAgency" title="Pine Ridge Agency"/>
+							<heading id="WoundedKnee" title="Wounded Knee"/>
+						</heading>
+						<heading id="Todd" title="Todd">
+							<!-- <heading id="Mission" title="Mission"/> Disambiguate -->
+							<heading id="Rosebud" title="Rosebud"/>
+							<heading id="RosebudReservation" title="Rosebud Reservation"/>
+						</heading>
+					</heading>
 					<heading id="Wisconsin" title="Wisconsin">
 						<heading id="Platteville" title="Platteville"/>
 					</heading>
-					<heading id="Iowa" title="Iowa"/>
 				</heading>
 				<heading id="SouthernGreatLakesstates" title="Southern Great Lakes states">
-					<heading id="Ohio" title="Ohio">
-						<heading id="Hamilton" title="Hamilton">
-							<heading id="Mariemont" title="Mariemont"/>
-						</heading>
-					</heading>
-					<heading id="Indiana" title="Indiana"/>
-					<heading id="Michigan" title="Michigan">
-						<heading id="Tacomesh" title="Tacomesh"/>
+					<heading id="GreatLakes" title="Great Lakes">
+						<synonym value="Southern Great Lakes"/>
+						<synonym value="Northern Great Lakes"/>
 					</heading>
 					<heading id="Illinois" title="Illinois">
 						<heading id="Chicago" title="Chicago"/>
 					</heading>
+					<heading id="Indiana" title="Indiana"/>
 					<heading id="Kentucky" title="Kentucky"/>
-					<heading id="GreatLakes" title="Great Lakes">
-						<heading id="NorthernGreatLakes" title="Northern Great Lakes"/>
+					<heading id="Michigan" title="Michigan">
+						<heading id="Tacomesh" title="Tacomesh"/>
+					</heading>
+					<heading id="Ohio" title="Ohio">
+						<heading id="Hamilton" title="Hamilton">
+							<heading id="Mariemont" title="Mariemont"/>
+						</heading>
 					</heading>
 				</heading>
 			</heading> 
