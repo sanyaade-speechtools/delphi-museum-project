@@ -892,6 +892,11 @@
 		</heading>
 	</heading>
 	<heading id="ContainersAndVessels" title="Containers &amp; Vessels">
+		<heading id="Amphora" title="Amphora">
+			<synonym value="Amphoras"/>
+			<synonym value="Amphorae"/>
+			<implies facet="Activity_facet" cat="Foodstorage"/>
+		</heading>
 		<heading id="Aryballos" title="Aryballos">
 			<synonym value="αρύβαλλος"/>
 		</heading>
@@ -1120,6 +1125,10 @@
 			<heading id="SodaCan" title="Soda Can"/>
 			<heading id="TeaCan" title="Tea Can"/>
 		</heading>
+		<heading id="Canteen" title="Canteen">
+			<synonym value="Canteens"/>
+			<implies facet="Activity_facet" cat="Foodstorage"/>			
+		</heading>
 		<heading id="Cup" title="Cup">
 	        <synonym value="Cups"/>
             <implies facet="Activity_facet" cat="Foodserving"/>
@@ -1129,6 +1138,7 @@
             </heading>
 	        <heading id="Chalice" title="Chalice">
 	            <synonym value="Chalices"/>
+	        	<synonym value="Wine cup"/>
 	            <implies facet="Activity_facet" cat="Drinking"/>
 	        </heading>
 	        <heading id="Goblet" title="Goblet">
@@ -1249,6 +1259,7 @@
 					<heading id="Olpe" title="Olpe">
 					    <implies facet="Culture_facet" cat="Corinthian"/>
 					    <implies facet="TechniqueDesignDecoration_facet" cat="SShaped"/>
+						<implies facet="Activity_facet" cat="WineDrinking"/>
 					</heading>
 				</heading>
 			</heading>
@@ -1258,6 +1269,10 @@
 			<implies facet="Activity_facet" cat="Metallurgy"/><!-- are all kettles made of metal? -->
 			<implies facet="Activity_facet" cat="Foodpreparation"/>
 			<implies facet="ObjectName_facet" cat="KettleHeating"/>
+		</heading>
+		<heading id="Olla" title="Olla">
+			<synonym value="Ollas"/>
+			<implies facet="Activity_facet" cat="Foodstorage"/>
 		</heading>
 		<heading id="Porringer" title="Porringer">
 			<synonym value="Porringers"/>
@@ -1709,11 +1724,6 @@
 			<synonym value="Food Preparation"/>
 			<synonym value="Preparing Food"/>
 			<synonym value="Cooking"/>
-			<heading id="Amphora" title="Amphora">
-				<synonym value="Amphoras"/>
-				<synonym value="Amphorae"/>
-				<implies facet="Activity_facet" cat="Foodstorage"/>
-			</heading>
 			<heading id="ContainerOpeners" title="Openers">
 				<heading id="BottleOpeners" title="Bottle Openers">
 					<synonym value="Bottle Opener"/>
@@ -1747,10 +1757,6 @@
 			<heading id="Bowl" title="Bowl">
 				<synonym value="Bowls"/>
 				<implies facet="Activity_facet" cat="Foodserving"/><!-- need complex inferentiation to remove ritual bowls, etc. -->
-			</heading>
-			<heading id="Canteen" title="Canteen">
-				<synonym value="Canteens"/>
-				<implies facet="Activity_facet" cat="Foodstorage"/>			
 			</heading>
 			<heading id="FoodHeatingDevices" title="Food Heating Devices">
 				<heading id="Boilingstone" title="Boiling stone">
@@ -1786,6 +1792,10 @@
 					<implies facet="Activity_facet" cat="Foodpreparation"/>
 					<implies facet="ObjectName_facet" cat="KettleVessels"/>
 				</heading>
+				<heading id="Oven" title="Oven">
+					<synonym value="Ovens"/>
+					<implies facet="Activity_facet" cat="Foodpreparation"/>			
+				</heading>
 				<heading id="TeapotHeating" title="Teapot">
 					<synonym value="Teapots"/>
 					<synonym value="Tea pot"/>
@@ -1804,8 +1814,8 @@
 				<implies facet="Activity_facet" cat="Foodserving"/>
 				<implies facet="ObjectName_facet" cat="Chocolate"/>
 			</heading>
-			<heading id="CookingVessel" title="Cooking Vessel">
-				<synonym value="Cooking Vessels"/>
+			<heading id="CookingVessels" title="Cooking Vessels">
+				<synonym value="Cooking Vessel"/>
 				<implies facet="Activity_facet" cat="Foodpreparation"/>
 				<heading id="Basin" title="Basin">
 					<excl value="Great Basin"/>
@@ -1893,18 +1903,6 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="Ladle" title="Ladle">
-				<synonym value="Ladles"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>			
-			</heading>
-			<heading id="Olla" title="Olla">
-				<synonym value="Ollas"/>
-				<implies facet="Activity_facet" cat="Foodstorage"/>
-			</heading>
-			<heading id="Oven" title="Oven">
-				<synonym value="Ovens"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>			
-			</heading>
 			<heading id="MushPaddle" title="Mush Paddle">
 				<synonym value="Mush Paddles"/>
 				<implies facet="Activity_facet" cat="Foodpreparation"/>	
@@ -1970,15 +1968,39 @@
 					<heading id="CheeseScoop" title="Cheese Scoop">
 						<synonym value="Cheese Scoops"/>
 						<implies facet="Activity_facet" cat="Eating"/>
+						<implies facet="Activity_facet" cat="Foodserving"/>
+					</heading>
+					<heading id="LadleSpoon" title="Ladle">
+						<synonym value="Ladles"/>
+						<implies facet="Activity_facet" cat="Eating"/>
+						<implies facet="Activity_facet" cat="Foodserving"/>
+					</heading>
+					<heading id="MarrowSpoon" title="Marrow Spoon">
+						<synonym value="Marrow Spoons"/>
+						<implies facet="Activity_facet" cat="Eating"/>
+					</heading>
+					<heading id="RitualSpoon" title="Ritual Spoon">
+						<synonym value="Ritual Spoons"/>
+						<implies facet="Activity_facet" cat="ReligionSpirituality"/>
 					</heading>
 					<heading id="SoupSpoon" title="Soup Spoon">
 						<synonym value="Soup Spoons"/>
+						<implies facet="Activity_facet" cat="Eating"/>
+					</heading>
+					<heading id="SouvenirSpoon" title="Souvenir Spoon">
+						<synonym value="Souvenir Spoons"/>
+					</heading>
+					<heading id="TableSpoon" title="Table Spoon">
+						<synonym value="Table Spoons"/>
+						<synonym value="Tablespoon"/>
+						<synonym value="Tablespoons"/>
 						<implies facet="Activity_facet" cat="Eating"/>
 					</heading>
 				</heading>
 			</heading>
 		</heading>
 		<heading id="FoodAndDrinks" title="FoodAndDrinks">
+			<synonym value="Food sample"/>
 			<heading id="Beer" title="Beer">
 				<synonym value="Beers"/>
 				<excl value="Root Beer"/>
