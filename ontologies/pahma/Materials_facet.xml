@@ -139,8 +139,16 @@
 				<heading id="WoolFelt" title="Wool Felt"/>
 			</heading>
 		</heading>
-		<heading id="Horn" title="Horn"> <!-- Exclude if "great horned owl", "powder horn", "horn fish",
-			 "elk horn prong", "prong horn", "Mrs. Horne", "hornfels", etc. -->
+		<heading id="Horn" title="Horn"> 
+			<excl value="Devils horn"/>
+			<excl value="Devil's horn"/>
+			<excl value="Devils horns"/>
+			<excl value="Devil's horns"/>
+			<excl value="Powder horn"/>
+			<excl value="Powder horns"/>
+			<excl value="Horn fish"/>
+			<excl value="Elk horn prong"/> <!-- Why? -->
+			<excl value="Prong horn"/> <!-- Why? -->
 			<synonym value="Horns"/>
 			<heading id="AntelopeHorn" title="Antelope Horn">
 				<synonym value="Antelope Horns"/>
@@ -355,14 +363,16 @@
 			</heading>
 		</heading>
 		<heading id="Antler" title="Antler">
-			<heading id="DeerHorn" title="Deer Horn">
+			<heading id="DeerAntler" title="Deer Antler">
+				<synonym value="Deer Horn"/>
 				<synonym value="Deer Horns"/>
 				<synonym value="Deer's Horn"/>
 				<synonym value="Deer's Horns"/>
 				<synonym value="Deers' Horn"/>
 				<synonym value="Deers' Horns"/>
 			</heading>
-			<heading id="ElkHorn" title="Elk Horn">
+			<heading id="ElkAntler" title="Elk Antler">
+				<synonym value="Elk Horn"/>
 				<synonym value="Elk Horns"/>
 				<synonym value="Elk's Horn"/>
 				<synonym value="Elk's Horns"/>
