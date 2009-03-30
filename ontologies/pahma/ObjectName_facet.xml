@@ -2424,6 +2424,8 @@
 	    <synonym value="Musical"/>
 	    <synonym value="Musical Instrument"/>
 	    <synonym value="Musical Instruments"/>
+		<synonym value="Noisemaker"/>
+		<synonym value="Noisemakers"/>
 		<synonym value="Toy Instrument"/>
 		<synonym value="Toy Instruments"/>
 		<heading id="StringedInstruments" title="Stringed Instruments">
@@ -2437,40 +2439,212 @@
 	            <excl value="Haliotis"/> <!-- Excludes "Haliotis, banjo type" -->
 	            <synonym value="Banjos"/>
 	            <synonym value="Banjoes"/>
+	            <synonym value="Yugoslav Banjo"/> <!-- from old DB: "Yugoslav banjo-like stringed instrument" [sic] -->
+	            <synonym value="Yugoslav Banjos"/>
+	            <synonym value="Yugoslav Banjoes"/>
 	            <heading id="GourdBanjo" title="Gourd Banjo">
 	                <synonym value="Gourd Banjos"/>
 	                <synonym value="Gourd Banjoes"/>
 	                <implies facet="Materials_facet" cat="GourdPlantMaterial"/>
 	            </heading>
 	        </heading>
-	        <heading id="Bowmusical" title="Bow (musical)">
-	            <synonym value="Bows (musical)"/>
-	        </heading>
-	        <heading id="Bowresin" title="Bow resin"/>
-	        <heading id="Fiddle" title="Fiddle">
-	            <synonym value="Fiddles"/>
-	            <synonym value="Violin"/>
-	            <synonym value="Violins"/>
-	        </heading>
+		    <heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
+		        <synonym value="Bowed Instruments"/>		        
+		        <synonym value="Bow Instrument"/>
+		        <synonym value="Bow Instruments"/>
+		        <excl value="Harp"/> 
+		        <excl value="Harps"/> 
+		        <heading id="Fiddle" title="Fiddle">
+		            <synonym value="Fiddles"/>
+		            <synonym value="Fiddle With Bow"/>
+		            <synonym value="Fiddles With Bow"/>
+		            <synonym value="Fiddle With Bows"/>
+		            <synonym value="Fiddles With Bows"/>
+		            <synonym value="Fiddle Bow"/>
+		            <synonym value="Fiddle Bows"/>
+		            <synonym value="Tube Fiddle"/>
+		            <synonym value="Tube Fiddles"/>
+		            <synonym value="Tube Fiddle With Bow"/>
+		            <synonym value="Tube Fiddles With Bow"/>
+		            <synonym value="Tube Fiddle With Bows"/>
+		            <synonym value="Tube Fiddles With Bows"/>
+		            <synonym value="Tube Fiddle Bow"/>
+		            <synonym value="Tube Fiddle Bows"/>
+		        </heading>
+    		    <heading id="MusicBow" title="Music Bow"> <!-- includes bows of all instruments -->
+    	            <synonym value="Music Bows"/>
+    	            <synonym value="Musical Bow"/>
+    	            <synonym value="Musical Bows"/>
+    	            <heading id="Bowresin" title="Bow resin">
+        	            <synonym value="Bow Resins"/>
+        	            <synonym value="Music Bow Resin"/>
+        	            <synonym value="Music Bow Resins"/>
+        	            <synonym value="Musical Bow Resin"/>
+        	            <synonym value="Musical Bow Resins"/>
+    	            </heading>
+    	            <heading id="ChildsMusicBow" title="Child's Music Bow">
+    	                <synonym value="Child's Music Bows"/>
+    	                <synonym value="Child's Musical Bow"/>
+    	                <synonym value="Child's Musical Bows"/>
+    	                <synonym value="Child Music Bow"/>
+    	                <synonym value="Child Music Bows"/>
+    	                <synonym value="Child Musical Bow"/>
+    	                <synonym value="Child Musical Bows"/>
+    	                <synonym value="Children Music Bow"/>
+    	                <synonym value="Children Music Bows"/>
+    	                <synonym value="Children Musical Bow"/>
+    	                <synonym value="Children Musical Bows"/>            
+    	                <synonym value="Music Bow For Child"/>
+    	                <synonym value="Music Bows For Child"/>
+    	                <synonym value="Musical Bow For Child"/>
+    	                <synonym value="Musical Bows For Child"/> 
+    	                <synonym value="Music Bow For Children"/>
+    	                <synonym value="Music Bows For Children"/>
+    	                <synonym value="Musical Bow For Children"/>
+    	                <synonym value="Musical Bows For Children"/>
+    	            </heading>
+    	            <heading id="AdultsMusicBow" title="Adult's Music Bow">
+    	                <synonym value="Adult's Music Bows"/>
+    	                <synonym value="Adult's Musical Bow"/>
+    	                <synonym value="Adult's Musical Bows"/>
+    	                <synonym value="Adult Music Bow"/>
+    	                <synonym value="Adult Music Bows"/>
+    	                <synonym value="Adult Musical Bow"/>
+    	                <synonym value="Adult Musical Bows"/>
+    	                <synonym value="Adults Music Bow"/>
+    	                <synonym value="Adults Music Bows"/>
+    	                <synonym value="Adults Musical Bow"/>
+    	                <synonym value="Adults Musical Bows"/> 
+    	                <synonym value="Music Bow For Adult"/>
+    	                <synonym value="Music Bows For Adult"/>
+    	                <synonym value="Musical Bow For Adult"/>
+    	                <synonym value="Musical Bows For Adult"/> 
+    	                <synonym value="Music Bow For Adults"/>
+    	                <synonym value="Music Bows For Adults"/>
+    	                <synonym value="Musical Bow For Adults"/>
+    	                <synonym value="Musical Bows For Adults"/> 
+    	            </heading>
+    		    </heading>
+		        <heading id="Ravanhatha" title="Ravanhatha"> <!-- includes alternate spelling: Ravanhatta -->
+		            <synonym value="Ravanhathas"/>
+		            <synonym value="Ravanhatha With Bow"/>
+		            <synonym value="Ravanhathas With Bow"/>
+		            <synonym value="Ravanhatha With Bows"/>
+		            <synonym value="Ravanhathas With Bows"/>
+		            <synonym value="Ravanhatha Bow"/>
+		            <synonym value="Ravanhatha Bows"/>
+		            <synonym value="Ravanhatta"/>
+		            <synonym value="Ravanhattas"/>
+		            <synonym value="Ravanhatta With Bow"/>
+		            <synonym value="Ravanhattas With Bow"/>
+		            <synonym value="Ravanhatta With Bows"/>
+		            <synonym value="Ravanhattas With Bows"/>
+		            <synonym value="Ravanhatta Bow"/>
+		            <synonym value="Ravanhattas Bows"/>
+		        </heading>
+		        <heading id="Rebab" title="Rebab">
+		            <synonym value="Rebabs"/>
+		            <synonym value="Rebab With Bow"/>
+		            <synonym value="Rebabs With Bow"/>
+		            <synonym value="Rebab With Bows"/>
+		            <synonym value="Rebabs With Bows"/>
+		            <synonym value="Rebab Bow"/>
+		            <synonym value="Rebab Bows"/>
+		        </heading>
+		        <heading id="Sarangi" title="Sarangi">
+		            <synonym value="Sarangis"/>
+		            <synonym value="Sarangi With Bow"/>
+		            <synonym value="Sarangis With Bow"/>
+		            <synonym value="Sarangi With Bows"/>
+		            <synonym value="Sarangis With Bows"/>
+		            <synonym value="Sarangi Bow"/>
+		            <synonym value="Sarangi Bows"/>
+		        </heading>	
+		        <heading id="Violin" title="Violin">
+		            <synonym value="Violins"/>
+		            <synonym value="Violin With Bow"/>
+		            <synonym value="Violins With Bow"/>
+		            <synonym value="Violin With Bows"/>
+		            <synonym value="Violins With Bows"/>
+		            <synonym value="Violin Bow"/>
+		            <synonym value="Violin Bows"/>
+		            <synonym value="2-Stringed Violin"/>
+		            <synonym value="2-Stringed Violins"/>
+		            <synonym value="2-Stringed Violin With Bow"/>
+		            <synonym value="2-Stringed Violins With Bow"/>
+		            <synonym value="2-Stringed Violin With Bows"/>
+		            <synonym value="2-Stringed Violins With Bows"/>
+		            <synonym value="2-Stringed Violin Bow"/>
+		            <synonym value="2-Stringed Violin Bows"/>
+		            <synonym value="Two-Stringed Violin"/>
+		            <synonym value="Two-Stringed Violins"/>
+		            <synonym value="Two-Stringed Violin With Bow"/>
+		            <synonym value="Two-Stringed Violins With Bow"/>
+		            <synonym value="Two-Stringed Violin With Bows"/>
+		            <synonym value="Two-Stringed Violins With Bows"/>
+		            <synonym value="Two-Stringed Violin Bow"/>
+		            <synonym value="Two-Stringed Violin Bows"/>
+		            <synonym value="2-String Violin"/>
+		            <synonym value="2-String Violins"/>
+		            <synonym value="2-String Violin With Bow"/>
+		            <synonym value="2-String Violins With Bow"/>
+		            <synonym value="2-String Violin With Bows"/>
+		            <synonym value="2-String Violins With Bows"/>
+		            <synonym value="2-String Violin Bow"/>
+		            <synonym value="2-String Violin Bows"/>
+		            <synonym value="Two-String Violin"/>
+		            <synonym value="Two-String Violins"/>
+		            <synonym value="Two-String Violin With Bow"/>
+		            <synonym value="Two-String Violins With Bow"/>
+		            <synonym value="Two-String Violin With Bows"/>
+		            <synonym value="Two-String Violins With Bows"/>
+		            <synonym value="Two-String Violin Bow"/>
+		            <synonym value="Two-String Violin Bows"/>
+		        </heading>
+		    </heading>
 	        <heading id="Guitar" title="Guitar">
 	            <synonym value="Guitars"/>
 	        </heading>
-	        <heading id="Harp" title="Harp">
+	        <heading id="Harp" title="Harp"> <!-- implied materials: Bow, as a weapon turned into instrument -->
 	            <synonym value="Harps"/>
+	            <synonym value="Harp-Like"/> <!-- from old DB: "Harp-like Instrument" [sic] -->
+	            <synonym value="Harp-like"/>
+	            <synonym value="Bow Harp"/>
+	            <synonym value="Bow Harps"/>
+	            <implies facet="Materials_facet" cat="BowMaterial"/>
 	        </heading>
 	        <heading id="Harpsichord" title="Harpsichord">
 	            <synonym value="Harpsichords"/>
 	        </heading>
-	        <heading id="Lyre" title="Lyre">
-	            <synonym value="Lyres"/>
+    	    <heading id="Jantar" title="Jantar"> <!-- confirm: does Jantar mean "string instrument" or simply "instrument"? -->
+    	        <synonym value="Jantars"/>
+    	        <synonym value="String Jantar"/>
+    	        <synonym value="String Jantars"/>
+    	        <synonym value="Stringed Jantar"/>
+    	        <synonym value="Stringed Jantars"/>
+    	    </heading>
+	        <heading id="Koto" title="Koto">
+	            <synonym value="Kotos"/>
+	            <synonym value="Koto-Type"/> <!-- from old DB: "3 koto-type stringed instruments" [sic] -->
+	            <synonym value="Koto-type"/>
 	        </heading>
+			<heading id="LuteInstrument" title="Lute">
+				<synonym value="Lutes"/>
+			</heading>
+			<heading id="Lyre" title="Lyre">
+    	        <synonym value="Lyres"/>
+    	        <synonym value="Bowl-Lyre"/> <!-- infer bowl shape, not material made of bowls -->
+    	        <synonym value="Bowl-Lyres"/>
+    	        <synonym value="Bowl Lyre"/>
+    	        <synonym value="Bowl Lyres"/>
+    	    </heading>	        
 	        <heading id="Sitar" title="Sitar">
 	            <synonym value="Sitars"/>
 	        </heading>
 	        <heading id="Ukelele" title="Ukelele">
 	            <synonym value="Ukeleles"/>
 	        </heading>
-	        <heading id="Zither" title="Zither">
+    	    <heading id="Zither" title="Zither">
 	            <synonym value="Zithers"/>
 	        </heading>
 	    </heading>
@@ -2491,20 +2665,36 @@
 	        	<synonym value="Womans Bangles"/>
 	        	<synonym value="Womans Bangle"/>
 	        </heading>
-	        <heading id="Beater" title="Beater">
+	    	<heading id="Beater" title="Beater"> <!-- beaters/sticks exclusively not intended for drum use -->
 	            <synonym value="Beaters"/>
 	        	<synonym value="Rhythym Stick"/>
 	        	<synonym value="Rhythym Sticks"/>
 	        	<synonym value="Rhythym-Stick"/>
 	        	<synonym value="Rhythym-Sticks"/>
-	        	<excl value="Seed Beater"/>
+	    		<synonym value="Bamboo Clapper"/>
+	    		<synonym value="Bamboo Clappers"/>
+	    		<synonym value="Bamboo Stick"/>
+	    		<synonym value="Bamboo Sticks"/> <!-- "bamboo object" from TMS: "one piece attached at one end then cut into two to be hit together to make sound. Used in theatrical performances" -->
+	    		<synonym value="Kalutang Stick"/>	    		
+	    		<synonym value="Kalutang Sticks"/>
+	    		<synonym value="Kalutang"/>
+	    		<synonym value="Kalutangs"/> 
+	    		<synonym value="Pu-ili Stick"/>	    		
+	    		<synonym value="Pu-ili Sticks"/>
+	    		<synonym value="Pu-ili"/>
+	    		<synonym value="Pu-ilis"/>
+	    		<synonym value="Pu'ili Stick"/>	    		
+	    		<synonym value="Pu'ili Sticks"/>
+	    		<synonym value="Pu'ili"/>
+	    		<synonym value="Pu'ilis"/>
+	    		<excl value="Seed Beater"/>
 	            <excl value="Seed Beaters"/>
 	            <excl value="Seed-Beater"/>
 	            <excl value="Seed-Beaters"/>
-	        	<excl value="Drum"/> <!-- beaters not specifically for drum use -->
+	        	<excl value="Drum"/> 
 	        	<excl value="Drums"/>
 	        </heading>
-	        <heading id="Bell" title="Bell">
+	        <heading id="Bell" title="Bell"> <!-- includes: chimes, leg, ghanta, horn, animal -->
 	            <synonym value="Bells"/>	        	
 	        	<heading id="OccasionSpecificBell" title="Bell by use" nomatch="true">
 	        		<heading id="HuntingBell" title="Hunting Bell">
@@ -2518,6 +2708,9 @@
 	        			<synonym value="Bell Ornaments"/>
 	        		</heading>
 	        	</heading>	
+	        	<heading id="ChimeInstrument" title="Chime">
+	        		<synonym value="Chimes"/>
+	        	</heading>
 	        	<heading id="LegBell" title="Leg Bells">
 	        		<synonym value="Leg Bell"/>
 	        		<synonym value="Legbell"/>	        	
@@ -2526,6 +2719,11 @@
 	        		<synonym value="Ankle Bells"/>
 	        		<synonym value="Anklebell"/>	        	
 	        		<synonym value="Anklebells"/>
+	        	</heading>
+	        	<heading id="GhantaBell" title="Ghanta Bell">
+	        		<synonym value="Ghanta Bells"/>
+	        		<synonym value="Ghanta"/>	        	
+	        		<synonym value="Ghantas"/>
 	        	</heading>
 	        	<heading id="HornBell" title="Horn Bells"> <!-- horn as instrument, not as material of bell -->
 	        		<synonym value="Horn Bell"/>	
@@ -2585,7 +2783,7 @@
 	        <heading id="Castanet" title="Castanet">
 	            <synonym value="Castanets"/>
 	        </heading>
-	        <heading id="Cymbal" title="Cymbal">
+	        <heading id="Cymbal" title="Cymbal"> <!-- includes: finger, hand, rolmo, tingsha -->
 	            <synonym value="Cymbals"/>
 	        	<heading id="FingerCymbal" title="Finger Cymbal">			
 	        		<synonym value="Finger Cymbals"/>
@@ -2608,8 +2806,8 @@
 	        		<synonym value="Tingshas"/>
 	        	</heading>
 	        </heading>
-	        <heading id="Drums" title="Drums">
-	            <synonym value="Drum"/>
+	    	<heading id="Drums" title="Drums"> <!-- includes: box, doublehead, set, sticks, gourd, hourglass/damaru, laced, slit/split/teponaztli, snare, water  -->
+	            <synonym value="Drum"/> 
 	        	<heading id="OccasionSpecificDrum" title="Drum by use" nomatch="true">
 	        		<heading id="ShamanDrum" title="Shaman Drum">
 	        			<synonym value="Shaman Drums"/>
@@ -2667,7 +2865,15 @@
 	        	<heading id="HourGlassDrum" title="Hour-Glass Drum">
 	        		<synonym value="Hour-Glass Drums"/>
 	        		<synonym value="Hour Glass Drum"/>
-	        		<synonym value="Hour Glass Drums"/>
+	        		<synonym value="Hour Glass Drums"/>  
+	        		<synonym value="Damaru Drum"/>
+	        		<synonym value="Damaru Drums"/>
+	        		<synonym value="Damaru"/>
+	        		<synonym value="Damarus"/>
+	        		<synonym value="Damru Drum"/>
+	        		<synonym value="Damru Drums"/>
+	        		<synonym value="Damru"/>
+	        		<synonym value="Damrus"/>
 	        	</heading>
 	        	<heading id="LacedDrum" title="Laced Drum">
 	        		<synonym value="Laced Drums"/>
@@ -2678,6 +2884,10 @@
 	                <synonym value="Slit Drums"/>
 	        		<synonym value="Slit-Drum"/>
 	        		<synonym value="Slit-Drums"/>
+	        		<synonym value="Teponaztli Drum"/>
+	        		<synonym value="Teponaztli Drums"/>
+	        		<synonym value="Teponaztli"/>
+	        		<synonym value="Teponaztlis"/>
 	        		<synonym value="Log Slit Drum"/>
 	        		<synonym value="Log Slit Drums"/>
 	        		<synonym value="Log-Slit Drum"/>
@@ -2706,7 +2916,7 @@
 	        	<heading id="Snaredrum" title="Snare Drum">
 	        		<synonym value="Snare Drums"/>
 	        	</heading>
-	        	<heading id="WaterDrum" title="Water Drum">
+	    		<heading id="WaterDrum" title="Water Drum">
 	        		<synonym value="Water Drums"/>
 	        		<synonym value="Half-Gourd Water Drum"/>
 	        		<synonym value="Half-Gourd Water Drums"/>
@@ -2739,7 +2949,7 @@
 	    		<synonym value="Jaw's Harp"/>
 	    		<synonym value="Jaw's Harps"/>
 	    	</heading>
-	    	<heading id="Metallophones" title="Metallophones">
+	    	<heading id="Metallophones" title="Metallophones"> <!-- includes: gendr, gangsa, saron, glockenspiel, vibraphone, xylophone  -->
 	            <synonym value="Metallophone"/>
 	            <heading id="Gendr" title="Gendr">
 	                <synonym value="Gendr"/>
@@ -2756,7 +2966,10 @@
 	            <heading id="Vibraphone" title="Vibraphone">
 	                <synonym value="Vibraphones"/>
 	            </heading>
-	        </heading>
+	    	    <heading id="Xylophone" title="Xylophone">
+	    	        <synonym value="Xylophones"/>
+	    	    </heading>
+	    	</heading>
 	        <heading id="MouthOrgan" title="Mouth Organ">
 	            <synonym value="Mouth Organs"/>
 	        </heading>
@@ -2765,7 +2978,7 @@
 	    		<synonym value="Rasp and Wire"/>
 	    		<synonym value="Wire and Rasp"/>
 	    	</heading>
-	    	<heading id="Rattles" title="Rattles">
+	    	<heading id="Rattles" title="Rattles"> <!-- implied materials: armadillo, bark, cane, claw, coccoon, copper, fur, gourd, gravel, hoof, horn, shell, seed, turtle -->
 	            <synonym value="Rattle"/>
 	            <synonym value="Rattler"/>
 	            <synonym value="Rattlers"/>
@@ -2806,18 +3019,20 @@
 	            <heading id="AmuletRattle" title="Amulet Rattle">
 	                <synonym value="Amulet Rattles"/>
 	            </heading>
-	            <heading id="Armadillo-Tail Rattle" title="Armadillo-Tail Rattle">
+	    		<heading id="Armadillo-Tail Rattle" title="Armadillo-Tail Rattle"> <!-- implied materials: armadillo -->
 	                <synonym value="Armadillo-Tail Rattles"/>
 	                <synonym value="Armadillo Tail Rattle"/>
 	                <synonym value="Armadillo Tail Rattles"/>
+	            	<implies facet="Materials_facet" cat="ArmadilloAnimalMaterial"/>
 	            </heading> 
 	            <heading id="BabyRattle" title="Baby Rattle">
 	                <synonym value="Baby Rattles"/>
 	                <synonym value="Baby Rattler"/>
 	                <synonym value="Baby Rattlers"/>
 	            </heading>
-	            <heading id="BarkRattle" title="Bark Rattle">
+	    		<heading id="BarkRattle" title="Bark Rattle"> <!-- implied materials: bark -->
 	                <synonym value="Bark Rattles"/>
+	            	<implies facet="Materials_facet" cat="BarkPlantMaterial"/>
 	            </heading>
 	            <heading id="BasketryRattle" title="Basketry Rattle">
 	                <synonym value="Basketry Rattles"/>
@@ -2878,8 +3093,9 @@
 	    			<synonym value="Calabashes"/>
 	    			<synonym value="Calabashs"/>
 	    		</heading>
-	    		<heading id="CaneRattle" title="Cane Rattle">
+	    		<heading id="CaneRattle" title="Cane Rattle"> <!-- implied materials: cane -->
 	                <synonym value="Cane Rattles"/>
+	    			<implies facet="Materials_facet" cat="CaneAnimalMaterial"/>
 	            </heading>
 	            <heading id="CarvedRattle" title="Carved Rattle">
 	                <synonym value="Carved Rattles"/>
@@ -2887,7 +3103,7 @@
 	        	<heading id="ChimuRattle" title="Chimu Rattle">
 	        		<synonym value="Chimu Rattles"/>
 	        	</heading>
-	        	<heading id="ClapstickRattle" title="Clap/Splitstick Rattle">
+	        	<heading id="ClapstickRattle" title="Clap/Splitstick Rattle"> <!-- includes Pu'ili -->
 	                <synonym value="Clapstick Rattles"/>
 	                <synonym value="Clapstick"/>
 	                <synonym value="Clapsticks"/>
@@ -2914,19 +3130,30 @@
 	                <synonym value="Paddle-Shaped Rattles"/>
 	                <synonym value="Paddle Shaped Rattle"/>
 	                <synonym value="Paddle Shaped Rattles"/>
+	        		<synonym value="Pu-ili Stick"/>	    		
+	        		<synonym value="Pu-ili Sticks"/>
+	        		<synonym value="Pu-ili"/>
+	        		<synonym value="Pu-ilis"/>
+	        		<synonym value="Pu'ili Stick"/>	    		
+	        		<synonym value="Pu'ili Sticks"/>
+	        		<synonym value="Pu'ili"/>
+	        		<synonym value="Pu'ilis"/>
 	            </heading>
-	        	<heading id="ClawRattle" title="Claw Rattle">
+	    		<heading id="ClawRattle" title="Claw Rattle"> <!-- implied materials: claw -->
 	        		<synonym value="Claw Rattles"/>
 	        		<synonym value="Crab Claw Rattle"/>
 	        		<synonym value="Crab Claw Rattles"/>
 	        		<synonym value="Crab-Claw Rattle"/>
 	        		<synonym value="Crab-Claw Rattles"/>
+	        		<implies facet="Materials_facet" cat="ClawAnimalMaterial"/>
 	        	</heading>
-	        	<heading id="CoccoonRattle" title="Coccoon Rattle">
+	    		<heading id="CoccoonRattle" title="Coccoon Rattle"> <!-- implied materials: coccoon -->
 	                <synonym value="Coccoon Rattles"/>
+	        		<implies facet="Materials_facet" cat="CoccoonAnimalMaterial"/>
 	            </heading>
-	            <heading id="CopperRattle" title="Copper Rattle">
+	    		<heading id="CopperRattle" title="Copper Rattle"> <!-- implied materials: copper -->
 	                <synonym value="Copper Rattles"/>
+	            	<implies facet="Materials_facet" cat="CopperMaterial"/>
 	            </heading>
 	            <heading id="CuiaRattle" title="Cuia Rattle">
 	                <synonym value="Cuia Rattles"/>
@@ -2939,21 +3166,25 @@
 	        		<synonym value="Finger Piano and Rattle"/>
 	        		<synonym value="Finger Piano and Rattles"/>
 	        	</heading>
-	        	<heading id="FurRattle" title="Fur Rattle">
+	    		<heading id="FurRattle" title="Fur Rattle"> <!-- implied materials: fur -->
 	                <synonym value="Fur Rattles"/>
+	        		<implies facet="Materials_facet" cat="FurAnimalMaterial"/>
 	            </heading>
 	            <heading id="Goite-Husk Rattle" title="Goite-Husk Rattle">
 	                <synonym value="Goite-Husk Rattles"/>
 	                <synonym value="Goite Husk Rattles"/>
 	                <synonym value="Goite Husk Rattle"/>
 	            </heading> 
-	            <heading id="GourdRattle" title="Gourd Rattle">
+	    		<heading id="GourdRattle" title="Gourd Rattle"> <!-- implied materials: gourd -->
 	                <synonym value="Gourd Rattles"/>
+	            	<implies facet="Materials_facet" cat="GourdAnimalMaterial"/>
 	            </heading>
-	            <heading id="GravelCoccoonRattle" title="Gravel-Coccoon Rattle">
+	    		<heading id="GravelCoccoonRattle" title="Gravel-Coccoon Rattle"> <!-- implied materials: cocoon, gravel -->
 	                <synonym value="Gravel-Coccoon Rattles"/>
 	                <synonym value="Gravel Coccoon Rattles"/>
 	                <synonym value="Gravel Coccoon Rattle"/>
+	            	<implies facet="Materials_facet" cat="CocoonAnimalMaterial"/>
+	            	<implies facet="Materials_facet" cat="GravelMaterial"/>
 	            </heading> 
 	        	<heading id="HandRattle" title="Hand Rattle">
 	        		<synonym value="Hand Rattles"/>
@@ -2962,7 +3193,7 @@
 	        		<excl value="Bracelet"/>
 	        		<excl value="Bracelets"/>
 	        	</heading>
-	        	<heading id="HoofRattle" title="Hoof Rattle">
+	    		<heading id="HoofRattle" title="Hoof Rattle"> <!-- implied materials: hoof -->
 	                <synonym value="Hoof Rattles"/>
 	                <synonym value="Hoofs Rattle"/>
 	                <synonym value="Hoofs Rattles"/>
@@ -2994,9 +3225,11 @@
 	                <synonym value="Bison Hooved Rattles"/>
 	                <synonym value="Bison-Hooves Rattle"/>
 	                <synonym value="Bison-Hooves Rattles"/>
+	        		<implies facet="Materials_facet" cat="HoofAnimalMaterial"/>
 	            </heading>
-	            <heading id="HornRattle" title="Horn Rattle">
+	    		<heading id="HornRattle" title="Horn Rattle"> <!-- implied materials: horn -->
 	                <synonym value="Horn Rattles"/>
+	            	<implies facet="Materials_facet" cat="HornAnimalMaterial"/>
 	            </heading>
 	            <heading id="LegRattle" title="Leg Rattle">
 	                <synonym value="Leg Rattles"/>       
@@ -3032,7 +3265,7 @@
 	            <heading id="PeyoteRattle" title="Peyote">
 	                <synonym value="Peyote Rattles"/>       
 	            </heading>
-	            <heading id="SeaShellRattle" title="Sea Shell Rattle">
+	    		<heading id="SeaShellRattle" title="Sea Shell Rattle"> <!-- implied materials: shell -->
 	                <synonym value="Sea Shell Rattles"/>
 	                <synonym value="Seashell Rattle"/>
 	                <synonym value="Seashell Rattles"/>
@@ -3040,13 +3273,15 @@
 	                <synonym value="Shell Rattles"/>
 	                <excl value="Turtle"/>
 	                <excl value="Turtles"/>
+	            	<implies facet="Materials_facet" cat="ShellMaterial"/> 
 	            </heading>
-	        	<heading id="SeedRattle" title="Seed Rattle">
+	        	<heading id="SeedRattle" title="Seed Rattle"> <!-- implied materials: seed -->
 	        		<synonym value="Seed Rattles"/>
 	        		<synonym value="Pod Rattle"/>
 	        		<synonym value="Pod Rattles"/>
 	        		<synonym value="Seed Pod Rattle"/>
 	        		<synonym value="Seed Pod Rattles"/>
+	        		<implies facet="Materials_facet" cat="SeedPlantMaterial"/> 
 	        	</heading>
 	        	<heading id="SistrumRattle" title="Sistrum">
 	                <synonym value="Sistrums"/>
@@ -3066,7 +3301,7 @@
 	            <heading id="TotemicRattle" title="Totemic Rattle">
 	                <synonym value="Totemic Rattles"/>       
 	            </heading>
-	            <heading id="TurtleShellRattle" title="Turtle Shell Rattle">
+	    		<heading id="TurtleShellRattle" title="Turtle Shell Rattle"> <!-- implied materials: turtle -->
 	                <synonym value="Turtle Shell Rattles"/>
 	                <synonym value="Turtle Rattle"/>
 	                <synonym value="Turtle Rattles"/>
@@ -3078,9 +3313,10 @@
 	                <synonym value="Shell Rattles"/>
 	                <excl value="Sea"/> <!-- To exclude seashell rattles -->
 	                <excl value="Seashell"/> <!-- Ibid. -->
+	            	<implies facet="Materials_facet" cat="TurtleAnimalMaterial"/> 
 	            </heading>
 	        </heading>
-	        <heading id="Sanza" title="Sanza">
+	        <heading id="Sanza" title="Sanza"> <!-- includes Mbiras -->
 	            <synonym value="Sansas"/>
 	            <synonym value="Zanza"/>
 	            <synonym value="Zanzas"/>
@@ -3123,9 +3359,6 @@
 	        <heading id="Tapper" title="Tapper">
 	            <synonym value="Tappers"/>
 	        </heading>
-	        <heading id="Xylophone" title="Xylophone">
-	            <synonym value="Xylophones"/>
-	        </heading>
 	    	<heading id="MusicalWashboard" title="Musical Washboard">
 	    		<synonym value="Musical Washboards"/>
 	    		<synonym value="Washboard Instrument"/>
@@ -3137,16 +3370,26 @@
 	    </heading>
 	    <heading id="WindInstruments" title="Wind Instruments">
 	        <synonym value="Wind Instrument"/>
-	    	<synonym value="Aerophone"/>			
+	        <synonym value="Musical Wind Instrument"/>
+	        <synonym value="Musical Wind Instruments"/>
+	        <synonym value="Aerophone"/>			
 	        <synonym value="Aerophones"/>
 	        <heading id="Bullroarer" title="Bullroarer">
 	        	<synonym value="Bullroarers"/>
 	        	<synonym value="Bull-roarer"/>
 	        	<synonym value="Bull-roarers"/>
 	        </heading>
+	    	<heading id="Didgeridoo" title="Didgeridoo">
+	    		<synonym value="Didgeridoos"/>
+	    		<synonym value="Drone Pipe"/>
+	    		<synonym value="Drone Pipes"/>
+	    	</heading>	    	
 	    	<heading id="FluteInstrument" title="Flute"> <!-- includes panpipe/flute, pipe, recorder, flageolet / implied materials: bamboo, bone, cane, reed, metal, wood/en -->
 	            <synonym value="Flutes"/>
-	    			<heading id="FlageoletInstrument" title="Flageolet">
+	    	    <synonym value="Musical Flute"/>
+	    	    <synonym value="Musical Flutes"/>
+	    		<excl value="fluted" /> <!-- exclude sculpted description, not musical instrument -->
+	    	    <heading id="FlageoletInstrument" title="Flageolet">
 	    				<synonym value="Flageolets"/>
 	    				<synonym value="2/1 Hole Flageolet"/>
 	    				<synonym value="4/2 Hole Flageolet"/>
@@ -3157,7 +3400,7 @@
 	    				<synonym value="2/1-Hole Flageolets"/>
 	    				<synonym value="4/2-Hole Flageolets"/>
 	    			</heading>
-	    			<heading id="Panpipe" title="Panpipe"> <!-- excludes "single"  / implied materials: reed -->
+	    			<heading id="Panpipe" title="Panpipe"> <!-- excludes single / implied materials: reed -->
 	    				<synonym value="Panpipes"/>
 	    				<heading id="ReedPanpipe" title="Reed Panpipe">
 	    					<synonym value="Reed Panipe"/> <!-- sound is produced by reed (pipe not necessarily made of reed material) -->
@@ -3184,13 +3427,13 @@
 	    					<implies facet="Materials_facet" cat="ReedPlantMaterial"/>
 	    				</heading>
 	    			</heading>
-	    			<heading id="PipeInstrument" title="Pipe"> <!-- excludes "pan" -->
+	    			<heading id="PipeInstrument" title="Pipe"> <!-- excludes pan -->
 	    				<synonym value="Pipes"/>	    		
 	    				<synonym value="Set of Single Pipes"/>
 	    				<synonym value="Sets of Single Pipes"/>
 	    				<synonym value="Single Pipe"/>		    		
 	    				<synonym value="Single Pipes"/>
-	    				<excl value="Pan"/> 
+	    				<excl value="Pan"/>
 	    			</heading>
 	    			<heading id="RecorderInstrument" title="Recorder">
 	    				<synonym value="Recorders"/>
@@ -3209,7 +3452,7 @@
 	    			<synonym value="Cane Flutes"/>
 	    			<implies facet="Materials_facet" cat="CanePlantMaterial"/>
 	    		</heading>
-	    		<heading id="MetalFlute" title="Metal Flute">
+	    		<heading id="MetalFlute" title="Metal Flute"> <!-- excludes: pipe -->
 	    			<synonym value="Metal Flutes"/>
 	    			<synonym value="Metal-Pipe Flute"/>
 	    			<synonym value="Metal-Pipe Flutes"/>
@@ -3219,15 +3462,18 @@
 	    			<excl value="Pipes"/> 
 	    			<implies facet="Materials_facet" cat="MetalMaterial"/>
 	    		</heading>
-	    		<heading id="WoodenFlute" title="Wooden Flute">
+	    	    <heading id="NoseFlute" title="Nose Flute">
+	    	        <synonym value="Nose Flutes"/>
+	    	    </heading>
+	    	    <heading id="WoodenFlute" title="Wooden Flute">
 	    			<synonym value="Wooden Flutes"/>
 	    			<synonym value="Wood Flute"/>
 	    			<synonym value="Wood Flutes"/>
 	    			<implies facet="Materials_facet" cat="WoodPlantMaterial"/>
 	    		</heading>
-	    		<heading id="ReedFlute" title="Reed Flute">
+	    	    <heading id="ReedFlute" title="Reed Flute"> <!-- sound is produced by reed (flute not necessarily made of reed material) -->
 	    			<synonym value="Reed Flutes"/>
-	    			<synonym value="Reed Flute"/> <!-- sound is produced by reed (flute not necessarily made of reed material) -->
+	    			<synonym value="Reed Flute"/> 
 	    			<synonym value="Reed Flutes"/>
 	    			<synonym value="Cone Flute"/>
 	    			<synonym value="Cone Flutes"/>
@@ -3337,6 +3583,13 @@
 	    			<implies facet="Materials_facet" cat="PotteryMaterial"/>
 	    		</heading>
 	    	</heading>
+	    	<heading id="Organ" title="Organ"> <!-- includes reed, harmonium -->
+	        	<synonym value="Organs"/>
+	        	<synonym value="Reed Organ"/> <!-- sound is produced by reed (organ not necessarily made of reed material) -->
+	        	<synonym value="Reed Organs"/>
+	        	<synonym value="Harmonium"/> 
+	        	<synonym value="Harmoniums"/>
+	        </heading>
 	        <heading id="Trumpet" title="Trumpet"> <!-- implied materials: bamboo, brass -->
 	            <synonym value="Trumpets"/>
 	        	<heading id="BambooTrumpet" title="Bamboo Trumpet">
