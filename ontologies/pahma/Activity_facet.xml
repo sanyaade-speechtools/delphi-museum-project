@@ -7,8 +7,8 @@
 		<!-- This is a temporary section, to speed up entry
 			by making it easier to locate and copy syntax examples:
 			
-			<implies facet="Activity_facet" cat="Millinery"/>
-			<implies facet="Activity_facet" cat="Metallurgy"/>
+			<implies facet="ActivityorContext" cat="Millinery"/>
+			<implies facet="ActivityorContext" cat="Metallurgy"/>
 			<synonym value="Drawings"/>
 			<excl value="photographic plate"/>
 			<excl value="Black Oak"/>
@@ -188,7 +188,7 @@
 				</heading>
 				<heading id="StrawberryFestival" title="Strawberry Festival">
 					<synonym value="Strawberry Festivals"/>
-					<implies facet="Culture_facet" cat="KashayaPomo"/>
+					<implies facet="Culture" cat="KashayaPomo"/>
 				</heading>
 			</heading>
 			<heading id="HoliFestival" title="Holi Festival">
@@ -196,7 +196,7 @@
 			</heading>
 			<heading id="JunkanooFestival" title="Junkanoo Festival">
 				<synonym value="Junkanoo Festivals"/>
-				<implies facet="Location_facet" cat="TheBahamas"/>
+				<implies facet="Location" cat="TheBahamas"/>
 			</heading>
 			<heading id="Só'iFestival" title="Só'i Festival"> <!-- Mortuary festival -->
 				<synonym value="Só'i Festivals"/>
@@ -263,25 +263,25 @@
 			<heading id="DrinkingAlcohol" title="Drinking Alcohol">
 				<heading id="BeerDrinking" title="Beer Drinking">
 					<synonym value="Drinking Beer"/>
-					<implies facet="Activity_facet" cat="DrugsAlcoholBeer"/>
+					<implies facet="ActivityorContext" cat="DrugsAlcoholBeer"/>
 				</heading>
 				<heading id="LiquorDrinking" title="Liquor Drinking">
 					<synonym value="Drinking Liquor"/>
-					<implies facet="Activity_facet" cat="DrugsAlcoholLiqour"/>
+					<implies facet="ActivityorContext" cat="DrugsAlcoholLiqour"/>
 				</heading>
 				<heading id="WineDrinking" title="Wine Drinking">
 					<synonym value="Drinking Wine"/>
-					<implies facet="Activity_facet" cat="DrugsAlcoholWine"/>
+					<implies facet="ActivityorContext" cat="DrugsAlcoholWine"/>
 				</heading>
 			</heading>
 			<heading id="OtherDrinking" title="Other Drinking">
 				<heading id="CoffeeDrinking" title="Coffee Drinking">
 					<synonym value="Drinking Coffee"/>
-					<implies facet="Activity_facet" cat="CoffeeCaffeineStimulant"/>
+					<implies facet="ActivityorContext" cat="CoffeeCaffeineStimulant"/>
 				</heading>
 				<heading id="TeaDrinking" title="Tea Drinking">
 					<synonym value="Drinking Tea"/>
-					<implies facet="Activity_facet" cat="TeaCaffeineStimulant"/>
+					<implies facet="ActivityorContext" cat="TeaCaffeineStimulant"/>
 				</heading>
 			</heading>
 		</heading>
