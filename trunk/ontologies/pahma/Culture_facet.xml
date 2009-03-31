@@ -23,13 +23,13 @@
 		<heading id="ModernAfricancultures" title="African cultures">
 			<heading id="NorthernAfricanGroups" title="North Africa" noMatch="true">
 				<heading id="AlgerianGroups" title="Algerian">
-					<implies facet="Location_facet" cat="Algeria"/>
+					<implies facet="Location" cat="Algeria"/>
 				</heading>
 				<heading id="EgyptianGroups" title="Egyptian">
-					<implies facet="Location_facet" cat="EgyptCountry"/>
+					<implies facet="Location" cat="EgyptCountry"/>
 				</heading>
 				<heading id="NubianGroups" title="Nubian">
-					<!-- <implies facet="Location_facet" cat="NubiaCountry"/> For when we can link to past locations -->
+					<!-- <implies facet="Location" cat="NubiaCountry"/> For when we can link to past locations -->
 				</heading>
 				<heading id="TuaregGroups" title="Tuareg">
 					<synonym value="Imuhagh"/>
@@ -55,35 +55,35 @@
 					</heading>
 					<heading id="IraqwTribe" title="Iraqw">
 						<synonym value="Iraqw people"/>
-						<implies facet="Location_facet" cat="TanzaniaCountry"/>
+						<implies facet="Location" cat="TanzaniaCountry"/>
 						<heading id="IraqwAkonaayClan" title="Akonaay clan">
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwEtlaweClan" title="Etlawe clan">
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwGurtiClan" title="Gurti clan">
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwHayFissoClan" title="Hay-Fisso clan">
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwHayGhaymoClan" title="Hay-Ghaymo clan"> <!-- Same as Hay-Gharmo clan? -->
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwHayGharmoClan" title="Hay-Gharmo clan"> <!-- Same as Hay-Ghaymo clan? -->
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwHayLoloClan" title="Hay-Lolo clan"/>
 						<heading id="IraqwHayOamoClan" title="Hay-Oamo clan">
 							<synonym value="Hay-Qamo clan"/>
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwHayParetoClan" title="Hay-Pareto clan">
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 						<heading id="IraqwHaySankaClan" title="Hay-Sanka clan">
-							<implies facet="Location_facet" cat="DatlaaVillTanz"/>
+							<implies facet="Location" cat="DatlaaVillTanz"/>
 						</heading>
 					</heading>
 					<heading id="KambaTribe" title="Kamba"/>
@@ -148,11 +148,11 @@
 					<synonym value="Beembe"/>
 					<synonym value="Mbembe"/>
 					<synonym value="Wabembe"/>
-					<implies facet="Location_facet" cat="DemocraticRepublicoftheCongo"/>
+					<implies facet="Location" cat="DemocraticRepublicoftheCongo"/>
 				</heading>
 				<heading id="BenaLuluaTribe" title="Bena Lulua">
 					<synonym value="Lulua"/>
-					<implies facet="Location_facet" cat="DemocraticRepublicoftheCongo"/>
+					<implies facet="Location" cat="DemocraticRepublicoftheCongo"/>
 				</heading>
 				<heading id="ChokweTribe" title="Chokwe"/>
 				<heading id="CongoBrazzavilleTribes" title="Congo-Brazzaville">
@@ -225,7 +225,7 @@
 					<synonym value="Balega"/>
 					<synonym value="Rega"/>
 					<synonym value="Warega"/>
-					<implies facet="Location_facet" cat="DemocraticRepublicoftheCongo"/>
+					<implies facet="Location" cat="DemocraticRepublicoftheCongo"/>
 				</heading>
 				<heading id="LoziTribe" title="Lozi"/>
 				<heading id="LuchaziTribe" title="Luchazi"/>
@@ -240,7 +240,7 @@
 			</heading>
 			<heading id="WestAfricanTribes" title="West Africa" noMatch="true">
 				<heading id="CameroonTribes" title="Cameroon" noMatch="true">
-					<implies facet="Location_facet" cat="CameroonCountry"/>
+					<implies facet="Location" cat="CameroonCountry"/>
 					<heading id="BamumTribe" title="Bamum"/>
 					<heading id="EwondoTribe" title="Ewondo">
 						<synonym value="Yaunde"/>
@@ -255,7 +255,7 @@
 				<heading id="FonTribe" title="Fon"/>
 				<heading id="KutaTribe" title="Kuta"/>
 				<heading id="GabonTribes" title="Gabon" noMatch="true">
-					<implies facet="Location_facet" cat="GabonCountry"/>
+					<implies facet="Location" cat="GabonCountry"/>
 					<heading id="FangTribe" title="Fang"/>
 					<heading id="TsogoTribe" title="Tsogo">
 						<synonym value="Mitsogho"/>
@@ -266,7 +266,7 @@
 					</heading>
 				</heading>
 				<heading id="GhanaTribes" title="Ghana" noMatch="true">
-					<implies facet="Location_facet" cat="GhanaCountry"/>
+					<implies facet="Location" cat="GhanaCountry"/>
 					<heading id="AshantiTribe" title="Ashanti">
 						<synonym value="Asante"/>
 					</heading>
@@ -274,7 +274,7 @@
 					<heading id="LobiTribe" title="Lobi"/>
 				</heading>
 				<heading id="IvoryCoastTribes" title="Ivory Coast" noMatch="true">
-					<implies facet="Location_facet" cat="CotedIvoire"/>
+					<implies facet="Location" cat="CotedIvoire"/>
 					<heading id="AnyiTribe" title="Anyi">
 						<synonym value="Agni"/>
 					</heading>
@@ -304,7 +304,7 @@
 					</heading>
 				</heading>
 				<heading id="LiberianTribes" title="Liberia" noMatch="true">
-					<implies facet="Location_facet" cat="LiberiaCountry"/>
+					<implies facet="Location" cat="LiberiaCountry"/>
 					<heading id="BandiTribe" title="Bandi"/>
 					<heading id="BassaTribe" title="Bassa"/>
 					<heading id="KpelleTribe" title="Kpelle"/>
@@ -312,7 +312,7 @@
 					<heading id="LomaTribe" title="Loma"/>
 				</heading>
 				<heading id="MaliTribes" title="Mali" noMatch="true">
-					<implies facet="Location_facet" cat="MaliCountry"/>
+					<implies facet="Location" cat="MaliCountry"/>
 					<heading id="BambaraTribe" title="Bambara">
 						<synonym value="Bamana"/>
 					</heading>
@@ -331,7 +331,7 @@
 					<synonym value="Mendi"/>
 				</heading>
 				<heading id="NigerianTribes" title="Nigeria" noMatch="true">
-					<implies facet="Location_facet" cat="Nigeria"/>
+					<implies facet="Location" cat="Nigeria"/>
 					<heading id="BeninTribe" title="Benin">
 						<synonym value="Bibi"/>
 					</heading>
@@ -1394,7 +1394,7 @@
 							</heading>
 							<heading id="WashoIndians" title="Washo">
 								<synonym value="Washoe"/>
-								<implies facet="Culture_facet" cat="MissionDieguenoIndians"/>
+								<implies facet="Culture" cat="MissionDieguenoIndians"/>
 							</heading>
 							<heading id="YukiIndians" title="Yuki">
 								<synonym value="Yuke"/>
@@ -1761,7 +1761,7 @@
 							<heading id="WesternMonoIndians" title="Western Mono">
 								<synonym value="Monache"/>
 								<synonym value="Owens Valley Paiute"/>
-								<implies facet="Culture_facet" cat="BasinWesternMonoIndians"/>
+								<implies facet="Culture" cat="BasinWesternMonoIndians"/>
 								<heading id="TuhukwadjIndians" title="Tuhukwadj"/>
 								<heading id="WuksachiIndians" title="Wuksachi"/>
 								<heading id="WobonutcIndians" title="Wobonutc"/>
@@ -1795,7 +1795,7 @@
 								<synonym value="Los Coyotes Band of Cahuilla"/>
 								<synonym value="Los Coyotes Cahuilla"/>
 								<synonym value="Tecuiche"/>
-								<implies facet="Culture_facet" cat="MissionCahuillaIndians"/>
+								<implies facet="Culture" cat="MissionCahuillaIndians"/>
 							</heading>
 							<heading id="ChumashIndians" title="Chumash">
 								<heading id="InteriorChumashIndians" title="Interior Chumash">
@@ -1878,7 +1878,7 @@
 								<synonym value="Ipai"/>
 								<synonym value="Tipai"/>
 								<synonym value="Tipai-Ipai"/>
-								<implies facet="Culture_facet" cat="MissionDieguenoIndians"/>
+								<implies facet="Culture" cat="MissionDieguenoIndians"/>
 								<heading id="KumeyaayIndians" title="Kumeyaay">
 									<synonym value="Campo Band of Mission Indians"/>
 									<synonym value="Campo Kumeyaay Nation"/>
@@ -1923,7 +1923,7 @@
 								<synonym value="Tobikhars"/>
 								<synonym value="Tongva"/>
 								<synonym value="Tumamqamalum"/>
-								<implies facet="Culture_facet" cat="MissionGabrielinoIndians"/>
+								<implies facet="Culture" cat="MissionGabrielinoIndians"/>
 							</heading>
 							<heading id="JuanenoIndians" title="Juaneño">
 								<synonym value="Acagchemem"/>
@@ -1939,7 +1939,7 @@
 								<synonym value="Juaneo"/>  <!-- In some cases, the tilde-n is completely omitted -->
 								<synonym value="Natano"/>
 								<synonym value="Acjachemen Nation"/>
-								<implies facet="Culture_facet" cat="MissionJuanenoIndians"/>
+								<implies facet="Culture" cat="MissionJuanenoIndians"/>
 							</heading>
 							<heading id="LuisenoIndians" title="Luiseño">
 								<synonym value="Acagchemem"/>
@@ -1956,7 +1956,7 @@
 								<synonym value="Quechnajuichom"/>
 								<synonym value="Sanjuanenos"/>
 								<synonym value="San Luisienos"/>
-								<implies facet="Culture_facet" cat="MissionLuisenoIndians"/>
+								<implies facet="Culture" cat="MissionLuisenoIndians"/>
 							</heading>
 							<heading id="SerranoIndians" title="Serrano">
 								<synonym value="Maringints"/>
@@ -2273,7 +2273,7 @@
 						<heading id="SiouxIndians" title="Sioux">
 							<synonym value="Dakota"/>
 							<header value="Sioux from Pine Ridge Reservation, South Dakota"> <!-- TRIM this from the UI -->
-								<implies facet="Location_facet" cat="PineRidgeReservation"/>
+								<implies facet="Location" cat="PineRidgeReservation"/>
 							</header>
 							<heading id="IsantiSiouxIndians" title="Santee">
 								<synonym value="Isanti"/>
@@ -2477,7 +2477,7 @@
 						</heading>
 						<heading id="RoanokeIndians" title="Roanoke"/>
 						<heading id="SeminoleIndians" title="Seminole">
-							<implies facet="Location_facet" cat="FloridaState"/>
+							<implies facet="Location" cat="FloridaState"/>
 						</heading>
 						<heading id="Tunica" title="Tunica"/>
 					</heading>
@@ -2566,7 +2566,7 @@
 						<heading id="TohonoOodhamIndians" title="Tohono O'odham">
 							<synonym value="Papago"/>
 							<synonym value="Papago, Santa Rosa, Arizona">  <!-- is this synonym-implies structure legal? -->
-								<implies facet="Location_facet" cat="SantaRosaArizona"/>
+								<implies facet="Location" cat="SantaRosaArizona"/>
 							</synonym>
 						</heading>
 						<heading id="TontoIndians" title="Tonto"/>
@@ -2683,37 +2683,37 @@
 						<synonym value="Olyutorkan"/>
 						<synonym value="Olyutorkas"/>
 						<synonym value="Olyutorkans"/>
-						<implies facet="Location_facet" cat="Kamchatkaregion"/>
+						<implies facet="Location" cat="Kamchatkaregion"/>
 					</heading>
 					<heading id="ChukchiModern" title="Chukchi">
 						<synonym value="Chukchis"/>
 						<synonym value="Chukchee"/>
 						<synonym value="Chukchees"/>
-						<implies facet="Location_facet" cat="Kamchatkaregion"/>
+						<implies facet="Location" cat="Kamchatkaregion"/>
 					</heading>
 					<heading id="ItelmenModern" title="Itelmen">
 						<synonym value="Itelman"/>
 						<synonym value="Itelmens"/>
 						<synonym value="Kamchadal"/>
 						<synonym value="Kamchadals"/>
-						<implies facet="Location_facet" cat="Kamchatkaregion"/>
+						<implies facet="Location" cat="Kamchatkaregion"/>
 					</heading>
 					<heading id="KerekModern" title="Kerek">
 						<synonym value="Kereks"/>
-						<implies facet="Location_facet" cat="Kamchatkaregion"/>
+						<implies facet="Location" cat="Kamchatkaregion"/>
 					</heading>
 					<heading id="KoryakModern" title="Koryak">
 						<synonym value="Koryaks"/>
 						<synonym value="Koriak"/>
 						<synonym value="Koriaks"/>
-						<implies facet="Location_facet" cat="Kamchatkaregion"/>
+						<implies facet="Location" cat="Kamchatkaregion"/>
 					</heading>
 				</heading>
 				<heading id="MongolModern" title="Mongol">
 					<synonym value="Mongols"/>
 					<synonym value="Mongolian"/>
 					<synonym value="Mongolians"/>
-					<implies facet="Location_facet" cat="MongoliaCountry"/>
+					<implies facet="Location" cat="MongoliaCountry"/>
 				</heading>
 			</heading>
 			<heading id="SouthAsianGroups" title="Southern Asia" noMatch="true">
@@ -2722,7 +2722,7 @@
 				<heading id="SindhiGroup" title="Sindhi">
 					<synonym value="Sindhis"/>
 					<synonym value="Sindh"/>
-					<implies facet="Location_facet" cat="SindhPakistan"/>
+					<implies facet="Location" cat="SindhPakistan"/>
 				</heading>
 			</heading>
 			<heading id="SEAsianGroups" title="Southeast Asia" noMatch="true">
@@ -2732,50 +2732,50 @@
 					<heading id="AtaPhilippTribe" title="Ata Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Ata"/>
 						<synonym value="Atas"/>
-						<implies facet="Location_facet" cat="MindanaoIslGrpPhilip"/>
+						<implies facet="Location" cat="MindanaoIslGrpPhilip"/>
 					</heading>
 					<heading id="BagoboTribe" title="Bagobo Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Bagobo"/>
 						<synonym value="Bagobos"/>
-						<implies facet="Location_facet" cat="MindanaoIslGrpPhilip"/>
+						<implies facet="Location" cat="MindanaoIslGrpPhilip"/>
 					</heading>
 					<heading id="BatakTribe" title="Batak Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Batak"/>
 						<synonym value="Bataks"/>
-						<implies facet="Culture_facet" cat="NegritoGroupsPhil"/>
-						<implies facet="Location_facet" cat="VisayanGroup"/>
+						<implies facet="Culture" cat="NegritoGroupsPhil"/>
+						<implies facet="Location" cat="VisayanGroup"/>
 					</heading>
 					<heading id="BikolTribe" title="Bikol Tribe"> <!-- Religion = Christian -->
 						<synonym value="Bikol"/>
 						<synonym value="Bikols"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="BisayaTribe" title="Bisaya Tribe"> <!-- Religion = Christian -->
 						<synonym value="Bisaya"/>
 						<synonym value="Bisayan"/>
 						<synonym value="Bisayans"/>
 						<synonym value="Bisayas"/>
-						<implies facet="Location_facet" cat="PhilippinesCountry"/>
+						<implies facet="Location" cat="PhilippinesCountry"/>
 					</heading>
 					<heading id="CagayanTribe" title="Cagayan Tribe"> <!-- Religion = Christian -->
 						<synonym value="Cagayan"/>
 						<synonym value="Cagayans"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="GaddangTribe" title="Gaddang Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Gaddang"/>
 						<synonym value="Gaddangs"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="IfugaoTribe" title="Ifugao Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Ifugao"/>
 						<synonym value="Ifugaos"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="IgorotTribes" title="Igorot Tribes"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Igorot"/>
 						<synonym value="Igorots"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 						<heading id="BontocTribe" title="Bontoc Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 							<synonym value="Bontoc"/>
 							<synonym value="Bontocs"/>
@@ -2792,29 +2792,29 @@
 					<heading id="IlokanoTribe" title="Ilokano Tribe"> <!-- Religion = Christian -->
 						<synonym value="Ilokano"/>
 						<synonym value="Ilokanos"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="IlongotTribe" title="Ilongot Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Ilongot"/>
 						<synonym value="Ilongots"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="KalingaTribe" title="Kalinga Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Kalinga"/>
 						<synonym value="Kalingas"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="MandayaTribe" title="Mandaya Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Mandaya"/>
 						<synonym value="Mandayan"/>
 						<synonym value="Mandayans"/>
 						<synonym value="Mandayas"/>
-						<implies facet="Location_facet" cat="MindanaoIslGrpPhilip"/>
+						<implies facet="Location" cat="MindanaoIslGrpPhilip"/>
 					</heading>
 					<heading id="MangayanTribes" title="Mangayan Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Mangayan"/>
 						<synonym value="Mangayans"/>
-						<implies facet="Location_facet" cat="MindoroIslPhilip"/>
+						<implies facet="Location" cat="MindoroIslPhilip"/>
 						<heading id="BuhidTribe" title="Buhid Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 							<synonym value="Buhid"/>
 							<synonym value="Buhids"/>
@@ -2831,12 +2831,12 @@
 					<heading id="ManoboTribe" title="Manobo Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Manobo"/>
 						<synonym value="Manobos"/>
-						<implies facet="Location_facet" cat="MindanaoIslGrpPhilip"/>
+						<implies facet="Location" cat="MindanaoIslGrpPhilip"/>
 					</heading>
 					<heading id="MoroTribe" title="Moro Tribe"> <!-- Religion = Islam -->
 						<synonym value="Moro"/>
 						<synonym value="Moros"/>
-						<implies facet="Location_facet" cat="MindanaoIslGrpPhilip"/>
+						<implies facet="Location" cat="MindanaoIslGrpPhilip"/>
 					</heading>
 					<heading id="NegritoGroupsPhil" title="Negrito groups"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Negrito"/>
@@ -2845,27 +2845,27 @@
 					<heading id="PampangaTribe" title="Pampanga Tribe"> <!-- Religion = Christian -->
 						<synonym value="Pampanga"/>
 						<synonym value="Pampangas"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="PangasinanTribe" title="Pangasinan Tribe"> <!-- Religion = Christian -->
 						<synonym value="Pangasinan"/>
 						<synonym value="Pangasinans"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="TagalogTribe" title="Tagalog Tribe"> <!-- Religion = Christian -->
 						<synonym value="Tagalog"/>
 						<synonym value="Tagalogs"/>
-						<implies facet="Location_facet" cat="PhilippinesCountry"/>
+						<implies facet="Location" cat="PhilippinesCountry"/>
 					</heading>
 					<heading id="TinggianTribe" title="Tinggian Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Tinggian"/>
 						<synonym value="Tinggians"/>
-						<implies facet="Location_facet" cat="LuzonIslGrpPhilipp"/>
+						<implies facet="Location" cat="LuzonIslGrpPhilipp"/>
 					</heading>
 					<heading id="TirurayTribe" title="Tiruray Tribe"> <!-- Religion = "Pagan" (?= Local) -->
 						<synonym value="Tiruray"/>
 						<synonym value="Tirurays"/>
-						<implies facet="Location_facet" cat="MindanaoIslGrpPhilip"/>
+						<implies facet="Location" cat="MindanaoIslGrpPhilip"/>
 					</heading>
 				</heading>
 			</heading>
@@ -2897,25 +2897,25 @@
 			<heading id="MelanesianCulture" title="Melanesian">
 			    <heading id="Bainig" title="Bainig">
 			        <synonym value="Bainig tribe"/>
-			        <implies facet="Location_facet" cat="NewBritain"/>
+			        <implies facet="Location" cat="NewBritain"/>
 			    </heading>
 			    <heading id="Kaulong" title="Kaulong">
 			        <synonym value="Kaulong tribe"/>
-			        <implies facet="Location_facet" cat="NewBritain"/>
+			        <implies facet="Location" cat="NewBritain"/>
 			    </heading>
 			    <heading id="Lesu" title="Lesu">
 			        <synonym value="Lesu tribe"/>
 			        <synonym value="Lossu"/>
 			        <synonym value="Lossu tribe"/>
-			        <implies facet="Location_facet" cat="NewIreland"/>
+			        <implies facet="Location" cat="NewIreland"/>
 			    </heading>
 			    <heading id="Sengseng" title="Sengseng">
 			        <synonym value="Sengseng tribe"/>
-			        <implies facet="Location_facet" cat="NewBritain"/>
+			        <implies facet="Location" cat="NewBritain"/>
 			    </heading>
 			    <heading id="Tolai" title="Tolai">
 			        <synonym value="Tolai tribe"/>
-			        <implies facet="Location_facet" cat="NewBritain"/>
+			        <implies facet="Location" cat="NewBritain"/>
 			    </heading>
 			</heading>
 			<heading id="NewGuineaCultures" title="New Guinea cultures">
@@ -3133,11 +3133,11 @@
 		<heading id="AncientAsianCultures" title="Ancient Asia">
 			<heading id="AncientFarEasternCultures" title="Far Eastern Cultures">
 				<heading id="AinuCulture" title="Ainu">
-					<implies facet="Location_facet" cat="JapanCounty"/>
+					<implies facet="Location" cat="JapanCounty"/>
 				</heading>
 				<heading id="HunCulture" title="Huns"/>
 				<heading id="JomonCulture" title="Jomon">  <!-- Some consider it a culture, not just a period -->
-					<implies facet="Location_facet" cat="JapanCounty"/>
+					<implies facet="Location" cat="JapanCounty"/>
 				</heading>
 				<heading id="MongolCulture" title="Mongol"/>
 				<heading id="MughalCulture" title="Mughal"/>
@@ -3239,9 +3239,9 @@
 					<synonym value="Anasazi"/>
 				</heading>
 				<heading id="HohokamIndians" title="Hohokam">
-					<implies facet="Location_facet" cat="Arizona"/>
-					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-						<implies facet="Period_facet" cat="1AD-1450AD"/> -->
+					<implies facet="Location" cat="Arizona"/>
+					<!-- <implies facet="Period" cat="Precolumbian"/>
+						<implies facet="Period" cat="1AD-1450AD"/> -->
 				</heading>
 				<heading id="LasPalmasCulture" title="Las Palmas">
 					<synonym value="Las Palmas culture"/>
@@ -3250,16 +3250,16 @@
 				</heading>
 				<heading id="MogollonIndians" title="Mogollón">
 					<synonym value="Mogollon"/>
-					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-						<implies facet="Period_facet" cat="900BC-200BC"/> -->
+					<!-- <implies facet="Period" cat="Precolumbian"/>
+						<implies facet="Period" cat="900BC-200BC"/> -->
 				</heading>
 				<heading id="MountainCahuillaIndians" title="Mountain Cahuilla"/>
 				<heading id="NWCoastTradition" title="NW Coast Tradition">
 					<synonym value="Northwest Coast Tradition"/>
 				</heading>
 				<heading id="PatayanIndians" title="Patayan">
-					<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-						<implies facet="Period_facet" cat="700AD-1550AD"/> -->
+					<!-- <implies facet="Period" cat="Precolumbian"/>
+						<implies facet="Period" cat="700AD-1550AD"/> -->
 				</heading>
 				<heading id="SouthernNWCoastTradition" title="S. NW Coast Tradition">
 					<synonym value="Southern Northwest Coast Tradition"/>
@@ -3268,26 +3268,26 @@
 			<heading id="AncientSouthAmericanCultures" title="Ancient South America">
 				<heading id="AncientAndeanCultures" title="Andean Cultures">
 					<heading id="ChavinCulture" title="Chavin">
-						<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-							<implies facet="Period_facet" cat="900BC-200BC"/> -->
+						<!-- <implies facet="Period" cat="Precolumbian"/>
+							<implies facet="Period" cat="900BC-200BC"/> -->
 					</heading>
 					<heading id="ChimuCulture" title="Chimú">
 						<synonym value="Chimús"/>
 						<synonym value="Chimu"/>
 						<synonym value="Chimus"/>
-						<implies facet="Location_facet" cat="Peru"/>
-						<!--<implies facet="Period_facet" cat="Precolumbian"/>
-							<implies facet="Period_facet" cat="100-800AD"/> -->
+						<implies facet="Location" cat="Peru"/>
+						<!--<implies facet="Period" cat="Precolumbian"/>
+							<implies facet="Period" cat="100-800AD"/> -->
 					</heading>
 					<heading id="CupisniqueCulture" title="Cupisnique">
-						<!-- <implies facet="Period_facet" cat="Precolumbian"/>
-							<implies facet="Period_facet" cat="1000-1500AD"/> -->
+						<!-- <implies facet="Period" cat="Precolumbian"/>
+							<implies facet="Period" cat="1000-1500AD"/> -->
 					</heading>
 					<heading id="IncaCulture" title="Inca">
 						<synonym value="Incan"/>
 						<synonym value="Incas"/>
 						<synonym value="Incans"/>
-						<implies facet="Location_facet" cat="Peru"/>
+						<implies facet="Location" cat="Peru"/>
 					</heading>
 					<heading id="MochicaCulture" title="Mochica">
 						<synonym value="Moche"/>
@@ -3297,7 +3297,7 @@
 						<synonym value="Mochicas"/>
 						<synonym value="Mochican"/>
 						<synonym value="Mochicans"/>
-						<implies facet="Location_facet" cat="Peru"/>
+						<implies facet="Location" cat="Peru"/>
 					</heading>
 					<heading id="NascaCulture" title="Nasca">
 						<synonym value="Nascas"/>
@@ -3307,9 +3307,9 @@
 						<synonym value="Nazcas"/>
 						<synonym value="Nazcan"/>
 						<synonym value="Nazcans"/>
-						<implies facet="Location_facet" cat="Peru"/>
-						<!--<implies facet="Period_facet" cat="Precolumbian"/>
-							<implies facet="Period_facet" cat="1100BC-750AD"/> -->
+						<implies facet="Location" cat="Peru"/>
+						<!--<implies facet="Period" cat="Precolumbian"/>
+							<implies facet="Period" cat="1100BC-750AD"/> -->
 					</heading>
 					<heading id="TiwanakuCulture" title="Tiwanaku">
 						<synonym value="Tiwanakuan"/>
@@ -3323,17 +3323,17 @@
 						<synonym value="Tiahuanacuan"/>
 						<synonym value="Tiahuanacoans"/>
 						<synonym value="Tiahuanacuans"/>
-						<implies facet="Location_facet" cat="Bolivia"/>
-						<!--<implies facet="Period_facet" cat="Precolumbian"/>
-							<implies facet="Period_facet" cat="1500BC-1000AD"/> -->
+						<implies facet="Location" cat="Bolivia"/>
+						<!--<implies facet="Period" cat="Precolumbian"/>
+							<implies facet="Period" cat="1500BC-1000AD"/> -->
 					</heading>
 					<heading id="Wari" title="Wari">
 						<synonym value="Waris"/>
 						<synonym value="Huari"/>
 						<synonym value="Huaris"/>
-						<implies facet="Location_facet" cat="Peru"/>
-						<!--<implies facet="Period_facet" cat="Precolumbian"/>
-							<implies facet="Period_facet" cat="500-900AD"/> -->
+						<implies facet="Location" cat="Peru"/>
+						<!--<implies facet="Period" cat="Precolumbian"/>
+							<implies facet="Period" cat="500-900AD"/> -->
 					</heading>
 				</heading>
 			</heading>

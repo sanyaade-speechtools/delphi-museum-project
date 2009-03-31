@@ -19,7 +19,7 @@
 		Escutcheon
 		    keyhole escutcheon
 		feather-dart headdress
-			<implies facet="Materials_facet" cat="Feathers"/>
+			<implies facet="Material" cat="Feathers"/>
 		Fireplace tools
 		    Fireplace fan piece (what is this?)
 		Fish knife
@@ -50,8 +50,8 @@
 		This is a temporary section, to speed up entry
 		by making it easier to locate and copy syntax examples:
 		
-		<implies facet="Activity_facet" cat="Burial"/>
-		<implies facet="Activity_facet" cat="Metallurgy"/>
+		<implies facet="ActivityorContext" cat="Burial"/>
+		<implies facet="ActivityorContext" cat="Metallurgy"/>
 		<synonym value="Drawings"/>
 		<excl value="photographic plate"/>
 		<excl value="Black Oak"/>
@@ -66,7 +66,7 @@
 				<synonym value="Bark houses"/>
 				<synonym value="Bark-house"/>
 				<synonym value="Bark-houses"/>
-				<implies facet="Materials_facet" cat="TreeBark"/>
+				<implies facet="Material" cat="TreeBark"/>
 			</heading>
 			<heading id="Brushhouse" title="Brush house">
 				<synonym value="Brushhouses"/>
@@ -84,11 +84,11 @@
 			</heading>
 			<heading id="Granary" title="Granary">
 				<synonym value="Granaries"/>
-				<implies facet="Activity_facet" cat="FoodStorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="House" title="House">
 				<synonym value="Houses"/>
-				<implies facet="Activity_facet" cat="FoodStorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<excl value="Goldweight"/><!-- Ashanti goldweights are sometimes made with a shield motif -->
 			<heading id="Roundhouse" title="Roundhouse">
@@ -173,7 +173,7 @@
 				<heading id="PartsOfArrow" title="Parts of arrow" noMatch="true">
 					<heading id="Fletching" title="Fletching">
 						<synonym value="Fletchings"/>
-						<implies facet="Materials_facet" cat="Feathers"/>
+						<implies facet="Material" cat="Feathers"/>
 					</heading>			
 				</heading>
 			</heading>
@@ -217,14 +217,14 @@
 					<excl value="Spanish Bayonet"/>
 					<excl value="Spanish Bayonets"/>
 					<synonym value="Bayonets"/>
-				    <implies facet="Activity_facet" cat="Metallurgy"/>
+				    <implies facet="ActivityorContext" cat="Metallurgy"/>
 				</heading>
 				<heading id="Blade" title="Blade">
 					<synonym value="Blades"/>
 				</heading>
 				<heading id="Dagger" title="Dagger">
 					<synonym value="Daggers"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/>
+					<implies facet="ActivityorContext" cat="Metallurgy"/>
 					<heading id="PurbaDagger" title="Purba">
 						<synonym value="Purbas"/>
 					</heading>
@@ -234,11 +234,11 @@
 				</heading>
 				<heading id="Machete" title="Machete">
 					<synonym value="Machetes"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/>			
+					<implies facet="ActivityorContext" cat="Metallurgy"/>			
 				</heading>
 				<heading id="Parang" title="Parang">
 					<synonym value="Parangs"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/>	
+					<implies facet="ActivityorContext" cat="Metallurgy"/>	
 				</heading>
 			    <heading id="Pike" title="Pike">
 			        <synonym value="Pikes"/>
@@ -255,11 +255,11 @@
 			        <heading id="Guandao" title="Guandao">
 			            <synonym value="Kwandao"/>
 			            <synonym value="Kuantao"/>
-			            <implies facet="Location_facet" cat="China"/>
+			            <implies facet="Location" cat="China"/>
 			        </heading>
 			        <heading id="Naginata" title="Naginata">
 			            <synonym value="Naginatas"/>
-			            <implies facet="Location_facet" cat="Japan"/>
+			            <implies facet="Location" cat="Japan"/>
 			        </heading>
 			    </heading>
 				<heading id="Scabbard" title="Scabbard">
@@ -272,7 +272,7 @@
 					<synonym value="Sword"/>
 					<excl value="Weaving"/>
 					<excl value="Weaver's Sword"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/>
+					<implies facet="ActivityorContext" cat="Metallurgy"/>
 					<heading id="TypesOfSwords" title="Types of swords" noMatch="true">
 						<heading id="Cutlass" title="Cutlass">
 							<synonym value="Cutlasses"/>
@@ -334,7 +334,7 @@
 			</heading>
 			<heading id="Firearms" title="Firearms">
 				<synonym value="Firearm"/>
-				<implies facet="Activity_facet" cat="Metallurgy"/>
+				<implies facet="ActivityorContext" cat="Metallurgy"/>
 				<heading id="Cannon" title="Cannon">
 					<synonym value="Cannons"/>
 					<excl value="Cannon Bone"/>
@@ -541,15 +541,15 @@
 	<heading id="Ceremonialitems" title="Ceremonial items">
 		<heading id="Altar" title="Altar">
 			<synonym value="Altars"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>			
 		</heading>
 		<heading id="Amulet" title="Amulet">
 			<synonym value="Amulets"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>				
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>				
 		</heading>
 		<heading id="Idol" title="Idol">				
 			<synonym value="Idols"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>		
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>		
 		</heading>
 		<heading id="Charmstone" title="Charmstone">
 			<synonym value="Charmstones"/>
@@ -557,12 +557,12 @@
 			<synonym value="Charm stones"/>
 			<synonym value="Charm-stone"/>
 			<synonym value="Charm-stones"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>			
 		</heading>
 		<heading id="FeatheredStick" title="Feathered Stick">
 			<synonym value="Feathered Sticks"/>
-			<implies facet="Materials_facet" cat="Feathers"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="Material" cat="Feathers"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="Headdress" title="Headdress">
 			<synonym value="Headdresses"/>
@@ -575,40 +575,40 @@
 			<synonym value="Malas"/>
 			<synonym value="Prayer beads"/>
 			<synonym value="Prayer bead"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="Mandala" title="Mandala">
 			<synonym value="Mandalas"/>
 			<synonym value="Dreamcatcher"/>
 			<synonym value="Dreamcatchers"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="Mask" title="Mask">
 			<synonym value="Masks"/>
-			<implies facet="TechniqueDesignDecoration_facet" cat="FigurativeOrRepresentational"/>
+			<implies facet="TechniqueDesignorDecoration" cat="FigurativeOrRepresentational"/>
 		</heading>
 		<heading id="PrayerRug" title="Prayer Rug">
 			<synonym value="Prayer Mat"/>  <!-- Are these all textiles, or are some woven from reeds, etc.? -->
 			<synonym value="Prayer Mats"/>
 			<synonym value="Prayer Rugs"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-			<implies facet="ObjectName_facet" cat="RugsFurnishings"/>
-			<implies facet="ObjectName_facet" cat="PrayerRugTextiles"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+			<implies facet="ObjectName" cat="RugsFurnishings"/>
+			<implies facet="ObjectName" cat="PrayerRugTextiles"/>
 		</heading>
 		<heading id="PrayerWheel" title="Prayer Wheel">
 			<synonym value="Prayer Wheels"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="Scarab" title="Scarab">
 			<synonym value="Scarabs"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="Scepter" title="Scepter">
 			<synonym value="Scepters"/>
 		</heading>
 		<heading id="Shrine" title="Shrine">
 			<synonym value="Shrines"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="Ushabti" title="Ushabti">
 			<synonym value="Ushabtis"/>
@@ -616,7 +616,7 @@
 			<synonym value="Shabtis"/>
 			<synonym value="Shawabti"/>
 			<synonym value="Shawabtis"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>			
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>			
 		</heading>
 		<heading id="Wand" title="Wand">
 			<synonym value="Wands"/>
@@ -728,21 +728,21 @@
 			</heading>
 			<heading id="Skirt" title="Skirt"><!-- Might be confused with the frilly bit around a mattress, hovercraft, or christmas tree -->
 				<synonym value="Skirts"/>
-				<implies facet="ObjectName_facet" cat="SkirtLowerBody"/>
+				<implies facet="ObjectName" cat="SkirtLowerBody"/>
 			</heading>
 		    <heading id="WeddingDress" title="Wedding Dress"><!-- Card for 7-6432 -->
 		        <synonym value="Wedding Dresses"/>
-		    	<implies facet="Activity_facet" cat="BridalAdornment"/>
+		    	<implies facet="ActivityorContext" cat="BridalAdornment"/>
 		    </heading>
 		</heading>
 		<heading id="Footwear" title="Footwear">
 			<heading id="SandalsFootwear" title="Sandals">
 				<synonym value="Sandal"/>
-				<implies facet="Activity_facet" cat="ShoeMaking"/>
+				<implies facet="ActivityorContext" cat="ShoeMaking"/>
 			</heading>
 			<heading id="ShoesFootwear" title="Shoes">
 				<synonym value="Shoe"/>
-				<implies facet="Activity_facet" cat="ShoeMaking"/>
+				<implies facet="ActivityorContext" cat="ShoeMaking"/>
 			</heading>
 			<heading id="SocksFootwear" title="Socks" noMatch="true"/>	
 		</heading>
@@ -761,7 +761,7 @@
 			</heading>
 			<heading id="Hat" title="Hat">
 				<synonym value="Hats"/>
-				<implies facet="Activity_facet" cat="Millinery"/>
+				<implies facet="ActivityorContext" cat="Millinery"/>
 			</heading>
 			<heading id="Headband" title="Headband">
 				<synonym value="Headbands"/>
@@ -811,11 +811,11 @@
 				<synonym value="Bras"/>
 				<synonym value="Brassiere"/>
 				<synonym value="Brassieres"/>
-				<implies facet="ObjectName_facet" cat="BraUnderwearUpper"/>
+				<implies facet="ObjectName" cat="BraUnderwearUpper"/>
 			</heading>
 			<heading id="CorsetUnderwear" title="Corset">
 				<synonym value="Corsets"/>
-				<implies facet="ObjectName_facet" cat="CorsetUnderwearUpper"/>
+				<implies facet="ObjectName" cat="CorsetUnderwearUpper"/>
 			</heading>
 			<heading id="GStringUnderwear" title="G-String">
 				<synonym value="G-Strings"/>
@@ -839,7 +839,7 @@
 				<excl value="Viola"/>
 				<excl value="Violin"/>
 				<excl value="Violins"/>
-				<implies facet="ObjectName_facet" cat="GStringUnderwearLower"/>
+				<implies facet="ObjectName" cat="GStringUnderwearLower"/>
 			</heading>
 			<heading id="GarterUnderwear" title="Garter">
 				<synonym value="Garters"/>
@@ -851,7 +851,7 @@
 				<excl value="Garter-Stitch"/>
 				<excl value="Garter-Stitches"/>
 				<excl value="Garter-Stitching"/>
-				<implies facet="ObjectName_facet" cat="GarterUnderwearLower"/>
+				<implies facet="ObjectName" cat="GarterUnderwearLower"/>
 			</heading>
 			<heading id="GarterBeltUnderwear" title="Garter Belt">
 				<synonym value="Garter-belt"/>
@@ -859,12 +859,12 @@
 				<synonym value="Garter-belts"/>
 				<synonym value="Garter belts"/>
 				<synonym value="Garterbelts"/>
-				<implies facet="ObjectName_facet" cat="GarterBeltUnderwearLower"/>
+				<implies facet="ObjectName" cat="GarterBeltUnderwearLower"/>
 			</heading>
 			<heading id="GirdleUnderwear" title="Girdle">
 				<synonym value="Girdles"/>
-				<implies facet="ObjectName_facet" cat="GirdleUnderwearLower"/>
-				<implies facet="ObjectName_facet" cat="GirdleUnderwearUpper"/>
+				<implies facet="ObjectName" cat="GirdleUnderwearLower"/>
+				<implies facet="ObjectName" cat="GirdleUnderwearUpper"/>
 			</heading>
 			<heading id="HairshirtUnderwear" title="Hairshirt">
 				<synonym value="Hair-shirt"/>
@@ -872,13 +872,13 @@
 				<synonym value="Hair-shirts"/>
 				<synonym value="Hair shirts"/>
 				<synonym value="Hairshirts"/>
-				<implies facet="ObjectName_facet" cat="HairshirtUnderwearUpper"/>
-				<implies facet="ObjectName_facet" cat="HairshirtShirt"/>
+				<implies facet="ObjectName" cat="HairshirtUnderwearUpper"/>
+				<implies facet="ObjectName" cat="HairshirtShirt"/>
 			</heading>
 			<heading id="SocksUnderwear" title="Socks">
 				<synonym value="Sock"/>
-				<implies facet="ObjectName_facet" cat="SocksFootwear"/>
-				<implies facet="ObjectName_facet" cat="SocksUnderwearLower"/>
+				<implies facet="ObjectName" cat="SocksFootwear"/>
+				<implies facet="ObjectName" cat="SocksUnderwearLower"/>
 			</heading>
 			<heading id="UndershirtUnderwear" title="Undershirt">
 				<synonym value="Under-shirt"/>
@@ -886,8 +886,8 @@
 				<synonym value="Under-shirts"/>
 				<synonym value="Under shirts"/>
 				<synonym value="Undershirts"/>
-				<implies facet="ObjectName_facet" cat="UndershirtUnderwearUpper"/>
-				<implies facet="ObjectName_facet" cat="UndershirtShirt"/>
+				<implies facet="ObjectName" cat="UndershirtUnderwearUpper"/>
+				<implies facet="ObjectName" cat="UndershirtShirt"/>
 			</heading>
 		</heading>
 	</heading>
@@ -895,7 +895,7 @@
 		<heading id="Amphora" title="Amphora">
 			<synonym value="Amphoras"/>
 			<synonym value="Amphorae"/>
-			<implies facet="Activity_facet" cat="Foodstorage"/>
+			<implies facet="ActivityorContext" cat="Foodstorage"/>
 		</heading>
 		<heading id="Aryballos" title="Aryballos">
 			<synonym value="αρύβαλλος"/>
@@ -910,7 +910,7 @@
 			<synonym value="Basket"/>
 			<heading id="BabyBasket" title="Baby Basket">
 				<synonym value="Baby Baskets"/>
-				<implies facet="Activity_facet" cat="Childrearing"/>
+				<implies facet="ActivityorContext" cat="Childrearing"/>
 			</heading>
 			<heading id="Basketrycaplid" title="Basketry Cap (Lid)">
 				<synonym value="Basketry cap (lids)"/>
@@ -921,32 +921,32 @@
 				<synonym value="Bird trap baskets"/>
 				<synonym value="Bird-trap basket"/>
 				<synonym value="Bird-trap baskets"/>
-				<implies facet="Activity_facet" cat="Hunting"/>		
+				<implies facet="ActivityorContext" cat="Hunting"/>		
 			</heading>
 			<heading id="Burdenbasket" title="Burden Basket">
 				<synonym value="Burden baskets"/>
-				<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			</heading>
 			<heading id="Carryingbasket" title="Carrying Basket">
 				<synonym value="Carrying baskets"/>
-				<implies facet="Activity_facet" cat="BasketMaking"/>
+				<implies facet="ActivityorContext" cat="BasketMaking"/>
 			</heading>
 			<heading id="CookingBasketBaskets" title="Cooking Basket">
 				<synonym value="Cooking Baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>
-				<implies facet="ObjectName_facet" cat="CookingBasketHeating"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ObjectName" cat="CookingBasketHeating"/>
 			</heading>
 			<heading id="DecorativeBasket" title="Decorative Basket">
 				<synonym value="Decorative Baskets"/>
 			</heading>
 			<heading id="Dippingbasket" title="Dipping Basket">
 				<synonym value="Dipping baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>		
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>		
 			</heading>
 			<heading id="DoctoringbasketBaskets" title="Doctoring basket">
 				<synonym value="Doctoring baskets"/>
-				<implies facet="Activity_facet" cat="Healing"/>	
-				<implies facet="ObjectName_facet" cat="DoctoringbasketMedical"/>
+				<implies facet="ActivityorContext" cat="Healing"/>	
+				<implies facet="ObjectName" cat="DoctoringbasketMedical"/>
 			</heading>
 			<heading id="BasketFishtrapbasket" title="Fish Trap Basket"><!-- Also a kind of trap (armament) -->
 				<synonym value="Fish Trap Baskets"/>
@@ -957,7 +957,7 @@
 				<synonym value="Fishtrap"/>
 				<synonym value="Fishtraps"/>					
 				<synonym value="Fish trap baskets"/>
-				<implies facet="Activity_facet" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="Fishing"/>
 				<heading id="EelTrapBasket" title="Eel Trap Basket"><!-- Also a kind of trap (armament) -->				
 					<synonym value="Eel Trap Baskets"/>
 					<synonym value="Eel-Trap Basket"/>
@@ -989,11 +989,11 @@
 			</heading>
 			<heading id="HangingBasket" title="Hanging Basket">
 				<synonym value="Hanging Baskets"/>
-				<implies facet="Activity_facet" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="Foodstorage"/>
 			</heading>
 			<heading id="Mortarbasket" title="Mortar Basket">
 				<synonym value="Mortar Baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>		
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>		
 			</heading>
 			<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
 				<synonym value="Mush-boiling Baskets"/>
@@ -1001,32 +1001,32 @@
 				<synonym value="Mush boiling Baskets"/>			
 				<synonym value="Boiling basket"/>
 				<synonym value="Boiling baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>	
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>	
 			</heading>
 			<heading id="ParchingBasket" title="Parching Basket">
 				<synonym value="Parching Baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			</heading>
 			<heading id="Servingbasket" title="Serving Basket">
 				<synonym value="Serving baskets"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>			
+				<implies facet="ActivityorContext" cat="Foodserving"/>			
 			</heading>
 			<heading id="SiftingBasket" title="Sifting Basket">
 				<synonym value="Sifting Baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>			
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>			
 			</heading>
 			<heading id="SoupBasketBaskets" title="Soup basket">
 				<synonym value="Soup baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>	
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>	
 			</heading>
 			<heading id="Storagebasket" title="Storage basket">
 				<heading id="Seedbasket" title="Seed basket">
 					<synonym value="Seed baskets"/>
-					<implies facet="Activity_facet" cat="Foodstorage"/>			
+					<implies facet="ActivityorContext" cat="Foodstorage"/>			
 				</heading>
 				<heading id="Acornbasket" title="Acorn basket">
 					<synonym value="Acorn baskets"/>
-					<implies facet="Activity_facet" cat="Foodstorage"/>			
+					<implies facet="ActivityorContext" cat="Foodstorage"/>			
 				</heading>
 			</heading>
 			<heading id="TouristBasket" title="Tourist Basket">
@@ -1034,12 +1034,12 @@
 			</heading>
 			<heading id="WinnowingBasket" title="Winnowing Basket">
 				<synonym value="Winnowing Baskets"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			</heading>
 		</heading>
 		<heading id="Bottle" title="Bottle">
 			<synonym value="Bottles"/>
-			<implies facet="Activity_facet" cat="Foodstorage"/>			
+			<implies facet="ActivityorContext" cat="Foodstorage"/>			
 		</heading>
 		<heading id="Bowl" title="Bowl">
 			<synonym value="Bowls"/>
@@ -1053,9 +1053,9 @@
 			<heading id="CanopicBoxContainer" title="Canopic Box">
 				<synonym value="Canopic Boxes"/>
 				<synonym value="Canopic Boxs"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>	
-				<implies facet="ObjectName_facet" cat="CanopicBxFuner"/>
+				<implies facet="ActivityorContext" cat="Burial"/>
+				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>	
+				<implies facet="ObjectName" cat="CanopicBxFuner"/>
 			</heading>
 			<heading id="CoffinBoxContainer" title="Coffin" noMatch="true"/>
 			<heading id="FeatherBoxContainer" title="Feather Box">
@@ -1078,7 +1078,7 @@
 				<synonym value="Match-Boxes"/>
 				<synonym value="Match Boxes"/>
 				<synonym value="Matchboxes"/>
-				<implies facet="Activity_facet" cat="AnySmoking"/>
+				<implies facet="ActivityorContext" cat="AnySmoking"/>
 			</heading>
 			<heading id="MoneyBoxContainer" title="Money Box" noMatch="true"/>
 			<heading id="PowderCapBoxContainer" title="Powder &amp; Cap Box">
@@ -1101,7 +1101,7 @@
 				<synonym value="Snuff-Boxes"/>
 				<synonym value="Snuff Boxes"/>
 				<synonym value="Snuffboxes"/>
-				<implies facet="Activity_facet" cat="SnuffDrug"/>
+				<implies facet="ActivityorContext" cat="SnuffDrug"/>
 			</heading>
 		</heading>
 		<heading id="CanContainer" title="Can"> <!-- Disambiguate -->
@@ -1127,19 +1127,19 @@
 		</heading>
 		<heading id="Canteen" title="Canteen">
 			<synonym value="Canteens"/>
-			<implies facet="Activity_facet" cat="Foodstorage"/>			
+			<implies facet="ActivityorContext" cat="Foodstorage"/>			
 		</heading>
 		<heading id="Cup" title="Cup">
 	        <synonym value="Cups"/>
-            <implies facet="Activity_facet" cat="Foodserving"/>
+            <implies facet="ActivityorContext" cat="Foodserving"/>
             <heading id="BeerCup" title="Beer Cup">
 	            <synonym value="Beer Cups"/>
-	            <implies facet="Activity_facet" cat="BeerDrinking"/>
+	            <implies facet="ActivityorContext" cat="BeerDrinking"/>
             </heading>
 	        <heading id="Chalice" title="Chalice">
 	            <synonym value="Chalices"/>
 	        	<synonym value="Wine cup"/>
-	            <implies facet="Activity_facet" cat="Drinking"/>
+	            <implies facet="ActivityorContext" cat="Drinking"/>
 	        </heading>
 	        <heading id="Goblet" title="Goblet">
 	            <synonym value="Goblets"/>
@@ -1150,8 +1150,8 @@
 	                <synonym value="Cylix"/>
 	                <synonym value="Kylixes"/>
 	                <synonym value="Kylikes"/>
-	                <implies facet="Culture_facet" cat="Greek"/>
-	                <implies facet="Activity_facet" cat="Wine Drinking"/>
+	                <implies facet="Culture" cat="Greek"/>
+	                <implies facet="ActivityorContext" cat="Wine Drinking"/>
 	                <heading id="Tondo" title="Tondo">
 	                    <definition value="The almost flat interior circle on the interior base of the cup, 
 	                        called the tondo, was the primary surface for painted decoration in the 
@@ -1165,8 +1165,8 @@
 	            <heading id="Skyphos" title="Skyphos">
 	                <synonym value="σκύφος"/>
 	                <synonym value="skyphoi"/>
-	                <implies facet="Culture_facet" cat="Greek"/>
-	                <implies facet="Activity_facet" cat="Wine Drinking"/>
+	                <implies facet="Culture" cat="Greek"/>
+	                <implies facet="ActivityorContext" cat="Wine Drinking"/>
 	            </heading>
 	        </heading>
 	        <heading id="Rhyton" title="Rhyton">
@@ -1178,9 +1178,9 @@
 	    </heading>
 		<heading id="CoffeepotVessel" title="Coffee pot">
 			<synonym value="Coffee pots"/>
-			<implies facet="Activity_facet" cat="Foodserving"/>
-			<implies facet="Activity_facet" cat="CoffeeDrinking"/>
-			<implies facet="ObjectName_facet" cat="CoffeepotHeating"/>
+			<implies facet="ActivityorContext" cat="Foodserving"/>
+			<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
+			<implies facet="ObjectName" cat="CoffeepotHeating"/>
 		</heading>
 		<heading id="Dish" title="Dish">
 			<synonym value="Dishes"/>
@@ -1206,7 +1206,7 @@
 			<synonym value="Jar"/>
 			<heading id="BeerJar" title="Beer Jar">
 				<synonym value="Beer Jars"/>
-				<implies facet="Activity_facet" cat="BeerDrinking"/>
+				<implies facet="ActivityorContext" cat="BeerDrinking"/>
 			</heading>
 			<heading id="BottleJar" title="Bottle Jar">
 				<synonym value="Bottle Jars"/>
@@ -1214,9 +1214,9 @@
 			<heading id="CanopicJarJars" title="Canopic Jar">
 				<synonym value="Canopic Jars"/>
 				<synonym value="Canopic Jars"/>
-				<implies facet="Activity_facet" cat="Burial"/>
-				<implies facet="Activity_facet" cat="ReligionSpirituality"/>	
-				<implies facet="ObjectName_facet" cat="CanopicJFuner"/>
+				<implies facet="ActivityorContext" cat="Burial"/>
+				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>	
+				<implies facet="ObjectName" cat="CanopicJFuner"/>
 			</heading>
 			<heading id="DummyJar" title="Dummy Jar">
 				<synonym value="Dummy Jars"/>
@@ -1252,34 +1252,34 @@
 			</heading>
 			<heading id="WineJug" title="Wine Jug">
 				<synonym value="Wine Jugs"/>
-				<implies facet="Activity_facet" cat="WineDrinking"/>
+				<implies facet="ActivityorContext" cat="WineDrinking"/>
 				<heading id="Oinochoe" title="Oinochoe">
 					<synonym value="Οινοχόη"/>
 					<synonym value="Oenochoe"/>
 					<heading id="Olpe" title="Olpe">
-					    <implies facet="Culture_facet" cat="Corinthian"/>
-					    <implies facet="TechniqueDesignDecoration_facet" cat="SShaped"/>
-						<implies facet="Activity_facet" cat="WineDrinking"/>
+					    <implies facet="Culture" cat="Corinthian"/>
+					    <implies facet="TechniqueDesignorDecoration" cat="SShaped"/>
+						<implies facet="ActivityorContext" cat="WineDrinking"/>
 					</heading>
 				</heading>
 			</heading>
 		</heading>
 		<heading id="KettleVessels" title="Kettle">
 			<synonym value="Kettles"/>
-			<implies facet="Activity_facet" cat="Metallurgy"/><!-- are all kettles made of metal? -->
-			<implies facet="Activity_facet" cat="Foodpreparation"/>
-			<implies facet="ObjectName_facet" cat="KettleHeating"/>
+			<implies facet="ActivityorContext" cat="Metallurgy"/><!-- are all kettles made of metal? -->
+			<implies facet="ActivityorContext" cat="Foodpreparation"/>
+			<implies facet="ObjectName" cat="KettleHeating"/>
 		</heading>
 		<heading id="Olla" title="Olla">
 			<synonym value="Ollas"/>
-			<implies facet="Activity_facet" cat="Foodstorage"/>
+			<implies facet="ActivityorContext" cat="Foodstorage"/>
 		</heading>
 		<heading id="Porringer" title="Porringer">
 			<synonym value="Porringers"/>
-			<implies facet="Activity_facet" cat="Eating"/>
+			<implies facet="ActivityorContext" cat="Eating"/>
 		</heading>
 		<heading id="Pottery" title="Pottery">
-			<implies facet="Materials_facet" cat="Clay"/>
+			<implies facet="Material" cat="Clay"/>
 			<synonym value="Pot"/>
 			<heading id="PotteryByShape" title="By shape" noMatch="true">
 				<heading id="OfferingTable" title="Offering Table">
@@ -1299,25 +1299,25 @@
 				<heading id="BlackFigureWare" title="Black Figure ware">
 					<synonym value="Black-Figure ware"/>
 					<synonym value="'μελανόμορφα"/>
-					<implies facet="color_facet" cat="Black"/>
-					<implies facet="color_facet" cat="Red"/>
-					<implies facet="collection_facet" cat="ClassicalMediterranean"/>
+					<implies facet="Color" cat="Black"/>
+					<implies facet="Color" cat="Red"/>
+					<implies facet="Collection" cat="ClassicalMediterranean"/>
 				</heading>
 				<heading id="BlackTopRedWare" title="Black-top red ware">
 					<synonym value="BTR"/>
-					<implies facet="color_facet" cat="Red"/>
-					<implies facet="color_facet" cat="Black"/>
+					<implies facet="Color" cat="Red"/>
+					<implies facet="Color" cat="Black"/>
 				</heading>
 				<heading id="CeladonWare" title="Celadon ware">
 					<synonym value="Celadon"/>
-					<implies facet="color_facet" cat="Celadon"/>
+					<implies facet="Color" cat="Celadon"/>
 				</heading>
 				<heading id="Lusterware" title="Lusterware">
 					<synonym value="Lusterware"/>
 					<synonym value="Lustre ware"/>
 					<synonym value="Lustreware"/>
-					<implies facet="TechniqueDesignDecoration_facet" cat="MetallicGlaze"/>
-					<implies facet="color_facet" cat="Iridescent"/>
+					<implies facet="TechniqueDesignorDecoration" cat="MetallicGlaze"/>
+					<implies facet="Color" cat="Iridescent"/>
 				</heading>
 				<heading id="Plasticware" title="Plastic ware"/>
 				<heading id="Porcelain" title="Porcelain"/>
@@ -1325,17 +1325,17 @@
 					<synonym value="Red-Figure ware"/>
 					<synonym value="Red Figure pottery"/>
 					<synonym value="Red-Figure pottery"/>
-					<implies facet="color_facet" cat="Black"/>
-					<implies facet="color_facet" cat="Red"/>
-					<implies facet="collection_facet" cat="ClassicalMediterranean"/>
+					<implies facet="Color" cat="Black"/>
+					<implies facet="Color" cat="Red"/>
+					<implies facet="Collection" cat="ClassicalMediterranean"/>
 				</heading>
 				<heading id="Whiteware" title="White ware">
 					<synonym value="whiteware"/>
-					<implies facet="color_facet" cat="White"/>
+					<implies facet="Color" cat="White"/>
 				</heading>
 				<heading id="WhiteGroundWare" title="White ground ware">
 					<synonym value="WG ware"/>
-					<implies facet="color_facet" cat="White"/>
+					<implies facet="Color" cat="White"/>
 				</heading>
 			</heading>
 		</heading>
@@ -1348,8 +1348,8 @@
 			<synonym value="Teapots"/>
 			<synonym value="Tea pot"/>
 			<synonym value="Tea pots"/>
-			<implies facet="Activity_facet" cat="Foodserving"/>
-			<implies facet="ObjectName_facet" cat="TeapotHeating"/>
+			<implies facet="ActivityorContext" cat="Foodserving"/>
+			<implies facet="ObjectName" cat="TeapotHeating"/>
 		</heading>
 		<heading id="Vase" title="Vase">
 			<synonym value="Vases"/>
@@ -1366,22 +1366,22 @@
 			<synonym value="Abaci"/>
 			<synonym value="Abacuses"/>
 			<synonym value="Counting Frame"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>			
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>			
 		</heading>
 		<heading id="Counter" title="Counter">
 			<synonym value="Counters"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>				
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>				
 		</heading>
 		<heading id="Coin" title="Coin">
 			<synonym value="Coins"/>
 			<synonym value="Coinage"/>
-			<implies facet="Activity_facet" cat="Metallurgy"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+			<implies facet="ActivityorContext" cat="Metallurgy"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			<!--These categories need cleaning -->
 			<heading id="Denomination" title="Denomination">
 				<heading id="Bronzedouble" title="Bronze double">
 					<synonym value="Bronze doubles"/>
-				    <implies facet="Materials_facet" cat="Bronze"/>		
+				    <implies facet="Material" cat="Bronze"/>		
 				</heading>
 				<heading id="Notgeld" title="Notgeld"/>
 				<heading id="50centavos" title="50 centavos"/>
@@ -1698,24 +1698,24 @@
 			</heading>
 		</heading>
 		<heading id="MoneyBox" title="Money Box">
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
-			<implies facet="ObjectName_facet" cat="MoneyBoxContainer"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+			<implies facet="ObjectName" cat="MoneyBoxContainer"/>
 		</heading>
 		<heading id="Moneystone" title="Money stone">
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 		</heading>
 		<heading id="Purse" title="Purse">
 			<synonym value="Purses"/>
 			<synonym value="Handbag"/>
 			<synonym value="Handbags"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 		</heading>
 		<heading id="Seal" title="Seal"><!-- exclude sea mammals and closures -->
 			<excl value="Marine"/>
 			<excl value="Pinniped"/>
 			<excl value="Sea Lion"/>
 			<synonym value="Seals"/>
-			<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 		</heading>
 	</heading>
 	<heading id="DomesticItems" title="Domestic Items">
@@ -1727,7 +1727,7 @@
 			<heading id="ContainerOpeners" title="Openers">
 				<heading id="BottleOpeners" title="Bottle Openers">
 					<synonym value="Bottle Opener"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="Foodserving"/>
 					<heading id="CapLifter" title="Caplifter">
 						<synonym value="Caplifters"/>
 						<synonym value="Cap lifter"/>
@@ -1756,67 +1756,67 @@
 			</heading>
 			<heading id="Bowl" title="Bowl">
 				<synonym value="Bowls"/>
-				<implies facet="Activity_facet" cat="Foodserving"/><!-- need complex inferentiation to remove ritual bowls, etc. -->
+				<implies facet="ActivityorContext" cat="Foodserving"/><!-- need complex inferentiation to remove ritual bowls, etc. -->
 			</heading>
 			<heading id="FoodHeatingDevices" title="Food Heating Devices">
 				<heading id="Boilingstone" title="Boiling stone">
 					<synonym value="Boiling stones"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>
 				</heading>
 				<heading id="Chafingdish" title="Chafing dish">
 					<synonym value="Chafing dishes"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>		
+					<implies facet="ActivityorContext" cat="Foodserving"/>		
 				</heading>
 				<heading id="CoffeepotHeating" title="Coffee pot">
 					<synonym value="Coffee pots"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>
-					<implies facet="Activity_facet" cat="CoffeeDrinking"/>
-					<implies facet="ObjectName_facet" cat="CoffeepotVessel"/>
+					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
+					<implies facet="ObjectName" cat="CoffeepotVessel"/>
 				</heading>
 				<heading id="CookingBasketHeating" title="Cooking Basket">
 					<synonym value="Cooking Baskets"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>
-					<implies facet="ObjectName_facet" cat="CookingBasketBaskets"/>
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ObjectName" cat="CookingBasketBaskets"/>
 				</heading>
 				<heading id="CookingStone" title="Cooking Stone">
 					<synonym value="Cooking Stones"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>		
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>		
 				</heading>
 				<heading id="CookingStove" title="Cooking Stove">
 					<synonym value="Cooking Stoves"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>			
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>			
 				</heading>
 				<heading id="KettleHeating" title="Kettle">
 					<synonym value="Kettles"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/><!-- are all kettles made of metal? -->
-					<implies facet="Activity_facet" cat="Foodpreparation"/>
-					<implies facet="ObjectName_facet" cat="KettleVessels"/>
+					<implies facet="ActivityorContext" cat="Metallurgy"/><!-- are all kettles made of metal? -->
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ObjectName" cat="KettleVessels"/>
 				</heading>
 				<heading id="Oven" title="Oven">
 					<synonym value="Ovens"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>			
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>			
 				</heading>
 				<heading id="TeapotHeating" title="Teapot">
 					<synonym value="Teapots"/>
 					<synonym value="Tea pot"/>
 					<synonym value="Tea pots"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>
-					<implies facet="ObjectName_facet" cat="TeapotVessels"/>
+					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ObjectName" cat="TeapotVessels"/>
 				</heading>
 			</heading>
 			<heading id="Chocolatemold" title="Chocolate mold">
 				<synonym value="Chocolate molds"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>
-				<implies facet="ObjectName_facet" cat="Chocolate"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ObjectName" cat="Chocolate"/>
 			</heading>
 			<heading id="Chocolatestirrer" title="Chocolate stirrer">
 				<synonym value="Chocolate stirrers"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>
-				<implies facet="ObjectName_facet" cat="Chocolate"/>
+				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ObjectName" cat="Chocolate"/>
 			</heading>
 			<heading id="CookingVessels" title="Cooking Vessels">
 				<synonym value="Cooking Vessel"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
 				<heading id="Basin" title="Basin">
 					<excl value="Great Basin"/>
 					<excl value="Basin and Plain"/>
@@ -1835,12 +1835,12 @@
 					<synonym value="Cooking Pans"/>
 					<synonym value="Pan"/>
 					<synonym value="Pans"/>
-					<implies facet="Activity_facet" cat="Metallurgy"/>
+					<implies facet="ActivityorContext" cat="Metallurgy"/>
 				</heading>				
 			</heading>
 			<heading id="Dish" title="Dish">
 				<synonym value="Dishes"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="Foodserving"/>
 				<heading id="FeastDish" title="Feast Dish">
 					<synonym value="Feast Dishes"/>
 				</heading>
@@ -1849,7 +1849,7 @@
 				<synonym value="Funnels"/>
 				<excl value="Enema Funnel"/>
 				<excl value="Enema Funnels"/>
-				<implies facet="Activity_facet" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="Foodstorage"/>
 			</heading>
 			<heading id="GrainMeasure" title="Grain Measure"/>
 			<heading id="Graters" title="Graters">
@@ -1868,7 +1868,7 @@
 			<heading id="GrindingAndCrushingDevices" title="Grinding &amp; Crushing Devices">
 				<heading id="Acornanvil" title="Acorn anvil">
 					<synonym value="Acorn anvils"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>			
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>			
 				</heading>
 				<heading id="Groundstone" title="Groundstone">
 					<synonym value="Groundstones"/>
@@ -1876,7 +1876,7 @@
 					<synonym value="Groundstone"/>
 					<synonym value="Ground-stone"/>
 					<synonym value="Ground-stones"/>
-					<implies facet="Activity_facet" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="Foodpreparation"/>
 					<heading id="Grindingstone" title="Grinding stone">
 						<synonym value="Grinding stones"/>
 						<heading id="ManoAndMetate" title="Mano &amp; Metate">
@@ -1893,11 +1893,11 @@
 						<heading id="MortarAndPestle" title="Mortar &amp; Pestle">
 							<heading id="Mortar" title="Mortar">
 								<synonym value="Mortars"/>
-								<implies facet="Activity_facet" cat="Foodpreparation"/>
+								<implies facet="ActivityorContext" cat="Foodpreparation"/>
 							</heading>
 							<heading id="Pestle" title="Pestle">
 								<synonym value="Pestles"/>
-								<implies facet="Activity_facet" cat="Foodpreparation"/>
+								<implies facet="ActivityorContext" cat="Foodpreparation"/>
 							</heading>
 						</heading>
 					</heading>
@@ -1905,17 +1905,17 @@
 			</heading>
 			<heading id="MushPaddle" title="Mush Paddle">
 				<synonym value="Mush Paddles"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>	
-				<implies facet="ObjectName_facet" cat="Mush"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>	
+				<implies facet="ObjectName" cat="Mush"/>
 			</heading>
 			<heading id="MushStirrer" title="Mush Stirrer">
 				<synonym value="Mush Stirrers"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>	
-				<implies facet="ObjectName_facet" cat="Mush"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>	
+				<implies facet="ObjectName" cat="Mush"/>
 			</heading>
 			<heading id="Plate" title="Plate">
 				<synonym value="Plates"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="Foodserving"/>
 				<excl value="photographic plate"/>
 				<excl value="photographic plate"/>
 				<excl value="Silver plate"/>
@@ -1941,51 +1941,51 @@
 			</heading>
 			<heading id="Platter" title="Platter">
 				<synonym value="Platters"/>
-				<implies facet="Activity_facet" cat="Foodserving"/>			
+				<implies facet="ActivityorContext" cat="Foodserving"/>			
 			</heading>
 			<heading id="SeedBeater" title="Seed Beater">
 				<synonym value="Seed Beaters"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>				
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>				
 			</heading>
 			<heading id="Sifter" title="Sifter">
 				<synonym value="Sifters"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>	
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>	
 			</heading>
 			<heading id="Strainer" title="Strainer">
 				<synonym value="Strainers"/>
-				<implies facet="Activity_facet" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			</heading>
 			<heading id="Utensils" title="Utensils">
 				<synonym value="Utensil"/>
-				<implies facet="Activity_facet" cat="Eating"/>	
+				<implies facet="ActivityorContext" cat="Eating"/>	
 				<heading id="Fork" title="Fork">
 					<synonym value="Forks"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>			
+					<implies facet="ActivityorContext" cat="Foodserving"/>			
 				</heading>
 				<heading id="Spoon" title="Spoon">
 					<synonym value="Spoons"/>
-					<implies facet="Activity_facet" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="Foodserving"/>
 					<heading id="CheeseScoop" title="Cheese Scoop">
 						<synonym value="Cheese Scoops"/>
-						<implies facet="Activity_facet" cat="Eating"/>
-						<implies facet="Activity_facet" cat="Foodserving"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
+						<implies facet="ActivityorContext" cat="Foodserving"/>
 					</heading>
 					<heading id="LadleSpoon" title="Ladle">
 						<synonym value="Ladles"/>
-						<implies facet="Activity_facet" cat="Eating"/>
-						<implies facet="Activity_facet" cat="Foodserving"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
+						<implies facet="ActivityorContext" cat="Foodserving"/>
 					</heading>
 					<heading id="MarrowSpoon" title="Marrow Spoon">
 						<synonym value="Marrow Spoons"/>
-						<implies facet="Activity_facet" cat="Eating"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
 					</heading>
 					<heading id="RitualSpoon" title="Ritual Spoon">
 						<synonym value="Ritual Spoons"/>
-						<implies facet="Activity_facet" cat="ReligionSpirituality"/>
+						<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 					</heading>
 					<heading id="SoupSpoon" title="Soup Spoon">
 						<synonym value="Soup Spoons"/>
-						<implies facet="Activity_facet" cat="Eating"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
 					</heading>
 					<heading id="SouvenirSpoon" title="Souvenir Spoon">
 						<synonym value="Souvenir Spoons"/>
@@ -1994,7 +1994,7 @@
 						<synonym value="Table Spoons"/>
 						<synonym value="Tablespoon"/>
 						<synonym value="Tablespoons"/>
-						<implies facet="Activity_facet" cat="Eating"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
 					</heading>
 				</heading>
 			</heading>
@@ -2009,7 +2009,7 @@
 				<excl value="Rootbeers"/>
 				<excl value="Root-beer"/>
 				<excl value="Root-beers"/>
-				<implies facet="Activity_facet" cat="BeerDrinking"/>
+				<implies facet="ActivityorContext" cat="BeerDrinking"/>
 			</heading>
 			<heading id="Bread" title="Bread">
 				<synonym value="Breads"/>
@@ -2046,7 +2046,7 @@
 			</heading>
 			<heading id="Cradle" title="Cradle">
 				<synonym value="Cradles"/>
-				<implies facet="Activity_facet" cat="Childrearing"/>
+				<implies facet="ActivityorContext" cat="Childrearing"/>
 			</heading>
 			<heading id="HangingMirror" title="Hanging Mirror">
 				<synonym value="Hanging Mirrors"/>
@@ -2103,7 +2103,7 @@
 				<synonym value="Stirgil"/>
 				<synonym value="Stirgils"/>
 				<synonym value="Grooming"/>
-				<implies facet="Activity_facet" cat="Metallurgy"/>		
+				<implies facet="ActivityorContext" cat="Metallurgy"/>		
 			</heading>
 		</heading>
 	</heading>
@@ -2119,32 +2119,32 @@
 			<heading id="BadjucaDance" title="Badjuca Dance">
 				<synonym value="Badjuca Dances"/>
 				<synonym value="Badjuca"/>
-				<implies facet="Culture_facet" cat="EasternPomo"/>
+				<implies facet="Culture" cat="EasternPomo"/>
 			</heading>
 			<heading id="DjaneDance" title="Djane Dance">
 				<synonym value="Djane Dances"/>
 				<synonym value="Djane"/>
-				<implies facet="Culture_facet" cat="EasternPomo"/>
+				<implies facet="Culture" cat="EasternPomo"/>
 			</heading>
 			<heading id="GilakDance" title="Gilak Dance">
 				<synonym value="Gilak Dances"/>
 				<synonym value="Gilak"/>
-				<implies facet="Culture_facet" cat="EasternPomo"/>
+				<implies facet="Culture" cat="EasternPomo"/>
 			</heading>
 			<heading id="KalimatotoDance" title="Kalimatoto Dance">
 				<synonym value="Kalimatoto Dances"/>
 				<synonym value="Kalimatoto"/>
-				<implies facet="Culture_facet" cat="EasternPomo"/>
+				<implies facet="Culture" cat="EasternPomo"/>
 			</heading>
 			<heading id="LoleDance" title="Lole Dance">
 				<synonym value="Lole Dances"/>
 				<synonym value="Lole"/>
-				<implies facet="Culture_facet" cat="EasternPomo"/>
+				<implies facet="Culture" cat="EasternPomo"/>
 			</heading>
 			<heading id="XshlingakDance" title="Xshlingak Dance">
 				<synonym value="Xshlingak Dances"/>
 				<synonym value="Xshlingak"/>
-				<implies facet="Culture_facet" cat="EasternPomo"/>
+				<implies facet="Culture" cat="EasternPomo"/>
 			</heading>
 		</heading>
 		<heading id="Gatherings" title="Gatherings">
@@ -2184,49 +2184,49 @@
 	<heading id="FishingTrappingitems" title="Fishing &amp; Trapping items">
 		<heading id="Hook" title="Hook">
 			<synonym value="Hooks"/>
-			<implies facet="Activity_facet" cat="Fishing"/>	
+			<implies facet="ActivityorContext" cat="Fishing"/>	
 		</heading>
 		<heading id="FishingLine" title="Fishing line">
 			<synonym value="Fishing lines"/>
-			<implies facet="Activity_facet" cat="Fishing"/>				
+			<implies facet="ActivityorContext" cat="Fishing"/>				
 		</heading>
 		<heading id="Harpoon" title="Harpoon">
 			<synonym value="Harpoons"/>
-			<implies facet="Activity_facet" cat="Fishing"/>
-			<implies facet="Activity_facet" cat="Hunting"/>			
+			<implies facet="ActivityorContext" cat="Fishing"/>
+			<implies facet="ActivityorContext" cat="Hunting"/>			
 		</heading>
 		<heading id="Net" title="Net">
 			<synonym value="Nets"/>
-			<implies facet="Activity_facet" cat="Fishing"/>	
+			<implies facet="ActivityorContext" cat="Fishing"/>	
 		</heading>
 		<heading id="Sinker" title="Sinker">
 			<synonym value="Sinkers"/>
-			<implies facet="Activity_facet" cat="Fishing"/>	
+			<implies facet="ActivityorContext" cat="Fishing"/>	
 		</heading>
 		<heading id="Nethanger" title="Net hanger">
 			<synonym value="Net hangers"/>
-			<implies facet="Activity_facet" cat="Fishing"/>	
+			<implies facet="ActivityorContext" cat="Fishing"/>	
 		</heading>
 		<heading id="Gig" title="Gig"><!-- A trident or three-pringed spear for fishing -->		
 			<synonym value="Gigs"/>
-			<implies facet="Activity_facet" cat="Fishing"/>
+			<implies facet="ActivityorContext" cat="Fishing"/>
 		</heading>
 		<heading id="Slitter" title="Slitter">
 			<heading id="EelSlitter" title="Eel Slitter">
 				<synonym value="Eel Slitters"/>
-				<implies facet="Activity_facet" cat="Fishing"/>			
+				<implies facet="ActivityorContext" cat="Fishing"/>			
 			</heading>
 		</heading>
 		<heading id="Gorgehook" title="Gorge hook">
 			<synonym value="Gorge hooks"/>
-			<implies facet="Activity_facet" cat="Fishing"/>	
+			<implies facet="ActivityorContext" cat="Fishing"/>	
 		</heading>
 	</heading>
 	<heading id="Funeraryitems" title="Funerary items">
 		<heading id="Mummy" title="Mummy">
 			<synonym value="Mummies"/>
-			<implies facet="Activity_facet" cat="ReligionSpirituality"/>
-			<implies facet="Activity_facet" cat="Burial"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+			<implies facet="ActivityorContext" cat="Burial"/>
 			<heading id="Humanmummy" title="Human mummy">
 				<synonym value="Human mummies"/>			
 			</heading>
@@ -2262,19 +2262,19 @@
 			<synonym value="Sarcophogas"/>
 			<synonym value="Sarcophogases"/>
 			<synonym value="Sarcophagi"/>
-			<implies facet="Activity_facet" cat="Burial"/>
+			<implies facet="ActivityorContext" cat="Burial"/>
 		</heading>
 		<heading id="Coffin" title="Coffin">
 			<synonym value="Coffins"/>
-			<implies facet="Activity_facet" cat="Burial"/>
-			<implies facet="ObjectName_facet" cat="CoffinBoxContainer"/>
+			<implies facet="ActivityorContext" cat="Burial"/>
+			<implies facet="ObjectName" cat="CoffinBoxContainer"/>
 		</heading>
 		<heading id="CanopicBxFuner" title="Canopic Box" noMatch="true"/>
 		<heading id="CanopicJFuner" title="Canopic Jar" noMatch="true"/>
 	</heading>
 	<heading id="Games" title="Games">
 		<synonym value="Game"/>
-		<implies facet="Activity_facet" cat="PlayingGames"/>
+		<implies facet="ActivityorContext" cat="PlayingGames"/>
 		<heading id="Parcheesi" title="Parcheesi"/>
 		<heading id="Chess" title="Chess"/>
 		<heading id="Checkers" title="Checkers"/><!-- exclude the design motif -->
@@ -2297,13 +2297,13 @@
 			</heading>
 			<heading id="Cufflink" title="Cufflink">
 				<synonym value="Cufflinks"/>
-				<implies facet="ObjectName_facet" cat="CufflinkAccessory"/>
+				<implies facet="ObjectName" cat="CufflinkAccessory"/>
 			</heading>
 			<heading id="Torque" title="Torque">
 				<synonym value="Torques"/>
 				<synonym value="Torc"/>
 				<synonym value="Torcs"/>
-				<implies facet="Activity_facet" cat="Metallurgy"/>
+				<implies facet="ActivityorContext" cat="Metallurgy"/>
 			</heading>
 		</heading>
 		<heading id="ChestOrnamentation" title="Chest Ornamentation">
@@ -2317,7 +2317,7 @@
 			<heading id="Fibula" title="Fibula">
 				<synonym value="Fibulas"/>
 				<synonym value="Fibulae"/>
-				<implies facet="Activity_facet" cat="Metallurgy"/>		
+				<implies facet="ActivityorContext" cat="Metallurgy"/>		
 			</heading>
 			<heading id="Pin" title="Pin">
 				<synonym value="Pins"/>
@@ -2409,12 +2409,12 @@
 	<heading id="MedicalHealingItems" title="Medical &amp; Healing items">
 		<heading id="DoctoringbasketMedical" title="Doctoring basket">
 			<synonym value="Doctoring baskets"/>
-			<implies facet="Activity_facet" cat="Healing"/>
-			<implies facet="ObjectName_facet" cat="DoctoringbasketBaskets"/>
+			<implies facet="ActivityorContext" cat="Healing"/>
+			<implies facet="ObjectName" cat="DoctoringbasketBaskets"/>
 		</heading>
 		<heading id="Enemafunnel" title="Enema funnel">
 			<synonym value="Enema funnels"/>
-			<implies facet="Activity_facet" cat="Healing"/>
+			<implies facet="ActivityorContext" cat="Healing"/>
 		</heading>
 	</heading>
 	<heading id="MusicRelatedItems" title="Music">
@@ -2445,7 +2445,7 @@
 	            <heading id="GourdBanjo" title="Gourd Banjo">
 	                <synonym value="Gourd Banjos"/>
 	                <synonym value="Gourd Banjoes"/>
-	                <implies facet="Materials_facet" cat="GourdPlantMaterial"/>
+	                <implies facet="Material" cat="GourdPlantMaterial"/>
 	            </heading>
 	        </heading>
 		    <heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
@@ -2611,7 +2611,7 @@
 	            <synonym value="Harp-like"/>
 	            <synonym value="Bow Harp"/>
 	            <synonym value="Bow Harps"/>
-	            <implies facet="Materials_facet" cat="BowMaterial"/>
+	            <implies facet="Material" cat="BowMaterial"/>
 	        </heading>
 	        <heading id="Harpsichord" title="Harpsichord">
 	            <synonym value="Harpsichords"/>
@@ -3023,7 +3023,7 @@
 	                <synonym value="Armadillo-Tail Rattles"/>
 	                <synonym value="Armadillo Tail Rattle"/>
 	                <synonym value="Armadillo Tail Rattles"/>
-	            	<implies facet="Materials_facet" cat="ArmadilloAnimalMaterial"/>
+	            	<implies facet="Material" cat="ArmadilloAnimalMaterial"/>
 	            </heading> 
 	            <heading id="BabyRattle" title="Baby Rattle">
 	                <synonym value="Baby Rattles"/>
@@ -3032,7 +3032,7 @@
 	            </heading>
 	    		<heading id="BarkRattle" title="Bark Rattle"> <!-- implied materials: bark -->
 	                <synonym value="Bark Rattles"/>
-	            	<implies facet="Materials_facet" cat="BarkPlantMaterial"/>
+	            	<implies facet="Material" cat="BarkPlantMaterial"/>
 	            </heading>
 	            <heading id="BasketryRattle" title="Basketry Rattle">
 	                <synonym value="Basketry Rattles"/>
@@ -3095,7 +3095,7 @@
 	    		</heading>
 	    		<heading id="CaneRattle" title="Cane Rattle"> <!-- implied materials: cane -->
 	                <synonym value="Cane Rattles"/>
-	    			<implies facet="Materials_facet" cat="CaneAnimalMaterial"/>
+	    			<implies facet="Material" cat="CaneAnimalMaterial"/>
 	            </heading>
 	            <heading id="CarvedRattle" title="Carved Rattle">
 	                <synonym value="Carved Rattles"/>
@@ -3145,15 +3145,15 @@
 	        		<synonym value="Crab Claw Rattles"/>
 	        		<synonym value="Crab-Claw Rattle"/>
 	        		<synonym value="Crab-Claw Rattles"/>
-	        		<implies facet="Materials_facet" cat="ClawAnimalMaterial"/>
+	        		<implies facet="Material" cat="ClawAnimalMaterial"/>
 	        	</heading>
 	    		<heading id="CoccoonRattle" title="Coccoon Rattle"> <!-- implied materials: coccoon -->
 	                <synonym value="Coccoon Rattles"/>
-	        		<implies facet="Materials_facet" cat="CoccoonAnimalMaterial"/>
+	        		<implies facet="Material" cat="CoccoonAnimalMaterial"/>
 	            </heading>
 	    		<heading id="CopperRattle" title="Copper Rattle"> <!-- implied materials: copper -->
 	                <synonym value="Copper Rattles"/>
-	            	<implies facet="Materials_facet" cat="CopperMaterial"/>
+	            	<implies facet="Material" cat="CopperMaterial"/>
 	            </heading>
 	            <heading id="CuiaRattle" title="Cuia Rattle">
 	                <synonym value="Cuia Rattles"/>
@@ -3168,7 +3168,7 @@
 	        	</heading>
 	    		<heading id="FurRattle" title="Fur Rattle"> <!-- implied materials: fur -->
 	                <synonym value="Fur Rattles"/>
-	        		<implies facet="Materials_facet" cat="FurAnimalMaterial"/>
+	        		<implies facet="Material" cat="FurAnimalMaterial"/>
 	            </heading>
 	            <heading id="Goite-Husk Rattle" title="Goite-Husk Rattle">
 	                <synonym value="Goite-Husk Rattles"/>
@@ -3177,14 +3177,14 @@
 	            </heading> 
 	    		<heading id="GourdRattle" title="Gourd Rattle"> <!-- implied materials: gourd -->
 	                <synonym value="Gourd Rattles"/>
-	            	<implies facet="Materials_facet" cat="GourdAnimalMaterial"/>
+	            	<implies facet="Material" cat="GourdAnimalMaterial"/>
 	            </heading>
 	    		<heading id="GravelCoccoonRattle" title="Gravel-Coccoon Rattle"> <!-- implied materials: cocoon, gravel -->
 	                <synonym value="Gravel-Coccoon Rattles"/>
 	                <synonym value="Gravel Coccoon Rattles"/>
 	                <synonym value="Gravel Coccoon Rattle"/>
-	            	<implies facet="Materials_facet" cat="CocoonAnimalMaterial"/>
-	            	<implies facet="Materials_facet" cat="GravelMaterial"/>
+	            	<implies facet="Material" cat="CocoonAnimalMaterial"/>
+	            	<implies facet="Material" cat="GravelMaterial"/>
 	            </heading> 
 	        	<heading id="HandRattle" title="Hand Rattle">
 	        		<synonym value="Hand Rattles"/>
@@ -3225,11 +3225,11 @@
 	                <synonym value="Bison Hooved Rattles"/>
 	                <synonym value="Bison-Hooves Rattle"/>
 	                <synonym value="Bison-Hooves Rattles"/>
-	        		<implies facet="Materials_facet" cat="HoofAnimalMaterial"/>
+	        		<implies facet="Material" cat="HoofAnimalMaterial"/>
 	            </heading>
 	    		<heading id="HornRattle" title="Horn Rattle"> <!-- implied materials: horn -->
 	                <synonym value="Horn Rattles"/>
-	            	<implies facet="Materials_facet" cat="HornAnimalMaterial"/>
+	            	<implies facet="Material" cat="HornAnimalMaterial"/>
 	            </heading>
 	            <heading id="LegRattle" title="Leg Rattle">
 	                <synonym value="Leg Rattles"/>       
@@ -3273,7 +3273,7 @@
 	                <synonym value="Shell Rattles"/>
 	                <excl value="Turtle"/>
 	                <excl value="Turtles"/>
-	            	<implies facet="Materials_facet" cat="ShellMaterial"/> 
+	            	<implies facet="Material" cat="ShellMaterial"/> 
 	            </heading>
 	        	<heading id="SeedRattle" title="Seed Rattle"> <!-- implied materials: seed -->
 	        		<synonym value="Seed Rattles"/>
@@ -3281,7 +3281,7 @@
 	        		<synonym value="Pod Rattles"/>
 	        		<synonym value="Seed Pod Rattle"/>
 	        		<synonym value="Seed Pod Rattles"/>
-	        		<implies facet="Materials_facet" cat="SeedPlantMaterial"/> 
+	        		<implies facet="Material" cat="SeedPlantMaterial"/> 
 	        	</heading>
 	        	<heading id="SistrumRattle" title="Sistrum">
 	                <synonym value="Sistrums"/>
@@ -3313,7 +3313,7 @@
 	                <synonym value="Shell Rattles"/>
 	                <excl value="Sea"/> <!-- To exclude seashell rattles -->
 	                <excl value="Seashell"/> <!-- Ibid. -->
-	            	<implies facet="Materials_facet" cat="TurtleAnimalMaterial"/> 
+	            	<implies facet="Material" cat="TurtleAnimalMaterial"/> 
 	            </heading>
 	        </heading>
 	        <heading id="Sanza" title="Sanza"> <!-- includes Mbiras -->
@@ -3424,7 +3424,7 @@
 	    					<synonym value="Pan Flute"/>
 	    					<synonym value="Pan Flutes"/>
 	    					<excl value="Single"/> 
-	    					<implies facet="Materials_facet" cat="ReedPlantMaterial"/>
+	    					<implies facet="Material" cat="ReedPlantMaterial"/>
 	    				</heading>
 	    			</heading>
 	    			<heading id="PipeInstrument" title="Pipe"> <!-- excludes pan -->
@@ -3442,15 +3442,15 @@
 	    			</heading>
 	    		<heading id="BambooFlute" title="Bamboo Flute">
 	    			<synonym value="Bamboo Flutes"/>
-	    			<implies facet="Materials_facet" cat="BambooPlantMaterial"/>
+	    			<implies facet="Material" cat="BambooPlantMaterial"/>
 	    		</heading>
 	    		<heading id="BoneFlute" title="Bone Flute">
 	    			<synonym value="Bone Flutes"/>
-	    			<implies facet="Materials_facet" cat="BoneMaterial"/>
+	    			<implies facet="Material" cat="BoneMaterial"/>
 	    		</heading>
 	    		<heading id="CaneFlute" title="Cane Flute">
 	    			<synonym value="Cane Flutes"/>
-	    			<implies facet="Materials_facet" cat="CanePlantMaterial"/>
+	    			<implies facet="Material" cat="CanePlantMaterial"/>
 	    		</heading>
 	    		<heading id="MetalFlute" title="Metal Flute"> <!-- excludes: pipe -->
 	    			<synonym value="Metal Flutes"/>
@@ -3460,7 +3460,7 @@
 	    			<synonym value="Metal Pipe Flutes"/>
 	    			<excl value="Pipe"/> 
 	    			<excl value="Pipes"/> 
-	    			<implies facet="Materials_facet" cat="MetalMaterial"/>
+	    			<implies facet="Material" cat="MetalMaterial"/>
 	    		</heading>
 	    	    <heading id="NoseFlute" title="Nose Flute">
 	    	        <synonym value="Nose Flutes"/>
@@ -3469,7 +3469,7 @@
 	    			<synonym value="Wooden Flutes"/>
 	    			<synonym value="Wood Flute"/>
 	    			<synonym value="Wood Flutes"/>
-	    			<implies facet="Materials_facet" cat="WoodPlantMaterial"/>
+	    			<implies facet="Material" cat="WoodPlantMaterial"/>
 	    		</heading>
 	    	    <heading id="ReedFlute" title="Reed Flute"> <!-- sound is produced by reed (flute not necessarily made of reed material) -->
 	    			<synonym value="Reed Flutes"/>
@@ -3555,7 +3555,7 @@
 	    			<synonym value="Six Holed Flutes"/>
 	    			<synonym value="Six-Holed Flute"/>
 	    			<synonym value="Six-Holed Flutes"/>
-	    			<implies facet="Materials_facet" cat="ReedPlantMaterial"/>
+	    			<implies facet="Material" cat="ReedPlantMaterial"/>
 	    		</heading>
 	    	</heading>
 	        <heading id="Harmonica" title="Harmonica">
@@ -3580,7 +3580,7 @@
 	    		<synonym value="Ocarinas"/>
 	    		<heading id="PotteryOcarina" title="Pottery Ocarina">
 	    			<synonym value="Pottery Ocarinas"/>
-	    			<implies facet="Materials_facet" cat="PotteryMaterial"/>
+	    			<implies facet="Material" cat="PotteryMaterial"/>
 	    		</heading>
 	    	</heading>
 	    	<heading id="Organ" title="Organ"> <!-- includes reed, harmonium -->
@@ -3594,11 +3594,11 @@
 	            <synonym value="Trumpets"/>
 	        	<heading id="BambooTrumpet" title="Bamboo Trumpet">
 	        		<synonym value="Bamboo Trumpets"/>
-	        		<implies facet="Materials_facet" cat="BambooPlantMaterial"/>
+	        		<implies facet="Material" cat="BambooPlantMaterial"/>
 	        	</heading>
 	        	<heading id="BrassTrumpet" title="Brass Trumpet">
 	        		<synonym value="Brass Trumpets"/>
-	        		<implies facet="Materials_facet" cat="BrassMaterial"/>
+	        		<implies facet="Material" cat="BrassMaterial"/>
 	        	</heading>
 	        </heading>
 	        <heading id="WhistleInstrument" title="Whistle"> <!--implied materials: bone, pottery, wood/en -->
@@ -3651,17 +3651,17 @@
 	        	<synonym value="Five-Holed Whistles"/>
 	        	<heading id="BoneWhistle" title="Bone Whistle">
 	        		<synonym value="Bone Whistles"/>
-	        		<implies facet="Materials_facet" cat="BoneMaterial"/>
+	        		<implies facet="Material" cat="BoneMaterial"/>
 	        	</heading>
 	        	<heading id="PotteryWhistle" title="Pottery Whistle">
 	        		<synonym value="Pottery Whistles"/>
-	        		<implies facet="Materials_facet" cat="PotteryMaterial"/>
+	        		<implies facet="Material" cat="PotteryMaterial"/>
 	        	</heading>
 	        	<heading id="WoodenWhistle" title="Wooden Whistle">
 	        		<synonym value="Wooden Whistles"/>
 	        		<synonym value="Wood Whistle"/>
 	        		<synonym value="Wood Whistles"/>
-	        		<implies facet="Materials_facet" cat="WoodPlantMaterial"/>
+	        		<implies facet="Material" cat="WoodPlantMaterial"/>
 	        	</heading>
 	        </heading>
 	    </heading>
@@ -3685,7 +3685,7 @@
 			<synonym value="Pipes"/>
 			<heading id="OpiumPipe" title="OpiumPipe">
 				<synonym value="Opium Pipes"/>
-				<implies facet="Activity_facet" cat="DrugUse"/>
+				<implies facet="ActivityorContext" cat="DrugUse"/>
 			</heading>
 			<heading id="PipeParts" title="Pipe Parts">
 				<heading id="PipeBowl" title="Pipe Bowl">
@@ -3703,7 +3703,7 @@
 			<synonym value="Pouches"/>
 			<synonym value="Sack"/>
 			<synonym value="Sacks"/>
-			<implies facet="ObjectName_facet" cat="BagAccessory"/>
+			<implies facet="ObjectName" cat="BagAccessory"/>
 		</heading>
 	</heading>
 	<heading id="Photographs" title="Photographs">
@@ -3749,26 +3749,26 @@
 			<synonym value="Shadow Play Figures"/>
 	        <synonym value="Shadow Play Figure"/>
 	        <heading id="HajivatShadowFigure" title="Hajivat">
-	            <implies facet="Culture_facet" cat="Turkish"/>
+	            <implies facet="Culture" cat="Turkish"/>
 	        </heading>
 	        <heading id="HodjaShadowFigure" title="Hodja (the religious leader)">
 	            <synonym value="Hodja"/>
-	            <implies facet="Culture_facet" cat="Turkish"/>
+	            <implies facet="Culture" cat="Turkish"/>
 	        </heading>
 	        <heading id="IskeleKahyasiShadowFigure" title="Iskele Kahyasi (a pierman of Istanbul)">
 	            <synonym value="Iskele Kahyasi"/>
 	            <synonym value="pierman of Istanbul"/>
-	            <implies facet="Culture_facet" cat="Turkish"/>
+	            <implies facet="Culture" cat="Turkish"/>
 	        </heading>
 	        <heading id="KaragozShadowFigure" title="Karagöz (the black-eyed man)">
 	            <synonym value="Karagöz"/>
 	            <synonym value="Karagoz"/>
-	            <implies facet="Culture_facet" cat="Turkish"/>
+	            <implies facet="Culture" cat="Turkish"/>
 	        </heading>
 	        <heading id="TerziNikoShadowFigure" title="Terzi Niko (the Greek tailor Niko)">
 	            <synonym value="Terzi Niko"/>
 	            <synonym value="the Greek tailor Niko"/>
-	            <implies facet="Culture_facet" cat="Turkish"/>
+	            <implies facet="Culture" cat="Turkish"/>
 	        </heading>
 	    </heading>
 	</heading>
@@ -3939,26 +3939,26 @@
 	<heading id="SculptedWorks" title="Sculpted Works">
 		<heading id="Ossuary" title="Ossuary">
 			<synonym value="Ossuaries"/>
-			<implies facet="Activity_facet" cat="Burial"/>
-			<implies facet="Activity_facet" cat="Sculpting"/>
-			<implies facet="Activity_facet" cat="Carving"/><!-- could be stone carving or wood carving -->
+			<implies facet="ActivityorContext" cat="Burial"/>
+			<implies facet="ActivityorContext" cat="Sculpting"/>
+			<implies facet="ActivityorContext" cat="Carving"/><!-- could be stone carving or wood carving -->
 		</heading>
 	</heading>
 	<heading id="Sportsequipment" title="Sports equipment">
-		<implies facet="Activity_facet" cat="PlayingSports"/>
+		<implies facet="ActivityorContext" cat="PlayingSports"/>
 		<heading id="Ball" title="Ball">
-			<implies facet="TechniqueDesignDecoration_facet" cat="Spherical"/><!-- check cat. -->
+			<implies facet="TechniqueDesignorDecoration" cat="Spherical"/><!-- check cat. -->
 			<synonym value="Balls"/>
 		</heading>
 		<heading id="ShinnyBall" title="Shinny Ball">
-		    <implies facet="TechniqueDesignDecoration_facet" cat="Spherical"/><!-- check cat. -->			
+		    <implies facet="TechniqueDesignorDecoration" cat="Spherical"/><!-- check cat. -->			
 			<synonym value="Shinny Balls"/>
 		</heading>
 	</heading>
 	<heading id="Tools" title="Tools">
 		<synonym value="Tool"/>
 		<heading id="AnimalHusbandryTools" title="AnimalHusbandryTools"  noMatch="true">
-			<implies facet="Activity_facet" cat="AnimalHusbandry"/>
+			<implies facet="ActivityorContext" cat="AnimalHusbandry"/>
 			<heading id="StockWhip" title="StockWhip">
 				<synonym value="StockWhips"/>
 				<heading id="BuggyWhip" title="Buggy Whip">
@@ -3974,9 +3974,9 @@
 				</heading>
 				<heading id="Quirt" title="Quirt">					
 					<synonym value="Quirts"/>
-					<implies facet="Activity_facet" cat="HorsebackRiding"/>
-				    <implies facet="Materials_facet" cat="Leather"/>
-				    <implies facet="TechniqueDesignDecoration_facet" cat="Forked"/>	
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				    <implies facet="Material" cat="Leather"/>
+				    <implies facet="TechniqueDesignorDecoration" cat="Forked"/>	
 				</heading>			
 			</heading>
 			<heading id="Yoke" title="Yoke">
@@ -4256,7 +4256,7 @@
 		<heading id="Rope" title="Rope">
 			<synonym value="Ropes"/>
 			<heading id="MeshMeasure" title="Mesh Measure">
-				<implies facet="Activity_facet" cat="CommerceAndTrade"/>
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			</heading>
 		</heading>
 		<heading id="Sickle" title="Sickle">
