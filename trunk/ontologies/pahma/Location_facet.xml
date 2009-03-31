@@ -4191,12 +4191,12 @@
 					<heading id="LosAltillos" title="Los Altillos"/>
 					<heading id="Mascota" title="Mascota"/>
 					<heading id="ASanAntonio" title="A. San Antonio"/>
-					<heading id="SanGabrielMX" title="San Gabriel">
-						<excl value="Misson"/> <!-- Disambiguates from Los Angeles town and mission -->
-						<excl value="CA-LAn"/> <!-- Ibid. -->
-						<excl value="Los Angeles"/> <!-- Ibid. -->
-						<excl value="California"/> <!-- Ibid. -->
-					</heading>
+					<!-- <heading id="SanGabrielMX" title="San Gabriel"> As far as I can tell, all objects from San Gabriel are from the U.S. -->
+						<!-- <excl value="Misson"/> Disambiguates from Los Angeles town and mission -->
+						<!-- <excl value="CA-LAn"/> Ibid. -->
+						<!-- <excl value="Los Angeles"/> Ibid. -->
+						<!-- <excl value="California"/> Ibid. -->
+					<!-- </heading> -->
 					<heading id="SanJoseTateposco" title="San Jose Tateposco"/>
 					<heading id="Sayula" title="Sayula"/>
 					<heading id="Talpa" title="Talpa"/>
@@ -6616,6 +6616,9 @@
 									</heading>
 									<heading id="MapleCreekHumboldtCA" title="Maple Creek"/>
 									<heading id="MartinsFerryHumboldtCA" title="Martin's Ferry"/>
+									<heading id="MillCreekHumbCA" title="Mill Creek" noMatch="true">
+										<synonym value="Below Mill Creek, Humboldt County"/>
+									</heading>
 									<heading id="MirandaHumboldtCA" title="Miranda"/>
 									<heading id="OrickHumboldtCA" title="Orick"/>
 									<heading id="OrleansHumboldtCA" title="Orleans"/>
@@ -9920,8 +9923,9 @@
 								<heading id="PlacesTehamaCA" title="Place Names" noMatch="true">
 									<heading id="ChildsMdwsTehamaCA" title="Childs Meadows"/>
 									<heading id="DeerCreekTehamaCA" title="Deer Creek"/>
-									<heading id="MillCreekTehamaCA" title="Mill Creek">
+									<heading id="MillCreekTehamaCA" title="Mill Creek" noMatch="true">
 										<synonym value="Bank of Mill Creek"/>
+										<synonym value="California; Tehama; Bank of Mill Creek"/>
 									</heading>
 									<heading id="MineralTehamaCA" title="Mineral"/> <!-- Disambiguate from its rocky homonym -->
 									<!-- <heading id="Mound1" title="Mound 1"/>  These are too ambiguous; need additional criteria. -->
@@ -17254,7 +17258,7 @@
 									<heading id="LaHaciendaRanch" title="La Hacienda Ranch"/>
 									<heading id="LemooreKingsCA" title="Lemoore"/>
 									<heading id="SantaRosaRancheria" title="Santa Rosa Rancheria"/>
-									<heading id="TulareLakeKingsCA" title="Tulare Lake"/>
+									<!--<heading id="TulareLakeKingsCA" title="Tulare Lake"/> As far as I can tell, all PAHMA objects from Tulare Lake are from Tulare county -->
 								</heading>
 								<heading id="TrinomKingsCA" title="Trinomial site names" noMatch="true">
 									<heading id="CAKin1" title="CA-Kin-1">
@@ -18252,12 +18256,16 @@
 								<synonym value="Tulare County, CA, no loc"/>
 								<synonym value="Tulare County, CA, no loc."/>
 								<heading id="PlacesTulareCA" title="Place Names" noMatch="true">
-									<heading id="DrumValleyTulareCA" title="Drum Valley"/>
+									<heading id="DrumValleyTulareCA" title="Drum Valley" noMatch="true">
+										<synonym value="California; Tulare; Drum Valley"/>
+									</heading>
 									<heading id="IshomValleyTulareCA" title="Ishom Valley"/>
 									<heading id="KaweahRiverTulareCA" title="Kaweah River"/>
 									<heading id="LewisCreekTulareCA" title="Lewis Creek"/>
 									<heading id="LimeKilnTulareCA" title="Lime Kiln"/>
-									<heading id="MillCreekTulareCA" title="Mill Creek"/>
+									<heading id="MillCreekTulareCA" title="Mill Creek" noMatch="true">
+										<synonym value="California; Tulare; Mill Creek"/>
+									</heading>
 									<heading id="PortervilleTulareCA" title="Porterville"/>
 									<heading id="TulareLakeTulareCA" title="Tulare Lake">
 										<synonym value="Tulare Lake area"/>
@@ -18358,7 +18366,7 @@
 									<heading id="CATul151" title="CA-Tul-151"/>
 									<heading id="CATul166" title="CA-Tul-166"/>
 									<heading id="CATulNL1" title="CA-Tul-NL-1">
-										<synonym value="Tule River Reservation"/>
+										<implies facet="Location" cat="TuleRiverResTulareCA"/>
 									</heading>
 									<heading id="CATulNL2" title="CA-Tul-NL-2"/>
 									<heading id="CATulNL3" title="CA-Tul-NL-3">
@@ -18522,6 +18530,7 @@
 									</heading>
 									<heading id="TopangaCynLAnCA" title="Topanga Canyon">
 										<synonym value="Topanga"/>
+										<synonym value="Topango"/>
 										<heading id="TopangaTankSLAnCA" title="Tank Site">
 											<synonym value="The Tank Site"/>
 										</heading>
@@ -18533,6 +18542,7 @@
 										<synonym value="CA-LAn-  1"/>
 										<synonym value="CA-LAn- 1 and LAn-2"/>
 										<synonym value="CA-LAn-1 and LAn-2"/>
+										<synonym value="CA-LAn-NL-2"/>
 										<implies facet="Location" cat="TopangaTankSLAnCA"/>
 									</heading>
 									<heading id="CALan2" title="CA-LAn-2">
@@ -18601,7 +18611,7 @@
 									<heading id="CALan123" title="CA-LAn-123"/>
 									<heading id="CALan125" title="CA-LAn-125"/>
 									<heading id="CALan133" title="CA-LAn-133">
-										<synonym value="Nelson 1"/>
+										<!-- <synonym value="Nelson 1"/> Duplicate hook in CAMrn1; seems likely this synonym is spurious --> 
 										<synonym value="SBMNH 127"/>
 									</heading>
 									<heading id="CALan138" title="CA-LAn-138">
@@ -18609,16 +18619,16 @@
 										<synonym value="Malaga Cave (Walker)"/>
 									</heading>
 									<heading id="CALan139" title="CA-LAn-139">
-										<synonym value="Nelson 7"/>
+										<!-- <synonym value="Nelson 7"/> Duplicate hook in CAMrn7; seems likely this synonym is spurious --> 
 									</heading>
 									<heading id="CALan141" title="CA-LAn-141">
 										<synonym value="Nelson 9"/>
 									</heading>
 									<heading id="CALan142" title="CA-LAn-142">
-										<synonym value="Nelson 10"/>
+										<!-- <synonym value="Nelson 10"/> Duplicate hook in CAMrn7; seems likely this synonym is spurious --> 
 									</heading>
 									<heading id="CALan149" title="CA-LAn-149">
-										<synonym value="Nelson 17"/>
+										<!-- <synonym value="Nelson 17"/> Duplicate hook in CAMrn7; seems likely this synonym is spurious --> 
 									</heading>
 									<heading id="CALan153" title="CA-LAn-153">
 										<synonym value="D-2"/>
@@ -18666,9 +18676,6 @@
 									<heading id="CALan395" title="CA-LAn-395"/>
 									<heading id="CALanNL1" title="CA-LAn-NL-1">
 										<synonym value="Port Los Angeles, 1 m. north of Southern Pacific Wharf."/>
-									</heading>
-									<heading id="CALanNL2" title="CA-LAn-NL-2">
-										<synonym value="CA-LAn-1"/>
 									</heading>
 								</heading>
 							</heading>
