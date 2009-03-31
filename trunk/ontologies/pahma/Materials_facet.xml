@@ -655,7 +655,8 @@
 			</heading>
 		</heading>
 		<heading id="GrassandHerbs" title="Grass and Herbs">
-			<heading id="Bamboo" title="Bamboo"/>
+			<heading id="BambooMaterial" title="Bamboo"/>
+			<heading id="CanePlantMaterial" title="Cane"/>
 			<heading id="Commonbeargrass" title="Common beargrass">
 				<synonym value="Bear grass"/>
 				<synonym value="Beargrass"/>
@@ -665,6 +666,7 @@
 				<synonym value="Bare grass"/>
 			</heading>
 			<heading id="Rabbitbrush" title="Rabbit brush"/>
+			<heading id="ReedPlantMaterial" title="Reed"/>
 			<heading id="Sedge" title="Sedge">
 				<synonym value="Carex"/>
 			</heading>
@@ -702,6 +704,7 @@
 				<heading id="Earthenware" title="Earthenware">
 					<synonym value="Earthen ware"/>
 				</heading>
+				<heading id="PotteryMaterial" title="Pottery"/>
 				<heading id="Stoneware" title="Stoneware"/>
 				<heading id="Terracotta" title="Terracotta">
 					<synonym value="Terra cotta"/>
@@ -714,16 +717,15 @@
 				<synonym value="porcellaneous"/>
 			</heading>
 		</heading>
-		<heading id="Metal" title="Metal">
+		<heading id="MetalMaterial" title="Metal">
 			<synonym value="Pot Metal"/>
 			<synonym value="Pot-Metal"/>
 			<heading id="Alloyunspecified" title="Alloy (unspecified)"/>
 			<heading id="Aluminum" title="Aluminum">
 				<synonym value="Aluminium"/>
 			</heading>
-			<heading id="Brass" title="Brass">
-					<!-- a "gold weight" is an item usually made of brass -->
-				<synonym value="Gold weight"/>
+			<heading id="BrassMaterial" title="Brass">
+				<synonym value="Gold weight"/> <!-- a "gold weight" is an item usually made of brass -->
 			</heading>
 			<heading id="Bronze" title="Bronze"/>
 			<heading id="Copper" title="Copper">
