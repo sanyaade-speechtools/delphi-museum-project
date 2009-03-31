@@ -277,39 +277,44 @@
 					<heading id="Parrot" title="Parrot" noMatch="true" asToken="plural"/>
 					<heading id="Peacock" title="Peacock" noMatch="true" asToken="plural"/>
 					<heading id="Pelican" title="Pelican" noMatch="true">
-						<token value="pelican"/>
-						<token value="pelicans"/>
-						<token value="pelikan"/>
+						<token value="Pelican"/>
+						<token value="Pelicans"/>
+						<token value="Pelikan"/>
 					</heading>
 					<heading id="Penguin" title="Penguin" noMatch="true" asToken="plural"/>
 					<heading id="Phoenix" title="Phoenix" noMatch="true" asToken="noplural"/>
 					<heading id="Quail" title="Quail" noMatch="true" asToken="plural">
 						<heading id="QuailCrest" title="Quail Crest">
-							<synonym value="quail crests"/>
-							<synonym value="quail crest decoration"/>
-							<synonym value="quail crest fringe"/>
-							<synonym value="quail crest design"/>
-							<synonym value="quail crests decoration"/>
+							<synonym value="Quail Crests"/>
+							<synonym value="Quail Crest Decoration"/>
+							<synonym value="Quail Crest Fringe"/>
+							<synonym value="Quail Crest Design"/>
+							<synonym value="Quail Crests Decoration"/>
 						</heading>
 					</heading>
 					<heading id="Raven" title="Raven" noMatch="true" asToken="plural"/>
-					<heading id="RedWingedBlackbird" title="RedWinged Blackbird">
-						<synonym value="red-wing blackbird"/>
-						<synonym value="redwinged blackbird"/>
+					<heading id="RedWingedBlackbird" title="Red-Winged Blackbird">
+						<synonym value="Red-wing Blackbird"/>
+						<synonym value="Redwinged Blackbird"/>
+						<synonym value="Redwinged Blackbirds"/>
 					</heading>
 					<heading id="Roadrunner" title="Roadrunner" noMatch="true" asToken="plural"/>
 					<heading id="Sparrow" title="Sparrow" noMatch="true" asToken="plural"/>
 					<heading id="Swan" title="Swan" noMatch="true" asToken="plural"/>
 					<heading id="Thunderbird" title="Thunderbird">
-						<synonym value="thunderbird"/>
-						<excl value="thunderbird park"/>
+						<synonym value="Thunderbirds"/>
+						<synonym value="Thunder Bird"/>
+						<synonym value="Thunder-Bird"/>
+						<synonym value="Thunder Birds"/>
+						<synonym value="Thunder-Birds"/>
+						<excl value="Thunderbird Park"/>
 					</heading>
 				</heading>
 				<heading id="WaterAnimals" title="Water Animals (Fish, Marine mammals, Shellfish, etc.)" noMatch="true">
 					<heading id="Fish" title="Fish" noMatch="true">
-						<token value="fish"/>
-						<token value="fresh water fish"/>
-						<token value="fishes" combine="prefix"/>
+						<token value="Fish"/>
+						<token value="Fresh water fish"/>
+						<token value="Fishes" combine="prefix"/>
 						<heading id="Eel" title="Eel" noMatch="true" asToken="noplural"/>
 						<heading id="Salmon" title="Salmon" noMatch="true" asToken="noplural"/>
 						<heading id="Sculpin" title="Sculpin" noMatch="true" asToken="noplural"/>
@@ -327,10 +332,13 @@
 						</heading>
 						<!-- Note Killer whale is mostly used as design -->
 						<heading id="KillerWhale" title="Killer Whale">
-							<synonym value="killerwhale"/>
-							<synonym value="killer-whale"/>
-							<synonym value="killer whale"/>
-							<synonym value="orca"/>
+							<synonym value="Killerwhale"/>
+							<synonym value="Killerwhales"/>
+							<synonym value="Killer-Whale"/>
+							<synonym value="Killer-Whales"/>
+							<synonym value="Killer Whales"/>
+							<synonym value="Orca"/>
+							<synonym value="Orcas"/>
 						</heading>
 						<heading id="Seal" title="Seal" noMatch="true" asToken="plural"/>
 						<!-- No evidence of use as design <heading id="SeaLion" title="Sea Lion" noMatch="true"> -->
@@ -455,10 +463,8 @@
 						</heading>
 						<heading id="Leopard" title="Leopard" noMatch="true" asToken="plural"/>
 						<heading id="Lion" title="Lion" noMatch="true" asToken="plural">
-							<token value="lion"/>
 							<token value="lions" combine="prefix"/>
 							<heading id="NameanLion" title="Namean Lion" noMatch="true" asToken="plural">
-								<token value="Namean lion"/>
 								<token value="Namean lions" combine="prefix"/>
 							</heading>
 						</heading>
