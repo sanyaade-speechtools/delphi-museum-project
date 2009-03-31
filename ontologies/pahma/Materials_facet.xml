@@ -552,30 +552,30 @@
 		</heading>
 		<heading id="Trees" title="Trees">
 			<heading id="TypesOfTrees" title="Types of Trees" noMatch="true">
-				<heading id="Alder" title="Alder"/>
-				<heading id="Banana" title="Banana">
+				<heading id="AlderTree" title="Alder"/>
+				<heading id="BananaTree" title="Banana">
 					<synonym value="Bananas"/>
 					<synonym value="Banana seed"/>
 					<synonym value="Banana seeds"/>
 				</heading>
-				<heading id="Birch" title="Birch">
+				<heading id="BirchTree" title="Birch">
 					<heading id="Hazel" title="Hazel"/>
 				</heading>
-				<heading id="Cedar" title="Cedar"/>
-				<heading id="Coconut" title="Coconut">
+				<heading id="CedarTree" title="Cedar"/>
+				<heading id="CoconutTree" title="Coconut">
 					<synonym value="Coconuts"/>
 					<heading id="CoconutShell" title="Coconut Shell">
 						<synonym value="Coconut Shells"/>
 					</heading>
 				</heading>
 				<heading id="Conifer" title="Conifer">
-					<heading id="Fir" title="Fir"/>
-					<heading id="Juniper" title="Juniper">
+					<heading id="FirTree" title="Fir"/>
+					<heading id="JuniperTree" title="Juniper">
 						<synonym value="Junipers"/>
 						<synonym value="Juniper seed"/>
 						<synonym value="Juniper seeds"/>
 					</heading>
-					<heading id="Pine" title="Pine">
+					<heading id="PineTree" title="Pine">
 						<synonym value="Pinenut"/>
 						<synonym value="Pinenuts"/>
 						<synonym value="Pine nut"/>
@@ -637,7 +637,9 @@
 				<synonym value="Common Viburnum"/>
 				<synonym value="Viburnum ellipticum"/>
 			</heading>
-			<heading id="Juniper" title="Juniper"/>
+			<heading id="JuniperBush" title="Juniper Bush">
+				<implies facet="Materials" cat="JuniperTree"/>
+			</heading>
 			<heading id="Redbud" title="Redbud">
 				<synonym value="Red-bud"/>
 			</heading>
