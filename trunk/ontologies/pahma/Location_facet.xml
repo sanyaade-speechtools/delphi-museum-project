@@ -19252,6 +19252,16 @@
 								<heading id="PlacesSBrbraCA" title="Place Names" noMatch="true">
 									<heading id="FranklinSite" title="Franklin site"/>
 									<heading id="GoletaSBrbraCA" title="Goleta">
+										<heading id="GoletaSloughSBaCA" title="Goleta Slough">
+											<heading id="GoletaSlghESBaCA" title="East side of slough"> <!-- Trim from UI -->
+												<synonym value="E side Goleta Slough"/>
+												<synonym value="East side of Goleta Slough"/>
+											</heading>
+											<heading id="GoletaSlghSSBaCA" title="South side of slough"> <!-- Trim from UI -->
+												<synonym value="S side of Goleta Slough"/>
+												<synonym value="South side of Goleta Slough"/>
+											</heading>
+										</heading>
 										<heading id="MosesIslSBrbraCA" title="Moses Island"/>
 										<heading id="SkeletonIslSBrbraCA" title="Skeleton Island"/>
 									</heading>
@@ -19677,21 +19687,19 @@
 									<heading id="CASBa42" title="CA-SBa- 42">
 										<synonym value="CA-SBa-42"/>
 										<synonym value="Rogers 42"/>
-										<synonym value="E side Goleta Slough"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+										<implies facet="Location" cat="GoletaSlghESBaCA"/>
 									</heading>
 									<heading id="CASBa43" title="CA-SBa- 43">
 										<synonym value="CA-SBa-43"/>
-										<synonym value="East side of Goleta Slough"/>
 										<synonym value="Mainland site 2"/>
 										<synonym value="Olson M2"/>
 										<synonym value="Rogers 43"/>
+										<implies facet="Location" cat="GoletaSlghESBaCA"/>
 									</heading>
 									<heading id="CASBa44" title="CA-SBa- 44">
 										<synonym value="CA-SBa-44"/>
-										<synonym value="East side of Goleta Slough"/>
 										<synonym value="Rogers 44"/>
+										<implies facet="Location" cat="GoletaSlghESBaCA"/>
 									</heading>
 									<heading id="CASBa46" title="CA-SBa- 46">
 										<synonym value="CA-SBa-46"/>
@@ -19703,18 +19711,14 @@
 									<heading id="CASBa47" title="CA-SBa- 47">
 										<synonym value="CA-SBa-47"/>
 										<synonym value="Rogers 47"/>
-										<synonym value="S side of Goleta Slough"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Goleta campus 2"/>
+										<implies facet="Location" cat="GoletaSlghSSBaCA"/>
 									</heading>
 									<heading id="CASBa48" title="CA-SBa- 48">
 										<synonym value="CA-SBa-48"/>
-										<synonym value="S side of Goleta Slough"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 										<synonym value="Goleta campus 1"/>
 										<synonym value="Rogers 48"/>
+										<implies facet="Location" cat="GoletaSlghSSBaCA"/>
 									</heading>
 									<heading id="CASBa73" title="CA-SBa- 73">
 										<synonym value="CA-SBa-73"/>
