@@ -3375,7 +3375,7 @@
 					<synonym value="Coastal Peru (unspecified)"/>
 					<heading id="PeruFarNorthCoast" title="Far North Coast"/>
 					<heading id="PeruNorthCoast" title="North Coast">
-						<heading id="PeruChepen" title="Chepen"/>
+						<heading id="ChepanPeru" title="Chepan"/>
 						<heading id="ChicamaValley" title="Chicama Valley"> <!-- PV 23 -->
 							<synonym value="Chicama"/>
 							<synonym value="Chicama PV23"/>
@@ -3443,8 +3443,6 @@
 								<synonym value="Canete"/>
 							</heading>
 						</heading>
-						<heading id="HuanucoRegion" title="Huánuco Region"/>
-						<heading id="JuninRegion" title="Junín Region"/>
 						<heading id="LimaRegion" title="Lima Region">
 							<heading id="Chancayvalley" title="Chancay valley">
 								<heading id="CaleradeLauren" title="Calera de Lauren">
@@ -3483,53 +3481,15 @@
 								<heading id="Paramonga" title="Paramonga"/>
 							</heading>
 						</heading>
-						<heading id="PascoRegion" title="Pasco Region"/>
 						<heading id="UcayaliRegion" title="Ucayali Region">
 							<heading id="UcayaliRiver" title="Ucayali River"/>
 						</heading>
 						<!-- End of Verify -->
 					</heading>
 					<heading id="PeruSouthCoast" title="South Coast">
+						<synonym value="Far South Coast"/>
 						<synonym value="Southern Peru"/>
 						<!-- Verify that the following are all South Coast -->
-						<heading id="ApurimacRegion" title="Apurímac Region"/>
-						<heading id="ArequipaRegion" title="Arequipa Region">
-							<heading id="AcariVallPeru" title="Acári valley"> <!-- PV 74 -->
-								<synonym value="Acari valley"/>
-								<synonym value="PV74"/>
-								<heading id="HachaViejo" title="Hacha"/>
-								<heading id="HuaratoViejo" title="Huarato">
-									<synonym value="PV74-20"/>
-								</heading>
-								<heading id="TamboViejo" title="Tambo Viejo">
-									<synonym value="PV74-1"/>
-								</heading>
-							</heading>
-							<heading id="AllancayPeru" title="Allancay">
-								<synonym value="Allangay"/>
-							</heading>
-							<heading id="CayllomaMine" title="Caylloma Mine"/>
-							<heading id="ChalaPeru" title="Chala"/>
-							<heading id="YaucaVallPeru" title="Yauca valley">
-								<heading id="Mochica" title="Mochica"/>
-							</heading>
-						</heading>
-						<heading id="AyacuchoRegion" title="Ayacucho Region"/>
-						<heading id="CuzcoRegion" title="Cuzco Region">
-							<heading id="Calca" title="Calca"/>
-							<heading id="Cochahuasi" title="Cochahuasi"/>
-							<heading id="ColwayChinchaypuquit" title="Colway: Chinchaypuquit"/>
-							<heading id="Cuzco" title="Cuzco"/>
-							<heading id="CuzcoColmay" title="Cuzco Colmay"/>
-							<heading id="Huarocondo" title="Huarocondo"/>
-							<heading id="LaRecoleta" title="La Recoleta"/>
-							<heading id="MachuPicchu" title="Machu Picchu"/>
-							<heading id="PampadeCuzco" title="Pampa de Cuzco"/>
-							<heading id="PampaViejas" title="Pampa Viejas"/>
-							<heading id="PaucartamboProvince" title="Paucartambo Province"/>
-							<heading id="Sacsahuaman" title="Sacsahuaman"/>
-						</heading>
-						<heading id="HuancavelicaRegion" title="Huancavelica Region"/>
 						<heading id="IcaRegion" title="Ica Region">
 							<heading id="AnconPeru" title="Ancon">
 								<heading id="AnconSiteA" title="Ancon Site A"/>
@@ -3578,18 +3538,14 @@
 								<synonym value="Nasca"/>
 								<synonym value="Nazca"/>
 								<synonym value="Nasca valley"/>
-								<heading id="NacoroGrande" title="Nacoro Grande"/>
 								<heading id="Cacatilla" title="Cacatilla"/>
 								<heading id="Cahuachi" title="Cahuachi"/>
-								<heading id="Soisongo" title="Soisongo"/>
 								<heading id="Congalla" title="Congalla"/>
-								<heading id="Pangaravi" title="Pangaravi"/>
-								<heading id="Poromo" title="Poromo"/>
-								<heading id="RavineofNazca" title="Ravine of Nazca"/>
-								<heading id="Trancas" title="Trancas"/>
-								<heading id="Tunga" title="Tunga"/>
-								<heading id="Usaka" title="Usaka"/>
+								<heading id="NacoroGrande" title="Nacoro Grande"/>
 								<heading id="Nazca" title="Nazca"/>
+								<heading id="Pangaravi" title="Pangaravi"/>
+								<heading id="RavineofNazca" title="Ravine of Nazca"/>
+								<heading id="Soisongo" title="Soisongo"/>
 							</heading>
 							<heading id="PoromaVallPeru" title="Poroma Valley"> <!-- PV 71 -->
 								<heading id="CoparaPeru" title="Copara"> <!-- 14° 59' 0" South, 74° 53' 0" West -->
@@ -3658,6 +3614,7 @@
 								</heading>
 								<heading id="UsacaPeru" title="Usaca">
 									<synonym value="PV71-37"/>
+									<synonym value="Usaka"/>
 								</heading>
 							</heading>
 							<heading id="TarugaVallPeru" title="Taruga Valley"> <!-- PV 70 -->
@@ -3668,37 +3625,131 @@
 								</heading>
 							</heading>
 						</heading>
-						<heading id="MadredeDiosRegion" title="Madre de Dios Region"/>
-						<heading id="MoqueguaRegion" title="Moquegua Region"/>
 						<heading id="Piscovalley" title="Pisco valley">
 							<heading id="TamboColorado" title="Tambo Colorado">
 								<synonym value="Tombo Colorado"/>
 							</heading>
 							<heading id="GuayaGrande" title="Guaya Grande"/>
 						</heading>
-						<heading id="PunoRegion" title="Puno Region"/>
-						<heading id="TacnaRegion" title="Tacna Region"/>
+						<heading id="ToparoWashPeru" title="Topara Wash">
+							<synonym value="Topara"/>
+						</heading>
 						<!-- End of Verify -->
 					</heading>
-					<heading id="PeruFarSouthCoast" title="Far South Coast"/>
 				</heading>
 				<heading id="HighlandPeru" title="Highland Peru">
-					<heading id="PeruNorthHighlands" title="North Highlands"/>
-					<heading id="PeruCentralHighlands" title="Central Highlands"/>
-					<heading id="PeruSouthHighlands" title="South Highlands"/>
+					<heading id="PeruNorthHighlands" title="North Highlands">
+						<heading id="AmazonasRegion" title="Amazonas Region">
+							<synonym value="Amazonas"/>
+						</heading>
+						<!-- Highlands of Ancash Department -->
+						<heading id="CajamarcaRegion" title="Cajamarca Region">
+							<synonym value="Cajamarca"/>
+							<heading id="VistaAlegre" title="Vista Alegre"/>
+						</heading>
+						<heading id="MarcaHuamachuco" title="Marca Huamachuco">
+							<synonym value="Huamachuco"/>
+						</heading>
+						<heading id="HuanucoRegion" title="Huánuco Region">
+							<synonym value="Huánuco"/>
+							<synonym value="Huanuco"/>
+							<synonym value="Huanuco Region"/>
+						</heading>
+						<heading id="SanMartinRegion" title="San Martín Region">
+							<synonym value="San Martín"/>
+							<synonym value="San Martin"/>
+							<synonym value="San Martin Region"/>
+						</heading>
+						<!-- Highlands of Libertad Department -->
+					</heading>
+					<heading id="PeruCentralHighlands" title="Central Highlands">
+						<heading id="HuancavelicaRegion" title="Huancavelica Region">
+							<synonym value="Huancavelica"/>
+						</heading>
+						<heading id="JuninRegion" title="Junín Region">
+							<synonym value="Junín"/>
+							<synonym value="Junin"/>
+							<synonym value="Junin Region"/>
+						</heading>
+						<!-- Highlands of Lima Department -->
+						<heading id="PascoRegion" title="Pasco Region">
+							<synonym value="Cerro de Pasco"/>
+							<synonym value="Pasco"/>
+						</heading>
+					</heading>
+					<heading id="PeruSouthHighlands" title="South Highlands">
+						<heading id="ApurimacRegion" title="Apurímac Region">
+							<synonym value="Apurímac"/>
+							<synonym value="Apurimac"/>
+							<synonym value="Apurimac Region"/>
+						</heading>
+						<heading id="ArequipaRegion" title="Arequipa Region">
+							<synonym value="Arequipa"/>
+							<heading id="AcariVallPeru" title="Acári valley"> <!-- PV 74 -->
+								<synonym value="Acari valley"/>
+								<synonym value="PV74"/>
+								<heading id="HachaViejo" title="Hacha"/>
+								<heading id="HuaratoViejo" title="Huarato">
+									<synonym value="PV74-20"/>
+								</heading>
+								<heading id="TamboViejo" title="Tambo Viejo">
+									<synonym value="PV74-1"/>
+								</heading>
+							</heading>
+							<heading id="AllancayPeru" title="Allancay">
+								<synonym value="Allangay"/>
+							</heading>
+							<heading id="CayllomaMine" title="Caylloma Mine"/>
+							<heading id="ChalaPeru" title="Chala"/>
+							<heading id="YaucaVallPeru" title="Yauca valley">
+								<heading id="Mochica" title="Mochica"/>
+							</heading>
+						</heading>
+						<heading id="AyacuchoRegion" title="Ayacucho Region">
+							<synonym value="Ayacucho"/>
+						</heading>
+						<heading id="CuzcoRegion" title="Cuzco Region">
+							<synonym value="Cusco Region"/>
+							<heading id="Calca" title="Calca"/>
+							<heading id="Cochahuasi" title="Cochahuasi"/>
+							<heading id="ColwayChinchaypuquit" title="Colway: Chinchaypuquit"/>
+							<heading id="Cuzco" title="Cuzco"/>
+							<heading id="CuzcoColmay" title="Cuzco Colmay"/>
+							<heading id="Huarocondo" title="Huarocondo"/>
+							<heading id="LaRecoleta" title="La Recoleta"/>
+							<heading id="MachuPicchu" title="Machu Picchu"/>
+							<heading id="PampadeCuzco" title="Pampa de Cuzco"/>
+							<heading id="PampaViejas" title="Pampa Viejas"/>
+							<heading id="PaucartamboProvince" title="Paucartambo Province"/>
+							<heading id="Sacsahuaman" title="Sacsahuaman"/>
+						</heading>
+						<heading id="MoqueguaRegion" title="Moquegua Region">
+							<synonym value="Moquegua"/>
+							<synonym value="Moquequa"/> <!-- Misspelling common in museum documents -->
+						</heading>
+						<heading id="PunoRegion" title="Puno Region">
+							<synonym value="Puno"/>
+						</heading>
+						<heading id="TacnaRegion" title="Tacna Region">
+							<synonym value="Tacna"/>
+						</heading>
+					</heading>
 				</heading>
-				<heading id="PeruEasternPeru" title="Eastern Peru"/>
+				<heading id="PeruEasternPeru" title="Eastern Peru">
+					<heading id="LoretoRegion" title="Loreto Region">
+						<synonym value="Loreto"/>
+					</heading>
+					<heading id="MadredeDiosRegion" title="Madre de Dios Region"/>
+				</heading>
 				<!-- ___________ NOT ORGANIZED _____________ -->
 				
-				<heading id="Campapiro" title="Campapiro">
+				<heading id="Campapiro" title="Campapiro"> <!-- Where is this? -->
 					<synonym value="Campopiro"/>
 				</heading>
 				<heading id="CasaChicasite" title="Casa Chica site"/>
-				<heading id="ChepanPeru" title="Chepan"/>
 				<heading id="CoyuzPeru" title="Coyuz"/>
 				<heading id="LaEminaPeru" title="La Emina"/>
 				<heading id="Limatambo" title="Limatambo"/>
-				<heading id="MarcaHuamachuco" title="Marca Huamachuco"/>
 				<heading id="PampadeLQuinvPeru" title="Pampa de los Quinvales"/>
 				<heading id="ParacasPeru" title="Paracas"/>
 				<heading id="PaytaPeru" title="Payta"/>
@@ -3706,21 +3757,8 @@
 				<heading id="TecapaSite" title="Tecapa Site"/>
 				<heading id="NorthernPeru" title="Northern Peru">
 					<synonym value="North Coast (unspecified)"/>
-					<heading id="AmazonasRegion" title="Amazonas Region"/>
-					<heading id="CajamarcaRegion" title="Cajamarca Region">
-						<synonym value="Cajamarca"/>
-						<heading id="VistaAlegre" title="Vista Alegre"/>
-					</heading>
-					<heading id="LoretoRegion" title="Loreto Region">
-						<synonym value="Loreto"/>
-					</heading>
 					<heading id="PiuraRegion" title="Piura Region">
 						<synonym value="Piura"/>
-					</heading>
-					<heading id="SanMartinRegion" title="San Martín Region">
-						<synonym value="San Martin Region"/>
-						<synonym value="San Martín"/>
-						<synonym value="San Martin"/>
 					</heading>
 					<heading id="TumbesRegion" title="Tumbes Region">
 						<synonym value="Tumbes"/>
@@ -7256,7 +7294,7 @@
 								<synonym value="Lassen County, no loc."/>
 								<synonym value="Lassen County, CA, no loc"/>
 								<synonym value="Lassen County, CA, no loc."/>
-								<heading id="PlacesLassenCA" title="Place Names" noMatch="true">
+								<heading id="ModernPlacesLassenCA" title="Place Names" noMatch="true">
 									<heading id="DixieValley" title="Dixie Valley"/>
 									<heading id="EagleLake" title="Eagle Lake"/>
 									<heading id="HoneyLake" title="Honey Lake"/>
@@ -7264,6 +7302,9 @@
 									<heading id="StacyHiRockRanch" title="Stacy High Rock Ranch"/>
 									<heading id="Susanville" title="Susanville"/>
 								</heading>
+								<!--<heading id="NativePlacesLassenCA" title="Native place names" noMatch="true">
+									<heading id="xxxxxxxxxxx" title="xxxxxxx"/>
+								</heading> -->
 								<heading id="TrinomLassenCA" title="Trinomial site names" noMatch="true">
 									<heading id="CALas1" title="CA-Las- 1">
 										<synonym value="CA-Las-1"/>
@@ -7364,7 +7405,7 @@
 									<heading id="CALas20" title="CA-Las- 20">
 										<synonym value="CA-Las-20"/>
 										<synonym value="Upper Secret Valley"/>
-										<synonym value="L-20"/>
+										<!--<synonym value="L-20"/> -->
 									</heading>
 									<heading id="CALas21" title="CA-Las- 21">
 										<synonym value="CA-Las-21"/>
@@ -7373,7 +7414,7 @@
 									</heading>
 									<heading id="CALas22" title="CA-Las- 22">
 										<synonym value="CA-Las-22"/>
-										<synonym value="L-22"/>
+										<synonym value="L-22"/>gg
 									</heading>
 									<heading id="CALas23" title="CA-Las- 23">
 										<synonym value="CA-Las-23"/>
@@ -7385,7 +7426,7 @@
 									</heading>
 									<heading id="CALas25" title="CA-Las- 25">
 										<synonym value="CA-Las-25"/>
-										<synonym value="L-25"/>
+										<!--<synonym value="L-25"/> -->
 									</heading>
 									<heading id="CALas26" title="CA-Las- 26">
 										<synonym value="CA-Las-26"/>
@@ -7393,12 +7434,12 @@
 									</heading>
 									<heading id="CALas27" title="CA-Las- 27">
 										<synonym value="CA-Las-27"/>
-										<synonym value="L-27"/>
+										<!--<synonym value="L-27"/> -->
 										<synonym value="Roop Fort"/>
 									</heading>
 									<heading id="CALas28" title="CA-Las- 28">
 										<synonym value="CA-Las-28"/>
-										<synonym value="L-28"/>
+										<!--<synonym value="L-28"/> -->
 										<synonym value="Wendel hot Springs"/>
 										<synonym value="pamu"/>
 									</heading>
@@ -18009,27 +18050,27 @@
 									<heading id="CASLO20" title="CA-SLO- 20">
 										<synonym value="CA-SLO-20"/>
 										<synonym value="Piedras Blancas 4"/>
-										<synonym value="L-20"/>
+										<!--<synonym value="L-20"/> -->
 									</heading>
 									<heading id="CASLO22" title="CA-SLO- 22">
 										<synonym value="CA-SLO-22"/>
 										<synonym value="Sunnyside School 2"/>
-										<synonym value="L-22"/>
+										<!--<synonym value="L-22"/> -->
 									</heading>
 									<heading id="CASLO25" title="CA-SLO- 25">
 										<synonym value="CA-SLO-25"/>
-										<synonym value="L-25"/>
+										<!--<synonym value="L-25"/> -->
 										<synonym value="Goiaran"/>
 									</heading>
 									<heading id="CASLO27" title="CA-SLO- 27">
 										<synonym value="CA-SLO-27"/>
 										<synonym value="Mole"/>
-										<synonym value="L-27"/>
+										<!--<synonym value="L-27"/> -->
 									</heading>
 									<heading id="CASLO28" title="CA-SLO- 28">
 										<synonym value="CA-SLO-28"/>
 										<synonym value="Morro State Park"/>
-										<synonym value="L-28"/>
+										<!--<synonym value="L-28"/> -->
 									</heading>
 									<heading id="CASLO30" title="CA-SLO- 30">
 										<synonym value="CA-SLO-30"/>
