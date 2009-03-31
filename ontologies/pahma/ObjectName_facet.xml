@@ -1279,8 +1279,9 @@
 			<implies facet="ActivityorContext" cat="Eating"/>
 		</heading>
 		<heading id="Pottery" title="Pottery">
-			<implies facet="Material" cat="Clay"/>
+			<implies facet="Material" cat="PotteryMaterial"/> <!-- Yes, the material is really clay, but I subdivided clay to see if it's useful to do so.  -->
 			<synonym value="Pot"/>
+			<synonym value="Pots"/>
 			<heading id="PotteryByShape" title="By shape" noMatch="true">
 				<heading id="OfferingTable" title="Offering Table">
 					<synonym value="Offering Tables"/>
@@ -3455,7 +3456,7 @@
 	    			</heading>
 	    		<heading id="BambooFlute" title="Bamboo Flute">
 	    			<synonym value="Bamboo Flutes"/>
-	    			<implies facet="Material" cat="BambooPlantMaterial"/>
+	    			<implies facet="Material" cat="BambooMaterial"/>
 	    		</heading>
 	    		<heading id="BoneFlute" title="Bone Flute">
 	    			<synonym value="Bone Flutes"/>
@@ -3612,7 +3613,7 @@
 	            <synonym value="Trumpets"/>
 	        	<heading id="BambooTrumpet" title="Bamboo Trumpet">
 	        		<synonym value="Bamboo Trumpets"/>
-	        		<implies facet="Material" cat="BambooPlantMaterial"/>
+	        		<implies facet="Material" cat="BambooMaterial"/>
 	        	</heading>
 	        	<heading id="BrassTrumpet" title="Brass Trumpet">
 	        		<synonym value="Brass Trumpets"/>
