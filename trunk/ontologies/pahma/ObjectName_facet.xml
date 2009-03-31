@@ -2451,13 +2451,18 @@
 	                <implies facet="Material" cat="GourdPlantMaterial"/>
 	            </heading>
 	        </heading>
-		    <heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
+		    <heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Esraj, Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
 		        <synonym value="Bowed Instruments"/>		        
 		        <synonym value="Bow Instrument"/>
 		        <synonym value="Bow Instruments"/>
 		        <excl value="Harp"/> 
 		        <excl value="Harps"/> 
-		        <heading id="Fiddle" title="Fiddle">
+		    	<heading id="Esraj" title="Esraj">
+		    		<synonym value="Esraj"/>
+		    		<synonym value="Israj"/>
+		    		<synonym value="Israjs"/>
+		    	</heading>
+		    	<heading id="Fiddle" title="Fiddle">
 		            <synonym value="Fiddles"/>
 		            <synonym value="Fiddle With Bow"/>
 		            <synonym value="Fiddles With Bow"/>
@@ -2629,10 +2634,12 @@
 	        <heading id="Koto" title="Koto">
 	            <synonym value="Kotos"/>
 	            <synonym value="Koto-Type"/> <!-- from old DB: "3 koto-type stringed instruments" [sic] -->
-	            <synonym value="Koto type"/>
+	            <synonym value="Koto Type"/>
 	        </heading>
 			<heading id="LuteInstrument" title="Lute">
 				<synonym value="Lutes"/>
+				<synonym value="Kerar"/>
+				<synonym value="Kerars"/>
 			</heading>
 			<heading id="Lyre" title="Lyre">
     	        <synonym value="Lyres"/>
@@ -2655,7 +2662,10 @@
 	        <synonym value="Percussion instrument"/>
 	        <synonym value="Idiophone"/>
 	        <synonym value="Idiophones"/>
-	        <heading id="Bangle" title="Bangle">
+	    	<heading id="Anklung" title="Anklung">
+	    		<synonym value="Anklungs"/>
+	    	</heading>
+	    	<heading id="Bangle" title="Bangle">
 	            <synonym value="Bangles"/>
 	        	<synonym value="Woman's Ankle Bangles"/>
 	        	<synonym value="Woman's Ankle Bangle"/>
@@ -3472,7 +3482,7 @@
 	    			<synonym value="Wooden Flutes"/>
 	    			<synonym value="Wood Flute"/>
 	    			<synonym value="Wood Flutes"/>
-	    			<implies facet="Material" cat="WoodPlantMaterial"/>
+	    	    	<implies facet="Material" cat="WoodMaterial"/>
 	    		</heading>
 	    	    <heading id="ReedFlute" title="Reed Flute"> <!-- sound is produced by reed (flute not necessarily made of reed material) -->
 	    			<synonym value="Reed Flutes"/>
@@ -3561,7 +3571,12 @@
 	    			<implies facet="Material" cat="ReedPlantMaterial"/>
 	    		</heading>
 	    	</heading>
-	        <heading id="Harmonica" title="Harmonica">
+			<heading id="Gyaling" title="Gyaling">
+	    		<synonym value="Gyalings"/>
+	    		<synonym value="Gyaling Oboe"/>
+	    		<synonym value="Gyaling Oboes"/>
+	    	</heading>	    	
+	    	<heading id="Harmonica" title="Harmonica">
 	            <synonym value="Harmonicas"/>
 	        </heading>
 	        <heading id="HornInstrument" title="Horn"> <!-- instrument name is "horn", not implied horn material -->
@@ -3664,7 +3679,7 @@
 	        		<synonym value="Wooden Whistles"/>
 	        		<synonym value="Wood Whistle"/>
 	        		<synonym value="Wood Whistles"/>
-	        		<implies facet="Material" cat="WoodPlantMaterial"/>
+	        		<implies facet="Material" cat="WoodMaterial"/>
 	        	</heading>
 	        </heading>
 	    </heading>
