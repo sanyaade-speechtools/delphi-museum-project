@@ -5868,9 +5868,11 @@
 							<heading id="Onebabi" title="Onebabi"/>
 							<heading id="Paloparado" title="Paloparado"/>
 							<heading id="PapagoReservation" title="Papago Reservation">
-								<implies facet="Culture" cat="PapagoIndians"/>
+								<implies facet="Culture" cat="TohonoOodhamIndians"/>
 								<heading id="Quijotoa" title="Quijotoa"/>
-								<heading id="SantaRosaArizona" title="Santa Rosa"/>
+								<heading id="SantaRosaArizona" title="Santa Rosa" noMatch="true"> <!-- because Santa Rosa, CA, is more likely in our collection -->
+									<synonym value="Santa Rosa, Arizona"/>
+								</heading>
 								<heading id="Sells" title="Sells"/>
 								<heading id="Tracy" title="Tracy"/>
 							</heading>
@@ -20503,9 +20505,6 @@
 								<heading id="NVCh79" title="NV-Ch-79">
 									<synonym value="NV-Ch- 79"/>
 									<implies facet="Location" cat="BootSloughChNV"/>
-								</heading>
-								<heading id="NVCh77" title="NV-Ch-77">
-									<synonym value="NV-Ch- 77"/>
 								</heading>
 								<heading id="NVCh80" title="NV-Ch-80">
 									<synonym value="NV-Ch- 80"/>

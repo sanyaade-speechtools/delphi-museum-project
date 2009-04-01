@@ -253,7 +253,6 @@
 					<heading id="MandanaTribe" title="Mandana"/>
 				</heading>
 				<heading id="FonTribe" title="Fon"/>
-				<heading id="KutaTribe" title="Kuta"/>
 				<heading id="GabonTribes" title="Gabon" noMatch="true">
 					<implies facet="Location" cat="GabonCountry"/>
 					<heading id="FangTribe" title="Fang"/>
@@ -271,7 +270,7 @@
 						<synonym value="Asante"/>
 					</heading>
 					<heading id="GaTribe" title="Ga"/>
-					<heading id="LobiTribe" title="Lobi"/>
+					<heading id="LobiTribeGhana" title="Lobi" noMatch="true"/>
 				</heading>
 				<heading id="IvoryCoastTribes" title="Ivory Coast" noMatch="true">
 					<implies facet="Location" cat="CotedIvoire"/>
@@ -303,6 +302,8 @@
 						<synonym value="Yaoure"/>
 					</heading>
 				</heading>
+				<heading id="KonoTribe" title="Kono"/>
+				<heading id="KutaTribe" title="Kuta"/>
 				<heading id="LiberianTribes" title="Liberia" noMatch="true">
 					<implies facet="Location" cat="LiberiaCountry"/>
 					<heading id="BandiTribe" title="Bandi"/>
@@ -363,13 +364,12 @@
 					</heading>
 					<heading id="YorubaPeople" title="Yoruba"/>
 				</heading>
-				<heading id="KonoTribe" title="Kono"/>
-				<heading id="MendeTribe" title="Mende"/>
 				<heading id="UpperVoltaTribes" title="Upper Volta" noMatch="true">
 					<heading id="BoboTribe" title="Bobo"/>
 					<heading id="DagariTribe" title="Dagari"/>
 					<heading id="LobiTribe" title="Lobi">
 						<synonym value="Labi"/>
+						<implies facet="Culture" cat="LobiTribeGhana"/>
 					</heading>
 					<heading id="MossiTribe" title="Mossi">
 						<synonym value="Mosi"/>
@@ -1468,7 +1468,9 @@
 								<synonym value="Excelen"/>
 								<synonym value="Tucutnut"/>
 							</heading>
-							<heading id="KawaiisuIndians" title="Kawaiisu"/>
+							<heading id="KawaiisuIndians" title="Kawaiisu">
+								<implies facet="Culture" cat="KawaiisuIndGrBasin"/>
+							</heading>
 							<heading id="KitanemukIndians" title="Kitanemuk"/>
 							<heading id="SalinanIndians" title="Salinan"/>
 							<heading id="TubatulabalIndians" title="Tübatulabal">
@@ -2002,7 +2004,7 @@
 						<heading id="ChemehueviIndians" title="Chemehuevi">
 							<synonym value="Chemehueve"/>
 						</heading>
-						<heading id="KawaiisuIndians" title="Kawaiisu"/>
+						<heading id="KawaiisuIndGrBasin" title="Kawaiisu" noMatch="true"/>
 						<heading id="PaiuteIndians" title="Paiute">
 							<heading id="NorthernPaiuteIndians" title="Northern Paiute"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 								<synonym value="Kutsavi Dokado"/>
@@ -2057,13 +2059,13 @@
 						<heading id="MexicanIndians" title="Mexican"/>
 						<heading id="NahuaIndians" title="Nahua"/>
 						<heading id="NazatecIndians" title="Nazatec"/>
-						<heading id="PapagoIndians" title="Papago"/>
 						<heading id="PopolocoIndians" title="Popoloco"/>
 						<heading id="PopolucaIndians" title="Popoluca"/>
 						<heading id="SeriIndians" title="Seri"/>
 						<heading id="TarascanIndians" title="Tarascan"/>
+						<heading id="PapagoIndiansMX" title="Tohono O'odham" noMatch="true"/>
 						<heading id="WarihioIndians" title="Warihio"/>
-						<heading id="YaquiIndians" title="Yaqui"/>
+						<heading id="YaquiIndiansMX" title="Yaqui" noMatch="true"/>
 						<heading id="ZapotecIndians" title="Zapotec"/>
 					</heading>
 					<heading id="NortheastTribes" title="Northeast tribes">
@@ -2486,18 +2488,22 @@
 					</heading>
 					<heading id="Southwesttribes" title="Southwest tribes">
 						<heading id="PuebloTribes" title="Pueblo Tribes">
+							<synonym value="Pubelo (?)"/>
+							<synonym value="Pueblo"/>
+							<synonym value="Puebloan"/>
+							<synonym value="Puebloans"/>
 							<heading id="AcomaTribe" title="Acoma">
 								<synonym value="Acomita"/>
 							</heading>
-							<heading id="LagunaTribe" title="Laguna"/>
-							<heading id="JemezTribe" title="Jemez"/>
-							<heading id="IsletaTribe" title="Isleta"/>
+							<heading id="CochitiTribe" title="Cochiti"/>
 							<heading id="HopiIndians" title="Hopi">
 								<heading id="HopiTewa" title="Hopi-Tewa"/>
 							</heading>
-							<heading id="PuebloTribes" title="Pueblo">
-								<synonym value="Pubelo (?)"/>
-								<synonym value="Puebloan"/>
+							<heading id="IsletaTribe" title="Isleta"/>
+							<heading id="JemezTribe" title="Jemez"/>
+							<heading id="LagunaTribe" title="Laguna"/>
+							<heading id="NambeTribe" title="Nambé">
+								<synonym value="Nambe"/>
 							</heading>
 							<heading id="SanFelipeTribe" title="San Felipe"/>
 							<heading id="SanIldefonsoTribe" title="San Ildefonso"/>
@@ -2506,39 +2512,32 @@
 							<heading id="SantaAnaTribe" title="Santa Ana"/>
 							<heading id="SantaClaraTribe" title="Santa Clara"/>
 							<heading id="SantoDomingoTribe" title="Santo Domingo"/>
-							<heading id="TaosTribe" title="Taos"/>
-							<heading id="TesuqueTribe" title="Tesuque"/>
 							<heading id="SiaTribe" title="Sia">
 								<synonym value="Zia"/>
 							</heading>
-							<heading id="NambeTribe" title="Nambé">
-								<synonym value="Nambe"/>
-							</heading>
-							<heading id="CochitiTribe" title="Cochiti"/>
+							<heading id="TaosTribe" title="Taos"/>
+							<heading id="TesuqueTribe" title="Tesuque"/>
 							<heading id="ZuniTribe" title="Zuni">
 								<synonym value="Zuñi"/>
 								<synonym value="Zui"/>  <!-- In some cases, the tilde-n is completely omitted -->
 							</heading>
 						</heading>
 						<heading id="ApacheIndians" title="Apache">
+							<synonym value="Apaches"/>
 							<heading id="ChiricahuaIndians" title="Chiricahua"/>
-							<heading id="MescaleroIndians" title="Mescalero"/>
 							<heading id="JicarillaIndians" title="Jicarilla"/>
+							<heading id="MescaleroIndians" title="Mescalero"/>
+							<heading id="SanCarlosIndians" title="San Carlos"/>
+							<heading id="WesternApacheIndians" title="Western Apache"/>
 							<heading id="WhiteMountainIndians" title="White Mountain">
 								<synonym value="White River"/>
 							</heading>
-							<heading id="SanCarlosIndians" title="San Carlos"/>
-							<heading id="WesternApacheIndians" title="Western Apache"/>
 						</heading>
 						<heading id="CocopaIndians" title="Cocopa"/>
 						<heading id="NavajoIndians" title="Navajo">
 							<synonym value="Navaho"/>
-						</heading>
-						<heading id="YumanIndians" title="Yuman">
-							<synonym value="Lower Colorado River tribes"/>
-							<heading id="DeltaCalifornianYumanIndians" title="Delta-Californian"/>
-							<heading id="RiverYumanIndians" title="River Yuman"/>
-							<heading id="UplandYumanIndians" title="Upland Yuman"/>
+							<synonym value="Navahos"/>
+							<synonym value="Navajos"/>
 						</heading>
 						<heading id="PaiIndians" title="Pai">
 							<heading id="HavasupaiIndians" title="Havasupai"/>
@@ -2562,15 +2561,19 @@
 						<heading id="YumaIndians" title="Yuma">
 							<synonym value="Quechan"/>
 						</heading>
-						<heading id="YaquiIndians" title="Yaqui"/>
+						<heading id="YaquiIndiansSW" title="Yaqui">
+							<synonym value="Yaquis"/>
+						</heading>
 						<heading id="YumanIndians" title="Yuman">
-							<heading id="Maricopa" title="Maricopa"/>
+							<heading id="Maricopa" title="Maricopa"/> <!-- Really?  Trim from UI -->
+							<synonym value="Lower Colorado River tribes"/>
+							<heading id="DeltaCalifornianYumanIndians" title="Delta-Californian"/>
+							<heading id="RiverYumanIndians" title="River Yuman"/>
+							<heading id="UplandYumanIndians" title="Upland Yuman"/>
 						</heading>
 						<heading id="TohonoOodhamIndians" title="Tohono O'odham">
 							<synonym value="Papago"/>
-							<synonym value="Papago, Santa Rosa, Arizona">  <!-- is this synonym-implies structure legal? -->
-								<implies facet="Location" cat="SantaRosaArizona"/>
-							</synonym>
+							<implies facet="Culture" cat="PapagoIndiansMX"/>
 						</heading>
 						<heading id="TontoIndians" title="Tonto"/>
 						<heading id="MohaveIndians" title="Mohave">
@@ -2888,7 +2891,6 @@
 				<heading id="ScottishGroups" title="Scottish"/>
 				<heading id="SpanishGroups" title="Spain"/>
 				<heading id="SwedishGroups" title="Swedish"/>
-				<heading id="RussianGroups" title="Russian"/>
 				<heading id="YugoslavianGroups" title="Yugoslavian"/>  <!-- how to parse into Croatian, Bosnian, Serbian, etc.? -->
 			</heading>
 		</heading>

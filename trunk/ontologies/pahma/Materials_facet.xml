@@ -117,26 +117,35 @@
 				<synonym value="fishskin"/>
 			</heading>
 		</heading>
-		<heading id="Hair" title="Hair">
-			<heading id="Angora" title="Angora"/>
+		<heading id="HairMaterial" title="Hair">
+			<heading id="AngoraMaterial" title="Angora"/>
 			<heading id="Horsehair" title="Horsehair">
 				<synonym value="Horse Hair"/>
 			</heading>
 			<heading id="Mohair" title="Mohair"/>
-			<heading id="Wool" title="Wool">
+			<heading id="WoolMaterial" title="Wool">
 				<synonym value="Wool Fabric"/>
+				<synonym value="Woolen"/>
+				<implies facet="Material" cat="WoolFiber"/>
 				<heading id="BrushedWool" title="Brushed Wool">
 					<synonym value="Brushed-Wool"/>
+					<implies facet="Material" cat="BrushedWoolFiber"/>
 				</heading>
 				<heading id="Cashmere" title="Cashmere">
 					<synonym value="Cashmere wool"/>
+					<implies facet="Material" cat="CashmereFiber"/>
 				</heading>
 				<heading id="Lambswool" title="Lambswool">
+					<synonym value="Lamb wool"/>
+					<synonym value="Lamb-wool"/>
 					<synonym value="Lambs wool"/>
 					<synonym value="Lambs' wool"/>
 					<synonym value="Lamb's wool"/>
+					<implies facet="Material" cat="LambswoolFiber"/>
 				</heading>
-				<heading id="WoolFelt" title="Wool Felt"/>
+				<heading id="WoolFelt" title="Wool Felt">
+					<implies facet="Material" cat="WoolFeltFiber"/>
+				</heading>
 			</heading>
 		</heading>
 		<heading id="Horn" title="Horn"> 
@@ -214,7 +223,9 @@
 		<heading id="Feathers" title="Feathers">
 			<synonym value="Feather"/>
 		</heading>
-		<heading id="Silk" title="Silk"/>
+		<heading id="SilkMaterial" title="Silk">
+			<implies facet="Material" cat="SilkFiber"/>
+		</heading>
 		<heading id="BoneMaterial" title="Bone"/>
 		<heading id="ToothAndTusk" title="Tooth and Tusk">
 			<synonym value="Incisor"/>
@@ -579,8 +590,11 @@
 					<heading id="FirTree" title="Fir"/>
 					<heading id="JuniperTree" title="Juniper">
 						<synonym value="Junipers"/>
+						<synonym value="Juniper berry"/>
+						<synonym value="Juniper berries"/>
 						<synonym value="Juniper seed"/>
 						<synonym value="Juniper seeds"/>
+						<implies facet="Materials" cat="JuniperBush"/>
 					</heading>
 					<heading id="PineTree" title="Pine">
 						<synonym value="Pinenut"/>
@@ -637,6 +651,10 @@
 		</heading>
 		<heading id="Shrubs" title="Shrubs">
 			<heading id="Cercis" title="Cercis"/>
+			<heading id="CottonPlant" title="Cotton Plant">
+				<synonym value="Cotton"/>
+				<implies facet="Material" cat="CottonFiber"/>
+			</heading>
 			<heading id="Grapevine" title="Grapevine"/>
 			<heading id="Honeysuckle" title="Honeysuckle">
 				<synonym value="Caprifoliaceae"/>
@@ -644,9 +662,7 @@
 				<synonym value="Common Viburnum"/>
 				<synonym value="Viburnum ellipticum"/>
 			</heading>
-			<heading id="JuniperBush" title="Juniper Bush">
-				<implies facet="Materials" cat="JuniperTree"/>
-			</heading>
+			<heading id="JuniperBush" title="Juniper Bush" noMatch="true"/>
 			<heading id="Redbud" title="Redbud">
 				<synonym value="Red-bud"/>
 			</heading>
@@ -681,7 +697,6 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Cotton" title="Cotton"/>
 		<heading id="Wicker" title="Wicker"/>
 		<heading id="Devilshorns" title="'Devil's horns'"/>
 		<heading id="Devilsclaw" title="'Devil's claw'"/>
@@ -894,9 +909,8 @@
 			<heading id="Paper" title="Paper"/>
 			<heading id="Cardboard" title="Cardboard"/>
 		</heading>
-		<heading id="Plastic" title="Plastic"> <!-- exclude Greek Plastic ware -->
-			<heading id="Polyester" title="Polyester"/>
-			<heading id="Nylon" title="Nylon"/>
+		<heading id="Plastic" title="Plastic">
+			<excl value="Greek"/> <!-- excludes Greek Plastic ware.  Other kinds of non-plastic plastic ware? -->
 		</heading>
 		<heading id="Synthetic" title="Synthetic"/>
 		<heading id="Textiles" title="Textiles">
@@ -904,16 +918,21 @@
 			<synonym value="Fabric"/>
 			<synonym value="Fabrics"/>
 			<synonym value="Textile"/>
-		    <heading id="AnimalTextiles" title="Animal Textiles">
-		        <heading id="Silk" title="Silk"/>
-		        <heading id="Wool" title="Wool"/>
+		    <heading id="AnimalTextiles" title="Animal-derived" noMatch="true">
+		        <heading id="SilkFiber" title="Silk" noMatch="true"/>
+		    	<heading id="WoolFiber" title="Wool" noMatch="true">
+		    		<heading id="BrushedWoolFiber" title="Brushed Wool" noMatch="true"/>
+		    		<heading id="CashmereFiber" title="Cashmere" noMatch="true"/>
+		    		<heading id="LambswoolFiber" title="Lambswool" noMatch="true"/>
+		    		<heading id="WoolFeltFiber" title="Wool Felt" noMatch="true"/>
+		    	</heading>
 		    </heading>
-		    <heading id="PlantTextiles" title="Plant Textiles">
-		        <heading id="Cotton" title="Cotton"/>
-		        <heading id="Hemp" title="Hemp"/>
-		        <heading id="Sisal" title="Sisal"/>
+		    <heading id="PlantTextiles" title="Plant-derived" noMatch="true">
+		    	<heading id="CottonFiber" title="Cotton" noMatch="true"/>
+		    	<heading id="HempFiber" title="Hemp"/>
+		    	<heading id="SisalFiber" title="Sisal"/>
 		    </heading>
-		    <heading id="MineralTextiles" title="Mineral Textiles">
+		    <heading id="MineralTextiles" title="Mineral-derived" noMatch="true">
 		        <heading id="AsbestosFiber" title="Asbestos Fiber">
 		            <synonym value="Asbestos Fibers"/>
 		            <synonym value="Asbestos Fibre"/>
@@ -932,19 +951,20 @@
 		            <synonym value="Fiberglass"/>  <!-- Exclusions needed -->
 		        </heading>
 		    </heading>
-		    <heading id="SyntheticTextiles" title="Synthetic Textiles">
-		        <heading id="Amarid" title="Amarid"/>
-		        <heading id="Lurex" title="Lurex"/>
-		        <heading id="Nylon" title="Nylon"/>
+		    <heading id="SyntheticTextiles" title="Synthetics">
+		    	<synonym value="Synthetic"/>
+		    	<heading id="AmaridFiber" title="Amarid"/>
+		    	<heading id="LurexFiber" title="Lurex"/>
+		    	<heading id="NylonFiber" title="Nylon"/>
 		        <heading id="OlefinFiber" title="Olefin Fiber">
-		            <heading id="Tyvek" title="Tyvek"/>
+		        	<heading id="TyvekFiber" title="Tyvek"/>
 		        </heading>
 		        <heading id="PolyactideFiber" title="Polyactide Fiber">
 	                <synonym value="Polyactide Fibers"/>
 	                <synonym value="Polyactide Fibre"/>
 	                <synonym value="Polyactide Fibres"/>
 	                <synonym value="Polyactide"/>  <!-- Exclusions needed? -->
-		            <heading id="Ingeo" title="Ingeo"/>
+		        	<heading id="IngeoFiber" title="Ingeo"/>
 	            </heading>
 		        <heading id="PolyesterFiber" title="Polyester Fiber">
 		            <synonym value="Polyester Fibers"/>
@@ -957,8 +977,8 @@
 		            <synonym value="Polyurethane Fibre"/>
 		            <synonym value="Polyurethane Fibres"/>
 		            <synonym value="Polyurethane"/>  <!-- Exclusions needed? -->
-		            <heading id="Spandex" title="Spandex">
-		                <heading id="Lycra" title="Lycra"/>
+		        	<heading id="SpandexFiber" title="Spandex">
+		        		<heading id="LycraFiber" title="Lycra"/>
 		            </heading>
 		        </heading>
 		    </heading>
