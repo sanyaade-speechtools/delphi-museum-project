@@ -1924,7 +1924,7 @@
 								<implies facet="Culture" cat="MissionGabrielinoIndians"/>
 							</heading>
 							<heading id="JuanenoIndians" title="Juaneño">
-								<synonym value="Acagchemem"/>
+								<!-- <synonym value="Acagchemem"/> CHECK: also a synonym of Luiseño indians -->
 								<synonym value="Acjachemen"/>
 								<synonym value="Acjachemen Nation"/>
 								<synonym value="Barona Indian Reservation"/>
@@ -1936,13 +1936,12 @@
 								<synonym value="Juaneño Band of Mission Indians"/>
 								<synonym value="Juaneo"/>  <!-- In some cases, the tilde-n is completely omitted -->
 								<synonym value="Natano"/>
-								<synonym value="Acjachemen Nation"/>
 								<implies facet="Culture" cat="MissionJuanenoIndians"/>
 							</heading>
 							<heading id="LuisenoIndians" title="Luiseño">
-								<synonym value="Acagchemem"/>
+								<!-- <synonym value="Acagchemem"/> CHECK: also a synonym of Juaneño indians -->
 								<synonym value="Ghecham"/>
-								<synonym value="Juaneno"/>
+								<!-- <synonym value="Juaneno"/> CHECK: also a synonym of Juaneño indians -->
 								<synonym value="Khecham"/>
 								<synonym value="Kechi"/>
 								<synonym value="Kechis"/>
@@ -1986,9 +1985,9 @@
 							<heading id="MissionDieguenoIndians" title="Diegueño" noMatch="true"/> <!-- Here just as a target for inference -->
 							<!-- Rincon Band of Diegueno Mission Indians -->
 							<!-- Ramona Band or Village of Cahuilla Mission Indians -->
-							<heading id="MissionGabrielinoIndians" title="Gabrieliño"/> <!-- Here just as a target for inference -->
+							<heading id="MissionGabrielinoIndians" title="Gabrieliño" noMatch="true"/> <!-- Here just as a target for inference -->
 							<heading id="MissionJuanenoIndians" title="Juaneño Band" noMatch="true"/> <!-- Here just as a target for inference -->
-							<heading id="MissionLuisenoIndians" title="Luiseño"/> <!-- Here just as a target for inference -->
+							<heading id="MissionLuisenoIndians" title="Luiseño" noMatch="true"/> <!-- Here just as a target for inference -->
 							<!-- San Manuel Band of Mission Indians -->
 							<!-- Pauma Yuima Band of Mission Indians -->
 						</heading>	
