@@ -12106,7 +12106,7 @@
 										<synonym value="Mrp-G6"/>
 									</heading>
 									<heading id="CAMrp224" title="CA-Mrp-224">
-										<synonym value="P-2"/>
+										<!-- <synonym value="P-2"/> Conflicts with ElkoCoNV -->
 									</heading>
 									<heading id="CAMrp226" title="CA-Mrp-226">
 										<synonym value="Mrp-G7"/>
@@ -19837,12 +19837,12 @@
 										<synonym value="Ru-37"/>
 										<synonym value="Sajachu"/>
 										<synonym value="Rennie site"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
+										<!--  -->
 										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
 									</heading>
 									<heading id="CASBa242" title="CA-SBa-242">
-										<synonym value="Ytias"/>
 										<synonym value="RU-42"/>
+										<implies facet="Location" cat="YtiasNearLompoc"/>
 									</heading>
 									<heading id="CASBa279" title="CA-SBa-279"/>
 									<heading id="CASBa329" title="CA-SBa-329"/>
@@ -20802,7 +20802,7 @@
 							<synonym value="El-X1"/>
 							<synonym value="El-X2"/>
 							<synonym value="P-1"/>
-							<synonym value="P-2"/>
+							<!-- <synonym value="P-2"/> Conflicts with CAMrp224 -->
 							<synonym value="P-3"/>
 							<synonym value="South Fork Shelter"/>
 							<synonym value="S1"/>
