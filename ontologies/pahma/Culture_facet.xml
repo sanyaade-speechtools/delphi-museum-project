@@ -315,12 +315,12 @@
 				<heading id="MaliTribes" title="Mali" noMatch="true">
 					<implies facet="Location" cat="MaliCountry"/>
 					<heading id="BambaraTribe" title="Bambara">
-						<synonym value="Bamana"/>
+						<!-- <synonym value="Bamana"/> CHECK: Minianka (below) has the same synonym -->
 					</heading>
 					<heading id="DogonTribe" title="Dogon"/>
 					<heading id="MalinkeTribe" title="Malinke"/>
 					<heading id="MiniankaTribe" title="Minianka">
-						<synonym value="Bamana"/>
+						<!-- <synonym value="Bamana"/> CHECK: Bambara (above) has the same synonym -->
 					</heading>
 					<heading id="SonghaiTribe" title="Songhai"/>
 				</heading>
@@ -787,7 +787,6 @@
 								<synonym value="Tolana"/>
 								<synonym value="Tolanas"/>
 								<synonym value="Talawa"/>
-								<synonym value="Talawas"/>
 								<synonym value="Tola'k"/>
 								<synonym value="Tolokwe"/>
 								<synonym value="Yantucket"/>
@@ -974,7 +973,7 @@
 									</heading>
 								</heading>
 								<heading id="LakeMiwokIndians" title="Lake Miwok">
-									<synonym value="Pomo"/>
+									<!-- <synonym value="Pomo"/> CHECK: same as synonym for PomoIndians, BaloKayIndians -->
 									<synonym value="Northern Coast Miwok"/>
 									<synonym value="Northern Moquelumnan"/>
 									<heading id="TulivoniIndians" title="Tulivoni"> <!-- Only 2 headings, but these may be helpful, so stet. -->
@@ -1206,14 +1205,14 @@
 										<synonym value="Ballo-kai"/>
 										<synonym value="Shanel-kaya"/>
 										<synonym value="Canal"/>
-										<synonym value="Canel"/>
+										<!-- <synonym value="Canel"/> CHECK: same as synonym for SanelIndians -->
 										<synonym value="Cha-net-kai"/>
 										<synonym value="Cane'kai"/>
 										<synonym value="Caneki"/>
 										<synonym value="Paum"/>
 										<synonym value="Poam"/>
 										<synonym value="Pome"/>
-										<synonym value="Pomo"/>
+										<!-- <synonym value="Pomo"/> CHECK: same as synonym for PomoIndians, LakeMiwokIndians -->
 										<synonym value="Pone"/>
 										<synonym value="Pum"/>
 										<synonym value="Poma"/>
@@ -1227,7 +1226,6 @@
 										<synonym value="Matuko"/>
 										<synonym value="ceinal"/>
 										<synonym value="cinal"/>
-										<synonym value="Shinal"/>
 										<synonym value="Haiyau"/>
 										<synonym value="Kaiyao"/>
 										<synonym value="Kaiyau"/>
@@ -1235,7 +1233,6 @@
 										<synonym value="Ki-yow"/>
 										<synonym value="Xaiyau"/>
 										<synonym value="Ki-yao-bah"/>
-										<synonym value="Kayaw"/>
 									</heading>
 									<heading id="YimaIndians" title="Yima">
 										<synonym value="Bowal"/>
@@ -1284,7 +1281,6 @@
 										<synonym value="Hoo-la-nap-o"/>
 									</heading>
 									<heading id="ShekomIndians" title="She-kom">
-										<synonym value="cigom"/>
 										<synonym value="Che-com"/>
 										<synonym value="Cigom"/>
 										<synonym value="Shigom"/>
@@ -1918,7 +1914,6 @@
 								<synonym value="Gabrieleo"/>  <!-- In some cases, the tilde-n is completely omitted -->
 								<synonym value="Gabrieleos"/>  <!-- In some cases, the tilde-n is completely omitted -->
 								<synonym value="Gabrilenos"/>  <!-- Common misspelling -->
-								<synonym value="Gabrieleno"/>
 								<synonym value="Gabrileños"/>
 								<synonym value="Kij"/>
 								<synonym value="Kizh"/>
@@ -3146,7 +3141,7 @@
 				<heading id="JomonCulture" title="Jomon">  <!-- Some consider it a culture, not just a period -->
 					<implies facet="Location" cat="JapanCounty"/>
 				</heading>
-				<heading id="MongolCulture" title="Mongol"/>
+				<!-- <heading id="MongolCulture" title="Mongol"/> How to differentiate this from the modern Mongols? -->
 				<heading id="MughalCulture" title="Mughal"/>
 			</heading>
 			<heading id="AncientNearEasternCultures" title="Near Eastern Cultures">
@@ -3231,12 +3226,12 @@
 					<synonym value="Toltecan"/>
 					<synonym value="Toltecans"/>
 				</heading>
-				<heading id="ZapotecCulture" title="Zapotec Civilization">
+				<heading id="ZapotecCulture" title="Zapotec Civilization" noMatch="true">
 					<synonym value="Zapotec Civilisation"/> <!-- British English -->
-					<synonym value="Zapotec"/>
-					<synonym value="Zapotecs"/>
-					<synonym value="Zapotecan"/>
-					<synonym value="Zapotecans"/>
+					<!-- <synonym value="Zapotec"/> -->
+					<!-- <synonym value="Zapotecs"/> -->
+					<!-- <synonym value="Zapotecan"/> -->
+					<!-- <synonym value="Zapotecans"/> -->
 				</heading>
 			</heading>
 			<heading id="AncientNorthAmericanCultures" title="Ancient North America">
