@@ -359,8 +359,6 @@
 					<synonym value="Sea lion Tooth"/>
 					<synonym value="Tooth of steller's Sea lion"/>
 					<synonym value="Sea lions Tooth"/>
-					<synonym value="Whale's Teeth"/>
-					<synonym value="Whale's Tooth"/>
 				</heading>
 				<heading id="WalrusTeethTusk" title="Walrus Tooth/Tusk">
 					<synonym value="Walrus Tusk"/>
@@ -846,7 +844,7 @@
 				<heading id="Actinolite" title="Actinolite"/>
 				<heading id="Amphibolite" title="Amphibolite"/>
 				<heading id="Argillite" title="Argillite"/>
-				<heading id="Asbestos" title="Asbestos"/>
+				<heading id="AsbestosStone" title="Asbestos"/>
 				<heading id="Asphalt" title="Asphalt">
 					<synonym value="Asphaltum"/>
 				</heading>
@@ -937,7 +935,7 @@
 		            <synonym value="Asbestos Fibers"/>
 		            <synonym value="Asbestos Fibre"/>
 		            <synonym value="Asbestos Fibres"/>
-		            <synonym value="Asbestos"/>  <!-- Exclusions needed? -->
+		        	<implies facet="Material" cat="AsbestosStone"/>
 		        </heading>
 		        <heading id="BasaltFiber" title="Basalt Fiber">
 		            <synonym value="Basalt Fibers"/>
