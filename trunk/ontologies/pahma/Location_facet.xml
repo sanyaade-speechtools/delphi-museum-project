@@ -4987,9 +4987,9 @@
 							<synonym value="OR-DS-NL"/>
 							<heading id="EastLake" title="East Lake"/>
 						</heading>
-						<heading id="ORDouglasCounty" title="Douglas County">
-							<synonym value="Douglas"/>
-							<synonym value="Douglas Co."/>
+						<heading id="ORDouglasCounty" title="Douglas County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Douglas"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Douglas Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<synonym value="OR-DO-NL"/>
 							<synonym value="OR-Douglas-NL"/>
 							<excl value="NV"/> <!--There's a Douglas Co. in NV, OR, and WA -->
@@ -5246,9 +5246,9 @@
 							<synonym value="Cowlitz Co."/>
 							<synonym value="WA-Cowlitz-NL"/>
 						</heading>
-						<heading id="DouglasCoWA" title="Douglas County">
-							<synonym value="Douglas"/>
-							<synonym value="Douglas Co."/>
+						<heading id="DouglasCoWA" title="Douglas County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Douglas"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Douglas Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<excl value="NV"/> <!--There's a Douglas Co. in NV, OR, and WA -->
 							<excl value="Nev"/> <!--There's a Douglas Co. in NV, OR, and WA -->
 							<excl value="Nevada"/> <!--There's a Douglas Co. in NV, OR, and WA -->
@@ -8703,11 +8703,11 @@
 									</heading>
 									<heading id="CANev56" title="CA-Nev- 56">
 										<synonym value="CA-Nev-56"/>
-										<synonym value="X-1"/>
+										<!-- <synonym value="X-1"/> Disambiguate -->
 									</heading>
 									<heading id="CANev58" title="CA-Nev- 58">
 										<synonym value="CA-Nev-58"/>
-										<synonym value="X-3"/>
+										<!-- <synonym value="X-3"/> Disambiguate -->
 									</heading>
 									<heading id="CANev59" title="CA-Nev- 59">
 										<synonym value="CA-Nev-59"/>
@@ -8744,7 +8744,7 @@
 									</heading>
 									<heading id="CANev68" title="CA-Nev- 68">
 										<synonym value="CA-Nev-68"/>
-										<synonym value="X-13"/>
+										<!-- <synonym value="X-13"/> Disambiguate -->
 									</heading>
 									<heading id="CANev70" title="CA-Nev- 70">
 										<synonym value="CA-Nev-70"/>
@@ -9755,11 +9755,11 @@
 									<heading id="CASis144" title="CA-Sis-144"/>
 									<heading id="CASis151" title="CA-Sis-151"/>
 									<heading id="CASis152" title="CA-Sis-152">
-										<synonym value="X-1"/>
+										<!-- <synonym value="X-1"/> Disambiguate -->
 									</heading>
 									<heading id="CASis154" title="CA-Sis-154">
 										<synonym value="Em-mah-Kwit-Te (Merriam)"/>
-										<synonym value="X-3"/>
+										<!-- <synonym value="X-3"/> Disambiguate -->
 									</heading>
 									<heading id="CASis155" title="CA-Sis-155">
 										<synonym value="Eras (Merriam)"/>
@@ -9777,7 +9777,7 @@
 										<synonym value="X-11"/>
 									</heading>
 									<heading id="CASis163" title="CA-Sis-163">
-										<synonym value="X-13"/>
+										<!-- <synonym value="X-13"/> Disambiguate -->
 									</heading>
 									<heading id="CASis166" title="CA-Sis-166"/>
 									<heading id="CASis169" title="CA-Sis-169">
@@ -10548,7 +10548,7 @@
 									</heading>
 									<heading id="CAAlp10" title="CA-Alp-10"/>
 									<heading id="CAAlp19" title="CA-Alp-19">
-										<synonym value="X-3"/>
+										<!-- <synonym value="X-3"/> Disambiguate -->
 									</heading>
 									<heading id="CAAlp20" title="CA-Alp-20">
 										<synonym value="X-4"/>
@@ -13099,7 +13099,7 @@
 									<heading id="CANap154" title="CA-Nap-154"/>
 									<heading id="CANap159" title="CA-Nap-159"/>
 									<heading id="CANap163" title="CA-Nap-163">
-										<synonym value="X-3"/>
+										<!-- <synonym value="X-3"/> Disambiguate -->
 									</heading>
 									<heading id="CANap165" title="CA-Nap-165"/>
 									<heading id="CANap166" title="CA-Nap-166"/>
@@ -15640,11 +15640,11 @@
 									</heading>
 									<heading id="CAYol3" title="CA-Yol- 3">
 										<synonym value="CA-Yol-3"/>
-										<synonym value="X-2"/>
+										<!-- <synonym value="X-2"/> Disambiguate -->
 									</heading>
 									<heading id="CAYol4" title="CA-Yol- 4">
 										<synonym value="CA-Yol-4"/>
-										<synonym value="X-1"/>
+										<!-- <synonym value="X-1"/> Disambiguate -->
 									</heading>
 									<heading id="CAYol5" title="CA-Yol- 5">
 										<synonym value="S-5"/>
@@ -15659,7 +15659,7 @@
 									</heading>
 									<heading id="CAYol8" title="CA-Yol- 8">
 										<synonym value="CA-Yol-8"/>
-										<synonym value="X-3"/>
+										<!-- <synonym value="X-3"/> Disambiguate -->
 									</heading>
 									<heading id="CAYol9" title="CA-Yol- 9">
 										<synonym value="CA-Yol-9"/>
@@ -16701,10 +16701,10 @@
 									<heading id="CAIny214" title="CA-Iny-214"/>
 									<heading id="CAIny215" title="CA-Iny-215"/>
 									<heading id="CAIny217" title="CA-Iny-217">
-										<synonym value="X-2"/>
+										<!-- <synonym value="X-2"/> Disambiguate -->
 									</heading>
 									<heading id="CAIny218" title="CA-Iny-218">
-										<synonym value="X-3"/>
+										<!-- <synonym value="X-3"/> Disambiguate -->
 									</heading>
 									<heading id="CAIny219" title="CA-Iny-219">
 										<synonym value="X-4"/>
@@ -19931,7 +19931,7 @@
 									<heading id="CASBa548" title="CA-SBa-548"/>
 									<heading id="CASBa549" title="CA-SBa-549">
 										<synonym value="Ruth's 17"/>
-										<synonym value="X-13"/>
+										<!-- <synonym value="X-13"/> Disambiguate -->
 									</heading>
 									<heading id="CASBa552" title="CA-SBa-552">
 										<synonym value="Ruth's 10"/>
@@ -20676,9 +20676,9 @@
 								</heading>
 							</heading>
 						</heading>
-						<heading id="NVDouglasCoNV" title="Douglas county">
-							<synonym value="Douglas"/>
-							<synonym value="Douglas Co."/>
+						<heading id="NVDouglasCoNV" title="Douglas county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Douglas"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Douglas Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<synonym value="PROVENIENCE = Douglas county, Nevada"/>
 							<excl value="OR"/> <!--There's a Douglas Co. in NV, OR, and WA -->
 							<excl value="Ore"/> <!--There's a Douglas Co. in NV, OR, and WA -->
@@ -21160,7 +21160,6 @@
 							<synonym value="Ammonia Springs"/>
 							<synonym value="Horse Spring"/>
 							<synonym value="Cherry Creek II"/>
-							<synonym value="W-17"/>
 							<synonym value="NPS 12-14"/>
 							<synonym value="McKinney Tanks"/>
 							<synonym value="Itchy Grass Shelter"/>
@@ -21290,14 +21289,14 @@
 						</heading>
 						<heading id="PershingCoNV" title="Pershing county">
 							<synonym value="PROVENIENCE = Pershing county, Nevada"/>
-							<synonym value="X-3"/>
+							<!-- <synonym value="X-3"/> Disambiguate -->
 							<synonym value="X-2 ?"/>
 							<synonym value="Pitt Ranch Mound"/>
 							<synonym value="Granite Point Shelter"/>
 							<synonym value="Awahti jubah"/>
 							<synonym value="Orr Place"/>
 							<synonym value="Granite Point Rockshelter"/>
-							<synonym value="X-1"/>
+							<!-- <synonym value="X-1"/> Disambiguate -->
 							<synonym value="Nevada Toulon"/>
 							<synonym value="Orr-P1b"/>
 							<synonym value="Numahwatsi muinoo"/>
@@ -21310,7 +21309,7 @@
 							<synonym value="Painted Cave"/>
 							<synonym value="Lohatekalupopi"/>
 							<synonym value="Pole Canyon"/>
-							<synonym value="X-2"/>
+							<!-- <synonym value="X-2"/> Disambiguate -->
 							<synonym value="Site #5 (Loud)"/>
 							<synonym value="Loud 17"/>
 							<synonym value="Hamilton Ranch"/>
