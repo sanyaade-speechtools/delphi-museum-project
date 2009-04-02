@@ -5065,11 +5065,15 @@
 							<synonym value="OR-Lane-NL"/>
 							<heading id="BaileyHills" title="Bailey Hills"/>
 						</heading>
-						<heading id="LincolnCoOR" title="Lincoln County">
+						<heading id="LincolnCoOR" title="Lincoln County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<excl value="Nevada"/>
-							<synonym value="Lincoln"/>
-							<synonym value="Lincoln Co"/>
-							<synonym value="Lincoln Co."/>
+							<!-- <synonym value="Lincoln"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Lincoln Co"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Lincoln Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<synonym value="Lincoln, Oregon"/>
+							<synonym value="Lincoln, OR"/>
+							<synonym value="Oregon; Lincoln"/>
+							<synonym value="Oregon; Lincoln Co"/>
 							<synonym value="OR-LNC-NL"/>
 							<heading id="SiletzReservation" title="Siletz Reservation">
 								<synonym value="Siletz Agency"/>
@@ -7370,7 +7374,7 @@
 									<heading id="CALas12" title="CA-Las- 12">
 										<synonym value="CA-Las-12"/>
 										<synonym value="L-12"/>
-										<synonym value="Cold Springs"/>
+										<!-- <synonym value="Cold Springs"/> Disambiguate from Cold Springs in Churchill co. and Lincoln co., NV -->
 									</heading>
 									<heading id="CALas13" title="CA-Las- 13">
 										<synonym value="CA-Las-13"/>
@@ -20157,7 +20161,7 @@
 								</heading>
 								<heading id="ClamshellLakeSite" title="Clamshell Lake Site"/>
 								<heading id="CocanourChNV" title="Cocanour"/>
-								<heading id="ColdSprChNV" title="Cold Springs"/>
+								<!-- <heading id="ColdSprChNV" title="Cold Springs"/> Disambiguate from Cold Springs in Lincoln co., NV & Lassen co., CA -->
 								<heading id="DuneSprChNV" title="Dune Springs"/>
 								<heading id="DynamiteCaveChNV" title="Dynamite Cave"/>
 								<heading id="EastgaveCaveChNV" title="Eastgave Cave">
@@ -20976,11 +20980,15 @@
 								<heading id="NVLa17" title="NV-La-17"/>
 							</heading>
 						</heading>
-						<heading id="LincolnCoNV" title="Lincoln county">
+						<heading id="LincolnCoNV" title="Lincoln county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<excl value="Oregon"/>
-							<synonym value="Lincoln"/>
-							<synonym value="Lincoln Co"/>
-							<synonym value="Lincoln Co."/>
+							<!-- <synonym value="Lincoln"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Lincoln Co"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Lincoln Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<synonym value="Lincoln, Nevada"/>
+							<synonym value="Lincoln, NV"/>
+							<synonym value="Nevada; Lincoln"/>
+							<synonym value="Nevada; Lincoln Co"/>
 							<synonym value="PROVENIENCE = Lincoln county, Nevada"/>
 							<synonym value="Seaman Spring"/>
 							<synonym value="Burried Pipeline"/>
@@ -20999,7 +21007,7 @@
 							<synonym value="Indian Bathtub"/>
 							<synonym value="Ln2-1977"/>
 							<synonym value="Pullman lithic scatter"/>
-							<synonym value="Cold Springs"/>
+							<!-- <synonym value="Cold Springs"/>  Disambiguate from Cold Springs in Churchill co., NV & Lassen co., CA -->
 							<synonym value="Hack-hack Spring"/>
 							<synonym value="No Name&quot; Rockshelter"/>
 							<synonym value="Cottonwood Guard Station"/>
