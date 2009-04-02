@@ -3239,7 +3239,7 @@
 	                <synonym value="Bison Hooved Rattles"/>
 	                <synonym value="Bison-Hooves Rattle"/>
 	                <synonym value="Bison-Hooves Rattles"/>
-	        		<implies facet="Material" cat="HoofAnimalMaterial"/>
+	    			<implies facet="Material" cat="HoofMaterial"/>
 	            </heading>
 	    		<heading id="HornRattle" title="Horn Rattle"> <!-- implied materials: horn -->
 	                <synonym value="Horn Rattles"/>
@@ -3287,7 +3287,7 @@
 	                <synonym value="Shell Rattles"/>
 	                <excl value="Turtle"/>
 	                <excl value="Turtles"/>
-	            	<implies facet="Material" cat="ShellMaterial"/> 
+	    			<implies facet="Material" cat="ShellMaterials"/> 
 	            </heading>
 	        	<heading id="SeedRattle" title="Seed Rattle"> <!-- implied materials: seed -->
 	        		<synonym value="Seed Rattles"/>
@@ -3913,6 +3913,7 @@
 		</heading>
 		<heading id="ShellSample" title="Shell Sample">
 			<synonym value="Shell Samples"/>
+			<implies facet="Material" cat="ShellMaterials"/> 
 		</heading>
 		<heading id="SoilSample" title="Soil Sample">
 			<synonym value="Soil Samples"/>
@@ -3994,7 +3995,7 @@
 				<heading id="Quirt" title="Quirt">					
 					<synonym value="Quirts"/>
 					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
-				    <implies facet="Material" cat="Leather"/>
+					<implies facet="Material" cat="LeatherAndFur"/>
 				    <implies facet="TechniqueDesignorDecoration" cat="Forked"/>	
 				</heading>			
 			</heading>
