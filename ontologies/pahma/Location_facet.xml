@@ -5016,9 +5016,9 @@
 							<synonym value="OR-JA-NL"/>
 							<heading id="Medford" title="Medford"/>
 						</heading>
-						<heading id="JeffersonCoOR" title="Jefferson County">
-							<synonym value="Jefferson"/>
-							<synonym value="Jefferson Co."/>
+						<heading id="JeffersonCoOR" title="Jefferson County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Jefferson"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Jefferson Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<synonym value="OR-JE-NL"/>
 							<synonym value="OR-Jefferson-NL"/>
 							<excl value="Washington"/>
@@ -5114,10 +5114,10 @@
 								<synonym value="Wappatoo Island"/>
 							</heading>
 						</heading>
-						<heading id="PolkCountyOR" title="Polk County">
-							<synonym value="Polk"/>
-							<synonym value="Polk Co"/>
-							<synonym value="Polk Co."/>
+						<heading id="PolkCountyOR" title="Polk County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Polk"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Polk Co"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Polk Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<synonym value="OR-PO-NL"/>
 							<synonym value="OR-Polk-NL"/>
 							<excl value="Texas"/>
@@ -5270,9 +5270,9 @@
 							<heading id="LakeQuinault" title="Lake Quinault"/>
 						</heading>
 						<heading id="HoodsInlet" title="Hoods Inlet"/>
-						<heading id="JeffersonCoWA" title="Jefferson County">
-							<synonym value="Jefferson"/>
-							<synonym value="Jefferson Co."/>
+						<heading id="JeffersonCoWA" title="Jefferson County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Jefferson"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Jefferson Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<excl value="Oregon"/>
 							<excl value="Missouri"/>
 							<heading id="Queets" title="Queets"/>
@@ -20210,7 +20210,7 @@
 									<synonym value="Lee Hotspring"/>
 									<synonym value="Lee Hotsprings"/>
 								</heading>
-								<heading id="LeonardRockshChNV" title="Leonard Rockshelter"/>
+								<!-- <heading id="LeonardRockshChNV" title="Leonard Rockshelter"/> Paolo will determine whether this is in Churchill or Pershing co., NV -->
 								<heading id="LovelockCaveChNV" title="Lovelock Cave">
 									<synonym value="Lovelock"/> <!-- There is a city by this name, but in PAHMA context refers only to this cave -->
 									<synonym value="Sunset Guano Cave"/> <!-- Earlier name for this cave -->
@@ -21291,7 +21291,6 @@
 							<synonym value="PROVENIENCE = Pershing county, Nevada"/>
 							<!-- <synonym value="X-3"/> Disambiguate -->
 							<synonym value="X-2 ?"/>
-							<synonym value="Pitt Ranch Mound"/>
 							<synonym value="Granite Point Shelter"/>
 							<synonym value="Awahti jubah"/>
 							<synonym value="Orr Place"/>
@@ -21300,7 +21299,6 @@
 							<synonym value="Nevada Toulon"/>
 							<synonym value="Orr-P1b"/>
 							<synonym value="Numahwatsi muinoo"/>
-							<synonym value="Leonard Rockshelter"/>
 							<synonym value="Medicine Rock"/>
 							<synonym value="Toulon"/>
 							<synonym value="Owl Cave"/>
@@ -21325,7 +21323,7 @@
 								<heading id="LovelockPershingNV" title="Lovelock">
 									<synonym value="Lovelock, city of"/>
 								</heading>
-								<heading id="LeonardRockshelterNV" title="Leonard Rockshelter"/>
+								<!-- <heading id="LeonardRockshPeNV" title="Leonard Rockshelter"/> Paolo will determine whether this is in Churchill or Pershing co., NV -->
 								<heading id="MillCityPershingNV" title="Mill City"/>
 								<heading id="PittRanchMdNV" title="Pitt Ranch Mound"/>
 								<heading id="TungstonPershingNV" title="Tungston"/>
@@ -21748,7 +21746,7 @@
 					</heading>
 					<heading id="Missouri" title="Missouri">
 						<heading id="FranklinCoMO" title="Franklin county"/>
-						<heading id="JeffersonCoMO" title="Jefferson">
+						<heading id="JeffersonCoMO" title="Jefferson county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<excl value="Oregon"/>
 							<excl value="Washington"/>
 						</heading>
@@ -21765,10 +21763,10 @@
 					</heading>
 					<heading id="Texas" title="Texas">
 						<heading id="FortStantonTX" title="Fort Stanton"/>
-						<heading id="PolkCountyTX" title="Polk county">
-							<synonym value="Polk"/>
-							<synonym value="Polk Co"/>
-							<synonym value="Polk Co."/>
+						<heading id="PolkCountyTX" title="Polk county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Polk"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Polk Co"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+							<!-- <synonym value="Polk Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<synonym value="TX-PO-NL"/>
 							<synonym value="TX-Polk-NL"/>
 							<excl value="Oregon"/>
