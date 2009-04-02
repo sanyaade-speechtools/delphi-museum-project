@@ -47,77 +47,30 @@
 				<synonym value="Pupa"/>
 			</heading>
 		</heading>
-		<heading id="LeatherAndFur" title="Leather and Fur">
-			<synonym value="leather"/>
-			<synonym value="fur"/>
-			<!-- this works around some buggy metadata -->
-			<excl value="furniture"/>
-			<synonym value="animal skin"/>
-			<synonym value="smoked skin"/>
-			<heading id="Deerskin" title="Deerskin">
-				<synonym value="Deer hide"/>
-				<synonym value="buckskin"/>
-				<synonym value="buckskin fur"/>
-				<synonym value="deerkskin"/>
-				<synonym value="fawn skin"/>
-				<heading id="Reindeerhide" title="Reindeer hide">
-					<synonym value="Reindeer skin"/>
-					<synonym value="Raindeer skin"/>
-					<synonym value="Reindeer calf skin"/>
-				</heading>
-				<heading id="Elkhide" title="Elk hide"/>
-				<heading id="Caribouhide" title="Caribou hide">
-					<synonym value="Caribou skin"/>
-					<synonym value="Caribou skins"/>
-				</heading>
+		<heading id="Antler" title="Antler">
+			<heading id="DeerAntler" title="Deer Antler">
+				<synonym value="Deer Horn"/>
+				<synonym value="Deer Horns"/>
+				<synonym value="Deer's Horn"/>
+				<synonym value="Deer's Horns"/>
+				<synonym value="Deers' Horn"/>
+				<synonym value="Deers' Horns"/>
 			</heading>
-			<heading id="Cowhide" title="Cow hide">
-				<synonym value="cowhide"/>
-				<synonym value="cowhides"/>
-                <synonym value="calfhide"/>
-				<synonym value="calfhides"/>
-				<synonym value="calfskin"/>
-				<synonym value="parfleche"/>
-				<heading id="Rawhide" title="Raw hide">
-					<synonym value="rawhide"/>
-				</heading>
+			<heading id="ElkAntler" title="Elk Antler">
+				<synonym value="Elk Horn"/>
+				<synonym value="Elk Horns"/>
+				<synonym value="Elk's Horn"/>
+				<synonym value="Elk's Horns"/>
+				<synonym value="Elks' Horn"/>
+				<synonym value="Elks' Horns"/>
 			</heading>
-			<heading id="Donkeyskin" title="Donkey skin">
-			</heading>
-			<heading id="Goatskin" title="Goatskin">
-				<synonym value="Goatskins"/>
-				<synonym value="Goat skin"/>
-				<synonym value="Goat skins"/>
-			</heading>
-			<heading id="Yakhide" title="Yak hide">
-				<synonym value="yak skin"/>
-			</heading>
-			<heading id="Sheepskin" title="Sheepskin">
-				<synonym value="sheep skin"/>
-				<synonym value="lambskin"/>
-				<synonym value="lamb skin"/>
-			</heading>
-			<heading id="Rabbitskin" title="Rabbit skin">
-			</heading>
-			<heading id="Sealskin" title="Seal skin">
-				<synonym value="sealhide"/>
-				<synonym value="seal fur skin"/>
-				<synonym value="seal hide"/>
-				<synonym value="bleached sealskin"/>
-			</heading>
-			<heading id="Otterskin" title="Otter skin">
-			</heading>
-			<heading id="Reptileskin" title="Reptile skin">
-				<heading id="Snakeskin" title="Snakeskin">
-					<synonym value="snake skin"/>
-				</heading>
-				<heading id="Lizardskin" title="Lizard skin">
-					<synonym value="lizardskin"/>
-				</heading>
-			</heading>
-			<heading id="Fishskin" title="Fish skin">
-				<synonym value="fishskin"/>
-			</heading>
+		</heading>
+		<heading id="BoneMaterial" title="Bone"/>
+		<heading id="Feathers" title="Feathers">
+			<synonym value="Feather"/>
+		</heading>
+		<heading id="Fossil" title="Fossil">
+			<heading id="Ammonite" title="Ammonite"/>
 		</heading>
 		<heading id="HairMaterial" title="Hair">
 			<heading id="AngoraMaterial" title="Angora"/>
@@ -149,6 +102,9 @@
 					<implies facet="Material" cat="WoolFeltFiber"/>
 				</heading>
 			</heading>
+		</heading>
+		<heading id="HoofMaterial" title="Hoof">
+			<synonym value="Hooves"/>
 		</heading>
 		<heading id="HornMaterial" title="Horn"> 
 			<excl value="Devils horn"/>
@@ -222,186 +178,77 @@
 				<synonym value="Sheeps' Horns"/>
 			</heading>
 		</heading>
-		<heading id="Feathers" title="Feathers">
-			<synonym value="Feather"/>
-		</heading>
-		<heading id="SilkMaterial" title="Silk">
-			<implies facet="Material" cat="SilkFiber"/>
-		</heading>
-		<heading id="BoneMaterial" title="Bone"/>
-		<heading id="ToothAndTusk" title="Tooth and Tusk">
-			<synonym value="Incisor"/>
-			<synonym value="Incisors"/>
-			<synonym value="Lower Incisor"/>
-			<synonym value="Upper Incisor"/>
-			<synonym value="Central Incisor"/>
-			<synonym value="Lateral Incisor"/>
-			<synonym value="Mammal Incisor"/>
-			<synonym value="Mammal Tooth"/>
-			<synonym value="Molar"/>
-			<synonym value="Molars"/>
-			<synonym value="Premolar"/>
-			<synonym value="Premolars"/>
-			<synonym value="Tusk"/>
-			<synonym value="Tusks"/>
-			<synonym value="Tooth"/>
-			<synonym value="Teeth"/>
-			<heading id="BearTooth" title="Bear Tooth">
-				<synonym value="Bear teeth"/>
-				<synonym value="Bear's tooth"/>
-				<synonym value="Bear's canine tooth"/>
-				<synonym value="Bear's teeth"/>
-			</heading>
-			<heading id="BoarTeethTusk" title="Boar Tooth/Tusk">
-				<synonym value="Boar Tusk"/>
-				<synonym value="Boar's Tusk"/>
-				<synonym value="Boar's Tusks"/>
-				<synonym value="Boar's tooth"/>
-			</heading>
-			<heading id="CoyoteTooth" title="Coyote Tooth">
-				<synonym value="Coyote teeth"/>
-			</heading>
-			<heading id="DeerTooth" title="Deer Tooth">
-				<synonym value="Deer teeth"/>
-				<synonym value="Teeth of elk and deer"/>
-				<synonym value="Deer Incisor"/>
-				<synonym value="reindeer Incisor"/>
-				<synonym value="reindeer Incisors"/>
-				<synonym value="Elk teeth"/>
-				<synonym value="Elk check teeth"/>
-				<synonym value="Elk tooth"/>
-				<synonym value="Elk molars"/>
-				<synonym value="Teeth of an elk"/>
-				<synonym value="Teeth of elk"/>
-			</heading>
-			<heading id="DogTooth" title="Dog Tooth">
-				<synonym value="Dog teeth"/>
-				<synonym value="Dogs teeth"/>
-				<synonym value="Dog's teeth"/>
-				<synonym value="Dog's tooth"/>
-			</heading>
-			<heading id="ElephantTeethTusk" title="Elephant Tooth/Tusk">
-				<synonym value="Elephant Tusk"/>
-				<synonym value="Elephant Tusks"/>
-				<synonym value="Elephant teeth"/>
-				<synonym value="Elephant tooth"/>
-				<synonym value="Elephant's tooth"/>
-				<heading id="MammothTeethTusk" title="Mammoth Tooth/Tusk">
-					<synonym value="Mastodon Tusk"/>
-					<synonym value="Mastodon Tusks"/>
-					<synonym value="Mastodon tooth"/>
-					<synonym value="Mammoth tooth"/>
+		<heading id="LeatherAndFur" title="Leather and Fur">
+			<synonym value="leather"/>
+			<synonym value="fur"/>
+			<!-- this works around some buggy metadata -->
+			<excl value="furniture"/>
+			<synonym value="animal skin"/>
+			<synonym value="smoked skin"/>
+			<heading id="Deerskin" title="Deerskin">
+				<synonym value="Deer hide"/>
+				<synonym value="buckskin"/>
+				<synonym value="buckskin fur"/>
+				<synonym value="deerkskin"/>
+				<synonym value="fawn skin"/>
+				<heading id="Reindeerhide" title="Reindeer hide">
+					<synonym value="Reindeer skin"/>
+					<synonym value="Raindeer skin"/>
+					<synonym value="Reindeer calf skin"/>
+				</heading>
+				<heading id="Elkhide" title="Elk hide"/>
+				<heading id="Caribouhide" title="Caribou hide">
+					<synonym value="Caribou skin"/>
+					<synonym value="Caribou skins"/>
 				</heading>
 			</heading>
-			<heading id="FishTooth" title="Fish Tooth">
-				<synonym value="Fish Teeth"/>
-				<synonym value="Fish's Teeth"/>
-				<synonym value="Fishs Teeth"/>
-				<synonym value="Fish's Tooth"/>
-				<heading id="SharkTooth" title="Shark Tooth">
-					<synonym value="Shark Teeth"/>
-					<synonym value="Shark's Teeth"/>
-					<synonym value="Sharks Teeth"/>
-					<synonym value="Shark's Tooth"/>
-				</heading>
-				<heading id="StingRayTooth" title="Sting Ray Tooth">
-					<synonym value="Sting ray Teeth"/>
-					<synonym value="Sting ray spine and Teeth"/>
-					<synonym value="Sting ray's Teeth"/>
-					<synonym value="Sting rays Teeth"/>
-					<synonym value="Sting ray's Tooth"/>
+			<heading id="Cowhide" title="Cow hide">
+				<synonym value="cowhide"/>
+				<synonym value="cowhides"/>
+				<synonym value="calfhide"/>
+				<synonym value="calfhides"/>
+				<synonym value="calfskin"/>
+				<synonym value="parfleche"/>
+				<heading id="Rawhide" title="Raw hide">
+					<synonym value="rawhide"/>
 				</heading>
 			</heading>
-			<heading id="HumanTooth" title="Human Tooth" >
-				<synonym value="Human Teeth"/>
-				<synonym value="Human canine teeth"/>
-				<synonym value="Human molar"/>
+			<heading id="Donkeyskin" title="Donkey skin">
 			</heading>
-			<heading id="Ivory" title="Ivory">
-				<implies facet="Color" cat="OffWhite"/>
+			<heading id="Goatskin" title="Goatskin">
+				<synonym value="Goatskins"/>
+				<synonym value="Goat skin"/>
+				<synonym value="Goat skins"/>
 			</heading>
-			<heading id="PigTeethTusk" title="Pig Tooth/Tusk">
-				<synonym value="Pig Tusk"/>
-				<synonym value="Pig's Tusk"/>
-				<synonym value="Pig's tooth"/>
-				<synonym value="Pig's teeth"/>
+			<heading id="Yakhide" title="Yak hide">
+				<synonym value="yak skin"/>
 			</heading>
-			<heading id="RodentTooth" title="Rodent Tooth">
-				<synonym value="Rodent teeth"/>
-				<synonym value="Teeth of rodent"/>
-				<synonym value="Rodent Incisor"/>
-				<synonym value="Rodent's Incisor"/>
-				<heading id="BeaverTooth" title="Beaver Tooth">
-					<synonym value="Beaver Tooth"/>
-					<synonym value="Beavertooth"/>
-					<synonym value="Beaver Teeth"/>
-					<synonym value="Beaver or porcupine teeth"/>
-					<synonym value="Teeth of Beaver"/>
-					<synonym value="Incisor of Beaver"/>
-					<synonym value="Beaver Incisor"/>
-					<synonym value="Beaver's Incisor"/>
-				</heading>
-				<heading id="GoundHogTooth" title="Gound Hog Tooth">
-					<synonym value="Ground hog teeth"/>
-					<synonym value="Groundhog teeth"/>
-				</heading>
+			<heading id="Sheepskin" title="Sheepskin">
+				<synonym value="sheep skin"/>
+				<synonym value="lambskin"/>
+				<synonym value="lamb skin"/>
 			</heading>
-			<heading id="SeaMammalTeeth" title="SeaMammal Tooth">
-				<synonym value="Sea mammal tooth"/>
-				<synonym value="Tooth of sea mammal"/>
-				<synonym value="Teeth of dolphin"/>
-				<synonym value="Sea mammal teeth"/>
-				<synonym value="Pinniped teeth"/>
-				<synonym value="Porpoise tooth"/>
-				<synonym value="Porpoise teeth"/>
-				<heading id="Baleen" title="Baleen"/>
-				<heading id="SealSeaLionTooth" title="Seal/Sea Lion Tooth">
-					<synonym value="Seal Tooth"/>
-					<synonym value="Sealion Tooth"/>
-					<synonym value="Sea lion Tooth"/>
-					<synonym value="Tooth of steller's Sea lion"/>
-					<synonym value="Sea lions Tooth"/>
+			<heading id="Rabbitskin" title="Rabbit skin">
+			</heading>
+			<heading id="Sealskin" title="Seal skin">
+				<synonym value="sealhide"/>
+				<synonym value="seal fur skin"/>
+				<synonym value="seal hide"/>
+				<synonym value="bleached sealskin"/>
+			</heading>
+			<heading id="Otterskin" title="Otter skin">
+			</heading>
+			<heading id="Reptileskin" title="Reptile skin">
+				<heading id="Snakeskin" title="Snakeskin">
+					<synonym value="snake skin"/>
 				</heading>
-				<heading id="WalrusTeethTusk" title="Walrus Tooth/Tusk">
-					<synonym value="Walrus Tusk"/>
-					<synonym value="Walrus tip"/>
-					<synonym value="Walrus ivory"/>
-					<synonym value="Walrus Tusks"/>
-					<synonym value="Walrus Tooth"/>
-					<synonym value="Walrus Teeth"/>
-				</heading>
-				<heading id="WhaleTooth" title="Whale Tooth">
-					<synonym value="Whale Teeth"/>
-					<synonym value="Whale's Teeth"/>
-					<synonym value="Whale's Tooth"/>
+				<heading id="Lizardskin" title="Lizard skin">
+					<synonym value="lizardskin"/>
 				</heading>
 			</heading>
-			<!-- Too little data <heading id="NarwhalTusk" title="Narwhal Tusk">
-				<synonym value="Narwhal Tusks"/>
-			</heading> -->
-		</heading>
-		<heading id="Antler" title="Antler">
-			<heading id="DeerAntler" title="Deer Antler">
-				<synonym value="Deer Horn"/>
-				<synonym value="Deer Horns"/>
-				<synonym value="Deer's Horn"/>
-				<synonym value="Deer's Horns"/>
-				<synonym value="Deers' Horn"/>
-				<synonym value="Deers' Horns"/>
+			<heading id="Fishskin" title="Fish skin">
+				<synonym value="fishskin"/>
 			</heading>
-			<heading id="ElkAntler" title="Elk Antler">
-				<synonym value="Elk Horn"/>
-				<synonym value="Elk Horns"/>
-				<synonym value="Elk's Horn"/>
-				<synonym value="Elk's Horns"/>
-				<synonym value="Elks' Horn"/>
-				<synonym value="Elks' Horns"/>
-			</heading>
-		</heading>
-		<heading id="Sinew" title="Sinew">
-			<synonym value="Sinews"/>
-			<excl value="Sinew shredder"/>
-			<heading id="WhaleSinew" title="Whale Sinew"/>
 		</heading>
 		<heading id="ShellMaterials" title="Shell and Shell-like Materials">
 			<heading id="Coral" title="Coral">
@@ -552,8 +399,163 @@
 				<heading id="Trumpetshell" title="Trumpet Shell"/>
 			</heading>
 		</heading>
-		<heading id="Fossil" title="Fossil">
-			<heading id="Ammonite" title="Ammonite"/>
+		<heading id="SilkMaterial" title="Silk">
+			<implies facet="Material" cat="SilkFiber"/>
+		</heading>
+		<heading id="Sinew" title="Sinew">
+			<synonym value="Sinews"/>
+			<excl value="Sinew shredder"/>
+			<heading id="WhaleSinew" title="Whale Sinew"/>
+		</heading>
+		<heading id="ToothAndTusk" title="Tooth and Tusk">
+			<synonym value="Incisor"/>
+			<synonym value="Incisors"/>
+			<synonym value="Lower Incisor"/>
+			<synonym value="Upper Incisor"/>
+			<synonym value="Central Incisor"/>
+			<synonym value="Lateral Incisor"/>
+			<synonym value="Mammal Incisor"/>
+			<synonym value="Mammal Tooth"/>
+			<synonym value="Molar"/>
+			<synonym value="Molars"/>
+			<synonym value="Premolar"/>
+			<synonym value="Premolars"/>
+			<synonym value="Tusk"/>
+			<synonym value="Tusks"/>
+			<synonym value="Tooth"/>
+			<synonym value="Teeth"/>
+			<heading id="BearTooth" title="Bear Tooth">
+				<synonym value="Bear teeth"/>
+				<synonym value="Bear's tooth"/>
+				<synonym value="Bear's canine tooth"/>
+				<synonym value="Bear's teeth"/>
+			</heading>
+			<heading id="BoarTeethTusk" title="Boar Tooth/Tusk">
+				<synonym value="Boar Tusk"/>
+				<synonym value="Boar's Tusk"/>
+				<synonym value="Boar's Tusks"/>
+				<synonym value="Boar's tooth"/>
+			</heading>
+			<heading id="CoyoteTooth" title="Coyote Tooth">
+				<synonym value="Coyote teeth"/>
+			</heading>
+			<heading id="DeerTooth" title="Deer Tooth">
+				<synonym value="Deer teeth"/>
+				<synonym value="Teeth of elk and deer"/>
+				<synonym value="Deer Incisor"/>
+				<synonym value="reindeer Incisor"/>
+				<synonym value="reindeer Incisors"/>
+				<synonym value="Elk teeth"/>
+				<synonym value="Elk check teeth"/>
+				<synonym value="Elk tooth"/>
+				<synonym value="Elk molars"/>
+				<synonym value="Teeth of an elk"/>
+				<synonym value="Teeth of elk"/>
+			</heading>
+			<heading id="DogTooth" title="Dog Tooth">
+				<synonym value="Dog teeth"/>
+				<synonym value="Dogs teeth"/>
+				<synonym value="Dog's teeth"/>
+				<synonym value="Dog's tooth"/>
+			</heading>
+			<heading id="ElephantTeethTusk" title="Elephant Tooth/Tusk">
+				<synonym value="Elephant Tusk"/>
+				<synonym value="Elephant Tusks"/>
+				<synonym value="Elephant teeth"/>
+				<synonym value="Elephant tooth"/>
+				<synonym value="Elephant's tooth"/>
+				<heading id="MammothTeethTusk" title="Mammoth Tooth/Tusk">
+					<synonym value="Mastodon Tusk"/>
+					<synonym value="Mastodon Tusks"/>
+					<synonym value="Mastodon tooth"/>
+					<synonym value="Mammoth tooth"/>
+				</heading>
+			</heading>
+			<heading id="FishTooth" title="Fish Tooth">
+				<synonym value="Fish Teeth"/>
+				<synonym value="Fish's Teeth"/>
+				<synonym value="Fishs Teeth"/>
+				<synonym value="Fish's Tooth"/>
+				<heading id="SharkTooth" title="Shark Tooth">
+					<synonym value="Shark Teeth"/>
+					<synonym value="Shark's Teeth"/>
+					<synonym value="Sharks Teeth"/>
+					<synonym value="Shark's Tooth"/>
+				</heading>
+				<heading id="StingRayTooth" title="Sting Ray Tooth">
+					<synonym value="Sting ray Teeth"/>
+					<synonym value="Sting ray spine and Teeth"/>
+					<synonym value="Sting ray's Teeth"/>
+					<synonym value="Sting rays Teeth"/>
+					<synonym value="Sting ray's Tooth"/>
+				</heading>
+			</heading>
+			<heading id="HumanTooth" title="Human Tooth" >
+				<synonym value="Human Teeth"/>
+				<synonym value="Human canine teeth"/>
+				<synonym value="Human molar"/>
+			</heading>
+			<heading id="Ivory" title="Ivory">
+				<implies facet="Color" cat="OffWhite"/>
+			</heading>
+			<heading id="PigTeethTusk" title="Pig Tooth/Tusk">
+				<synonym value="Pig Tusk"/>
+				<synonym value="Pig's Tusk"/>
+				<synonym value="Pig's tooth"/>
+				<synonym value="Pig's teeth"/>
+			</heading>
+			<heading id="RodentTooth" title="Rodent Tooth">
+				<synonym value="Rodent teeth"/>
+				<synonym value="Teeth of rodent"/>
+				<synonym value="Rodent Incisor"/>
+				<synonym value="Rodent's Incisor"/>
+				<heading id="BeaverTooth" title="Beaver Tooth">
+					<synonym value="Beavertooth"/>
+					<synonym value="Beaver Teeth"/>
+					<synonym value="Beaver or porcupine teeth"/>
+					<synonym value="Teeth of Beaver"/>
+					<synonym value="Incisor of Beaver"/>
+					<synonym value="Beaver Incisor"/>
+					<synonym value="Beaver's Incisor"/>
+				</heading>
+				<heading id="GoundHogTooth" title="Gound Hog Tooth">
+					<synonym value="Ground hog teeth"/>
+					<synonym value="Groundhog teeth"/>
+				</heading>
+			</heading>
+			<heading id="SeaMammalTeeth" title="SeaMammal Tooth">
+				<synonym value="Sea mammal tooth"/>
+				<synonym value="Tooth of sea mammal"/>
+				<synonym value="Teeth of dolphin"/>
+				<synonym value="Sea mammal teeth"/>
+				<synonym value="Pinniped teeth"/>
+				<synonym value="Porpoise tooth"/>
+				<synonym value="Porpoise teeth"/>
+				<heading id="Baleen" title="Baleen"/>
+				<heading id="SealSeaLionTooth" title="Seal/Sea Lion Tooth">
+					<synonym value="Seal Tooth"/>
+					<synonym value="Sealion Tooth"/>
+					<synonym value="Sea lion Tooth"/>
+					<synonym value="Tooth of steller's Sea lion"/>
+					<synonym value="Sea lions Tooth"/>
+				</heading>
+				<heading id="WalrusTeethTusk" title="Walrus Tooth/Tusk">
+					<synonym value="Walrus Tusk"/>
+					<synonym value="Walrus tip"/>
+					<synonym value="Walrus ivory"/>
+					<synonym value="Walrus Tusks"/>
+					<synonym value="Walrus Tooth"/>
+					<synonym value="Walrus Teeth"/>
+				</heading>
+				<heading id="WhaleTooth" title="Whale Tooth">
+					<synonym value="Whale Teeth"/>
+					<synonym value="Whale's Teeth"/>
+					<synonym value="Whale's Tooth"/>
+				</heading>
+			</heading>
+			<!-- Too little data <heading id="NarwhalTusk" title="Narwhal Tusk">
+				<synonym value="Narwhal Tusks"/>
+			</heading> -->
 		</heading>
 	</heading>
 	<heading id="FromPlants" title="From Plants">

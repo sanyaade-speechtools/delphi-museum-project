@@ -19251,14 +19251,20 @@
 								<synonym value="Santa Barbara County, CA, no loc"/>
 								<synonym value="Santa Barbara County, CA, no loc."/>
 								<heading id="PlacesSBrbraCA" title="Place Names" noMatch="true">
+									<heading id="CuyamaMtsSBrbraCA" title="Cuyama Mountains"/>
+									<heading id="CuyamaValleySBrbraCA" title="Cuyama Valley"/>
 									<heading id="FranklinSite" title="Franklin site"/>
 									<heading id="GoletaSBrbraCA" title="Goleta">
+										<heading id="GoletaMoresRanch" title="Goleta (More's Ranch)"/>
+										<heading id="GoletaSawyersRanch" title="Goleta (Sawyer's Ranch)">
+											<synonym value="Galita (Sawyer's Ranch)"/>
+										</heading>
 										<heading id="GoletaSloughSBaCA" title="Goleta Slough">
-											<heading id="GoletaSlghESBaCA" title="East side of slough"> <!-- Trim from UI -->
+											<heading id="GoletaSlghESBaCA" title="East side of slough">
 												<synonym value="E side Goleta Slough"/>
 												<synonym value="East side of Goleta Slough"/>
 											</heading>
-											<heading id="GoletaSlghSSBaCA" title="South side of slough"> <!-- Trim from UI -->
+											<heading id="GoletaSlghSSBaCA" title="South side of slough">
 												<synonym value="S side of Goleta Slough"/>
 												<synonym value="South side of Goleta Slough"/>
 											</heading>
@@ -19266,44 +19272,46 @@
 										<heading id="MosesIslSBrbraCA" title="Moses Island"/>
 										<heading id="SkeletonIslSBrbraCA" title="Skeleton Island"/>
 									</heading>
-									<heading id="CuyamaMtsSBrbraCA" title="Cuyama Mountains"/>
-									<heading id="SantaYnezSBrbraCA" title="Santa Ynez">
-										<heading id="SantaYnezValley" title="Santa Ynez Valley"/>
-										<heading id="HappyCanyonSBrbraCA" title="Happy Canyon">
-											<synonym value="Happey Valley"/>
-											<synonym value="Happy Valley"/>
-											<heading id="SanorRanchSBrbraCA" title="Sanor Ranch"/>
-											<heading id="SanorSiteSBrbraCA" title="Sanor Site"/>
-										</heading>
-									</heading>
 									<heading id="GuadalupeSBrbraCA" title="Guadalupe">
 										<excl value="Mexico"/> <!-- Disambiguates from Baja California location -->
 										<excl value="Baja"/> <!-- Ibid. -->
 										<excl value="BC"/> <!-- Ibid. -->
 									</heading>
+									<heading id="LompocSBrbraCA" title="Lompoc">
+										<synonym value="Lompoc Area"/>
+										<heading id="LompocLanding" title="Lompoc Landing"/>
+										<heading id="LompocSurfStation" title="Lompoc (Surf Station)"/>
+										<heading id="SuddenRanch" title="Sudden Ranch"/>
+									</heading>
 									<heading id="MoresIslSBrbraCA" title="Mores Island"/>
+									<heading id="RogersSite14SBrbraCA" title="Rogers Site 14"/>
 									<heading id="SiquocValley" title="Siquoc Valley"/>
 									<heading id="SantaBarbaraIsland" title="Santa Barbara Island">
 										<implies facet="Location" cat="ChIslSBarbara"/>
 									</heading>
 									<heading id="SanddunesSofPtSal" title="Sand dunes south of Point Sal"/>
-									<heading id="GoletaSawyersRanch" title="Goleta (Sawyer's Ranch)">
-										<synonym value="Galita (Sawyer's Ranch)"/>
-									</heading>
-									<heading id="GoletaMoresRanch" title="Goleta (More's Ranch)"/>
-									<heading id="LompocSurfStation" title="Lompoc (Surf Station)"/>
 									<heading id="HondaCanyonSBrbraCA" title="Honda Canyon">
 										<synonym value="Handa Canon"/>
 										<synonym value="Handa Cañon"/>
 										<heading id="Scolarisite" title="Scolari site"/>
 									</heading>
-									<heading id="LompocAreaSBrbraCA" title="Lompoc Area"/>
+									<heading id="LaPurisimaMission" title="La Purísima Concepcíon Mission">
+										<synonym value="La Purisima"/>
+										<synonym value="La Purísima"/>
+										<synonym value="La Purisima Mission"/>
+										<synonym value="La Purísima Mission"/>
+										<implies facet="Location" cat="MissLaPurisimaConc"/>
+										<heading id="PurisimaIndBarracks" title="Indian Barracks" noMatch="true">
+											<synonym value="La Purisima Indian Barracks"/>
+										</heading>
+										<heading id="OldLaPurisimaMiss" title="Old La Purísima Mission">
+											<synonym value="Old La Purisima"/>
+											<synonym value="Old La Purísima"/>
+											<synonym value="Old La Purisima Mission"/>
+										</heading>
+									</heading>
 									<heading id="SanJulianRanch" title="San Julian Ranch"/>
 									<heading id="SanMariusRanch" title="San Marius Ranch"/>
-									<heading id="LompocLanding" title="Lompoc Landing"/>
-									<heading id="LompocSBrbraCA" title="Lompoc">
-										<heading id="SuddenRanch" title="Sudden Ranch"/>
-									</heading>
 									<heading id="SMiguelIslCA" title="San Miguel Island">
 										<synonym value="CA-SMI-NL"/>
 										<synonym value="San Miguel Is"/>
@@ -19574,26 +19582,17 @@
 											<synonym value="Outhwaite 9"/>
 										</heading>
 									</heading>
-									<heading id="SkeletonIsland" title="Skeleton Island"/>
+									<heading id="SantaYnezSBrbraCA" title="Santa Ynez">
+										<heading id="SantaYnezValley" title="Santa Ynez Valley"/>
+										<heading id="HappyCanyonSBrbraCA" title="Happy Canyon">
+											<synonym value="Happey Valley"/>
+											<synonym value="Happy Valley"/>
+											<heading id="SanorRanchSBrbraCA" title="Sanor Ranch"/>
+											<heading id="SanorSiteSBrbraCA" title="Sanor Site"/>
+										</heading>
+									</heading>
 									<heading id="YtiasNearLompoc" title="Ytias">
 										<synonym value="Ytias Near Lompoc"/>
-									</heading>
-									<heading id="RogersSite14SBrbraCA" title="Rogers Site 14"/>
-									<heading id="CuyamaValleySBrbraCA" title="Cuyama Valley"/>
-									<heading id="LaPurisimaMission" title="La Purísima Concepcíon Mission">
-										<synonym value="La Purisima"/>
-										<synonym value="La Purísima"/>
-										<synonym value="La Purisima Mission"/>
-										<synonym value="La Purísima Mission"/>
-										<implies facet="Location" cat="MissLaPurisimaConc"/>
-										<heading id="PurisimaIndBarracks" title="Indian Barracks" noMatch="true">
-											<synonym value="La Purisima Indian Barracks"/>
-										</heading>
-										<heading id="OldLaPurisimaMiss" title="Old La Purísima Mission">
-											<synonym value="Old La Purisima"/>
-											<synonym value="Old La Purísima"/>
-											<synonym value="Old La Purisima Mission"/>
-										</heading>
 									</heading>
 									<heading id="SantaInesMission" title="Santa Inés Mission">
 										<synonym value="Mission Santa Inés"/>
