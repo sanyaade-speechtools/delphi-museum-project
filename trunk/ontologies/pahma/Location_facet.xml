@@ -19257,6 +19257,10 @@
 								<heading id="PlacesSBrbraCA" title="Place Names" noMatch="true">
 									<heading id="CuyamaMtsSBrbraCA" title="Cuyama Mountains"/>
 									<heading id="CuyamaValleySBrbraCA" title="Cuyama Valley"/>
+									<heading id="ForneysCoveSBaCA" title="Forney's Cove">
+										<synonym value="Forneys Cove"/>
+										<synonym value="Forneys' Cove"/>
+									</heading>
 									<heading id="FranklinSite" title="Franklin site"/>
 									<heading id="FraziersPtSBaCA" title="Frazier's Point">
 										<synonym value="Fraziers Point"/>
@@ -19266,7 +19270,7 @@
 										<synonym value="Fraziers. Pt"/>
 										<synonym value="Fraziers Pt."/>
 										<synonym value="Frazier's Pt."/>
-										<synonym value="Fraziers. Pt."/>
+										<synonym value="Fraziers' Pt."/>
 									</heading>
 									<heading id="GoletaSBrbraCA" title="Goleta">
 										<heading id="GoletaMoresRanch" title="Goleta (More's Ranch)"/>
@@ -19475,8 +19479,8 @@
 											<synonym value="CA-SCrI-3"/>
 											<synonym value="Outhwaite 85"/>
 											<synonym value="Olson 6"/>
-											<synonym value="Frazier's Point"/>
-											<synonym value="Forney's Cove"/>
+											<implies facet="Location" cat="ForneysCoveSBaCA"/>
+											<implies facet="Location" cat="FraziersPtSBaCA"/>
 										</heading>
 										<heading id="CASCrI39" title="CA-SCrI- 39">
 											<synonym value="CA-SCrI-39"/>
@@ -19499,25 +19503,24 @@
 										<heading id="CASCrI2" title="CA-SCrI- 2">
 											<synonym value="CA-SCrI-2"/>
 											<synonym value="Olson 86"/>
-											<synonym value="Frazier's Point"/>
-											<implies facet="Location" cat="MissSantaInes"/>
+											<implies facet="Location" cat="FraziersPtSBaCA"/>
 										</heading>
 										<heading id="CASCrI14" title="CA-SCrI- 14">
 											<synonym value="CA-SCrI-14"/>
 											<synonym value="Outhwaite 80"/>
 											<synonym value="Olson 80"/>
-											<synonym value="Forney's Cove"/>
+											<implies facet="Location" cat="ForneysCoveSBaCA"/>
 										</heading>
 										<heading id="CASCrI11" title="CA-SCrI- 11">
 											<synonym value="CA-SCrI-11"/>
 											<synonym value="Outhwaite 85"/>
-											<synonym value="Frazier's Point"/>
 											<synonym value="Olson 110"/>
+											<implies facet="Location" cat="FraziersPtSBaCA"/>
 										</heading>
 										<heading id="CASCrI16" title="CA-SCrI- 16">
 											<synonym value="CA-SCrI-16"/>
 											<synonym value="Olson 111"/>
-											<synonym value="Forney's Cove"/>
+											<implies facet="Location" cat="ForneysCoveSBaCA"/>
 										</heading>
 										<heading id="CASCrI34" title="CA-SCrI- 34">
 											<synonym value="CA-SCrI-34"/>
