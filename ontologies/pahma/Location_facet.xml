@@ -6158,7 +6158,7 @@
 								<heading id="Toadlena" title="Toadlena"/>
 							</heading>
 							<heading id="SanMiguelcounty" title="San Miguel county">
-								<heading id="LasVegasNM" title="Las Vegas"/>
+								<heading id="LasVegasNM" title="Las Vegas" noMatch="true"/> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<heading id="PecosNM" title="Pecos"/>
 							</heading>
 							<heading id="SantaFeCoNM" title="Santa Fe county">
@@ -6558,15 +6558,15 @@
 									<heading id="CAGle20" title="CA-Gle-20"/>
 								</heading>
 							</heading>
-							<heading id="HumboldtCountyCA" title="Humboldt county">
+							<heading id="HumboldtCountyCA" title="Humboldt county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<synonym value="CA-Hum-NL"/>
 								<synonym value="CA-Hum"/>
 								<synonym value="CA-Humboldt"/>
 								<synonym value="CA-Humboldt-NL"/>
-								<synonym value="Humboldt Co"/>
-								<synonym value="Humboldt Co."/>
-								<synonym value="Humboldt County, no loc"/>
-								<synonym value="Humboldt County, no loc."/>
+								<!-- <synonym value="Humboldt Co"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+								<!--<synonym value="Humboldt Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+								<!-- <synonym value="Humboldt County, no loc"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
+								<!-- <synonym value="Humboldt County, no loc."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<synonym value="Humboldt County, CA, no loc"/>
 								<synonym value="Humboldt County, CA, no loc."/>
 								<synonym value="Southern Humboldt county"/>
@@ -8549,7 +8549,7 @@
 								<synonym value="Nevada County, CA, no loc"/>
 								<synonym value="Nevada County, CA, no loc."/>
 								<heading id="PlacesNevadaCA" title="Place Names" noMatch="true">
-									<heading id="AshMeadowsNevCA" title="Ash Meadows">
+									<heading id="AshMeadowsNevCA" title="Ash Meadows" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 										<excl value="Nye"/>
 									</heading>
 									<heading id="ColfaxNevCA" title="Colfax"/>
@@ -16192,7 +16192,7 @@
 									<heading id="AlabamaHills" title="Alabama Hills"/>
 									<heading id="BakerCreek" title="Baker Creek"/>
 									<heading id="BigPine" title="Big Pine">
-										<heading id="IndianCemetery" title="Indian Cemetery"/>
+										<!-- <heading id="IndianCemetery" title="Indian Cemetery"/> -->
 									</heading>
 									<heading id="BigPineCreek" title="Big Pine Creek">
 										<heading id="NBankBigPineCrk" title="North bank of Big Pine Creek"/>
@@ -16202,7 +16202,7 @@
 									<heading id="DeepSprings" title="Deep Springs"/>
 									<heading id="DeathValley" title="Death Valley">
 										<heading id="CoyoteHole" title="Coyote Hole"/>
-										<heading id="CottonwoodCanyon" title="Cottonwood Canyon">
+										<heading id="CottonwdCynInyCA" title="Cottonwood Canyon" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 											<excl value="Nevada"/>
 											<excl value="Nye"/>
 										</heading>
@@ -19258,6 +19258,16 @@
 									<heading id="CuyamaMtsSBrbraCA" title="Cuyama Mountains"/>
 									<heading id="CuyamaValleySBrbraCA" title="Cuyama Valley"/>
 									<heading id="FranklinSite" title="Franklin site"/>
+									<heading id="FraziersPtSBaCA" title="Frazier's Point">
+										<synonym value="Fraziers Point"/>
+										<synonym value="Fraziers' Point"/>
+										<synonym value="Fraziers Pt"/>
+										<synonym value="Frazier's Pt"/>
+										<synonym value="Fraziers. Pt"/>
+										<synonym value="Fraziers Pt."/>
+										<synonym value="Frazier's Pt."/>
+										<synonym value="Fraziers. Pt."/>
+									</heading>
 									<heading id="GoletaSBrbraCA" title="Goleta">
 										<heading id="GoletaMoresRanch" title="Goleta (More's Ranch)"/>
 										<heading id="GoletaSawyersRanch" title="Goleta (Sawyer's Ranch)">
@@ -19490,6 +19500,7 @@
 											<synonym value="CA-SCrI-2"/>
 											<synonym value="Olson 86"/>
 											<synonym value="Frazier's Point"/>
+											<implies facet="Location" cat="MissSantaInes"/>
 										</heading>
 										<heading id="CASCrI14" title="CA-SCrI- 14">
 											<synonym value="CA-SCrI-14"/>
@@ -20587,7 +20598,7 @@
 									<excl value="California"/> <!-- Disambiguates Southern CA city -->
 								</heading>
 								<heading id="GypsumCave" title="Gypsum Cave"/>
-								<heading id="LasVegasNV" title="Las Vegas"/>
+								<heading id="LasVegasNV" title="Las Vegas" noMatch="true"/> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<heading id="LostCityPuebloGrandeNV" title="Lost City (Pueblo Grande)" noMatch="true"/>
 								<heading id="MoapaNV" title="MoapaNV"/>
 								<heading id="PaiuteCaveOvertonFill" title="Paiute Cave (Overton fill)" noMatch="true"/>
@@ -20854,7 +20865,7 @@
 							<heading id="IndianSpringsEsmereldaCountyNV" title="Indian Springs"/>
 						</heading>
 						<heading id="EurekaCounty" title="Eureka county"/>
-						<heading id="HumboldtCoNV" title="Humboldt county">
+						<heading id="HumboldtCoNV" title="Humboldt county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 							<synonym value="PROVENIENCE = Humboldt county, Nevada"/>
 							<synonym value="Barrel Springs"/>
 							<synonym value="Brooks Spring"/>
@@ -21185,11 +21196,11 @@
 							<synonym value="Slivovitz Rock Shelter"/>
 							<synonym value="Civa Shelter I"/>
 							<heading id="PlacesNyeNV" title="Place Names" noMatch="true">
-								<heading id="AshMeadwsNyeNV" title="Ash Meadows">
+								<heading id="AshMeadwsNyeNV" title="Ash Meadows" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 									<excl value="California"/>
 								</heading>
 								<heading id="BeattyNyeNV" title="Beatty"/>
-								<heading id="CottonwCynNyeNV" title="Cottonwood Canyon">
+								<heading id="CottonwdCynNyeNV" title="Cottonwood Canyon" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 									<excl value="California"/>
 									<excl value="Inyo"/>
 								</heading>
