@@ -359,10 +359,10 @@
 			</heading>
 			<heading id="Propulsiveweapons" title="Propulsive weapons">
 				<synonym value="Propulsive weapon"/>
-				<heading id="Spear" title="Spear">
-					<synonym value="Spears"/>
+				<heading id="ArrowWeapon" title="Arrow">
+					<synonym value="Arrows"/>
 				</heading>
-				<heading id="Atlatl" title="Atlatl">
+				<heading id="AtlatlWeapon" title="Atlatl">
 					<synonym value="Atlatls"/>
 				</heading>
 				<heading id="ProjectilePoint" title="Projectile Point">
@@ -380,14 +380,40 @@
 					<synonym value="Arrow-point"/>
 					<synonym value="Arrow-points"/>
 				</heading>
-				<heading id="Arrow" title="Arrow">
-					<synonym value="Arrows"/>
+				<heading id="BowWeapon" title="Bow" noMatch="true">
+					<synonym value="Bow"/>
+					<synonym value="Bows"/>
+					Bass
+					Cello
+					<excl value="Fiddle"/>
+					<excl value="Fiddles"/>
+					<excl value="Instrument"/>
+					<excl value="Instruments"/>
+					<excl value="Music"/>
+					<excl value="Musical"/>
+					Ravanhatha
+					Ravanhatta
+					S
+					Violin
+					Viola
 				</heading>
-				<heading id="Boomerang" title="Boomerang">
+				<heading id="BoomerangWeapon" title="Boomerang">
 					<synonym value="Boomerangs"/>
 				</heading>
-				<heading id="Lance" title="Lance">
+				<heading id="CatapultWeapon" title="Catapult">
+					<synonym value="Catapults"/>
+				</heading>
+				<heading id="LanceWeapon" title="Lance">
 					<synonym value="Lances"/>
+				</heading>
+				<heading id="SlingshotWeapon" title="Slingshot">
+					<synonym value="Slingshots"/>
+				</heading>
+				<heading id="SpearWeapon" title="Spear">
+					<synonym value="Spears"/>
+				</heading>
+				<heading id="TrebuchetWeapon" title="Trebuchet">
+					<synonym value="Trebuchets"/>
 				</heading>
 			</heading>
 			<heading id="Traps" title="Traps">
@@ -2620,7 +2646,6 @@
 	            <synonym value="Harp-like"/>
 	            <synonym value="Bow Harp"/>
 	            <synonym value="Bow Harps"/>
-	            <implies facet="Material" cat="BowMaterial"/>
 	        </heading>
 	        <heading id="Harpsichord" title="Harpsichord">
 	            <synonym value="Harpsichords"/>
@@ -3109,7 +3134,7 @@
 	    		</heading>
 	    		<heading id="CaneRattle" title="Cane Rattle"> <!-- implied materials: cane -->
 	                <synonym value="Cane Rattles"/>
-	    			<implies facet="Material" cat="CaneAnimalMaterial"/>
+	    			<implies facet="Material" cat="CanePlantMaterial"/>
 	            </heading>
 	            <heading id="CarvedRattle" title="Carved Rattle">
 	                <synonym value="Carved Rattles"/>
