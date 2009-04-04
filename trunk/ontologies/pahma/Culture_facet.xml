@@ -504,12 +504,13 @@
 									<synonym value="Kenai Eskimos"/>
 								</heading>
 								<heading id="KoniagTribe" title="Koniag">
-									<synonym value="Koniag"/>
+									<synonym value="Koniags"/>
 									<synonym value="Kodiak Eskimo"/>
 									<synonym value="Kodiak Eskimos"/>
 								</heading>
 								<heading id="PacificEskimo" title="Pacific Eskimo">
-									<synonym value="Kodiak Eskimos"/>
+									<!-- <synonym value="Kodiak Eskimo"/> CHECK: also a synonym of Koniag -->
+									<!-- <synonym value="Kodiak Eskimos"/> CHECK: also a synonym of Koniag -->
 								</heading>
 								<heading id="UgashikEskimo" title="Ugashik Eskimo">
 									<synonym value="Ugashak"/>
@@ -588,7 +589,6 @@
 							<heading id="PointHopeEskimo" title="Point Hope Eskimo"/>
 							<heading id="SiberianEskimo" title="Siberian Eskimo"/>
 							<heading id="StLawrenceIslandEskimo" title="St. Lawrence Island Eskimo"/>
-							<heading id="YupikEskimo" title="Yupik Eskimo"/>
 						</heading>
 						<heading id="GreenlandicTribes" title="Greenlandic Tribes">
 							<heading id="EastGreenlandEskimo" title="East Greenland Eskimo">
@@ -633,9 +633,10 @@
 							</heading>
 							<heading id="KlamathRiverTribes" title="Klamath River Tribes">
 								<synonym value="Lower Klamath River Tribes"/>
+								<synonym value="Klamath River People"/>
 								<heading id="HupaIndians" title="Hupa">
 									<synonym value="Nabiltse"/>
-									<synonym value="Natano"/>
+									<!-- <synonym value="Natano"/> CHECK: also a synonym of Juaneño indians -->
 									<synonym value="Trinity"/>
 									<synonym value="Hoopah"/>
 									<heading id="SouthForkHupaIndians" title="South Fork Hupa"> <!-- TRIM this from the UI -->
@@ -657,6 +658,33 @@
 									<synonym value="Peh-tsik"/>
 									<synonym value="Quoratem"/>
 								</heading>
+								<heading id="TolowaIndians" title="Tolowa">
+									<synonym value="Dalawa"/>
+									<synonym value="Dalawas"/>
+									<synonym value="Etchulet"/>
+									<synonym value="Etchulets"/>
+									<synonym value="Tollowa"/>
+									<synonym value="Tollowas"/>
+									<synonym value="Tol-lo-wah"/>
+									<synonym value="Tol'-lo-wah"/>
+									<synonym value="Tol'-lo-wahs"/>
+									<synonym value="Tolewah"/>
+									<synonym value="Tolewahs"/>
+									<synonym value="Tahlewah"/>
+									<synonym value="Tahlewahs"/>
+									<synonym value="Tahlehwah"/>
+									<synonym value="Tahlehwahs"/>
+									<synonym value="Tahluwah"/>
+									<synonym value="Tahluwahs"/>
+									<synonym value="Talawas"/>
+									<synonym value="Tolana"/>
+									<synonym value="Tolanas"/>
+									<synonym value="Talawa"/>
+									<synonym value="Tola'k"/>
+									<synonym value="Tolokwe"/>
+									<synonym value="Yantucket"/>
+									<synonym value="Yantuckets"/>
+								</heading>
 								<heading id="YurokIndians" title="Yurok">
 									<synonym value="Al-agnas"/>
 									<synonym value="Al-i-kwa"/>
@@ -676,10 +704,9 @@
 									<synonym value="Kenuck"/>
 									<synonym value="Kenuk"/>
 									<synonym value="Kiruhikwak"/>
-									<synonym value="Klamath River People"/>
 									<synonym value="Kyinnaa"/>
-									<synonym value="Klamath"/>
-									<synonym value="Lower Klamath"/>
+									<!-- <synonym value="Klamath"/> Too general.  Could be Klamath River tribes, Klamath Lake tribes, or Klamath tribe -->
+									<!-- <synonym value="Lower Klamath"/> Too general.  Could be Lower Klamath River tribes or Lower Klamath Lake tribes -->
 									<synonym value="Palik-Ai-li-qua"/>
 									<synonym value="Poh-lik"/>
 									<synonym value="Polikla"/>
@@ -770,33 +797,6 @@
 									<synonym value="Athabascan, Bear River, California"/>
 									<synonym value="Bear River, Humboldt"/>
 								</heading>
-							</heading>
-							<heading id="TolowaIndians" title="Tolowa">
-								<synonym value="Dalawa"/>
-								<synonym value="Dalawas"/>
-								<synonym value="Etchulet"/>
-								<synonym value="Etchulets"/>
-								<synonym value="Tollowa"/>
-								<synonym value="Tollowas"/>
-								<synonym value="Tol-lo-wah"/>
-								<synonym value="Tol'-lo-wah"/>
-								<synonym value="Tol'-lo-wahs"/>
-								<synonym value="Tolewah"/>
-								<synonym value="Tolewahs"/>
-								<synonym value="Tahlewah"/>
-								<synonym value="Tahlewahs"/>
-								<synonym value="Tahlehwah"/>
-								<synonym value="Tahlehwahs"/>
-								<synonym value="Tahluwah"/>
-								<synonym value="Tahluwahs"/>
-								<synonym value="Talawas"/>
-								<synonym value="Tolana"/>
-								<synonym value="Tolanas"/>
-								<synonym value="Talawa"/>
-								<synonym value="Tola'k"/>
-								<synonym value="Tolokwe"/>
-								<synonym value="Yantucket"/>
-								<synonym value="Yantuckets"/>
 							</heading>
 							<heading id="WailakiIndians" title="Wailaki">
 								<synonym value="Ken'-es-ti"/>
@@ -889,11 +889,21 @@
 								<synonym value="Hat Creek Indians"/>
 								<synonym value="Pacamallies"/>
 							</heading>
-							<heading id="KlamathTribes" title="Klamath">
-								<heading id="KlamathReservationIndians" title="Klamath Reservation"/>
-								<heading id="KlamathLakeTribes" title="Klamath Lake Tribes"/>
+							<heading id="KlamathBasinTribes" title="Klamath Basin Tribes">
+								<synonym value="Klamath Lake Tribe"/>
+								<synonym value="Klamath Lake Tribes"/>
+								<synonym value="Klamath Basin Tribe"/>
+								<synonym value="Klamath Reservation"/>
+								<heading id="KlamathTribe" title="Klamath">
+									<synonym value="Klamaths"/>
+								</heading>
+								<heading id="ModocIndians" title="Modoc">
+									<synonym value="Modocs"/>
+								</heading>
+								<heading id="YahooskinIndians" title="Yahooskin">
+									<synonym value="Yahooskins"/>
+								</heading>
 							</heading>
-							<heading id="ModocIndians" title="Modoc"/>
 							<heading id="YahiIndians" title="Yahi">
 								<synonym value="Yahi(?)"/>
 								<synonym value="Yahi (uncertain)"/>
@@ -1058,7 +1068,7 @@
 									<heading id="BokeyaIndians" title="Bokeya">
 										<synonym value="Pdataya"/>
 										<synonym value="Danokeya"/>
-										<synonym value="Kanowa"/>
+										<!-- <synonym value="Kanowa"/> CHECK: also a synonym of Kanoa (below) -->
 										<synonym value="Boch-he-af"/>
 										<synonym value="Bo-kas"/>
 										<synonym value="Bokea"/>
@@ -1155,54 +1165,6 @@
 								</heading>
 								<heading id="NorthernPomoIndians" title="Northern Pomo">
 									<synonym value="N. Pomo"/>
-									<heading id="ComachoIndians" title="Comacho">
-										<synonym value="Ko-ma-cho"/>
-									</heading>
-									<heading id="MasutIndians" title="Masut">
-										<synonym value="Maj-su-ta-ki-as"/>
-										<synonym value="Masu-ta-kaya"/>
-										<synonym value="Ma-su-ta-kea"/>
-									</heading>
-									<heading id="MatoPomoIndians" title="Mato-Pomo">
-										<synonym value="Chebal-na-Poma"/>
-										<synonym value="Shi-bal-ni Pomo"/>
-									</heading>
-									<heading id="MitomPomoIndians" title="Mitom-Pomo">
-										<synonym value="Willits"/>
-										<synonym value="Little Lake Valley"/>
-										<synonym value="Betumke"/>
-										<synonym value="Betumki"/>
-										<synonym value="Bitom-kai"/>
-										<synonym value="Matomey Ki"/>
-										<synonym value="Ma-tom-kai"/>
-										<synonym value="Me-tum-ki"/>
-										<synonym value="Mi-toam-ki"/>
-										<synonym value="Mitomkai"/>
-										<synonym value="Mtom-kai"/>
-									</heading>
-									<heading id="TabahteaIndians" title="Tabah-tea">
-										<synonym value="Ta-bi-tas"/>
-										<synonym value="Taa-bo-tah"/>
-										<synonym value="Tah'-bah-ta'"/>
-										<synonym value="Tah'-bo-ta"/>
-									</heading>
-									<heading id="KomliIndians" title="Komli"/>
-									<heading id="ShodaKayIndians" title="Shoda-Kay">
-										<synonym value="Sacham-Kay"/>
-										<synonym value="Sh0-da-kai Pomo"/>
-										<synonym value="ShO-da-kai Pomo"/>
-										<synonym value="co'dakai"/>
-										<synonym value="Shodakhai"/>
-										<heading id="CatcamkauIndians" title="Catcamkau"> <!-- Trim from UI -->
-											<synonym value="Chamkhai"/>
-											<synonym value="Shachamkau"/>
-											<synonym value="Teamkawi"/>
-										</heading>
-									</heading>
-									<heading id="KachaIndians" title="Kacha">
-										<synonym value="Katca"/>
-										<heading id="Dapishul" title="Da-pi-shul"/>
-									</heading>
 									<heading id="BaloKayIndians" title="Balo-Kay">
 										<!-- <synonym value="Shanel"/> CHECK: same as synonym for SanelIndians -->
 										<synonym value="Sedam"/>
@@ -1223,31 +1185,79 @@
 										<synonym value="Poma"/>
 										<synonym value="Po-mo-ke-chah"/>
 									</heading>
+									<heading id="ComachoIndians" title="Comacho">
+										<synonym value="Ko-ma-cho"/>
+									</heading>
+									<heading id="KachaIndians" title="Kacha">
+										<synonym value="Katca"/>
+										<heading id="Dapishul" title="Da-pi-shul"/>
+									</heading>
+									<heading id="KomliIndians" title="Komli"/> <!-- CHECK: also used as a synonym of Yima indians (below) -->
+									<heading id="MasutIndians" title="Masut">
+										<synonym value="Maj-su-ta-ki-as"/>
+										<synonym value="Masu-ta-kaya"/>
+										<synonym value="Ma-su-ta-kea"/>
+									</heading>
+									<heading id="MatoPomoIndians" title="Mato-Pomo">
+										<synonym value="Chebal-na-Poma"/>
+										<synonym value="Shi-bal-ni Pomo"/>
+									</heading>
 									<heading id="MatukuIndians" title="Matuku">
 										<synonym value="Shinal"/>
 										<synonym value="Kayaw"/>
 										<synonym value="Mah-too-go"/>
 										<synonym value="Matuho"/>
 										<synonym value="Matuko"/>
-										<synonym value="ceinal"/>
-										<synonym value="cinal"/>
+										<synonym value="Ceinal"/>
+										<synonym value="Cinal"/>
 										<synonym value="Haiyau"/>
 										<synonym value="Kaiyao"/>
-										<synonym value="Kaiyau"/>
-										<synonym value="Ki-ou"/>
+										<!-- <synonym value="Kaiyau"/> CHECK: also a synonym of Kayau (below) -->
+										<!-- <synonym value="Ki-ou"/> CHECK: also a synonym of Kayau (below) -->
 										<synonym value="Ki-yow"/>
 										<synonym value="Xaiyau"/>
 										<synonym value="Ki-yao-bah"/>
 									</heading>
+									<heading id="MitomPomoIndians" title="Mitom-Pomo">
+										<synonym value="Willits"/>
+										<synonym value="Little Lake Valley"/>
+										<synonym value="Betumke"/>
+										<synonym value="Betumki"/>
+										<synonym value="Bitom-kai"/>
+										<synonym value="Matomey Ki"/>
+										<synonym value="Ma-tom-kai"/>
+										<synonym value="Me-tum-ki"/>
+										<synonym value="Mi-toam-ki"/>
+										<synonym value="Mitomkai"/>
+										<synonym value="Mtom-kai"/>
+									</heading>
+									<heading id="TabahteaIndians" title="Tabah-tea">
+										<synonym value="Ta-bi-tas"/>
+										<synonym value="Taa-bo-tah"/>
+										<synonym value="Tah'-bah-ta'"/>
+										<synonym value="Tah'-bo-ta"/>
+									</heading>
+									<heading id="ShodaKayIndians" title="Shoda-Kay">
+										<synonym value="Sacham-Kay"/>
+										<synonym value="Sh0-da-kai Pomo"/>
+										<synonym value="ShO-da-kai Pomo"/>
+										<synonym value="co'dakai"/>
+										<synonym value="Shodakhai"/>
+										<heading id="CatcamkauIndians" title="Catcamkau"> <!-- Trim from UI -->
+											<synonym value="Chamkhai"/>
+											<synonym value="Shachamkau"/>
+											<synonym value="Teamkawi"/>
+										</heading>
+									</heading>
 									<heading id="YimaIndians" title="Yima">
 										<synonym value="Bowal"/>
-										<synonym value="Komli"/>
+										<!-- <synonym value="Komli"/> CHECK: also a synonym of Komli indians (above) -->
 										<synonym value="Yimaba"/>
 										<synonym value="Boalke"/>
 										<synonym value="Boilkai"/>
 										<synonym value="Moal-kai"/>
 										<synonym value="Boalkea"/>
-										<synonym value="bo'-al-ke-ah"/>
+										<synonym value="Bo'-al-ke-ah"/>
 										<synonym value="Boil-ka-ya"/>
 									</heading>
 								</heading>
@@ -1255,16 +1265,16 @@
 									<synonym value="NE Pomo"/>
 									<synonym value="N.E. Pomo"/>
 									<heading id="DahhohabeIndians" title="Dah-ho-habe">
-										<synonym value="Habe-napo"/>
+										<!-- <synonym value="Habe-napo"/> CHECK: also a synonym of Kabenapo (below) -->
 										<synonym value="Danoxa"/>
 										<synonym value="Danoha"/>
 										<synonym value="Dan-no-kah"/>
 										<synonym value="Di-noo-ha-vah"/>
 									</heading>
 									<heading id="KabenapoIndians" title="Kabenapo">
-										<synonym value="Habe-napo"/>
+										<!-- <synonym value="Habe-napo"/> CHECK: also a synonym of Dah-ho-habe (above) -->
 										<synonym value="Hahbenap'-po"/>
-										<synonym value="xabenapo"/>
+										<synonym value="Xabenapo"/>
 										<synonym value="Kabenapwena"/>
 										<synonym value="Bidamiwina"/>
 										<synonym value="Nonapoti"/>
@@ -1274,7 +1284,7 @@
 										<synonym value="Kaiyau"/>
 										<synonym value="Hayiau"/>
 										<synonym value="Ki-yow'-bah"/>
-										<synonym value="ki-ou"/>
+										<synonym value="Ki-ou"/>
 										<synonym value="Mayi"/>
 									</heading>
 									<heading id="KuLanapoIndians" title="KuLanapo">
@@ -1303,18 +1313,19 @@
 								<heading id="SoutheasternPomo" title="Southeastern Pomo">
 									<synonym value="SE Pomo"/>
 									<synonym value="S.E. Pomo"/>
-									<heading id="HowkumaIndians" title="How-ku-ma">
+									<synonym value="Southeast Pomo"/>
+									<heading id="HamfoIndians" title="Ham-fo"/>
+									<heading id="HowkumaIndians" title="How-ku-ma"> <!-- CHECK: also a synonym of Ka'-mina (below) -->
 										<synonym value="Le'makma"/>
 										<synonym value="Ka'ugu'ma"/>
 										<synonym value="Kamdot"/>
 										<synonym value="Limakmaiina"/>
 										<synonym value="Le-mah-mah"/>
 									</heading>
-									<heading id="HamfoIndians" title="Ham-fo"/>
 									<heading id="KaminaIndians" title="Ka'-mina">
 										<synonym value="Xa'-wina"/>
 										<synonym value="Ka'uguma"/>
-										<synonym value="How-ku-ma"/>
+										<!-- <synonym value="How-ku-ma"/> CHECK: also a synonym of How-ku-ma (above) -->
 										<synonym value="Elem"/>
 										<synonym value="Xaukumaiina"/>
 										<synonym value="Kamina"/>
@@ -1939,7 +1950,7 @@
 								<synonym value="Juaneño Band"/>
 								<synonym value="Juaneño Band of Mission Indians"/>
 								<synonym value="Juaneo"/>  <!-- In some cases, the tilde-n is completely omitted -->
-								<synonym value="Natano"/>
+								<!-- <synonym value="Natano"/> CHECK: also a synonym of Hupa indians -->
 								<implies facet="Culture" cat="MissionJuanenoIndians"/>
 							</heading>
 							<heading id="LuisenoIndians" title="Luiseño">

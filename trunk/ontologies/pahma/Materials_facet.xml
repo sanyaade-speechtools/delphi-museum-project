@@ -69,26 +69,35 @@
 		<heading id="Feathers" title="Feathers">
 			<synonym value="Feather"/>
 		</heading>
-		<heading id="Fossil" title="Fossil">
-			<heading id="Ammonite" title="Ammonite"/>
+		<heading id="FossilMaterial" title="Fossil">
+			<heading id="AmmoniteMaterial" title="Ammonite"/>
 		</heading>
 		<heading id="HairMaterial" title="Hair">
-			<heading id="AngoraMaterial" title="Angora"/>
-			<heading id="Horsehair" title="Horsehair">
+			<heading id="AngoraMaterial" title="Angora">
+				<implies facet="Material" cat="AngoraFiber"/>
+			</heading>
+			<heading id="HorsehairMaterial" title="Horsehair">
 				<synonym value="Horse Hair"/>
 			</heading>
-			<heading id="Mohair" title="Mohair"/>
+			<heading id="MohairMaterial" title="Mohair">
+				<implies facet="Material" cat="MohairFiber"/>
+			</heading>
 			<heading id="WoolMaterial" title="Wool">
 				<synonym value="Wool Fabric"/>
 				<synonym value="Woolen"/>
 				<implies facet="Material" cat="WoolFiber"/>
+				<heading id="AlpacaWool" title="Alpaca Wool">
+					<synonym value="Alpaca-Wool"/>
+					<implies facet="Material" cat="AlpacaFiber"/>
+				</heading>
 				<heading id="BrushedWool" title="Brushed Wool">
 					<synonym value="Brushed-Wool"/>
 					<implies facet="Material" cat="BrushedWoolFiber"/>
 				</heading>
-				<heading id="Cashmere" title="Cashmere">
+				<heading id="CashmereMaterial" title="Cashmere">
 					<synonym value="Cashmere wool"/>
 					<implies facet="Material" cat="CashmereFiber"/>
+					<implies facet="Material" cat="CashmereWoolFiber"/>
 				</heading>
 				<heading id="Lambswool" title="Lambswool">
 					<synonym value="Lamb wool"/>
@@ -400,12 +409,18 @@
 			</heading>
 		</heading>
 		<heading id="SilkMaterial" title="Silk">
+			<excl value="Art Silk"/>
+			<excl value="Spider Silk"/>
 			<implies facet="Material" cat="SilkFiber"/>
 		</heading>
 		<heading id="Sinew" title="Sinew">
 			<synonym value="Sinews"/>
 			<excl value="Sinew shredder"/>
 			<heading id="WhaleSinew" title="Whale Sinew"/>
+		</heading>
+		<heading id="SpiderSilkMaterial" title="Spider Silk">
+			<excl value="Art Silk"/>
+			<implies facet="Material" cat="SpiderSilkFiber"/>
 		</heading>
 		<heading id="ToothAndTusk" title="Tooth and Tusk">
 			<synonym value="Incisor"/>
@@ -788,6 +803,14 @@
 			<heading id="Tin" title="Tin"/>
 		</heading>
 		<heading id="MineralsAndStones" title="Minerals And Stones">
+			<synonym value="boulder"/>
+			<synonym value="boulders"/>
+			<synonym value="rock"/>
+			<synonym value="rock (unspecified)"/>
+			<synonym value="stone"/>
+			<synonym value="stone (unspecified)"/>
+			<synonym value="unspecified rock"/>
+			<synonym value="unspecificed stone"/>
 			<!-- consider a pigment group for ochre, chalk, charcoal, graphite. Malachite can be here, as can hematite -->
 			<heading id="PreciousAndSemiPreciousStones" title="Precious And Semi-Precious Stones">
 				<synonym value="Semi-Precious"/>
@@ -880,14 +903,6 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="unspecifiedstone" title="Unspecified Stone">
-				<synonym value="unspecificed stone"/>
-				<synonym value="rock (unspecified)"/>
-				<synonym value="unspecified rock"/>
-				<synonym value="stone"/>
-				<synonym value="rock"/>
-				<synonym value="boulder"/>
-			</heading>
 		</heading>
 	</heading>
 	<heading id="ManufacturedMaterial" title="Manufactured Materials">
@@ -910,24 +925,35 @@
 			<heading id="Cardboard" title="Cardboard"/>
 		</heading>
 		<heading id="Plastic" title="Plastic">
+			<synonym value="Plastics"/>
 			<excl value="Greek"/> <!-- excludes Greek Plastic ware.  Other kinds of non-plastic plastic ware? -->
 		</heading>
-		<heading id="Synthetic" title="Synthetic"/>
 		<heading id="Textiles" title="Textiles">
 			<synonym value="Cloth"/>
 			<synonym value="Fabric"/>
 			<synonym value="Fabrics"/>
 			<synonym value="Textile"/>
-		    <heading id="AnimalTextiles" title="Animal-derived" noMatch="true">
-		        <heading id="SilkFiber" title="Silk" noMatch="true"/>
+			<heading id="AnimalTextiles" title="Animal-derived" noMatch="true">
+		    	<heading id="AlpacaFiber" title="Alpaca" noMatch="true"/>
+		    	<heading id="AngoraFiber" title="Angora" noMatch="true"/>
+		    	<heading id="CamelHairFiber" title="Camel hair" noMatch="true"/>
+		    	<heading id="CashmereFiber" title="Cashmere" noMatch="true"/>
+		    	<heading id="CatgutFiber" title="Catgut" noMatch="true"/>
+		    	<heading id="ChiengoraFiber" title="Chiengora" noMatch="true"/>
+		    	<heading id="LlamaFiber" title="Llama" noMatch="true"/>
+		    	<heading id="MohairFiber" title="Mohair" noMatch="true"/>
+		    	<heading id="SilkFiber" title="Silk" noMatch="true"/>
+		    	<heading id="SinewFiber" title="Sinew" noMatch="true"/>
+		    	<heading id="SpiderSilkFiber" title="Spider silk" noMatch="true"/>
 		    	<heading id="WoolFiber" title="Wool" noMatch="true">
 		    		<heading id="BrushedWoolFiber" title="Brushed Wool" noMatch="true"/>
-		    		<heading id="CashmereFiber" title="Cashmere" noMatch="true"/>
+		    		<heading id="CashmereWoolFiber" title="Cashmere" noMatch="true"/>
 		    		<heading id="LambswoolFiber" title="Lambswool" noMatch="true"/>
 		    		<heading id="WoolFeltFiber" title="Wool Felt" noMatch="true"/>
 		    	</heading>
 		    </heading>
 		    <heading id="PlantTextiles" title="Plant-derived" noMatch="true">
+		    	Bamboo · Coir · Cotton · Flax · Hemp · Jute · Kenaf · Abacá · Piña · Raffia · Ramie · Sisal
 		    	<heading id="CottonFiber" title="Cotton" noMatch="true"/>
 		    	<heading id="HempFiber" title="Hemp"/>
 		    	<heading id="SisalFiber" title="Sisal"/>
@@ -944,17 +970,53 @@
 		            <synonym value="Basalt Fibre"/>
 		            <synonym value="Basalt Fibres"/>
 		        </heading>
-		        <heading id="GlassFiber" title="Glass Fiber">
-		            <synonym value="Glass Fibers"/>
+		    	<heading id="MineralWoolFiber" title="Mineral Wool">
+		    		<synonym value="Mineral Wools"/>
+		    	</heading>
+		    	<heading id="GlassWoolFiber" title="Glass Wool">
+		    		<synonym value="Glass Fiber"/>
+		    		<synonym value="Glass Fibers"/>
 		            <synonym value="Glass Fibre"/>
 		            <synonym value="Glass Fibres"/>
-		            <synonym value="Fiberglass"/>  <!-- Exclusions needed -->
+		    		<synonym value="Glass Wool"/>
+		    		<synonym value="Glass Wools"/>
+		    		<synonym value="Fiberglass"/>  <!-- Exclusions needed -->
+		    		<synonym value="Fibreglass"/>  <!-- Exclusions needed -->
 		        </heading>
 		    </heading>
-		    <heading id="SyntheticTextiles" title="Synthetics">
+		    <heading id="SyntheticTextiles" title="Synthetics &amp; Semi-synthetics">
 		    	<synonym value="Synthetic"/>
-		    	<heading id="AmaridFiber" title="Amarid"/>
+		    	<synonym value="Synthetics"/>
+		    	<synonym value="Semi-synthetic"/>
+		    	<synonym value="Semi-synthetics"/>
+		    	<synonym value="Semisynthetic"/>
+		    	<synonym value="Semisynthetics"/>
+		    	<heading id="AcrylicFiber" title="Acrylic" noMatch="true">
+		    		<synonym value="Acrylic fiber"/>
+		    		<synonym value="Acrylic fibers"/>
+		    		<synonym value="Acrylic fibre"/>
+		    		<synonym value="Acrylic fibres"/>
+		    		<synonym value="Fiber, acrylic"/>
+		    		<synonym value="Fibers, acrylic"/>
+		    		<synonym value="Fibre, acrylic"/>
+		    		<synonym value="Fibres, acrylic"/>
+		    		<synonym value="Textile, acrylic"/>
+		    		<synonym value="Textiles, acrylic"/>
+		    	</heading>
+		    	<heading id="AmaridFiber" title="Amarid">
+		    		<heading id="KevlarFiber" title="Kevlar"/>
+		    		<heading id="NomexFiber" title="Nomex"/>
+		    		<heading id="TechnoraFiber" title="Technora"/>
+		    		<heading id="TwaronFiber" title="Twaron"/>
+		    	</heading>
+		    	<heading id="CarbonFiber" title="Carbon fiber">
+		    		<synonym value="Carbon fibers"/>
+		    		<synonym value="Carbon fibre"/>
+		    		<synonym value="Carbon fibres"/>
+		    		<heading id="TenaxFiber" title="Tenax"/>
+		    	</heading>
 		    	<heading id="LurexFiber" title="Lurex"/>
+		    	<heading id="MicrofiberFiber" title="Microfiber"/>
 		    	<heading id="NylonFiber" title="Nylon"/>
 		        <heading id="OlefinFiber" title="Olefin Fiber">
 		        	<heading id="TyvekFiber" title="Tyvek"/>
@@ -972,7 +1034,11 @@
 		            <synonym value="Polyester Fibres"/>
 		            <synonym value="Polyester"/>  <!-- Exclusions needed? -->
 		        </heading>
-		        <heading id="PolyurethaneFiber" title="Polyurethane Fiber">
+		    	<heading id="PolyethyleneFiber" title="Polyethylene Fiber">
+		    		<heading id="DyneemaFiber" title="Dyneema"/>
+		    		<heading id="SpectraFiber" title="Spectra"/>
+		    	</heading>
+		    	<heading id="PolyurethaneFiber" title="Polyurethane Fiber">
 		            <synonym value="Polyurethane Fibers"/>
 		            <synonym value="Polyurethane Fibre"/>
 		            <synonym value="Polyurethane Fibres"/>
@@ -981,6 +1047,23 @@
 		        		<heading id="LycraFiber" title="Lycra"/>
 		            </heading>
 		        </heading>
+		    	<heading id="RayonFiber" title="Rayon">
+		    		<!--From <http://en.wikipedia.org/wiki/Rayon>:
+		    			Rayon is a manufactured regenerated cellulosic fiber. Because it is
+		    			produced from naturally occurring polymers, it is neither a truly
+		    			synthetic fiber nor a natural fiber; it is a semi-synthetic fiber.
+		    			Rayon is known by the names viscose rayon and art silk in the textile
+		    			industry. It usually has a high lustre quality giving it a bright shine. -->
+		    		<synonym value="Viscose Rayon"/>
+		    		<synonym value="Art Silk"/>
+		    		<synonym value="Art Silks"/>
+		    		<synonym value="Art-Silk"/>
+		    		<synonym value="Art-Silks"/>
+		    		<excl value="Rayón"/> <!-- Excludes the Mexican state -->
+		    	</heading>
+		    	<heading id="TencelFiber" title="Tencel"/>
+		    	<heading id="VinalonFiber" title="Vinalon"/>
+		    	<heading id="ZylonFiber" title="Zylon"/>
 		    </heading>
 		</heading>
 		<heading id="Whitemansmaterial" title="White man's material"/>
