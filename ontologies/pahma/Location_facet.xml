@@ -8957,7 +8957,7 @@
 								<synonym value="Shasta County, CA, no loc."/>
 								<synonym value="Shasta County, California, no loc."/>
 								<heading id="PlacesShastaCA" title="Place Names" noMatch="true">
-									<heading id="AntlerShastaCA" title="Antler">
+									<heading id="AntlerShastaCA" title="Antler"> <!-- Interested to see if following exclusions omit all objects made of antler -->
 										<excl value="Deer"/>
 										<excl value="Moose"/>
 										<excl value="Reindeer"/>
@@ -13884,8 +13884,6 @@
 										<synonym value="CA-SJo-16"/>
 										<synonym value="P.M. Jones Mound #1"/>
 										<synonym value="Stockton, mound #1"/>
-										<excl value="Yoruba"/>
-										<!-- Quick fix until I learn why Yoruba objects are latching -->
 									</heading>
 									<heading id="CASJo20" title="CA-SJo- 20">
 										<synonym value="CA-SJo-20"/>
@@ -16907,8 +16905,12 @@
 										<heading id="TulamniuMdsKernCA" title="Tulamniu Mounds"/>
 									</heading>
 									<heading id="BuenaVistaLkBdKernCA" title="Buena Vista Lake Bed">
-										<heading id="PelicanIslKernCA" title="Pelican Island"/>
-										<!-- 35.211ºN; 119.268ºW -->
+										<heading id="PelicanIslKernCA" title="Pelican Island">
+											<excl value="Churchill"/>
+											<excl value="Nevada"/>
+											<excl value="NV"/>
+											<!-- 35.211ºN; 119.268ºW -->
+										</heading>
 									</heading>
 									<heading id="ButtonwillowKernCA" title="Buttonwillow"/> 
 									<!-- <heading id="CalienteSForkKernRancheria" title="Caliente-S.Fork Kern Rancheria"/> -->
@@ -20232,7 +20234,7 @@
 								<heading id="ManoBeachChNV" title="Mano Beach"/>
 								<heading id="MiddlegateChNV" title="Middlegate"/>
 								<heading id="OcalaCaveChNV" title="Ocala Cave"/>
-								<heading id="PelicanIslChNV" title="Pelican Island"/>
+								<!-- <heading id="PelicanIslChNV" title="Pelican Island"/> Disambiguate with Kern Co., CA site of same name -->
 								<heading id="PriceSiteChNV" title="Price Site"/>
 								<heading id="PumiceBeachChNV" title="Pumice Beach site">
 									<synonym value="Pumice Beach"/>
@@ -21109,7 +21111,6 @@
 						</heading>
 						<heading id="MineralCoNV" title="Mineral County">
 							<synonym value="PROVENIENCE = Mineral county, Nevada"/>
-							<synonym value="Cool Valley"/>
 							<synonym value="Coal Valley Site"/>
 							<synonym value="Crenshaw Site 2"/>
 							<synonym value="Demchak Site"/>
@@ -21117,18 +21118,21 @@
 							<synonym value="Garfield Flats"/>
 							<synonym value="Mi-X1"/>
 							<synonym value="Mi-X2"/>
-							<synonym value="Powell Canyon"/>
-							<synonym value="Whiskey Flat"/>
-							<synonym value="Whiskey Flats"/>
-							<synonym value="West bank Walker Lake"/>
 							<heading id="PlacesMineralNV" title="Place Names" noMatch="true">
+								<heading id="CoolValleyMinNV" title="Cool Valley"/>
 								<heading id="PetroglyphCynMinNV" title="Petroglyph Canyon">
 									<excl value="WA"/> <!-- There's also a Petroglyph Canyon in WA -->
 									<excl value="Washington"/> <!-- Ibid. -->
 								</heading>
+								<heading id="PowellCynMinNV" title="Powell Canyon"/>
 								<heading id="Schurz" title="Schurz"/>
 								<heading id="Sodaville" title="Sodaville"/>
-								<heading id="WalkerLake" title="Walker Lake"/>
+								<heading id="WalkerLake" title="Walker Lake">
+									<synonym value="West bank Walker Lake"/>
+								</heading>
+								<heading id="WhiskeyFlatMinNV" title="Whiskey Flat">
+									<synonym value="Whiskey Flats"/>
+								</heading>
 							</heading>
 							<heading id="TrinomMineralNV" title="Trinomial site names" noMatch="true">
 								<heading id="NVMi2" title="NV-Mi- 2">
