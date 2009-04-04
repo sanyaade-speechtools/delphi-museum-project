@@ -5320,10 +5320,7 @@
 							</heading>
 							<heading id="PetroglyphPoint" title="Petroglyph Point"/>
 							<heading id="PictographCanyon" title="Pictograph Canyon"/>
-							<heading id="PetroglyphCynKLWA" title="Petroglyph Canyon">
-								<excl value="NV"/> <!-- There's also a Petroglyph Canyon in NV -->
-								<excl value="Nevada"/> <!-- Ibid. -->
-							</heading>
+							<!-- <heading id="PetroglyphCynKLWA" title="Petroglyph Canyon"> There's also a Petroglyph Canyon in NV -->
 							<heading id="Spedis" title="Spedis"/>
 							<heading id="WAKlickitatNL1" title="WA-Klickitat-NL-1"/>
 							<heading id="WAKlickitatNL2" title="WA-Klickitat-NL-2"/>
@@ -5393,7 +5390,9 @@
 						<heading id="SnohomishCounty" title="Snohomish County">
 							<synonym value="Snohomish"/>
 							<synonym value="Snohomish Co."/>
-							<heading id="TulalipReservation" title="Tulalip Reservation"/>
+							<heading id="TulalipReservation" title="Tulalip Reservation">
+								<implies facet="Culture" cat="SnoqualmieIndians"/>
+							</heading>
 						</heading>
 						<heading id="StevensCounty" title="Stevens County">
 							<synonym value="Stevens"/>
@@ -20128,7 +20127,6 @@
 						<heading id="CarsonCityCoNV" title="Carson City county">
 							<synonym value="Ormsby County"/> <!-- Ormsby County was merged into Carson City County in 1969 -->
 							<synonym value="NV-Or-1"/>
-							<synonym value="NV-Or-1"/>
 							<synonym value="NV-Ormsby-1"/>
 							<heading id="CarsonCity" title="Carson City">
 								<synonym value="Carson"/>
@@ -21076,7 +21074,7 @@
 						</heading>
 						<heading id="LyonCoNV" title="Lyon county">
 							<synonym value="PROVENIENCE = Lyon county, Nevada"/>
-							<synonym value="Medicine Rock"/>
+							<!-- <synonym value="Medicine Rock"/> Disambiguate: one in Lyon, one in Pershing, maybe one in Mineral co. near Walker Lake -->
 							<synonym value="Stewards #211"/>
 							<synonym value="Doctor Rock"/>
 							<synonym value="Ly-X1"/>
@@ -21120,10 +21118,7 @@
 							<synonym value="Mi-X2"/>
 							<heading id="PlacesMineralNV" title="Place Names" noMatch="true">
 								<heading id="CoolValleyMinNV" title="Cool Valley"/>
-								<heading id="PetroglyphCynMinNV" title="Petroglyph Canyon">
-									<excl value="WA"/> <!-- There's also a Petroglyph Canyon in WA -->
-									<excl value="Washington"/> <!-- Ibid. -->
-								</heading>
+								<!-- <heading id="PetroglyphCynMinNV" title="Petroglyph Canyon"> There's also a Petroglyph Canyon in WA -->
 								<heading id="PowellCynMinNV" title="Powell Canyon"/>
 								<heading id="Schurz" title="Schurz"/>
 								<heading id="Sodaville" title="Sodaville"/>
@@ -21317,7 +21312,7 @@
 							<synonym value="Nevada Toulon"/>
 							<synonym value="Orr-P1b"/>
 							<synonym value="Numahwatsi muinoo"/>
-							<synonym value="Medicine Rock"/>
+							<!-- <synonym value="Medicine Rock"/> Disambiguate: one in Lyon, one in Pershing, maybe one in Mineral co. near Walker Lake -->
 							<synonym value="Toulon"/>
 							<synonym value="Owl Cave"/>
 							<synonym value="Placeritos"/>
@@ -21338,7 +21333,7 @@
 									<!-- 	Latitude: 40.00306
 											Longitude: -118.62056 -->
 								</heading>
-								<heading id="LovelockPershingNV" title="Lovelock">
+								<heading id="LovelockPershingNV" title="Lovelock city"> <!-- As opposed to cave.  Do we have anything from here? -->
 									<synonym value="Lovelock, city of"/>
 								</heading>
 								<!-- <heading id="LeonardRockshPeNV" title="Leonard Rockshelter"/> Paolo will determine whether this is in Churchill or Pershing co., NV -->
