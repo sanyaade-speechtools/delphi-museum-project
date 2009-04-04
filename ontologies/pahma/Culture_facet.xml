@@ -637,7 +637,7 @@
 								<heading id="HupaIndians" title="Hupa">
 									<synonym value="Nabiltse"/>
 									<!-- <synonym value="Natano"/> CHECK: also a synonym of Juaneño indians -->
-									<synonym value="Trinity"/>
+									<!-- <synonym value="Trinity"/> CHECK: also a synonym of Wintu -->
 									<synonym value="Hoopah"/>
 									<heading id="SouthForkHupaIndians" title="South Fork Hupa"> <!-- TRIM this from the UI -->
 										<synonym value="Tsaningwha"/>
@@ -832,11 +832,10 @@
 								<synonym value="Northern Wintun"/>
 								<synonym value="Mountain Diggers"/>
 								<synonym value="Trinity Wintu"/>
-								<synonym value="Trinity"/>
+								<!-- <synonym value="Trinity"/> CHECK: also a synonym of Koniag -->
 								<synonym value="Xatukwi-wa"/>
 								<synonym value="Khatukeyu"/>
 								<heading id="NomtipomIndians" title="Nomtipom"/>
-								
 								<heading id="WenememIndians" title="Wenem-em">
 									<synonym value="Wenemem"/>
 								</heading>
@@ -902,6 +901,7 @@
 								</heading>
 								<heading id="YahooskinIndians" title="Yahooskin">
 									<synonym value="Yahooskins"/>
+									<implies facet="Culture" cat="PaiuteIndians"/>
 								</heading>
 							</heading>
 							<heading id="YahiIndians" title="Yahi">
@@ -2021,10 +2021,19 @@
 								<synonym value="Northern Paiute (?)"/>
 								<synonym value="Northern Paiute (uncertain)"/>
 								<synonym value="Paviotso"/>
-								<heading id="FallonPaiuteIndians" title="Fallon Paiute"/>
-								<heading id="MonoLakePaiuteIndians" title="Mono Lake Paiute"/>
-								<heading id="PyramidLakePaiuteIndians" title="Pyramid Lake Paiute"/>
-								<heading id="WadadokadoIndians" title="Wadadokado"/>
+								<synonym value="Paviotsos"/>
+								<heading id="FallonPaiuteIndians" title="Fallon Paiute">
+									<synonym value="Fallon Paiutes"/>
+								</heading>
+								<heading id="MonoLakePaiuteIndians" title="Mono Lake Paiute">
+									<synonym value="Mono Lake Paiutes"/>
+								</heading>
+								<heading id="PyramidLakePaiuteIndians" title="Pyramid Lake Paiute">
+									<synonym value="Pyramid Lake Paiutes"/>
+								</heading>
+								<heading id="WadadokadoIndians" title="Wadadokado">
+									<synonym value="Wadadokados"/>
+								</heading>
 							</heading>
 							<heading id="SouthernPaiuteIndians" title="Southern Paiute"> <!-- Only 2 headings, but these may be helpful, so stet. -->
 								<heading id="KaibabPaiuteIndians" title="Kaibab Paiute"/>
@@ -2211,24 +2220,29 @@
 							<synonym value="Western Oregon type"/>
 						</heading>
 						<!-- Pentlach -->
-						<heading id="PuyallupIndians" title="Puyallup">
-							<synonym value="Snoqualmi"/>
-						</heading>
 						<heading id="QueetsIndians" title="Queets"/>
 						<heading id="Quinault" title="Quinault"/>
 						<heading id="Salish" title="Salish">
-							<heading id="CoastSalish" title="Coast Salish"/>
+							<heading id="CoastSalish" title="Coast Salish">
+								<heading id="PuyallupIndians" title="Puyallup">
+									<synonym value="Lushootseed"/>
+									<synonym value="Lushootseeds"/>
+									<synonym value="Puyallups"/>
+									<synonym value="S'puyalupubsh"/>
+									<synonym value="S'puyalupubshs"/>
+								</heading>
+								<heading id="SnoqualmieIndians" title="Snoqualmie">
+									<synonym value="Snoqualemie"/>
+									<synonym value="Snoqualmi"/>
+									<synonym value="Snuqualmi"/>
+								</heading>
+							</heading>
 							<heading id="Salishantribes" title="Salishan tribes"/>
 							<heading id="SouthernSalish" title="Southern Salish"/>
 						</heading>
 						<!-- Seshelt -->
 						<heading id="Siletz" title="Siletz"/>
 						<heading id="Siuslaw" title="Siuslaw"/>
-						<heading id="SnoqualmieIndians" title="Snoqualmie">
-							<synonym value="Snoqualemie"/>
-							<synonym value="Snoqualmi"/>
-							<synonym value="Snuqualmi"/>
-						</heading>
 						<heading id="Suquamish" title="Suquamish">
 							<synonym value="Squamish"/>
 						</heading>
@@ -2240,7 +2254,10 @@
 							<synonym value="Western Washington tribes"/>
 						</heading>
 					</heading>
-					<heading id="Plainstribes" title="Plains tribes">  <!-- Purposefully made a synonym of both Prarie tribes and Plains tribes -->
+					<heading id="PlainsAndPrarieTribes" title="Plains and Prairie tribes">
+						bbbbb
+					</heading>
+					<heading id="Plainstribes" title="Plains tribes">
 						<synonym value="Northern Plains tribes"/>
 						<synonym value="Plains tribe (unspecified)"/>
 						<synonym value="Plains and Prairie tribes"/>
