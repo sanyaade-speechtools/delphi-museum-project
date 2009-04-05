@@ -3984,7 +3984,7 @@
 							<synonym value="Manteca Canon"/>
 							<synonym value="Manteca Canyon"/>
 						</heading>
-						<heading id="GuadalupeBCMX" title="Guadalupe"/>
+						<heading id="GuadalupeBCMX" title="Guadalupe" noMatch="true"/> <!-- Disambiguate with Santa Barbara city -->
 						<heading id="LaHuertaBCMX" title="La Huerta">
 							<synonym value="La Huerta de Los Indios"/>
 						</heading>
@@ -14280,104 +14280,100 @@
 								<synonym value="San Mateo County, CA, no loc"/>
 								<synonym value="San Mateo County, CA, no loc."/>
 								<heading id="PlacesSMateoCA" title="Place Names" noMatch="true">
+									<heading id="AnoNuevoPtSMaCA" title="Ano Nuevo Point"/>
 									<heading id="BelmontSMateoCA" title="Belmont"/>
 									<heading id="ColmaSMateoCA" title="Colma"/>
+									<heading id="HalfmoonBaySMaCA" title="Halfmoon Bay"/>
+									<heading id="MillsEstateSMaCA" title="Mills Estate"/>
+									<heading id="MossBeachSSMaCA" title="Moss Beach Site"/>
+									<heading id="SanBrunoSMaCA" title="San Bruno"/>
+									<heading id="SanMateoMdSMaCA" title="San Mateo Shellmound"/>
 								</heading>
 								<heading id="TrinomSMateoCA" title="Trinomial site names" noMatch="true">
-									<heading id="CASMa3" title="CA-SMa- 3">
-										<synonym value="CA-SMa-3"/>
+									<heading id="CASMa3" title="CA-SMa-3">
+										<synonym value="CA-SMa- 3"/>
+										<synonym value="CA-SMa-  3"/>
 										<synonym value="Nelson 357"/>
 									</heading>
-									<heading id="CASMa4" title="CA-SMa- 4">
-										<synonym value="CA-SMa-4"/>
+									<heading id="CASMa4" title="CA-SMa-4">
+										<synonym value="CA-SMa- 4"/>
+										<synonym value="CA-SMa-  4"/>
 										<synonym value="Nelson 372"/>
 										<synonym value="Sewell 1"/>
-										<synonym value="San Mateo Shellmound"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location" cat="SanMateoMdSMaCA"/>
 									</heading>
-									<heading id="CASMa20" title="CA-SMa- 20">
-										<synonym value="CA-SMa-20"/>
-										<synonym value="Ano Nuevo Point"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+									<heading id="CASMa20" title="CA-SMa-20">
+										<synonym value="CA-SMa- 20"/>
+										<implies facet="Location" cat="AnoNuevoPtSMaCA"/>
 									</heading>
-									<heading id="CASMa22" title="CA-SMa- 22">
-										<synonym value="CA-SMa-22"/>
+									<heading id="CASMa22" title="CA-SMa-22">
+										<synonym value="CA-SMa- 22"/>
 										<synonym value="Princeton"/>
 										<synonym value="Shellmound #407"/>
-										<synonym value="Halfmoon Bay"/>
 										<synonym value="Nelson 407"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location" cat="HalfmoonBaySMaCA"/>
 									</heading>
-									<heading id="CASMa23" title="CA-SMa- 23">
-										<synonym value="CA-SMa-23"/>
-										<synonym value="San Bruno"/>
-										<synonym value="Drake"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+									<heading id="CASMa23" title="CA-SMa-23">
+										<synonym value="CA-SMa- 23"/>
+										<!-- <synonym value="Drake"/> Also synonym of SBa location -->
+										<implies facet="Location" cat="SanBrunoSMaCA"/>
 									</heading>
-									<heading id="CASMa40" title="CA-SMa- 40">
-										<synonym value="CA-SMa-40"/>
+									<heading id="CASMa40" title="CA-SMa-40">
+										<synonym value="CA-SMa- 40"/>
 										<synonym value="Nelson 379"/>
 										<synonym value="SM-1"/>
 									</heading>
-									<heading id="CASMa73" title="CA-SMa- 73">
-										<synonym value="CA-SMa-73"/>
-										<synonym value="Moss Beach Site"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+									<heading id="CASMa73" title="CA-SMa-73">
+										<synonym value="CA-SMa- 73"/>
+										<implies facet="Location" cat="MossBeachSSMaCA"/>
 									</heading>
-									<heading id="CASMa74" title="CA-SMa- 74">
-										<synonym value="CA-SMa-74"/>
-										<synonym value="Mills Estate"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+									<heading id="CASMa74" title="CA-SMa-74">
+										<synonym value="CA-SMa- 74"/>
+										<implies facet="Location" cat="MillsEstateSMaCA"/>
 									</heading>
-									<heading id="CASMa75" title="CA-SMa- 75">
-										<synonym value="CA-SMa-75"/>
+									<heading id="CASMa75" title="CA-SMa-75">
+										<synonym value="CA-SMa- 75"/>
 									</heading>
-									<heading id="CASMa78" title="CA-SMa- 78">
-										<synonym value="CA-SMa-78"/>
+									<heading id="CASMa78" title="CA-SMa-78">
+										<synonym value="CA-SMa- 78"/>
 									</heading>
-									<heading id="CASMa80" title="CA-SMa- 80">
-										<synonym value="CA-SMa-80"/>
+									<heading id="CASMa80" title="CA-SMa-80">
+										<synonym value="CA-SMa- 80"/>
 									</heading>
-									<heading id="CASMa88" title="CA-SMa- 88">
-										<synonym value="CA-SMa-88"/>
+									<heading id="CASMa88" title="CA-SMa-88">
+										<synonym value="CA-SMa- 88"/>
 									</heading>
-									<heading id="CASMa90" title="CA-SMa- 90">
-										<synonym value="CA-SMa-90"/>
+									<heading id="CASMa90" title="CA-SMa-90">
+										<synonym value="CA-SMa- 90"/>
 									</heading>
-									<heading id="CASMa91" title="CA-SMa- 91">
-										<synonym value="CA-SMa-91"/>
+									<heading id="CASMa91" title="CA-SMa-91">
+										<synonym value="CA-SMa- 91"/>
 									</heading>
-									<heading id="CASMa97" title="CA-SMa- 97">
-										<synonym value="CA-SMa-97"/>
+									<heading id="CASMa97" title="CA-SMa-97">
+										<synonym value="CA-SMa- 97"/>
 									</heading>
 									<heading id="CASMa151" title="CA-SMa-151">
 										<synonym value="Nelson 412, 413, 414"/>
 									</heading>
 									<heading id="CASMa434" title="CA-SMa-434"/>
 									<heading id="CASMa438" title="CA-SMa-438"/>
-									<heading id="CASMaNL1" title="CA-SMa-NL- 1">
-										<synonym value="CA-SMa-NL-1"/>
+									<heading id="CASMaNL1" title="CA-SMa-NL-1">
+										<synonym value="CA-SMa-NL- 1"/>
 									</heading>
-									<heading id="CASMaNL2" title="CA-SMa-NL- 2">
-										<synonym value="CA-SMa-NL-2"/>
+									<heading id="CASMaNL2" title="CA-SMa-NL-2">
+										<synonym value="CA-SMa-NL- 2"/>
 									</heading>
-									<heading id="CASMaNL6" title="CA-SMa-NL- 6">
-										<synonym value="CA-SMa-NL-6"/>
+									<heading id="CASMaNL6" title="CA-SMa-NL-6">
+										<synonym value="CA-SMa-NL- 6"/>
 									</heading>
-									<heading id="CASMaNL7" title="CA-SMa-NL- 7">
-										<synonym value="CA-SMa-NL-7"/>
+									<heading id="CASMaNL7" title="CA-SMa-NL-7">
+										<synonym value="CA-SMa-NL- 7"/>
 									</heading>
-									<heading id="CASMaNL8" title="CA-SMa-NL- 8">
-										<synonym value="CA-SMa-NL-8"/>
+									<heading id="CASMaNL8" title="CA-SMa-NL-8">
+										<synonym value="CA-SMa-NL- 8"/>
 									</heading>
-									<heading id="CASMaNL9" title="CA-SMa-NL- 9">
-										<synonym value="CA-SMa-NL-9"/>
+									<heading id="CASMaNL9" title="CA-SMa-NL-9">
+										<synonym value="CA-SMa-NL9"/>
 									</heading>
 									<heading id="CASMaNL10" title="CA-SMa-NL-10"/>
 									<heading id="CASMaNL11" title="CA-SMa-NL-11"/>
@@ -14397,7 +14393,10 @@
 								<synonym value="Santa Clara County, CA, no loc."/>
 								<heading id="PlacesSClaraCA" title="Place Names" noMatch="true">
 									<heading id="MissionSantaClara" title="Mission Santa Clara"/>
-									<heading id="MoffettFieldSClaraCA" title="Moffett Field"/>
+									<heading id="MoffettFieldSClaraCA" title="Moffett Field">
+										<synonym value="Moffett Airfield"/>
+									</heading>
+									<heading id="MtnViewSClaraCA" title="Mountain View"/>
 									<heading id="SanJoseSClaraCA" title="San Jose">
 										<heading id="CoyoteCrSClaraCA" title="Coyote Creek"/>
 										<heading id="MtHamiltonRdSClaraCA" title="Mt. Hamilton Road"/>
@@ -14411,7 +14410,7 @@
 										<synonym value="Ponce A, B,"/>
 										<synonym value="Castro site"/>
 										<synonym value="Cossuto"/>
-										<synonym value="Mountain View"/>
+										<implies facet="Location" cat="MtnViewSClaraCA"/>
 									</heading>
 									<heading id="CASCl31" title="CA-SCl-31"/>
 									<heading id="CASCl32" title="CA-SCl-32"/>
@@ -14446,7 +14445,7 @@
 									<heading id="BonnieDoonSCrCA" title="Bonnie Doon"/>
 									<heading id="DavenportBakerySite" title="Davenport Bakery site"/>
 									<heading id="LagunaCreekSite" title="Laguna Creek Site"/>
-									<heading id="SiteIISCruzCA" title="Site II"/>
+									<!-- <heading id="SiteIISCruzCA" title="Site II"/> -->
 									<heading id="NewYearsIslSCruzCA" title="New Years Island"/> <!-- <heading id="SurfaceofMound" title="Surface of Mound"/> Disambiguate -->
 									<heading id="NewYearsPtSCruzCA" title="New Years Point"/>
 									<heading id="MarshallFieldMdSCruzCA" title="Marshall Field Mound"/>
@@ -14548,6 +14547,7 @@
 								<heading id="PlacesSolanoCA" title="Place Names" noMatch="true">
 									<heading id="BeniciaSolanoCA" title="Benicia"/>
 									<heading id="CordeliaSolanoCA" title="Cordelia"/>
+									<heading id="CrossSloughSolCA" title="Cross Slough"/>
 									<heading id="VallejoSolanoCA" title="Vallejo"/>
 								</heading>
 								<heading id="TrinomSolanoCA" title="Trinomial site names" noMatch="true">
@@ -14601,9 +14601,7 @@
 										<synonym value="CA-Sol- 13"/>
 										<synonym value="CA-Sol-13"/>
 										<synonym value="SW-13"/>
-										<synonym value="Cross Slough"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+										<implies facet="Location" cat="CrossSloughSolCA"/>
 									</heading>
 									<heading id="CASol14" title="CA-Sol- 14">
 										<synonym value="CA-Sol-14"/>
@@ -19771,7 +19769,7 @@
 									<heading id="CASBa14" title="CA-SBa- 14">
 										<synonym value="CA-SBa-14"/>
 										<synonym value="Rogers 14"/>
-										<synonym value="Drake"/>
+										<!-- <synonym value="Drake"/> Also synonym of SMa location -->
 										<implies facet="Location" cat="RogersSite14SBrbraCA"/>
 									</heading>
 									<heading id="CASBa15" title="CA-SBa- 15">
