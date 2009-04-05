@@ -3183,7 +3183,7 @@
 				<synonym value="Bowgainville"/>
 			</heading>
 			<heading id="SantaCruzIslandGroup" title="Santa Cruz Island Group">
-				<heading id="SantaCruzIslandSolomonIslands" title="Santa Cruz Island"> <!-- Disambiguate from CA channel island -->
+				<heading id="SantaCruzIslandSolomonIslands" title="Santa Cruz Island" noMatch="true"> <!-- Disambiguate from CA channel island -->
 					<heading id="AlhambraBay" title="Alhambra Bay"/>
 				</heading>
 			</heading>
@@ -21163,7 +21163,6 @@
 							<synonym value="Latrans"/>
 							<synonym value="Bernards Rockshelter"/>
 							<synonym value="P.S. Shelter"/>
-							<synonym value="Ione Cemetery"/>
 							<synonym value="Slivovitz Rockshelter"/>
 							<synonym value="Pecker"/> <!-- 'scuse me? -->
 							<synonym value="Natural Arch"/>
@@ -21206,6 +21205,10 @@
 									<excl value="California"/>
 									<excl value="Inyo"/>
 								</heading>
+								<!-- <heading id="IoneCemeteryNyeNV" title="Ione Cemetery" noMatch="true"> Sensitive -->
+									<!-- <synonym value="Ione Cemetery"/> -->
+									<!-- <implies facet="Culture" cat="IoneBandMiwokIndians"/> -->
+								<!-- </heading> -->
 								<heading id="ManhattanNyeNV" title="Manhattan">
 									<excl value="New York"/> <!-- Disambiguates from NY city -->
 									<excl value="NY"/> <!-- Ibid. -->
@@ -21224,8 +21227,8 @@
 								<heading id="NVNy17" title="NV-Ny-17">
 									<synonym value="NV-Ny- 17"/>
 									<synonym value="NV-Ny-  17"/>
-									<synonym value="Ione Cemetery"/>
 									<synonym value="W-17"/>
+									<!-- <implies facet="Location" cat="IoneCemeteryNyeNV"/> Sensitive -->
 								</heading>
 								<heading id="NVNy18" title="NV-Ny-18">
 									<synonym value="NV-Ny- 18"/>

@@ -667,8 +667,6 @@
 		<heading id="Shrubs" title="Shrubs">
 			<heading id="Cercis" title="Cercis"/>
 			<heading id="CottonPlant" title="Cotton Plant">
-				<synonym value="Cotton"/>
-				<implies facet="Material" cat="CottonFiber"/>
 			</heading>
 			<heading id="Grapevine" title="Grapevine"/>
 			<heading id="Honeysuckle" title="Honeysuckle">
@@ -953,9 +951,27 @@
 		    	</heading>
 		    </heading>
 		    <heading id="PlantTextiles" title="Plant-derived" noMatch="true">
-		    	Bamboo · Coir · Cotton · Flax · Hemp · Jute · Kenaf · Abacá · Piña · Raffia · Ramie · Sisal
-		    	<heading id="CottonFiber" title="Cotton" noMatch="true"/>
+		    	<heading id="AbacaFiber" title="Abacá" noMatch="true">
+		    		<synonym value="Abaca"/>
+		    	</heading>
+		    	<heading id="BambooFiber" title="Bamboo" noMatch="true"/>
+		    	<heading id="CoirFiber" title="Coir" noMatch="true"/>
+		    	<heading id="CottonFiber" title="Cotton">
+		    		<synonym value="Cotton"/>
+		    		<implies facet="Material" cat="CottonPlant"/>
+		    	</heading>
+		    	<heading id="FlaxFiber" title="Flax" noMatch="true">
+		    		<excl value="Flax Seed"/>
+		    		<excl value="Flax Seeds"/>
+		    	</heading>
 		    	<heading id="HempFiber" title="Hemp"/>
+		    	<heading id="JuteFiber" title="Jute" noMatch="true"/>
+		    	<heading id="KenafFiber" title="Kenaf" noMatch="true"/>
+		    	<heading id="PinaFiber" title="Piña" noMatch="true">
+		    		<synonym value="Pina"/>
+		    	</heading>
+		    	<heading id="RaffiaFiber" title="Raffia" noMatch="true"/>
+		    	<heading id="RamieFiber" title="Ramie" noMatch="true"/>
 		    	<heading id="SisalFiber" title="Sisal"/>
 		    </heading>
 		    <heading id="MineralTextiles" title="Mineral-derived" noMatch="true">
