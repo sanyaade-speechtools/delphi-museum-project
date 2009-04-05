@@ -66,7 +66,7 @@
 				<synonym value="Bark houses"/>
 				<synonym value="Bark-house"/>
 				<synonym value="Bark-houses"/>
-				<implies facet="Material" cat="TreeBark"/>
+				<implies facet="Material" cat="TreeBarkMaterial"/>
 			</heading>
 			<heading id="Brushhouse" title="Brush house">
 				<synonym value="Brushhouses"/>
@@ -3069,9 +3069,9 @@
 	                <synonym value="Baby Rattler"/>
 	                <synonym value="Baby Rattlers"/>
 	            </heading>
-	    		<heading id="BarkRattle" title="Bark Rattle"> <!-- implied materials: bark -->
+	    		<heading id="BarkRattle" title="Bark Rattle">
 	                <synonym value="Bark Rattles"/>
-	            	<implies facet="Material" cat="BarkPlantMaterial"/>
+	    			<implies facet="Material" cat="TreeBarkMaterial"/>
 	            </heading>
 	            <heading id="BasketryRattle" title="Basketry Rattle">
 	                <synonym value="Basketry Rattles"/>
@@ -3178,13 +3178,13 @@
 	        		<synonym value="Pu'ili"/>
 	        		<synonym value="Pu'ilis"/>
 	            </heading>
-	    		<heading id="ClawRattle" title="Claw Rattle"> <!-- implied materials: claw -->
+	    		<heading id="ClawRattle" title="Claw Rattle">
 	        		<synonym value="Claw Rattles"/>
 	        		<synonym value="Crab Claw Rattle"/>
 	        		<synonym value="Crab Claw Rattles"/>
 	        		<synonym value="Crab-Claw Rattle"/>
 	        		<synonym value="Crab-Claw Rattles"/>
-	        		<implies facet="Material" cat="ClawAnimalMaterial"/>
+	    			<implies facet="Material" cat="CrabShellMaterial"/>
 	        	</heading>
 	    		<heading id="CocoonRattle" title="Cocoon Rattle">
 	                <synonym value="Cocoon Rattles"/>
@@ -3223,7 +3223,7 @@
 	                <synonym value="Gravel Cocoon Rattles"/>
 	                <synonym value="Gravel Cocoon Rattle"/>
 	    			<implies facet="Material" cat="MaterialsInsectCocoons"/>
-	            	<implies facet="Material" cat="GravelMaterial"/>
+	    			<implies facet="Material" cat="GravelMaterial"/>
 	            </heading> 
 	        	<heading id="HandRattle" title="Hand Rattle">
 	        		<synonym value="Hand Rattles"/>
@@ -3314,13 +3314,13 @@
 	                <excl value="Turtles"/>
 	    			<implies facet="Material" cat="ShellMaterials"/> 
 	            </heading>
-	        	<heading id="SeedRattle" title="Seed Rattle"> <!-- implied materials: seed -->
+	        	<heading id="SeedRattle" title="Seed Rattle">
 	        		<synonym value="Seed Rattles"/>
 	        		<synonym value="Pod Rattle"/>
 	        		<synonym value="Pod Rattles"/>
 	        		<synonym value="Seed Pod Rattle"/>
 	        		<synonym value="Seed Pod Rattles"/>
-	        		<implies facet="Material" cat="SeedPlantMaterial"/> 
+	        		<implies facet="Material" cat="SeedsPlantMaterial"/> 
 	        	</heading>
 	        	<heading id="SistrumRattle" title="Sistrum">
 	                <synonym value="Sistrums"/>

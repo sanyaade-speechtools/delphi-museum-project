@@ -260,6 +260,9 @@
 			</heading>
 		</heading>
 		<heading id="ShellMaterials" title="Shell and Shell-like Materials">
+			<heading id="CrabShellMaterial" title="Crab Shell">
+				<synonym value="Crab Shells"/>
+			</heading>
 			<heading id="Coral" title="Coral">
 				<synonym value="Corals"/>
 				<excl value="textile"/>
@@ -581,16 +584,76 @@
 		<prefix value="made using "/>
 		<prefix value="manufactured with "/>
 		<prefix value="manufactured from "/>
-		<heading id="GourdPlantMaterial" title="Gourd">
-			<synonym value="Gourds"/>
+		<heading id="Fernsandprimitiveplants" title="Ferns and primitive plants">
+			<heading id="Brackenroot" title="Bracken root"/>
+			<heading id="Fern" title="Fern">
+				<heading id="Horsetailfern" title="Horsetail fern">
+					<synonym value="Equisetum"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="GourdPlantMaterial" title="Gourds">
+			<synonym value="Gourd"/>
+		</heading>
+		<heading id="GrassandHerbs" title="Grass and Herbs">
+			<heading id="BambooMaterial" title="Bamboo"/>
+			<heading id="CanePlantMaterial" title="Cane"/>
+			<heading id="Commonbeargrass" title="Common beargrass">
+				<synonym value="Bear grass"/>
+				<synonym value="Beargrass"/>
+				<synonym value="Bear-grass"/>
+				<synonym value="Xerophyllum tenex"/>
+				<synonym value="Baregrass"/>
+				<synonym value="Bare grass"/>
+			</heading>
+			<heading id="Devilsclaw" title="'Devil's claw'"/>
+			<heading id="Devilshorns" title="'Devil's horns'"/>
+			<heading id="Rabbitbrush" title="Rabbit brush"/>
+			<heading id="ReedPlantMaterial" title="Reed"/>
+			<heading id="Sedge" title="Sedge">
+				<synonym value="Carex"/>
+			</heading>
+			<heading id="Sloughgrass" title="Slough grass"/>
+			<heading id="Whitegrass" title="White grass"/>
+		</heading>
+		<heading id="SeedsPlantMaterial" title="Seeds">
+			<synonym value="Seed"/>
+			<heading id="BananaSeedMaterial" title="Banana Seeds">
+				<synonym value="Banana Seed"/>
+				<implies facet="Material" cat="BananaTree"/>
+			</heading>
+			<heading id="FlaxSeedMaterial" title="Flax Seeds">
+				<synonym value="Flax Seed"/>
+			</heading>
+			<heading id="JuniperSeedMaterial" title="Juniper Seeds">
+				<synonym value="Juniper Seed"/>
+				<implies facet="Material" cat="JuniperTree"/>
+			</heading>
+		</heading>
+		<heading id="Shrubs" title="Shrubs">
+			<heading id="Cercis" title="Cercis"/>
+			<heading id="CottonPlant" title="Cotton Plant">
+			</heading>
+			<heading id="Grapevine" title="Grapevine"/>
+			<heading id="Honeysuckle" title="Honeysuckle">
+				<synonym value="Caprifoliaceae"/>
+				<synonym value="Viburnum"/>
+				<synonym value="Common Viburnum"/>
+				<synonym value="Viburnum ellipticum"/>
+			</heading>
+			<heading id="JuniperBush" title="Juniper Bush" noMatch="true"/>
+			<heading id="Redbud" title="Redbud">
+				<synonym value="Red-bud"/>
+			</heading>
+			<heading id="Skunkbushsumac" title="Skunkbush sumac">
+				<synonym value="Rhus trilobata"/>
+			</heading>
 		</heading>
 		<heading id="Trees" title="Trees">
 			<heading id="TypesOfTrees" title="Types of Trees" noMatch="true">
 				<heading id="AlderTree" title="Alder"/>
 				<heading id="BananaTree" title="Banana">
 					<synonym value="Bananas"/>
-					<synonym value="Banana seed"/>
-					<synonym value="Banana seeds"/>
 				</heading>
 				<heading id="BirchTree" title="Birch">
 					<heading id="Hazel" title="Hazel"/>
@@ -638,10 +701,10 @@
 				<heading id="Yucca" title="Yucca"/>
 			</heading>
 			<heading id="PartsOfTrees" title="Parts of Trees" noMatch="true">
-				<heading id="TreeBark" title="Bark"/>
-				<heading id="TreeBranch" title="Branch"/>
-				<heading id="TreeBurl" title="Burl"/>
-				<heading id="TreeRoot" title="Root">
+				<heading id="TreeBarkMaterial" title="Bark"/>
+				<heading id="TreeBranchMaterial" title="Branch"/>
+				<heading id="TreeBurlMaterial" title="Burl"/>
+				<heading id="TreeRootMaterial" title="Root">
 					<synonym value="Roots"/>
 					<excl value="Root Beer"/>
 					<excl value="Man-root"/>
@@ -664,55 +727,6 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Shrubs" title="Shrubs">
-			<heading id="Cercis" title="Cercis"/>
-			<heading id="CottonPlant" title="Cotton Plant">
-			</heading>
-			<heading id="Grapevine" title="Grapevine"/>
-			<heading id="Honeysuckle" title="Honeysuckle">
-				<synonym value="Caprifoliaceae"/>
-				<synonym value="Viburnum"/>
-				<synonym value="Common Viburnum"/>
-				<synonym value="Viburnum ellipticum"/>
-			</heading>
-			<heading id="JuniperBush" title="Juniper Bush" noMatch="true"/>
-			<heading id="Redbud" title="Redbud">
-				<synonym value="Red-bud"/>
-			</heading>
-			<heading id="Skunkbushsumac" title="Skunkbush sumac">
-				<synonym value="Rhus trilobata"/>
-			</heading>
-		</heading>
-		<heading id="GrassandHerbs" title="Grass and Herbs">
-			<heading id="BambooMaterial" title="Bamboo"/>
-			<heading id="CanePlantMaterial" title="Cane"/>
-			<heading id="Commonbeargrass" title="Common beargrass">
-				<synonym value="Bear grass"/>
-				<synonym value="Beargrass"/>
-				<synonym value="Bear-grass"/>
-				<synonym value="Xerophyllum tenex"/>
-				<synonym value="Baregrass"/>
-				<synonym value="Bare grass"/>
-			</heading>
-			<heading id="Rabbitbrush" title="Rabbit brush"/>
-			<heading id="ReedPlantMaterial" title="Reed"/>
-			<heading id="Sedge" title="Sedge">
-				<synonym value="Carex"/>
-			</heading>
-			<heading id="Sloughgrass" title="Slough grass"/>
-			<heading id="Whitegrass" title="White grass"/>
-		</heading>
-		<heading id="Fernsandprimitiveplants" title="Ferns and primitive plants">
-			<heading id="Brackenroot" title="Bracken root"/>
-			<heading id="Fern" title="Fern">
-				<heading id="Horsetailfern" title="Horsetail fern">
-					<synonym value="Equisetum"/>
-				</heading>
-			</heading>
-		</heading>
-		<heading id="Wicker" title="Wicker"/>
-		<heading id="Devilshorns" title="'Devil's horns'"/>
-		<heading id="Devilsclaw" title="'Devil's claw'"/>
 	</heading>
 	<heading id="Inorganic" title="Inorganic">
 		<prefix value="made of "/>
@@ -810,59 +824,6 @@
 			<synonym value="unspecified rock"/>
 			<synonym value="unspecificed stone"/>
 			<!-- consider a pigment group for ochre, chalk, charcoal, graphite. Malachite can be here, as can hematite -->
-			<heading id="PreciousAndSemiPreciousStones" title="Precious And Semi-Precious Stones">
-				<synonym value="Semi-Precious"/>
-				<synonym value="Gemstone"/>
-				<synonym value="Gems"/>
-				<synonym value="Gem"/>
-				<heading id="Amber" title="Amber">
-					<implies facet="Color" cat="AmberColored"/>
-				</heading>
-				<heading id="Amethyst" title="Amethyst">
-					<implies facet="Color" cat="Purple"/>
-				</heading>
-				<heading id="Chalcedony" title="Chalcedony">
-					<heading id="Agate" title="Agate"/>
-					<heading id="Bloodstone" title="Bloodstone"/>
-					<heading id="Carnelian" title="Carnelian"/>
-					<heading id="Jasper" title="Jasper"/>
-					<heading id="Onyx" title="Onyx"/>
-				</heading>
-				<heading id="Garnet" title="Garnet"/>
-				<heading id="Hematite" title="Hematite"/>
-				<heading id="Jade" title="Jade"/>
-				<heading id="LapisLazuli" title="Lapis Lazuli">
-					<synonym value="Lapis lazui"/>
-					<synonym value="Lapis"/>
-					<implies facet="Color" cat="Blue"/>
-				</heading>
-				<heading id="Malachite" title="Malachite"/>
-				<heading id="Ruby" title="Ruby"/>
-				<heading id="Turquoise" title="Turquoise"/>
-			</heading>
-			<heading id="DecorativeStone" title="Decorative Stones">
-				<heading id="Alabaster" title="Alabaster"/>
-				<heading id="Marble" title="Marble"/>
-				<heading id="Ochre" title="Ochre"/>
-				<heading id="Quartz" title="Quartz"/>
-				<heading id="Quartzite" title="Quartzite"/>
-				<heading id="Soapstone" title="Soapstone">
-					<synonym value="steatite"/>
-				</heading>
-			</heading>
-			<heading id="Volcanic" title="Volcanic">
-				<heading id="Basalt" title="Basalt">
-					<heading id="Finegrainedbasalt" title="Fine-grained basalt"/>
-					<heading id="Vesilicbasalt" title="Vesilic basalt"/>
-				</heading>
-				<heading id="Lava" title="Lava"/>
-				<heading id="Obsidian" title="Obsidian">
-					<implies facet="Color" cat="Black"/>
-				</heading>
-				<heading id="Pumice" title="Pumice">
-					</heading>
-				<heading id="Rhyolite" title="Rhyolite"/>
-			</heading>
 			<heading id="CommonStones" title="Common Stones">
 				<heading id="Actinolite" title="Actinolite"/>
 				<heading id="Amphibolite" title="Amphibolite"/>
@@ -901,7 +862,61 @@
 					</heading>
 				</heading>
 			</heading>
-		</heading>
+			<heading id="DecorativeStone" title="Decorative Stones">
+				<heading id="Alabaster" title="Alabaster"/>
+				<heading id="Marble" title="Marble"/>
+				<heading id="Ochre" title="Ochre"/>
+				<heading id="Quartz" title="Quartz"/>
+				<heading id="Quartzite" title="Quartzite"/>
+				<heading id="Soapstone" title="Soapstone">
+					<synonym value="steatite"/>
+				</heading>
+			</heading>
+			<heading id="GravelMaterial" title="Gravel"/>
+			<heading id="PreciousAndSemiPreciousStones" title="Precious And Semi-Precious Stones">
+				<synonym value="Semi-Precious"/>
+				<synonym value="Gemstone"/>
+				<synonym value="Gems"/>
+				<synonym value="Gem"/>
+				<heading id="Amber" title="Amber">
+					<implies facet="Color" cat="AmberColored"/>
+				</heading>
+				<heading id="Amethyst" title="Amethyst">
+					<implies facet="Color" cat="Purple"/>
+				</heading>
+				<heading id="Chalcedony" title="Chalcedony">
+					<heading id="Agate" title="Agate"/>
+					<heading id="Bloodstone" title="Bloodstone"/>
+					<heading id="Carnelian" title="Carnelian"/>
+					<heading id="Jasper" title="Jasper"/>
+					<heading id="Onyx" title="Onyx"/>
+				</heading>
+				<heading id="Garnet" title="Garnet"/>
+				<heading id="Hematite" title="Hematite"/>
+				<heading id="Jade" title="Jade"/>
+				<heading id="LapisLazuli" title="Lapis Lazuli">
+					<synonym value="Lapis lazui"/>
+					<synonym value="Lapis"/>
+					<implies facet="Color" cat="Blue"/>
+				</heading>
+				<heading id="Malachite" title="Malachite"/>
+				<heading id="Ruby" title="Ruby"/>
+				<heading id="Turquoise" title="Turquoise"/>
+			</heading>
+			<heading id="Volcanic" title="Volcanic">
+				<heading id="Basalt" title="Basalt">
+					<heading id="Finegrainedbasalt" title="Fine-grained basalt"/>
+					<heading id="Vesilicbasalt" title="Vesilic basalt"/>
+				</heading>
+				<heading id="Lava" title="Lava"/>
+				<heading id="Obsidian" title="Obsidian">
+					<implies facet="Color" cat="Black"/>
+				</heading>
+				<heading id="Pumice" title="Pumice">
+					</heading>
+				<heading id="Rhyolite" title="Rhyolite"/>
+			</heading>
+			</heading>
 	</heading>
 	<heading id="ManufacturedMaterial" title="Manufactured Materials">
 		<prefix value="made of "/>
