@@ -10363,7 +10363,7 @@
 									</heading>
 									<heading id="CAAla14" title="CA-Ala-14">
 										<synonym value="CA-Ala- 14"/>
-										<implies facet="Location" cat="MortarRockParkAlamedaCA"/> 
+										<implies facet="Location" cat="MortarRockParkAlaCA"/> 
 									</heading>
 									<heading id="CAAla16" title="CA-Ala-16">
 										<synonym value="CA-Ala- 16"/>
@@ -19256,6 +19256,11 @@
 								<synonym value="Santa Barbara County, CA, no loc"/>
 								<synonym value="Santa Barbara County, CA, no loc."/>
 								<heading id="PlacesSBrbraCA" title="Place Names" noMatch="true">
+									<heading id="AlexanderSBaCA" title="Alexander">
+										<excl value="Louisiana"/>
+										<excl value="Valley"/>
+										<excl value="Archipelago"/>
+									</heading>
 									<heading id="CuyamaMtsSBrbraCA" title="Cuyama Mountains"/>
 									<heading id="CuyamaValleySBrbraCA" title="Cuyama Valley"/>
 									<heading id="ForneysCoveSBaCA" title="Forney's Cove">
@@ -19585,8 +19590,6 @@
 											<synonym value="Smuggler's Cover (Schumacher) (part only)"/>
 										</heading>
 										<heading id="CASCrINL1" title="CA-SCrI-NL-1"/>
-
-
 										<heading id="CASCrI1" title="CA-SCrI- 1">
 											<synonym value="CA-SCrI-1"/>
 										</heading>
@@ -19790,12 +19793,7 @@
 									<heading id="CASBa117" title="CA-SBa-117"/>
 									<heading id="CASBa123" title="CA-SBa-123">
 										<synonym value="SBMNH 123"/>
-										<synonym value="Alexander"/>
-										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
-										<excl value="Louisiana"/>
-										<excl value="Valley"/>
-										<excl value="Archipelago"/>
+										<implies facet="Location" cat="AlexanderSBaCA"/>
 									</heading>
 									<heading id="CASBa130" title="CA-SBa-130"/>
 									<heading id="CASBa203" title="CA-SBa-203">
@@ -21744,7 +21742,7 @@
 						</heading>
 					</heading>
 					<heading id="LouisianaState" title="Louisiana">
-						<heading id="AlexanderLA" title="Alexander"/>
+						<heading id="AlexanderLA" title="Alexander" noMatch="true"/> <!-- Need to disambiguate with Alexander, Santa Barbara, CA -->
 						<heading id="AllenLA" title="Allen">
 							<heading id="KinderLA" title="Kinder"/>
 						</heading>
