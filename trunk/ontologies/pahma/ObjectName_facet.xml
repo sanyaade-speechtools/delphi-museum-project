@@ -3058,11 +3058,11 @@
 	            <heading id="AmuletRattle" title="Amulet Rattle">
 	                <synonym value="Amulet Rattles"/>
 	            </heading>
-	    		<heading id="Armadillo-Tail Rattle" title="Armadillo-Tail Rattle"> <!-- implied materials: armadillo -->
+	    		<heading id="Armadillo-Tail Rattle" title="Armadillo-Tail Rattle">
 	                <synonym value="Armadillo-Tail Rattles"/>
 	                <synonym value="Armadillo Tail Rattle"/>
 	                <synonym value="Armadillo Tail Rattles"/>
-	            	<implies facet="Material" cat="ArmadilloAnimalMaterial"/>
+	    			<implies facet="Material" cat="ArmadilloTailMat"/>
 	            </heading> 
 	            <heading id="BabyRattle" title="Baby Rattle">
 	                <synonym value="Baby Rattles"/>
@@ -3304,7 +3304,7 @@
 	            <heading id="PeyoteRattle" title="Peyote">
 	                <synonym value="Peyote Rattles"/>       
 	            </heading>
-	    		<heading id="SeaShellRattle" title="Sea Shell Rattle"> <!-- implied materials: shell -->
+	    		<heading id="SeaShellRattle" title="Sea Shell Rattle">
 	                <synonym value="Sea Shell Rattles"/>
 	                <synonym value="Seashell Rattle"/>
 	                <synonym value="Seashell Rattles"/>
@@ -3340,7 +3340,7 @@
 	            <heading id="TotemicRattle" title="Totemic Rattle">
 	                <synonym value="Totemic Rattles"/>       
 	            </heading>
-	    		<heading id="TurtleShellRattle" title="Turtle Shell Rattle"> <!-- implied materials: turtle -->
+	    		<heading id="TurtleShellRattle" title="Turtle Shell Rattle">
 	                <synonym value="Turtle Shell Rattles"/>
 	                <synonym value="Turtle Rattle"/>
 	                <synonym value="Turtle Rattles"/>
@@ -3352,7 +3352,7 @@
 	                <synonym value="Shell Rattles"/>
 	                <excl value="Sea"/> <!-- To exclude seashell rattles -->
 	                <excl value="Seashell"/> <!-- Ibid. -->
-	            	<implies facet="Material" cat="TurtleAnimalMaterial"/> 
+	    			<implies facet="Material" cat="TurtleShellMaterial"/> 
 	            </heading>
 	        </heading>
 	        <heading id="Sanza" title="Sanza"> <!-- includes Mbiras -->

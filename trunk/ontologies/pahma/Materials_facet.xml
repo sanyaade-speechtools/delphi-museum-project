@@ -260,9 +260,6 @@
 			</heading>
 		</heading>
 		<heading id="ShellMaterials" title="Shell and Shell-like Materials">
-			<heading id="CrabShellMaterial" title="Crab Shell">
-				<synonym value="Crab Shells"/>
-			</heading>
 			<heading id="Coral" title="Coral">
 				<synonym value="Corals"/>
 				<excl value="textile"/>
@@ -355,13 +352,15 @@
 				</heading>
 				<heading id="CrustaceanShells" title="Crustaceans">
 					<synonym value="Crustacean"/>
-					<heading id="CrabShell" title="Crab Shell">
+					<heading id="CrabShellMaterial" title="Crab Shell">
+						<synonym value="Crab Shells"/>
 						<synonym value="Crabshell"/>
 						<synonym value="Crabshells"/>
 						<synonym value="Crab-shell"/>
 						<synonym value="Crab-shells"/>
 					</heading>
-					<heading id="LobsterShell" title="Lobster Shell">
+					<heading id="LobsterShellMaterial" title="Lobster Shell">
+						<synonym value="Lobster Shells"/>
 						<synonym value="Lobstershell"/>
 						<synonym value="Lobstershells"/>
 						<synonym value="Lobster-shell"/>
@@ -377,7 +376,7 @@
 					<heading id="Nautilusshell" title="Nautilus Shell">
 						<synonym value="Nautilus"/>
 					</heading>
-					<heading id="TurtleShell" title="Turtle Shell"/>
+					<heading id="TurtleShellMaterial" title="Turtle Shell"/>
 				</heading>
 				<heading id="Coneshell" title="Cone Shell">
 					<synonym value="Cone shells"/>
@@ -424,6 +423,10 @@
 		<heading id="SpiderSilkMaterial" title="Spider Silk">
 			<excl value="Art Silk"/>
 			<implies facet="Material" cat="SpiderSilkFiber"/>
+		</heading>
+		<heading id="TailMaterial" title="Tails">
+			<heading id="ArmadilloTailMat" title="Armadillo Tail"/>
+			<heading id="OxTailMaterial" title="Ox Tail"/>
 		</heading>
 		<heading id="ToothAndTusk" title="Tooth and Tusk">
 			<synonym value="Incisor"/>
