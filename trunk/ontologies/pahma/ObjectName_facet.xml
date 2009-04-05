@@ -2475,7 +2475,7 @@
 	            <heading id="GourdBanjo" title="Gourd Banjo">
 	                <synonym value="Gourd Banjos"/>
 	                <synonym value="Gourd Banjoes"/>
-	                <implies facet="Material" cat="GourdPlantMaterial"/>
+	            	<implies facet="Material" cat="GourdPlantMaterial"/>
 	            </heading>
 	        </heading>
 		    <heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Esraj, Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
@@ -3190,9 +3190,9 @@
 	                <synonym value="Cocoon Rattles"/>
 	    			<implies facet="Material" cat="MaterialsInsectCocoons"/>
 	            </heading>
-	    		<heading id="CopperRattle" title="Copper Rattle"> <!-- implied materials: copper -->
+	    		<heading id="CopperRattle" title="Copper Rattle">
 	                <synonym value="Copper Rattles"/>
-	            	<implies facet="Material" cat="CopperMaterial"/>
+	    			<implies facet="Material" cat="CopperMetal"/>
 	            </heading>
 	            <heading id="CuiaRattle" title="Cuia Rattle">
 	                <synonym value="Cuia Rattles"/>
@@ -3216,7 +3216,7 @@
 	            </heading> 
 	    		<heading id="GourdRattle" title="Gourd Rattle"> <!-- implied materials: gourd -->
 	                <synonym value="Gourd Rattles"/>
-	            	<implies facet="Material" cat="GourdAnimalMaterial"/>
+	    			<implies facet="Material" cat="GourdPlantMaterial"/>
 	            </heading>
 	    		<heading id="GravelCocoonRattle" title="Gravel-Cocoon Rattle"> <!-- implied materials: cocoon, gravel -->
 	                <synonym value="Gravel-Cocoon Rattles"/>
@@ -3594,7 +3594,7 @@
 	    			<synonym value="Six Holed Flutes"/>
 	    			<synonym value="Six-Holed Flute"/>
 	    			<synonym value="Six-Holed Flutes"/>
-	    			<implies facet="Material" cat="ReedPlantMaterial"/>
+	    	    	<implies facet="Material" cat="ReedPlantMaterial"/>
 	    		</heading>
 	    	</heading>
 			<heading id="Gyaling" title="Gyaling">
@@ -4010,11 +4010,6 @@
 				<heading id="BuggyWhip" title="Buggy Whip">
 					<synonym value="Buggy Whips"/>
 				</heading>
-				<heading id="Horseshoe" title="Horse shoe">
-					<synonym value="Horse shoes"/>
-					<synonym value="Horseshoe"/>
-					<synonym value="Horseshoes"/>
-				</heading>
 				<heading id="RidingCrop" title="Riding Crop">
 					<synonym value="Riding Crops"/>
 				</heading>
@@ -4046,7 +4041,8 @@
 		</heading>
 		<heading id="HorseTack" title="Horse Tack">
 			<definition value="used to describe any of the various equipment and accessories 
-				worn by horses in the course of their use as domesticated animals"/>
+			worn by horses in the course of their use as domesticated animals"/>
+			<implies facet="ActivityorContext" cat="HorsebackRiding"/>
 			<heading id="HorseBreastplate" title="Breastplate">
 				<synonym value="Breastplates"/>
 			</heading>
@@ -4064,26 +4060,29 @@
 			</heading>
 			<heading id="Horseshoe" title="Horseshoe">
 				<synonym value="Horseshoes"/>
+				<synonym value="Horse shoe"/>
+				<synonym value="Horse shoes"/>
+				<synonym value="Horseshoes"/>
+			</heading>
+			<heading id="Martingale" title="Martingale">
+				<synonym value="Martingales"/>
 			</heading>
 			<heading id="Reins" title="Reins">
 				<synonym value="Reins"/>
 			</heading>
 			<heading id="Saddle" title="Saddle">
 				<synonym value="Saddles"/>
-				<heading id="SaddleBag" title="Saddle bag">
-					<synonym value="Saddle bags"/>
-					<synonym value="Saddlebags"/>
-				</heading>
-				<heading id="Stirrup" title="Stirrup">
-					<synonym value="Stirrups"/>
-				</heading>				
+			</heading>
+			<heading id="SaddleBag" title="Saddle bag">
+				<synonym value="Saddle bags"/>
+				<synonym value="Saddlebags"/>
 			</heading>
 			<heading id="SaddleBlanket" title="Saddle Blanket">
 				<synonym value="Saddle Blankets"/>
 			</heading>
-			<heading id="Martingale" title="Martingale">
-				<synonym value="Martingales"/>
-			</heading>
+			<heading id="Stirrup" title="Stirrup">
+				<synonym value="Stirrups"/>
+			</heading>				
 		</heading>
 		<heading id="Awl" title="Awl">
 			<synonym value="Awls"/>
