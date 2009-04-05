@@ -3017,7 +3017,7 @@
 	    		<synonym value="Rasp and Wire"/>
 	    		<synonym value="Wire and Rasp"/>
 	    	</heading>
-	    	<heading id="Rattles" title="Rattles"> <!-- implied materials: armadillo, bark, cane, claw, coccoon, copper, fur, gourd, gravel, hoof, horn, shell, seed, turtle -->
+	    	<heading id="Rattles" title="Rattles"> <!-- implied materials: armadillo, bark, cane, claw, cocoon, copper, fur, gourd, gravel, hoof, horn, shell, seed, turtle -->
 	            <synonym value="Rattle"/>
 	            <synonym value="Rattler"/>
 	            <synonym value="Rattlers"/>
@@ -3186,9 +3186,9 @@
 	        		<synonym value="Crab-Claw Rattles"/>
 	        		<implies facet="Material" cat="ClawAnimalMaterial"/>
 	        	</heading>
-	    		<heading id="CoccoonRattle" title="Coccoon Rattle"> <!-- implied materials: coccoon -->
-	                <synonym value="Coccoon Rattles"/>
-	        		<implies facet="Material" cat="CoccoonAnimalMaterial"/>
+	    		<heading id="CocoonRattle" title="Cocoon Rattle">
+	                <synonym value="Cocoon Rattles"/>
+	    			<implies facet="Material" cat="MaterialsInsectCocoons"/>
 	            </heading>
 	    		<heading id="CopperRattle" title="Copper Rattle"> <!-- implied materials: copper -->
 	                <synonym value="Copper Rattles"/>
@@ -3207,7 +3207,7 @@
 	        	</heading>
 	    		<heading id="FurRattle" title="Fur Rattle"> <!-- implied materials: fur -->
 	                <synonym value="Fur Rattles"/>
-	        		<implies facet="Material" cat="FurAnimalMaterial"/>
+	    			<implies facet="Material" cat="LeatherAndFur"/>
 	            </heading>
 	            <heading id="Goite-Husk Rattle" title="Goite-Husk Rattle">
 	                <synonym value="Goite-Husk Rattles"/>
@@ -3218,11 +3218,11 @@
 	                <synonym value="Gourd Rattles"/>
 	            	<implies facet="Material" cat="GourdAnimalMaterial"/>
 	            </heading>
-	    		<heading id="GravelCoccoonRattle" title="Gravel-Coccoon Rattle"> <!-- implied materials: cocoon, gravel -->
-	                <synonym value="Gravel-Coccoon Rattles"/>
-	                <synonym value="Gravel Coccoon Rattles"/>
-	                <synonym value="Gravel Coccoon Rattle"/>
-	            	<implies facet="Material" cat="CocoonAnimalMaterial"/>
+	    		<heading id="GravelCocoonRattle" title="Gravel-Cocoon Rattle"> <!-- implied materials: cocoon, gravel -->
+	                <synonym value="Gravel-Cocoon Rattles"/>
+	                <synonym value="Gravel Cocoon Rattles"/>
+	                <synonym value="Gravel Cocoon Rattle"/>
+	    			<implies facet="Material" cat="MaterialsInsectCocoons"/>
 	            	<implies facet="Material" cat="GravelMaterial"/>
 	            </heading> 
 	        	<heading id="HandRattle" title="Hand Rattle">
