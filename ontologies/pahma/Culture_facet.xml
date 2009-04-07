@@ -9,10 +9,11 @@
 		********************
 		Notes for a future revision:
 		
-		In a future revision, it might be useful to make this into a "who" facet.
+		It might be useful to make this into more of a "who" facet.
 		Such a "who" facet would have these major sub-facets:
 		• Person (personal name of specific person)
-		• Culture
+		• Culture by geography (what this facet currently is limited to)
+		• Culture by language group (Athabascan, Uto-Aztecan, etc.)
 		• Profession (e.g., shoemaker, weaver)
 		• Role (e.g., wife)
 		• Rank (e.g., royalty, serf, slave, caste)
@@ -969,6 +970,7 @@
 									<synonym value="Moquelumnan"/>
 									<synonym value="Me'-wan"/>
 									<heading id="CentralSierraMiwokIndians" title="Central Sierra Miwok">
+										<synonym value="Chaw'se"/>
 										<synonym value="Meewok"/>
 									</heading>
 									<heading id="IoneBandMiwokIndians" title="Ione Band of Miwok Indians">
@@ -1775,6 +1777,7 @@
 							</heading>
 							<heading id="WesternMonoIndians" title="Western Mono">
 								<synonym value="Monache"/>
+								<synonym value="Monachi"/>
 								<synonym value="Owens Valley Paiute"/>
 								<implies facet="Culture" cat="BasinWesternMonoIndians"/>
 								<heading id="TuhukwadjIndians" title="Tuhukwadj"/>
@@ -2921,7 +2924,24 @@
 		</heading>
 		<heading id="ModernOceaniancultures" title="Oceanian cultures">
 			<heading id="Australiancultures" title="Australian cultures">
-				<heading id="Australianaborigines" title="Australian aborigines"/>
+				<heading id="Australianaborigines" title="Australian aborigines">
+					<heading id="ArandaTribe" title="Aranda tribe"/>
+					<heading id="DangbonTribe" title="Dangbon tribe"/>
+					<heading id="DijambarrpuynuTribe" title="Dijambarrpuynu tribe"/> <!-- or clan -->
+					<heading id="GunwingguTribe" title="Gunwinggu tribe">
+						<synonym value="Gunwiggu"/> <!-- Misspelling -->
+						<synonym value="Kunwinjku"/>
+					</heading>
+					<heading id="GupapuynaTribe" title="Gupapuyna tribe"/>
+					<heading id="GupapuyjuTribe" title="Gupapuyju tribe"/>
+					<heading id="KukatjaTribe" title="Kukatja tribe"/> <!-- (Pintubi) -->
+					<heading id="MurinbataTribe" title="Murinbata tribe"/>
+					<heading id="MurnginTribe" title="Murngin tribe"/> <!-- 11-41325 -->
+					<heading id="PintubiTribe" title="Pintubi tribe"/>
+					<heading id="RiratjinguTribe" title="Riratjingu tribe"/>
+					<heading id="TiwiTribeOZ" title="Tiwi tribe"/>
+					<!-- Harramirri mala, Jirritja moiety 11-43036 -->
+				</heading>
 			</heading>
 			<heading id="MicronesianCultures" title="Micronesian"/>
 			<heading id="MelanesianCulture" title="Melanesian">
@@ -3021,38 +3041,113 @@
 		</heading>
 		<heading id="AncientAfricanCultures" title="Ancient Africa">
 			<heading id="MagosianCulture" title="Magosian">
-				<implies facet="Location" cat="Magosian"/>
+				<!-- <implies facet="Location" cat="Mesolithic/Postpaleolithic"/> -->
+			</heading>
+			<heading id="AncientEgyptianCul" title="Ancient Egypt">
 			</heading>
 		</heading>
+		<!-- To add:
+			• Phoenician
+			• Mycenian
+			• Assyrians
+			• Cycladic civilization
+			• Minoan civilization
+			• Timbuktu's culture?
+			• 
+			-->
 		<heading id="AncientEuropeanCultures" title="Ancient Europe">
-			<heading id="AncientGreece" title="Ancient Greece">
-				<synonym value="Greek"/>
-					<!-- questionable, but I think most people entering this term are looking for things from Ancient Greece -->
-				<synonym value="Ancient Greek"/>
-				<synonym value="Classical Greece"/>
-				<synonym value="Classical Greek"/>
-				<synonym value="Attica"/>
-				<excl value="Greek Key"/>
-				<!-- Need complex inferencing: if cat 8 *and* Greek... --> 
-				<heading id="Corinthian" title="Corinthian"/>
-				<heading id="ProtoCorinthian" title="Proto-Corinthian"/>
-			</heading>
-			<heading id="MyceneanCulture" title="Mycenean">
-				<synonym value="Mycenian"/>
-			</heading>
-			<heading id="AncientRome" title="Ancient Rome">
-				<synonym value="Ancient Roman"/>
-				<synonym value="Classical Rome"/>
-				<synonym value="Classical Roman"/>
-				<synonym value="Imperial Rome"/>
-				<synonym value="Republican Rome"/>
-				<synonym value="Imperial Roman"/>
-				<synonym value="Republican Roman"/>
-				<synonym value="Roman Empire"/>
-				<synonym value="Roman Republic"/>
-				<!-- Need complex inferencing: if cat 8 *and* Rome... --> 
+			<heading id="GrecoRomanCultures" title="Greco-Roman cultures">
+				<heading id="AncGreekCulture" title="Ancient Greeks">
+						<!-- Need complex inferencing: if cat 8 *and* Greek... --> 
+					<synonym value="Greek"/> <!-- questionable, but I think most people entering this term are looking for things from Ancient Greece -->
+					<synonym value="Ancient Greece"/>
+					<synonym value="Ancient Greek"/> <!-- English adjectival variant -->
+					<synonym value="Classical Greece"/>
+					<synonym value="Classical Greek"/> <!-- English adjectival variant -->
+					<synonym value="Attica"/> <!-- Move to more specific facet -->
+					<excl value="Greek Key"/>
+					<heading id="BoetianCulture" title="Boetian" noMatch="true"/>
+					<heading id="CorinthianCul" title="Corinthian">
+						<synonym value="Corinthians"/>
+					</heading>
+					<heading id="HelleneCulture" title="Hellenes">
+						<synonym value="Achaeans"/> <!-- one of the collective names used for the Greeks in Homer's Iliad (used 598 times) and Odyssey -->
+						<synonym value="Ἀχαιοί"/> <!-- Ibid., Greek plural -->
+						<synonym value="Akhaioí"/> <!-- Ibid., plural transliteration -->
+						<synonym value="Danaans"/> <!-- another of the collective names used for the Greeks in Homer's Iliad (used 138 times) and Odyssey -->
+						<synonym value="Δαναοί"/> <!-- Ibid., Greek plural -->
+						<synonym value="Argives"/> <!-- another of the collective names used for the Greeks in Homer's Iliad (used 29 times) and Odyssey -->
+						<synonym value="Ἀργεῖοι"/> <!-- Ibid., Greek plural -->
+						<synonym value="Hellene"/>
+						<synonym value="Έλληνες"/> <!-- Greek plural -->
+						<synonym value="ˈe̞line̞s"/> <!-- IPA (International Phonetic Alphabet -->
+						<synonym value="[ˈe̞line̞s]"/> <!-- IPA (International Phonetic Alphabet -->
+						<synonym value="Hellenic"/>
+						<heading id="AeolianCulture" title="Aeolian">
+							<!-- The name comes from the fact that they were considered to be descended from
+								Aeolus (whose father Hellen was the mythological patriarch of all Hellenes). -->
+							<synonym value="Aeolians"/>
+							<synonym value="Αἰολεῖς"/> <!-- Greek plural -->
+							<synonym value="Aeolic"/> <!-- English adjectival form -->
+							<synonym value="iː'ɒlɪk"/>
+							<synonym value="iː'əʊlɪən"/>
+						</heading>
+						<heading id="DorianCulture" title="Dorian">
+							<synonym value="Dorians"/>
+							<synonym value="Doric"/>
+							<synonym value="Δωριεῖς"/> <!-- Greek plural -->
+							<synonym value="Dōrieis"/> <!-- Plural transliteration -->
+							<synonym value="Δωριεύς"/> <!-- Greek singular -->
+							<synonym value="Dōrieus"/> <!-- Singular transliteration -->
+						</heading>
+						<heading id="IonianCulture" title="Ionian">
+							<synonym value="Ionians"/>
+							<synonym value="Ἴωνες"/> <!-- Greek plural -->
+							<synonym value="Íōnes"/> <!-- Plural transliteration -->
+							<synonym value="Ἴων"/> <!-- Greek singular -->
+							<synonym value="Íōn"/> <!-- Singular transliteration -->
+						</heading>
+					</heading>
+					<heading id="EtruscoCorinthCul" title="Etrusco-Corinthian">
+						<synonym value="Etruscocorinthian"/>
+						<synonym value="Etruscocorinthians"/>
+						<synonym value="Etrusco Corinthian"/>
+						<synonym value="Etrusco Corinthians"/>
+						<synonym value="Etrusco-Corinthians"/>
+					</heading>
+					<heading id="ProtoCorinthian" title="Proto-Corinthian">
+						<synonym value="Protocorinthian"/>
+						<synonym value="Protocorinthians"/>
+						<synonym value="Proto Corinthian"/>
+						<synonym value="Proto Corinthians"/>
+						<synonym value="Proto-Corinthians"/>
+					</heading>
+				</heading>
+				<heading id="MyceneanCulture" title="Mycenean">
+					<synonym value="Myceneans"/>
+					<synonym value="Mycenian"/>
+					<synonym value="Mycenians"/>
+				</heading>
+				<heading id="AncientRome" title="Ancient Rome">
+					<synonym value="Ancient Roman"/>
+					<synonym value="Classical Rome"/>
+					<synonym value="Classical Roman"/>
+					<synonym value="Imperial Rome"/>
+					<synonym value="Republican Rome"/>
+					<synonym value="Imperial Roman"/>
+					<synonym value="Republican Roman"/>
+					<synonym value="Roman Empire"/>
+					<synonym value="Roman Republic"/>
+					<synonym value="Roman"/>
+					<synonym value="Romans"/>
+					<!-- Need complex inferencing: if cat 8 *and* Rome... --> 
+				</heading>
 			</heading>
 			<heading id="CelticTribes" title="Celtic tribes">
+				<synonym value="Celtic"/>
+				<synonym value="Celtics"/>
+				<synonym value="Celt"/>
+				<synonym value="Celts"/>
 				<heading id="BritishTribes" title="British tribes">
 					<synonym value="Brythonic tribes"/>
 					<heading id="ScottishTribes" title="Scottish tribes">
@@ -3107,6 +3202,7 @@
 				</heading>
 			</heading>
 			<heading id="Etruscan" title="Etruscan">
+				<synonym value="Etruscans"/>
 				<synonym value="Etruria"/>
 			</heading>
 			<heading id="IllyrianTribes" title="Illyrian tribes">
