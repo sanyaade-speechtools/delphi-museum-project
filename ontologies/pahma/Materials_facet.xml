@@ -126,14 +126,14 @@
 			<excl value="Elk horn prong"/> <!-- Why? -->
 			<excl value="Prong horn"/> <!-- Why? -->
 			<synonym value="Horns"/>
-			<heading id="AntelopeHorn" title="Antelope Horn">
+			<heading id="AntelopeHornMaterial" title="Antelope Horn">
 				<synonym value="Antelope Horns"/>
 				<synonym value="Antelope's Horn"/>
 				<synonym value="Antelope's Horns"/>
 				<synonym value="Antelopes' Horn"/>
 				<synonym value="Antelopes' Horns"/>
 			</heading>
-			<heading id="BuffaloHorn" title="Buffalo Horn">
+			<heading id="BuffaloHornMaterial" title="Buffalo Horn">
 				<synonym value="Buffalo Horns"/>
 				<synonym value="Buffalo's Horn"/>
 				<synonym value="Buffalo's Horns"/>
@@ -146,7 +146,7 @@
 				<synonym value="Bisons' Horn"/>
 				<synonym value="Bisons' Horns"/>
 			</heading>
-			<heading id="CowHorn" title="Cow Horn">
+			<heading id="CowHornMaterial" title="Cow Horn">
 				<synonym value="Cow Horns"/>
 				<synonym value="Cow's Horn"/>
 				<synonym value="Cow's Horns"/>
@@ -165,21 +165,28 @@
 				<synonym value="Bulls' Horn"/>
 				<synonym value="Bulls' Horns"/>
 			</heading>
-			<heading id="MountainGoatHorn" title="Mountain Goat Horn">
+			<heading id="MtnGoatHornMaterial" title="Mountain Goat Horn">
 				<synonym value="Mountain Goat Horns"/>
 				<synonym value="Mountain Goat's Horn"/>
 				<synonym value="Mountain Goat's Horns"/>
 				<synonym value="Mountain Goats' Horn"/>
 				<synonym value="Mountain Goats' Horns"/>
 			</heading>
-			<heading id="MountainSheepHorn" title="Mountain Sheep Horn">
+			<heading id="MtnSheepHornMaterial" title="Mountain Sheep Horn">
 				<synonym value="Mountain Sheep Horns"/>
 				<synonym value="Mountain Sheep's Horn"/>
 				<synonym value="Mountain Sheep's Horns"/>
 				<synonym value="Mountain Sheeps' Horn"/>
 				<synonym value="Mountain Sheeps' Horns"/>
 			</heading>
-			<heading id="SheepHorn" title="Sheep Horn">
+			<heading id="OxHornMaterial" title="Ox Horn">
+				<synonym value="Sheep Horns"/>
+				<synonym value="Sheep's Horn"/>
+				<synonym value="Sheep's Horns"/>
+				<synonym value="Sheeps' Horn"/>
+				<synonym value="Sheeps' Horns"/>
+			</heading>
+			<heading id="SheepHornMaterial" title="Sheep Horn">
 				<synonym value="Sheep Horns"/>
 				<synonym value="Sheep's Horn"/>
 				<synonym value="Sheep's Horns"/>
@@ -766,7 +773,7 @@
 			<synonym value="Pot Metal"/>
 			<synonym value="Pot-Metal"/>
 			<heading id="Alloyunspecified" title="Alloy (unspecified)"/>
-			<heading id="Aluminum" title="Aluminum">
+			<heading id="AluminumMaterial" title="Aluminum">
 				<synonym value="Aluminium"/>
 			</heading>
 			<heading id="BrassMaterial" title="Brass">
@@ -777,7 +784,7 @@
 				<heading id="CopperAlloy" title="Copper Alloy"/>
 			</heading>
 			<heading id="Electrum" title="Electrum"/>
-			<heading id="Gold" title="Gold">
+			<heading id="GoldMaterial" title="Gold">
 				<implies facet="Color" cat="GoldColored"/>
 				<heading id="GoldPlate" title="Gold Plate">
 					<synonym value="Gilded"/>
@@ -793,14 +800,14 @@
 				<heading id="IronOre" title="Iron Ore"/>
 				<heading id="Slag" title="Slag"/>
 			</heading>
-			<heading id="Lead" title="Lead">
+			<heading id="LeadMaterial" title="Lead">
 				<excl value="lead vocal"/>
 				<excl value="lead dancer"/>
 				<excl value="vocal lead"/>
 			</heading>
-			<heading id="Pewter" title="Pewter"/>
-			<heading id="Platinum" title="Platinum"/>
-			<heading id="Silver" title="Silver">
+			<heading id="PewterMaterial" title="Pewter"/>
+			<heading id="PlatinumMaterial" title="Platinum"/>
+			<heading id="SilverMaterial" title="Silver">
 				<implies facet="Color" cat="SilverColored"/>
 				<heading id="SilverAlloy" title="Silver Alloy"/>
 				<heading id="SilverPlate" title="Silver Plate">
