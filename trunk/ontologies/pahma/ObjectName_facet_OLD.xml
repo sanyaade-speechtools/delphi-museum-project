@@ -3,10 +3,9 @@
 	<notes>
 		This is a temporary notes section.
 	    	Terms to be added:
-		ashtray
-	    balloons
+	    balloons (not in British Museum Thesaurus)
 		bedspread
-		billumbag
+		billumbag (not in British Museum Thesaurus)
 		bones
 		   wildcat bones
 		bonnet
@@ -23,9 +22,49 @@
 		Fireplace tools
 		    Fireplace fan piece (what is this?)
 		Fish knife
-		Guttus (lamp feeder)
+		<heading id="LightingEq" title="Lighting Equipment"> <!-- BM TOP TERM -->
+			<heading id="xxxxxxxxxxx" title="Candelabrum"/>
+			<heading id="xxxxxxxxxxx" title="Candelon"/>
+			<heading id="xxxxxxxxxxx" title="Candle"/>
+			<heading id="xxxxxxxxxxx" title="Candle Box"/>
+			<heading id="xxxxxxxxxxx" title="Candle Case"/>
+			<heading id="xxxxxxxxxxx" title="Candle Holder"/>
+			<heading id="xxxxxxxxxxx" title="Candle Mold"/>
+			<heading id="xxxxxxxxxxx" title="Candle Screen"/>
+			<heading id="xxxxxxxxxxx" title="Candlestick holder"/>
+			<heading id="xxxxxxxxxxx" title="Ceiling Light"/>
+			<heading id="xxxxxxxxxxx" title="Chandelier"/>
+			<heading id="LampLighting" title="Lamp"/>
+			<heading id="xxxxxxxxxxx" title="Lamp bracket"/>
+			<heading id="LampFiller" title="Lamp Filler">
+				<implies facet="ObjectName" cat="ContainersAndVessels"/>
+				<heading id="Guttus" title="Guttus (lamp feeder/filler)">
+					<synonym value="Guttus"/>
+				</heading>
+			</heading>
+			<heading id="xxxxxxxxxxx" title="Lamp holder"/>
+			<heading id="xxxxxxxxxxx" title="Lamp hook"/>
+			<heading id="xxxxxxxxxxx" title="Lamp ornament"/>
+			<heading id="xxxxxxxxxxx" title="Lamp stand"/>
+			<heading id="Lantern" title="Lantern">
+				<synonym value="Lanterns"/>
+				<excl value="Lantern slide"/>
+				<excl value="Lantern slides"/>
+			</heading>
+			<heading id="xxxxxxxxxxx" title="Lustre"/>
+			<heading id="xxxxxxxxxxx" title="Peerman"/>
+			<heading id="xxxxxxxxxxx" title="Rush Light Holder"/>
+			<heading id="xxxxxxxxxxx" title="Snuffer"/>
+			<heading id="xxxxxxxxxxx" title="Snuffer Stand"/>
+			<heading id="xxxxxxxxxxx" title="Torch"/>
+			<heading id="xxxxxxxxxxx" title="Torch holder"/>
+			<heading id="xxxxxxxxxxx" title="Wick"/>
+			<heading id="xxxxxxxxxxx" title="Wick Holder"/>
+			<heading id="xxxxxxxxxxx" title="Wick Puller"/>
+			<heading id="xxxxxxxxxxx" title="Wick Trimmer"/>
+		</heading>
+		
 		letter opener
-		mandrel
 		manta
 		night chant (Yeibichai)
 		Patera
@@ -42,7 +81,7 @@
 		spray bottle
 		thangka
 		tumbler
-		Vajra
+		
 		war bonnet
 		whisk
 		wreath
@@ -142,7 +181,7 @@
 			<heading id="Helmet" title="Helmet">
 				<synonym value="Helmets"/>
 			</heading>
-			<heading id="Gorgets" title="Gorgets"></heading>			
+			<heading id="Gorgets" title="Gorgets">			
 				<synonym value="Gorget"/>
 				<heading id="ArmorBanjo" title="Banjo"><!-- Called ArmorBanjo because I also want to enter banjo as an ornament and as a musical instrument-->
 					<synonym value="Banjos"/><!-- Will this work? Can I do this? I'll also need to use exclusions -->
@@ -150,6 +189,7 @@
 						<synonym value="Half Banjos"/>
 					</heading>
 				</heading>
+			</heading>
 			<heading id="Greave" title="Greave">
 				<synonym value="Greaves"/>
 			</heading>
@@ -503,10 +543,86 @@
 			</heading>
 			<heading id="Sculpture" title="Sculpture">
 				<synonym value="Sculptures"/>
+				<heading id="FigureSculpture" title="Figure">
+					<heading id="AcroterionFigure" title="Acroterion"/>
+					<heading id="BustFigure" title="Bust">
+						<excl value="Half Dollar"/>
+						<excl value="Half-Dollar"/>
+					</heading>
+					<heading id="CaryatidFigure" title="Caryatid"/>
+					<heading id="DipaLakshmi" title="Dipa-Lakshmi"/>
+					<heading id="DivinationFigure" title="Divination Figure"/>
+					<heading id="DollFigure" title="Doll">
+						NT CEREMONIAL DOLL
+						NT KACHINA-DOLL
+						NT RAG DOLL
+					</heading>
+					<heading id="FigureHead" title="Figure-Head"/>
+					<heading id="FigurineFigure" title="Figurine"/>
+					<heading id="HermFigure" title="Herm"/>
+					<heading id="MushroomStone" title="Mushroom Stone"/>
+					<heading id="NaukraticFigure" title="Naukratic Figure"/>
+					<heading id="PuppetFigures" title="Puppets">
+						<synonym value="Puppet"/>
+						<heading id="HandPuppets" title="Hand Puppets">
+							<synonym value="Hand Puppet"/>
+						</heading>
+						<heading id="Marionettes" title="Marionettes">
+							<synonym value="Marionette"/>
+						</heading>
+						<heading id="ShadowPuppets" title="Shadow Puppets">
+							<synonym value="Shadow Play Figures"/>
+							<synonym value="Shadow Play Figure"/>
+							<heading id="HajivatShadowFigure" title="Hajivat">
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="HodjaShadowFigure" title="Hodja (the religious leader)">
+								<synonym value="Hodja"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="IskeleKahyasiShadowFigure" title="Iskele Kahyasi (a pierman of Istanbul)">
+								<synonym value="Iskele Kahyasi"/>
+								<synonym value="pierman of Istanbul"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="KaragozShadowFigure" title="Karagöz (the black-eyed man)">
+								<synonym value="Karagöz"/>
+								<synonym value="Karagoz"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="TerziNikoShadowFigure" title="Terzi Niko (the Greek tailor Niko)">
+								<synonym value="Terzi Niko"/>
+								<synonym value="the Greek tailor Niko"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+						</heading>
+					</heading>
+					<heading id="ScareDevilFigure" title="Scare-Devil"/>
+					<heading id="ShabtiFigure" title="Shabti" noMatch="true"/>
+					<heading id="StaffGod" title="Staff God"/>
+					<heading id="Statue" title="Statue">
+						<synonym value="Statues"/>
+						<heading id="Statuette" title="Statuette">
+							<synonym value="Statuettes"/>
+						</heading>
+					</heading>
+					<heading id="VotiveFigure" title="Votive Figure">
+						NT EYE IDOL
+						NT PADDLE DOLL
+					</heading>
+				</heading>
+				<heading id="LingaSculpture" title="Linga"/>
+				<heading id="MonumInscription" title="Monumental Inscription"/>
+				<heading id="OkimonoSculpt" title="Okimono"/>
+				<heading id="PadukaSculpture" title="Paduka"/>
+				<heading id="Petroglyph" title="Petroglyph"/>
+				<heading id="ReliefSculpture" title="Relief"/>
+				<heading id="ScrimshawSculpt" title="Scrimshaw"/>
+				<heading id="TormaSculpture" title="Torma"/>
+				<heading id="TotemPoleSculpt" title="Totem-Pole"/>
+				<heading id="YoniSculpture" title="Yoni"/>
 			</heading>
-			<heading id="Statue" title="Statue">
-				<synonym value="Statues"/>
-			</heading>
+			
 		</heading>
 	</heading>
 	<heading id="AudioRecordings" title="Audio Recordings">
@@ -564,6 +680,108 @@
 		</heading>
 	</heading>
 	-->
+	<!-- 
+		TT RELIGIOUS/RITUAL EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="AEGIS
+		<heading id="xxxxxxxxxxx" title="ALTAR
+		<heading id="xxxxxxxxxxx" title="ALTAR-CARD
+		<heading id="xxxxxxxxxxx" title="ALTAR-CLOTH
+		<heading id="xxxxxxxxxxx" title="ALTAR-DOSSAL
+		<heading id="xxxxxxxxxxx" title="ALTAR-FRONTAL
+		<heading id="xxxxxxxxxxx" title="ALTAR-ORNAMENT
+		<heading id="xxxxxxxxxxx" title="ALTAR-PIECE
+		<heading id="xxxxxxxxxxx" title="ALTAR-TABLET
+		<heading id="xxxxxxxxxxx" title="AMULET
+		<heading id="xxxxxxxxxxx" title="AMULET-BELT
+		<heading id="xxxxxxxxxxx" title="AMULET-BOX
+		<heading id="xxxxxxxxxxx" title="AMULET-CASE
+		<heading id="xxxxxxxxxxx" title="AMULET-HOLDER
+		<heading id="xxxxxxxxxxx" title="ANGAVASTRUM
+		<heading id="xxxxxxxxxxx" title="ANIMAL-HEAD-DRESS
+		<heading id="xxxxxxxxxxx" title="AYAGA-PATA
+		<heading id="xxxxxxxxxxx" title="BANNER-STONE
+		<heading id="xxxxxxxxxxx" title="BAPTISMAL SHELL
+		<heading id="xxxxxxxxxxx" title="BI
+		<heading id="xxxxxxxxxxx" title="BODY-PAINT
+		<heading id="xxxxxxxxxxx" title="CANDELON
+		<heading id="xxxxxxxxxxx" title="CENSER-FITTING
+		<heading id="xxxxxxxxxxx" title="CENSER-STAND
+		<heading id="xxxxxxxxxxx" title="CEREMONIAL BOARD
+		<heading id="xxxxxxxxxxx" title="CEREMONIAL DOLL
+		<heading id="xxxxxxxxxxx" title="CEREMONIAL STAFF
+		<heading id="xxxxxxxxxxx" title="CHARM
+		<heading id="xxxxxxxxxxx" title="CHARM-BOX
+		<heading id="xxxxxxxxxxx" title="CHARM-BRACELET
+		<heading id="xxxxxxxxxxx" title="CHARM-CASE
+		<heading id="xxxxxxxxxxx" title="CHARM-HOLDER
+		<heading id="xxxxxxxxxxx" title="CHARM-NECKLACE
+		<heading id="xxxxxxxxxxx" title="CHRISTMAS-CARD
+		<heading id="xxxxxxxxxxx" title="CHURINGA
+		<heading id="xxxxxxxxxxx" title="CIRCUMCISION EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="COPPER
+		<heading id="xxxxxxxxxxx" title="CORN-DOLLY
+		<heading id="xxxxxxxxxxx" title="COUP-STICK
+		<heading id="xxxxxxxxxxx" title="CROSS
+		<heading id="xxxxxxxxxxx" title="CROWN
+		<heading id="xxxxxxxxxxx" title="CROZIER
+		<heading id="xxxxxxxxxxx" title="CURSE
+		<heading id="xxxxxxxxxxx" title="CURSING-HORN
+		<heading id="xxxxxxxxxxx" title="CURSING-STICK
+		<heading id="xxxxxxxxxxx" title="CYLCON
+		<heading id="xxxxxxxxxxx" title="DAMARU
+		<heading id="xxxxxxxxxxx" title="DIVINATION EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="DOTAKU
+		<heading id="xxxxxxxxxxx" title="EUCHARISTIC CAKE
+		<heading id="xxxxxxxxxxx" title="EUCHARISTIC REED
+		<heading id="xxxxxxxxxxx" title="EUCHARISTIC SPOON
+		<heading id="xxxxxxxxxxx" title="FONT
+		<heading id="xxxxxxxxxxx" title="FUNERARY EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="GOD SYMBOL
+		<heading id="xxxxxxxxxxx" title="GOD-HOUSE
+		<heading id="xxxxxxxxxxx" title="HANUKAH LAMP
+		<heading id="xxxxxxxxxxx" title="HONGBAO
+		<heading id="xxxxxxxxxxx" title="HYMN-BOOK
+		<heading id="xxxxxxxxxxx" title="ICON
+		<heading id="xxxxxxxxxxx" title="INAU
+		<heading id="xxxxxxxxxxx" title="INCENSE EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="KACHINA-DOLL
+		<heading id="xxxxxxxxxxx" title="KAHILI
+		<heading id="xxxxxxxxxxx" title="KORAN-BAG
+		<heading id="xxxxxxxxxxx" title="KORAN-BOARD
+		<heading id="xxxxxxxxxxx" title="KORAN-CASE
+		<heading id="xxxxxxxxxxx" title="KORAN-REST
+		<heading id="xxxxxxxxxxx" title="KOSHER SEAL
+		<heading id="xxxxxxxxxxx" title="LAW-WHEEL
+		<heading id="xxxxxxxxxxx" title="LINGA
+		<heading id="xxxxxxxxxxx" title="LON-GYI
+		<heading id="xxxxxxxxxxx" title="MAGIC SQUARE
+		<heading id="xxxxxxxxxxx" title="MANDALA
+		<heading id="xxxxxxxxxxx" title="MARRIAGE EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="MASQUERADE-COSTUME
+		<heading id="xxxxxxxxxxx" title="MASS-BELL
+		<heading id="xxxxxxxxxxx" title="MEMENTO MORI
+		<heading id="xxxxxxxxxxx" title="MEZUZAH
+		<heading id="xxxxxxxxxxx" title="MONSTRANCE
+		<heading id="xxxxxxxxxxx" title="MORSE
+		<heading id="xxxxxxxxxxx" title="MOSQUE-LAMP
+		<heading id="xxxxxxxxxxx" title="OFFERING EQUIPMENT
+		<heading id="xxxxxxxxxxx" title="PADUKA
+		<heading id="xxxxxxxxxxx" title="PAX
+		<heading id="xxxxxxxxxxx" title="PENITENTIAL CHAIN
+		<heading id="xxxxxxxxxxx" title="PHUR-BU
+		<heading id="xxxxxxxxxxx" title="PHYLACTERY
+		<heading id="xxxxxxxxxxx" title="PHYLACTERY-POUCH
+		<heading id="xxxxxxxxxxx" title="POINTING BONE
+		<heading id="xxxxxxxxxxx" title="POINTING STICK
+		<heading id="xxxxxxxxxxx" title="PRAYER-BEAD
+		<heading id="xxxxxxxxxxx" title="PRAYER-BLOCK
+		<heading id="xxxxxxxxxxx" title="PRAYER-BOARD
+		<heading id="xxxxxxxxxxx" title="PRAYER-BOOK
+		<heading id="xxxxxxxxxxx" title="PRAYER-BOOK-CASE
+		<heading id="xxxxxxxxxxx" title="PRAYER-BOOK-COVER
+		<heading id="xxxxxxxxxxx" title="PRAYER-BOX
+		<heading id="xxxxxxxxxxx" title="PRAYER-CAP
+		-->
 	<heading id="Ceremonialitems" title="Ceremonial items">
 		<heading id="Altar" title="Altar">
 			<synonym value="Altars"/>
@@ -642,7 +860,8 @@
 			<synonym value="Shabtis"/>
 			<synonym value="Shawabti"/>
 			<synonym value="Shawabtis"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>			
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+			<implies facet="ObjectName" cat="ShabtiFigure"/>
 		</heading>
 		<heading id="Wand" title="Wand">
 			<synonym value="Wands"/>
@@ -1314,6 +1533,7 @@
 				</heading>
 				<heading id="OilLamp" title="Oil Lamp">
 					<synonym value="Oil Lamps"/>
+					<implies facet="ObjectName" cat="LampLighting"/>
 				</heading>
 				<heading id="Plate" title="Plate">
 					<synonym value="Plates"/>
@@ -1393,6 +1613,20 @@
 		</heading>
 	</heading>
 	<heading id="CurrencyRelatedItems" title="Currency &amp; related items">
+		<!--
+		<heading id="xxxxxxxxxxx" title="BANKNOTE
+		<heading id="xxxxxxxxxxx" title="BRIDE-PRICE
+		<heading id="xxxxxxxxxxx" title="CHEQUE
+		<heading id="xxxxxxxxxxx" title="CHEQUE-BOOK
+		<heading id="xxxxxxxxxxx" title="CHEQUE-CARD
+		<heading id="xxxxxxxxxxx" title="COIN
+		<heading id="xxxxxxxxxxx" title="CURRENCY-BAR
+		<heading id="xxxxxxxxxxx" title="MANILLA
+		<heading id="xxxxxxxxxxx" title="RING-GOLD
+		<heading id="xxxxxxxxxxx" title="RING-MONEY
+		<heading id="xxxxxxxxxxx" title="TIKAL
+		<heading id="xxxxxxxxxxx" title="WAMPUM
+		-->
 		<heading id="Abacus" title="Abacus"><!--exclude column/architrave interface -->
 			<synonym value="Abaci"/>
 			<synonym value="Abacuses"/>
@@ -3715,11 +3949,130 @@
 	    </heading>
 	</heading>
 	<heading id="PersonalGear" title="Personal Gear">
+		<heading id="StimulantNarcoticEq" title="Stimulant/Narcotic Equipment">
+			<!-- This category includes groups of objects associated with the preparation and
+				consumption of beverages, which loosely may be classified as stimulants,
+				e.g. chocolate, coffee and tea. -->
+			<heading id="xxxxxxxxxxx" title="ALCOHOL EQUIPMENT"/>
+			<heading id="xxxxxxxxxxx" title="BETEL EQUIPMENT"/>
+			<heading id="xxxxxxxxxxx" title="CHOCOLATE-CUP"/>
+			<heading id="xxxxxxxxxxx" title="CHOCOLATE-POT"/>
+			<heading id="xxxxxxxxxxx" title="COFFEE EQUIPMENT"/>
+			<heading id="xxxxxxxxxxx" title="DRUG"/>
+			<heading id="xxxxxxxxxxx" title="DRUG-BOTTLE"/>
+			<heading id="xxxxxxxxxxx" title="DRUG-JAR"/>
+			<heading id="xxxxxxxxxxx" title="DRUG-POT"/>
+			<heading id="xxxxxxxxxxx" title="KAVA-BOWL"/>
+			<heading id="xxxxxxxxxxx" title="KAVA-CUP"/>
+			<heading id="xxxxxxxxxxx" title="KAVA-LADLE"/>
+			<heading id="xxxxxxxxxxx" title="KAVA-STRAINER"/>
+			<heading id="xxxxxxxxxxx" title="LIME EQUIPMENT"/>
+			<heading id="xxxxxxxxxxx" title="NICOTINE-FLASK"/>
+			<heading id="xxxxxxxxxxx" title="OPIUM EQUIPMENT"/>
+			<heading id="SmokingEquipment" title="Smoking Equipment">
+				<heading id="xxxxxxxxxxx" title="ASHTRAY"/>
+				<heading id="xxxxxxxxxxx" title="CHEROOT"/>
+				<heading id="xxxxxxxxxxx" title="CIGAR"/>
+				<heading id="xxxxxxxxxxx" title="CIGAR-CASE"/>
+				<heading id="xxxxxxxxxxx" title="CIGAR-CUTTER"/>
+				<heading id="xxxxxxxxxxx" title="CIGARETTE"/>
+				<heading id="xxxxxxxxxxx" title="CIGARETTE-BOX"/>
+				<heading id="xxxxxxxxxxx" title="CIGARETTE-CASE"/>
+				<heading id="xxxxxxxxxxx" title="CIGARETTE-HOLDER"/>
+				<heading id="xxxxxxxxxxx" title="CIGARETTE-LIGHTER"/>
+				<heading id="xxxxxxxxxxx" title="CIGARETTE-PACKET"/>
+				<heading id="xxxxxxxxxxx" title="CIGAR-HOLDER"/>
+				<heading id="xxxxxxxxxxx" title="HOOKAH-CASE"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-BAG"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-BOX"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-CASE"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-CLEANER"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-COVER"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-HOLDER"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-PIN"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-SCRAPER"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-SPOON"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-STOPPER"/>
+				<heading id="xxxxxxxxxxx" title="SMOKING-PIPE-TAMPER"/>
+			</heading>
+			<heading id="xxxxxxxxxxx" title="SNUFF EQUIPMENT"/>
+			<heading id="xxxxxxxxxxx" title="TEA EQUIPMENT">
+				<heading id="xxxxxxxxxxx" title="CADDY-SPOON"/>
+				<heading id="xxxxxxxxxxx" title="KENSUI"/>
+				<heading id="xxxxxxxxxxx" title="TEA-BOWL"/>
+				<heading id="xxxxxxxxxxx" title="TEA-BOX"/>
+				<heading id="xxxxxxxxxxx" title="TEA-CADDY">
+					NT CHAIRE
+				</heading>
+				<heading id="xxxxxxxxxxx" title="TEA-CHURN"/>
+				<heading id="xxxxxxxxxxx" title="TEA-COSY"/>
+				<heading id="xxxxxxxxxxx" title="TEA-CUP"/>
+				<heading id="xxxxxxxxxxx" title="TEA-FUNNEL"/>
+				<heading id="xxxxxxxxxxx" title="TEA-INFUSER"/>
+				<heading id="xxxxxxxxxxx" title="TEA-JAR"/>
+				<heading id="xxxxxxxxxxx" title="TEA-JAR-CONTAINER"/>
+				<heading id="xxxxxxxxxxx" title="TEA-JUG"/>
+				<heading id="xxxxxxxxxxx" title="TEA-LADLE"/>
+				<heading id="xxxxxxxxxxx" title="TEA-MILL"/>
+				<heading id="xxxxxxxxxxx" title="TEA-PACKET"/>
+				<heading id="xxxxxxxxxxx" title="TEAPOT">
+					NT DOUBLE TEAPOT
+					NT KYUSU
+				</heading>
+				<heading id="xxxxxxxxxxx" title="TEAPOT-STAND"/>
+				<heading id="xxxxxxxxxxx" title="TEA-SCOOP"/>
+				<heading id="xxxxxxxxxxx" title="TEA-SCREEN"/>
+				<heading id="xxxxxxxxxxx" title="TEA-SET"/>
+				<heading id="xxxxxxxxxxx" title="TEA-SHOVEL"/>
+				<heading id="xxxxxxxxxxx" title="TEA-SPATULA"/>
+				<heading id="xxxxxxxxxxx" title="TEA-SPOON"/>
+				<heading id="xxxxxxxxxxx" title="TEA-STRAINER"/>
+				<heading id="xxxxxxxxxxx" title="TEA-TRAY"/>
+				<heading id="xxxxxxxxxxx" title="TEA-URN"/>
+				<heading id="xxxxxxxxxxx" title="TEA-WHISK"/>
+				<heading id="xxxxxxxxxxx" title="TEA-WHISK-CONTAINER"/>
+			</heading>
+			<heading id="xxxxxxxxxxx" title="TOBACCO EQUIPMENT"/>
+		</heading>
+		<heading id="xxxxxxxxxxx" title="Personal Accessories">
+			<heading id="xxxxxxxxxxx" title="BELT"/>
+			<heading id="xxxxxxxxxxx" title="CRUTCH"/>
+			<heading id="xxxxxxxxxxx" title="EPAULETTE"/>
+			<heading id="xxxxxxxxxxx" title="EYE-SHADE"/>
+			<heading id="xxxxxxxxxxx" title="GAITER"/>
+			<heading id="xxxxxxxxxxx" title="GARTER"/>
+			<heading id="xxxxxxxxxxx" title="GLOVE"/>
+			<heading id="xxxxxxxxxxx" title="GOGGLES"/>
+			<heading id="xxxxxxxxxxx" title="HANDBAG"/>
+			<heading id="xxxxxxxxxxx" title="HANDKERCHIEF"/>
+			<heading id="xxxxxxxxxxx" title="HAND-WARMER"/>
+			<heading id="xxxxxxxxxxx" title="MOUSTACHE-STICK"/>
+			<heading id="xxxxxxxxxxx" title="MUFF"/>
+			<heading id="xxxxxxxxxxx" title="NECKERCHIEF"/>
+			<heading id="xxxxxxxxxxx" title="NECK-TIE"/>
+			<heading id="xxxxxxxxxxx" title="NOSE-CLIP"/>
+			<heading id="xxxxxxxxxxx" title="PARASOL"/>
+			<heading id="xxxxxxxxxxx" title="POCKET-BOOK"/>
+			<heading id="xxxxxxxxxxx" title="POUCH"/>
+			<heading id="xxxxxxxxxxx" title="PURSE"/>
+			<heading id="xxxxxxxxxxx" title="PUTTEE"/>
+			<heading id="xxxxxxxxxxx" title="RUFF"/>
+			<heading id="xxxxxxxxxxx" title="SAGEMONO"/>
+			<heading id="xxxxxxxxxxx" title="SASH"/>
+			<heading id="xxxxxxxxxxx" title="SCARF"/>
+			<heading id="xxxxxxxxxxx" title="STOMACHER"/>
+			<heading id="Umbrella" title="Umbrella">
+				<synonym value="Umbrellas"/>
+			</heading>
+			<heading id="xxxxxxxxxxx" title="VISOR"/>
+			<heading id="xxxxxxxxxxx" title="WAIST-BAND"/>
+			<heading id="xxxxxxxxxxx" title="WAIST-STRING"/>
+			<heading id="xxxxxxxxxxx" title="WALKING-STICK"/>
+			<heading id="xxxxxxxxxxx" title="WALLET"/>
+		</heading>
 		<heading id="Fan" title="Fan">
 			<synonym value="Fans"/>
-		</heading>
-		<heading id="Umbrella" title="Umbrella">
-			<synonym value="Umbrellas"/>
 		</heading>
 		<heading id="Pipe" title="Pipe">
 			<excl value="Lead pipe"/><!-- excludes pipe for plumbing -->
@@ -3785,41 +4138,6 @@
 	</heading>
 	<heading id="PlasterCast" title="Plaster Cast">
 		<synonym value="Plaster Casts"/>	
-	</heading>
-	<heading id="Puppets" title="Puppets">
-		<synonym value="Puppet"/>
-		<heading id="HandPuppets" title="Hand Puppets">
-			<synonym value="Hand Puppet"/>
-		</heading>
-		<heading id="Marionettes" title="Marionettes">
-			<synonym value="Marionette"/>
-		</heading>
-		<heading id="ShadowPuppets" title="Shadow Puppets">
-			<synonym value="Shadow Play Figures"/>
-	        <synonym value="Shadow Play Figure"/>
-	        <heading id="HajivatShadowFigure" title="Hajivat">
-	        	<implies facet="Culture" cat="TurkishGroups"/>
-	        </heading>
-	        <heading id="HodjaShadowFigure" title="Hodja (the religious leader)">
-	            <synonym value="Hodja"/>
-	        	<implies facet="Culture" cat="TurkishGroups"/>
-	        </heading>
-	        <heading id="IskeleKahyasiShadowFigure" title="Iskele Kahyasi (a pierman of Istanbul)">
-	            <synonym value="Iskele Kahyasi"/>
-	            <synonym value="pierman of Istanbul"/>
-	        	<implies facet="Culture" cat="TurkishGroups"/>
-	        </heading>
-	        <heading id="KaragozShadowFigure" title="Karagöz (the black-eyed man)">
-	            <synonym value="Karagöz"/>
-	            <synonym value="Karagoz"/>
-	        	<implies facet="Culture" cat="TurkishGroups"/>
-	        </heading>
-	        <heading id="TerziNikoShadowFigure" title="Terzi Niko (the Greek tailor Niko)">
-	            <synonym value="Terzi Niko"/>
-	            <synonym value="the Greek tailor Niko"/>
-	        	<implies facet="Culture" cat="TurkishGroups"/>
-	        </heading>
-	    </heading>
 	</heading>
 	<heading id="ScientificSamples" title="Scientific Samples">
 		<synonym value="Scientific Sample"/>
@@ -4005,8 +4323,110 @@
 			<synonym value="Shinny Balls"/>
 		</heading>
 	</heading>
-	<heading id="Tools" title="Tools">
+	<heading id="ToolsImplements" title="Tools &amp; Implements">
 		<synonym value="Tool"/>
+		<heading id="xxxxxxxxxxx" title="ADZE"/>
+		<heading id="xxxxxxxxxxx" title="AGRICULTURAL TOOL/IMPLEMENT"/>
+		<heading id="xxxxxxxxxxx" title="ANVIL"/>
+		<heading id="xxxxxxxxxxx" title="APPLICATOR"/>
+		<heading id="xxxxxxxxxxx" title="ART/WRITING-IMPLEMENT"/>
+		<heading id="xxxxxxxxxxx" title="AUGER"/>
+		<heading id="xxxxxxxxxxx" title="AWL"/>
+		<heading id="xxxxxxxxxxx" title="AXE"/>
+		<heading id="xxxxxxxxxxx" title="BACKED BLADE"/>
+		<heading id="xxxxxxxxxxx" title="BACKED BLADELET"/>
+		<heading id="xxxxxxxxxxx" title="BACKED KNIFE"/>
+		<heading id="xxxxxxxxxxx" title="BAILER"/>
+		<heading id="xxxxxxxxxxx" title="BAT"/>
+		<heading id="xxxxxxxxxxx" title="BEATER"/>
+		<heading id="xxxxxxxxxxx" title="BEATING-BOARD"/>
+		<heading id="xxxxxxxxxxx" title="BELLOWS"/>
+		<heading id="xxxxxxxxxxx" title="BEVELLED PEBBLE"/>
+		<heading id="xxxxxxxxxxx" title="BISEAU"/>
+		<heading id="xxxxxxxxxxx" title="BLOW-TUBE"/>
+		<heading id="xxxxxxxxxxx" title="BOAT-HOOK"/>
+		<heading id="xxxxxxxxxxx" title="BOBBIN"/>
+		<heading id="xxxxxxxxxxx" title="BODKIN"/>
+		<heading id="xxxxxxxxxxx" title="BORER"/>
+		<heading id="xxxxxxxxxxx" title="BRACE"/>
+		<heading id="xxxxxxxxxxx" title="BRANDING-IRON"/>
+		<heading id="xxxxxxxxxxx" title="BROOM"/>
+		<heading id="xxxxxxxxxxx" title="BRUSH"/>
+		<heading id="xxxxxxxxxxx" title="BURNING-GLASS"/>
+		<heading id="xxxxxxxxxxx" title="BURNISHER"/>
+		<heading id="xxxxxxxxxxx" title="BUTTON-HOOK"/>
+		<heading id="xxxxxxxxxxx" title="CALENDER"/>
+		<heading id="xxxxxxxxxxx" title="CARDER"/>
+		<heading id="xxxxxxxxxxx" title="CARTRIDGE-LOADER"/>
+		<heading id="xxxxxxxxxxx" title="CAULKING-TOOL"/>
+		<heading id="xxxxxxxxxxx" title="Celt"/>
+		<heading id="xxxxxxxxxxx" title="Chisel"/>
+		<heading id="xxxxxxxxxxx" title="CHOPPER"/>
+		<heading id="xxxxxxxxxxx" title="CHOPPING TOOL"/>
+		<heading id="xxxxxxxxxxx" title="CHURNING-STICK"/>
+		<heading id="ClampTool" title="Clamp">
+			<synonym value="Clamps"/>
+		</heading>
+		<heading id="xxxxxxxxxxx" title="CLEAVER"/>
+		<heading id="xxxxxxxxxxx" title="COMB BEATER"/>
+		<heading id="xxxxxxxxxxx" title="COOKING-IMPLEMENT"/>
+		<heading id="xxxxxxxxxxx" title="CORKSCREW"/>
+		<heading id="xxxxxxxxxxx" title="COTTON-BOW"/>
+		<heading id="xxxxxxxxxxx" title="COUNTERPLATE"/>
+		<heading id="xxxxxxxxxxx" title="CRAMP"/>
+		<heading id="xxxxxxxxxxx" title="CRANNEQUIN"/>
+		<heading id="xxxxxxxxxxx" title="CREASER"/>
+		<heading id="xxxxxxxxxxx" title="CRIMPING-WHEEL"/>
+		<heading id="xxxxxxxxxxx" title="CRUSHER"/>
+		<heading id="xxxxxxxxxxx" title="CURRY-COMB"/>
+		<heading id="xxxxxxxxxxx" title="CUSHION-STONE"/>
+		<heading id="xxxxxxxxxxx" title="CUTLERY"/>
+		<heading id="xxxxxxxxxxx" title="CUTTER"/>
+		<heading id="xxxxxxxxxxx" title="DABBER"/>
+		<heading id="xxxxxxxxxxx" title="DART-NOTCHER"/>
+		<heading id="xxxxxxxxxxx" title="DENTICULATE"/>
+		<heading id="xxxxxxxxxxx" title="DIGGING-TOOL/IMPLEMENT"/>
+		<heading id="xxxxxxxxxxx" title="DRAW-PLATE"/>
+		<heading id="xxxxxxxxxxx" title="DREDGER"/>
+		<heading id="xxxxxxxxxxx" title="DRESSING-TOOL"/>
+		<heading id="xxxxxxxxxxx" title="DRILL"/>
+		<heading id="xxxxxxxxxxx" title="DRILL-BIT"/>
+		<heading id="xxxxxxxxxxx" title="DRINKING-TUBE"/>
+		<heading id="xxxxxxxxxxx" title="DROPPER"/>
+		<heading id="xxxxxxxxxxx" title="EMBROIDERY-TOOL"/>
+		<heading id="xxxxxxxxxxx" title="ENLARGER"/>
+		<heading id="xxxxxxxxxxx" title="EXTRACTOR"/>
+		<heading id="xxxxxxxxxxx" title="FABRICATOR"/>
+		<heading id="xxxxxxxxxxx" title="FILE"/>
+		<heading id="xxxxxxxxxxx" title="FIRE-SAW"/>
+		<heading id="xxxxxxxxxxx" title="FIRE-STEEL"/>
+		<heading id="xxxxxxxxxxx" title="FIRE-STICK"/>
+		<heading id="xxxxxxxxxxx" title="FIRE-STONE"/>
+		<heading id="xxxxxxxxxxx" title="FLAKED FLAKE"/>
+		<heading id="xxxxxxxxxxx" title="FLAKER"/>
+		<heading id="xxxxxxxxxxx" title="FLENCHING-TOOL/IMPLEMENT"/>
+		<heading id="xxxxxxxxxxx" title="FLESHER"/>
+		<heading id="xxxxxxxxxxx" title="FLESH-HOOK"/>
+		<heading id="xxxxxxxxxxx" title="FLY-SHOOTER"/>
+		<heading id="xxxxxxxxxxx" title="FLY-WHISK"/>
+		<heading id="xxxxxxxxxxx" title="FORK"/>
+		<heading id="xxxxxxxxxxx" title="FORMER"/>
+		<heading id="xxxxxxxxxxx" title="FUNNEL"/>
+		<heading id="xxxxxxxxxxx" title="GAFF"/>
+		<heading id="xxxxxxxxxxx" title="GATHERING-TOOL/IMPLEMENT"/>
+		<heading id="xxxxxxxxxxx" title="GIMLET"/>
+		<heading id="xxxxxxxxxxx" title="GINNING-TOOL"/>
+		<heading id="xxxxxxxxxxx" title="Gouge"/>
+		<heading id="xxxxxxxxxxx" title="Grate"/>
+		<heading id="xxxxxxxxxxx" title="GRATTOIR"/>
+		<heading id="xxxxxxxxxxx" title="Grinder"/>
+		<heading id="xxxxxxxxxxx" title="GROUND-EDGE PIECE"/>
+		<heading id="xxxxxxxxxxx" title="GUNNER'S KEY"/>
+		<heading id="xxxxxxxxxxx" title="Hammer"/>
+		<heading id="xxxxxxxxxxx" title="Hammerstone"/>
+		<heading id="xxxxxxxxxxx" title="Handaxe"/>
+		<heading id="xxxxxxxxxxx" title="Harpago"/>
+		
 		<heading id="AnimalHusbandryTools" title="AnimalHusbandryTools"  noMatch="true">
 			<implies facet="ActivityorContext" cat="AnimalHusbandry"/>
 			<heading id="StockWhip" title="StockWhip">
@@ -4024,43 +4444,102 @@
 				    <implies facet="TechniqueDesignorDecoration" cat="Forked"/>	
 				</heading>			
 			</heading>
-			<heading id="Yoke" title="Yoke">
-				<synonym value="Yokes"/>
-				<excl value="Blouse"/>
-				<excl value="Blouses"/>
-				<excl value="Blusa"/>
-				<excl value="Blusas"/>
-				<excl value="Dress"/>
-				<excl value="Dresses"/>
-				<excl value="Huipil"/>
-				<excl value="Huipils"/>
-				<excl value="Netsuke"/>
-				<excl value="Parka"/>
-				<excl value="Parkas"/>
-				<excl value="Shirt"/>
-				<excl value="Shirts"/>
-				<excl value="Tunic"/>
-				<excl value="Tunics"/>
+			<heading id="HarnessTool" title="Harness">
+				<synonym value="Harnesses"/>
+				<heading id="xxxxxxxxxxx" title="Blinker">
+					<synonym value="Blinkers"/>
+				</heading>
+				<heading id="BridleHarness" title="Bridle" noMatch="true"/>
+				<heading id="xxxxxxxxxxx" title="Camel Harness"/>
+				<heading id="xxxxxxxxxxx" title="Dog Harness"/>
+				<heading id="xxxxxxxxxxx" title="Donkey Harness"/>
+				<heading id="xxxxxxxxxxx" title="Frontlet">
+					<synonym value="Frontlets"/>
+				</heading>
+				<heading id="xxxxxxxxxxx" title="Girth">
+					<synonym value="xxxxxxxxxxx"/>
+				</heading>
+				<heading id="xxxxxxxxxxx" title="Girth Strap">
+					<synonym value="xxxxxxxxxxx"/>
+				</heading>
+				<heading id="HalterHarness" title="Halter" noMatch="true"/>
+				<heading id="xxxxxxxxxxx" title="Headstall">
+					<synonym value="xxxxxxxxxxx"/>
+				</heading>
+				<heading id="HorseHarness" title="Horse Harness" noMatch="true"/>
+				<heading id="xxxxxxxxxxx" title="Knee Rest">
+					<synonym value="xxxxxxxxxxx"/>
+				</heading>
+				<heading id="xxxxxxxxxxx" title="Lead">
+					<synonym value="Leads"/>
+				</heading>
+				<heading id="xxxxxxxxxxx" title="Mule Harness">
+					<synonym value="xxxxxxxxxxx"/>
+				</heading>
+				<heading id="xxxxxxxxxxx" title="Muzzle">
+					<synonym value="Muzzles"/>
+				</heading>
+				<heading id="xxxxxxxxxxx" title="Nose Band">
+					<synonym value="Nose Bands"/>
+				</heading>
+				<heading id="RangleHarness" title="Rangle">
+					<synonym value="Rangles"/>
+				</heading>
+				<heading id="ReinHarness" title="Rein" noMatch="true"/>
+				<heading id="SaddleHarness" title="Saddle" noMatch="true"/>
+				<heading id="StirrupHarness" title="Stirrup" noMatch="true"/>
+				<heading id="TerretHarness" title="Terret">
+					<synonym value="Terrets"/>
+				</heading>
+				<heading id="Yoke" title="Yoke">
+					<synonym value="Yokes"/>
+					<excl value="Blouse"/>
+					<excl value="Blouses"/>
+					<excl value="Blusa"/>
+					<excl value="Blusas"/>
+					<excl value="Dress"/>
+					<excl value="Dresses"/>
+					<excl value="Huipil"/>
+					<excl value="Huipils"/>
+					<excl value="Netsuke"/>
+					<excl value="Parka"/>
+					<excl value="Parkas"/>
+					<excl value="Shirt"/>
+					<excl value="Shirts"/>
+					<excl value="Tunic"/>
+					<excl value="Tunics"/>
+				</heading>
 			</heading>
 		</heading>
 		<heading id="HorseTack" title="Horse Tack">
-			<definition value="used to describe any of the various equipment and accessories 
-			worn by horses in the course of their use as domesticated animals"/>
+			<!-- used to describe any of the various equipment and accessories 
+			worn by horses in the course of their use as domesticated animals -->
 			<implies facet="ActivityorContext" cat="HorsebackRiding"/>
 			<heading id="HorseBreastplate" title="Breastplate">
 				<synonym value="Breastplates"/>
 			</heading>
 			<heading id="Bridle" title="Bridle">
 				<synonym value="Bridles"/>
+				<implies facet="ObjectName" cat="BridleHarness"/>
 			</heading>
 			<heading id="HorseBit" title="Horse bit">
 				<synonym value="Horse bits"/>
 			</heading>
 			<heading id="Halter" title="Halter">
 				<synonym value="Halters"/>
+				<implies facet="ObjectName" cat="HalterHarness"/>
 			</heading>
 			<heading id="Harness" title="Harness">
 				<synonym value="Harnesses"/>
+				<excl value="Mule harness"/>
+				<excl value="Mule harnesses"/>
+				<excl value="Camel harness"/>
+				<excl value="Camel harnesses"/>
+				<excl value="Dog harness"/>
+				<excl value="Dog harnesses"/>
+				<excl value="Donkey harness"/>
+				<excl value="Donkey harnesses"/>
+				<implies facet="ObjectName" cat="HorseHarness"/>
 			</heading>
 			<heading id="Horseshoe" title="Horseshoe">
 				<synonym value="Horseshoes"/>
@@ -4071,11 +4550,13 @@
 			<heading id="Martingale" title="Martingale">
 				<synonym value="Martingales"/>
 			</heading>
-			<heading id="Reins" title="Reins">
+			<heading id="ReinsHorseTack" title="Reins">
 				<synonym value="Reins"/>
+				<implies facet="ObjectName" cat="ReinHarness"/>
 			</heading>
-			<heading id="Saddle" title="Saddle">
+			<heading id="SaddleHorseTack" title="Saddle">
 				<synonym value="Saddles"/>
+				<implies facet="ObjectName" cat="SaddleHarness"/>
 			</heading>
 			<heading id="SaddleBag" title="Saddle bag">
 				<synonym value="Saddle bags"/>
@@ -4086,8 +4567,10 @@
 			</heading>
 			<heading id="Stirrup" title="Stirrup">
 				<synonym value="Stirrups"/>
+				<implies facet="ObjectName" cat="StirrupHarness"/>
 			</heading>				
 		</heading>
+		
 		<heading id="Awl" title="Awl">
 			<synonym value="Awls"/>
 			<heading id="BasketAwl" title="Basket awl">
@@ -4514,5 +4997,93 @@
 			</heading>
 		</heading>
 	</heading>
+	<heading id="xxxxxxxxxxx" title="PRODUCTION/REPLICATION"> <!-- •••••••••• TOP TERM •••••••••• -->
+	<!-- This includes by-products but is not intended to cover manufacture
+		in general. See also the Top Term TOOL/IMPLEMENT. -->
+		NT ARCHETYPE
+		NT BLADELET
+		NT BLANK
+		NT CAST
+		NT CASTING WASTE
+		NT CASTING-JET
+		NT COPY
+		NT CORE
+		NT CRESTED PIECE
+		NT CULLET
+		NT DRILL-CORE
+		NT ELECTROTYPE
+		NT FAKE
+		NT FLAKE
+		NT GLASS ROD
+		NT HACKSILVER
+		NT IMITATION
+		NT IMPRESSION
+		NT INGOT
+		NT JEWELLERY-MAKING EQUIPMENT
+		NT KNAPPING FRAGMENT
+		NT MATRIX
+		NT MICROBURIN
+		NT MODEL
+		NT MOULD
+		NT PALIMPSEST
+		NT PATTERN
+		NT POTTERY-MAKING EQUIPMENT
+		NT PROOF
+		NT PROTOTYPE
+		NT REPLICA
+		NT REPRODUCTION
+		NT ROUGHOUT
+		NT SKEUOMORPH
+		NT SLAG
+		NT SPALL
+		NT TEMPLATE
+		NT TRIAL-PIECE
+		NT WASTER
+		NT WORKED OCHRE
+	</heading>
+	
+	HOROLOGICAL EQUIPMENT
+	BT SCIENCE/MEDICINE
+	<!--
+	<heading id="xxxxxxxxxxx" title="CHRONOMETER-CASE
+	<heading id="xxxxxxxxxxx" title="CHRONOMETER-KEY
+	<heading id="xxxxxxxxxxx" title="CLOCK-CASE
+	<heading id="xxxxxxxxxxx" title="CLOCK-KEY
+	<heading id="xxxxxxxxxxx" title="CLOCK-STAND
+	<heading id="xxxxxxxxxxx" title="DUST-CAP
+	<heading id="xxxxxxxxxxx" title="HOROLOGICAL INSTRUMENT
+	HOROLOGICAL TOOL/IMPLEMENT
+	••• BT TOOL/IMPLEMENT
+		<heading id="xxxxxxxxxxx" title="BECK-IRON
+		<heading id="xxxxxxxxxxx" title="BLUEING PAN
+		<heading id="xxxxxxxxxxx" title="DEPTH TOOL
+		<heading id="xxxxxxxxxxx" title="FUSEE-ADJUSTING ROD
+		<heading id="xxxxxxxxxxx" title="FUSEE-CUTTING ENGINE
+		<heading id="xxxxxxxxxxx" title="JACOT TOOL
+		<heading id="xxxxxxxxxxx" title="JEWEL-GAUGE
+		<heading id="xxxxxxxxxxx" title="MAINSPRING-WINDER
+		<heading id="xxxxxxxxxxx" title="MANDREL
+		<heading id="xxxxxxxxxxx" title="POISING TOOL
+		<heading id="xxxxxxxxxxx" title="SCREW-CUTTER
+		<heading id="xxxxxxxxxxx" title="SCREW-POLISHER
+		<heading id="xxxxxxxxxxx" title="STAR WHEEL
+		<heading id="xxxxxxxxxxx" title="TRUEING-TOOL
+		<heading id="xxxxxxxxxxx" title="TURNS
+		<heading id="xxxxxxxxxxx" title="UPRIGHTING TOOL
+		<heading id="xxxxxxxxxxx" title="VERGE PALLET ADJUSTER
+		<heading id="xxxxxxxxxxx" title="WATCH-CASE-OPENER
+		<heading id="xxxxxxxxxxx" title="WATCH-TIMING-MACHINE
+		<heading id="xxxxxxxxxxx" title="WHEEL-CUTTER
+	<heading id="xxxxxxxxxxx" title="WATCH MOVEMENT
+	<heading id="xxxxxxxxxxx" title="HOLDER
+	<heading id="xxxxxxxxxxx" title="WATCH-CASE
+	<heading id="xxxxxxxxxxx" title="WATCH-CHAIN
+	<heading id="xxxxxxxxxxx" title="WATCH-COVER
+	<heading id="xxxxxxxxxxx" title="WATCH-HOLDER
+	<heading id="xxxxxxxxxxx" title="WATCH-KEY
+	<heading id="xxxxxxxxxxx" title="WATCH-PAPER
+	<heading id="xxxxxxxxxxx" title="WATCH-STAND
+	-->
+	
 </taxonomy>
 
