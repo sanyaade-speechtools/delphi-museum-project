@@ -20,13 +20,16 @@
 		<heading id="JBLillard" title="J.B. Lillard"/>
 		<heading id="RachelMossman" title="Rachel Gould Mossman"/>
 		<heading id="EleanorMurray" title="Eleanor Murray"/>
+		<heading id="UCDesignDept" title="U.C. Design Department">
+			<synonym value="UCDD"/>
+			<synonym value="Design Department"/>
+		</heading>
 		<heading id="Ziegelmaier" title="Paul Ziegelmaier"/>
 	</heading>
-	<heading id="FoundingCollections" title="FoundingCollections">
+	<heading id="FoundingCollections" title="Founding Collections">
 		<!-- Need to add these -->
 		<heading id="CaliforniaArchaeology" title="California Archaeology"/>
 		<heading id="ClassicMeditrColl" title="Classical Mediterranean"/>
-		
 	</heading>
 	<heading id="MuseumCatalogs" title="Museum Catalogs">
 		<heading id="Catalog1" title="Catalog 1">
@@ -145,10 +148,9 @@
 			<implies facet="Location" cat="NorthAmerica"/>
 		</heading>
 	</heading>
-	<heading id="BasketCollection" title="Basket Collection"/>
-	<heading id="UCDDCollections" title="U.C. Design Department Collection">
-		<synonym value="UCDD"/>
-		<synonym value="Design Department"/>
+	<heading id="ObjectCollections" title="Object Collections">
+		<!-- Need to fill this out -->
+		<heading id="BasketCollection" title="Basket Collection" noMatch="true"/>
 	</heading>
 </taxonomy>
 
