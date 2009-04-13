@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <taxonomy id="ObjectName" title="Object Name">
 	<notes>This is an experimental fusion of PAHMA terms in a modified British Museum structure</notes>
-	<heading id="AgriculturalSubsistence" title="Agricultural/Subsistence">
-		<heading id="AgriculturalEquipment" title="Agricultural Equipment">
-			<synonym value="Agricultural Equipments"/>
+	<heading id="AgriculturalSubsistence" title="Agriculture &amp; Subsistence">
+		<synonym value="Agricultural/Subsistence"/>
+		<synonym value="Agricultural"/>
+		<synonym value="Agriculture"/>
+		<synonym value="Subsistence"/>
+		<heading id="AgriculturalEquipment" title="Agricultural Items">
+			<synonym value="Agricultural Equipment"/>
 			<heading id="AgriculturalTools" title="Agricultural Tools">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies tools -->
 				<heading id="BillHook" title="Bill-Hook">
@@ -108,8 +112,8 @@
 			<heading id="HarrowRest" title="Harrow-Rest">
 				<synonym value="Harrow-Rests"/>
 			</heading>
-			<heading id="IrrigationEquipment" title="Irrigation Equipment">
-				<synonym value="Irrigation Equipments"/>
+			<heading id="IrrigationEquipment" title="Irrigation Items">
+				<synonym value="Irrigation Equipment"/>
 			</heading>
 			<heading id="MilkingCan" title="Milking-Can">
 				<synonym value="Milking-Cans"/>
@@ -292,7 +296,7 @@
 			</heading>
 		</heading>
 		<heading id="GatheringEquipment" title="Gathering Equipment">
-			<synonym value="Gathering Equipments"/>
+			<synonym value="Gathering Items"/>
 			<heading id="Beehive" title="Beehive"> <!-- MAIN TERM -->
 				<synonym value="Beehives"/>
 				<synonym value="Bee hive"/>
@@ -344,7 +348,7 @@
 			</heading>
 		</heading>
 		<heading id="HuntingEquipment" title="Hunting Equipment">
-				<synonym value="Hunting Equipments"/>
+				<synonym value="Hunting Items"/>
 				<heading id="BirdCall" title="Bird-Call">
 					<synonym value="Bird-Calls"/>
 				</heading>
@@ -473,7 +477,7 @@
 			</heading>
 	</heading>
 	<heading id="AnimalEquipment" title="Animal Equipment">
-		<synonym value="Animal Equipments"/>
+		<synonym value="Animal Items"/>
 		<heading id="AnimalLabelAnmlEq" title="Animal-Label">
 			<synonym value="Animal-Labels"/>
 		</heading>
@@ -532,7 +536,7 @@
 			<synonym value="Dog-Boots"/>
 		</heading>
 		<heading id="EquestrianEquipmentAnmlEq" title="Equestrian Equipment">
-			<synonym value="Equestrian Equipments"/>
+			<synonym value="Equestrian Items"/>
 		</heading>
 		<heading id="GoadAnmlEq" title="Goad">
 			<synonym value="Goads"/>
@@ -929,7 +933,7 @@
 			<synonym value="Graffito"/>
 		</heading>
 		<heading id="HydraulicEquipment" title="Hydraulic Equipment">
-			<synonym value="Hydraulic Equipments"/>
+			<synonym value="Hydraulic Items"/>
 		</heading>
 		<heading id="Latrine" title="Latrine">
 			<synonym value="Latrines"/>
@@ -1810,10 +1814,12 @@
 				<synonym value="Trade-Cards"/>
 			</heading>
 		</heading>
-		<heading id="ArtWritingEquipment" title="Art/Writing Equipment">
-			<synonym value="Art/Writing Equipments"/>
+		<heading id="ArtWritingItems" title="Art &amp; Writing Items">
+			<synonym value="Art/Writing Equipment"/>
 			<heading id="Alphabet" title="Alphabet"/>
-			<heading id="ArtWritingImplement" title="Art/ Writing-Implement">
+			<heading id="ArtWritingImplements" title="Art &amp; Writing Implements">
+				<synonym value="Art/Writing-Implement"/>
+				<synonym value="Art/ Writing-Implement"/>
 				<heading id="Dividers" title="Dividers"/>
 				<heading id="DrawingInstrument" title="Drawing Instrument">
 					<synonym value="Drawing Instruments"/>
@@ -1882,8 +1888,11 @@
 			<heading id="Calligraphyboard" title="Calligraphy-Board">
 				<synonym value="Calligraphy-Boards"/>
 			</heading>
-			<heading id="Condensingglass" title="Condensing-Glass">
+			<heading id="CondensingglassArtWr" title="Condensing Glass">
+				<synonym value="Condensing Glasses"/>
+				<synonym value="Condensing-Glass"/>
 				<synonym value="Condensing-Glasses"/>
+				<implies facet="ObjectName" cat="CondensingGlassOptical"/>
 			</heading>
 			<heading id="Drawingboard" title="Drawing-Board">
 				<synonym value="Drawing-Boards"/>
@@ -1997,7 +2006,7 @@
 				<synonym value="Pounce-Pots"/>
 			</heading>
 			<heading id="Printingequipment" title="Printing Equipment">
-				<synonym value="Printing Equipments"/>
+				<synonym value="Printing Items"/>
 			</heading>
 			<heading id="Sandholder" title="Sand-Holder">
 				<synonym value="Sand-Holders"/>
@@ -2070,9 +2079,9 @@
 			</heading>
 		</heading>
 		<heading id="AudioVisualEquipment" title="Audio/Visual Equipment">
-			<synonym value="Audio/Visual Equipments"/>
-			<!-- This Category Includes Objects For Mechanically Recording, Transmitting
-				Or Receiving Sound Or Images, And Associated Equipment. -->
+			<synonym value="Audio/Visual Items"/>
+			<!-- This category includes objects for mechanically recording, transmitting
+				or receiving sound or images, and associated equipment. -->
 			<heading id="AudioCassettePlayer" title="Audio Cassette-Player">
 				<synonym value="Audio Cassette-Players"/>
 			</heading>
@@ -3324,7 +3333,7 @@
 		<heading id="WineskinContainer" title="Wineskin">
 			<synonym value="Wineskins"/>
 		</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Containersandvessels" title="Containers &amp; Vessels">
 			<heading id="Amphora" title="Amphora">
 				<synonym value="Amphoras"/>
@@ -3332,7 +3341,7 @@
 				<implies facet="ActivityorContext" cat="Foodstorage"/>
 			</heading>
 			<heading id="Aryballos" title="Aryballos">
-				<synonym value="‚âà√≠¬¨¬±‚âà√¨‚àö√ñ‚âà√¨‚àö√ü‚âà√≠‚Äö√¢¬ß‚âà√≠¬¨¬±‚âà√≠¬¨‚Ñ¢‚âà√≠¬¨‚Ñ¢‚âà√≠‚àö‚àè‚âà√¨‚àö√°"/>
+				<synonym value="‚âà√≠¬¨¬±‚âà√¨‚àö√ñ‚âà√¨‚àö√ü‚âà√≠‚Äö√¢¬ß‚âà√≠¬¨¬±‚âà√≠¬¨‚Ñ¢‚âà√≠¬¨‚Ñ¢‚âà√≠‚àö‚àè‚âà√¨‚àö√°"/>  <!-- FIX:  this got screwed up in the FMP conversion -->
 			</heading>
 			<heading id="Barrel" title="Barrel">
 				<synonym value="Barrels"/>
@@ -4303,7 +4312,7 @@
 			<synonym value="Uniforms"/>
 		</heading>
 	</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Clothingorcostume" title="Clothing Or Costume" noMatch="true">
 			<synonym value="Clothes"/>
 			<synonym value="Clothing"/>
@@ -5172,8 +5181,8 @@
 			<synonym value="Wampums"/>
 		</heading>
 	</heading>
-	<heading id="FireFireLightingEquip" title="Fire/Fire-Lighting Equipment">
-		<synonym value="Fire/Fire-Lighting Equipments"/> <!-- British Museum's Term For This Facet -->
+	<heading id="FireFireLightingEquip" title="Fire &amp; Fire-Lighting Items">
+		<synonym value="Fire/Fire-Lighting Equipment"/> <!-- British Museum's Term For This Facet -->
 		<heading id="Bellows" title="Bellows">
 			<!-- <synonym value="xxxxxxxxx"/> Does this have a singular? -->
 		</heading>
@@ -5705,7 +5714,7 @@
 		<heading id="YutSet" title="Yut-Set">
 			<synonym value="Yut-Sets"/>
 		</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Sportsequipment" title="Sports Equipment">
 			<implies facet="ActivityorContext" cat="Playingsports"/>
 			<heading id="Ball" title="Ball">
@@ -5735,7 +5744,7 @@
 		</heading>
 	</heading>
 	<heading id="LightingEquipment" title="Lighting Equipment">
-		<synonym value="Lighting Equipments"/>
+		<synonym value="Lighting Items"/>
 		<heading id="Candelabrum" title="Candelabrum">
 			<synonym value="Candelabrums"/>
 		</heading>
@@ -5942,7 +5951,7 @@
 			<synonym value="Stump-Covers"/>
 		</heading>
 		<heading id="SurgicalEquipment" title="Surgical Equipment">
-			<synonym value="Surgical Equipments"/>
+			<synonym value="Surgical Items"/>
 		</heading>
 	</heading>
 	<heading id="MiscellaneousEquipment" title="Miscellaneous Equipment">
@@ -5986,8 +5995,8 @@
 		<heading id="ChoppingBoard" title="Chopping-Board">
 			<synonym value="Chopping-Boards"/>
 		</heading>
-		<heading id="CobblingEquipment" title="Cobbling-Equipment">
-			<synonym value="Cobbling-Equipments"/>
+		<heading id="CobblingEquipment" title="Cobbling Equipment">
+			<synonym value="Cobbling-Equipment"/>
 		</heading>
 		<heading id="ContraceptiveSheath" title="Contraceptive Sheath">
 			<synonym value="Contraceptive Sheaths"/>
@@ -6419,7 +6428,7 @@
 	<heading id="PerformanceArts" title="Performance Arts">  <!-- Includes Dance Equipment, Music Equipment -->
 		<synonym value="Performance Art"/>
 		<heading id="DanceEquipment" title="Dance Equipment">
-			<synonym value="Dance Equipments"/>
+			<synonym value="Dance Items"/>
 		</heading>
 		<heading id="JestersStaff" title="Jester's Staff">
 			<synonym value="Jester's Staffs"/>
@@ -6692,7 +6701,7 @@
 			<heading id="WhistleCleaner" title="Whistle-Cleaner">
 				<synonym value="Whistle-Cleaners"/>
 			</heading>
-			<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+			<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 			<heading id="Musicrelateditems" title="Music">
 				<synonym value="Instrument"/>
 				<synonym value="Instruments"/>
@@ -8165,7 +8174,7 @@
 			<heading id="TorcPrsOrn" title="Torc">
 				<synonym value="Torcs"/>
 			</heading>
-			<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+			<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 			<heading id="JewelryPrsOrn" title="Jewelry">
 				<synonym value="Jewellery"/>
 				<synonym value="Jewelery"/>
@@ -8419,7 +8428,7 @@
 			<!-- implies metallurgy -->
 		</heading>
 		<heading id="JewelleryMakingEquipment" title="Jewellery-Making Equipment">
-			<synonym value="Jewellery-Making Equipments"/>
+			<synonym value="Jewellery-Making Items"/>
 		</heading>
 		<heading id="KnappingFrgProdRepl" title="Knapping Fragment">
 			<synonym value="Knapping Fragments"/>
@@ -8443,7 +8452,7 @@
 			<synonym value="Patterns"/>
 		</heading>
 		<heading id="PotteryMakingEquipment" title="Pottery-Making Equipment">
-			<synonym value="Pottery-Making Equipments"/>
+			<synonym value="Pottery-Making Items"/>
 		</heading>
 		<heading id="ProofProdReplic" title="Proof">
 			<synonym value="Proofs"/>
@@ -8605,7 +8614,7 @@
 			<synonym value="Churingas"/>
 		</heading>
 		<heading id="CircumcisionEquipmentRelRit" title="Circumcision Equipment">
-			<synonym value="Circumcision Equipments"/>
+			<synonym value="Circumcision Items"/>
 		</heading>
 		<heading id="CopperRelRit" title="Copper">
 			<synonym value="Coppers"/>
@@ -8641,7 +8650,7 @@
 			<synonym value="Damarus"/>
 		</heading>
 		<heading id="DivinationEquipmentRelRit" title="Divination Equipment">
-			<synonym value="Divination Equipments"/>
+			<synonym value="Divination Items"/>
 		</heading>
 		<heading id="DotakuRelRit" title="Dotaku">
 			<synonym value="Dotakus"/>
@@ -8705,7 +8714,7 @@
 			<synonym value="Inaus"/>
 		</heading>
 		<heading id="IncenseEquipmentRelRit" title="Incense Equipment">
-			<synonym value="Incense Equipments"/>
+			<synonym value="Incense Items"/>
 		</heading>
 		<heading id="KachinaDollRelRit" title="Kachina-Doll">
 			<synonym value="Kachina-Dolls"/>
@@ -8744,7 +8753,7 @@
 			<synonym value="Mandalas"/>
 		</heading>
 		<heading id="MarriageEquipmentRelRit" title="Marriage Equipment">
-			<synonym value="Marriage Equipments"/>
+			<synonym value="Marriage Items"/>
 		</heading>
 		<heading id="MasqueradeCostumeRelRit" title="Masquerade-Costume">
 			<synonym value="Masquerade-Costumes"/>
@@ -8768,7 +8777,7 @@
 			<synonym value="Mosque-Lamps"/>
 		</heading>
 		<heading id="OfferingEquipmentRelRit" title="Offering Equipment">
-			<synonym value="Offering Equipments"/>
+			<synonym value="Offering Items"/>
 		</heading>
 		<heading id="PadukaRelRit" title="Paduka">
 			<synonym value="Padukas"/>
@@ -8891,9 +8900,6 @@
 		<heading id="SampleCore" title="Sample Core">
 			<synonym value="Sample Cores"/>
 		</heading>
-		<heading id="Shampoo" title="Shampoo">
-			<synonym value="Shampoos"/>
-		</heading>
 		<heading id="Snuff" title="Snuff">
 			<synonym value="Snuffs"/>
 		</heading>
@@ -8912,7 +8918,7 @@
 		<heading id="Varnish" title="Varnish">
 			<synonym value="Varnishs"/>
 		</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Ashsample" title="Ash Sample">
 			<synonym value="Ash Samples"/>
 		</heading>
@@ -9121,7 +9127,7 @@
 			</heading>
 		</heading>
 		<heading id="HorologicalEqSci" title="Horological Equipment">
-			<synonym value="Horological Equipments"/>
+			<synonym value="Horological Items"/>
 			<heading id="ChronometerCase" title="Chronometer-Case">
 				<synonym value="Chronometer-Cases"/>
 			</heading>
@@ -9340,7 +9346,9 @@
 				<heading id="RepeatingMechanism" title="Repeating-Mechanism">
 					<synonym value="Repeating-Mechanisms"/>
 				</heading>
-				<heading id="SandGlass" title="Sand-Glass">
+				<heading id="SandGlass" title="Sand Glass">
+					<synonym value="Sand Glasses"/>
+					<synonym value="Sand-Glass"/>
 					<synonym value="Sand-Glasses"/>
 				</heading>
 				<heading id="Sundial" title="Sundial">
@@ -9890,16 +9898,16 @@
 				<heading id="CompoundMicroscope" title="Compound Microscope">
 					<synonym value="Compound Microscopes"/>
 				</heading>
-				<heading id="CondensingGlass" title="Condensing-Glass">
-					<synonym value="Condensing-Glasses"/>
-				</heading>
+				<heading id="CondensingGlassOptical" title="Condensing Glass" noMatch="true"/>
 				<heading id="Kaleidoscope" title="Kaleidoscope">
 					<synonym value="Kaleidoscopes"/>
 				</heading>
 				<heading id="Lens" title="Lens">
 					<synonym value="Lenses"/>
 				</heading>
-				<heading id="MagnifyingGlass" title="Magnifying-Glass">
+				<heading id="MagnifyingGlass" title="Magnifying Glass">
+					<synonym value="Magnifying Glasses"/>
+					<synonym value="Magnifying-Glass"/>
 					<synonym value="Magnifying-Glasses"/>
 				</heading>
 				<heading id="MicroscopeSlide" title="Microscope-Slide">
@@ -9911,7 +9919,9 @@
 				<heading id="Prism" title="Prism">
 					<synonym value="Prisms"/>
 				</heading>
-				<heading id="QuizzingGlass" title="Quizzing-Glass">
+				<heading id="QuizzingGlass" title="Quizzing Glass">
+					<synonym value="Quizzing Glasses"/>
+					<synonym value="Quizzing-Glass"/>
 					<synonym value="Quizzing-Glasses"/>
 				</heading>
 				<heading id="Spectacles" title="Spectacles">
@@ -10115,7 +10125,7 @@
 		</heading>
 	</heading>
 	<heading id="SocialControlEquipment" title="Social Control Equipment">
-		<synonym value="Social Control Equipments"/>
+		<synonym value="Social Control Items"/>
 		<!-- This Category Does Not Include Weapons -->
 		<heading id="ChastityBelt" title="Chastity-Belt">
 			<synonym value="Chastity-Belts"/>
@@ -10170,15 +10180,18 @@
 			<synonym value="Truncheons"/>
 		</heading>
 	</heading>
-	<heading id="StimulantNarcEquip" title="Stimulant/Narcotic Equipment">
-		<synonym value="Stimulant/Narcotic Equipments"/>
-		<!-- Includes Alcohol Equipment, Betel Equipment, Coffee Equipment, Lime Equipment,
-			Opium Equipment, Smoking Equipment, Snuff Equipment, Tea Equipment Tobacco Equipment -->
-		<!-- This Category Includes Groups of Objects Associated With The Preparation And
-			Consumption of Beverages, Which Loosely May Be Classified As Stimulants,
-			e.g. Chocolate, Coffee And Tea. -->
+	<heading id="StimulantNarcEquip" title="Stimulant &amp; Narcotic Equipment">
+		<synonym value="Stimulant/Narcotic Equipment"/>
+		<synonym value="Stimulant/Narcotic Items"/>
+		<synonym value="Stimulant"/>
+		<synonym value="Stimulants"/>
+		<synonym value="Narcotic"/>
+		<synonym value="Narcotics"/>
+		<!-- This category includes groups of objects associated with the preparation and
+			consumption of beverages, which may loosely be classified as stimulants,
+			e.g. chocolate, coffee and tea. -->
 		<heading id="AlcoholEquipment" title="Alcohol Equipment">
-			<synonym value="Alcohol Equipments"/>
+			<synonym value="Alcohol Items"/>
 			<heading id="BeerContainer" title="Beer-Container">
 				<synonym value="Beer-Containers"/>
 			</heading>
@@ -10194,7 +10207,9 @@
 			<heading id="Chalice" title="Chalice">
 				<synonym value="Chalices"/>
 			</heading>
-			<heading id="CiderGlass" title="Cider-Glass">
+			<heading id="CiderGlass" title="Cider Glass">
+				<synonym value="Cider Glasses"/>
+				<synonym value="Cider-Glass"/>
 				<synonym value="Cider-Glasses"/>
 			</heading>
 			<heading id="CiderJug" title="Cider-Jug">
@@ -10233,7 +10248,9 @@
 			<heading id="Goblet" title="Goblet">
 				<synonym value="Goblets"/>
 			</heading>
-			<heading id="LiqueurGlass" title="Liqueur-Glass">
+			<heading id="LiqueurGlass" title="Liqueur Glass">
+				<synonym value="Liqueur Glasses"/>
+				<synonym value="Liqueur-Glass"/>
 				<synonym value="Liqueur-Glasses"/>
 			</heading>
 			<heading id="MazerBowl" title="Mazer Bowl">
@@ -10242,7 +10259,9 @@
 			<heading id="MazerCup" title="Mazer Cup">
 				<synonym value="Mazer Cups"/>
 			</heading>
-			<heading id="MeadGlass" title="Mead-Glass">
+			<heading id="MeadGlass" title="Mead Glass">
+				<synonym value="Mead Glasses"/>
+				<synonym value="Mead-Glass"/>
 				<synonym value="Mead-Glasses"/>
 			</heading>
 			<heading id="Mether" title="Mether">
@@ -10290,7 +10309,9 @@
 			<heading id="Rummer" title="Rummer">
 				<synonym value="Rummers"/>
 			</heading>
-			<heading id="SchnappsGlass" title="Schnapps-Glass">
+			<heading id="SchnappsGlass" title="Schnapps Glass">
+				<synonym value="Schnapps Glasses"/>
+				<synonym value="Schnapps-Glass"/>
 				<synonym value="Schnapps-Glasses"/>
 			</heading>
 			<heading id="StandingCup" title="Standing Cup">
@@ -10336,19 +10357,27 @@
 				<synonym value="Wine-Funnels"/>
 				<implies facet="ObjectName" cat="FunnelTool"/>
 			</heading>
-			<heading id="WineGlass" title="Wine-Glass">
+			<heading id="WineGlass" title="Wine Glass">
+				<synonym value="Wine Glasses"/>
+				<synonym value="Wine-Glass"/>
 				<synonym value="Wine-Glasses"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Drinking-Glass -->
-				<heading id="ChampagneGlass" title="Champagne-Glass">
+				<heading id="ChampagneGlass" title="Champagne Glass">
+					<synonym value="Champagne Glasses"/>
+					<synonym value="Champagne-Glass"/>
 					<synonym value="Champagne-Glasses"/>
 				</heading>
 				<heading id="FluteGlass" title="Flute Glass">
 					<synonym value="Flute Glasses"/>
 				</heading>
-				<heading id="PortGlass" title="Port-Glass">
+				<heading id="PortGlass" title="Port Glass">
+					<synonym value="Port Glasses"/>
+					<synonym value="Port-Glass"/>
 					<synonym value="Port-Glasses"/>
 				</heading>
-				<heading id="SherryGlass" title="Sherry-Glass">
+				<heading id="SherryGlass" title="Sherry Glass">
+					<synonym value="Sherry Glasses"/>
+					<synonym value="Sherry-Glass"/>
 					<synonym value="Sherry-Glasses"/>
 				</heading>
 				<heading id="ToastmastersGlass" title="Toastmaster's Glass">
@@ -10370,15 +10399,18 @@
 			<heading id="WineVessel" title="Wine-Vessel">
 				<synonym value="Wine-Vessels"/>
 			</heading>
-			<heading id="YardOfAleGlass" title="Yard-Of-Ale-Glass">
+			<heading id="YardOfAleGlass" title="Yard-of-Ale Glass">
+				<synonym value="Yard-Of-Ale Glasses"/>
+				<synonym value="Yard-Of-Ale-Glass"/>
 				<synonym value="Yard-Of-Ale-Glasses"/>
+				<!-- implies drinking glass -->
 			</heading>
 			<heading id="Yunomi" title="Yunomi">
 				<synonym value="Yunomis"/>
 			</heading>
 		</heading>
 		<heading id="BetelEquipment" title="Betel Equipment">
-			<synonym value="Betel Equipments"/>
+			<synonym value="Betel Items"/>
 			<heading id="BetelContainer" title="Betel-Container">
 				<synonym value="Betel-Containers"/>
 			</heading>
@@ -10405,7 +10437,7 @@
 				<synonym value="Chocolate-Pots"/>
 			</heading>
 		<heading id="CoffeeEquipment" title="Coffee Equipment">
-			<synonym value="Coffee Equipments"/>
+			<synonym value="Coffee Items"/>
 			<heading id="CoffeeCan" title="Coffee-Can">
 				<synonym value="Coffee-Cans"/>
 			</heading>
@@ -10480,16 +10512,16 @@
 			<synonym value="Kava-Strainers"/>
 		</heading>
 		<heading id="LimeEquipment" title="Lime Equipment">
-			<synonym value="Lime Equipments"/>
+			<synonym value="Lime Items"/>
 		</heading>
 		<heading id="NicotineFlask" title="Nicotine-Flask">
 			<synonym value="Nicotine-Flasks"/>
 		</heading>
 		<heading id="OpiumEquipment" title="Opium Equipment">
-			<synonym value="Opium Equipments"/>
+			<synonym value="Opium Items"/>
 		</heading>
 		<heading id="Smokingequipment" title="Smoking Equipment">
-			<synonym value="Smoking Equipments"/>
+			<synonym value="Smoking Items"/>
 			<heading id="Ashtray" title="Ashtray">
 				<synonym value="Ashtrays"/>
 			</heading>
@@ -10794,7 +10826,7 @@
 			<synonym value="Tapestries"/>
 			<heading id="PrayerRugTextiles" title="Prayer Rug" noMatch="true"/>
 		</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Textiles" title="Textiles">
 			<heading id="Ribbon" title="Ribbon">
 				<synonym value="Ribbons"/>
@@ -10821,9 +10853,9 @@
 				</heading>
 			</heading>
 		</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 	</heading>
-	<heading id="ToiletCosmeticEquipment" title="Toilet/Cosmetic Equipment">
+	<heading id="ToiletriesCosmetics" title="Toiletries &amp; Cosmetics">
 		<!-- The British Museum Specifies That This Includes Tattooing Equipment -->
 		<synonym value="Toilet/Cosmetic Equipment"/> <!-- British Museum's Term For This Facet -->
 		<heading id="Bath" title="Bath">
@@ -10926,7 +10958,7 @@
 			<implies facet="ActivityorContext" cat="Metallurgy"/>
 		</heading>
 		<heading id="TattooingEquipment" title="Tattooing Equipment">
-			<synonym value="Tattooing Equipments"/>
+			<synonym value="Tattooing Items"/>
 			<heading id="TattooingInstrument" title="Tattooing-Instrument">
 			<synonym value="Tattooing-Instruments"/>
 		</heading>
@@ -11206,7 +11238,9 @@
 		<heading id="BrushTool" title="Brush">
 			<synonym value="Brushs"/>
 		</heading>
-		<heading id="BurningGlassTool" title="Burning-Glass">
+		<heading id="BurningGlassTool" title="Burning Glass">
+			<synonym value="Burning Glasses"/>
+			<synonym value="Burning-Glass"/>
 			<synonym value="Burning-Glasses"/>
 		</heading>
 		<heading id="BurnisherTool" title="Burnisher">
@@ -11424,7 +11458,7 @@
 		<heading id="HarpagoTool" title="Harpago">
 			<synonym value="Harpagos"/>
 		</heading>
-		<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="ToolsImplements" title="Tools &amp; Implements">
 			<heading id="AnimalHusbandryTools" title="Animalhusbandrytools"  noMatch="true">
 				<implies facet="ActivityorContext" cat="Animalhusbandry"/>
@@ -11797,7 +11831,7 @@
 			<synonym value="Stilts"/>
 		</heading>
 		<heading id="TransportEquipment" title="Transport Equipment">
-			<synonym value="Transport Equipments"/>
+			<synonym value="Transport Items"/>
 			<heading id="CartCover" title="Cart-Cover">
 					<synonym value="Cart-Covers"/>
 				</heading>
@@ -12025,7 +12059,7 @@
 				<synonym value="Tyre"/> <!-- British singular -->
 				<synonym value="Tyres"/> <!-- British plural -->
 			</heading>
-			<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+			<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 				<heading id="Boats" title="Boats">
 					<synonym value="Boat"/>
 					<excl value="Boat-Shape"/>
