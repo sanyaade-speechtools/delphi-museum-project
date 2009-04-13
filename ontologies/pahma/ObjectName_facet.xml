@@ -5,10 +5,10 @@
 		<heading id="AgriculturalEquipment" title="Agricultural Equipment">
 			<synonym value="Agricultural Equipments"/>
 			<heading id="AgriculturalTools" title="Agricultural Tools">
-				<implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies tools
+				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies tools -->
 				<heading id="BillHook" title="Bill-Hook">
 					<synonym value="Bill-Hooks"/>
-					<implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies? also a weapon?
+					<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies? also a weapon? -->
 				</heading>
 				<heading id="CottonGinAgTool" title="Cotton Gin">
 					<!-- a machine for separating cotton from its seeds -->
@@ -322,7 +322,7 @@
 				<implies facet="ObjectName" cat="RopesMain"/>
 			</heading>
 			<heading id="GatheringToolsMain" title="Gathering-Tools">
-				<implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies Tool/Implement
+				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies Tool/Implement -->
 				<heading id="BerryComb" title="Berry-Comb">
 					<synonym value="Berry-Combs"/>
 				</heading>
@@ -1225,32 +1225,37 @@
 			<synonym value="Weapon Moulds"/>
 			<synonym value="Weapon-Mould"/>
 			<synonym value="Weapon-Moulds"/>
-			<implies facet="ObjectName" cat="mmmmmmmmmmm"/><!-- Implies Mold -->
+			<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Is this sufficient, or should it be in every child term? -->
 			<heading id="ArrowheadMold" title="Arrowhead Mold">
 				<synonym value="Arrowhead Mould"/>
 				<synonym value="Arrow-Head-Mould"/>
 				<synonym value="Arrow-Head Mold"/>
 				<synonym value="Arrow-Head Mould"/>
+				<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="BulletMold" title="Bullet Mold">
 				<synonym value="Bullet Mould"/>
+				<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CannonMold" title="Cannon Mold">
 				<synonym value="Cannon Mould"/>
+				<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CannonballMold" title="Cannonball Mold">
 				<synonym value="Cannonball Mould"/>
+				<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="DaggerMold" title="Dagger Mold">
 				<synonym value="Dagger Mould"/>
-				<synonym value="Dagger-Mould"/> <!-- British Museum's Term For This Facet -->
+				<synonym value="Dagger-Mould"/>
+				<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="SwordMold" title="Sword Mold">
 				<synonym value="Sword Mould"/>
+				<implies facet="ObjectName" cat="MoldsProdReplic"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 		</heading>
-	<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
-			
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Munitions" title="Munitions">
 			<synonym value="Munition"/>
 			<synonym value="Ammunition"/>
@@ -1486,7 +1491,7 @@
 			</heading>
 			
 		</heading>
-	<!-- ‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢‚Äö√Ñ¬¢ -->
+		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Armorandweapons" title="Armor &amp; Weapons">
 			<heading id="Armor" title="Armor">
 				<heading id="Armorbyconstruction" title="Armor By Construction" noMatch="true">
@@ -1716,14 +1721,14 @@
 				<implies facet="ObjectName" cat="BiJadeDisk2"/>
 			</heading>
 			<heading id="MagicalDisc" title="Magical Disc">
-				<implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Amulet
+				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Amulet -->
 			</heading>
 			<heading id="Sara" title="Sara"> <!-- Done -->
 				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a painted disc. -->
 				<synonym value="Saras"/>
 			</heading>
 			<heading id="Xuanji" title="Xuanji">
-				<implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Religious/Ritual Equipment
+				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Religious/Ritual Equipment -->
 			</heading>
 		</heading>
 		<heading id="EngravedStone" title="Engraved Stone"/>
@@ -2601,7 +2606,7 @@
 			<synonym value="Cigarette-Packet"/>
 			<synonym value="Cigarette-Packets"/>
 			<synonym value="Pack of Cigarette"/>
-			<implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies smoking
+			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> implies smoking -->
 		</heading>
 		<heading id="CineraryEnvelope" title="Cinerary Envelope">
 			<synonym value="Cinerary Envelopes"/>
@@ -4633,7 +4638,7 @@
 			<synonym value="Cooking-Stones"/>
 		</heading>
 		<heading id="CookingVessel" title="Cooking-Vessel">
-			<implies facet="ObjectName" cat="mmmmmmmmmmm"/><!-- Implies Vessel -->
+			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Vessel -->
 			<heading id="BakingDish" title="Baking-Dish">
 				<synonym value="Baking-Dishs"/>
 			</heading>
@@ -4651,7 +4656,7 @@
 			</heading>
 			<heading id="CookingPot" title="Cooking-Pot">
 				<synonym value="Cooking-Pots"/>
-				<implies facet="ObjectName" cat="mmmmmmmmmmm"/><!-- Implies Pot -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Pot -->
 				<heading id="Chytra" title="Chytra"/>
 				<heading id="Lopas" title="Lopas"/>
 			</heading>
@@ -5715,7 +5720,7 @@
 	</heading>
 	<heading id="Instruments" title="Instruments">
 		<synonym value="Instrument"/>
-		<implies facet="ObjectName" cat="mmmmmmmmmmm"/><!-- implies Tools -->
+		<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> implies Tools -->
 		<heading id="HorologicalInstrument" title="Horological Instrument">
 			<synonym value="Horological Instruments"/>
 		</heading>
@@ -8350,11 +8355,11 @@
 		<heading id="Copy" title="Copy">
 			<synonym value="Copies"/>
 		</heading>
-		<heading id="Core" title="Core">
+		<heading id="CoreProdReplic" title="Core">
 			<synonym value="Cores"/>
 			<!-- In The Department of Prehistoric And Romano-British Antiquities
 				This Term Refers To The Residual Objects From Which Stone Tools Were Made -->
-			<implies facet="ObjectName" cat="mmmmmmmmmmm"/><!-- implies Tools ? -->
+			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> implies Tools ? -->
 			<heading id="BipolarCore" title="Bipolar Core">
 				<synonym value="Bipolar Cores"/>
 			</heading>
@@ -8368,22 +8373,22 @@
 				<synonym value="Levallois Cores"/>
 			</heading>
 		</heading>
-		<heading id="CrestedPiece" title="Crested Piece">
+		<heading id="CrestedPcProdRepl" title="Crested Piece">
 			<synonym value="Crested Pieces"/>
 		</heading>
-		<heading id="Cullet" title="Cullet">
+		<heading id="CulletProdReplic" title="Cullet">
 			<synonym value="Cullets"/>
 		</heading>
-		<heading id="DrillCore" title="Drill-Core">
+		<heading id="DrillCoreProdReplic" title="Drill-Core">
 			<synonym value="Drill-Cores"/>
 		</heading>
 		<heading id="Electrotype" title="Electrotype">
 			<synonym value="Electrotypes"/>
 		</heading>
-		<heading id="Fake" title="Fake">
+		<heading id="FakeProdReplic" title="Fake">
 			<synonym value="Fakes"/>
 		</heading>
-		<heading id="Flake" title="Flake">
+		<heading id="FlakeProdReplic" title="Flake">
 			<heading id="CoreRejuvenationFlake" title="Core Rejuvenation Flake">
 				<synonym value="Core Rejuvenation Flakes"/>
 			</heading>
@@ -8397,82 +8402,84 @@
 				<synonym value="Tranchet Axe Flakes"/>
 			</heading>
 		</heading>
-		<heading id="GlassRod" title="Glass Rod">
+		<heading id="GlassRodProdReplic" title="Glass Rod">
 			<synonym value="Glass Rods"/>
 		</heading>
-		<heading id="Hacksilver" title="Hacksilver">
+		<heading id="HacksilverProdRepl" title="Hacksilver">
 			<synonym value="Hacksilvers"/>
 		</heading>
-		<heading id="Imitation" title="Imitation">
+		<heading id="ImitationProdRepl" title="Imitation">
 			<synonym value="Imitations"/>
 		</heading>
-		<heading id="Impression" title="Impression">
+		<heading id="ImpressionProdRepl" title="Impression">
 			<synonym value="Impressions"/>
 		</heading>
-		<heading id="Ingot" title="Ingot">
+		<heading id="IngotProdReplic" title="Ingot">
 			<synonym value="Ingots"/>
+			<!-- implies metallurgy -->
 		</heading>
 		<heading id="JewelleryMakingEquipment" title="Jewellery-Making Equipment">
 			<synonym value="Jewellery-Making Equipments"/>
 		</heading>
-		<heading id="KnappingFragment" title="Knapping Fragment">
+		<heading id="KnappingFrgProdRepl" title="Knapping Fragment">
 			<synonym value="Knapping Fragments"/>
 		</heading>
-		<heading id="Matrix" title="Matrix">
+		<heading id="MatrixProdReplic" title="Matrix">
 			<synonym value="Matrixs"/>
 		</heading>
-		<heading id="Microburin" title="Microburin">
+		<heading id="MicroburinProdRepl" title="Microburin">
 			<synonym value="Microburins"/>
 		</heading>
-		<heading id="Model" title="Model">
+		<heading id="ModelProdReplic" title="Model">
 			<synonym value="Models"/>
 		</heading>
-		<heading id="Mold" title="Mold">
+		<heading id="MoldsProdReplic" title="Mold">
 			<synonym value="Molds"/>
 		</heading>
-		<heading id="Palimpsest" title="Palimpsest">
+		<heading id="PalimpsestProdRepl" title="Palimpsest">
 			<synonym value="Palimpsests"/>
 		</heading>
-		<heading id="Pattern" title="Pattern">
+		<heading id="PatternProdRepl" title="Pattern">
 			<synonym value="Patterns"/>
 		</heading>
 		<heading id="PotteryMakingEquipment" title="Pottery-Making Equipment">
 			<synonym value="Pottery-Making Equipments"/>
 		</heading>
-		<heading id="Proof" title="Proof">
+		<heading id="ProofProdReplic" title="Proof">
 			<synonym value="Proofs"/>
 		</heading>
-		<heading id="Prototype" title="Prototype">
+		<heading id="PrototypeProdRepl" title="Prototype">
 			<synonym value="Prototypes"/>
 		</heading>
-		<heading id="Replica" title="Replica">
+		<heading id="ReplicaProdReplic" title="Replica">
 			<synonym value="Replicas"/>
 		</heading>
-		<heading id="Reproduction" title="Reproduction">
+		<heading id="ReproductProdRepl" title="Reproduction">
 			<synonym value="Reproductions"/>
 		</heading>
-		<heading id="Roughout" title="Roughout">
+		<heading id="RoughoutProdRepl" title="Roughout">
 			<synonym value="Roughouts"/>
 		</heading>
-		<heading id="Skeuomorph" title="Skeuomorph">
+		<heading id="SkeuomorphProdRepl" title="Skeuomorph">
 			<synonym value="Skeuomorphs"/>
 		</heading>
-		<heading id="Slag" title="Slag">
+		<heading id="SlagProdReplic" title="Slag">
 			<synonym value="Slags"/>
+			<!-- Implies metallury -->
 		</heading>
-		<heading id="Spall" title="Spall">
+		<heading id="SpallProdReplic" title="Spall">
 			<synonym value="Spalls"/>
 		</heading>
-		<heading id="Template" title="Template">
+		<heading id="TemplateProdReplic" title="Template">
 			<synonym value="Templates"/>
 		</heading>
-		<heading id="TrialPiece" title="Trial-Piece">
+		<heading id="TrialPcProdReplic" title="Trial-Piece">
 			<synonym value="Trial-Pieces"/>
 		</heading>
-		<heading id="Waster" title="Waster">
+		<heading id="WasterProdReplic" title="Waster">
 			<synonym value="Wasters"/>
 		</heading>
-		<heading id="WorkedOchre" title="Worked Ochre">
+		<heading id="WorkedOchreProdRepl" title="Worked Ochre">
 			<synonym value="Worked Ochres"/>
 		</heading>
 	</heading>
@@ -9073,7 +9080,7 @@
 		<synonym value="Measure"/>
 		<synonym value="Measures"/>
 		<heading id="CalendarScience" title="Calendar">
-			<implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies Communications Equipment
+			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies Communications Equipment -->
 			<synonym value="Calendars"/>
 			<heading id="Almanac" title="Almanac">
 				<synonym value="Almanacs"/>
@@ -10331,7 +10338,7 @@
 			</heading>
 			<heading id="WineGlass" title="Wine-Glass">
 				<synonym value="Wine-Glasses"/>
-				<implies facet="ObjectName" cat="mmmmmmmmmmm"/><!-- Implies Drinking-Glass -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Drinking-Glass -->
 				<heading id="ChampagneGlass" title="Champagne-Glass">
 					<synonym value="Champagne-Glasses"/>
 				</heading>
@@ -11380,7 +11387,7 @@
 			<synonym value="Ginning Tools"/>
 			<synonym value="Ginning-Tool"/>
 			<synonym value="Ginning-Tools"/>
-			<implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies TEXTILE CRAFTS
+			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies TEXTILE CRAFTS -->
 			<heading id="CottonGinTool" title="Cotton Gin">
 				<synonym value="Cotton Gins"/>
 				<synonym value="Cotton-Gin"/>
