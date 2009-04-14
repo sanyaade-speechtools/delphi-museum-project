@@ -10,9 +10,7 @@
 			<synonym value="Agricultural Equipment"/>
 			<heading id="AgriculturalTools" title="Agricultural Tools">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies tools -->
-				<heading id="BillHook" title="Bill Hook">
-					<synonym value="Bill Hooks"/>
-					<synonym value="Bill-Hook"/>
+				<heading id="BillHook" title="Bill-Hook">
 					<synonym value="Bill-Hooks"/>
 					<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies? also a weapon? -->
 				</heading>
@@ -4785,18 +4783,10 @@
 			<synonym value="Corn Grater"/>
 			<synonym value="Corn Graters"/>
 		</heading>
-		<heading id="CulinaryMouldCookEq" title="Culinary-Mould">
-			<synonym value="Culinary-Moulds"/>
-			<synonym value="Culinary Mould"/>
-			<synonym value="Culinary Moulds"/>
-			<synonym value="Culinary Mold"/>
+		<heading id="CulinaryMouldCookEq" title="Culinary Mold">
 			<synonym value="Culinary Molds"/>
-		</heading>
-		<heading id="CulinaryMould" title="Culinary-Mould">
+			<synonym value="Culinary-Mould"/>
 			<synonym value="Culinary-Moulds"/>
-		</heading>
-		<heading id="DoughVatCookEq" title="Dough-Vat">
-			<synonym value="Dough-Vats"/>
 		</heading>
 		<heading id="FishDrierCookEq" title="Fish-Drier">
 			<synonym value="Fish-Driers"/>
@@ -4995,6 +4985,10 @@
 					<synonym value="Pans"/>
 					<implies facet="ActivityorContext" cat="Metallurgy"/>
 				</heading>
+				<heading id="DoughVatCookEq" title="Dough Vat">
+					<synonym value="Dough Vats"/>
+					<synonym value="Dough-Vat"/>
+					<synonym value="Dough-Vats"/>
 			</heading>
 			<heading id="Dish" title="Dish">
 				<synonym value="Dishes"/>
@@ -5173,7 +5167,8 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Currency" title="Currency">
+	</heading>
+		<heading id="Currency" title="Currency">
 		<synonym value="Currencies"/>
 		<heading id="Banknote" title="Banknote">
 			<synonym value="Banknotes"/>
