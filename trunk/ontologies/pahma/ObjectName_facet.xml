@@ -817,7 +817,7 @@
 		</heading>
 		<heading id="Arch" title="Arch">
 			<synonym value="Arches"/>
-			<synonym value="Archs"/>
+			<synonym value="Archs"/> <!-- Misspelling -->
 		</heading>
 		<heading id="ArchitecturalCone" title="Architectural Cone">
 			<synonym value="Architectural Cones"/>
@@ -906,7 +906,9 @@
 		<heading id="Floor" title="Floor">
 			<synonym value="Floors"/>
 		</heading>
-		<heading id="FoundationStone" title="Foundation-Stone">
+		<heading id="FoundationStone" title="Foundation Stone">
+			<synonym value="Foundation Stones"/>
+			<synonym value="Foundation-Stone"/>
 			<synonym value="Foundation-Stones"/>
 		</heading>
 		<heading id="Frieze" title="Frieze">
@@ -984,7 +986,9 @@
 		<heading id="Post" title="Post">
 			<synonym value="Posts"/>
 		</heading>
-		<heading id="PyramidCasing" title="Pyramid-Casing">
+		<heading id="PyramidCasing" title="Pyramid Casing">
+			<synonym value="Pyramid Casings"/>
+			<synonym value="Pyramid-Casing"/>
 			<synonym value="Pyramid-Casings"/>
 		</heading>
 		<heading id="Pyramidion" title="Pyramidion">
@@ -1005,13 +1009,15 @@
 		</heading>
 		<heading id="Revetment" title="Revetment">
 			<synonym value="Revetments"/>
-			<synonym value="Rev√™tment"/>
-			<synonym value="Rev√™tments"/>
+			<synonym value="Revêtment"/>
+			<synonym value="Revêtments"/>
 		</heading>
 		<heading id="Roof" title="Roof">
 			<synonym value="Roofs"/>
 		</heading>
-		<heading id="RoofProp" title="Roof-Prop">
+		<heading id="RoofProp" title="Roof Prop">
+			<synonym value="Roof Props"/>
+			<synonym value="Roof-Prop"/>
 			<synonym value="Roof-Props"/>
 		</heading>
 		<heading id="Sima" title="Sima">
@@ -1050,7 +1056,7 @@
 		<!-- oooooooooooo The following need to be incorporated above oooooooooooo -->
 		<heading id="Architecturalelements" title="Architectural Elements">
 			<synonym value="Architectural Element"/>
-			<heading id="Buildingsorstructures" title="Buildings Or Structures" noMatch="true">
+			<heading id="BuildingsStructures" title="Buildings &amp; Structures" noMatch="true">
 				<heading id="Barkhouse" title="Bark House">
 					<synonym value="Barkhouses"/>
 					<synonym value="Barkhouse"/>
@@ -1096,8 +1102,8 @@
 					<synonym value="Teepees"/>
 					<synonym value="Tepee"/>
 					<synonym value="Tepees"/>
-					<synonym value="Th‚Äö√†√∂‚Äö√¢‚Ä†pi"/><!-- In The Lakota Language -->
-					<synonym value="Th‚Äö√†√∂‚Äö√¢‚Ä†pis"/>
+					<synonym value="thípi"/><!-- In The Lakota Language -->
+					<synonym value="thípis"/>
 					<synonym value="Wigwam"/>
 					<synonym value="Wigwams"/>
 				</heading>
@@ -1120,6 +1126,7 @@
 			<heading id="Roofingtiles" title="Roofing Tiles">
 				<synonym value="Roofing Tile"/>
 				<heading id="Imbrex" title="Imbrex">
+					<synonym value="Imbrexes"/>
 					<synonym value="Imbrices"/>
 				</heading>
 				<heading id="Tegula" title="Tegula">
@@ -1376,9 +1383,9 @@
 						<heading id="Cutlass" title="Cutlass">
 							<synonym value="Cutlasses"/>
 						</heading>
-						<heading id="Epee" title="Ep‚Äö√†√∂¬¨¬©e">
+						<heading id="Epee" title="Epée">
 							<synonym value="Epee"/>
-							<synonym value="Ep‚Äö√†√∂¬¨¬©es"/>
+							<synonym value="Epées"/>
 							<synonym value="Epees"/>
 						</heading>
 						<heading id="Foil" title="Foil">
@@ -1432,17 +1439,17 @@
 				</heading>
 			</heading>
 			
-			<heading id="Propulsiveweapons" title="Propulsive Weapons">
+			<heading id="PropulsiveWeapons" title="Propulsive Weapons">
 				<synonym value="Propulsive Weapon"/>
-				<heading id="Arrowweapon" title="Arrow">
+				<heading id="ArrowWeapon" title="Arrow">
 					<synonym value="Arrows"/>
 				</heading>
-				<heading id="Atlatlweapon" title="Atlatl">
+				<heading id="AtlatlWeapon" title="Atlatl">
 					<synonym value="Atlatls"/>
 				</heading>
 				<heading id="Projectilepoint" title="Projectile Point">
 					<synonym value="Projectile Points"/>
-					<synonym value="Projective Point"/>  <!-- Curious Usage Found In Pahma Cat. Cards (E.G. 2-21633‚Äö√Ñ√¨21638, L-18707) -->
+					<synonym value="Projective Point"/>  <!-- Curious usage found in PAHMA cat. cards (E.G. 2-21633–21638, L-18707) -->
 					<synonym value="Projective Points"/>
 					<synonym value="Arrowhead"/>
 					<synonym value="Arrowheads"/>
@@ -1581,25 +1588,55 @@
 						<heading id="SocketBayonet" title="Socket Bayonet"/>
 					</heading>
 					<heading id="Dagger" title="Dagger">
-						<heading id="Baselard" title="Baselard"/>
-						<heading id="Dirk" title="Dirk"/>
-						<heading id="Misericord(Dagger)" title="Misericord (Dagger)"/>
-						<heading id="Poignard" title="Poignard"/>
+						<synonym value="Daggers"/>
+						<heading id="Baselard" title="Baselard">
+							<synonym value="Baselards"/>
+						</heading>
+						<heading id="Dirk" title="Dirk">
+							<synonym value="Dirks"/>
+						</heading>
+						<heading id="MisericordDagger" title="Misericord">
+							<synonym value="Misericords"/>
+						</heading>
+						<heading id="Poignard" title="Poignard">
+							<synonym value="Poignards"/>
+						</heading>
 					</heading>
 					<heading id="StaffWeapon" title="Staff Weapon">
-						<heading id="Bill" title="Bill"/>
-						<heading id="Glaive" title="Glaive"/>
-						<heading id="Guisarme" title="Guisarme"/>
-						<heading id="Halberd" title="Halberd"/>
-						<heading id="PoleAxe" title="Pole Axe"/>
-						<heading id="Spear" title="Spear">
-							<heading id="Javelin" title="Javelin"> <!-- A Long Spear Designed To Be Thrown In Order To Injure Or Kill A Given Target. -->
-								<heading id="Angon" title="Angon"/>
-							</heading>
-							<heading id="Lance" title="Lance"/>
-							<heading id="Pike" title="Pike"/>
+						<synonym value="Staff Weapons"/>
+						<heading id="Bill" title="Bill">
+							<synonym value="Bills"/> <!-- EXCL needed -->
 						</heading>
-						<heading id="Trident" title="Trident"/>
+						<heading id="Glaive" title="Glaive">
+							<synonym value="Glaives"/>
+						</heading>
+						<heading id="Guisarme" title="Guisarme">
+							<synonym value="Guisarmes"/>
+						</heading>
+						<heading id="Halberd" title="Halberd">
+							<synonym value="Halberds"/>
+						</heading>
+						<heading id="PoleAxe" title="Pole Axe">
+							<synonym value="Pole Axes"/>
+						</heading>
+						<heading id="Spear" title="Spear">
+							<synonym value="Spears"/>
+							<heading id="Javelin" title="Javelin"> <!-- A Long Spear Designed To Be Thrown In Order To Injure Or Kill A Given Target. -->
+								<synonym value="Javelins"/>
+								<heading id="Angon" title="Angon">
+									<synonym value="Angons"/>
+								</heading>
+							</heading>
+							<heading id="Lance" title="Lance">
+								<synonym value="Lances"/>
+							</heading>
+							<heading id="Pike" title="Pike">
+								<synonym value="Pikes"/>
+							</heading>
+						</heading>
+						<heading id="Trident" title="Trident">
+							<synonym value="Tridents"/>
+						</heading>
 					</heading>
 					<heading id="Sword" title="Sword">
 						<heading id="Broadsword" title="Broadsword"/>
@@ -1627,8 +1664,8 @@
 					<heading id="WarHammer" title="War Hammer"/>
 				</heading>
 				<heading id="ProjectileWeapon" title="Projectile Weapon">
-					<heading id="Blowpipe(Weapon)" title="Blowpipe (Weapon)"/>
-					<heading id="Bow(Weapon)" title="Bow (Weapon)"/>
+					<heading id="BlowpipeWeapon" title="Blowpipe (Weapon)"/>
+					<heading id="BowWeapon" title="Bow (Weapon)"/>
 					<heading id="Catapult" title="Catapult"/>
 					<heading id="Crossbow" title="Crossbow"/>
 					<heading id="Firearm" title="Firearm">
@@ -1669,12 +1706,12 @@
 								<synonym value="Shotguns"/>
 							</heading>
 						</heading>
-					<heading id="Mortar(Weapon)" title="Mortar (Weapon)"/>
+					<heading id="MortarWeapon" title="Mortar (Weapon)"/>
 				</heading>
 					<heading id="Projectile" title="Projectile">
 						<heading id="Ammunition" title="Ammunition">
 							<heading id="Bullet" title="Bullet"/>
-							<heading id="Canister(Shot)" title="Canister (Shot)"/>
+							<heading id="CanisterShot" title="Canister (Shot)"/>
 							<heading id="CannonBall" title="Cannon Ball"/>
 							<heading id="Cartridge" title="Cartridge"/>
 							<heading id="MusketBall" title="Musket Ball"/>
@@ -1703,7 +1740,7 @@
 							<heading id="Francisca" title="Francisca"/>
 						</heading>
 					</heading>
-					<heading id="Sling(Military)" title="Sling (Military)"/> 
+					<heading id="SlingMilitary" title="Sling (Military)"/> 
 					<heading id="SpearGun" title="Spear Gun"/>
 					<heading id="SpearThrower" title="Spear Thrower"/>
 				</heading>
@@ -1722,7 +1759,7 @@
 			<heading id="BiJadeDisk" title="Bi (jade disk)">
 				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a flat jade disc for ritual use. -->
 				<synonym value="Bis"/> <!-- Check -->
-				<implies facet="ObjectName" cat="BiJadeDisk2"/>
+				<implies facet="ObjectName" cat="BiJadeDiskRelRit"/>
 			</heading>
 			<heading id="MagicalDisc" title="Magical Disc">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Amulet -->
@@ -2221,9 +2258,9 @@
 		</heading>
 		<heading id="Document" title="Document">
 			<synonym value="Documents"/>
-			<!-- The British Museum Specifies That This Term Refers To Unspecified
-				Documents Which Are Made of Paper, Clay, Etc., And Which Are Not
-				Covered By Other Object Names. -->
+			<!-- The British Museum specifies that this term refers to unspecified
+				documents which are made of paper, clay, etc., and which are not
+				covered by other object names. -->
 		</heading>
 		<heading id="DocumentCase" title="Document Case">
 			<synonym value="Document Cases"/>
@@ -2349,9 +2386,11 @@
 			<synonym value="Sealings"/>
 		</heading>
 		<heading id="SealMatrix" title="Seal-Matrix">
-			<synonym value="Seal-Matrixs"/>
+			<synonym value="Seal-Matrices"/>
+			<synonym value="Seal-Matrixes"/>
+			<synonym value="Seal-Matrixs"/><!-- Misspelling -->
 		</heading>
-		<heading id="Serial" title="Serial">  <!-- Magazine a better term? -->
+		<heading id="Serial" title="Serial">  <!-- Is magazine a better term? -->
 			<synonym value="Serials"/>
 		</heading>
 		<heading id="SignBoard" title="Sign-Board">
@@ -2918,8 +2957,18 @@
 			<heading id="Carafe" title="Carafe">
 				<synonym value="Carafes"/>
 			</heading>
-			<heading id="CentrePiece" title="Centre-Piece">
+			<heading id="Centerpiece" title="Centerpiece">
+				<synonym value="Centrepiece"/>
+				<synonym value="Centrepieces"/>
+				<synonym value="Centerpieces"/>
+				<synonym value="Centre Piece"/>
+				<synonym value="Centre Pieces"/>
+				<synonym value="Centre-Piece"/>
 				<synonym value="Centre-Pieces"/>
+				<synonym value="Center Piece"/>
+				<synonym value="Center Pieces"/>
+				<synonym value="Center-Piece"/>
+				<synonym value="Center-Pieces"/>
 			</heading>
 			<heading id="Charger" title="Charger">
 				<synonym value="Chargers"/>
@@ -3063,17 +3112,18 @@
 			<heading id="Pan" title="Pan">
 				<synonym value="Pans"/>
 			</heading>
-			<heading id="Pa‚Äö√†√∂¬¨¬±caP‚Äö√†√∂¬¨‚àûtra" title="Pa‚Äö√†√∂¬¨¬±ca-P‚Äö√†√∂¬¨‚àûtra">
-				<synonym value="Pa‚Äö√†√∂¬¨¬±ca-P‚Äö√†√∂¬¨‚àûtras"/>
-			</heading>
-			<heading id="PepperMill" title="Pepper-Mill">
+			<!--<heading id="Pa‚Äö√†√∂¬¨¬±caP‚Äö√†√∂¬¨‚àûtra" title="Pa‚Äö√†√∂¬¨¬±ca-P‚Äö√†√∂¬¨‚àûtra">  FIX -->
+			<!--<synonym value="Pa‚Äö√†√∂¬¨¬±ca-P‚Äö√†√∂¬¨‚àûtras"/> -->
+			<!--</heading> -->
+			<heading id="PepperMill" title="Pepper Mill">
+				<synonym value="Pepper Mills"/>
+				<synonym value="Pepper-Mill "/>
 				<synonym value="Pepper-Mills"/>
 			</heading>
-			<heading id="PepperPot" title="Pepper-Pot">
+			<heading id="PepperPot" title="Pepper Pot">
+				<synonym value="Pepper Pots"/>
+				<synonym value="Pepper-Pot "/>
 				<synonym value="Pepper-Pots"/>
-			</heading>
-			<heading id="Phial" title="Phial">
-				<synonym value="Phials"/>
 			</heading>
 			<heading id="PickleTray" title="Pickle-Tray">
 				<synonym value="Pickle-Trays"/>
@@ -3153,6 +3203,7 @@
 				<heading id="HolyWaterVessel" title="Holy Water-Vessel">
 					<synonym value="Holy Water-Vessels"/>
 					<heading id="Ampulla" title="Ampulla">
+						<synonym value="Ampullae"/>
 						<synonym value="Ampullas"/>
 					</heading>
 					<heading id="HolyWaterBox" title="Holy Water-Box">
@@ -3189,7 +3240,9 @@
 				<heading id="MultipleVase" title="Multiple Vase">
 					<synonym value="Multiple Vases"/>
 				</heading>
-				<heading id="OfferingVessel" title="Offering-Vessel">
+				<heading id="OfferingVessel" title="Offering Vessel">
+					<synonym value="Offering Vessels"/>
+					<synonym value="Offering-Vessel"/>
 					<synonym value="Offering-Vessels"/>
 					<heading id="Candelero" title="Candelero">
 						<synonym value="Candeleros"/>
@@ -3243,13 +3296,17 @@
 				<heading id="SutraTray" title="Sutra-Tray">
 					<synonym value="Sutra-Trays"/>
 				</heading>
-				<heading id="TempleVase" title="Temple-Vase">
+				<heading id="TempleVase" title="Temple Vase">
+					<synonym value="Temple Vases"/>
+					<synonym value="Temple-Vase"/>
 					<synonym value="Temple-Vases"/>
 				</heading>
 				<heading id="VotiveTank" title="Votive Tank">
 					<synonym value="Votive Tanks"/>
 				</heading>
-				<heading id="WeddingCup" title="Wedding-Cup">
+				<heading id="WeddingCup" title="Wedding Cup">
+					<synonym value="Wedding Cups"/>
+					<synonym value="Wedding-Cup"/>
 					<synonym value="Wedding-Cups"/>
 				</heading>
 				<heading id="Xian" title="Xian">
@@ -3322,6 +3379,11 @@
 			<heading id="Tray" title="Tray">
 				<synonym value="Trays"/>
 			</heading>
+			<heading id="Vial" title="Vial">
+				<synonym value="Phial"/>
+				<synonym value="Phials"/>
+				<synonym value="Vials"/>
+			</heading>
 		</heading>
 		<heading id="WalletContainer" title="Wallet">
 			<synonym value="Wallets"/>
@@ -3343,7 +3405,7 @@
 				<implies facet="ActivityorContext" cat="Foodstorage"/>
 			</heading>
 			<heading id="Aryballos" title="Aryballos">
-				<synonym value="‚âà√≠¬¨¬±‚âà√¨‚àö√ñ‚âà√¨‚àö√ü‚âà√≠‚Äö√¢¬ß‚âà√≠¬¨¬±‚âà√≠¬¨‚Ñ¢‚âà√≠¬¨‚Ñ¢‚âà√≠‚àö‚àè‚âà√¨‚àö√°"/>  <!-- FIX:  this got screwed up in the FMP conversion -->
+				<synonym value="αρύβαλλος"/>
 			</heading>
 			<heading id="Barrel" title="Barrel">
 				<synonym value="Barrels"/>
@@ -3530,7 +3592,7 @@
 				<heading id="Bentwoodboxcontainer" title="Bent Wood Box" noMatch="true"/>
 				<heading id="Canopicboxcontainer" title="Canopic Box">
 					<synonym value="Canopic Boxes"/>
-					<synonym value="Canopic Boxs"/>
+					<synonym value="Canopic Boxs"/> <!-- Misspelling -->
 					<implies facet="ActivityorContext" cat="Burial"/>
 					<implies facet="ActivityorContext" cat="Religionspirituality"/>
 					<implies facet="ObjectName" cat="Canopicbxfuner"/>
@@ -3624,16 +3686,16 @@
 		        </heading>
 		        <heading id="Kotyle" title="Kotyle">
 		            <heading id="Kylix" title="Kylix">
-		                <synonym value="‚âà√≠‚Äö√†¬¥‚âà√¨‚àö√ü‚âà√≠¬¨‚Ñ¢‚âà√≠≈ì√Ñ‚âà√≠‚àö¬∂"/>
+		            	<synonym value="κύλιξ"/>
 		                <synonym value="Cylix"/>
 		                <synonym value="Kylixes"/>
 		                <synonym value="Kylikes"/>
 		            	<implies facet="Culture" cat="Ancientgreece"/>
 		            	<implies facet="ActivityorContext" cat="Winedrinking"/>
 		                <heading id="Tondo" title="Tondo">
-		                    <!--The Almost Flat Interior Circle On The Interior Base of The Cup, 
+		                    <!--The Almost Flat Interior Circle On The interior Base of The Cup, 
 		                        Called The Tondo, Was The Primary Surface For Painted Decoration In The 
-		                        Black-Figure Or Red-Figure Styles of The 6th And 5th Century Bc. As The
+		                        Black-Figure Or Red-Figure Styles of The 6th And 5th Century BC. As The
 		                        Representations Would Be Covered With Wine, The Scenes Would Only Be
 		                        Revealed In Stages As The Wine Was Drained. They Were Often Designed
 		                        With This In Mind, With Scenes Created So That They Would Surprise Or
@@ -3641,7 +3703,7 @@
 		                </heading>
 		            </heading>
 		            <heading id="Skyphos" title="Skyphos">
-		                <synonym value="‚âà√¨‚àö√¢‚âà√≠‚Äö√†¬¥‚âà√¨‚àö√ü‚âà√¨‚àö√∫‚âà√≠‚àö‚àè‚âà√¨‚àö√°"/>
+		            	<synonym value="σκύφος"/>
 		                <synonym value="Skyphoi"/>
 		            	<implies facet="Culture" cat="Ancientgreece"/>
 		            	<implies facet="ActivityorContext" cat="Winedrinking"/>
@@ -3666,7 +3728,7 @@
 			<heading id="Flask" title="Flask">
 				<synonym value="Flasks"/>
 				<heading id="Alabastron" title="Alabastron">
-					<synonym value="‚âà√≠¬¨¬±‚âà√≠¬¨‚Ñ¢‚âà√≠¬¨¬Æ‚âà√≠‚Äö√¢¬ß‚âà√≠¬¨¬±‚âà√¨‚àö√¢‚âà√¨‚àö√´‚âà√¨‚àö√ñ‚âà√≠‚àö‚àè‚âà√≠≈í¬©"/>
+					<synonym value="αλάβαστρον"/>
 					<synonym value="Alabastra"/>
 					<synonym value="Alabastrons"/>
 				</heading>
@@ -3732,7 +3794,7 @@
 					<synonym value="Wine Jugs"/>
 					<implies facet="ActivityorContext" cat="Winedrinking"/>
 					<heading id="Oinochoe" title="Oinochoe">
-						<synonym value="‚âà√≠‚àö¬∫‚âà√≠≈ì√Ñ‚âà√≠≈í¬©‚âà√≠‚àö‚àè‚âà√¨‚àö¬∞‚âà√¨‚àö‚Ä¢‚âà√≠‚Äö√†√´"/>
+						<synonym value="Οινοχόη"/>
 						<synonym value="Oenochoe"/>
 						<heading id="Olpe" title="Olpe">
 						    <implies facet="Culture" cat="Corinthian"/>
@@ -3778,7 +3840,7 @@
 				<heading id="Potterybystyleortype" title="By Style Or Type" noMatch="true">
 					<heading id="BlackFigureware" title="Black Figure Ware">
 						<synonym value="Black-Figure Ware"/>
-						<synonym value="'‚âà√≠¬¨‚à´‚âà√≠¬¨¬µ‚âà√≠¬¨‚Ñ¢‚âà√≠¬¨¬±‚âà√≠≈í¬©‚âà√¨‚àö‚Ä¢‚âà√≠¬¨‚à´‚âà√≠‚àö‚àè‚âà√¨‚àö√ñ‚âà√¨‚àö√∫‚âà√≠¬¨¬±"/>
+						<synonym value="'μελανόμορφα"/>
 						<implies facet="Color" cat="Black"/>
 						<implies facet="Color" cat="Red"/>
 						<implies facet="Culture" cat="Ancgreekculture"/>
@@ -4209,7 +4271,8 @@
 				<synonym value="Belts"/>
 			</heading>
 			<heading id="Crutch" title="Crutch">
-				<synonym value="Crutchs"/>
+				<synonym value="Crutches"/>
+				<synonym value="Crutchs"/> <!-- Misspelling -->
 			</heading>
 			<heading id="Epaulette" title="Epaulette">
 				<synonym value="Epaulettes"/>
@@ -4260,7 +4323,8 @@
 				<synonym value="Pocket-Books"/>
 			</heading>
 			<heading id="Pouch" title="Pouch">
-				<synonym value="Pouchs"/>
+				<synonym value="Pouches"/>
+				<synonym value="Pouchs"/> <!-- Misspelling -->
 			</heading>
 			<heading id="PursePersAcc" title="Purse"> <!-- Main latch -->
 				<synonym value="Purses"/>
@@ -4620,7 +4684,7 @@
 			<synonym value="Breadboards"/>
 		</heading>
 		<heading id="BreadPunch" title="Bread-Punch">
-			<synonym value="Bread-Punchs"/>
+			<synonym value="Bread-Punchs"/> <!-- Misspelling -->
 		</heading>
 		<heading id="CheeseGrater" title="Cheese-Grater">
 			<synonym value="Cheese-Graters"/>
@@ -4805,9 +4869,9 @@
 				    <implies facet="Material" cat="Bronze"/>
 				</heading>
 				<heading id="Notgeld" title="Notgeld"/>
-				<heading id="50centavos" title="50 Centavos"/>
+				<heading id="FiftyCentavos" title="50 Centavos"/>
 			</heading>
-			<heading id="Unitedstatescoins" title="United States Coins">
+			<heading id="UnitedStatesCoins" title="United States Coins">
 				<synonym value="Us/Dollar System"/>
 				<heading id="Penny" title="Penny">
 					<synonym value="Pennies"/>
@@ -5058,7 +5122,7 @@
 				<heading id="Litra" title="Litra">
 					<synonym value="Litras"/>
 				</heading>
-				<heading id="16litraipiece" title="16 Litrai Piece"/>
+				<heading id="SixteenLitraiPc" title="16 Litrai Piece"/>
 				<heading id="Pentokion" title="Pentokion">
 					<synonym value="Pentokion"/>
 				</heading>
@@ -5068,7 +5132,7 @@
 			</heading>
 			<heading id="Ancientpersiancoins" title="Ancient Persian Coins">
 				<heading id="Siglos" title="Siglos">
-					<heading id="2stater" title="2 Stater"/>
+					<heading id="Twostater" title="2 Stater"/>
 				</heading>
 			</heading>
 			<heading id="Ancientromancoins" title="Ancient Roman Coins">
@@ -5102,12 +5166,12 @@
 						<synonym value="Aes (Uncial Standard)"/>
 					</heading>
 					<heading id="Aesfolles" title="Aes Folles">
-						<heading id="Aesfolles4" title="Aes Folles (4)"/>
-						<heading id="Aesfollesr3" title="Aes Folles (R3)"/>
-						<heading id="Aesfolless" title="Aes Folles (S)"/>
-						<heading id="Aesfollesr4" title="Aes Folles (R 4)"/>
-						<heading id="Aesfollesr1" title="Aes Folles (R1)"/>
-						<heading id="Aesfollesc1" title="Aes Folles (C1)"/>
+						<heading id="AesfollesFour" title="Aes Folles (4)"/>
+						<heading id="AesfollesRThree" title="Aes Folles (R3)"/>
+						<heading id="AesfollesS" title="Aes Folles (S)"/>
+						<heading id="AesfollesRFour" title="Aes Folles (R 4)"/>
+						<heading id="AesfollesROne" title="Aes Folles (R1)"/>
+						<heading id="AesfollesCOne" title="Aes Folles (C1)"/>
 					</heading>
 					<heading id="Aesgrave" title="Aes Grave">
 						<heading id="Aesgravelibral" title="Aes Grave; Libral"/>
@@ -5344,6 +5408,7 @@
 		</heading>
 		<heading id="Torch" title="Torch">
 			<synonym value="Torches"/>
+			<synonym value="Torchs"/> <!-- Misspelling -->
 		</heading>
 		<heading id="TorchHolder" title="Torch-Holder">
 			<synonym value="Torch-Holders"/>
@@ -5810,7 +5875,9 @@
 			<excl value="Lantern Slide"/>
 			<excl value="Lantern Slides"/>
 		</heading>
-		<heading id="Lustre" title="Lustre">
+		<heading id="Luster" title="Luster">
+			<synonym value="Lusters"/>
+			<synonym value="Lustre"/>
 			<synonym value="Lustres"/>
 		</heading>
 		<heading id="Peerman" title="Peerman">
@@ -5826,7 +5893,8 @@
 			<synonym value="Snuffer Stands"/>
 		</heading>
 		<heading id="Torch" title="Torch">
-			<synonym value="Torchs"/>
+			<synonym value="Torches"/>
+			<synonym value="Torchs"/><!-- Misspelling -->
 		</heading>
 		<heading id="TorchHolder" title="Torch Holder">
 			<synonym value="Torch Holders"/>
@@ -5878,7 +5946,8 @@
 			<synonym value="Caudle-Cups"/>
 		</heading>
 		<heading id="Crutch" title="Crutch">
-			<synonym value="Crutchs"/>
+			<synonym value="Crutches"/>
+			<synonym value="Crutchs"/><!-- Misspelling -->
 		</heading>
 		<heading id="Dentures" title="Dentures">
 			<synonym value="Denture"/>
@@ -6138,7 +6207,8 @@
 			<synonym value="Panels"/>
 		</heading>
 		<heading id="Patch" title="Patch">
-			<synonym value="Patchs"/>
+			<synonym value="Patches"/>
+			<synonym value="Patchs"/><!-- Misspelling -->
 		</heading>
 		<heading id="Peg" title="Peg">
 			<synonym value="Pegs"/>
@@ -6677,7 +6747,7 @@
 				<synonym value="Musical Scratchers"/>
 			</heading>
 			<heading id="MusicalWatch" title="Musical Watch">
-				<synonym value="Musical Watchs"/>
+				<synonym value="Musical Watches"/>
 			</heading>
 			<heading id="MusicBook" title="Music-Book">
 				<synonym value="Music-Books"/>
@@ -7356,7 +7426,7 @@
 			            	<synonym value="Bowl With Rattle"/>  
 			            	<synonym value="Bowl With Rattles"/>  
 			            </heading>
-			        	<heading id="Braceletankletrattle" title="Bracelet/Anklet Rattle">
+			        	<heading id="BraceletAnkletRattle" title="Bracelet/Anklet Rattle">
 			        		<synonym value="Bracelet/Anklet Rattles"/>       
 			        		<synonym value="Arm Rattle"/>
 			        		<synonym value="Arm Rattles"/> 
@@ -7969,9 +8039,15 @@
 			    </heading>
 			</heading>
 		</heading>
-		<heading id="PuppetPerFart" title="Puppets" noMatch="true"/>
+		<heading id="PuppetPerfArt" title="Puppets" noMatch="true"/>
 		<heading id="Scenery" title="Scenery"/>
-		<heading id="TheatreCostume" title="Theatre-Costume"/>
+		<heading id="TheaterCostume" title="Theater Costume">
+			<synonym value="Theater Costumes"/>
+			<synonym value="Theatre Costume"/>
+			<synonym value="Theatre Costumes"/>
+			<synonym value="Theatre-Costume"/>
+			<synonym value="Theatre-Costumes"/>
+		</heading>
 	</heading>
 	<heading id="PersonalOrnament" title="Personal Ornament">  <!-- Includes Jewellery -->
 		<synonym value="Personal Ornaments"/>
@@ -8436,7 +8512,9 @@
 			<synonym value="Knapping Fragments"/>
 		</heading>
 		<heading id="MatrixProdReplic" title="Matrix">
-			<synonym value="Matrixs"/>
+			<synonym value="Matrices"/>
+			<synonym value="Matrixes"/>
+			<synonym value="Matrixs"/><!-- Misspelling -->
 		</heading>
 		<heading id="MicroburinProdRepl" title="Microburin">
 			<synonym value="Microburins"/>
@@ -8569,10 +8647,10 @@
 		<heading id="BaptismalShellRelRit" title="Baptismal Shell">
 			<synonym value="Baptismal Shells"/>
 		</heading>
-		<heading id="BiJadeDisk2RelRit" title="Bi" noMatch="true">
+		<heading id="BiJadeDiskRelRit" title="Bi" noMatch="true">
 			<synonym value="Bis"/>
 		</heading>
-		<heading id="BodyPaint1RelRit" title="Body-Paint" noMatch="true"/>
+		<heading id="BodyPaintRelRit" title="Body-Paint" noMatch="true"/>
 		<heading id="CandelonRelRit" title="Candelon">
 			<synonym value="Candelons"/>
 		</heading>
@@ -8785,7 +8863,7 @@
 			<synonym value="Padukas"/>
 		</heading>
 		<heading id="PaxRelRit" title="Pax">
-			<synonym value="Paxs"/>
+			<!-- <synonym value="xxxxxxx"/> Is there a plural form for this concept? -->
 		</heading>
 		<heading id="PenitentialChainRelRit" title="Penitential Chain">
 			<synonym value="Penitential Chains"/>
@@ -8797,7 +8875,8 @@
 			<synonym value="Phylacteries"/>
 		</heading>
 		<heading id="PhylacteryPouchRelRit" title="Phylactery-Pouch">
-			<synonym value="Phylactery-Pouchs"/>
+			<synonym value="Phylactery-Pouches"/>
+			<synonym value="Phylactery-Pouchs"/><!-- Misspelling -->
 		</heading>
 		<heading id="PointingBoneRelRit" title="Pointing Bone">
 			<synonym value="Pointing Bones"/>
@@ -8939,7 +9018,7 @@
 				<synonym value="Grass Samples"/>
 			</heading>
 		</heading>
-		<heading id="C14sample" title="C-14 Sample">
+		<heading id="CFourteenSample" title="C-14 Sample">
 			<synonym value="C-14 Samples"/>
 		</heading>
 		<heading id="Carbonsample" title="Carbon Sample">
@@ -9130,25 +9209,25 @@
 		</heading>
 		<heading id="HorologicalEqSci" title="Horological Equipment">
 			<synonym value="Horological Items"/>
-			<heading id="ChronometerCase" title="Chronometer-Case">
+			<heading id="ChronometerCaseHoro" title="Chronometer-Case">
 				<synonym value="Chronometer-Cases"/>
 			</heading>
-			<heading id="ChronometerKey" title="Chronometer-Key">
+			<heading id="ChronometerKeyHoro" title="Chronometer-Key">
 				<synonym value="Chronometer-Keys"/>
 			</heading>
-			<heading id="ClockCase" title="Clock-Case">
+			<heading id="ClockCaseHoro" title="Clock-Case">
 				<synonym value="Clock-Cases"/>
 			</heading>
-			<heading id="ClockKey" title="Clock-Key">
+			<heading id="ClockKeyHoro" title="Clock-Key">
 				<synonym value="Clock-Keys"/>
 			</heading>
-			<heading id="ClockStand" title="Clock-Stand">
+			<heading id="ClockStandHoro" title="Clock-Stand">
 				<synonym value="Clock-Stands"/>
 			</heading>
-			<heading id="DustCap" title="Dust-Cap">
+			<heading id="DustCapHoro" title="Dust-Cap">
 				<synonym value="Dust-Caps"/>
 			</heading>
-			<heading id="HorologicalInstrument" title="Clocks &amp; timepieces">
+			<heading id="HorologicalInstrHoro" title="Clocks &amp; timepieces">
 				<synonym value="Horological Instrument"/>
 				<heading id="AlarmMechanism" title="Alarm-Mechanism">
 					<synonym value="Alarm-Mechanisms"/>
@@ -9390,189 +9469,191 @@
 					</heading>
 				</heading>
 				<heading id="Watch" title="Watch">
-					<synonym value="Watchs"/>
+					<synonym value="Watches"/>
 					<heading id="AlarmWatch" title="Alarm Watch">
-						<synonym value="Alarm Watchs"/>
+						<synonym value="Alarm Watches"/>
 					</heading>
 					<heading id="AntiMagneticWatch" title="Anti-Magnetic Watch">
-						<synonym value="Anti-Magnetic Watchs"/>
+						<synonym value="Anti-Magnetic Watches"/>
 					</heading>
 					<heading id="AstronomicalWatch" title="Astronomical Watch">
-						<synonym value="Astronomical Watchs"/>
+						<synonym value="Astronomical Watches"/>
 					</heading>
 					<heading id="BlindmansWatch" title="Blindman's Watch">
-						<synonym value="Blindman's Watchs"/>
+						<synonym value="Blindman's Watches"/>
 					</heading>
 					<heading id="ButtonHoleWatch" title="Button-Hole Watch">
-						<synonym value="Button-Hole Watchs"/>
+						<synonym value="Button-Hole Watches"/>
 					</heading>
 					<heading id="CalendarWatch" title="Calendar Watch">
-						<synonym value="Calendar Watchs"/>
+						<synonym value="Calendar Watches"/>
 					</heading>
-					<heading id="CentreSecondsWatch" title="Centre-Seconds Watch">
-						<synonym value="Centre-Seconds Watchs"/>
+					<heading id="CenterSecondsWatch" title="Center-Seconds Watch">
+						<synonym value="Centre-Seconds Watch"/>
+						<synonym value="Centre-Seconds Watches"/>
+						<synonym value="Center-Seconds Watches"/>
 					</heading>
 					<heading id="ChatelaineWatch" title="Chatelaine-Watch">
-						<synonym value="Chatelaine-Watchs"/>
+						<synonym value="Chatelaine-Watches"/>
 					</heading>
 					<heading id="ChineseMarketWatch" title="Chinese Market Watch">
-						<synonym value="Chinese Market Watchs"/>
+						<synonym value="Chinese Market Watches"/>
 					</heading>
 					<heading id="ChronographWatch" title="Chronograph Watch">
-						<synonym value="Chronograph Watchs"/>
+						<synonym value="Chronograph Watches"/>
 					</heading>
 					<heading id="ChronometerWatch" title="Chronometer Watch">
-						<synonym value="Chronometer Watchs"/>
+						<synonym value="Chronometer Watches"/>
 					</heading>
 					<heading id="ClockWatch" title="Clock-Watch">
-						<synonym value="Clock-Watchs"/>
+						<synonym value="Clock-Watches"/>
 					</heading>
 					<heading id="CoachWatch" title="Coach Watch">
-						<synonym value="Coach Watchs"/>
+						<synonym value="Coach Watches"/>
 					</heading>
 					<heading id="DecimalDialWatch" title="Decimal-Dial Watch">
-						<synonym value="Decimal-Dial Watchs"/>
+						<synonym value="Decimal-Dial Watches"/>
 					</heading>
 					<heading id="DifferentialDialWatch" title="Differential-Dial Watch">
-						<synonym value="Differential-Dial Watchs"/>
+						<synonym value="Differential-Dial Watches"/>
 					</heading>
 					<heading id="DigitalWatch" title="Digital Watch">
-						<synonym value="Digital Watchs"/>
+						<synonym value="Digital Watches"/>
 					</heading>
 					<heading id="DoubleDialWatch" title="Double-Dial Watch">
-						<synonym value="Double-Dial Watchs"/>
+						<synonym value="Double-Dial Watches"/>
 					</heading>
 					<heading id="DummyWatch" title="Dummy Watch">
-						<synonym value="Dummy Watchs"/>
+						<synonym value="Dummy Watches"/>
 					</heading>
 					<heading id="EquationWatch" title="Equation Watch">
-						<synonym value="Equation Watchs"/>
+						<synonym value="Equation Watches"/>
 					</heading>
 					<heading id="FlyBackHandsWatch" title="Fly-Back Hands Watch">
-						<synonym value="Fly-Back Hands Watchs"/>
+						<synonym value="Fly-Back Hands Watches"/>
 					</heading>
 					<heading id="FobWatch" title="Fob-Watch">
-						<synonym value="Fob-Watchs"/>
+						<synonym value="Fob-Watches"/>
 					</heading>
 					<heading id="HermeticWatch" title="Hermetic Watch">
-						<synonym value="Hermetic Watchs"/>
+						<synonym value="Hermetic Watches"/>
 					</heading>
 					<heading id="HunterWatch" title="Hunter Watch">
-						<synonym value="Hunter Watchs"/>
+						<synonym value="Hunter Watches"/>
 					</heading>
 					<heading id="InkingChronographWatch" title="Inking-Chronograph Watch">
-						<synonym value="Inking-Chronograph Watchs"/>
+						<synonym value="Inking-Chronograph Watches"/>
 					</heading>
 					<heading id="JapaneseWatch" title="Japanese Watch">
-						<synonym value="Japanese Watchs"/>
+						<synonym value="Japanese Watches"/>
 					</heading>
 					<heading id="JumpHourWatch" title="Jump-Hour Watch">
-						<synonym value="Jump-Hour Watchs"/>
+						<synonym value="Jump-Hour Watches"/>
 					</heading>
 					<heading id="KarusselWatch" title="Karussel Watch">
-						<synonym value="Karussel Watchs"/>
+						<synonym value="Karussel Watches"/>
 					</heading>
 					<heading id="LongDurationWatch" title="Long-Duration Watch">
-						<synonym value="Long-Duration Watchs"/>
+						<synonym value="Long-Duration Watches"/>
 					</heading>
 					<heading id="MasonicWatch" title="Masonic Watch">
-						<synonym value="Masonic Watchs"/>
+						<synonym value="Masonic Watches"/>
 					</heading>
 					<heading id="MetronomeWatch" title="Metronome-Watch">
-						<synonym value="Metronome-Watchs"/>
+						<synonym value="Metronome-Watches"/>
 					</heading>
 					<heading id="MultiTimeWatch" title="Multi-Time Watch">
-						<synonym value="Multi-Time Watchs"/>
+						<synonym value="Multi-Time Watches"/>
 					</heading>
 					<heading id="MusicalWatch" title="Musical Watch">
-						<synonym value="Musical Watchs"/>
+						<synonym value="Musical Watches"/>
 					</heading>
 					<heading id="NameDialWatch" title="Name-Dial Watch">
-						<synonym value="Name-Dial Watchs"/>
+						<synonym value="Name-Dial Watches"/>
 					</heading>
 					<heading id="NoveltyWatch" title="Novelty Watch">
-						<synonym value="Novelty Watchs"/>
+						<synonym value="Novelty Watches"/>
 					</heading>
 					<heading id="OgnionWatch" title="Ognion Watch">
-						<synonym value="Ognion Watchs"/>
+						<synonym value="Ognion Watches"/>
 					</heading>
 					<heading id="PedometerWatch" title="Pedometer Watch">
-						<synonym value="Pedometer Watchs"/>
+						<synonym value="Pedometer Watches"/>
 					</heading>
 					<heading id="PendulumWatch" title="Pendulum Watch">
-						<synonym value="Pendulum Watchs"/>
+						<synonym value="Pendulum Watches"/>
 					</heading>
 					<heading id="PocketChronometer" title="Pocket Chronometer">
 						<synonym value="Pocket Chronometers"/>
 					</heading>
 					<heading id="PullWindWatch" title="Pull-Wind Watch">
-						<synonym value="Pull-Wind Watchs"/>
+						<synonym value="Pull-Wind Watches"/>
 					</heading>
 					<heading id="PuritanWatch" title="Puritan Watch">
-						<synonym value="Puritan Watchs"/>
+						<synonym value="Puritan Watches"/>
 					</heading>
 					<heading id="RadioWatch" title="Radio-Watch">
-						<synonym value="Radio-Watchs"/>
+						<synonym value="Radio-Watches"/>
 					</heading>
 					<heading id="RepeatingWatch" title="Repeating Watch">
-						<synonym value="Repeating Watchs"/>
+						<synonym value="Repeating Watches"/>
 					</heading>
 					<heading id="RotaryWatch" title="Rotary Watch">
-						<synonym value="Rotary Watchs"/>
+						<synonym value="Rotary Watches"/>
 					</heading>
 					<heading id="SedanChairWatch" title="Sedan-Chair Watch">
-						<synonym value="Sedan-Chair Watchs"/>
+						<synonym value="Sedan-Chair Watches"/>
 					</heading>
 					<heading id="SelfWindingWatch" title="Self-Winding Watch">
-						<synonym value="Self-Winding Watchs"/>
+						<synonym value="Self-Winding Watches"/>
 					</heading>
 					<heading id="SkeletonisedWatch" title="Skeletonised Watch">
-						<synonym value="Skeletonised Watchs"/>
+						<synonym value="Skeletonised Watches"/>
 					</heading>
 					<heading id="SouscriptionWatch" title="Souscription Watch">
-						<synonym value="Souscription Watchs"/>
+						<synonym value="Souscription Watches"/>
 					</heading>
 					<heading id="StackfreedWatch" title="Stackfreed Watch">
-						<synonym value="Stackfreed Watchs"/>
+						<synonym value="Stackfreed Watches"/>
 					</heading>
 					<heading id="StrikingWatch" title="Striking Watch">
-						<synonym value="Striking Watchs"/>
+						<synonym value="Striking Watches"/>
 					</heading>
 					<heading id="SundialWatch" title="Sundial Watch">
-						<synonym value="Sundial Watchs"/>
+						<synonym value="Sundial Watches"/>
 					</heading>
 					<heading id="SunriseSunsetWatch" title="Sunrise/Sunset Watch">
-						<synonym value="Sunrise/Sunset Watchs"/>
+						<synonym value="Sunrise/Sunset Watches"/>
 					</heading>
 					<heading id="Tachymeter" title="Tachymeter">
 						<synonym value="Tachymeters"/>
 					</heading>
 					<heading id="ThirtyHourWatch" title="Thirty-Hour Watch">
-						<synonym value="Thirty-Hour Watchs"/>
+						<synonym value="Thirty-Hour Watches"/>
 					</heading>
 					<heading id="TourbillonWatch" title="Tourbillon Watch">
-						<synonym value="Tourbillon Watchs"/>
+						<synonym value="Tourbillon Watches"/>
 					</heading>
 					<heading id="TurkishMarketWatch" title="Turkish-Market Watch">
-						<synonym value="Turkish-Market Watchs"/>
+						<synonym value="Turkish-Market Watches"/>
 					</heading>
 					<heading id="WalkingStickWatch" title="Walking-Stick Watch">
-						<synonym value="Walking-Stick Watchs"/>
+						<synonym value="Walking-Stick Watches"/>
 					</heading>
 					<heading id="WanderingHourWatch" title="Wandering-Hour Watch">
-						<synonym value="Wandering-Hour Watchs"/>
+						<synonym value="Wandering-Hour Watches"/>
 					</heading>
 					<heading id="WatchComponent" title="Watch-Component">
 						<synonym value="Watch-Components"/>
 					</heading>
 					<heading id="WoodenWatch" title="Wooden Watch">
-						<synonym value="Wooden Watchs"/>
+						<synonym value="Wooden Watches"/>
 					</heading>
 					<heading id="WorldTimeWatch" title="World-Time Watch">
-						<synonym value="World-Time Watchs"/>
+						<synonym value="World-Time Watches"/>
 					</heading>
 					<heading id="WristWatch" title="Wrist-Watch">
-						<synonym value="Wrist-Watchs"/>
+						<synonym value="Wrist-Watches"/>
 					</heading>
 				</heading>
 			</heading>
@@ -9637,31 +9718,31 @@
 					<synonym value="Wheel-Cutters"/>
 				</heading>
 			</heading>
-			<heading id="WatchMovementHolder" title="Watch Movement Holder">
+			<heading id="WatchMvmntHldrHoro" title="Watch Movement Holder">
 				<synonym value="Watch Movement Holders"/>
 			</heading>
-			<heading id="WatchCase" title="Watch-Case">
+			<heading id="WatchCaseHoro" title="Watch-Case">
 				<synonym value="Watch-Cases"/>
-				<heading id="WatchAdaptor" title="Watch-Adaptor">
+				<heading id="WatchAdaptorHoro" title="Watch-Adaptor">
 					<synonym value="Watch-Adaptors"/>
 				</heading>
 			</heading>
 			<heading id="WatchChain" title="Watch-Chain">
 				<synonym value="Watch-Chains"/>
 			</heading>
-			<heading id="WatchCover" title="Watch-Cover">
+			<heading id="WatchCoverHoro" title="Watch-Cover">
 				<synonym value="Watch-Covers"/>
 			</heading>
-			<heading id="WatchHolder" title="Watch-Holder">
+			<heading id="WatchHolderHoro" title="Watch-Holder">
 				<synonym value="Watch-Holders"/>
 			</heading>
-			<heading id="WatchKey" title="Watch-Key">
+			<heading id="WatchKeyHoro" title="Watch-Key">
 				<synonym value="Watch-Keys"/>
 			</heading>
-			<heading id="WatchPaper" title="Watch-Paper">
+			<heading id="WatchPaperHoro" title="Watch-Paper">
 				<synonym value="Watch-Papers"/>
 			</heading>
-			<heading id="WatchStand" title="Watch-Stand">
+			<heading id="WatchStandHoro" title="Watch-Stand">
 				<synonym value="Watch-Stands"/>
 			</heading>
 		</heading>
@@ -10060,8 +10141,8 @@
 						<synonym value="Pierman of Istanbul"/>
 						<implies facet="Culture" cat="TurkishGroups"/>
 					</heading>
-					<heading id="KaragozShadowFigure" title="Karag‚Äö√†√∂‚Äö√†√áz (The Black-Eyed Man)"> <!-- MTB: check accents -->
-						<synonym value="Karag‚Äö√†√∂‚Äö√†√áz"/>
+					<heading id="KaragozShadowFigure" title="Karagöz (The Black-Eyed Man)"> <!-- MTB: check accents -->
+						<synonym value="Karagöz"/>
 						<synonym value="Karagoz"/>
 						<implies facet="Culture" cat="TurkishGroups"/>
 					</heading>
@@ -10303,7 +10384,8 @@
 				<synonym value="Puzzle-Cups"/>
 			</heading>
 			<heading id="Quaich" title="Quaich">
-				<synonym value="Quaichs"/>
+				<synonym value="Quaiches"/>
+				<synonym value="Quaichs"/><!-- Misspelling -->
 			</heading>
 			<heading id="Rhyton" title="Rhyton">
 				<synonym value="Rhytons"/>
@@ -10868,10 +10950,11 @@
 			<synonym value="Foot-Baths"/>
 		</heading>
 		</heading>
-		<heading id="Cosmetic" title="Cosmetic">
-			<heading id="BodyPaint2" title="Body-Paint">
+		<heading id="Cosmetics" title="Cosmetics">
+			<synonym value="Cosmetic"/>
+			<heading id="BodyPaintCosmetics" title="Body-Paint">
 				<synonym value="Body-Paints"/>
-				<implies facet="ObjectName" cat="BodyPaint1"/>
+				<implies facet="ObjectName" cat="BodyPaintRelRit"/>
 			</heading>
 			<heading id="Kohl" title="Kohl"/>
 			<heading id="Lipstick" title="Lipstick">
@@ -10898,7 +10981,8 @@
 				<synonym value="Kohl-Containers"/>
 			</heading>
 			<heading id="MascaraPouch" title="Mascara-Pouch">
-				<synonym value="Mascara-Pouchs"/>
+				<synonym value="Mascara-Pouchws"/>
+				<synonym value="Mascara-Pouchs"/> <!-- Misspelling -->
 			</heading>
 		</heading>
 		<heading id="CosmeticPalette" title="Cosmetic-Palette">
@@ -11755,7 +11839,7 @@
 				<heading id="Axe" title="Axe">
 					<synonym value="Axes"/>
 					<synonym value="Ax"/>
-					<synonym value="Axs"/>
+					<synonym value="Axs"/> <!-- Misspelling -->
 					<heading id="Axehandle" title="Axe Handle">
 						<synonym value="Axe Handles"/>
 					</heading>
