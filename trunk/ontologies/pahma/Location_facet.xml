@@ -5049,11 +5049,11 @@
 								<heading id="FortRockCave" title="Fort Rock Cave"/>
 							</heading>
 							<heading id="JacksonCoOR" title="Jackson County">
-								<excl value="Amador"/>
-								<excl value="Reservation"/>
 								<synonym value="Jackson"/>
 								<synonym value="Jackson Co."/>
 								<synonym value="OR-JA-NL"/>
+								<excl value="Amador"/>
+								<excl value="Reservation"/>
 								<heading id="Medford" title="Medford"/>
 							</heading>
 							<heading id="JeffersonCoOR" title="Jefferson County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
@@ -5106,7 +5106,6 @@
 								<heading id="BaileyHills" title="Bailey Hills"/>
 							</heading>
 							<heading id="LincolnCoOR" title="Lincoln County" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
-								<excl value="Nevada"/>
 								<!-- <synonym value="Lincoln"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<!-- <synonym value="Lincoln Co"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<!-- <synonym value="Lincoln Co."/> Need to find a way to deal with these, as synonym + excl doesn't work -->
@@ -5115,6 +5114,8 @@
 								<synonym value="Oregon; Lincoln"/>
 								<synonym value="Oregon; Lincoln Co"/>
 								<synonym value="OR-LNC-NL"/>
+								<excl value="Nevada"/>
+								<excl value="Lincoln City, OR"/>
 								<heading id="SiletzReservation" title="Siletz Reservation">
 									<synonym value="Siletz Agency"/>
 								</heading>
