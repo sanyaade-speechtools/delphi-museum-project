@@ -4637,143 +4637,194 @@
 	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment">
 		<synonym value="Culinary Equipment"/>
-		<heading id="BaconRoaster" title="Bacon-Roaster">
+		<synonym value="Cooking Implement"/>
+		<synonym value="Cooking Implements"/>
+		<synonym value="Cooking-Implement"/>
+		<synonym value="Cooking-Implements"/>
+		<heading id="BaconRoasterCookEq" title="Bacon Roaster">
+			<synonym value="Bacon Roasters"/>
 			<synonym value="Bacon-Roasters"/>
+			<synonym value="Bacon-Roasters"/>
+			<!-- Checked w/ OED: is this a pan or an oven? Unclear, term too narrow? --> 
 		</heading>
-		<heading id="BakingCup" title="Baking-Cup">
+		<heading id="BakingCupCookEq" title="Baking Cup">
+			<synonym value="Baking Cups"/>
+			<synonym value="Baking-Cup"/>
 			<synonym value="Baking-Cups"/>
 		</heading>
-		<heading id="BakingTray" title="Baking Disk">
+		<heading id="BakingTrayCookEq" title="Baking Tray">
+			<synonym value="Baking Trays"/>
+			<synonym value="Baking-Tray"/>
+			<synonym value="Baking-Trays"/>
 			<synonym value="Baking Disc"/>
-			<synonym value="Baking-Disk"/>
-			<synonym value="Baking-Disks"/>
+			<synonym value="Baking Disk"/>
 			<synonym value="Baking Disks"/>
 			<synonym value="Baking-Disk"/>
 			<synonym value="Baking-Disks"/>
 		</heading>
-		<heading id="BakingTray" title="Baking Tray">
-			<synonym value="Baking Trays"/>
-			<synonym value="Baking-Tray"/>
-			<synonym value="Baking-Trays"/>
-		</heading>
-		<heading id="BiscuitCutter" title="Biscuit-Cutter">
+		<heading id="BiscuitCutterCookEq" title="Biscuit Cutter">
+			<synonym value="Biscuit Cutters"/>
+			<synonym value="Biscuit-Cutter"/>
 			<synonym value="Biscuit-Cutters"/>
 		</heading>
-		<heading id="Boiler" title="Boiler">
-			<synonym value="Boilers"/>
-		</heading>
-		<heading id="BottleJack" title="Bottle Jack">
+		<heading id="BottleJackCookEq" title="Bottle Jack">
 			<synonym value="Bottle Jacks"/>
+			<!-- OED: "a jack for roasting meat, shaped like a bottle" Should this live with roasting equipment, somewhere else?-->
 		</heading>
-		<heading id="Breadboard" title="Breadboard">
+		<heading id="BreadboardCookEq" title="Breadboard">
 			<synonym value="Breadboards"/>
 		</heading>
-		<heading id="BreadPunch" title="Bread-Punch">
+		<heading id="BreadPunchCookEq" title="Bread Punch">
+			<synonym value="Bread Punches"/>
+			<synonym value="Bread-Punch"/>
 			<synonym value="Bread-Punchs"/> <!-- Misspelling -->
+			<synonym value="Bread-Punches"/>
 		</heading>
-		<heading id="CheeseGrater" title="Cheese-Grater">
+		<heading id="CheeseGraterCookEq" title="Cheese Grater">
+			<synonym value="Cheese Graters"/>
+			<synonym value="Cheese-Grater"/>
 			<synonym value="Cheese-Graters"/>
+			<implies facet="ObjectName" cat="GraterCheeseGrater"/>
 		</heading>
-		<heading id="ChoppingKnife" title="Chopping-Knife">
-			<synonym value="Chopping-Knifes"/>
+		<heading id="ChoppingKnifeCookEq" title="Chopping Knife">
+			<synonym value="Chopping Knifes"/> <!-- Misspelling -->
+			<synonym value="Chopping Knives"/>
+			<synonym value="Chopping-Knife"/>
+			<synonym value="Chopping-Knives"/>
 		</heading>
-		<heading id="CoconutGrater" title="Coconut-Grater">
+		<heading id="CoconutGraterCookEq" title="Coconut Grater">
+			<synonym value="Coconut Graters"/>
+			<synonym value="Coconut-Grater"/>
 			<synonym value="Coconut-Graters"/>
+			<implies facet="ObjectName" cat="GraterCoconutGrater"/>
 		</heading>
-		<heading id="CoconutScraper" title="Coconut-Scraper">
+		<heading id="CoconutScraperCookEq" title="Coconut-Scraper">
 			<synonym value="Coconut-Scrapers"/>
+			<synonym value="Coconut Scraper"/>
+			<synonym value="Coconut Scrapers"/>
 		</heading>
-		<heading id="Colander" title="Colander">
+		<heading id="ColanderCookEq" title="Colander">
 			<synonym value="Colanders"/>
 			<synonym value="Strainer"/>
 			<synonym value="Strainers"/>
 		</heading>
-		<heading id="CookingImplement" title="Cooking-Implement">
-			<synonym value="Cooking-Implements"/>
-		</heading>
-		<heading id="CookingStand" title="Cooking-Stand">
+		<heading id="CookingStandCookEq" title="Cooking-Stand">
 			<synonym value="Cooking-Stands"/>
+			<synonym value="Cooking Stand"/>
+			<synonym value="Cooking Stands"/>
 		</heading>
-		<heading id="CookingStone" title="Cooking-Stone">
+		<heading id="CookingStoneCookEq" title="Cooking-Stone">
 			<synonym value="Cooking-Stones"/>
+			<synonym value="Cooking Stone"/>
+			<synonym value="Cooking Stones"/>
 		</heading>
-		<heading id="CookingVessel" title="Cooking-Vessel">
+		<heading id="CookingVesselCookEq" title="Cooking-Vessel">
 			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Vessel -->
-			<heading id="BakingDish" title="Baking-Dish">
+			<heading id="BakingDishCookEq" title="Baking-Dish">
 				<synonym value="Baking-Dishs"/>
+				<synonym value="Baking Dish"/>
+				<synonym value="Baking Dishes"/>
 			</heading>
-			<heading id="Cauldron" title="Cauldron">
+			<heading id="CauldronCookEq" title="Cauldron">
 				<synonym value="Cauldrons"/>
+				<synonym value="Caldron"/>
+				<synonym value="Caldrons"/>
 			</heading>
-			<heading id="CookingBasket" title="Cooking-Basket">
+			<heading id="CookingBasketCookEq" title="Cooking-Basket">
 				<implies facet="Collection" cat="BasketCollection"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
+				<synonym value="Cooking Baskets"/>			
 			</heading>
-			<heading id="CookingBowl" title="Cooking-Bowl">
+			<heading id="CookingBowlCookEq" title="Cooking-Bowl">
 				<synonym value="Cooking-Bowls"/>
+				<synonym value="Cooking Bowl"/>
+				<synonym value="Cooking Bowls"/>
 			</heading>
-			<heading id="CookingPan" title="Cooking-Pan">
+			<heading id="CookingPanCookEq" title="Cooking-Pan">
 				<synonym value="Cooking-Pans"/>
+				<synonym value="Cooking Pan"/>
+				<synonym value="Cooking Pans"/>
 			</heading>
-			<heading id="CookingPot" title="Cooking-Pot">
+			<heading id="CookingPotCookEq" title="Cooking Pot">
+				<synonym value="Cooking Pots"/>
+				<synonym value="Cooking-Pot"/>
 				<synonym value="Cooking-Pots"/>
+				<synonym value="Boiler"/>
+				<synonym value="Boilers"/>
+				<synonym value="Cauldron"/>
+				<synonym value="Cauldrons"/>
+				<synonym value="Caldron"/>
+				<synonym value="Caldrons"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Pot -->
-				<heading id="Chytra" title="Chytra"/>
-				<heading id="Lopas" title="Lopas"/>
+				<heading id="ChytraCookEq" title="Chytra"/>
+				<heading id="LopasCookEq" title="Lopas"/>
 			</heading>
-			<heading id="Doka" title="Doka">
+			<heading id="DokaCookEq" title="Doka">
 				<synonym value="Dokas"/>
 			</heading>
-			<heading id="PieDish" title="Pie-Dish">
+			<heading id="PieDishCookEq" title="Pie-Dish">
 				<synonym value="Pie-Dishs"/>
+				<synonym value="Pie Pan"/>
+				<synonym value="Pie Pans"/>
+				<synonym value="Pie Plate"/>
+				<synonym value="Pie Plates"/>
 			</heading>
-			<heading id="Pipkin" title="Pipkin">
+			<heading id="PipkinCookEq" title="Pipkin">
 				<synonym value="Pipkins"/>
 			</heading>
-			<heading id="Skillet" title="Skillet">
+			<heading id="SkilletCookEq" title="Skillet">
 				<synonym value="Skillets"/>
 			</heading>
-			<heading id="Steamer" title="Steamer">
+			<heading id="SteamerCookEq" title="Steamer">
 				<synonym value="Steamers"/>
 			</heading>
 		</heading>
-		<heading id="CornGrater" title="Corn-Grater">
+		<heading id="CornGraterCookEq" title="Corn-Grater">
 			<synonym value="Corn-Graters"/>
+			<synonym value="Corn Grater"/>
+			<synonym value="Corn Graters"/>
+		</heading>
+		<heading id="CulinaryMouldCookEq" title="Culinary-Mould">
+			<synonym value="Culinary-Moulds"/>
+			<synonym value="Culinary Mould"/>
+			<synonym value="Culinary Moulds"/>
+			<synonym value="Culinary Mold"/>
+			<synonym value="Culinary Molds"/>
 		</heading>
 		<heading id="CulinaryMould" title="Culinary-Mould">
 			<synonym value="Culinary-Moulds"/>
 		</heading>
-		<heading id="DoughVat" title="Dough-Vat">
+		<heading id="DoughVatCookEq" title="Dough-Vat">
 			<synonym value="Dough-Vats"/>
 		</heading>
-		<heading id="FishDrier" title="Fish-Drier">
+		<heading id="FishDrierCookEq" title="Fish-Drier">
 			<synonym value="Fish-Driers"/>
 		</heading>
-		<heading id="FishSieve" title="Fish-Sieve">
+		<heading id="FishSieveCookEq" title="Fish-Sieve">
 			<synonym value="Fish-Sieves"/>
 		</heading>
-		<heading id="FleshHook" title="Flesh-Hook">
+		<heading id="FleshHookCookEq" title="Flesh-Hook">
 			<synonym value="Flesh-Hooks"/>
 		</heading>
-		<heading id="FoodGrinder" title="Food-Grinder">
+		<heading id="FoodGrinderCookEq" title="Food-Grinder">
 			<synonym value="Food-Grinders"/>
 		</heading>
-		<heading id="FoodPounder" title="Food-Pounder">
+		<heading id="FoodPounderCookEq" title="Food-Pounder">
 			<synonym value="Food-Pounders"/>
 		</heading>
-		<heading id="FoodScoop" title="Food-Scoop">
+		<heading id="FoodScoopCookEq" title="Food-Scoop">
 			<synonym value="Food-Scoops"/>
-			<heading id="CheeseScoop" title="Cheese Scoop">
+			<heading id="CheeseScoopCookEq" title="Cheese Scoop">
 				<synonym value="Cheese Scoops"/>
 				<synonym value="Cheese-Scoop"/>
 				<synonym value="Cheese-Scoops"/>
 			</heading>
 		</heading>
-		<heading id="FoodStamp" title="Food-Stamp">
+		<heading id="FoodStampCookEq" title="Food-Stamp">
 			<synonym value="Food-Stamps"/>
 		</heading>
-		<heading id="FoodStirrer" title="Food-Stirrer">
+		<heading id="FoodStirrerCookEq" title="Food-Stirrer">
 			<synonym value="Food-Stirrers"/>
-			<heading id="FoodPaddleCulinary" title="Food Paddle">
+			<heading id="FoodPaddleCulinaryCookEq" title="Food Paddle">
 				<synonym value="Food Paddles"/>
 				<synonym value="Food-Paddle"/>
 				<synonym value="Food-Paddles"/>
@@ -4802,25 +4853,25 @@
 		<heading id="NutmegGrater" title="Nutmeg-Grater">
 			<synonym value="Nutmeg-Graters"/>
 		</heading>
-		<heading id="NutmegRasp" title="Nutmeg-Rasp">
+		<heading id="NutmegRaspCookEq" title="Nutmeg-Rasp">
 			<synonym value="Nutmeg-Rasps"/>
 		</heading>
-		<heading id="PastryCutter" title="Pastry-Cutter">
+		<heading id="PastryCutterCookEq" title="Pastry-Cutter">
 			<synonym value="Pastry-Cutters"/>
 		</heading>
-		<heading id="RollingBoard" title="Rolling-Board">
+		<heading id="RollingBoardCookEq" title="Rolling-Board">
 			<synonym value="Rolling-Boards"/>
 		</heading>
-		<heading id="RollingPin" title="Rolling-Pin">
+		<heading id="RollingPinCookEq" title="Rolling-Pin">
 			<synonym value="Rolling-Pins"/>
 		</heading>
-		<heading id="SagoPounder" title="Sago-Pounder">
+		<heading id="SagoPounderCookEq" title="Sago-Pounder">
 			<synonym value="Sago-Pounders"/>
 		</heading>
-		<heading id="Spit" title="Spit">
+		<heading id="SpitCookEq" title="Spit">
 			<synonym value="Spits"/>
 		</heading>
-		<heading id="Toaster" title="Toaster">
+		<heading id="ToasterCookEq" title="Toaster">
 			<synonym value="Toasters"/>
 		</heading>
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
