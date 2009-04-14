@@ -4720,6 +4720,7 @@
 		</heading>
 		<heading id="CookingVesselCookEq" title="Cooking-Vessel">
 			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Vessel -->
+			<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			<heading id="BakingDishCookEq" title="Baking-Dish">
 				<synonym value="Baking-Dishs"/>
 				<synonym value="Baking Dish"/>
@@ -4748,6 +4749,8 @@
 				<synonym value="Cooking Pots"/>
 				<synonym value="Cooking-Pot"/>
 				<synonym value="Cooking-Pots"/>
+				<synonym value="Pots"/> 				
+				<synonym value="Pot"/>
 				<synonym value="Boiler"/>
 				<synonym value="Boilers"/>
 				<synonym value="Cauldron"/>
@@ -4758,8 +4761,19 @@
 				<heading id="ChytraCookEq" title="Chytra"/>
 				<heading id="LopasCookEq" title="Lopas"/>
 			</heading>
+			<heading id="CookingPan" title="Cooking Pan">
+				<synonym value="Cooking Pans"/>
+				<synonym value="Pan"/>
+				<synonym value="Pans"/>
+				<implies facet="ActivityorContext" cat="Metallurgy"/>
+			</heading>
 			<heading id="DokaCookEq" title="Doka">
 				<synonym value="Dokas"/>
+			</heading>
+			<heading id="DoughVatCookEq" title="Dough Vat"> 				
+				<synonym value="Dough Vats"/> 				
+				<synonym value="Dough-Vat"/> 				
+				<synonym value="Dough-Vats"/> 			
 			</heading>
 			<heading id="PieDishCookEq" title="Pie-Dish">
 				<synonym value="Pie-Dishs"/>
@@ -4776,6 +4790,12 @@
 			</heading>
 			<heading id="SteamerCookEq" title="Steamer">
 				<synonym value="Steamers"/>
+			</heading>
+			<heading id="Basin" title="Basin">
+				<excl value="Great Basin"/>
+				<excl value="Basin and Plain"/>
+				<excl value="Basin &amp; Plain"/>
+				<synonym value="Basins"/>
 			</heading>
 		</heading>
 		<heading id="CornGraterCookEq" title="Corn-Grater">
@@ -4842,7 +4862,7 @@
 		<heading id="Masher" title="Masher">
 			<synonym value="Mashers"/>
 		</heading>
-		<heading id="NutmegGrater" title="Nutmeg-Grater">
+		<heading id="NutmegGraterCookEq" title="Nutmeg-Grater">
 			<synonym value="Nutmeg-Graters"/>
 		</heading>
 		<heading id="NutmegRaspCookEq" title="Nutmeg-Rasp">
@@ -4866,6 +4886,7 @@
 		<heading id="ToasterCookEq" title="Toaster">
 			<synonym value="Toasters"/>
 		</heading>
+		
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
 		<heading id="FoodPreparationItems" title="Food Preparation Items" noMatch="true">
 			<synonym value="Food Preparation"/>
@@ -4962,34 +4983,7 @@
 				<implies facet="ActivityorContext" cat="Foodserving"/>
 				<implies facet="ObjectName" cat="Chocolate"/>
 			</heading>
-			<heading id="CookingVessels" title="Cooking Vessels">
-				<synonym value="Cooking Vessel"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
-				<heading id="Basin" title="Basin">
-					<excl value="Great Basin"/>
-					<excl value="Basin and Plain"/>
-					<excl value="Basin &amp; Plain"/>
-					<synonym value="Basins"/>
-				</heading>
-				<heading id="CookingPot" title="Cooking Pot">
-					<synonym value="Cooking Pots"/>
-					<synonym value="Pots"/>
-					<synonym value="Pot"/>
-				</heading>
-				<heading id="CookingBowl" title="Cooking Bowl">
-					<synonym value="Cooking Bowls"/>
-				</heading>
-				<heading id="CookingPan" title="Cooking Pan">
-					<synonym value="Cooking Pans"/>
-					<synonym value="Pan"/>
-					<synonym value="Pans"/>
-					<implies facet="ActivityorContext" cat="Metallurgy"/>
-				</heading>
-				<heading id="DoughVatCookEq" title="Dough Vat">
-					<synonym value="Dough Vats"/>
-					<synonym value="Dough-Vat"/>
-					<synonym value="Dough-Vats"/>
-			</heading>
+		
 			<heading id="Dish" title="Dish">
 				<synonym value="Dishes"/>
 				<implies facet="ActivityorContext" cat="Foodserving"/>
@@ -5167,8 +5161,7 @@
 			</heading>
 		</heading>
 	</heading>
-	</heading>
-		<heading id="Currency" title="Currency">
+	<heading id="Currency" title="Currency">
 		<synonym value="Currencies"/>
 		<heading id="Banknote" title="Banknote">
 			<synonym value="Banknotes"/>
