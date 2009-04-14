@@ -6848,6 +6848,283 @@
 			<synonym value="Jester's Staffs"/>
 		</heading>
 		<heading id="MusicEquipment" title="Music Equipment">
+			<heading id="StringedInstruments" title="Stringed Instruments">
+				<synonym value="Stringed Instrument"/>
+				<synonym value="String Instrument"/>
+				<synonym value="String Instruments"/>
+				<synonym value="Chordophone"/>
+				<synonym value="Chordophones"/>
+				<synonym value="Stringed"/>
+				<synonym value="Strings"/>
+				<heading id="Banjo" title="Banjo"> <!-- implied materials: gourd -->
+					<excl value="Abalone"/> <!-- Excludes abalone "banjo" -->
+					<excl value="Haliotis"/> <!-- Excludes "Haliotis, banjo type" -->
+					<synonym value="Banjos"/>
+					<synonym value="Banjoes"/>
+					<synonym value="Yugoslav Banjo"/> <!-- from old DB: "Yugoslav banjo-like stringed instrument" [sic] -->
+					<synonym value="Yugoslav Banjos"/>
+					<synonym value="Yugoslav Banjoes"/>
+					<heading id="GourdBanjo" title="Gourd Banjo"> 
+						<synonym value="Gourd Banjos"/>
+						<synonym value="Gourd Banjoes"/>
+						<implies facet="Material" cat="GourdPlantMaterial"/>
+					</heading>
+				</heading>
+				<heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Esraj, Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
+					<synonym value="Bowed Instruments"/>		        
+					<synonym value="Bow Instrument"/>
+					<synonym value="Bow Instruments"/>
+					<excl value="Harp"/> 
+					<excl value="Harps"/> 
+					<heading id="Esraj" title="Esraj">
+						<heading id="EsrajBow" title="Esraj Bow">
+							<synonym value="Esraj Bows"/>
+							<synonym value="Esrajs Bow"/>
+							<synonym value="Esrajs Bows"/>
+							<synonym value="Esraj With Bow"/>
+							<synonym value="Esraj With Bows"/>
+							<synonym value="Esrajs With Bow"/>
+							<synonym value="Esrajs With Bows"/>	
+							<synonym value="Israj Bow"/>
+							<synonym value="Israj Bows"/>
+							<synonym value="Israjs Bow"/>
+							<synonym value="Israjs Bows"/>
+							<synonym value="Israj With Bow"/>
+							<synonym value="Israj With Bows"/>
+							<synonym value="Israjs With Bow"/>
+							<synonym value="Israjs With Bows"/>
+							<implies facet="ObjectName" cat="BowEsrajBow"/>
+						</heading>
+						<synonym value="Esrajs"/>
+						<synonym value="Israj"/>
+						<synonym value="Israjs"/>
+					</heading>
+					<heading id="Fiddle" title="Fiddle">
+						<heading id="FiddleBow" title="Fiddle Bow">
+							<synonym value="Fiddle With Bow"/>
+							<synonym value="Fiddles With Bow"/>
+							<synonym value="Fiddle With Bows"/>
+							<synonym value="Fiddles With Bows"/>
+							<synonym value="Fiddle Bow"/>
+							<synonym value="Fiddle Bows"/>	
+							<synonym value="Tube Fiddle With Bow"/>
+							<synonym value="Tube Fiddles With Bow"/>
+							<synonym value="Tube Fiddle With Bows"/>
+							<synonym value="Tube Fiddles With Bows"/>
+							<synonym value="Tube Fiddle Bow"/>
+							<synonym value="Tube Fiddle Bows"/>
+							<implies facet="ObjectName" cat="BowFiddleBow"/>
+						</heading>
+						<synonym value="Fiddles"/>
+						<synonym value="Tube Fiddle"/>
+						<synonym value="Tube Fiddles"/>
+					</heading>
+					<heading id="MusicBow" title="Music Bow"> <!-- includes: bows of all string instruments, bow resin, vibrator (as name for bow) -->
+						<synonym value="Music Bows"/>
+						<synonym value="Musical Bow"/>
+						<synonym value="Musical Bows"/>
+						<synonym value="Vibrator"/>
+						<synonym value="Vibrators"/>
+						<synonym value="Music Vibrator"/>
+						<synonym value="Music Vibrators"/>
+						<synonym value="Musical Vibrator"/>
+						<synonym value="Musical Vibrators"/>
+						<heading id="Bowresin" title="Bow resin">
+							<synonym value="Bow Resins"/>
+							<synonym value="Music Bow Resin"/>
+							<synonym value="Music Bow Resins"/>
+							<synonym value="Musical Bow Resin"/>
+							<synonym value="Musical Bow Resins"/>
+						</heading>
+						<heading id="ChildsMusicBow" title="Child's Music Bow">
+							<synonym value="Child's Music Bows"/>
+							<synonym value="Child's Musical Bow"/>
+							<synonym value="Child's Musical Bows"/>
+							<synonym value="Child Music Bow"/>
+							<synonym value="Child Music Bows"/>
+							<synonym value="Child Musical Bow"/>
+							<synonym value="Child Musical Bows"/>
+							<synonym value="Children Music Bow"/>
+							<synonym value="Children Music Bows"/>
+							<synonym value="Children Musical Bow"/>
+							<synonym value="Children Musical Bows"/>            
+							<synonym value="Music Bow For Child"/>
+							<synonym value="Music Bows For Child"/>
+							<synonym value="Musical Bow For Child"/>
+							<synonym value="Musical Bows For Child"/> 
+							<synonym value="Music Bow For Children"/>
+							<synonym value="Music Bows For Children"/>
+							<synonym value="Musical Bow For Children"/>
+							<synonym value="Musical Bows For Children"/>
+						</heading>
+						<heading id="AdultsMusicBow" title="Adult's Music Bow">
+							<synonym value="Adult's Music Bows"/>
+							<synonym value="Adult's Musical Bow"/>
+							<synonym value="Adult's Musical Bows"/>
+							<synonym value="Adult Music Bow"/>
+							<synonym value="Adult Music Bows"/>
+							<synonym value="Adult Musical Bow"/>
+							<synonym value="Adult Musical Bows"/>
+							<synonym value="Adults Music Bow"/>
+							<synonym value="Adults Music Bows"/>
+							<synonym value="Adults Musical Bow"/>
+							<synonym value="Adults Musical Bows"/> 
+							<synonym value="Music Bow For Adult"/>
+							<synonym value="Music Bows For Adult"/>
+							<synonym value="Musical Bow For Adult"/>
+							<synonym value="Musical Bows For Adult"/> 
+							<synonym value="Music Bow For Adults"/>
+							<synonym value="Music Bows For Adults"/>
+							<synonym value="Musical Bow For Adults"/>
+							<synonym value="Musical Bows For Adults"/> 
+						</heading>
+						<heading id="BowEsrajBow" title="Bow: Esraj Bow" noMatch="true"/>
+						<heading id="BowFiddleBow" title="Bow: Fiddle Bow" noMatch="true"/>
+						<heading id="BowRavanhathaBow" title="Bow: Ravanhatha Bow" noMatch="true"/>
+						<heading id="BowRebabBow" title="Bow: Rebab Bow" noMatch="true"/>
+						<heading id="BowSarangiBow" title="Bow: Sarangi Bow" noMatch="true"/>
+						<heading id="BowViolinBow" title="Bow: Violin Bow" noMatch="true"/>
+					</heading>
+					<heading id="Ravanhatha" title="Ravanhatha"> <!-- includes alternate spelling: Ravanhatta -->
+						<heading id="RavanhathaBow" title="Ravanhatha Bow">
+							<synonym value="Ravanhatha With Bow"/>
+							<synonym value="Ravanhathas With Bow"/>
+							<synonym value="Ravanhatha With Bows"/>
+							<synonym value="Ravanhathas With Bows"/>
+							<synonym value="Ravanhatha Bow"/>
+							<synonym value="Ravanhatha Bows"/>		
+							<synonym value="Ravanhatta With Bow"/>
+							<synonym value="Ravanhattas With Bow"/>
+							<synonym value="Ravanhatta With Bows"/>
+							<synonym value="Ravanhattas With Bows"/>
+							<synonym value="Ravanhatta Bow"/>
+							<synonym value="Ravanhattas Bows"/>
+							<implies facet="ObjectName" cat="BowRavanhathaBow"/>
+						</heading>
+						<synonym value="Ravanhathas"/>
+						<synonym value="Ravanhatta"/>
+						<synonym value="Ravanhattas"/>
+					</heading>
+					<heading id="Rebab" title="Rebab">
+						<heading id="RebabBow" title="Rebab Bow">
+							<synonym value="Rebab With Bow"/>
+							<synonym value="Rebabs With Bow"/>
+							<synonym value="Rebab With Bows"/>
+							<synonym value="Rebabs With Bows"/>
+							<synonym value="Rebab Bow"/>
+							<synonym value="Rebab Bows"/>
+							<implies facet="ObjectName" cat="BowRebabBow"/>
+						</heading>
+						<synonym value="Rebabs"/>
+					</heading>
+					<heading id="Sarangi" title="Sarangi">
+						<heading id="SarangiBow" title="Sarangi Bow">
+							<synonym value="Sarangi With Bow"/>
+							<synonym value="Sarangis With Bow"/>
+							<synonym value="Sarangi With Bows"/>
+							<synonym value="Sarangis With Bows"/>
+							<synonym value="Sarangi Bow"/>
+							<synonym value="Sarangi Bows"/>
+							<implies facet="ObjectName" cat="BowSarangiBow"/>
+						</heading>
+						<synonym value="Sarangis"/>
+					</heading>	
+					<heading id="Violin" title="Violin">
+						<heading id="ViolinBow" title="Violin Bow">
+							<synonym value="Violin With Bow"/>
+							<synonym value="Violins With Bow"/>
+							<synonym value="Violin With Bows"/>
+							<synonym value="Violins With Bows"/>
+							<synonym value="Violin Bow"/>
+							<synonym value="Violin Bows"/>
+							<synonym value="2-Stringed Violin With Bow"/>
+							<synonym value="2-Stringed Violins With Bow"/>
+							<synonym value="2-Stringed Violin With Bows"/>
+							<synonym value="2-Stringed Violins With Bows"/>
+							<synonym value="2-Stringed Violin Bow"/>
+							<synonym value="2-Stringed Violin Bows"/>
+							<synonym value="Two-Stringed Violin With Bow"/>
+							<synonym value="Two-Stringed Violins With Bow"/>
+							<synonym value="Two-Stringed Violin With Bows"/>
+							<synonym value="Two-Stringed Violins With Bows"/>
+							<synonym value="Two-Stringed Violin Bow"/>
+							<synonym value="Two-Stringed Violin Bows"/>
+							<synonym value="2-String Violin With Bow"/>
+							<synonym value="2-String Violins With Bow"/>
+							<synonym value="2-String Violin With Bows"/>
+							<synonym value="2-String Violins With Bows"/>
+							<synonym value="2-String Violin Bow"/>
+							<synonym value="2-String Violin Bows"/>
+							<synonym value="Two-String Violin With Bow"/>
+							<synonym value="Two-String Violins With Bow"/>
+							<synonym value="Two-String Violin With Bows"/>
+							<synonym value="Two-String Violins With Bows"/>
+							<synonym value="Two-String Violin Bow"/>
+							<synonym value="Two-String Violin Bows"/>
+							<implies facet="ObjectName" cat="BowViolinBow"/>	        		
+						</heading>
+						<synonym value="Violins"/>
+						<synonym value="2-Stringed Violin"/>
+						<synonym value="2-Stringed Violins"/>
+						<synonym value="Two-Stringed Violin"/>
+						<synonym value="Two-Stringed Violins"/>
+						<synonym value="2-String Violin"/>
+						<synonym value="2-String Violins"/>
+						<synonym value="Two-String Violin"/>
+						<synonym value="Two-String Violins"/>
+					</heading>
+				</heading>
+				<heading id="Guitar" title="Guitar"> <!-- includes dobro -->
+					<synonym value="Guitars"/>
+					<heading id="Dobro" title="Dobro">
+						<synonym value="Dobros"/>
+					</heading>
+				</heading>
+				<heading id="Harp" title="Harp"> <!-- includes: Bow Harp, Harp-Like -->
+					<synonym value="Harps"/>
+					<synonym value="Harp-Like"/> <!-- from old DB: "Harp-like Instrument" [sic] -->
+					<synonym value="Harp-like"/>
+					<heading id="Bow Harp" title="Bow Harp">
+						<synonym value="Bow Harps"/>
+					</heading>
+				</heading>
+				<heading id="Harpsichord" title="Harpsichord">
+					<synonym value="Harpsichords"/>
+				</heading>
+				<heading id="Jantar" title="Jantar"> <!-- confirm: does Jantar mean "string instrument" or simply "instrument"? -->
+					<synonym value="Jantars"/>
+					<synonym value="String Jantar"/>
+					<synonym value="String Jantars"/>
+					<synonym value="Stringed Jantar"/>
+					<synonym value="Stringed Jantars"/>
+				</heading>
+				<heading id="Koto" title="Koto">
+					<synonym value="Kotos"/>
+					<synonym value="Koto-Type"/> <!-- from old DB: "3 koto-type stringed instruments" [sic] -->
+					<synonym value="Koto Type"/>
+				</heading>
+				<heading id="LuteInstrument" title="Lute">
+					<synonym value="Lutes"/>
+					<synonym value="Kerar"/>
+					<synonym value="Kerars"/>
+				</heading>
+				<heading id="Lyre" title="Lyre">
+					<synonym value="Lyres"/>
+					<synonym value="Bowl-Lyre"/> <!-- infer bowl shape, not material made of bowls -->
+					<synonym value="Bowl-Lyres"/>
+					<synonym value="Bowl Lyre"/>
+					<synonym value="Bowl Lyres"/>
+				</heading>	        
+				<heading id="Sitar" title="Sitar">
+					<synonym value="Sitars"/>
+				</heading>
+				<heading id="Ukelele" title="Ukelele">
+					<synonym value="Ukeleles"/>
+				</heading>
+				<heading id="Zither" title="Zither">
+					<synonym value="Zithers"/>
+				</heading>
+			</heading>
 			<heading id="BellHolder" title="Bell-Holder">
 				<synonym value="Bell-Holders"/>
 			</heading>
@@ -7127,284 +7404,7 @@
 				<synonym value="Noisemakers"/>
 				<synonym value="Toy Instrument"/>
 				<synonym value="Toy Instruments"/>
-				<heading id="StringedInstruments" title="Stringed Instruments">
-			        <synonym value="Stringed Instrument"/>
-			    	<synonym value="String Instrument"/>
-			    	<synonym value="String Instruments"/>
-			        <synonym value="Chordophone"/>
-			        <synonym value="Chordophones"/>
-					<synonym value="Stringed"/>
-					<synonym value="Strings"/>
-					<heading id="Banjo" title="Banjo"> <!-- implied materials: gourd -->
-			            <excl value="Abalone"/> <!-- Excludes abalone "banjo" -->
-			            <excl value="Haliotis"/> <!-- Excludes "Haliotis, banjo type" -->
-			            <synonym value="Banjos"/>
-			            <synonym value="Banjoes"/>
-			            <synonym value="Yugoslav Banjo"/> <!-- from old DB: "Yugoslav banjo-like stringed instrument" [sic] -->
-			            <synonym value="Yugoslav Banjos"/>
-			            <synonym value="Yugoslav Banjoes"/>
-			            <heading id="GourdBanjo" title="Gourd Banjo"> 
-			                <synonym value="Gourd Banjos"/>
-			                <synonym value="Gourd Banjoes"/>
-			                <implies facet="Material" cat="GourdPlantMaterial"/>
-			            </heading>
-			        </heading>
-				    <heading id="BowedInstrument" title="Bowed Instrument"> <!-- includes: Esraj, Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
-				        <synonym value="Bowed Instruments"/>		        
-				        <synonym value="Bow Instrument"/>
-				        <synonym value="Bow Instruments"/>
-				        <excl value="Harp"/> 
-				        <excl value="Harps"/> 
-				    	<heading id="Esraj" title="Esraj">
-				    		<heading id="EsrajBow" title="Esraj Bow">
-				    			<synonym value="Esraj Bows"/>
-				    			<synonym value="Esrajs Bow"/>
-				    			<synonym value="Esrajs Bows"/>
-				    			<synonym value="Esraj With Bow"/>
-				    			<synonym value="Esraj With Bows"/>
-				    			<synonym value="Esrajs With Bow"/>
-				    			<synonym value="Esrajs With Bows"/>	
-				    			<synonym value="Israj Bow"/>
-				    			<synonym value="Israj Bows"/>
-				    			<synonym value="Israjs Bow"/>
-				    			<synonym value="Israjs Bows"/>
-				    			<synonym value="Israj With Bow"/>
-				    			<synonym value="Israj With Bows"/>
-				    			<synonym value="Israjs With Bow"/>
-				    			<synonym value="Israjs With Bows"/>
-				    			<implies facet="ObjectName" cat="BowEsrajBow"/>
-				    		</heading>
-				    		<synonym value="Esrajs"/>
-				    		<synonym value="Israj"/>
-				    		<synonym value="Israjs"/>
-				    	</heading>
-				    	<heading id="Fiddle" title="Fiddle">
-				    		<heading id="FiddleBow" title="Fiddle Bow">
-				    			<synonym value="Fiddle With Bow"/>
-				    			<synonym value="Fiddles With Bow"/>
-				    			<synonym value="Fiddle With Bows"/>
-				    			<synonym value="Fiddles With Bows"/>
-				    			<synonym value="Fiddle Bow"/>
-				    			<synonym value="Fiddle Bows"/>	
-				    			<synonym value="Tube Fiddle With Bow"/>
-				    			<synonym value="Tube Fiddles With Bow"/>
-				    			<synonym value="Tube Fiddle With Bows"/>
-				    			<synonym value="Tube Fiddles With Bows"/>
-				    			<synonym value="Tube Fiddle Bow"/>
-				    			<synonym value="Tube Fiddle Bows"/>
-				    			<implies facet="ObjectName" cat="BowFiddleBow"/>
-				    		</heading>
-				            <synonym value="Fiddles"/>
-				            <synonym value="Tube Fiddle"/>
-				            <synonym value="Tube Fiddles"/>
-				        </heading>
-		    		    <heading id="MusicBow" title="Music Bow"> <!-- includes: bows of all string instruments, bow resin, vibrator (as name for bow) -->
-		    	            <synonym value="Music Bows"/>
-		    	            <synonym value="Musical Bow"/>
-		    	            <synonym value="Musical Bows"/>
-		    		    	<synonym value="Vibrator"/>
-		    		    	<synonym value="Vibrators"/>
-		    		    	<synonym value="Music Vibrator"/>
-		    		    	<synonym value="Music Vibrators"/>
-		    		    	<synonym value="Musical Vibrator"/>
-		    		    	<synonym value="Musical Vibrators"/>
-		    	            <heading id="Bowresin" title="Bow resin">
-		        	            <synonym value="Bow Resins"/>
-		        	            <synonym value="Music Bow Resin"/>
-		        	            <synonym value="Music Bow Resins"/>
-		        	            <synonym value="Musical Bow Resin"/>
-		        	            <synonym value="Musical Bow Resins"/>
-		    	            </heading>
-		    	            <heading id="ChildsMusicBow" title="Child's Music Bow">
-		    	                <synonym value="Child's Music Bows"/>
-		    	                <synonym value="Child's Musical Bow"/>
-		    	                <synonym value="Child's Musical Bows"/>
-		    	                <synonym value="Child Music Bow"/>
-		    	                <synonym value="Child Music Bows"/>
-		    	                <synonym value="Child Musical Bow"/>
-		    	                <synonym value="Child Musical Bows"/>
-		    	                <synonym value="Children Music Bow"/>
-		    	                <synonym value="Children Music Bows"/>
-		    	                <synonym value="Children Musical Bow"/>
-		    	                <synonym value="Children Musical Bows"/>            
-		    	                <synonym value="Music Bow For Child"/>
-		    	                <synonym value="Music Bows For Child"/>
-		    	                <synonym value="Musical Bow For Child"/>
-		    	                <synonym value="Musical Bows For Child"/> 
-		    	                <synonym value="Music Bow For Children"/>
-		    	                <synonym value="Music Bows For Children"/>
-		    	                <synonym value="Musical Bow For Children"/>
-		    	                <synonym value="Musical Bows For Children"/>
-		    	            </heading>
-		    	            <heading id="AdultsMusicBow" title="Adult's Music Bow">
-		    	                <synonym value="Adult's Music Bows"/>
-		    	                <synonym value="Adult's Musical Bow"/>
-		    	                <synonym value="Adult's Musical Bows"/>
-		    	                <synonym value="Adult Music Bow"/>
-		    	                <synonym value="Adult Music Bows"/>
-		    	                <synonym value="Adult Musical Bow"/>
-		    	                <synonym value="Adult Musical Bows"/>
-		    	                <synonym value="Adults Music Bow"/>
-		    	                <synonym value="Adults Music Bows"/>
-		    	                <synonym value="Adults Musical Bow"/>
-		    	                <synonym value="Adults Musical Bows"/> 
-		    	                <synonym value="Music Bow For Adult"/>
-		    	                <synonym value="Music Bows For Adult"/>
-		    	                <synonym value="Musical Bow For Adult"/>
-		    	                <synonym value="Musical Bows For Adult"/> 
-		    	                <synonym value="Music Bow For Adults"/>
-		    	                <synonym value="Music Bows For Adults"/>
-		    	                <synonym value="Musical Bow For Adults"/>
-		    	                <synonym value="Musical Bows For Adults"/> 
-		    	            </heading>
-		    		    	<heading id="BowEsrajBow" title="Bow: Esraj Bow" noMatch="true"/>
-		    		    	<heading id="BowFiddleBow" title="Bow: Fiddle Bow" noMatch="true"/>
-		    		    	<heading id="BowRavanhathaBow" title="Bow: Ravanhatha Bow" noMatch="true"/>
-		    		    	<heading id="BowRebabBow" title="Bow: Rebab Bow" noMatch="true"/>
-		    		    	<heading id="BowSarangiBow" title="Bow: Sarangi Bow" noMatch="true"/>
-		    		    	<heading id="BowViolinBow" title="Bow: Violin Bow" noMatch="true"/>
-		    		    </heading>
-				        <heading id="Ravanhatha" title="Ravanhatha"> <!-- includes alternate spelling: Ravanhatta -->
-				            <heading id="RavanhathaBow" title="Ravanhatha Bow">
-				            	<synonym value="Ravanhatha With Bow"/>
-				            	<synonym value="Ravanhathas With Bow"/>
-				            	<synonym value="Ravanhatha With Bows"/>
-				            	<synonym value="Ravanhathas With Bows"/>
-				            	<synonym value="Ravanhatha Bow"/>
-				            	<synonym value="Ravanhatha Bows"/>		
-				            	<synonym value="Ravanhatta With Bow"/>
-				            	<synonym value="Ravanhattas With Bow"/>
-				            	<synonym value="Ravanhatta With Bows"/>
-				            	<synonym value="Ravanhattas With Bows"/>
-				            	<synonym value="Ravanhatta Bow"/>
-				            	<synonym value="Ravanhattas Bows"/>
-				            	<implies facet="ObjectName" cat="BowRavanhathaBow"/>
-				            </heading>
-				        	<synonym value="Ravanhathas"/>
-				            <synonym value="Ravanhatta"/>
-				            <synonym value="Ravanhattas"/>
-				        </heading>
-				        <heading id="Rebab" title="Rebab">
-				        	<heading id="RebabBow" title="Rebab Bow">
-				        		<synonym value="Rebab With Bow"/>
-				        		<synonym value="Rebabs With Bow"/>
-				        		<synonym value="Rebab With Bows"/>
-				        		<synonym value="Rebabs With Bows"/>
-				        		<synonym value="Rebab Bow"/>
-				        		<synonym value="Rebab Bows"/>
-				        		<implies facet="ObjectName" cat="BowRebabBow"/>
-				        	</heading>
-				            <synonym value="Rebabs"/>
-				        </heading>
-				        <heading id="Sarangi" title="Sarangi">
-				        	<heading id="SarangiBow" title="Sarangi Bow">
-				        		<synonym value="Sarangi With Bow"/>
-				        		<synonym value="Sarangis With Bow"/>
-				        		<synonym value="Sarangi With Bows"/>
-				        		<synonym value="Sarangis With Bows"/>
-				        		<synonym value="Sarangi Bow"/>
-				        		<synonym value="Sarangi Bows"/>
-				        		<implies facet="ObjectName" cat="BowSarangiBow"/>
-				        	</heading>
-				            <synonym value="Sarangis"/>
-				        </heading>	
-				        <heading id="Violin" title="Violin">
-				        	<heading id="ViolinBow" title="Violin Bow">
-				        		<synonym value="Violin With Bow"/>
-				        		<synonym value="Violins With Bow"/>
-				        		<synonym value="Violin With Bows"/>
-				        		<synonym value="Violins With Bows"/>
-				        		<synonym value="Violin Bow"/>
-				        		<synonym value="Violin Bows"/>
-				        		<synonym value="2-Stringed Violin With Bow"/>
-				        		<synonym value="2-Stringed Violins With Bow"/>
-				        		<synonym value="2-Stringed Violin With Bows"/>
-				        		<synonym value="2-Stringed Violins With Bows"/>
-				        		<synonym value="2-Stringed Violin Bow"/>
-				        		<synonym value="2-Stringed Violin Bows"/>
-				        		<synonym value="Two-Stringed Violin With Bow"/>
-				        		<synonym value="Two-Stringed Violins With Bow"/>
-				        		<synonym value="Two-Stringed Violin With Bows"/>
-				        		<synonym value="Two-Stringed Violins With Bows"/>
-				        		<synonym value="Two-Stringed Violin Bow"/>
-				        		<synonym value="Two-Stringed Violin Bows"/>
-				        		<synonym value="2-String Violin With Bow"/>
-				        		<synonym value="2-String Violins With Bow"/>
-				        		<synonym value="2-String Violin With Bows"/>
-				        		<synonym value="2-String Violins With Bows"/>
-				        		<synonym value="2-String Violin Bow"/>
-				        		<synonym value="2-String Violin Bows"/>
-				        		<synonym value="Two-String Violin With Bow"/>
-				        		<synonym value="Two-String Violins With Bow"/>
-				        		<synonym value="Two-String Violin With Bows"/>
-				        		<synonym value="Two-String Violins With Bows"/>
-				        		<synonym value="Two-String Violin Bow"/>
-				        		<synonym value="Two-String Violin Bows"/>
-				        		<implies facet="ObjectName" cat="BowViolinBow"/>	        		
-				        	</heading>
-				            <synonym value="Violins"/>
-				            <synonym value="2-Stringed Violin"/>
-				            <synonym value="2-Stringed Violins"/>
-				            <synonym value="Two-Stringed Violin"/>
-				            <synonym value="Two-Stringed Violins"/>
-				            <synonym value="2-String Violin"/>
-				            <synonym value="2-String Violins"/>
-				            <synonym value="Two-String Violin"/>
-				            <synonym value="Two-String Violins"/>
-				        </heading>
-				    </heading>
-			        <heading id="Guitar" title="Guitar"> <!-- includes dobro -->
-			            <synonym value="Guitars"/>
-			        	<heading id="Dobro" title="Dobro">
-			        		<synonym value="Dobros"/>
-			        	</heading>
-			        </heading>
-			        <heading id="Harp" title="Harp"> <!-- includes: Bow Harp, Harp-Like -->
-			            <synonym value="Harps"/>
-			            <synonym value="Harp-Like"/> <!-- from old DB: "Harp-like Instrument" [sic] -->
-			            <synonym value="Harp-like"/>
-			        	<heading id="Bow Harp" title="Bow Harp">
-			        		<synonym value="Bow Harps"/>
-			        	</heading>
-			        </heading>
-			        <heading id="Harpsichord" title="Harpsichord">
-			            <synonym value="Harpsichords"/>
-			        </heading>
-		    	    <heading id="Jantar" title="Jantar"> <!-- confirm: does Jantar mean "string instrument" or simply "instrument"? -->
-		    	        <synonym value="Jantars"/>
-		    	        <synonym value="String Jantar"/>
-		    	        <synonym value="String Jantars"/>
-		    	        <synonym value="Stringed Jantar"/>
-		    	        <synonym value="Stringed Jantars"/>
-		    	    </heading>
-			        <heading id="Koto" title="Koto">
-			            <synonym value="Kotos"/>
-			            <synonym value="Koto-Type"/> <!-- from old DB: "3 koto-type stringed instruments" [sic] -->
-			            <synonym value="Koto Type"/>
-			        </heading>
-					<heading id="LuteInstrument" title="Lute">
-						<synonym value="Lutes"/>
-						<synonym value="Kerar"/>
-						<synonym value="Kerars"/>
-					</heading>
-					<heading id="Lyre" title="Lyre">
-		    	        <synonym value="Lyres"/>
-		    	        <synonym value="Bowl-Lyre"/> <!-- infer bowl shape, not material made of bowls -->
-		    	        <synonym value="Bowl-Lyres"/>
-		    	        <synonym value="Bowl Lyre"/>
-		    	        <synonym value="Bowl Lyres"/>
-		    	    </heading>	        
-			        <heading id="Sitar" title="Sitar">
-			            <synonym value="Sitars"/>
-			        </heading>
-			        <heading id="Ukelele" title="Ukelele">
-			            <synonym value="Ukeleles"/>
-			        </heading>
-		    	    <heading id="Zither" title="Zither">
-			            <synonym value="Zithers"/>
-			        </heading>
-			    </heading>
-			    <heading id="Percussioninstruments" title="Percussion instruments">
+				<heading id="Percussioninstruments" title="Percussion instruments">
 			        <synonym value="Percussion instrument"/>
 			        <synonym value="Idiophone"/>
 			        <synonym value="Idiophones"/>
