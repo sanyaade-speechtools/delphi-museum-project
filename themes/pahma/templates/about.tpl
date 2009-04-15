@@ -54,7 +54,7 @@ Ray Larson</a> for his guidance.</p>
 <p>Thanks to Jon Lesser for his continued work on Delphi, and especially for the
 current visual design.</p>
 
-<p>Thanks to the British Museum for the use of use of parts of their
+<p>Thanks to the British Museum for the use of parts of their
 <a href="http://www.mda.org.uk/bmobj/Objintro.htm">Object Names Thesaurus</a>, under their
 generous copyright terms for non-profit use.</p>
 
