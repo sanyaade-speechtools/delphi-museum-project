@@ -11032,9 +11032,11 @@
 			<synonym value="Alcohol Items"/>
 			<heading id="BeerContainer" title="Beer-Container">
 				<synonym value="Beer-Containers"/>
+				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
 			<heading id="BeerStrainer" title="Beer-Strainer">
 				<synonym value="Beer-Strainers"/>
+				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
 			<heading id="BrandyBowl" title="Brandy-Bowl">
 				<synonym value="Brandy-Bowls"/>
@@ -11189,18 +11191,22 @@
 			</heading>
 			<heading id="WineCup" title="Wine-Cup">
 				<synonym value="Wine-Cups"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WineCupHolder" title="Wine-Cup-Holder">
 				<synonym value="Wine-Cup-Holders"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WineFunnel" title="Wine-Funnel">
 				<synonym value="Wine-Funnels"/>
 				<implies facet="ObjectName" cat="FunnelTool"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WineGlass" title="Wine Glass">
 				<synonym value="Wine Glasses"/>
 				<synonym value="Wine-Glass"/>
 				<synonym value="Wine-Glasses"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Drinking-Glass -->
 				<heading id="ChampagneGlass" title="Champagne Glass">
 					<synonym value="Champagne Glasses"/>
@@ -11209,6 +11215,7 @@
 				</heading>
 				<heading id="FluteGlass" title="Flute Glass">
 					<synonym value="Flute Glasses"/>
+					<implies facet="ObjectName" cat="WineFood"/>
 				</heading>
 				<heading id="PortGlass" title="Port Glass">
 					<synonym value="Port Glasses"/>
@@ -11226,24 +11233,30 @@
 			</heading>
 			<heading id="WineHeater" title="Wine-Heater">
 				<synonym value="Wine-Heaters"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WineLadle" title="Wine-Ladle">
 				<synonym value="Wine-Ladles"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WinePotHolder" title="Wine-Pot-Holder">
 				<synonym value="Wine-Pot-Holders"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WineStrainer" title="Wine-Strainer">
 				<synonym value="Wine-Strainers"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="WineVessel" title="Wine-Vessel">
 				<synonym value="Wine-Vessels"/>
+				<implies facet="ObjectName" cat="WineFood"/>
 			</heading>
 			<heading id="YardOfAleGlass" title="Yard-of-Ale Glass">
 				<synonym value="Yard-Of-Ale Glasses"/>
 				<synonym value="Yard-Of-Ale-Glass"/>
 				<synonym value="Yard-Of-Ale-Glasses"/>
 				<!-- implies drinking glass -->
+				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
 			<heading id="Yunomi" title="Yunomi">
 				<synonym value="Yunomis"/>
@@ -11280,6 +11293,7 @@
 		</heading>
 		<heading id="CoffeeEquipment" title="Coffee Equipment">
 			<synonym value="Coffee Items"/>
+			<implies facet="ObjectName" cat="CoffeeFood"/>
 			<heading id="CoffeeCanCfeEq" title="Coffee-Can">
 				<synonym value="Coffee-Cans"/>
 			</heading>
@@ -11288,6 +11302,7 @@
 			</heading>
 			<heading id="CoffeeCupCfeEq" title="Coffee-Cup">
 				<synonym value="Coffee-Cups"/>
+				<implies facet="ActivityorContext" cat="Coffeedrinking"/>
 			</heading>
 			<heading id="CoffeeFilterCfeEq" title="Coffee-Filter">
 				<synonym value="Coffee-Filters"/>
@@ -11297,6 +11312,7 @@
 			</heading>
 			<heading id="CoffeeJugCfeEq" title="Coffee-Jug">
 				<synonym value="Coffee-Jugs"/>
+				<implies facet="ActivityorContext" cat="Coffeedrinking"/>
 			</heading>
 			<heading id="CoffeeMillCfeEq" title="Coffee-Mill">
 				<synonym value="Coffee-Mills"/>
@@ -11306,6 +11322,7 @@
 			</heading>
 			<heading id="CoffeePotCfeEq" title="Coffee-Pot">
 				<synonym value="Coffee-Pots"/>
+				<implies facet="ActivityorContext" cat="Coffeedrinking"/>
 			</heading>
 			<heading id="CoffeePotBurnerCfeEq" title="Coffee-Pot-Burner">
 				<synonym value="Coffee-Pot-Burners"/>
@@ -11318,10 +11335,12 @@
 			</heading>
 			<heading id="CoffeeSetCfeEq" title="Coffee-Set">
 				<synonym value="Coffee-Sets"/>
+				<implies facet="ActivityorContext" cat="Coffeedrinking"/>
 			</heading>
 			<heading id="CoffeeSpoonCfeEq" title="Coffee Spoon" noMatch="true"/>
 			<heading id="CoffeeStrainerCfeEq" title="Coffee-Strainer">
 				<synonym value="Coffee-Strainers"/>
+				<implies facet="ActivityorContext" cat="Coffeedrinking"/>
 			</heading>
 			<heading id="CoffeeTableCfeEq" title="Coffee-Table">
 				<synonym value="Coffee-Tables"/>
