@@ -2682,7 +2682,8 @@
 					<synonym value="Box of Chocolates"/>
 					<synonym value="Chocolate Boxes"/>
 					<synonym value="Chocolate-Box"/>
-					<synonym value="Chocolate-Boxes"/>		
+					<synonym value="Chocolate-Boxes"/>
+					<implies facet="ObjectName" cat="ChocolateFood"/>
 				</heading>
 				<heading id="LunchBox" title="Lunch Box">
 					<synonym value="Lunch Boxes"/>
@@ -4635,6 +4636,7 @@
 		</heading>
 	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment">
+		<implies facet="ActivityorContext" cat="Foodpreparation"/>
 		<synonym value="Culinary Equipment"/>
 		<synonym value="Cooking Implement"/>
 		<synonym value="Cooking Implements"/>
@@ -4685,52 +4687,79 @@
 			<synonym value="Chopping-Knife"/>
 			<synonym value="Chopping-Knives"/>
 		</heading>
-		<heading id="CoconutScraperCookEq" title="Coconut-Scraper">
-			<synonym value="Coconut-Scrapers"/>
-			<synonym value="Coconut Scraper"/>
+		<heading id="CoconutScraperCookEq" title="Coconut Scraper">
 			<synonym value="Coconut Scrapers"/>
+			<synonym value="Coconut-Scraper"/>
+			<synonym value="Coconut-Scrapers"/>
 		</heading>
 		<heading id="ColanderCookEq" title="Colander">
 			<synonym value="Colanders"/>
 			<synonym value="Strainer"/>
 			<synonym value="Strainers"/>
 		</heading>
-		<heading id="CookingStandCookEq" title="Cooking-Stand">
-			<synonym value="Cooking-Stands"/>
-			<synonym value="Cooking Stand"/>
+		<heading id="ContainerOpeners" title="Openers">
+			<heading id="BottleOpeners" title="Bottle Openers">
+				<synonym value="Bottle Opener"/>
+				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<heading id="CapLifter" title="Caplifter">
+					<synonym value="Caplifters"/>
+					<synonym value="Cap lifter"/>
+					<synonym value="Cap lifters"/>
+					<synonym value="Cap-lifter"/>
+					<synonym value="Cap-lifters"/>
+				</heading>
+				<heading id="CanKeyOpener" title="Can Key Opener">
+					<synonym value="Can Key Openers"/>
+					<synonym value="Can-Key Opener"/>
+					<synonym value="Can-Key Openers"/>
+				</heading>
+				<heading id="Corkscrew" title="Corkscrew">
+					<synonym value="Corkscrews"/>
+					<heading id="SlidingBarrelCorkscrew" title="Sliding Barrel Corkscrew">
+						<synonym value="Sliding Barrel Corkscrews"/>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="CanOpeners" title="Can Opener">
+				<synonym value="Can Openers"/>
+			</heading>
+			<heading id="ShellfishOpeners" title="Shellfish Opener">
+				<synonym value="Shellfish Openers"/>
+				<heading id="OysterShucker" title="Oyster Shucker"/>
+			</heading>
+		</heading>
+		<heading id="CookingStandCookEq" title="Cooking Stand">
 			<synonym value="Cooking Stands"/>
+			<synonym value="Cooking-Stand"/>
+			<synonym value="Cooking-Stands"/>
 		</heading>
-		<heading id="CookingStoneCookEq" title="Cooking-Stone">
-			<synonym value="Cooking-Stones"/>
-			<synonym value="Cooking Stone"/>
+		<heading id="CookingStoneCookEq" title="Cooking Stone">
 			<synonym value="Cooking Stones"/>
+			<synonym value="Cooking-Stone"/>
+			<synonym value="Cooking-Stones"/>
 		</heading>
-		<heading id="CookingVesselCookEq" title="Cooking-Vessel">
+		<heading id="CookingVesselCookEq" title="Cooking Vessel">
 			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Vessel -->
+			<synonym value="Cooking Vessel"/>
 			<implies facet="ActivityorContext" cat="Foodpreparation"/>
-			<heading id="BakingDishCookEq" title="Baking-Dish">
-				<synonym value="Baking-Dishs"/>
-				<synonym value="Baking Dish"/>
-				<synonym value="Baking Dishes"/>
+			<heading id="BakingDishCookEq" title="Baking Dish">
+				<synonym value="Baking Dishs"/>
+				<synonym value="Baking-Dish"/>
+				<synonym value="Baking-Dishes"/>
 			</heading>
-			<heading id="CauldronCookEq" title="Cauldron">
-				<synonym value="Cauldrons"/>
-				<synonym value="Caldron"/>
-				<synonym value="Caldrons"/>
-			</heading>
-			<heading id="CookingBasketCookEq" title="Cooking-Basket">
+			<heading id="CookingBasketCookEq" title="Cooking Basket">
 				<implies facet="Collection" cat="BasketCollection"/>  <!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
-				<synonym value="Cooking Baskets"/>			
+				<synonym value="Cooking-Baskets"/>			
 			</heading>
-			<heading id="CookingBowlCookEq" title="Cooking-Bowl">
-				<synonym value="Cooking-Bowls"/>
-				<synonym value="Cooking Bowl"/>
+			<heading id="CookingBowlCookEq" title="Cooking Bowl">
 				<synonym value="Cooking Bowls"/>
+				<synonym value="Cooking-Bowl"/>
+				<synonym value="Cooking-Bowls"/>
 			</heading>
-			<heading id="CookingPanCookEq" title="Cooking-Pan">
-				<synonym value="Cooking-Pans"/>
-				<synonym value="Cooking Pan"/>
+			<heading id="CookingPanCookEq" title="Cooking Pan">
 				<synonym value="Cooking Pans"/>
+				<synonym value="Cooking-Pan"/>
+				<synonym value="Cooking-Pans"/>
 			</heading>
 			<heading id="CookingPotCookEq" title="Cooking Pot">
 				<synonym value="Cooking Pots"/>
@@ -4738,6 +4767,7 @@
 				<synonym value="Cooking-Pots"/>
 				<synonym value="Pots"/> 				
 				<synonym value="Pot"/>
+				<!-- Need to differentiate from other non-cooking equip. pots -->
 				<synonym value="Boiler"/>
 				<synonym value="Boilers"/>
 				<synonym value="Cauldron"/>
@@ -4762,15 +4792,18 @@
 				<synonym value="Dough-Vat"/> 				
 				<synonym value="Dough-Vats"/> 			
 			</heading>
-			<heading id="PieDishCookEq" title="Pie-Dish">
-				<synonym value="Pie-Dishs"/>
+			<heading id="PieDishCookEq" title="Pie Dish">
+				<synonym value="Pie Dishs"/> <!-- Misspelling -->
+				<synonym value="Pie Dishes"/>
 				<synonym value="Pie Pan"/>
 				<synonym value="Pie Pans"/>
 				<synonym value="Pie Plate"/>
 				<synonym value="Pie Plates"/>
+				<!-- Need to differentiate from "Dishes," "Plates," "Pans?" more generally? -->
 			</heading>
 			<heading id="PipkinCookEq" title="Pipkin">
 				<synonym value="Pipkins"/>
+				<!-- Earthenware pot or pan, also a drinking vessel. -->
 			</heading>
 			<heading id="SkilletCookEq" title="Skillet">
 				<synonym value="Skillets"/>
@@ -4782,6 +4815,7 @@
 				<excl value="Great Basin"/>
 				<excl value="Basin and Plain"/>
 				<excl value="Basin &amp; Plain"/>
+				<excl value="Wash"/>
 				<synonym value="Basins"/>
 			</heading>
 		</heading>
@@ -4789,32 +4823,48 @@
 			<synonym value="Culinary Molds"/>
 			<synonym value="Culinary-Mould"/>
 			<synonym value="Culinary-Moulds"/>
+			<heading id="ChocolateMold" title="Chocolate Mold">
+				<synonym value="Chocolate molds"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
+				<implies facet="ObjectName" cat="ChocolateFood"/>
+			</heading>
 		</heading>
-		<heading id="FishDrierCookEq" title="Fish-Drier">
+		<heading id="FishDrierCookEq" title="Fish Drier">
+			<synonym value="Fish Driers"/>
+			<synonym value="Fish-Drier"/>
 			<synonym value="Fish-Driers"/>
+			<synonym value="Fish Dryer"/>
+			<synonym value="Fish Dryers"/>
 		</heading>
-		<heading id="FishSieveCookEq" title="Fish-Sieve">
+		<heading id="FishSieveCookEq" title="Fish Sieve">
+			<synonym value="Fish Sieves"/>
+			<synonym value="Fish-Sieve"/>
 			<synonym value="Fish-Sieves"/>
+			<synonym value="Fish Scale Sieves"/>
+			<synonym value="Fish Scale Sieves"/>
 		</heading>
-		<heading id="FleshHookCookEq" title="Flesh-Hook">
+		<heading id="FleshHookCookEq" title="Flesh Hook">
+			<synonym value="Flesh Hooks"/>
 			<synonym value="Flesh-Hooks"/>
+			<synonym value="Flesh-Hooks"/>
+			<!-- Medieval cooking tool, for pulling meat from the pot.  Related term: cauldron/caldron. -->
 		</heading>
-		<heading id="FoodGrinderCookEq" title="Food-Grinder">
-			<synonym value="Food-Grinders"/>
-		</heading>
-		<heading id="FoodPounderCookEq" title="Food-Pounder">
-			<synonym value="Food-Pounders"/>
-		</heading>
-		<heading id="FoodScoopCookEq" title="Food-Scoop">
+		<heading id="FoodScoopCookEq" title="Food Scoop">
+			<synonym value="Food Scoops"/>
+			<synonym value="Food-Scoop"/>
 			<synonym value="Food-Scoops"/>
 			<heading id="CheeseScoopCookEq" title="Cheese Scoop">
 				<synonym value="Cheese Scoops"/>
 				<synonym value="Cheese-Scoop"/>
 				<synonym value="Cheese-Scoops"/>
 			</heading>
+			<heading id="IceCreamScoopCookEq" title="Ice Cream Scoop">
+				<synonym value="Ice Cream Scoops"/>
+			</heading>
 		</heading>
 		<heading id="FoodStampCookEq" title="Food Stamp">
 			<!-- Refers to implements used to impress designs on food items.  This does not include "food stamps" in the context of welfare/ social assistance zzzzzz -->			
+			<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			<synonym value="Food Stamps"/>
 			<synonym value="Food-Stamp"/>
 			<synonym value="Food-Stamps"/>
@@ -4824,8 +4874,15 @@
 				<synonym value="Bread Cachets"/>
 			</heading>
 		</heading>
-		<heading id="FoodStirrerCookEq" title="Food-Stirrer">
+		<heading id="FoodStirrerCookEq" title="Food Stirrer">
+			<synonym value="Food Stirrers"/>
+			<synonym value="Food-Stirrer"/>
 			<synonym value="Food-Stirrers"/>
+			<heading id="Chocolatestirrer" title="Chocolate stirrer">
+				<synonym value="Chocolate stirrers"/>
+				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ObjectName" cat="ChocolateFood"/>
+			</heading>
 			<heading id="FoodPaddleCookEq" title="Food Paddle">
 				<synonym value="Food Paddles"/>
 				<synonym value="Food-Paddle"/>
@@ -4839,9 +4896,6 @@
 		</heading>
 		<heading id="GratersCookEq" title="Graters">
 			<synonym value="Grater"/>
-			<heading id="RaspCookEq" title="Rasp">
-				<synonym value="Rasps"/>
-			</heading>		
 			<heading id="CheeseGraterCookEq" title="Cheese Grater">
 				<synonym value="Cheese Graters"/>
 				<synonym value="Cheese-Grater"/>
@@ -4853,10 +4907,13 @@
 				<synonym value="Coconut-Grater"/>
 				<synonym value="Coconut-Graters"/>
 			</heading>
-			<heading id="CornGraterCookEq" title="Corn-Grater">
-				<synonym value="Corn-Graters"/>
-				<synonym value="Corn Grater"/>
+			<heading id="CornGraterCookEq" title="Corn Grater">
 				<synonym value="Corn Graters"/>
+				<synonym value="Corn-Grater"/>
+				<synonym value="Corn-Graters"/>
+			</heading>
+			<heading id="ZesterCookEq" title="Zester">
+				<synonym value="Zesters"/>
 			</heading>
 			<heading id="NutmegGraterCookEq" title="Nutmeg Grater">
 				<synonym value="Nutmeg Graters"/>
@@ -4873,25 +4930,53 @@
 				<excl value="Snuff" />
 				<excl value="Foot" />
 			</heading>
+			<heading id="RaspCookEq" title="Rasp">
+				<synonym value="Rasps"/>
+				<excl value="Musical" />
+				<excl value="Stick" />
+				<excl value="Wire" />
+				<excl value="Snuff" />
+				<excl value="Foot" />
+			</heading>	
 		</heading>
 		<heading id="GrindingAndCrushingDevicesCookEq" title="Grinding &amp; Crushing Devices">
 			<synonym value="Milling Equipment"/>
 			<heading id="AcornAnvilCookEq" title="Acorn Anvil">
 				<synonym value="Acorn Anvils"/>
-				<!-- implies "Hopper Mortars"? -->
+				<!-- implies or synonym value "Hopper Mortars"? -->
+			</heading>
+			<heading id="FoodGrinderCookEq" title="Food Grinder">
+				<synonym value="Food Grinders"/>
+				<synonym value="Food-Grinder"/>
+				<synonym value="Food-Grinders"/>
+			</heading>
+			<heading id="FoodPounderCookEq" title="Food Pounder">
+				<synonym value="Food Pounders"/>
+				<synonym value="Food-Pounder"/>
+				<synonym value="Food-Pounders"/>
+				<heading id="SagoPounderCookEq" title="Sago Pounder">
+					<synonym value="Sago Pounders"/>
+					<synonym value="Sago-Pounder"/>
+					<synonym value="Sago-Pounders"/>
+				</heading>
 			</heading>
 			<heading id="GroundstoneCookingEq" title="Groundstone">
 				<synonym value="Groundstones"/>
 				<synonym value="Ground stone"/>
-				<synonym value="Groundstone"/>
+				<synonym value="Ground stones"/>
 				<synonym value="Ground-stone"/>
 				<synonym value="Ground-stones"/>
+				<synonym value="Millstone"/>
+				<synonym value="Millstones"/>
 				<implies facet="ActivityorContext" cat="Foodpreparation"/>
 				<heading id="Grindingstone" title="Grinding stone">
 					<synonym value="Grinding stones"/>
 					<heading id="ManoAndMetate" title="Mano &amp; Metate">
 						<heading id="Metate" title="Metate">
 							<synonym value="Metates"/>
+							<synonym value="Quern"/>
+							<synonym value="Querns"/>
+							<synonym value="Batan"/>
 						</heading>
 						<heading id="Mano" title="Mano (handstone)">
 							<synonym value="Mano"/>
@@ -4903,42 +4988,55 @@
 					<heading id="MortarAndPestle" title="Mortar &amp; Pestle">
 						<heading id="Mortar" title="Mortar">
 							<synonym value="Mortars"/>
+							<synonym value="Molcajete"/>
 							<implies facet="ActivityorContext" cat="Foodpreparation"/>
 						</heading>
 						<heading id="Pestle" title="Pestle">
 							<synonym value="Pestles"/>
+							<synonym value="Tejolote"/>
 							<implies facet="ActivityorContext" cat="Foodpreparation"/>
 						</heading>
 					</heading>
 				</heading>
 			</heading>
+			<heading id="MasherCookingEq" title="Masher">
+				<synonym value="Mashers"/>
+			</heading>
 		</heading>
 		<heading id="GriddleCookingEq" title="Griddle">
 			<synonym value="Griddles"/>
 		</heading>
-		<heading id="HotPlateCookingEq" title="Hot-Plate">
+		<heading id="HotPlateCookingEq" title="Hot Plate">
+			<synonym value="Hot Plates"/>
+			<synonym value="Hot-Plate"/>
 			<synonym value="Hot-Plates"/>
 		</heading>
-		<heading id="LemonSqueezerCookingEq" title="Lemon-Squeezer">
-			<synonym value="Lemon-Squeezers"/>
+		<heading id="SqueezerCookingEq" title="Squeezer">
+			<heading id="LemonSqueezerCookingEq" title="Lemon Squeezer">
+				<synonym value="Lemon Squeezers"/>
+				<synonym value="Lemon-Squeezer"/>
+				<synonym value="Lemon-Squeezers"/>
+			</heading>
+			<heading id="ManiocSqueezerCookingEq" title="Manioc Squeezer">
+				<synonym value="Manioc Squeezers"/>
+				<synonym value="Manioc-Squeezer"/>
+				<synonym value="Manioc-Squeezers"/>
+			</heading>
 		</heading>
-		<heading id="ManiocSqueezerCookingEq" title="Manioc-Squeezer">
-			<synonym value="Manioc-Squeezers"/>
-		</heading>
-		<heading id="MasherCookingEq" title="Masher">
-			<synonym value="Mashers"/>
-		</heading>
-		<heading id="PastryCutterCookEq" title="Pastry-Cutter">
+		<heading id="PastryCutterCookEq" title="Pastry Cutter">
+			<synonym value="Pastry Cutters"/>
+			<synonym value="Pastry-Cutter"/>
 			<synonym value="Pastry-Cutters"/>
 		</heading>
-		<heading id="RollingBoardCookEq" title="Rolling-Board">
+		<heading id="RollingBoardCookEq" title="Rolling Board">
+			<synonym value="Rolling Boards"/>
+			<synonym value="Rolling-Board"/>
 			<synonym value="Rolling-Boards"/>
 		</heading>
-		<heading id="RollingPinCookEq" title="Rolling-Pin">
+		<heading id="RollingPinCookEq" title="Rolling Pin">
+			<synonym value="Rolling Pins"/>
+			<synonym value="Rolling-Pin"/>
 			<synonym value="Rolling-Pins"/>
-		</heading>
-		<heading id="SagoPounderCookEq" title="Sago-Pounder">
-			<synonym value="Sago-Pounders"/>
 		</heading>
 		<heading id="SpitCookEq" title="Spit">
 			<synonym value="Spits"/>
@@ -4952,37 +5050,6 @@
 			<synonym value="Preparing Food"/>
 			<synonym value="Cooking"/>
 			
-			<heading id="ContainerOpeners" title="Openers">
-				<heading id="BottleOpeners" title="Bottle Openers">
-					<synonym value="Bottle Opener"/>
-					<implies facet="ActivityorContext" cat="Foodserving"/>
-					<heading id="CapLifter" title="Caplifter">
-						<synonym value="Caplifters"/>
-						<synonym value="Cap lifter"/>
-						<synonym value="Cap lifters"/>
-						<synonym value="Cap-lifter"/>
-						<synonym value="Cap-lifters"/>
-					</heading>
-					<heading id="CanKeyOpener" title="Can Key Opener">
-						<synonym value="Can Key Openers"/>
-						<synonym value="Can-Key Opener"/>
-						<synonym value="Can-Key Openers"/>
-					</heading>
-					<heading id="Corkscrew" title="Corkscrew">
-						<synonym value="Corkscrews"/>
-						<heading id="SlidingBarrelCorkscrew" title="Sliding Barrel Corkscrew">
-							<synonym value="Sliding Barrel Corkscrews"/>
-						</heading>
-					</heading>
-				</heading>
-				<heading id="CanOpeners" title="Can Opener">
-					<synonym value="Can Openers"/>
-				</heading>
-				<heading id="ShellfishOpeners" title="Shellfish Opener">
-					<synonym value="Shellfish Openers"/>
-					<heading id="OysterShucker" title="Oyster Shucker"/>
-				</heading>
-			</heading>
 			<heading id="Bowl" title="Bowl">
 				<synonym value="Bowls"/>
 				<implies facet="ActivityorContext" cat="Foodserving"/><!-- need complex inferentiation to remove ritual bowls, etc. -->
@@ -5034,16 +5101,8 @@
 					<implies facet="ObjectName" cat="TeapotVessels"/>
 				</heading>
 			</heading>
-			<heading id="Chocolatemold" title="Chocolate mold">
-				<synonym value="Chocolate molds"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
-				<implies facet="ObjectName" cat="ChocolateFood"/>
-			</heading>
-			<heading id="Chocolatestirrer" title="Chocolate stirrer">
-				<synonym value="Chocolate stirrers"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
-				<implies facet="ObjectName" cat="Chocolate"/>
-			</heading>
+
+
 		
 			<heading id="Dish" title="Dish">
 				<synonym value="Dishes"/>
@@ -10958,9 +11017,11 @@
 		</heading>
 		<heading id="ChocolateCup" title="Chocolate-Cup">
 				<synonym value="Chocolate-Cups"/>
+				<implies facet="ObjectName" cat="ChocolateFood"/>
 			</heading>
 		<heading id="ChocolatePot" title="Chocolate-Pot">
 				<synonym value="Chocolate-Pots"/>
+				<implies facet="ObjectName" cat="ChocolateFood"/>
 			</heading>
 		<heading id="CoffeeEquipment" title="Coffee Equipment">
 			<synonym value="Coffee Items"/>
