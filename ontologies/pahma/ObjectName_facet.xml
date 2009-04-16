@@ -1970,6 +1970,7 @@
 			</heading>
 			<heading id="CalligraphyboardComm" title="Calligraphy-Board">
 				<synonym value="Calligraphy-Boards"/>
+				<implies facet="ObjectName" cat="BoardMiscEq"/>
 			</heading>
 			<heading id="CondensingglassArtWrComm" title="Condensing Glass">
 				<synonym value="Condensing Glasses"/>
@@ -4767,7 +4768,7 @@
 			<synonym value="Bacon-Roasters"/>
 			<synonym value="Bacon-Roasters"/>
 			<!-- Checked w/ OED: is this a pan or an oven? Unclear, term too narrow? -->
-		</heading>		
+		</heading>
 		<heading id="BakingCupCookEq" title="Baking Cup">
 			<synonym value="Baking Cups"/>
 			<synonym value="Baking-Cup"/>
@@ -4788,8 +4789,17 @@
 			<synonym value="Biscuit-Cutter"/>
 			<synonym value="Biscuit-Cutters"/>
 		</heading>
-		<heading id="BoardCookEq" title="Board">
-			<synonym value="Boards"/>
+		<heading id="CookingBoardCookEq" title="Cooking Board">
+			<synonym value="Cooking Boards"/>
+			<excl value="Baby board"/>
+			<excl value="Card"/>
+			<excl value="Checker"/>
+			<excl value="Cradle"/>
+			<excl value="Cribbage"/>
+			<excl value="Mat"/>
+			<excl value="Roof"/>
+			<excl value="Splash"/>
+			<implies facet="ObjectName" cat="BoardMiscEq"/>
 			<heading id="BreadboardCookEq" title="Breadboard">
 				<synonym value="Breadboards"/>
 			</heading>
@@ -4842,7 +4852,7 @@
 		</heading>
 		<heading id="CookingVesselCookEq" title="Cooking Vessel">
 			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Vessel -->
-			<synonym value="Cooking Vessel"/>
+			<synonym value="Cooking Vessels"/>
 			<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			<heading id="BakingDishCookEq" title="Baking Dish">
 				<synonym value="Baking Dishs"/>
@@ -4904,12 +4914,9 @@
 			<heading id="DokaCookEq" title="Doka">
 				<synonym value="Dokas"/>
 			</heading>
-			<heading id="DoughBowlCookEq" title="Dough Bowl">  
-				<synonym value="Dough Bowls"/>  
-				<synonym value="Dough Vats"/>  
-				<synonym value="Dough-Vat"/>  
-				<synonym value="Dough-Vats"/>  
-			</heading>
+			<heading id="DoughBowlCookEq" title="Dough Bowl">  <synonym value="Dough Bowls"/> 
+					<synonym value="Dough Vats"/>  <synonym value="Dough-Vat"/>  <synonym
+					value="Dough-Vats"/>  </heading>
 			<heading id="PieDishCookEq" title="Pie Dish">
 				<synonym value="Pie Dishs"/>
 				<!-- Misspelling -->
@@ -4929,6 +4936,7 @@
 				<excl value="Basin and Plain"/>
 				<excl value="Basin &amp; Plain"/>
 				<excl value="Wash"/>
+				<excl value="Basinet"/>
 				<synonym value="Basins"/>
 			</heading>
 		</heading>
@@ -4944,6 +4952,7 @@
 		</heading>
 		<heading id="DishCookEq" title="Dish">
 			<synonym value="Dishes"/>
+			<excl value="Offering"/>
 			<implies facet="ActivityorContext" cat="Foodserving"/>
 			<heading id="FeastDishCookEq" title="Feast Dish">
 				<synonym value="Feast Dishes"/>
@@ -5064,9 +5073,9 @@
 			<heading id="ToasterCookEq" title="Toaster">
 				<synonym value="Toasters"/>
 			</heading>
-		</heading>	
+		</heading>
 		<heading id="FoodStampCookEq" title="Food Stamp">
-			<!-- Refers to implements used to impress designs on food items.  This does not include "food stamps" in the context of welfare/ social assistance zzzzzz -->
+			<!-- Refers to the tool used to impress designs on food items.  This does not include "food stamps" in the context of welfare/ social assistance zzzzzz -->
 			<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			<synonym value="Food Stamps"/>
 			<synonym value="Food-Stamp"/>
@@ -5173,7 +5182,7 @@
 				<synonym value="Ground-stones"/>
 				<synonym value="Millstone"/>
 				<synonym value="Millstones"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>				
+				<implies facet="ActivityorContext" cat="Foodpreparation"/>
 				<heading id="ManoAndMetateCookEq" title="Mano &amp; Metate">
 					<heading id="MetateCookEq" title="Metate">
 						<synonym value="Metates"/>
@@ -5200,6 +5209,7 @@
 					<heading id="MortarCookEq" title="Mortar">
 						<synonym value="Mortars"/>
 						<synonym value="Molcajete"/>
+						<excl value="Weapon"/>
 						<implies facet="ActivityorContext" cat="Foodpreparation"/>
 					</heading>
 					<heading id="MortarBasketCookEq" title="Mortar Basket">
@@ -5248,17 +5258,17 @@
 				<synonym value="Lobster Crackers"/>
 			</heading>
 			<heading id="OysterShuckerCookEq" title="Oyster Shucker">
-			<synonym value="Oyster Shuckers"/>
+				<synonym value="Oyster Shuckers"/>
 			</heading>
 			<heading id="OysterKnifeCookEq" title="Oyster Knife">
-			<synonym value="Oyster Knives"/>
+				<synonym value="Oyster Knives"/>
 			</heading>
 		</heading>
 		<heading id="SieveSifterCookEq" title="Sieve">
-			<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			<synonym value="Sieves"/>
 			<synonym value="Sifter"/>
 			<synonym value="Sifters"/>
+			<implies facet="ActivityorContext" cat="Foodpreparation"/>
 			<heading id="BasketSifterCookingEq" title="Basket Sifter">
 				<synonym value="Basket Sifters"/>
 			</heading>
@@ -5337,57 +5347,57 @@
 						<synonym value="Mush Stirrers"/>
 						<implies facet="ActivityorContext" cat="Foodpreparation"/>
 						<implies facet="ObjectName" cat="Mush"/>
-						</heading>
 					</heading>
-			<heading id="ForkUtensilCookEq" title="Fork">
-				<synonym value="Forks"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
-				<implies facet="ObjectName" cat="ForkTool"/>
-			</heading>
-			<heading id="SpoonUtensilCookEq" title="Spoon">
-				<synonym value="Spoons"/>
-				<excl value="Eucharist"/>
-				<!-- Excludes eucharistic spoons -->
-				<excl value="Eucharistic"/>
-				<!-- Excludes eucharistic spoons -->
-				<excl value="Ink"/>
-				<!-- Excludes ink spoons -->
-				<excl value="Pipe"/>
-				<!-- Excludes smoking pipe spoons -->
-				<excl value="Snuff"/>
-				<!-- Excludes snuff spoons -->
-				<excl value="Toilet"/>
-				<!-- Excludes toilet spoons -->
-				<excl value="Warmer"/>
-				<!-- Excludes spoon warmers -->
-				<implies facet="ActivityorContext" cat="Foodserving"/>
-				<heading id="CoffeeSpoonUtensilCookEq" title="Coffee Spoon">
-					<synonym value="Coffee Spoons"/>
-					<synonym value="Coffee-spoon"/>
-					<synonym value="Coffee-spoons"/>
-					<implies facet="ObjectName" cat="CoffeeSpoonCfeEq"/>
 				</heading>
-				<heading id="LadleSpoonUtensilCookEq" title="Ladle">
-					<synonym value="Ladles"/>
-					<implies facet="ActivityorContext" cat="Eating"/>
+				<heading id="ForkUtensilCookEq" title="Fork">
+					<synonym value="Forks"/>
 					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ObjectName" cat="ForkTool"/>
 				</heading>
-				<heading id="MarrowSpoonUtensilCookEq" title="Marrow Spoon">
-					<synonym value="Marrow Spoons"/>
-					<implies facet="ActivityorContext" cat="Eating"/>
-				</heading>
-				<heading id="SoupSpoonUtensilCookEq" title="Soup Spoon">
-					<synonym value="Soup Spoons"/>
-					<implies facet="ActivityorContext" cat="Eating"/>
-				</heading>
-				<heading id="TableSpoonUtensilCookEq" title="Table Spoon">
-					<synonym value="Table Spoons"/>
-					<synonym value="Tablespoon"/>
-					<synonym value="Tablespoons"/>
-					<implies facet="ActivityorContext" cat="Eating"/>
+				<heading id="SpoonUtensilCookEq" title="Spoon">
+					<synonym value="Spoons"/>
+					<excl value="Eucharist"/>
+					<!-- Excludes eucharistic spoons -->
+					<excl value="Eucharistic"/>
+					<!-- Excludes eucharistic spoons -->
+					<excl value="Ink"/>
+					<!-- Excludes ink spoons -->
+					<excl value="Pipe"/>
+					<!-- Excludes smoking pipe spoons -->
+					<excl value="Snuff"/>
+					<!-- Excludes snuff spoons -->
+					<excl value="Toilet"/>
+					<!-- Excludes toilet spoons -->
+					<excl value="Warmer"/>
+					<!-- Excludes spoon warmers -->
+					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<heading id="CoffeeSpoonUtensilCookEq" title="Coffee Spoon">
+						<synonym value="Coffee Spoons"/>
+						<synonym value="Coffee-spoon"/>
+						<synonym value="Coffee-spoons"/>
+						<implies facet="ObjectName" cat="CoffeeSpoonCfeEq"/>
+					</heading>
+					<heading id="LadleSpoonUtensilCookEq" title="Ladle">
+						<synonym value="Ladles"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
+						<implies facet="ActivityorContext" cat="Foodserving"/>
+					</heading>
+					<heading id="MarrowSpoonUtensilCookEq" title="Marrow Spoon">
+						<synonym value="Marrow Spoons"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
+					</heading>
+					<heading id="SoupSpoonUtensilCookEq" title="Soup Spoon">
+						<synonym value="Soup Spoons"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
+					</heading>
+					<heading id="TableSpoonUtensilCookEq" title="Table Spoon">
+						<synonym value="Table Spoons"/>
+						<synonym value="Tablespoon"/>
+						<synonym value="Tablespoons"/>
+						<implies facet="ActivityorContext" cat="Eating"/>
+					</heading>
 				</heading>
 			</heading>
-		</heading>
 		</heading>
 	</heading>
 	<heading id="Currency" title="Currency">
@@ -6598,195 +6608,196 @@
 		<synonym value="Apparatus"/>
 		<!-- British Museum notes that, generally speaking, this category is a catch-all
 			for terms which do not fit under other top terms -->
-		<heading id="Battery" title="Battery">
+		<heading id="BatteryMiscEq" title="Battery">
 			<synonym value="Batteries"/>
 			<synonym value="Batterys"/>
 			<!-- Misspelling -->
 		</heading>
-		<heading id="BellPull" title="Bell-Pull">
+		<heading id="BellPullMiscEq" title="Bell-Pull">
 			<synonym value="Bell-Pulls"/>
 		</heading>
-		<heading id="Birdstone" title="Birdstone">
+		<heading id="BirdstoneMiscEq" title="Birdstone">
 			<synonym value="Birdstones"/>
 		</heading>
-		<heading id="Block" title="Block">
+		<heading id="BlockMiscEq" title="Block">
 			<synonym value="Blocks"/>
 		</heading>
-		<heading id="Board" title="Board">
-			<synonym value="Boards"/>
+		<heading id="BoardMiscEq" title="Board" noMatch="true">
+			<synonym value="Chopped board"/>
+			<synonym value="Roof board"/>
 		</heading>
-		<heading id="BookEnd" title="Book-End">
+		<heading id="BookEndMiscEq" title="Book-End">
 			<synonym value="Book-Ends"/>
 		</heading>
-		<heading id="Bouquet" title="Bouquet">
+		<heading id="BouquetMiscEq" title="Bouquet">
 			<synonym value="Bouquets"/>
 		</heading>
-		<heading id="BreakfastSet" title="Breakfast-Set">
+		<heading id="BreakfastSetMiscEq" title="Breakfast-Set">
 			<synonym value="Breakfast-Sets"/>
 		</heading>
-		<heading id="CarpetWeight" title="Carpet-Weight">
+		<heading id="CarpetWeightMiscEq" title="Carpet-Weight">
 			<synonym value="Carpet-Weights"/>
 		</heading>
-		<heading id="Chain" title="Chain">
+		<heading id="ChainMiscEq" title="Chain">
 			<synonym value="Chains"/>
 		</heading>
-		<heading id="ChoppingBlock" title="Chopping-Block">
+		<heading id="ChoppingBlockMiscEq" title="Chopping-Block">
 			<synonym value="Chopping-Blocks"/>
 		</heading>
-		<heading id="CobblingEquipment" title="Cobbling Equipment">
+		<heading id="CobblingEquipmentMiscEq" title="Cobbling Equipment">
 			<synonym value="Cobbling-Equipment"/>
 		</heading>
-		<heading id="ContraceptiveSheath" title="Contraceptive Sheath">
+		<heading id="ContraceptiveSheathMiscEq" title="Contraceptive Sheath">
 			<synonym value="Contraceptive Sheaths"/>
 		</heading>
-		<heading id="Cord" title="Cord">
+		<heading id="CordMiscEq" title="Cord">
 			<synonym value="Cords"/>
 		</heading>
-		<heading id="Counter" title="Counter">
+		<heading id="CounterMiscEq" title="Counter">
 			<synonym value="Counters"/>
 		</heading>
-		<heading id="Cover" title="Cover">
+		<heading id="CoverMiscEq" title="Cover">
 			<synonym value="Covers"/>
 		</heading>
-		<heading id="DinnerSet" title="Dinner-Set">
+		<heading id="DinnerSetMiscEq" title="Dinner-Set">
 			<synonym value="Dinner-Sets"/>
 		</heading>
 
-		<heading id="DoorStop" title="Door-Stop">
+		<heading id="DoorStopMiscEq" title="Door-Stop">
 			<synonym value="Door-Stops"/>
 		</heading>
-		<heading id="Duster" title="Duster">
+		<heading id="DusterMiscEq" title="Duster">
 			<synonym value="Dusters"/>
 		</heading>
-		<heading id="Ernaton" title="Ernaton">
+		<heading id="ErnatonMiscEq" title="Ernaton">
 			<synonym value="Ernatons"/>
 		</heading>
-		<heading id="Fastener" title="Fastener">
+		<heading id="FastenerMiscEq" title="Fastener">
 			<synonym value="Fasteners"/>
 		</heading>
-		<heading id="Feeder" title="Feeder">
+		<heading id="FeederMiscEq" title="Feeder">
 			<synonym value="Feeders"/>
 		</heading>
-		<heading id="Filter" title="Filter">
+		<heading id="FilterMiscEq" title="Filter">
 			<synonym value="Filters"/>
 		</heading>
-		<heading id="Firework" title="Firework">
+		<heading id="FireworkMiscEq" title="Firework">
 			<synonym value="Fireworks"/>
 		</heading>
-		<heading id="Float" title="Float">
+		<heading id="FloatMiscEq" title="Float">
 			<synonym value="Floats"/>
 		</heading>
-		<heading id="Frame" title="Frame">
+		<heading id="FrameMiscEq" title="Frame">
 			<synonym value="Frames"/>
 		</heading>
-		<heading id="Fringe" title="Fringe">
+		<heading id="FringeMiscEq" title="Fringe">
 			<synonym value="Fringes"/>
 		</heading>
-		<heading id="Fumigator" title="Fumigator">
+		<heading id="FumigatorMiscEq" title="Fumigator">
 			<synonym value="Fumigators"/>
 		</heading>
-		<heading id="Grating" title="Grating">
+		<heading id="GratingMiscEq" title="Grating">
 			<synonym value="Gratings"/>
 		</heading>
-		<heading id="Grid" title="Grid">
+		<heading id="GridMiscEq" title="Grid">
 			<synonym value="Grids"/>
 		</heading>
-		<heading id="Gridiron" title="Gridiron">
+		<heading id="GridironMiscEq" title="Gridiron">
 			<synonym value="Gridirons"/>
 		</heading>
-		<heading id="Guard" title="Guard">
+		<heading id="GuardMiscEq" title="Guard">
 			<synonym value="Guards"/>
 		</heading>
-		<heading id="HandScreen" title="Hand-Screen">
+		<heading id="HandScreenMiscEq" title="Hand-Screen">
 			<synonym value="Hand-Screens"/>
 		</heading>
-		<heading id="Hanger" title="Hanger">
+		<heading id="HangerMiscEq" title="Hanger">
 			<synonym value="Hangers"/>
 		</heading>
-		<heading id="HeadStick" title="Head-Stick">
+		<heading id="HeadStickMiscEq" title="Head-Stick">
 			<synonym value="Head-Sticks"/>
 		</heading>
-		<heading id="Heater" title="Heater">
+		<heading id="HeaterMiscEq" title="Heater">
 			<synonym value="Heaters"/>
 		</heading>
-		<heading id="HobbyHorse" title="Hobby-Horse">
+		<heading id="HobbyHorseMiscEq" title="Hobby-Horse">
 			<synonym value="Hobby-Horses"/>
 		</heading>
-		<heading id="Hook" title="Hook">
+		<heading id="HookMiscEq" title="Hook">
 			<synonym value="Hooks"/>
 			<excl value="Fish"/>
 		</heading>
-		<heading id="Hoop" title="Hoop">
+		<heading id="HoopMiscEq" title="Hoop">
 			<synonym value="Hoops"/>
 		</heading>
-		<heading id="Key" title="Key">
+		<heading id="KeyMiscEq" title="Key">
 			<synonym value="Keys"/>
 		</heading>
-		<heading id="Ladder" title="Ladder">
+		<heading id="LadderMiscEq" title="Ladder">
 			<synonym value="Ladders"/>
 		</heading>
-		<heading id="Lid" title="Lid">
+		<heading id="LidMiscEq" title="Lid">
 			<synonym value="Lids"/>
 		</heading>
-		<heading id="Line" title="Line">
+		<heading id="LineMiscEq" title="Line">
 			<synonym value="Lines"/>
 		</heading>
-		<heading id="Lock" title="Lock">
+		<heading id="LockMiscEq" title="Lock">
 			<synonym value="Locks"/>
 		</heading>
-		<heading id="Marker" title="Marker">
+		<heading id="MarkerMiscEq" title="Marker">
 			<synonym value="Markers"/>
 		</heading>
-		<heading id="Mask" title="Mask">
+		<heading id="MaskMiscEq" title="Mask">
 			<synonym value="Masks"/>
 		</heading>
-		<heading id="Mirror" title="Mirror">
+		<heading id="MirrorMiscEq" title="Mirror">
 			<synonym value="Mirrors"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
-		<heading id="Model" title="Model">
+		<heading id="ModelMiscEq" title="Model">
 			<synonym value="Models"/>
 		</heading>
-		<heading id="NapkinRing" title="Napkin-Ring">
+		<heading id="NapkinRingMiscEq" title="Napkin-Ring">
 			<synonym value="Napkin-Rings"/>
 		</heading>
-		<heading id="Nef" title="Nef">
+		<heading id="NefMiscEq" title="Nef">
 			<synonym value="Nefs"/>
 		</heading>
-		<heading id="Net" title="Net">
+		<heading id="NetMiscEq" title="Net">
 			<synonym value="Nets"/>
 		</heading>
-		<heading id="Noose" title="Noose">
+		<heading id="NooseMiscEq" title="Noose">
 			<synonym value="Nooses"/>
 		</heading>
-		<heading id="Ornament" title="Ornament">
+		<heading id="OrnamentMiscEq" title="Ornament">
 			<synonym value="Ornaments"/>
 		</heading>
-		<heading id="Pad" title="Pad">
+		<heading id="PadMiscEq" title="Pad">
 			<synonym value="Pads"/>
 		</heading>
-		<heading id="Palette" title="Palette">
+		<heading id="PaletteMiscEq" title="Palette">
 			<synonym value="Palettes"/>
 		</heading>
-		<heading id="Panel" title="Panel">
+		<heading id="PanelMiscEq" title="Panel">
 			<synonym value="Panels"/>
 		</heading>
-		<heading id="Patch" title="Patch">
+		<heading id="PatchMiscEq" title="Patch">
 			<synonym value="Patches"/>
 			<synonym value="Patchs"/>
 			<!-- Misspelling -->
 		</heading>
-		<heading id="Peg" title="Peg">
+		<heading id="PegMiscEq" title="Peg">
 			<synonym value="Pegs"/>
 		</heading>
-		<heading id="PegBoard" title="Peg-Board">
+		<heading id="PegBoardMiscEq" title="Peg-Board">
 			<synonym value="Peg-Boards"/>
 		</heading>
-		<heading id="PersonalGear" title="Personal Gear">
-			<heading id="Fan" title="Fan">
+		<heading id="PersonalGearMiscEq" title="Personal Gear">
+			<heading id="FanMiscEq" title="Fan">
 				<synonym value="Fans"/>
 			</heading>
-			<heading id="Pipe" title="Pipe">
+			<heading id="PipeMiscEq" title="Pipe">
 				<excl value="Lead pipe"/>
 				<!-- excludes pipe for plumbing -->
 				<excl value="Lead pipes"/>
@@ -6806,12 +6817,12 @@
 				<excl value="instruments"/>
 				<!-- excludes musical instruments -->
 				<synonym value="Pipes"/>
-				<heading id="OpiumPipe" title="OpiumPipe">
+				<heading id="OpiumPipeMiscEq" title="OpiumPipe">
 					<synonym value="Opium Pipes"/>
 					<implies facet="ActivityorContext" cat="DrugUse"/>
 				</heading>
-				<heading id="PipeParts" title="Pipe Parts">
-					<heading id="PipeBowl" title="Pipe Bowl">
+				<heading id="PipePartsMiscEq" title="Pipe Parts">
+					<heading id="PipeBowlMiscEq" title="Pipe Bowl">
 						<synonym value="Pipe Bowls"/>
 						<synonym value="Pipe-Bowl"/>
 						<synonym value="Pipe-Bowls"/>
@@ -6821,256 +6832,256 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="PicnicSet" title="Picnic-Set">
+		<heading id="PicnicSetMiscEq" title="Picnic-Set">
 			<synonym value="Picnic-Sets"/>
 		</heading>
-		<heading id="Pintle" title="Pintle">
+		<heading id="PintleMiscEq" title="Pintle">
 			<synonym value="Pintles"/>
 		</heading>
-		<heading id="Plank" title="Plank">
+		<heading id="PlankMiscEq" title="Plank">
 			<synonym value="Planks"/>
 		</heading>
-		<heading id="Plaque" title="Plaque">
+		<heading id="PlaqueMiscEq" title="Plaque">
 			<synonym value="Plaques"/>
 		</heading>
-		<heading id="Plug" title="Plug">
+		<heading id="PlugMiscEq" title="Plug">
 			<synonym value="Plugs"/>
 		</heading>
-		<heading id="Point" title="Point">
+		<heading id="PointMiscEq" title="Point">
 			<synonym value="Points"/>
 		</heading>
-		<heading id="Pole" title="Pole">
+		<heading id="PoleMiscEq" title="Pole">
 			<synonym value="Poles"/>
 		</heading>
-		<heading id="Pulley" title="Pulley">
+		<heading id="PulleyMiscEq" title="Pulley">
 			<synonym value="Pulleys"/>
 		</heading>
-		<heading id="Pump" title="Pump">
+		<heading id="PumpMiscEq" title="Pump">
 			<synonym value="Pumps"/>
 		</heading>
-		<heading id="Rack" title="Rack">
+		<heading id="RackMiscEq" title="Rack">
 			<synonym value="Racks"/>
 		</heading>
-		<heading id="Reel" title="Reel">
+		<heading id="ReelMiscEq" title="Reel">
 			<synonym value="Reels"/>
 		</heading>
-		<heading id="Reeler" title="Reeler">
+		<heading id="ReelerMiscEq" title="Reeler">
 			<synonym value="Reelers"/>
 		</heading>
-		<heading id="Reflector" title="Reflector">
+		<heading id="ReflectorMiscEq" title="Reflector">
 			<synonym value="Reflectors"/>
 		</heading>
-		<heading id="Rest" title="Rest">
+		<heading id="RestMiscEq" title="Rest">
 			<synonym value="Rests"/>
 		</heading>
-		<heading id="Ring" title="Ring">
+		<heading id="RingMiscEq" title="Ring">
 			<synonym value="Rings"/>
 		</heading>
-		<heading id="RingStone" title="Ring-Stone">
+		<heading id="RingStoneMiscEq" title="Ring-Stone">
 			<synonym value="Ring-Stones"/>
 		</heading>
-		<heading id="RopesMain" title="Rope">
+		<heading id="RopesMainMiscEq" title="Rope">
 			<synonym value="Ropes"/>
 		</heading>
-		<heading id="Roundel" title="Roundel">
+		<heading id="RoundelMiscEq" title="Roundel">
 			<synonym value="Roundels"/>
 		</heading>
-		<heading id="Scare" title="Scare">
+		<heading id="ScareMiscEq" title="Scare">
 			<!-- EXCL needed -->
 			<synonym value="Scares"/>
 		</heading>
-		<heading id="Scissors" title="Scissors">
+		<heading id="ScissorsMiscEq" title="Scissors">
 			<synonym value="Scissor"/>
 			<synonym value="Shears"/>
 			<synonym value="Shear"/>
 			<!-- <implies facet="ActivityorContext" cat="GroomingPersonal"/> This needs complex inferentiation -->
 		</heading>
-		<heading id="Screen" title="Screen">
+		<heading id="ScreenMiscEq" title="Screen">
 			<!-- EXCL needed -->
 			<synonym value="Screens"/>
 		</heading>
-		<heading id="Sealing" title="Sealing">
+		<heading id="SealingMiscEq" title="Sealing">
 			<!-- EXCL needed -->
 			<synonym value="Sealings"/>
 		</heading>
-		<heading id="SexAid" title="Sex-Aid">
+		<heading id="SexAidMiscEq" title="Sex-Aid">
 			<synonym value="Sex-Aids"/>
 		</heading>
-		<heading id="Siphon" title="Siphon">
+		<heading id="SiphonMiscEq" title="Siphon">
 			<synonym value="Siphons"/>
 		</heading>
-		<heading id="Slab" title="Slab">
+		<heading id="SlabMiscEq" title="Slab">
 			<synonym value="Slabs"/>
 		</heading>
-		<heading id="SleeveWeight" title="Sleeve-Weight">
+		<heading id="SleeveWeightMiscEq" title="Sleeve-Weight">
 			<synonym value="Sleeve-Weights"/>
 		</heading>
-		<heading id="Souvenir" title="Souvenir">
+		<heading id="SouvenirMiscEq" title="Souvenir">
 			<synonym value="Souvenirs"/>
-			<heading id="SouvenirSpoonUtensil" title="Souvenir Spoon">
+			<heading id="SouvenirSpoonUtensilMiscEq" title="Souvenir Spoon">
 				<synonym value="Souvenir Spoons"/>
 			</heading>
 		</heading>
-		<heading id="Spike" title="Spike">
+		<heading id="SpikeMiscEq" title="Spike">
 			<synonym value="Spikes"/>
 		</heading>
-		<heading id="Spool" title="Spool">
+		<heading id="SpoolMiscEq" title="Spool">
 			<synonym value="Spools"/>
 		</heading>
-		<heading id="Spout" title="Spout">
+		<heading id="SpoutMiscEq" title="Spout">
 			<synonym value="Spouts"/>
 		</heading>
-		<heading id="Spray" title="Spray">
+		<heading id="SprayMiscEq" title="Spray">
 			<synonym value="Sprays"/>
 		</heading>
-		<heading id="Sprinkler" title="Sprinkler">
+		<heading id="SprinklerMiscEq" title="Sprinkler">
 			<synonym value="Sprinklers"/>
 		</heading>
-		<heading id="Spur" title="Spur">
+		<heading id="SpurMiscEq" title="Spur">
 			<synonym value="Spurs"/>
 		</heading>
-		<heading id="Staff" title="Staff">
+		<heading id="StaffMiscEq" title="Staff">
 			<synonym value="Staffs"/>
 		</heading>
-		<heading id="Stake" title="Stake">
+		<heading id="StakeMiscEq" title="Stake">
 			<synonym value="Stakes"/>
 		</heading>
-		<heading id="Stands" title="Stands">
+		<heading id="StandsMiscEq" title="Stands">
 			<synonym value="Stand"/>
-			<heading id="ArrowStandStnd" title="Arrow Stand">
+			<heading id="ArrowStandStndMiscEq" title="Arrow Stand">
 				<synonym value="Arrow Stands"/>
 				<synonym value="Arrow-Stand"/>
 				<synonym value="Arrow-Stands"/>
 			</heading>
-			<heading id="BaseStnd" title="Base">
+			<heading id="BaseStndMiscEq" title="Base">
 				<synonym value="Bases"/>
 			</heading>
-			<heading id="BedStandStnd" title="Bed-Stand">
+			<heading id="BedStandStndMiscEq" title="Bed-Stand">
 				<synonym value="Bed-Stands"/>
 			</heading>
-			<heading id="BeehiveStandStnd" title="Beehive-Stand" noMatch="true"/>
-			<heading id="BellStandStnd" title="Bell-Stand">
+			<heading id="BeehiveStandStndMiscEq" title="Beehive-Stand" noMatch="true"/>
+			<heading id="BellStandStndMiscEq" title="Bell-Stand">
 				<synonym value="Bell-Stands"/>
 			</heading>
-			<heading id="BetelStandStnd" title="Betel-Stand">
+			<heading id="BetelStandStndMiscEq" title="Betel-Stand">
 				<synonym value="Betel-Stands"/>
 			</heading>
-			<heading id="CakeStandStnd" title="Cake-Stand">
+			<heading id="CakeStandStndMiscEq" title="Cake-Stand">
 				<synonym value="Cake-Stands"/>
 			</heading>
-			<heading id="ClockStandStnd" title="Clock-Stand">
+			<heading id="ClockStandStndMiscEq" title="Clock-Stand">
 				<synonym value="Clock-Stands"/>
 			</heading>
-			<heading id="ClothesHorseStnd" title="Clothes-Horse">
+			<heading id="ClothesHorseStndMiscEq" title="Clothes-Horse">
 				<synonym value="Clothes-Horses"/>
 			</heading>
-			<heading id="CondimentStandStnd" title="Condiment-Stand">
+			<heading id="CondimentStandStndMiscEq" title="Condiment-Stand">
 				<synonym value="Condiment-Stands"/>
 			</heading>
-			<heading id="CosmeticStandStnd" title="Cosmetic-Stand">
+			<heading id="CosmeticStandStndMiscEq" title="Cosmetic-Stand">
 				<synonym value="Cosmetic-Stands"/>
 			</heading>
-			<heading id="CradleStandStnd" title="Cradle-Stand">
+			<heading id="CradleStandStndMiscEq" title="Cradle-Stand">
 				<synonym value="Cradle-Stands"/>
 			</heading>
-			<heading id="DrumStandStnd" title="Drum-Stand">
+			<heading id="DrumStandStndMiscEq" title="Drum-Stand">
 				<synonym value="Drum-Stands"/>
 			</heading>
-			<heading id="EggStandStnd" title="Egg-Stand">
+			<heading id="EggStandStndMiscEq" title="Egg-Stand">
 				<synonym value="Egg-Stands"/>
 			</heading>
-			<heading id="FigureStandStnd" title="Figure-Stand">
+			<heading id="FigureStandStndMiscEq" title="Figure-Stand">
 				<synonym value="Figure-Stands"/>
 			</heading>
-			<heading id="FireDogStnd" title="Fire-Dog">
+			<heading id="FireDogStndMiscEq" title="Fire-Dog">
 				<synonym value="Fire-Dogs"/>
 			</heading>
-			<heading id="FireGridStnd" title="Fire-Grid">
+			<heading id="FireGridStndMiscEq" title="Fire-Grid">
 				<synonym value="Fire-Grids"/>
 			</heading>
-			<heading id="FruitStandStnd" title="Fruit-Stand">
+			<heading id="FruitStandStndMiscEq" title="Fruit-Stand">
 				<synonym value="Fruit-Stands"/>
 			</heading>
-			<heading id="GongStandStnd" title="Gong-Stand">
+			<heading id="GongStandStndMiscEq" title="Gong-Stand">
 				<synonym value="Gong-Stands"/>
 			</heading>
-			<heading id="HatRackStandStnd" title="Hatrack" noMatch="true"/>
-			<heading id="IncenseBurnerStandStnd" title="Incense-Burner-Stand">
+			<heading id="HatRackStandStndMiscEq" title="Hatrack" noMatch="true"/>
+			<heading id="IncenseBurnerStandStndMiscEq" title="Incense-Burner-Stand">
 				<synonym value="Incense-Burner-Stands"/>
 			</heading>
-			<heading id="IncenseStandStnd" title="Incense-Stand">
+			<heading id="IncenseStandStndMiscEq" title="Incense-Stand">
 				<synonym value="Incense-Stands"/>
 			</heading>
-			<heading id="InkStandStnd" title="Ink-Stand">
+			<heading id="InkStandStndMiscEq" title="Ink-Stand">
 				<synonym value="Ink-Stands"/>
 			</heading>
-			<heading id="IronStandStnd" title="Iron-Stand">
+			<heading id="IronStandStndMiscEq" title="Iron-Stand">
 				<synonym value="Iron-Stands"/>
 			</heading>
-			<heading id="LaceStandStnd" title="Lace-Stand">
+			<heading id="LaceStandStndMiscEq" title="Lace-Stand">
 				<synonym value="Lace-Stands"/>
 			</heading>
-			<heading id="LampStandStnd" title="Lamp-Stand">
+			<heading id="LampStandStndMiscEq" title="Lamp-Stand">
 				<synonym value="Lamp-Stands"/>
 			</heading>
-			<heading id="LibationStandStnd" title="Libation-Stand">
+			<heading id="LibationStandStndMiscEq" title="Libation-Stand">
 				<synonym value="Libation-Stands"/>
 			</heading>
-			<heading id="MirrorStandStnd" title="Mirror-Stand">
+			<heading id="MirrorStandStndMiscEq" title="Mirror-Stand">
 				<synonym value="Mirror-Stands"/>
 			</heading>
-			<heading id="OfferingStandStnd" title="Offering-Stand">
+			<heading id="OfferingStandStndMiscEq" title="Offering-Stand">
 				<synonym value="Offering-Stands"/>
 			</heading>
-			<heading id="PedestalStnd" title="Pedestal">
+			<heading id="PedestalStndMiscEq" title="Pedestal">
 				<synonym value="Pedestals"/>
 			</heading>
-			<heading id="PlinthStnd" title="Plinth">
+			<heading id="PlinthStndMiscEq" title="Plinth">
 				<synonym value="Plinths"/>
 			</heading>
-			<heading id="QuiverStandStnd" title="Quiver-Stand">
+			<heading id="QuiverStandStndMiscEq" title="Quiver-Stand">
 				<synonym value="Quiver-Stands"/>
 			</heading>
-			<heading id="RebabStandStnd" title="Rebab-Stand" noMatch="true"/>
-			<heading id="RingStandStnd" title="Ring-Stand">
+			<heading id="RebabStandStndMiscEq" title="Rebab-Stand" noMatch="true"/>
+			<heading id="RingStandStndMiscEq" title="Ring-Stand">
 				<synonym value="Ring-Stands"/>
 			</heading>
-			<heading id="ScrollStandStnd" title="Scroll-Stand">
+			<heading id="ScrollStandStndMiscEq" title="Scroll-Stand">
 				<synonym value="Scroll-Stands"/>
 			</heading>
-			<heading id="SnufferStandStnd" title="Snuffer-Stand">
+			<heading id="SnufferStandStndMiscEq" title="Snuffer-Stand">
 				<synonym value="Snuffer-Stands"/>
 			</heading>
-			<heading id="StelaStandStnd" title="Stela-Stand">
+			<heading id="StelaStandStndMiscEq" title="Stela-Stand">
 				<synonym value="Stela-Stands"/>
 			</heading>
-			<heading id="SulingStandStnd" title="Suling-Stand" noMatch="true"/>
-			<heading id="TrestleStnd" title="Trestle">
+			<heading id="SulingStandStndMiscEq" title="Suling-Stand" noMatch="true"/>
+			<heading id="TrestleStndMiscEq" title="Trestle">
 				<synonym value="Trestles"/>
 			</heading>
-			<heading id="TripodStandStnd" title="Tripod Stand">
+			<heading id="TripodStandStndMiscEq" title="Tripod Stand">
 				<synonym value="Tripod Stands"/>
 			</heading>
-			<heading id="TrivetStnd" title="Trivet">
+			<heading id="TrivetStndMiscEq" title="Trivet">
 				<synonym value="Trivets"/>
 			</heading>
-			<heading id="VesselStandStnd" title="Vessel-Stand">
+			<heading id="VesselStandStndMiscEq" title="Vessel-Stand">
 				<synonym value="Vessel-Stands"/>
 			</heading>
-			<heading id="WatchStandStnd" title="Watch-Stand">
+			<heading id="WatchStandStndMiscEq" title="Watch-Stand">
 				<synonym value="Watch-Stands"/>
 			</heading>
-			<heading id="WigStandStnd" title="Wig-Stand">
+			<heading id="WigStandStndMiscEq" title="Wig-Stand">
 				<synonym value="Wig-Stands"/>
 			</heading>
-			<heading id="WritingSetStandStnd" title="Writing-Set-Stand">
+			<heading id="WritingSetStandStndMiscEq" title="Writing-Set-Stand">
 				<synonym value="Writing-Set-Stands"/>
 			</heading>
 		</heading>
-		<heading id="Stave" title="Stave">
+		<heading id="StaveMiscEq" title="Stave">
 			<synonym value="Staves"/>
 		</heading>
-		<heading id="Stick" title="Stick">
+		<heading id="StickMiscEq" title="Stick">
 			<synonym value="Sticks"/>
 		</heading>
 	</heading>
@@ -7099,8 +7110,10 @@
 					<!-- from old DB: "Yugoslav banjo-like stringed instrument" [sic] -->
 					<synonym value="Yugoslav Banjos"/>
 					<synonym value="Yugoslav Banjoes"/>
-					<excl value="Abalone"/> <!-- Excludes abalone "banjo" -->
-					<excl value="Haliotis"/> <!-- Excludes "Haliotis, banjo type" -->
+					<excl value="Abalone"/>
+					<!-- Excludes abalone "banjo" -->
+					<excl value="Haliotis"/>
+					<!-- Excludes "Haliotis, banjo type" -->
 					<heading id="GourdBanjo" title="Gourd Banjo">
 						<synonym value="Gourd Banjos"/>
 						<synonym value="Gourd Banjoes"/>
@@ -8661,7 +8674,7 @@
 			</heading>
 			<heading id="Songsheet" title="Songsheet">
 				<synonym value="Songsheets"/>
-				<implies facet="ObjectName" cat="SongsheetComm"/>				
+				<implies facet="ObjectName" cat="SongsheetComm"/>
 			</heading>
 			<heading id="SulingStand" title="Suling-Stand">
 				<synonym value="Suling-Stands"/>
