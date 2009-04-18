@@ -70,12 +70,15 @@ function loadObjectZoomer(path){
 	myflashvars = {
 		zoomifyMaxZoom: 100,
 		zoomifySlider: 0,
-		zoomifyNavWindow: 0,
+		zoomifyNavWindow: 1,
+		zoomifyNavWidth: 85,
+		zoomifyNavHeight: 70,
+		zoomifyNavY: 280,
 		zoomifyImagePath: path
 	};
 	$('#detail_image').flash(
 	        { src: templateVarsJSON['zoomer'],
-	          width: 375,
+	          width: 425,
 	          height: 350,
 			flashvars: myflashvars,
 			expressInstall: true }, 
