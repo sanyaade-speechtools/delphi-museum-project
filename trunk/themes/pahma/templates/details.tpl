@@ -4,54 +4,10 @@
 	var templateVarsJSON = eval({$templateVarsJSON});
 //]]>
 </script>
-<script type="text/javascript" charset="utf-8">
-{literal}
-// Move to details.js
-//<![CDATA[
-function doViewCard(e) {
-  $('#detail_image').css("visibility","hidden");
-	setCatCardImage("{/literal}{$catCardMediaItems[0].img_path}{literal}");
-  $('#pop_screen').css("display","block");
-	e.cancelBubble = true;
-	if (e.stopPropagation) e.stopPropagation();
-	return false;
-}
-
-function setCatCardImage(srcURL) {
-	$('#cat_card_image').attr("src", srcURL);
-	$('#cat_card_clipper').removeClass('zoomed');
-	
-}
-
-function doHideCard(e) {
-  $('#detail_image').css("visibility","visible");
-  $('#pop_screen').css("display","none");
-  
-	e.cancelBubble = true;
-	if (e.stopPropagation) e.stopPropagation();
-	return false;
-}
-
-function doCatCardZoom(e) {
-	if($('#cat_card_clipper').hasClass('zoomed')){
-		//$('#cat_card_image').attr("width","{/literal}{$catCardMediaItems[0].width}{literal}");
-		$('#cat_card_clipper').addClass('unzoomed');
-		$('#cat_card_clipper').removeClass('zoomed');
-	} else {
-		$('#cat_card_clipper').addClass('zoomed');
-		$('#cat_card_clipper').removeClass('unzoomed');
-	}
-	e.cancelBubble = true;
-	if (e.stopPropagation) 
-		e.stopPropagation();
-	return false;
-}
-//]]>
-{/literal}
-</script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.flash.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.ui-1.0/ui.tabs.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/details.js"></script>
+
 		<div id="detail_imageCol">
 			<div id="detail_mediaBox">
 				{if $noImage}
@@ -188,13 +144,13 @@ function doCatCardZoom(e) {
 			<div id="pop_screen" 
 			    style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:#FFF; display:none;" >
 			  <div id="vcc_inner" 
-			    style="position:absolute; top:10px; left:15px; width:1200px; height:650px; background-color:#F8F8F8; border:2px solid #cdcdc9; padding:0 15px;" >
+			    style="position:absolute; top:10px; left:15px; width:680px; height:650px; background-color:#F8F8F8; border:2px solid #cdcdc9; padding:0 15px;" >
 					<h3 style="float:right"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
 					<h2>Catalog Card{if $numCatCardMediaItems > 1 }s{/if} for object:</h2>
                    
                     <div id="cat_card_clipper" class="unzoomed" style="overflow:auto">
                     <a href="" onclick="doCatCardZoom(event);return false;">
-					<img id="cat_card_image" width="650px" src="foo" />
+					<img id="cat_card_image" src="{$catCardMediaItems[0].img_path}" width="650px" />
                     </a>
                     </div>
                     
