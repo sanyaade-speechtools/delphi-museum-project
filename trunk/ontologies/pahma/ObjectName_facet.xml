@@ -5419,7 +5419,7 @@
 				<heading id="FiftyCentavos" title="50 Centavos"/>
 			</heading>
 			<heading id="UnitedStatesCoins" title="United States Coins">
-				<synonym value="Us/Dollar System"/>
+				<synonym value="US/Dollar System"/>
 				<heading id="Penny" title="Penny">
 					<synonym value="Pennies"/>
 					<heading id="Flyingeaglepenny" title="Flying Eagle Penny">
@@ -5682,85 +5682,105 @@
 				</heading>
 			</heading>
 			<heading id="Ancientromancoins" title="Ancient Roman Coins">
+				<heading id="RomanCoinsByDenom" title="By Denomination" noMatch="true">
+					<heading id="RomanBronzeCoinDenom" title="Bronze coin denominations" noMatch="true">
+						<heading id="RomanDenomAs" title="As" noMatch="true">
+							<!-- <synonym value="xxxxxxxxxxxxxx"/> -->
+						</heading>
+						<heading id="RomanDenomSemis" title="Semis">
+							<synonym value="Semis ?"/>
+						</heading>
+						<heading id="RomanDenomTriens" title="Triens"/>
+					</heading>
+				</heading>
+				<heading id="RomanCoinsByType" title="By Type" noMatch="true">
+					<heading id="RomanEarlyBronzeCoins" title="Early bronze coins" noMatch="true">
+						<implies facet="Material" cat="BronzeMetal"/>
+						<heading id="RomanAesRude" title="Aes Rude"> <!-- Bronze/Copper bartered by weight, in irregular forms -->
+							<synonym value="Oes Rude"/>
+							<heading id="Aesrudesextantalstand" title="Aes Rude; Sextantal Stand"/> <!-- Cannot currently be a single token -->
+						</heading>
+						<heading id="RomanAesGrave" title="Aes Grave"> <!-- Bronze/Copper bartered by weight, in the form of bars -->
+							<synonym value="Oes Grave"/>
+							<heading id="Aesgravelibral" title="Aes Grave; Libral"/> <!-- Cannot currently be a single token -->
+							<heading id="Aesgraveuncia" title="Aes Grave; Uncia"/> <!-- Cannot currently be a single token -->
+							<heading id="Aesgravequadrans" title="Aes Grave; Quadrans"/> <!-- Cannot currently be a single token -->
+							<heading id="Aesgravetriens" title="Aes Grave; Triens"/> <!-- Cannot currently be a single token -->
+						</heading>
+						<heading id="RomanAesSignatum" title="Aes Signatum"> <!-- Bronze/Copper bars stamped with definite figures -->
+							<synonym value="Oes Signatum"/>
+						</heading>
+					</heading>
+					<heading id="RomanLaterBronzeCoins" title="Later bronze coins" noMatch="true">
+						<implies facet="Material" cat="BronzeMetal"/>
+						<heading id="Aes" title="Aes">
+							<heading id="Aesfolles" title="Aes Folles">
+								<heading id="AesfollesFour" title="Aes Folles (4)"/>
+								<heading id="AesfollesRThree" title="Aes Folles (R3)"/>
+								<heading id="AesfollesS" title="Aes Folles (S)"/>
+								<heading id="AesfollesRFour" title="Aes Folles (R 4)"/>
+								<heading id="AesfollesROne" title="Aes Folles (R1)"/>
+								<heading id="AesfollesCOne" title="Aes Folles (C1)"/>
+							</heading>
+							<heading id="Aessemis" title="Aes Semis"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="RomanCoinsByWtStandard" title="By Weight Standard" noMatch="true">
+					<heading id="RomanLibralStandard" title="Libral Standard"/> <!-- Original weight standard -->
+					<heading id="RomanSemiLibralStandard" title="Semilibral Standard">
+						<synonym value="(Semi-Libral S"/>
+					</heading>
+					<heading id="RomanPostSemiLibralStand" title="Post-Semilibral Standard">
+						<synonym value="(Post-Semilibral St"/>
+					</heading>
+					<heading id="RomanTrientalStandard" title="Triental Standard"/>
+					<heading id="RomanQuartuncialStandard" title="Quartuncial Standard"> <!-- CHECK -->
+					</heading>
+					<heading id="RomanSextantalStandard" title="Sextantal Standard">
+						<synonym value="(Sextantal Standard"/>
+						<synonym value="(Sextantal Standard)"/>
+						<synonym value="(Sextantal Stand"/>
+						<synonym value="(Sextantal Standard?)"/>
+					</heading>
+					<heading id="RomanUncialStandard" title="Uncial Standard">
+						<synonym value="Uncial Standrard"/>
+						<synonym value="(Uncial Standard)"/>
+						<synonym value="Uncial Standar"/>
+					</heading>
+					<heading id="RomanSemiuncialStandard" title="Semiuncial Standard">
+						<synonym value="Semiuncial Standa"/>
+						<synonym value="Semiuncial Sta"/>
+					</heading>
+				</heading>
 				<heading id="Antoninianus" title="Antoninianus">
 					<synonym value="Antoninianvs"/>
 					<synonym value="Antioninianus"/>
 				</heading>
 				<heading id="Denarius" title="Denarius">
+					<synonym value="Denari"/>
+					<synonym value="Denarii"/>
+					<implies facet="Material" cat="SilverMaterial"/>
 					<heading id="Denariusserrate" title="Denarius (Serrate)">
 						<synonym value="Denarius Serrati"/>
 					</heading>
 				</heading>
 				<heading id="Sestertius" title="Sestertius"/>
 				<heading id="Quinarius" title="Quinarius"/>
-				<heading id="Sextans" title="Sextans">
-					<heading id="Sextanssextantalstandard" title="Sextans (Sextantal Standard)"/>
-					<heading id="Sextansuncialstandard" title="Sextans (Uncial Standard)">
-						<synonym value="Sextans; Uncial Standrard"/>
-					</heading>
+				<heading id="Sextans" title="Sextans"/>
+				<heading id="Aureus" title="Aureus">
+					<implies facet="Material" cat="GoldMaterial"/>
 				</heading>
-				<heading id="Aes" title="Aes">
-					<heading id="Aessemiuncialstandard" title="Aes - Semiuncial Standard">
-						<synonym value="Aes; Semiuncial Standard"/>
-					</heading>
-					<heading id="Aessextantalstandard" title="Aes - Sextantal Standard">
-						<synonym value="Aes (Sextantal Standard)"/>
-						<synonym value="Aes-(Sextantal Standard?)"/>
-						<synonym value="Aes; Sextantal Standard"/>
-					</heading>
-					<heading id="Aesuncialstandard" title="Aes - Uncial Standard">
-						<synonym value="Aes (Uncial Standard)"/>
-					</heading>
-					<heading id="Aesfolles" title="Aes Folles">
-						<heading id="AesfollesFour" title="Aes Folles (4)"/>
-						<heading id="AesfollesRThree" title="Aes Folles (R3)"/>
-						<heading id="AesfollesS" title="Aes Folles (S)"/>
-						<heading id="AesfollesRFour" title="Aes Folles (R 4)"/>
-						<heading id="AesfollesROne" title="Aes Folles (R1)"/>
-						<heading id="AesfollesCOne" title="Aes Folles (C1)"/>
-					</heading>
-					<heading id="Aesgrave" title="Aes Grave">
-						<heading id="Aesgravelibral" title="Aes Grave; Libral"/>
-						<heading id="Aesgraveuncia" title="Aes Grave; Uncia"/>
-						<heading id="Aesgravequadrans" title="Aes Grave; Quadrans"/>
-						<heading id="Aesgravetriens" title="Aes Grave; Triens"/>
-					</heading>
-					<heading id="Aesrude" title="Aes Rude">
-						<heading id="Aesrudesextantalstand" title="Aes Rude; Sextantal Stand"/>
-					</heading>
-					<heading id="Aessemis" title="Aes Semis"/>
-				</heading>
-				<heading id="Aureus" title="Aureus"/>
 				<heading id="Cistophoros" title="Cistophoros"/>
-				<heading id="Quadrans" title="Quadrans">
-					<synonym value="Quadrans - Semiuncial Sta"/>
-					<synonym value="Quadrans (Sextantal Stand"/>
-					<synonym value="Quadrans - Uncial Standar"/>
-					<synonym value="Quadrans; Uncial Standard"/>
-				</heading>
+				<heading id="Quadrans" title="Quadrans"/>
 				<heading id="Constantinians" title="Constantinians"/>
 				<heading id="Semuncia" title="Semuncia"/>
 				<heading id="Dupondius" title="Dupondius"/>
-				<heading id="Semis" title="Semis">
-					<synonym value="Semis ?"/>
-					<synonym value="Semis - Semiuncial Standa"/>
-					<synonym value="Semis (Sextantal Standard"/>
-					<synonym value="Semis; Sextantal Standard"/>
-				</heading>
-				<heading id="Triens" title="Triens">
-					<synonym value="Triens - Uncial Standard"/>
-					<synonym value="Triens; Uncial Standard"/>
-					<synonym value="Triens (Sextantal Standard)"/>
-				</heading>
 				<heading id="Quartuncias" title="Quartuncias">
 					<synonym value="Quartuncia"/>
-					<synonym value="Quartuncia (Semi-Libral S"/>
 					<synonym value="Sydenham:  Quartuncia; Gr"/>
 				</heading>
-				<heading id="Uncia" title="Uncia">
-					<synonym value="Uncia - Triental Standard"/>
-					<synonym value="Uncia (Post-Semilibral St"/>
-				</heading>
+				<heading id="Uncia" title="Uncia"/>
 				<heading id="Triaassaria" title="Tria Assaria"/>
 			</heading>
 			<heading id="Ancientbyzantinecoins" title="Ancient Byzantine Coins"/>
