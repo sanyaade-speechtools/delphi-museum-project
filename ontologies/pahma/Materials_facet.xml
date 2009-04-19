@@ -596,9 +596,45 @@
 		<prefix value="manufactured from "/>
 		<heading id="Fernsandprimitiveplants" title="Ferns and primitive plants">
 			<heading id="Brackenroot" title="Bracken root"/>
-			<heading id="Fern" title="Fern">
+			<heading id="Ferns" title="Ferns">
+				<synonym value="Fern"/>
+				<heading id="BrakeFern" title="Brake fern">  <!-- from Supplementary Catalog -->
+					<synonym value="Brake ferns"/>
+					<synonym value="Pteris"/>  <!-- Taxonomic genus -->
+					<synonym value="Pteris quilina"/> <!-- Linnaean binomial -->
+					<synonym value="Pteris sp"/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Pteris sp."/> <!-- Taxonomic genus, indeterminate species -->
+				</heading>
+				<heading id="ChainFern" title="Chain fern">  <!-- from Supplementary Catalog -->
+					<synonym value="Chain ferns"/>
+					<synonym value="Woodwardia"/> <!-- Taxonomic genus -->
+					<synonym value="Woodwardia sp"/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Woodwardia sp."/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Woodwardia spinulosa"/> <!-- Linnaean binomial -->
+				</heading>
 				<heading id="Horsetailfern" title="Horsetail fern">
-					<synonym value="Equisetum"/>
+					<synonym value="Horsetail ferns"/>
+					<synonym value="Equisetum"/> <!-- Taxonomic genus -->
+					<synonym value="Equisetum sp"/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Equisetum sp."/> <!-- Taxonomic genus, indeterminate species -->
+				</heading>
+				<heading id="MaidenhairFern" title="Maidenhair fern">  <!-- from Supplementary Catalog -->
+					<synonym value="Maidenhair"/>
+					<synonym value="Maidenhairs"/>
+					<synonym value="Maidenhair ferns"/>
+					<synonym value="Adiantum"/> <!-- Taxonomic genus -->
+					<synonym value="Adiantum pendatum"/> <!-- Linnaean binomial -->
+					<synonym value="Adiantum sp"/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Adiantum sp."/> <!-- Taxonomic genus, indeterminate species -->
+				</heading>
+			</heading>
+			<heading id="Lichens" title="Lichens">
+				<synonym value="Lichen"/>
+				<heading id="WolfLichen" title="Wolf lichen">  <!-- from Supplementary Catalog -->
+					<synonym value="Evernia sp"/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Evernia sp."/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Evernia vulpina"/> <!-- Linnaean binomial -->
+					<synonym value="Wolf lichens"/>
 				</heading>
 			</heading>
 		</heading>
@@ -608,23 +644,37 @@
 		<heading id="GrassandHerbs" title="Grass and Herbs">
 			<heading id="BambooMaterial" title="Bamboo"/>
 			<heading id="CanePlantMaterial" title="Cane"/>
-			<heading id="Commonbeargrass" title="Common beargrass">
-				<synonym value="Bear grass"/>
+			<heading id="Commonbeargrass" title="Common Beargrass">
+				<synonym value="Baregrass"/> <!-- Misspelling -->
+				<synonym value="Bare grass"/> <!-- Misspelling -->
+				<synonym value="Bear grass"/> <!-- Alternative spelling -->
 				<synonym value="Beargrass"/>
-				<synonym value="Bear-grass"/>
-				<synonym value="Xerophyllum tenex"/>
-				<synonym value="Baregrass"/>
-				<synonym value="Bare grass"/>
+				<synonym value="Bear-grass"/> <!-- Alternative spelling -->
+				<synonym value="Xerophyllum tenex"/> <!-- Linnaean binomial -->
 			</heading>
 			<heading id="Devilsclaw" title="'Devil's claw'"/>
 			<heading id="Devilshorns" title="'Devil's horns'"/>
 			<heading id="Rabbitbrush" title="Rabbit brush"/>
-			<heading id="ReedPlantMaterial" title="Reed"/>
-			<heading id="Sedge" title="Sedge">
-				<synonym value="Carex"/>
+			<heading id="ReedPlantMaterial" title="Reed">  <!-- from Supplementary Catalog -->
+				<synonym value="Phragmites sp"/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Phragmites sp."/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Phragmites vulgaris"/> <!-- Linnaean binomial -->
+				<synonym value="Reeds"/>
 			</heading>
-			<heading id="Sloughgrass" title="Slough grass"/>
-			<heading id="Whitegrass" title="White grass"/>
+			<heading id="RushGrass" title="Rush">  <!-- from Supplementary Catalog -->
+				<synonym value="Juncus"/> <!-- Taxonomic genus -->
+				<synonym value="Juncus sp"/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Juncus sp."/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Rushes"/>
+			</heading>
+			<heading id="SedgeGrass" title="Sedge">  <!-- from Supplementary Catalog -->
+				<synonym value="Carex"/> <!-- Taxonomic genus -->
+				<synonym value="Carex sp"/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Carex sp."/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Sedges"/>
+			</heading>
+			<heading id="Sloughgrass" title="Slough Grass"/>
+			<heading id="Whitegrass" title="White Grass"/>
 		</heading>
 		<heading id="SeedsPlantMaterial" title="Seeds">
 			<synonym value="Seed"/>
@@ -641,29 +691,62 @@
 			</heading>
 		</heading>
 		<heading id="Shrubs" title="Shrubs">
-			<heading id="Cercis" title="Cercis"/>
-			<heading id="CottonPlant" title="Cotton Plant">
+			<heading id="Cercis" title="Cercis"/> <!-- Taxonomic genus -->
+			<heading id="CottonPlant" title="Cotton Plant"/>
+			<heading id="DesertAgave" title="Desert Agave"> <!-- From Supplementary Catalog -->
+				<synonym value="Agave"/> <!-- Common name & taxonomic genus -->
+				<synonym value="Agave deserti"/> <!-- Linnaean binomial -->
+				<synonym value="Agave sp"/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Agave sp."/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Agaves"/>
+				<synonym value="Century Plant"/>
+				<synonym value="Century Plants"/>
+				<synonym value="Desert Agaves"/>
 			</heading>
-			<heading id="Grapevine" title="Grapevine"/>
+			<heading id="Grapevine" title="Grapevine"> <!-- from Supplementary Catalog -->
+				<synonym value="Grapevines"/>
+				<synonym value="Grape vine"/>
+				<synonym value="Grape vines"/>
+				<synonym value="Grape-vine"/>
+				<synonym value="Grape-vines"/>
+				<synonym value="Vitis"/> <!-- Taxonomic genus -->
+				<synonym value="Vitis californica"/> <!-- Linnaean binomial -->
+				<synonym value="Vitis sp"/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Vitis sp."/> <!-- Taxonomic genus, indeterminate species -->
+			</heading>
 			<heading id="Honeysuckle" title="Honeysuckle">
-				<synonym value="Caprifoliaceae"/>
-				<synonym value="Viburnum"/>
+				<synonym value="Caprifoliaceae"/> <!-- Taxonomic family -->
 				<synonym value="Common Viburnum"/>
-				<synonym value="Viburnum ellipticum"/>
+				<synonym value="Viburnum"/> <!-- Taxonomic genus -->
+				<synonym value="Viburnum sp"/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Viburnum sp."/> <!-- Taxonomic genus, indeterminate species -->
+				<synonym value="Viburnum ellipticum"/> <!-- Linnaean binomial -->
 			</heading>
 			<heading id="JuniperBush" title="Juniper Bush" noMatch="true"/>
 			<heading id="Redbud" title="Redbud">
 				<synonym value="Red-bud"/>
 			</heading>
 			<heading id="Skunkbushsumac" title="Skunkbush sumac">
-				<synonym value="Rhus trilobata"/>
+				<synonym value="Rhus trilobata"/> <!-- Linnaean binomial -->
 			</heading>
 		</heading>
 		<heading id="Trees" title="Trees">
 			<heading id="TypesOfTrees" title="Types of Trees" noMatch="true">
-				<heading id="AlderTree" title="Alder"/>
-				<heading id="BananaTree" title="Banana">
-					<synonym value="Bananas"/>
+				<heading id="AlderTree" title="Alder"> <!-- from Supplementary Catalog -->
+					<synonym value="Alnus"/> <!-- Taxonomic genus -->
+					<synonym value="Alnus sp"/> <!-- Taxonomic genus, indeterminate species -->
+					<synonym value="Alnus sp."/> <!-- Taxonomic genus, indeterminate species -->
+					<heading id="RedAlderTree" title="Red Alder">
+						<synonym value="Alnus rubra"/> <!-- Linnaean binomial -->
+						<synonym value="Red Alders"/>
+					</heading>
+					<heading id="WhiteAlderTree" title="White Alder">
+						<synonym value="Alnus rhombifolia"/> <!-- Linnaean binomial -->
+						<synonym value="White Alders"/>
+					</heading>
+				</heading>
+				<heading id="BananaTree" title="Banana Tree">
+					<synonym value="Banana Trees"/>
 				</heading>
 				<heading id="BirchTree" title="Birch">
 					<heading id="Hazel" title="Hazel"/>
@@ -698,7 +781,7 @@
 						<heading id="Nutmegpine" title="'Nutmeg pine'"/>
 						<heading id="Sugarpine" title="Sugar pine">
 							<synonym value="Sugarpine"/>
-							<synonym value="Pinus lambertiniana"/>
+							<synonym value="Pinus lambertiniana"/> <!-- Linnaean binomial -->
 						</heading>
 					</heading>
 					<heading id="Redwood" title="Redwood"/>
