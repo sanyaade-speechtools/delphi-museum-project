@@ -176,3 +176,42 @@ function ajaxLinkHandler(arg_id, arg_href, arg_title){
 	// Return false so that the link is not followed
 	return false;
 }
+
+function doCatCardZoom(e) {
+	if($('#cat_card_clipper').hasClass('zoomed')){
+		$('#cat_card_clipper').addClass('unzoomed');
+		$('#cat_card_clipper').removeClass('zoomed');
+	} else {
+		$('#cat_card_clipper').addClass('zoomed');
+		$('#cat_card_clipper').removeClass('unzoomed');
+	}
+	e.cancelBubble = true;
+	if (e.stopPropagation) 
+		e.stopPropagation();
+	return false;
+}
+
+function doHideCard(e) {
+  $('#detail_image').css("visibility","visible");
+  $('#pop_screen').css("display","none");
+  
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	return false;
+}
+
+function setCatCardImage(srcURL) {
+	$('#cat_card_image').attr("src", srcURL);
+	$('#cat_card_clipper').removeClass('zoomed');
+	
+}
+
+function doViewCard(e) {
+  	$('#detail_image').css("visibility","hidden");
+	$('#pop_screen').css("display","block");
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	return false;
+}
+
+
