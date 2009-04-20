@@ -154,7 +154,7 @@
                     </a>
                     </div>
                     
-					<h3 style="float:center; font-weight:normal"><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}&objId={$id}">Problem or Issue with this object's catalog card(s)?</a></h3>
+					<h3 style="float:right; font-weight:normal"><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}&objId={$id}">Problem or Issue with this object's catalog card(s)?</a></h3>
 					{if $numCatCardMediaItems > 1 }
 						<h3>Additional views</h3>
 						{section name=item loop=$catCardMediaItems}
