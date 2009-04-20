@@ -115,6 +115,9 @@
 			</heading>
 			<heading id="IrrigationEquipment" title="Irrigation Items">
 				<synonym value="Irrigation Equipment"/>
+				<heading id="WateringCan" title="Watering Can">
+					<synonym value="Watering Cans"/>
+				</heading>
 			</heading>
 			<heading id="MilkingCan" title="Milking Can" noMatch="true">
 				<synonym value="Milking Cans"/>
@@ -2985,7 +2988,6 @@
 			<heading id="Sardinecan" title="Sardine Can"/>
 			<heading id="Sodacan" title="Soda Can"/>
 			<heading id="Teacan" title="Tea Can"/>
-			<heading id="Wateringcan" title="Watering Can"/>
 		</heading>
 		<heading id="Case" title="Case">
 			<synonym value="Cases"/>
@@ -3633,18 +3635,20 @@
 				<synonym value="Porringers"/>
 				<implies facet="ActivityorContext" cat="Eating"/>
 			</heading>
-			<heading id="Pot" title="Pot">
+			<heading id="Pot" title="Pot" noMatch="true">
 				<synonym value="Pots"/>
 				<heading id="Olla" title="Olla">
 					<synonym value="Ollas"/>
 					<implies facet="ActivityorContext" cat="FoodStorage"/>
+					<implies facet="ObjectName" cat="CookingPotCookEq"/>
+					<!-- Where do non-cooking related pots live?  -->
 				</heading>
 			</heading>
 			<heading id="Pottery" title="Pottery">
 				<implies facet="Material" cat="Potterymaterial"/>
 				<!-- Yes, The Material Is Really Clay, But I Subdivided Clay To See If It's Useful To Do So.  -->
-				<synonym value="Pot"/>
-				<synonym value="Pots"/>
+				<synonym value="Clay Pot"/>
+				<synonym value="Clay Pots"/>
 				<heading id="Potterybyshape" title="By Shape" noMatch="true">
 					<heading id="Offeringtable" title="Offering Table">
 						<synonym value="Offering Tables"/>
@@ -3679,7 +3683,6 @@
 						<implies facet="Color" cat="Celadoncolor"/>
 					</heading>
 					<heading id="Lusterware" title="Lusterware">
-						<synonym value="Lusterware"/>
 						<synonym value="Lustre Ware"/>
 						<synonym value="Lustreware"/>
 						<implies facet="TechniqueDesignorDecoration" cat="MetallicGlaze"/>
@@ -3726,6 +3729,10 @@
 				</heading>
 				<heading id="Cauxicalli" title="Cauxicalli">
 					<synonym value="Cauxicallis"/>
+					<synonym value="Cuauhxicalli"/>
+					<synonym value="Cuauhxicallis"/>
+					<synonym value="Quauhxicalli"/>
+					<synonym value="Quauhxicallis"/>
 				</heading>
 				<heading id="Censer" title="Censer">
 					<synonym value="Censers"/>
@@ -3982,14 +3989,26 @@
 	</heading>
 	<heading id="Costume" title="Costume">
 		<synonym value="Costumes"/>
+		<synonym value="Clothes"/>
+		<synonym value="Clothing"/>
 		<heading id="CostumeFitting" title="Costume-Fitting">
 			<synonym value="Costume-Fittings"/>
 		</heading>
 		<heading id="DanceCostume" title="Dance-Costume">
 			<synonym value="Dance-Costumes"/>
 		</heading>
-		<heading id="FootWear" title="Foot-Wear">
-			<synonym value="Foot-Wears"/>
+		<heading id="Footwear" title="Footwear">
+			<heading id="Sandalsfootwear" title="Sandals">
+				<synonym value="Sandal"/>
+				<implies facet="ActivityorContext" cat="Shoemaking"/>
+			</heading>
+			<heading id="ShoesFootwear" title="Shoes">
+				<synonym value="Shoe"/>
+				<implies facet="ActivityorContext" cat="Shoemaking"/>
+			</heading>
+			<heading id="SocksFootwear" title="Socks">
+				<synonym value="Sock"/>
+			</heading>
 		</heading>
 		<heading id="Garment" title="Garment">
 			<synonym value="Garments"/>
@@ -4019,6 +4038,22 @@
 			</heading>
 			<heading id="BlouseGarment" title="Blouse">
 				<synonym value="Blouses"/>
+				<synonym value="Blusa"/>
+				<heading id="Huipil" title="Huipil">
+					<synonym value="Huipils"/>
+					<heading id="Huipilcofrada" title="Huipil, Cofrada"/>
+					<heading id="Huipilsobre" title="Huipil, Sobre"/>
+					<heading id="Huipilsanto" title="Huipil, Santo"/>
+					<heading id="Huipilmatrimonio" title="Huipil, Matrimonio"/>
+					<heading id="Huipilfiesta" title="Huipil, Fiesta"/>
+					<heading id="Huipildiario" title="Huipil, Diario"/>
+					<heading id="Huipillienzo" title="Huipil, Lienzo"/>
+					<heading id="Huipilniaornio" title="Huipil, Nia Or Nio"/>
+					<heading id="Huipilcasamiento" title="Huipil, Casamiento"/>
+				</heading>
+				<heading id="Mola" title="Mola">
+					<synonym value="Molas"/>
+				</heading>
 			</heading>
 			<heading id="BreastClothGarment" title="Breast-Cloth">
 				<synonym value="Breast-Cloths"/>
@@ -4050,8 +4085,22 @@
 			<heading id="CodPieceGarment" title="Cod-Piece">
 				<synonym value="Cod-Pieces"/>
 			</heading>
-			<heading id="DressGarment" title="Dress">
-				<synonym value="Dresses"/>
+			<heading id="Dresses" title="Dresses">
+				<synonym value="Dress"/> <!-- Exclude The Verb (Both Clothing & Butchery) -->
+				<heading id="Kimono" title="Kimono">
+					<synonym value="Kimonos"/>
+				</heading>
+				<heading id="Sari" title="Sari">
+					<synonym value="Saris"/>
+				</heading>
+				<heading id="Skirt" title="Skirt"> <!-- Might Be Confused With The Frilly Bit Around A Mattress, Hovercraft, Or Christmas Tree -->
+					<synonym value="Skirts"/>
+					<implies facet="ObjectName" cat="SkirtLowerBody"/>
+				</heading>
+				<heading id="Weddingdress" title="Wedding Dress"> <!-- Card For 7-6432 -->
+					<synonym value="Wedding Dresses"/>
+					<implies facet="ActivityorContext" cat="Bridaladornment"/>
+			</heading>
 			</heading>
 			<heading id="FrockGarment" title="Frock">
 				<synonym value="Frocks"/>
@@ -4064,9 +4113,6 @@
 			</heading>
 			<heading id="GownGarment" title="Gown">
 				<synonym value="Gowns"/>
-			</heading>
-			<heading id="HuipilGarment" title="Huipil">
-				<synonym value="Huipils"/>
 			</heading>
 			<heading id="JacketGarment" title="Jacket">
 				<synonym value="Jackets"/>
@@ -4122,14 +4168,20 @@
 			<heading id="MantleGarment" title="Mantle">
 				<synonym value="Mantles"/>
 			</heading>
+			<heading id="Mittens" title="Mittens">
+				<synonym value="Mitten"/>
+			</heading>
 			<heading id="NeckCoverGarment" title="Neck-Cover">
 				<synonym value="Neck-Covers"/>
 			</heading>
 			<heading id="OvergarmentGarment" title="Overgarment">
 				<synonym value="Overgarments"/>
 			</heading>
-			<heading id="PantaloonsGarment" title="Pantaloons">
+			<heading id="PantsGarment" title="Pants">
+				<synonym value="Pant"/>
 				<synonym value="Pantaloon"/>
+				<synonym value="Pantaloons"/>
+				<synonym value="Trousers"/>
 			</heading>
 			<heading id="ParkaGarment" title="Parka">
 				<synonym value="Parkas"/>
@@ -4155,9 +4207,6 @@
 			<heading id="RodilleraGarment" title="Rodillera">
 				<synonym value="Rodilleras"/>
 			</heading>
-			<heading id="SariGarment" title="Sari">
-				<synonym value="Saris"/>
-			</heading>
 			<heading id="SarongGarment" title="Sarong">
 				<synonym value="Sarongs"/>
 			</heading>
@@ -4165,6 +4214,8 @@
 				<synonym value="Serapes"/>
 			</heading>
 			<heading id="ShawlGarment" title="Shawl">
+				<synonym value="Serape"/>
+				<synonym value="Serapes"/>
 				<synonym value="Shawls"/>
 			</heading>
 			<heading id="ShiftGarment" title="Shift">
@@ -4172,6 +4223,10 @@
 			</heading>
 			<heading id="ShirtGarment" title="Shirt">
 				<synonym value="Shirts"/>
+				<heading id="Hairshirtshirt" title="Hairshirt" noMatch="true"/>
+				<heading id="Undershirtshirt" title="Undershirt" noMatch="true"/>
+				<synonym value="Undershirts"/>
+				<implies facet="objectName" cat="UndershirtUnderwearUpper"/>
 			</heading>
 			<heading id="ShirtFrontGarment" title="Shirt-Front">
 				<synonym value="Shirt-Fronts"/>
@@ -4221,9 +4276,6 @@
 			<heading id="TrainGarment" title="Train">
 				<synonym value="Trains"/>
 			</heading>
-			<heading id="TrousersGarment" title="Trousers">
-				<synonym value="Trouser"/>
-			</heading>
 			<heading id="TunicGarment" title="Tunic">
 				<synonym value="Tunics"/>
 			</heading>
@@ -4232,7 +4284,89 @@
 			</heading>
 			<heading id="UndergarmentGarment" title="Undergarment">
 				<synonym value="Undergarments"/>
+				<synonym value="Under-Garment"/>
+				<synonym value="Under Garment"/>
+				<synonym value="Under-Wear"/>
+				<synonym value="Under Wear"/>
+				<synonym value="Under-Wears"/>
+				<synonym value="Under Wears"/>
+				<synonym value="Underwears"/>
+				<heading id="GirdleUnderwear" title="Girdle">
+					<synonym value="Girdles"/>
+				</heading>
+				<heading id="UnderwearLowerBody" title="Underwear" noMatch="true">
+					<heading id="GstringUnderwearLower" title="G-String" noMatch="true">
+						<synonym value="G-Strings"/>
+						<synonym value="G String"/>
+						<synonym value="G Strings"/>
+						<synonym value="Gstring"/>
+						<synonym value="Gstrings"/>
+						<excl value="Stringed"/> <!-- For Excluding Musical G-Strings -->
+						<excl value="Strung"/> <!-- For Excluding Musical G-Strings -->
+						<excl value="Banjo"/>
+						<excl value="Banjos"/>
+						<excl value="Cello"/>
+						<excl value="Cellos"/>
+						<excl value="Guitar"/>
+						<excl value="Guitars"/>
+						<excl value="Harpsichord"/>
+						<excl value="Harpsichords"/>
+						<excl value="Piano"/>
+						<excl value="Pianos"/>
+						<excl value="Viola"/>
+						<excl value="Viola"/>
+						<excl value="Violin"/>
+						<excl value="Violins"/>
+						<implies facet="ObjectName" cat="GstringUnderwearLower"/>
+					</heading>
+					<heading id="GarterUnderwearLower" title="Garter" noMatch="true">
+						<synonym value="Garters"/>
+						<excl value="Snake"/> <!-- Excludes Garter Snake -->
+						<excl value="Snakes"/> <!-- Excludes Garter Snakes -->
+						<excl value="Garter Stitch"/>
+						<excl value="Garter Stitches"/>
+						<excl value="Garter Stitching"/>
+						<excl value="Garter-Stitch"/>
+						<excl value="Garter-Stitches"/>
+						<excl value="Garter-Stitching"/>
+					</heading>
+					<heading id="GarterbeltUnderwear" title="Garter Belt">
+						<synonym value="Garter-Belt"/>
+						<synonym value="Garter Belt"/>
+						<synonym value="Garter-Belts"/>
+						<synonym value="Garter Belts"/>
+						<synonym value="Garterbelts"/>
+						<implies facet="ObjectName" cat="GarterbeltUnderwearLower"/>
+					</heading>
+					<heading id="SocksUnderwearLower" title="Socks" noMatch="true"/>
+				</heading>
+			<heading id="UnderwearUpperBody" title="Underwear" noMatch="true">
+				<heading id="BraUnderwearUpper" title="Bra"/>
+					<synonym value="Bras"/>
+					<synonym value="Brassiere"/>
+					<synonym value="Brassieres"/>
+					<excl value="Auto"/> <!-- excludes car/auto bras -->
+					<excl value="Car"/> <!-- excludes car/auto bras -->
+				</heading>
+				<heading id="CorsetUnderwear" title="Corset">
+					<synonym value="Corsets"/>
+				</heading>
+				<heading id="HairshirtUnderwear" title="Hairshirt">
+					<synonym value="Hair-Shirt"/>
+					<synonym value="Hair Shirt"/>
+					<synonym value="Hair-Shirts"/>
+					<synonym value="Hair Shirts"/>
+					<synonym value="Hairshirts"/>
+				</heading>
+				<heading id="UndershirtUnderwearUpper" title="Undershirt">
+					<synonym value="Under-Shirt"/>
+					<synonym value="Under Shirt"/>
+					<synonym value="Under-Shirts"/>
+					<synonym value="Under Shirts"/>
+					<synonym value="Undershirts"/>
+				</heading>
 			</heading>
+			
 			<heading id="VestGarment" title="Vest">
 				<synonym value="Vests"/>
 			</heading>
@@ -4254,9 +4388,15 @@
 			<heading id="YashmakGarment" title="Yashmak">
 				<synonym value="Yashmaks"/>
 			</heading>
-		</heading>
+		
 		<heading id="HeadGear" title="Head Gear">
 			<synonym value="Head-Gear"/>
+			<heading id="BasketryHat" title="Basketry Hat">
+				<synonym value="Basketry Hats"/>
+				<synonym value="Basketry Cap"/>
+				<synonym value="Basketry Caps"/>
+				<implies facet="Collection" cat="BasketCollection"/>
+			</heading>
 			<heading id="Bonnet" title="Bonnet">
 				<synonym value="Bonnets"/>
 			</heading>
@@ -4272,6 +4412,10 @@
 			<heading id="FaceCover" title="Face-Cover">
 				<synonym value="Face-Covers"/>
 			</heading>
+			<heading id="Fez" title="Fez">
+				<synonym value="Fes"/>
+				<synonym value="Fezzes"/>
+			</heading>
 			<heading id="HairCover" title="Hair-Cover">
 				<synonym value="Hair-Covers"/>
 			</heading>
@@ -4280,6 +4424,7 @@
 			</heading>
 			<heading id="HatHeadGear" title="Hat">
 				<synonym value="Hats"/>
+				<implies facet="ActivityorContext" cat="Millinery"/>
 			</heading>
 			<heading id="HeadBand" title="Head-Band">
 				<synonym value="Head-Bands"/>
@@ -4337,15 +4482,49 @@
 			<heading id="MasqueradeCostume" title="Masquerade-Costume">
 				<synonym value="Masquerade-Costumes"/>
 			</heading>
+		<heading id="Neckwear" title="Neckwear">
+			<synonym value="Neck Ware"/>
+			<synonym value="Neck Wear"/>
+			<synonym value="Neckware"/>
+			<heading id="Collar" title="Collar">
+				<synonym value="Collars"/>
+			</heading>
+			<heading id="Cravatte" title="Cravatte">
+				<synonym value="Cravattes"/>
+			</heading>
+			<heading id="Tie" title="Tie"> <!-- Need Disambiguation With The Verb And The Railroad Timber -->
+				<synonym value="Ties"/>
+			</heading>
+		</heading>
 			<heading id="PersonalAccessories" title="Personal Accessories">
 				<synonym value="Personal Accessory"/>
-				<heading id="Belt" title="Belt">
+				<heading id="BeltAccessory" title="Belt">
 					<synonym value="Belts"/>
+					<excl value="Door Belt"/>
+					<excl value="Door Belts"/>
+					<excl value="Doorbelt"/>
+					<excl value="Doorbelts"/>
+					<excl value="Door-Belt"/>
+					<excl value="Door-Belts"/>
+					<excl value="Door Belt Locks"/>
+					<excl value="Doorbelt Lock"/>
+					<excl value="Doorbelt Locks"/>
+					<excl value="Door-Belt Lock"/>
+					<excl value="Door-Belt Locks"/>
 				</heading>
-				<heading id="Crutch" title="Crutch">
+				<heading id="ButtonAccessory" title="Button">
+					<synonym value="Buttons"/>
+				</heading>
+				<heading id="ButtonHookAccessory" title="Button Hook">
+					<synonym value="Button Hooks"/>
+				</heading>
+				<heading id="CrutchAccessory" title="Crutch">
 					<synonym value="Crutches"/>
 					<synonym value="Crutchs"/>
 					<!-- Misspelling -->
+				</heading>
+				<heading id="CufflinkAccessory" title="Cufflink">
+					<synonym value="Cufflinks"/>
 				</heading>
 				<heading id="Epaulette" title="Epaulette">
 					<synonym value="Epaulettes"/>
@@ -4365,8 +4544,10 @@
 				<heading id="Goggles" title="Goggles">
 					<synonym value="Goggle"/>
 				</heading>
-				<heading id="Handbag" title="Handbag">
+				<heading id="Handbag" title="Handbag" noMatch="true">
 					<synonym value="Handbags"/>
+					<implies facet="ObjectName" cat="PurseAccessory"/>
+					<implies facet="ObjectName" cat="PurseContainer"/>
 				</heading>
 				<heading id="Handkerchief" title="Handkerchief">
 					<synonym value="Handkerchiefs"/>
@@ -4386,14 +4567,16 @@
 				<heading id="NeckTie" title="Neck-Tie">
 					<synonym value="Neck-Ties"/>
 				</heading>
+				<heading id="NetsukeAccessory" title="Netsuke"/>
 				<heading id="NoseClip" title="Nose-Clip">
 					<synonym value="Nose-Clips"/>
 				</heading>
 				<heading id="Parasol" title="Parasol">
 					<synonym value="Parasols"/>
 				</heading>
-				<heading id="PocketBook" title="Pocket-Book">
+				<heading id="PocketBook" title="Pocket-Book" noMatch="true">
 					<synonym value="Pocket-Books"/>
+					<implies facet="ObjectName" cat="PocketBookContnr"/>
 				</heading>
 				<heading id="PursePersAcc" title="Purse">
 					<!-- Main latch -->
@@ -4414,7 +4597,7 @@
 					<synonym value="Sagemonos"/>
 				</heading>
 				<heading id="Sash" title="Sash">
-					<synonym value="Sashs"/>
+					<synonym value="Sashs"/>	
 				</heading>
 				<heading id="Scarf" title="Scarf">
 					<synonym value="Scarfs"/>
@@ -4437,8 +4620,9 @@
 				<heading id="WalkingStick" title="Walking-Stick">
 					<synonym value="Walking-Sticks"/>
 				</heading>
-				<heading id="Wallet" title="Wallet">
+				<heading id="Wallet" title="Wallet" noMatch="true">
 					<synonym value="Wallets"/>
+					<implies facet="ObjectName" cat="WalletContainer"/>
 				</heading>
 			</heading>
 			<heading id="TheatreCostume" title="Theatre-Costume">
@@ -4448,278 +4632,6 @@
 				<synonym value="Uniforms"/>
 			</heading>
 		</heading>
-		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-		<heading id="Clothingorcostume" title="Clothing Or Costume" noMatch="true">
-			<synonym value="Clothes"/>
-			<synonym value="Clothing"/>
-			<synonym value="Costume"/>
-			<synonym value="Costumes"/>
-			<synonym value="Garment"/>
-			<synonym value="Garments"/>
-			<heading id="Accessories" title="Accessories">
-				<heading id="NetsukeAccessory" title="Netsuke"/>
-				<heading id="BagAccessory" title="Bag" noMatch="true"/>
-				<heading id="BeltAccessory" title="Belt">
-					<synonym value="Belts"/>
-					<excl value="Door Belt"/>
-					<excl value="Door Belts"/>
-					<excl value="Doorbelt"/>
-					<excl value="Doorbelts"/>
-					<excl value="Door-Belt"/>
-					<excl value="Door-Belts"/>
-					<excl value="Door Belt Locks"/>
-					<excl value="Doorbelt Lock"/>
-					<excl value="Doorbelt Locks"/>
-					<excl value="Door-Belt Lock"/>
-					<excl value="Door-Belt Locks"/>
-				</heading>
-				<heading id="ButtonAccessory" title="Button">
-					<synonym value="Buttons"/>
-				</heading>
-				<heading id="ButtonHookAccessory" title="Button Hook">
-					<synonym value="Button Hooks"/>
-				</heading>
-				<heading id="CufflinkAccessory" title="Cufflink" noMatch="true"/>
-				<heading id="PurseAccessory" title="Purse" noMatch="true"/>
-			</heading>
-			<heading id="LowerBodyclothes" title="Clothes (Lower Body)" noMatch="true">
-				<heading id="Pants" title="Pants">
-					<synonym value="Pant"/>
-					<synonym value="Pantaloon"/>
-					<synonym value="Pantaloons"/>
-					<synonym value="Trousers"/>
-				</heading>
-				<heading id="SkirtLowerBody" title="Skirt" noMatch="true"/>
-				<heading id="UnderwearLowerBody" title="Underwear" noMatch="true">
-					<heading id="GstringUnderwearLower" title="G-String" noMatch="true"/>
-					<heading id="GarterUnderwearLower" title="Garter" noMatch="true"/>
-					<heading id="GarterbeltUnderwearLower" title="Garter Belt" noMatch="true"/>
-					<heading id="GirdleUnderwearLower" title="Girdle" noMatch="true"/>
-					<heading id="SocksUnderwearLower" title="Socks" noMatch="true"/>
-				</heading>
-			</heading>
-			<heading id="Upperbodyclothes" title="Clothes (Upper Body)" noMatch="true">
-				<heading id="Blouse" title="Blouse">
-					<synonym value="Blouses"/>
-					<synonym value="Blusa"/>
-					<heading id="Huipil" title="Huipil">
-						<synonym value="Huipils"/>
-						<heading id="Huipilcofrada" title="Huipil, Cofrada"/>
-						<heading id="Huipilsobre" title="Huipil, Sobre"/>
-						<heading id="Huipilsanto" title="Huipil, Santo"/>
-						<heading id="Huipilmatrimonio" title="Huipil, Matrimonio"/>
-						<heading id="Huipilfiesta" title="Huipil, Fiesta"/>
-						<heading id="Huipildiario" title="Huipil, Diario"/>
-						<heading id="Huipillienzo" title="Huipil, Lienzo"/>
-						<heading id="Huipilniaornio" title="Huipil, Nia Or Nio"/>
-						<heading id="Huipilcasamiento" title="Huipil, Casamiento"/>
-					</heading>
-					<heading id="Mola" title="Mola">
-						<synonym value="Molas"/>
-					</heading>
-				</heading>
-				<heading id="Neckwear" title="Neckwear">
-					<synonym value="Neck Ware"/>
-					<synonym value="Neck Wear"/>
-					<synonym value="Neckware"/>
-					<heading id="Collar" title="Collar">
-						<synonym value="Collars"/>
-					</heading>
-					<heading id="Cravatte" title="Cravatte">
-						<synonym value="Cravattes"/>
-					</heading>
-					<heading id="Tie" title="Tie"> <!-- Need Disambiguation With The Verb And The Railroad Timber -->
-						<synonym value="Ties"/>
-					</heading>
-				</heading>
-				<heading id="Shirt" title="Shirt">
-					<synonym value="Shirts"/>
-					<heading id="Hairshirtshirt" title="Hairshirt" noMatch="true"/>
-					<heading id="Undershirtshirt" title="Undershirt" noMatch="true"/>
-				</heading>
-				<heading id="UnderwearUpperBody" title="Underwear" noMatch="true">
-					<heading id="BraUnderwearUpper" title="Bra" noMatch="true"/>
-					<heading id="CorsetUnderwearUpper" title="Corset" noMatch="true"/>
-					<heading id="GirdleUnderwearUpper" title="Girdle" noMatch="true"/>
-					<heading id="HairshirtUnderwearUpper" title="Hairshirt" noMatch="true"/>
-					<heading id="UndershirtUnderwearUpper" title="Undershirt" noMatch="true"/>
-				</heading>
-			</heading>
-			<heading id="Dresses" title="Dresses">
-				<synonym value="Dress"/> <!-- Exclude The Verb (Both Clothing & Butchery) -->
-				<heading id="Kimono" title="Kimono">
-					<synonym value="Kimonos"/>
-				</heading>
-				<heading id="Sari" title="Sari">
-					<synonym value="Saris"/>
-				</heading>
-				<heading id="Skirt" title="Skirt"> <!-- Might Be Confused With The Frilly Bit Around A Mattress, Hovercraft, Or Christmas Tree -->
-					<synonym value="Skirts"/>
-					<implies facet="ObjectName" cat="SkirtLowerBody"/>
-				</heading>
-				<heading id="Weddingdress" title="Wedding Dress"> <!-- Card For 7-6432 -->
-					<synonym value="Wedding Dresses"/>
-					<implies facet="ActivityorContext" cat="Bridaladornment"/>
-				</heading>
-			</heading>
-			<heading id="Footwear" title="Footwear">
-				<heading id="Sandalsfootwear" title="Sandals">
-					<synonym value="Sandal"/>
-					<implies facet="ActivityorContext" cat="Shoemaking"/>
-				</heading>
-				<heading id="ShoesFootwear" title="Shoes">
-					<synonym value="Shoe"/>
-					<implies facet="ActivityorContext" cat="Shoemaking"/>
-				</heading>
-				<heading id="SocksFootwear" title="Socks" noMatch="true"/>
-			</heading>
-			<heading id="Headwear" title="Headwear">
-				<heading id="BasketryHat" title="Basketry Hat">
-					<synonym value="Basketry Hats"/>
-					<synonym value="Basketry Cap"/>
-					<synonym value="Basketry Caps"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-				</heading>
-				<heading id="Cap" title="Cap">
-					<synonym value="Caps"/>
-				</heading>
-				<heading id="Fez" title="Fez">
-					<synonym value="Fes"/>
-					<synonym value="Fezzes"/>
-				</heading>
-				<heading id="Hat" title="Hat">
-					<synonym value="Hats"/>
-					<implies facet="ActivityorContext" cat="Millinery"/>
-				</heading>
-				<heading id="Headband" title="Headband">
-					<synonym value="Headbands"/>
-				</heading>
-				<heading id="Turban" title="Turban">
-					<synonym value="Turbans"/>
-				</heading>
-			</heading>
-			<heading id="Outerwear" title="Outerwear">
-				<heading id="Apron" title="Apron">
-					<synonym value="Aprons"/>
-				</heading>
-				<heading id="Cloak" title="Cloak">
-					<synonym value="Cloaks"/>
-				</heading>
-				<heading id="Gloves" title="Gloves">
-					<synonym value="Glove"/>
-				</heading>
-				<heading id="Jacket" title="Jacket">
-					<synonym value="Jackets"/>
-				</heading>
-				<heading id="Mittens" title="Mittens">
-					<synonym value="Mitten"/>
-				</heading>
-				<heading id="Parka" title="Parka">
-					<synonym value="Parkas"/>
-				</heading>
-				<heading id="Shawl" title="Shawl">
-					<synonym value="Serape"/>
-					<synonym value="Serapes"/>
-					<synonym value="Shawls"/>
-				</heading>
-			</heading>
-			<heading id="Underwearall" title="Underwear">
-				<synonym value="Under-Garment"/>
-				<synonym value="Under Garment"/>
-				<synonym value="Undergarment"/>
-				<synonym value="Under-Garments"/>
-				<synonym value="Under Garments"/>
-				<synonym value="Undergarment"/>
-				<synonym value="Under-Wear"/>
-				<synonym value="Under Wear"/>
-				<synonym value="Under-Wears"/>
-				<synonym value="Under Wears"/>
-				<synonym value="Underwears"/>
-				<heading id="BraUnderwear" title="Bra"> <!-- EXCL needed for 'bra' as pidgin for 'brother'? -->
-					<synonym value="Bras"/>
-					<synonym value="Brassiere"/>
-					<synonym value="Brassieres"/>
-					<excl value="Auto"/> <!-- excludes car/auto bras -->
-					<excl value="Car"/> <!-- excludes car/auto bras -->
-					<implies facet="ObjectName" cat="BraUnderwearUpper"/>
-				</heading>
-				<heading id="CorsetUnderwear" title="Corset">
-					<synonym value="Corsets"/>
-					<implies facet="ObjectName" cat="CorsetUnderwearUpper"/>
-				</heading>
-				<heading id="GstringUnderwear" title="G-String">
-					<synonym value="G-Strings"/>
-					<synonym value="G String"/>
-					<synonym value="G Strings"/>
-					<synonym value="Gstring"/>
-					<synonym value="Gstrings"/>
-					<excl value="Stringed"/> <!-- For Excluding Musical G-Strings -->
-					<excl value="Strung"/> <!-- For Excluding Musical G-Strings -->
-					<excl value="Banjo"/>
-					<excl value="Banjos"/>
-					<excl value="Cello"/>
-					<excl value="Cellos"/>
-					<excl value="Guitar"/>
-					<excl value="Guitars"/>
-					<excl value="Harpsichord"/>
-					<excl value="Harpsichords"/>
-					<excl value="Piano"/>
-					<excl value="Pianos"/>
-					<excl value="Viola"/>
-					<excl value="Viola"/>
-					<excl value="Violin"/>
-					<excl value="Violins"/>
-					<implies facet="ObjectName" cat="GstringUnderwearLower"/>
-				</heading>
-				<heading id="GarterUnderwear" title="Garter">
-					<synonym value="Garters"/>
-					<excl value="Snake"/> <!-- Excludes Garter Snake -->
-					<excl value="Snakes"/> <!-- Excludes Garter Snakes -->
-					<excl value="Garter Stitch"/>
-					<excl value="Garter Stitches"/>
-					<excl value="Garter Stitching"/>
-					<excl value="Garter-Stitch"/>
-					<excl value="Garter-Stitches"/>
-					<excl value="Garter-Stitching"/>
-					<implies facet="ObjectName" cat="GarterUnderwearLower"/>
-				</heading>
-				<heading id="GarterbeltUnderwear" title="Garter Belt">
-					<synonym value="Garter-Belt"/>
-					<synonym value="Garter Belt"/>
-					<synonym value="Garter-Belts"/>
-					<synonym value="Garter Belts"/>
-					<synonym value="Garterbelts"/>
-					<implies facet="ObjectName" cat="GarterbeltUnderwearLower"/>
-				</heading>
-				<heading id="GirdleUnderwear" title="Girdle">
-					<synonym value="Girdles"/>
-					<implies facet="ObjectName" cat="GirdleUnderwearLower"/>
-					<implies facet="ObjectName" cat="GirdleUnderwearUpper"/>
-				</heading>
-				<heading id="HairshirtUnderwear" title="Hairshirt">
-					<synonym value="Hair-Shirt"/>
-					<synonym value="Hair Shirt"/>
-					<synonym value="Hair-Shirts"/>
-					<synonym value="Hair Shirts"/>
-					<synonym value="Hairshirts"/>
-					<implies facet="ObjectName" cat="HairshirtUnderwearUpper"/>
-					<implies facet="ObjectName" cat="Hairshirtshirt"/>
-				</heading>
-				<heading id="SocksUnderwear" title="Socks">
-					<synonym value="Sock"/>
-					<implies facet="ObjectName" cat="Socksfootwear"/>
-					<implies facet="ObjectName" cat="SocksUnderwearLower"/>
-				</heading>
-				<heading id="UndershirtUnderwear" title="Undershirt">
-					<synonym value="Under-Shirt"/>
-					<synonym value="Under Shirt"/>
-					<synonym value="Under-Shirts"/>
-					<synonym value="Under Shirts"/>
-					<synonym value="Undershirts"/>
-					<implies facet="ObjectName" cat="UndershirtUnderwearUpper"/>
-					<implies facet="ObjectName" cat="Undershirtshirt"/>
-				</heading>
-			</heading>
 		</heading>
 	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
@@ -4865,7 +4777,8 @@
 				<synonym value="Cooking Pots"/>
 				<synonym value="Cooking-Pot"/>
 				<synonym value="Cooking-Pots"/>
-				<synonym value="Pots"/>  <synonym value="Pot"/>
+				<synonym value="Pots"/>  
+				<synonym value="Pot"/>
 				<!-- Need to differentiate from other non-cooking equip. pots -->
 				<synonym value="Boiler"/>
 				<synonym value="Boilers"/>
@@ -4873,7 +4786,6 @@
 				<synonym value="Cauldrons"/>
 				<synonym value="Caldron"/>
 				<synonym value="Caldrons"/>
-				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Pot -->
 				<heading id="ChytraCookEq" title="Chytra"/>
 				<heading id="LopasCookEq" title="Lopas"/>
 				<heading id="PipkinCookEq" title="Pipkin">
@@ -5017,7 +4929,7 @@
 				<synonym value="Hot-Plate"/>
 				<synonym value="Hot-Plates"/>
 			</heading>
-			<heading id="KettleHeatingCookEq" title="Kettle">
+			<heading id="KettleHeatingCookEq" title="Kettle" noMatch="true">
 				<synonym value="Kettles"/>
 				<implies facet="ActivityorContext" cat="Metallurgy"/> <!-- are all kettles made of metal? -->
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
@@ -5992,7 +5904,6 @@
 		<heading id="SoupFood" title="Soup">
 			<synonym value="Soups"/>
 			<heading id="Acornsoup" title="Acorn Soup">
-				<synonym value="Soups"/>
 			</heading>
 		</heading>
 		<heading id="TeaFood" title="Tea">
@@ -7592,6 +7503,9 @@
 						<synonym value="Slit Drums"/>
 						<synonym value="Slit-Drum"/>
 						<synonym value="Slit-Drums"/>
+						<synonym value="Teponachtli Drum"/>
+						<synonym value="Teponaxtle Drum"/>
+						<synonym value="Teponaztle Drum"/>
 						<synonym value="Teponaztli Drum"/>
 						<synonym value="Teponaztli Drums"/>
 						<synonym value="Teponaztli"/>
@@ -8688,7 +8602,7 @@
 				<synonym value="Bracelets"/>
 				<implies facet="ObjectName" cat="BraceletPrsOrn"/>
 			</heading>
-			<heading id="CufflinkPrsOrn" title="Cufflink">
+			<heading id="CufflinkPrsOrn" title="Cufflink" noMatch="true">
 				<synonym value="Cufflinks"/>
 				<implies facet="ObjectName" cat="CufflinkAccessory"/>
 			</heading>
@@ -8837,9 +8751,6 @@
 			</heading>
 			<heading id="CoronetPrsOrn" title="Coronet">
 				<synonym value="Coronets"/>
-			</heading>
-			<heading id="CuffLinkPrsOrn" title="Cuff-Link">
-				<synonym value="Cuff-Links"/>
 			</heading>
 			<heading id="DemiParurePrsOrn" title="Demi-Parure">
 				<synonym value="Demi-Parures"/>
@@ -9523,6 +9434,7 @@
 			<synonym value="Phylactery-Pouchs"/>
 			<!-- Misspelling -->
 			<excl value="PouchContainer"/>
+			<excl value="Bag"/>
 		</heading>
 		<heading id="PointingBoneRelRit" title="Pointing Bone">
 			<synonym value="Pointing Bones"/>
