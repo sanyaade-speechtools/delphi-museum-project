@@ -158,7 +158,7 @@
 				<synonym value="Hook"/>
 				<!-- EXCL needed? -->
 				<synonym value="Hooks"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="FishHookCase" title="Fish-Hook-Case">
 				<synonym value="Fish-Hook-Cases"/>
@@ -184,7 +184,7 @@
 				<synonym value="Fishing Lines"/>
 				<synonym value="Fishing-Line"/>
 				<synonym value="Fishing-Lines"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="FishingLineHolder" title="Fishing-Line-Holder">
 				<synonym value="Fishing-Line-Holders"/>
@@ -199,7 +199,7 @@
 				<synonym value="Fishing-Nets"/>
 				<synonym value="Net"/>
 				<synonym value="Nets"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 				<heading id="LandingNet" title="Landing-Net">
 					<synonym value="Landing-Nets"/>
 				</heading>
@@ -209,7 +209,8 @@
 			</heading>
 			<heading id="FishingRaft" title="Fishing-Raft">
 				<synonym value="Fishing-Rafts"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>implies boat </heading>
+				<implies facet="ObjectName" cat="mmmmmmmm"/>implies boat 
+			</heading>
 			<heading id="FishingRod" title="Fishing-Rod">
 				<synonym value="Fishing-Rods"/>
 			</heading>
@@ -265,34 +266,34 @@
 			<heading id="Gig" title="Gig">
 				<!-- A trident or three-pringed spear for fishing -->
 				<synonym value="Gigs"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="Gorgehook" title="Gorge hook">
 				<synonym value="Gorge hooks"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="Harpoon" title="Harpoon">
 				<synonym value="Fish-Harpoon"/>
 				<synonym value="Fish-Harpoons"/>
 				<synonym value="Harpoons"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 				<implies facet="ActivityorContext" cat="Hunting"/>
 			</heading>
 			<heading id="Nethanger" title="Net hanger">
 				<synonym value="Net hangers"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="NetFloat" title="Net-Float">
 				<synonym value="Net-Floats"/>
 			</heading>
 			<heading id="Sinker" title="Sinker">
 				<synonym value="Sinkers"/>
-				<implies facet="ActivityorContext" cat="Fishing"/>
+				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="Slitter" title="Slitter">
 				<heading id="EelSlitter" title="Eel Slitter">
 					<synonym value="Eel Slitters"/>
-					<implies facet="ActivityorContext" cat="Fishing"/>
+					<implies facet="ActivityorContext" cat="FishingActivity"/>
 				</heading>
 			</heading>
 		</heading>
@@ -3529,7 +3530,7 @@
 					<synonym value="Fishtrap"/>
 					<synonym value="Fishtraps"/>
 					<synonym value="Fish Trap Baskets"/>
-					<implies facet="ActivityorContext" cat="Fishing"/>
+					<implies facet="ActivityorContext" cat="FishingActivity"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Is this sufficient, or should it be in every child term? -->
 					<heading id="EeltrapBasket" title="Eel Trap Basket">
