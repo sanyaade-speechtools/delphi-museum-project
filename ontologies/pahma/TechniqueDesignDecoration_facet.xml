@@ -231,7 +231,6 @@
 				<token value="indian chief"/>
 				<token value="eskimo"/>
 				<token value="eskimos"/>
-				<token value="eskimo"/>
 				<token value="human face"/>
 				<token value="human faces" combine="prefix"/>
 				<token value="man's face"/>
@@ -463,10 +462,7 @@
 						</heading>
 						<heading id="Leopard" title="Leopard" noMatch="true" asToken="plural"/>
 						<heading id="Lion" title="Lion" noMatch="true" asToken="plural">
-							<token value="lions" combine="prefix"/>
-							<heading id="NameanLion" title="Namean Lion" noMatch="true" asToken="plural">
-								<token value="Namean lions" combine="prefix"/>
-							</heading>
+							<heading id="NameanLion" title="Namean Lion" noMatch="true" asToken="plural"/>
 						</heading>
 						<heading id="MonkeyOrApe" title="Monkey or Ape" noMatch="true">
 							<token value="monkey"/>
