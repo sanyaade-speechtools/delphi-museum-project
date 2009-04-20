@@ -306,13 +306,21 @@
 						<synonym value="Cockle Shells"/>
 						<synonym value="Glycymeris"/>
 					</heading>
+					<!-- Protothaca staminea -->
 					<heading id="MusselShell" title="Mussel Shell">
 						<synonym value="Mussel"/>
-						<synonym value="Gonidea"/>
+						<synonym value="Mussels"/>
+						<synonym value="Mussel Shells"/>
 						<synonym value="Mytilus"/>
 						<synonym value="Mytiuls"/>
 						<synonym value="Mytillus"/>
 						<synonym value="Mytilis"/>
+						<heading id="WesternRidgedMussel" title="Western Ridged Mussel">
+							<!-- http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=80033 -->
+							<synonym value="Gonidea"/> <!-- Gonidea is a monotypic genus -->
+							<synonym value="Gonidea angulata"/>
+							<synonym value="Gonidea augulata"/> <!-- Misspelling -->
+						</heading>
 					</heading>
 					<heading id="Oystershell" title="Oyster Shell">
 						<synonym value="Oyster"/>
@@ -412,7 +420,12 @@
 					</heading>
 				</heading>
 				<heading id="MoonShell" title="Moon Shell">
-					<synonym value="polinices"/>
+					<synonym value="Euspira"/> <!-- Genus name -->
+					<synonym value="Euspira lewisii"/> <!-- taxon no longer valid; subsumed into Euspira lewisii -->
+					<synonym value="Lunatia"/> <!-- genus no longer valid; subsumed into Euspira -->
+					<synonym value="Lunatia lewisii"/> <!-- taxon no longer valid; subsumed into Euspira lewisii -->
+					<synonym value="Polinices"/> <!-- genus no longer valid; subsumed into Euspira -->
+					<synonym value="Polinices lewisii"/> <!-- taxon no longer valid; subsumed into Euspira lewisii -->
 				</heading>
 				<heading id="Trumpetshell" title="Trumpet Shell"/>
 			</heading>
@@ -855,18 +868,31 @@
 		<heading id="MetalMaterial" title="Metal">
 			<synonym value="Pot Metal"/>
 			<synonym value="Pot-Metal"/>
-			<heading id="Alloyunspecified" title="Alloy (unspecified)"/>
+			<heading id="AlloyedMetals" title="Alloys">
+				<synonym value="Alloy"/>
+				<synonym value="Alloy (unspecified)"/>
+				<heading id="BrassMetal" title="Brass">
+					<synonym value="Gold weight"/> <!-- a "gold weight" is an item usually made of brass -->
+				</heading>
+				<heading id="BronzeMetal" title="Bronze"/>
+				<heading id="ElectrumMetal" title="Electrum"/>
+				<heading id="OrichalcumMetal" title="Orichalcum">
+					<synonym value="Aurichalcum"/>
+				</heading>
+				<heading id="PewterMetal" title="Pewter"/>
+				<heading id="SteelMetal" title="Steel">
+					<heading id="StainlessSteelMetal" title="Stainless steel">
+						<synonym value="Stainless-steel"/>
+					</heading>
+				</heading>
+				<heading id="TinMetal" title="Tin"/>
+			</heading>
 			<heading id="AluminumMaterial" title="Aluminum">
 				<synonym value="Aluminium"/>
 			</heading>
-			<heading id="BrassMaterial" title="Brass">
-				<synonym value="Gold weight"/> <!-- a "gold weight" is an item usually made of brass -->
-			</heading>
-			<heading id="BronzeMetal" title="Bronze"/>
 			<heading id="CopperMetal" title="Copper">
 				<heading id="CopperAlloy" title="Copper Alloy"/>
 			</heading>
-			<heading id="Electrum" title="Electrum"/>
 			<heading id="GoldMaterial" title="Gold">
 				<implies facet="Color" cat="GoldColored"/>
 				<heading id="GoldPlate" title="Gold Plate">
@@ -887,7 +913,6 @@
 				<excl value="lead dancer"/>
 				<excl value="vocal lead"/>
 			</heading>
-			<heading id="PewterMaterial" title="Pewter"/>
 			<heading id="PlatinumMaterial" title="Platinum"/>
 			<heading id="SilverMaterial" title="Silver">
 				<implies facet="Color" cat="SilverColored"/>
@@ -899,13 +924,7 @@
 				</heading>
 				<heading id="SterlingSilver" title="Sterling Silver"/>
 			</heading>
-			<heading id="Steel" title="Steel">
-				<heading id="Stainlesssteel" title="Stainless steel">
-					<synonym value="Stainless-steel"/>
-				</heading>
 			</heading>
-			<heading id="Tin" title="Tin"/>
-		</heading>
 		<heading id="MineralsAndStones" title="Minerals And Stones">
 			<synonym value="boulder"/>
 			<synonym value="boulders"/>
@@ -1004,8 +1023,8 @@
 				<heading id="Obsidian" title="Obsidian">
 					<implies facet="Color" cat="Black"/>
 				</heading>
-				<heading id="Pumice" title="Pumice">
-					</heading>
+				<heading id="Pumice" title="Pumice"/>
+				<heading id="Trachyte" title="Trachyte"/>
 				<heading id="Rhyolite" title="Rhyolite"/>
 			</heading>
 			</heading>
