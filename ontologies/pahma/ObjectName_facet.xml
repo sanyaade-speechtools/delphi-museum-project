@@ -887,11 +887,11 @@
 			</heading>
 			<heading id="Granary" title="Granary">
 				<synonym value="Granaries"/>
-				<implies facet="ActivityorContext" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="House" title="House">
 				<synonym value="Houses"/>
-				<implies facet="ActivityorContext" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Roundhouse" title="Roundhouse">
 				<synonym value="Roundhouses"/>
@@ -3445,7 +3445,7 @@
 			<heading id="Amphora" title="Amphora">
 				<synonym value="Amphoras"/>
 				<synonym value="Amphorae"/>
-				<implies facet="ActivityorContext" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Aryballos" title="Aryballos">
 				<synonym value="αρύβαλλος"/>
@@ -3497,7 +3497,7 @@
 				</heading>
 				<heading id="CookingBasketBaskets" title="Cooking Basket">
 					<synonym value="Cooking Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="ObjectName" cat="CookingBasketheating"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
@@ -3509,7 +3509,7 @@
 				</heading>
 				<heading id="DippingBasket" title="Dipping Basket">
 					<synonym value="Dipping Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
@@ -3582,13 +3582,13 @@
 				</heading>
 				<heading id="HangingBasket" title="Hanging Basket">
 					<synonym value="Hanging Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodstorage"/>
+					<implies facet="ActivityorContext" cat="FoodStorage"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="MortarBasket" title="Mortar Basket">
 					<synonym value="Mortar Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
@@ -3598,31 +3598,31 @@
 					<synonym value="Mush Boiling Baskets"/>
 					<synonym value="Boiling Basket"/>
 					<synonym value="Boiling Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="ParchingBasket" title="Parching Basket">
 					<synonym value="Parching Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="ServingBasket" title="Serving Basket">
 					<synonym value="Serving Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="SiftingBasket" title="Sifting Basket">
 					<synonym value="Sifting Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="SoupBasketBaskets" title="Soup Basket">
 					<synonym value="Soup Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
@@ -3631,13 +3631,13 @@
 					<!-- Is this sufficient, or should it be in every child term? -->
 					<heading id="SeedBasket" title="Seed Basket">
 						<synonym value="Seed Baskets"/>
-						<implies facet="ActivityorContext" cat="Foodstorage"/>
+						<implies facet="ActivityorContext" cat="FoodStorage"/>
 						<implies facet="Collection" cat="BasketCollection"/>
 						<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 					</heading>
 					<heading id="AcornBasket" title="Acorn Basket">
 						<synonym value="Acorn Baskets"/>
-						<implies facet="ActivityorContext" cat="Foodstorage"/>
+						<implies facet="ActivityorContext" cat="FoodStorage"/>
 						<implies facet="Collection" cat="BasketCollection"/>
 						<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 					</heading>
@@ -3649,14 +3649,14 @@
 				</heading>
 				<heading id="WinnowingBasket" title="Winnowing Basket">
 					<synonym value="Winnowing Baskets"/>
-					<implies facet="ActivityorContext" cat="Foodpreparation"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 			</heading>
 			<heading id="Bottle" title="Bottle">
 				<synonym value="Bottles"/>
-				<implies facet="ActivityorContext" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Bowl" title="Bowl">
 				<synonym value="Bowls"/>
@@ -3747,11 +3747,11 @@
 			</heading>
 			<heading id="Canteen" title="Canteen">
 				<synonym value="Canteens"/>
-				<implies facet="ActivityorContext" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Cup" title="Cup">
 				<synonym value="Cups"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<heading id="Beercup" title="Beer Cup">
 					<synonym value="Beer Cups"/>
 					<implies facet="ActivityorContext" cat="BeerDrinking"/>
@@ -3798,7 +3798,7 @@
 			</heading>
 			<heading id="Coffeepotvessel" title="Coffee Pot">
 				<synonym value="Coffee Pots"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="Coffeedrinking"/>
 				<implies facet="ObjectName" cat="Coffeepotheating"/>
 			</heading>
@@ -3888,12 +3888,12 @@
 				<synonym value="Kettles"/>
 				<implies facet="ActivityorContext" cat="Metallurgy"/>
 				<!-- Are All Kettles Made of Metal? -->
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="Kettleheating"/>
 			</heading>
 			<heading id="Olla" title="Olla">
 				<synonym value="Ollas"/>
-				<implies facet="ActivityorContext" cat="Foodstorage"/>
+				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Porringer" title="Porringer">
 				<synonym value="Porringers"/>
@@ -3976,7 +3976,7 @@
 				<synonym value="Teapots"/>
 				<synonym value="Tea Pot"/>
 				<synonym value="Tea Pots"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ObjectName" cat="Teapotheating"/>
 			</heading>
 			<heading id="Vase" title="Vase">
@@ -4748,7 +4748,7 @@
 		<synonym value="Food Preparation"/>
 		<synonym value="Preparing Food"/>
 		<synonym value="Cooking"/>
-		<implies facet="ActivityorContext" cat="Foodpreparation"/>
+		<implies facet="ActivityorContext" cat="FoodPreparation"/>
 		<heading id="BaconRoasterCookEq" title="Bacon Roaster">
 			<synonym value="Bacon Roasters"/>
 			<synonym value="Bacon-Roasters"/>
@@ -4807,12 +4807,12 @@
 			<synonym value="Colanders"/>
 			<synonym value="Strainer"/>
 			<synonym value="Strainers"/>
-			<implies facet="ActivityorContext" cat="Foodpreparation"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 		</heading>
 	<heading id="ContainerOpenersCookEq" title="Openers" noMatch="true">
 			<heading id="BottleOpenersCookEq" title="Bottle Openers">
 				<synonym value="Bottle Opener"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<heading id="CanOpenersCookEq" title="Can Opener">
 					<synonym value="Can Openers"/>
 				</heading>
@@ -4838,7 +4838,7 @@
 		</heading>
 		<heading id="CookingVesselCookEq" title="Cooking Vessel">
 			<synonym value="Cooking Vessels"/>
-			<implies facet="ActivityorContext" cat="Foodpreparation"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<implies facet="ObjectName" cat="VesselContainer"/>
 			<heading id="BakingDishCookEq" title="Baking Dish">
 				<synonym value="Baking Dishs"/>
@@ -4847,7 +4847,7 @@
 			</heading>
 			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"/>
 				<synonym value="Cooking Baskets"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="CookingBasketBaskets"/>
 				<implies facet="Collection" cat="BasketCollection"/>
 			</heading>
@@ -4857,7 +4857,7 @@
 				<synonym value="Cooking-Bowls"/>
 				<heading id="BowlCookEq" title="Bowl">
 					<synonym value="Bowls"/> GGGG
-					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<!-- need complex inferentiation to remove ritual bowls, etc. -->
 				</heading>
 			</heading>
@@ -4936,13 +4936,13 @@
 		<heading id="DishCookEq" title="Dish">
 			<synonym value="Dishes"/>
 			<excl value="Offering"/>
-			<implies facet="ActivityorContext" cat="Foodserving"/>
+			<implies facet="ActivityorContext" cat="FoodServing"/>
 			<heading id="FeastDishCookEq" title="Feast Dish">
 				<synonym value="Feast Dishes"/>
 			</heading>
 			<heading id="PlateCookEq" title="Plate">
 				<synonym value="Plates"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<excl value="photographic plate"/>
 				<excl value="photographic plate"/>
 				<excl value="Silver plate"/>
@@ -4968,7 +4968,7 @@
 			</heading>
 			<heading id="PlatterCookEq" title="Platter">
 				<synonym value="Platters"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 			</heading>
 		</heading>
 		<heading id="FishDrierCookEq" title="Fish Drier">
@@ -4988,7 +4988,7 @@
 			<synonym value="Food Heating Devices"/>
 			<heading id="BoilingstoneCookEq" title="Boiling Stone">
 				<synonym value="Boiling stones"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 			<heading id="BottleJackCookEq" title="Bottle Jack">
 				<synonym value="Bottle Jacks"/>
@@ -4998,11 +4998,11 @@
 			</heading>
 			<heading id="ChafingdishCookEq" title="Chafing dish">
 				<synonym value="Chafing dishes"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 			</heading>
 			<heading id="CoffeePotHeatingCookEq" title="Coffee pot">
 				<synonym value="Coffee pots"/>
-				<implies facet="ActivityorContext" cat="Foodserving"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 				<implies facet="ObjectName" cat="CoffeePotVessel"/>
 			</heading>
@@ -5015,11 +5015,11 @@
 				<synonym value="Cooking Stones"/>
 				<synonym value="Cooking-Stone"/>
 				<synonym value="Cooking-Stones"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 			<heading id="CookingStoveCookEq" title="Cooking Stove">
 				<synonym value="Cooking Stoves"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 			<heading id="DishWarmerCookEq" title="Dish-Warmer">
 				<synonym value="Dish-Warmers"/>
@@ -5035,12 +5035,12 @@
 			<heading id="KettleHeatingCookEq" title="Kettle">
 				<synonym value="Kettles"/>
 				<implies facet="ActivityorContext" cat="Metallurgy"/> <!-- are all kettles made of metal? -->
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="KettleVessels"/>
 			</heading>
 			<heading id="OvenCookEq" title="Oven">
 				<synonym value="Ovens"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 			<heading id="SpitCookEq" title="Spit">
 				<synonym value="Spits"/>
@@ -5051,7 +5051,7 @@
 		</heading>
 		<heading id="FoodStampCookEq" title="Food Stamp">
 			<!-- Refers to the tool used to impress designs on food items.  This does not include "food stamps" in the context of welfare/ social assistance zzzzzz -->
-			<implies facet="ActivityorContext" cat="Foodpreparation"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<synonym value="Food Stamps"/>
 			<synonym value="Food-Stamp"/>
 			<synonym value="Food-Stamps"/>
@@ -5072,7 +5072,7 @@
 			<synonym value="Funnels"/>
 			<excl value="Enema Funnel"/>
 			<excl value="Enema Funnels"/>
-			<implies facet="ActivityorContext" cat="Foodstorage"/>
+			<implies facet="ActivityorContext" cat="FoodStorage"/>
 			<implies facet="ObjectName" cat="FunnelTool"/>
 		</heading>
 		<heading id="GrainMeasureCookEq" title="Grain Measure">
@@ -5157,7 +5157,7 @@
 				<synonym value="Ground-stones"/>
 				<synonym value="Millstone"/>
 				<synonym value="Millstones"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<heading id="ManoAndMetateCookEq" title="Mano &amp; Metate">
 					<heading id="MetateCookEq" title="Metate">
 						<synonym value="Metates"/>
@@ -5185,16 +5185,16 @@
 						<synonym value="Mortars"/>
 						<synonym value="Molcajete"/>
 						<excl value="Weapon"/>
-						<implies facet="ActivityorContext" cat="Foodpreparation"/>
+						<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					</heading>
 					<heading id="MortarBasketCookEq" title="Mortar Basket">
 						<implies facet="Collection" cat="BasketCollection"/>
-						<implies facet="ActivityorContext" cat="Foodpreparation"/>
+						<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					</heading>
 					<heading id="PestleCookEq" title="Pestle">
 						<synonym value="Pestles"/>
 						<synonym value="Tejolote"/>
-						<implies facet="ActivityorContext" cat="Foodpreparation"/>
+						<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					</heading>
 				</heading>
 			</heading>
@@ -5209,7 +5209,7 @@
 			</heading>
 			<heading id="SeedBeaterCookEq" title="Seed Beater">
 				<synonym value="Seed Beaters"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 		</heading>
 		<heading id="PastryCutterCookEq" title="Pastry Cutter">
@@ -5243,7 +5243,7 @@
 			<synonym value="Sieves"/>
 			<synonym value="Sifter"/>
 			<synonym value="Sifters"/>
-			<implies facet="ActivityorContext" cat="Foodpreparation"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<heading id="BasketSifterCookingEq" title="Basket Sifter">
 				<synonym value="Basket Sifters"/>
 			</heading>
@@ -5272,7 +5272,7 @@
 		<heading id="UtensilsCookEq" title="Utensils">
 			<synonym value="Utensil"/>
 			<implies facet="ActivityorContext" cat="Eating"/>
-			<implies facet="ActivityorContext" cat="Foodpreparation"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<heading id="ChoppingKnifeCookEq" title="Chopping Knife">
 				<synonym value="Chopping Knifes"/>
 				<!-- Misspelling -->
@@ -5281,8 +5281,8 @@
 				<synonym value="Chopping-Knives"/>
 			</heading>
 			<heading id="FoodScoopCookEq" title="Food Scoop">
-				<implies facet="ActivityorContext" cat="Foodserving"/>
-				<implies facet="ActivityorContext" cat="Foodpreparation"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<synonym value="Food Scoops"/>
 				<synonym value="Food-Scoop"/>
 				<synonym value="Food-Scoops"/>
@@ -5300,7 +5300,7 @@
 					<synonym value="Food-Stirrers"/>
 					<heading id="ChocolatestirrerCookEq" title="Chocolate stirrer">
 						<synonym value="Chocolate stirrers"/>
-						<implies facet="ActivityorContext" cat="Foodserving"/>
+						<implies facet="ActivityorContext" cat="FoodServing"/>
 						<implies facet="ObjectName" cat="ChocolateFood"/>
 					</heading>
 				</heading>
@@ -5310,7 +5310,7 @@
 					<synonym value="Food-Paddles"/>
 					<heading id="MushPaddleCookEq" title="Mush Paddle">
 						<synonym value="Mush Paddles"/>
-						<implies facet="ActivityorContext" cat="Foodpreparation"/>
+						<implies facet="ActivityorContext" cat="FoodPreparation"/>
 						<implies facet="ObjectName" cat="Mush"/>
 					</heading>
 					<heading id="RicePaddleCookEq" title="Rice Paddle">
@@ -5320,13 +5320,13 @@
 					</heading>
 					<heading id="MushStirrerCookEq" title="Mush Stirrer">
 						<synonym value="Mush Stirrers"/>
-						<implies facet="ActivityorContext" cat="Foodpreparation"/>
+						<implies facet="ActivityorContext" cat="FoodPreparation"/>
 						<implies facet="ObjectName" cat="Mush"/>
 					</heading>
 				</heading>
 				<heading id="ForkUtensilCookEq" title="Fork">
 					<synonym value="Forks"/>
-					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<implies facet="ObjectName" cat="ForkTool"/>
 				</heading>
 				<heading id="SpoonUtensilCookEq" title="Spoon">
@@ -5345,7 +5345,7 @@
 					<!-- Excludes toilet spoons -->
 					<excl value="Warmer"/>
 					<!-- Excludes spoon warmers -->
-					<implies facet="ActivityorContext" cat="Foodserving"/>
+					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<heading id="CoffeeSpoonUtensilCookEq" title="Coffee Spoon">
 						<synonym value="Coffee Spoons"/>
 						<synonym value="Coffee-spoon"/>
@@ -5355,7 +5355,7 @@
 					<heading id="LadleSpoonUtensilCookEq" title="Ladle">
 						<synonym value="Ladles"/>
 						<implies facet="ActivityorContext" cat="Eating"/>
-						<implies facet="ActivityorContext" cat="Foodserving"/>
+						<implies facet="ActivityorContext" cat="FoodServing"/>
 					</heading>
 					<heading id="MarrowSpoonUtensilCookEq" title="Marrow Spoon">
 						<synonym value="Marrow Spoons"/>
