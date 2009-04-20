@@ -141,28 +141,24 @@
 		<br class="clear" />
 
 		{if $hasCatCardMedia }
-			<div id="pop_screen" 
-			    style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:#FFF; display:none;" >
-			  <div id="vcc_inner" 
-			    style="position:absolute; top:10px; left:15px; width:680px; height:650px; background-color:#F8F8F8; border:2px solid #cdcdc9; padding:0 15px;" >
-					<h3 style="float:right"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
+			<div id="pop_screen">
+			  <div id="vcc_inner">
+					<h3 id="hideCatCard"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
 					<h2>Catalog Card{if $numCatCardMediaItems > 1 }s{/if} for object:</h2>
                    
-                    <div id="cat_card_clipper" class="unzoomed" style="overflow:auto">
+                    <div id="cat_card_clipper" class="unzoomed">
                     <a href="" onclick="doCatCardZoom(event);return false;">
-					<img id="cat_card_image" src="{$catCardMediaItems[0].img_path}" width="650px" />
+					<img id="cat_card_image" src="{$catCardMediaItems[0].img_path}" />
                     </a>
                     </div>
                     
-					<h3 style="float:right; font-weight:normal"><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}&objId={$id}">Problem or Issue with this object's catalog card(s)?</a></h3>
+					<h3 id="catCardProblem"><a href="{$wwwroot}/modules/about/contact.php?objNum={$objnum}&objId={$id}">Problem or Issue with this object's catalog card(s)?</a></h3>
 					{if $numCatCardMediaItems > 1 }
 						<h3>Additional views</h3>
 						{section name=item loop=$catCardMediaItems}
-							<span class="catCard_thumbnail">
-                            
-								<img width="120px" src="{$catCardMediaItems[item].img_path}" 
-								      style="margin:5px; cursor:pointer; border:solid black 1px;"
-											onclick="setCatCardImage('{$catCardMediaItems[item].img_path}');" />
+							<span id="catCard_thumbnail">
+                            	<img src="{$catCardMediaItems[item].img_path}" 
+								 onclick="setCatCardImage('{$catCardMediaItems[item].img_path}');" />
 							</span>
 						{/section}
 					{/if}
