@@ -194,8 +194,7 @@ function doCatCardZoom(e) {
 function doHideCard(e) {
   $('#detail_image').css("visibility","visible");
   $('#pop_screen').css("display","none");
-  
-	e.cancelBubble = true;
+  e.cancelBubble = true;
 	if (e.stopPropagation) e.stopPropagation();
 	return false;
 }
@@ -203,7 +202,6 @@ function doHideCard(e) {
 function setCatCardImage(srcURL) {
 	$('#cat_card_image').attr("src", srcURL);
 	$('#cat_card_clipper').removeClass('zoomed');
-	
 }
 
 function doViewCard(e) {
@@ -213,5 +211,3 @@ function doViewCard(e) {
 	if (e.stopPropagation) e.stopPropagation();
 	return false;
 }
-
-
