@@ -2855,9 +2855,7 @@
 		<heading id="InroContainer" title="Inro">
 			<synonym value="Inros"/>
 		</heading>
-		<heading id="JiulingStickContainer" title="Jiuling-Stick-Container">
-			<synonym value="Jiuling-Stick-Containers"/>
-		</heading>
+		<heading id="JiulingStickContainer" title="Jiuling-Stick-Container" noMatch="true"/>
 		<heading id="LimeContainer" title="Lime Container">
 			<synonym value="Lime Containers"/>
 			<synonym value="Lime-Container"/>
@@ -6214,176 +6212,172 @@
 	</heading>
 	<heading id="GamesSportingEquipment" title="Games &amp; Sporting Equipment">
 		<synonym value="Games/Sporting Equipment"/>
-		<synonym value="Game"/>
-		<synonym value="Games"/>
-		<synonym value="Sport"/>
-		<synonym value="Sports"/>
-		<synonym value="Sport Equipment"/>
-		<synonym value="Sports Equipment"/>
-		<heading id="CarpetBowl" title="Carpet-Bowl">
+		<heading id="CarpetBowlGmSprt" title="Carpet-Bowl">
 			<synonym value="Carpet-Bowls"/>
 		</heading>
-		<heading id="CatsCradle" title="Cat's Cradle">
-			<synonym value="Cat's Cradles"/>
-		</heading>
-		<heading id="ChessSet" title="Chess Set">
-			<synonym value="Chessboard"/>
-			<synonym value="Chessboards"/>
-			<synonym value="Chess board"/>
-			<synonym value="Chess boards"/>
-			<synonym value="Chess-board"/>
-			<synonym value="Chess-boards"/>
-			<synonym value="Chessman"/>
-			<synonym value="Chessmen"/>
-			<synonym value="Chess Piece"/>
-			<synonym value="Chess Piece"/>
-			<synonym value="Chess Sets"/>
-			<synonym value="Chess-Set"/>
-			<synonym value="Chess-Sets"/>
-		</heading>
-		<heading id="Cockspur" title="Cockspur">
-			<synonym value="Cockspurs"/>
-		</heading>
-		<heading id="DiceShaker" title="Dice-Shaker">
-			<synonym value="Dice-Shakers"/>
-		</heading>
-		<heading id="Discus" title="Discus">
-			<synonym value="Discuses"/>
-		</heading>
-		<heading id="DominoSet" title="Domino-Set">
-			<synonym value="Domino-Sets"/>
-		</heading>
-		<heading id="ExerciseClub" title="Exercise-Club">
-			<synonym value="Exercise-Clubs"/>
-		</heading>
-		<heading id="ExerciseStick" title="Exercise-Stick">
-			<synonym value="Exercise-Sticks"/>
-		</heading>
-		<heading id="FencingMask" title="Fencing-Mask">
-			<synonym value="Fencing-Masks"/>
-		</heading>
-		<heading id="Games" title="Games">
+		<heading id="GamesGmSprt" title="Games">
 			<!-- The British Museum Specifies That This Term Should Only Be Used
 			For Unspecified Games, And Is Not Used As A Broad Term. -->
 			<synonym value="Game"/>
+			<synonym value="Games"/>
 			<implies facet="ActivityorContext" cat="Playinggames"/>
-			<heading id="Parcheesi" title="Parcheesi"/>
-			<heading id="Chess" title="Chess"/>
-			<heading id="Checkers" title="Checkers"/>
-			<!-- Exclude The Design Motif -->
-			<heading id="Dice" title="Dice">
-				<synonym value="Die"/>
-				<!-- Exclude Death, Machining Tools -->
+			<heading id="CatsCradleGmSprt" title="Cat's Cradle">
+				<synonym value="Cat's Cradles"/>
 			</heading>
-			<heading id="Grassgame" title="Grass Game">
+			<heading id="CheckersGmSprt" title="Checkers"/> <!-- Exclude the design motif -->
+			<heading id="ChessGameGmSprt" title="Chess">
+				<synonym value="Chessboard"/>
+				<synonym value="Chessboards"/>
+				<synonym value="Chess board"/>
+				<synonym value="Chess boards"/>
+				<synonym value="Chess-board"/>
+				<synonym value="Chess-boards"/>
+				<synonym value="Chessman"/>
+				<synonym value="Chessmen"/>
+				<synonym value="Chess Piece"/>
+				<synonym value="Chess Piece"/>
+				<synonym value="Chess Set"/>
+				<synonym value="Chess Sets"/>
+				<synonym value="Chess-Set"/>
+				<synonym value="Chess-Sets"/>
+			</heading>
+			<heading id="CockspurGmSprt" title="Cockspur">
+				<synonym value="Cockspurs"/>
+			</heading>
+			<heading id="DiceGmSprt" title="Dice">
+				<synonym value="Die"/> <!-- Excludes Death, Machining Tools -->
+			</heading>
+			<heading id="DiceShakerGmSprt" title="Dice-Shaker">
+				<synonym value="Dice-Shakers"/>
+			</heading>
+			<heading id="DominoSetGmSprt" title="Domino-Set">
+				<synonym value="Domino-Sets"/>
+			</heading>
+			<heading id="GameBallGmSprt" title="Game-Ball">
+				<synonym value="Game-Balls"/>
+			</heading>
+			<heading id="GameBoardGmSprt" title="Game-Board">
+				<synonym value="Game-Boards"/>
+			</heading>
+			<heading id="GameBoxGmSprt" title="Game-Box">
+				<synonym value="Game-Boxes"/>
+			</heading>
+			<heading id="GameCounterTrayGmSprt" title="Game-Counter-Tray">
+				<synonym value="Game-Counter-Trays"/>
+			</heading>
+			<heading id="GamePieceGmSprt" title="Game-Piece">
+				<synonym value="Game-Pieces"/>
+			</heading>
+			<heading id="GamesCabinetGmSprt" title="Games-Cabinet">
+				<synonym value="Games-Cabinets"/>
+			</heading>
+			<heading id="GameStickGmSprt" title="Game-Stick">
+				<synonym value="Game-Sticks"/>
+			</heading>
+			<heading id="GamingCharmGmSprt" title="Gaming-Charm">
+				<synonym value="Gaming-Charms"/>
+			</heading>
+			<heading id="GamingTableGmSprt" title="Gaming-Table">
+				<synonym value="Gaming-Tables"/>
+			</heading>
+			<heading id="GrassgameGmSprt" title="Grass Game">
 				<synonym value="Grass Games"/>
 			</heading>
-			<heading id="Monopoly" title="Monopoly"/>
-			<!-- From Card 7-7236 -->
+			<heading id="LotteryTicketGmSprt" title="Lottery Ticket">
+				<synonym value="Lottery Tickets"/>
+			</heading>
+			<heading id="MahjongSetGmSprt" title="Mahjong-Set">
+				<synonym value="Mahjong-Sets"/>
+			</heading>
+			<heading id="MonopolyGmSprt" title="Monopoly"/> <!-- From Card 7-7236 -->
+			<heading id="ParcheesiGmSprt" title="Parcheesi"/>
+			<heading id="PlayingCardCaseGmSprt" title="Playing-Card-Case">
+				<synonym value="Playing-Card-Cases"/>
+			</heading>
+			<heading id="PlayingCrdHldrGmSprt" title="Playing-Card-Holder">
+				<synonym value="Playing-Card-Holders"/>
+			</heading>
+			<heading id="PuzzleGmSprt" title="Puzzle">
+				<synonym value="Puzzles"/>
+			</heading>
+			<heading id="WagerCupGmSprt" title="Wager-Cup">
+				<synonym value="Wager-Cups"/>
+			</heading>
 		</heading>
-		<heading id="GameBall" title="Game-Ball">
-			<synonym value="Game-Balls"/>
-		</heading>
-		<heading id="GameBoard" title="Game-Board">
-			<synonym value="Game-Boards"/>
-		</heading>
-		<heading id="GameBox" title="Game-Box">
-			<synonym value="Game-Boxes"/>
-		</heading>
-		<heading id="GameCounterTray" title="Game-Counter-Tray">
-			<synonym value="Game-Counter-Trays"/>
-		</heading>
-		<heading id="GamePiece" title="Game-Piece">
-			<synonym value="Game-Pieces"/>
-		</heading>
-		<heading id="GamesCabinet" title="Games-Cabinet">
-			<synonym value="Games-Cabinets"/>
-		</heading>
-		<heading id="GameStick" title="Game-Stick">
-			<synonym value="Game-Sticks"/>
-		</heading>
-		<heading id="GamingCharm" title="Gaming-Charm">
-			<synonym value="Gaming-Charms"/>
-		</heading>
-		<heading id="GamingTable" title="Gaming-Table">
-			<synonym value="Gaming-Tables"/>
-		</heading>
-		<heading id="JiulingSet" title="Jiuling-Set">
+		<heading id="JiulingSetGmSprt" title="Jiuling-Set">
 			<synonym value="Jiuling-Sets"/>
 		</heading>
-		<heading id="JiulingStickContainer" title="Jiuling-Stick-Container">
+		<heading id="JiulingStckCntnrGmSprt" title="Jiuling-Stick-Container">
 			<synonym value="Jiuling-Stick-Containers"/>
+			<implies facet="ObjectName" cat="JiulingStickContainer"/>
 		</heading>
-		<heading id="JumpingWeight" title="Jumping-Weight">
-			<synonym value="Jumping-Weights"/>
-		</heading>
-		<heading id="Kite" title="Kite">
-			<synonym value="Kites"/>
-		</heading>
-		<heading id="LotteryTicket" title="Lottery Ticket">
-			<synonym value="Lottery Tickets"/>
-		</heading>
-		<heading id="MahjongSet" title="Mahjong-Set">
-			<synonym value="Mahjong-Sets"/>
-		</heading>
-		<heading id="PanathenaicAmphora" title="Panathenaic Amphora">
-			<synonym value="Panathenaic Amphoras"/>
-		</heading>
-		<heading id="PlayingCardCase" title="Playing-Card-Case">
-			<synonym value="Playing-Card-Cases"/>
-		</heading>
-		<heading id="PlayingCardHolder" title="Playing-Card-Holder">
-			<synonym value="Playing-Card-Holders"/>
-		</heading>
-		<heading id="PugilisticRing" title="Pugilistic Ring">
-			<synonym value="Pugilistic Rings"/>
-		</heading>
-		<heading id="Puzzle" title="Puzzle">
-			<synonym value="Puzzles"/>
-		</heading>
-		<heading id="Quoit" title="Quoit">
+		<heading id="QuoitGmSprt" title="Quoit">
 			<synonym value="Quoits"/>
 		</heading>
-		<heading id="Shuttlecock" title="Shuttlecock">
-			<synonym value="Shuttlecocks"/>
-		</heading>
-		<heading id="Sugoroku" title="Sugoroku">
-			<synonym value="Sugorokus"/>
-		</heading>
-		<heading id="SurfBoard" title="Surf-Board">
-			<synonym value="Surf-Boards"/>
-		</heading>
-		<heading id="Target" title="Target">
-			<synonym value="Targets"/>
-		</heading>
-		<heading id="Toy" title="Toy">
-			<synonym value="Toys"/>
-		</heading>
-		<heading id="WagerCup" title="Wager-Cup">
-			<synonym value="Wager-Cups"/>
-		</heading>
-		<heading id="WeiqiPot" title="Weiqi-Pot">
-			<synonym value="Weiqi-Pots"/>
-		</heading>
-		<heading id="WeiqiSet" title="Weiqi-Set">
-			<synonym value="Weiqi-Sets"/>
-		</heading>
-		<heading id="YutSet" title="Yut-Set">
-			<synonym value="Yut-Sets"/>
-		</heading>
-		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-		<heading id="Sportsequipment" title="Sports Equipment">
-			<implies facet="ActivityorContext" cat="Playingsports"/>
-			<heading id="Ball" title="Ball">
+		<heading id="SportsEquipmentGmSprt" title="Sports Equipment">
+			<synonym value="Sport"/>
+			<synonym value="Sports"/>
+			<synonym value="Sport Equipment"/>
+			<synonym value="Sports Equipment"/>
+			<implies facet="ActivityorContext" cat="PlayingSports"/>
+			<heading id="BallGmSprt" title="Ball">
 				<implies facet="Techniquedesignordecoration" cat="Spherical"/>
 				<!-- Check Cat. -->
 				<synonym value="Balls"/>
 			</heading>
-			<heading id="Shinnyball" title="Shinny Ball">
+			<heading id="DiscusGmSprt" title="Discus">
+				<synonym value="Discuses"/>
+			</heading>
+			<heading id="ExerciseClubGmSprt" title="Exercise-Club">
+				<synonym value="Exercise-Clubs"/>
+			</heading>
+			<heading id="ExerciseStickGmSprt" title="Exercise-Stick">
+				<synonym value="Exercise-Sticks"/>
+			</heading>
+			<heading id="FencingMaskGmSprt" title="Fencing-Mask">
+				<synonym value="Fencing-Masks"/>
+			</heading>
+			<heading id="KiteGmSprt" title="Kite">
+				<synonym value="Kites"/>
+			</heading>
+			<heading id="JumpingWeightGmSprt" title="Jumping-Weight">
+				<synonym value="Jumping-Weights"/>
+			</heading>
+			<heading id="PanathenaicAmphoraGmSprt" title="Panathenaic Amphora">
+				<synonym value="Panathenaic Amphoras"/>
+			</heading>
+			<heading id="PugilisticRingGmSprt" title="Pugilistic Ring">
+				<synonym value="Pugilistic Rings"/>
+			</heading>
+			<heading id="ShinnyballGmSprt" title="Shinny Ball">
 				<implies facet="Techniquedesignordecoration" cat="Spherical"/>
 				<!-- Check Cat. -->
 				<synonym value="Shinny Balls"/>
 			</heading>
+			<heading id="ShuttlecockGmSprt" title="Shuttlecock">
+				<synonym value="Shuttlecocks"/>
+			</heading>
+			<heading id="SurfBoardGmSprt" title="Surf-Board">
+				<synonym value="Surf-Boards"/>
+			</heading>
+			<heading id="TargetGmSprt" title="Target">
+				<synonym value="Targets"/>
+			</heading>
+		</heading>
+		<heading id="SugorokuGmSprt" title="Sugoroku">
+			<synonym value="Sugorokus"/>
+		</heading>
+		<heading id="ToyGmSprt" title="Toy">
+			<synonym value="Toys"/>
+		</heading>
+		<heading id="WeiqiPotGmSprt" title="Weiqi-Pot">
+			<synonym value="Weiqi-Pots"/>
+		</heading>
+		<heading id="WeiqiSetGmSprt" title="Weiqi-Set">
+			<synonym value="Weiqi-Sets"/>
+		</heading>
+		<heading id="YutSetGmSprt" title="Yut-Set">
+			<synonym value="Yut-Sets"/>
 		</heading>
 	</heading>
 	<heading id="Instruments" title="Instruments">
