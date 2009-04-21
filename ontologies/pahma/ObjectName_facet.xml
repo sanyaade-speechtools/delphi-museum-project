@@ -609,13 +609,13 @@
 			<heading id="NoseBandAnmlEq" title="Nose Band">
 				<synonym value="Nose Bands"/>
 			</heading>
-			<heading id="RangleharnessAnmlEq" title="Rangle">
+			<heading id="RangleHarnessAnmlEq" title="Rangle">
 				<synonym value="Rangles"/>
 			</heading>
-			<heading id="ReinharnessAnmlEq" title="Rein" noMatch="true"/>
-			<heading id="SaddleharnessAnmlEq" title="Saddle" noMatch="true"/>
-			<heading id="StirrupharnessAnmlEq" title="Stirrup" noMatch="true"/>
-			<heading id="TerretharnessAnmlEq" title="Terret">
+			<heading id="ReinHarnessAnmlEq" title="Rein" noMatch="true"/>
+			<heading id="SaddleHarnessAnmlEq" title="Saddle" noMatch="true"/>
+			<heading id="StirrupHarnessAnmlEq" title="Stirrup" noMatch="true"/>
+			<heading id="TerretHarnessAnmlEq" title="Terret">
 				<synonym value="Terrets"/>
 			</heading>
 			<heading id="YokeAnmlEq" title="Yoke">
@@ -653,14 +653,14 @@
 			</heading>
 			<heading id="BridleAnmlEq" title="Bridle">
 				<synonym value="Bridles"/>
-				<implies facet="ObjectName" cat="Bridleharness"/>
+				<implies facet="ObjectName" cat="BridleHarnessAnmlEq"/>
 			</heading>
 			<heading id="HorsebitAnmlEq" title="Horse Bit">
 				<synonym value="Horse Bits"/>
 			</heading>
 			<heading id="HalterAnmlEq" title="Halter">
 				<synonym value="Halters"/>
-				<implies facet="ObjectName" cat="Halterharness"/>
+				<implies facet="ObjectName" cat="HalterHarnessAnmlEq"/>
 			</heading>
 			<heading id="HarnessAnmlEq" title="Harness">
 				<synonym value="Harnesses"/>
@@ -672,7 +672,7 @@
 				<excl value="Dog Harnesses"/>
 				<excl value="Donkey Harness"/>
 				<excl value="Donkey Harnesses"/>
-				<implies facet="ObjectName" cat="Horseharness"/>
+				<implies facet="ObjectName" cat="HorseHarnessAnmlEq"/>
 			</heading>
 			<heading id="HorseshoeAnmlEq" title="Horseshoe">
 				<synonym value="Horseshoes"/>
@@ -685,11 +685,11 @@
 			</heading>
 			<heading id="ReinshorsetackAnmlEq" title="Reins">
 				<synonym value="Reins"/>
-				<implies facet="ObjectName" cat="Reinharness"/>
+				<implies facet="ObjectName" cat="ReinHarnessAnmlEq"/>
 			</heading>
 			<heading id="SaddlehorsetackAnmlEq" title="Saddle">
 				<synonym value="Saddles"/>
-				<implies facet="ObjectName" cat="Saddleharness"/>
+				<implies facet="ObjectName" cat="SaddleHarnessAnmlEq"/>
 			</heading>
 			<heading id="SaddlebagAnmlEq" title="Saddle Bag">
 				<synonym value="Saddle Bags"/>
@@ -700,7 +700,7 @@
 			</heading>
 			<heading id="StirrupAnmlEq" title="Stirrup">
 				<synonym value="Stirrups"/>
-				<implies facet="ObjectName" cat="Stirrupharness"/>
+				<implies facet="ObjectName" cat="StirrupHarnessAnmlEq"/>
 			</heading>
 		</heading>
 		<heading id="LariatAnmlEq" title="Lariat">
