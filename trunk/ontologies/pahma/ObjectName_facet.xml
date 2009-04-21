@@ -794,52 +794,33 @@
 			<heading id="Mummies" title="Mummies">
 				<synonym value="Mummy"/>
 				<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-				<!-- Is this sufficient, or should it be in every child term? -->
 				<heading id="HumanMummy" title="Human Mummy">
 					<synonym value="Human mummies"/>
 					<implies facet="ObjectName" cat="HumanRemains"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="CatMummy" title="Cat Mummy">
 					<synonym value="Cat mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="CrocodileMummy" title="Crocodile Mummy">
 					<synonym value="Crocodile mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="DogMummy" title="Dog Mummy">
 					<synonym value="Dog mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="MonkeyMummy" title="Monkey Mummy">
 					<synonym value="Monkey mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="FishMummy" title="Fish Mummy">
 					<synonym value="Fish mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="LizardMummy" title="Lizard Mummy">
 					<synonym value="Lizard mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="ParrotMummy" title="Parrot Mummy">
 					<synonym value="Parrot mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="SnakeMummy" title="Snake Mummy">
 					<synonym value="Snake mummies"/>
-					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 			</heading>
 			<!-- <heading id="Biologicalshells" title="Shells">
@@ -1392,40 +1373,27 @@
 			<synonym value="Weapon-Mould"/>
 			<synonym value="Weapon-Moulds"/>
 			<implies facet="ObjectName" cat="MoldsProdReplic"/>
-			<!-- Is this sufficient, or should it be in every child term? -->
 			<heading id="ArrowheadMold" title="Arrowhead Mold">
 				<synonym value="Arrowhead Mould"/>
 				<synonym value="Arrow-Head-Mould"/>
 				<synonym value="Arrow-Head Mold"/>
 				<synonym value="Arrow-Head Mould"/>
-				<implies facet="ObjectName" cat="MoldsProdReplic"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="BulletMold" title="Bullet Mold">
 				<synonym value="Bullet Mould"/>
-				<implies facet="ObjectName" cat="MoldsProdReplic"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CannonMold" title="Cannon Mold">
 				<synonym value="Cannon Mould"/>
-				<implies facet="ObjectName" cat="MoldsProdReplic"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CannonballMold" title="Cannonball Mold">
 				<synonym value="Cannonball Mould"/>
-				<implies facet="ObjectName" cat="MoldsProdReplic"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="DaggerMold" title="Dagger Mold">
 				<synonym value="Dagger Mould"/>
 				<synonym value="Dagger-Mould"/>
-				<implies facet="ObjectName" cat="MoldsProdReplic"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="SwordMold" title="Sword Mold">
 				<synonym value="Sword Mould"/>
-				<implies facet="ObjectName" cat="MoldsProdReplic"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 		</heading>
 		<heading id="Weapons" title="Weapons">
@@ -2692,19 +2660,14 @@
 		<heading id="Baskets" title="Baskets">
 			<synonym value="Basket"/>
 			<implies facet="Collection" cat="BasketCollection"/>
-			<!-- Is this sufficient, or should it be in every child term? -->
 			<heading id="BabyBasket" title="Baby Basket">
 				<synonym value="Baby Baskets"/>
 				<implies facet="ActivityorContext" cat="Childrearing"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="Basketrycaplid" title="Basketry Cap (Lid)">
 				<synonym value="Basketry Cap (Lids)"/>
 				<synonym value="Basketry Caps (Lid)"/>
 				<synonym value="Basketry Caps (Lids)"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="BasketbirdtrapBasket" title="Bird Trap Basket">
 				<!-- Should Also Be Made A Kind of Trap (Armament) -->
@@ -2712,45 +2675,31 @@
 				<synonym value="Bird-Trap Basket"/>
 				<synonym value="Bird-Trap Baskets"/>
 				<implies facet="ActivityorContext" cat="Hunting"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="BurdenBasket" title="Burden Basket">
 				<synonym value="Burden Baskets"/>
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CarryingBasket" title="Carrying Basket">
 				<synonym value="Carrying Baskets"/>
 				<implies facet="ActivityorContext" cat="Basketmaking"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CookingBasketBaskets" title="Cooking Basket">
 				<synonym value="Cooking Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="CookingBasketheating"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="DecorativeBasket" title="Decorative Basket">
 				<synonym value="Decorative Baskets"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="DippingBasket" title="Dipping Basket">
 				<synonym value="Dipping Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="DoctoringBasketBaskets" title="Doctoring Basket">
 				<synonym value="Doctoring Baskets"/>
 				<implies facet="ActivityorContext" cat="Healing"/>
 				<implies facet="ObjectName" cat="DoctoringBasketMedical"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="BasketfishtrapBasket" title="Fish Trap Basket">
 				<!-- Also A Kind of Trap (Armament) -->
@@ -2770,16 +2719,12 @@
 					<synonym value="Eel Trap Baskets"/>
 					<synonym value="Eel-Trap Basket"/>
 					<synonym value="Eel-Trap Baskets"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="SalmontrapBasket" title="Salmon Trap Basket">
 					<!-- Also A Kind of Trap (Armament) -->
 					<synonym value="Salmon Trap Baskets"/>
 					<synonym value="Salmon-Trap Basket"/>
 					<synonym value="Salmon-Trap Baskets"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 			</heading>
 			<heading id="GatheringBasket" title="Gathering Basket">
@@ -2790,15 +2735,11 @@
 					<synonym value="Acorn-Gathering Baskets"/>
 					<synonym value="Acorn Gathering Basket"/>
 					<synonym value="Acorn Gathering Baskets"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="SeedgatheringBasket" title="Seed-Gathering Basket">
 					<synonym value="Seed-Gathering Baskets"/>
 					<synonym value="Seed Gathering Basket"/>
 					<synonym value="Seed Gathering Baskets"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 			</heading>
 			<heading id="GiftBasket" title="Gift Basket">
@@ -2809,20 +2750,14 @@
 				<synonym value="Jewel Baskets"/>
 				<synonym value="Jewel-Basket"/>
 				<synonym value="Jewel-Baskets"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="HangingBasket" title="Hanging Basket">
 				<synonym value="Hanging Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="MortarBasket" title="Mortar Basket">
 				<synonym value="Mortar Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="MushboilingBasket" title="Mush-Boiling Basket">
 				<synonym value="Mush-Boiling Baskets"/>
@@ -2831,32 +2766,22 @@
 				<synonym value="Boiling Basket"/>
 				<synonym value="Boiling Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="ParchingBasket" title="Parching Basket">
 				<synonym value="Parching Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="ServingBasket" title="Serving Basket">
 				<synonym value="Serving Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="SiftingBasket" title="Sifting Basket">
 				<synonym value="Sifting Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="SoupBasketBaskets" title="Soup Basket">
 				<synonym value="Soup Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="StorageBasket" title="Storage Basket">
 				<implies facet="Collection" cat="BasketCollection"/>
@@ -2864,26 +2789,18 @@
 				<heading id="SeedBasket" title="Seed Basket">
 					<synonym value="Seed Baskets"/>
 					<implies facet="ActivityorContext" cat="FoodStorage"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 				<heading id="AcornBasket" title="Acorn Basket">
 					<synonym value="Acorn Baskets"/>
 					<implies facet="ActivityorContext" cat="FoodStorage"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 			</heading>
 			<heading id="TouristBasket" title="Tourist Basket">
 				<synonym value="Tourist Baskets"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="WinnowingBasket" title="Winnowing Basket">
 				<synonym value="Winnowing Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 		</heading>
 		<heading id="Bath" title="Bath">
@@ -2901,8 +2818,8 @@
 		<heading id="BoxContainers" title="Box">
 			<synonym value="Boxes"/>
 			<excl value="Box Drum"/>
-			<heading id="Bentwoodboxcontainer" title="Bent Wood Box" noMatch="true"/>
-			<heading id="Canopicboxcontainer" title="Canopic Box">
+			<heading id="BentwoodBoxContainer" title="Bent Wood Box" noMatch="true"/>
+			<heading id="CanopicBoxContainer" title="Canopic Box">
 				<synonym value="Canopic Boxes"/>
 				<synonym value="Canopic Boxs"/>
 				<!-- Misspelling -->
@@ -2910,22 +2827,22 @@
 				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 				<implies facet="ObjectName" cat="Canopicbxfuner"/>
 			</heading>
-			<heading id="Coffinboxcontainer" title="Coffin" noMatch="true"/>
-			<heading id="Featherboxcontainer" title="Feather Box">
+			<heading id="CoffinBoxContainer" title="Coffin" noMatch="true"/>
+			<heading id="FeatherBoxContainer" title="Feather Box">
 				<synonym value="Feather-Box"/>
 				<synonym value="Featherbox"/>
 				<synonym value="Feather-Boxes"/>
 				<synonym value="Feather Boxes"/>
 				<synonym value="Featherboxes"/>
 			</heading>
-			<heading id="Golddustboxcontainer" title="Gold Dust Box">
+			<heading id="GolddustBoxContainer" title="Gold Dust Box">
 				<synonym value="Gold-Dust Box"/>
 				<synonym value="Golddust Box"/>
 				<synonym value="Gold-Dust Boxes"/>
 				<synonym value="Gold Dust Boxes"/>
 				<synonym value="Golddust Boxes"/>
 			</heading>
-			<heading id="Matchboxcontainer" title="Match Box" noMatch="true">
+			<heading id="MatchBoxContainer" title="Match Box" noMatch="true">
 				<synonym value="Match-Box"/>
 				<synonym value="Matchbox"/>
 				<synonym value="Match-Boxes"/>
@@ -2934,8 +2851,8 @@
 				<implies facet="ActivityorContext" cat="Anysmoking"/>
 				<implies facet="ObjectName" cat="MatchBoxFireEq"/>
 			</heading>
-			<heading id="Moneyboxcontainer" title="Money Box" noMatch="true"/>
-			<heading id="Powdercapboxcontainer" title="Powder &amp; Cap Box">
+			<heading id="MoneyBoxContainer" title="Money Box" noMatch="true"/>
+			<heading id="PowdercapBoxContainer" title="Powder &amp; Cap Box">
 				<synonym value="Cap Box"/>
 				<synonym value="Cap Boxes"/>
 				<synonym value="Powder And Cap Box"/>
@@ -2943,7 +2860,7 @@
 				<synonym value="Powder Box"/>
 				<synonym value="Powder Boxes"/>
 			</heading>
-			<heading id="Snuffboxcontainer" title="Snuff Box">
+			<heading id="SnuffBoxContainer" title="Snuff Box">
 				<synonym value="Quid-Box"/>
 				<synonym value="Quid Box"/>
 				<synonym value="Quidbox"/>
@@ -12710,8 +12627,6 @@
 			<heading id="BasketCarrier" title="Basket-Carrier"/>
 			<heading id="Briefcase" title="Briefcase"/>
 			<heading id="CarryingBasket" title="Carrying-Basket">
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CarryingBelt" title="Carrying-Belt">
 				<synonym value="Carrying-Belts"/>
