@@ -258,20 +258,15 @@
 					<synonym value="Fish-Trap Basket"/>
 					<synonym value="Fish-Trap Baskets"/>
 					<implies facet="Collection" cat="BasketCollection"/>
-					<!-- Is this sufficient, or should it be in every child term? -->
 					<heading id="TrapEelTrapBasket" title="Eel Trap Basket">
 						<synonym value="Eel Trap Baskets"/>
 						<synonym value="Eel-Trap Basket"/>
 						<synonym value="Eel-Trap Baskets"/>
-						<implies facet="Collection" cat="BasketCollection"/>
-						<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 					</heading>
 					<heading id="TrapSalmonTrapBasket" title="Salmon Trap Basket">
 						<synonym value="Salmon Trap Baskets"/>
 						<synonym value="Salmon-Trap Basket"/>
 						<synonym value="Salmon-Trap Baskets"/>
-						<implies facet="Collection" cat="BasketCollection"/>
-						<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 					</heading>
 				</heading>
 			</heading>
@@ -2709,8 +2704,6 @@
 				<synonym value="Fishtraps"/>
 				<synonym value="Fish Trap Baskets"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Is this sufficient, or should it be in every child term? -->
 				<heading id="EeltrapBasket" title="Eel Trap Basket">
 					<!-- Also A Kind of Trap (Armament) -->
 					<synonym value="Eel Trap Baskets"/>
@@ -2726,8 +2719,6 @@
 			</heading>
 			<heading id="GatheringBasket" title="Gathering Basket">
 				<synonym value="Gathering Baskets"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Is this sufficient, or should it be in every child term? -->
 				<heading id="AcorngatheringBasket" title="Acorn-Gathering Basket">
 					<synonym value="Acorn-Gathering Baskets"/>
 					<synonym value="Acorn Gathering Basket"/>
@@ -2781,8 +2772,7 @@
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 			<heading id="StorageBasket" title="Storage Basket">
-				<implies facet="Collection" cat="BasketCollection"/>
-				<!-- Is this sufficient, or should it be in every child term? -->
+				<synonym value="Storage Baskets"/>
 				<heading id="SeedBasket" title="Seed Basket">
 					<synonym value="Seed Baskets"/>
 					<implies facet="ActivityorContext" cat="FoodStorage"/>
@@ -2931,7 +2921,6 @@
 		<heading id="DessertBasket" title="Dessert Basket">
 			<synonym value="Dessert-Basket"/>
 			<implies facet="Collection" cat="BasketCollection"/>
-			<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 		</heading>
 		<heading id="EelContainer" title="Eel Container">
 			<synonym value="Eel Containers"/>
@@ -11208,16 +11197,11 @@
 		<heading id="Smokingequipment" title="Smoking Equipment">
 			<synonym value="Smoking Items"/>
 			<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-			<!-- Is this sufficient, or should it be in every child term? -->
 			<heading id="AshtraySmkng" title="Ashtray">
 				<synonym value="Ashtrays"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigarSmkng" title="Cigar">
 				<synonym value="Cigars"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				<heading id="CherootSmkng" title="Cheroot">
 					<!-- "a cigar with both ends open and untapered." (New Oxford American Dictionary) -->
 					<synonym value="Cheroots"/>
@@ -11227,57 +11211,41 @@
 					<!-- French plural -->
 					<synonym value="curuṭṭu"/>
 					<!-- Original Tamil term meaning "roll of tobacco" -->
-					<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-					<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 				</heading>
 			</heading>
 			<heading id="CigarCaseSmkng" title="Cigar Case">
 				<synonym value="Cigar Cases"/>
 				<synonym value="Cigar-Case"/>
 				<synonym value="Cigar-Cases"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigarCutterSmkng" title="Cigar Cutter">
 				<synonym value="Cigar Cutters"/>
 				<synonym value="Cigar-Cutter"/>
 				<synonym value="Cigar-Cutters"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigaretteSmkng" title="Cigarette">
 				<synonym value="Cigarettes"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigaretteBoxSmkng" title="Cigarette Box">
 				<synonym value="Cigarette Boxes"/>
 				<synonym value="Cigarette-Box"/>
 				<synonym value="Cigarette-Boxes"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigaretteCaseSmkng" title="Cigarette Case">
 				<synonym value="Cigarette Cases"/>
 				<synonym value="Cigarette-Case"/>
 				<synonym value="Cigarette-Cases"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigaretteHolderSmkng" title="Cigarette Holder">
 				<synonym value="Cigarette Holders"/>
 				<synonym value="Cigarette-Holder"/>
 				<synonym value="Cigarette-Holders"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigaretteLighterSmkng" title="Cigarette Lighter">
 				<synonym value="Cigarette Lighters"/>
 				<synonym value="Cigarette-Lighter"/>
 				<synonym value="Cigarette-Lighters"/>
 				<implies facet="ObjectName" cat="CigaretteLighterFireEq"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigarettePackSmkng" title="Cigarette Pack">
 				<!-- Is this the proper American term? -->
@@ -11286,22 +11254,16 @@
 				<synonym value="Cigarette-Packet"/>
 				<synonym value="Cigarette-Packets"/>
 				<synonym value="Pack of Cigarettes"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="CigarHolderSmkng" title="Cigar Holder">
 				<synonym value="Cigar Holders"/>
 				<synonym value="Cigar-Holder"/>
 				<synonym value="Cigar-Holders"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="HookahCaseSmkng" title="Hookah Case">
 				<synonym value="Hookah Cases"/>
 				<synonym value="Hookah-Case"/>
 				<synonym value="Hookah-Cases"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="SmokingPipeSmkng" title="Smoking Pipe">
 				<synonym value="Pipe"/>
@@ -11311,8 +11273,6 @@
 				<synonym value="Smoking-Pipes"/>
 				<excl value="lead"/>
 				<!-- other EXCL needed? -->
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeBagSmkng" title="Pipe Bag">
 				<synonym value="Pipe Bags"/>
@@ -11326,8 +11286,6 @@
 				<synonym value="Smoking-Pipe Bags"/>
 				<synonym value="Smoking-Pipe-Bag"/>
 				<synonym value="Smoking-Pipe-Bags"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeBoxSmkng" title="Pipe Box">
 				<synonym value="Pipe Boxes"/>
@@ -11341,8 +11299,6 @@
 				<synonym value="Smoking-Pipe Boxes"/>
 				<synonym value="Smoking-Pipe-Box"/>
 				<synonym value="Smoking-Pipe-Boxes"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeCaseSmkng" title="Pipe Case">
 				<synonym value="Pipe Cases"/>
@@ -11356,8 +11312,6 @@
 				<synonym value="Smoking-Pipe Cases"/>
 				<synonym value="Smoking-Pipe-Case"/>
 				<synonym value="Smoking-Pipe-Cases"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeCleanerSmkng" title="Pipe Cleaner">
 				<synonym value="Pipe Cleaners"/>
@@ -11371,8 +11325,6 @@
 				<synonym value="Smoking-Pipe Cleaners"/>
 				<synonym value="Smoking-Pipe-Cleaner"/>
 				<synonym value="Smoking-Pipe-Cleaners"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeCoverSmkng" title="Pipe Cover">
 				<synonym value="Pipe Covers"/>
@@ -11386,8 +11338,6 @@
 				<synonym value="Smoking-Pipe Covers"/>
 				<synonym value="Smoking-Pipe-Cover"/>
 				<synonym value="Smoking-Pipe-Covers"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeHolderSmkng" title="Pipe Holder">
 				<synonym value="Pipe Holders"/>
@@ -11401,8 +11351,6 @@
 				<synonym value="Smoking-Pipe Holders"/>
 				<synonym value="Smoking-Pipe-Holder"/>
 				<synonym value="Smoking-Pipe-Holders"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipePinSmkng" title="Pipe Pin">
 				<synonym value="Pipe Pins"/>
@@ -11416,8 +11364,6 @@
 				<synonym value="Smoking-Pipe Pins"/>
 				<synonym value="Smoking-Pipe-Pin"/>
 				<synonym value="Smoking-Pipe-Pins"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeScraperSmkng" title="Pipe Scraper">
 				<synonym value="Pipe Scrapers"/>
@@ -11432,8 +11378,6 @@
 				<synonym value="Smoking-Pipe-Scraper"/>
 				<synonym value="Smoking-Pipe-Scrapers"/>
 				<implies facet="ObjectName" cat="TobaccoPipeScraper"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeSpoonSmkng" title="Pipe Spoon">
 				<synonym value="Pipe Spoons"/>
@@ -11447,8 +11391,6 @@
 				<synonym value="Smoking-Pipe Spoons"/>
 				<synonym value="Smoking-Pipe-Spoon"/>
 				<synonym value="Smoking-Pipe-Spoons"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeStopperSmkng" title="Pipe Stopper">
 				<synonym value="Pipe Stoppers"/>
@@ -11463,8 +11405,6 @@
 				<synonym value="Smoking-Pipe-Stopper"/>
 				<synonym value="Smoking-Pipe-Stoppers"/>
 				<implies facet="ObjectName" cat="TobaccoPipeStopper"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 			<heading id="PipeTamperSmkng" title="Pipe Tamper">
 				<synonym value="Pipe Tampers"/>
@@ -11478,8 +11418,6 @@
 				<synonym value="Smoking-Pipe Tampers"/>
 				<synonym value="Smoking-Pipe-Tamper"/>
 				<synonym value="Smoking-Pipe-Tampers"/>
-				<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
-				<!-- Does it need to be here, or will it latch from the parent term's <implies>? -->
 			</heading>
 		</heading>
 		<heading id="SnuffEquipment" title="Snuff Equipment">
