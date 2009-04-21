@@ -2925,13 +2925,14 @@
 				<synonym value="Gold Dust Boxes"/>
 				<synonym value="Golddust Boxes"/>
 			</heading>
-			<heading id="Matchboxcontainer" title="Match Box">
+			<heading id="Matchboxcontainer" title="Match Box" noMatch="true">
 				<synonym value="Match-Box"/>
 				<synonym value="Matchbox"/>
 				<synonym value="Match-Boxes"/>
 				<synonym value="Match Boxes"/>
 				<synonym value="Matchboxes"/>
 				<implies facet="ActivityorContext" cat="Anysmoking"/>
+				<implies facet="ObjectName" cat="MatchBoxFireEq"/>
 			</heading>
 			<heading id="Moneyboxcontainer" title="Money Box" noMatch="true"/>
 			<heading id="Powdercapboxcontainer" title="Powder &amp; Cap Box">
@@ -3023,8 +3024,11 @@
 			<synonym value="Eel-Container"/>
 			<synonym value="Eel-Containers"/>
 		</heading>
-		<heading id="FireStickContainer" title="Fire-Stick-Container">
+		<heading id="FireStickContainer" title="Fire Stick Container">
+			<synonym value="Fire Stick Containers"/>
+			<synonym value="Fire-Stick-Container"/>
 			<synonym value="Fire-Stick-Containers"/>
+			<implies facet="ObjectName" cat="FireStickContainerFireEq"/>
 		</heading>
 		<heading id="FoodContainer" title="Food Containers">
 			<synonym value="Food Container"/>
@@ -3456,8 +3460,11 @@
 			<heading id="Ewer" title="Ewer">
 				<synonym value="Ewers"/>
 			</heading>
-			<heading id="FireDevil" title="Fire-Devil">
+			<heading id="FireDevil" title="Fire evil" noMatch="true">
+				<synonym value="Fire Devils"/>
+				<synonym value="Fire-Devil"/>
 				<synonym value="Fire-Devils"/>
+				<implies facet="ObjectName" cat="FireDevilFireEq"/>
 			</heading>
 			<heading id="Flask" title="Flask">
 				<synonym value="Flasks"/>
@@ -4652,7 +4659,7 @@
 		<implies facet="ActivityorContext" cat="FoodPreparation"/>
 		<heading id="BaconRoasterCookEq" title="Bacon Roaster">
 			<synonym value="Bacon Roasters"/>
-			<synonym value="Bacon-Roasters"/>
+			<synonym value="Bacon-Roaster"/>
 			<synonym value="Bacon-Roasters"/>
 			<!-- Checked w/ OED: is this a pan or an oven? Unclear, term too narrow? -->
 		</heading>
@@ -5560,7 +5567,7 @@
 				</heading>
 				<heading id="SixteenLitraiPc" title="16 Litrai Piece"/>
 				<heading id="Pentokion" title="Pentokion">
-					<synonym value="Pentokion"/>
+					<synonym value="Pentokions"/>
 				</heading>
 				<heading id="Dekonkion" title="Dekonkion">
 					<synonym value="Dekonkions"/>
@@ -5740,7 +5747,9 @@
 		<heading id="FireCoverFireEq" title="Fire-Cover">
 			<synonym value="Fire-Covers"/>
 		</heading>
-		<heading id="FireDevilFireEq" title="Fire-Devil">
+		<heading id="FireDevilFireEq" title="Fire Devil">
+			<synonym value="Fire Devils"/>
+			<synonym value="Fire-Devil"/>
 			<synonym value="Fire-Devils"/>
 		</heading>
 		<heading id="FireDogFireEq" title="Fire-Dog">
@@ -5794,7 +5803,9 @@
 		<heading id="FireStickFireEq" title="Fire-Stick">
 			<synonym value="Fire-Sticks"/>
 		</heading>
-		<heading id="FireStickContainerFireEq" title="Fire-Stick-Container">
+		<heading id="FireStickContainerFireEq" title="Fire Stick Container">
+			<synonym value="Fire Stick Containers"/>
+			<synonym value="Fire-Stick-Container"/>
 			<synonym value="Fire-Stick-Containers"/>
 		</heading>
 		<heading id="FireStoneFireEq" title="Fire-Stone">
@@ -6098,11 +6109,10 @@
 		<heading id="CarpetBowlGmSprt" title="Carpet-Bowl">
 			<synonym value="Carpet-Bowls"/>
 		</heading>
-		<heading id="GamesGmSprt" title="Games">
+		<heading id="GamesGmSprt" title="Games" noMatch="true">
 			<!-- The British Museum Specifies That This Term Should Only Be Used
 			For Unspecified Games, And Is Not Used As A Broad Term. -->
 			<synonym value="Game"/>
-			<synonym value="Games"/>
 			<implies facet="ActivityorContext" cat="Playinggames"/>
 			<heading id="CatsCradleGmSprt" title="Cat's Cradle">
 				<synonym value="Cat's Cradles"/>
@@ -6118,14 +6128,15 @@
 				<synonym value="Chessman"/>
 				<synonym value="Chessmen"/>
 				<synonym value="Chess Piece"/>
-				<synonym value="Chess Piece"/>
+				<synonym value="Chess Pieces"/>
 				<synonym value="Chess Set"/>
 				<synonym value="Chess Sets"/>
 				<synonym value="Chess-Set"/>
 				<synonym value="Chess-Sets"/>
 			</heading>
-			<heading id="CockspurGmSprt" title="Cockspur">
+			<heading id="CockspurGmSprt" title="Cockspur" noMatch="true">
 				<synonym value="Cockspurs"/>
+				<implies facet="ObjectName" cat="CockspurAnmlEq"/>
 			</heading>
 			<heading id="DiceGmSprt" title="Dice">
 				<synonym value="Die"/> <!-- Excludes Death, Machining Tools -->
@@ -6201,7 +6212,6 @@
 			<synonym value="Sport"/>
 			<synonym value="Sports"/>
 			<synonym value="Sport Equipment"/>
-			<synonym value="Sports Equipment"/>
 			<implies facet="ActivityorContext" cat="PlayingSports"/>
 			<heading id="BallGmSprt" title="Ball">
 				<implies facet="TechniqueDesignorDecoration" cat="Spherical"/>
@@ -6362,10 +6372,11 @@
 		<heading id="SnufferStand" title="Snuffer Stand">
 			<synonym value="Snuffer Stands"/>
 		</heading>
-		<heading id="Torch" title="Torch">
+		<heading id="Torch" title="Torch" noMatch="true">
 			<synonym value="Torches"/>
 			<synonym value="Torchs"/>
 			<!-- Misspelling -->
+			<implies facet="ObjectName" cat="TorchFireEq"/>
 		</heading>
 		<heading id="TorchHolder" title="Torch Holder">
 			<synonym value="Torch Holders"/>
@@ -6390,7 +6401,7 @@
 		<synonym value="Healings"/>
 		<synonym value="Medical"/>
 		<synonym value="Medical/Medicine Equipment"/>
-		<synonym value="Medicine"/>
+		<synonym value="Medicine" noMatch="true"/>
 		<synonym value="Medicines"/>
 		<heading id="ApothecaryLadle" title="Apothecary-Ladle">
 			<synonym value="Apothecary-Ladles"/>
@@ -6659,6 +6670,7 @@
 		</heading>
 		<heading id="NetMiscEq" title="Net">
 			<synonym value="Nets"/>
+			<excl value="Fishing"/>
 		</heading>
 		<heading id="NooseMiscEq" title="Noose">
 			<synonym value="Nooses"/>
@@ -6849,9 +6861,6 @@
 			<heading id="BaseStndMiscEq" title="Base">
 				<synonym value="Bases"/>
 			</heading>
-			<heading id="BedStandStndMiscEq" title="Bed-Stand">
-				<synonym value="Bed-Stands"/>
-			</heading>
 			<heading id="BeehiveStandStndMiscEq" title="Beehive-Stand" noMatch="true"/>
 			<heading id="BellStandStndMiscEq" title="Bell-Stand">
 				<synonym value="Bell-Stands"/>
@@ -6873,9 +6882,6 @@
 			</heading>
 			<heading id="CosmeticStandStndMiscEq" title="Cosmetic-Stand">
 				<synonym value="Cosmetic-Stands"/>
-			</heading>
-			<heading id="CradleStandStndMiscEq" title="Cradle-Stand">
-				<synonym value="Cradle-Stands"/>
 			</heading>
 			<heading id="DrumStandStndMiscEq" title="Drum-Stand">
 				<synonym value="Drum-Stands"/>
@@ -7584,7 +7590,6 @@
 					<!-- includes: gendr, gangsa, saron, glockenspiel, vibraphone, xylophone  -->
 					<synonym value="Metallophone"/>
 					<heading id="Gendr" title="Gendr">
-						<synonym value="Gendr"/>
 					</heading>
 					<heading id="Gangsa" title="Gangsa">
 						<synonym value="Gangsas"/>
