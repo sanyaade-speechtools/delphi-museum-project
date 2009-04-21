@@ -3175,7 +3175,7 @@
 			<synonym value="Pigment Containers"/>
 			<synonym value="Pigment-Container"/>
 			<synonym value="Pigment-Containers"/>
-			<implies facet="objectName" cat="PigmentContainerComm"/>
+			<implies facet="ObjectName" cat="PigmentContainerComm"/>
 		</heading>
 		<heading id="PocketContnr" title="Pocket">
 			<synonym value="Pockets"/>
@@ -3274,7 +3274,7 @@
 					<!-- Infer Firearms -->
 				</heading>
 			</heading>
-			<heading id="Basin" title="Basin">
+			<heading id="Basin" title="Basin" noMatch="true">
 				<synonym value="Basins"/>
 			</heading>
 			<heading id="Beaker" title="Beaker">
@@ -3286,8 +3286,9 @@
 			<heading id="Biberon" title="Biberon">
 				<synonym value="Biberons"/>
 			</heading>
-			<heading id="Boiler" title="Boiler">
+			<heading id="Boiler" title="Boiler" noMatch="true">
 				<synonym value="Boilers"/>
+				<implies facet="ObjectName" cat="CookingPotCookEq"/>
 			</heading>
 			<heading id="Bottle" title="Bottle">
 				<synonym value="Bottles"/>
@@ -3342,11 +3343,11 @@
 			<heading id="CocktailShaker" title="Cocktail-Shaker">
 				<synonym value="Cocktail-Shakers"/>
 			</heading>
-			<heading id="Coffeepotvessel" title="Coffee Pot">
+			<heading id="Coffeepotvessel" title="Coffee Pot" noMatch="true">
 				<synonym value="Coffee Pots"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
-				<implies facet="ObjectName" cat="Coffeepotheating"/>
+				<implies facet="ObjectName" cat="CoffeePotHeatingCookEq"/>
 			</heading>
 			<heading id="CoffeePercolator" title="Coffee-Percolator">
 				<synonym value="Coffee-Percolators"/>
@@ -3445,8 +3446,9 @@
 			<heading id="Dipper" title="Dipper">
 				<synonym value="Dippers"/>
 			</heading>
-			<heading id="Dish" title="Dish">
+			<heading id="Dish" title="Dish" noMatch="true">
 				<synonym value="Dishes"/>
+				<implies facet="ObjectName" cat="DishCookEq"/>
 			</heading>
 			<heading id="DrinkingVessel" title="Drinking-Vessel">
 				<synonym value="Drinking-Vessels"/>
@@ -3509,7 +3511,7 @@
 					<synonym value="Incense Jars"/>
 					<synonym value="Incense-Jar"/>
 					<synonym value="Incense-Jars"/>
-					<implies facet="objectName" cat="IncenseVessel"/>
+					<implies facet="ObjectName" cat="IncenseVessel"/>
 				</heading>
 				<heading id="Kohljar" title="Kohl Jar">
 					<synonym value="Kohl Jars"/>
@@ -3560,12 +3562,12 @@
 			<heading id="Kero" title="Kero">
 				<synonym value="Keros"/>
 			</heading>
-			<heading id="Kettlevessels" title="Kettle">
+			<heading id="Kettlevessels" title="Kettle" noMatch="true">
 				<synonym value="Kettles"/>
 				<implies facet="ActivityorContext" cat="Metallurgy"/>
 				<!-- Are All Kettles Made of Metal? -->
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="ObjectName" cat="Kettleheating"/>
+				<implies facet="ObjectName" cat="KettleHatingCookEq"/>
 			</heading>
 			<heading id="Kuduo" title="Kuduo">
 				<synonym value="Kuduos"/>
@@ -3591,8 +3593,9 @@
 			<heading id="MilkVessel" title="Milk-Vessel">
 				<synonym value="Milk-Vessels"/>
 			</heading>
-			<heading id="Mortar" title="Mortar">
+			<heading id="Mortar" title="Mortar" noMatch="true">
 				<synonym value="Mortars"/>
+				<implies facet="ObjectName" cat="MortarCookEq"/>
 			</heading>
 			<heading id="MustardShaker" title="Mustard-Shaker">
 				<synonym value="Mustard-Shakers"/>
@@ -3600,8 +3603,9 @@
 			<heading id="OilVessel" title="Oil-Vessel">
 				<synonym value="Oil-Vessels"/>
 			</heading>
-			<heading id="Pan" title="Pan">
+			<heading id="Pan" title="Pan" noMatch="true">
 				<synonym value="Pans"/>
+				<implies facet="ObjectName" cat="CookingPanCookEq"/>
 			</heading>
 			<heading id="Pañca-Pátra">
 				<synonym value="Pañca-Pátras"/>
@@ -3619,11 +3623,13 @@
 			<heading id="PickleTray" title="Pickle-Tray">
 				<synonym value="Pickle-Trays"/>
 			</heading>
-			<heading id="Plate" title="Plate">
+			<heading id="Plate" title="Plate" noMatch="true">
 				<synonym value="Plates"/>
+				<implies facet="ObjectName" cat="PlateCookEq"/>
 			</heading>
-			<heading id="Platter" title="Platter">
+			<heading id="Platter" title="Platter" noMatch="true">
 				<synonym value="Platters"/>
+				<implies facet="ObjectName" cat="PlatterCookEq"/>
 			</heading>
 			<heading id="PopeJoanBoard" title="Pope Joan Board">
 				<synonym value="Pope Joan Boards"/>
@@ -3654,7 +3660,7 @@
 						<synonym value="Oil Lamps"/>
 						<implies facet="ObjectName" cat="Lamplighting"/>
 					</heading>
-					<heading id="Plate" title="Plate">
+					<heading id="PotteryPlate" title="Plate" noMatch="true">
 						<synonym value="Plates"/>
 					</heading>
 					<heading id="Potstand" title="Pot Stand">
@@ -3851,8 +3857,9 @@
 						<synonym value="Offering-Vases"/>
 					</heading>
 				</heading>
-				<heading id="Pan" title="Pan">
+				<heading id="Pan" title="Pan" noMatch="true">
 					<synonym value="Pans"/>
+					<excl value="CookingPanCookEq"/>
 				</heading>
 				<heading id="Pou" title="Pou">
 					<synonym value="Pous"/>
@@ -4223,7 +4230,7 @@
 				<heading id="Hairshirtshirt" title="Hairshirt" noMatch="true"/>
 				<heading id="Undershirtshirt" title="Undershirt" noMatch="true"/>
 				<synonym value="Undershirts"/>
-				<implies facet="objectName" cat="UndershirtUnderwearUpper"/>
+				<implies facet="ObjectName" cat="UndershirtUnderwearUpper"/>
 			</heading>
 			<heading id="ShirtFrontGarment" title="Shirt-Front">
 				<synonym value="Shirt-Fronts"/>
@@ -4749,8 +4756,8 @@
 				<synonym value="Cooking Bowls"/>
 				<synonym value="Cooking-Bowl"/>
 				<synonym value="Cooking-Bowls"/>
-				<heading id="BowlCookEq" title="Bowl">
-					<synonym value="Bowls"/> GGGG
+				<heading id="BowlCookEq" title="Bowl" noMatch="true">
+					<synonym value="Bowls"/>
 					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<!-- need complex inferentiation to remove ritual bowls, etc. -->
 				</heading>
@@ -4877,6 +4884,7 @@
 			<synonym value="Flesh-Hooks"/>
 			<synonym value="Flesh-Hooks"/>
 			<!-- Medieval cooking tool, for pulling meat from the pot.  Related term: cauldron/caldron. -->
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 		</heading>
 		<heading id="FoodHeatingDevicesCookEq" title="Food Heating Device">
 			<synonym value="Food Heating Devices"/>
@@ -4926,7 +4934,7 @@
 				<synonym value="Hot-Plate"/>
 				<synonym value="Hot-Plates"/>
 			</heading>
-			<heading id="KettleHeatingCookEq" title="Kettle" noMatch="true">
+			<heading id="KettleHeatingCookEq" title="Kettle">
 				<synonym value="Kettles"/>
 				<implies facet="ActivityorContext" cat="Metallurgy"/> <!-- are all kettles made of metal? -->
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
@@ -9297,6 +9305,10 @@
 		<heading id="EucharisticSpoonRelRit" title="Eucharistic Spoon">
 			<synonym value="Eucharistic Spoons"/>
 		</heading>
+		<heading id="FleshHookRelRit" title="Flesh Hook" noMatch="true">
+			<synonym value="Flesh Hooks"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
 		<heading id="FontRelRit" title="Font">
 			<synonym value="Fonts"/>
 		</heading>
@@ -12299,8 +12311,12 @@
 		<heading id="FlesherTool" title="Flesher">
 			<synonym value="Fleshers"/>
 		</heading>
-		<heading id="FleshHookTool" title="Flesh-Hook">
+		<heading id="FleshHookTool" title="Flesh Hook">
+			<synonym value="Flesh Hooks"/>
+			<synonym value="Flesh-Hook"/>
 			<synonym value="Flesh-Hooks"/>
+			<implies facet="ObjectName" cat="FleshHookCookEq"/>
+			<!-- a flesh hook can also refer to forks used for ritual/sacrifical meat, and the hooks used in certain body piercing techniques -->
 		</heading>
 		<heading id="FlyShooterTool" title="Fly-Shooter">
 			<synonym value="Fly-Shooters"/>
