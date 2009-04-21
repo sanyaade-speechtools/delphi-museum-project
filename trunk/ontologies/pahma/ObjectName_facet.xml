@@ -2436,7 +2436,7 @@
 			<synonym value="Sign-Boards"/>
 		</heading>
 		<heading id="SongsheetComm" title="Songsheet" noMatch="true"/>
-		<heading id="AudiorecordingsComm" title="Audio Recordings">
+		<heading id="AudioRecordingsComm" title="Audio Recordings">
 			<synonym value="Audio Recording"/>
 			<synonym value="Sound Recording"/>
 			<synonym value="Sound Recordings"/>
@@ -3914,11 +3914,11 @@
 		<heading id="Footwear" title="Footwear">
 			<heading id="Sandalsfootwear" title="Sandals">
 				<synonym value="Sandal"/>
-				<implies facet="ActivityorContext" cat="Shoemaking"/>
+				<implies facet="ActivityorContext" cat="ShoeMaking"/>
 			</heading>
 			<heading id="ShoesFootwear" title="Shoes">
 				<synonym value="Shoe"/>
-				<implies facet="ActivityorContext" cat="Shoemaking"/>
+				<implies facet="ActivityorContext" cat="ShoeMaking"/>
 			</heading>
 			<heading id="SocksFootwear" title="Socks">
 				<synonym value="Sock"/>
@@ -7612,7 +7612,7 @@
 						<synonym value="Armadillo-Tail Rattles"/>
 						<synonym value="Armadillo Tail Rattle"/>
 						<synonym value="Armadillo Tail Rattles"/>
-						<implies facet="Material" cat="ArmadilloAnimalMaterial"/>
+						<implies facet="Material" cat="ArmadilloTailMat"/>
 					</heading>
 					<heading id="BabyRattle" title="Baby Rattle">
 						<synonym value="Baby Rattles"/>
@@ -7918,7 +7918,7 @@
 						<!-- To exclude seashell rattles -->
 						<excl value="Seashell"/>
 						<!-- Ibid. -->
-						<implies facet="Material" cat="TurtleAnimalMaterial"/>
+						<implies facet="Material" cat="TurtleShellMaterial"/>
 					</heading>
 				</heading>
 				<heading id="Sanza" title="Sanza">
