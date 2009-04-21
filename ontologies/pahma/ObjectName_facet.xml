@@ -10,10 +10,10 @@
 		<heading id="AgriculturalEquipment" title="Agricultural Items">
 			<synonym value="Agricultural Equipment"/>
 			<heading id="AgriculturalTools" title="Agricultural Tools">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies tools -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies tools -->
 				<heading id="BillHook" title="Bill-Hook">
 					<synonym value="Bill-Hooks"/>
-					<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies? also a weapon? -->
+					<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies? also a weapon? -->
 				</heading>
 				<heading id="CottonGinAgTool" title="Cotton Gin">
 					<!-- a machine for separating cotton from its seeds -->
@@ -180,21 +180,25 @@
 			</heading>
 			<heading id="FishHookCase" title="Fish-Hook-Case">
 				<synonym value="Fish-Hook-Cases"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>implies container </heading>
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies container -->
+			</heading>
 			<heading id="FishingBait" title="Fishing-Bait">
 				<synonym value="Fishing-Baits"/>
 			</heading>
 			<heading id="FishingBasket" title="Fishing-Basket">
 				<synonym value="Fishing-Baskets"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>implies basket </heading>
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies basket -->
+			</heading>
 			<heading id="FishingBoat" title="Fishing Boat">
 				<synonym value="Fishing Boats"/>
 				<synonym value="Fishing-Boat"/>
 				<synonym value="Fishing-Boats"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>implies boat </heading>
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies boat -->
+			</heading>
 			<heading id="FishingGoggles" title="Fishing-Goggles">
 				<synonym value="Fishing-Goggle"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>implies eyewear </heading>
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies eyewear -->
+				</heading>
 			<heading id="FishingKite" title="Fishing-Kite">
 				<synonym value="Fishing-Kites"/>
 			</heading>
@@ -227,7 +231,8 @@
 			</heading>
 			<heading id="FishingRaft" title="Fishing-Raft">
 				<synonym value="Fishing-Rafts"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>implies boat </heading>
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies boat -->
+				</heading>
 			<heading id="FishingRod" title="Fishing-Rod">
 				<synonym value="Fishing-Rods"/>
 			</heading>
@@ -343,7 +348,7 @@
 				<implies facet="ObjectName" cat="RopesMain"/>
 			</heading>
 			<heading id="GatheringToolsMain" title="Gathering-Tools">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies Tool/Implement -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies Tool/Implement -->
 				<heading id="BerryComb" title="Berry-Comb">
 					<synonym value="Berry-Combs"/>
 				</heading>
@@ -875,7 +880,7 @@
 				<synonym value="Bark Houses"/>
 				<synonym value="Bark-House"/>
 				<synonym value="Bark-Houses"/>
-				<implies facet="Material" cat="Treebarkmaterial"/>
+				<implies facet="Material" cat="TreeBarkMaterial"/>
 			</heading>
 			<heading id="Brushhouse" title="Brush House">
 				<synonym value="Brushhouses"/>
@@ -1786,7 +1791,7 @@
 				<implies facet="ObjectName" cat="BiJadeDiskRelRit"/>
 			</heading>
 			<heading id="MagicalDisc" title="Magical Disc">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Amulet -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies Amulet -->
 			</heading>
 			<heading id="Sara" title="Sara">
 				<!-- Done -->
@@ -1794,7 +1799,7 @@
 				<synonym value="Saras"/>
 			</heading>
 			<heading id="Xuanji" title="Xuanji">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>Implies Religious/Ritual Equipment -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies Religious/Ritual Equipment -->
 			</heading>
 		</heading>
 		<heading id="EngravedStone" title="Engraved Stone"/>
@@ -2656,12 +2661,12 @@
 				<synonym value="Baby Baskets"/>
 				<implies facet="ActivityorContext" cat="Childrearing"/>
 			</heading>
-			<heading id="Basketrycaplid" title="Basketry Cap (Lid)">
+			<heading id="BasketryCapLid" title="Basketry Cap (Lid)">
 				<synonym value="Basketry Cap (Lids)"/>
 				<synonym value="Basketry Caps (Lid)"/>
 				<synonym value="Basketry Caps (Lids)"/>
 			</heading>
-			<heading id="BasketbirdtrapBasket" title="Bird Trap Basket">
+			<heading id="BasketBirdTrapBasket" title="Bird Trap Basket">
 				<!-- Should Also Be Made A Kind of Trap (Armament) -->
 				<synonym value="Bird Trap Baskets"/>
 				<synonym value="Bird-Trap Basket"/>
@@ -2693,7 +2698,7 @@
 				<implies facet="ActivityorContext" cat="Healing"/>
 				<implies facet="ObjectName" cat="DoctoringBasketMedical"/>
 			</heading>
-			<heading id="BasketfishtrapBasket" title="Fish Trap Basket">
+			<heading id="BasketFishTrapBasket" title="Fish Trap Basket">
 				<!-- Also A Kind of Trap (Armament) -->
 				<synonym value="Fish Trap Baskets"/>
 				<synonym value="Fish-Trap Basket"/>
@@ -2747,7 +2752,7 @@
 				<synonym value="Mortar Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
-			<heading id="MushboilingBasket" title="Mush-Boiling Basket">
+			<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
 				<synonym value="Mush-Boiling Baskets"/>
 				<synonym value="Mush Boiling Basket"/>
 				<synonym value="Mush Boiling Baskets"/>
@@ -3633,7 +3638,7 @@
 			</heading>
 			<heading id="ReligiousRitualVessel" title="Religious/Ritual Vessel">
 				<synonym value="Religious/Ritual Vessels"/>
-				<implies facet="ObjectName" cat="mmmmmmmm"/>
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> -->
 				<!-- implies vessel -->
 				<heading id="AltarVessel" title="Altar-Vessel">
 					<synonym value="Altar-Vessels"/>
@@ -5318,7 +5323,8 @@
 						<synonym value="Columbian Exposition Commemorative Half Dollars"/>
 						<synonym value="Columbian Exposition Commemorative Half-Dollar"/>
 						<synonym value="Columbian Exposition Commemorative Half-Dollars"/>
-						<implies facet="ObjectName" cat="mmmmmmmm"/>implies event Columbian Expo. </heading>
+						<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies event Columbian Expo. -->
+					</heading>
 					<heading id="DiamondJubCommemHalfDoll" title="Diamond Jubilee Commemorative">
 						<synonym value="Diamond Jubilee Commemorative Half Dollar"/>
 						<synonym value="Diamond Jubilee Commemorative Half Dollars"/>
@@ -6219,7 +6225,7 @@
 	</heading>
 	<heading id="Instruments" title="Instruments">
 		<synonym value="Instrument"/>
-		<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> implies Tools -->
+		<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> implies Tools -->
 		<heading id="HorologicalInstrument" title="Horological Instrument">
 			<synonym value="Horological Instruments"/>
 		</heading>
@@ -7741,12 +7747,10 @@
 						<implies facet="Material" cat="ClawAnimalMaterial"/>
 					</heading>
 					<heading id="CocoonRattle" title="Cocoon Rattle">
-						<!-- implied materials: Cocoon -->
 						<synonym value="Cocoon Rattles"/>
 						<implies facet="Material" cat="MaterialsInsectCocoons"/>
 					</heading>
 					<heading id="CopperRattle" title="Copper Rattle">
-						<!-- implied materials: copper -->
 						<synonym value="Copper Rattles"/>
 						<implies facet="Material" cat="CopperMaterial"/>
 					</heading>
@@ -7762,7 +7766,6 @@
 						<synonym value="Finger Piano and Rattles"/>
 					</heading>
 					<heading id="FurRattle" title="Fur Rattle">
-						<!-- implied materials: fur -->
 						<synonym value="Fur Rattles"/>
 						<implies facet="Material" cat="FurAnimalMaterial"/>
 					</heading>
@@ -7772,12 +7775,10 @@
 						<synonym value="Goite Husk Rattle"/>
 					</heading>
 					<heading id="GourdRattle" title="Gourd Rattle">
-						<!-- implied materials: gourd -->
 						<synonym value="Gourd Rattles"/>
-						<implies facet="Material" cat="GourdAnimalMaterial"/>
+						<implies facet="Material" cat="GourdPlantMaterial"/>
 					</heading>
 					<heading id="GravelCocoonRattle" title="Gravel-Cocoon Rattle">
-						<!-- implied materials: cocoon, gravel -->
 						<synonym value="Gravel-Cocoon Rattles"/>
 						<synonym value="Gravel Cocoon Rattles"/>
 						<synonym value="Gravel Cocoon Rattle"/>
@@ -7792,7 +7793,6 @@
 						<excl value="Bracelets"/>
 					</heading>
 					<heading id="HoofRattle" title="Hoof Rattle">
-						<!-- implied materials: hoof -->
 						<synonym value="Hoof Rattles"/>
 						<synonym value="Hoofs Rattle"/>
 						<synonym value="Hoofs Rattles"/>
@@ -7827,7 +7827,6 @@
 						<implies facet="Material" cat="HoofMaterial"/>
 					</heading>
 					<heading id="HornRattle" title="Horn Rattle">
-						<!-- implied materials: horn -->
 						<synonym value="Horn Rattles"/>
 						<implies facet="Material" cat="HornMaterial"/>
 					</heading>
@@ -7883,7 +7882,7 @@
 						<synonym value="Pod Rattles"/>
 						<synonym value="Seed Pod Rattle"/>
 						<synonym value="Seed Pod Rattles"/>
-						<implies facet="Material" cat="SeedPlantMaterial"/>
+						<implies facet="Material" cat="SeedsPlantMaterial"/>
 					</heading>
 					<heading id="SistrumRattle" title="Sistrum">
 						<synonym value="Sistrums"/>
@@ -8965,7 +8964,7 @@
 			<synonym value="Cores"/>
 			<!-- In The Department of Prehistoric And Romano-British Antiquities
 				This Term Refers To The Residual Objects From Which Stone Tools Were Made -->
-			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> implies Tools ? -->
+			<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> implies Tools ? -->
 			<heading id="BipolarCore" title="Bipolar Core">
 				<synonym value="Bipolar Cores"/>
 			</heading>
@@ -9695,7 +9694,7 @@
 		<synonym value="Measure"/>
 		<synonym value="Measures"/>
 		<heading id="CalendarScience" title="Calendar">
-			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies Communications Equipment -->
+			<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies Communications Equipment -->
 			<synonym value="Calendars"/>
 			<heading id="Almanac" title="Almanac">
 				<synonym value="Almanacs"/>
@@ -11022,7 +11021,7 @@
 				<synonym value="Wine-Glass"/>
 				<synonym value="Wine-Glasses"/>
 				<implies facet="ObjectName" cat="WineFood"/>
-				<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/> Implies Drinking-Glass -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> Implies Drinking-Glass -->
 				<heading id="ChampagneGlass" title="Champagne Glass">
 					<synonym value="Champagne Glasses"/>
 					<synonym value="Champagne-Glass"/>
@@ -12251,7 +12250,7 @@
 			<synonym value="Ginning Tools"/>
 			<synonym value="Ginning-Tool"/>
 			<synonym value="Ginning-Tools"/>
-			<!-- <implies facet="ObjectName" cat="mmmmmmmmmmm"/>implies TEXTILE CRAFTS -->
+			<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies TEXTILE CRAFTS -->
 			<heading id="CottonGinTool" title="Cotton Gin">
 				<synonym value="Cotton Gins"/>
 				<synonym value="Cotton-Gin"/>
