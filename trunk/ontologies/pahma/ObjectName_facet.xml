@@ -1810,7 +1810,9 @@
 		</heading>
 	</heading>
 	<heading id="ChildcareEquipment" title="Childcare Equipment">
-		<heading id="BabyCoverChdCr" title="Baby-Cover">
+		<heading id="BabyCoverChdCr" title="Baby Cover">
+			<synonym value="Baby Covers"/>
+			<synonym value="Baby-Cover"/>
 			<synonym value="Baby-Covers"/>
 		</heading>
 		<heading id="BabyFeederChdCr" title="Baby Feeder">
@@ -1818,16 +1820,24 @@
 			<synonym value="Baby-Feeder"/>
 			<synonym value="Baby-Feeders"/>
 		</heading>
-		<heading id="BabyRattleChdCr" title="Baby-Rattle">
+		<heading id="BabyRattleChdCr" title="Baby Rattle">
+			<synonym value="Baby Rattles"/>
+			<synonym value="Baby-Rattle"/>
 			<synonym value="Baby-Rattles"/>
 		</heading>
-		<heading id="BabyWalkerChdCr" title="Baby-Walker">
+		<heading id="BabyWalkerChdCr" title="Baby Walker">
+			<synonym value="Baby Walkers"/>
+			<synonym value="Baby-Walker"/>
 			<synonym value="Baby-Walkers"/>
 		</heading>
-		<heading id="ChildBibChdCr" title="Child-Bib">
+		<heading id="ChildBibChdCr" title="Child Bib">
+			<synonym value="Child Bib"/>
+			<synonym value="Child-Bib"/>
 			<synonym value="Child-Bibs"/>
 		</heading>
-		<heading id="ChildCarrierChdCr" title="Child-Carrier">
+		<heading id="ChildCarrierChdCr" title="Child Carrier">
+			<synonym value="Child Carriers"/>
+			<synonym value="Child-Carrier"/>
 			<synonym value="Child-Carriers"/>
 		</heading>
 		<heading id="CotChdCr" title="Cot">
@@ -1839,25 +1849,47 @@
 			<implies facet="ActivityorContext" cat="Childrearing"/>
 			<implies facet="ObjectName" cat="CradleFurniture"/>
 		</heading>
-		<heading id="CradleCoverChdCr" title="Cradle-Cover">
+		<heading id="CradleBoardChdCr" title="Cradle Board">
+			<synonym value="Cradle Boards"/>
+			<synonym value="Cradleboards"/>
+			<synonym value="Cradleboards"/>
+			<synonym value="Baby Basket"/>
+			<synonym value="Baby Baskets"/>
+			<heading id="HeadFlattenerChdCr" title="Head Flattener">
+				<!-- This is just one part of the cradleboard. Do head flatteners exist on their own as well? -->
+				<synonym value="Head Flatteners"/>
+				<synonym value="Head-Flattener"/>
+				<synonym value="Head-Flatteners"/>
+			</heading>
+			<heading id="HeadGuardChdCr" title="Head Guard">
+				<!-- This is just one part of the cradleboard. Differntiate from other head guards? -->
+				<synonym value="Head Guards"/>
+			</heading>
+		</heading>
+		<heading id="CradleCoverChdCr" title="Cradle Cover">
+			<synonym value="Cradle Covers"/>
+			<synonym value="Cradle-Cover"/>
 			<synonym value="Cradle-Covers"/>
 		</heading>
-		<heading id="CradleStandChdCr" title="Cradle-Stand">
+		<heading id="CradleStandChdCr" title="Cradle Stand">
+			<synonym value="Cradle Stands"/>
+			<synonym value="Cradle-Stand"/>
 			<synonym value="Cradle-Stands"/>
 		</heading>
 		<heading id="DiaperChdCr" title="Diaper">
 			<synonym value="Diapers"/>
 		</heading>
-		<heading id="HeadFlattenerChdCr" title="Head-Flattener">
-			<synonym value="Head-Flatteners"/>
-		</heading>
-		<heading id="SwaddlingClothChdCr" title="Swaddling-Cloth">
+		<heading id="SwaddlingClothChdCr" title="Swaddling Cloth">
+			<synonym value="Swaddling Cloths"/>
+			<synonym value="Swaddling-Cloth"/>
 			<synonym value="Swaddling-Cloths"/>
 		</heading>
 		<heading id="ToyChdCr" title="Toy">
 			<synonym value="Toys"/>
 		</heading>
-		<heading id="UrinePipeChdCr" title="Urine-Pipe">
+		<heading id="UrinePipeChdCr" title="Urine Pipe">
+			<synonym value="Urine Pipes"/>
+			<synonym value="Urine-Pipe"/>
 			<synonym value="Urine-Pipes"/>
 		</heading>
 		<heading id="WritingSheetChdCr" title="Writing Sheet">
@@ -4579,6 +4611,7 @@
 				<heading id="YashmakGarment" title="Yashmak">
 					<synonym value="Yashmaks"/>
 				</heading>
+			
 			</heading>
 		</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
