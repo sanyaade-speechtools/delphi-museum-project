@@ -711,24 +711,28 @@
 		<heading id="LariatAnmlEq" title="Lariat">
 			<synonym value="Lariats"/>
 		</heading>
-		<heading id="MilkingCanAnmlEq" title="Milking Can">
-			<synonym value="Milking Cans"/>
-			<synonym value="Milking-Can"/>
-			<synonym value="Milking-Cans"/>
-
-		</heading>
-		<heading id="MilkingJugAnmlEq" title="Milking-Jug">
-			<synonym value="Milking-Jugs"/>
-		</heading>
-		<heading id="MilkingPailAnmlEq" title="Milking Pail">
-			<synonym value="Milking Pails"/>
-			<synonym value="Milking-Pail"/>
-			<synonym value="Milking-Pails"/>
-		</heading>
-		<heading id="MilkingPotAnmlEq" title="Milking Pot">
-			<synonym value="Milking Pots"/>
-			<synonym value="Milking-Pot"/>
-			<synonym value="Milking-Pots"/>
+		<heading id="MilkingEquipment" title="Milking Items">
+			<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
+			<heading id="MilkingCanAnmlEq" title="Milking Can">
+				<synonym value="Milking Cans"/>
+				<synonym value="Milking-Can"/>
+				<synonym value="Milking-Cans"/>
+			</heading>
+			<heading id="MilkingJugAnmlEq" title="Milking Jug">
+				<synonym value="Milking Jugs"/>
+				<synonym value="Milking-Jug"/>
+				<synonym value="Milking-Jugs"/>
+			</heading>
+			<heading id="MilkingPailAnmlEq" title="Milking Pail">
+				<synonym value="Milking Pails"/>
+				<synonym value="Milking-Pail"/>
+				<synonym value="Milking-Pails"/>
+			</heading>
+			<heading id="MilkingPotAnmlEq" title="Milking Pot">
+				<synonym value="Milking Pots"/>
+				<synonym value="Milking-Pot"/>
+				<synonym value="Milking-Pots"/>
+			</heading>
 		</heading>
 		<heading id="MonkeyScareAnmlEq" title="Monkey Scare">
 			<synonym value="Monkey Scares"/>
@@ -750,16 +754,24 @@
 		<heading id="PerchAnmlEq" title="Perch">
 			<synonym value="Perches"/>
 		</heading>
-		<heading id="SaddleBagAnmlEq" title="Saddle-Bag">
+		<heading id="SaddleBagAnmlEq" title="Saddle Bag">
+			<synonym value="Saddle Bags"/>
+			<synonym value="Saddle-Bag"/>
 			<synonym value="Saddle-Bags"/>
 		</heading>
-		<heading id="SaddleBlanketAnmlEq" title="Saddle-Blanket">
+		<heading id="SaddleBlanketAnmlEq" title="Saddle Blanket">
+			<synonym value="Saddle Blankets"/>
+			<synonym value="Saddle-Blanket"/>
 			<synonym value="Saddle-Blankets"/>
 		</heading>
-		<heading id="SaddleCoverAnmlEq" title="Saddle-Cover">
+		<heading id="SaddleCoverAnmlEq" title="Saddle Cover">
+			<synonym value="Saddle Covers"/>
+			<synonym value="Saddle-Cover"/>
 			<synonym value="Saddle-Covers"/>
 		</heading>
-		<heading id="SaddleCushionAnmlEq" title="Saddle-Cushion">
+		<heading id="SaddleCushionAnmlEq" title="Saddle Cushion">
+			<synonym value="Saddle Cushions"/>
+			<synonym value="Saddle-Cushion"/>
 			<synonym value="Saddle-Cushions"/>
 		</heading>
 		<heading id="SheepBellAnmlEq" title="Sheep-Bell">
