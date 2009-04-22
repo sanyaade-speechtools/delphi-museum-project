@@ -2433,8 +2433,11 @@
 		<heading id="PointerComm" title="Pointer">
 			<synonym value="Pointers"/>
 		</heading>
-		<heading id="PostageStampComm" title="Postage-Stamp">
+		<heading id="PostageStampComm" title="Postage Stamp">
+			<synonym value="Postage Stamps"/>
+			<synonym value="Postage-Stamp"/>
 			<synonym value="Postage-Stamps"/>
+			<implies facet="ObjectName" cat="PostageStampVisRep"/>
 		</heading>
 		<heading id="PosterComm" title="Poster">
 			<synonym value="Posters"/>
@@ -6438,7 +6441,7 @@
 		<heading id="Enema" title="Enema">
 			<synonym value="Enemas"/>
 		</heading>
-		<heading id="EnemaFunnel" title="Enema funnel">
+		<heading id="EnemaFunnel" title="Enema Funnel">
 			<synonym value="Enema Funnels"/>
 			<implies facet="ActivityorContext" cat="Healing"/>
 			<implies facet="ObjectName" cat="FunnelTool"/>
@@ -10427,12 +10430,11 @@
 					<synonym value="Napier-Bone"/>
 					<synonym value="Napier-Bones"/>
 				</heading>
-				<heading id="SectorMathInst" title="Sector">
-					<!-- EXCL needed? -->
-					<synonym value="xxxxxxxxxxxx"/>
-				</heading>
+				<!-- <heading id="SectorMathInst" title="Sector"/> -->
 				<heading id="SlideRuleMathInst" title="Slide Rule">
-					<synonym value="xxxxxxxxxxxx"/>
+					<synonym value="Slide Rules"/>
+					<synonym value="Slide-Rule"/>
+					<synonym value="Slide-Rules"/>
 				</heading>
 			</heading>
 			<heading id="MeasuringInstruments" title="Measuring Instruments">
@@ -10454,14 +10456,22 @@
 				<heading id="ClinometerMeasure" title="Clinometer">
 					<synonym value="Clinometers"/>
 				</heading>
-				<heading id="ClothMeasureMeasure" title="Cloth-Measure">
+				<heading id="ClothMeasureMeasure" title="Cloth Measure">
+					<synonym value="Cloth Measures"/>
+					<synonym value="Cloth-Measure"/>
 					<synonym value="Cloth-Measures"/>
 				</heading>
 				<heading id="CompassesMeasure" title="Compasses">
 					<synonym value="Compass"/>
 				</heading>
-				<heading id="CrossStaffMeasure" title="Cross-Staff">
+				<heading id="CrossStaffMeasure" title="Cross Staff">
+					<synonym value="Cross Staffs"/>
+					<synonym value="Cross-Staff"/>
 					<synonym value="Cross-Staffs"/>
+					<synonym value="Cross Stave"/>
+					<synonym value="Cross Staves"/>
+					<synonym value="Cross-Stave"/>
+					<synonym value="Cross-Staves"/>
 				</heading>
 				<heading id="GaugeMeasure" title="Gauge">
 					<synonym value="Gauges"/>
@@ -10490,16 +10500,22 @@
 					<synonym value="Level"/>
 					<!-- EXCL needed -->
 				</heading>
-				<heading id="MeasuringRodMeasure" title="Measuring-Rod">
+				<heading id="MeasuringRodMeasure" title="Measuring Rod">
+					<synonym value="Measuring Rods"/>
+					<synonym value="Measuring-Rod"/>
 					<synonym value="Measuring-Rods"/>
 				</heading>
-				<heading id="MeasuringVesselMeasure" title="Measuring-Vessel">
+				<heading id="MeasuringVesselMeasure" title="Measuring Vessel">
+					<synonym value="Measuring Vessels"/>
+					<synonym value="Measuring-Vessel"/>
 					<synonym value="Measuring-Vessels"/>
 				</heading>
 				<heading id="PedometerMeasure" title="Pedometer">
 					<synonym value="Pedometers"/>
 				</heading>
-				<heading id="PlumbBobMeasure" title="Plumb-Bob">
+				<heading id="PlumbBobMeasure" title="Plumb Bob">
+					<synonym value="Plumb Bobs"/>
+					<synonym value="Plumb-Bob"/>
 					<synonym value="Plumb-Bobs"/>
 				</heading>
 				<heading id="ProtractorMeasure" title="Protractor">
@@ -10548,7 +10564,9 @@
 			</heading>
 			<heading id="MedicalInstrument" title="Medical Instrument">
 				<synonym value="Medical Instruments"/>
-				<heading id="AcupunctureNeedle" title="Acupuncture-Needle">
+				<heading id="AcupunctureNeedle" title="Acupuncture Needle">
+					<synonym value="Acupuncture Needles"/>
+					<synonym value="Acupuncture-Needle"/>
 					<synonym value="Acupuncture-Needles"/>
 				</heading>
 				<heading id="Catheter" title="Catheter">
@@ -10557,7 +10575,9 @@
 				<heading id="DentalInstrument" title="Dental Instrument">
 					<synonym value="Dental Instruments"/>
 				</heading>
-				<heading id="EnemaFunnel" title="Enema-Funnel">
+				<heading id="EnemaFunnel" title="Enema Funnel">
+					<synonym value="Enema Funnels"/>
+					<synonym value="Enema-Funnel"/>
 					<synonym value="Enema-Funnels"/>
 					<implies facet="ObjectName" cat="FunnelTool"/>
 				</heading>
@@ -13030,140 +13050,151 @@
 		</heading>
 	</heading>
 	<heading id="VisualRepresentation" title="Visual Representations">
-		<heading id="Album" title="Album">
+		<heading id="AlbumVisRep" title="Album">
 			<synonym value="Albums"/>
 		</heading>
-		<heading id="Alphabet" title="Alphabet">
+		<heading id="AlphabetVisRep" title="Alphabet">
 			<synonym value="Alphabets"/>
 		</heading>
-		<heading id="Banknote" title="Banknote">
+		<heading id="BanknoteVisRep" title="Banknote">
 			<synonym value="Banknotes"/>
 		</heading>
-		<heading id="BookofPrints" title="Book of Prints">
+		<heading id="BookofPrintsVisRep" title="Book of Prints">
 			<synonym value="Books of Prints"/>
 		</heading>
-		<heading id="BookDecoration" title="Book-Decoration">
+		<heading id="BookDecorationVisRep" title="Book-Decoration">
 			<synonym value="Book-Decorations"/>
 		</heading>
-		<heading id="BookIllustration" title="Book-Illustration">
+		<heading id="BookIllustrationVisRep" title="Book-Illustration">
 			<synonym value="Book-Illustrations"/>
 		</heading>
-		<heading id="Bookplate" title="Bookplate">
+		<heading id="BookplateVisRep" title="Bookplate">
 			<synonym value="Bookplates"/>
 		</heading>
-		<heading id="Calligraphy" title="Calligraphy"/>
-		<heading id="Collage" title="Collage">
+		<heading id="CalligraphyVisRep" title="Calligraphy"/>
+		<heading id="CollageVisRep" title="Collage">
 			<synonym value="Collages"/>
 		</heading>
-		<heading id="CutOut" title="Cut-Out">
+		<heading id="CutOutVisRep" title="Cut-Out">
 			<synonym value="Cut-Outs"/>
 		</heading>
-		<heading id="DecoratedPaper" title="Decorated Paper">
+		<heading id="DecoratedPaperVisRep" title="Decorated Paper">
 			<synonym value="Decorated Papers"/>
 		</heading>
-		<heading id="Diptych" title="Diptych">
+		<heading id="DiptychVisRep" title="Diptych">
 			<synonym value="Diptychs"/>
-			<heading id="Semi-Diptych" title="Semi-Diptych">
+			<heading id="Semi-DiptychVisRep" title="Semi-Diptych">
 				<synonym value="Semi-Diptychs"/>
 				<synonym value="SemiDiptych"/>
 				<synonym value="SemiDiptychs"/>
 			</heading>
 		</heading>
-		<heading id="Drawing" title="Drawing">
+		<heading id="DrawingVisRep" title="Drawing">
 			<synonym value="Drawings"/>
 			<synonym value="Sketch"/>
 			<synonym value="Sketches"/>
 			<synonym value="Illustration"/>
 			<synonym value="Illustrations"/>
 		</heading>
-		<heading id="Emblem" title="Emblem">
+		<heading id="EmblemVisRep" title="Emblem">
 			<synonym value="Emblems"/>
 		</heading>
-		<heading id="GlassSlide" title="Glass Slide">
+		<heading id="GlassSlideVisRep" title="Glass Slide">
 			<synonym value="Glass Slides"/>
 		</heading>
-		<heading id="GreetingCard" title="Greeting-Card">
+		<heading id="GreetingCardVisRep" title="Greeting Card">
+			<synonym value="Greeting Cards"/>
+			<synonym value="Greeting-Card"/>
 			<synonym value="Greeting-Cards"/>
 		</heading>
-		<heading id="Icon" title="Icon">
+		<heading id="IconVisRep" title="Icon">
 			<synonym value="Icons"/>
 		</heading>
-		<heading id="Idol" title="Idol">
+		<heading id="IdolVisRep" title="Idol">
 			<synonym value="Idols"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
-		<heading id="Impression" title="Impression">
+		<heading id="ImpressionVisRep" title="Impression">
 			<synonym value="Impressions"/>
 		</heading>
-		<heading id="LanternSlide" title="Lantern Slide">
+		<heading id="LanternSlideVisRep" title="Lantern Slide">
 			<synonym value="Lantern Slides"/>
 		</heading>
-		<heading id="Medal" title="Medal">
+		<heading id="MedalVisRep" title="Medal">
 			<synonym value="Medal"/>
 		</heading>
-		<heading id="Medallion" title="Medallion">
+		<heading id="MedallionVisRep" title="Medallion">
 			<synonym value="Medallions"/>
 		</heading>
-		<heading id="Medley" title="Medley">
+		<heading id="MedleyVisRep" title="Medley">
 			<synonym value="Medleys"/>
 		</heading>
-		<heading id="ModernCartoon" title="Modern Cartoon">
+		<heading id="ModernCartoonVisRep" title="Modern Cartoon">
 			<synonym value="Modern Cartoons"/>
 		</heading>
-		<heading id="Offset" title="Offset">
+		<heading id="OffsetVisRep" title="Offset">
 			<synonym value="Offsets"/>
 		</heading>
-		<heading id="Paintings" title="Paintings">
+		<heading id="PaintingsVisRep" title="Paintings">
 			<synonym value="Painting"/>
-			<heading id="EKamban" title="E-Kamban">
+			<heading id="EKambanVisRep" title="E-Kamban">
 				<synonym value="E-Kambans"/>
 			</heading>
-			<heading id="FanPainting" title="Fan-Painting">
+			<heading id="FanPaintingVisRep" title="Fan Painting">
+				<synonym value="Fan Paintings"/>
+				<synonym value="Fan-Painting"/>
 				<synonym value="Fan-Paintings"/>
 			</heading>
-			<heading id="Gaku" title="Gaku">
+			<heading id="GakuVisRep" title="Gaku">
 				<synonym value="Gakus"/>
 			</heading>
-			<heading id="Miniature" title="Miniature">
+			<heading id="MiniatureVisRep" title="Miniature">
 				<synonym value="Miniatures"/>
 			</heading>
-			<heading id="MummyPortrait" title="Mummy-Portrait">
+			<heading id="MummyPortraitVisRep" title="Mummy Portrait">
+				<synonym value="Mummy Portraits"/>
+				<synonym value="Mummy-Portrait "/>
 				<synonym value="Mummy-Portraits"/>
 			</heading>
-			<heading id="OtsuE" title="Otsu-E">
+			<heading id="OtsuEVisRep" title="Otsu-E">
 				<synonym value="Otsu-Es"/>
 			</heading>
-			<heading id="Pata" title="Pata">
+			<heading id="PataVisRep" title="Pata">
 				<synonym value="Pata"/>
 			</heading>
-			<heading id="Pichwai" title="Pichwai">
+			<heading id="PichwaiVisRep" title="Pichwai">
 				<synonym value="Pichwais"/>
 			</heading>
-			<heading id="Shikishi" title="Shikishi">
+			<heading id="ShikishiVisRep" title="Shikishi">
 				<synonym value="Shikishis"/>
 			</heading>
-			<heading id="WallPainting" title="Wall-Painting">
-				<heading id="TombPainting" title="Tomb-Painting">
+			<heading id="WallPaintingVisRep" title="Wall Painting">
+				<synonym value="Wall Paintings"/>
+				<synonym value="Wall-Painting"/>
+				<synonym value="Wall-Paintings"/>
+				<heading id="TombPaintingVisRep" title="Tomb Painting">
+					<synonym value="Tomb Paintings"/>
+					<synonym value="Tomb-Painting"/>
 					<synonym value="Tomb-Paintings"/>
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Papercut" title="Papercut">
+		<heading id="PapercutVisRep" title="Papercut">
 			<synonym value="Papercuts"/>
 			<synonym value="Paper-cut"/>
 			<synonym value="Paper-cuts"/>
 		</heading>
-		<heading id="Paperwork" title="Paperwork"/>
-		<heading id="Papyrus" title="Papyrus">
+		<heading id="PaperworkVisRep" title="Paperwork"/>
+		<heading id="PapyrusVisRep" title="Papyrus">
 			<synonym value="Papyri"/>
 		</heading>
-		<heading id="Pattern" title="Pattern">
+		<heading id="PatternVisRep" title="Pattern">
 			<synonym value="Patterns"/>
 		</heading>
-		<heading id="Pau" title="Pau">
+		<heading id="PauVisRep" title="Pau">
 			<synonym value="Paus"/>
 		</heading>
-		<heading id="Photographs" title="Photographs">
+		<heading id="PhotographsVisRep" title="Photographs">
 			<synonym value="Photograph"/>
 			<synonym value="Photo"/>
 			<synonym value="Photos"/>
@@ -13171,10 +13202,10 @@
 			<!-- EXCL needed? -->
 			<synonym value="Prints"/>
 			<!-- EXCL needed? -->
-			<heading id="Negatives" title="Negatives">
+			<heading id="NegativesVisRep" title="Negatives">
 				<synonym value="Negative"/>
 				<!-- Check for possible exclusions -->
-				<heading id="GlassPlateNegative" title="Glass Plate Negative">
+				<heading id="GlassPlateNegativeVisRep" title="Glass Plate Negative">
 					<synonym value="Glass Plate Negatives"/>
 					<synonym value="Glass-Plate Negative"/>
 					<synonym value="Glass-Plate Negatives"/>
@@ -13182,74 +13213,74 @@
 					<synonym value="Glassplate Negatives"/>
 				</heading>
 			</heading>
-			<heading id="Positives" title="Positives">
+			<heading id="PositivesVisRep" title="Positives">
 				<synonym value="Positive"/>
 				<!-- EXCL needed? -->
-				<heading id="ColorSlides" title="Color Slides">
+				<heading id="ColorSlidesVisRep" title="Color Slides">
 					<synonym value="Color Slide"/>
 					<synonym value="BW Slide"/>
 					<synonym value="B/W Slide"/>
 					<synonym value="B&amp;W Slide"/>
 					<synonym value="Slides"/>
-					<!-- EXCL needed? -->
 					<synonym value="Slide"/>
-					<!-- EXCL needed? -->
-					<synonym value="Transparencies"/>
-					<!-- EXCL needed? -->
-					<synonym value="Transparency"/>
-					<!-- EXCL needed? -->
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Picture" title="Picture">
+		<heading id="PictureVisRep" title="Picture">
 			<synonym value="Pictures"/>
 		</heading>
-		<heading id="Plaquette" title="Plaquette">
+		<heading id="PlaquetteVisRep" title="Plaquette">
 			<synonym value="Plaquettes"/>
 		</heading>
-		<heading id="PlayingCard" title="Playing-Card">
+		<heading id="PlayingCardVisRep" title="Playing Card">
+			<synonym value="Playing Cards"/>
+			<synonym value="Playing-Card"/>
 			<synonym value="Playing-Cards"/>
 		</heading>
-		<heading id="Polyptych" title="Polyptych">
+		<heading id="PolyptychVisRep" title="Polyptych">
 			<synonym value="Polyptychs"/>
 		</heading>
-		<heading id="Portfolio" title="Portfolio">
+		<heading id="PortfolioVisRep" title="Portfolio">
 			<synonym value="Portfolios"/>
 		</heading>
-		<heading id="PostageStamp" title="Postage-Stamp">
-			<synonym value="Postage-Stamps"/>
-		</heading>
-		<heading id="Print" title="Print">
+		<heading id="PostageStampVisRep" title="Postage-Stamp" noMatch="true"/>
+		<heading id="PrintVisRep" title="Print">
 			<synonym value="Prints"/>
 		</heading>
-		<heading id="RickshawPanel" title="Rickshaw-Panel">
+		<heading id="RickshawPanelVisRep" title="Rickshaw Panel">
+			<synonym value="Rickshaw Panels"/>
+			<synonym value="Rickshaw-Panel"/>
 			<synonym value="Rickshaw-Panels"/>
 		</heading>
-		<heading id="Rubbing" title="Rubbing">
+		<heading id="RubbingVisRep" title="Rubbing">
 			<synonym value="Rubbings"/>
 		</heading>
-		<heading id="Scroll" title="Scroll">
+		<heading id="ScrollVisRep" title="Scroll">
 			<synonym value="Scrolls"/>
 		</heading>
-		<heading id="SignBoard" title="Sign-Board">
+		<heading id="SignBoardVisRep" title="Sign Board">
+			<synonym value="Sign Boards"/>
+			<synonym value="Sign-Board"/>
 			<synonym value="Sign-Boards"/>
 		</heading>
-		<heading id="Silhouette" title="Silhouette">
+		<heading id="SilhouetteVisRep" title="Silhouette">
 			<synonym value="Silhouettes"/>
 		</heading>
-		<heading id="SketchBook" title="Sketch-Book">
+		<heading id="SketchBookVisRep" title="Sketch Book">
+			<synonym value="Sketch Books"/>
+			<synonym value="Sketch-Book"/>
 			<synonym value="Sketch-Books"/>
 		</heading>
-		<heading id="Storyboard" title="Storyboard">
+		<heading id="StoryboardVisRep" title="Storyboard">
 			<synonym value="Storyboards"/>
 		</heading>
-		<heading id="Tetraptych" title="Tetraptych">
+		<heading id="TetraptychVisRep" title="Tetraptych">
 			<synonym value="Tetraptychs"/>
 		</heading>
-		<heading id="Transparency" title="Transparency">
+		<heading id="TransparencyVisRep" title="Transparency">
 			<synonym value="Transparencies"/>
 		</heading>
-		<heading id="Triptych" title="Triptych">
+		<heading id="TriptychVisRep" title="Triptych">
 			<synonym value="Triptychs"/>
 		</heading>
 	</heading>
