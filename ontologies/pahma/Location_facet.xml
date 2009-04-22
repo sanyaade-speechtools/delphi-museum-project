@@ -4600,7 +4600,7 @@
 									<heading id="FreshwaterBay" title="Freshwater Bay"/>
 								</heading>
 								<heading id="HainesDivAK" title="Haines">
-									<heading id="PorcupineRiver" title="Porcupine River"/>
+									<heading id="PorcupineRvHainesAK" title="Porcupine River" noMatch="true"/>
 								</heading>
 								<heading id="HoonahAngoonCenAreaAK" title="Hoonah-Angoon Census Area">
 									<heading id="Hoonah" title="Hoonah">
@@ -4646,7 +4646,9 @@
 								</heading>
 								<heading id="SkagwayYakAngAK" title="Skagway-Yakutat-Angoon">
 									<heading id="Angoon1" title="Angoon"/>
-									<heading id="PorcupineRiver" title="Porcupine River"/>
+									<heading id="PorcupineRvSkagwayAK" title="Porcupine River">
+										<implies facet="Location" cat="PorcupineRvHainesAK"/>
+									</heading>
 									<heading id="Skagway" title="Skagway"/>
 									<heading id="Yakutat" title="Yakutat"/>
 								</heading>
@@ -4717,8 +4719,8 @@
 								</heading>
 								<heading id="LakePeninsDivAK2" title="Lake and Peninsula" noMatch="true">
 									<heading id="ChignikAK2" title="Chignik" noMatch="true"/>
-									<heading id="KatmaiAK" title="Katmai" noMatch="true"/>
-									<heading id="UnavashikIslAK" title="Unavashik Island" noMatch="true"/>
+									<heading id="KatmaiAK2" title="Katmai" noMatch="true"/>
+									<heading id="UnavashikIslAK2" title="Unavashik Island" noMatch="true"/>
 								</heading>
 								<heading id="ValdezCordovaDivAK" title="Valdez-Cordova">
 									<heading id="CapeYakataga" title="Cape Yakataga">
@@ -14004,224 +14006,234 @@
 									<synonym value="San Joaquin County, CA, no loc."/>
 									<heading id="PlacesSJoaqCA" title="Place Names" noMatch="true">
 										<heading id="BellotaSJoaqCA" title="Bellota"/>
-										<heading id="TurnerRanchSJoaqCA" title="Turner Ranch"/>
-										<heading id="UnionIslSJoaqCA" title="Union Island"/>
-										<heading id="ShagLakeSJoaqCA" title="Shag Lake"/>
-										<heading id="MiwokRnchriaSJoaqCA" title="Miwok Rancheria"/>
-										<heading id="SwayneRanchSJoaqCA" title="Swayne Ranch"/>
+										<heading id="BuckerRanchSJoCA" title="Bucker Ranch"/>
+										<heading id="DurhamRanchSJoaqCA" title="Durham Ranch"/>
+										<heading id="FrenchCampSloughSJoCA" title="French Camp Slough">
+											<synonym value="French Camp Slough (?)"/>
+										</heading>
 										<heading id="GaltLodiSJoaqCA" title="Galt-Lodi"/>
 										<heading id="LodiSJoaqCA" title="Lodi"/>
-										<heading id="DurhamRanchSJoaqCA" title="Durham Ranch"/>
-										<heading id="StocktonSJoaqCA" title="Stockton"/>
+										<heading id="MiwokRnchriaSJoaqCA" title="Miwok Rancheria"/>
+										<heading id="OldKingSJoCA" title="Old King"/>
+										<heading id="OldThorntonSJoCA" title="Old Thornton"/>
+										<heading id="OldVailSJoCA" title="Old Vail"/>
+										<heading id="OldWheelerSJoCA" title="Old Wheeler"/>
 										<heading id="RobertsIslSJoaqCA" title="Roberts Island"/>
+										<heading id="ShagLakeSJoaqCA" title="Shag Lake"/>
+										<heading id="StocktonSJoaqCA" title="Stockton"/>
+										<heading id="SwayneRanchSJoaqCA" title="Swayne Ranch"/>
+										<heading id="TurnerRanchSJoaqCA" title="Turner Ranch"/>
+										<heading id="UnionIslSJoaqCA" title="Union Island"/>
+										<heading id="VailSJoCA" title="Vail">
+											<excl value="Colorado"/>
+										</heading>
+										<heading id="WalkerSloughSJoCA" title="Walker Slough"/>
 										<heading id="WaterlooRdSJoaqCA" title="Waterloo Road"/>
 									</heading>
 									<heading id="TrinomSJoaqCA" title="Trinomial site names" noMatch="true">
-										<heading id="CASJo1" title="CA-SJo- 1">
-											<synonym value="CA-SJo-1"/>
+										<heading id="CASJo1" title="CA-SJo-1">
+											<synonym value="CA-SJo- 1"/>
 										</heading>
-										<heading id="CASJo2" title="CA-SJo- 2">
-											<synonym value="CA-SJo-2"/>
+										<heading id="CASJo2" title="CA-SJo-2">
+											<synonym value="CA-SJo- 2"/>
 										</heading>
-										<heading id="CASJo3" title="CA-SJo- 3">
-											<synonym value="CA-SJo-3"/>
+										<heading id="CASJo3" title="CA-SJo-3">
+											<synonym value="CA-SJo- 3"/>
 											<synonym value="GHW 43"/>
 											<synonym value="J1"/>
 											<synonym value="Abersold"/>
 										</heading>
-										<heading id="CASJo4" title="CA-SJo- 4">
-											<synonym value="CA-SJo-4"/>
+										<heading id="CASJo4" title="CA-SJo-4">
+											<synonym value="CA-SJo- 4"/>
 											<synonym value="Dethlefsen"/>
 										</heading>
-										<heading id="CASJo5" title="CA-SJo- 5">
-											<synonym value="CA-SJo-5"/>
+										<heading id="CASJo5" title="CA-SJo-5">
+											<synonym value="CA-SJo- 5"/>
 											<synonym value="J5"/>
 											<synonym value="GWH 47"/>
 										</heading>
-										<heading id="CASJo6" title="CA-SJo- 6">
-											<synonym value="CA-SJo-6"/>
+										<heading id="CASJo6" title="CA-SJo-6">
+											<synonym value="CA-SJo- 6"/>
 										</heading>
-										<heading id="CASJo9" title="CA-SJo- 9">
-											<synonym value="CA-SJo-9"/>
+										<heading id="CASJo9" title="CA-SJo-9">
+											<synonym value="CA-SJo- 9"/>
 											<synonym value="GWH 51, J9"/>
 										</heading>
-										<heading id="CASJo10" title="CA-SJo- 10">
-											<synonym value="CA-SJo-10"/>
+										<heading id="CASJo10" title="CA-SJo-10">
+											<synonym value="CA-SJo- 10"/>
 											<synonym value="GWH 10"/>
 											<synonym value="J10"/>
 										</heading>
-										<heading id="CASJo16" title="CA-SJo- 16">
-											<synonym value="CA-SJo-16"/>
+										<heading id="CASJo16" title="CA-SJo-16">
+											<synonym value="CA-SJo- 16"/>
 											<synonym value="P.M. Jones Mound #1"/>
 											<synonym value="Stockton, mound #1"/>
 										</heading>
-										<heading id="CASJo20" title="CA-SJo- 20">
-											<synonym value="CA-SJo-20"/>
+										<heading id="CASJo20" title="CA-SJo-20">
+											<synonym value="CA-SJo- 20"/>
 											<synonym value="Chicory (Barr collection)"/>
 										</heading>
-										<heading id="CASJo26" title="CA-SJo- 26">
-											<synonym value="CA-SJo-26"/>
+										<heading id="CASJo26" title="CA-SJo-26">
+											<synonym value="CA-SJo- 26"/>
 											<synonym value="McGary"/>
 											<synonym value="Schenck &amp; Dawson 26"/>
 										</heading>
-										<heading id="CASJo28" title="CA-SJo- 28">
-											<synonym value="CA-SJo-28"/>
+										<heading id="CASJo28" title="CA-SJo-28">
+											<synonym value="CA-SJo- 28"/>
 											<synonym value="Lockeford (Barr collection)"/>
 										</heading>
-										<heading id="CASJo31" title="CA-SJo- 31">
-											<synonym value="CA-SJo-31"/>
+										<heading id="CASJo31" title="CA-SJo-31">
+											<synonym value="CA-SJo- 31"/>
 											<synonym value="Schenck &amp; Dawson 31"/>
 											<synonym value="Littlehale"/>
 										</heading>
-										<heading id="CASJo33" title="CA-SJo- 33">
-											<synonym value="CA-SJo-33"/>
+										<heading id="CASJo33" title="CA-SJo-33">
+											<synonym value="CA-SJo- 33"/>
 											<synonym value="Schenck &amp; Dawson 33"/>
 											<!-- <synonym value="Rode"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo37" title="CA-SJo- 37">
-											<synonym value="CA-SJo-37"/>
+										<heading id="CASJo37" title="CA-SJo-37">
+											<synonym value="CA-SJo- 37"/>
 											<synonym value="Knoll"/>
 											<synonym value="Schenck &amp; Dawson 37"/>
 										</heading>
-										<heading id="CASJo42" title="CA-SJo- 42">
-											<synonym value="CA-SJo-42"/>
+										<heading id="CASJo42" title="CA-SJo-42">
+											<synonym value="CA-SJo- 42"/>
 											<synonym value="Schenck &amp; Dawson 42"/>
 											<!-- <synonym value="McCauley"/> Disambiguate -->
 										</heading>
 										<heading id="CASJo43" title="CA-SJo-43">
-											<synonym value="CA-SJo- 43"/>
+											<synonym value="CA-SJo-  43"/>
 											<synonym value="Schenck &amp; Dawson 43"/>
 											<!-- <synonym value="McCauley"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo44" title="CA-SJo- 44">
-											<synonym value="CA-SJo-44"/>
+										<heading id="CASJo44" title="CA-SJo-44">
+											<synonym value="CA-SJo- 44"/>
 											<!-- <synonym value="McCauley"/> Disambiguate -->
 											<synonym value="Schenck &amp; Dawson 44"/>
 										</heading>
-										<heading id="CASJo45" title="CA-SJo- 45">
-											<synonym value="CA-SJo-45"/>
+										<heading id="CASJo45" title="CA-SJo-45">
+											<synonym value="CA-SJo- 45"/>
 											<synonym value="Schenck &amp; Dawson 45"/>
 											<!-- <synonym value="McCauley"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo46" title="CA-SJo- 46">
-											<synonym value="CA-SJo-46"/>
+										<heading id="CASJo46" title="CA-SJo-46">
+											<synonym value="CA-SJo- 46"/>
 											<synonym value="Schenck &amp; Dawson 46"/>
 											<!-- <synonym value="Smith"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo47" title="CA-SJo- 47">
-											<synonym value="CA-SJo-47"/>
+										<heading id="CASJo47" title="CA-SJo-47">
+											<synonym value="CA-SJo- 47"/>
 											<synonym value="Schenck &amp; Dawson 47"/>
 											<!-- <synonym value="McCauley"/> Disambiguate -->
-											<synonym value="Bucker Ranch"/>
-											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<implies facet="Location" cat="BuckerRanchSJoCA"/>
 										</heading>
-										<heading id="CASJo48" title="CA-SJo- 48">
-											<synonym value="CA-SJo-48"/>
+										<heading id="CASJo48" title="CA-SJo-48">
+											<synonym value="CA-SJo- 48"/>
 											<synonym value="Schenck &amp; Dawson 48"/>
 											<synonym value="DeVries"/>
 										</heading>
-										<heading id="CASJo53" title="CA-SJo- 53">
-											<synonym value="CA-SJo-53"/>
+										<heading id="CASJo53" title="CA-SJo-53">
+											<synonym value="CA-SJo- 53"/>
 											<synonym value="Schenck &amp; Dawson 53"/>
 											<synonym value="Kile"/>
 										</heading>
-										<heading id="CASJo54" title="CA-SJo- 54">
-											<synonym value="CA-SJo-54"/>
+										<heading id="CASJo54" title="CA-SJo-54">
+											<synonym value="CA-SJo- 54"/>
 											<synonym value="Schenck &amp; Dawson 54"/>
-											<synonym value="Old King"/>
+											<implies facet="Location" cat="OldKingSJoCA"/>
 										</heading>
-										<heading id="CASJo55" title="CA-SJo- 55">
-											<synonym value="CA-SJo-55"/>
-											<synonym value="Old King"/>
+										<heading id="CASJo55" title="CA-SJo-55">
+											<synonym value="CA-SJo- 55"/>
+											<implies facet="Location" cat="OldKingSJoCA"/>
 										</heading>
-										<heading id="CASJo56" title="CA-SJo- 56">
-											<synonym value="CA-SJo-56"/>
+										<heading id="CASJo56" title="CA-SJo-56">
+											<synonym value="CA-SJo- 56"/>
 											<synonym value="Schenck &amp; Dawson 56"/>
-											<synonym value="Old Wheeler"/>
 											<synonym value="Phelps"/>
 											<synonym value="Thornton"/>
 											<synonym value="Koontz"/>
+											<implies facet="Location" cat="OldWheelerSJoCA"/>
 										</heading>
-										<heading id="CASJo57" title="CA-SJo- 57">
-											<synonym value="CA-SJo-57"/>
+										<heading id="CASJo57" title="CA-SJo-57">
+											<synonym value="CA-SJo- 57"/>
 											<synonym value="Schenck &amp; Dawson 57"/>
-											<synonym value="Old Thornton"/>
+											<implies facet="Location" cat="OldThorntonSJoCA"/>
 										</heading>
-										<heading id="CASJo58" title="CA-SJo- 58">
-											<synonym value="CA-SJo-58"/>
+										<heading id="CASJo58" title="CA-SJo-58">
+											<synonym value="CA-SJo- 58"/>
 											<synonym value="Schenck &amp; Dawson 58"/>
-											<synonym value="Old Thornton"/>
+											<implies facet="Location" cat="OldThorntonSJoCA"/>
 										</heading>
-										<heading id="CASJo59" title="CA-SJo- 59">
-											<synonym value="CA-SJo-59"/>
+										<heading id="CASJo59" title="CA-SJo-59">
+											<synonym value="CA-SJo- 59"/>
 											<synonym value="Schenck &amp; Dawson 59"/>
 											<synonym value="Koontz"/>
 										</heading>
-										<heading id="CASJo66" title="CA-SJo- 66">
-											<synonym value="CA-SJo-66"/>
+										<heading id="CASJo66" title="CA-SJo-66">
+											<synonym value="CA-SJo- 66"/>
 										</heading>
-										<heading id="CASJo68" title="CA-SJo- 68">
-											<synonym value="CA-SJo-68"/>
+										<heading id="CASJo68" title="CA-SJo-68">
+											<synonym value="CA-SJo- 68"/>
 											<synonym value="Schenck &amp; Dawson 68"/>
 											<synonym value="C-68"/>
 											<synonym value="Blossom (Journeay)"/>
 										</heading>
-										<heading id="CASJo69" title="CA-SJo- 69">
-											<synonym value="CA-SJo-69"/>
+										<heading id="CASJo69" title="CA-SJo-69">
+											<synonym value="CA-SJo- 69"/>
 											<synonym value="Schenck &amp; Dawson 69"/>
-											<synonym value="Vail"/>
+											<implies facet="Location" cat="VailSJoCA"/>
 										</heading>
-										<heading id="CASJo70" title="CA-SJo- 70">
-											<synonym value="CA-SJo-70"/>
+										<heading id="CASJo70" title="CA-SJo-70">
+											<synonym value="CA-SJo- 70"/>
 											<synonym value="Schenck &amp; Dawson 70"/>
-											<synonym value="Vail"/>
+											<implies facet="Location" cat="VailSJoCA"/>
 										</heading>
-										<heading id="CASJo73" title="CA-SJo- 73">
-											<synonym value="CA-SJo-73"/>
+										<heading id="CASJo73" title="CA-SJo-73">
+											<synonym value="CA-SJo- 73"/>
 											<synonym value="Brack"/>
 											<synonym value="Schenck &amp; Dawson 73"/>
 										</heading>
-										<heading id="CASJo75" title="CA-SJo- 75">
-											<synonym value="CA-SJo-75"/>
+										<heading id="CASJo75" title="CA-SJo-75">
+											<synonym value="CA-SJo- 75"/>
 											<synonym value="Barr's Copperopolis camp site"/>
 											<synonym value="Schenck &amp; Dawson 75"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASJo78" title="CA-SJo- 78">
-											<synonym value="CA-SJo-78"/>
+										<heading id="CASJo78" title="CA-SJo-78">
+											<synonym value="CA-SJo- 78"/>
 											<synonym value="Schenck &amp; Dawson 78"/>
-											<synonym value="Old Vail"/>
+											<implies facet="Location" cat="OldVailSJoCA"/>
 										</heading>
-										<heading id="CASJo80" title="CA-SJo- 80">
-											<synonym value="CA-SJo-80"/>
+										<heading id="CASJo80" title="CA-SJo-80">
+											<synonym value="CA-SJo- 80"/>
 											<synonym value="Schenck &amp; Dawson 80"/>
 											<synonym value="Stockton Channel"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASJo81" title="CA-SJo- 81">
-											<synonym value="CA-SJo-81"/>
+										<heading id="CASJo81" title="CA-SJo-81">
+											<synonym value="CA-SJo- 81"/>
 											<synonym value="Schenck &amp; Dawson 81"/>
 											<synonym value="Feck"/>
 											<synonym value="Robert's Island Wood Ranch"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASJo82" title="CA-SJo- 82">
-											<synonym value="CA-SJo-82"/>
+										<heading id="CASJo82" title="CA-SJo-82">
+											<synonym value="CA-SJo- 82"/>
 											<synonym value="Schenck &amp; Dawson 82"/>
 											<synonym value="Walker Slough Jones"/>
 											<!-- <synonym value="Barr"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo83" title="CA-SJo- 83">
-											<synonym value="CA-SJo-83"/>
+										<heading id="CASJo83" title="CA-SJo-83">
+											<synonym value="CA-SJo- 83"/>
 											<synonym value="Schenck &amp; Dawson 83"/>
 											<synonym value="Ott"/>
 										</heading>
-										<heading id="CASJo85" title="CA-SJo- 85">
-											<synonym value="CA-SJo-85"/>
+										<heading id="CASJo85" title="CA-SJo-85">
+											<synonym value="CA-SJo- 85"/>
 											<synonym value="Schenck &amp; Dawson 85"/>
 											<!-- <synonym value="Barr"/> Disambiguate -->
 											<synonym value="Copperopolis"/>
@@ -14229,54 +14241,52 @@
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASJo86" title="CA-SJo- 86">
-											<synonym value="CA-SJo-86"/>
+										<heading id="CASJo86" title="CA-SJo-86">
+											<synonym value="CA-SJo- 86"/>
 											<synonym value="Schenck &amp; Dawson 86"/>
 											<!-- <synonym value="Pool"/> Disambiguate -->
 											<!-- <synonym value="Barr"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo87" title="CA-SJo- 87">
-											<synonym value="CA-SJo-87"/>
+										<heading id="CASJo87" title="CA-SJo-87">
+											<synonym value="CA-SJo- 87"/>
 											<synonym value="Schenck &amp; Dawson 87"/>
 											<synonym value="Martin"/>
 											<!-- <synonym value="Barr"/> Disambiguate -->
 										</heading>
-										<heading id="CASJo88" title="CA-SJo- 88">
-											<synonym value="CA-SJo-88"/>
+										<heading id="CASJo88" title="CA-SJo-88">
+											<synonym value="CA-SJo- 88"/>
 											<synonym value="Schenck &amp; Dawson 88"/>
 											<synonym value="Old D.R. Smith"/>
+											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASJo89" title="CA-SJo- 89">
-											<synonym value="CA-SJo-89"/>
+										<heading id="CASJo89" title="CA-SJo-89">
+											<synonym value="CA-SJo- 89"/>
 											<synonym value="Schenck &amp; Dawson 8"/>
 											<synonym value="Robert's Island"/>
 											<synonym value="Brant's Ferry"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASJo90" title="CA-SJo- 90">
-											<synonym value="CA-SJo-90"/>
+										<heading id="CASJo90" title="CA-SJo-90">
+											<synonym value="CA-SJo- 90"/>
 											<synonym value="Schenck &amp; Dawson 90"/>
 											<synonym value="Lewis"/>
 										</heading>
-										<heading id="CASJo91" title="CA-SJo- 91">
-											<synonym value="CA-SJo-91"/>
+										<heading id="CASJo91" title="CA-SJo-91">
+											<synonym value="CA-SJo- 91"/>
 											<synonym value="Schenck &amp; Dawson 9"/>
 											<!-- <synonym value="Barr"/> Disambiguate -->
 											<!-- <synonym value="Island"/> Too ambiguous -->
-											<synonym value="Walker Slough"/>
-											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<implies facet="Location" cat="WalkerSloughSJoCA"/>
 										</heading>
-										<heading id="CASJo92" title="CA-SJo- 92">
-											<synonym value="CA-SJo-92"/>
+										<heading id="CASJo92" title="CA-SJo-92">
+											<synonym value="CA-SJo- 92"/>
 											<synonym value="Schenck &amp; Dawson 92"/>
-											<synonym value="French Camp Slough (?)"/>
-											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<implies facet="Location" cat="FrenchCampSloughSJoCA"/>
 										</heading>
-										<heading id="CASJo94" title="CA-SJo- 94">
-											<synonym value="CA-SJo-94"/>
+										<heading id="CASJo94" title="CA-SJo-94">
+											<synonym value="CA-SJo- 94"/>
 										</heading>
 										<heading id="CASJo105" title="CA-SJo-105"/>
 										<heading id="CASJo106A" title="CA-SJo-106A"/>
