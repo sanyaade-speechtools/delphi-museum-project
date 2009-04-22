@@ -11,7 +11,9 @@
 			<synonym value="Agricultural Equipment"/>
 			<heading id="AgriculturalTools" title="Agricultural Tools">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies tools -->
-				<heading id="BillHook" title="Bill-Hook">
+				<heading id="BillHook" title="Bill Hook">
+					<synonym value="Bill Hooks"/>
+					<synonym value="Bill-Hook"/>
 					<synonym value="Bill-Hooks"/>
 					<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies? also a weapon? -->
 				</heading>
@@ -55,7 +57,9 @@
 					<synonym value="Ploughs"/>
 					<synonym value="Plows"/>
 				</heading>
-				<heading id="PruningHook" title="Pruning-Hook">
+				<heading id="PruningHook" title="Pruning Hook">
+					<synonym value="Pruning Hooks"/>
+					<synonym value="Pruning-Hook"/>
 					<synonym value="Pruning-Hooks"/>
 				</heading>
 				<heading id="PruningKnife" title="Pruning-Knife">
@@ -64,7 +68,9 @@
 				<heading id="Reaper" title="Reaper">
 					<synonym value="Reapers"/>
 				</heading>
-				<heading id="ReapingHook" title="Reaping-Hook">
+				<heading id="ReapingHook" title="Reaping Hook">
+					<synonym value="Reaping Hooks"/>
+					<synonym value="Reaping-Hook"/>
 					<synonym value="Reaping-Hooks"/>
 				</heading>
 				<heading id="Scythe" title="Scythe">
@@ -173,12 +179,14 @@
 				<synonym value="Fish Hooks"/>
 				<synonym value="Fish-Hook"/>
 				<synonym value="Fish-Hooks"/>
-				<synonym value="Hook"/>
+				<synonym value="Hook" noMatch="true"/>
 				<!-- EXCL needed? -->
-				<synonym value="Hooks"/>
+				<synonym value="Hooks" noMatch="true"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="FishHookCase" title="Fish-Hook-Case">
+			<heading id="FishHookCase" title="Fish Hook Case">
+				<synonym value="Fish Hook Cases"/>
+				<synonym value="Fish-Hook-Case"/>
 				<synonym value="Fish-Hook-Cases"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies container -->
 			</heading>
@@ -355,7 +363,9 @@
 				<heading id="DiggingStick" title="Digging-Stick">
 					<synonym value="Digging-Sticks"/>
 				</heading>
-				<heading id="GatheringHook" title="Gathering-Hook">
+				<heading id="GatheringHook" title="Gathering Hook">
+					<synonym value="Gathering Hooks"/>
+					<synonym value="Gathering-Hook"/>
 					<synonym value="Gathering-Hooks"/>
 				</heading>
 				<heading id="GatheringStick" title="Gathering-Stick">
@@ -476,7 +486,9 @@
 			<heading id="SealDragHuntEq" title="Seal-Drag">
 				<synonym value="Seal-Drags"/>
 			</heading>
-			<heading id="SealHookHuntEq" title="Seal-Hook">
+			<heading id="SealHookHuntEq" title="Seal Hook">
+				<synonym value="Seal Hooks"/>
+				<synonym value="Seal-Hook"/>
 				<synonym value="Seal-Hooks"/>
 			</heading>
 			<heading id="SealIndicatorHuntEq" title="Seal Indicator">
@@ -2031,7 +2043,9 @@
 			<heading id="InkScreenComm" title="Ink-Screen">
 				<synonym value="Ink-Screens"/>
 			</heading>
-			<heading id="InkStandComm" title="Ink-Stand">
+			<heading id="InkStandComm" title="Ink Stand">
+				<synonym value="Ink Stands"/>
+				<synonym value="Ink-Stand"/>
 				<synonym value="Ink-Stands"/>
 			</heading>
 			<heading id="InkStoneComm" title="Ink-Stone">
@@ -2149,7 +2163,9 @@
 			<heading id="ScrollcoverComm" title="Scroll-Cover">
 				<synonym value="Scroll-Covers"/>
 			</heading>
-			<heading id="ScrollstandComm" title="Scroll-Stand">
+			<heading id="ScrollstandComm" title="Scroll Stand">
+				<synonym value="Scroll Stands"/>
+				<synonym value="Scroll-Stand"/>
 				<synonym value="Scroll-Stands"/>
 			</heading>
 			<heading id="ScrollweightComm" title="Scroll-Weight">
@@ -2190,7 +2206,9 @@
 			<heading id="WritingsetComm" title="Writing-Set">
 				<synonym value="Writing-Sets"/>
 			</heading>
-			<heading id="WritingsetstandComm" title="Writing-Set-Stand">
+			<heading id="WritingsetstandComm" title="Writing Set Stand">
+				<synonym value="Writing Set Stands"/>
+				<synonym value="Writing-Set-Stand"/>
 				<synonym value="Writing-Set-Stands"/>
 			</heading>
 			<heading id="WritingslopeComm" title="Writing-Slope">
@@ -2472,6 +2490,7 @@
 		</heading>
 		<heading id="SealingComm" title="Sealing">
 			<synonym value="Sealings"/>
+			<excl value="SealingMiscEq"/>
 		</heading>
 		<heading id="SealMatrixComm" title="Seal-Matrix">
 			<synonym value="Seal-Matrices"/>
@@ -2867,10 +2886,14 @@
 		<heading id="Bath" title="Bath">
 			<synonym value="Baths"/>
 		</heading>
-		<heading id="BeerContainer" title="Beer-Container">
+		<heading id="BeerContainer" title="Beer Container">
+			<synonym value="Beer Containers"/>
+			<synonym value="Beer-Container"/>
 			<synonym value="Beer-Containers"/>
 		</heading>
-		<heading id="BetelContainer" title="Betel-Container">
+		<heading id="BetelContainer" title="Betel Container">
+			<synonym value="Betel Containers"/>
+			<synonym value="Betel-Container"/>
 			<synonym value="Betel-Containers"/>
 		</heading>
 		<heading id="Bin" title="Bin">
@@ -4653,10 +4676,12 @@
 		</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
 		<synonym value="Culinary Equipment"/>
-		<synonym value="Cooking Implement"/>
-		<synonym value="Cooking Implements"/>
-		<synonym value="Cooking-Implement"/>
-		<synonym value="Cooking-Implements"/>
+		<heading id="CookingImplementCookEq" title="Cooking Implement" noMatch="true">
+			<synonym value="Cooking Implements"/>
+			<synonym value="Cooking-Implement"/>
+			<synonym value="Cooking-Implements"/>
+			<implies facet="CookingImplementTool"/>
+		</heading>
 		<synonym value="Food Preparation Item"/>
 		<synonym value="Food Preparation Items"/>
 		<synonym value="Food Preparation"/>
@@ -4896,7 +4921,7 @@
 			<synonym value="Flesh Hooks"/>
 			<synonym value="Flesh-Hooks"/>
 			<synonym value="Flesh-Hooks"/>
-			<!-- Medieval cooking tool, for pulling meat from the pot.  Related term: cauldron/caldron. -->
+			<!-- Medieval cooking tool, for pulling meat from the pot.  Related term: cauldron/caldron. Also ritual item. See FleshHookRelRit-->
 		</heading>
 		<heading id="FoodHeatingDevicesCookEq" title="Food Heating Device">
 			<synonym value="Food Heating Devices"/>
@@ -5787,7 +5812,9 @@
 		<heading id="FireHolderFireEq" title="Fire-Holder">
 			<synonym value="Fire-Holders"/>
 		</heading>
-		<heading id="FireHookFireEq" title="Fire-Hook">
+		<heading id="FireHookFireEq" title="Fire Hook">
+			<synonym value="Fire Hooks"/>
+			<synonym value="Fire-Hook"/>
 			<synonym value="Fire-Hooks"/>
 		</heading>
 		<heading id="FireJarFireEq" title="Fire-Jar">
@@ -6279,8 +6306,9 @@
 		<heading id="SugorokuGmSprt" title="Sugoroku">
 			<synonym value="Sugorokus"/>
 		</heading>
-		<heading id="ToyGmSprt" title="Toy">
+		<heading id="ToyGmSprt" title="Toy" noMatch="true">
 			<synonym value="Toys"/>
+			<implies facet="ObjectName" cat="ToyChdCr"/>
 		</heading>
 		<heading id="WeiqiPotGmSprt" title="Weiqi-Pot">
 			<synonym value="Weiqi-Pots"/>
@@ -6647,10 +6675,10 @@
 		</heading>
 		<heading id="HookMiscEq" title="Hook">
 			<synonym value="Hooks"/>
-			<excl value="Fish"/>
 		</heading>
 		<heading id="HoopMiscEq" title="Hoop">
 			<synonym value="Hoops"/>
+			<excl value="Belt"/>
 		</heading>
 		<heading id="KeyMiscEq" title="Key">
 			<synonym value="Keys"/>
@@ -6826,6 +6854,7 @@
 		<heading id="SealingMiscEq" title="Sealing">
 			<!-- EXCL needed -->
 			<synonym value="Sealings"/>
+			<excl value="SealingComm"/>
 		</heading>
 		<heading id="SexAidMiscEq" title="Sex-Aid">
 			<synonym value="Sex-Aids"/>
@@ -6880,9 +6909,6 @@
 				<synonym value="Bases"/>
 			</heading>
 			<heading id="BeehiveStandStndMiscEq" title="Beehive-Stand" noMatch="true"/>
-			<heading id="BellStandStndMiscEq" title="Bell-Stand">
-				<synonym value="Bell-Stands"/>
-			</heading>
 			<heading id="BetelStandStndMiscEq" title="Betel-Stand">
 				<synonym value="Betel-Stands"/>
 			</heading>
@@ -6901,26 +6927,26 @@
 			<heading id="CosmeticStandStndMiscEq" title="Cosmetic-Stand">
 				<synonym value="Cosmetic-Stands"/>
 			</heading>
-			<heading id="DrumStandStndMiscEq" title="Drum-Stand">
-				<synonym value="Drum-Stands"/>
-			</heading>
 			<heading id="EggStandStndMiscEq" title="Egg-Stand">
 				<synonym value="Egg-Stands"/>
 			</heading>
 			<heading id="FigureStandStndMiscEq" title="Figure-Stand">
 				<synonym value="Figure-Stands"/>
 			</heading>
-			<heading id="FireDogStndMiscEq" title="Fire-Dog">
+			<heading id="FireDogStndMiscEq" title="Fire og" noMatch="true">
+				<synonym value="Fire Dogs"/>
+				<synonym value="Fire-Dog"/>
 				<synonym value="Fire-Dogs"/>
+				<implies facet="ObjectName" cat="FireDogFireEq"/>
 			</heading>
-			<heading id="FireGridStndMiscEq" title="Fire-Grid">
+			<heading id="FireGridStndMiscEq" title="Fire Grid" noMatch="true">
+				<synonym value="Fire Grids"/>
+				<synonym value="Fire-Grid"/>
 				<synonym value="Fire-Grids"/>
+				<implies facet="ObjectName" cat="FireGridFireEq"/>
 			</heading>
 			<heading id="FruitStandStndMiscEq" title="Fruit-Stand">
 				<synonym value="Fruit-Stands"/>
-			</heading>
-			<heading id="GongStandStndMiscEq" title="Gong-Stand">
-				<synonym value="Gong-Stands"/>
 			</heading>
 			<heading id="HatRackStandStndMiscEq" title="Hatrack" noMatch="true"/>
 			<heading id="IncenseBurnerStandStndMiscEq" title="Incense-Burner-Stand">
@@ -6929,8 +6955,11 @@
 			<heading id="IncenseStandStndMiscEq" title="Incense-Stand">
 				<synonym value="Incense-Stands"/>
 			</heading>
-			<heading id="InkStandStndMiscEq" title="Ink-Stand">
+			<heading id="InkStandStndMiscEq" title="Ink Stand" noMatch="true">
+				<synonym value="Ink Stands"/>
+				<synonym value="Ink-Stand"/>
 				<synonym value="Ink-Stands"/>
+				<implies facet="ObjectName" cat="InkStandComm"/>
 			</heading>
 			<heading id="IronStandStndMiscEq" title="Iron-Stand">
 				<synonym value="Iron-Stands"/>
@@ -6963,8 +6992,11 @@
 			<heading id="RingStandStndMiscEq" title="Ring-Stand">
 				<synonym value="Ring-Stands"/>
 			</heading>
-			<heading id="ScrollStandStndMiscEq" title="Scroll-Stand">
+			<heading id="ScrollStandStndMiscEq" title="Scroll Stand" noMatch="true">
+				<synonym value="Scroll Stands"/>
+				<synonym value="Scroll-Stand"/>
 				<synonym value="Scroll-Stands"/>
+				<implies facet="ObjectName" cat="ScrollStandComm"/>
 			</heading>
 			<heading id="SnufferStandStndMiscEq" title="Snuffer-Stand">
 				<synonym value="Snuffer-Stands"/>
@@ -6972,7 +7004,8 @@
 			<heading id="StelaStandStndMiscEq" title="Stela-Stand">
 				<synonym value="Stela-Stands"/>
 			</heading>
-			<heading id="SulingStandStndMiscEq" title="Suling-Stand" noMatch="true"/>
+			<heading id="SulingStandStndMiscEq" title="Suling Stand" noMatch="true"/>
+				<synonym value="Suling Stands"/>
 			<heading id="TrestleStndMiscEq" title="Trestle">
 				<synonym value="Trestles"/>
 			</heading>
@@ -6982,17 +7015,24 @@
 			<heading id="TrivetStndMiscEq" title="Trivet">
 				<synonym value="Trivets"/>
 			</heading>
-			<heading id="VesselStandStndMiscEq" title="Vessel-Stand">
+			<heading id="VesselStandStndMiscEq" title="Vessel Stand">
+				<synonym value="Vessel Stands"/>
+				<synonym value="Vessel-Stand"/>
 				<synonym value="Vessel-Stands"/>
 			</heading>
-			<heading id="WatchStandStndMiscEq" title="Watch-Stand">
+			<heading id="WatchStandStndMiscEq" title="Watch Stand">
+				<synonym value="Watch Stands"/>
+				<synonym value="Watch-Stand"/>
 				<synonym value="Watch-Stands"/>
 			</heading>
 			<heading id="WigStandStndMiscEq" title="Wig-Stand">
 				<synonym value="Wig-Stands"/>
 			</heading>
-			<heading id="WritingSetStandStndMiscEq" title="Writing-Set-Stand">
+			<heading id="WritingSetStandStndMiscEq" title="Writing Set Stand" noMatch="true">
+				<synonym value="Writing Set Stands"/>
+				<synonym value="Writing-Set-Stand"/>
 				<synonym value="Writing-Set-Stands"/>
+				<implies facet="ObjectName" cat="WritingsetstandComm"/>
 			</heading>
 		</heading>
 		<heading id="StaveMiscEq" title="Stave">
@@ -7000,6 +7040,7 @@
 		</heading>
 		<heading id="StickMiscEq" title="Stick">
 			<synonym value="Sticks"/>
+			<excl value="Drum"/>
 		</heading>
 	</heading>
 	<heading id="PerformanceArts" title="Performance Arts">
@@ -7331,14 +7372,6 @@
 					<synonym value="Kalutang Sticks"/>
 					<synonym value="Kalutang"/>
 					<synonym value="Kalutangs"/>
-					<synonym value="Pu-ili Stick"/>
-					<synonym value="Pu-ili Sticks"/>
-					<synonym value="Pu-ili"/>
-					<synonym value="Pu-ilis"/>
-					<synonym value="Pu'ili Stick"/>
-					<synonym value="Pu'ili Sticks"/>
-					<synonym value="Pu'ili"/>
-					<synonym value="Pu'ilis"/>
 					<excl value="Seed Beater"/>
 					<excl value="Seed Beaters"/>
 					<excl value="Seed-Beater"/>
@@ -7779,9 +7812,6 @@
 						<synonym value="Split-Stick Rattles"/>
 						<synonym value="Split-Stick"/>
 						<synonym value="Split-Sticks"/>
-						<synonym value="Split Stick Rattle"/>
-						<synonym value="Clapper Stick Rattle"/>
-						<synonym value="Clapper Stick Rattles"/>
 						<synonym value="Clapper Stick Rattle"/>
 						<synonym value="Clapper Stick Rattles"/>
 						<synonym value="Clapper Rattle"/>
@@ -8004,7 +8034,7 @@
 						<synonym value="Finger Piano"/>
 						<synonym value="Finger Pianos"/>
 						<synonym value="Hand Piano"/>
-						<synonym value="Hand Piano"/>
+						<synonym value="Hand Pianos"/>
 						<synonym value="Kalimba"/>
 						<synonym value="Kisaanj"/>
 						<synonym value="Kututeng"/>
@@ -8231,11 +8261,13 @@
 							<implies facet="Material" cat="BrassMetal"/>
 						</heading>
 					</heading>
-					<synonym value="Horn With Bell"/>
-					<!-- also incl in Bell heading -->
-					<synonym value="Horn With Bells"/>
-					<synonym value="Horns With Bell"/>
-					<synonym value="Horns With Bells"/>
+					<heading id="HornWithBell" title="Horn With Bell" noMatch="true">
+						<!-- also incl in Bell heading -->
+						<synonym value="Horn With Bells"/>
+						<synonym value="Horns With Bell"/>
+						<synonym value="Horns With Bells"/>
+						<implies facet="ObjectName" cat="HornBell"/>
+					</heading>
 					<synonym value="Ox Horn"/>
 					<synonym value="Ox Horns"/>
 					<synonym value="Singing Gourd Horn"/>
@@ -8258,17 +8290,12 @@
 						<!-- excludes single / implied materials: reed -->
 						<synonym value="Panpipes"/>
 						<heading id="ReedPanpipe" title="Reed Panpipe">
-							<synonym value="Reed Panipe"/>
 							<!-- sound is produced by reed (pipe not necessarily made of reed material) -->
-							<synonym value="Reed Panipes"/>
 							<synonym value="Reed Pan-pipe"/>
 							<synonym value="Reed Pan-pipes"/>
 							<synonym value="Reed Pan Pipe"/>
 							<synonym value="Reed Pan Pipes"/>
-							<synonym value="Reed Pan-pipe"/>
-							<synonym value="Reed Pan-pipes"/>
-							<synonym value="Reed Pan Pipe"/>
-							<synonym value="Reed Pan Pipes"/>
+							<synonym value="Reed Panpipes"/>
 							<synonym value="Pan-pipe"/>
 							<synonym value="Pan-pipes"/>
 							<synonym value="Pan Pipe"/>
@@ -8378,7 +8405,9 @@
 			<heading id="BellStand" title="Bell-Stand">
 				<synonym value="Bell-Stands"/>
 			</heading>
-			<heading id="DrumStand" title="Drum-Stand">
+			<heading id="DrumStand" title="Drum Stand">
+				<synonym value="Drum Stands"/>
+				<synonym value="Drum-Stand"/>
 				<synonym value="Drum-Stands"/>
 			</heading>
 			<heading id="GongStand" title="Gong-Stand">
@@ -12304,7 +12333,7 @@
 		<heading id="FlesherTool" title="Flesher">
 			<synonym value="Fleshers"/>
 		</heading>
-		<heading id="FleshHookTool" title="Flesh Hook">
+		<heading id="FleshHookTool" title="Flesh Hook" noMatch="true">
 			<synonym value="Flesh Hooks"/>
 			<synonym value="Flesh-Hook"/>
 			<synonym value="Flesh-Hooks"/>
