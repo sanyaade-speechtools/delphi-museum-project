@@ -3597,7 +3597,7 @@
 				</heading>
 			</heading>
 			<heading id="Pottery" title="Pottery">
-				<implies facet="Material" cat="Potterymaterial"/>
+				<implies facet="Material" cat="PotteryMaterial"/>
 				<!-- Yes, The Material Is Really Clay, But I Subdivided Clay To See If It's Useful To Do So.  -->
 				<synonym value="Clay Pot"/>
 				<synonym value="Clay Pots"/>
@@ -6553,7 +6553,6 @@
 		<heading id="DinnerSetMiscEq" title="Dinner-Set">
 			<synonym value="Dinner-Sets"/>
 		</heading>
-
 		<heading id="DoorStopMiscEq" title="Door-Stop">
 			<synonym value="Door-Stops"/>
 		</heading>
@@ -7789,7 +7788,7 @@
 					</heading>
 					<heading id="CopperRattle" title="Copper Rattle">
 						<synonym value="Copper Rattles"/>
-						<implies facet="Material" cat="CopperMaterial"/>
+						<implies facet="Material" cat="CopperMetal"/>
 					</heading>
 					<heading id="CuiaRattle" title="Cuia Rattle">
 						<synonym value="Cuia Rattles"/>
@@ -8676,7 +8675,6 @@
 			<synonym value="Head-Ornaments"/>
 		</heading>
 		<heading id="JewelleryPrsOrn" title="Jewellery">
-			<!-- <synonym value="xxxxxxxxx"/> Does this have a plural? -->
 			<heading id="AnkletPrsOrn" title="Anklet">
 				<synonym value="Anklets"/>
 			</heading>
@@ -9255,6 +9253,7 @@
 		</heading>
 		<heading id="CopperRelRit" title="Copper">
 			<synonym value="Coppers"/>
+			<implies facet="Material" cat="CopperMetal"/>
 		</heading>
 		<heading id="CornDollyRelRit" title="Corn-Dolly">
 			<synonym value="Corn-Dollies"/>
@@ -13280,10 +13279,6 @@
 			<synonym value="Dreamcatcher"/>
 			<synonym value="Dreamcatchers"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="Mask" title="Mask">
-			<synonym value="Masks"/>
-			<implies facet="TechniqueDesignorDecoration" cat="FigurativeOrRepresentational"/>
 		</heading>
 		<heading id="PrayerRug" title="Prayer Rug">
 			<synonym value="Prayer Mat"/>
