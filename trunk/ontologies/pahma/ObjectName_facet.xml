@@ -206,7 +206,7 @@
 			<heading id="FishingGoggles" title="Fishing-Goggles">
 				<synonym value="Fishing-Goggle"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies eyewear -->
-				</heading>
+			</heading>
 			<heading id="FishingKite" title="Fishing-Kite">
 				<synonym value="Fishing-Kites"/>
 			</heading>
@@ -240,7 +240,7 @@
 			<heading id="FishingRaft" title="Fishing-Raft">
 				<synonym value="Fishing-Rafts"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies boat -->
-				</heading>
+			</heading>
 			<heading id="FishingRod" title="Fishing-Rod">
 				<synonym value="Fishing-Rods"/>
 			</heading>
@@ -1867,7 +1867,7 @@
 				<synonym value="Cradleboards"/>
 				<synonym value="Cradleboards"/>
 				<heading id="HeadFlattenerChdCr" title="Head Flattener">
-				<!-- This is just one part of the cradleboard. Do head flatteners exist on their own as well? -->
+					<!-- This is just one part of the cradleboard. Do head flatteners exist on their own as well? -->
 					<synonym value="Head Flatteners"/>
 					<synonym value="Head-Flattener"/>
 					<synonym value="Head-Flatteners"/>
@@ -2583,7 +2583,8 @@
 			<synonym value="Arrow-Heads"/>
 		</heading>
 		<heading id="BackplatePart" title="Backplate">
-			<synonym value="Backplates"/> <!-- EXCL armor? -->
+			<synonym value="Backplates"/>
+			<!-- EXCL armor? -->
 		</heading>
 		<heading id="BarbPart" title="Barb">
 			<synonym value="Barbs"/>
@@ -4405,22 +4406,22 @@
 			</heading>
 			<heading id="VestGarment" title="Vest">
 				<synonym value="Vests"/>
-			</heading>	
+			</heading>
 			<heading id="VestmentGarment" title="Vestment">
 				<synonym value="Vestments"/>
-			</heading>	
+			</heading>
 			<heading id="WaistClothGarment" title="Waist-Cloth">
 				<synonym value="Waist-Cloths"/>
-			</heading>	
+			</heading>
 			<heading id="WaistcoatGarment" title="Waistcoat">
 				<synonym value="Waistcoats"/>
-			</heading>	
+			</heading>
 			<heading id="WaistMatGarment" title="Waist-Mat">
 				<synonym value="Waist-Mats"/>
-			</heading>	
+			</heading>
 			<heading id="WrapGarment" title="Wrap">
 				<synonym value="Wraps"/>
-			</heading>	
+			</heading>
 		</heading>
 		<heading id="HeadGear" title="Head Gear">
 			<synonym value="Head-Gear"/>
@@ -4464,7 +4465,7 @@
 			</heading>
 			<heading id="HeadCloth" title="Head-Cloth">
 				<synonym value="Head-Cloths"/>
-				</heading>
+			</heading>
 			<heading id="HeadCover" title="Head-Cover">
 				<synonym value="Head-Covers"/>
 			</heading>
@@ -4508,11 +4509,11 @@
 			</heading>
 			<heading id="Veil" title="Veil">
 				<synonym value="Veils"/>
-			</heading>		
+			</heading>
 			<heading id="YashmakGarment" title="Yashmak">
 				<synonym value="Yashmaks"/>
-			</heading>	
-		</heading>	
+			</heading>
+		</heading>
 		<heading id="MasqueradeCostume" title="Masquerade-Costume">
 			<synonym value="Masquerade-Costumes"/>
 		</heading>
@@ -4535,7 +4536,7 @@
 				<!-- Need Disambiguation With The Verb And The Railroad Timber -->
 				<synonym value="Ties"/>
 			</heading>
-			</heading>
+		</heading>
 		<heading id="PersonalAccessories" title="Personal Accessories">
 			<synonym value="Personal Accessory"/>
 			<heading id="BeltAccessory" title="Belt">
@@ -4579,8 +4580,8 @@
 				<synonym value="Garters"/>
 			</heading>
 			<heading id="Glove" title="Glove">
-			<synonym value="Gloves"/>
-			</heading>			
+				<synonym value="Gloves"/>
+			</heading>
 			<heading id="Goggles" title="Goggles">
 				<synonym value="Goggle"/>
 			</heading>
@@ -4619,7 +4620,7 @@
 				<implies facet="ObjectName" cat="PocketBookContnr"/>
 			</heading>
 			<heading id="PursePersAcc" title="Purse">
-			<!-- Main latch -->
+				<!-- Main latch -->
 				<synonym value="Purses"/>
 				<synonym value="Handbag"/>
 				<synonym value="Handbags"/>
@@ -4665,17 +4666,17 @@
 				<implies facet="ObjectName" cat="WalletContainer"/>
 			</heading>
 			<heading id="Wig" title="Wig">
-			<synonym value="Wigs"/>
-		</heading>	
-		</heading>	
+				<synonym value="Wigs"/>
+			</heading>
+		</heading>
 		<heading id="TheaterCostume" title="Theater Costume">
 			<synonym value="Theater Costumes"/>
 			<synonym value="Theatre-Costume"/>
 			<synonym value="Theatre-Costumes"/>
-		</heading>	
+		</heading>
 		<heading id="Uniform" title="Uniform">
 			<synonym value="Uniforms"/>
-		</heading>	
+		</heading>
 	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
 		<synonym value="Culinary Equipment"/>
@@ -4785,8 +4786,8 @@
 				<synonym value="Baking-Dish"/>
 				<synonym value="Baking-Dishes"/>
 			</heading>
-			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"/> FIX BELOW
-			<synonym value="Cooking Baskets"/>
+			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"/> FIX
+			BELOW <synonym value="Cooking Baskets"/>
 			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<implies facet="ObjectName" cat="CookingBasketBaskets"/>
 			<implies facet="Collection" cat="BasketCollection"/>
@@ -4838,12 +4839,8 @@
 		<heading id="DokaCookEq" title="Doka">
 			<synonym value="Dokas"/>
 		</heading>
-		<heading id="DoughBowlCookEq" title="Dough Bowl"> 
-			<synonym value="Dough Bowls"/> 
-			<synonym value="Dough Vats"/> 
-			<synonym value="Dough-Vat"/> 
-			<synonym value="Dough-Vats"/> 
-		</heading>
+		<heading id="DoughBowlCookEq" title="Dough Bowl">  <synonym value="Dough Bowls"/>  <synonym
+				value="Dough Vats"/>  <synonym value="Dough-Vat"/>  <synonym value="Dough-Vats"/>  </heading>
 		<heading id="PieDishCookEq" title="Pie Dish">
 			<synonym value="Pie Dishs"/>
 			<!-- Misspelling -->
@@ -7009,7 +7006,7 @@
 				<synonym value="Stela-Stands"/>
 			</heading>
 			<heading id="SulingStandStndMiscEq" title="Suling Stand" noMatch="true"/>
-				<synonym value="Suling Stands"/>
+			<synonym value="Suling Stands"/>
 			<heading id="TrestleStndMiscEq" title="Trestle">
 				<synonym value="Trestles"/>
 			</heading>
@@ -8438,110 +8435,110 @@
 			<heading id="MusicalClock" title="Musical Clock">
 				<synonym value="Musical Clocks"/>
 			</heading>
-			
-			
-				<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
 
-				<heading id="Aerophone_BM" title="Aerophone">
-					<synonym value="Aerophones"/>
-				</heading>
-				<heading id="Bagpipes" title="Bagpipes">
-					<!--incorporate-->
-					<synonym value="Bagpipe"/>
-				</heading>
-				<heading id="Bugle_BM" title="Bugle">
-					<synonym value="Bugles"/>
-				</heading>
-				<heading id="Buzzer_BM" title="Buzzer">
-					<synonym value="Buzzers"/>
-				</heading>
-				<heading id="Charango_BM" title="Charango">
-					<synonym value="Charangos"/>
-				</heading>
-				<heading id="Chun_BM" title="Chun">
-					<synonym value="Chuns"/>
-				</heading>
-				<heading id="ClappingStick_BM" title="Clapping Stick">
-					<synonym value="Clapping Sticks"/>
-				</heading>
-				<heading id="Clarinet_BM" title="Clarinet">
-					<synonym value="Clarinets"/>
-				</heading>
-				<heading id="ConcussionStick_BM" title="Concussion Stick">
-					<synonym value="Concussion Sticks"/>
-				</heading>
-				<heading id="Cordophone_BM" title="Cordophone">
-					<synonym value="Cordophones"/>
-				</heading>
-				<heading id="Crotal_BM" title="Crotal">
-					<synonym value="Crotals"/>
-				</heading>
-				<heading id="Dulcimer_BM" title="Dulcimer">
-					<synonym value="Dulcimers"/>
-				</heading>
-				<heading id="Genggong_BM" title="Genggong">
-					<synonym value="Genggongs"/>
-				</heading>
-				<heading id="Gittern_BM" title="Gittern">
-					<synonym value="Gitterns"/>
-				</heading>
-				<heading id="Jingle_BM" title="Jingle">
-					<synonym value="Jingles"/>
-				</heading>
-				<heading id="Kecer_BM" title="Kecer">
-					<synonym value="Kecers"/>
-				</heading>
-				<heading id="Kora_BM" title="Kora">
-					<synonym value="Koras"/>
-				</heading>
-				<heading id="Mandolin_BM" title="Mandolin">
-					<synonym value="Mandolins"/>
-				</heading>
-				<heading id="MouthOrgan_BM" title="Mouth-Organ">
-					<synonym value="Mouth-Organs"/>
-				</heading>
-				<heading id="MusicalBox_BM" title="Musical Box">
-					<synonym value="Musical Boxes"/>
-				</heading>
-				<heading id="MusicalHorn_BM" title="Musical Horn">
-					<synonym value="Musical Horns"/>
-				</heading>
-				<heading id="MusicalPipe_BM" title="Musical Pipe">
-					<synonym value="Musical Pipes"/>
-				</heading>
-				<heading id="MusicalRasp_BM" title="Musical Rasp">
-					<synonym value="Musical Rasps"/>
-				</heading>
-				<heading id="PercussionBoard_BM" title="Percussion Board">
-					<synonym value="Percussion Boards"/>
-				</heading>
-				<heading id="Rabob_BM" title="Rabob">
-					<synonym value="Rabobs"/>
-				</heading>
-				<heading id="Reneti_BM" title="Reneti">
-					<synonym value="Renetis"/>
-				</heading>
-				<heading id="SgraSnyan_BM" title="Sgra-Snyan">
-					<synonym value="Sgra-Snyans"/>
-				</heading>
-				<heading id="Shawm_BM" title="Shawm">
-					<synonym value="Shawms"/>
-				</heading>
-				<heading id="StampingTube_BM" title="Stamping Tube">
-					<synonym value="Stamping Tubes"/>
-				</heading>
-				<heading id="Surnoi_BM" title="Surnoi">
-					<synonym value="Surnois"/>
-				</heading>
-				<heading id="Tambourine_BM" title="Tambourine">
-					<synonym value="Tambourines"/>
-				</heading>
-				<heading id="Viol_BM" title="Viol">
-					<synonym value="Viols"/>
-				</heading>
-				<heading id="VoiceDisguiser_BM" title="Voice-Disguiser">
-					<synonym value="Voice-Disguisers"/>
-				</heading>
+
+			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
+
+			<heading id="Aerophone_BM" title="Aerophone">
+				<synonym value="Aerophones"/>
+			</heading>
+			<heading id="Bagpipes" title="Bagpipes">
+				<!--incorporate-->
+				<synonym value="Bagpipe"/>
+			</heading>
+			<heading id="Bugle_BM" title="Bugle">
+				<synonym value="Bugles"/>
+			</heading>
+			<heading id="Buzzer_BM" title="Buzzer">
+				<synonym value="Buzzers"/>
+			</heading>
+			<heading id="Charango_BM" title="Charango">
+				<synonym value="Charangos"/>
+			</heading>
+			<heading id="Chun_BM" title="Chun">
+				<synonym value="Chuns"/>
+			</heading>
+			<heading id="ClappingStick_BM" title="Clapping Stick">
+				<synonym value="Clapping Sticks"/>
+			</heading>
+			<heading id="Clarinet_BM" title="Clarinet">
+				<synonym value="Clarinets"/>
+			</heading>
+			<heading id="ConcussionStick_BM" title="Concussion Stick">
+				<synonym value="Concussion Sticks"/>
+			</heading>
+			<heading id="Cordophone_BM" title="Cordophone">
+				<synonym value="Cordophones"/>
+			</heading>
+			<heading id="Crotal_BM" title="Crotal">
+				<synonym value="Crotals"/>
+			</heading>
+			<heading id="Dulcimer_BM" title="Dulcimer">
+				<synonym value="Dulcimers"/>
+			</heading>
+			<heading id="Genggong_BM" title="Genggong">
+				<synonym value="Genggongs"/>
+			</heading>
+			<heading id="Gittern_BM" title="Gittern">
+				<synonym value="Gitterns"/>
+			</heading>
+			<heading id="Jingle_BM" title="Jingle">
+				<synonym value="Jingles"/>
+			</heading>
+			<heading id="Kecer_BM" title="Kecer">
+				<synonym value="Kecers"/>
+			</heading>
+			<heading id="Kora_BM" title="Kora">
+				<synonym value="Koras"/>
+			</heading>
+			<heading id="Mandolin_BM" title="Mandolin">
+				<synonym value="Mandolins"/>
+			</heading>
+			<heading id="MouthOrgan_BM" title="Mouth-Organ">
+				<synonym value="Mouth-Organs"/>
+			</heading>
+			<heading id="MusicalBox_BM" title="Musical Box">
+				<synonym value="Musical Boxes"/>
+			</heading>
+			<heading id="MusicalHorn_BM" title="Musical Horn">
+				<synonym value="Musical Horns"/>
+			</heading>
+			<heading id="MusicalPipe_BM" title="Musical Pipe">
+				<synonym value="Musical Pipes"/>
+			</heading>
+			<heading id="MusicalRasp_BM" title="Musical Rasp">
+				<synonym value="Musical Rasps"/>
+			</heading>
+			<heading id="PercussionBoard_BM" title="Percussion Board">
+				<synonym value="Percussion Boards"/>
+			</heading>
+			<heading id="Rabob_BM" title="Rabob">
+				<synonym value="Rabobs"/>
+			</heading>
+			<heading id="Reneti_BM" title="Reneti">
+				<synonym value="Renetis"/>
+			</heading>
+			<heading id="SgraSnyan_BM" title="Sgra-Snyan">
+				<synonym value="Sgra-Snyans"/>
+			</heading>
+			<heading id="Shawm_BM" title="Shawm">
+				<synonym value="Shawms"/>
+			</heading>
+			<heading id="StampingTube_BM" title="Stamping Tube">
+				<synonym value="Stamping Tubes"/>
+			</heading>
+			<heading id="Surnoi_BM" title="Surnoi">
+				<synonym value="Surnois"/>
+			</heading>
+			<heading id="Tambourine_BM" title="Tambourine">
+				<synonym value="Tambourines"/>
+			</heading>
+			<heading id="Viol_BM" title="Viol">
+				<synonym value="Viols"/>
+			</heading>
+			<heading id="VoiceDisguiser_BM" title="Voice-Disguiser">
+				<synonym value="Voice-Disguisers"/>
+			</heading>
 
 			<heading id="MusicalInstrumentBow" title="Musical Instrument-Bow">
 				<synonym value="Musical Instrument-Bows"/>
@@ -10721,6 +10718,57 @@
 				</heading>
 				<heading id="KachinaDoll" title="Kachina-Doll">
 					<synonym value="Kachina-Dolls"/>
+					<synonym value="Kachina Doll"/>
+					<synonym value="Kachina Dolls"/>
+					<heading id="ClownFigureKachina" title="Clown Figure">
+						<synonym value="Clown Kachinas"/>
+						<synonym value="Clown Kachina"/>
+					</heading>
+					<heading id="ChiefFigureKachina" title="Chief Figure">
+						<synonym value="Chief Kachinas"/>
+						<synonym value="Chief Kachina"/>
+					</heading>
+					<heading id="GuardFigureKachina" title="Guard Figure">
+						<synonym value="Guard Kachinas"/>
+						<synonym value="Guard Kachina"/>
+					</heading>
+					<heading id="RunnerFigureKachina" title="Runner Figure">
+						<synonym value="Runner Kachinas"/>
+						<synonym value="Runner Kachina"/>
+					</heading>
+					<heading id="OgreFigureKachina" title="Ogre Figure">
+						<synonym value="Ogre Kachinas"/>
+						<synonym value="Ogre Kachina"/>
+					</heading>
+					<heading id="AnimalFigureKachina" title="Animal Figure">
+						<synonym value="Animal Kachinas"/>
+						<synonym value="Animal Kachina"/>
+					</heading>
+					<heading id="PlantFigureKachina" title="Plant Figure">
+						<synonym value="Plant Kachinas"/>
+						<synonym value="Plant Kachina"/>
+					</heading>
+					<heading id="WomenFigureKachina" title="Women Figure">
+						<synonym value="Women Kachinas"/>
+						<synonym value="Women Kachina"/>
+						<synonym value="Woman Kachinas"/>
+						<synonym value="Woman Kachina"/>
+						<synonym value="Female Kachinas"/>
+						<synonym value="Female Kachina"/>
+					</heading>
+					<heading id="EagleFigureKachina" title="Eagle Figure">
+						<synonym value="Eagle Kachinas"/>
+						<synonym value="Eagle Kachina"/>
+						<synonym value="Bird Kachina"/>
+					</heading>
+					<heading id="SnowFigureKachina" title="Snow Figure">
+						<synonym value="Snow Kachinas"/>
+						<synonym value="Snow Kachina"/>
+					</heading>
+					<heading id="SunFigureKachina" title="Sun Figure">
+						<synonym value="Sun Kachinas"/>
+						<synonym value="Sun Kachina"/>
+					</heading>
 				</heading>
 				<heading id="RagDoll" title="Rag Doll">
 					<synonym value="Rag Dolls"/>
@@ -12669,8 +12717,7 @@
 			<heading id="Bag" title="Bag"/>
 			<heading id="BasketCarrier" title="Basket-Carrier"/>
 			<heading id="Briefcase" title="Briefcase"/>
-			<heading id="CarryingBasket" title="Carrying-Basket">
-			</heading>
+			<heading id="CarryingBasket" title="Carrying-Basket"> </heading>
 			<heading id="CarryingBelt" title="Carrying-Belt">
 				<synonym value="Carrying-Belts"/>
 			</heading>
