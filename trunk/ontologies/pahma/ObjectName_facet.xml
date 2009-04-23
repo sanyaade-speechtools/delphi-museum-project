@@ -4275,16 +4275,24 @@
 				<synonym value="Serape"/>
 				<synonym value="Serapes"/>
 				<synonym value="Shawls"/>
+				<synonym value="Perraje"/>
+				<synonym value="Perrajes"/>
+				<synonym value="Rebozo"/>
+				<synonym value="Rebozos"/>
 			</heading>
 			<heading id="ShiftGarment" title="Shift">
 				<synonym value="Shifts"/>
 			</heading>
 			<heading id="ShirtGarment" title="Shirt">
 				<synonym value="Shirts"/>
-				<heading id="Hairshirtshirt" title="Hairshirt" noMatch="true"/>
-				<heading id="Undershirtshirt" title="Undershirt" noMatch="true"/>
-				<synonym value="Undershirts"/>
-				<implies facet="ObjectName" cat="UndershirtUnderwearUpper"/>
+				<heading id="Hairshirtshirt" title="Hairshirt" noMatch="true">
+					<implies facet="ObjectName" cat="HairshirtUnderwear"/>
+				</heading>
+				<heading id="Undershirtshirt" title="Undershirt" noMatch="true">
+					<synonym value="Undershirts"/>
+					<implies facet="ObjectName" cat="UndershirtUnderwearUpper"/>
+				</heading>
+				<heading id="T-shirtShirtGarment" title="T-shirt"/>
 			</heading>
 			<heading id="ShirtFrontGarment" title="Shirt-Front">
 				<synonym value="Shirt-Fronts"/>
@@ -4447,6 +4455,8 @@
 			</heading>
 			<heading id="WrapGarment" title="Wrap">
 				<synonym value="Wraps"/>
+				<synonym value="Wrap-around Garment"/>
+				<synonym value="Wrap-around Garments"/>
 			</heading>
 		</heading>
 		<heading id="HeadGear" title="Head Gear">
@@ -4486,7 +4496,9 @@
 				<synonym value="Hats"/>
 				<implies facet="ActivityorContext" cat="Millinery"/>
 			</heading>
-			<heading id="HeadBand" title="Head-Band">
+			<heading id="HeadBand" title="Head Band">
+				<synonym value="Head Bands"/>
+				<synonym value="Head-Band"/>
 				<synonym value="Head-Bands"/>
 			</heading>
 			<heading id="HeadCloth" title="Head-Cloth">
@@ -4495,11 +4507,18 @@
 			<heading id="HeadCover" title="Head-Cover">
 				<synonym value="Head-Covers"/>
 			</heading>
-			<heading id="HeadDress" title="Head-Dress">
+			<heading id="HeadDress" title="Headdress">
+				<synonym value="Headdresses"/>
+				<synonym value="Head Dress"/>
+				<synonym value="Head Dresses"/>
+				<synonym value="Head-Dress"/>
 				<synonym value="Head-Dresses"/>
 			</heading>
-			<heading id="HeadGuard" title="Head-Guard">
+			<heading id="HeadGuard" title="Head Guard">
+				<synonym value="Head Guards"/>
+				<synonym value="Head-Guard"/>
 				<synonym value="Head-Guards"/>
+				<excl value="HeadGuardChdCr"/>
 			</heading>
 			<heading id="HeadNet" title="Head-Net">
 				<synonym value="Head-Nets"/>
@@ -4567,6 +4586,8 @@
 			<synonym value="Personal Accessory"/>
 			<heading id="BeltAccessory" title="Belt">
 				<synonym value="Belts"/>
+				<synonym value="Cinta"/>
+				<synonym value="Cintas"/>
 				<excl value="Door Belt"/>
 				<excl value="Door Belts"/>
 				<excl value="Doorbelt"/>
@@ -4578,7 +4599,10 @@
 				<excl value="Doorbelt Locks"/>
 				<excl value="Door-Belt Lock"/>
 				<excl value="Door-Belt Locks"/>
+				<heading id="BeltClaspBeltAccessory" title="Belt Clasp"/>
+				<heading id="BeltBuckleBeltAccessory" title="Belt Buckle"/>
 			</heading>
+			<heading id="BroachAccessory" title="Broach"/>
 			<heading id="ButtonAccessory" title="Button">
 				<synonym value="Buttons"/>
 			</heading>
@@ -4610,6 +4634,12 @@
 			</heading>
 			<heading id="Goggles" title="Goggles">
 				<synonym value="Goggle"/>
+			</heading>
+			<heading id="HairAccessory" title="Hair Accessory" noMatch="true"> 				
+				<synonym value="Hair Clip"/> 				
+				<synonym value="Hair Clips"/> 				
+				<synonym value="Barrette"/> 				
+				<synonym value="Barrettes"/> 			
 			</heading>
 			<heading id="Handbag" title="Handbag" noMatch="true">
 				<synonym value="Handbags"/>
@@ -4679,7 +4709,9 @@
 			<heading id="Visor" title="Visor">
 				<synonym value="Visors"/>
 			</heading>
-			<heading id="WaistBand" title="Waist-Band">
+			<heading id="WaistBand" title="Waist Band">
+				<synonym value="Waist Bands"/>
+				<synonym value="Waist-Band"/>
 				<synonym value="Waist-Bands"/>
 			</heading>
 			<heading id="WaistString" title="Waist-String">
