@@ -4224,7 +4224,9 @@
 			<heading id="PonchoGarment" title="Poncho">
 				<synonym value="Ponchos"/>
 			</heading>
-			<heading id="PubicCoverGarment" title="Pubic-Cover">
+			<heading id="PubicCoverGarment" title="Pubic Cover">
+				<synonym value="Pubic Covers"/>
+				<synonym value="Pubic-Cover"/>
 				<synonym value="Pubic-Covers"/>
 			</heading>
 			<heading id="PyjamasGarment" title="Pyjamas">
@@ -4401,279 +4403,280 @@
 					<synonym value="Undershirts"/>
 				</heading>
 			</heading>
-			<heading id="HeadGear" title="Head Gear">
-				<synonym value="Head-Gear"/>
-				<heading id="BasketryHat" title="Basketry Hat">
-					<synonym value="Basketry Hats"/>
-					<synonym value="Basketry Cap"/>
-					<synonym value="Basketry Caps"/>
-					<implies facet="Collection" cat="BasketCollection"/>
-				</heading>
-				<heading id="Bonnet" title="Bonnet">
-					<synonym value="Bonnets"/>
-				</heading>
-				<heading id="CapHeadGear" title="Cap">
-					<synonym value="Caps"/>
-				</heading>
-				<heading id="Circlet" title="Circlet">
-					<synonym value="Circlets"/>
-				</heading>
-				<heading id="EarMuff" title="Ear-Muff">
-					<synonym value="Ear-Muffs"/>
-				</heading>
-				<heading id="FaceCover" title="Face-Cover">
-					<synonym value="Face-Covers"/>
-				</heading>
-				<heading id="Fez" title="Fez">
-					<synonym value="Fes"/>
-					<synonym value="Fezzes"/>
-				</heading>
-				<heading id="HairCover" title="Hair-Cover">
-					<synonym value="Hair-Covers"/>
-				</heading>
-				<heading id="HairNet" title="Hair-Net">
-					<synonym value="Hair-Nets"/>
-				</heading>
-				<heading id="HatHeadGear" title="Hat">
-					<synonym value="Hats"/>
-					<implies facet="ActivityorContext" cat="Millinery"/>
-				</heading>
-				<heading id="HeadBand" title="Head-Band">
-					<synonym value="Head-Bands"/>
-				</heading>
-				<heading id="HeadCloth" title="Head-Cloth">
-					<synonym value="Head-Cloths"/>
-				</heading>
-				<heading id="HeadCover" title="Head-Cover">
-					<synonym value="Head-Covers"/>
-				</heading>
-				<heading id="HeadDress" title="Head-Dress">
-					<synonym value="Head-Dresses"/>
-				</heading>
-				<heading id="HeadGuard" title="Head-Guard">
-					<synonym value="Head-Guards"/>
-				</heading>
-				<heading id="HeadNet" title="Head-Net">
-					<synonym value="Head-Nets"/>
-				</heading>
-				<heading id="HeadPiece" title="Head-Piece">
-					<synonym value="Head-Pieces"/>
-				</heading>
-				<heading id="HeadRope" title="Head-Rope">
-					<synonym value="Head-Ropes"/>
-					<implies facet="ObjectName" cat="RopesMain"/>
-				</heading>
-				<heading id="Headscarf" title="Headscarf">
-					<synonym value="Headscarfs"/>
-				</heading>
-				<heading id="HeadTie" title="Head-Tie">
-					<synonym value="Head-Ties"/>
-				</heading>
-				<heading id="HelmetHeadGear" title="Helmet" noMatch="true"/>
-				<heading id="Hood" title="Hood">
-					<synonym value="Hoods"/>
-				</heading>
-				<heading id="Kerchief" title="Kerchief">
-					<synonym value="Kerchiefs"/>
-				</heading>
-				<heading id="ScoldsBridle" title="Scold's Bridle">
-					<synonym value="Scold's Bridles"/>
-				</heading>
-				<heading id="TemporalRing" title="Temporal-Ring">
-					<synonym value="Temporal-Rings"/>
-				</heading>
-				<heading id="Turban" title="Turban">
-					<synonym value="Turbans"/>
-				</heading>
-				<heading id="Veil" title="Veil">
-					<synonym value="Veils"/>
-				</heading>
-				<heading id="Wig" title="Wig">
-					<synonym value="Wigs"/>
-				</heading>
-			</heading>
-				<heading id="MasqueradeCostume" title="Masquerade-Costume">
-					<synonym value="Masquerade-Costumes"/>
-				</heading>
-				<heading id="Neckwear" title="Neckwear">
-					<synonym value="Neck Ware"/>
-					<synonym value="Neck Wear"/>
-					<synonym value="Neckware"/>
-					<heading id="Collar" title="Collar">
-						<synonym value="Collars"/>
-					</heading>
-					<heading id="Cravatte" title="Cravatte">
-						<synonym value="Cravattes"/>
-					</heading>
-					<heading id="NeckCoverGarment" title="Neck Cover">
-						<synonym value="Neck Covers"/>
-						<synonym value="Neck-Cover"/>
-						<synonym value="Neck-Covers"/>
-					</heading>
-					<heading id="Tie" title="Tie">
-						<!-- Need Disambiguation With The Verb And The Railroad Timber -->
-						<synonym value="Ties"/>
-					</heading>
-				</heading>
-				<heading id="PersonalAccessories" title="Personal Accessories">
-					<synonym value="Personal Accessory"/>
-					<heading id="BeltAccessory" title="Belt">
-						<synonym value="Belts"/>
-						<excl value="Door Belt"/>
-						<excl value="Door Belts"/>
-						<excl value="Doorbelt"/>
-						<excl value="Doorbelts"/>
-						<excl value="Door-Belt"/>
-						<excl value="Door-Belts"/>
-						<excl value="Door Belt Locks"/>
-						<excl value="Doorbelt Lock"/>
-						<excl value="Doorbelt Locks"/>
-						<excl value="Door-Belt Lock"/>
-						<excl value="Door-Belt Locks"/>
-					</heading>
-					<heading id="ButtonAccessory" title="Button">
-						<synonym value="Buttons"/>
-					</heading>
-					<heading id="ButtonHookAccessory" title="Button Hook">
-						<synonym value="Button Hooks"/>
-					</heading>
-					<heading id="CrutchAccessory" title="Crutch">
-						<synonym value="Crutches"/>
-						<synonym value="Crutchs"/>
-						<!-- Misspelling -->
-					</heading>
-					<heading id="CufflinkAccessory" title="Cufflink">
-						<synonym value="Cufflinks"/>
-					</heading>
-					<heading id="Epaulette" title="Epaulette">
-						<synonym value="Epaulettes"/>
-					</heading>
-					<heading id="EyeShade" title="Eye-Shade">
-						<synonym value="Eye-Shades"/>
-					</heading>
-					<heading id="Gaiter" title="Gaiter">
-						<synonym value="Gaiters"/>
-					</heading>
-					<heading id="Garter" title="Garter">
-						<synonym value="Garters"/>
-					</heading>
-					<heading id="Glove" title="Glove">
-						<synonym value="Gloves"/>
-					</heading>
-					<heading id="Goggles" title="Goggles">
-						<synonym value="Goggle"/>
-					</heading>
-					<heading id="Handbag" title="Handbag" noMatch="true">
-						<synonym value="Handbags"/>
-						<implies facet="ObjectName" cat="PurseAccessory"/>
-						<implies facet="ObjectName" cat="PurseContainer"/>
-					</heading>
-					<heading id="Handkerchief" title="Handkerchief">
-						<synonym value="Handkerchiefs"/>
-					</heading>
-					<heading id="HandWarmer" title="Hand-Warmer">
-						<synonym value="Hand-Warmers"/>
-					</heading>
-					<heading id="MoustacheStick" title="Moustache-Stick">
-						<synonym value="Moustache-Sticks"/>
-					</heading>
-					<heading id="Muff" title="Muff">
-						<synonym value="Muffs"/>
-					</heading>
-					<heading id="Neckerchief" title="Neckerchief">
-						<synonym value="Neckerchiefs"/>
-					</heading>
-					<heading id="NeckTie" title="Neck-Tie">
-						<synonym value="Neck-Ties"/>
-					</heading>
-					<heading id="NetsukeAccessory" title="Netsuke"/>
-					<heading id="NoseClip" title="Nose-Clip">
-						<synonym value="Nose-Clips"/>
-					</heading>
-					<heading id="Parasol" title="Parasol">
-						<synonym value="Parasols"/>
-					</heading>
-					<heading id="PocketBook" title="Pocket-Book" noMatch="true">
-						<synonym value="Pocket-Books"/>
-						<implies facet="ObjectName" cat="PocketBookContnr"/>
-					</heading>
-					<heading id="PursePersAcc" title="Purse">
-						<!-- Main latch -->
-						<synonym value="Purses"/>
-						<synonym value="Handbag"/>
-						<synonym value="Handbags"/>
-						<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-						<implies facet="ObjectName" cat="PurseAccessory"/>
-						<implies facet="ObjectName" cat="PurseContainer"/>
-					</heading>
-					<heading id="Puttee" title="Puttee">
-						<synonym value="Puttees"/>
-					</heading>
-					<heading id="Ruff" title="Ruff">
-						<synonym value="Ruffs"/>
-					</heading>
-					<heading id="Sagemono" title="Sagemono">
-						<synonym value="Sagemonos"/>
-					</heading>
-					<heading id="Sash" title="Sash">
-						<synonym value="Sashs"/>
-					</heading>
-					<heading id="Scarf" title="Scarf">
-						<synonym value="Scarfs"/>
-					</heading>
-					<heading id="Stomacher" title="Stomacher">
-						<synonym value="Stomachers"/>
-					</heading>
-					<heading id="Umbrella" title="Umbrella">
-						<synonym value="Umbrellas"/>
-					</heading>
-					<heading id="Visor" title="Visor">
-						<synonym value="Visors"/>
-					</heading>
-					<heading id="WaistBand" title="Waist-Band">
-						<synonym value="Waist-Bands"/>
-					</heading>
-					<heading id="WaistString" title="Waist-String">
-						<synonym value="Waist-Strings"/>
-					</heading>
-					<heading id="WalkingStick" title="Walking-Stick">
-						<synonym value="Walking-Sticks"/>
-					</heading>
-					<heading id="Wallet" title="Wallet" noMatch="true">
-						<synonym value="Wallets"/>
-						<implies facet="ObjectName" cat="WalletContainer"/>
-					</heading>
-				</heading>
-				<heading id="TheatreCostume" title="Theatre-Costume">
-					<synonym value="Theatre-Costumes"/>
-				</heading>
-				<heading id="Uniform" title="Uniform">
-					<synonym value="Uniforms"/>
-				</heading>
-				<heading id="VestGarment" title="Vest">
-					<synonym value="Vests"/>
-				</heading>
-				<heading id="VestmentGarment" title="Vestment">
-					<synonym value="Vestments"/>
-				</heading>
-				<heading id="WaistClothGarment" title="Waist-Cloth">
-					<synonym value="Waist-Cloths"/>
-				</heading>
-				<heading id="WaistcoatGarment" title="Waistcoat">
-					<synonym value="Waistcoats"/>
-				</heading>
-				<heading id="WaistMatGarment" title="Waist-Mat">
-					<synonym value="Waist-Mats"/>
-				</heading>
-				<heading id="WrapGarment" title="Wrap">
-					<synonym value="Wraps"/>
-				</heading>
-				<heading id="YashmakGarment" title="Yashmak">
-					<synonym value="Yashmaks"/>
-				</heading>
-			
-			</heading>
+			<heading id="VestGarment" title="Vest">
+				<synonym value="Vests"/>
+			</heading>	
+			<heading id="VestmentGarment" title="Vestment">
+				<synonym value="Vestments"/>
+			</heading>	
+			<heading id="WaistClothGarment" title="Waist-Cloth">
+				<synonym value="Waist-Cloths"/>
+			</heading>	
+			<heading id="WaistcoatGarment" title="Waistcoat">
+				<synonym value="Waistcoats"/>
+			</heading>	
+			<heading id="WaistMatGarment" title="Waist-Mat">
+				<synonym value="Waist-Mats"/>
+			</heading>	
+			<heading id="WrapGarment" title="Wrap">
+				<synonym value="Wraps"/>
+			</heading>	
 		</heading>
+		<heading id="HeadGear" title="Head Gear">
+			<synonym value="Head-Gear"/>
+			<heading id="BasketryHat" title="Basketry Hat">
+				<synonym value="Basketry Hats"/>
+				<synonym value="Basketry Cap"/>
+				<synonym value="Basketry Caps"/>
+				<implies facet="Collection" cat="BasketCollection"/>
+			</heading>
+			<heading id="Bonnet" title="Bonnet">
+				<synonym value="Bonnets"/>
+			</heading>
+			<heading id="CapHeadGear" title="Cap">
+				<synonym value="Caps"/>
+			</heading>
+			<heading id="Circlet" title="Circlet">
+				<synonym value="Circlets"/>
+			</heading>
+			<heading id="EarMuff" title="Ear-Muff">
+				<synonym value="Ear-Muffs"/>
+			</heading>
+			<heading id="FaceCover" title="Face-Cover">
+				<synonym value="Face-Covers"/>
+			</heading>
+			<heading id="Fez" title="Fez">
+				<synonym value="Fes"/>
+				<synonym value="Fezzes"/>
+			</heading>
+			<heading id="HairCover" title="Hair-Cover">
+				<synonym value="Hair-Covers"/>
+			</heading>
+			<heading id="HairNet" title="Hair-Net">
+				<synonym value="Hair-Nets"/>
+			</heading>
+			<heading id="HatHeadGear" title="Hat">
+				<synonym value="Hats"/>
+				<implies facet="ActivityorContext" cat="Millinery"/>
+			</heading>
+			<heading id="HeadBand" title="Head-Band">
+				<synonym value="Head-Bands"/>
+			</heading>
+			<heading id="HeadCloth" title="Head-Cloth">
+				<synonym value="Head-Cloths"/>
+				</heading>
+			<heading id="HeadCover" title="Head-Cover">
+				<synonym value="Head-Covers"/>
+			</heading>
+			<heading id="HeadDress" title="Head-Dress">
+				<synonym value="Head-Dresses"/>
+			</heading>
+			<heading id="HeadGuard" title="Head-Guard">
+				<synonym value="Head-Guards"/>
+			</heading>
+			<heading id="HeadNet" title="Head-Net">
+				<synonym value="Head-Nets"/>
+			</heading>
+			<heading id="HeadPiece" title="Head-Piece">
+				<synonym value="Head-Pieces"/>
+			</heading>
+			<heading id="HeadRope" title="Head-Rope">
+				<synonym value="Head-Ropes"/>
+				<implies facet="ObjectName" cat="RopesMain"/>
+			</heading>
+			<heading id="Headscarf" title="Headscarf">
+				<synonym value="Headscarfs"/>
+			</heading>
+			<heading id="HeadTie" title="Head-Tie">
+				<synonym value="Head-Ties"/>
+			</heading>
+			<heading id="HelmetHeadGear" title="Helmet" noMatch="true"/>
+			<heading id="Hood" title="Hood">
+				<synonym value="Hoods"/>
+			</heading>
+			<heading id="Kerchief" title="Kerchief">
+				<synonym value="Kerchiefs"/>
+			</heading>
+			<heading id="ScoldsBridle" title="Scold's Bridle">
+				<synonym value="Scold's Bridles"/>
+			</heading>
+			<heading id="TemporalRing" title="Temporal-Ring">
+				<synonym value="Temporal-Rings"/>
+			</heading>
+			<heading id="Turban" title="Turban">
+				<synonym value="Turbans"/>
+			</heading>
+			<heading id="Veil" title="Veil">
+				<synonym value="Veils"/>
+			</heading>		
+			<heading id="YashmakGarment" title="Yashmak">
+				<synonym value="Yashmaks"/>
+			</heading>	
+		</heading>	
+		<heading id="MasqueradeCostume" title="Masquerade-Costume">
+			<synonym value="Masquerade-Costumes"/>
+		</heading>
+		<heading id="Neckwear" title="Neckwear">
+			<synonym value="Neck Ware"/>
+			<synonym value="Neck Wear"/>
+			<synonym value="Neckware"/>
+			<heading id="Collar" title="Collar">
+				<synonym value="Collars"/>
+			</heading>
+			<heading id="Cravatte" title="Cravatte">
+				<synonym value="Cravattes"/>
+			</heading>
+			<heading id="NeckCoverGarment" title="Neck Cover">
+				<synonym value="Neck Covers"/>
+				<synonym value="Neck-Cover"/>
+				<synonym value="Neck-Covers"/>
+			</heading>
+			<heading id="Tie" title="Tie">
+				<!-- Need Disambiguation With The Verb And The Railroad Timber -->
+				<synonym value="Ties"/>
+			</heading>
+			</heading>
+		<heading id="PersonalAccessories" title="Personal Accessories">
+			<synonym value="Personal Accessory"/>
+			<heading id="BeltAccessory" title="Belt">
+				<synonym value="Belts"/>
+				<excl value="Door Belt"/>
+				<excl value="Door Belts"/>
+				<excl value="Doorbelt"/>
+				<excl value="Doorbelts"/>
+				<excl value="Door-Belt"/>
+				<excl value="Door-Belts"/>
+				<excl value="Door Belt Locks"/>
+				<excl value="Doorbelt Lock"/>
+				<excl value="Doorbelt Locks"/>
+				<excl value="Door-Belt Lock"/>
+				<excl value="Door-Belt Locks"/>
+			</heading>
+			<heading id="ButtonAccessory" title="Button">
+				<synonym value="Buttons"/>
+			</heading>
+			<heading id="ButtonHookAccessory" title="Button Hook">
+				<synonym value="Button Hooks"/>
+			</heading>
+			<heading id="CrutchAccessory" title="Crutch">
+				<synonym value="Crutches"/>
+				<synonym value="Crutchs"/>
+				<!-- Misspelling -->
+			</heading>
+			<heading id="CufflinkAccessory" title="Cufflink">
+				<synonym value="Cufflinks"/>
+			</heading>
+			<heading id="Epaulette" title="Epaulette">
+				<synonym value="Epaulettes"/>
+			</heading>
+			<heading id="EyeShade" title="Eye-Shade">
+				<synonym value="Eye-Shades"/>
+			</heading>
+			<heading id="Gaiter" title="Gaiter">
+				<synonym value="Gaiters"/>
+			</heading>
+			<heading id="Garter" title="Garter">
+				<synonym value="Garters"/>
+			</heading>
+			<heading id="Glove" title="Glove">
+			<synonym value="Gloves"/>
+			</heading>			
+			<heading id="Goggles" title="Goggles">
+				<synonym value="Goggle"/>
+			</heading>
+			<heading id="Handbag" title="Handbag" noMatch="true">
+				<synonym value="Handbags"/>
+				<implies facet="ObjectName" cat="PurseAccessory"/>
+				<implies facet="ObjectName" cat="PurseContainer"/>
+			</heading>
+			<heading id="Handkerchief" title="Handkerchief">
+				<synonym value="Handkerchiefs"/>
+			</heading>
+			<heading id="HandWarmer" title="Hand-Warmer">
+				<synonym value="Hand-Warmers"/>
+			</heading>
+			<heading id="MoustacheStick" title="Moustache-Stick">
+				<synonym value="Moustache-Sticks"/>
+			</heading>
+			<heading id="Muff" title="Muff">
+				<synonym value="Muffs"/>
+			</heading>
+			<heading id="Neckerchief" title="Neckerchief">
+				<synonym value="Neckerchiefs"/>
+			</heading>
+			<heading id="NeckTie" title="Neck-Tie">
+				<synonym value="Neck-Ties"/>
+			</heading>
+			<heading id="NetsukeAccessory" title="Netsuke"/>
+			<heading id="NoseClip" title="Nose-Clip">
+				<synonym value="Nose-Clips"/>
+			</heading>
+			<heading id="Parasol" title="Parasol">
+				<synonym value="Parasols"/>
+			</heading>
+			<heading id="PocketBook" title="Pocket-Book" noMatch="true">
+				<synonym value="Pocket-Books"/>
+				<implies facet="ObjectName" cat="PocketBookContnr"/>
+			</heading>
+			<heading id="PursePersAcc" title="Purse">
+			<!-- Main latch -->
+				<synonym value="Purses"/>
+				<synonym value="Handbag"/>
+				<synonym value="Handbags"/>
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+				<implies facet="ObjectName" cat="PurseAccessory"/>
+				<implies facet="ObjectName" cat="PurseContainer"/>
+			</heading>
+			<heading id="Puttee" title="Puttee">
+				<synonym value="Puttees"/>
+			</heading>
+			<heading id="Ruff" title="Ruff">
+				<synonym value="Ruffs"/>
+			</heading>
+			<heading id="Sagemono" title="Sagemono">
+				<synonym value="Sagemonos"/>
+			</heading>
+			<heading id="Sash" title="Sash">
+				<synonym value="Sashs"/>
+			</heading>
+			<heading id="Scarf" title="Scarf">
+				<synonym value="Scarfs"/>
+			</heading>
+			<heading id="Stomacher" title="Stomacher">
+				<synonym value="Stomachers"/>
+			</heading>
+			<heading id="Umbrella" title="Umbrella">
+				<synonym value="Umbrellas"/>
+			</heading>
+			<heading id="Visor" title="Visor">
+				<synonym value="Visors"/>
+			</heading>
+			<heading id="WaistBand" title="Waist-Band">
+				<synonym value="Waist-Bands"/>
+			</heading>
+			<heading id="WaistString" title="Waist-String">
+				<synonym value="Waist-Strings"/>
+			</heading>
+			<heading id="WalkingStick" title="Walking-Stick">
+				<synonym value="Walking-Sticks"/>
+			</heading>
+			<heading id="Wallet" title="Wallet" noMatch="true">
+				<synonym value="Wallets"/>
+				<implies facet="ObjectName" cat="WalletContainer"/>
+			</heading>
+			<heading id="Wig" title="Wig">
+			<synonym value="Wigs"/>
+		</heading>	
+		</heading>	
+		<heading id="TheaterCostume" title="Theater Costume">
+			<synonym value="Theater Costumes"/>
+			<synonym value="Theatre-Costume"/>
+			<synonym value="Theatre-Costumes"/>
+		</heading>	
+		<heading id="Uniform" title="Uniform">
+			<synonym value="Uniforms"/>
+		</heading>	
+	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
 		<synonym value="Culinary Equipment"/>
 		<heading id="CookingImplementCookEq" title="Cooking Implement" noMatch="true">
@@ -8582,12 +8585,13 @@
 		</heading>
 		<heading id="PuppetPerfArt" title="Puppets" noMatch="true"/>
 		<heading id="Scenery" title="Scenery"/>
-		<heading id="TheaterCostume" title="Theater Costume">
+		<heading id="TheaterCostume" title="Theater Costume" noMatch="true">
 			<synonym value="Theater Costumes"/>
 			<synonym value="Theatre Costume"/>
 			<synonym value="Theatre Costumes"/>
 			<synonym value="Theatre-Costume"/>
 			<synonym value="Theatre-Costumes"/>
+			<implies facet="ObjectName" cat="TheaterCostume"/>
 		</heading>
 	</heading>
 	<heading id="PersonalOrnament" title="Personal Ornament">
