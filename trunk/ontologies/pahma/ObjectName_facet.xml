@@ -4845,81 +4845,87 @@
 				<synonym value="Baking-Dish"/>
 				<synonym value="Baking-Dishes"/>
 			</heading>
-			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"/> FIX BELOW
+			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"> FIX BELOW
 				<synonym value="Cooking Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="CookingBasketBaskets"/>
 				<implies facet="Collection" cat="BasketCollection"/>
-			</heading>  <!-- Christina: there needs to be another end-heading tag here to close "cooking vessels" -->
-		<heading id="CookingBowlCookEq" title="Cooking Bowl">
-			<synonym value="Cooking Bowls"/>
-			<synonym value="Cooking-Bowl"/>
-			<synonym value="Cooking-Bowls"/>
-			<heading id="BowlCookEq" title="Bowl" noMatch="true">
-				<synonym value="Bowls"/>
-				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<!-- need complex inferentiation to remove ritual bowls, etc. -->
+			<!-- Christina: there needs to be another end-heading tag here to close "cooking vessels" -->
 			</heading>
-		</heading>
-		<heading id="CookingPanCookEq" title="Cooking Pan">
-			<synonym value="Cooking Pans"/>
-			<synonym value="Cooking-Pan"/>
-			<synonym value="Cooking-Pans"/>
-			<synonym value="Pan"/>
-			<synonym value="Pans"/>
-			<implies facet="ActivityorContext" cat="Metallurgy"/>
-			<heading id="SkilletCookEq" title="Skillet">
-				<synonym value="Skillets"/>
-				<synonym value="Fry Pan"/>
-				<synonym value="Fry Pans"/>
-				<synonym value="Frying Pan"/>
-				<synonym value="Frying Pans"/>
+			<heading id="CookingBowlCookEq" title="Cooking Bowl">
+				<synonym value="Cooking Bowls"/>
+				<synonym value="Cooking-Bowl"/>
+				<synonym value="Cooking-Bowls"/>
+				<heading id="BowlCookEq" title="Bowl" noMatch="true">
+					<synonym value="Bowls"/>
+					<implies facet="ActivityorContext" cat="FoodServing"/>
+					<!-- need complex inferentiation to remove ritual bowls, etc. -->
+				</heading>
 			</heading>
-		</heading>
-		<heading id="CookingPotCookEq" title="Cooking Pot">
-			<synonym value="Cooking Pots"/>
-			<synonym value="Cooking-Pot"/>
-			<synonym value="Cooking-Pots"/>
-			<synonym value="Pots"/>  <synonym value="Pot"/>
-			<!-- Need to differentiate from other non-cooking equip. pots -->
-			<synonym value="Boiler"/>
-			<synonym value="Boilers"/>
-			<synonym value="Cauldron"/>
-			<synonym value="Cauldrons"/>
-			<synonym value="Caldron"/>
-			<synonym value="Caldrons"/>
-			<heading id="ChytraCookEq" title="Chytra"/>
-			<heading id="LopasCookEq" title="Lopas"/>
-			<heading id="PipkinCookEq" title="Pipkin">
-				<synonym value="Pipkins"/>
-				<!-- Earthenware pot or pan, also a drinking vessel. -->
+			<heading id="CookingPanCookEq" title="Cooking Pan">
+				<synonym value="Cooking Pans"/>
+				<synonym value="Cooking-Pan"/>
+				<synonym value="Cooking-Pans"/>
+				<synonym value="Pan"/>
+				<synonym value="Pans"/>
+				<implies facet="ActivityorContext" cat="Metallurgy"/>
+				<heading id="SkilletCookEq" title="Skillet">
+					<synonym value="Skillets"/>
+					<synonym value="Fry Pan"/>
+					<synonym value="Fry Pans"/>
+					<synonym value="Frying Pan"/>
+					<synonym value="Frying Pans"/>
+				</heading>
 			</heading>
-		</heading>
-		<heading id="DokaCookEq" title="Doka">
-			<synonym value="Dokas"/>
-		</heading>
-		<heading id="DoughBowlCookEq" title="Dough Bowl">  <synonym value="Dough Bowls"/>  <synonym
-				value="Dough Vats"/>  <synonym value="Dough-Vat"/>  <synonym value="Dough-Vats"/>  </heading>
-		<heading id="PieDishCookEq" title="Pie Dish">
-			<synonym value="Pie Dishs"/> <!-- Misspelling -->
-			<synonym value="Pie Dishes"/>
-			<synonym value="Pie Pan"/>
-			<synonym value="Pie Pans"/>
-			<synonym value="Pie Plate"/>
-			<synonym value="Pie Plates"/>
-			<!-- Need to differentiate from "Dishes," "Plates," "Pans?" more generally? -->
-		</heading>
-		<heading id="SteamerCookEq" title="Steamer">
-			<synonym value="Steamers"/>
-		</heading>
-		<heading id="BasinCookEq" title="Basin">
-			<excl value="Great Basin"/>
-			<excl value="Basin and Plain"/>
-			<excl value="Basin &amp; Plain"/>
-			<excl value="Wash"/>
-			<excl value="Basinet"/>
-			<synonym value="Basins"/>
-		</heading>
+			<heading id="CookingPotCookEq" title="Cooking Pot">
+				<synonym value="Cooking Pots"/>
+				<synonym value="Cooking-Pot"/>
+				<synonym value="Cooking-Pots"/>
+				<synonym value="Pots"/>  <synonym value="Pot"/>
+				<!-- Need to differentiate from other non-cooking equip. pots -->
+				<synonym value="Boiler"/>
+				<synonym value="Boilers"/>
+				<synonym value="Cauldron"/>
+				<synonym value="Cauldrons"/>
+				<synonym value="Caldron"/>
+				<synonym value="Caldrons"/>
+				<heading id="ChytraCookEq" title="Chytra"/>
+				<heading id="LopasCookEq" title="Lopas"/>
+				<heading id="PipkinCookEq" title="Pipkin">
+					<synonym value="Pipkins"/>
+					<!-- Earthenware pot or pan, also a drinking vessel. -->
+				</heading>
+			</heading>
+			<heading id="DokaCookEq" title="Doka">
+				<synonym value="Dokas"/>
+			</heading>
+			<heading id="DoughBowlCookEq" title="Dough Bowl">  
+				<synonym value="Dough Bowls"/>  
+				<synonym value="Dough Vats"/>  
+				<synonym value="Dough-Vat"/>  
+				<synonym value="Dough-Vats"/>  
+			</heading>
+			<heading id="PieDishCookEq" title="Pie Dish">
+				<synonym value="Pie Dishs"/> <!-- Misspelling -->
+				<synonym value="Pie Dishes"/>
+				<synonym value="Pie Pan"/>
+				<synonym value="Pie Pans"/>
+				<synonym value="Pie Plate"/>
+				<synonym value="Pie Plates"/>
+				<!-- Need to differentiate from "Dishes," "Plates," "Pans?" more generally? -->
+			</heading>
+			<heading id="SteamerCookEq" title="Steamer">
+				<synonym value="Steamers"/>
+			</heading>
+			<heading id="BasinCookEq" title="Basin">
+				<excl value="Great Basin"/>
+				<excl value="Basin and Plain"/>
+				<excl value="Basin &amp; Plain"/>
+				<excl value="Wash"/>
+				<excl value="Basinet"/>
+				<synonym value="Basins"/>
+			</heading>
+		</heading> 
 		<heading id="CulinaryMouldCookEq" title="Culinary Mold">
 			<synonym value="Culinary Molds"/>
 			<synonym value="Culinary-Mould"/>
