@@ -204,9 +204,16 @@ function setCatCardImage(srcURL) {
 	$('#cat_card_clipper').removeClass('zoomed');
 }
 
-function doViewCard(e) {
+function doViewCard(e,nimages) {
   	$('#detail_image').css("visibility","hidden");
 	$('#pop_screen').css("display","block");
+	if(nimages>1){
+		$('#vcc_inner').addClass('manyimages');
+	
+		
+	}else{
+		$('#vcc_inner').removeClass('manyimages');
+	}
 	e.cancelBubble = true;
 	if (e.stopPropagation) e.stopPropagation();
 	return false;
