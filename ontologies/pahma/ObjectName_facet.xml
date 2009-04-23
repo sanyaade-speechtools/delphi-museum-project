@@ -6332,9 +6332,10 @@
 		<heading id="TortureInstrument" title="Torture-Instrument">
 			<!-- Imply From Other -->
 		</heading>
-		<heading id="MusicalInstruments" title="Musical Instruments">
+		<heading id="MusicalInstruments" title="Musical Instruments" noMatch="true">
 			<!-- Elsewhere -->
 			<synonym value="Musical Instrument"/>
+			<implies facet="ObectName" cat="MusicEquipment"/>
 		</heading>
 	</heading>
 	<heading id="LightingEquipment" title="Lighting Equipment">
@@ -7052,6 +7053,12 @@
 			<synonym value="Jester's Staffs"/>
 		</heading>
 		<heading id="MusicEquipment" title="Music Equipment">
+			<synonym value="Musical Instrument"/>
+			<synonym value="Musical Instruments"/>
+			<synonym value="Noisemaker"/>
+			<synonym value="Noisemakers"/>
+			<synonym value="Toy Instrument"/>
+			<synonym value="Toy Instruments"/>
 			<heading id="StringedInstruments" title="Stringed Instruments">
 				<synonym value="Stringed Instrument"/>
 				<synonym value="String Instrument"/>
@@ -7576,8 +7583,11 @@
 						<synonym value="Slit-Drum"/>
 						<synonym value="Slit-Drums"/>
 						<synonym value="Teponachtli Drum"/>
+						<synonym value="Teponachtli Drums"/>
 						<synonym value="Teponaxtle Drum"/>
+						<synonym value="Teponaxtle Drums"/>
 						<synonym value="Teponaztle Drum"/>
+						<synonym value="Teponaztle Drums"/>
 						<synonym value="Teponaztli Drum"/>
 						<synonym value="Teponaztli Drums"/>
 						<synonym value="Teponaztli"/>
@@ -8399,6 +8409,9 @@
 					<synonym value="Five-Holed Whistles"/>
 				</heading>
 			</heading>
+			<heading id="AcousticJar" title="Acoustic Jar">
+				<synonym value="Acoustic Jars"/>
+			</heading>
 			<heading id="BellHolder" title="Bell-Holder">
 				<synonym value="Bell-Holders"/>
 			</heading>
@@ -8422,12 +8435,10 @@
 			<heading id="MusicalClock" title="Musical Clock">
 				<synonym value="Musical Clocks"/>
 			</heading>
-			<heading id="MusicalInstrument" title="Musical Instrument">
+			
+			
 				<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
-				<synonym value="Musical Instruments"/>
-				<heading id="AcousticJar_BM" title="Acoustic Jar">
-					<synonym value="Acoustic Jars"/>
-				</heading>
+
 				<heading id="Aerophone_BM" title="Aerophone">
 					<synonym value="Aerophones"/>
 				</heading>
@@ -8435,29 +8446,17 @@
 					<!--incorporate-->
 					<synonym value="Bagpipe"/>
 				</heading>
-				<heading id="Bell_BM" title="Bell">
-					<synonym value="Bells"/>
-				</heading>
 				<heading id="Bugle_BM" title="Bugle">
 					<synonym value="Bugles"/>
 				</heading>
-				<heading id="Bullroarer_BM" title="Bullroarer">
-					<synonym value="Bullroarers"/>
-				</heading>
 				<heading id="Buzzer_BM" title="Buzzer">
 					<synonym value="Buzzers"/>
-				</heading>
-				<heading id="Castanet_BM" title="Castanet">
-					<synonym value="Castanets"/>
 				</heading>
 				<heading id="Charango_BM" title="Charango">
 					<synonym value="Charangos"/>
 				</heading>
 				<heading id="Chun_BM" title="Chun">
 					<synonym value="Chuns"/>
-				</heading>
-				<heading id="Clapper_BM" title="Clapper">
-					<synonym value="Clappers"/>
 				</heading>
 				<heading id="ClappingStick_BM" title="Clapping Stick">
 					<synonym value="Clapping Sticks"/>
@@ -8474,35 +8473,14 @@
 				<heading id="Crotal_BM" title="Crotal">
 					<synonym value="Crotals"/>
 				</heading>
-				<heading id="Cymbal_BM" title="Cymbal">
-					<synonym value="Cymbals"/>
-				</heading>
-				<heading id="Didgeridoo_BM" title="Didgeridoo">
-					<synonym value="Didgeridoos"/>
-				</heading>
-				<heading id="Drum_BM" title="Drum">
-					<synonym value="Drums"/>
-				</heading>
 				<heading id="Dulcimer_BM" title="Dulcimer">
 					<synonym value="Dulcimers"/>
-				</heading>
-				<heading id="Flute_BM" title="Flute">
-					<synonym value="Flutes"/>
 				</heading>
 				<heading id="Genggong_BM" title="Genggong">
 					<synonym value="Genggongs"/>
 				</heading>
 				<heading id="Gittern_BM" title="Gittern">
 					<synonym value="Gitterns"/>
-				</heading>
-				<heading id="Gong_BM" title="Gong">
-					<synonym value="Gongs"/>
-				</heading>
-				<heading id="Harmonium_BM" title="Harmonium">
-					<synonym value="Harmoniums"/>
-				</heading>
-				<heading id="JewsHarp_BM" title="Jew's Harp">
-					<synonym value="Jew's Harps"/>
 				</heading>
 				<heading id="Jingle_BM" title="Jingle">
 					<synonym value="Jingles"/>
@@ -8515,9 +8493,6 @@
 				</heading>
 				<heading id="Mandolin_BM" title="Mandolin">
 					<synonym value="Mandolins"/>
-				</heading>
-				<heading id="Metallophone_BM" title="Metallophone">
-					<synonym value="Metallophones"/>
 				</heading>
 				<heading id="MouthOrgan_BM" title="Mouth-Organ">
 					<synonym value="Mouth-Organs"/>
@@ -8534,26 +8509,11 @@
 				<heading id="MusicalRasp_BM" title="Musical Rasp">
 					<synonym value="Musical Rasps"/>
 				</heading>
-				<heading id="Oboe_BM" title="Oboe">
-					<synonym value="Oboes"/>
-				</heading>
-				<heading id="Ocarina_BM" title="Ocarina">
-					<synonym value="Ocarinas"/>
-				</heading>
-				<heading id="Organ_BM" title="Organ">
-					<synonym value="Organs"/>
-				</heading>
 				<heading id="PercussionBoard_BM" title="Percussion Board">
 					<synonym value="Percussion Boards"/>
 				</heading>
 				<heading id="Rabob_BM" title="Rabob">
 					<synonym value="Rabobs"/>
-				</heading>
-				<heading id="Rattle_BM" title="Rattle">
-					<synonym value="Rattles"/>
-				</heading>
-				<heading id="Recorder_BM" title="Recorder">
-					<synonym value="Recorders"/>
 				</heading>
 				<heading id="Reneti_BM" title="Reneti">
 					<synonym value="Renetis"/>
@@ -8564,12 +8524,6 @@
 				<heading id="Shawm_BM" title="Shawm">
 					<synonym value="Shawms"/>
 				</heading>
-				<heading id="Sistrum_BM" title="Sistrum">
-					<synonym value="Sistrums"/>
-				</heading>
-				<heading id="SlitDrum_BM" title="Slit-Drum">
-					<synonym value="Slit-Drums"/>
-				</heading>
 				<heading id="StampingTube_BM" title="Stamping Tube">
 					<synonym value="Stamping Tubes"/>
 				</heading>
@@ -8579,16 +8533,13 @@
 				<heading id="Tambourine_BM" title="Tambourine">
 					<synonym value="Tambourines"/>
 				</heading>
-				<heading id="Trumpet_BM" title="Trumpet">
-					<synonym value="Trumpets"/>
-				</heading>
 				<heading id="Viol_BM" title="Viol">
 					<synonym value="Viols"/>
 				</heading>
 				<heading id="VoiceDisguiser_BM" title="Voice-Disguiser">
 					<synonym value="Voice-Disguisers"/>
 				</heading>
-			</heading>
+
 			<heading id="MusicalInstrumentBow" title="Musical Instrument-Bow">
 				<synonym value="Musical Instrument-Bows"/>
 			</heading>
@@ -8627,20 +8578,6 @@
 			</heading>
 			<heading id="WhistleCleaner" title="Whistle-Cleaner">
 				<synonym value="Whistle-Cleaners"/>
-			</heading>
-			<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-			<heading id="MusicRelatedItems" title="Music">
-				<synonym value="Instrument"/>
-				<synonym value="Instruments"/>
-				<synonym value="Musical"/>
-				<synonym value="Musical Instrument"/>
-				<synonym value="Musical Instruments"/>
-				<synonym value="Music Instrument"/>
-				<synonym value="Music Instruments"/>
-				<synonym value="Noisemaker"/>
-				<synonym value="Noisemakers"/>
-				<synonym value="Toy Instrument"/>
-				<synonym value="Toy Instruments"/>
 			</heading>
 		</heading>
 		<heading id="PuppetPerfArt" title="Puppets" noMatch="true"/>
