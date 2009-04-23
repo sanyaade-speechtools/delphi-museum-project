@@ -207,7 +207,7 @@ function setCatCardImage(srcURL) {
 function doViewCard(e,nimages) {
   	$('#detail_image').css("visibility","hidden");
 	$('#pop_screen').css("display","block");
-	if(nimages>1){
+	if(nimages>10){
 		$('#vcc_inner').addClass('manyimages');
 	
 		
