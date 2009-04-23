@@ -940,7 +940,7 @@
 				<synonym value="Tepee"/>
 				<synonym value="Tepees"/>
 				<synonym value="thípi"/>
-				<!-- In The Lakota Language -->
+				<!-- in the Lakota language -->
 				<synonym value="thípis"/>
 				<synonym value="Wigwam"/>
 				<synonym value="Wigwams"/>
@@ -1962,23 +1962,23 @@
 				<heading id="DrawingInstrumentComm" title="Drawing Instrument">
 					<synonym value="Drawing Instruments"/>
 				</heading>
-				<heading id="DrawingSetComm" title="Drawing-Set">
+				<heading id="DrawingSetComm" title="Drawing Set">
+					<synonym value="Drawing Sets"/>
+					<synonym value="Drawing-Set"/>
 					<synonym value="Drawing-Sets"/>
 				</heading>
-				<heading id="EmbossingStampComm" title="Embossing-Stamp">
-					<synonym value="Embossing-Stamps"/>
-				</heading>
-				<heading id="EngravingToolComm" title="Engraving-Tool">
-					<synonym value="Engraving-Tools"/>
-				</heading>
-				<heading id="EtchingToolComm" title="Etching-Tool">
-					<synonym value="Etching-Tools"/>
-				</heading>
+				<heading id="EmbossingStampComm" title="Embossing-Stamp" noMatch="true"/>
+				<heading id="EngravingToolComm" title="Engraving Tool" noMatch="true"/>
+				<heading id="EtchingToolComm" title="Etching Tool" noMatch="true"/>
 				<heading id="FoldingSquareComm" title="Folding Square">
 					<synonym value="Folding Squares"/>
+					<implies facet="ObjectName" cat="FoldingSquareTool"/>
 				</heading>
-				<heading id="InkSpoonComm" title="Ink-Spoon">
+				<heading id="InkSpoonComm" title="Ink Spoon">
+					<synonym value="Ink Spoons"/>
+					<synonym value="Ink-Spoon "/>
 					<synonym value="Ink-Spoons"/>
+					<implies facet="ObjectName" cat="InkSpoonTool"/>
 				</heading>
 				<heading id="PaintBrushComm" title="Paint-Brush">
 					<synonym value="Paint-Brushs"/>
@@ -12070,21 +12070,26 @@
 			<heading id="DrawingSetTool" title="Drawing-Set">
 				<synonym value="Drawing-Sets"/>
 			</heading>
-			<heading id="EmbossingStampTool" title="Embossing-Stamp">
+			<heading id="EmbossingStampTool" title="Embossing Stamp">
+				<synonym value="Embossing Stamps"/>
+				<synonym value="Embossing-Stamp"/>
 				<synonym value="Embossing-Stamps"/>
+				<implies facet="ObjectName" cat="EmbossingStampComm"/>
 			</heading>
-			<heading id="EngravingTool" title="Engraving-Tool">
+			<heading id="EngravingToolTool" title="Engraving Tool">
+				<synonym value="Engraving Tools"/>
+				<synonym value="Engraving-Tool"/>
 				<synonym value="Engraving-Tools"/>
+				<implies facet="ObjectName" cat="EngravingToolComm"/>
 			</heading>
-			<heading id="EtchingTool" title="Etching-Tool">
+			<heading id="EtchingTool" title="Etching Tool">
+				<synonym value="Etching Tools"/>
+				<synonym value="Etching-Tool"/>
 				<synonym value="Etching-Tools"/>
+				<implies facet="ObjectName" cat="EtchingToolComm"/>
 			</heading>
-			<heading id="FoldingSquareTool" title="Folding Square">
-				<synonym value="Folding Squares"/>
-			</heading>
-			<heading id="InkSpoonTool" title="Ink-Spoon">
-				<synonym value="Ink-Spoons"/>
-			</heading>
+			<heading id="FoldingSquareTool" title="Folding Square" noMatch="true"/>
+			<heading id="InkSpoonTool" title="Ink-Spoon" noMatch="true"/>
 			<heading id="PaintBrushTool" title="Paint-Brush">
 				<synonym value="Paint-Brushs"/>
 			</heading>
