@@ -126,7 +126,7 @@
 				<p>{$objnum}</p>
 			{/if}
 			{if $hasCatCardMedia }
-				<h3><a href="" onClick="doViewCard(event);return false;">View Catalog Card Image{if $numCatCardMediaItems > 1 }s{/if}</a></h3>
+				<h3><a href="" onClick="doViewCard(event,{$numCatCardMediaItems});return false;">View Catalog Card Image{if $numCatCardMediaItems > 1 }s{/if}</a></h3>
 			{else}
 				<h4>No Catalog Card Images for this object</h4>
 			{/if}
@@ -145,7 +145,7 @@
 			  <div id="vcc_inner">
 					<h3 id="hideCatCard"><a href="" onClick="doHideCard(event);return false;">Hide Catalog Card View</a></h3>
 					<h2>Catalog Card{if $numCatCardMediaItems > 1 }s{/if} for object:</h2>
-                   
+              
                     <div id="cat_card_clipper" class="unzoomed">
                     <a href="" onclick="doCatCardZoom(event);return false;">
 					<img id="cat_card_image" src="{$catCardMediaItems[0].img_path}" />
