@@ -164,16 +164,16 @@
 		</heading>
 		<heading id="FishingEquipment" title="Fishing Equipment">
 			<synonym value="Fishing"/>
-			<heading id="EelFork" title="Eel-Fork">
+			<heading id="EelForkFshEq" title="Eel-Fork">
 				<synonym value="Eel-Forks"/>
 			</heading>
-			<heading id="FishArrow" title="Fish-Arrow">
+			<heading id="FishArrowFshEq" title="Fish-Arrow">
 				<synonym value="Fish-Arrows"/>
 			</heading>
-			<heading id="FishGorge" title="Fish-Gorge">
+			<heading id="FishGorgeFshEq" title="Fish-Gorge">
 				<synonym value="Fish-Gorges"/>
 			</heading>
-			<heading id="FishHook" title="Fish Hook">
+			<heading id="FishHookFshEq" title="Fish Hook">
 				<synonym value="Fishhook"/>
 				<synonym value="Fishhooks"/>
 				<synonym value="Fish Hooks"/>
@@ -184,45 +184,40 @@
 				<synonym value="Hooks" noMatch="true"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="FishHookCase" title="Fish Hook Case">
+			<heading id="FishHookCaseFshEq" title="Fish Hook Case">
 				<synonym value="Fish Hook Cases"/>
 				<synonym value="Fish-Hook-Case"/>
 				<synonym value="Fish-Hook-Cases"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies container -->
 			</heading>
-			<heading id="FishingBait" title="Fishing-Bait">
+			<heading id="FishingBaitFshEq" title="Fishing-Bait">
 				<synonym value="Fishing-Baits"/>
 			</heading>
-			<heading id="FishingBasket" title="Fishing-Basket">
+			<heading id="FishingBasketFshEq" title="Fishing-Basket">
 				<synonym value="Fishing-Baskets"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies basket -->
 			</heading>
-			<heading id="FishingBoat" title="Fishing Boat">
-				<synonym value="Fishing Boats"/>
-				<synonym value="Fishing-Boat"/>
-				<synonym value="Fishing-Boats"/>
-				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies boat -->
-			</heading>
-			<heading id="FishingGoggles" title="Fishing-Goggles">
+			<heading id="FishingBoatFshEq" title="Fishing Boat" noMatch="true"/>
+			<heading id="FishingGogglesFshEq" title="Fishing-Goggles">
 				<synonym value="Fishing-Goggle"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies eyewear -->
 			</heading>
-			<heading id="FishingKite" title="Fishing-Kite">
+			<heading id="FishingKiteFshEq" title="Fishing-Kite">
 				<synonym value="Fishing-Kites"/>
 			</heading>
-			<heading id="FishingLine" title="Fishing Line">
+			<heading id="FishingLineFshEq" title="Fishing Line">
 				<synonym value="Fishing Lines"/>
 				<synonym value="Fishing-Line"/>
 				<synonym value="Fishing-Lines"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="FishingLineHolder" title="Fishing-Line-Holder">
+			<heading id="FishingLineHolderFshEq" title="Fishing-Line-Holder">
 				<synonym value="Fishing-Line-Holders"/>
 			</heading>
-			<heading id="FishingLineWinder" title="Fishing-Line-Winder">
+			<heading id="FishingLineWinderFshEq" title="Fishing-Line-Winder">
 				<synonym value="Fishing-Line-Winders"/>
 			</heading>
-			<heading id="FishingNet" title="Fishing Net">
+			<heading id="FishingNetFshEq" title="Fishing Net">
 				<synonym value="Fishing Net"/>
 				<synonym value="Fishing Nets"/>
 				<synonym value="Fishing-Net"/>
@@ -230,93 +225,93 @@
 				<synonym value="Net"/>
 				<synonym value="Nets"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
-				<heading id="LandingNet" title="Landing-Net">
+				<heading id="LandingNetFshEq" title="Landing-Net">
 					<synonym value="Landing-Nets"/>
 				</heading>
 			</heading>
-			<heading id="FishingNoose" title="Fishing-Noose">
+			<heading id="FishingNooseFshEq" title="Fishing-Noose">
 				<synonym value="Fishing-Nooses"/>
 			</heading>
-			<heading id="FishingRaft" title="Fishing-Raft">
+			<heading id="FishingRaftFshEq" title="Fishing-Raft">
 				<synonym value="Fishing-Rafts"/>
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies boat -->
 			</heading>
-			<heading id="FishingRod" title="Fishing-Rod">
+			<heading id="FishingRodFshEq" title="Fishing-Rod">
 				<synonym value="Fishing-Rods"/>
 			</heading>
-			<heading id="FishingRodHolder" title="Fishing-Rod-Holder">
+			<heading id="FishingRodHolderFshEq" title="Fishing-Rod-Holder">
 				<synonym value="Fishing-Rod-Holders"/>
 			</heading>
-			<heading id="FishingStick" title="Fishing-Stick">
+			<heading id="FishingStickFshEq" title="Fishing-Stick">
 				<synonym value="Fishing-Sticks"/>
 			</heading>
-			<heading id="FishingTrimmer" title="Fishing-Trimmer">
+			<heading id="FishingTrimmerFshEq" title="Fishing-Trimmer">
 				<synonym value="Fishing-Trimmers"/>
 			</heading>
-			<heading id="FishLure" title="Fish-Lure">
+			<heading id="FishLureFshEq" title="Fish-Lure">
 				<synonym value="Fish-Lures"/>
 			</heading>
-			<heading id="FishScoop" title="Fish-Scoop">
+			<heading id="FishScoopFshEq" title="Fish-Scoop">
 				<synonym value="Fish-Scoops"/>
 			</heading>
-			<heading id="FishSpear" title="Fish-Spear">
+			<heading id="FishSpearFshEq" title="Fish-Spear">
 				<synonym value="Fish-Spears"/>
 			</heading>
-			<heading id="FishTraps" title="Fish Traps">
+			<heading id="FishTrapsFshEq" title="Fish Traps">
 				<synonym value="Fish Trap"/>
 				<synonym value="Fish-Trap"/>
 				<synonym value="Fish-Traps"/>
-				<heading id="TrapFishTrapBaskets" title="Fish Trap Baskets">
+				<heading id="TrapFishTrapBasketsFshEq" title="Fish Trap Baskets">
 					<synonym value="Fish Trap Basket"/>
 					<synonym value="Fish-Trap Basket"/>
 					<synonym value="Fish-Trap Baskets"/>
 					<implies facet="Collection" cat="BasketCollection"/>
-					<heading id="TrapEelTrapBasket" title="Eel Trap Basket">
+					<heading id="TrapEelTrapBasketFshEq" title="Eel Trap Basket">
 						<synonym value="Eel Trap Baskets"/>
 						<synonym value="Eel-Trap Basket"/>
 						<synonym value="Eel-Trap Baskets"/>
 					</heading>
-					<heading id="TrapSalmonTrapBasket" title="Salmon Trap Basket">
+					<heading id="TrapSalmonTrapBasketFshEq" title="Salmon Trap Basket">
 						<synonym value="Salmon Trap Baskets"/>
 						<synonym value="Salmon-Trap Basket"/>
 						<synonym value="Salmon-Trap Baskets"/>
 					</heading>
 				</heading>
 			</heading>
-			<heading id="FishWeir" title="Fish Weir">
+			<heading id="FishWeirFshEq" title="Fish Weir">
 				<synonym value="Fish Weirs"/>
 				<synonym value="Fish-Weir"/>
 				<synonym value="Fish-Weirs"/>
 			</heading>
-			<heading id="Gig" title="Gig">
+			<heading id="GigFshEq" title="Gig">
 				<!-- A trident or three-pringed spear for fishing -->
 				<synonym value="Gigs"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="Gorgehook" title="Gorge hook">
+			<heading id="GorgehookFshEq" title="Gorge hook">
 				<synonym value="Gorge hooks"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="Harpoon" title="Harpoon">
+			<heading id="HarpoonFshEq" title="Harpoon">
 				<synonym value="Fish-Harpoon"/>
 				<synonym value="Fish-Harpoons"/>
 				<synonym value="Harpoons"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 				<implies facet="ActivityorContext" cat="Hunting"/>
 			</heading>
-			<heading id="Nethanger" title="Net hanger">
+			<heading id="NethangerFshEq" title="Net hanger">
 				<synonym value="Net hangers"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="NetFloat" title="Net-Float">
+			<heading id="NetFloatFshEq" title="Net-Float">
 				<synonym value="Net-Floats"/>
 			</heading>
-			<heading id="Sinker" title="Sinker">
+			<heading id="SinkerFshEq" title="Sinker">
 				<synonym value="Sinkers"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="Slitter" title="Slitter">
-				<heading id="EelSlitter" title="Eel Slitter">
+			<heading id="SlitterFshEq" title="Slitter">
+				<heading id="EelSlitterFshEq" title="Eel Slitter">
 					<synonym value="Eel Slitters"/>
 					<implies facet="ActivityorContext" cat="FishingActivity"/>
 				</heading>
@@ -13079,6 +13074,7 @@
 						<synonym value="Fishing Boats"/>
 						<synonym value="Fishing-Boat"/>
 						<synonym value="Fishing-Boats"/>
+						<implies facet="ObjectName" cat="FishingBoatFshEq"/>
 					</heading>
 					<heading id="GalleyBoat" title="Galley">
 						<synonym value="Galleys"/>
