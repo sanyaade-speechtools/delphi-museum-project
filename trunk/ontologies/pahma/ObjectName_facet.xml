@@ -4924,6 +4924,12 @@
 			<synonym value="Culinary Molds"/>
 			<synonym value="Culinary-Mould"/>
 			<synonym value="Culinary-Moulds"/>
+			<heading id="BreadMoldCookEq" title="Bread Mold">
+				<synonym value="Bread Molds"/>
+				<!-- This refers to culinary equipment, not fungus -->
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
+				<implies facet="ObjectName" cat="BreadFood"/>
+			</heading>
 			<heading id="ChocolateMoldCookEq" title="Chocolate Mold">
 				<synonym value="Chocolate molds"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
@@ -8703,6 +8709,26 @@
 			<synonym value="Chest Ornaments"/>
 			<synonym value="Chest Ornamentation"/>
 			<!-- Miscellaneous, non-jewelery items? -->
+			<heading id="KapkapPrsOrn" title="Kapkap">
+				<synonym value="Kapkaps"/>
+			</heading>
+			<heading id="PectoralPrsOrn" title="Pectoral">
+				<synonym value="Pectorals"/>
+				<!-- Miscellaneous, non-jewelery items? See PectoralJewelery for pectoral metallurgy.-->
+			</heading>
+		</heading>
+		<heading id="ClaspPrsOrn" title="Clasp">
+			<synonym value="Clasps"/>
+			<heading id="MorsePrsOrn" title="Morse">
+				<synonym value="Morses"/>
+				<!-- Type of clasp? -->
+			</heading>
+			<heading id="ShoulderClaspPrsOrn" title="Shoulder Clasp">
+				<synonym value="Shoulder Clasps"/>
+				<synonym value="Shoulder-Clasp"/>
+				<synonym value="Shoulder-Clasps"/>
+				<!-- Miscellaneous, non-jewelery items? -->
+			</heading>
 		</heading>
 		<heading id="DanceOrnamentPrsOrn" title="Dance Ornament">
 			<synonym value="Dance Ornaments"/>
@@ -8726,7 +8752,9 @@
 			<synonym value="Toe Ornamentations"/>
 			<!-- Miscellaneous, non-jewelery items? Related heading: FingertoeJeweleryPrsOrn. -->
 		</heading>
-		<heading id="FobRingPrsOrn" title="Fob-Ring">
+		<heading id="FobRingPrsOrn" title="Fob Ring">
+			<synonym value="Fob Rings"/>
+			<synonym value="Fob-Ring"/>
 			<synonym value="Fob-Rings"/>
 		</heading>
 		<heading id="FootOrnamentPrsOrn" title="Foot Ornament">
@@ -8806,6 +8834,7 @@
 				<synonym value="Arm Bands"/>
 				<synonym value="Arm-Band"/>
 				<synonym value="Arm-Bands"/>
+				<!-- Should be -jewelery- arm bands. -->
 			</heading>
 			<heading id="ArmletPrsOrn" title="Armlet">
 				<synonym value="Armlets"/>
@@ -8941,28 +8970,10 @@
 					<synonym value="Mangtika"/>
 				</heading>
 			</heading>
-
-			<heading id="LegOrnamentPrsOrn" title="Leg Ornament">
-				<synonym value="Leg Ornaments"/>
-				<synonym value="Leg-Ornament"/>
-				<synonym value="Leg-Ornaments"/>
-				<!-- Miscellaneous, non-jewelery items? -->
-			</heading>
-			
-			<heading id="LipOrnamentPrsOrn" title="Lip Ornament">
-				<synonym value="Lip Ornaments"/>
-				<synonym value="Lip-Ornament"/>
-				<synonym value="Lip-Ornaments"/>
-				<!-- Miscellaneous, non-jewelery items? -->
-				<heading id="LipPlugPrsOrn" title="Lip-Plug">
-					<synonym value="Lip-Plugs"/>
-				</heading>
-			</heading>
 			<heading id="MenatPrsOrn" title="Menat">
 				<synonym value="Menats"/>
 			</heading>
-			<heading id="NeckOrnamentationPrsOrn" title="Neck Ornamentation">
-				<synonym value="Neck Ornamentations"/>
+			<heading id="NeckJeweleryPrsOrn" title="Neck Jewelery">
 				<heading id="OrnamentBanjoPrsOrn" title="Banjo" noMatch="true"/>
 				<heading id="BullaPrsOrn" title="Bulla">
 					<excl value="Tympanic Bulla"/>
@@ -8996,9 +9007,9 @@
 			</heading>
 			<heading id="ParurePrsOrn" title="Parure">
 				<synonym value="Parures"/>
-			</heading>
-			<heading id="PectoralPrsOrn" title="Pectoral">
-				<synonym value="Pectorals"/>
+			</heading>			
+			<heading id="PectoralJeweleryPrsOrn" title="Pectoral Jewelery">
+				<!-- distinguish from non-jewelery pectorals?  do they exist? -->
 			</heading>
 			<heading id="PinPrsOrn" title="Pin" noMatch="true">
 				<synonym value="Pins"/>
@@ -9013,44 +9024,71 @@
 			<heading id="ToeRingPrsOrn" title="Toe-Ring">
 				<synonym value="Toe-Rings"/>
 			</heading>
-
-					
-
-			
-
+		</heading>
 		
+		
+
+		<heading id="LegOrnamentPrsOrn" title="Leg Ornament">
+			<synonym value="Leg Ornaments"/>
+			<synonym value="Leg-Ornament"/>
+			<synonym value="Leg-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="KapkapPrsOrn" title="Kapkap">
-			<synonym value="Kapkaps"/>
+		
+		<heading id="LipOrnamentPrsOrn" title="Lip Ornament">
+			<synonym value="Lip Ornaments"/>
+			<synonym value="Lip-Ornament"/>
+			<synonym value="Lip-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
+			<heading id="LipPlugPrsOrn" title="Lip-Plug">
+				<synonym value="Lip-Plugs"/>
+			</heading>
 		</heading>
 
-
-		<heading id="MorsePrsOrn" title="Morse">
-			<synonym value="Morses"/>
-		</heading>
-		<heading id="NeckOrnamentPrsOrn" title="Neck-Ornament">
+		<heading id="NeckOrnamentPrsOrn" title="Neck Ornament">
+			<synonym value="Neck Ornaments"/>
+			<synonym value="Neck-Ornament"/>
 			<synonym value="Neck-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="NoseOrnamentPrsOrn" title="Nose-Ornament">
+		
+		<heading id="NoseOrnamentPrsOrn" title="Nose Ornament">
+			<synonym value="Nose Ornaments"/>
+			<synonym value="Nose-Ornament"/>
 			<synonym value="Nose-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="PenisOrnamentPrsOrn" title="Penis-Ornament">
+
+		<heading id="PenisOrnamentPrsOrn" title="Penis Ornament">
+			<synonym value="Penis Ornaments"/>
+			<synonym value="Penis-Ornament"/>
 			<synonym value="Penis-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="PubicOrnamentPrsOrn" title="Pubic-Ornament">
+		<heading id="PubicOrnamentPrsOrn" title="Pubic Ornament">
+			<synonym value="Pubic Ornaments"/>
+			<synonym value="Pubic-Ornament"/>
 			<synonym value="Pubic-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="ShoulderClaspPrsOrn" title="Shoulder-Clasp">
-			<synonym value="Shoulder-Clasps"/>
-		</heading>
-		<heading id="TailPiecePrsOrn" title="Tail-Piece">
+
+		<heading id="TailPiecePrsOrn" title="Tail Piece">
+			<synonym value="Tail Pieces"/>
+			<synonym value="Tail-Piece"/>
 			<synonym value="Tail-Pieces"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="TurbanOrnamentPrsOrn" title="Turban-Ornament">
+		<heading id="TurbanOrnamentPrsOrn" title="Turban Ornament">
+			<synonym value="Turban Ornaments"/>
+			<synonym value="Turban-Ornament"/>
 			<synonym value="Turban-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
-		<heading id="WaistOrnamentPrsOrn" title="Waist-Ornament">
+		<heading id="WaistOrnamentPrsOrn" title="Waist Ornament">
 			<synonym value="Waist-Ornaments"/>
+			<synonym value="Waist-Ornament"/>
+			<synonym value="Waist-Ornaments"/>
+			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
 
 	</heading>
