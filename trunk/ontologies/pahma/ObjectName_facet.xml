@@ -1980,8 +1980,10 @@
 					<synonym value="Ink-Spoons"/>
 					<implies facet="ObjectName" cat="InkSpoonTool"/>
 				</heading>
-				<heading id="PaintBrushComm" title="Paint-Brush">
-					<synonym value="Paint-Brushs"/>
+				<heading id="PaintBrushComm" title="Paint Brush">
+					<synonym value="Paint Brushes"/>
+					<synonym value="Paint-Brush"/>
+					<synonym value="Paint-Brushes"/>
 				</heading>
 				<heading id="PaintGrinderComm" title="Paint-Grinder">
 					<synonym value="Paint-Grinders"/>
@@ -1995,7 +1997,9 @@
 				<heading id="PencilComm" title="Pencil">
 					<synonym value="Pencils"/>
 				</heading>
-				<heading id="PenCutterComm" title="Pen-Cutter">
+				<heading id="PenCutterComm" title="Pen Cutter">
+					<synonym value="Pen Cutters"/>
+					<synonym value="Pen-Cutter "/>
 					<synonym value="Pen-Cutters"/>
 				</heading>
 				<heading id="ProtractorComm" title="Protractor">
@@ -2009,12 +2013,20 @@
 				</heading>
 				<heading id="TypewriterComm" title="Typewriter">
 					<synonym value="Typewriters"/>
+					<implies facet="ObjectName" cat="TypewriterTool"/>
 				</heading>
-				<heading id="WritingBrushComm" title="Writing-Brush">
-					<synonym value="Writing-Brushs"/>
+				<heading id="WritingBrushComm" title="Writing Brush">
+					<synonym value="Writing Brushes"/>
+					<synonym value="Writing-Brush"/>
+					<synonym value="Writing-Brushes"/>
+					<synonym value="Writing-Brushs"/> <!-- Misspelling -->
+					<implies facet="ObjectName" cat="WritingBrushTool"/>
 				</heading>
-				<heading id="WritingStickComm" title="Writing-Stick">
+				<heading id="WritingStickComm" title="Writing Stick">
+					<synonym value="Writing Sticks"/>
+					<synonym value="Writing-Stick"/>
 					<synonym value="Writing-Sticks"/>
+					<implies facet="ObjectName" cat="WritingStickTool"/>
 				</heading>
 			</heading>
 			<heading id="BrushContainerComm" title="Brush-Container">
@@ -3860,7 +3872,8 @@
 						<synonym value="Offering-Cups"/>
 					</heading>
 					<heading id="OfferingDish" title="Offering-Dish">
-						<synonym value="Offering-Dishs"/>
+						<synonym value="Offering-Dishes"/>
+						<synonym value="Offering-Dishs"/> <!-- Misspelling -->
 					</heading>
 					<heading id="OfferingJar" title="Offering-Jar">
 						<synonym value="Offering-Jars"/>
@@ -4651,7 +4664,8 @@
 				<synonym value="Sagemonos"/>
 			</heading>
 			<heading id="Sash" title="Sash">
-				<synonym value="Sashs"/>
+				<synonym value="Sashes"/>
+				<synonym value="Sashs"/> <!-- Misspelling -->
 			</heading>
 			<heading id="Scarf" title="Scarf">
 				<synonym value="Scarfs"/>
@@ -4795,16 +4809,16 @@
 			<synonym value="Cooking Vessels"/>
 			<implies facet="ObjectName" cat="VesselContainer"/>
 			<heading id="BakingDishCookEq" title="Baking Dish">
-				<synonym value="Baking Dishs"/>
+				<synonym value="Baking Dishs"/>  <!-- Misspelling -->
 				<synonym value="Baking-Dish"/>
 				<synonym value="Baking-Dishes"/>
 			</heading>
-			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"/> FIX
-			BELOW <synonym value="Cooking Baskets"/>
-			<implies facet="ActivityorContext" cat="FoodPreparation"/>
-			<implies facet="ObjectName" cat="CookingBasketBaskets"/>
-			<implies facet="Collection" cat="BasketCollection"/>
-		</heading>
+			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"/> FIX BELOW
+				<synonym value="Cooking Baskets"/>
+				<implies facet="ActivityorContext" cat="FoodPreparation"/>
+				<implies facet="ObjectName" cat="CookingBasketBaskets"/>
+				<implies facet="Collection" cat="BasketCollection"/>
+			</heading>  <!-- Christina: there needs to be another end-heading tag here to close "cooking vessels" -->
 		<heading id="CookingBowlCookEq" title="Cooking Bowl">
 			<synonym value="Cooking Bowls"/>
 			<synonym value="Cooking-Bowl"/>
@@ -4855,8 +4869,7 @@
 		<heading id="DoughBowlCookEq" title="Dough Bowl">  <synonym value="Dough Bowls"/>  <synonym
 				value="Dough Vats"/>  <synonym value="Dough-Vat"/>  <synonym value="Dough-Vats"/>  </heading>
 		<heading id="PieDishCookEq" title="Pie Dish">
-			<synonym value="Pie Dishs"/>
-			<!-- Misspelling -->
+			<synonym value="Pie Dishs"/> <!-- Misspelling -->
 			<synonym value="Pie Dishes"/>
 			<synonym value="Pie Pan"/>
 			<synonym value="Pie Pans"/>
@@ -7816,7 +7829,7 @@
 					</heading>
 					<heading id="Calabash" title="Calabash">
 						<synonym value="Calabashes"/>
-						<synonym value="Calabashs"/>
+						<synonym value="Calabashs"/> <!-- Misspelling -->
 					</heading>
 					<heading id="CaneRattle" title="Cane Rattle">
 						<!-- implied materials: cane -->
@@ -9578,7 +9591,8 @@
 			<synonym value="Tobaccos"/>
 		</heading>
 		<heading id="Varnish" title="Varnish">
-			<synonym value="Varnishs"/>
+			<synonym value="Varnishes"/>
+			<synonym value="Varnishs"/> <!-- Misspelling -->
 		</heading>
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
 		<heading id="Ashsample" title="Ash Sample">
@@ -12014,18 +12028,30 @@
 				<synonym value="Strigils"/>
 				<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 			</heading>
-			<heading id="ToiletSpoon" title="Toilet-Spoon">
+			<heading id="ToiletSpoon" title="Toilet Spoon">
+				<synonym value="Toilet Spoons"/>
+				<synonym value="Toilet-Spoon"/>
 				<synonym value="Toilet-Spoons"/>
 			</heading>
-			<heading id="ToothBrush" title="Tooth-Brush">
-				<synonym value="Tooth-Brushs"/>
+			<heading id="ToothBrush" title="Toothbrush">
+				<synonym value="Toothbrushes"/>
+				<synonym value="Tooth Brush"/>
+				<synonym value="Tooth Brushes"/>
+				<synonym value="Tooth-Brush"/>
+				<synonym value="Tooth-Brushes"/>
 				<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 			</heading>
-			<heading id="ToothPick" title="Tooth-Pick">
+			<heading id="ToothPick" title="Toothpick">
+				<synonym value="Toothpicks"/>
+				<synonym value="Tooth Pick"/>
+				<synonym value="Tooth Picks"/>
+				<synonym value="Tooth-Pick"/>
 				<synonym value="Tooth-Picks"/>
 				<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 			</heading>
-			<heading id="ToothStick" title="Tooth-Stick">
+			<heading id="ToothStick" title="Tooth Stick">
+				<synonym value="Tooth Sticks"/>
+				<synonym value="Tooth-Stick "/>
 				<synonym value="Tooth-Sticks"/>
 			</heading>
 			<heading id="WigCurler" title="Wig-Curler">
@@ -12091,7 +12117,7 @@
 			<heading id="FoldingSquareTool" title="Folding Square" noMatch="true"/>
 			<heading id="InkSpoonTool" title="Ink-Spoon" noMatch="true"/>
 			<heading id="PaintBrushTool" title="Paint-Brush">
-				<synonym value="Paint-Brushs"/>
+				<synonym value="Paint-Brushes"/>
 			</heading>
 			<heading id="PaintGrinderTool" title="Paint-Grinder">
 				<synonym value="Paint-Grinders"/>
@@ -12117,15 +12143,9 @@
 			<heading id="StylusTool" title="Stylus">
 				<!-- The British Museum Notes That This Term Does Not Refer To Musical Styli. -->
 			</heading>
-			<heading id="TypewriterTool" title="Typewriter">
-				<synonym value="Typewriters"/>
-			</heading>
-			<heading id="WritingBrushTool" title="Writing-Brush">
-				<synonym value="Writing-Brushs"/>
-			</heading>
-			<heading id="WritingStickTool" title="Writing-Stick">
-				<synonym value="Writing-Sticks"/>
-			</heading>
+			<heading id="TypewriterTool" title="Typewriter" noMatch="true"/>
+			<heading id="WritingBrushTool" title="Writing Brush" noMatch="true"/>
+			<heading id="WritingStickTool" title="Writing Stick" noMatch="true"/>
 		</heading>
 		<heading id="AugerTool" title="Auger">
 			<synonym value="Augers"/>
@@ -12190,7 +12210,7 @@
 			<synonym value="Brooms"/>
 		</heading>
 		<heading id="BrushTool" title="Brush">
-			<synonym value="Brushs"/>
+			<synonym value="Brushes"/>
 		</heading>
 		<heading id="BurningGlassTool" title="Burning Glass">
 			<synonym value="Burning Glasses"/>
