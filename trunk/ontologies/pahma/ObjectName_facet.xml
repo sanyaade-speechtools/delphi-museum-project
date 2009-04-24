@@ -9602,6 +9602,14 @@
 		<heading id="CharmNecklaceRelRit" title="Charm-Necklace">
 			<synonym value="Charm-Necklaces"/>
 		</heading>
+		<heading id="CharmstoneRelRit" title="Charmstone">
+			<synonym value="Charmstones"/>
+			<synonym value="Charm stone"/>
+			<synonym value="Charm stones"/>
+			<synonym value="Charm-stone"/>
+			<synonym value="Charm-stones"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
 		<heading id="ChristmasCardRelRit" title="Christmas-Card">
 			<synonym value="Christmas-Cards"/>
 		</heading>
@@ -9663,7 +9671,7 @@
 		<heading id="FleshHookRelRit" title="Flesh Hook" noMatch="true">
 			<synonym value="Flesh Hooks"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-			<!-- This is, by default also a Cooking Equipment term- used in religious ceremony 
+			<!-- This is, by default, also a Cooking Equipment term- used in religious ceremony 
 			to pull cooked meat out of cauldrons... differentiate ceremonial and non-ceremonial 
 			without making them mutually exclusive? -->
 		</heading>
@@ -9673,12 +9681,16 @@
 		<heading id="FuneraryItemsRelRit" title="Funerary items">
 			<synonym value="Funeral"/>
 			<synonym value="Funerary"/>
+			<heading id="CanopicBxFunerRelRit" title="Canopic Box" noMatch="true"/>
+			<heading id="CanopicJFunerRelRit" title="Canopic Jar" noMatch="true"/>
+			<heading id="CoffinRelRit" title="Coffin">
+				<synonym value="Coffins"/>
+				<implies facet="ActivityorContext" cat="Burial"/>
+				<implies facet="ObjectName" cat="CoffinBoxContainer"/>
+			</heading>
 			<heading id="MummyFuneraryItemRelRit" title="Mummy" noMatch="true">
 				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
-			</heading>
-			<heading id="UrnRelRit" title="Urn">
-				<synonym value="Urns"/>
 			</heading>
 			<heading id="SarcophagusFunerItemRelRit" title="Sarcophagus" noMatch="true">
 				<synonym value="Sarcophogas"/>
@@ -9687,13 +9699,9 @@
 				<implies facet="ActivityorContext" cat="Burial"/>
 				<implies facet="ObjectName" cat="SarcophagusContainer"/>
 			</heading>
-			<heading id="CoffinRelRit" title="Coffin">
-				<synonym value="Coffins"/>
-				<implies facet="ActivityorContext" cat="Burial"/>
-				<implies facet="ObjectName" cat="CoffinBoxContainer"/>
+			<heading id="UrnRelRit" title="Urn">
+				<synonym value="Urns"/>
 			</heading>
-			<heading id="CanopicBxFunerRelRit" title="Canopic Box" noMatch="true"/>
-			<heading id="CanopicJFunerRelRit" title="Canopic Jar" noMatch="true"/>
 		</heading>
 		<heading id="GodSymbolRelRit" title="God Symbol">
 			<synonym value="God Symbols"/>
@@ -9703,6 +9711,13 @@
 		</heading>
 		<heading id="HanukahLampRelRit" title="Hanukah Lamp">
 			<synonym value="Hanukah Lamps"/>
+		</heading>
+		<heading id="HeaddressRelRit" title="Headdress">
+			<synonym value="Headdresses"/>
+			<synonym value="Head dress"/>
+			<synonym value="Head dresses"/>
+			<synonym value="Head-dress"/>
+			<synonym value="Head-dresses"/>
 		</heading>
 		<heading id="HongbaoRelRit" title="Hongbao">
 			<synonym value="Hongbaos"/>
@@ -9754,8 +9769,17 @@
 		<heading id="MagicSquareRelRit" title="Magic Square">
 			<synonym value="Magic Squares"/>
 		</heading>
+		<heading id="MalaRelRit" title="Mala">
+			<synonym value="Malas"/>
+			<synonym value="Prayer beads"/>
+			<synonym value="Prayer bead"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
 		<heading id="MandalaRelRit" title="Mandala">
 			<synonym value="Mandalas"/>
+			<synonym value="Dreamcatcher"/>
+			<synonym value="Dreamcatchers"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="MarriageEquipmentRelRit" title="Marriage Equipment">
 			<synonym value="Marriage Items"/>
@@ -9836,6 +9860,34 @@
 		<heading id="PrayerCapRelRit" title="Prayer-Cap">
 			<synonym value="Prayer-Caps"/>
 		</heading>
+		<heading id="PrayerRugRelRit" title="Prayer Rug">
+			<synonym value="Prayer Mat"/>
+			<!-- Are these all textiles, or are some woven from reeds, etc.? -->
+			<synonym value="Prayer Mats"/>
+			<synonym value="Prayer Rugs"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+			<implies facet="ObjectName" cat="RugsFurnishings"/>
+			<implies facet="ObjectName" cat="PrayerRugTextiles"/>
+		</heading>
+		<heading id="PrayerWheelRelRit" title="Prayer Wheel">
+			<synonym value="Prayer Wheels"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="RitualSpoonRelRit" title="Ritual Spoon">
+			<synonym value="Ritual Spoons"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="ScarabRelRit" title="Scarab">
+			<synonym value="Scarabs"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
+		<heading id="ScepterRelRit" title="Scepter">
+			<synonym value="Scepters"/>
+		</heading>
+		<heading id="ShrineRelRit" title="Shrine">
+			<synonym value="Shrines"/>
+			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+		</heading>
 		<heading id="UshabtiRelRit" title="Ushabti">
 			<synonym value="Ushabtis"/>
 			<synonym value="Shabti"/>
@@ -9844,6 +9896,9 @@
 			<synonym value="Shawabtis"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 			<implies facet="ObjectName" cat="ShabtiFigure"/>
+		</heading>
+		<heading id="WandRelRit" title="Wand">
+			<synonym value="Wands"/>
 		</heading>
 	</heading>
 	<heading id="ScientificSamples" title="Scientific Samples">
@@ -13696,73 +13751,9 @@
 			<synonym value="Triptychs"/>
 		</heading>
 	</heading>
+	
 	<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-	<heading id="Ceremonialitems" title="Ceremonial items">
-		<heading id="Charmstone" title="Charmstone">
-			<synonym value="Charmstones"/>
-			<synonym value="Charm stone"/>
-			<synonym value="Charm stones"/>
-			<synonym value="Charm-stone"/>
-			<synonym value="Charm-stones"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="FeatheredStick" title="Feathered Stick">
-			<synonym value="Feathered Sticks"/>
-			<implies facet="Material" cat="Feathers"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="Headdress" title="Headdress">
-			<synonym value="Headdresses"/>
-			<synonym value="Head dress"/>
-			<synonym value="Head dresses"/>
-			<synonym value="Head-dress"/>
-			<synonym value="Head-dresses"/>
-		</heading>
-		<heading id="Mala" title="Mala">
-			<synonym value="Malas"/>
-			<synonym value="Prayer beads"/>
-			<synonym value="Prayer bead"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="Mandala" title="Mandala">
-			<synonym value="Mandalas"/>
-			<synonym value="Dreamcatcher"/>
-			<synonym value="Dreamcatchers"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="PrayerRug" title="Prayer Rug">
-			<synonym value="Prayer Mat"/>
-			<!-- Are these all textiles, or are some woven from reeds, etc.? -->
-			<synonym value="Prayer Mats"/>
-			<synonym value="Prayer Rugs"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-			<implies facet="ObjectName" cat="RugsFurnishings"/>
-			<implies facet="ObjectName" cat="PrayerRugTextiles"/>
-		</heading>
-		<heading id="PrayerWheel" title="Prayer Wheel">
-			<synonym value="Prayer Wheels"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="RitualSpoonUtensil" title="Ritual Spoon">
-			<!-- Moved out of cooking/ culinary to ceremonial -->
-			<synonym value="Ritual Spoons"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="Scarab" title="Scarab">
-			<synonym value="Scarabs"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="Scepter" title="Scepter">
-			<synonym value="Scepters"/>
-		</heading>
-		<heading id="Shrine" title="Shrine">
-			<synonym value="Shrines"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
-		<heading id="Wand" title="Wand">
-			<synonym value="Wands"/>
-		</heading>
-	</heading>
+	
 	<heading id="CurrencyRelatedItems" title="Currency &amp; related items">
 		<heading id="Counter" title="Counter">
 			<synonym value="Counters"/>
