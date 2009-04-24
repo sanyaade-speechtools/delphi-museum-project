@@ -3452,9 +3452,13 @@
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 				<implies facet="ObjectName" cat="CoffeePotHeatingCookEq"/>
+				<implies facet="ObjectName" cat="CoffeeFood"/>
 			</heading>
-			<heading id="CoffeePercolator" title="Coffee-Percolator">
+			<heading id="CoffeePercolator" title="Coffee Percolator">
+				<synonym value="Coffee Percolators"/>
+				<synonym value="Coffee-Percolator"/>
 				<synonym value="Coffee-Percolators"/>
+				<implies facet="ObjectName" cat="CoffeeFood"/>
 			</heading>
 			<heading id="Cooler" title="Cooler">
 				<synonym value="Coolers"/>
@@ -5092,6 +5096,7 @@
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 				<implies facet="ObjectName" cat="CoffeePotVessel"/>
+				<implies facet="ObjectName" cat="CoffeeFood"/>
 			</heading>
 			<heading id="CookingStandCookEq" title="Cooking Stand">
 				<synonym value="Cooking Stands"/>
@@ -5438,6 +5443,7 @@
 						<synonym value="Coffee-spoon"/>
 						<synonym value="Coffee-spoons"/>
 						<implies facet="ObjectName" cat="CoffeeSpoonCfeEq"/>
+						<implies facet="ObjectName" cat="CoffeeFood"/>
 					</heading>
 					<heading id="LadleSpoonUtensilCookEq" title="Ladle">
 						<synonym value="Ladles"/>
@@ -6108,6 +6114,7 @@
 		</heading>
 		<heading id="CoffeeFood" title="Coffee">
 			<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
+			<implies facet="ObjectName" cat="CoffeeFood"/>
 		</heading>
 		<heading id="MushFood" title="Mush"/>
 		<heading id="SoupFood" title="Soup">
@@ -11415,85 +11422,131 @@
 		</heading>
 		<heading id="BetelEquipment" title="Betel Equipment">
 			<synonym value="Betel Items"/>
-			<heading id="BetelContainer" title="Betel-Container">
+			<heading id="BetelContainer" title="Betel Container">
+				<synonym value="Betel Containers"/>
+				<synonym value="Betel-Container"/>
 				<synonym value="Betel-Containers"/>
 			</heading>
-			<heading id="BetelCrusher" title="Betel-Crusher">
+			<heading id="BetelCrusher" title="Betel Crusher">
+				<synonym value="Betel Crushers"/>
+				<synonym value="Betel-Crusher"/>
 				<synonym value="Betel-Crushers"/>
 			</heading>
-			<heading id="BetelCutter" title="Betel-Cutter">
+			<heading id="BetelCutter" title="Betel Cutter">
+				<synonym value="Betel Cutters"/>
+				<synonym value="Betel-Cutter"/>
 				<synonym value="Betel-Cutters"/>
 			</heading>
-			<heading id="BetelMortar" title="Betel-Mortar">
+			<heading id="BetelMortar" title="Betel Mortar">
+				<synonym value="Betel Mortars"/>
+				<synonym value="Betel-Mortar"/>
 				<synonym value="Betel-Mortars"/>
 			</heading>
-			<heading id="BetelPestle" title="Betel-Pestle">
+			<heading id="BetelPestle" title="Betel Pestle">
+				<synonym value="Betel Pestles"/>
+				<synonym value="Betel-Pestle"/>
 				<synonym value="Betel-Pestles"/>
 			</heading>
-			<heading id="BetelStand" title="Betel-Stand">
+			<heading id="BetelStand" title="Betel Stand">
+				<synonym value="Betel Stands"/>
+				<synonym value="Betel-Stand"/>
 				<synonym value="Betel-Stands"/>
 			</heading>
 		</heading>
-		<heading id="ChocolateCup" title="Chocolate-Cup">
-			<synonym value="Chocolate-Cups"/>
+		<heading id="ChocolateEquipment" title="Chocolate Equipment" noMatch="true">
 			<implies facet="ObjectName" cat="ChocolateFood"/>
-		</heading>
-		<heading id="ChocolatePot" title="Chocolate-Pot">
-			<synonym value="Chocolate-Pots"/>
-			<implies facet="ObjectName" cat="ChocolateFood"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
+			<implies facet="ActivityorContext" cat="ChocolateDrinking"/>
+			<heading id="ChocolateCup" title="Chocolate Cup">
+				<synonym value="Chocolate Cups"/>
+				<synonym value="Chocolate-Cup"/>
+				<synonym value="Chocolate-Cups"/>
+			</heading>
+			<heading id="ChocolatePot" title="Chocolate Pot">
+				<synonym value="Chocolate Pots"/>
+				<synonym value="Chocolate-Pot"/>
+				<synonym value="Chocolate-Pots"/>
+			</heading>
 		</heading>
 		<heading id="CoffeeEquipment" title="Coffee Equipment">
 			<synonym value="Coffee Items"/>
 			<implies facet="ObjectName" cat="CoffeeFood"/>
+			<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
+			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<heading id="CoffeeCanCfeEq" title="Coffee-Can">
+				<synonym value="Coffee Cans"/>
+				<synonym value="Coffee-Can"/>
 				<synonym value="Coffee-Cans"/>
 			</heading>
-			<heading id="CoffeeCoolerCfeEq" title="Coffee-Cooler">
+			<heading id="CoffeeCoolerCfeEq" title="Coffee Cooler">
+				<synonym value="Coffee Coolers"/>
+				<synonym value="Coffee-Cooler"/>
 				<synonym value="Coffee-Coolers"/>
 			</heading>
-			<heading id="CoffeeCupCfeEq" title="Coffee-Cup">
+			<heading id="CoffeeCupCfeEq" title="Coffee Cup">
+				<synonym value="Coffee Cups"/>
+				<synonym value="Coffee-Cup"/>
 				<synonym value="Coffee-Cups"/>
-				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 			</heading>
-			<heading id="CoffeeFilterCfeEq" title="Coffee-Filter">
+			<heading id="CoffeeFilterCfeEq" title="Coffee Filter">
+				<synonym value="Coffee Filters"/>
+				<synonym value="Coffee-Filter"/>
 				<synonym value="Coffee-Filters"/>
 			</heading>
-			<heading id="CoffeeGrinderCfeEq" title="Coffee-Grinder">
+			<heading id="CoffeeGrinderCfeEq" title="Coffee Grinder">
+				<synonym value="Coffee Grinders"/>
+				<synonym value="Coffee-Grinder"/>
 				<synonym value="Coffee-Grinders"/>
 			</heading>
-			<heading id="CoffeeJugCfeEq" title="Coffee-Jug">
+			<heading id="CoffeeJugCfeEq" title="Coffee Jug">
+				<synonym value="Coffee Jugs"/>
+				<synonym value="Coffee-Jug"/>
 				<synonym value="Coffee-Jugs"/>
-				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 			</heading>
-			<heading id="CoffeeMillCfeEq" title="Coffee-Mill">
+			<heading id="CoffeeMillCfeEq" title="Coffee Mill">
+				<synonym value="Coffee Mills"/>
+				<synonym value="Coffee-Mill"/>
 				<synonym value="Coffee-Mills"/>
 			</heading>
-			<heading id="CoffeePercolatorCfeEq" title="Coffee-Percolator">
+			<heading id="CoffeePercolatorCfeEq" title="Coffee Percolator">
+				<synonym value="Coffee Percolators"/>
+				<synonym value="Coffee-Percolator"/>
 				<synonym value="Coffee-Percolators"/>
 			</heading>
-			<heading id="CoffeePotCfeEq" title="Coffee-Pot">
+			<heading id="CoffeePotCfeEq" title="Coffee Pot">
+				<synonym value="Coffee Pots"/>
+				<synonym value="Coffee-Pot"/>
 				<synonym value="Coffee-Pots"/>
-				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 			</heading>
-			<heading id="CoffeePotBurnerCfeEq" title="Coffee-Pot-Burner">
+			<heading id="CoffeePotBurnerCfeEq" title="Coffee Pot Burner">
+				<synonym value="Coffee Pot Burners"/>
+				<synonym value="Coffee-Pot-Burner"/>
 				<synonym value="Coffee-Pot-Burners"/>
 			</heading>
-			<heading id="CoffeePotStandCfeEq" title="Coffee-Pot-Stand">
+			<heading id="CoffeePotStandCfeEq" title="Coffee Pot Stand">
+				<synonym value="Coffee Pot Stands"/>
+				<synonym value="Coffee-Pot-Stand"/>
 				<synonym value="Coffee-Pot-Stands"/>
 			</heading>
-			<heading id="CoffeeRoasterCfeEq" title="Coffee-Roaster">
+			<heading id="CoffeeRoasterCfeEq" title="Coffee Roaster">
+				<synonym value="Coffee Roasters"/>
+				<synonym value="Coffee-Roaster"/>
 				<synonym value="Coffee-Roasters"/>
 			</heading>
-			<heading id="CoffeeSetCfeEq" title="Coffee-Set">
+			<heading id="CoffeeSetCfeEq" title="Coffee Set">
+				<synonym value="Coffee Sets"/>
+				<synonym value="Coffee-Set"/>
 				<synonym value="Coffee-Sets"/>
-				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 			</heading>
 			<heading id="CoffeeSpoonCfeEq" title="Coffee Spoon" noMatch="true"/>
-			<heading id="CoffeeStrainerCfeEq" title="Coffee-Strainer">
+			<heading id="CoffeeStrainerCfeEq" title="Coffee Strainer">
+				<synonym value="Coffee Strainers"/>
+				<synonym value="Coffee-Strainer"/>
 				<synonym value="Coffee-Strainers"/>
-				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 			</heading>
-			<heading id="CoffeeTableCfeEq" title="Coffee-Table">
+			<heading id="CoffeeTableCfeEq" title="Coffee Table">
+				<synonym value="Coffee Tables"/>
+				<synonym value="Coffee-Table"/>
 				<synonym value="Coffee-Tables"/>
 			</heading>
 		</heading>
