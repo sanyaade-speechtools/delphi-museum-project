@@ -10663,8 +10663,7 @@
 											<implies facet="Location" cat="MtEdenHaywardCA"/>
 										</heading>
 										<heading id="CAAlaNL11" title="CA-Ala-NL-11">
-											<synonym value="Berkeley Mound"/>
-											<implies facet="Location" cat="BerkeleyAlamedaCA"/>
+											<implies facet="Location" cat="WestBerkeleyMdAlaCA"/>
 										</heading>
 										<heading id="CAAlaNL12" title="CA-Ala-NL-12">
 											<implies facet="Location" cat="BerkeleyAlamedaCA"/>
@@ -11080,7 +11079,7 @@
 											<synonym value="Wildcat Creek"/>
 										</heading>
 									</heading>
-									<heading id="TrinomCCostaCA" title="Trinomial site name">
+									<heading id="TrinomCCostaCA" title="Trinomial site name" noMatch="true">
 										<heading id="CACCo1" title="CA-CCo-1">
 											<synonym value="CA-CCo- 1"/>
 											<synonym value="CA-CCo-  1"/>
@@ -11486,7 +11485,7 @@
 										<heading id="RivertonElDoradoCA" title="Riverton"/>
 										<heading id="SpanishFlatElDoradoCA" title="Spanish Flat"/>
 									</heading>
-									<heading id="TrinomElDoradoCA" title="Trinomial site name">
+									<heading id="TrinomElDoradoCA" title="Trinomial site name" noMatch="true">
 										<heading id="CAElD2" title="CA-ElD-2">
 											<synonym value="CA-ElD- 2"/>
 										</heading>
@@ -13376,6 +13375,7 @@
 											<synonym value="Indian Head Md"/>
 											<synonym value="Indian Head Md."/>
 										</heading>
+										<heading id="OldHarveySacCA" title="Old Harvey"/>
 										<heading id="RiversideSactoCA" title="Riverside" noMatch="true"/>
 										<heading id="SacramentoSactoCA" title="Sacramento">
 											<heading id="VicinitySacto" title="Vicinity of Sacramento"/>
@@ -13384,115 +13384,123 @@
 										</heading>
 										<heading id="StrawberrySactoCA" title="Strawberry" noMatch="true"/>
 										<heading id="ThistleMoundSactoCA" title="Thistle Mound"/>
+										<heading id="WindmillerSiteSacCA" title="Windmiller Site"/>
 									</heading>
 									<heading id="TrinomSactoCA" title="Trinomial site names" noMatch="true">
-										<heading id="CASac1" title="CA-Sac- 1">
-											<synonym value="CA-Sac-1"/>
+										<heading id="CASac1" title="CA-Sac-1">
+											<synonym value="CA-Sac- 1"/>
+											<synonym value="CA-Sac-  1"/>
 											<synonym value="Schenck-Dawson 1"/>
 											<synonym value="Cantrell"/>
 										</heading>
-										<heading id="CASac2" title="CA-Sac- 2">
-											<synonym value="CA-Sac-2"/>
+										<heading id="CASac2" title="CA-Sac-2">
+											<synonym value="CA-Sac- 2"/>
+											<synonym value="CA-Sac-  2"/>
 											<synonym value="Schenck-Dawson 2"/>
 											<synonym value="Johnson Mound C.2"/>
 										</heading>
-										<heading id="CASac3" title="CA-Sac- 3">
-											<synonym value="CA-Sac-3"/>
+										<heading id="CASac3" title="CA-Sac-3">
+											<synonym value="CA-Sac- 3"/>
+											<synonym value="CA-Sac-  3"/>
 											<synonym value="Johnson Mound C.3"/>
 											<synonym value="Schenck-Dawson 3"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASac6" title="CA-Sac- 6">
-											<synonym value="CA-Sac-6"/>
+										<heading id="CASac6" title="CA-Sac-6">
+											<synonym value="CA-Sac- 6"/>
+											<synonym value="CA-Sac-  6"/>
 											<synonym value="Johnson Mound"/>
 											<synonym value="Johnson Mound C.6"/>
 											<synonym value="Schenck-Dawson 6"/>
 										</heading>
-										<heading id="CASac7" title="CA-Sac- 7">
-											<synonym value="CA-Sac-7"/>
+										<heading id="CASac7" title="CA-Sac-7">
+											<synonym value="CA-Sac- 7"/>
+											<synonym value="CA-Sac-  7"/>
 											<synonym value="Nichols"/>
 											<synonym value="Schenck-Dawson 7"/>
 										</heading>
-										<heading id="CASac8" title="CA-Sac- 8">
-											<synonym value="CA-Sac-8"/>
+										<heading id="CASac8" title="CA-Sac-8">
+											<synonym value="CA-Sac- 8"/>
+											<synonym value="CA-Sac-  8"/>
 											<synonym value="Schenck-Dawson 8"/>
 											<synonym value="Old Harvey"/>
 										</heading>
-										<heading id="CASac9" title="CA-Sac- 9">
-											<synonym value="CA-Sac-9"/>
+										<heading id="CASac9" title="CA-Sac-9">
+											<synonym value="CA-Sac- 9"/>
+											<synonym value="CA-Sac-  9"/>
 											<synonym value="Schenck-Dawson 9"/>
-											<synonym value="Old Harvey"/>
+											<implies facet="Location" cat="OldHarveySacCA"/>
 										</heading>
-										<heading id="CASac10" title="CA-Sac- 10">
-											<synonym value="CA-Sac-10"/>
+										<heading id="CASac10" title="CA-Sac-10">
+											<synonym value="CA-Sac- 10"/>
 											<synonym value="Schenck-Dawson 10"/>
-											<synonym value="Old Harvey"/>
+											<implies facet="Location" cat="OldHarveySacCA"/>
 										</heading>
-										<heading id="CASac11" title="CA-Sac- 11">
-											<synonym value="CA-Sac-11"/>
+										<heading id="CASac11" title="CA-Sac-11">
+											<synonym value="CA-Sac- 11"/>
 											<synonym value="Schenck-Dawson 11"/>
-											<synonym value="Old Harvey"/>
+											<implies facet="Location" cat="OldHarveySacCA"/>
 										</heading>
-										<heading id="CASac15" title="CA-Sac- 15">
-											<synonym value="CA-Sac-15"/>
+										<heading id="CASac15" title="CA-Sac-15">
+											<synonym value="CA-Sac- 15"/>
 											<synonym value="s-15"/>
 											<synonym value="Cahill"/>
 										</heading>
-										<heading id="CASac16" title="CA-Sac- 16">
-											<synonym value="CA-Sac-16"/>
+										<heading id="CASac16" title="CA-Sac-16">
+											<synonym value="CA-Sac- 16"/>
 											<synonym value="S-16"/>
 											<synonym value="Mound Ranch"/>
 											<synonym value="Bennett"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CASac18" title="CA-Sac- 18">
-											<synonym value="CA-Sac-18"/>
+										<heading id="CASac18" title="CA-Sac-18">
+											<synonym value="CA-Sac- 18"/>
 											<synonym value="S-18"/>
 											<implies facet="Location" cat="BeattySactoCA"/>
 										</heading>
-										<heading id="CASac19" title="CA-Sac- 19">
-											<synonym value="CA-Sac-19"/>
+										<heading id="CASac19" title="CA-Sac-19">
+											<synonym value="CA-Sac- 19"/>
 											<synonym value="Schenck-Dawson 19"/>
 											<synonym value="Old Crump"/>
 										</heading>
-										<heading id="CASac20" title="CA-Sac- 20">
-											<synonym value="CA-Sac-20"/>
+										<heading id="CASac20" title="CA-Sac-20">
+											<synonym value="CA-Sac- 20"/>
 											<synonym value="Schenck-Dawson 20"/>
 											<synonym value="Old Glenn"/>
 										</heading>
-										<heading id="CASac21" title="CA-Sac- 21">
-											<synonym value="CA-Sac-21"/>
+										<heading id="CASac21" title="CA-Sac-21">
+											<synonym value="CA-Sac- 21"/>
 											<synonym value="S-66"/>
 											<synonym value="Hollister"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="HollisterSacCA" title="Hollister"/> -->
 										</heading>
-										<heading id="CASac24" title="CA-Sac- 24">
-											<synonym value="CA-Sac-24"/>
+										<heading id="CASac24" title="CA-Sac-24">
+											<synonym value="CA-Sac- 24"/>
 											<synonym value="Mahon 3"/>
 											<synonym value="C-104"/>
 										</heading>
-										<heading id="CASac25" title="CA-Sac- 25">
-											<synonym value="CA-Sac-25"/>
+										<heading id="CASac25" title="CA-Sac-25">
+											<synonym value="CA-Sac- 25"/>
 											<synonym value="Tyler Island 1"/>
 											<synonym value="S-102"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="Tyler Island"/> -->
 										</heading>
-										<heading id="CASac26" title="CA-Sac- 26">
-											<synonym value="CA-Sac-26"/>
+										<heading id="CASac26" title="CA-Sac-26">
+											<synonym value="CA-Sac- 26"/>
 											<synonym value="Joe Mound #3"/>
 											<synonym value="S-26"/>
 										</heading>
-										<heading id="CASac28" title="CA-Sac- 28">
-											<synonym value="CA-Sac-28"/>
+										<heading id="CASac28" title="CA-Sac-28">
+											<synonym value="CA-Sac- 28"/>
 											<synonym value="S-28"/>
 											<implies facet="Location" cat="StrawberrySactoCA"/>
 										</heading>
-										<heading id="CASac29" title="CA-Sac- 29">
-											<synonym value="CA-Sac-29"/>
+										<heading id="CASac29" title="CA-Sac-29">
+											<synonym value="CA-Sac- 29"/>
 											<synonym value="S-29"/>
 											<synonym value="King Brown 1"/>
 										</heading>
@@ -13559,130 +13567,130 @@
 											<synonym value="S-59"/>
 											<synonym value="Edinger"/>
 										</heading>
-										<heading id="CASac60" title="CA-Sac- 60">
-											<synonym value="CA-Sac-60"/>
+										<heading id="CASac60" title="CA-Sac-60">
+											<synonym value="CA-Sac- 60"/>
 											<synonym value="S-60"/>
 											<synonym value="Hicks 1"/>
 										</heading>
-										<heading id="CASac61" title="CA-Sac- 61">
-											<synonym value="CA-Sac-61"/>
+										<heading id="CASac61" title="CA-Sac-61">
+											<synonym value="CA-Sac- 61"/>
 											<synonym value="Hicks 2"/>
 										</heading>
-										<heading id="CASac62" title="CA-Sac- 62">
-											<synonym value="CA-Sac-62"/>
+										<heading id="CASac62" title="CA-Sac-62">
+											<synonym value="CA-Sac- 62"/>
 											<synonym value="S-62"/>
 											<synonym value="Robinson"/>
 										</heading>
-										<heading id="CASac63" title="CA-Sac- 63">
-											<synonym value="CA-Sac-63"/>
+										<heading id="CASac63" title="CA-Sac-63">
+											<synonym value="CA-Sac- 63"/>
 											<synonym value="S-63"/>
 											<synonym value="Peter Bloom site"/>
 										</heading>
-										<heading id="CASac64" title="CA-Sac- 64">
-											<synonym value="CA-Sac-64"/>
+										<heading id="CASac64" title="CA-Sac-64">
+											<synonym value="CA-Sac- 64"/>
 											<synonym value="S-64"/>
 											<synonym value="Stone Lake"/>
 											<synonym value="Stone"/>
 											<synonym value="Walker site"/>
 											<implies facet="Location" cat="HonthMdSacCA"/>
 										</heading>
-										<heading id="CASac66" title="CA-Sac- 66">
-											<synonym value="CA-Sac-66"/>
+										<heading id="CASac66" title="CA-Sac-66">
+											<synonym value="CA-Sac- 66"/>
 											<synonym value="Schenck-Dawson 66"/>
 											<synonym value="Morse Mound"/>
 											<synonym value="Glenn site"/>
 											<synonym value="C 66"/>
 											<synonym value="Old Glenn"/>
 										</heading>
-										<heading id="CASac68" title="CA-Sac- 68">
-											<synonym value="CA-Sac-68"/>
+										<heading id="CASac68" title="CA-Sac-68">
+											<synonym value="CA-Sac- 68"/>
 										</heading>
-										<heading id="CASac71" title="CA-Sac- 71">
-											<synonym value="CA-Sac-71"/>
+										<heading id="CASac71" title="CA-Sac-71">
+											<synonym value="CA-Sac- 71"/>
 											<synonym value="S-71"/>
 											<synonym value="Green"/>
 										</heading>
-										<heading id="CASac72" title="CA-Sac- 72">
-											<synonym value="CA-Sac-72"/>
+										<heading id="CASac72" title="CA-Sac-72">
+											<synonym value="CA-Sac- 72"/>
 											<synonym value="Herzog Site"/>
 										</heading>
-										<heading id="CASac73" title="CA-Sac- 73">
-											<synonym value="CA-Sac-73"/>
+										<heading id="CASac73" title="CA-Sac-73">
+											<synonym value="CA-Sac- 73"/>
 											<synonym value="S-73"/>
 											<synonym value="Von Lobensels"/>
 										</heading>
-										<heading id="CASac75" title="CA-Sac- 75">
-											<synonym value="CA-Sac-75"/>
+										<heading id="CASac75" title="CA-Sac-75">
+											<synonym value="CA-Sac- 75"/>
 											<synonym value="S-75"/>
 											<synonym value="Locke 1"/>
 										</heading>
-										<heading id="CASac83" title="CA-Sac- 83">
-											<synonym value="CA-Sac-83"/>
+										<heading id="CASac83" title="CA-Sac-83">
+											<synonym value="CA-Sac- 83"/>
 											<synonym value="S-83"/>
 											<synonym value="Nicolaus 5"/>
 										</heading>
-										<heading id="CASac84" title="CA-Sac- 84">
-											<synonym value="CA-Sac-84"/>
+										<heading id="CASac84" title="CA-Sac-84">
+											<synonym value="CA-Sac- 84"/>
 											<synonym value="S-84"/>
 											<synonym value="Nicolaus 1"/>
 										</heading>
-										<heading id="CASac85" title="CA-Sac- 85">
-											<synonym value="CA-Sac-85"/>
+										<heading id="CASac85" title="CA-Sac-85">
+											<synonym value="CA-Sac- 85"/>
 											<synonym value="S-85"/>
 											<synonym value="Nicolaus 2"/>
 										</heading>
-										<heading id="CASac86" title="CA-Sac- 86">
-											<synonym value="CA-Sac-86"/>
+										<heading id="CASac86" title="CA-Sac-86">
+											<synonym value="CA-Sac- 86"/>
 											<synonym value="S-86"/>
 											<synonym value="Nicolaus #3"/>
 										</heading>
-										<heading id="CASac87" title="CA-Sac- 87">
-											<synonym value="CA-Sac-87"/>
+										<heading id="CASac87" title="CA-Sac-87">
+											<synonym value="CA-Sac- 87"/>
 											<synonym value="S-87"/>
 											<synonym value="Nicolaus #4"/>
 										</heading>
-										<heading id="CASac88" title="CA-Sac- 88">
-											<synonym value="CA-Sac-88"/>
+										<heading id="CASac88" title="CA-Sac-88">
+											<synonym value="CA-Sac- 88"/>
 											<synonym value="Elliot 1"/>
 											<synonym value="S-88"/>
 										</heading>
-										<heading id="CASac89" title="CA-Sac- 89">
-											<synonym value="CA-Sac-89"/>
+										<heading id="CASac89" title="CA-Sac-89">
+											<synonym value="CA-Sac- 89"/>
 											<synonym value="Elliot 2"/>
 											<synonym value="S-89"/>
 										</heading>
-										<heading id="CASac90" title="CA-Sac- 90">
-											<synonym value="CA-Sac-90"/>
+										<heading id="CASac90" title="CA-Sac-90">
+											<synonym value="CA-Sac- 90"/>
 											<synonym value="Elliot 3"/>
 											<synonym value="S-90"/>
 										</heading>
-										<heading id="CASac91" title="CA-Sac- 91">
-											<synonym value="CA-Sac-91"/>
+										<heading id="CASac91" title="CA-Sac-91">
+											<synonym value="CA-Sac- 91"/>
 											<synonym value="S-91"/>
 											<synonym value="McCormick 1"/>
 										</heading>
-										<heading id="CASac92" title="CA-Sac- 92">
-											<synonym value="CA-Sac-92"/>
+										<heading id="CASac92" title="CA-Sac-92">
+											<synonym value="CA-Sac- 92"/>
 											<synonym value="S-92"/>
 											<synonym value="McCormick 2"/>
 										</heading>
-										<heading id="CASac93" title="CA-Sac- 93">
-											<synonym value="CA-Sac-93"/>
+										<heading id="CASac93" title="CA-Sac-93">
+											<synonym value="CA-Sac- 93"/>
 											<synonym value="C-93"/>
 											<synonym value="Allyn 4"/>
 										</heading>
-										<heading id="CASac95" title="CA-Sac- 95">
-											<synonym value="CA-Sac-95"/>
+										<heading id="CASac95" title="CA-Sac-95">
+											<synonym value="CA-Sac- 95"/>
 											<synonym value="C-95"/>
 											<synonym value="Allyn 2"/>
 										</heading>
-										<heading id="CASac96" title="CA-Sac- 96">
-											<synonym value="CA-Sac-96"/>
+										<heading id="CASac96" title="CA-Sac-96">
+											<synonym value="CA-Sac- 96"/>
 											<synonym value="C-96"/>
 											<synonym value="Allyn"/>
 										</heading>
-										<heading id="CASac99" title="CA-Sac- 99">
-											<synonym value="CA-Sac-99"/>
+										<heading id="CASac99" title="CA-Sac-99">
+											<synonym value="CA-Sac- 99"/>
 											<synonym value="C-9"/>
 											<synonym value="Deterding"/>
 										</heading>
@@ -13712,7 +13720,7 @@
 										</heading>
 										<heading id="CASac107" title="CA-Sac-107">
 											<synonym value="C-107"/>
-											<synonym value="Windmiller Site"/>
+											<implies facet="Location" cat="WindmillerSiteSacCA"/>
 										</heading>
 										<heading id="CASac109" title="CA-Sac-109">
 											<synonym value="C-109"/>
@@ -13882,10 +13890,10 @@
 										<heading id="CASac25andSac104" title="CA-Sac- 25 and Sac-104">
 											<synonym value="CA-Sac-25 and Sac-104"/>
 										</heading>
-										<heading id="CASac106orSac107" title="CA-Sac-106 or Sac-107">
-											<synonym value="Windmiller Site"/>
+										<heading id="CASac106orSac107" title="CA-Sac-106 or Sac-107"> <!-- Trim from UI -->
+											<implies facet="Location" cat="WindmillerSiteSacCA"/>
 										</heading>
-										<heading id="CASac112or113" title="CA-Sac-112 or 113"/>
+										<heading id="CASac112or113" title="CA-Sac-112 or 113"/> <!-- Trim from UI -->
 									</heading>
 								</heading>
 								<heading id="SanFranciscoCountyCA" title="San Francisco county">
@@ -15942,253 +15950,262 @@
 										<heading id="TollhouseFresnoCA" title="Tollhouse"/>
 										<heading id="TrimmerSprings" title="Trimmer Springs"/>
 									</heading>
-									<heading id="TrinomFresnoCA" title="Trinomial site name">
-										<heading id="CAFre1" title="CA-Fre- 1">
-											<synonym value="CA-Fre-1"/>
+									<heading id="TrinomFresnoCA" title="Trinomial site name" noMatch="true">
+										<heading id="CAFre1" title="CA-Fre-1">
+											<synonym value="CA-Fre- 1"/>
+											<synonym value="CA-Fre-  1"/>
 										</heading>
-										<heading id="CAFre2" title="CA-Fre- 2">
-											<synonym value="CA-Fre-2"/>
+										<heading id="CAFre2" title="CA-Fre-2">
+											<synonym value="CA-Fre- 2"/>
+											<synonym value="CA-Fre-  2"/>
 										</heading>
-										<heading id="CAFre3" title="CA-Fre- 3">
-											<synonym value="CA-Fre-3"/>
+										<heading id="CAFre3" title="CA-Fre-3">
+											<synonym value="CA-Fre- 3"/>
+											<synonym value="CA-Fre-  3"/>
 										</heading>
-										<heading id="CAFre4" title="CA-Fre- 4">
-											<synonym value="CA-Fre-4"/>
+										<heading id="CAFre4" title="CA-Fre-4">
+											<synonym value="CA-Fre- 4"/>
+											<synonym value="CA-Fre-  4"/>
 										</heading>
-										<heading id="CAFre5" title="CA-Fre- 5">
-											<synonym value="CA-Fre-5"/>
+										<heading id="CAFre5" title="CA-Fre-5">
+											<synonym value="CA-Fre- 5"/>
+											<synonym value="CA-Fre-  5"/>
 										</heading>
-										<heading id="CAFre6" title="CA-Fre- 6">
-											<synonym value="CA-Fre-6"/>
+										<heading id="CAFre6" title="CA-Fre-6">
+											<synonym value="CA-Fre- 6"/>
+											<synonym value="CA-Fre-  6"/>
 										</heading>
-										<heading id="CAFre7" title="CA-Fre- 7">
-											<synonym value="CA-Fre-7"/>
+										<heading id="CAFre7" title="CA-Fre-7">
+											<synonym value="CA-Fre- 7"/>
+											<synonym value="CA-Fre-  7"/>
 										</heading>
-										<heading id="CAFre8" title="CA-Fre- 8">
-											<synonym value="CA-Fre-8"/>
+										<heading id="CAFre8" title="CA-Fre-8">
+											<synonym value="CA-Fre- 8"/>
+											<synonym value="CA-Fre-  8"/>
 										</heading>
-										<heading id="CAFre9" title="CA-Fre- 9">
-											<synonym value="CA-Fre-9"/>
+										<heading id="CAFre9" title="CA-Fre-9">
+											<synonym value="CA-Fre- 9"/>
+											<synonym value="CA-Fre-  9"/>
 										</heading>
-										<heading id="CAFre14" title="CA-Fre- 14">
-											<synonym value="CA-Fre-14"/>
+										<heading id="CAFre14" title="CA-Fre-14">
+											<synonym value="CA-Fre- 14"/>
 										</heading>
-										<heading id="CAFre15" title="CA-Fre- 15">
-											<synonym value="CA-Fre-15"/>
+										<heading id="CAFre15" title="CA-Fre-15">
+											<synonym value="CA-Fre- 15"/>
 										</heading>
-										<heading id="CAFre17" title="CA-Fre- 17">
-											<synonym value="CA-Fre-17"/>
+										<heading id="CAFre17" title="CA-Fre-17">
+											<synonym value="CA-Fre- 17"/>
 										</heading>
-										<heading id="CAFre18" title="CA-Fre- 18">
-											<synonym value="CA-Fre-18"/>
+										<heading id="CAFre18" title="CA-Fre-18">
+											<synonym value="CA-Fre- 18"/>
 										</heading>
-										<heading id="CAFre19" title="CA-Fre- 19">
-											<synonym value="CA-Fre-19"/>
+										<heading id="CAFre19" title="CA-Fre-19">
+											<synonym value="CA-Fre- 19"/>
 										</heading>
-										<heading id="CAFre20" title="CA-Fre- 20">
-											<synonym value="CA-Fre-20"/>
+										<heading id="CAFre20" title="CA-Fre-20">
+											<synonym value="CA-Fre- 20"/>
 										</heading>
-										<heading id="CAFre23" title="CA-Fre- 23">
-											<synonym value="CA-Fre-23"/>
+										<heading id="CAFre23" title="CA-Fre-23">
+											<synonym value="CA-Fre- 23"/>
 										</heading>
-										<heading id="CAFre24" title="CA-Fre- 24">
-											<synonym value="CA-Fre-24"/>
+										<heading id="CAFre24" title="CA-Fre-24">
+											<synonym value="CA-Fre- 24"/>
 											<synonym value="(Lower Rancheria?)"/>
 										</heading>
-										<heading id="CAFre25" title="CA-Fre- 25">
-											<synonym value="CA-Fre-25"/>
+										<heading id="CAFre25" title="CA-Fre-25">
+											<synonym value="CA-Fre- 25"/>
 										</heading>
-										<heading id="CAFre26" title="CA-Fre- 26">
-											<synonym value="CA-Fre-26"/>
+										<heading id="CAFre26" title="CA-Fre-26">
+											<synonym value="CA-Fre- 26"/>
 										</heading>
-										<heading id="CAFre27" title="CA-Fre- 27">
-											<synonym value="CA-Fre-27"/>
+										<heading id="CAFre27" title="CA-Fre-27">
+											<synonym value="CA-Fre- 27"/>
 										</heading>
-										<heading id="CAFre29" title="CA-Fre- 29">
-											<synonym value="CA-Fre-29"/>
+										<heading id="CAFre29" title="CA-Fre-29">
+											<synonym value="CA-Fre- 29"/>
 										</heading>
-										<heading id="CAFre30" title="CA-Fre- 30">
-											<synonym value="CA-Fre-30"/>
+										<heading id="CAFre30" title="CA-Fre-30">
+											<synonym value="CA-Fre- 30"/>
 										</heading>
-										<heading id="CAFre31" title="CA-Fre- 31">
-											<synonym value="CA-Fre-31"/>
+										<heading id="CAFre31" title="CA-Fre-31">
+											<synonym value="CA-Fre- 31"/>
 										</heading>
-										<heading id="CAFre32" title="CA-Fre- 32">
-											<synonym value="CA-Fre-32"/>
+										<heading id="CAFre32" title="CA-Fre-32">
+											<synonym value="CA-Fre- 32"/>
 											<synonym value="Balch Camp"/>
 										</heading>
-										<heading id="CAFre36" title="CA-Fre- 36">
-											<synonym value="CA-Fre-36"/>
+										<heading id="CAFre36" title="CA-Fre-36">
+											<synonym value="CA-Fre- 36"/>
 											<synonym value="J 80, 122 (Hewes)"/>
 											<synonym value="#75 (O. P. Noren)"/>
 										</heading>
-										<heading id="CAFre37" title="CA-Fre- 37">
-											<synonym value="CA-Fre-37"/>
+										<heading id="CAFre37" title="CA-Fre-37">
+											<synonym value="CA-Fre- 37"/>
 										</heading>
-										<heading id="CAFre41" title="CA-Fre- 41">
-											<synonym value="CA-Fre-41"/>
+										<heading id="CAFre41" title="CA-Fre-41">
+											<synonym value="CA-Fre- 41"/>
 											<synonym value="J 76, 118 (GHW)"/>
 											<synonym value="Noren site 31"/>
 											<synonym value="Jug Rock"/>
 										</heading>
-										<heading id="CAFre42" title="CA-Fre- 42">
-											<synonym value="CA-Fre-42"/>
+										<heading id="CAFre42" title="CA-Fre-42">
+											<synonym value="CA-Fre- 42"/>
 											<synonym value="J 28, 70 (Hewes)"/>
 										</heading>
-										<heading id="CAFre45" title="CA-Fre- 45">
-											<synonym value="CA-Fre-45"/>
+										<heading id="CAFre45" title="CA-Fre-45">
+											<synonym value="CA-Fre- 45"/>
 											<synonym value="J 34, 76 (Hewes)"/>
 										</heading>
-										<heading id="CAFre46" title="CA-Fre- 46">
-											<synonym value="CA-Fre-46"/>
+										<heading id="CAFre46" title="CA-Fre-46">
+											<synonym value="CA-Fre- 46"/>
 											<synonym value="J 38, 80 (Hewes)"/>
 										</heading>
-										<heading id="CAFre47" title="CA-Fre- 47">
-											<synonym value="CA-Fre-47"/>
+										<heading id="CAFre47" title="CA-Fre-47">
+											<synonym value="CA-Fre- 47"/>
 											<synonym value="J 39, 81 (Hewes)"/>
 										</heading>
-										<heading id="CAFre48" title="CA-Fre- 48">
-											<synonym value="CA-Fre-48"/>
+										<heading id="CAFre48" title="CA-Fre-48">
+											<synonym value="CA-Fre- 48"/>
 											<synonym value="J 40, 82 (Hewes)"/>
 											<synonym value="Tranquility"/>
 										</heading>
-										<heading id="CAFre49" title="CA-Fre- 49">
-											<synonym value="CA-Fre-49"/>
+										<heading id="CAFre49" title="CA-Fre-49">
+											<synonym value="CA-Fre- 49"/>
 											<synonym value="J 41, 83 (Hewes)"/>
 										</heading>
-										<heading id="CAFre50" title="CA-Fre- 50">
-											<synonym value="CA-Fre-50"/>
+										<heading id="CAFre50" title="CA-Fre-50">
+											<synonym value="CA-Fre- 50"/>
 											<synonym value="J 42, 84 (Hewes)"/>
 										</heading>
-										<heading id="CAFre52" title="CA-Fre- 52">
-											<synonym value="CA-Fre-52"/>
+										<heading id="CAFre52" title="CA-Fre-52">
+											<synonym value="CA-Fre- 52"/>
 											<synonym value="J 44, 86 (Hewes)"/>
 										</heading>
-										<heading id="CAFre54" title="CA-Fre- 54">
-											<synonym value="CA-Fre-54"/>
+										<heading id="CAFre54" title="CA-Fre-54">
+											<synonym value="CA-Fre- 54"/>
 											<synonym value="J 66, 108 (Hewes)"/>
 											<synonym value="Noren's site 1"/>
 										</heading>
-										<heading id="CAFre55" title="CA-Fre- 55">
-											<synonym value="CA-Fre-55"/>
+										<heading id="CAFre55" title="CA-Fre-55">
+											<synonym value="CA-Fre- 55"/>
 											<synonym value="J 67, 109 (Hewes)"/>
 											<synonym value="Noren's site 7"/>
 										</heading>
-										<heading id="CAFre56" title="CA-Fre- 56">
-											<synonym value="CA-Fre-56"/>
+										<heading id="CAFre56" title="CA-Fre-56">
+											<synonym value="CA-Fre- 56"/>
 											<synonym value="J 68, 110 (Hewes)"/>
 											<synonym value="Noren's site 16"/>
 										</heading>
-										<heading id="CAFre57" title="CA-Fre- 57">
-											<synonym value="CA-Fre-57"/>
+										<heading id="CAFre57" title="CA-Fre-57">
+											<synonym value="CA-Fre- 57"/>
 											<synonym value="J 69, 111 (Hewes)"/>
 											<synonym value="Noren's site 38"/>
 										</heading>
-										<heading id="CAFre58" title="CA-Fre- 58">
-											<synonym value="CA-Fre-58"/>
+										<heading id="CAFre58" title="CA-Fre-58">
+											<synonym value="CA-Fre- 58"/>
 											<synonym value="J 70, 112 (Hewes)"/>
 											<synonym value="Noren's site 39"/>
 											<synonym value="Dochiu (Kroeber)"/>
 										</heading>
-										<heading id="CAFre59" title="CA-Fre- 59">
-											<synonym value="CA-Fre-59"/>
+										<heading id="CAFre59" title="CA-Fre-59">
+											<synonym value="CA-Fre- 59"/>
 											<synonym value="J 71, 113 (Hewes)"/>
 											<synonym value="Noren's site 41"/>
 											<synonym value="Mashtinay (Kroeber)"/>
 										</heading>
-										<heading id="CAFre60" title="CA-Fre- 60">
-											<synonym value="CA-Fre-60"/>
+										<heading id="CAFre60" title="CA-Fre-60">
+											<synonym value="CA-Fre- 60"/>
 											<synonym value="J 73, 115 (Hewes)"/>
 											<synonym value="Noren's site 19"/>
 										</heading>
-										<heading id="CAFre61" title="CA-Fre- 61">
-											<synonym value="CA-Fre-61"/>
+										<heading id="CAFre61" title="CA-Fre-61">
+											<synonym value="CA-Fre- 61"/>
 											<synonym value="J 74, 116 (Hewes)"/>
 											<synonym value="Noren's site 20"/>
 										</heading>
-										<heading id="CAFre62" title="CA-Fre- 62">
-											<synonym value="CA-Fre-62"/>
+										<heading id="CAFre62" title="CA-Fre-62">
+											<synonym value="CA-Fre- 62"/>
 											<synonym value="J 75, 117 (Hewes)"/>
 											<synonym value="Noren's site #34"/>
 										</heading>
-										<heading id="CAFre63" title="CA-Fre- 63">
-											<synonym value="CA-Fre-63"/>
+										<heading id="CAFre63" title="CA-Fre-63">
+											<synonym value="CA-Fre- 63"/>
 											<synonym value="J 77, 119 (Hewes)"/>
 											<synonym value="Noren's site 7"/>
 										</heading>
-										<heading id="CAFre64" title="CA-Fre- 64">
-											<synonym value="CA-Fre-64"/>
+										<heading id="CAFre64" title="CA-Fre-64">
+											<synonym value="CA-Fre- 64"/>
 											<synonym value="J 78, 120 (Hewes)"/>
 											<synonym value="Noren's site 72"/>
 										</heading>
-										<heading id="CAFre65" title="CA-Fre- 65">
-											<synonym value="CA-Fre-65"/>
+										<heading id="CAFre65" title="CA-Fre-65">
+											<synonym value="CA-Fre- 65"/>
 											<synonym value="J 79, 121 (Hewes)"/>
 											<synonym value="Noren's site 74"/>
 										</heading>
-										<heading id="CAFre66" title="CA-Fre- 66">
-											<synonym value="CA-Fre-66"/>
+										<heading id="CAFre66" title="CA-Fre-66">
+											<synonym value="CA-Fre- 66"/>
 											<synonym value="J 81, 123 (Hewes)"/>
 											<synonym value="Noren's site 6"/>
 										</heading>
-										<heading id="CAFre67" title="CA-Fre- 67">
-											<synonym value="CA-Fre-67"/>
+										<heading id="CAFre67" title="CA-Fre-67">
+											<synonym value="CA-Fre- 67"/>
 											<synonym value="J 83, 125 (Hewes)"/>
 										</heading>
-										<heading id="CAFre68" title="CA-Fre- 68">
-											<synonym value="CA-Fre-68"/>
+										<heading id="CAFre68" title="CA-Fre-68">
+											<synonym value="CA-Fre- 68"/>
 											<synonym value="J 84, 126 (Hewes)"/>
 										</heading>
-										<heading id="CAFre70" title="CA-Fre- 70">
-											<synonym value="CA-Fre-70"/>
+										<heading id="CAFre70" title="CA-Fre-70">
+											<synonym value="CA-Fre- 70"/>
 											<synonym value="J 86, 128 (Hewes)"/>
 										</heading>
-										<heading id="CAFre71" title="CA-Fre- 71">
-											<synonym value="CA-Fre-71"/>
+										<heading id="CAFre71" title="CA-Fre-71">
+											<synonym value="CA-Fre- 71"/>
 											<synonym value="J 92, 134 (Hewes)"/>
 										</heading>
-										<heading id="CAFre72" title="CA-Fre- 72">
-											<synonym value="CA-Fre-72"/>
+										<heading id="CAFre72" title="CA-Fre-72">
+											<synonym value="CA-Fre- 72"/>
 											<synonym value="J 94, 136 (Hewes)"/>
 										</heading>
-										<heading id="CAFre73" title="CA-Fre- 73">
-											<synonym value="CA-Fre-73"/>
+										<heading id="CAFre73" title="CA-Fre-73">
+											<synonym value="CA-Fre- 73"/>
 											<synonym value="151 (Hewes)"/>
 										</heading>
-										<heading id="CAFre74" title="CA-Fre- 74">
-											<synonym value="CA-Fre-74"/>
+										<heading id="CAFre74" title="CA-Fre-74">
+											<synonym value="CA-Fre- 74"/>
 											<synonym value="152 (Hewes)"/>
 										</heading>
-										<heading id="CAFre76" title="CA-Fre- 76">
-											<synonym value="CA-Fre-76"/>
+										<heading id="CAFre76" title="CA-Fre-76">
+											<synonym value="CA-Fre- 76"/>
 											<synonym value="Smith's 169 Pc."/>
 										</heading>
-										<heading id="CAFre80" title="CA-Fre- 80">
-											<synonym value="CA-Fre-80"/>
+										<heading id="CAFre80" title="CA-Fre-80">
+											<synonym value="CA-Fre- 80"/>
 										</heading>
-										<heading id="CAFre81" title="CA-Fre- 81">
-											<synonym value="CA-Fre-81"/>
+										<heading id="CAFre81" title="CA-Fre-81">
+											<synonym value="CA-Fre- 81"/>
 										</heading>
-										<heading id="CAFre82" title="CA-Fre- 82">
-											<synonym value="CA-Fre-82"/>
+										<heading id="CAFre82" title="CA-Fre-82">
+											<synonym value="CA-Fre- 82"/>
 										</heading>
-										<heading id="CAFre83" title="CA-Fre- 83">
-											<synonym value="CA-Fre-83"/>
+										<heading id="CAFre83" title="CA-Fre-83">
+											<synonym value="CA-Fre- 83"/>
 										</heading>
-										<heading id="CAFre84" title="CA-Fre- 84">
-											<synonym value="CA-Fre-84"/>
+										<heading id="CAFre84" title="CA-Fre-84">
+											<synonym value="CA-Fre- 84"/>
 										</heading>
-										<heading id="CAFre86" title="CA-Fre- 86">
-											<synonym value="CA-Fre-86"/>
+										<heading id="CAFre86" title="CA-Fre-86">
+											<synonym value="CA-Fre- 86"/>
 										</heading>
-										<heading id="CAFre89" title="CA-Fre- 89">
-											<synonym value="CA-Fre-89"/>
+										<heading id="CAFre89" title="CA-Fre-89">
+											<synonym value="CA-Fre- 89"/>
 										</heading>
-										<heading id="CAFre90" title="CA-Fre- 90">
-											<synonym value="CA-Fre-90"/>
+										<heading id="CAFre90" title="CA-Fre-90">
+											<synonym value="CA-Fre- 90"/>
 										</heading>
-										<heading id="CAFre95" title="CA-Fre- 95">
-											<synonym value="CA-Fre-95"/>
+										<heading id="CAFre95" title="CA-Fre-95">
+											<synonym value="CA-Fre- 95"/>
 										</heading>
 										<heading id="CAFre103" title="CA-Fre-103"/>
 										<heading id="CAFre105" title="CA-Fre-105"/>
