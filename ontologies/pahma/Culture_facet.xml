@@ -2943,32 +2943,87 @@
 					<!-- Harramirri mala, Jirritja moiety 11-43036 -->
 				</heading>
 			</heading>
-			<heading id="MicronesianCultures" title="Micronesian"/>
-			<heading id="MelanesianCulture" title="Melanesian">
-			    <heading id="Bainig" title="Bainig">
-			        <synonym value="Bainig tribe"/>
-			        <implies facet="Location" cat="NewBritain"/>
-			    </heading>
-			    <heading id="Kaulong" title="Kaulong">
-			        <synonym value="Kaulong tribe"/>
-			        <implies facet="Location" cat="NewBritain"/>
-			    </heading>
-			    <heading id="Lesu" title="Lesu">
-			        <synonym value="Lesu tribe"/>
-			        <synonym value="Lossu"/>
-			        <synonym value="Lossu tribe"/>
-			        <implies facet="Location" cat="NewIreland"/>
-			    </heading>
-			    <heading id="Sengseng" title="Sengseng">
-			        <synonym value="Sengseng tribe"/>
-			        <implies facet="Location" cat="NewBritain"/>
-			    </heading>
-			    <heading id="Tolai" title="Tolai">
-			        <synonym value="Tolai tribe"/>
-			        <implies facet="Location" cat="NewBritain"/>
-			    </heading>
+			<heading id="MicronesianCultures" title="Micronesian">
+				<heading id="Chamorro" title="Chamorro">
+					<synonym value="Guamanian"/>
+					<synonym value="Tao Tao Tano"/>
+					<synonym value="Taotao Tano"/>
+					<implies facet="Location" cat="Guam"/>
+				</heading>
+				<heading id="I-Kiribati" title="I-Kiribati">
+					<synonym value="Gilbertese"/>
+				<implies facet="Location" cat="Kiribati"/>
+				</heading>
+				<heading id="Marshallese" title="Marshallese">
+					<implies facet="Location" cat="MarshallIslands"/>
+				</heading>
+				<heading id="Carolinean" title="Carolinean">
+					<implies facet="Location" cat="CarolineIslandsMicronesia"/>
+					<heading id="Chuukese" title="Chuukese"> <!-- possibly only a language group -->
+					<implies facet="Location" cat="ChuukIslandMicronesia"/>
+				</heading>
+					<heading id="Kosraean" title="Kosraean"> <!-- possibly only a language group -->
+					<implies facet="Location" cat="KosraeIslandMicronesia"/>
+				</heading>
+					<heading id="Pohnpeian" title="Pohnpeian"> <!-- possibly only a language group -->
+					<implies facet="Location" cat="PonapeMicronesia"/>
+				</heading>
+					<heading id="Yapese" title="Yapese"> <!-- possibly only a language group -->
+					<implies facet="Location" cat="YapIslandMicronesia"/>
+				</heading>
+				<heading id="Palauan" title="Palauan">
+					<implies facet="Location" cat="Palau"/>
+				</heading>
+				</heading>
 			</heading>
+			<heading id="MelanesianCulture" title="Melanesian">
+			    
+				<heading id="Fijian" title="Fijian">
+					<heading id="Indo-Fijian" title="Indo-Fijian">
+							<implies facet="Location" cat="Fiji"/>
+						</heading>
+					</heading>
+				<heading id="NewCaledonian" title="New Caledonian">
+					<implies facet="Location" cat="NewCaledonia"/>
+					<heading id="Kanak" title="Kanak">
+						<synonym value="Canaque"/>
+						<synonym value="Kanakas"/>
+						<synonym value="Kanaks"/>
+						<synonym value="Kaneka music"/> <!-- accent on e in Kaneka-->
+					</heading>
+				</heading>
 			<heading id="NewGuineaCultures" title="New Guinea cultures">
+				<heading id="Baining" title="Baining">
+					<synonym value="Baining tribe"/>
+					<implies facet="Location" cat="NewBritain"/>
+				</heading>
+				<heading id="Kaulong" title="Kaulong">
+					<synonym value="Kaulong tribe"/>
+					<implies facet="Location" cat="NewBritain"/>
+				</heading>
+				<heading id="Sengseng" title="Sengseng">
+					<synonym value="Sengseng tribe"/>
+					<implies facet="Location" cat="NewBritain"/>
+				</heading>
+				<heading id="Tolai" title="Tolai">
+					<synonym value="Tolai tribe"/>
+					<implies facet="Location" cat="NewBritain"/>
+				</heading>
+				<heading id="Lesu" title="Lesu">
+					<synonym value="Lesu tribe"/>
+					<synonym value="Lossu"/>
+					<synonym value="Lossu tribe"/>
+					<implies facet="Location" cat="NewIreland"/>
+				</heading>
+				<heading id="Malagan" title="Malagan">
+					<synonym value="Malangan"/>
+					<synonym value="Malanggan"/>
+					<implies facet="Location" cat="NewIreland"/>
+				</heading>
+				<heading id="Tatanua" title="Tatanua">
+					<synonym value="Tatanuan"/>
+					<implies facet="Location" cat="NewIreland"/>
+				</heading>
 				<heading id="NewGuineaMassimArea" title="Massim Area cultures">
 					<!-- includes Trobriand Is., Woodlark Is., Louisade arch. and S.E. tip of New Guinea, D'Entrecasteaux Is. -->
 				</heading>
@@ -3014,15 +3069,71 @@
 					<!-- West Irian Barat, Baliem valley (Dani), Star Mountains (Yalemo) -->
 				</heading>
 			</heading>
+				<heading id="Ni-Vanuatu" title="Ni-Vanuatu">
+					<implies facet="Location" cat="Vanuatu"/>
+				</heading>
+				<heading id="NorfolkIslander" title="Norfolk Islander">
+					<implies facet="Location" cat="NorfolkIsland"/>
+				</heading>
+				<heading id="SolomonIslander" title="Solomon Islander">
+			
+				<implies facet="Location" cat="SolomonIslands"/>
+					<heading id="Malaitan" title="Malaitan">
+					</heading>
+					
+				</heading>
+			</heading>
 			<heading id="PolynesianCultures" title="Polynesian Cultures">
-				<heading id="Hawaiian" title="Hawaiian"/>
 				<heading id="Polynesian" title="Polynesian">
-					<heading id="EasternPolynesians" title="Eastern Polynesians"/>
-					<heading id="WesternPolynesians" title="Western Polynesians"/>
+					<heading id="Hawaiian" title="Hawaiian">
+						<synonym value="Hawai'i maoli"/>
+						<synonym value="Kanaka maoli"/>
+							<synonym value="kanaka"/>
+								<synonym value="Native Hawaiians"/>
+								<synonym value="'oiwi"/>
+						<implies facet="Location" cat="HawaiianIslands"/>
+					</heading>
+						<heading id="Rotuman" title="Rotuman">
+						</heading>
+					<heading id="EasternPolynesians" title="Eastern Polynesians">
+					<heading id="FrenchPolynesian" title="French Polynesian">
+						<implies facet="Location" cat="FrenchPolynesia"/>
+					<heading id="Tahitian" title="Tahitian">
+						<implies facet="Location" cat="Tahiti"/>
+					</heading>
+					</heading>
+							<heading id="Marquesan" title="Marquesan">
+								<implies facet="Location" cat="Marquesas"/>
+							</heading>
+						<heading id="Rapanui" title="Rapanui">
+							<synonym value="Rapa Nui"/>
+							<implies facet="Location" cat="EasterIsland"/>
+						</heading>
+					</heading>
+					<heading id="WesternPolynesians" title="Western Polynesians">
+						
+						<heading id="Maori" title="Maori">
+							<heading id="Pounamu" title="Pounamu">
+								<synonym value="Ngai Tahu"/>
+								<synonym value="Te Wahi Pounamu"/>
+									<synonym value="Te Wai Pounamu"/>
+			
+		</heading>
+	</heading>
+						<heading id="Samoan" title="Samoan">
+							<implies facet="Location" cat="AmericanSamoa"/>
+							<implies facet="Location" cat="WSamoaCountry"/>
+
+						</heading>
+					<heading id="Tongan" title="Tongan">
+						<implies facet="Location" cat="Tonga"/>
+				</heading>
+			</heading>
+		</heading>
 			</heading>
 		</heading>
 	</heading>
-	</heading>
+	
 	<heading id="AncientCultures" title="Ancient cultures">
 		<heading id="WidespreadAncientCultures" title="Widespread Cultures">
 			<heading id="Acheulean" title="Acheulean">
