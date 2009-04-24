@@ -6104,6 +6104,10 @@
 			<synonym value="Breads"/>
 			<synonym value="Loaf"/>
 			<synonym value="Loaves"/>
+			<heading id="AcornBread" title="Acorn Bread"/>
+			<heading id="ChapatiBread" title="Chapati">
+				<synonym value="Chapatis"/>
+			</heading>
 		</heading>
 		<heading id="CheeseFood" title="Cheese">
 			<synonym value="Cheeses"/>
@@ -9538,6 +9542,9 @@
 		<heading id="FleshHookRelRit" title="Flesh Hook" noMatch="true">
 			<synonym value="Flesh Hooks"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+			<!-- This is, by default also a Cooking Equipment term- used in religious ceremony 
+			to pull cooked meat out of cauldrons... differentiate ceremonial and non-ceremonial 
+			without making them mutually exclusive? -->
 		</heading>
 		<heading id="FontRelRit" title="Font">
 			<synonym value="Fonts"/>
