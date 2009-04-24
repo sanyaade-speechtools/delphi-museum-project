@@ -2074,14 +2074,18 @@
 			<heading id="ArtWritingImplementsComm" title="Art &amp; Writing Implements">
 				<synonym value="Art/Writing-Implement"/>
 				<synonym value="Art/ Writing-Implement"/>
-				<heading id="DividersComm" title="Dividers"/>
+				<heading id="DividersComm" title="Dividers">
+					<implies facet="ObjectName" cat="DividersTool"/>
+				</heading>
 				<heading id="DrawingInstrumentComm" title="Drawing Instrument">
 					<synonym value="Drawing Instruments"/>
+					<implies facet="ObjectName" cat="DrawingInstrumentTool"/>
 				</heading>
 				<heading id="DrawingSetComm" title="Drawing Set">
 					<synonym value="Drawing Sets"/>
 					<synonym value="Drawing-Set"/>
 					<synonym value="Drawing-Sets"/>
+					<implies facet="ObjectName" cat="DrawingSetTool"/>
 				</heading>
 				<heading id="EmbossingStampComm" title="Embossing-Stamp" noMatch="true"/>
 				<heading id="EngravingToolComm" title="Engraving Tool" noMatch="true"/>
@@ -2100,23 +2104,33 @@
 					<synonym value="Paint Brushes"/>
 					<synonym value="Paint-Brush"/>
 					<synonym value="Paint-Brushes"/>
+					<implies facet="ObjectName" cat="PaintBrushTool"/>
 				</heading>
-				<heading id="PaintGrinderComm" title="Paint-Grinder">
+				<heading id="PaintGrinderComm" title="Paint Grinder">
+					<synonym value="Paint Grinders"/>
+					<synonym value="Paint-Grinder"/>
 					<synonym value="Paint-Grinders"/>
+					<implies facet="ObjectName" cat="PaintGrinderTool"/>
 				</heading>
-				<heading id="PapyrusBurnisherComm" title="Papyrus-Burnisher">
+				<heading id="PapyrusBurnisherComm" title="Papyrus Burnisher">
+					<synonym value="Papyrus Burnishers"/>
+					<synonym value="Papyrus-Burnisher"/>
 					<synonym value="Papyrus-Burnishers"/>
+					<implies facet="ObjectName" cat="PapyrusBurnisherTool"/>
 				</heading>
 				<heading id="PenComm" title="Pen">
 					<synonym value="Pens"/>
+					<implies facet="ObjectName" cat="PenTool"/>
 				</heading>
 				<heading id="PencilComm" title="Pencil">
 					<synonym value="Pencils"/>
+					<implies facet="ObjectName" cat="PencilTool"/>
 				</heading>
 				<heading id="PenCutterComm" title="Pen Cutter">
 					<synonym value="Pen Cutters"/>
 					<synonym value="Pen-Cutter "/>
 					<synonym value="Pen-Cutters"/>
+					<implies facet="ObjectName" cat="PenCutterTool"/>
 				</heading>
 				<heading id="ProtractorComm" title="Protractor">
 					<synonym value="Protractors"/>
@@ -12407,13 +12421,9 @@
 			<synonym value="Applicators"/>
 		</heading>
 		<heading id="ArtWritingImplementTool" title="Art/Writing-Implement">
-			<heading id="DividersTool" title="Dividers"/>
-			<heading id="DrawingInstrumentTool" title="Drawing Instrument">
-				<synonym value="Drawing Instruments"/>
-			</heading>
-			<heading id="DrawingSetTool" title="Drawing-Set">
-				<synonym value="Drawing-Sets"/>
-			</heading>
+			<heading id="DividersTool" title="Dividers" noMatch="true"/>
+			<heading id="DrawingInstrumentTool" title="Drawing Instrument" noMatch="true"/>
+			<heading id="DrawingSetTool" title="Drawing Set" noMatch="true"/>
 			<heading id="EmbossingStampTool" title="Embossing Stamp">
 				<synonym value="Embossing Stamps"/>
 				<synonym value="Embossing-Stamp"/>
@@ -12433,25 +12443,13 @@
 				<implies facet="ObjectName" cat="EtchingToolComm"/>
 			</heading>
 			<heading id="FoldingSquareTool" title="Folding Square" noMatch="true"/>
-			<heading id="InkSpoonTool" title="Ink-Spoon" noMatch="true"/>
-			<heading id="PaintBrushTool" title="Paint-Brush">
-				<synonym value="Paint-Brushes"/>
-			</heading>
-			<heading id="PaintGrinderTool" title="Paint-Grinder">
-				<synonym value="Paint-Grinders"/>
-			</heading>
-			<heading id="PapyrusBurnisherTool" title="Papyrus-Burnisher">
-				<synonym value="Papyrus-Burnishers"/>
-			</heading>
-			<heading id="PenTool" title="Pen">
-				<synonym value="Pens"/>
-			</heading>
-			<heading id="PencilTool" title="Pencil">
-				<synonym value="Pencils"/>
-			</heading>
-			<heading id="PenCutterTool" title="Pen-Cutter">
-				<synonym value="Pen-Cutters"/>
-			</heading>
+			<heading id="InkSpoonTool" title="Ink Spoon" noMatch="true"/>
+			<heading id="PaintBrushTool" title="Paint Brush" noMatch="true"/>
+			<heading id="PaintGrinderTool" title="Paint Grinder" noMatch="true"/>
+			<heading id="PapyrusBurnisherTool" title="Papyrus Burnisher" noMatch="true"/>
+			<heading id="PenTool" title="Pen" noMatch="true"/>
+			<heading id="PencilTool" title="Pencil" noMatch="true"/>
+			<heading id="PenCutterTool" title="Pen Cutter" noMatch="true"/>
 			<heading id="ProtractorTool" title="Protractor">
 				<synonym value="Protractors"/>
 			</heading>
