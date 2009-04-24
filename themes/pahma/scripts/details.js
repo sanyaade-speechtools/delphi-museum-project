@@ -208,11 +208,14 @@ function doViewCard(e,nimages) {
   	$('#detail_image').css("visibility","hidden");
 	$('#pop_screen').css("display","block");
 	if(nimages>5){
-		$('#vcc_inner').addClass('manyimages');
-	
-		
+		var rows = nimages/5;
+		var thumb_width = 120;
+		var padding = 10 * rows;
+		var regular_height = 650;
+		var vcc_inner_height = (rows * thumb_width) + padding + regular_height;
+		$('#vcc_inner').css('height', vcc_inner_height);
 	}else{
-		$('#vcc_inner').removeClass('manyimages');
+		//do nothing
 	}
 	e.cancelBubble = true;
 	if (e.stopPropagation) e.stopPropagation();
