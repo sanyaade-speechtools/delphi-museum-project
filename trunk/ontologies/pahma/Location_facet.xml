@@ -22075,8 +22075,8 @@
 				<synonym value="Czechoslovakians"/>
 				<synonym value="Czechoslovak"/>
 				<synonym value="Czechoslovaks"/>
-				<implies facet="Location_facet" cat="CzechRepublic"/> <!-- Need to work on this inference rule -->
-				<implies facet="Location_facet" cat="SlovakiaCountry"/> <!-- Need to work on this inference rule -->
+				<implies facet="Location" cat="CzechRepublic"/> <!-- Need to work on this inference rule -->
+				<implies facet="Location" cat="SlovakiaCountry"/> <!-- Need to work on this inference rule -->
 			</heading>
 			<heading id="Yugoslavia" title="Yugoslavia">
 				<synonym value="Yugoslavia (former)"/>
@@ -22088,9 +22088,9 @@
 				<synonym value="Republic of Yugoslavia"/>
 				<synonym value="Socialist Federal Republic of Yugoslavia"/>
 				<synonym value="Југославија"/>
-				<implies facet="Location_facet" cat="BosniaHerzegovina"/> <!-- Need to work on this inference rule -->
-				<implies facet="Location_facet" cat="CroatiaCountry"/> <!-- Need to work on this inference rule -->
-				<implies facet="Location_facet" cat="SerbiaCountry"/> <!-- Need to work on this inference rule -->
+				<implies facet="Location" cat="BosniaHerzegovina"/> <!-- Need to work on this inference rule -->
+				<implies facet="Location" cat="CroatiaCountry"/> <!-- Need to work on this inference rule -->
+				<implies facet="Location" cat="SerbiaCountry"/> <!-- Need to work on this inference rule -->
 			</heading>
 			<heading id="AncientGreece" title="Ancient Greece">
 				<synonym value="Greece (ancient)"/>
@@ -22098,7 +22098,7 @@
 				<synonym value="Ancient Greek"/>
 				<synonym value="Classical Greece"/>
 				<heading id="MagnaGraeciaOlGrce" title="Magna Graecia">
-					<implies facet="Location_facet" cat="SouthernItaly"/>
+					<implies facet="Location" cat="SouthernItaly"/>
 					<!-- Central Italy- 
 					Etruria — usually referred to in Greek and Latin source texts as Tyrrhenia -->
 					<!-- Southern Italy- -->
@@ -22106,7 +22106,7 @@
 					<heading id="ApuliaOldGreece" title="Apulia">
 						<synonym value="Ἀπουλία"/>
 						<synonym value="Puglia"/>
-						<implies facet="Location_facet" cat="PugliaItaly"/>
+						<implies facet="Location" cat="PugliaItaly"/>
 					</heading>
 					<heading id="BarlettaOldGreece" title="Barletta"/> 
 					<heading id="NaplesOldGreece" title="Neápolis"> <!-- Literally means "New City" -->
@@ -22115,7 +22115,7 @@
 						<synonym value="Neapolitan"/>
 						<synonym value="Napule"/>
 						<synonym value="Νεάπολις"/>
-						<implies facet="Location_facet" cat="NaplesItaly"/>
+						<implies facet="Location" cat="NaplesItaly"/>
 					</heading>
 					<heading id="RhegionOldGreece" title="Rhegion"> <!-- Literally means "it breaks away" -->
 						<synonym value="Reggio di Calabria"/>
@@ -22123,7 +22123,7 @@
 						<synonym value="Rìggiu"/>
 						<synonym value="Righi"/>
 						<synonym value="Ῥήγιον"/>
-						<implies facet="Location_facet" cat="ReggioCalabrItaly"/>
+						<implies facet="Location" cat="ReggioCalabrItaly"/>
 					</heading>
 					<heading id="MessorofeOldGreece" title="Messorofè"/> 
 					<heading id="OrthioiOldGreece" title="Orthioi"/> 
@@ -22132,9 +22132,9 @@
 						<synonym value="Sicily"/>
 						<synonym value="Sicilian"/>
 						<synonym value="Sicilians"/>
-						<implies facet="Location_facet" cat="SicilyItaly"/>
+						<implies facet="Location" cat="SicilyItaly"/>
 						<heading id="GelaOldGreece" title="Gela">
-							<implies facet="Location_facet" cat="GelaItaly"/>
+							<implies facet="Location" cat="GelaItaly"/>
 						</heading>
 						<heading id="SyrakousaeOldGreece" title="Syrakousae">
 							<synonym value="Siracusa"/> <!-- Italian -->
@@ -22143,7 +22143,7 @@
 							<synonym value="Sarausa"/> <!-- Sicilian -->
 							<synonym value="Συρακοῦσαι"/> <!-- Greek -->
 							<synonym value="Syrakousae"/> <!-- Transliterated Greek -->
-							<implies facet="Location_facet" cat="SiracusaItaly"/>
+							<implies facet="Location" cat="SiracusaItaly"/>
 						</heading>
 					</heading>
 				</heading>
