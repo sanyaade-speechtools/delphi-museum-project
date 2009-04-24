@@ -2048,7 +2048,6 @@
 		</heading>
 	</heading>
 	<heading id="CommunicationRelatedItems" title="Communication-Related Items">
-		<!-- Includes Art/Writing Equipment, Audio/Visual Equipment -->
 		<synonym value="Communication"/>
 		<synonym value="Communication Equipment"/>
 		<synonym value="Communications"/>
@@ -2087,9 +2086,24 @@
 					<synonym value="Drawing-Sets"/>
 					<implies facet="ObjectName" cat="DrawingSetTool"/>
 				</heading>
-				<heading id="EmbossingStampComm" title="Embossing-Stamp" noMatch="true"/>
-				<heading id="EngravingToolComm" title="Engraving Tool" noMatch="true"/>
-				<heading id="EtchingToolComm" title="Etching Tool" noMatch="true"/>
+				<heading id="EmbossingStampComm" title="Embossing Stamp">
+					<synonym value="Embossing Stamps"/>
+					<synonym value="Embossing-Stamp"/>
+					<synonym value="Embossing-Stamps"/>
+					<implies facet="ObjectName" cat="EmbossingStampTool"/>
+				</heading>
+				<heading id="EngravingToolComm" title="Engraving Tool">
+					<synonym value="Engraving Tools"/>
+					<synonym value="Engraving-Tool"/>
+					<synonym value="Engraving-Tools"/>
+					<implies facet="ObjectName" cat="EngravingToolTool"/>
+				</heading>
+				<heading id="EtchingToolComm" title="Etching Tool">
+					<synonym value="Etching Tools"/>
+					<synonym value="Etching-Tool"/>
+					<synonym value="Etching-Tools"/>
+					<implies facet="ObjectName" cat="EtchingToolTool"/>
+				</heading>
 				<heading id="FoldingSquareComm" title="Folding Square">
 					<synonym value="Folding Squares"/>
 					<implies facet="ObjectName" cat="FoldingSquareTool"/>
@@ -2134,12 +2148,16 @@
 				</heading>
 				<heading id="ProtractorComm" title="Protractor">
 					<synonym value="Protractors"/>
+					<implies facet="ObjectName" cat="ProtractorMeasure"/>
+					<implies facet="ObjectName" cat="ProtractorTool"/>
 				</heading>
 				<heading id="SetSquareComm" title="Set Square">
 					<synonym value="Set Squares"/>
+					<implies facet="ObjectName" cat="SetSquareTool"/>
 				</heading>
 				<heading id="StylusComm" title="Stylus">
 					<synonym value="Styli"/>
+					<implies facet="ObjectName" cat="StylusTool"/>
 				</heading>
 				<heading id="TypewriterComm" title="Typewriter">
 					<synonym value="Typewriters"/>
@@ -2159,7 +2177,9 @@
 					<implies facet="ObjectName" cat="WritingStickTool"/>
 				</heading>
 			</heading>
-			<heading id="BrushContainerComm" title="Brush-Container">
+			<heading id="BrushContainerComm" title="Brush Container">
+				<synonym value="Brush Containers"/>
+				<synonym value="Brush-Container"/>
 				<synonym value="Brush-Containers"/>
 			</heading>
 			<heading id="BrushrestComm" title="Brush-Rest">
@@ -10826,9 +10846,7 @@
 					<synonym value="Plumb-Bob"/>
 					<synonym value="Plumb-Bobs"/>
 				</heading>
-				<heading id="ProtractorMeasure" title="Protractor">
-					<synonym value="Protractors"/>
-				</heading>
+				<heading id="ProtractorMeasure" title="Protractor" noMatch="true"/>
 				<heading id="QuadrantMeasure" title="Quadrant">
 					<synonym value="Quadrants"/>
 					<!-- EXCL needed -->
@@ -12420,28 +12438,13 @@
 		<heading id="ApplicatorTool" title="Applicator">
 			<synonym value="Applicators"/>
 		</heading>
-		<heading id="ArtWritingImplementTool" title="Art/Writing-Implement">
+		<heading id="ArtWritingImplementTool" title="Art &amp; Writing Tools" noMatch="true">
 			<heading id="DividersTool" title="Dividers" noMatch="true"/>
 			<heading id="DrawingInstrumentTool" title="Drawing Instrument" noMatch="true"/>
 			<heading id="DrawingSetTool" title="Drawing Set" noMatch="true"/>
-			<heading id="EmbossingStampTool" title="Embossing Stamp">
-				<synonym value="Embossing Stamps"/>
-				<synonym value="Embossing-Stamp"/>
-				<synonym value="Embossing-Stamps"/>
-				<implies facet="ObjectName" cat="EmbossingStampComm"/>
-			</heading>
-			<heading id="EngravingToolTool" title="Engraving Tool">
-				<synonym value="Engraving Tools"/>
-				<synonym value="Engraving-Tool"/>
-				<synonym value="Engraving-Tools"/>
-				<implies facet="ObjectName" cat="EngravingToolComm"/>
-			</heading>
-			<heading id="EtchingTool" title="Etching Tool">
-				<synonym value="Etching Tools"/>
-				<synonym value="Etching-Tool"/>
-				<synonym value="Etching-Tools"/>
-				<implies facet="ObjectName" cat="EtchingToolComm"/>
-			</heading>
+			<heading id="EmbossingStampTool" title="Embossing-Stamp" noMatch="true"/>
+			<heading id="EngravingToolTool" title="Engraving Tool" noMatch="true"/>
+			<heading id="EtchingToolTool" title="Etching Tool" noMatch="true"/>
 			<heading id="FoldingSquareTool" title="Folding Square" noMatch="true"/>
 			<heading id="InkSpoonTool" title="Ink Spoon" noMatch="true"/>
 			<heading id="PaintBrushTool" title="Paint Brush" noMatch="true"/>
@@ -12450,15 +12453,9 @@
 			<heading id="PenTool" title="Pen" noMatch="true"/>
 			<heading id="PencilTool" title="Pencil" noMatch="true"/>
 			<heading id="PenCutterTool" title="Pen Cutter" noMatch="true"/>
-			<heading id="ProtractorTool" title="Protractor">
-				<synonym value="Protractors"/>
-			</heading>
-			<heading id="SetSquareTool" title="Set Square">
-				<synonym value="Set Squares"/>
-			</heading>
-			<heading id="StylusTool" title="Stylus">
-				<!-- The British Museum Notes That This Term Does Not Refer To Musical Styli. -->
-			</heading>
+			<heading id="ProtractorTool" title="Protractor" noMatch="true"/>
+			<heading id="SetSquareTool" title="Set Square" noMatch="true"/>
+			<heading id="StylusTool" title="Stylus" noMatch="true"/>
 			<heading id="TypewriterTool" title="Typewriter" noMatch="true"/>
 			<heading id="WritingBrushTool" title="Writing Brush" noMatch="true"/>
 			<heading id="WritingStickTool" title="Writing Stick" noMatch="true"/>
