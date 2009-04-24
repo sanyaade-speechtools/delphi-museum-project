@@ -1109,7 +1109,7 @@
 							<heading id="MegaraGreece" title="Megara"/>
 							<heading id="MenideGreece" title="Menide"/>
 							<heading id="MtHymettosGreece" title="Mount Hymettos"/>
-							<heading id="ParosGreece" title="Paros"/>
+							<heading id="ParosGreece" title="Paros" noMatch="true"/>
 							<heading id="PiraeusGreece" title="Piraeus"/>
 							<heading id="PorosGreece" title="Poros"/>
 							<heading id="SalamisGreece" title="Salamis"/>
@@ -1456,14 +1456,14 @@
 					</heading>
 					<heading id="KurdishTurkey" title="Kurdish Turkey"/>
 					<heading id="Marmararegion" title="Marmara region">
-						<heading id="Adrianople" title="Adrianople">
+						<heading id="AdrianopleMarmara" title="Adrianople">
 							<synonym value="Edirna"/>
 						</heading>
-						<heading id="Istanbul" title="Istanbul">
+						<heading id="IstanbulMarmara" title="Istanbul">
 							<synonym value="Constantinople"/>
 						</heading>
-						<heading id="Aeolis" title="Aeolis"/>
-						<heading id="Bursa" title="Bursa"/>
+						<heading id="AeolisMarmara" title="Aeolis" noMatch="true"/>
+						<heading id="BursaMarmara" title="Bursa"/>
 					</heading>
 					<heading id="MediterraneanRegion" title="Mediterranean region">
 						<heading id="Anavarza" title="Anavarza"/>
@@ -3604,7 +3604,7 @@
 								<heading id="PoromaVallPeru" title="Poroma Valley"> <!-- PV 71 -->
 									<heading id="CoparaPeru" title="Copara"> <!-- 14° 59' 0" South, 74° 53' 0" West -->
 										<synonym value="PV71-9,12,17-18,22-24"/>
-										<synonym value="PV71-9"/>
+										<!-- <synonym value="PV71-9"/> Trancas or Copara? -->
 										<synonym value="PV71-12"/>
 										<synonym value="PV71-22"/>
 										<synonym value="PV71-23"/>
@@ -3625,12 +3625,12 @@
 									</heading>
 									<heading id="PoromaPeru" title="Poroma">
 										<synonym value="PV71-1-7"/>
-										<synonym value="PV71-1"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-2"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-3"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-5"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-6"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-7"/> <!-- Trancas or Poroma? -->
+										<!-- <synonym value="PV71-1"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-2"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-3"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-5"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-6"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-7"/> Trancas or Poroma? -->
 										<heading id="PoromaIVPeru" title="Poroma IV">
 											<synonym value="PV71-4"/>
 										</heading>
@@ -3643,14 +3643,14 @@
 										<synonym value="Hda. Trancas"/>
 										<synonym value="Las Trancas"/>
 										<synonym value="PV71-1-10,11,19-21"/>
-										<synonym value="PV71-1"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-2"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-3"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-5"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-6"/> <!-- Trancas or Poroma? -->
-										<synonym value="PV71-7"/> <!-- Trancas or Poroma? -->
+										<!-- <synonym value="PV71-1"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-2"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-3"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-5"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-6"/> Trancas or Poroma? -->
+										<!-- <synonym value="PV71-7"/> Trancas or Poroma? -->
 										<synonym value="PV71-8"/>
-										<synonym value="PV71-9"/>
+										<!-- <synonym value="PV71-9"/>  Trancas or Copara? -->
 										<synonym value="PV71-10"/>
 										<synonym value="PV71-11"/>
 										<synonym value="PV71-19"/>
@@ -22392,7 +22392,7 @@
 						</heading>
 						<heading id="AmorgosOldGreece" title="Amorgos">
 							<synonym value="Αμοργός"/>
-							<heading id="AigialiOldGreece" title="Aigiali"/>
+							<!-- <heading id="AigialiOldGreece" title="Aigiali"/> Is this the same [Greek] Aigiali listed under Anatolia? -->
 							<heading id="ChoraOldGreece" title="Chora"/>
 							<!-- How is this different from the Chora further above? Same name, different island? -->
 							<heading id="ArkesiniOldGreece" title="Arkesini"/>
@@ -22464,6 +22464,7 @@
 						<heading id="ParosOldGreece" title="Paros">
 							<synonym value="Πάρος"/>
 							<synonym value="Paro"/>
+							<implies facet="Location" cat="ParosGreece"/>
 						</heading>
 						<heading id="PholegandrosOldGreece" title="Pholegandros">
 							<synonym value="Folegandros"/>
@@ -22494,6 +22495,7 @@
 						<synonym value="Aeolia"/>
 						<synonym value="Αιολία"/>
 						<synonym value="Aiolía"/>
+						<implies facet="Location" cat="Aeolis"/>
 					</heading>
 					<heading id="LesbosOldGreece" title="Lesbos">
 						<synonym value="Lesbos Island"/>
