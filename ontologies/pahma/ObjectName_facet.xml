@@ -5026,14 +5026,21 @@
 				<synonym value="Baking-Dish"/>
 				<synonym value="Baking-Dishes"/>
 			</heading>
-			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"> FIX BELOW
+			<heading id="BasinCookEq" title="Basin">
+				<excl value="Great Basin"/>
+				<excl value="Basin and Plain"/>
+				<excl value="Basin &amp; Plain"/>
+				<excl value="Wash"/>
+				<excl value="Basinet"/>
+				<synonym value="Basins"/>
+			</heading>
+			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"> 
 				<synonym value="Cooking Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="CookingBasketBaskets"/>
 				<implies facet="Collection" cat="BasketCollection"/>
-			<!-- Christina: there needs to be another end-heading tag here to close "cooking vessels" -->
 			</heading>
-			<heading id="CookingBowlCookEq" title="Cooking Bowl">
+			<heading id="CookingBowlCookEq" title="Cooking Bowl"/>
 				<synonym value="Cooking Bowls"/>
 				<synonym value="Cooking-Bowl"/>
 				<synonym value="Cooking-Bowls"/>
@@ -5042,7 +5049,7 @@
 					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<!-- need complex inferentiation to remove ritual bowls, etc. -->
 				</heading>
-			</heading>
+				<heading id="BreadBowlCookEq" title="Bread Bowl"/>
 			<heading id="CookingPanCookEq" title="Cooking Pan">
 				<synonym value="Cooking Pans"/>
 				<synonym value="Cooking-Pan"/>
@@ -5097,14 +5104,6 @@
 			</heading>
 			<heading id="SteamerCookEq" title="Steamer">
 				<synonym value="Steamers"/>
-			</heading>
-			<heading id="BasinCookEq" title="Basin">
-				<excl value="Great Basin"/>
-				<excl value="Basin and Plain"/>
-				<excl value="Basin &amp; Plain"/>
-				<excl value="Wash"/>
-				<excl value="Basinet"/>
-				<synonym value="Basins"/>
 			</heading>
 		</heading> 
 		<heading id="CulinaryMouldCookEq" title="Culinary Mold">
@@ -5234,6 +5233,7 @@
 			</heading>
 			<heading id="OvenCookEq" title="Oven">
 				<synonym value="Ovens"/>
+				<heading id="BreadOvenCookEq" title="Bread Oven"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="OvenFireEq"/>
 			</heading>
@@ -6220,9 +6220,13 @@
 			<synonym value="Loaf"/>
 			<synonym value="Loaves"/>
 			<heading id="AcornBread" title="Acorn Bread"/>
+			<heading id="BlackbreadBread" title="Blackbread"/>
+			<heading id="CornbreadBread" title="Cornbread"/>
 			<heading id="ChapatiBread" title="Chapati">
 				<synonym value="Chapatis"/>
 			</heading>
+			<heading id="PikiBread" title="Piki Bread"/>
+			<heading id="WaferBread" title="Wafer Bread"/>
 		</heading>
 		<heading id="CheeseFood" title="Cheese">
 			<synonym value="Cheeses"/>
