@@ -511,7 +511,9 @@
 					<synonym value="Harpoon-Throwers"/>
 				</heading>
 			</heading>
-			<heading id="HawkBellHuntEq" title="Hawk-Bell">
+			<heading id="HawkBellHuntEq" title="Hawk Bell">
+				<synonym value="Hawk Bells"/>
+				<synonym value="Hawk-Bell"/>
 				<synonym value="Hawk-Bells"/>
 			</heading>
 			<heading id="HawkBeltHuntEq" title="Hawk-Belt">
@@ -723,8 +725,11 @@
 				<excl value="Tunics"/>
 			</heading>
 		</heading>
-		<heading id="HawkBellAnmlEq" title="Hawk-Bell">
+		<heading id="HawkBellAnmlEq" title="Hawk Bell" noMatch="true">
+			<synonym value="Hawk Bells"/>
+			<synonym value="Hawk-Bell"/>
 			<synonym value="Hawk-Bells"/>
+			<implies facet="ObjectName" cat="HawkBellHuntEq"/>
 		</heading>
 		<heading id="HobbleAnmlEq" title="Hobble">
 			<synonym value="Hobbles"/>
@@ -764,13 +769,11 @@
 				<synonym value="Horseshoes"/>
 				<synonym value="Horse Shoe"/>
 				<synonym value="Horse Shoes"/>
-				<synonym value="Horseshoes"/>
 			</heading>
 			<heading id="MartingaleAnmlEq" title="Martingale">
 				<synonym value="Martingales"/>
 			</heading>
 			<heading id="ReinsHorseTackAnmlEq" title="Reins">
-				<synonym value="Reins"/>
 				<implies facet="ObjectName" cat="ReinHarnessAnmlEq"/>
 			</heading>
 			<heading id="SaddleHorseTackAnmlEq" title="Saddle">
@@ -1378,7 +1381,7 @@
 					<heading id="LegGuard" title="Leg Guard"/>
 					<heading id="PaletteArmor" title="Palette (Armour)"/>
 				</heading>
-				<heading id="ArmorFyFunction" title="Armor By Function" noMatch="true">
+				<heading id="ArmorByFunction" title="Armor By Function" noMatch="true">
 					<heading id="HorseArmor" title="Horse Armor">
 						<synonym value="Horse Armour"/>
 					</heading>
@@ -3597,7 +3600,6 @@
 				</heading>
 				<heading id="Canopicjarjars" title="Canopic Jar">
 					<synonym value="Canopic Jars"/>
-					<synonym value="Canopic Jars"/>
 					<implies facet="ActivityorContext" cat="Burial"/>
 					<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 					<implies facet="ObjectName" cat="Canopicjfuner"/>
@@ -4547,8 +4549,9 @@
 			<heading id="CapHeadGear" title="Cap">
 				<synonym value="Caps"/>
 			</heading>
-			<heading id="Circlet" title="Circlet">
-				<synonym value="Circlets"/>
+			<heading id="Circlet" title="Circlet" noMatch="true">
+				<synonym value="Circlets" noMatch="true"/>
+				<implies facet="ObjectName" cat="HeadOrnamentationPrsOrn"/>
 			</heading>
 			<heading id="EarMuff" title="Ear-Muff">
 				<synonym value="Ear-Muffs"/>
@@ -4642,6 +4645,7 @@
 			<synonym value="Neckware"/>
 			<heading id="Collar" title="Collar">
 				<synonym value="Collars"/>
+				<excl value="CollarJewelery"/>
 			</heading>
 			<heading id="Cravatte" title="Cravatte">
 				<synonym value="Cravattes"/>
@@ -4792,8 +4796,9 @@
 				<synonym value="Wallets"/>
 				<implies facet="ObjectName" cat="WalletContainer"/>
 			</heading>
-			<heading id="Wig" title="Wig">
+			<heading id="Wig" title="Wig" noMatch="true">
 				<synonym value="Wigs"/>
+				<implies facet="ObjectName" cat="WigPrsOrn"/>
 			</heading>
 		</heading>
 		<heading id="TheaterCostume" title="Theater Costume">
@@ -5062,7 +5067,7 @@
 		</heading>
 		<heading id="FleshHookCookEq" title="Flesh Hook">
 			<synonym value="Flesh Hooks"/>
-			<synonym value="Flesh-Hooks"/>
+			<synonym value="Flesh-Hook"/>
 			<synonym value="Flesh-Hooks"/>
 			<!-- Medieval cooking tool, for pulling meat from the pot.  Related term: cauldron/caldron. Also ritual item. See FleshHookRelRit-->
 		</heading>
@@ -5124,6 +5129,7 @@
 			<heading id="OvenCookEq" title="Oven">
 				<synonym value="Ovens"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
+				<implies facet="ObjectName" cat="OvenFireEq"/>
 			</heading>
 			<heading id="SpitCookEq" title="Spit">
 				<synonym value="Spits"/>
@@ -6106,7 +6112,7 @@
 		<heading id="MushFood" title="Mush"/>
 		<heading id="SoupFood" title="Soup">
 			<synonym value="Soups"/>
-			<heading id="Acornsoup" title="Acorn Soup"> </heading>
+			<heading id="Acornsoup" title="Acorn Soup"/>
 		</heading>
 		<heading id="TeaFood" title="Tea">
 			<implies facet="ActivityorContext" cat="Teadrinking"/>
@@ -6852,6 +6858,7 @@
 		</heading>
 		<heading id="ModelMiscEq" title="Model">
 			<synonym value="Models"/>
+			<!-- Need to differentiate from ModelProdReplic.  How to do this? -->
 		</heading>
 		<heading id="NapkinRingMiscEq" title="Napkin-Ring">
 			<synonym value="Napkin-Rings"/>
@@ -6972,6 +6979,7 @@
 		</heading>
 		<heading id="RingMiscEq" title="Ring">
 			<synonym value="Rings"/>
+			<excl value="RingJewelery"/>
 		</heading>
 		<heading id="RingStoneMiscEq" title="Ring-Stone">
 			<synonym value="Ring-Stones"/>
@@ -7497,7 +7505,7 @@
 				<heading id="Anklung" title="Anklung">
 					<synonym value="Anklungs"/>
 				</heading>
-				<heading id="Bangle" title="Bangle">
+				<heading id="BanglePercussion" title="Bangle">
 					<synonym value="Bangles"/>
 					<synonym value="Woman's Ankle Bangles"/>
 					<synonym value="Woman's Ankle Bangle"/>
@@ -7509,6 +7517,7 @@
 					<synonym value="Woman's Bangle"/>
 					<synonym value="Womans Bangles"/>
 					<synonym value="Womans Bangle"/>
+					<excl value="Jewelery"/>
 				</heading>
 				<heading id="Beater" title="Beater">
 					<!-- beaters/sticks exclusively not intended for drum use, excludes: seed beaters, drums -->
@@ -8100,8 +8109,8 @@
 						<synonym value="Knee to Ankle Rattles"/>
 						<synonym value="Ankle to Knee Rattle"/>
 						<synonym value="Ankle to Knee Rattles"/>
-						<synonym value="Anklet"/>
-						<synonym value="Anklets"/>
+						<synonym value="Anklet" noMatch="true"/>
+						<synonym value="Anklets" noMatch="true"/>
 					</heading>
 					<heading id="MaracaRattle" title="Maraca">
 						<synonym value="Maracas"/>
@@ -8860,7 +8869,6 @@
 				<synonym value="Top Knots"/>
 			</heading>
 			<heading id="WigPrsOrn" title="Wig">
-				<!-- Elsewhere? -->
 				<synonym value="Wigs"/>
 			</heading>
 		</heading>
@@ -8923,6 +8931,7 @@
 			</heading>
 			<heading id="BangleJeweleryPrsOrn" title="Bangle">
 				<synonym value="Bangles"/>
+				<excl value="BanglePercussion"/>
 			</heading>
 			<heading id="BeadsJeweleryPrsOrn" title="Beads">
 				<synonym value="Bead"/>
@@ -8995,6 +9004,7 @@
 			</heading>
 			<heading id="CollarJeweleryPrsOrn" title="Collar">
 				<synonym value="Collars"/>
+				<excl value="Neckwear"/>
 			</heading>
 			<heading id="CoronetJeweleryPrsOrn" title="Coronet">
 				<synonym value="Coronets"/>
@@ -9362,6 +9372,7 @@
 		<heading id="AegisreligionRelRit" title="Aegis">
 			<synonym value="Aegi"/>
 			<!-- Check -->
+			<!-- Needs exclusions for non-religious. e.g. Aegis Armaments. -->
 		</heading>
 		<heading id="AltarRelRit" title="Altar">
 			<synonym value="Altars"/>
