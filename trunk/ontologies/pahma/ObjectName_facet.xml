@@ -5881,7 +5881,6 @@
 					</heading>
 					<heading id="Quinarius" title="Quinarius"/>
 					<!-- could be gold or silver -->
-
 				</heading>
 				<heading id="RomanCoinsByType" title="By Type" noMatch="true">
 					<heading id="RomanEarlyBronzeCoins" title="Early bronze coins" noMatch="true">
@@ -5990,17 +5989,37 @@
 				<heading id="Tenpfenning" title="10 Pfenning"/>
 			</heading>
 		</heading>
+		<heading id="CounterCurrency" title="Counter">
+			<synonym value="Counters"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+		</heading>
 		<heading id="CurrencyBar" title="Currency-Bar">
 			<synonym value="Currency-Bars"/>
 		</heading>
 		<heading id="Manilla" title="Manilla">
 			<synonym value="Manillas"/>
 		</heading>
+		<heading id="MoneyBoxCurrency" title="Money Box">
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+			<implies facet="ObjectName" cat="MoneyBoxContainer"/>
+		</heading>
+		<heading id="MoneystoneCurrency" title="Money stone">
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+		</heading>
+		<heading id="PurseCommerceCurrency" title="Purse" noMatch="true"/>
 		<heading id="RingGold" title="Ring-Gold">
 			<synonym value="Ring-Golds"/>
 		</heading>
 		<heading id="RingMoney" title="Ring-Money">
 			<synonym value="Ring-Monies"/>
+		</heading>
+		<heading id="SealCurrency" title="Seal">
+			<!-- exclude sea mammals and closures -->
+			<excl value="Marine"/>
+			<excl value="Pinniped"/>
+			<excl value="Sea Lion"/>
+			<synonym value="Seals"/>
+			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 		</heading>
 		<heading id="Tikal" title="Tikal">
 			<synonym value="Tikals"/>
@@ -13749,31 +13768,6 @@
 		</heading>
 		<heading id="TriptychVisRep" title="Triptych">
 			<synonym value="Triptychs"/>
-		</heading>
-	</heading>
-	
-	<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-	
-	<heading id="CurrencyRelatedItems" title="Currency &amp; related items">
-		<heading id="Counter" title="Counter">
-			<synonym value="Counters"/>
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="MoneyBox" title="Money Box">
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-			<implies facet="ObjectName" cat="MoneyBoxContainer"/>
-		</heading>
-		<heading id="Moneystone" title="Money stone">
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="PurseCommerce" title="Purse" noMatch="true"/>
-		<heading id="Seal" title="Seal">
-			<!-- exclude sea mammals and closures -->
-			<excl value="Marine"/>
-			<excl value="Pinniped"/>
-			<excl value="Sea Lion"/>
-			<synonym value="Seals"/>
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 		</heading>
 	</heading>
 </taxonomy>
