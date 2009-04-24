@@ -1648,7 +1648,7 @@
 					<synonym value="Arrowpoints"/>
 					<synonym value="Arrowhead"/>
 					<synonym value="Arrowheads"/>
-					<heading id="BarbedAndTangedArrowhead" title="Barbed And Tanged Arrowhead"/>
+					<heading id="BarbedAndTangedArrowhead" title="Barbed and Tanged Arrowhead"/>
 					<heading id="LeafArrowhead" title="Leaf Arrowhead"/>
 					<heading id="FlutedArrowhead" title="Fluted Arrowhead"/>
 					<heading id="StemmedArrowhead" title="Stemmed Arrowhead"/>
@@ -4124,9 +4124,7 @@
 				<synonym value="Shoe"/>
 				<implies facet="ActivityorContext" cat="ShoeMaking"/>
 			</heading>
-			<heading id="SocksFootwear" title="Socks">
-				<synonym value="Sock"/>
-			</heading>
+			<heading id="SocksFootwear" title="Socks" noMatch="true"/>
 		</heading>
 		<heading id="Garment" title="Garment">
 			<synonym value="Garments"/>
@@ -4395,9 +4393,7 @@
 			<heading id="SmockGarment" title="Smock">
 				<synonym value="Smocks"/>
 			</heading>
-			<heading id="SockGarment" title="Sock">
-				<synonym value="Socks"/>
-			</heading>
+			<heading id="SockGarment" title="Sock" noMatch="true"/>
 			<heading id="StockingGarment" title="Stocking">
 				<synonym value="Stockings"/>
 			</heading>
@@ -4480,7 +4476,7 @@
 						<excl value="Garter-Stitches"/>
 						<excl value="Garter-Stitching"/>
 					</heading>
-					<heading id="GarterbeltUnderwear" title="Garter Belt">
+					<heading id="GarterBeltUnderwear" title="Garter Belt">
 						<synonym value="Garter-Belt"/>
 						<synonym value="Garter Belt"/>
 						<synonym value="Garter-Belts"/>
@@ -4488,7 +4484,11 @@
 						<synonym value="Garterbelts"/>
 						<implies facet="ObjectName" cat="GarterbeltUnderwearLower"/>
 					</heading>
-					<heading id="SocksUnderwearLower" title="Socks" noMatch="true"/>
+					<heading id="SocksUnderwearLower" title="Socks">
+						<synonym value="Sock"/>
+						<implies facet="ObjectName" cat="SocksFootwear"/>
+						<implies facet="ObjectName" cat="SockGarment"/>
+					</heading>
 				</heading>
 				<heading id="UnderwearUpperBody" title="Underwear" noMatch="true">
 					<heading id="BraUnderwearUpper" title="Bra"/>
