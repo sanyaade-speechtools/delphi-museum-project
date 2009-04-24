@@ -22,7 +22,7 @@
 					<synonym value="Cotton Gins"/>
 					<synonym value="Cotton-Gin"/>
 					<synonym value="Cotton-Gins"/>
-					<implies facet="ObjectName" cat="GinningTool"/>
+					<implies facet="ObjectName" cat="CottonGinTool"/>
 				</heading>
 				<heading id="Dibble" title="Dibble">
 					<synonym value="Dibbles"/>
@@ -56,6 +56,7 @@
 					<synonym value="Plough"/>
 					<synonym value="Ploughs"/>
 					<synonym value="Plows"/>
+					<implies facet="ActivityorContext" cat="PlowingFarming"/>
 				</heading>
 				<heading id="PruningHook" title="Pruning Hook">
 					<synonym value="Pruning Hooks"/>
@@ -75,6 +76,7 @@
 				</heading>
 				<heading id="Scythe" title="Scythe">
 					<synonym value="Scythes"/>
+					<implies facet="ActivityorContext" cat="HarvestingFarming"/>
 				</heading>
 				<heading id="Sickle" title="Sickle">
 					<synonym value="Sickles"/>
@@ -85,23 +87,37 @@
 				<heading id="Thresher" title="Thresher">
 					<synonym value="Threshers"/>
 				</heading>
-				<heading id="ThreshingTray" title="Threshing-Tray">
+				<heading id="ThreshingTray" title="Threshing Tray">
+					<synonym value="Threshing Trays"/>
+					<synonym value="Threshing-Tray"/>
 					<synonym value="Threshing-Trays"/>
 				</heading>
-				<heading id="Winnower" title="Winnower">
-					<synonym value="Winnowers"/>
-				</heading>
-				<heading id="WinnowingBasket" title="Winnowing-Basket">
-					<synonym value="Winnowing-Baskets"/>
-				</heading>
-				<heading id="WinnowingFan" title="Winnowing-Fan">
-					<synonym value="Winnowing-Fans"/>
-				</heading>
-				<heading id="WinnowingFork" title="Winnowing-Fork">
-					<synonym value="Winnowing-Forks"/>
-				</heading>
-				<heading id="WinnowingTray" title="Winnowing-Tray">
-					<synonym value="Winnowing-Trays"/>
+				<heading id="WinnowingAgTool" title="Winnowing Tools">
+					<synonym value="Winnowing Tool"/>
+					<implies facet="ActivityorContext" cat="WinnowingFarming"/>
+					<heading id="Winnower" title="Winnower">
+						<synonym value="Winnowers"/>
+					</heading>
+					<heading id="WinnowingBasket" title="Winnowing Basket">
+						<synonym value="Winnowing Baskets"/>
+						<synonym value="Winnowing-Basket"/>
+						<synonym value="Winnowing-Baskets"/>
+					</heading>
+					<heading id="WinnowingFan" title="Winnowing Fan">
+						<synonym value="Winnowing Fans"/>
+						<synonym value="Winnowing-Fan"/>
+						<synonym value="Winnowing-Fans"/>
+					</heading>
+					<heading id="WinnowingFork" title="Winnowing Fork">
+						<synonym value="Winnowing Forks"/>
+						<synonym value="Winnowing-Fork"/>
+						<synonym value="Winnowing-Forks"/>
+					</heading>
+					<heading id="WinnowingTray" title="Winnowing Tray">
+						<synonym value="Winnowing Trays"/>
+						<synonym value="Winnowing-Tray"/>
+						<synonym value="Winnowing-Trays"/>
+					</heading>
 				</heading>
 			</heading>
 			<heading id="BirdScare" title="Bird-Scare">
@@ -125,29 +141,37 @@
 					<synonym value="Watering Cans"/>
 				</heading>
 			</heading>
-			<heading id="MilkingCan" title="Milking Can" noMatch="true">
-				<synonym value="Milking Cans"/>
-				<synonym value="Milking-Can"/>
-				<synonym value="Milking-Cans"/>
-				<implies facet="ObjectName" cat="MilkingCanAnmlEq"/>
-			</heading>
-			<heading id="MilkingJug" title="Milking Jug" noMatch="true">
-				<synonym value="Milking Jugs"/>
-				<synonym value="Milking-Jug"/>
-				<synonym value="Milking-Jugs"/>
-				<implies facet="ObjectName" cat="MilkingJugAnmlEq"/>
-			</heading>
-			<heading id="MilkingPail" title="Milking Pail" noMatch="true">
-				<synonym value="Milking Pails"/>
-				<synonym value="Milking-Pail"/>
-				<synonym value="Milking-Pails"/>
-				<implies facet="ObjectName" cat="MilkingPailAnmlEq"/>
-			</heading>
-			<heading id="MilkingPot" title="Milking Pot" noMatch="true">
-				<synonym value="Milking Pots"/>
-				<synonym value="Milking-Pot"/>
-				<synonym value="Milking-Pots"/>
-				<implies facet="ObjectName" cat="MilkingPotAnmlEq"/>
+			<heading id="MilkingEquipment" title="Milking Items">
+				<heading id="MilkingCan" title="Milking Can" noMatch="true">
+					<synonym value="Milking Cans"/>
+					<synonym value="Milking-Can"/>
+					<synonym value="Milking-Cans"/>
+					<implies facet="ObjectName" cat="MilkingCanAnmlEq"/>
+				</heading>
+				<heading id="MilkingJug" title="Milking Jug" noMatch="true">
+					<synonym value="Milking Jugs"/>
+					<synonym value="Milking-Jug"/>
+					<synonym value="Milking-Jugs"/>
+					<implies facet="ObjectName" cat="MilkingJugAnmlEq"/>
+				</heading>
+				<heading id="MilkingPail" title="Milking Pail" noMatch="true">
+					<synonym value="Milking Pails"/>
+					<synonym value="Milking-Pail"/>
+					<synonym value="Milking-Pails"/>
+					<implies facet="ObjectName" cat="MilkingPailAnmlEq"/>
+				</heading>
+				<heading id="MilkingPot" title="Milking Pot" noMatch="true">
+					<synonym value="Milking Pots"/>
+					<synonym value="Milking-Pot"/>
+					<synonym value="Milking-Pots"/>
+					<implies facet="ObjectName" cat="MilkingPotAnmlEq"/>
+					<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
+				</heading>
+				<heading id="MilkingStool" title="Milking Stool">
+					<synonym value="Milking Stools"/>
+					<synonym value="Milking-Stool"/>
+					<synonym value="Milking-Stools"/>
+				</heading>
 			</heading>
 			<heading id="MonkeyScare" title="Monkey Scare" noMatch="true">
 				<synonym value="Monkey Scares"/>
@@ -605,8 +629,13 @@
 		<heading id="BrailAnmlEq" title="Brail">
 			<synonym value="Brails"/>
 		</heading>
-		<heading id="BrandingIronAnmlEq" title="Branding-Iron">
+		<heading id="BrandingIronAnmlEq" title="Branding Iron">
+			<synonym value="Branding Irons"/>
+			<synonym value="Branding-Iron"/>
 			<synonym value="Branding-Irons"/>
+			<implies facet="ActivityorContext" cat="BrandingHusbandry"/>
+			<implies facet="ActivityorContext" cat="Metallurgy"/>
+			<implies facet="ObjectName" cat="BrandingIronTool"/>
 		</heading>
 		<heading id="BullockCoverAnmlEq" title="Bullock-Cover">
 			<synonym value="Bullock-Covers"/>
@@ -858,6 +887,21 @@
 		</heading>
 		<heading id="SheepShearsAnmlEq" title="Sheep-Shears">
 			<synonym value="Sheep-Shear"/>
+		</heading>
+		<heading id="Stockwhip" title="Stockwhip">
+			<synonym value="Stockwhips"/>
+			<heading id="BuggyWhip" title="Buggy Whip">
+				<synonym value="Buggy Whips"/>
+			</heading>
+			<heading id="Ridingcrop" title="Riding Crop">
+				<synonym value="Riding Crops"/>
+			</heading>
+			<heading id="Quirt" title="Quirt">
+				<synonym value="Quirts"/>
+				<implies facet="ActivityorContext" cat="Horsebackriding"/>
+				<implies facet="Material" cat="Leatherandfur"/>
+				<implies facet="TechniqueDesignorDecoration" cat="Forked"/>
+			</heading>
 		</heading>
 		<heading id="TetherAnmlEq" title="Tether">
 			<synonym value="Tethers"/>
@@ -5987,28 +6031,42 @@
 		<heading id="FireRakeFireEq" title="Fire-Rake">
 			<synonym value="Fire-Rakes"/>
 		</heading>
-		<heading id="FireSawFireEq" title="Fire-Saw">
+		<heading id="FireSawFireEq" title="Fire Saw">
+			<synonym value="Fire Saws"/>
+			<synonym value="Fire-Saw"/>
 			<synonym value="Fire-Saws"/>
+			<implies facet="ObjectName" cat="FireSawTool"/>
 		</heading>
-		<heading id="FireScreenFireEq" title="Fire-Screen">
+		<heading id="FireScreenFireEq" title="Fire Screen">
+			<synonym value="Fire Screens"/>
+			<synonym value="Fire-Screen"/>
 			<synonym value="Fire-Screens"/>
 		</heading>
 		<heading id="FireShovelFireEq" title="Fire-Shovel">
 			<synonym value="Fire-Shovels"/>
 		</heading>
-		<heading id="FireSteelFireEq" title="Fire-Steel">
+		<heading id="FireSteelFireEq" title="Fire Steel">
+			<synonym value="Fire Steels"/>
+			<synonym value="Fire-Steel"/>
 			<synonym value="Fire-Steels"/>
+			<implies facet="ObjectName" cat="FireSteelTool"/>
 		</heading>
-		<heading id="FireStickFireEq" title="Fire-Stick">
+		<heading id="FireStickFireEq" title="Fire Stick">
+			<synonym value="Fire Sticks"/>
+			<synonym value="Fire-Stick"/>
 			<synonym value="Fire-Sticks"/>
+			<implies facet="ObjectName" cat="FireStickTool"/>
 		</heading>
 		<heading id="FireStickContainerFireEq" title="Fire Stick Container">
 			<synonym value="Fire Stick Containers"/>
 			<synonym value="Fire-Stick-Container"/>
 			<synonym value="Fire-Stick-Containers"/>
 		</heading>
-		<heading id="FireStoneFireEq" title="Fire-Stone">
+		<heading id="FireStoneFireEq" title="Fire Stone">
+			<synonym value="Fire Stones"/>
+			<synonym value="Fire-Stone"/>
 			<synonym value="Fire-Stones"/>
+			<implies facet="ObjectName" cat="FireStoneTool"/>
 		</heading>
 		<heading id="FireTongsFireEq" title="Fire-Tongs">
 			<synonym value="Fire-Tong"/>
@@ -12463,9 +12521,7 @@
 		<heading id="BraceTool" title="Brace">
 			<synonym value="Braces"/>
 		</heading>
-		<heading id="BrandingIronTool" title="Branding-Iron">
-			<synonym value="Branding-Irons"/>
-		</heading>
+		<heading id="BrandingIronTool" title="Branding-Iron" noMatch="true"/>
 		<heading id="BroomTool" title="Broom">
 			<synonym value="Brooms"/>
 		</heading>
@@ -12604,18 +12660,10 @@
 		<heading id="FileTool" title="File">
 			<synonym value="Files"/>
 		</heading>
-		<heading id="FireSawTool" title="Fire-Saw">
-			<synonym value="Fire-Saws"/>
-		</heading>
-		<heading id="FireSteelTool" title="Fire-Steel">
-			<synonym value="Fire-Steels"/>
-		</heading>
-		<heading id="FireStickTool" title="Fire-Stick">
-			<synonym value="Fire-Sticks"/>
-		</heading>
-		<heading id="FireStoneTool" title="Fire-Stone">
-			<synonym value="Fire-Stones"/>
-		</heading>
+		<heading id="FireSawTool" title="Fire-Saw" noMatch="true"/>
+		<heading id="FireSteelTool" title="Fire Steel" noMatch="true"/>
+		<heading id="FireStickTool" title="Fire-Stick" noMatch="true"/>
+		<heading id="FireStoneTool" title="Fire-Stone" noMatch="true"/>
 		<heading id="FlakedFlakeTool" title="Flaked Flake">
 			<synonym value="Flaked Flakes"/>
 		</heading>
@@ -12660,11 +12708,7 @@
 			<synonym value="Ginning-Tool"/>
 			<synonym value="Ginning-Tools"/>
 			<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies TEXTILE CRAFTS -->
-			<heading id="CottonGinTool" title="Cotton Gin">
-				<synonym value="Cotton Gins"/>
-				<synonym value="Cotton-Gin"/>
-				<synonym value="Cotton-Gins"/>
-			</heading>
+			<heading id="CottonGinTool" title="Cotton Gin" noMatch="true"/>
 		</heading>
 		<heading id="GougeTool" title="Gouge">
 			<synonym value="Gouges"/>
@@ -12699,22 +12743,8 @@
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
 		<heading id="ToolsImplementsMERGE" title="Tools &amp; Implements">
 			<heading id="AnimalHusbandryTools" title="Animalhusbandrytools" noMatch="true">
-				<implies facet="ActivityorContext" cat="Animalhusbandry"/>
-				<heading id="Stockwhip" title="Stockwhip">
-					<synonym value="Stockwhips"/>
-					<heading id="BuggyWhip" title="Buggy Whip">
-						<synonym value="Buggy Whips"/>
-					</heading>
-					<heading id="Ridingcrop" title="Riding Crop">
-						<synonym value="Riding Crops"/>
-					</heading>
-					<heading id="Quirt" title="Quirt">
-						<synonym value="Quirts"/>
-						<implies facet="ActivityorContext" cat="Horsebackriding"/>
-						<implies facet="Material" cat="Leatherandfur"/>
-						<implies facet="TechniqueDesignorDecoration" cat="Forked"/>
-					</heading>
-				</heading>
+				
+				
 			</heading>
 			<heading id="Awl" title="Awl">
 				<synonym value="Awls"/>
