@@ -114,6 +114,7 @@
 		</heading>
 		<heading id="StimulantDrugs" title="Stimulants">
 			<heading id="DrugsCaffeine" title="CaffeineUse" noMatch="true">
+				<heading id="ChocolateCaffeineStimulant" title="Chocolate"/>
 				<heading id="CoffeeCaffeineStimulant" title="Coffee"/>
 				<heading id="TeaCaffeineStimulant" title="Tea"/>
 			</heading>
@@ -137,6 +138,11 @@
 				</heading>
 			</heading>
 			<heading id="OtherDrinking" title="Other Drinking">
+				<heading id="ChocolateDrinking" title="Chocolate Drinking">
+					<synonym value="Drinking Chocolate"/>
+					<implies facet="ObjectName" cat="ChocolateFood"/>
+					<implies facet="ActivityorContext" cat="ChocolateCaffeineStimulant"/>
+				</heading>
 				<heading id="CoffeeDrinking" title="Coffee Drinking">
 					<synonym value="Drinking Coffee"/>
 					<implies facet="ActivityorContext" cat="CoffeeCaffeineStimulant"/>
