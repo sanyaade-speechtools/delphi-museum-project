@@ -763,7 +763,7 @@
 			<!-- Pahma Only -->
 			<!-- Used To Describe Any of The Various Equipment And Accessories 
 				Worn By Horses In The Course of Their Use As Domesticated Animals -->
-			<implies facet="ActivityorContext" cat="Horsebackriding"/>
+			<implies facet="ActivityorContext" cat="HorsebackRiding"/>
 			<heading id="HorsebreastplateAnmlEq" title="Breastplate">
 				<synonym value="Breastplates"/>
 			</heading>
@@ -895,7 +895,7 @@
 			</heading>
 			<heading id="Quirt" title="Quirt">
 				<synonym value="Quirts"/>
-				<implies facet="ActivityorContext" cat="Horsebackriding"/>
+				<implies facet="ActivityorContext" cat="HorsebackRiding"/>
 				<implies facet="Material" cat="Leatherandfur"/>
 				<implies facet="TechniqueDesignorDecoration" cat="Forked"/>
 			</heading>
@@ -3349,6 +3349,7 @@
 				</heading>
 				<heading id="IncenseVessel" title="Incense-Vessel">
 					<synonym value="Incense-Vessels"/>
+					<implies facet="ObjectName" cat="VesselContainer"/>
 					<heading id="Balsamarium" title="Balsamarium">
 						<synonym value="Balsamariums"/>
 					</heading>
@@ -4047,8 +4048,8 @@
 				<heading id="MultipleVase" title="Multiple Vase">
 					<synonym value="Multiple Vases"/>
 				</heading>
-				<heading id="OfferingVessel" title="Offering Vessel">
-					<synonym value="Offering Vessels"/>
+				<heading id="OfferingVessel" title="Offering Vessels">
+					<synonym value="Offering Vessel"/>
 					<synonym value="Offering-Vessel"/>
 					<synonym value="Offering-Vessels"/>
 					<heading id="Candelero" title="Candelero">
@@ -4059,6 +4060,7 @@
 					</heading>
 					<heading id="LibationVessel" title="Libation-Vessel">
 						<synonym value="Libation-Vessels"/>
+						<implies facet="ObjectName" cat="VesselContainer"/>
 					</heading>
 					<heading id="PreachersPlate" title="Preacher's Plate">
 						<synonym value="Preacher's Plates"/>
@@ -4123,6 +4125,7 @@
 				</heading>
 				<heading id="YiVessel" title="Yi">
 					<synonym value="Yis"/>
+					<implies facet="ObjectName" cat="VesselContainer"/>
 				</heading>
 				<heading id="You" title="You">
 					<synonym value="Yous"/>
@@ -4142,6 +4145,7 @@
 			</heading>
 			<heading id="SaltVessel" title="Salt Vessel">
 				<synonym value="Salt Vessels"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="SanzuFu" title="Sanzu Fu">
 				<synonym value="Sanzu Fus"/>
@@ -4154,6 +4158,7 @@
 			</heading>
 			<heading id="SnuffVessel" title="Snuff-Vessel">
 				<synonym value="Snuff-Vessels"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="Spittoon" title="Spittoon">
 				<synonym value="Spittoons"/>
@@ -4163,6 +4168,7 @@
 			</heading>
 			<heading id="StorageVessel" title="Storage-Vessel">
 				<synonym value="Storage-Vessels"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="SugarShaker" title="Sugar-Shaker">
 				<synonym value="Sugar-Shakers"/>
@@ -4187,9 +4193,11 @@
 				<synonym value="Tea Pot"/>
 				<synonym value="Tea Pots"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="ToiletVessel" title="Toilet-Vessel">
 				<synonym value="Toilet-Vessels"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="Tray" title="Tray">
 				<synonym value="Trays"/>
@@ -5023,9 +5031,16 @@
 					<synonym value="Cap-lifter"/>
 					<synonym value="Cap-lifters"/>
 				</heading>
-				<heading id="CorkscrewCookEq" title="Corkscrew">
-					<synonym value="Corkscrews"/>
-					<heading id="SlidingBarrelCorkscrewCookEq" title="Sliding Barrel Corkscrew">
+				<heading id="CorkscrewCookEq" title="Corkscrews">
+					<synonym value="Corkscrew"/>
+					<implies facet="ObjectName" cat="CorkscrewTool"/>
+					<implies facet="ObjectName" cat="CorkscrewAlcEq"/>
+					<heading id="FixedBarrelCorkscrewCookEq" title="Fixed Barrel">
+						<synonym value="Fixed Barrel Corkscrew"/>
+						<synonym value="Fixed Barrel Corkscrews"/>
+					</heading>
+					<heading id="SlidingBarrelCorkscrewCookEq" title="Sliding Barrel">
+						<synonym value="Sliding Barrel Corkscrew"/>
 						<synonym value="Sliding Barrel Corkscrews"/>
 					</heading>
 				</heading>
@@ -5210,6 +5225,7 @@
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 				<implies facet="ObjectName" cat="CoffeePotVessel"/>
 				<implies facet="ObjectName" cat="CoffeeFood"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="CookingStandCookEq" title="Cooking Stand">
 				<synonym value="Cooking Stands"/>
@@ -5243,6 +5259,7 @@
 				<!-- are all kettles made of metal? -->
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 				<implies facet="ObjectName" cat="KettleVessels"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="OvenCookEq" title="Oven">
 				<synonym value="Ovens"/>
@@ -6699,7 +6716,7 @@
 		</heading>
 		<heading id="LampFiller" title="Lamp Filler">
 			<synonym value="Lamp Fillers"/>
-			<implies facet="ObjectName" cat="Containersandvessels"/>
+			<implies facet="ObjectName" cat="VesselContainer"/>
 			<heading id="Guttus" title="Guttus (Lamp Feeder/Filler)">
 				<synonym value="Guttus"/>
 			</heading>
@@ -6774,6 +6791,7 @@
 		</heading>
 		<heading id="ApothecaryVessel" title="Apothecary-Vessel">
 			<synonym value="Apothecary-Vessels"/>
+			<implies facet="ObjectName" cat="VesselContainer"/>
 		</heading>
 		<heading id="ApothecaryWeight" title="Apothecary-Weight">
 			<synonym value="Apothecary-Weights"/>
@@ -7370,6 +7388,7 @@
 				<synonym value="Vessel Stands"/>
 				<synonym value="Vessel-Stand"/>
 				<synonym value="Vessel-Stands"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="WatchStandStndMiscEq" title="Watch Stand">
 				<synonym value="Watch Stands"/>
@@ -10988,6 +11007,7 @@
 					<synonym value="Measuring Vessels"/>
 					<synonym value="Measuring-Vessel"/>
 					<synonym value="Measuring-Vessels"/>
+					<implies facet="ObjectName" cat="VesselContainer"/>
 				</heading>
 				<heading id="PedometerMeasure" title="Pedometer">
 					<synonym value="Pedometers"/>
@@ -11435,9 +11455,12 @@
 		<!-- This category includes groups of objects associated with the preparation and
 			consumption of beverages, which may loosely be classified as stimulants,
 			e.g. chocolate, coffee and tea. -->
-		<heading id="AlcoholEquipment" title="Alcohol Equipment">
+		<heading id="AlcoholEquipment" title="Alcohol-related Items">
+			<synonym value="Alcohol Equipment"/>
 			<synonym value="Alcohol Items"/>
-			<heading id="BeerContainer" title="Beer-Container">
+			<heading id="BeerContainer" title="Beer Container">
+				<synonym value="Beer Containers"/>
+				<synonym value="Beer-Container"/>
 				<synonym value="Beer-Containers"/>
 				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
@@ -11471,9 +11494,7 @@
 			<heading id="CommunionCup" title="Communion Cup">
 				<synonym value="Communion Cups"/>
 			</heading>
-			<heading id="Corkscrew" title="Corkscrew">
-				<synonym value="Corkscrews"/>
-			</heading>
+			<heading id="CorkscrewAlcEq" title="Corkscrew" noMatch="true"/>
 			<heading id="Decanter" title="Decanter">
 				<synonym value="Decanters"/>
 			</heading>
@@ -11657,6 +11678,7 @@
 			<heading id="WineVessel" title="Wine-Vessel">
 				<synonym value="Wine-Vessels"/>
 				<implies facet="ObjectName" cat="WineFood"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="YardOfAleGlass" title="Yard-of-Ale Glass">
 				<synonym value="Yard-Of-Ale Glasses"/>
@@ -12368,6 +12390,7 @@
 			</heading>
 			<heading id="CosmeticVessel" title="Cosmetic-Vessel">
 				<synonym value="Cosmetic-Vessels"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="KohlContainer" title="Kohl-Container">
 				<synonym value="Kohl-Containers"/>
@@ -12588,6 +12611,7 @@
 		</heading>
 		<heading id="ToiletVessel" title="Toilet-Vessel">
 			<synonym value="Toilet-Vessels"/>
+			<implies facet="ObjectName" cat="VesselContainer"/>
 		</heading>
 		<heading id="WigBox" title="Wig-Box">
 			<synonym value="Wig-Boxes"/>
@@ -12746,9 +12770,7 @@
 		<heading id="CookingImplementTool" title="Cooking-Implement">
 			<synonym value="Cooking-Implements"/>
 		</heading>
-		<heading id="CorkscrewTool" title="Corkscrew">
-			<synonym value="Corkscrews"/>
-		</heading>
+		<heading id="CorkscrewTool" title="Corkscrew" noMatch="true"/>
 		<heading id="CottonBowTool" title="Cotton-Bow">
 			<synonym value="Cotton-Bows"/>
 		</heading>
@@ -13261,6 +13283,7 @@
 			</heading>
 			<heading id="VesselCarrier" title="Vessel-Carrier">
 				<synonym value="Vessel-Carriers"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="WaterCarrier" title="Water-Carrier">
 				<synonym value="Water-Carriers"/>
