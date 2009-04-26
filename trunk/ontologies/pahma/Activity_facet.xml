@@ -49,6 +49,15 @@
 		<heading id="Sculpting" title="Sculpting"> 					
 			<synonym value="Sculpture"/> 				
 		</heading>
+		<heading id="NeedleWork" title="Needle Work"> 					
+			<synonym value="Needlework"/>
+			<synonym value="Needleworking"/>
+			<synonym value="Needleworks"/>
+			<synonym value="Sewn"/>
+			<synonym value="Sewing"/>
+			<synonym value="Embroidery"/>
+			<synonym value="Embroidered"/>
+		</heading>
 		<heading id="ShoeMaking" title="Shoe Making">
 			<synonym value="Shoemaking"/>
 			<synonym value="Shoe-making"/>
@@ -258,8 +267,12 @@
 				</heading>
 				<heading id="Marriage" title="Marriage">
 					<synonym value="Wedding"/>
+					<synonym value="Weddings"/>
+					<synonym value="Marriages"/>
 					<heading id="BridalAdornment" title="Bridal Adornment">
 						<heading id="MaangtikaBridalLocket" title="Mangtika (Bridal Locket)">
+							<synonym value="Bridal Locket"/>
+							<synonym value="Mangtika"/>
 							<synonym value="Maangtika"/>
 							<synonym value="Mangtika"/>
 							<synonym value="Mang Tika"/>
@@ -271,11 +284,6 @@
 					<synonym value="Wake"/>
 					<excl value="Wake up"/> <!-- helps exclude the verb sense of "wake" -->
 					<synonym value="Mourning"/>
-				</heading>
-				<heading id="Weddings" title="Weddings">
-					<synonym value="Wedding"/>
-					<synonym value="Marriage"/>
-					<synonym value="Marriages"/>
 				</heading>
 			</heading>
 			<heading id="Festivals" title="Festivals">
@@ -475,14 +483,53 @@
 		<heading id="HorsebackRiding" title="Horseback Riding"/>
 	</heading>
 	<heading id="Violence" title="Violence">
-		<heading id="Attacking" title="Attacking"/>
-		<heading id="Blinding" title="Blinding"/>
-		<heading id="Destroying" title="Destroying"/>
-		<heading id="Injuring" title="Injuring"/>
-		<heading id="Killing" title="Killing"/>
-		<heading id="Maiming" title="Maiming"/>
-		<heading id="Stabbing" title="Stabbing"/>
-		<heading id="Warring" title="Warring"/>
+		<heading id="Attacking" title="Attacking">
+			<synonym value="Attack"/>
+			<synonym value="Attacked"/>
+			<synonym value="Attacks"/>
+		</heading>
+		<heading id="Blinding" title="Blinding">
+			<synonym value="Blinded"/>
+		</heading>
+		<heading id="Destroying" title="Destroying">
+			<synonym value="Destroy"/>
+			<synonym value="Destroyed"/> <!-- Careful: beware objects destroyed by analysis, disposal -->
+			<synonym value="Destroys"/>
+		</heading>
+		<heading id="Injuring" title="Injuring">
+			<synonym value="Injure"/>
+			<synonym value="Injured"/>
+			<synonym value="Injures"/>
+			<synonym value="Injury"/>
+		</heading>
+		<heading id="Killing" title="Killing">
+			<synonym value="Kill"/>
+			<synonym value="Killed"/>
+			<synonym value="Kills"/>
+		</heading>
+		<heading id="Maiming" title="Maiming">
+			<synonym value="Maim"/>
+			<synonym value="Maims"/>
+			<synonym value="Maimed"/>
+		</heading>
+		<heading id="Stabbing" title="Stabbing">
+			<synonym value="Stab"/>
+			<synonym value="Stabs"/>
+			<synonym value="Stabbed"/>
+		</heading>
+		<heading id="Torturing" title="Torturing">
+			<synonym value="Torture"/>
+			<synonym value="Tortures"/>
+			<synonym value="Tortured"/>
+		</heading>
+		<heading id="Warring" title="Warring">
+			<synonym value="Battle"/>
+			<synonym value="Battled"/>
+			<synonym value="Battling"/>
+			<synonym value="War"/>
+			<synonym value="Wars"/>
+			<synonym value="Warred"/>
+		</heading>
 	</heading>
 </taxonomy>
 

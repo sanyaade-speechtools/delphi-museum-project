@@ -212,8 +212,7 @@
 				<synonym value="Fish Hooks"/>
 				<synonym value="Fish-Hook"/>
 				<synonym value="Fish-Hooks"/>
-				<synonym value="Hook"/>
-				<!-- EXCL needed? -->
+				<synonym value="Hook"/> <!-- EXCL needed? -->
 				<synonym value="Hooks"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
@@ -396,8 +395,7 @@
 		</heading>
 		<heading id="GatheringEquipment" title="Gathering Equipment">
 			<synonym value="Gathering Items"/>
-			<heading id="Beehive" title="Beehive">
-				<!-- MAIN TERM -->
+			<heading id="Beehive" title="Beehive"> <!-- MAIN TERM -->
 				<synonym value="Beehives"/>
 				<synonym value="Bee hive"/>
 				<synonym value="Bee hives"/>
@@ -405,15 +403,13 @@
 				<synonym value="Bee-hives"/>
 				<implies facet="ObjectName" cat="BeehiveAnmlEq"/>
 			</heading>
-			<heading id="BeehiveCover" title="Beehive Cover">
-				<!-- MAIN TERM -->
+			<heading id="BeehiveCover" title="Beehive Cover"> <!-- MAIN TERM -->
 				<synonym value="Beehive Covers"/>
 				<synonym value="Beehive-Cover"/>
 				<synonym value="Beehive-Covers"/>
 				<implies facet="ObjectName" cat="BeehiveCoverAnmlEq"/>
 			</heading>
-			<heading id="BeehiveStand" title="Beehive Stand">
-				<!-- MAIN TERM -->
+			<heading id="BeehiveStand" title="Beehive Stand"> <!-- MAIN TERM -->
 				<synonym value="Beehive Stands"/>
 				<synonym value="Beehive-Stand"/>
 				<synonym value="Beehive-Stands"/>
@@ -879,7 +875,9 @@
 		<heading id="PerchAnmlEq" title="Perch">
 			<synonym value="Perches"/>
 		</heading>
-		<heading id="SheepBellAnmlEq" title="Sheep-Bell">
+		<heading id="SheepBellAnmlEq" title="Sheep Bell">
+			<synonym value="Sheep Bells"/>
+			<synonym value="Sheep-Bell"/>
 			<synonym value="Sheep-Bells"/>
 		</heading>
 		<heading id="SheepShearsAnmlEq" title="Sheep-Shears">
@@ -896,7 +894,7 @@
 			<heading id="Quirt" title="Quirt">
 				<synonym value="Quirts"/>
 				<implies facet="ActivityorContext" cat="HorsebackRiding"/>
-				<implies facet="Material" cat="Leatherandfur"/>
+				<implies facet="Material" cat="LeatherAndFur"/>
 				<implies facet="TechniqueDesignorDecoration" cat="Forked"/>
 			</heading>
 		</heading>
@@ -956,6 +954,7 @@
 			</heading>
 			<!-- <heading id="Biologicalshells" title="Shells">
 				<synonym value="Shell"/>
+				<implies facet="Material" cat="ShellMaterials"/>
 				<heading id="Clamshells" title="Clam Shells">
 					<heading id="SaxidomusNuttalli" title="Butternut Clam">
 						<synonym value="Saxidomus nuttalli"/>
@@ -1924,21 +1923,21 @@
 		<synonym value="Artefacts"/>
 		<heading id="Ball" title="Ball"/>
 		<heading id="BifaciallyWorkedPiece" title="Bifacially Worked Piece"/>
-		<heading id="CarvedStone" title="Carved Stone"/>
-		<heading id="Disc" title="Disc">
-			<!-- Done -->
+		<heading id="CarvedStone" title="Carved Stone">
+			<implies facet="ActivityorContext" cat="Carving"/>
+			<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
+		</heading>
+		<heading id="Disc" title="Disc"> <!-- Done -->
 			<synonym value="Discs"/>
 			<heading id="BiJadeDisk" title="Bi (jade disk)">
 				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a flat jade disc for ritual use. -->
-				<synonym value="Bis"/>
-				<!-- Check -->
+				<synonym value="Bis"/> <!-- Check -->
 				<implies facet="ObjectName" cat="BiJadeDiskRelRit"/>
 			</heading>
 			<heading id="MagicalDisc" title="Magical Disc">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies Amulet -->
 			</heading>
-			<heading id="Sara" title="Sara">
-				<!-- Done -->
+			<heading id="Sara" title="Sara"> <!-- Done -->
 				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a painted disc. -->
 				<synonym value="Saras"/>
 			</heading>
@@ -1948,8 +1947,7 @@
 		</heading>
 		<heading id="EngravedStone" title="Engraved Stone"/>
 		<heading id="RetouchedPiece" title="Retouched Piece"/>
-		<heading id="Rod" title="Rod">
-			<!-- Done -->
+		<heading id="Rod" title="Rod"> <!-- Done -->
 			<synonym value="Rods"/>
 		</heading>
 	</heading>
@@ -2006,8 +2004,7 @@
 		<heading id="CotChdCr" title="Cot">
 			<synonym value="Cots"/>
 		</heading>
-		<heading id="CradleChdCr" title="Cradle">
-			<!-- MAIN TERM -->
+		<heading id="CradleChdCr" title="Cradle"> <!-- MAIN TERM -->
 			<!-- Want to link this run of terms to bedding more generally (cradle and swaddling-related)? -->
 			<synonym value="Cradles"/>
 			<implies facet="ActivityorContext" cat="Childrearing"/>
@@ -2040,8 +2037,7 @@
 			<synonym value="Urine-Pipe"/>
 			<synonym value="Urine-Pipes"/>
 		</heading>
-		<heading id="WritingSheetChdCr" title="Writing Sheet">
-			<!-- WTF? -->
+		<heading id="WritingSheetChdCr" title="Writing Sheet"> <!-- WTF? -->
 			<synonym value="Writing Sheets"/>
 		</heading>
 	</heading>
@@ -2540,7 +2536,9 @@
 			<synonym value="Document-Case"/>
 			<synonym value="Document-Cases"/>
 		</heading>
-		<heading id="ElectionPlateComm" title="Election-Plate">
+		<heading id="ElectionPlateComm" title="Election Plate">
+			<synonym value="Election Plates"/>
+			<synonym value="Election-Plate"/>
 			<synonym value="Election-Plates"/>
 		</heading>
 		<heading id="FilingSystemComm" title="Filing System">
@@ -2552,7 +2550,9 @@
 		<heading id="GuaranteeComm" title="Guarantee">
 			<synonym value="Guarantees"/>
 		</heading>
-		<heading id="HornBookComm" title="Horn-Book">
+		<heading id="HornBookComm" title="Horn Book">
+			<synonym value="Horn Books"/>
+			<synonym value="Horn-Book"/>
 			<synonym value="Horn-Books"/>
 		</heading>
 		<heading id="InvitationComm" title="Invitation">
@@ -2593,6 +2593,7 @@
 		</heading>
 		<heading id="MonumentalInscriptionComm" title="Monumental Inscription">
 			<synonym value="Monumental Inscriptions"/>
+			<implies facet="ObjectName" cat="Monuminscription"/>
 		</heading>
 		<heading id="NewspaperComm" title="Newspaper">
 			<synonym value="Newspapers"/>
@@ -3320,7 +3321,7 @@
 				<implies facet="ActivityorContext" cat="Burial"/>
 				<implies facet="ActivityorContext" cat="Sculpting"/>
 				<implies facet="ActivityorContext" cat="Carving"/>
-				<!-- Could be stone carving or wood carving -->
+				<implies facet="TechniqueDesignorDecoration" cat="Carved"/> <!-- Could be stone carving or wood carving -->
 			</heading>
 			<heading id="SarcophagusContainer" title="Sarcophagus" noMatch="true"/>
 		</heading>
@@ -3667,9 +3668,7 @@
 			<heading id="CuppingVessel" title="Cupping-Vessel">
 				<synonym value="Cupping-Vessels"/>
 			</heading>
-			<heading id="Decanter" title="Decanter">
-				<synonym value="Decanters"/>
-			</heading>
+			<heading id="DecanterVessel" title="Decanter" noMatch="true"/>
 			<heading id="Dipper" title="Dipper">
 				<synonym value="Dippers"/>
 			</heading>
@@ -4348,7 +4347,7 @@
 				<heading id="Weddingdress" title="Wedding Dress">
 					<!-- Card For 7-6432 -->
 					<synonym value="Wedding Dresses"/>
-					<implies facet="ActivityorContext" cat="Bridaladornment"/>
+					<implies facet="ActivityorContext" cat="BridalAdornment"/>
 				</heading>
 			</heading>
 			<heading id="FrockGarment" title="Frock">
@@ -6315,6 +6314,7 @@
 			<synonym value="Back-Rests"/>
 		</heading>
 		<heading id="Furnishing" title="Furnishing">
+			<synonym value="Furnishings"/>
 			<heading id="Bedding" title="Bedding">
 				<heading id="Blanket" title="Blanket">
 					<synonym value="Blankets"/>
@@ -6325,23 +6325,15 @@
 				<heading id="Pillow" title="Pillow">
 					<synonym value="Pillows"/>
 				</heading>
-				<heading id="Matsleeping" title="Mat, Sleeping"/>
+				<heading id="SleepingMat" title="Sleeping Mat">
+					<synonym value="Sleeping Mats"/>
+				</heading>
 			</heading>
 			<heading id="Blind" title="Blind">
 				<synonym value="Blinds"/>
 			</heading>
 			<heading id="Canopy" title="Canopy">
 				<synonym value="Canopies"/>
-			</heading>
-			<heading id="Carpet" title="Carpet">
-				<synonym value="Carpets"/>
-				<synonym value="Rug"/>
-				<synonym value="Rugs"/>
-				<heading id="Runner" title="Runner">
-					<!-- EXCL: might be confused with the bipedally ambulating athlete, e.g., on Greek pottery -->
-					<synonym value="Runners"/>
-				</heading>
-				<heading id="PrayerRugTextiles" title="Prayer Rug" noMatch="true"/>
 			</heading>
 			<heading id="Curtain" title="Curtain">
 				<synonym value="Curtains"/>
@@ -6355,7 +6347,9 @@
 			<heading id="FloorCover" title="Floor-Cover">
 				<synonym value="Floor-Covers"/>
 			</heading>
-			<heading id="FootstoolCover" title="Footstool-Cover">
+			<heading id="FootstoolCover" title="Footstool Cover">
+				<synonym value="Footstool Covers"/>
+				<synonym value="Footstool-Cover"/>
 				<synonym value="Footstool-Covers"/>
 			</heading>
 			<heading id="Hanging" title="Hanging">
@@ -6364,14 +6358,19 @@
 			<heading id="Kilim" title="Kilim">
 				<synonym value="Kilims"/>
 			</heading>
-			<heading id="Mat" title="Mat">
-				<heading id="BedMat" title="Bed-Mat">
+			<heading id="Mats" title="Mats">
+				<synonym value="Mat"/>
+				<heading id="BedMat" title="Bed Mat">
+					<synonym value="Bed Mats"/>
+					<synonym value="Bed-Mat"/>
 					<synonym value="Bed-Mats"/>
 				</heading>
 				<heading id="Coaster" title="Coaster">
 					<synonym value="Coasters"/>
 				</heading>
-				<heading id="DanceMat" title="Dance-Mat">
+				<heading id="DanceMat" title="Dance Mat">
+					<synonym value="Dance Mats"/>
+					<synonym value="Dance-Mat"/>
 					<synonym value="Dance-Mats"/>
 					<implies facet="ActivityorContext" cat="DancesEvents"/>
 				</heading>
@@ -6393,6 +6392,167 @@
 				<heading id="TableMat" title="Table-Mat">
 					<synonym value="Table-Mats"/>
 				</heading>
+			</heading>
+			<heading id="RugsFurnishings" title="Rugs">
+				<synonym value="Busut"/>
+				<synonym value="Carpets"/>
+				<synonym value="Carpeting"/>
+				<synonym value="Kali"/>
+				<synonym value="Kalice"/>
+				<synonym value="Khali"/>
+				<synonym value="Rug"/>
+				<synonym value="Ruggs"/>
+				<synonym value="Zulliya"/>
+				<heading id="RugsByForm" title="by form" noMatch="true">
+					<heading id="AreaRug" title="Area Rugs"/>
+					<heading id="AudienceRug" title="Audience Rugs"/>
+					<heading id="BroadloomRug" title="Broadlooms"/>
+					<heading id="CarpetTile" title="Carpet Tiles"/>
+					<heading id="Carpet" title="Carpet"/>
+					<heading id="Kelleyeh" title="Kelleyehs"/>
+					<heading id="Kenares" title="Kenares"/>
+					<heading id="MianFarsh" title="Mian Farsh"/>
+					<heading id="ShapedCarpet" title="Shaped Carpets"/>
+					<heading id="ThrowRug" title="Throw Rugs"/>
+					<heading id="RugsByFormSize" title="by form &amp; size" noMatch="true">
+						<heading id="Dozar" title="Dozars"/>
+						<heading id="Pushti" title="Pushti"/>
+						<heading id="Sejjadeh" title="Sejjadeh"/>
+						<heading id="Sezar" title="Sezar"/>
+						<heading id="Yastik" title="Yastiks"/>
+						<heading id="Zaronim" title="Zaronims"/>
+					</heading>
+				</heading>
+				<heading id="RugsByFunction" title="by function" noMatch="true">
+					<heading id="Balisht" title="Balisht"/>
+					<heading id="DoorRug" title="Door Rugs"/>
+					<heading id="Gabbehs" title="Gabbehs"/>
+					<heading id="HearthRug" title="Hearth Rugs"/>
+					<heading id="IndoorOutdoorCarpet" title="Indoor-Outdoor Carpets"/>
+					<heading id="PrayerRugRugFunctions" title="Prayer Rug" noMatch="true"/>
+					<heading id="Sofreh" title="Sofrehs"/>
+					<heading id="StairCarpet" title="Stair Carpets"/>
+					<heading id="Vagireh" title="Vagirehs"/>
+					<heading id="Yatak" title="Yataks"/>
+					<heading id="ChineseRugsByFunction" title="Chinese Rugs by function" noMatch="true">
+						<heading id="PillarRug" title="Pillar Rugs"/>
+						<heading id="TempleRug" title="Temple Rugs"/>
+					</heading>
+					<heading id="TibetanRugsByFunction" title="Tibetan Rugs by function" noMatch="true">
+						<heading id="Khaden" title="Khadens"/>
+						<heading id="Khagangma" title="Khagangmas"/>
+						<heading id="Saden" title="Sadens"/>
+					</heading>
+					<heading id="TurkomanRugsByFunction" title="Turkoman Rugs by function" noMatch="true">
+						<heading id="Engsi" title="Engsis"/>
+						<heading id="Germetch" title="Germetch"/>
+						<heading id="Kapunuk" title="Kapunuks"/>
+					</heading>
+				</heading>
+				<heading id="RugsByPattern" title="by pattern" noMatch="true">
+					<heading id="ChessboardRug" title="Chessboard Rugs"/>
+					<heading id="GardenCarpets" title="Garden Carpets"/>
+					<heading id="PictorialRugs" title="Pictorial Rugs"/>
+					<heading id="PortugueseCarpet" title="Portuguese Carpets"/>
+					<heading id="PrayerRugRugPatterns" title="Prayer Rug" noMatch="true"/>
+					<heading id="TigerRug" title="Tiger Rugs"/>
+					<heading id="CaucasianRugsByPattern" title="Caucasian Rugs by pattern" noMatch="true">
+						<heading id="CloudbandKazak" title="Cloudband Kazaks"/>
+						<heading id="DragonRug" title="Dragon Rugs"/>
+						<heading id="PinwheelKazak" title="Pinwheel Kazaks"/>
+						<heading id="StarKazak" title="Star Kazaks"/>
+						<heading id="SunburstKazak" title="Sunburst Kazaks"/>
+					</heading>
+					<heading id="ChineseRugsByPattern" title="Chinese Rugs by pattern" noMatch="true">
+						<heading id="BanjiChineseRug" title="Banjis"/>
+					</heading>
+					<heading id="NavajoRugsByPattern" title="Navajo Rugs by pattern" noMatch="true">
+						<heading id="SandpaintingRug" title="Sandpainting Rugs"/>
+						<heading id="StormPatternRug" title="Storm Pattern Rugs"/>
+						<heading id="YeibichaiRug" title="Yeibichai Rugs"/>
+						<heading id="YeiRug" title="Yei Rugs"/>
+					</heading>
+					<heading id="PersianRugsByPattern" title="Persian Rugs by pattern" noMatch="true">
+						<heading id="ArdabilCarpet" title="Ardabil Carpets"/>
+						<heading id="PolonaiseCarpet" title="Polonaise Carpets">
+							<heading id="CoronationCarpet" title="Coronation Carpets"/>
+						</heading>
+						<heading id="SanguszkoCarpet" title="Sanguszko Carpets"/>
+						<heading id="VaseCarpet" title="Vase Carpets"/>
+					</heading>
+					<heading id="SpanishRugsByPattern" title="Spanish Carpets by pattern" noMatch="true">
+						<heading id="AdmiralCarpet" title="Admiral Carpets"/>
+					</heading>
+					<heading id="TurkishRugsByPattern" title="Turkish Rugs by pattern" noMatch="true">
+						<heading id="CemeteryCarpets" title="Cemetery Carpets"/>
+						<heading id="CrivelliCarpets" title="Crivelli Carpets"/>
+						<heading id="HolbeinCarpets" title="Holbein Carpets">
+							<heading id="SmallPatternHolbeins" title="Small Pattern Holbeins"/>
+							<heading id="LargePatternHolbeins" title="Large Pattern Holbeins"/>
+						</heading>
+						<heading id="KisGhiordes" title="Kis-Ghiordes"/>
+						<heading id="LottoCarpets" title="Lotto Carpets"/>
+						<heading id="TransylvanianCarpets" title="Transylvanian Carpets"/>
+						<heading id="UshakRugsByPattern" title="Ushak Rugs by pattern" noMatch="true">
+							<heading id="BirdUshak" title="Bird Ushaks"/>
+							<heading id="DoubleNicheUshak" title="Double-Niche Ushaks"/>
+							<heading id="MedallionUshak" title="Medallion Ushaks"/>
+							<heading id="StarUshak" title="Star Ushaks"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="RugsByGeogOrigStyle" title="by geographic origin or style" noMatch="true">
+					<heading id="AlcarazCarpet" title="Alcaraz Carpets"/>
+					<heading id="Alpujarras" title="Alpujarras"/>
+					<heading id="IndoPersianRug" title="Indo-Persian Rugs"/>
+					<heading id="ParaMamlukCarpet" title="Para-Mamluk Carpets"/>
+				</heading>
+				<heading id="RugsByTechnique" title="by technique" noMatch="true">
+					<heading id="AbnakeeRugs" title="Abnakee Rugs"/>
+					<heading id="ArraiolosCarpets" title="Arraiolos Carpets"/>
+					<heading id="AubussonCarpets" title="Aubusson Carpets"/>
+					<heading id="Flatweaves" title="Flatweaves"/>
+					<heading id="Flossas" title="Flossas"/>
+					<heading id="FluffMats" title="Fluff Mats"/>
+					<heading id="LoopedPileCarpets" title="Looped-Pile Carpets"/>
+					<heading id="MoquettesMachineMadeRugs)" title="Moquettes (Machine-Made Rugs)"/>
+					<heading id="OrientalRugs" title="Oriental Rugs">
+						<!-- Gabbehs [N]
+							Odjakliks [N] -->
+					</heading>
+					<heading id="PileWovenCarpets" title="Pile-Woven Carpets"/>
+					<heading id="ShagCarpets" title="Shag Carpets"/>
+				</heading>
+				<heading id="RugsBySocialOrigin" title="by social origin" noMatch="true">
+					<heading id="CityRug" title="City Rugs"/>
+					<heading id="CourtCarpet" title="Court Carpets"/>
+					<heading id="TribalRug" title="Tribal Rugs"/>
+					<heading id="VillageRug" title="Village Rugs"/>
+				</heading>
+				<!-- Getty AAT non-preferred parent terms:
+					asmalyks
+					bed Rugs
+					bokches
+					cuvals
+					khalyks
+					mafrashes
+					namakdan
+					saddle Rugs
+					torbas
+				-->
+				<!-- Azerbaijani Rug
+					English Carpets
+					French Carpets
+					Oriental Carpets in Europe
+					Pakistani Carpets
+					Persian and Anatolian Carpets -->
+				<heading id="Runner" title="Runner">
+					<!-- EXCL: might be confused with the bipedally ambulating athlete, e.g., on Greek pottery -->
+					<synonym value="Runners"/>
+				</heading>
+				<!-- Spanish Carpets
+					Turkish Carpets
+					Turkmen ("Bukhara") Carpet -->
 			</heading>
 			<heading id="SeatCover" title="Seat-Cover">
 				<synonym value="Seat-Covers"/>
@@ -6430,8 +6590,7 @@
 			<heading id="CupboardFurniture" title="Cupboard">
 				<synonym value="Cupboards"/>
 			</heading>
-			<heading id="DeskFurniture" title="Desk">
-				<!-- MAIN TERM -->
+			<heading id="DeskFurniture" title="Desk"> <!-- MAIN TERM -->
 				<synonym value="Desks"/>
 				<implies facet="ObjectName" cat="DeskTabFurniture"/>
 			</heading>
@@ -6444,8 +6603,7 @@
 			<heading id="HangingMirror" title="Hanging Mirror">
 				<synonym value="Hanging Mirrors"/>
 			</heading>
-			<heading id="HatRackFurniture" title="Hatrack">
-				<!-- MAIN TERM -->
+			<heading id="HatRackFurniture" title="Hatrack"> <!-- MAIN TERM -->
 				<synonym value="Hat Rack"/>
 				<synonym value="Hat Racks"/>
 				<synonym value="Hat-Rack"/>
@@ -6658,15 +6816,11 @@
 	<heading id="Instruments" title="Instruments">
 		<synonym value="Instrument"/>
 		<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> implies Tools -->
-		<heading id="HorologicalInstrument" title="Horological Instrument">
-			<synonym value="Horological Instruments"/>
-		</heading>
+		<heading id="HorologicalInstruments" title="Horological Instruments" noMatch="true"/>
 		<heading id="ScientificInstrument" title="Scientific Instrument">
 			<synonym value="Scientific Instruments"/>
 		</heading>
-		<heading id="TortureInstrument" title="Torture-Instrument">
-			<!-- Imply From Other -->
-		</heading>
+		<heading id="TortureInstrumentInstmt" title="Torture-Instrument" noMatch="true"/>
 		<heading id="MusicalInstruments" title="Musical Instruments" noMatch="true">
 			<!-- Elsewhere -->
 			<synonym value="Musical Instrument"/>
@@ -8033,7 +8187,9 @@
 				<heading id="Metallophones" title="Metallophones">
 					<!-- includes: gendr, gangsa, saron, glockenspiel, vibraphone, xylophone  -->
 					<synonym value="Metallophone"/>
-					<heading id="Gendr" title="Gendr"> </heading>
+					<heading id="Gendr" title="Gendr">
+						<synonym value="Gendrs"/>
+					</heading>
 					<heading id="Gangsa" title="Gangsa">
 						<synonym value="Gangsas"/>
 					</heading>
@@ -8099,7 +8255,6 @@
 						<synonym value="Amulet Rattles"/>
 					</heading>
 					<heading id="Armadillo-Tail Rattle" title="Armadillo-Tail Rattle">
-						<!-- implied materials: armadillo -->
 						<synonym value="Armadillo-Tail Rattles"/>
 						<synonym value="Armadillo Tail Rattle"/>
 						<synonym value="Armadillo Tail Rattles"/>
@@ -8111,9 +8266,8 @@
 						<synonym value="Baby Rattlers"/>
 					</heading>
 					<heading id="BarkRattle" title="Bark Rattle">
-						<!-- implied materials: bark -->
 						<synonym value="Bark Rattles"/>
-						<implies facet="Material" cat="BarkPlantMaterial"/>
+						<implies facet="Material" cat="TreeBarkMaterial"/>
 					</heading>
 					<heading id="BasketryRattle" title="Basketry Rattle">
 						<synonym value="Basketry Rattles"/>
@@ -8181,6 +8335,8 @@
 					</heading>
 					<heading id="CarvedRattle" title="Carved Rattle">
 						<synonym value="Carved Rattles"/>
+						<implies facet="ActivityorContext" cat="Carving"/>
+						<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
 					</heading>
 					<heading id="ChimuRattle" title="Chimu Rattle">
 						<synonym value="Chimu Rattles"/>
@@ -8220,7 +8376,6 @@
 						<synonym value="Pu'ilis"/>
 					</heading>
 					<heading id="ClawRattle" title="Claw Rattle">
-						<!-- implied materials: claw -->
 						<synonym value="Claw Rattles"/>
 						<synonym value="Crab Claw Rattle"/>
 						<synonym value="Crab Claw Rattles"/>
@@ -8249,7 +8404,7 @@
 					</heading>
 					<heading id="FurRattle" title="Fur Rattle">
 						<synonym value="Fur Rattles"/>
-						<implies facet="Material" cat="FurAnimalMaterial"/>
+						<implies facet="Material" cat="LeatherAndFur"/>
 					</heading>
 					<heading id="Goite-Husk Rattle" title="Goite-Husk Rattle">
 						<synonym value="Goite-Husk Rattles"/>
@@ -8264,7 +8419,7 @@
 						<synonym value="Gravel-Cocoon Rattles"/>
 						<synonym value="Gravel Cocoon Rattles"/>
 						<synonym value="Gravel Cocoon Rattle"/>
-						<implies facet="Material" cat="CocoonAnimalMaterial"/>
+						<implies facet="Material" cat="MaterialsInsectCocoons"/>
 						<implies facet="Material" cat="GravelMaterial"/>
 					</heading>
 					<heading id="HandRattle" title="Hand Rattle">
@@ -8347,7 +8502,6 @@
 						<synonym value="Peyote Rattles"/>
 					</heading>
 					<heading id="SeaShellRattle" title="Sea Shell Rattle">
-						<!-- implied materials: shell -->
 						<synonym value="Sea Shell Rattles"/>
 						<synonym value="Seashell Rattle"/>
 						<synonym value="Seashell Rattles"/>
@@ -8395,15 +8549,12 @@
 						<synonym value="Tortoise Rattles"/>
 						<synonym value="Shell Rattle"/>
 						<synonym value="Shell Rattles"/>
-						<excl value="Sea"/>
-						<!-- To exclude seashell rattles -->
-						<excl value="Seashell"/>
-						<!-- Ibid. -->
+						<excl value="Sea"/> <!-- To exclude seashell rattles -->
+						<excl value="Seashell"/> <!-- Ibid. -->
 						<implies facet="Material" cat="TurtleShellMaterial"/>
 					</heading>
 				</heading>
-				<heading id="Sanza" title="Sanza">
-					<!-- includes Mbiras -->
+				<heading id="Sanza" title="Sanza"> <!-- includes Mbiras -->
 					<synonym value="Sanzas"/>
 					<synonym value="Zanza"/>
 					<synonym value="Zanzas"/>
@@ -9821,11 +9972,7 @@
 		<heading id="IncenseEquipmentRelRit" title="Incense Equipment">
 			<synonym value="Incense Items"/>
 		</heading>
-		<heading id="KachinaDollRelRit" title="Kachina Doll">
-			<synonym value="Kachina Dolls"/>
-			<synonym value="Kachina-Doll"/>
-			<synonym value="Kachina-Dolls"/>
-		</heading>
+		<heading id="KachinaDollRelRit" title="Kachina Doll" noMatch="true"/>
 		<heading id="KahiliRelRit" title="Kahili">
 			<synonym value="Kahilis"/>
 		</heading>
@@ -9897,6 +10044,7 @@
 		</heading>
 		<heading id="PadukaRelRit" title="Paduka">
 			<synonym value="Padukas"/>
+			<implies facet="ObjectName" cat="PadukaSculpture"/>
 		</heading>
 		<heading id="PaxRelRit" title="Pax">
 			<!-- <synonym value="xxxxxxx"/> Is there a plural form for this concept? -->
@@ -9948,12 +10096,15 @@
 			<synonym value="Prayer-Caps"/>
 		</heading>
 		<heading id="PrayerRugRelRit" title="Prayer Rug">
-			<synonym value="Prayer Mat"/>
-			<!-- Are these all textiles, or are some woven from reeds, etc.? -->
+			<synonym value="Prayer Mat"/> <!-- Are these all textiles, or are some woven from reeds, etc.? -->
 			<synonym value="Prayer Mats"/>
+			<synonym value="Prayer-Mat"/>
+			<synonym value="Prayer-Mats"/>
 			<synonym value="Prayer Rugs"/>
+			<synonym value="Prayer-Rug"/>
+			<synonym value="Prayer-Rugs"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-			<implies facet="ObjectName" cat="RugsFurnishings"/>
+			<implies facet="ObjectName" cat="PrayerRugRugPatterns"/>
 			<implies facet="ObjectName" cat="PrayerRugTextiles"/>
 		</heading>
 		<heading id="PrayerWheelRelRit" title="Prayer Wheel">
@@ -10071,163 +10222,164 @@
 			<synonym value="Varnishs"/> <!-- Misspelling -->
 		</heading>
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-		<heading id="Ashsample" title="Ash Sample">
+		<heading id="AshSample" title="Ash Sample">
 			<synonym value="Ash Samples"/>
 		</heading>
-		<heading id="Bonesample" title="Bone Sample">
+		<heading id="BoneSample" title="Bone Sample">
 			<synonym value="Bone Samples"/>
 		</heading>
-		<heading id="Botanicalsample" title="Botanical Sample">
+		<heading id="BotanicalSample" title="Botanical Sample">
 			<synonym value="Botanical Samples"/>
-			<heading id="Ethnobotanicalsample" title="Ethnobotanical Sample">
+			<heading id="EthnobotanicalSample" title="Ethnobotanical Sample">
 				<synonym value="Ethnobotanical Samples"/>
 			</heading>
-			<heading id="Fungussample" title="Fungus Sample">
+			<heading id="FungusSample" title="Fungus Sample">
 				<synonym value="Fungus Samples"/>
 			</heading>
-			<heading id="Grasssample" title="Grass Sample">
+			<heading id="GrassSample" title="Grass Sample">
 				<synonym value="Grass Samples"/>
 			</heading>
 		</heading>
 		<heading id="CFourteenSample" title="C-14 Sample">
 			<synonym value="C-14 Samples"/>
 		</heading>
-		<heading id="Carbonsample" title="Carbon Sample">
+		<heading id="CarbonSample" title="Carbon Sample">
 			<synonym value="Carbon Samples"/>
 		</heading>
-		<heading id="Charcoalsample" title="Charcoal Sample">
+		<heading id="CharcoalSample" title="Charcoal Sample">
 			<synonym value="Charcoal Samples"/>
 		</heading>
-		<heading id="Constituentsample" title="Constituent Sample">
+		<heading id="ConstituentSample" title="Constituent Sample">
 			<synonym value="Constituent Samples"/>
 		</heading>
-		<heading id="Cremationsample" title="Cremation Sample">
+		<heading id="CremationSample" title="Cremation Sample">
 			<synonym value="Cremation Samples"/>
 		</heading>
-		<heading id="Depositsample" title="Deposit Sample">
+		<heading id="DepositSample" title="Deposit Sample">
 			<synonym value="Deposit Samples"/>
-			<heading id="Coresample" title="Core Sample">
+			<heading id="CoreSample" title="Core Sample">
 				<synonym value="Core Samples"/>
 			</heading>
-			<heading id="Gridsample" title="Grid Sample">
+			<heading id="GridSample" title="Grid Sample">
 				<synonym value="Grid Samples"/>
 			</heading>
-			<heading id="Middensample" title="Midden Sample">
+			<heading id="MiddenSample" title="Midden Sample">
 				<synonym value="Midden Samples"/>
 			</heading>
-			<heading id="Moundsample" title="Mound Sample">
+			<heading id="MoundSample" title="Mound Sample">
 				<synonym value="Mound Samples"/>
 			</heading>
-			<heading id="Refusesample" title="Refuse Sample">
+			<heading id="RefuseSample" title="Refuse Sample">
 				<synonym value="Refuse Samples"/>
 			</heading>
-			<heading id="Sedimentsample" title="Sediment Sample">
+			<heading id="SedimentSample" title="Sediment Sample">
 				<synonym value="Sediment Samples"/>
 			</heading>
 		</heading>
-		<heading id="Dungsample" title="Dung Sample">
+		<heading id="DungSample" title="Dung Sample">
 			<synonym value="Dung Samples"/>
 		</heading>
-		<heading id="Fibersample" title="Fiber Sample">
+		<heading id="FiberSample" title="Fiber Sample">
 			<synonym value="Fiber Samples"/>
 		</heading>
-		<heading id="Firepitsample" title="Fire Pit Sample">
+		<heading id="FirepitSample" title="Fire Pit Sample">
 			<synonym value="Fire Pit Samples"/>
 			<synonym value="Firepit Samples"/>
 			<synonym value="Firepit Sample"/>
 			<synonym value="Fire-Pit Samples"/>
 			<synonym value="Fire-Pit Sample"/>
 		</heading>
-		<heading id="Fishsample" title="Fish Sample">
+		<heading id="FishSample" title="Fish Sample">
 			<synonym value="Fish Samples"/>
 		</heading>
-		<heading id="Furnacestonesample" title="Furnace Stone Sample">
+		<heading id="FurnaceStoneSample" title="Furnace Stone Sample">
 			<synonym value="Furnace Stone Samples"/>
 		</heading>
-		<heading id="Lithicsample" title="Lithic Sample">
+		<heading id="LithicSample" title="Lithic Sample">
 			<synonym value="Lithic Samples"/>
-			<heading id="Asphaltumsample" title="Asphaltum Sample">
+			<heading id="AsphaltumSample" title="Asphaltum Sample">
 				<synonym value="Asphaltum Samples"/>
 			</heading>
-			<heading id="Chertsample" title="Chert Sample">
+			<heading id="ChertSample" title="Chert Sample">
 				<synonym value="Chert Samples"/>
 			</heading>
-			<heading id="Marblesample" title="Marble Sample">
+			<heading id="MarbleSample" title="Marble Sample">
 				<synonym value="Marble Samples"/>
 			</heading>
-			<heading id="Mineralsample" title="Mineral Sample">
+			<heading id="MineralSample" title="Mineral Sample">
 				<synonym value="Mineral Samples"/>
 			</heading>
-			<heading id="Obsidiansample" title="Obsidian Sample">
+			<heading id="ObsidianSample" title="Obsidian Sample">
 				<synonym value="Obsidian Samples"/>
 			</heading>
-			<heading id="Quartzitesample" title="Quartzite Sample">
+			<heading id="QuartziteSample" title="Quartzite Sample">
 				<synonym value="Quartzite Samples"/>
 			</heading>
-			<heading id="Rocksample" title="Rock Sample">
+			<heading id="RockSample" title="Rock Sample">
 				<synonym value="Rock Samples"/>
 			</heading>
-			<heading id="Saltsample" title="Salt Sample">
+			<heading id="SaltSample" title="Salt Sample">
 				<synonym value="Salt Samples"/>
 			</heading>
 		</heading>
-		<heading id="Materialsample" title="Material Sample">
+		<heading id="MaterialSample" title="Material Sample">
 			<synonym value="Material Samples"/>
 		</heading>
-		<heading id="Medicinalsample" title="Medicinal Sample">
+		<heading id="MedicinalSample" title="Medicinal Sample">
 			<synonym value="Medicinal Samples"/>
 		</heading>
-		<heading id="Ochresample" title="Ochre Sample">
+		<heading id="OchreSample" title="Ochre Sample">
 			<synonym value="Ochre Samples"/>
 		</heading>
-		<heading id="Pigmentsample" title="Pigment Sample">
+		<heading id="PigmentSample" title="Pigment Sample">
 			<synonym value="Pigment Samples"/>
 		</heading>
-		<heading id="Pollensample" title="Pollen Sample">
+		<heading id="PollenSample" title="Pollen Sample">
 			<synonym value="Pollen Samples"/>
 		</heading>
-		<heading id="Shellsample" title="Shell Sample">
+		<heading id="ShellSample" title="Shell Sample">
 			<synonym value="Shell Samples"/>
-			<implies facet="Material" cat="Shellmaterials"/>
+			<implies facet="Material" cat="ShellMaterials"/>
 		</heading>
-		<heading id="Soilsample" title="Soil Sample">
+		<heading id="SoilSample" title="Soil Sample">
 			<synonym value="Soil Samples"/>
-			<heading id="Claysample" title="Clay Sample">
+			<heading id="ClaySample" title="Clay Sample">
 				<synonym value="Clay Samples"/>
 			</heading>
-			<heading id="Dirtsample" title="Dirt Sample">
+			<heading id="DirtSample" title="Dirt Sample">
 				<synonym value="Dirt Samples"/>
 			</heading>
-			<heading id="Limeysoilsample" title="Limey Soil Sample">
+			<heading id="LimeySoilSample" title="Limey Soil Sample">
 				<synonym value="Limey Soil Samples"/>
 			</heading>
-			<heading id="Limonitesample" title="Limonite Sample">
+			<heading id="LimoniteSample" title="Limonite Sample">
 				<synonym value="Limonite Samples"/>
 			</heading>
 		</heading>
-		<heading id="Textilesample" title="Textile Sample">
+		<heading id="TextileSample" title="Textile Sample">
 			<synonym value="Textile Samples"/>
+			<implies facet="ObjectName" cat="Textiles"/>
 		</heading>
-		<heading id="Unspecifiedsample" title="Unspecified Sample">
+		<heading id="UnspecifiedSample" title="Unspecified Sample"> <!-- Remove ? -->
 			<synonym value="Unspecified Samples"/>
 		</heading>
-		<heading id="Wallpapersample" title="Wallpaper Sample">
+		<heading id="WallpaperSample" title="Wallpaper Sample">
 			<synonym value="Wallpaper Samples"/>
 			<synonym value="Wall Paper Samples"/>
 			<synonym value="Wall Paper Sample"/>
 			<synonym value="Wall-Paper Sample"/>
 			<synonym value="Wall-Paper Samples"/>
 		</heading>
-		<heading id="Wallsample" title="Wall Sample">
+		<heading id="WallSample" title="Wall Sample">
 			<synonym value="Wall Samples"/>
 		</heading>
-		<heading id="Woodsample" title="Wood Sample">
+		<heading id="WoodSample" title="Wood Sample">
 			<synonym value="Wood Samples"/>
 		</heading>
-		<heading id="Woolsample" title="Wool Sample">
+		<heading id="WoolSample" title="Wool Sample">
 			<synonym value="Wool Samples"/>
 		</heading>
-		<heading id="Yarnsample" title="Yarn Sample">
+		<heading id="YarnSample" title="Yarn Sample">
 			<synonym value="Yarn Samples"/>
 		</heading>
 	</heading>
@@ -10300,6 +10452,8 @@
 			</heading>
 			<heading id="HorologicalInstrHoro" title="Clocks &amp; timepieces">
 				<synonym value="Horological Instrument"/>
+				<synonym value="Horological Instruments"/>
+				<implies facet="ObjectName" cat="HorologicalInstruments"/>
 				<heading id="AlarmMechanism" title="Alarm-Mechanism">
 					<synonym value="Alarm-Mechanisms"/>
 				</heading>
@@ -10850,8 +11004,7 @@
 				<heading id="AstronomicalTable" title="Astronomical Table">
 					<synonym value="Astronomical Tables"/>
 				</heading>
-				<heading id="CelestialGlobeAst" title="Celestial Globe">
-					<!-- MAIN TERM -->
+				<heading id="CelestialGlobeAst" title="Celestial Globe"> <!-- MAIN TERM -->
 					<synonym value="Celestial Globes"/>
 					<implies facet="ObjectName" cat="CelestialGlobeSci"/>
 				</heading>
@@ -11224,50 +11377,128 @@
 				<heading id="CeremonialDoll" title="Ceremonial Doll">
 					<synonym value="Ceremonial Dolls"/>
 				</heading>
-				<heading id="KachinaDoll" title="Kachina-Doll">
-					<synonym value="Kachina-Dolls"/>
-					<synonym value="Kachina Doll"/>
+				<heading id="KachinaDoll" title="Kachina Doll"><!-- Traditionally for use by girls -->
 					<synonym value="Kachina Dolls"/>
-					<heading id="ClownFigureKachina" title="Clown Figure">
-						<synonym value="Clown Kachinas"/>
-						<synonym value="Clown Kachina"/>
+					<synonym value="Kachina-Doll"/>
+					<synonym value="Kachina-Dolls"/>
+					<synonym value="Kachina"/>
+					<synonym value="Kachinas"/>
+					<synonym value="Kachina"/>
+					<synonym value="Katsina"/>
+					<synonym value="Katsinam"/>
+					<!-- Implies root of cottonwood tree -->
+					<implies facet="ActivityorContext" cat="Carving"/>
+					<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
+					<implies facet="ObjectName" cat="KachinaDollRelRit"/>
+					<heading id="AholiHopiKachina" title="Aholi Kachina">
+					<!--From <http://www.aholi.com/>:
+						
+						Aholi is the companion (Kachina Chief's Lieutenant) of Eototo during *Powamu
+						and aids him in the task of bringing rain. While Eototo is present on all
+						three mesas, Aholi visits only on Third Mesa.
+						
+						Aholi is a beautiful kachina in his multicolored cloak and tall blue helmet
+						but is of less importance than the very plain Eototo. On the back of his cloak
+						is a likeness of Muyingwa, one of the Germ Gods responsible for the germination
+						of the seeds. Aholi wears a white kilt, a sash, and a fox skin. He wears red
+						moccasins and carries a staff or wand.
+						
+						Aholi carries a wand marked with a star on the end, and as the plumed water
+						serpent, two jars dedicated to him are painted with pointed star emblems.
+						
+						Aholi is the patron saint (wuya) of the Pikyas or Young Corn Clan who care for
+						the seed corn. The colors on his cloak are said to represent the flowers and
+						brightness of summer.
+						
+						Legend has it that the Aholi and Eototo kachinas were partners ages ago in a
+						different land. Aholi stayed behind to fight a rear guard action, then had his
+						throat cut to allow Eototo time to escape as leader. After many lengthy migrations
+						throughout the Southwest, they were reunited at Old Oraibi.
+						
+						Aholi's name appears to derive from the Hopi word ahulti, or "return" which was
+						the promise that the departing Quetzalcoatl made his people when he fled the
+						Toltec capital of Tula for the mythical land of Tlillan.
+						
+						* The Powamu Ceremony is also called the Bean Planting Festival. It is observed
+						in late January or early February and lasts 8 days. -->
+					</heading>
+					<heading id="BearHopiKachina" title="Bear Kachina">
+					<!--From <http://bear.kachina.us/index.htm>:
+						The Bear Kachina is of such great strength that it is felt he can cure the sick.
+						He appears in the kachina return or Soyal of First Mesa as the watchman or side
+						dancer for the Chakwaina. In this role he appears a little different that he does
+						in this illustration. He may come singly or in a group during the Palolokong
+						Dance, and he may appear in a number of colors such as Sakwa Honau (Blue Bear) or
+						Kocha Honau (White Bear). Probably he is most familiar in the Mixed Kachina Dance,
+						dancing outside the lines. His most distinctive features is the presence of a
+						bear footprint on either cheek.-->
+					</heading>
+					<heading id="ClownHopiKachina" title="Clown Kachina"/>
+					<heading id="CrowMotherHopiKachina" title="Crow Mother"/>
+					<heading id="EagleHopiKachina" title="Eagle Kachina"/>
+					<heading id="EototoHopiKachina" title="Eototo Kachina"/>
+					<heading id="FoxHopiKachina" title="Fox Kachina"/>
+					<heading id="KokopelliHopiKachina" title="Kokopelli Kachina"/>
+					<heading id="MorningSingerHopiKachina" title="Morning Singer Kachina"/>
+					<heading id="MudheadHopiKachina" title="Mudhead Kachina">
+						<synonym value="Koyemsi"/>
+					<!-- From <http://mudhead.kachina.us/index.htm>:
+						The Koyemsi, or Mudhead Kachina, is a clown who may be seen in most Hopi ceremonies.
+						Mudhead Kachinas drum, dance, play games with the audience, and may act as
+						announcers for events. They often give prizes or rewards for the races and
+						guessing games they organize. The term "mudhead" comes from their masks which
+						have mud applied to them.
+						
+						Most of the time they accompany other kachina; probably the only time when they
+						do not appear with other personages is during the Night Dances. Koyemsi are usually
+						the ones that play games with the audience to the accompaniment of rollicking tunes.
+						These games are generally guessing games or simple attempts to balance objects of
+						performances of some common act and the rewards are prizes of food or clothing.
+						
+						They may appear as a chorus, and on First Mesa and possibly other villages their
+						songs are in Zuni. During the rests in a dance, they may engage in games with the
+						boys and girls in the audience. At other times, only a single Mudhead may appear
+						as a drummer for a group. Should a dancer not have the proper mask or be late in
+						arriving, he can easily become a Mudhead by donning that mask. These kachinas
+						appear in almost every Hopi dance.-->
+					</heading>
+					<heading id="SnowHopiKachina" title="Snow Kachina"/>
+					<heading id="SunHopiKachina" title="Sun Kachina"/>
+					<heading id="WolfHopiKachina" title="Wolf Kachina"/>
+					<heading id="WupamoHopiKachina" title="Wupamo Kachina"/>
+					<!-- ************************ -->
+					<heading id="AnimalFigureKachina" title="Animal Figure">
+						<synonym value="Animal Kachinas"/>
+						<synonym value="Animal Kachina"/>
 					</heading>
 					<heading id="ChiefFigureKachina" title="Chief Figure">
 						<synonym value="Chief Kachinas"/>
 						<synonym value="Chief Kachina"/>
 					</heading>
-					<heading id="GuardFigureKachina" title="Guard Figure">
-						<synonym value="Guard Kachinas"/>
-						<synonym value="Guard Kachina"/>
-					</heading>
-					<heading id="RunnerFigureKachina" title="Runner Figure">
-						<synonym value="Runner Kachinas"/>
-						<synonym value="Runner Kachina"/>
-					</heading>
-					<heading id="OgreFigureKachina" title="Ogre Figure">
-						<synonym value="Ogre Kachinas"/>
-						<synonym value="Ogre Kachina"/>
-					</heading>
-					<heading id="AnimalFigureKachina" title="Animal Figure">
-						<synonym value="Animal Kachinas"/>
-						<synonym value="Animal Kachina"/>
-					</heading>
-					<heading id="PlantFigureKachina" title="Plant Figure">
-						<synonym value="Plant Kachinas"/>
-						<synonym value="Plant Kachina"/>
-					</heading>
-					<heading id="WomenFigureKachina" title="Women Figure">
-						<synonym value="Women Kachinas"/>
-						<synonym value="Women Kachina"/>
-						<synonym value="Woman Kachinas"/>
-						<synonym value="Woman Kachina"/>
-						<synonym value="Female Kachinas"/>
-						<synonym value="Female Kachina"/>
+					<heading id="ClownFigureKachina" title="Clown Figure">
+						<synonym value="Clown Kachinas"/>
+						<synonym value="Clown Kachina"/>
 					</heading>
 					<heading id="EagleFigureKachina" title="Eagle Figure">
 						<synonym value="Eagle Kachinas"/>
 						<synonym value="Eagle Kachina"/>
 						<synonym value="Bird Kachina"/>
+					</heading>
+					<heading id="GuardFigureKachina" title="Guard Figure">
+						<synonym value="Guard Kachinas"/>
+						<synonym value="Guard Kachina"/>
+					</heading>
+					<heading id="OgreFigureKachina" title="Ogre Figure">
+						<synonym value="Ogre Kachinas"/>
+						<synonym value="Ogre Kachina"/>
+					</heading>
+					<heading id="PlantFigureKachina" title="Plant Figure">
+						<synonym value="Plant Kachinas"/>
+						<synonym value="Plant Kachina"/>
+					</heading>
+					<heading id="RunnerFigureKachina" title="Runner Figure">
+						<synonym value="Runner Kachinas"/>
+						<synonym value="Runner Kachina"/>
 					</heading>
 					<heading id="SnowFigureKachina" title="Snow Figure">
 						<synonym value="Snow Kachinas"/>
@@ -11276,6 +11507,14 @@
 					<heading id="SunFigureKachina" title="Sun Figure">
 						<synonym value="Sun Kachinas"/>
 						<synonym value="Sun Kachina"/>
+					</heading>
+					<heading id="WomenFigureKachina" title="Women Figure">
+						<synonym value="Women Kachinas"/>
+						<synonym value="Women Kachina"/>
+						<synonym value="Woman Kachinas"/>
+						<synonym value="Woman Kachina"/>
+						<synonym value="Female Kachinas"/>
+						<synonym value="Female Kachina"/>
 					</heading>
 				</heading>
 				<heading id="RagDoll" title="Rag Doll">
@@ -11361,15 +11600,11 @@
 		<heading id="LingaSculpture" title="Linga">
 			<synonym value="Lingas"/>
 		</heading>
-		<heading id="Monuminscription" title="Monumental Inscription">
-			<synonym value="Monumental Inscriptions"/>
-		</heading>
+		<heading id="Monuminscription" title="Monumental Inscription" noMatch="true"/>
 		<heading id="OkimonoSculpt" title="Okimono">
 			<synonym value="Okimonos"/>
 		</heading>
-		<heading id="PadukaSculpture" title="Paduka">
-			<synonym value="Padukas"/>
-		</heading>
+		<heading id="PadukaSculpture" title="Paduka" noMatch="true"/>
 		<heading id="Petroglyph" title="Petroglyph">
 			<synonym value="Petroglyphs"/>
 		</heading>
@@ -11404,14 +11639,17 @@
 		<heading id="ManTrap" title="Man-Trap">
 			<synonym value="Man-Traps"/>
 		</heading>
+		<heading id="PropagandaSocCntrl" title="Propaganda">
+			<synonym value="Propagandas"/> <!-- Incorrect plural -->
+		</heading>
 		<heading id="ScoldsBridle" title="Scold's Bridle">
 			<synonym value="Scold's Bridles"/>
 		</heading>
 		<heading id="Scourge" title="Scourge">
 			<synonym value="Scourges"/>
 		</heading>
-		<heading id="Shackle" title="Shackle">
-			<synonym value="Shackles"/>
+		<heading id="Shackles" title="Shackles">
+			<synonym value="Shackle"/>
 			<heading id="Fetter" title="Fetter">
 				<synonym value="Fetters"/>
 			</heading>
@@ -11423,21 +11661,42 @@
 			</heading>
 		</heading>
 		<heading id="Stocks" title="Stocks"/>
-		<heading id="TortureInstrument" title="Torture-Instrument">
+		<heading id="TortureInstrument" title="Torture Instrument">
+			<synonym value="Torture Instruments"/>
+			<synonym value="Torture-Instrument"/>
 			<synonym value="Torture-Instruments"/>
-			<heading id="ArmPress" title="Arm-Press">
+			<implies facet="ObjectName" cat="TortureInstrumentInstmt"/>
+			<implies facet="ActivityorContext" cat="Torturing"/>
+			<heading id="ArmPressTorture" title="Arm Press">
+				<synonym value="Arm Presses"/>
+				<synonym value="Arm-Press"/>
 				<synonym value="Arm-Presses"/>
 			</heading>
-			<heading id="FingerPress" title="Finger-Press">
+			<heading id="FingerPressTorture" title="Finger Press">
+				<synonym value="Finger Presses"/>
+				<synonym value="Finger-Press"/>
 				<synonym value="Finger-Presses"/>
 			</heading>
-			<heading id="GenitalClamp" title="Genital-Clamp">
+			<heading id="GenitalClampTorture" title="Genital Clamp">
+				<synonym value="Genital Clamps"/>
+				<synonym value="Genital-Clamp"/>
 				<synonym value="Genital-Clamps"/>
 			</heading>
-			<heading id="ThumbScrew" title="Thumb-Screw">
-				<synonym value="Thumb-Screws"/>
+			<heading id="SlaveKillerTorture" title="Slave Killer">
+				<synonym value="Slave Killers"/>
+				<synonym value="Slave-Killer"/>
+				<synonym value="Slave-Killers"/>
 			</heading>
-			<heading id="TortureChair" title="Torture-Chair">
+			<heading id="ThumbScrewTorture" title="Thumb Screw">
+				<synonym value="Thumb Screws"/>
+				<synonym value="Thumb-Screw"/>
+				<synonym value="Thumb-Screws"/>
+				<synonym value="Thumbscrew"/>
+				<synonym value="Thumbscrews"/>
+			</heading>
+			<heading id="TortureChairTorture" title="Torture Chair">
+				<synonym value="Torture Chairs"/>
+				<synonym value="Torture-Chair"/>
 				<synonym value="Torture-Chairs"/>
 			</heading>
 		</heading>
@@ -11471,7 +11730,9 @@
 			<heading id="BrandyBowl" title="Brandy-Bowl">
 				<synonym value="Brandy-Bowls"/>
 			</heading>
-			<heading id="CaudleCup" title="Caudle-Cup">
+			<heading id="CaudleCup" title="Caudle Cup">
+				<synonym value="Caudle Cups"/>
+				<synonym value="Caudle-Cup"/>
 				<synonym value="Caudle-Cups"/>
 			</heading>
 			<heading id="Chalice" title="Chalice">
@@ -11482,21 +11743,28 @@
 				<synonym value="Cider-Glass"/>
 				<synonym value="Cider-Glasses"/>
 			</heading>
-			<heading id="CiderJug" title="Cider-Jug">
+			<heading id="CiderJug" title="Cider Jug">
+				<synonym value="Cider Jugs"/>
+				<synonym value="Cider-Jug"/>
 				<synonym value="Cider-Jugs"/>
 			</heading>
-			<heading id="CiderMug" title="Cider-Mug">
+			<heading id="CiderMug" title="Cider Mug">
+				<synonym value="Cider Mugs"/>
+				<synonym value="Cider-Mug"/>
 				<synonym value="Cider-Mugs"/>
 			</heading>
-			<heading id="CocktailShaker" title="Cocktail-Shaker">
+			<heading id="CocktailShaker" title="Cocktail Shaker">
+				<synonym value="Cocktail Shakers"/>
+				<synonym value="Cocktail-Shaker"/>
 				<synonym value="Cocktail-Shakers"/>
 			</heading>
 			<heading id="CommunionCup" title="Communion Cup">
 				<synonym value="Communion Cups"/>
 			</heading>
 			<heading id="CorkscrewAlcEq" title="Corkscrew" noMatch="true"/>
-			<heading id="Decanter" title="Decanter">
+			<heading id="DecanterAlcEq" title="Decanter">
 				<synonym value="Decanters"/>
+				<implies facet="ObjectName" cat="DecanterVessel"/>
 			</heading>
 			<heading id="Demijohn" title="Demijohn">
 				<synonym value="Demijohns"/>
@@ -12265,8 +12533,7 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Textiles" title="Textiles">
-		<!-- MAIN term -->
+	<heading id="Textiles" title="Textiles"> <!-- MAIN TERM -->
 		<synonym value="Textile"/>
 		<synonym value="RGM Yardage"/>
 		<heading id="Cloth" title="Cloth">
@@ -12277,6 +12544,12 @@
 			<synonym value="Embroidery Samples"/>
 			<synonym value="Embroidery-Sample"/>
 			<synonym value="Embroidery-Samples"/>
+		</heading>
+		<heading id="Flags" title="Flags">
+			<synonym value="Flag"/>
+			<heading id="Pennant" title="Pennant">
+				<synonym value="Pennants"/>
+			</heading>
 		</heading>
 		<heading id="LaceTextiles" title="Lace Textiles">
 			<synonym value="Lace Textiles"/>
@@ -12293,8 +12566,7 @@
 				<heading id="TorchonLace" title="Torchon Lace"/>
 			</heading>
 		</heading>
-		<heading id="Hanging" title="Hanging">
-			<!-- Done -->
+		<heading id="Hanging" title="Hanging"> <!-- Done -->
 			<synonym value="Hangings"/>
 			<implies facet="ObjectName" cat="Visualrepresentation"/>
 			<implies facet="ObjectName" cat="Furnishing"/>
@@ -12318,10 +12590,8 @@
 				<synonym value="Torans"/>
 			</heading>
 			<heading id="WallHanging" title="Wall-Hanging">
-				<implies facet="ObjectName" cat="Wall-Cover"/>
-				<!-- Check -->
-				<implies facet="ObjectName" cat="Wall-Ornament"/>
-				<!-- Check -->
+				<implies facet="ObjectName" cat="Wall-Cover"/> <!-- Check -->
+				<implies facet="ObjectName" cat="Wall-Ornament"/> <!-- Check -->
 				<heading id="Kalaga" title="Kalaga">
 					<!-- The Term Refers To A Burmese Wall-Hanging, Or Curtain, Often Made of A Mixture of Local And Imported Materials. -->
 					<synonym value="Kalagas"/>
@@ -12331,25 +12601,13 @@
 		<heading id="Ribbon" title="Ribbon">
 			<synonym value="Ribbons"/>
 		</heading>
-		<heading id="Sampler" title="Sampler">
-			<!-- Done -->
+		<heading id="Sampler" title="Sampler"> <!-- Done -->
 			<synonym value="Samplers"/>
-			<implies facet="ActivityorContext" cat="Needlework"/>
+			<implies facet="ActivityorContext" cat="NeedleWork"/>
 			<!-- Check -->
 		</heading>
-		<heading id="Tapestry" title="Tapestry">
-			<!-- Done -->
+		<heading id="Tapestry" title="Tapestry"> <!-- Done -->
 			<synonym value="Tapestries"/>
-			<heading id="PrayerRugTextiles" title="Prayer Rug" noMatch="true"/>
-		</heading>
-		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
-		<heading id="Textiles" title="Textiles">
-			<heading id="Flags" title="Flags">
-				<synonym value="Flag"/>
-				<heading id="Pennant" title="Pennant">
-					<synonym value="Pennants"/>
-				</heading>
-			</heading>
 		</heading>
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
 	</heading>

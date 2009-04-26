@@ -207,8 +207,7 @@
 		</heading>
 		<heading id="LeatherAndFur" title="Leather and Fur">
 			<synonym value="leather"/>
-			<synonym value="fur"/>
-			<!-- this works around some buggy metadata -->
+			<synonym value="fur"/> <!-- this works around some buggy metadata -->
 			<excl value="furniture"/>
 			<synonym value="animal skin"/>
 			<synonym value="smoked skin"/>
@@ -229,8 +228,8 @@
 					<synonym value="Caribou skins"/>
 				</heading>
 			</heading>
-			<heading id="Cowhide" title="Cow hide">
-				<synonym value="cowhide"/>
+			<heading id="Cowhide" title="Cowhide">
+				<synonym value="cow Hide"/>
 				<synonym value="cowhides"/>
 				<synonym value="calfhide"/>
 				<synonym value="calfhides"/>
@@ -809,7 +808,14 @@
 					<heading id="Redwood" title="Redwood"/>
 				</heading>
 				<heading id="Maple" title="Maple"/>
-				<heading id="Oak" title="Oak"/>
+				<heading id="MulberryTree" title="Mulberry">
+					<heading id="PaperMulberryTree" title="Paper Mulberry">
+						<synonym value="Broussonetia papyrifera"/>
+					</heading>
+				</heading>
+				<heading id="Oak" title="Oak">
+					<synonym value="Quercus"/>
+				</heading>
 				<heading id="Spruce" title="Spruce"/>
 				<heading id="Willow" title="Willow"/>
 				<heading id="Yew" title="Yew"/>
