@@ -205,14 +205,19 @@ function setCatCardImage(srcURL) {
 }
 
 function doViewCard(e,nimages) {
+	$('#vcc_inner').css('height', vcc_inner_height);
   	$('#detail_image').css("visibility","hidden");
 	$('#pop_screen').css("display","block");
 	if(nimages>5){
 		var rows = nimages/5;
-		var thumb_width = 120;
-		var padding = 10 * rows;
-		var regular_height = 650;
-		var vcc_inner_height = (rows * thumb_width) + padding + regular_height;
+		var thumb_height = 75;
+		var padding = 2 * rows;
+		if(nimages<=40){
+			var regular_height = 625;
+		}else{
+			var regular_height = 730;
+		}
+		var vcc_inner_height = (rows * thumb_height) + padding + regular_height;
 		$('#vcc_inner').css('height', vcc_inner_height);
 	}else{
 		//do nothing
