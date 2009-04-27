@@ -20,7 +20,7 @@
 		Missions (done),
 		Reservations and Rancherias
 	</notes>
-	<heading id="ModernLocations" title="Modern Locations" noMatch="true">
+	<heading id="ModernLocations" title="Modern Placenames" noMatch="true">
 		<heading id="Africa" title="Africa"> <!-- done -->
 			<heading id="NorthernAfrica" title="Northern Africa">
 				<synonym value="North Africa"/>
@@ -2469,24 +2469,22 @@
 					<synonym value="Burmese"/>
 					<heading id="ChinHills" title="Chin Hills">
 						<heading id="Chin" title="Chin"/>
-						<heading id="Tiddimvillage" title="Tiddim village"/>
+						<heading id="TiddimVillage" title="Tiddim village"/>
 					</heading>
 					<heading id="Mandalay" title="Mandalay"/>
 					<heading id="Rangoon" title="Rangoon"/>
 				</heading>
 				<heading id="Cambodia" title="Cambodia">
-					<synonym value="Cambodian"/>
-					<synonym value="Cambodians"/>
 					<synonym value="Kampuchea"/>
-					<synonym value="Kampuchean"/>
-					<synonym value="Kampucheans"/>
+					<implies facet="Culture" cat="CambodianPeople"/>
+					<implies facet="Location" cat="FrenchIndochina"/> <!-- Cambodia used to be part of French Indochina -->
 				</heading>
 				<heading id="EastTimor" title="East Timor">
 					<synonym value="East Timorese"/>
 				</heading>
 				<heading id="Laos" title="Laos">
-					<synonym value="Loatian"/>
-					<synonym value="Loatians"/>
+					<implies facet="Culture" cat="LoatianPeople"/>
+					<implies facet="Location" cat="FrenchIndochina"/> <!-- Laos used to be part of French Indochina -->
 				</heading>
 				<heading id="Malaysia" title="Malaysia">
 					<synonym value="Malaysian"/>
@@ -2499,7 +2497,8 @@
 					<synonym value="Thais"/>
 				</heading>
 				<heading id="VietnamBoth" title="Vietnam">
-					<synonym value="Vietnamese"/>
+					<implies facet="Culture" cat="VietnamesePeople"/>
+					<implies facet="Location" cat="FrenchIndochina"/> <!-- The Vietnams used to be part of French Indochina -->
 					<heading id="VietnamSouth" title="Vietnam (South)">
 						<synonym value="South Vietnam"/>
 						<synonym value="South Vietnamese"/>
@@ -22080,7 +22079,7 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="NonModernLocations" title="Non-modern Locations" noMatch="true">
+	<heading id="NonModernLocations" title="Non-modern Placenames" noMatch="true">
 		<heading id="NonModernEurope" title="Europe" noMatch="true">
 			<heading id="Czechoslovakia" title="Czechoslovakia">
 				<synonym value="Czechoslovakian"/>
@@ -22620,6 +22619,11 @@
 				<heading id="MeroeNubia" title="Meroë">
 					<synonym value="Meroe"/>
 				</heading>
+			</heading>
+		</heading>
+		<heading id="NonModernAsia" title="Asia" noMatch="true">
+			<heading id="FrenchIndochina" title="French Indochina">
+				<synonym value="French Indo-China"/>
 			</heading>
 		</heading>
 	</heading>
