@@ -3343,20 +3343,32 @@
 						<synonym value="Joss-Stick-Holders"/>
 					</heading>
 				</heading>
-				<heading id="IncenseVessel" title="Incense-Vessel">
+				<heading id="IncenseVessel" title="Incense Vessel">
+					<synonym value="Incense Vessels"/>
+					<synonym value="Incense-Vessel"/>
 					<synonym value="Incense-Vessels"/>
-					<implies facet="ObjectName" cat="VesselContainer"/>
+					<implies facet="ObjectName" cat="IncenseVslVsl"/>
 					<heading id="Balsamarium" title="Balsamarium">
 						<synonym value="Balsamariums"/>
 					</heading>
-					<heading id="IncenseBoat" title="Incense-Boat">
+					<heading id="IncenseBoat" title="Incense Boat">
+						<synonym value="Incense Boats"/>
+						<synonym value="Incense-Boat"/>
 						<synonym value="Incense-Boats"/>
 					</heading>
-					<heading id="IncenseBowl" title="Incense-Bowl">
+					<heading id="IncenseBowl" title="Incense Bowl">
+						<synonym value="Incense Bowls"/>
+						<synonym value="Incense-Bowl"/>
 						<synonym value="Incense-Bowls"/>
 					</heading>
-					<heading id="IncenseJar" title="Incense Jar"/> 
-					<heading id="IncenseVase" title="Incense-Vase">
+					<heading id="IncenseJar" title="Incense Jar">
+						<synonym value="Incense Jars"/>
+						<synonym value="Incense-Jar"/>
+						<synonym value="Incense-Jars"/>
+					</heading> 
+					<heading id="IncenseVase" title="Incense Vase">
+						<synonym value="Incense Vases"/>
+						<synonym value="Incense-Vase"/>
 						<synonym value="Incense-Vases"/>
 					</heading>
 				</heading>
@@ -3561,19 +3573,14 @@
 				<synonym value="Cocktail-Shakers"/>
 				<implies facet="ObjectName" cat="CocktailShakerAlcEq"/>
 			</heading>
-			<heading id="Coffeepotvessel" title="Coffee Pot" noMatch="true">
+			<heading id="CoffeePotVessel" title="Coffee Pot" noMatch="true">
 				<synonym value="Coffee Pots"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 				<implies facet="ObjectName" cat="CoffeePotHeatingCookEq"/>
 				<implies facet="ObjectName" cat="CoffeeFood"/>
 			</heading>
-			<heading id="CoffeePercolator" title="Coffee Percolator">
-				<synonym value="Coffee Percolators"/>
-				<synonym value="Coffee-Percolator"/>
-				<synonym value="Coffee-Percolators"/>
-				<implies facet="ObjectName" cat="CoffeeFood"/>
-			</heading>
+			<heading id="CoffeePercolatorVess" title="Coffee Percolator" noMatch="true"/>
 			<heading id="Cooler" title="Cooler">
 				<synonym value="Coolers"/>
 			</heading>
@@ -3702,9 +3709,7 @@
 			<heading id="Hanap" title="Hanap">
 				<synonym value="Hanaps"/>
 			</heading>
-			<heading id="IncenseVessel" title="Incense-Vessel">
-				<synonym value="Incense-Vessels"/>
-			</heading>
+			<heading id="IncenseVslVsl" title="Incense Vessel" noMatch="true"/>
 			<heading id="Jars" title="Jars">
 				<synonym value="Jar"/>
 				<heading id="Beerjar" title="Beer Jar">
@@ -12033,6 +12038,8 @@
 				<synonym value="Coffee Percolators"/>
 				<synonym value="Coffee-Percolator"/>
 				<synonym value="Coffee-Percolators"/>
+				<implies facet="ObjectName" cat="CoffeeFood"/>
+				<implies facet="ObjectName" cat="CoffeePercolatorVess"/>
 			</heading>
 			<heading id="CoffeePotCfeEq" title="Coffee Pot">
 				<synonym value="Coffee Pots"/>
