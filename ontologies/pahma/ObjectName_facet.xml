@@ -1528,7 +1528,7 @@
 			</heading>
 		</heading>
 		<heading id="Weapons" title="Weapons">
-			<!-- Weapons has two entries.  Sub-headings need to be incorporated -->
+			<!-- Weapons has two entries.  Sub-categories need to be incorporated -->
 			<synonym value="Weapon"/>
 			<heading id="Bluntweapons" title="Blunt Weapons">
 				<synonym value="Blunt Weapon"/>
@@ -3402,10 +3402,10 @@
 			<synonym value="Medicine-Horn"/>
 			<synonym value="Medicine-Horns"/>
 		</heading>
-		<heading id="MonstranceContnr" title="Monstrance">
-			<synonym value="Monstrances"/> 
-		</heading>
-		<heading id="OilContainer" title="Oil-Container">
+		<heading id="MonstranceContnr" title="Monstrance" noMatch="true"/>
+		<heading id="OilContainer" title="Oil Container">
+			<synonym value="Oil Containers"/>
+			<synonym value="Oil-Container"/>
 			<synonym value="Oil-Containers"/>
 		</heading>
 		<heading id="PaintTinContnr" title="Paint Tin" noMatch="true">
@@ -3416,6 +3416,7 @@
 		</heading>
 		<heading id="ParflecheContnr" title="Parfleche">
 			<synonym value="Parfleches"/>
+			<!-- Implies leather -->
 		</heading>
 		<heading id="PigmentContainer" title="Pigment Container" noMatch="true">
 			<synonym value="Pigment Containers"/>
@@ -3566,6 +3567,10 @@
 			</heading>
 			<heading id="CocktailShaker" title="Cocktail-Shaker">
 				<synonym value="Cocktail-Shakers"/>
+				<synonym value="Cocktail Shakers"/>
+				<synonym value="Cocktail-Shaker"/>
+				<synonym value="Cocktail-Shakers"/>
+				<implies facet="ObjectName" cat="CocktailShakerAlcEq"/>
 			</heading>
 			<heading id="Coffeepotvessel" title="Coffee Pot" noMatch="true">
 				<synonym value="Coffee Pots"/>
@@ -4937,7 +4942,7 @@
 	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
 		<synonym value="Culinary Equipment"/>
-		<heading id="CookingImplementCookEq" title="Cooking Implement" noMatch="true"> <!-- FIX -->
+		<heading id="CookingImplementCookEq" title="Cooking Implement" noMatch="true">
 			<synonym value="Cooking Implements"/>
 			<synonym value="Cooking-Implement"/>
 			<synonym value="Cooking-Implements"/>
@@ -6813,19 +6818,13 @@
 			<synonym value="Yut-Sets"/>
 		</heading>
 	</heading>
-	<heading id="Instruments" title="Instruments">
-		<synonym value="Instrument"/>
-		<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> implies Tools -->
+	<heading id="Instruments" title="Instruments" noMatch="true">
 		<heading id="HorologicalInstruments" title="Horological Instruments" noMatch="true"/>
+		<heading id="MusicalInstrumentInstmt" title="Musical Instruments" noMatch="true"/>
 		<heading id="ScientificInstrument" title="Scientific Instrument">
 			<synonym value="Scientific Instruments"/>
 		</heading>
 		<heading id="TortureInstrumentInstmt" title="Torture-Instrument" noMatch="true"/>
-		<heading id="MusicalInstruments" title="Musical Instruments" noMatch="true">
-			<!-- Elsewhere -->
-			<synonym value="Musical Instrument"/>
-			<implies facet="ObectName" cat="MusicEquipment"/>
-		</heading>
 	</heading>
 	<heading id="LightingEquipment" title="Lighting Equipment">
 		<synonym value="Lighting Items"/>
@@ -7261,24 +7260,15 @@
 				<synonym value="Fans"/>
 			</heading>
 			<heading id="PipeMiscEq" title="Pipe">
-				<excl value="Lead pipe"/>
-				<!-- excludes pipe for plumbing -->
-				<excl value="Lead pipes"/>
-				<!-- excludes pipe for plumbing -->
-				<excl value="Copper pipe"/>
-				<!-- excludes pipe for plumbing -->
-				<excl value="Copper pipes"/>
-				<!-- excludes pipe for plumbing -->
-				<excl value="Drone"/>
-				<!-- excludes musical instruments -->
-				<excl value="music"/>
-				<!-- excludes musical instruments -->
-				<excl value="musical"/>
-				<!-- excludes musical instruments -->
-				<excl value="instrument"/>
-				<!-- excludes musical instruments -->
-				<excl value="instruments"/>
-				<!-- excludes musical instruments -->
+				<excl value="Lead pipe"/> <!-- excludes pipe for plumbing -->
+				<excl value="Lead pipes"/> <!-- Ibid. -->
+				<excl value="Copper pipe"/> <!-- Ibid. -->
+				<excl value="Copper pipes"/> <!-- Ibid. -->
+				<excl value="Drone"/> <!-- excludes musical instruments -->
+				<excl value="music"/> <!-- Ibid. -->
+				<excl value="musical"/> <!-- Ibid. -->
+				<excl value="instrument"/> <!-- Ibid. -->
+				<excl value="instruments"/> <!-- Ibid. -->
 				<synonym value="Pipes"/>
 				<heading id="OpiumPipeMiscEq" title="OpiumPipe">
 					<synonym value="Opium Pipes"/>
@@ -7585,6 +7575,7 @@
 			<synonym value="Noisemakers"/>
 			<synonym value="Toy Instrument"/>
 			<synonym value="Toy Instruments"/>
+			<implies facet="ObjectName" cat="MusicalInstrumentInstmt"/>
 			<heading id="StringedInstruments" title="Stringed Instruments">
 				<synonym value="Stringed Instrument"/>
 				<synonym value="String Instrument"/>
@@ -8620,12 +8611,9 @@
 					<synonym value="Flutes"/>
 					<synonym value="Musical Flute"/>
 					<synonym value="Musical Flutes"/>
-					<excl value="fluted"/>
-					<!-- excludes sculpted description, not musical instrument -->
-					<excl value="organ"/>
-					<!-- excludes mouth organs -->
-					<excl value="whistle"/>
-					<!-- excludes whistles -->
+					<excl value="fluted"/> <!-- excludes sculpted description, not musical instrument -->
+					<excl value="organ"/> <!-- excludes mouth organs -->
+					<excl value="whistle"/> <!-- excludes whistles -->
 					<heading id="BambooFlute" title="Bamboo Flute">
 						<synonym value="Bamboo Flutes"/>
 						<implies facet="Material" cat="BambooMaterial"/>
@@ -8649,8 +8637,7 @@
 						<synonym value="2/1-Hole Flageolets"/>
 						<synonym value="4/2-Hole Flageolets"/>
 					</heading>
-					<heading id="MetalFlute" title="Metal Flute">
-						<!-- excludes: pipe -->
+					<heading id="MetalFlute" title="Metal Flute"> <!-- excludes: pipe -->
 						<synonym value="Metal Flutes"/>
 						<synonym value="Metal-Pipe Flute"/>
 						<synonym value="Metal-Pipe Flutes"/>
@@ -10032,6 +10019,8 @@
 		</heading>
 		<heading id="MonstranceRelRit" title="Monstrance">
 			<synonym value="Monstrances"/>
+			<implies facet="ObjectName" cat="MonstranceContnr"/>
+			<!-- Implies Roman Catholicism -->
 		</heading>
 		<heading id="MorseRelRit" title="Morse">
 			<synonym value="Morses"/>
@@ -11753,11 +11742,7 @@
 				<synonym value="Cider-Mug"/>
 				<synonym value="Cider-Mugs"/>
 			</heading>
-			<heading id="CocktailShaker" title="Cocktail Shaker">
-				<synonym value="Cocktail Shakers"/>
-				<synonym value="Cocktail-Shaker"/>
-				<synonym value="Cocktail-Shakers"/>
-			</heading>
+			<heading id="CocktailShakerAlcEq" title="Cocktail Shaker" noMatch="true"/>
 			<heading id="CommunionCup" title="Communion Cup">
 				<synonym value="Communion Cups"/>
 			</heading>
@@ -13499,9 +13484,9 @@
 				<synonym value="Bags"/>
 			</heading>
 			<heading id="BasketCarrier" title="Basket Carrier">
-				<synonym value="Carrying Carriers"/>
-				<synonym value="Carrying-Carrier"/>
-				<synonym value="Carrying-Carriers"/>
+				<synonym value="Basket Carriers"/>
+				<synonym value="Basket-Carrier"/>
+				<synonym value="Basket-Carriers"/>
 			</heading>
 			<heading id="Briefcase" title="Briefcase">
 				<synonym value="Briefcases"/>
