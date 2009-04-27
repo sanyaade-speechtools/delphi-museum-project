@@ -1051,9 +1051,9 @@
 				<synonym value="Teepees"/>
 				<synonym value="Tepee"/>
 				<synonym value="Tepees"/>
-				<synonym value="thípi"/>
+				<synonym value="Thípi"/>
 				<!-- in the Lakota language -->
-				<synonym value="thípis"/>
+				<synonym value="Thípis"/>
 				<synonym value="Wigwam"/>
 				<synonym value="Wigwams"/>
 			</heading>
@@ -1528,7 +1528,7 @@
 			</heading>
 		</heading>
 		<heading id="Weapons" title="Weapons">
-			<!-- "Weapons" has two entries.  Sub-headings need to be incorporated -->
+			<!-- Weapons has two entries.  Sub-headings need to be incorporated -->
 			<synonym value="Weapon"/>
 			<heading id="Bluntweapons" title="Blunt Weapons">
 				<synonym value="Blunt Weapon"/>
@@ -3360,7 +3360,7 @@
 					<heading id="IncenseBowl" title="Incense-Bowl">
 						<synonym value="Incense-Bowls"/>
 					</heading>
-					<heading id="IncenseJar" title="Incense Jar"> </heading>
+					<heading id="IncenseJar" title="Incense Jar"/> 
 					<heading id="IncenseVase" title="Incense-Vase">
 						<synonym value="Incense-Vases"/>
 					</heading>
@@ -3403,7 +3403,7 @@
 			<synonym value="Medicine-Horns"/>
 		</heading>
 		<heading id="MonstranceContnr" title="Monstrance">
-			<synonym value="Monstrances"/>
+			<synonym value="Monstrances"/> 
 		</heading>
 		<heading id="OilContainer" title="Oil-Container">
 			<synonym value="Oil-Containers"/>
@@ -4937,11 +4937,11 @@
 	</heading>
 	<heading id="CookingEquipment" title="Cooking Equipment" noMatch="true">
 		<synonym value="Culinary Equipment"/>
-		<heading id="CookingImplementCookEq" title="Cooking Implement" noMatch="true">
+		<heading id="CookingImplementCookEq" title="Cooking Implement" noMatch="true"> <!-- FIX -->
 			<synonym value="Cooking Implements"/>
 			<synonym value="Cooking-Implement"/>
 			<synonym value="Cooking-Implements"/>
-			<implies facet="CookingImplementTool"/>
+			<implies facet="ObjectName" cat="CookingImplementTool"/>
 		</heading>
 		<synonym value="Food Preparation Item"/>
 		<synonym value="Food Preparation Items"/>
@@ -5551,8 +5551,8 @@
 					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<implies facet="ObjectName" cat="ForkTool"/>
 				</heading>
-				<heading id="SpoonUtensilCookEq" title="Spoon">
-					<synonym value="Spoons"/>
+				<heading id="SpoonUtensilCookEq" title="Spoons">
+					<synonym value="Spoon"/>
 					<excl value="Eucharist"/>
 					<!-- Excludes eucharistic spoons -->
 					<excl value="Eucharistic"/>
@@ -8797,7 +8797,7 @@
 						</heading>
 					</heading>
 					<heading id="HornWithBell" title="Horn With Bell" noMatch="true">
-						<!-- also incl in Bell heading -->
+						<!-- also incl in Bell concept -->
 						<synonym value="Horn With Bells"/>
 						<synonym value="Horns With Bell"/>
 						<synonym value="Horns With Bells"/>
@@ -9208,7 +9208,7 @@
 			<synonym value="Finger Ornamentations"/>
 			<synonym value="Toe Ornamentation"/>
 			<synonym value="Toe Ornamentations"/>
-			<!-- Miscellaneous, non-jewelery items? Related heading: FingertoeJeweleryPrsOrn. -->
+			<!-- Miscellaneous, non-jewelery items? Related concept: FingertoeJeweleryPrsOrn. -->
 		</heading>
 		<heading id="FobRingPrsOrn" title="Fob Ring">
 			<synonym value="Fob Rings"/>
@@ -12137,7 +12137,7 @@
 					<!-- French singular -->
 					<synonym value="Cheroutes"/>
 					<!-- French plural -->
-					<synonym value="curuṭṭu"/>
+					<synonym value="Curuṭṭu"/>
 					<!-- Original Tamil term meaning "roll of tobacco" -->
 				</heading>
 			</heading>
@@ -12199,7 +12199,7 @@
 				<synonym value="Smoking Pipes"/>
 				<synonym value="Smoking-Pipe"/>
 				<synonym value="Smoking-Pipes"/>
-				<excl value="lead"/>
+				<excl value="Lead"/>
 				<!-- other EXCL needed? -->
 			</heading>
 			<heading id="PipeBagSmkng" title="Pipe Bag">
@@ -13493,17 +13493,32 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="TransportCarrier" title="Transport/Carrier">
+	<heading id="TransportationCarrying" title="Transportation &amp; Carrying">
 		<heading id="Carrier" title="Carrier">
-			<!-- RT Carrying-Chair, Pack-Saddle, Radio-Case -->
-			<heading id="Bag" title="Bag"/>
-			<heading id="BasketCarrier" title="Basket-Carrier"/>
-			<heading id="Briefcase" title="Briefcase"/>
-			<heading id="CarryingBasket" title="Carrying-Basket"> </heading>
-			<heading id="CarryingBelt" title="Carrying-Belt">
+			<heading id="Bag" title="Bag">
+				<synonym value="Bags"/>
+			</heading>
+			<heading id="BasketCarrier" title="Basket Carrier">
+				<synonym value="Carrying Carriers"/>
+				<synonym value="Carrying-Carrier"/>
+				<synonym value="Carrying-Carriers"/>
+			</heading>
+			<heading id="Briefcase" title="Briefcase">
+				<synonym value="Briefcases"/>
+			</heading>
+			<heading id="CarryingBasket" title="Carrying Basket">
+				<synonym value="Carrying Baskets"/>
+				<synonym value="Carrying-Basket"/>
+				<synonym value="Carrying-Baskets"/>
+			</heading>
+			<heading id="CarryingBelt" title="Carrying Belt">
+				<synonym value="Carrying Belts"/>
+				<synonym value="Carrying-Belt "/>
 				<synonym value="Carrying-Belts"/>
 			</heading>
-			<heading id="CarryingBoard" title="Carrying-Board">
+			<heading id="CarryingBoard" title="Carrying Board">
+				<synonym value="Carrying Boards"/>
+				<synonym value="Carrying-Board"/>
 				<synonym value="Carrying-Boards"/>
 			</heading>
 			<heading id="CarryingCloth" title="Carrying-Cloth">
