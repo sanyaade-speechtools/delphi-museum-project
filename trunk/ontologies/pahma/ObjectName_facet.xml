@@ -2386,51 +2386,49 @@
 				<synonym value="Writing-Tablets"/>
 			</heading>
 		</heading>
-		<heading id="AudioVisualEquipmentComm" title="Audio/Visual Equipment">
+		<heading id="AudioVisualEqComm" title="Audio/Visual Equipment">
 			<synonym value="Audio/Visual Items"/>
 			<!-- This category includes objects for mechanically recording, transmitting
 				or receiving sound or images, and associated equipment. -->
-			<heading id="AudioCassettePlayerComm" title="Audio Cassette-Player">
+			<heading id="AudioCassettePlayerAVeq" title="Audio Cassette-Player">
 				<synonym value="Audio Cassette-Players"/>
 			</heading>
-			<heading id="AudioTapeComm" title="Audio Tape">
-				<synonym value="Audio Tapes"/>
-			</heading>
-			<heading id="CameraComm" title="Camera">
+			<heading id="AudioTapeAVeq" title="Audio Tape" noMatch="true"/>
+			<heading id="CameraAVeq" title="Camera">
 				<synonym value="Cameras"/>
 			</heading>
-			<heading id="CameraStrapComm" title="Camera-Strap">
+			<heading id="CameraStrapAVeq" title="Camera-Strap">
 				<synonym value="Camera-Straps"/>
 			</heading>
-			<heading id="GramophoneRecordComm" title="Gramophone Record">
+			<heading id="GramophoneRecordAVeq" title="Gramophone Record">
 				<synonym value="Gramophone Records"/>
 			</heading>
-			<heading id="HeadphonesComm" title="Headphones">
+			<heading id="HeadphonesAVeq" title="Headphones">
 				<synonym value="Headphone"/>
 			</heading>
-			<heading id="MicrophoneComm" title="Microphone">
+			<heading id="MicrophoneAVeq" title="Microphone">
 				<synonym value="Microphones"/>
 			</heading>
-			<heading id="RadioComm" title="Radio">
+			<heading id="RadioAVeq" title="Radio">
 				<synonym value="Radios"/>
 			</heading>
-			<heading id="RadioCaseComm" title="Radio-Case">
+			<heading id="RadioCaseAVeq" title="Radio-Case">
 				<synonym value="Radio-Cases"/>
 			</heading>
-			<heading id="TelephoneComm" title="Telephone">
+			<heading id="TelephoneAVeq" title="Telephone">
 				<synonym value="Telephones"/>
 			</heading>
-			<heading id="TelevisionComm" title="Television">
+			<heading id="TelevisionAVeq" title="Television">
 				<synonym value="Televisions"/>
 			</heading>
-			<heading id="VideoCassetteComm" title="Video Cassette">
+			<heading id="VideoCassetteAVeq" title="Video Cassette">
 				<synonym value="Video Cassettes"/>
 				<synonym value="Video Tape"/>
 				<synonym value="Video Tapes"/>
 				<synonym value="Video"/>
 				<synonym value="Videos"/>
 			</heading>
-			<heading id="VideoCassetteRecorderComm" title="Video Cassette-Recorder">
+			<heading id="VideoCassetteRecorderAVeq" title="Video Cassette-Recorder">
 				<synonym value="Video Cassette-Recorders"/>
 			</heading>
 		</heading>
@@ -2693,6 +2691,7 @@
 			<synonym value="Sound Tracks"/>
 			<heading id="AudioTapeComm" title="Audio Tape">
 				<synonym value="Audio Tapes"/>
+				<implies facet="ObjectName" cat="AudioTapeAVeq"/>
 			</heading>
 			<heading id="CassetteTapeComm" title="Cassette Tape">
 				<synonym value="Cassette Tapes"/>
@@ -3180,20 +3179,16 @@
 		<heading id="Coffer" title="Coffer">
 			<synonym value="Coffers"/>
 		</heading>
-		<heading id="CosmeticContainer" title="Cosmetic Container">
-			<synonym value="Cosmetic Containers"/>
-			<synonym value="Cosmetic-Container"/>
-			<synonym value="Cosmetic-Containers"/>
-		</heading>
+		<heading id="CosmeticCntnrCntnr" title="Cosmetic Container" noMatch="true"/>
 		<heading id="Creel" title="Creel">
 			<synonym value="Creels"/>
 		</heading>
-		<heading id="EelContainer" title="Eel Container">
+		<heading id="EelCntnrCntnr" title="Eel Container">
 			<synonym value="Eel Containers"/>
 			<synonym value="Eel-Container"/>
 			<synonym value="Eel-Containers"/>
 		</heading>
-		<heading id="FireStickContainer" title="Fire Stick Container">
+		<heading id="FireStickCntnrCntnr" title="Fire Stick Container">
 			<synonym value="Fire Stick Containers"/>
 			<synonym value="Fire-Stick-Container"/>
 			<synonym value="Fire-Stick-Containers"/>
@@ -3325,7 +3320,7 @@
 			</heading>
 			<heading id="SarcophagusContainer" title="Sarcophagus" noMatch="true"/>
 		</heading>
-		<heading id="ReligiousContainers" title="Religious Containers">
+		<heading id="ReligiousCntnrCntnr" title="Religious Containers">
 			<heading id="GodHouseContnr" title="God House">
 				<synonym value="God Houses"/>
 				<synonym value="God-House"/>
@@ -3397,11 +3392,7 @@
 			<synonym value="Inros"/>
 		</heading>
 		<heading id="JiulingStickContainer" title="Jiuling Stick Container" noMatch="true"/>
-		<heading id="MedicineHorn" title="Medicine Horn">
-			<synonym value="Medicine Horns"/>
-			<synonym value="Medicine-Horn"/>
-			<synonym value="Medicine-Horns"/>
-		</heading>
+		<heading id="MedicineHornCntr" title="Medicine Horn" noMatch="true"/>
 		<heading id="MonstranceContnr" title="Monstrance" noMatch="true"/>
 		<heading id="OilContainer" title="Oil Container">
 			<synonym value="Oil Containers"/>
@@ -3474,9 +3465,7 @@
 			<heading id="Amphorisk" title="Amphorisk">
 				<synonym value="Amphorisks"/>
 			</heading>
-			<heading id="ApothecaryVessel" title="Apothecary-Vessel">
-				<synonym value="Apothecary-Vessels"/>
-			</heading>
+			<heading id="ApothecaryVesselCntnr" title="Apothecary Vessel" noMatch="true"/>
 			<heading id="Aryballos" title="Aryballos">
 				<synonym value="αρύβαλλος"/>
 			</heading>
@@ -6937,111 +6926,118 @@
 		<synonym value="Healings"/>
 		<synonym value="Medical"/>
 		<synonym value="Medical/Medicine Equipment"/>
-		<synonym value="Medicine" noMatch="true"/>
+		<synonym value="Medicine"/>
 		<synonym value="Medicines"/>
-		<heading id="ApothecaryLadle" title="Apothecary-Ladle">
+		<heading id="ApothecaryLadleRx" title="Apothecary Ladle">
+			<synonym value="Apothecary Ladles"/>
+			<synonym value="Apothecary-Ladle"/>
 			<synonym value="Apothecary-Ladles"/>
 		</heading>
-		<heading id="ApothecaryVessel" title="Apothecary-Vessel">
+		<heading id="ApothecaryVesselRx" title="Apothecary Vessel">
+			<synonym value="Apothecary Vessels"/>
+			<synonym value="Apothecary-Vessel"/>
 			<synonym value="Apothecary-Vessels"/>
-			<implies facet="ObjectName" cat="VesselContainer"/>
+			<implies facet="ObjectName" cat="ApothecaryVesselCntnr"/>
 		</heading>
-		<heading id="ApothecaryWeight" title="Apothecary-Weight">
+		<heading id="ApothecaryWeightRx" title="Apothecary-Weight">
 			<synonym value="Apothecary-Weights"/>
 		</heading>
-		<heading id="ArtificialHand" title="Artificial Hand">
+		<heading id="ArtificialHandRx" title="Artificial Hand">
 			<synonym value="Artificial Hands"/>
 		</heading>
-		<heading id="Bandage" title="Bandage">
+		<heading id="BandageRx" title="Bandage">
 			<synonym value="Bandages"/>
 		</heading>
-		<heading id="BirthingStool" title="Birthing-Stool">
+		<heading id="BirthingStoolRx" title="Birthing-Stool">
 			<synonym value="Birthing-Stools"/>
 		</heading>
-		<heading id="BleedingCup" title="Bleeding-Cup">
+		<heading id="BleedingCupRx" title="Bleeding-Cup">
 			<synonym value="Bleeding-Cups"/>
 		</heading>
-		<heading id="CaudleCup" title="Caudle-Cup">
+		<heading id="CaudleCupRx" title="Caudle-Cup">
 			<synonym value="Caudle-Cups"/>
 		</heading>
-		<heading id="Crutch" title="Crutch">
+		<heading id="CrutchRx" title="Crutch">
 			<synonym value="Crutches"/>
 			<synonym value="Crutchs"/>
 			<!-- Misspelling -->
 		</heading>
-		<heading id="Dentures" title="Dentures">
+		<heading id="DenturesRx" title="Dentures">
 			<synonym value="Denture"/>
 		</heading>
-		<heading id="DoctoringBasketMedical" title="Doctoring Basket">
+		<heading id="DoctoringBasketMedicalRx" title="Doctoring Basket">
 			<synonym value="Doctoring Baskets"/>
 			<implies facet="ActivityorContext" cat="Healing"/>
 			<implies facet="ObjectName" cat="DoctoringBasketBaskets"/>
 			<implies facet="Collection" cat="BasketCollection"/>
 		</heading>
-		<heading id="Enema" title="Enema">
+		<heading id="EnemaRx" title="Enema">
 			<synonym value="Enemas"/>
 		</heading>
-		<heading id="EnemaFunnel" title="Enema Funnel">
+		<heading id="EnemaFunnelRx" title="Enema Funnel">
 			<synonym value="Enema Funnels"/>
 			<implies facet="ActivityorContext" cat="Healing"/>
 			<implies facet="ObjectName" cat="FunnelTool"/>
 		</heading>
-		<heading id="EyeBath" title="Eye-Bath">
+		<heading id="EyeBathRx" title="Eye-Bath">
 			<synonym value="Eye-Baths"/>
 		</heading>
-		<heading id="FingerStall" title="Finger-Stall">
+		<heading id="FingerStallRx" title="Finger-Stall">
 			<synonym value="Finger-Stalls"/>
 		</heading>
-		<heading id="HealingPlate" title="Healing-Plate">
+		<heading id="HealingPlateRx" title="Healing-Plate">
 			<synonym value="Healing-Plates"/>
 		</heading>
-		<heading id="InsectRepellent" title="Insect-Repellent">
+		<heading id="InsectRepellentRx" title="Insect-Repellent">
 			<synonym value="Insect-Repellents"/>
 		</heading>
-		<heading id="InvalidMug" title="Invalid Mug">
+		<heading id="InvalidMugRx" title="Invalid Mug">
 			<synonym value="Invalid Mugs"/>
 		</heading>
-		<heading id="MedicalInstrument" title="Medical Instrument">
+		<heading id="MedicalInstrumentRx" title="Medical Instrument">
 			<synonym value="Medical Instruments"/>
 		</heading>
-		<heading id="Medicine" title="Medicine">
+		<heading id="MedicineRx" title="Medicine">
 			<synonym value="Medicines"/>
 			<synonym value="Febrifuge"/>
-			<heading id="PillMedicine" title="Pill">
+			<heading id="PillMedicineRx" title="Pill">
 				<synonym value="Pills"/>
 			</heading>
 		</heading>
-		<heading id="MedicineBag" title="Medicine-Bag">
+		<heading id="MedicineBagRx" title="Medicine-Bag">
 			<synonym value="Medicine-Bags"/>
 		</heading>
-		<heading id="MedicineBottle" title="Medicine-Bottle">
+		<heading id="MedicineBottleRx" title="Medicine-Bottle">
 			<synonym value="Medicine-Bottles"/>
 		</heading>
-		<heading id="MedicineBox" title="Medicine-Box">
+		<heading id="MedicineBoxRx" title="Medicine-Box">
 			<synonym value="Medicine-Boxes"/>
 		</heading>
-		<heading id="MedicineHorn" title="Medicine-Horn">
+		<heading id="MedicineHornRx" title="Medicine Horn">
+			<synonym value="Medicine Horns"/>
+			<synonym value="Medicine-Horn"/>
 			<synonym value="Medicine-Horns"/>
+			<implies facet="ObjectName" cat="MedicineHornCntr"/>
 		</heading>
-		<heading id="OculistsStamp" title="Oculist's Stamp">
+		<heading id="OculistsStampRx" title="Oculist's Stamp">
 			<synonym value="Oculist's Stamps"/>
 		</heading>
-		<heading id="PhrenologicalChart" title="Phrenological Chart">
+		<heading id="PhrenologicalChartRx" title="Phrenological Chart">
 			<synonym value="Phrenological Charts"/>
 		</heading>
-		<heading id="PhrenologicalSkull" title="Phrenological Skull">
+		<heading id="PhrenologicalSkullRx" title="Phrenological Skull">
 			<synonym value="Phrenological Skulls"/>
 		</heading>
-		<heading id="PillBox" title="Pill-Box">
+		<heading id="PillBoxRx" title="Pill-Box">
 			<synonym value="Pill-Boxes"/>
 		</heading>
-		<heading id="PillSlab" title="Pill-Slab">
+		<heading id="PillSlabRx" title="Pill-Slab">
 			<synonym value="Pill-Slabs"/>
 		</heading>
-		<heading id="StumpCover" title="Stump-Cover">
+		<heading id="StumpCoverRx" title="Stump-Cover">
 			<synonym value="Stump-Covers"/>
 		</heading>
-		<heading id="SurgicalEquipment" title="Surgical Equipment">
+		<heading id="SurgicalEquipmentRx" title="Surgical Equipment">
 			<synonym value="Surgical Items"/>
 		</heading>
 	</heading>
@@ -7446,7 +7442,7 @@
 			<heading id="FigureStandStndMiscEq" title="Figure-Stand">
 				<synonym value="Figure-Stands"/>
 			</heading>
-			<heading id="FireDogStndMiscEq" title="Fire og" noMatch="true">
+			<heading id="FireDogStndMiscEq" title="Fire Dog" noMatch="true">
 				<synonym value="Fire Dogs"/>
 				<synonym value="Fire-Dog"/>
 				<synonym value="Fire-Dogs"/>
@@ -9342,7 +9338,7 @@
 				<synonym value="Bracelets"/>
 			</heading>
 			<heading id="BroachJeweleryPrsOrn" title="Broach">
-				<synonym value="Brooches"/>
+				<synonym value="Broaches"/>
 				<heading id="BroachJeweleryPrsOrn" title="Brooch">
 					<synonym value="Brooches"/>
 				</heading>
@@ -9410,8 +9406,9 @@
 					<synonym value="Toe Rings"/>
 				</heading>
 			</heading>
-			<heading id="HeadlocketsJeweleryPrsOrn" title="Head Lockets">
+			<heading id="HeadLcktJwlryPrsOrn" title="Head Lockets">
 				<synonym value="Head Locket"/>
+				<implies facet="ObjectName" cat="LocketJeweleryPrsOrn"/>
 				<heading id="MaangtikaJeweleryPrsOrn" title="Maangtika">
 					<synonym value="Mangtika"/>
 				</heading>
@@ -9451,7 +9448,7 @@
 					<synonym value="Torc"/>
 					<synonym value="Torcs"/>
 					<implies facet="ActivityorContext" cat="Metallurgy"/>
-					<implies facet="ObjectName" cat="TorquePrsOrn"/>
+					<implies facet="ObjectName" cat="TorqueJeweleryPrsOrn"/>
 				</heading>
 			</heading>
 			<heading id="ParureJeweleryPrsOrn" title="Parure">
@@ -12621,24 +12618,38 @@
 				<synonym value="Rouges"/>
 			</heading>
 		</heading>
-		<heading id="CosmeticContainer" title="Cosmetic-Container">
-			<heading id="CosmeticBag" title="Cosmetic-Bag">
+		<heading id="CosmeticContainer" title="Cosmetic Container">
+			<synonym value="Cosmetic Containers"/>
+			<synonym value="Cosmetic-Container"/>
+			<synonym value="Cosmetic-Containers"/>
+			<implies facet="ObjectName" cat="CosmeticCntnrCntnr"/>
+			<heading id="CosmeticBag" title="Cosmetic Bag">
+				<synonym value="Cosmetic Bags"/>
+				<synonym value="Cosmetic-Bag"/>
 				<synonym value="Cosmetic-Bags"/>
 			</heading>
-			<heading id="CosmeticBox" title="Cosmetic-Box">
+			<heading id="CosmeticBox" title="Cosmetic Box">
+				<synonym value="Cosmetic Boxes"/>
+				<synonym value="Cosmetic-Box"/>
 				<synonym value="Cosmetic-Boxes"/>
 			</heading>
-			<heading id="CosmeticCase" title="Cosmetic-Case">
+			<heading id="CosmeticCase" title="Cosmetic Case">
+				<synonym value="Cosmetic Cases"/>
+				<synonym value="Cosmetic-Case"/>
 				<synonym value="Cosmetic-Cases"/>
 			</heading>
-			<heading id="CosmeticVessel" title="Cosmetic-Vessel">
+			<heading id="CosmeticVessel" title="Cosmetic Vessel">
+				<synonym value="Cosmetic Vessels"/>
+				<synonym value="Cosmetic-Vessel"/>
 				<synonym value="Cosmetic-Vessels"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
-			<heading id="KohlContainer" title="Kohl-Container">
+			<heading id="KohlContainer" title="Kohl Container">
+				<synonym value="Kohl Containers"/>
+				<synonym value="Kohl-Container"/>
 				<synonym value="Kohl-Containers"/>
 			</heading>
-			<heading id="MascaraPouch" title="Mascara Pouch" noMatch="true">
+			<heading id="MascaraPouch" title="Mascara Pouch">
 				<synonym value="Mascara Pouches"/>
 				<synonym value="Mascara-Pouchs"/>
 				<!-- Misspelling -->
