@@ -395,7 +395,7 @@
 		</heading>
 		<heading id="GatheringEquipment" title="Gathering Equipment">
 			<synonym value="Gathering Items"/>
-			<heading id="Beehive" title="Beehive"> <!-- MAIN TERM -->
+			<heading id="BeehiveBees" title="Beehive"> <!-- MAIN TERM -->
 				<synonym value="Beehives"/>
 				<synonym value="Bee hive"/>
 				<synonym value="Bee hives"/>
@@ -403,18 +403,18 @@
 				<synonym value="Bee-hives"/>
 				<implies facet="ObjectName" cat="BeehiveAnmlEq"/>
 			</heading>
-			<heading id="BeehiveCover" title="Beehive Cover"> <!-- MAIN TERM -->
+			<heading id="BeehiveCoverBees" title="Beehive Cover"> <!-- MAIN TERM -->
 				<synonym value="Beehive Covers"/>
 				<synonym value="Beehive-Cover"/>
 				<synonym value="Beehive-Covers"/>
 				<implies facet="ObjectName" cat="BeehiveCoverAnmlEq"/>
 			</heading>
-			<heading id="BeehiveStand" title="Beehive Stand"> <!-- MAIN TERM -->
+			<heading id="BeehiveStandBees" title="Beehive Stand"> <!-- MAIN TERM -->
 				<synonym value="Beehive Stands"/>
 				<synonym value="Beehive-Stand"/>
 				<synonym value="Beehive-Stands"/>
 				<implies facet="ObjectName" cat="BeehiveStandAnmlEq"/>
-				<implies facet="ObjectName" cat="BeehiveStandStnd"/>
+				<implies facet="ObjectName" cat="BeehiveStandStndMiscEq"/>
 			</heading>
 			<heading id="ClimbingRing" title="Climbing-Ring"/>
 			<heading id="ClimbingRopeGathering" title="Climbing Rope">
@@ -3087,7 +3087,7 @@
 				<!-- Misspelling -->
 				<implies facet="ActivityorContext" cat="Burial"/>
 				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-				<implies facet="ObjectName" cat="Canopicbxfuner"/>
+				<implies facet="ObjectName" cat="CanopicBxFunerRelRit"/>
 			</heading>
 			<heading id="CoffinBoxContainer" title="Coffin" noMatch="true"/>
 			<heading id="FeatherBoxContainer" title="Feather Box">
