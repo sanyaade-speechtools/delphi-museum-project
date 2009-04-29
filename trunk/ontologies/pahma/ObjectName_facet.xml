@@ -120,28 +120,31 @@
 					</heading>
 				</heading>
 			</heading>
-			<heading id="BirdScare" title="Bird-Scare">
+			<heading id="BirdScareAgEq" title="Bird Scare">
+				<synonym value="Bird Scares"/>
+				<synonym value="Bird-Scare"/>
 				<synonym value="Bird-Scares"/>
+				<implies facet="ObjectName" cat="BirdScareAnmlEq"/>
 			</heading>
-			<heading id="CornBin" title="Corn-Bin">
+			<heading id="CornBinAgEq" title="Corn-Bin">
 				<synonym value="Corn-Bins"/>
 			</heading>
-			<heading id="Crook" title="Crook">
+			<heading id="CrookAgEq" title="Crook">
 				<synonym value="Crooks"/>
 			</heading>
-			<heading id="GrainKiln" title="Grain-Kiln">
+			<heading id="GrainKilnAgEq" title="Grain-Kiln">
 				<synonym value="Grain-Kilns"/>
 			</heading>
-			<heading id="HarrowRest" title="Harrow-Rest">
+			<heading id="HarrowRestAgEq" title="Harrow-Rest">
 				<synonym value="Harrow-Rests"/>
 			</heading>
-			<heading id="IrrigationEquipment" title="Irrigation Items">
+			<heading id="IrrigationEqAgEq" title="Irrigation Items">
 				<synonym value="Irrigation Equipment"/>
 				<heading id="WateringCan" title="Watering Can">
 					<synonym value="Watering Cans"/>
 				</heading>
 			</heading>
-			<heading id="MilkingEquipment" title="Milking Items">
+			<heading id="MilkingEqAgEq" title="Milking Items">
 				<heading id="MilkingCan" title="Milking Can" noMatch="true">
 					<synonym value="Milking Cans"/>
 					<synonym value="Milking-Can"/>
@@ -173,16 +176,16 @@
 					<synonym value="Milking-Stools"/>
 				</heading>
 			</heading>
-			<heading id="MonkeyScare" title="Monkey Scare" noMatch="true">
+			<heading id="MonkeyScareAgEq" title="Monkey Scare">
 				<synonym value="Monkey Scares"/>
 				<synonym value="Monkey-Scare"/>
 				<synonym value="Monkey-Scares"/>
 				<implies facet="ObjectName" cat="MonkeyScareAnmlEq"/>
 			</heading>
-			<heading id="RiceBin" title="Rice-Bin">
+			<heading id="RiceBinAgEq" title="Rice-Bin">
 				<synonym value="Rice-Bins"/>
 			</heading>
-			<heading id="SickleHolder" title="Sickle-Holder">
+			<heading id="SickleHolderAgEq" title="Sickle-Holder">
 				<synonym value="Sickle-Holders"/>
 			</heading>
 		</heading>
@@ -623,9 +626,7 @@
 		<heading id="BirdFeederAnmlEq" title="Bird-Feeder">
 			<synonym value="Bird-Feeders"/>
 		</heading>
-		<heading id="BirdScareAnmlEq" title="Bird-Scare">
-			<synonym value="Bird-Scares"/>
-		</heading>
+		<heading id="BirdScareAnmlEq" title="Bird-Scare" noMatch="true"/>
 		<heading id="BrailAnmlEq" title="Brail">
 			<synonym value="Brails"/>
 		</heading>
@@ -2053,6 +2054,7 @@
 			<synonym value="Advertisements"/>
 			<heading id="EKambamComm" title="E-Kamban">
 				<synonym value="E-Kambans"/>
+				<implies facet="ObjectName" cat="EKambanVisRep"/>
 			</heading>
 			<heading id="PlayBillComm" title="Play-Bill">
 				<synonym value="Play-Bills"/>
@@ -8925,12 +8927,7 @@
 				<synonym value="Musical Clocks"/>
 			</heading>
 
-
 			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
-
-			<heading id="Aerophone_BM" title="Aerophone">
-				<synonym value="Aerophones"/>
-			</heading>
 			<heading id="Bagpipes" title="Bagpipes">
 				<!--incorporate-->
 				<synonym value="Bagpipe"/>
@@ -13867,7 +13864,7 @@
 					<synonym value="Lorry"/>
 					<!-- British singular (equivalent?) -->
 					<synonym value="Motor Truck"/>
-					<synonym value="Motor Truck"/>
+					<synonym value="Motor Trucks"/>
 					<synonym value="Trucks"/>
 				</heading>
 				<heading id="UnicycleVehicle" title="Unicycle">
@@ -13972,9 +13969,7 @@
 		</heading>
 		<heading id="PaintingsVisRep" title="Paintings">
 			<synonym value="Painting"/>
-			<heading id="EKambanVisRep" title="E-Kamban">
-				<synonym value="E-Kambans"/>
-			</heading>
+			<heading id="EKambanVisRep" title="E-Kamban" noMatch="true"/>
 			<heading id="FanPaintingVisRep" title="Fan Painting">
 				<synonym value="Fan Paintings"/>
 				<synonym value="Fan-Painting"/>
