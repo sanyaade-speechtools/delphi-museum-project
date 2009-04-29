@@ -1985,6 +1985,7 @@
 			<synonym value="Baby Baskets"/>
 			<synonym value="Baby Carrier"/>
 			<synonym value="Baby Carriers"/>
+			<implies facet="ObjectName" cat="ChildCarrierCrr"/>
 			<heading id="CradleBoardChdCr" title="Cradle Board">
 				<synonym value="Cradle Boards"/>
 				<synonym value="Cradleboards"/>
@@ -2010,7 +2011,6 @@
 			<implies facet="ActivityorContext" cat="Childrearing"/>
 			<implies facet="ObjectName" cat="CradleFurniture"/>
 		</heading>
-
 		<heading id="CradleCoverChdCr" title="Cradle Cover">
 			<synonym value="Cradle Covers"/>
 			<synonym value="Cradle-Cover"/>
@@ -3319,11 +3319,7 @@
 			<heading id="SarcophagusContainer" title="Sarcophagus" noMatch="true"/>
 		</heading>
 		<heading id="ReligiousCntnrCntnr" title="Religious Containers">
-			<heading id="GodHouseContnr" title="God House">
-				<synonym value="God Houses"/>
-				<synonym value="God-House"/>
-				<synonym value="God-Houses"/>
-			</heading>
+			<heading id="GodHouseContnr" title="God House" noMatch="true"/>
 			<heading id="IncenseContainer" title="Incense Container">
 				<synonym value="Incense Containers"/>
 				<synonym value="Incense-Container "/>
@@ -4704,12 +4700,8 @@
 			<heading id="HeadCover" title="Head-Cover">
 				<synonym value="Head-Covers"/>
 			</heading>
-			<heading id="HeadDress" title="Headdress">
-				<synonym value="Headdresses"/>
-				<synonym value="Head Dress"/>
-				<synonym value="Head Dresses"/>
-				<synonym value="Head-Dress"/>
-				<synonym value="Head-Dresses"/>
+			<heading id="HeadDressHdWr" title="Headdress">
+				
 			</heading>
 			<heading id="HeadGuard" title="Head Guard">
 				<synonym value="Head Guards"/>
@@ -4756,8 +4748,11 @@
 				<synonym value="Yashmaks"/>
 			</heading>
 		</heading>
-		<heading id="MasqueradeCostume" title="Masquerade-Costume">
+		<heading id="MasqueradeCostume" title="Masquerade Costume">
+			<synonym value="Masquerade Costumes"/>
+			<synonym value="Masquerade-Costume"/>
 			<synonym value="Masquerade-Costumes"/>
+			<implies facet="ObjectName" cat="MasqueradeCostumeRelRit"/>
 		</heading>
 		<heading id="Neckwear" title="Neckwear">
 			<synonym value="Neck Ware"/>
@@ -5191,10 +5186,7 @@
 			<synonym value="Fish Dryer"/>
 			<synonym value="Fish Dryers"/>
 		</heading>
-		<heading id="FleshHookCookEq" title="Flesh Hook">
-			<synonym value="Flesh Hooks"/>
-			<synonym value="Flesh-Hook"/>
-			<synonym value="Flesh-Hooks"/>
+		<heading id="FleshHookCookEq" title="Flesh Hook" noMatch="true">
 			<!-- Medieval cooking tool, for pulling meat from the pot.  Related term: cauldron/caldron. Also ritual item. See FleshHookRelRit-->
 		</heading>
 		<heading id="FoodHeatingDevicesCookEq" title="Food Heating Device">
@@ -5293,8 +5285,7 @@
 			<implies facet="ActivityorContext" cat="FoodStorage"/>
 			<implies facet="ObjectName" cat="FunnelTool"/>
 		</heading>
-		<heading id="GrainMeasureCookEq" title="Grain Measure">
-			<synonym value="Grain Measures"/>
+		<heading id="GrainMeasureCookEq" title="Grain Measure" noMatch="true">
 			<!-- Move this to agricultural subsistence? Does not appear to be used for cooking/ food preparation specifically. -->
 			<!-- Note- grain measures have also been turned into banjos, similar to gourd banjos. -->
 		</heading>
@@ -7415,17 +7406,11 @@
 				<synonym value="Bases"/>
 			</heading>
 			<heading id="BeehiveStandStndMiscEq" title="Beehive-Stand" noMatch="true"/>
-			<heading id="BetelStandStndMiscEq" title="Betel Stand">
-				<synonym value="Betel Stands"/>
-				<synonym value="Betel-Stand"/>
-				<synonym value="Betel-Stands"/>
-			</heading>
+			<heading id="BetelStandStndMiscEq" title="Betel Stand" noMatch="true"/>
 			<heading id="CakeStandStndMiscEq" title="Cake-Stand">
 				<synonym value="Cake-Stands"/>
 			</heading>
-			<heading id="ClockStandStndMiscEq" title="Clock-Stand">
-				<synonym value="Clock-Stands"/>
-			</heading>
+			<heading id="ClockStandStndMiscEq" title="Clock-Stand" noMatch="true"/>
 			<heading id="ClothesHorseStndMiscEq" title="Clothes-Horse">
 				<synonym value="Clothes-Horses"/>
 			</heading>
@@ -7529,11 +7514,7 @@
 				<synonym value="Vessel-Stands"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
-			<heading id="WatchStandStndMiscEq" title="Watch Stand">
-				<synonym value="Watch Stands"/>
-				<synonym value="Watch-Stand"/>
-				<synonym value="Watch-Stands"/>
-			</heading>
+			<heading id="WatchStandStndMiscEq" title="Watch Stand" noMatch="true"/>
 			<heading id="WigStandStndMiscEq" title="Wig-Stand">
 				<synonym value="Wig-Stands"/>
 			</heading>
@@ -8533,8 +8514,6 @@
 						<synonym value="Tortoise Shell Rattles"/>
 						<synonym value="Tortoise Rattle"/>
 						<synonym value="Tortoise Rattles"/>
-						<synonym value="Shell Rattle"/>
-						<synonym value="Shell Rattles"/>
 						<excl value="Sea"/> <!-- To exclude seashell rattles -->
 						<excl value="Seashell"/> <!-- Ibid. -->
 						<implies facet="Material" cat="TurtleShellMaterial"/>
@@ -9314,11 +9293,7 @@
 					<synonym value="Name-Bead"/>
 					<synonym value="Name-Beads"/>
 				</heading>
-				<heading id="PrayerBeadJeweleryPrsOrn" title="Prayer Bead">
-					<synonym value="Prayer Beads"/>
-					<synonym value="Prayer-Bead"/>
-					<synonym value="Prayer-Beads"/>
-				</heading>
+				<heading id="PrayerBeadJwlryPrsOrn" title="Prayer Bead" noMatch="true"/>
 				<heading id="RefebeadsJeweleryPrsOrn" title="Refe Beads">
 					<synonym value="Refe Bead"/>
 					<synonym value="Qba Lle,Ke,"/>
@@ -9925,18 +9900,22 @@
 		<heading id="GodSymbolRelRit" title="God Symbol">
 			<synonym value="God Symbols"/>
 		</heading>
-		<heading id="GodHouseRelRit" title="God-House">
+		<heading id="GodHouseRelRit" title="God House">
+			<synonym value="God Houses"/>
+			<synonym value="God-House"/>
 			<synonym value="God-Houses"/>
+			<implies facet="ObjectName" cat="GodHouseContnr"/>
 		</heading>
 		<heading id="HanukahLampRelRit" title="Hanukah Lamp">
 			<synonym value="Hanukah Lamps"/>
 		</heading>
 		<heading id="HeaddressRelRit" title="Headdress">
 			<synonym value="Headdresses"/>
-			<synonym value="Head dress"/>
-			<synonym value="Head dresses"/>
-			<synonym value="Head-dress"/>
-			<synonym value="Head-dresses"/>
+			<synonym value="Head Dress"/>
+			<synonym value="Head Dresses"/>
+			<synonym value="Head-Dress"/>
+			<synonym value="Head-Dresses"/>
+			<implies facet="ObjectName" cat="HeadDressHdWr"/>
 		</heading>
 		<heading id="HongbaoRelRit" title="Hongbao">
 			<synonym value="Hongbaos"/>
@@ -9986,8 +9965,7 @@
 		</heading>
 		<heading id="MalaRelRit" title="Mala">
 			<synonym value="Malas"/>
-			<synonym value="Prayer beads"/>
-			<synonym value="Prayer bead"/>
+			<implies facet="ObjectName" cat="PrayerBeadRelRit"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="MandalaRelRit" title="Mandala">
@@ -9999,9 +9977,7 @@
 		<heading id="MarriageEquipmentRelRit" title="Marriage Equipment">
 			<synonym value="Marriage Items"/>
 		</heading>
-		<heading id="MasqueradeCostumeRelRit" title="Masquerade-Costume">
-			<synonym value="Masquerade-Costumes"/>
-		</heading>
+		<heading id="MasqueradeCostumeRelRit" title="Masquerade-Costume" noMatch="true"/>
 		<heading id="MassBellRelRit" title="Mass-Bell">
 			<synonym value="Mass-Bells"/>
 		</heading>
@@ -10045,7 +10021,7 @@
 			<synonym value="Phylactery-Pouches"/>
 			<synonym value="Phylactery-Pouchs"/>
 			<!-- Misspelling -->
-			<excl value="PouchContainer"/>
+			<excl value="PouchContainer"/> <!-- FIX -->
 			<excl value="Bag"/>
 		</heading>
 		<heading id="PointingBoneRelRit" title="Pointing Bone">
@@ -10054,8 +10030,11 @@
 		<heading id="PointingStickRelRit" title="Pointing Stick">
 			<synonym value="Pointing Sticks"/>
 		</heading>
-		<heading id="PrayerBeadRelRit" title="Prayer-Bead">
+		<heading id="PrayerBeadRelRit" title="Prayer Bead">
+			<synonym value="Prayer Beads"/>
+			<synonym value="Prayer-Bead"/>
 			<synonym value="Prayer-Beads"/>
+			<implies facet="ObjectName" cat="PrayerBeadJwlryPrsOrn"/>
 		</heading>
 		<heading id="PrayerBlockRelRit" title="Prayer-Block">
 			<synonym value="Prayer-Blocks"/>
@@ -10449,6 +10428,7 @@
 				<synonym value="Clock Stands"/>
 				<synonym value="Clock-Stand"/>
 				<synonym value="Clock-Stands"/>
+				<implies facet="ObjectName" cat="ClockStandStndMiscEq"/>
 			</heading>
 			<heading id="DustCapHoro" title="Dust Cap">
 				<synonym value="Dust Caps"/>
@@ -10974,8 +10954,11 @@
 			<heading id="WatchPaperHoro" title="Watch-Paper">
 				<synonym value="Watch-Papers"/>
 			</heading>
-			<heading id="WatchStandHoro" title="Watch-Stand">
+			<heading id="WatchStandHoro" title="Watch Stand">
+				<synonym value="Watch Stands"/>
+				<synonym value="Watch-Stand"/>
 				<synonym value="Watch-Stands"/>
+				<implies facet="ObjectName" cat="WatchStandStndMiscEq"/>
 			</heading>
 		</heading>
 		<heading id="NumericalTableSci" title="Numerical Table">
@@ -11144,7 +11127,7 @@
 					<synonym value="Grain Measures"/>
 					<synonym value="Grain-Measure"/>
 					<synonym value="Grain-Measures"/>
-					<implies facet="ObjectName" cat="CookingEquipment"/>
+					<implies facet="ObjectName" cat="GrainMeasureCookEq"/>
 				</heading>
 				<heading id="HodometerMeasure" title="Hodometer">
 					<synonym value="Hodometers"/>
@@ -11995,6 +11978,7 @@
 				<synonym value="Betel Stands"/>
 				<synonym value="Betel-Stand"/>
 				<synonym value="Betel-Stands"/>
+				<implies facet="ObjectName" cat="BetelStandStndMiscEq"/>
 			</heading>
 		</heading>
 		<heading id="ChocolateEquipment" title="Chocolate Equipment" noMatch="true">
@@ -13145,7 +13129,7 @@
 		<heading id="FlesherTool" title="Flesher">
 			<synonym value="Fleshers"/>
 		</heading>
-		<heading id="FleshHookTool" title="Flesh Hook" noMatch="true">
+		<heading id="FleshHookTool" title="Flesh Hook">
 			<synonym value="Flesh Hooks"/>
 			<synonym value="Flesh-Hook"/>
 			<synonym value="Flesh-Hooks"/>
@@ -13557,9 +13541,7 @@
 			<heading id="CarryingStrap" title="Carrying-Strap">
 				<synonym value="Carrying-Straps"/>
 			</heading>
-			<heading id="ChildCarrier" title="Child-Carrier">
-				<synonym value="Child-Carriers"/>
-			</heading>
+			<heading id="ChildCarrierCrr" title="Child Carrier" noMatch="true"/>
 			<heading id="Holdall" title="Holdall">
 				<synonym value="Holdalls"/>
 			</heading>
@@ -13579,7 +13561,9 @@
 				<synonym value="Vessel-Carriers"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
-			<heading id="WaterCarrier" title="Water-Carrier">
+			<heading id="WaterCarrier" title="Water Carrier">
+				<synonym value="Water Carriers"/>
+				<synonym value="Water-Carrier"/>
 				<synonym value="Water-Carriers"/>
 			</heading>
 			<heading id="WheelBarrow" title="Wheel-Barrow">
