@@ -5431,10 +5431,8 @@
 								<heading id="PuyallupReserv" title="Puyallup Reservation"/>
 							</heading>
 							<heading id="PugetSound" title="Puget Sound"/>
-							<heading id="SanJuanCoWA" title="San Juan County">
-								<synonym value="San Juan"/>
-								<synonym value="San Juan Co"/>
-								<synonym value="San Juan Co."/>
+							<heading id="SanJuanCoWA" title="San Juan County" noMatch="true">
+								<synonym value="xxxxxxxxxx"/>
 								<excl value="California"/>
 								<excl value="Capistrano"/>
 								<excl value="Mission"/>
@@ -6242,7 +6240,8 @@
 									</heading>
 								</heading>
 								<heading id="RioArribacounty" title="Rio Arriba county">
-									<heading id="SanJuanRArrNM" title="San Juan">
+									<heading id="SanJuanRArrNM" title="San Juan" noMatch="true">
+										<synonym value="New Mexico; Rio Arriba; San Juan"/>
 										<excl value="California"/>
 										<excl value="Capistrano"/>
 										<excl value="Island"/>
@@ -6270,10 +6269,8 @@
 									<heading id="Sandia" title="Sandia"/>
 									<heading id="SantoDomingo" title="Santo Domingo"/>
 								</heading>
-								<heading id="SanJuanCoNM" title="San Juan county">
-									<synonym value="San Juan"/>
-									<synonym value="San Juan Co"/>
-									<synonym value="San Juan Co."/>
+								<heading id="SanJuanCoNM" title="San Juan County" noMatch="true">
+									<synonym value="xxxxxxxxx"/>
 									<excl value="California"/>
 									<excl value="Capistrano"/>
 									<excl value="Island"/>
@@ -6289,7 +6286,9 @@
 											<synonym value="Pueblo Bonito Ruins"/>
 										</heading>
 									</heading>
-									<heading id="Crystal" title="Crystal"/> <!-- Need exclusions -->
+									<heading id="Crystal" title="Crystal" noMatch="true">
+										<synonym value="New Mexico; Rio Arriba; Crystal"/>
+									</heading>
 									<heading id="Farmington" title="Farmington"/>
 									<heading id="TwoGreyHills" title="Two Grey Hills"/>
 									<heading id="Toadlena" title="Toadlena"/>
@@ -6326,11 +6325,9 @@
 									<heading id="DavisFarm" title="Davis Farm"/>
 									<heading id="BrighamCity" title="Brigham City"/>
 								</heading>
-								<heading id="SanJuanCoUT" title="San Juan county">
-									<synonym value="PROVENIENCE = San Juan county, Utah"/>
-									<synonym value="San Juan"/>
-									<synonym value="San Juan Co"/>
-									<synonym value="San Juan Co."/>
+								<heading id="SanJuanCoUT" title="San Juan County" noMatch="true">
+									<synonym value="PROVENIENCE = San Juan County, Utah"/>
+									<synonym value="Utah; San Juan"/>
 									<excl value="California"/>
 									<excl value="Capistrano"/>
 									<excl value="Island"/>
@@ -6339,9 +6336,12 @@
 									<excl value="Rio Arriba"/>
 									<excl value="New Mexico"/>
 									<excl value="Washington"/>
-									<heading id="AlkaliRidge" title="Alkali Ridge"/>
-									<heading id="Blanding" title="Blanding"/>
-									<heading id="Segir" title="Segir"/>
+									<heading id="AlkaliRidge" title="Alkali Ridge">
+										<synonym value="Utah; San Juan; Alkali Ridge"/>
+									</heading>
+									<heading id="Blanding" title="Blanding">
+										<synonym value="Utah; San Juan; Blanding"/>
+									</heading>
 									<heading id="GrandGulch" title="Grand Gulch">
 										<synonym value="Grand Gulch #1"/>
 										<synonym value="Grand Gulch #2"/>
@@ -6369,6 +6369,9 @@
 										<synonym value="Grand Gulch #26"/>
 										<synonym value="Grand Gulch #27"/>
 										<synonym value="Grand Gulch #28"/>
+									</heading>
+									<heading id="Segir" title="Segir">
+										<synonym value="Utah; San Juan; Segir"/>
 									</heading>
 								</heading>
 								<heading id="Uintah" title="Uintah">
@@ -17724,6 +17727,16 @@
 												<implies facet="Location" cat="MissSCarlosBorrCarm"/>
 											</heading>
 										</heading>
+										<heading id="Hill35AMntryCA" title="Hill 35A"/>
+										<heading id="JolonMntryCA" title="Jolon"/>
+										<heading id="MontereyMntCA" title="Monterey">
+											<synonym value="Near Monterey"/>
+										</heading>
+										<heading id="MossLandingMntryCA" title="Moss Landing">
+											<heading id="MossLandingSite1" title="Site 1, Moss Landing"/>
+										</heading>
+										<heading id="PineValleyMntCA" title="Pine Valley"/>
+										<heading id="PtPinosMntryCA" title="Pt. Pinos"/>
 										<heading id="SanAntonioMission" title="San Antonio Mission">
 											<synonym value="Mission San Antonio"/>
 											<synonym value="Mission San Antonio de Padua"/>
@@ -17731,14 +17744,7 @@
 											<synonym value="San Antonio de Padua Mission"/>
 											<implies facet="Location" cat="MissSAntonioPadua"/>
 										</heading>
-										<heading id="MontereyMntCA" title="Monterey">
-											<synonym value="Near Monterey"/>
-										</heading>
-										<heading id="MossLandingMntryCA" title="Moss Landing">
-											<heading id="MossLandingSite1" title="Site 1, Moss Landing"/>
-										</heading>
 										<heading id="SanAntonioRiver" title="San Antonio River"/>
-										<heading id="JolonMntryCA" title="Jolon"/>
 										<heading id="SantaLuciaCreek" title="Santa Lucia Creek"/>
 										<heading id="SantaLuciaPeak" title="Santa Lucia Peak"/>
 										<heading id="SoledadMissMntCA" title="Soledad Mission">
@@ -17746,8 +17752,6 @@
 											<synonym value="Nuestra Señora de la Soledad"/>
 											<implies facet="Location" cat="MissNuesSenSoledad"/>
 										</heading>
-										<heading id="PtPinosMntryCA" title="Pt. Pinos"/>
-										<heading id="Hill35AMntryCA" title="Hill 35A"/>
 									</heading>
 									<heading id="TrinomMntryCA" title="Trinomial site names" noMatch="true">
 										<heading id="CAMnt1" title="CA-Mnt-1">
@@ -17810,109 +17814,109 @@
 										<heading id="CAMnt30" title="CA-Mnt-30">
 											<synonym value="CA-Mnt- 30"/>
 										</heading>
-										<heading id="CAMnt31" title="CA-Mnt- 31">
-											<synonym value="CA-Mnt-31"/>
+										<heading id="CAMnt31" title="CA-Mnt-31">
+											<synonym value="CA-Mnt- 31"/>
 										</heading>
-										<heading id="CAMnt32" title="CA-Mnt- 32">
-											<synonym value="CA-Mnt-32"/>
+										<heading id="CAMnt32" title="CA-Mnt-32">
+											<synonym value="CA-Mnt- 32"/>
 										</heading>
-										<heading id="CAMnt33" title="CA-Mnt- 33">
-											<synonym value="CA-Mnt-33"/>
+										<heading id="CAMnt33" title="CA-Mnt-33">
+											<synonym value="CA-Mnt- 33"/>
 										</heading>
-										<heading id="CAMnt34" title="CA-Mnt- 34">
-											<synonym value="CA-Mnt-34"/>
+										<heading id="CAMnt34" title="CA-Mnt-34">
+											<synonym value="CA-Mnt- 34"/>
 										</heading>
-										<heading id="CAMnt35a" title="CA-Mnt- 35a">
-											<synonym value="CA-Mnt-35a"/>
+										<heading id="CAMnt35a" title="CA-Mnt-35a">
+											<synonym value="CA-Mnt- 35a"/>
 											<synonym value="Arroyo Seco"/>
 										</heading>
-										<heading id="CAMnt35" title="CA-Mnt- 35">
-											<synonym value="CA-Mnt-35"/>
+										<heading id="CAMnt35" title="CA-Mnt-35">
+											<synonym value="CA-Mnt- 35"/>
 										</heading>
-										<heading id="CAMnt37" title="CA-Mnt- 37">
-											<synonym value="CA-Mnt-37"/>
+										<heading id="CAMnt37" title="CA-Mnt-37">
+											<synonym value="CA-Mnt- 37"/>
 										</heading>
-										<heading id="CAMnt41" title="CA-Mnt- 41">
-											<synonym value="CA-Mnt-41"/>
+										<heading id="CAMnt41" title="CA-Mnt-41">
+											<synonym value="CA-Mnt- 41"/>
 										</heading>
-										<heading id="CAMnt44" title="CA-Mnt- 44">
-											<synonym value="CA-Mnt-44"/>
+										<heading id="CAMnt44" title="CA-Mnt-44">
+											<synonym value="CA-Mnt- 44"/>
 											<synonym value="Steward's 100 Pc. (part)"/>
 										</heading>
-										<heading id="CAMnt45" title="CA-Mnt- 45">
-											<synonym value="CA-Mnt-45"/>
+										<heading id="CAMnt45" title="CA-Mnt-45">
+											<synonym value="CA-Mnt- 45"/>
 											<synonym value="Steward's 100 Pc. (part)"/>
 										</heading>
-										<heading id="CAMnt46" title="CA-Mnt- 46">
-											<synonym value="CA-Mnt-46"/>
+										<heading id="CAMnt46" title="CA-Mnt-46">
+											<synonym value="CA-Mnt- 46"/>
 										</heading>
-										<heading id="CAMnt47" title="CA-Mnt- 47">
-											<synonym value="CA-Mnt-47"/>
+										<heading id="CAMnt47" title="CA-Mnt-47">
+											<synonym value="CA-Mnt- 47"/>
 											<synonym value="Steward's 100 Pc."/>
 										</heading>
-										<heading id="CAMnt48" title="CA-Mnt- 48">
-											<synonym value="CA-Mnt-48"/>
+										<heading id="CAMnt48" title="CA-Mnt-48">
+											<synonym value="CA-Mnt- 48"/>
 											<synonym value="Church Creek"/>
 										</heading>
-										<heading id="CAMnt49" title="CA-Mnt- 49">
-											<synonym value="CA-Mnt-49"/>
-											<synonym value="Pine Valley"/>
+										<heading id="CAMnt49" title="CA-Mnt-49">
+											<synonym value="CA-Mnt- 49"/>
+											<implies facet="Location" cat="PineValleyMntCA"/>
 										</heading>
-										<heading id="CAMnt52" title="CA-Mnt- 52">
-											<synonym value="CA-Mnt-52"/>
-											<synonym value="Pine Valley"/>
+										<heading id="CAMnt52" title="CA-Mnt-52">
+											<synonym value="CA-Mnt- 52"/>
+											<implies facet="Location" cat="PineValleyMntCA"/>
 										</heading>
-										<heading id="CAMnt57" title="CA-Mnt- 57">
-											<synonym value="CA-Mnt-57"/>
+										<heading id="CAMnt57" title="CA-Mnt-57">
+											<synonym value="CA-Mnt- 57"/>
 										</heading>
-										<heading id="CAMnt59" title="CA-Mnt- 59">
-											<synonym value="CA-Mnt-59"/>
+										<heading id="CAMnt59" title="CA-Mnt-59">
+											<synonym value="CA-Mnt- 59"/>
 										</heading>
-										<heading id="CAMnt63" title="CA-Mnt- 63">
-											<synonym value="CA-Mnt-63"/>
+										<heading id="CAMnt63" title="CA-Mnt-63">
+											<synonym value="CA-Mnt- 63"/>
 											<synonym value="Gifford 14"/>
 										</heading>
-										<heading id="CAMnt64" title="CA-Mnt- 64">
-											<synonym value="CA-Mnt-64"/>
+										<heading id="CAMnt64" title="CA-Mnt-64">
+											<synonym value="CA-Mnt- 64"/>
 											<synonym value="Gifford 15"/>
 										</heading>
-										<heading id="CAMnt71" title="CA-Mnt- 71">
-											<synonym value="CA-Mnt-71"/>
+										<heading id="CAMnt71" title="CA-Mnt-71">
+											<synonym value="CA-Mnt- 71"/>
 										</heading>
-										<heading id="CAMnt72" title="CA-Mnt- 72">
-											<synonym value="CA-Mnt-72"/>
+										<heading id="CAMnt72" title="CA-Mnt-72">
+											<synonym value="CA-Mnt- 72"/>
 										</heading>
-										<heading id="CAMnt73" title="CA-Mnt- 73">
-											<synonym value="CA-Mnt-73"/>
+										<heading id="CAMnt73" title="CA-Mnt-73">
+											<synonym value="CA-Mnt- 73"/>
 										</heading>
-										<heading id="CAMnt85" title="CA-Mnt- 85">
-											<synonym value="CA-Mnt-85"/>
+										<heading id="CAMnt85" title="CA-Mnt-85">
+											<synonym value="CA-Mnt- 85"/>
 											<synonym value="Hill 35 (Arroyo Seco)"/>
 										</heading>
-										<heading id="CAMnt87" title="CA-Mnt- 87">
-											<synonym value="CA-Mnt-87"/>
+										<heading id="CAMnt87" title="CA-Mnt-87">
+											<synonym value="CA-Mnt- 87"/>
 											<synonym value="Post 1"/>
 											<synonym value="Gifford 18"/>
 										</heading>
-										<heading id="CAMnt88" title="CA-Mnt- 88">
-											<synonym value="CA-Mnt-88"/>
+										<heading id="CAMnt88" title="CA-Mnt-88">
+											<synonym value="CA-Mnt- 88"/>
 											<synonym value="Post 2"/>
 											<synonym value="Haystack"/>
 										</heading>
-										<heading id="CAMnt89" title="CA-Mnt- 89">
-											<synonym value="CA-Mnt-89"/>
+										<heading id="CAMnt89" title="CA-Mnt-89">
+											<synonym value="CA-Mnt- 89"/>
 											<synonym value="Post 3"/>
 										</heading>
-										<heading id="CAMnt90" title="CA-Mnt- 90">
-											<synonym value="CA-Mnt-90"/>
+										<heading id="CAMnt90" title="CA-Mnt-90">
+											<synonym value="CA-Mnt- 90"/>
 											<synonym value="Post 4"/>
 										</heading>
-										<heading id="CAMnt91" title="CA-Mnt- 91">
-											<synonym value="CA-Mnt-91"/>
+										<heading id="CAMnt91" title="CA-Mnt-91">
+											<synonym value="CA-Mnt- 91"/>
 											<synonym value="Colby"/>
 										</heading>
-										<heading id="CAMnt93" title="CA-Mnt- 93">
-											<synonym value="CA-Mnt-93"/>
+										<heading id="CAMnt93" title="CA-Mnt-93">
+											<synonym value="CA-Mnt- 93"/>
 											<synonym value="Doud 2"/>
 											<synonym value="Hill 31"/>
 										</heading>
@@ -19093,13 +19097,13 @@
 											<synonym value="CA-SBr-73"/>
 											<synonym value="Rattlesnake Rock"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 											<synonym value="Steward 53"/>
 											<synonym value="Ross 12"/>
 											<synonym value="Daggett:1:1"/>
 											<synonym value="Yermo Petroglyphs #68"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr74" title="CA-SBr- 74">
 											<synonym value="CA-SBr-74"/>
