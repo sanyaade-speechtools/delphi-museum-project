@@ -7805,8 +7805,11 @@
 					</heading>
 				</heading>
 				<heading id="Guitar" title="Guitar">
-					<!-- includes dobro -->
+					<!-- includes Charango, dobro -->
 					<synonym value="Guitars"/>
+					<heading id="Charango" title="Charango">
+						<synonym value="Charangos"/>
+					</heading>
 					<heading id="Dobro" title="Dobro">
 						<synonym value="Dobros"/>
 					</heading>
@@ -7849,6 +7852,10 @@
 					<synonym value="Bowl-Lyres"/>
 					<synonym value="Bowl Lyre"/>
 					<synonym value="Bowl Lyres"/>
+				</heading>
+				<heading id="Piano" title="Piano">
+					<synonym value="Pianos"/>
+					<implies facet="ObjectName" cat="PianoPercussion"/>
 				</heading>
 				<heading id="Sitar" title="Sitar">
 					<synonym value="Sitars"/>
@@ -8197,6 +8204,7 @@
 						<synonym value="Xylophones"/>
 					</heading>
 				</heading>
+				<heading id="PianoPercussion" title="Piano" noMatch="true"/>
 				<heading id="RaspingStick" title="Rasping Sticks">
 					<synonym value="Rasping Stick"/>
 					<synonym value="Rasp and Wire"/>
@@ -8753,8 +8761,11 @@
 					<synonym value="Six-Holed Flutes"/>
 				</heading>
 				<heading id="HornInstrument" title="Horn">
-					<!-- includes: didgeridoo, trumpet, horn instrument / implied materials: bamboo, brass, gourd, horn, ox -->
+					<!-- includes: bugle, didgeridoo, trumpet, horn instrument / implied materials: bamboo, brass, gourd, horn, ox -->
 					<synonym value="Horns"/>
+					<heading id="Bugle" title="Bugle">
+						<synonym value="Bugles"/>
+					</heading>
 					<heading id="Didgeridoo" title="Didgeridoo">
 						<synonym value="Didgeridoos"/>
 						<synonym value="Drone Pipe"/>
@@ -8835,6 +8846,9 @@
 				<heading id="ReedInstrument" title="Reed">
 					<!-- sound produced by mouth with reed, not necessarily implied material / includes:  gyaling, oboe -->
 					<synonym value="Reeds"/>
+					<heading id="Bagpipe" title="Bagpipe">
+						<synonym value="Bagpipes"/>
+					</heading>
 					<heading id="Gyaling" title="Gyaling">
 						<synonym value="Gyalings"/>
 						<synonym value="Gyaling Oboe"/>
@@ -8937,18 +8951,10 @@
 
 
 			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
-			<heading id="Bagpipes" title="Bagpipes">
-				<!--incorporate-->
-				<synonym value="Bagpipe"/>
-			</heading>
-			<heading id="Bugle_BM" title="Bugle">
-				<synonym value="Bugles"/>
-			</heading>
+
+
 			<heading id="Buzzer_BM" title="Buzzer">
 				<synonym value="Buzzers"/>
-			</heading>
-			<heading id="Charango_BM" title="Charango">
-				<synonym value="Charangos"/>
 			</heading>
 			<heading id="Chun_BM" title="Chun">
 				<synonym value="Chuns"/>
