@@ -1978,6 +1978,12 @@
 			<synonym value="Baby Rattles"/>
 			<synonym value="Baby-Rattle"/>
 			<synonym value="Baby-Rattles"/>
+			<synonym value="Baby Calming Rattle"/>
+			<synonym value="Baby Calming Rattles"/>
+			<synonym value="Baby-Calming Rattle"/>
+			<synonym value="Baby-Calming Rattles"/>
+			<implies facet="ObjectName" cat="BabyRattleRattles"/>
+			<implies facet="ObjectName" cat="BabyCalmingRattle"/>
 		</heading>
 		<heading id="BabyWalkerChdCr" title="Baby Walker">
 			<synonym value="Baby Walkers"/>
@@ -8202,13 +8208,7 @@
 					<synonym value="Rattler"/>
 					<synonym value="Rattlers"/>
 					<heading id="OccasionSpecificRattle" title="Rattles by use" noMatch="true">
-						<heading id="BabyRattle" title="Baby Rattle">
-							<synonym value="Baby Rattles"/>
-							<synonym value="Baby Calming Rattle"/>
-							<synonym value="Baby Calming Rattles"/>
-							<synonym value="Baby-Calming Rattle"/>
-							<synonym value="Baby-Calming Rattles"/>
-						</heading>
+						<heading id="BabyCalmingRattle" title="Baby Rattle" noMatch="true"/>
 						<heading id="CeremonyRattle" title="Ceremony Rattle">
 							<synonym value="Ceremony Rattles"/>
 							<synonym value="Puberty Ceremony Rattle"/>
@@ -8245,11 +8245,7 @@
 						<synonym value="Armadillo Tail Rattles"/>
 						<implies facet="Material" cat="ArmadilloTailMat"/>
 					</heading>
-					<heading id="BabyRattle" title="Baby Rattle">
-						<synonym value="Baby Rattles"/>
-						<synonym value="Baby Rattler"/>
-						<synonym value="Baby Rattlers"/>
-					</heading>
+					<heading id="BabyRattleRattle" title="Baby Rattle" noMatch="true"/>
 					<heading id="BarkRattle" title="Bark Rattle">
 						<synonym value="Bark Rattles"/>
 						<implies facet="Material" cat="TreeBarkMaterial"/>
