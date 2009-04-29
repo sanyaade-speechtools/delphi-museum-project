@@ -540,8 +540,11 @@
 			<heading id="HawkBeltHuntEq" title="Hawk-Belt">
 				<synonym value="Hawk-Belts"/>
 			</heading>
-			<heading id="HuntingCalendarHuntEq" title="Hunting-Calendar">
+			<heading id="HuntingCalendarHuntEq" title="Hunting Calendar">
+				<synonym value="Hunting Calendars"/>
+				<synonym value="Hunting-Calendar"/>
 				<synonym value="Hunting-Calendars"/>
+				<implies facet="ObjectName" cat="HuntingClndrClndr"/>
 			</heading>
 			<heading id="HuntingHornHuntEq" title="Hunting-Horn">
 				<synonym value="Hunting-Horns"/>
@@ -10383,11 +10386,7 @@
 			<heading id="Egoyomi" title="Egoyomi">
 				<synonym value="Egoyomis"/>
 			</heading>
-			<heading id="HuntingCalendar" title="Hunting Calendar">
-				<synonym value="Hunting Calendars"/>
-				<synonym value="Hunting-Calendar"/>
-				<synonym value="Hunting-Calendars"/>
-			</heading>
+			<heading id="HuntingClndrClndr" title="Hunting Calendar" noMatch="true"/>
 			<heading id="PerpetualCalendar" title="Perpetual Calendar">
 				<synonym value="Perpetual Calendars"/>
 			</heading>
@@ -10444,8 +10443,9 @@
 					<synonym value="Alarm-Mechanism"/>
 					<synonym value="Alarm-Mechanisms"/>
 				</heading>
-				<heading id="AstronomicalDial" title="Astronomical Dial">
+				<heading id="AstronomDialHoroEq" title="Astronomical Dial">
 					<synonym value="Astronomical Dials"/>
+					<implies facet="ObjectName" cat="AstronomicalDial"/>
 				</heading>
 				<heading id="Chronometer" title="Chronometer">
 					<synonym value="Chronometers"/>
@@ -10975,9 +10975,7 @@
 					<synonym value="Pocket-Altimeters"/>
 				</heading>
 			</heading>
-			<heading id="AstronomicalDial" title="Astronomical Dial">
-				<synonym value="Astronomical Dials"/>
-			</heading>
+			<heading id="AstronomicalDial" title="Astronomical Dial" noMatch="true"/>
 			<heading id="AstronomicalInstrument" title="Astronomical Instrument">
 				<synonym value="Astronomical Instruments"/>
 				<heading id="ArmillarySphere" title="Armillary Sphere">
@@ -11009,10 +11007,8 @@
 					<synonym value="Torquetums"/>
 				</heading>
 			</heading>
-			<heading id="Compass" title="Compass">
-				<synonym value="Compasses"/>
-			</heading>
-			<heading id="Dial" title="Dial">
+			<heading id="CompassSciInstr" title="Compass" noMatch="true"/>
+			<heading id="DialSciInstr" title="Dial">
 				<synonym value="Dials"/>
 				<heading id="AzimuthDial" title="Azimuth Dial">
 					<synonym value="Azimuth Dials"/>
@@ -11105,6 +11101,7 @@
 				</heading>
 				<heading id="CompassesMeasure" title="Compasses">
 					<synonym value="Compass"/>
+					<implies facet="ObjectName" cat="CompassSciInstr"/>
 				</heading>
 				<heading id="CrossStaffMeasure" title="Cross Staff">
 					<synonym value="Cross Staffs"/>
