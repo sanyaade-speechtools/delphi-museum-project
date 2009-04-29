@@ -99,13 +99,16 @@
 		</heading>
 	</heading>
 	<heading id="DrugUse" title="Drug Use">
-		<heading id="AlcoholicDrugs" title="Alcohol">
+		<heading id="AlcoholicDrugs" title="Drinking">
 			<heading id="DrugsAlcoholBeer" title="Drinking Beer" noMatch="true"/>
 			<heading id="DrugsAlcoholLiqour" title="Drinking Liquor" noMatch="true"/>
 			<heading id="DrugsAlcoholWine" title="Drinking Wine" noMatch="true"/>
 		</heading>
 		<heading id="HallucinogenicDrugs" title="Hallucinogens"/>
-		<heading id="AnySmoking" title="Smoking">
+		<heading id="DrugSwallowing" title="Injesting Drugs">
+			<heading id="MescalineUse" title="Mescaline use"/>
+		</heading>
+		<heading id="DrugSmoking" title="Smoking">
 			<heading id="CannibisSmoking" title="Cannibis smoking">
 				<synonym value="Smoking cannibis"/>
 				<synonym value="Smoking marijuana"/>
@@ -120,9 +123,9 @@
 			<excl value="Salmon"/>
 			<excl value="Meat"/>
 		</heading>
-		<heading id="SniffedDrugs" title="SniffedDrugs">
-			<!-- others?  Or should this be merged? -->
-			<heading id="SnuffDrug" title="Snuff"/>
+		<heading id="DrugSniffing" title="Sniffing Drugs">
+			<heading id="CocaineDrugUse" title="Cocaine Use"/>
+			<heading id="SnuffDrugUse" title="Snuff Use"/>
 		</heading>
 		<heading id="StimulantDrugs" title="Stimulants">
 			<heading id="CocaChewingStimulant" title="Coca Chewing">
@@ -130,9 +133,9 @@
 			</heading>
 			<heading id="BetelChewingStimulant" title="Betel Chewing"/>
 			<heading id="DrugsCaffeine" title="CaffeineUse" noMatch="true">
-				<heading id="ChocolateCaffeineStimulant" title="Chocolate"/>
-				<heading id="CoffeeCaffeineStimulant" title="Coffee"/>
-				<heading id="TeaCaffeineStimulant" title="Tea"/>
+				<heading id="ChocolateCaffeineStimulant" title="Using Chocolate"/>
+				<heading id="CoffeeCaffeineStimulant" title="Using Coffee"/>
+				<heading id="TeaCaffeineStimulant" title="Using Tea"/>
 			</heading>
 		</heading>
 	</heading>
@@ -180,8 +183,9 @@
 				<synonym value="Making Breakfast"/>
 				<synonym value="Making Lunch"/>
 				<synonym value="Making Dinner"/>
-				<heading id="SmokingFood" title="Smoking">
-					<excl value="Anysmoking"/>
+				<heading id="SmokingFood" title="Smoking" noMatch="true">
+					<synonym value="Smoked"/>
+					<excl value="Tobacco"/>
 				</heading>
 			</heading>
 			<heading id="FoodServing" title="Food serving">
