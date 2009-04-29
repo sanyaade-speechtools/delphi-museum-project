@@ -2414,6 +2414,7 @@
 			<heading id="AudioTapeAVeq" title="Audio Tape" noMatch="true"/>
 			<heading id="CameraAVeq" title="Camera">
 				<synonym value="Cameras"/>
+				<implies facet="ObjectName" cat="CameraOptEq"/>
 			</heading>
 			<heading id="CameraStrapAVeq" title="Camera-Strap">
 				<synonym value="Camera-Straps"/>
@@ -11255,9 +11256,7 @@
 			</heading>
 			<heading id="OpticalInstrument" title="Optical Instrument">
 				<synonym value="Optical Instruments"/>
-				<heading id="Camera" title="Camera">
-					<synonym value="Cameras"/>
-				</heading>
+				<heading id="CameraOptEq" title="Camera" noMatch="true"/>
 				<heading id="CompoundMicroscope" title="Compound Microscope">
 					<synonym value="Compound Microscopes"/>
 				</heading>
@@ -11265,7 +11264,7 @@
 				<heading id="Kaleidoscope" title="Kaleidoscope">
 					<synonym value="Kaleidoscopes"/>
 				</heading>
-				<heading id="Lens" title="Lens">
+				<heading id="LensOptEq" title="Lens">
 					<synonym value="Lenses"/>
 				</heading>
 				<heading id="MagnifyingGlass" title="Magnifying Glass">
@@ -11279,7 +11278,7 @@
 				<heading id="Phakometer" title="Phakometer">
 					<synonym value="Phakometers"/>
 				</heading>
-				<heading id="Prism" title="Prism">
+				<heading id="PrismOptEq" title="Prism">
 					<synonym value="Prisms"/>
 				</heading>
 				<heading id="QuizzingGlass" title="Quizzing Glass">
@@ -14134,10 +14133,8 @@
 			<synonym value="Photograph"/>
 			<synonym value="Photo"/>
 			<synonym value="Photos"/>
-			<synonym value="Print"/>
-			<!-- EXCL needed? -->
-			<synonym value="Prints"/>
-			<!-- EXCL needed? -->
+			<synonym value="Photographic Print"/>
+			<synonym value="Photographic Prints"/>
 			<heading id="NegativesVisRep" title="Negatives">
 				<synonym value="Negative"/>
 				<!-- Check for possible exclusions -->
@@ -14182,6 +14179,9 @@
 		<heading id="PostageStampVisRep" title="Postage Stamp" noMatch="true"/>
 		<heading id="PrintVisRep" title="Print">
 			<synonym value="Prints"/>
+			<excl value="Photograph"/>
+			<excl value="Photographic"/>
+			<excl value="Photography"/>
 		</heading>
 		<heading id="RickshawPanelVisRep" title="Rickshaw Panel">
 			<synonym value="Rickshaw Panels"/>
