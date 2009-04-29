@@ -471,9 +471,7 @@
 			<heading id="BolasWeightHuntEq" title="Bolas-Weight">
 				<synonym value="Bolas-Weights"/>
 			</heading>
-			<heading id="BrailHuntEq" title="Brail">
-				<synonym value="Brails"/>
-			</heading>
+			<heading id="BrailHuntEq" title="Brail" noMatch="true"/>
 			<heading id="DeerCallHuntEq" title="Deer-Call">
 				<synonym value="Deer-Calls"/>
 			</heading>
@@ -629,6 +627,7 @@
 		<heading id="BirdScareAnmlEq" title="Bird-Scare" noMatch="true"/>
 		<heading id="BrailAnmlEq" title="Brail">
 			<synonym value="Brails"/>
+			<implies facet="ObjectName" cat="BrailHuntEq"/>
 		</heading>
 		<heading id="BrandingIronAnmlEq" title="Branding Iron">
 			<synonym value="Branding Irons"/>
@@ -2621,6 +2620,7 @@
 		</heading>
 		<heading id="PapyrusComm" title="Papyrus">
 			<synonym value="Papyri"/>
+			<implies facet="ObjectName" cat="PapyrusVisRep"/>
 		</heading>
 		<heading id="PassportComm" title="Passport">
 			<synonym value="Passports"/>
@@ -2630,9 +2630,7 @@
 			<synonym value="Pattern-Board"/>
 			<synonym value="Pattern-Boards"/>
 		</heading>
-		<heading id="PauComm" title="Pau">
-			<synonym value="Paus"/>
-		</heading>
+		<heading id="PauComm" title="Pau" noMatch="true"/>
 		<heading id="PermitComm" title="Permit">
 			<synonym value="Permits"/>
 		</heading>
@@ -3312,6 +3310,7 @@
 				<synonym value="Tea Jar-Containers"/>
 				<synonym value="Tea-Jar-Container"/>
 				<synonym value="Tea-Jar-Containers"/>
+				<implies facet="ObjectName" cat="TeaJarCntnrTeaEq"/>
 			</heading>
 			<heading id="TeaPacketContnr" title="Tea Packet">
 				<synonym value="Tea Packets"/>
@@ -3989,31 +3988,31 @@
 						<synonym value="Thuribles"/>
 					</heading>
 				</heading>
-				<heading id="Ding" title="Ding">
+				<heading id="DingRelRegVes" title="Ding">
 					<synonym value="Dings"/>
 				</heading>
-				<heading id="Dou" title="Dou">
+				<heading id="DouRelRegVes" title="Dou">
 					<synonym value="Dous"/>
 				</heading>
-				<heading id="Dui" title="Dui">
+				<heading id="DuiRelRegVes" title="Dui">
 					<synonym value="Duis"/>
 				</heading>
-				<heading id="FuVessel" title="Fu">
+				<heading id="FuRelRegVes" title="Fu">
 					<synonym value="Fus"/>
 				</heading>
 				<heading id="Gemellion" title="Gemellion">
 					<synonym value="Gemellions"/>
 				</heading>
-				<heading id="GuVessel" title="Gu">
+				<heading id="GuRelRegVes" title="Gu">
 					<synonym value="Gus"/>
 				</heading>
-				<heading id="Guang" title="Guang">
+				<heading id="GuangRelRegVes" title="Guang">
 					<synonym value="Guangs"/>
 				</heading>
-				<heading id="Gui" title="Gui">
+				<heading id="GuiRelRegVes" title="Gui">
 					<synonym value="Guis"/>
 				</heading>
-				<heading id="HeVessel" title="He">
+				<heading id="HeRelRegVes" title="He" noMatch="true">
 					<synonym value="Hes"/>
 				</heading>
 				<heading id="HolyWaterSprinkler" title="Holy Water-Sprinkler">
@@ -4035,19 +4034,19 @@
 						<synonym value="Holy Water-Vases"/>
 					</heading>
 				</heading>
-				<heading id="HuVessel" title="Hu">
+				<heading id="HuRelRegVes" title="Hu">
 					<synonym value="Hus"/>
 				</heading>
 				<heading id="IncantationBowl" title="Incantation Bowl">
 					<synonym value="Incantation Bowls"/>
 				</heading>
-				<heading id="Jia" title="Jia">
+				<heading id="JiaRelRegVes" title="Jia">
 					<synonym value="Jias"/>
 				</heading>
-				<heading id="Lei" title="Lei">
+				<heading id="LeiRelRegVes" title="Lei">
 					<synonym value="Leis"/>
 				</heading>
-				<heading id="LiVessel" title="Li">
+				<heading id="LiRelRegVes" title="Li">
 					<synonym value="Lis"/>
 				</heading>
 				<heading id="Loutrophoros" title="Loutrophoros">
@@ -4099,11 +4098,11 @@
 						<synonym value="Offering-Vases"/>
 					</heading>
 				</heading>
-				<heading id="Pan" title="Pan" noMatch="true">
+				<heading id="PanRelRegVes" title="Pan" noMatch="true">
 					<synonym value="Pans"/>
-					<excl value="CookingPanCookEq"/>
+					<excl value="Cooking"/>
 				</heading>
-				<heading id="Pou" title="Pou">
+				<heading id="PouRelRegVes" title="Pou">
 					<synonym value="Pous"/>
 				</heading>
 				<heading id="ShrineVase" title="Shrine-Vase">
@@ -4126,28 +4125,29 @@
 				<heading id="VotiveTank" title="Votive Tank">
 					<synonym value="Votive Tanks"/>
 				</heading>
-				<heading id="WeddingCup" title="Wedding Cup">
+				<heading id="WeddingCupRelRegVes" title="Wedding Cup">
 					<synonym value="Wedding Cups"/>
 					<synonym value="Wedding-Cup"/>
 					<synonym value="Wedding-Cups"/>
+					<implies facet="ObjectName" cat="WeddingCupAlcEq"/>
 				</heading>
-				<heading id="Xian" title="Xian">
+				<heading id="XianRelRegVes" title="Xian">
 					<synonym value="Xians"/>
 				</heading>
-				<heading id="YiVessel" title="Yi">
+				<heading id="YiRelRegVes" title="Yi">
 					<synonym value="Yis"/>
 					<implies facet="ObjectName" cat="VesselContainer"/>
 				</heading>
-				<heading id="You" title="You">
+				<heading id="YouRelRegVes" title="You">
 					<synonym value="Yous"/>
 				</heading>
-				<heading id="ZhaDou" title="Zha Dou">
+				<heading id="ZhaDouRelRegVes" title="Zha Dou">
 					<synonym value="Zha Dous"/>
 				</heading>
-				<heading id="Zhi" title="Zhi">
+				<heading id="ZhiRelRegVes" title="Zhi">
 					<synonym value="Zhis"/>
 				</heading>
-				<heading id="Zun" title="Zun">
+				<heading id="ZunRelRegVes" title="Zun">
 					<synonym value="Zuns"/>
 				</heading>
 			</heading>
@@ -6031,6 +6031,7 @@
 		<heading id="CounterCurrency" title="Counter">
 			<synonym value="Counters"/>
 			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+			<implies facet="ObjectName" cat="CounterMiscEq"/>
 		</heading>
 		<heading id="CurrencyBar" title="Currency-Bar">
 			<synonym value="Currency-Bars"/>
@@ -7114,9 +7115,7 @@
 		<heading id="CordMiscEq" title="Cord">
 			<synonym value="Cords"/>
 		</heading>
-		<heading id="CounterMiscEq" title="Counter">
-			<synonym value="Counters"/>
-		</heading>
+		<heading id="CounterMiscEq" title="Counter" noMatch="true"/>
 		<heading id="CoverMiscEq" title="Cover">
 			<synonym value="Covers"/>
 		</heading>
@@ -11780,7 +11779,7 @@
 			<heading id="FuddlingCup" title="Fuddling Cup">
 				<synonym value="Fuddling Cups"/>
 			</heading>
-			<heading id="Goblet" title="Goblet">
+			<heading id="GobletAlcEq" title="Goblet">
 				<synonym value="Goblets"/>
 			</heading>
 			<heading id="LiqueurGlass" title="Liqueur Glass">
@@ -11835,15 +11834,15 @@
 			<heading id="PuzzleCup" title="Puzzle-Cup">
 				<synonym value="Puzzle-Cups"/>
 			</heading>
-			<heading id="Quaich" title="Quaich">
+			<heading id="QuaichAlcEq" title="Quaich">
 				<synonym value="Quaiches"/>
 				<synonym value="Quaichs"/>
 				<!-- Misspelling -->
 			</heading>
-			<heading id="Rhyton" title="Rhyton">
+			<heading id="RhytonAlcEq" title="Rhyton">
 				<synonym value="Rhytons"/>
 			</heading>
-			<heading id="Rummer" title="Rummer">
+			<heading id="RummerAlcEq" title="Rummer">
 				<synonym value="Rummers"/>
 			</heading>
 			<heading id="SchnappsGlass" title="Schnapps Glass">
@@ -11857,19 +11856,19 @@
 			<heading id="Stangenglas" title="Stangenglas">
 				<!-- <synonym value="xxxxxxxxx"/> Does this have a plural? -->
 			</heading>
-			<heading id="Still" title="Still">
+			<heading id="StillAlcEq" title="Still">
 				<synonym value="Stills"/>
 			</heading>
 			<heading id="StirrupCup" title="Stirrup Cup">
 				<synonym value="Stirrup Cups"/>
 			</heading>
-			<heading id="Tankard" title="Tankard">
+			<heading id="TankardAlcEq" title="Tankard">
 				<synonym value="Tankards"/>
 			</heading>
 			<heading id="TastingCup" title="Tasting-Cup">
 				<synonym value="Tasting-Cups"/>
 			</heading>
-			<heading id="Tyg" title="Tyg">
+			<heading id="TygAlcEq" title="Tyg">
 				<synonym value="Tygs"/>
 			</heading>
 			<heading id="VodkaBottle" title="Vodka-Bottle">
@@ -11881,9 +11880,7 @@
 			<heading id="WassailBowl" title="Wassail-Bowl">
 				<synonym value="Wassail-Bowls"/>
 			</heading>
-			<heading id="WeddingCup" title="Wedding-Cup">
-				<synonym value="Wedding-Cups"/>
-			</heading>
+			<heading id="WeddingCupAlcEq" title="Wedding Cup" noMatch="true"/>
 			<heading id="WineCup" title="Wine-Cup">
 				<synonym value="Wine-Cups"/>
 				<implies facet="ObjectName" cat="WineFood"/>
@@ -11954,7 +11951,7 @@
 				<!-- implies drinking glass -->
 				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
-			<heading id="Yunomi" title="Yunomi">
+			<heading id="YunomiAlcEq" title="Yunomi">
 				<synonym value="Yunomis"/>
 			</heading>
 		</heading>
@@ -12522,9 +12519,7 @@
 			<heading id="TeaJar" title="Tea-Jar">
 				<synonym value="Tea-Jars"/>
 			</heading>
-			<heading id="TeaJarContainer" title="Tea-Jar-Container">
-				<synonym value="Tea-Jar-Containers"/>
-			</heading>
+			<heading id="TeaJarCntnrTeaEq" title="Tea Jar Container" noMatch="true"/>
 			<heading id="TeaJug" title="Tea Jug">
 				<synonym value="Tea Jugs"/>
 				<synonym value="Tea-Jug"/>
@@ -13714,7 +13709,6 @@
 			<synonym value="Vehicles"/>
 			<synonym value="Transportation"/>
 			<heading id="AircraftVehicle" title="Aircraft">
-				<synonym value="Aircraft"/>
 				<synonym value="Air craft"/>
 				<synonym value="Air-craft"/>
 				<synonym value="Airship"/>
@@ -13968,7 +13962,7 @@
 				<heading id="TricycleVehicle" title="Tricycle">
 					<synonym value="Tricycles"/>
 					<synonym value="Trike"/>
-					<synonym value="Trike"/>
+					<synonym value="Trikes"/>
 				</heading>
 				<heading id="TruckVehicle" title="Truck">
 					<synonym value="Lorries"/>
@@ -14127,15 +14121,14 @@
 			<synonym value="Paper-cuts"/>
 		</heading>
 		<heading id="PaperworkVisRep" title="Paperwork"/>
-		<heading id="PapyrusVisRep" title="Papyrus">
-			<synonym value="Papyri"/>
-		</heading>
+		<heading id="PapyrusVisRep" title="Papyrus" noMatch="true"/>
 		<heading id="PatternVisRep" title="Pattern">
 			<synonym value="Patterns"/>
 			<implies facet="ObjectName" cat="PatternProdRepl"/>
 		</heading>
 		<heading id="PauVisRep" title="Pau">
 			<synonym value="Paus"/>
+			<implies facet="ObjectName" cat="PauComm"/>
 		</heading>
 		<heading id="PhotographsVisRep" title="Photographs">
 			<synonym value="Photograph"/>

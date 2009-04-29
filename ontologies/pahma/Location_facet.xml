@@ -2695,16 +2695,16 @@
 					</heading>
 					<heading id="OnotoaIsland" title="Onotoa Island">
 						<synonym value="Onotoa"/>
-						<heading id="BuarikiVillageOnotoa" title="Buariki Village">
-							<synonym value="Buariki"/>
-							<excl value="Tabiteuea"/> <!-- Disambiguates from same village name on Tabiteuea -->
+						<heading id="BuarikiVillageOnotoa" title="Buariki Village" noMatch="true">
+							<!-- <synonym value="Buariki"/>
+							<excl value="Tabiteuea"/> Disambiguate from same village name on Tabiteuea -->
 						</heading>
 					</heading>
 					<heading id="TabiteueaIsland" title="Tabiteuea Island">
 						<synonym value="Tabiteuea"/>
-						<heading id="BuarikiVillageTabiteuea" title="Buariki Village">
-							<synonym value="Buariki"/>
-							<excl value="Onotoa"/> <!-- Disambiguates from same village name on Onotoa -->
+						<heading id="BuarikiVillageTabiteuea" title="Buariki Village" noMatch="true">
+							<!-- <synonym value="Buariki"/>
+							<excl value="Onotoa"/> Disambiguate from same village name on Onotoa -->
 						</heading>
 					</heading>
 					<heading id="TamanaIsland" title="Tamana Island">
