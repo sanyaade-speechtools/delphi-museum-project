@@ -2453,9 +2453,7 @@
 		<heading id="BroadsheetComm" title="Broadsheet">
 			<synonym value="Broadsheets"/>
 		</heading>
-		<heading id="CalendarComm" title="Calendar">
-			<synonym value="Calendars"/>
-		</heading>
+		<heading id="CalendarComm" title="Calendar" noMatch="true"/>
 		<heading id="CallComm" title="Call">
 			<synonym value="Calls"/>
 		</heading>
@@ -3814,9 +3812,7 @@
 			<heading id="LimeVessel" title="Lime-Vessel">
 				<synonym value="Lime-Vessels"/>
 			</heading>
-			<heading id="MeasuringVessel" title="Measuring-Vessel">
-				<synonym value="Measuring-Vessels"/>
-			</heading>
+			<heading id="MeasuringVslVsl" title="Measuring-Vessel" noMatch="true"/>
 			<heading id="MilkVessel" title="Milk-Vessel">
 				<synonym value="Milk-Vessels"/>
 			</heading>
@@ -6815,9 +6811,7 @@
 	<heading id="Instruments" title="Instruments" noMatch="true">
 		<heading id="HorologicalInstruments" title="Horological Instruments" noMatch="true"/>
 		<heading id="MusicalInstrumentInstmt" title="Musical Instruments" noMatch="true"/>
-		<heading id="ScientificInstrument" title="Scientific Instrument">
-			<synonym value="Scientific Instruments"/>
-		</heading>
+		<heading id="ScientificInstmtInstmt" title="Scientific Instruments" noMatch="true"/>
 		<heading id="TortureInstrumentInstmt" title="Torture-Instrument" noMatch="true"/>
 	</heading>
 	<heading id="LightingEquipment" title="Lighting Equipment">
@@ -9805,9 +9799,7 @@
 		<heading id="CeremonialBoardRelRit" title="Ceremonial Board">
 			<synonym value="Ceremonial Boards"/>
 		</heading>
-		<heading id="CeremonialDollRelRit" title="Ceremonial Doll">
-			<synonym value="Ceremonial Dolls"/>
-		</heading>
+		<heading id="CeremonialDollRelRit" title="Ceremonial Doll" noMatch="true"/>
 		<heading id="CeremonialStaffRelRit" title="Ceremonial Staff">
 			<synonym value="Ceremonial Staffs"/>
 		</heading>
@@ -10381,30 +10373,40 @@
 		<synonym value="Measure"/>
 		<synonym value="Measures"/>
 		<heading id="CalendarScience" title="Calendar">
-			<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies Communications Equipment -->
 			<synonym value="Calendars"/>
+			<implies facet="ObjectName" cat="CalendarComm"/>
 			<heading id="Almanac" title="Almanac">
 				<synonym value="Almanacs"/>
-				<heading id="ClogAlmanac" title="Clog-Almanac">
+				<heading id="ClogAlmanac" title="Clog Almanac">
+					<synonym value="Clog Almanacs"/>
+					<synonym value="Clog-Almanac"/>
 					<synonym value="Clog-Almanacs"/>
 				</heading>
 				<heading id="FarmersAlmanac" title="Farmer's Almanac">
 					<synonym value="Farmer's Almanacs"/>
 				</heading>
 			</heading>
-			<heading id="CalendarDisc" title="Calendar-Disc">
+			<heading id="CalendarDisc" title="Calendar Disc">
+				<synonym value="Calendar Discs"/>
+				<synonym value="Calendar-Disc"/>
 				<synonym value="Calendar-Discs"/>
 			</heading>
-			<heading id="CalendarRing" title="Calendar-Ring">
+			<heading id="CalendarRing" title="Calendar Ring">
+				<synonym value="Calendar Rings"/>
+				<synonym value="Calendar-Ring"/>
 				<synonym value="Calendar-Rings"/>
 			</heading>
-			<heading id="CalendarStick" title="Calendar-Stick">
+			<heading id="CalendarStick" title="Calendar Stick">
+				<synonym value="Calendar Sticks"/>
+				<synonym value="Calendar-Stick"/>
 				<synonym value="Calendar-Sticks"/>
 			</heading>
 			<heading id="Egoyomi" title="Egoyomi">
 				<synonym value="Egoyomis"/>
 			</heading>
-			<heading id="HuntingCalendar" title="Hunting-Calendar">
+			<heading id="HuntingCalendar" title="Hunting Calendar">
+				<synonym value="Hunting Calendars"/>
+				<synonym value="Hunting-Calendar"/>
 				<synonym value="Hunting-Calendars"/>
 			</heading>
 			<heading id="PerpetualCalendar" title="Perpetual Calendar">
@@ -10423,29 +10425,43 @@
 		</heading>
 		<heading id="HorologicalEqSci" title="Horological Equipment">
 			<synonym value="Horological Items"/>
-			<heading id="ChronometerCaseHoro" title="Chronometer-Case">
+			<heading id="ChronometerCaseHoro" title="Chronometer Case">
+				<synonym value="Chronometer Cases"/>
+				<synonym value="Chronometer-Case"/>
 				<synonym value="Chronometer-Cases"/>
 			</heading>
-			<heading id="ChronometerKeyHoro" title="Chronometer-Key">
+			<heading id="ChronometerKeyHoro" title="Chronometer Key">
+				<synonym value="Chronometer Keys"/>
+				<synonym value="Chronometer-Key"/>
 				<synonym value="Chronometer-Keys"/>
 			</heading>
-			<heading id="ClockCaseHoro" title="Clock-Case">
+			<heading id="ClockCaseHoro" title="Clock Case">
+				<synonym value="Clock Cases"/>
+				<synonym value="Clock-Case"/>
 				<synonym value="Clock-Cases"/>
 			</heading>
-			<heading id="ClockKeyHoro" title="Clock-Key">
+			<heading id="ClockKeyHoro" title="Clock Key">
+				<synonym value="Clock Keys"/>
+				<synonym value="Clock-Key"/>
 				<synonym value="Clock-Keys"/>
 			</heading>
-			<heading id="ClockStandHoro" title="Clock-Stand">
+			<heading id="ClockStandHoro" title="Clock Stand">
+				<synonym value="Clock Stands"/>
+				<synonym value="Clock-Stand"/>
 				<synonym value="Clock-Stands"/>
 			</heading>
-			<heading id="DustCapHoro" title="Dust-Cap">
+			<heading id="DustCapHoro" title="Dust Cap">
+				<synonym value="Dust Caps"/>
+				<synonym value="Dust-Cap"/>
 				<synonym value="Dust-Caps"/>
 			</heading>
 			<heading id="HorologicalInstrHoro" title="Clocks &amp; timepieces">
 				<synonym value="Horological Instrument"/>
 				<synonym value="Horological Instruments"/>
 				<implies facet="ObjectName" cat="HorologicalInstruments"/>
-				<heading id="AlarmMechanism" title="Alarm-Mechanism">
+				<heading id="AlarmMechanism" title="Alarm Mechanism">
+					<synonym value="Alarm Mechanisms"/>
+					<synonym value="Alarm-Mechanism"/>
 					<synonym value="Alarm-Mechanisms"/>
 				</heading>
 				<heading id="AstronomicalDial" title="Astronomical Dial">
@@ -10967,6 +10983,7 @@
 		</heading>
 		<heading id="ScientificInstrSci" title="Scientific Instrument">
 			<synonym value="Scientific Instruments"/>
+			<implies facet="ObjectName" cat="ScientificInstmtInstmt"/>
 			<heading id="Altimeter" title="Altimeter">
 				<synonym value="Altimeters"/>
 				<heading id="PocketAltimeter" title="Pocket Altimeter">
@@ -11051,7 +11068,7 @@
 			</heading>
 			<heading id="MathematicalInstruments" title="Mathematical Instruments">
 				<synonym value="Mathematical Instrument"/>
-				<!-- Bt Scientific Instrument -->
+				<implies facet="ObjectName" cat="ScientificInstmtInstmt"/>
 				<heading id="AbacusMathInst" title="Abacus">
 					<!--exclude column/architrave interface -->
 					<synonym value="Abaci"/>
@@ -11139,7 +11156,7 @@
 					<synonym value="Hygrometers"/>
 				</heading>
 				<heading id="LevelMeasure" title="Level">
-					<synonym value="Level"/>
+					<synonym value="Levels"/>
 					<!-- EXCL needed -->
 				</heading>
 				<heading id="MeasuringRodMeasure" title="Measuring Rod">
@@ -11151,7 +11168,7 @@
 					<synonym value="Measuring Vessels"/>
 					<synonym value="Measuring-Vessel"/>
 					<synonym value="Measuring-Vessels"/>
-					<implies facet="ObjectName" cat="VesselContainer"/>
+					<implies facet="ObjectName" cat="MeasuringVslVsl"/>
 				</heading>
 				<heading id="PedometerMeasure" title="Pedometer">
 					<synonym value="Pedometers"/>
@@ -11365,8 +11382,9 @@
 			</heading>
 			<heading id="DollFigure" title="Doll">
 				<synonym value="Dolls"/>
-				<heading id="CeremonialDoll" title="Ceremonial Doll">
+				<heading id="CeremonialDollDoll" title="Ceremonial Doll">
 					<synonym value="Ceremonial Dolls"/>
+					<implies facet="ObjectName" cat="CeremonialDollRelRit"/>
 				</heading>
 				<heading id="KachinaDoll" title="Kachina Doll"><!-- Traditionally for use by girls -->
 					<synonym value="Kachina Dolls"/>

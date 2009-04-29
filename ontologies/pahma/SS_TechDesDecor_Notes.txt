@@ -6,13 +6,8 @@ note that noiseToken and reduce, used in this facet,
 and may not be supported in the future (Patrick says that functionality
 is likely to be moved to the code that pulls data from the DB)
 
-What is this supposed to do?
-<noiseToken value="[\n]"/>
-
 Consistency Issues
 
-Bird is singular but other sections at this level are plural
-	(Insects, Land Mammals)
 Fruit and Vegetables is partly plural vs. Flower, Leaf, Tree
 Posture or Attitude singular vs. Human Shapes, Animal Shapes, Plant Shapes
 
@@ -23,7 +18,6 @@ Other
 Performed, Sung, Spoken, Recorded, Filmed, Photographed, Taped, Written:
 	should these be activities?
 
-
 1. At a given node, there should be 3-12 child headings.
 
 DesignOrDecoration:
@@ -31,20 +25,20 @@ DesignOrDecoration:
 Amorphous: only 1 heading
 
 FigurativeOrRepresentational:
-AnimanlShapes:Bird: more than 12 headings
-AnimalShapes:WaterAnimals: only 2 headings
-AnimalShapes:WaterAnimals:Fish:Seashell only 1 heading(Scallop)
-AnimalShapes:WaterAnimals:MarineMammals:Whale: only 1 heading (Scallop)
-AnimalShapes:AmphibiansAndReptiles:Lizard: only 2 headings
-AnimalShapes:AmphibiansAndReptiles:Snake: only 2 headings
-AnimalShapes:AmphibiansAndReptiles:Spider: only 1 heading
-AnimalShapes:LandMammals:LargeWildMammals: more than 12 headings
-AnimalShapes:LandMammals:LargeWildMammals:Bear: only 2 headings
-AnimalShapes:LandMammals:LargeWildMammals:Fox: only 2 headings
-AnimalShapes:LandMammals:LargeWildMammals:Lion: only 1 heading
-PlantShapes:FruitAndVegetables:Grain:Corn: only 1 heading
-PlantShapes:Leaf: only 1 heading
-PlantShapes:Tree: only 1 heading
+	AnimalShapes:Bird: more than 12 headings
+	AnimalShapes:WaterAnimals: only 2 headings
+	AnimalShapes:WaterAnimals:Fish:Seashell only 1 heading(Scallop)
+	AnimalShapes:WaterAnimals:MarineMammals:Whale: only 1 heading (Scallop)
+	AnimalShapes:AmphibiansAndReptiles:Lizard: only 2 headings
+	AnimalShapes:AmphibiansAndReptiles:Snake: only 2 headings
+	AnimalShapes:AmphibiansAndReptiles:Spider: only 1 heading
+	AnimalShapes:LandMammals:LargeWildMammals: more than 12 headings
+	AnimalShapes:LandMammals:LargeWildMammals:Bear: only 2 headings
+	AnimalShapes:LandMammals:LargeWildMammals:Fox: only 2 headings
+	AnimalShapes:LandMammals:LargeWildMammals:Lion: only 1 heading
+	PlantShapes:FruitAndVegetables:Grain:Corn: only 1 heading
+	PlantShapes:Leaf: only 1 heading
+	PlantShapes:Tree: only 1 heading
 
 LinearDesign:LinearMeander:only 1 heading
 
@@ -78,10 +72,6 @@ TechniqueOrManufacture:Performed: should these be activities?
 
 TechniqueOrManufacture:Ropework: only 2 headings
 TechniqueOrManufacture:Woven: only 2 headings
-
-
-2. Are IDs legal?
-OK
 
 3. String length of headings should be 6-20 characters 
 (ignoring strings under 6 characters)
@@ -125,11 +115,6 @@ Mold
 Molds
 
 God: cf. God Symbol in ObjectName
-
-6. Check for parent concept with a child concept that has parent concept
-as a synonym, etc.
-
-OK
 
 7. Locations that are homonyms of terms in other facets
 N/A
