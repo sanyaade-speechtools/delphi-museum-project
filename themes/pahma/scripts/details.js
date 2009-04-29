@@ -201,7 +201,12 @@ function doHideCard(e) {
 
 function setCatCardImage(srcURL) {
 	$('#cat_card_image').attr("src", srcURL);
-	$('#cat_card_clipper').removeClass('zoomed');
+	if($('#cat_card_clipper').hasClass('zoomed')){
+		$('#cat_card_clipper').addClass('zoomed');
+		
+	} else {
+		$('#cat_card_clipper').addClass('unzoomed');
+	}
 }
 
 function doViewCard(e,nimages) {
