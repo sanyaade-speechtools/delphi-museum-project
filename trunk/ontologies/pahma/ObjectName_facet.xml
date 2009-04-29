@@ -7762,6 +7762,9 @@
 						</heading>
 						<synonym value="Sarangis"/>
 					</heading>
+					<heading id="Viol" title="Viol">
+						<synonym value="Viols"/>
+					</heading>
 					<heading id="Violin" title="Violin">
 						<heading id="ViolinBow" title="Violin Bow">
 							<synonym value="Violin With Bow"/>
@@ -7812,14 +7815,16 @@
 				<heading id="Gittern" title="Gittern">
 					<synonym value="Gittern"/>
 				</heading>
-				<heading id="Guitar" title="Guitar">
-					<!-- includes Charango, dobro -->
+				<heading id="Guitar" title="Guitar"> <!-- includes Charango, dobro, Mandolin -->
 					<synonym value="Guitars"/>
 					<heading id="Charango" title="Charango">
 						<synonym value="Charangos"/>
 					</heading>
 					<heading id="Dobro" title="Dobro">
 						<synonym value="Dobros"/>
+					</heading>
+					<heading id="Mandolin" title="Mandolin">
+						<synonym value="Mandolins"/>
 					</heading>
 				</heading>
 				<heading id="Harp" title="Harp">
@@ -7868,8 +7873,14 @@
 					<synonym value="Pianos"/>
 					<implies facet="ObjectName" cat="PianoPercussion"/>
 				</heading>
+				<heading id="Rabob" title="Rabob">
+					<synonym value="Rabobs"/>
+				</heading>
 				<heading id="Sitar" title="Sitar">
 					<synonym value="Sitars"/>
+				</heading>
+				<heading id="Sgra-Snyan" title="Sgra-Snyan">
+					<synonym value="Sgra-Snyans"/>
 				</heading>
 				<heading id="Ukelele" title="Ukelele">
 					<synonym value="Ukeleles"/>
@@ -8230,6 +8241,8 @@
 					<synonym value="Rasping Stick"/>
 					<synonym value="Rasp and Wire"/>
 					<synonym value="Wire and Rasp"/>
+					<synonym value="Musical Rasp"/>
+					<synonym value="Musical Rasps"/>
 				</heading>
 				<heading id="Rattles" title="Rattles">
 					<!-- implied materials: armadillo, bark, cane, claw, Cocoon, copper, fur, gourd, gravel, hoof, horn, shell, seed, turtle -->
@@ -8356,6 +8369,8 @@
 						<synonym value="Clapstick Rattles"/>
 						<synonym value="Clapstick"/>
 						<synonym value="Clapsticks"/>
+						<synonym value="Clapping Stick"/>
+						<synonym value="Clapping Sticks"/>
 						<synonym value="Split Stick Rattle"/>
 						<synonym value="Split Stick Rattles"/>
 						<synonym value="Split-Stick Rattle"/>
@@ -8600,6 +8615,12 @@
 						<synonym value="Thumb Pianos"/>
 					</heading>
 				</heading>
+				<heading id="StampingTube" title="Stamping Tube">
+					<synonym value="Stamping Tubes"/>
+				</heading>
+				<heading id="Tambourine" title="Tambourine">
+					<synonym value="Tambourines"/>
+				</heading>
 				<heading id="Tapper" title="Tapper">
 					<synonym value="Tappers"/>
 				</heading>
@@ -8678,6 +8699,8 @@
 					<heading id="PipeInstrument" title="Pipe">
 						<!-- excludes pan -->
 						<synonym value="Pipes"/>
+						<synonym value="Musical Pipe"/>
+						<synonym value="Musical Pipes"/>
 						<synonym value="Set of Single Pipes"/>
 						<synonym value="Sets of Single Pipes"/>
 						<synonym value="Single Pipe"/>
@@ -8784,6 +8807,8 @@
 				<heading id="HornInstrument" title="Horn">
 					<!-- includes: bugle, didgeridoo, trumpet, horn instrument / implied materials: bamboo, brass, gourd, horn, ox -->
 					<synonym value="Horns"/>
+					<synonym value="Musical Horn"/>
+					<synonym value="Musical Horns"/>
 					<heading id="Bugle" title="Bugle">
 						<synonym value="Bugles"/>
 					</heading>
@@ -8825,6 +8850,8 @@
 				<heading id="MouthOrgan" title="Mouth Organ">
 					<!-- includes: harmonica, panpipe / implied materials: reed -->
 					<synonym value="Mouth Organs"/>
+					<synonym value="Mouth-Organ"/>
+					<synonym value="Mouth-Organs"/>
 					<heading id="Harmonica" title="Harmonica">
 						<synonym value="Harmonicas"/>
 					</heading>
@@ -8880,6 +8907,9 @@
 					</heading>
 					<heading id="Oboe" title="Oboe">
 						<synonym value="Oboes"/>
+					</heading>
+					<heading id="Shawm" title="Shawm">
+						<synonym value="Shawms"/>
 					</heading>
 				</heading>
 				<heading id="WhistleInstrument" title="Whistle">
@@ -8947,6 +8977,44 @@
 					<synonym value="Five-Holed Whistles"/>
 				</heading>
 			</heading>
+			<heading id="ElectricInstruments" title="Electric Instruments"> <!-- includes buzzer, synthesizer, voice disguiser -->
+				<synonym value="Electric Instrument"/>
+				<synonym value="Electronic Instrument"/>
+				<synonym value="Electronic Instruments"/>
+				<heading id="BuzzerInstrument" title="Buzzer">
+					<synonym value="Buzzers"/>
+				</heading>
+				<heading id="Synthesizer" title="Synthesizer">
+					<synonym value="Synthesizers"/>
+				</heading>
+				<heading id="VoiceDisguiser" title="Voice-Disguiser">
+					<synonym value="Voice-Disguisers"/>
+					<synonym value="Voice Disguiser"/>
+					<synonym value="Voice Disguisers"/>
+				</heading>
+			</heading>
+
+			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
+			<heading id="Chun_BM" title="Chun"> <!-- unknown -->
+				<synonym value="Chuns"/>
+			</heading>
+			<heading id="ConcussionStick_BM" title="Concussion Stick">  <!-- unknown -->
+				<synonym value="Concussion Sticks"/>
+			</heading>
+			<heading id="Jingle_BM" title="Jingle"> <!-- unclear -->
+				<synonym value="Jingles"/>
+			</heading>
+			<heading id="PercussionBoard_BM" title="Percussion Board"> <!-- unclear -->
+				<synonym value="Percussion Boards"/>
+			</heading>
+			<heading id="Reneti_BM" title="Reneti"> <!-- unknown -->
+				<synonym value="Renetis"/>
+			</heading>		
+			<heading id="Surnoi_BM" title="Surnoi"> <!-- unknown -->
+				<synonym value="Surnois"/>
+			</heading>
+			<!-- END MERGE ITEMS -->
+
 			<heading id="AcousticJar" title="Acoustic Jar">
 				<synonym value="Acoustic Jars"/>
 			</heading>
@@ -8970,78 +9038,12 @@
 			<heading id="MusicalBeater" title="Musical Beater">
 				<synonym value="Musical Beaters"/>
 			</heading>
-			<heading id="MusicalClockInstrument" title="Musical Clock" noMatch="true"/>
-
-
-
-			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
-
-
-			<heading id="Buzzer_BM" title="Buzzer">
-				<synonym value="Buzzers"/>
-			</heading>
-			<heading id="Chun_BM" title="Chun">
-				<synonym value="Chuns"/>
-			</heading>
-			<heading id="ClappingStick_BM" title="Clapping Stick">
-				<synonym value="Clapping Sticks"/>
-			</heading>
-			<heading id="ConcussionStick_BM" title="Concussion Stick">
-				<synonym value="Concussion Sticks"/>
-			</heading>
-			<heading id="Jingle_BM" title="Jingle">
-				<synonym value="Jingles"/>
-			</heading>
-
-			<heading id="Mandolin_BM" title="Mandolin">
-				<synonym value="Mandolins"/>
-			</heading>
-			<heading id="MouthOrgan_BM" title="Mouth-Organ">
-				<synonym value="Mouth-Organs"/>
-			</heading>
-			<heading id="MusicalBox_BM" title="Musical Box">
+			<heading id="MusicalBox" title="Musical Box">
 				<synonym value="Musical Boxes"/>
+				<synonym value="Music Box"/>
+				<synonym value="Music Boxes"/>
 			</heading>
-			<heading id="MusicalHorn_BM" title="Musical Horn">
-				<synonym value="Musical Horns"/>
-			</heading>
-			<heading id="MusicalPipe_BM" title="Musical Pipe">
-				<synonym value="Musical Pipes"/>
-			</heading>
-			<heading id="MusicalRasp_BM" title="Musical Rasp">
-				<synonym value="Musical Rasps"/>
-			</heading>
-			<heading id="PercussionBoard_BM" title="Percussion Board">
-				<synonym value="Percussion Boards"/>
-			</heading>
-			<heading id="Rabob_BM" title="Rabob">
-				<synonym value="Rabobs"/>
-			</heading>
-			<heading id="Reneti_BM" title="Reneti">
-				<synonym value="Renetis"/>
-			</heading>
-			<heading id="SgraSnyan_BM" title="Sgra-Snyan">
-				<synonym value="Sgra-Snyans"/>
-			</heading>
-			<heading id="Shawm_BM" title="Shawm">
-				<synonym value="Shawms"/>
-			</heading>
-			<heading id="StampingTube_BM" title="Stamping Tube">
-				<synonym value="Stamping Tubes"/>
-			</heading>
-			<heading id="Surnoi_BM" title="Surnoi">
-				<synonym value="Surnois"/>
-			</heading>
-			<heading id="Tambourine_BM" title="Tambourine">
-				<synonym value="Tambourines"/>
-			</heading>
-			<heading id="Viol_BM" title="Viol">
-				<synonym value="Viols"/>
-			</heading>
-			<heading id="VoiceDisguiser_BM" title="Voice-Disguiser">
-				<synonym value="Voice-Disguisers"/>
-			</heading>
-
+			<heading id="MusicalClockInstrument" title="Musical Clock" noMatch="true"/>
 			<heading id="MusicalInstrumentBow" title="Musical Instrument-Bow">
 				<synonym value="Musical Instrument-Bows"/>
 			</heading>
