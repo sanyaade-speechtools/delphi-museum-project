@@ -8932,9 +8932,9 @@
 			<heading id="MusicalBeater" title="Musical Beater">
 				<synonym value="Musical Beaters"/>
 			</heading>
-			<heading id="MusicalClock" title="Musical Clock">
-				<synonym value="Musical Clocks"/>
-			</heading>
+			<heading id="MusicalClockInstrument" title="Musical Clock" noMatch="true"/>
+
+
 
 			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
 			<heading id="Bagpipes" title="Bagpipes">
@@ -9044,9 +9044,7 @@
 			<heading id="MusicalScratcher" title="Musical Scratcher">
 				<synonym value="Musical Scratchers"/>
 			</heading>
-			<heading id="MusicalWatch" title="Musical Watch">
-				<synonym value="Musical Watches"/>
-			</heading>
+			<heading id="MusicalWatchInstrument" title="Musical Watch" noMatch="true"/>
 			<heading id="MusicBook" title="Music-Book">
 				<synonym value="Music-Books"/>
 			</heading>
@@ -10546,6 +10544,7 @@
 					</heading>
 					<heading id="MusicalClock" title="Musical Clock">
 						<synonym value="Musical Clocks"/>
+						<implies facet="ObjectName" cat="MusicalClockInstrument"/>
 					</heading>
 					<heading id="NightClock" title="Night Clock">
 						<synonym value="Night Clocks"/>
@@ -10781,6 +10780,7 @@
 					</heading>
 					<heading id="MusicalWatch" title="Musical Watch">
 						<synonym value="Musical Watches"/>
+						<implies facet="ObjectName" cat="MusicalWatchInstrument"/>
 					</heading>
 					<heading id="NameDialWatch" title="Name-Dial Watch">
 						<synonym value="Name-Dial Watches"/>
