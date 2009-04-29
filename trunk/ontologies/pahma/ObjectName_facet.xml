@@ -7582,6 +7582,8 @@
 				<synonym value="String Instruments"/>
 				<synonym value="Chordophone"/>
 				<synonym value="Chordophones"/>
+				<synonym value="Cordophone"/>
+				<synonym value="Cordophones"/>
 				<synonym value="Stringed"/>
 				<synonym value="Strings"/>
 				<heading id="BanjoMusical" title="Banjo">
@@ -7804,6 +7806,12 @@
 						<synonym value="Two-String Violins"/>
 					</heading>
 				</heading>
+				<heading id="Dulcimer" title="Dulcimer">
+					<synonym value="Dulcimers"/>
+				</heading>
+				<heading id="Gittern" title="Gittern">
+					<synonym value="Gittern"/>
+				</heading>
 				<heading id="Guitar" title="Guitar">
 					<!-- includes Charango, dobro -->
 					<synonym value="Guitars"/>
@@ -7834,18 +7842,21 @@
 					<synonym value="Stringed Jantar"/>
 					<synonym value="Stringed Jantars"/>
 				</heading>
+				<heading id="Kora" title="Kora">
+					<synonym value="Koras"/>
+				</heading>
 				<heading id="Koto" title="Koto">
 					<synonym value="Kotos"/>
 					<synonym value="Koto-Type"/>
 					<!-- from old DB: "3 koto-type stringed instruments" [sic] -->
 					<synonym value="Koto Type"/>
 				</heading>
-				<heading id="LuteInstrument" title="Lute">
+				<heading id="LuteInstrument" title="Lute"> <!-- strings free, not over soundboard, not played primarily with a bow -->
 					<synonym value="Lutes"/>
 					<synonym value="Kerar"/>
 					<synonym value="Kerars"/>
-				</heading>
-				<heading id="Lyre" title="Lyre">
+					</heading>
+				<heading id="Lyre" title="Lyre"> <!-- strings over soundboard, not played primarily with a bow -->
 					<synonym value="Lyres"/>
 					<synonym value="Bowl-Lyre"/>
 					<!-- infer bowl shape, not material made of bowls -->
@@ -7928,6 +7939,10 @@
 					</heading>
 					<heading id="ChimeInstrument" title="Chime">
 						<synonym value="Chimes"/>
+					</heading>
+					<heading id="CrotalBell" title="Crotal Bell">
+						<synonym value="Crotal Bells"/>
+						<synonym value="Crotals"/>
 					</heading>
 					<heading id="LegBell" title="Leg Bells">
 						<synonym value="Leg Bell"/>
@@ -8164,7 +8179,7 @@
 					<!-- sticks specifically for use with gong -->
 				</heading>
 				<heading id="JewsHarp" title="Jews Harp">
-					<!-- includes: Jaw Harp, Mouth Harp -->
+					<!-- includes: Genggong, Jaw Harp, Mouth Harp -->
 					<synonym value="Jews Harps"/>
 					<synonym value="JewsHarp"/>
 					<synonym value="JewsHarps"/>
@@ -8181,6 +8196,12 @@
 					<synonym value="Jaw's Harps"/>
 					<synonym value="Mouth Harp"/>
 					<synonym value="Mouth Harps"/>
+					<heading id="Genggong" title="Genggong">
+						<synonym value="Genggongs"/>
+					</heading>
+				</heading>
+				<heading id="Kecer" title="Kecer">
+					<synonym value="Kecers"/>
 				</heading>
 				<heading id="Metallophones" title="Metallophones">
 					<!-- includes: gendr, gangsa, saron, glockenspiel, vibraphone, xylophone  -->
@@ -8843,11 +8864,14 @@
 					<excl value="mouth"/>
 					<!-- excludes mouth organs -->
 				</heading>
-				<heading id="ReedInstrument" title="Reed">
-					<!-- sound produced by mouth with reed, not necessarily implied material / includes:  gyaling, oboe -->
+				<heading id="ReedInstrument" title="Reed"> <!-- includes bagpipe, clarinet, gyaling, oboe -->
+					<!-- sound produced by mouth with reed, not necessarily implied material -->
 					<synonym value="Reeds"/>
 					<heading id="Bagpipe" title="Bagpipe">
 						<synonym value="Bagpipes"/>
+					</heading>
+					<heading id="Clarinet" title="Clarinet">
+						<synonym value="Clarinets"/>
 					</heading>
 					<heading id="Gyaling" title="Gyaling">
 						<synonym value="Gyalings"/>
@@ -8962,36 +8986,13 @@
 			<heading id="ClappingStick_BM" title="Clapping Stick">
 				<synonym value="Clapping Sticks"/>
 			</heading>
-			<heading id="Clarinet_BM" title="Clarinet">
-				<synonym value="Clarinets"/>
-			</heading>
 			<heading id="ConcussionStick_BM" title="Concussion Stick">
 				<synonym value="Concussion Sticks"/>
-			</heading>
-			<heading id="Cordophone_BM" title="Cordophone">
-				<synonym value="Cordophones"/>
-			</heading>
-			<heading id="Crotal_BM" title="Crotal">
-				<synonym value="Crotals"/>
-			</heading>
-			<heading id="Dulcimer_BM" title="Dulcimer">
-				<synonym value="Dulcimers"/>
-			</heading>
-			<heading id="Genggong_BM" title="Genggong">
-				<synonym value="Genggongs"/>
-			</heading>
-			<heading id="Gittern_BM" title="Gittern">
-				<synonym value="Gitterns"/>
 			</heading>
 			<heading id="Jingle_BM" title="Jingle">
 				<synonym value="Jingles"/>
 			</heading>
-			<heading id="Kecer_BM" title="Kecer">
-				<synonym value="Kecers"/>
-			</heading>
-			<heading id="Kora_BM" title="Kora">
-				<synonym value="Koras"/>
-			</heading>
+
 			<heading id="Mandolin_BM" title="Mandolin">
 				<synonym value="Mandolins"/>
 			</heading>
