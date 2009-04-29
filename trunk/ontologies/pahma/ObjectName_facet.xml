@@ -2482,7 +2482,7 @@
 				<synonym value="Altar Card"/>
 				<synonym value="Altar-Card"/>
 				<synonym value="Altar-Cards"/>
-				<implies facet="ObjectName" cat="AltarCardRelig"/>
+				<implies facet="ObjectName" cat="AltarCardReligRelRit"/>
 			</heading>
 			<heading id="CatalogCardsComm" title="Catalog Cards">
 				<synonym value="Catalog Card"/>
@@ -9071,9 +9071,11 @@
 				<synonym value="Songsheets"/>
 				<implies facet="ObjectName" cat="SongsheetComm"/>
 			</heading>
-			<heading id="SulingStand" title="Suling-Stand">
+			<heading id="SulingStand" title="Suling Stand">
+				<synonym value="Suling Stands"/>
+				<synonym value="Suling-Stand"/>
 				<synonym value="Suling-Stands"/>
-				<implies facet="ObjectName" cat="SulingStandStnd"/>
+				<implies facet="ObjectName" cat="SulingStandStndMiscEq"/>
 			</heading>
 			<heading id="TimeBeater" title="Time-Beater">
 				<synonym value="Time-Beaters"/>
@@ -9722,7 +9724,7 @@
 			<synonym value="Altars"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
-		<heading id="AltarcardreligRelRit" title="Altar Card">
+		<heading id="AltarCardReligRelRit" title="Altar Card">
 			<synonym value="Altar Cards"/>
 		</heading>
 		<heading id="AltarClothRelRit" title="Altar-Cloth">
