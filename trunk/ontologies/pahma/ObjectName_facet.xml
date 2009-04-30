@@ -316,17 +316,24 @@
 					<synonym value="Fish Trap Basket"/>
 					<synonym value="Fish-Trap Basket"/>
 					<synonym value="Fish-Trap Baskets"/>
+					<synonym value="Fish-Trap"/>
+					<synonym value="Fish-Traps"/>
+					<synonym value="Fishtrap"/>
+					<synonym value="Fishtraps"/>
+					<implies facet="ActivityorContext" cat="FishingActivity"/>
 					<implies facet="Collection" cat="BasketCollection"/>
-					<implies facet="ActivityorContext" cat="HandGatheringFishing"/>
+					<implies facet="ObjectName" cat="FishTrapBasketBasket"/>
 					<heading id="TrapEelTrapBasketFshEq" title="Eel Trap Basket">
 						<synonym value="Eel Trap Baskets"/>
 						<synonym value="Eel-Trap Basket"/>
 						<synonym value="Eel-Trap Baskets"/>
+						<implies facet="ObjectName" cat="EelTrapBasketBasket"/>
 					</heading>
 					<heading id="TrapSalmonTrapBasketFshEq" title="Salmon Trap Basket">
 						<synonym value="Salmon Trap Baskets"/>
 						<synonym value="Salmon-Trap Basket"/>
 						<synonym value="Salmon-Trap Baskets"/>
+						<implies facet="ObjectName" cat="SalmonTrapBasketBasket"/>
 					</heading>
 				</heading>
 				<heading id="FishWeirFshEq" title="Fish Weir">
@@ -2177,6 +2184,7 @@
 				<synonym value="Brush Containers"/>
 				<synonym value="Brush-Container"/>
 				<synonym value="Brush-Containers"/>
+				<implies facet="ObjectName" cat="BrushCntnrCntnr"/>
 			</heading>
 			<heading id="BrushrestComm" title="Brush-Rest">
 				<synonym value="Brush-Rests"/>
@@ -2984,29 +2992,9 @@
 				<implies facet="ActivityorContext" cat="Healing"/>
 				<implies facet="ObjectName" cat="DoctoringBasketMedical"/>
 			</heading>
-			<heading id="BasketFishTrapBasket" title="Fish Trap Basket">
-				<!-- Also A Kind of Trap (Armament) -->
-				<synonym value="Fish Trap Baskets"/>
-				<synonym value="Fish-Trap Basket"/>
-				<synonym value="Fish-Trap Baskets"/>
-				<synonym value="Fish-Trap"/>
-				<synonym value="Fish-Traps"/>
-				<synonym value="Fishtrap"/>
-				<synonym value="Fishtraps"/>
-				<synonym value="Fish Trap Baskets"/>
-				<implies facet="ActivityorContext" cat="FishingActivity"/>
-				<heading id="EeltrapBasket" title="Eel Trap Basket">
-					<!-- Also A Kind of Trap (Armament) -->
-					<synonym value="Eel Trap Baskets"/>
-					<synonym value="Eel-Trap Basket"/>
-					<synonym value="Eel-Trap Baskets"/>
-				</heading>
-				<heading id="SalmontrapBasket" title="Salmon Trap Basket">
-					<!-- Also A Kind of Trap (Armament) -->
-					<synonym value="Salmon Trap Baskets"/>
-					<synonym value="Salmon-Trap Basket"/>
-					<synonym value="Salmon-Trap Baskets"/>
-				</heading>
+			<heading id="FishTrapBasketBasket" title="Fish Trap Basket" noMatch="true">
+				<heading id="EelTrapBasketBasket" title="Eel Trap Basket" noMatch="true"/>
+				<heading id="SalmonTrapBasketBasket" title="Salmon Trap Basket" noMatch="true"/>
 			</heading>
 			<heading id="GatheringBasket" title="Gathering Basket">
 				<synonym value="Gathering Baskets"/>
@@ -3152,12 +3140,7 @@
 				<implies facet="ObjectName" cat="SnuffDrug"/>
 			</heading>
 		</heading>
-		<heading id="BrushContainer" title="Brush Container" noMatch="true">
-			<synonym value="Brush Containers"/>
-			<synonym value="Brush-Container"/>
-			<synonym value="Brush-Containers"/>
-			<implies facet="ObjectName" cat="BrushContainerComm"/>
-		</heading>
+		<heading id="BrushCntnrCntnr" title="Brush Container" noMatch="true"/>
 		<heading id="CanContainer" title="Can">
 			<!-- Disambiguate -->
 			<synonym value="Cans"/>
@@ -3369,10 +3352,11 @@
 						<synonym value="Incense-Bowl"/>
 						<synonym value="Incense-Bowls"/>
 					</heading>
-					<heading id="IncenseJar" title="Incense Jar">
+					<heading id="IncenseJarCntnr" title="Incense Jar">
 						<synonym value="Incense Jars"/>
 						<synonym value="Incense-Jar"/>
 						<synonym value="Incense-Jars"/>
+						<implies facet="ObjectName" cat="IncenseJarJars"/>
 					</heading> 
 					<heading id="IncenseVase" title="Incense Vase">
 						<synonym value="Incense Vases"/>
@@ -3736,12 +3720,7 @@
 				<heading id="Gingerjar" title="Ginger Jar">
 					<synonym value="Ginger Jars"/>
 				</heading>
-				<heading id="Incensejar" title="Incense Jar" noMatch="true">
-					<synonym value="Incense Jars"/>
-					<synonym value="Incense-Jar"/>
-					<synonym value="Incense-Jars"/>
-					<implies facet="ObjectName" cat="IncenseVessel"/>
-				</heading>
+				<heading id="IncenseJarJars" title="Incense Jar" noMatch="true"/>
 				<heading id="Kohljar" title="Kohl Jar">
 					<synonym value="Kohl Jars"/>
 				</heading>
@@ -4582,26 +4561,24 @@
 						<excl value="Violins"/>
 						<implies facet="ObjectName" cat="GstringUnderwearLower"/>
 					</heading>
-					<heading id="GarterUnderwearLower" title="Garter" noMatch="true">
+					<heading id="GarterUnderwearLower" title="Garter">
 						<synonym value="Garters"/>
-						<excl value="Snake"/>
-						<!-- Excludes Garter Snake -->
-						<excl value="Snakes"/>
-						<!-- Excludes Garter Snakes -->
+						<excl value="Snake"/> <!-- Disambiguates from Garter Snake -->
+						<excl value="Snakes"/> <!-- Disambiguates from Garter Snakes -->
 						<excl value="Garter Stitch"/>
 						<excl value="Garter Stitches"/>
 						<excl value="Garter Stitching"/>
 						<excl value="Garter-Stitch"/>
 						<excl value="Garter-Stitches"/>
 						<excl value="Garter-Stitching"/>
+						<implies facet="ObjectName" cat="GarterAccessory"/>
 					</heading>
 					<heading id="GarterBeltUnderwear" title="Garter Belt">
-						<synonym value="Garter-Belt"/>
-						<synonym value="Garter Belt"/>
-						<synonym value="Garter-Belts"/>
 						<synonym value="Garter Belts"/>
+						<synonym value="Garter-Belt"/>
+						<synonym value="Garter-Belts"/>
+						<synonym value="Garterbelt"/>
 						<synonym value="Garterbelts"/>
-						<implies facet="ObjectName" cat="GarterbeltUnderwearLower"/>
 					</heading>
 					<heading id="SocksUnderwearLower" title="Socks">
 						<synonym value="Sock"/>
@@ -4614,10 +4591,8 @@
 					<synonym value="Bras"/>
 					<synonym value="Brassiere"/>
 					<synonym value="Brassieres"/>
-					<excl value="Auto"/>
-					<!-- excludes car/auto bras -->
-					<excl value="Car"/>
-					<!-- excludes car/auto bras -->
+					<excl value="Auto"/> <!-- Disambiguates from car/auto bras -->
+					<excl value="Car"/> <!-- Ibid. -->
 				</heading>
 				<heading id="CorsetUnderwear" title="Corset">
 					<synonym value="Corsets"/>
@@ -4824,9 +4799,7 @@
 			<heading id="Gaiter" title="Gaiter">
 				<synonym value="Gaiters"/>
 			</heading>
-			<heading id="Garter" title="Garter">
-				<synonym value="Garters"/>
-			</heading>
+			<heading id="GarterAccessory" title="Garter" noMatch="true"/>
 			<heading id="Glove" title="Glove">
 				<synonym value="Gloves"/>
 			</heading>
@@ -5541,20 +5514,14 @@
 				</heading>
 				<heading id="SpoonUtensilCookEq" title="Spoons">
 					<synonym value="Spoon"/>
-					<excl value="Eucharist"/>
-					<!-- Excludes eucharistic spoons -->
-					<excl value="Eucharistic"/>
-					<!-- Excludes eucharistic spoons -->
-					<excl value="Ink"/>
-					<!-- Excludes ink spoons -->
-					<excl value="Pipe"/>
-					<!-- Excludes smoking pipe spoons -->
-					<excl value="Snuff"/>
-					<!-- Excludes snuff spoons -->
-					<excl value="Toilet"/>
-					<!-- Excludes toilet spoons -->
-					<excl value="Warmer"/>
-					<!-- Excludes spoon warmers -->
+					<excl value="Eucharist"/> <!-- Disambiguates from eucharistic spoons -->
+					<excl value="Eucharistic"/> <!-- Ibid. -->
+					<excl value="Ink"/> <!-- Disambiguates from ink spoons -->
+					<excl value="Pipe"/> <!-- Disambiguates from smoking pipe spoons -->
+					<excl value="Snuff"/> <!-- Disambiguates from snuff spoons -->
+					<excl value="Toilet"/> <!-- Disambiguates from toilet spoons -->
+					<excl value="Warmer"/> <!-- Disambiguates from spoon warmers -->
+					<excl value="Warmers"/> <!-- Ibid. -->
 					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<heading id="CoffeeSpoonUtensilCookEq" title="Coffee Spoon">
 						<synonym value="Coffee Spoons"/>
@@ -6687,8 +6654,7 @@
 				<implies facet="ObjectName" cat="CockspurAnmlEq"/>
 			</heading>
 			<heading id="DiceGmSprt" title="Dice">
-				<synonym value="Die"/>
-				<!-- Excludes Death, Machining Tools -->
+				<synonym value="Die"/> <!-- Disambiguates from Death, Machining Tools -->
 			</heading>
 			<heading id="DiceShakerGmSprt" title="Dice-Shaker">
 				<synonym value="Dice-Shakers"/>
@@ -7272,11 +7238,11 @@
 				<synonym value="Fans"/>
 			</heading>
 			<heading id="PipeMiscEq" title="Pipe">
-				<excl value="Lead pipe"/> <!-- excludes pipe for plumbing -->
+				<excl value="Lead pipe"/> <!-- Disambiguates from pipe for plumbing -->
 				<excl value="Lead pipes"/> <!-- Ibid. -->
 				<excl value="Copper pipe"/> <!-- Ibid. -->
 				<excl value="Copper pipes"/> <!-- Ibid. -->
-				<excl value="Drone"/> <!-- excludes musical instruments -->
+				<excl value="Drone"/> <!-- Disambiguates from musical instruments -->
 				<excl value="music"/> <!-- Ibid. -->
 				<excl value="musical"/> <!-- Ibid. -->
 				<excl value="instrument"/> <!-- Ibid. -->
@@ -7586,17 +7552,13 @@
 				<synonym value="Stringed"/>
 				<synonym value="Strings"/>
 				<heading id="BanjoMusical" title="Banjo">
-					<!-- implied materials: gourd -->
 					<synonym value="Banjos"/>
 					<synonym value="Banjoes"/>
-					<synonym value="Yugoslav Banjo"/>
-					<!-- from old DB: "Yugoslav banjo-like stringed instrument" [sic] -->
+					<synonym value="Yugoslav Banjo"/> <!-- from old DB: "Yugoslav banjo-like stringed instrument" [sic] -->
 					<synonym value="Yugoslav Banjos"/>
 					<synonym value="Yugoslav Banjoes"/>
-					<excl value="Abalone"/>
-					<!-- Excludes abalone "banjo" -->
-					<excl value="Haliotis"/>
-					<!-- Excludes "Haliotis, banjo type" -->
+					<excl value="Abalone"/> <!-- Disambiguates from abalone "banjo" -->
+					<excl value="Haliotis"/> <!-- Disambiguates from "Haliotis, banjo type" -->
 					<heading id="GourdBanjo" title="Gourd Banjo">
 						<synonym value="Gourd Banjos"/>
 						<synonym value="Gourd Banjoes"/>
@@ -7604,7 +7566,6 @@
 					</heading>
 				</heading>
 				<heading id="BowedInstrument" title="Bowed Instrument">
-					<!-- includes: Esraj, Fiddle, Music Bow, Ravanhatha, Rebab, Sarangi, Violin / excludes: harp -->
 					<synonym value="Bowed Instruments"/>
 					<synonym value="Bow Instrument"/>
 					<synonym value="Bow Instruments"/>
@@ -7652,8 +7613,7 @@
 						<synonym value="Tube Fiddle"/>
 						<synonym value="Tube Fiddles"/>
 					</heading>
-					<heading id="MusicBow" title="Music Bow">
-						<!-- includes: bows of all string instruments, bow resin, vibrator (as name for bow) -->
+					<heading id="MusicBow" title="Music Bow"> <!-- includes: bows of all string instruments, bow resin, vibrator (as name for bow) -->
 						<synonym value="Music Bows"/>
 						<synonym value="Musical Bow"/>
 						<synonym value="Musical Bows"/>
@@ -7909,8 +7869,7 @@
 					<synonym value="Womans Bangle"/>
 					<excl value="Jewelery"/>
 				</heading>
-				<heading id="Beater" title="Beater">
-					<!-- beaters/sticks exclusively not intended for drum use, excludes: seed beaters, drums -->
+				<heading id="Beater" title="Beater"> <!-- beaters/sticks exclusively not intended for drum use. Does not include seed beaters, drums -->
 					<synonym value="Beaters"/>
 					<synonym value="Rhythym Stick"/>
 					<synonym value="Rhythym Sticks"/>
@@ -8648,9 +8607,9 @@
 					<synonym value="Flutes"/>
 					<synonym value="Musical Flute"/>
 					<synonym value="Musical Flutes"/>
-					<excl value="fluted"/> <!-- excludes sculpted description, not musical instrument -->
-					<excl value="organ"/> <!-- excludes mouth organs -->
-					<excl value="whistle"/> <!-- excludes whistles -->
+					<excl value="fluted"/> <!-- Disambiguates from sculpted ornamentation -->
+					<excl value="organ"/> <!-- Disambiguates from mouth organs -->
+					<excl value="whistle"/> <!-- Disambiguates from whistles -->
 					<heading id="BambooFlute" title="Bamboo Flute">
 						<synonym value="Bamboo Flutes"/>
 						<implies facet="Material" cat="BambooMaterial"/>
@@ -8674,21 +8633,20 @@
 						<synonym value="2/1-Hole Flageolets"/>
 						<synonym value="4/2-Hole Flageolets"/>
 					</heading>
-					<heading id="MetalFlute" title="Metal Flute"> <!-- excludes: pipe -->
+					<heading id="MetalFlute" title="Metal Flute">
 						<synonym value="Metal Flutes"/>
 						<synonym value="Metal-Pipe Flute"/>
 						<synonym value="Metal-Pipe Flutes"/>
 						<synonym value="Metal Pipe Flute"/>
 						<synonym value="Metal Pipe Flutes"/>
-						<excl value="Pipe"/>
-						<excl value="Pipes"/>
+						<excl value="Pipe"/> <!-- Logan: Disambiguates from pipe -->
+						<excl value="Pipes"/> <!-- Logan: Disambiguates from pipe -->
 						<implies facet="Material" cat="MetalMaterial"/>
 					</heading>
 					<heading id="NoseFlute" title="Nose Flute">
 						<synonym value="Nose Flutes"/>
 					</heading>
 					<heading id="OcarinaInstrument" title="Ocarina">
-						<!-- implied materials: pottery -->
 						<synonym value="Ocarinas"/>
 						<heading id="PotteryOcarina" title="Pottery Ocarina">
 							<synonym value="Pottery Ocarinas"/>
@@ -8696,7 +8654,6 @@
 						</heading>
 					</heading>
 					<heading id="PipeInstrument" title="Pipe">
-						<!-- excludes pan -->
 						<synonym value="Pipes"/>
 						<synonym value="Musical Pipe"/>
 						<synonym value="Musical Pipes"/>
@@ -8704,7 +8661,7 @@
 						<synonym value="Sets of Single Pipes"/>
 						<synonym value="Single Pipe"/>
 						<synonym value="Single Pipes"/>
-						<excl value="Pan"/>
+						<excl value="Pan"/> <!-- Disambiguates from pan pipes -->
 					</heading>
 					<heading id="RecorderInstrument" title="Recorder">
 						<synonym value="Recorders"/>
@@ -8855,10 +8812,8 @@
 						<synonym value="Harmonicas"/>
 					</heading>
 					<heading id="Panpipe" title="Panpipe">
-						<!-- excludes single / implied materials: reed -->
 						<synonym value="Panpipes"/>
-						<heading id="ReedPanpipe" title="Reed Panpipe">
-							<!-- sound is produced by reed (pipe not necessarily made of reed material) -->
+						<heading id="ReedPanpipe" title="Reed Panpipe"> <!-- sound is produced by reed (pipe not necessarily made of reed material) -->
 							<synonym value="Reed Pan-pipe"/>
 							<synonym value="Reed Pan-pipes"/>
 							<synonym value="Reed Pan Pipe"/>
@@ -8879,19 +8834,15 @@
 						</heading>
 					</heading>
 				</heading>
-				<heading id="Organ" title="Organ">
-					<!-- includes reed (sound produced by reed, not implied material), harmonium -->
+				<heading id="Organ" title="Organ"> <!-- includes reed (sound produced by reed, not implied material), harmonium -->
 					<synonym value="Organs"/>
-					<synonym value="Reed Organ"/>
-					<!-- sound is produced by reed (organ not necessarily made of reed material) -->
+					<synonym value="Reed Organ"/> <!-- sound is produced by reed (organ not necessarily made of reed material) -->
 					<synonym value="Reed Organs"/>
 					<synonym value="Harmonium"/>
 					<synonym value="Harmoniums"/>
-					<excl value="mouth"/>
-					<!-- excludes mouth organs -->
+					<excl value="mouth"/> <!-- Disambiguates from mouth organs -->
 				</heading>
-				<heading id="ReedInstrument" title="Reed"> <!-- includes bagpipe, clarinet, gyaling, oboe -->
-					<!-- sound produced by mouth with reed, not necessarily implied material -->
+				<heading id="ReedInstrument" title="Reed"> <!-- sound produced by mouth with reed, not necessarily implied material -->
 					<synonym value="Reeds"/>
 					<heading id="Bagpipe" title="Bagpipe">
 						<synonym value="Bagpipes"/>
@@ -13535,12 +13486,9 @@
 				</heading>
 				<heading id="Scraper" title="Scraper">
 					<synonym value="Scrapers"/>
-					<excl value="Coconut"/>
-					<!-- Excludes coconut scrapers -->
-					<excl value="Foot"/>
-					<!-- Excludes foot scrapers -->
-					<excl value="Pipe"/>
-					<!-- Excludes smoking pipe scrapers -->
+					<excl value="Coconut"/> <!-- Disambiguates from coconut scrapers -->
+					<excl value="Foot"/> <!-- Disambiguates from foot scrapers -->
+					<excl value="Pipe"/> <!-- Disambiguates from smoking pipe scrapers -->
 				</heading>
 				<heading id="Burin" title="Burin">
 					<synonym value="Burins"/>
