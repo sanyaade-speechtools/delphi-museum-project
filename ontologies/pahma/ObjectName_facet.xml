@@ -3193,12 +3193,7 @@
 			<implies facet="ObjectName" cat="FireStickContainerFireEq"/>
 		</heading>
 		<heading id="DrugContainers" title="Drug Containers">
-			<heading id="BetelContainerCntnr" title="Betel Container">
-				<synonym value="Betel Containers"/>
-				<synonym value="Betel-Container"/>
-				<synonym value="Betel-Containers"/>
-				<implies facet="ObjectName" cat="BetelNutDrug"/>
-			</heading>
+			<heading id="BetelContainerCntnr" title="Betel Container" noMatch="true"/>
 			<heading id="CocaContainerCntnr" title="Coca Container">
 				<synonym value="Coca Containers"/>
 				<synonym value="Coca Pouch"/>
@@ -11916,32 +11911,34 @@
 		<heading id="BetelEquipment" title="Betel Equipment">
 			<synonym value="Betel Items"/>
 			<implies facet="ObjectName" cat="BetelNutDrug"/>
-			<heading id="BetelContainer" title="Betel Container">
+			<heading id="BetelContainerBetlEq" title="Betel Container">
 				<synonym value="Betel Containers"/>
 				<synonym value="Betel-Container"/>
 				<synonym value="Betel-Containers"/>
+				<implies facet="ObjectName" cat="BetelContainerCntnr"/>
+				<implies facet="ObjectName" cat="BetelNutDrug"/>
 			</heading>
-			<heading id="BetelCrusher" title="Betel Crusher">
+			<heading id="BetelCrusherBetlEq" title="Betel Crusher">
 				<synonym value="Betel Crushers"/>
 				<synonym value="Betel-Crusher"/>
 				<synonym value="Betel-Crushers"/>
 			</heading>
-			<heading id="BetelCutter" title="Betel Cutter">
+			<heading id="BetelCutterBetlEq" title="Betel Cutter">
 				<synonym value="Betel Cutters"/>
 				<synonym value="Betel-Cutter"/>
 				<synonym value="Betel-Cutters"/>
 			</heading>
-			<heading id="BetelMortar" title="Betel Mortar">
+			<heading id="BetelMortarBetlEq" title="Betel Mortar">
 				<synonym value="Betel Mortars"/>
 				<synonym value="Betel-Mortar"/>
 				<synonym value="Betel-Mortars"/>
 			</heading>
-			<heading id="BetelPestle" title="Betel Pestle">
+			<heading id="BetelPestleBetlEq" title="Betel Pestle">
 				<synonym value="Betel Pestles"/>
 				<synonym value="Betel-Pestle"/>
 				<synonym value="Betel-Pestles"/>
 			</heading>
-			<heading id="BetelStand" title="Betel Stand">
+			<heading id="BetelStandBetlEq" title="Betel Stand">
 				<synonym value="Betel Stands"/>
 				<synonym value="Betel-Stand"/>
 				<synonym value="Betel-Stands"/>
