@@ -1972,6 +1972,7 @@
 			<synonym value="Baby Feeders"/>
 			<synonym value="Baby-Feeder"/>
 			<synonym value="Baby-Feeders"/>
+			<implies facet="ObjectName" cat="BabyFeederCntnr"/>
 		</heading>
 		<heading id="BabyRattleChdCr" title="Baby Rattle">
 			<synonym value="Baby Rattles"/>
@@ -2269,6 +2270,7 @@
 			<heading id="PaintboxComm" title="Paint-Box">
 				<synonym value="Paint-Boxes"/>
 			</heading>
+			<heading id="PaintCanComm" title="Paint Can" noMatch="true"/>
 			<heading id="PaintmixerComm" title="Paint-Mixer">
 				<synonym value="Paint-Mixers"/>
 			</heading>
@@ -2277,11 +2279,6 @@
 			</heading>
 			<heading id="PaintstoneComm" title="Paint-Stone">
 				<synonym value="Paint-Stones"/>
-			</heading>
-			<heading id="PaintTinComm" title="Paint Tin">
-				<synonym value="Paint Tins"/>
-				<synonym value="Paint-Tin"/>
-				<synonym value="Paint-Tins"/>
 			</heading>
 			<heading id="PaperSheetComm" title="Paper-Sheet">
 				<synonym value="Paper-Sheets"/>
@@ -2320,6 +2317,7 @@
 				<synonym value="Pigment Containers"/>
 				<synonym value="Pigment-Container"/>
 				<synonym value="Pigment-Containers"/>
+				<implies facet="ObjectName" cat="PigmentCntnrCntnr"/>
 			</heading>
 			<heading id="PouncePotComm" title="Pounce-Pot">
 				<synonym value="Pounce-Pots"/>
@@ -3252,11 +3250,7 @@
 			<synonym value="Food Container"/>
 			<synonym value="Food-Container"/>
 			<synonym value="Food-Containers"/>
-			<heading id="BeerContainer" title="Beer Container">
-				<synonym value="Beer Containers"/>
-				<synonym value="Beer-Container"/>
-				<synonym value="Beer-Containers"/>
-			</heading>
+			<heading id="BeerContainerFoodCntnr" title="Beer Container" noMatch="true"/>
 			<heading id="BiscuitTin" title="Biscuit Tin">
 				<synonym value="Biscuit Tins"/>
 				<synonym value="Biscuit-Tin"/>
@@ -3266,7 +3260,7 @@
 				<synonym value="Dessert-Basket"/>
 				<implies facet="Collection" cat="BasketCollection"/>
 			</heading>
-			<heading id="FoodBox" title="Food Boxes">
+			<heading id="FoodBoxFoodCntnr" title="Food Boxes">
 				<synonym value="Food Box"/>
 				<synonym value="Food-Box"/>
 				<synonym value="Food-Boxes"/>
@@ -3298,12 +3292,14 @@
 					<synonym value="Sweetmeat-Boxes"/>
 				</heading>
 			</heading>
-			<heading id="FoodSafe" title="Food Safe">
+			<heading id="FoodSafeFoodCntnr" title="Food Safe">
 				<synonym value="Food Safes"/>
 				<synonym value="Food-Safe"/>
 				<synonym value="Food-Safes"/>
 			</heading>
-			<heading id="MilkContainer" title="Milk-Container">
+			<heading id="MilkContainer" title="Milk Container">
+				<synonym value="Milk Containers"/>
+				<synonym value="Milk-Container"/>
 				<synonym value="Milk-Containers"/>
 			</heading>
 			<heading id="SoupContainer" title="Soup Container">
@@ -3311,6 +3307,7 @@
 				<synonym value="Soup-Container"/>
 				<synonym value="Soup-Containers"/>
 			</heading>
+			<heading id="TeaBagContnr" title="Tea Bag" noMatch="true"/>
 			<heading id="TeaJarContainer" title="Tea Jar">
 				<synonym value="Tea Jars"/>
 				<synonym value="Tea-Jar"/>
@@ -3324,11 +3321,6 @@
 				<synonym value="Tea-Jar-Container"/>
 				<synonym value="Tea-Jar-Containers"/>
 				<implies facet="ObjectName" cat="TeaJarCntnrTeaEq"/>
-			</heading>
-			<heading id="TeaPacketContnr" title="Tea Packet">
-				<synonym value="Tea Packets"/>
-				<synonym value="Tea-Packet"/>
-				<synonym value="Tea-Packets"/>
 			</heading>
 			<heading id="TeaWhiskCntnrCntnr" title="Tea Whisk Container" noMatch="true"/>
 			<heading id="WineskinContainer" title="Wineskin">
@@ -3438,22 +3430,21 @@
 			<synonym value="Oil-Container"/>
 			<synonym value="Oil-Containers"/>
 		</heading>
-		<heading id="PaintTinContnr" title="Paint Tin" noMatch="true">
+		<heading id="PaintCanContnr" title="Paint Can" noMatch="true">
+			<synonym value="Paint Cans"/>
+			<synonym value="Paint-Can"/>
+			<synonym value="Paint-Cans"/>
+			<synonym value="Paint Tin"/>
 			<synonym value="Paint Tins"/>
 			<synonym value="Paint-Tin"/>
 			<synonym value="Paint-Tins"/>
-			<implies facet="ObjectName" cat="PaintTinComm"/>
+			<implies facet="ObjectName" cat="PaintCanComm"/>
 		</heading>
 		<heading id="ParflecheContnr" title="Parfleche">
 			<synonym value="Parfleches"/>
 			<!-- Implies leather -->
 		</heading>
-		<heading id="PigmentContainer" title="Pigment Container" noMatch="true">
-			<synonym value="Pigment Containers"/>
-			<synonym value="Pigment-Container"/>
-			<synonym value="Pigment-Containers"/>
-			<implies facet="ObjectName" cat="PigmentContainerComm"/>
-		</heading>
+		<heading id="PigmentCntnrCntnr" title="Pigment Container" noMatch="true"/>
 		<heading id="PocketContnr" title="Pocket">
 			<synonym value="Pockets"/>
 		</heading>
@@ -3514,12 +3505,7 @@
 			<heading id="AsparagusServer" title="Asparagus-Server">
 				<synonym value="Asparagus-Servers"/>
 			</heading>
-			<heading id="BabyFeeder" title="Baby Feeder" noMatch="true">
-				<synonym value="Baby Feeders"/>
-				<synonym value="Baby-Feeder"/>
-				<synonym value="Baby-Feeders"/>
-				<implies facet="ObjectName" cat="BabyFeederChCr"/>
-			</heading>
+			<heading id="BabyFeederCntnr" title="Baby Feeder" noMatch="true"/>
 			<heading id="Barrel" title="Barrel">
 				<synonym value="Barrels"/>
 				<heading id="Gunpowderbarrel" title="Gunpowder Barrel">
@@ -4947,11 +4933,7 @@
 				<implies facet="ObjectName" cat="WigPrsOrn"/>
 			</heading>
 		</heading>
-		<heading id="TheaterCostume" title="Theater Costume">
-			<synonym value="Theater Costumes"/>
-			<synonym value="Theatre-Costume"/>
-			<synonym value="Theatre-Costumes"/>
-		</heading>
+		<heading id="TheaterCostumeCostumes" title="Theater Costume" noMatch="true"/>
 		<heading id="Uniform" title="Uniform">
 			<synonym value="Uniforms"/>
 		</heading>
@@ -9116,12 +9098,13 @@
 		<heading id="SceneryPerfArt" title="Scenery"/>
 		<heading id="TheaterCostumePerfArt" title="Theater Costume" noMatch="true">
 			<synonym value="Theater Costumes"/>
+			<synonym value="Theater-Costume"/>
+			<synonym value="Theater-Costumes"/>
 			<synonym value="Theatre Costume"/>
 			<synonym value="Theatre Costumes"/>
 			<synonym value="Theatre-Costume"/>
 			<synonym value="Theatre-Costumes"/>
-			<implies facet="ObjectName" cat="TheaterCostume"/>
-			<!-- this should link to theater costumes in clothing/costume -->
+			<implies facet="ObjectName" cat="TheaterCostumeCostumes"/>
 		</heading>
 	</heading>
 	<heading id="PersonalOrnament" title="Personal Ornament">
@@ -11749,17 +11732,22 @@
 			<synonym value="Alcohol Equipment"/>
 			<synonym value="Alcohol Items"/>
 			<implies facet="ObjectName" cat="AlcoholDrug"/>
-			<heading id="BeerContainer" title="Beer Container">
+			<heading id="BeerContainerAlcEq" title="Beer Container">
 				<synonym value="Beer Containers"/>
 				<synonym value="Beer-Container"/>
 				<synonym value="Beer-Containers"/>
+				<implies facet="ObjectName" cat="BeerContainerFoodCntnr"/>
 				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
-			<heading id="BeerStrainer" title="Beer-Strainer">
+			<heading id="BeerStrainer" title="Beer Strainer">
+				<synonym value="Beer Strainers"/>
+				<synonym value="Beer-Strainer"/>
 				<synonym value="Beer-Strainers"/>
 				<implies facet="ObjectName" cat="BeerFood"/>
 			</heading>
-			<heading id="BrandyBowl" title="Brandy-Bowl">
+			<heading id="BrandyBowl" title="Brandy Bowl">
+				<synonym value="Brandy Bowls"/>
+				<synonym value="Brandy-Bowl"/>
 				<synonym value="Brandy-Bowls"/>
 			</heading>
 			<heading id="CaudleCup" title="Caudle Cup">
@@ -12565,8 +12553,17 @@
 				<synonym value="Tea-Mill"/>
 				<synonym value="Tea-Mills"/>
 			</heading>
-			<heading id="TeaPacket" title="Tea-Packet">
+			<heading id="TeaBagTeaEq" title="Tea Bag">
+				<synonym value="Teabag"/>
+				<synonym value="Teabags"/>
+				<synonym value="Tea Bags"/>
+				<synonym value="Tea-Bag"/>
+				<synonym value="Tea-Bags"/>
+				<synonym value="Tea Packet"/>
+				<synonym value="Tea Packets"/>
+				<synonym value="Tea-Packet"/>
 				<synonym value="Tea-Packets"/>
+				<implies facet="ObjectName" cat="TeaBagContnr"/>
 			</heading>
 			<heading id="Teapot" title="Teapot">
 				<heading id="DoubleTeapot" title="Double Teapot">
