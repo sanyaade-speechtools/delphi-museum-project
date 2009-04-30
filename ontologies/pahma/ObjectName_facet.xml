@@ -144,37 +144,13 @@
 					<synonym value="Watering Cans"/>
 				</heading>
 			</heading>
-			<heading id="MilkingEqAgEq" title="Milking Items">
-				<heading id="MilkingCan" title="Milking Can" noMatch="true">
-					<synonym value="Milking Cans"/>
-					<synonym value="Milking-Can"/>
-					<synonym value="Milking-Cans"/>
-					<implies facet="ObjectName" cat="MilkingCanAnmlEq"/>
-				</heading>
-				<heading id="MilkingJug" title="Milking Jug" noMatch="true">
-					<synonym value="Milking Jugs"/>
-					<synonym value="Milking-Jug"/>
-					<synonym value="Milking-Jugs"/>
-					<implies facet="ObjectName" cat="MilkingJugAnmlEq"/>
-				</heading>
-				<heading id="MilkingPail" title="Milking Pail" noMatch="true">
-					<synonym value="Milking Pails"/>
-					<synonym value="Milking-Pail"/>
-					<synonym value="Milking-Pails"/>
-					<implies facet="ObjectName" cat="MilkingPailAnmlEq"/>
-				</heading>
-				<heading id="MilkingPot" title="Milking Pot" noMatch="true">
-					<synonym value="Milking Pots"/>
-					<synonym value="Milking-Pot"/>
-					<synonym value="Milking-Pots"/>
-					<implies facet="ObjectName" cat="MilkingPotAnmlEq"/>
-					<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
-				</heading>
-				<heading id="MilkingStool" title="Milking Stool">
-					<synonym value="Milking Stools"/>
-					<synonym value="Milking-Stool"/>
-					<synonym value="Milking-Stools"/>
-				</heading>
+			<heading id="MilkingEqAgEq" title="Milking Items" noMatch="true">
+				<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
+				<heading id="MilkingCanAgEq" title="Milking Can" noMatch="true"/>
+				<heading id="MilkingJugAgEq" title="Milking Jug" noMatch="true"/>
+				<heading id="MilkingPailAgEq" title="Milking Pail" noMatch="true"/>
+				<heading id="MilkingPotAgEq" title="Milking Pot" noMatch="true"/>
+				<heading id="MilkingStoolAgEq" title="Milking Stool" noMatch="true"/>
 			</heading>
 			<heading id="MonkeyScareAgEq" title="Monkey Scare">
 				<synonym value="Monkey Scares"/>
@@ -835,34 +811,41 @@
 			<synonym value="Lariats"/>
 			<implies facet="ObjectName" cat="RopesMainMiscEq"/>
 		</heading>
-		<heading id="MilkingEquipment" title="Milking Items">
+		<heading id="MilkingEqAnmlEq" title="Milking Items">
+			<synonym value="Milking Equipment"/>
 			<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
 			<heading id="MilkingCanAnmlEq" title="Milking Can">
 				<synonym value="Milking Cans"/>
 				<synonym value="Milking-Can"/>
 				<synonym value="Milking-Cans"/>
+				<implies facet="ObjectName" cat="MilkingCanAgEq"/>
 			</heading>
 			<heading id="MilkingJugAnmlEq" title="Milking Jug">
 				<synonym value="Milking Jugs"/>
 				<synonym value="Milking-Jug"/>
 				<synonym value="Milking-Jugs"/>
+				<implies facet="ObjectName" cat="MilkingJugAgEq"/>
 			</heading>
 			<heading id="MilkingPailAnmlEq" title="Milking Pail">
 				<synonym value="Milking Pails"/>
 				<synonym value="Milking-Pail"/>
 				<synonym value="Milking-Pails"/>
+				<implies facet="ObjectName" cat="MilkingPailAgEq"/>
 			</heading>
 			<heading id="MilkingPotAnmlEq" title="Milking Pot">
 				<synonym value="Milking Pots"/>
 				<synonym value="Milking-Pot"/>
 				<synonym value="Milking-Pots"/>
+				<implies facet="ObjectName" cat="MilkingPotAgEq"/>
+			</heading>
+			<heading id="MilkingStoolAnmlEq" title="Milking Stool">
+				<synonym value="Milking Stools"/>
+				<synonym value="Milking-Stool"/>
+				<synonym value="Milking-Stools"/>
+				<implies facet="ObjectName" cat="MilkingStoolAgEq"/>
 			</heading>
 		</heading>
-		<heading id="MonkeyScareAnmlEq" title="Monkey Scare">
-			<synonym value="Monkey Scares"/>
-			<synonym value="Monkey-Scare"/>
-			<synonym value="Monkey-Scares"/>
-		</heading>
+		<heading id="MonkeyScareAnmlEq" title="Monkey Scare" noMatch="true"/>
 		<heading id="NestAnmlEq" title="Nest">
 			<synonym value="Nests"/>
 		</heading>
