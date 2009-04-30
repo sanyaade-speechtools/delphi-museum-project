@@ -3821,9 +3821,7 @@
 			<heading id="Kuttrolf" title="Kuttrolf">
 				<synonym value="Kuttrolfs"/>
 			</heading>
-			<heading id="LampFiller" title="Lamp-Filler">
-				<synonym value="Lamp-Fillers"/>
-			</heading>
+			<heading id="LampFillerVsl" title="Lamp Filler" noMatch="true"/>
 			<heading id="LiDing" title="Li Ding">
 				<synonym value="Li Dings"/>
 			</heading>
@@ -4732,39 +4730,37 @@
 				<synonym value="Head-Guards"/>
 				<excl value="HeadGuardChdCr"/>
 			</heading>
-			<heading id="HeadNet" title="Head-Net">
+			<heading id="HeadNetHdWr" title="Head-Net">
 				<synonym value="Head-Nets"/>
 			</heading>
-			<heading id="HeadPiece" title="Head-Piece">
+			<heading id="HeadPieceHdWr" title="Head-Piece">
 				<synonym value="Head-Pieces"/>
 			</heading>
-			<heading id="HeadRope" title="Head-Rope">
+			<heading id="HeadRopeHdWr" title="Head-Rope">
 				<synonym value="Head-Ropes"/>
 				<implies facet="ObjectName" cat="RopesMainMiscEq"/>
 			</heading>
-			<heading id="Headscarf" title="Headscarf">
+			<heading id="HeadscarfHdWr" title="Headscarf">
 				<synonym value="Headscarfs"/>
 			</heading>
-			<heading id="HeadTie" title="Head-Tie">
+			<heading id="HeadTieHdWr" title="Head-Tie">
 				<synonym value="Head-Ties"/>
 			</heading>
 			<heading id="HelmetHeadGear" title="Helmet" noMatch="true"/>
-			<heading id="Hood" title="Hood">
+			<heading id="HoodHdWr" title="Hood">
 				<synonym value="Hoods"/>
 			</heading>
-			<heading id="Kerchief" title="Kerchief">
+			<heading id="KerchiefHdWr" title="Kerchief">
 				<synonym value="Kerchiefs"/>
 			</heading>
-			<heading id="ScoldsBridle" title="Scold's Bridle">
-				<synonym value="Scold's Bridles"/>
-			</heading>
-			<heading id="TemporalRing" title="Temporal-Ring">
+			<heading id="ScoldsBridleHdWr" title="Scold's Bridle" noMatch="true"/>
+			<heading id="TemporalRingHdWr" title="Temporal-Ring">
 				<synonym value="Temporal-Rings"/>
 			</heading>
-			<heading id="Turban" title="Turban">
+			<heading id="TurbanHdWr" title="Turban">
 				<synonym value="Turbans"/>
 			</heading>
-			<heading id="Veil" title="Veil">
+			<heading id="VeilHdWr" title="Veil">
 				<synonym value="Veils"/>
 			</heading>
 			<heading id="YashmakGarment" title="Yashmak">
@@ -6872,7 +6868,7 @@
 		</heading>
 		<heading id="LampFiller" title="Lamp Filler">
 			<synonym value="Lamp Fillers"/>
-			<implies facet="ObjectName" cat="VesselContainer"/>
+			<implies facet="ObjectName" cat="LampFillerVsl"/>
 			<heading id="Guttus" title="Guttus (Lamp Feeder/Filler)">
 				<synonym value="Guttus"/>
 			</heading>
@@ -11643,13 +11639,18 @@
 		<heading id="PropagandaSocCntrl" title="Propaganda">
 			<synonym value="Propagandas"/> <!-- Incorrect plural -->
 		</heading>
-		<heading id="ScoldsBridle" title="Scold's Bridle">
+		<heading id="ScoldsBridleSocCntrl" title="Scold's Bridle">
+			<synonym value="Scolds Bridle"/>
+			<synonym value="Scolds Bridles"/>
 			<synonym value="Scold's Bridles"/>
+			<synonym value="Scolds' Bridle"/>
+			<synonym value="Scolds' Bridles"/>
+			<implies facet="ObjectName" cat="ScoldsBridleHdWr"/>
 		</heading>
-		<heading id="Scourge" title="Scourge">
+		<heading id="ScourgeSocCntrl" title="Scourge">
 			<synonym value="Scourges"/>
 		</heading>
-		<heading id="Shackles" title="Shackles">
+		<heading id="ShacklesSocCntrl" title="Shackles">
 			<synonym value="Shackle"/>
 			<heading id="Fetter" title="Fetter">
 				<synonym value="Fetters"/>
