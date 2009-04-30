@@ -2383,24 +2383,35 @@
 			<heading id="WritingCaseComm" title="Writing-Case">
 				<synonym value="Writing-Cases"/>
 			</heading>
-			<heading id="WritingPadComm" title="Writing-Pad">
+			<heading id="WritingPadComm" title="Writing Pad">
+				<synonym value="Writing Pads"/>
+				<synonym value="Writing-Pad"/>
 				<synonym value="Writing-Pads"/>
 			</heading>
-			<heading id="WritingPaperComm" title="Writing-Paper">
+			<heading id="WritingPaperComm" title="Writing Paper">
+				<synonym value="Writing Papers"/>
+				<synonym value="Writing-Paper"/>
 				<synonym value="Writing-Papers"/>
 			</heading>
-			<heading id="WritingSetComm" title="Writing-Set">
+			<heading id="WritingSetComm" title="Writing Set">
+				<synonym value="Writing Sets"/>
+				<synonym value="Writing-Set"/>
 				<synonym value="Writing-Sets"/>
 			</heading>
 			<heading id="WritingSetStandComm" title="Writing Set Stand">
 				<synonym value="Writing Set Stands"/>
 				<synonym value="Writing-Set-Stand"/>
 				<synonym value="Writing-Set-Stands"/>
+				<implies facet="ObjectName" cat="WritingSetStandStndMiscEq"/>
 			</heading>
-			<heading id="WritingSlopeComm" title="Writing-Slope">
+			<heading id="WritingSlopeComm" title="Writing Slope">
+				<synonym value="Writing Slopes"/>
+				<synonym value="Writing-Slope"/>
 				<synonym value="Writing-Slopes"/>
 			</heading>
-			<heading id="WritingTabletComm" title="Writing-Tablet">
+			<heading id="WritingTabletComm" title="Writing Tablet">
+				<synonym value="Writing Tablets"/>
+				<synonym value="Writing-Tablet"/>
 				<synonym value="Writing-Tablets"/>
 			</heading>
 		</heading>
@@ -4827,6 +4838,7 @@
 			</heading>
 			<heading id="CufflinkAccessory" title="Cufflink">
 				<synonym value="Cufflinks"/>
+				<implies facet="ObjectName" cat="CufflinkJeweleryPrsOrn"/>
 			</heading>
 			<heading id="Epaulette" title="Epaulette">
 				<synonym value="Epaulettes"/>
@@ -6075,16 +6087,12 @@
 			<synonym value="Blow-Tubes"/>
 			<implies facet="ObjectName" cat="BlowTubeTool"/>
 		</heading>
-		<heading id="BrazierFireEq" title="Brazier">
-			<synonym value="Braziers"/>
-		</heading>
 		<heading id="BurnerFireEq" title="Burner">
 			<synonym value="Burners"/>
 		</heading>
 		<heading id="CamphorStickHolderFireEq" title="Camphor-Stick-Holder">
 			<synonym value="Camphor-Stick-Holders"/>
 		</heading>
-		<heading id="CigaretteLighterFireEq" title="Cigarette Lighter" noMatch="true"/>
 		<heading id="FaggotFireEq" title="Faggot">
 			<synonym value="Faggots"/>
 		</heading>
@@ -6102,8 +6110,39 @@
 		<heading id="FireBrickFireEq" title="Fire-Brick">
 			<synonym value="Fire-Bricks"/>
 		</heading>
-		<heading id="FireCoverFireEq" title="Fire-Cover">
-			<synonym value="Fire-Covers"/>
+		<heading id="FireContainmentFireEq" title="Fire Containment">
+			<heading id="BrazierFireEq" title="Brazier">
+				<synonym value="Braziers"/>
+			</heading>
+			<heading id="FireCoverFireEq" title="Fire-Cover">
+				<synonym value="Fire-Covers"/>
+			</heading>
+			<heading id="FireHolderFireEq" title="Fire-Holder">
+				<synonym value="Fire-Holders"/>
+			</heading>
+			<heading id="FireJarFireEq" title="Fire-Jar">
+				<synonym value="Fire-Jars"/>
+			</heading>
+			<heading id="FirePotFireEq" title="Fire-Pot">
+				<synonym value="Fire-Pots"/>
+			</heading>
+			<heading id="FireScreenFireEq" title="Fire Screen">
+				<synonym value="Fire Screens"/>
+				<synonym value="Fire-Screen"/>
+				<synonym value="Fire-Screens"/>
+			</heading>
+			<heading id="HearthFireEq" title="Hearth">
+				<synonym value="Hearths"/>
+			</heading>
+			<heading id="KilnFireEq" title="Kiln">
+				<synonym value="Kilns"/>
+			</heading>
+			<heading id="OvenFireEq" title="Oven">
+				<synonym value="Ovens"/>
+			</heading>
+			<heading id="StoveFireEq" title="Stove">
+				<synonym value="Stoves"/>
+			</heading>
 		</heading>
 		<heading id="FireDevilFireEq" title="Fire Devil">
 			<synonym value="Fire Devils"/>
@@ -6112,9 +6151,6 @@
 		</heading>
 		<heading id="FireDogFireEq" title="Fire-Dog">
 			<synonym value="Fire-Dogs"/>
-		</heading>
-		<heading id="FireDrillFireEq" title="Fire-Drill">
-			<synonym value="Fire-Drills"/>
 		</heading>
 		<heading id="FireFanFireEq" title="Fire-Fan">
 			<synonym value="Fire-Fans"/>
@@ -6125,48 +6161,59 @@
 		<heading id="FireGridFireEq" title="Fire-Grid">
 			<synonym value="Fire-Grids"/>
 		</heading>
-		<heading id="FireHolderFireEq" title="Fire-Holder">
-			<synonym value="Fire-Holders"/>
-		</heading>
 		<heading id="FireHookFireEq" title="Fire Hook">
 			<synonym value="Fire Hooks"/>
 			<synonym value="Fire-Hook"/>
 			<synonym value="Fire-Hooks"/>
 		</heading>
-		<heading id="FireJarFireEq" title="Fire-Jar">
-			<synonym value="Fire-Jars"/>
-		</heading>
-		<heading id="FireLighterFireEq" title="Fire-Lighter">
-			<synonym value="Fire-Lighters"/>
-		</heading>
 		<heading id="FirePistonFireEq" title="Fire-Piston">
 			<synonym value="Fire-Pistons"/>
 		</heading>
-		<heading id="FirePotFireEq" title="Fire-Pot">
-			<synonym value="Fire-Pots"/>
-		</heading>
-		<heading id="FireRakeFireEq" title="Fire-Rake">
-			<synonym value="Fire-Rakes"/>
-		</heading>
-		<heading id="FireSawFireEq" title="Fire Saw">
-			<synonym value="Fire Saws"/>
-			<synonym value="Fire-Saw"/>
-			<synonym value="Fire-Saws"/>
-			<implies facet="ObjectName" cat="FireSawTool"/>
-		</heading>
-		<heading id="FireScreenFireEq" title="Fire Screen">
-			<synonym value="Fire Screens"/>
-			<synonym value="Fire-Screen"/>
-			<synonym value="Fire-Screens"/>
-		</heading>
-		<heading id="FireShovelFireEq" title="Fire-Shovel">
-			<synonym value="Fire-Shovels"/>
-		</heading>
-		<heading id="FireSteelFireEq" title="Fire Steel">
-			<synonym value="Fire Steels"/>
-			<synonym value="Fire-Steel"/>
-			<synonym value="Fire-Steels"/>
-			<implies facet="ObjectName" cat="FireSteelTool"/>
+		<heading id="FireStarters" title="Fire Starters">
+			<synonym value="Fire Starter"/>
+			<synonym value="Firestarter"/>
+			<synonym value="Firestarters"/>
+			<synonym value="Fire-Starter"/>
+			<synonym value="Fire-Starters"/>
+			<heading id="CigaretteLighterFireEq" title="Cigarette Lighter" noMatch="true"/>
+			<heading id="FireDrill" title="Fire Drill">
+				<synonym value="Fire Drills"/>
+				<synonym value="Fire-Drill"/>
+				<synonym value="Fire-Drills"/>
+			</heading>
+			<heading id="FireLighterFireEq" title="Fire Lighter">
+				<synonym value="Fire Lighters"/>
+				<synonym value="Fire-Lighter"/>
+				<synonym value="Fire-Lighters"/>
+			</heading>
+			<heading id="FireSteelFireEq" title="Fire Steel">
+				<synonym value="Fire Steels"/>
+				<synonym value="Fire-Steel"/>
+				<synonym value="Fire-Steels"/>
+				<implies facet="ObjectName" cat="FireSteelTool"/>
+			</heading>
+			<heading id="FlintFireEq" title="Flint">
+				<synonym value="Flints"/>
+			</heading>
+			<heading id="Lighter" title="Lighter">
+				<synonym value="Lighters"/>
+			</heading>
+			<heading id="MatchFireEq" title="Match">
+				<synonym value="Matches"/>
+			</heading>
+			<heading id="MatchBoxFireEq" title="Match Box">
+				<synonym value="Match Boxes"/>
+				<synonym value="Match-Box"/>
+				<synonym value="Match-Boxes"/>
+				<synonym value="Box of Matches"/>
+				<synonym value="Boxed Matches"/>
+			</heading>
+			<heading id="MatchBoxHolderFireEq" title="Match-Box-Holder">
+				<synonym value="Match-Box-Holders"/>
+			</heading>
+			<heading id="StrikeALightFireEq" title="Strike-a-Light">
+				<synonym value="Strike-a-Lights"/>
+			</heading>
 		</heading>
 		<heading id="FireStickFireEq" title="Fire Stick">
 			<synonym value="Fire Sticks"/>
@@ -6185,11 +6232,22 @@
 			<synonym value="Fire-Stones"/>
 			<implies facet="ObjectName" cat="FireStoneTool"/>
 		</heading>
-		<heading id="FireTongsFireEq" title="Fire-Tongs">
-			<synonym value="Fire-Tong"/>
-		</heading>
-		<heading id="FlintFireEq" title="Flint">
-			<synonym value="Flints"/>
+		<heading id="FireTendingFireEq" title="Fire Tending Equipment">
+			<heading id="FireRakeFireEq" title="Fire-Rake">
+				<synonym value="Fire-Rakes"/>
+			</heading>
+			<heading id="FireSawFireEq" title="Fire Saw">
+				<synonym value="Fire Saws"/>
+				<synonym value="Fire-Saw"/>
+				<synonym value="Fire-Saws"/>
+				<implies facet="ObjectName" cat="FireSawTool"/>
+			</heading>
+			<heading id="FireShovelFireEq" title="Fire-Shovel">
+				<synonym value="Fire-Shovels"/>
+			</heading>
+			<heading id="FireTongsFireEq" title="Fire-Tongs">
+				<synonym value="Fire-Tong"/>
+			</heading>
 		</heading>
 		<heading id="ForgeFireEq" title="Forge">
 			<synonym value="Forges"/>
@@ -6200,30 +6258,12 @@
 		<heading id="FurnaceFireEq" title="Furnace">
 			<synonym value="Furnaces"/>
 		</heading>
-		<heading id="HearthFireEq" title="Hearth">
-			<synonym value="Hearths"/>
-		</heading>
-		<heading id="KilnFireEq" title="Kiln">
-			<synonym value="Kilns"/>
-		</heading>
 		<heading id="KilnDebrisFireEq" title="Kiln Debris"/>
 		<heading id="KilnFurnitureFireEq" title="Kiln-Furniture">
 			<synonym value="Kiln-Furnitures"/>
 		</heading>
-		<heading id="MatchFireEq" title="Match">
-			<synonym value="Matches"/>
-		</heading>
-		<heading id="MatchBoxFireEq" title="Match-Box">
-			<synonym value="Match-Boxes"/>
-		</heading>
-		<heading id="MatchBoxHolderFireEq" title="Match-Box-Holder">
-			<synonym value="Match-Box-Holders"/>
-		</heading>
 		<heading id="MatchExtinguisherFireEq" title="Match-Extinguisher">
 			<synonym value="Match-Extinguishers"/>
-		</heading>
-		<heading id="OvenFireEq" title="Oven">
-			<synonym value="Ovens"/>
 		</heading>
 		<heading id="PokerFireEq" title="Poker">
 			<synonym value="Pokers"/>
@@ -6233,12 +6273,6 @@
 		</heading>
 		<heading id="SpillVaseFireEq" title="Spill-Vase">
 			<synonym value="Spill-Vases"/>
-		</heading>
-		<heading id="StoveFireEq" title="Stove">
-			<synonym value="Stoves"/>
-		</heading>
-		<heading id="StrikeALightFireEq" title="Strike-A-Light">
-			<synonym value="Strike-A-Lights"/>
 		</heading>
 		<heading id="TaperHolderFireEq" title="Taper-Holder">
 			<synonym value="Taper-Holders"/>
@@ -7336,10 +7370,10 @@
 		<heading id="RestMiscEq" title="Rest">
 			<synonym value="Rests"/>
 		</heading>
-		<heading id="RingMiscEq" title="Ring">
+		<!--<heading id="RingMiscEq" title="Ring">
 			<synonym value="Rings"/>
 			<excl value="RingJewelery"/>
-		</heading>
+		</heading>-->
 		<heading id="RingStoneMiscEq" title="Ring Stone">
 			<synonym value="Ring Stones"/>
 			<synonym value="Ring-Stone"/>
@@ -7536,15 +7570,12 @@
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="WatchStandStndMiscEq" title="Watch Stand" noMatch="true"/>
-			<heading id="WigStandStndMiscEq" title="Wig-Stand">
+			<heading id="WigStandStndMiscEq" title="Wig Stand">
+				<synonym value="Wig Stands"/>
+				<synonym value="Wig-Stand"/>
 				<synonym value="Wig-Stands"/>
 			</heading>
-			<heading id="WritingSetStandStndMiscEq" title="Writing Set Stand" noMatch="true">
-				<synonym value="Writing Set Stands"/>
-				<synonym value="Writing-Set-Stand"/>
-				<synonym value="Writing-Set-Stands"/>
-				<implies facet="ObjectName" cat="WritingsetstandComm"/>
-			</heading>
+			<heading id="WritingSetStandStndMiscEq" title="Writing Set Stand" noMatch="true"/>
 		</heading>
 		<heading id="StaveMiscEq" title="Stave">
 			<synonym value="Staves"/>
@@ -9350,10 +9381,7 @@
 			<heading id="CoronetJeweleryPrsOrn" title="Coronet">
 				<synonym value="Coronets"/>
 			</heading>
-			<heading id="CufflinkJeweleryPrsOrn" title="Cufflink" noMatch="true">
-				<synonym value="Cufflinks"/>
-				<implies facet="ObjectName" cat="CufflinkAccessory"/>
-			</heading>
+			<heading id="CufflinkJeweleryPrsOrn" title="Cufflink" noMatch="true"/>
 			<heading id="DressPinJeweleryPrsOrn" title="Dress Pin">
 				<synonym value="Dress Pins"/>
 				<synonym value="Dress-Pin"/>
@@ -9384,15 +9412,21 @@
 			</heading>
 			<heading id="FingertoeJeweleryPrsOrn" title="Finger &amp; Toe Jewelery">
 				<synonym value="Finger &amp; Toe Jewelry"/>
-				<synonym value="Finger Or Toe Jewelry"/>
-				<synonym value="Finger Jewelry"/>
-				<synonym value="Toe Jewelry"/>
-				<heading id="RingJeweleryPrsOrn" title="Ring">
-					<synonym value="Rings"/>
-					<synonym value="Finger Ring"/>
-					<synonym value="Finger Rings"/>
-					<synonym value="Toe Ring"/>
-					<synonym value="Toe Rings"/>
+				<synonym value="Finger or Toe Jewelry"/>
+				<heading id="RingJeweleryPrsOrn" title="Rings">
+					<synonym value="Ring"/>
+					<heading id="FingerRingJeweleryPrsOrn" title="Finger Ring">
+						<synonym value="Finger Jewelry"/>
+						<synonym value="Finger Rings"/>
+						<synonym value="Finger-Ring"/>
+						<synonym value="Finger-Rings"/>
+					</heading>
+					<heading id="ToeRingJeweleryPrsOrn" title="Toe Ring">
+						<synonym value="Toe Jewelry"/>
+						<synonym value="Toe Rings"/>
+						<synonym value="Toe-Ring"/>
+						<synonym value="Toe-Rings"/>
+					</heading>
 				</heading>
 			</heading>
 			<heading id="HeadLcktJwlryPrsOrn" title="Head Lockets">
@@ -9461,11 +9495,6 @@
 				<excl value="Rolling"/>
 				<excl value="Wig"/>
 			</heading>			
-			<heading id="ToeRingJeweleryPrsOrn" title="Toe Ring">
-				<synonym value="Toe Rings"/>
-				<synonym value="Toe-Ring"/>
-				<synonym value="Toe-Rings"/>
-			</heading>
 		</heading>
 		<heading id="KapkapPrsOrn" title="Kapkap">
 			<synonym value="Kapkaps"/>
@@ -9524,7 +9553,7 @@
 			<!-- Miscellaneous, non-jewelery items? -->
 		</heading>
 		<heading id="WaistOrnamentPrsOrn" title="Waist Ornament">
-			<synonym value="Waist-Ornaments"/>
+			<synonym value="Waist Ornaments"/>
 			<synonym value="Waist-Ornament"/>
 			<synonym value="Waist-Ornaments"/>
 			<!-- Miscellaneous, non-jewelery items? -->
@@ -12403,7 +12432,7 @@
 				<synonym value="Smoking-Pipe Scrapers"/>
 				<synonym value="Smoking-Pipe-Scraper"/>
 				<synonym value="Smoking-Pipe-Scrapers"/>
-				<implies facet="ObjectName" cat="TobaccoPipeScraper"/>
+				<implies facet="ObjectName" cat="TobaccoPipeScraperTobac"/>
 			</heading>
 			<heading id="PipeSpoonSmkng" title="Pipe Spoon">
 				<synonym value="Pipe Spoons"/>
@@ -12430,7 +12459,7 @@
 				<synonym value="Smoking-Pipe Stoppers"/>
 				<synonym value="Smoking-Pipe-Stopper"/>
 				<synonym value="Smoking-Pipe-Stoppers"/>
-				<implies facet="ObjectName" cat="TobaccoPipeStopper"/>
+				<implies facet="ObjectName" cat="TobaccoPipeStopperTobac"/>
 			</heading>
 			<heading id="PipeTamperSmkng" title="Pipe Tamper">
 				<synonym value="Pipe Tampers"/>
@@ -13312,21 +13341,6 @@
 			<heading id="Drill" title="Drill">
 				<synonym value="Drills"/>
 			</heading>
-			<heading id="FireStarters" title="Fire Starters">
-				<synonym value="Fire Starter"/>
-				<synonym value="Firestarter"/>
-				<synonym value="Firestarters"/>
-				<synonym value="Fire-Starter"/>
-				<synonym value="Fire-Starters"/>
-				<heading id="Firedrill" title="Fire Drill">
-					<synonym value="Fire Drills"/>
-					<synonym value="Fire-Drill"/>
-					<synonym value="Fire-Drills"/>
-				</heading>
-				<heading id="Lighter" title="Lighter">
-					<synonym value="Lighters"/>
-				</heading>
-			</heading>
 			<heading id="LocksAndKeys" title="Locks &amp; Keys">
 				<heading id="Keys" title="Keys">
 					<synonym value="Key"/>
@@ -14150,7 +14164,7 @@
 			</heading>
 			<heading id="PositivesVisRep" title="Positives">
 				<synonym value="Positive"/>
-				<!-- EXCL needed? -->
+				<!-- Exclusions needed? -->
 				<heading id="ColorSlidesVisRep" title="Color Slides">
 					<synonym value="Color Slide"/>
 					<synonym value="BW Slide"/>
