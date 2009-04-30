@@ -2216,8 +2216,13 @@
 				<synonym value="Ink Stands"/>
 				<synonym value="Ink-Stand"/>
 				<synonym value="Ink-Stands"/>
+				<implies facet="ObjectName" cat="InkStandStndMiscEq"/>
 			</heading>
-			<heading id="InkStoneComm" title="Ink-Stone">
+			<heading id="InkStoneComm" title="Ink Stone">
+				<synonym value="Inkstone"/>
+				<synonym value="Inkstones"/>
+				<synonym value="Ink Stones"/>
+				<synonym value="Ink-Stone"/>
 				<synonym value="Ink-Stones"/>
 			</heading>
 			<heading id="InkStoneBoxComm" title="Ink-Stone-Box">
@@ -2334,6 +2339,7 @@
 				<synonym value="Scroll Stands"/>
 				<synonym value="Scroll-Stand"/>
 				<synonym value="Scroll-Stands"/>
+				<implies facet="ObjectName" cat="ScrollStandStndMiscEq"/>
 			</heading>
 			<heading id="ScrollWeightComm" title="Scroll-Weight">
 				<synonym value="Scroll-Weights"/>
@@ -7468,12 +7474,7 @@
 			<heading id="IncenseStandStndMiscEq" title="Incense-Stand">
 				<synonym value="Incense-Stands"/>
 			</heading>
-			<heading id="InkStandStndMiscEq" title="Ink Stand" noMatch="true">
-				<synonym value="Ink Stands"/>
-				<synonym value="Ink-Stand"/>
-				<synonym value="Ink-Stands"/>
-				<implies facet="ObjectName" cat="InkStandComm"/>
-			</heading>
+			<heading id="InkStandStndMiscEq" title="Ink Stand" noMatch="true"/>
 			<heading id="IronStandStndMiscEq" title="Iron-Stand">
 				<synonym value="Iron-Stands"/>
 			</heading>
@@ -7489,7 +7490,9 @@
 			<heading id="MirrorStandStndMiscEq" title="Mirror-Stand">
 				<synonym value="Mirror-Stands"/>
 			</heading>
-			<heading id="OfferingStandStndMiscEq" title="Offering-Stand">
+			<heading id="OfferingStandStndMiscEq" title="Offering Stand">
+				<synonym value="Offering Stands"/>
+				<synonym value="Offering-Stand"/>
 				<synonym value="Offering-Stands"/>
 			</heading>
 			<heading id="PedestalStndMiscEq" title="Pedestal">
@@ -7498,23 +7501,26 @@
 			<heading id="PlinthStndMiscEq" title="Plinth">
 				<synonym value="Plinths"/>
 			</heading>
-			<heading id="QuiverStandStndMiscEq" title="Quiver-Stand">
+			<heading id="QuiverStandStndMiscEq" title="Quiver Stand">
+				<synonym value="Quiver Stands"/>
+				<synonym value="Quiver-Stand"/>
 				<synonym value="Quiver-Stands"/>
 			</heading>
-			<heading id="RebabStandStndMiscEq" title="Rebab-Stand" noMatch="true"/>
-			<heading id="RingStandStndMiscEq" title="Ring-Stand">
+			<heading id="RebabStandStndMiscEq" title="Rebab Stand" noMatch="true"/>
+			<heading id="RingStandStndMiscEq" title="Ring Stand">
+				<synonym value="Ring Stands"/>
+				<synonym value="Ring-Stand"/>
 				<synonym value="Ring-Stands"/>
 			</heading>
-			<heading id="ScrollStandStndMiscEq" title="Scroll Stand" noMatch="true">
-				<synonym value="Scroll Stands"/>
-				<synonym value="Scroll-Stand"/>
-				<synonym value="Scroll-Stands"/>
-				<implies facet="ObjectName" cat="ScrollStandComm"/>
-			</heading>
-			<heading id="SnufferStandStndMiscEq" title="Snuffer-Stand">
+			<heading id="ScrollStandStndMiscEq" title="Scroll Stand" noMatch="true"/>
+			<heading id="SnufferStandStndMiscEq" title="Snuffer Stand">
+				<synonym value="Snuffer Stands"/>
+				<synonym value="Snuffer-Stand"/>
 				<synonym value="Snuffer-Stands"/>
 			</heading>
-			<heading id="StelaStandStndMiscEq" title="Stela-Stand">
+			<heading id="StelaStandStndMiscEq" title="Stela Stand">
+				<synonym value="Stela Stands"/>
+				<synonym value="Stela-Stand"/>
 				<synonym value="Stela-Stands"/>
 			</heading>
 			<heading id="SulingStandStndMiscEq" title="Suling Stand" noMatch="true"/>
