@@ -4155,9 +4155,7 @@
 				<synonym value="Toilet-Vessels"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
-			<heading id="Tray" title="Tray">
-				<synonym value="Trays"/>
-			</heading>
+			<heading id="TrayVsl" title="Tray" noMatch="true"/>
 			<heading id="Vase" title="Vase">
 				<synonym value="Vases"/>
 				<heading id="Hesvase" title="Hes Vase">
@@ -7493,6 +7491,7 @@
 				<synonym value="Wig Stands"/>
 				<synonym value="Wig-Stand"/>
 				<synonym value="Wig-Stands"/>
+				<implies facet="ObjectName" cat="WigStandCsmtc"/>
 			</heading>
 			<heading id="WritingSetStandStndMiscEq" title="Writing Set Stand" noMatch="true"/>
 		</heading>
@@ -12983,9 +12982,7 @@
 			<synonym value="Wig-Box"/>
 			<synonym value="Wig-Boxes"/>
 		</heading>
-		<heading id="WigStand" title="Wig-Stand">
-			<synonym value="Wig-Stands"/>
-		</heading>
+		<heading id="WigStandCsmtc" title="Wig Stand" noMatch="true"/>
 	</heading>
 	<heading id="ToolsImplements" title="Tools &amp; Implements">
 		<synonym value="Tool"/>
@@ -13513,9 +13510,6 @@
 			<heading id="MeshMeasure" title="Mesh Measure">
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			</heading>
-			<heading id="Sickle" title="Sickle">
-				<synonym value="Sickles"/>
-			</heading>
 			<heading id="TextileManufactureSewing" title="Textile Manufacture &amp; Sewing">
 				<heading id="AwlTextileTool" title="Awl" noMatch="true"/>
 				<heading id="Needle" title="Needle">
@@ -13625,8 +13619,9 @@
 			<heading id="Pack" title="Pack">
 				<synonym value="Packs"/>
 			</heading>
-			<heading id="Tray" title="Tray">
+			<heading id="TrayCarrier" title="Tray">
 				<synonym value="Trays"/>
+				<implies facet="ObjectName" cat="TrayVsl"/>
 			</heading>
 			<heading id="VesselCarrier" title="Vessel-Carrier">
 				<synonym value="Vessel-Carriers"/>
