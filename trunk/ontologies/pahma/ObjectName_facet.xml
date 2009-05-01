@@ -964,7 +964,6 @@
 				<excl value="Snuff-Box"/>
 				<excl value="Snuff-Boxes"/>
 				<implies facet="ObjectName" cat="SnuffDrug"/>
-				<!-- Found Elsewhere? -->
 			</heading>
 			<heading id="TobaccoPlantRemains" title="Tobacco">
 				<implies facet="ObjectName" cat="TobaccoDrug"/>
@@ -2954,6 +2953,7 @@
 		<heading id="Baskets" title="Baskets">
 			<synonym value="Basket"/>
 			<synonym value="Bakset"/>
+			<implies facet="ActivityorContext" cat="Basketmaking"/>
 			<implies facet="Collection" cat="BasketCollection"/>
 			<heading id="BabyBasket" title="Baby Basket">
 				<synonym value="Baby Baskets"/>
@@ -2975,10 +2975,7 @@
 				<synonym value="Burden Baskets"/>
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			</heading>
-			<heading id="CarryingBasket" title="Carrying Basket">
-				<synonym value="Carrying Baskets"/>
-				<implies facet="ActivityorContext" cat="Basketmaking"/>
-			</heading>
+			<heading id="CarryingBasketBskt" title="Carrying Basket" noMatch="true"/>
 			<heading id="CookingBasketBaskets" title="Cooking Basket">
 				<synonym value="Cooking Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
@@ -3212,9 +3209,7 @@
 				<!-- <implies facet="ObjectName" cat="CocaChewingStimulant"/>  Is this exclusively Betel-nut related? -->
 				<!-- <implies facet="ObjectName" cat="BetelNutDrug"/>   No; also used with Coca leaves -->
 			</heading>
-			<heading id="SnuffContainerCntnr" title="Snuff-Container">
-				<synonym value="Snuff-Containers"/>
-			</heading>
+			<heading id="SnuffContainerCntnr" title="Snuff Container" noMatch="true"/>
 			<heading id="TobaccoContainerCntnr" title="Tobacco-Container" noMatch="true"/>
 		</heading>
 		<heading id="FoodContainer" title="Food Containers">
@@ -3279,20 +3274,7 @@
 				<synonym value="Soup-Containers"/>
 			</heading>
 			<heading id="TeaBagContnr" title="Tea Bag" noMatch="true"/>
-			<heading id="TeaJarContainer" title="Tea Jar">
-				<synonym value="Tea Jars"/>
-				<synonym value="Tea-Jar"/>
-				<synonym value="Tea-Jars"/>
-				<synonym value="Tea Jar Container"/>
-				<synonym value="Tea Jar Containers"/>
-				<synonym value="Tea-Jar Container"/>
-				<synonym value="Tea-Jar Containers"/>
-				<synonym value="Tea Jar-Container"/>
-				<synonym value="Tea Jar-Containers"/>
-				<synonym value="Tea-Jar-Container"/>
-				<synonym value="Tea-Jar-Containers"/>
-				<implies facet="ObjectName" cat="TeaJarCntnrTeaEq"/>
-			</heading>
+			<heading id="TeaJarContainer" title="Tea Jar" noMatch="true"/>
 			<heading id="TeaWhiskCntnrCntnr" title="Tea Whisk Container" noMatch="true"/>
 			<heading id="WineskinContainer" title="Wineskin">
 				<synonym value="Wineskins"/>
@@ -3774,7 +3756,7 @@
 				<implies facet="ActivityorContext" cat="Metallurgy"/>
 				<!-- Are All Kettles Made of Metal? -->
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="ObjectName" cat="KettleHatingCookEq"/>
+				<implies facet="ObjectName" cat="KettleHeatingCookEq"/>
 			</heading>
 			<heading id="Kuduo" title="Kuduo">
 				<synonym value="Kuduos"/>
@@ -4132,6 +4114,7 @@
 			<heading id="SnuffVessel" title="Snuff-Vessel">
 				<synonym value="Snuff-Vessels"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="SnuffDrug"/>
 			</heading>
 			<heading id="Spittoon" title="Spittoon">
 				<synonym value="Spittoons"/>
@@ -6288,6 +6271,7 @@
 		<heading id="TeaFood" title="Tea">
 			<implies facet="ActivityorContext" cat="Teadrinking"/>
 		</heading>
+		<heading id="VodkaFood" title="Vodka"/>
 		<heading id="WeddingcakeFood" title="Wedding Cake">
 			<synonym value="Wedding Cakes"/>
 		</heading>
@@ -6719,8 +6703,11 @@
 			<heading id="PuzzleGmSprt" title="Puzzle">
 				<synonym value="Puzzles"/>
 			</heading>
-			<heading id="WagerCupGmSprt" title="Wager-Cup">
+			<heading id="WagerCupGmSprt" title="Wager Cup">
+				<synonym value="Wager Cups"/>
+				<synonym value="Wager-Cup"/>
 				<synonym value="Wager-Cups"/>
+				<implies facet="ObjectName" cat="WagerCupAlcEq"/>
 			</heading>
 		</heading>
 		<heading id="JiulingSetGmSprt" title="Jiuling-Set">
@@ -6944,13 +6931,10 @@
 		<heading id="BleedingCupRx" title="Bleeding-Cup">
 			<synonym value="Bleeding-Cups"/>
 		</heading>
-		<heading id="CaudleCupRx" title="Caudle-Cup">
-			<synonym value="Caudle-Cups"/>
-		</heading>
+		<heading id="CaudleCupRx" title="Caudle Cup" noMatch="true"/>
 		<heading id="CrutchRx" title="Crutch">
 			<synonym value="Crutches"/>
-			<synonym value="Crutchs"/>
-			<!-- Misspelling -->
+			<synonym value="Crutchs"/> <!-- Misspelling -->
 		</heading>
 		<heading id="DenturesRx" title="Dentures">
 			<synonym value="Denture"/>
@@ -7418,9 +7402,7 @@
 			<heading id="CondimentStandStndMiscEq" title="Condiment-Stand">
 				<synonym value="Condiment-Stands"/>
 			</heading>
-			<heading id="CosmeticStandStndMiscEq" title="Cosmetic-Stand">
-				<synonym value="Cosmetic-Stands"/>
-			</heading>
+			<heading id="CosmeticStndMiscEq" title="Cosmetic Stand" noMatch="true"/>
 			<heading id="EggStandStndMiscEq" title="Egg-Stand">
 				<synonym value="Egg-Stands"/>
 			</heading>
@@ -7482,6 +7464,7 @@
 				<synonym value="Snuffer Stands"/>
 				<synonym value="Snuffer-Stand"/>
 				<synonym value="Snuffer-Stands"/>
+				<implies facet="ObjectName" cat="SnuffDrug"/>
 			</heading>
 			<heading id="StelaStandStndMiscEq" title="Stela Stand">
 				<synonym value="Stela Stands"/>
@@ -11695,10 +11678,11 @@
 				<synonym value="Brandy-Bowls"/>
 				<implies facet="ObjectName" cat="BrandyFood"/>
 			</heading>
-			<heading id="CaudleCup" title="Caudle Cup">
+			<heading id="CaudleCupAlcEq" title="Caudle Cup">
 				<synonym value="Caudle Cups"/>
 				<synonym value="Caudle-Cup"/>
 				<synonym value="Caudle-Cups"/>
+				<implies facet="ObjectName" cat="CaudleCupRx"/>
 			</heading>
 			<heading id="ChaliceAlcEq" title="Chalice" noMatch="true"/>
 			<heading id="CiderEqAlcEq" title="Cider-related items" noMatch="true">
@@ -11816,7 +11800,7 @@
 				<synonym value="Schnapps Glasses"/>
 				<synonym value="Schnapps-Glass"/>
 				<synonym value="Schnapps-Glasses"/>
-				<implies facet="ObjectName" cat="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+				<implies facet="ObjectName" cat="SchnappsFood"/>
 			</heading>
 			<heading id="StandingCup" title="Standing Cup">
 				<synonym value="Standing Cups"/>
@@ -11833,19 +11817,21 @@
 			<heading id="TankardAlcEq" title="Tankard">
 				<synonym value="Tankards"/>
 			</heading>
-			<heading id="TastingCup" title="Tasting-Cup">
+			<heading id="TastingCup" title="Tasting Cup">
+				<synonym value="Tasting Cups"/>
+				<synonym value="Tasting-Cup"/>
 				<synonym value="Tasting-Cups"/>
 			</heading>
 			<heading id="TygAlcEq" title="Tyg">
 				<synonym value="Tygs"/>
 			</heading>
-			<heading id="VodkaBottle" title="Vodka-Bottle">
+			<heading id="VodkaBottle" title="Vodka Bottle">
+				<synonym value="Vodka Bottles"/>
+				<synonym value="Vodka-Bottle"/>
 				<synonym value="Vodka-Bottles"/>
-				<implies facet="ObjectName" cat="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+				<implies facet="ObjectName" cat="VodkaFood"/>
 			</heading>
-			<heading id="WagerCup" title="Wager-Cup">
-				<synonym value="Wager-Cups"/>
-			</heading>
+			<heading id="WagerCupAlcEq" title="Wager Cup" noMatch="true"/>
 			<heading id="WassailBowl" title="Wassail-Bowl">
 				<synonym value="Wassail-Bowls"/>
 			</heading>
@@ -12126,6 +12112,7 @@
 			<heading id="TeaDrug" title="Tea">
 				<implies facet="ActivityorContext" cat="TeaDrinking"/>
 				<implies facet="ActivityorContext" cat="CoffeeCaffeineStimulant"/>
+				<implies facet="ObjectName" cat="TeaDrugTheobr"/>
 			</heading>
 			<heading id="TobaccoDrug" title="Tobacco" noMatch="true">
 				<implies facet="ObjectName" cat="TobaccoNicotineDrug"/>
@@ -12159,14 +12146,14 @@
 					<heading id="TheobromineContainingDrugs" title="Theobromine">
 						<synonym value="Theobromines"/>
 						<synonym value="Xantheose"/>
-						<heading id="AcaiBerryDrug" title="Acai Berries">
+						<heading id="AcaiBerryDrugTheobr" title="Acai Berries">
 							<synonym value="Acai Berry"/>
 						</heading>
-						<heading id="ChocolateDug" title="Chocolate" noMatch="true"/>
-						<heading id="KolaNutDrug" title="Kola Nuts">
+						<heading id="ChocolateDrugTheobr" title="Chocolate" noMatch="true"/>
+						<heading id="KolaNutDrugTheobr" title="Kola Nuts">
 							<synonym value="Kola Nut"/>
 						</heading>
-						<heading id="TeaDrug" title="Tea" noMatch="true"/>
+						<heading id="TeaDrugTheobr" title="Tea" noMatch="true"/>
 					</heading>
 					<heading id="TheophyllineContainingDrugs" title="Theophylline">
 						<synonym value="Theophyllines"/>
@@ -12433,15 +12420,21 @@
 		<heading id="SnuffEquipment" title="Snuff Equipment">
 			<!-- <heading id="Snuff" title="Snuff">
 				<synonym value="Snuffs"/>
-			</heading> -->
+				</heading> -->
+			<implies facet="ObjectName" cat="SnuffDrug"/>
 			<heading id="SnuffApplicator" title="Snuff-Applicator">
 				<synonym value="Snuff-Applicators"/>
 			</heading>
-			<heading id="SnuffBag" title="Snuff-Bag">
+			<heading id="SnuffBag" title="Snuff Bag">
+				<synonym value="Snuff Bags"/>
+				<synonym value="Snuff-Bag"/>
 				<synonym value="Snuff-Bags"/>
 			</heading>
-			<heading id="SnuffContainer" title="Snuff-Container">
+			<heading id="SnuffContainer" title="Snuff Container">
+				<synonym value="Snuff Containers"/>
+				<synonym value="Snuff-Container"/>
 				<synonym value="Snuff-Containers"/>
+				<implies facet="ObjectName" cat="SnuffContainerCntnr"/>
 			</heading>
 			<heading id="SnuffFunnel" title="Snuff-Funnel">
 				<synonym value="Snuff-Funnels"/>
@@ -12501,10 +12494,20 @@
 			<heading id="TeaInfuser" title="Tea-Infuser">
 				<synonym value="Tea-Infusers"/>
 			</heading>
-			<heading id="TeaJar" title="Tea-Jar">
+			<heading id="TeaJar" title="Tea Jar">
+				<synonym value="Tea Jars"/>
+				<synonym value="Tea-Jar"/>
 				<synonym value="Tea-Jars"/>
+				<synonym value="Tea Jar Container"/>
+				<synonym value="Tea Jar Containers"/>
+				<synonym value="Tea-Jar Container"/>
+				<synonym value="Tea-Jar Containers"/>
+				<synonym value="Tea Jar-Container"/>
+				<synonym value="Tea Jar-Containers"/>
+				<synonym value="Tea-Jar-Container"/>
+				<synonym value="Tea-Jar-Containers"/>
+				<implies facet="ObjectName" cat="TeaJarContainer"/>
 			</heading>
-			<heading id="TeaJarCntnrTeaEq" title="Tea Jar Container" noMatch="true"/>
 			<heading id="TeaJug" title="Tea Jug">
 				<synonym value="Tea Jugs"/>
 				<synonym value="Tea-Jug"/>
@@ -12701,7 +12704,6 @@
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
 	</heading>
 	<heading id="ToiletriesCosmetics" title="Toiletries &amp; Cosmetics">
-		<!-- The British Museum Specifies That This Includes Tattooing Equipment -->
 		<synonym value="Toilet/Cosmetic Equipment"/>
 		<heading id="Bath" title="Bath">
 			<heading id="EyeBath" title="Eye-Bath">
@@ -12774,11 +12776,18 @@
 		<heading id="CosmeticSet" title="Cosmetic-Set">
 			<synonym value="Cosmetic-Sets"/>
 		</heading>
-		<heading id="CosmeticStand" title="Cosmetic-Stand">
+		<heading id="CosmeticStandCsmtc" title="Cosmetic Stand">
+			<synonym value="Cosmetic Stands"/>
+			<synonym value="Cosmetic-Stand"/>
 			<synonym value="Cosmetic-Stands"/>
+			<implies facet="ObjectName" cat="CosmeticStndMiscEq"/>
 		</heading>
-		<heading id="Hairpin" title="Hairpin">
+		<heading id="HairpinCsmtc" title="Hairpin">
+			<synonym value="Hairpins"/>
 			<synonym value="Hair Pin"/>
+			<synonym value="Hair Pins"/>
+			<synonym value="Hair-Pin"/>
+			<synonym value="Hair-Pins"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
 		<heading id="HairPinCover" title="Hair-Pin-Cover">
@@ -12801,7 +12810,7 @@
 			<synonym value="Shampoos"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
-		<heading id="Soap" title="Soap">
+		<heading id="SoapCsmtc" title="Soap">
 			<synonym value="Soaps"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
@@ -12844,7 +12853,6 @@
 			<synonym value="Toiletries"/>
 			<synonym value="Toiletry"/>
 			<synonym value="Toilet-Tool/Implement"/>
-			<!-- British Museum's Preferred Term For Concept -->
 			<implies facet="ObjectName" cat="ToolsImplements"/>
 			<heading id="BathScoop" title="Bath-Scoop">
 				<synonym value="Bath-Scoops"/>
@@ -12970,7 +12978,9 @@
 			<synonym value="Toilet-Vessels"/>
 			<implies facet="ObjectName" cat="VesselContainer"/>
 		</heading>
-		<heading id="WigBox" title="Wig-Box">
+		<heading id="WigBoxCsmtc" title="Wig Box">
+			<synonym value="Wig Boxes"/>
+			<synonym value="Wig-Box"/>
 			<synonym value="Wig-Boxes"/>
 		</heading>
 		<heading id="WigStand" title="Wig-Stand">
@@ -13021,9 +13031,14 @@
 		</heading>
 		<heading id="AwlTool" title="Awl">
 			<synonym value="Awls"/>
+			<implies facet="ObjectName" cat="AwlTextileTool"/>
+			<heading id="BasketAwl" title="Basket Awl">
+				<synonym value="Basket Awls"/>
+			</heading>
 		</heading>
 		<heading id="AxeTool" title="Axe">
 			<synonym value="Axes"/>
+			<synonym value="Axs"/>
 		</heading>
 		<heading id="BackedBladeTool" title="Backed Blade">
 			<synonym value="Backed Blades"/>
@@ -13105,9 +13120,6 @@
 		</heading>
 		<heading id="ChiselTool" title="Chisel">
 			<synonym value="Chisels"/>
-		</heading>
-		<heading id="ChopperTool" title="Chopper">
-			<synonym value="Choppers"/>
 		</heading>
 		<heading id="ChoppingTool" title="Chopping Tool">
 			<synonym value="Chopping Tools"/>
@@ -13214,9 +13226,6 @@
 		<heading id="FlakedFlakeTool" title="Flaked Flake">
 			<synonym value="Flaked Flakes"/>
 		</heading>
-		<heading id="FlakerTool" title="Flaker">
-			<synonym value="Flakers"/>
-		</heading>
 		<heading id="FlenchingTool" title="Flenching Tool">
 			<synonym value="Flenching-Tool/Implement"/>
 		</heading>
@@ -13281,29 +13290,35 @@
 		<heading id="HammerstoneTool" title="Hammerstone">
 			<synonym value="Hammerstones"/>
 		</heading>
-		<heading id="HandaxeTool" title="Handaxe">
-			<synonym value="Handaxes"/>
-		</heading>
 		<heading id="HarpagoTool" title="Harpago">
 			<synonym value="Harpagos"/>
+		</heading>
+		<!-- Where the heck did terms alphabetically after "harpago" go? -->
+		<heading id="StoneTools" title="Stone Tools">
+			<heading id="Burin" title="Burin">
+				<synonym value="Burins"/>
+			</heading>
+			<heading id="Chopper" title="Chopper">
+				<synonym value="Choppers"/>
+			</heading>
+			<heading id="Flaker" title="Flaker">
+				<synonym value="Flakers"/>
+			</heading>
+			<heading id="Handaxe" title="Handaxe">
+				<synonym value="Handaxes"/>
+			</heading>
+			<heading id="Scraper" title="Scraper">
+				<synonym value="Scrapers"/>
+				<excl value="Coconut"/> <!-- Disambiguates from coconut scrapers -->
+				<excl value="Foot"/> <!-- Disambiguates from foot scrapers -->
+				<excl value="Pipe"/> <!-- Disambiguates from smoking pipe scrapers -->
+			</heading>
 		</heading>
 		<!-- oooooooooooo The following concepts need to be incorporated above zzzzzzzzzzzz -->
 		<heading id="ToolsImplementsMERGE" title="Tools &amp; Implements">
 			<heading id="AnimalHusbandryTools" title="Animalhusbandrytools" noMatch="true">
 				
 				
-			</heading>
-			<heading id="Awl" title="Awl">
-				<synonym value="Awls"/>
-				<heading id="BasketAwl" title="Basket Awl">
-					<synonym value="Basket Awls"/>
-				</heading>
-			</heading>
-			<heading id="Chisel" title="Chisel">
-				<synonym value="Chisels"/>
-			</heading>
-			<heading id="Drill" title="Drill">
-				<synonym value="Drills"/>
 			</heading>
 			<heading id="LocksAndKeys" title="Locks &amp; Keys">
 				<heading id="Keys" title="Keys">
@@ -13501,30 +13516,8 @@
 			<heading id="Sickle" title="Sickle">
 				<synonym value="Sickles"/>
 			</heading>
-			<heading id="StoneTools" title="Stone Tools">
-				<heading id="Handaxe" title="Handaxe">
-					<synonym value="Handaxes"/>
-				</heading>
-				<heading id="Chopper" title="Chopper">
-					<synonym value="Choppers"/>
-				</heading>
-				<heading id="Flaker" title="Flaker">
-					<synonym value="Flakers"/>
-				</heading>
-				<heading id="Scraper" title="Scraper">
-					<synonym value="Scrapers"/>
-					<excl value="Coconut"/> <!-- Disambiguates from coconut scrapers -->
-					<excl value="Foot"/> <!-- Disambiguates from foot scrapers -->
-					<excl value="Pipe"/> <!-- Disambiguates from smoking pipe scrapers -->
-				</heading>
-				<heading id="Burin" title="Burin">
-					<synonym value="Burins"/>
-				</heading>
-			</heading>
 			<heading id="TextileManufactureSewing" title="Textile Manufacture &amp; Sewing">
-				<heading id="Awl" title="Awl">
-					<synonym value="Awls"/>
-				</heading>
+				<heading id="AwlTextileTool" title="Awl" noMatch="true"/>
 				<heading id="Needle" title="Needle">
 					<synonym value="Needles"/>
 				</heading>
@@ -13592,6 +13585,7 @@
 				<synonym value="Carrying Baskets"/>
 				<synonym value="Carrying-Basket"/>
 				<synonym value="Carrying-Baskets"/>
+				<implies facet="ObjectName" cat="CarryingBasketBskt"/>
 			</heading>
 			<heading id="CarryingBelt" title="Carrying Belt">
 				<synonym value="Carrying Belts"/>
