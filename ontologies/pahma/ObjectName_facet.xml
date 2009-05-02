@@ -545,10 +545,7 @@
 			<heading id="JessHuntEq" title="Jess">
 				<synonym value="Jesses"/>
 			</heading>
-			<heading id="LariatHuntEq" title="Lariat" noMatch="true">
-				<synonym value="Lariats"/>
-				<implies facet="ObjectName" cat="LariatAnmlEq"/>
-			</heading>
+			<heading id="LariatHuntEq" title="Lariat" noMatch="true"/>
 			<heading id="LassoHuntEq" title="Lasso">
 				<synonym value="Lassos"/>
 				<synonym value="Lassoes"/>
@@ -577,6 +574,7 @@
 				<synonym value="Seal Indicators"/>
 				<synonym value="Seal-Indicator"/>
 				<synonym value="Seal-Indicators"/>
+				<implies facet="ObjectName" cat="SealIndicatorComm"/>
 			</heading>
 			<heading id="SpearGunHuntEq" title="Spear-Gun">
 				<synonym value="Spear-Guns"/>
@@ -587,10 +585,7 @@
 			<heading id="TrapHuntEq" title="Trap">
 				<synonym value="Traps"/>
 			</heading>
-			<heading id="VervelHuntEq" title="Vervel" noMatch="true">
-				<synonym value="Vervels"/>
-				<implies facet="ObjectName" cat="VervelAnmlEq"/>
-			</heading>
+			<heading id="VervelHuntEq" title="Vervel" noMatch="true"/>
 			<heading id="WoundPlugHuntEq" title="Wound-Plug">
 				<synonym value="Wound-Plugs"/>
 			</heading>
@@ -820,6 +815,7 @@
 		</heading>
 		<heading id="LariatAnmlEq" title="Lariat">
 			<synonym value="Lariats"/>
+			<implies facet="ObjectName" cat="LariatHuntEq"/>
 			<implies facet="ObjectName" cat="RopesMainMiscEq"/>
 		</heading>
 		<heading id="MilkingEqAnmlEq" title="Milking Items">
@@ -901,6 +897,7 @@
 		<heading id="TrappingsAnmlEq" title="Trappings"/>
 		<heading id="VervelAnmlEq" title="Vervel">
 			<synonym value="Vervels"/>
+			<implies facet="ObjectName" cat="VervelHuntEq"/>
 		</heading>
 	</heading>
 	<heading id="BiologicalRemains" title="Biological Remains">
@@ -1979,9 +1976,6 @@
 					</heading>
 					<heading id="MortarWeapon" title="Mortar (Weapon)"/>
 				</heading>
-				<heading id="LanceWeapon" title="Lance">
-					<synonym value="Lances"/>
-				</heading>
 				<heading id="Projectile" title="Projectiles">
 					<synonym value="Projectile"/>
 					<heading id="Ammunition" title="Ammunition">
@@ -2175,8 +2169,6 @@
 			<synonym value="Child Carriers"/>
 			<synonym value="Child-Carrier"/>
 			<synonym value="Child-Carriers"/>
-			<synonym value="Baby Basket"/>
-			<synonym value="Baby Baskets"/>
 			<synonym value="Baby Carrier"/>
 			<synonym value="Baby Carriers"/>
 			<implies facet="ObjectName" cat="ChildCarrierCrr"/>
@@ -2866,10 +2858,7 @@
 		<heading id="SealImpressionComm" title="Seal-Impression">
 			<synonym value="Seal-Impressions"/>
 		</heading>
-		<heading id="SealIndicatorComm" title="Seal Indicator">
-			<synonym value="Seal Indicators"/>
-			<excl value="SealIndicatorHuntEq"/>
-		</heading>
+		<heading id="SealIndicatorComm" title="Seal Indicator" noMatch="true"/>
 		<heading id="SealingComm" title="Sealing">
 			<synonym value="Sealings"/>
 			<excl value="SealingMiscEq"/>
@@ -3120,6 +3109,7 @@
 			<heading id="BabyBasket" title="Baby Basket">
 				<synonym value="Baby Baskets"/>
 				<implies facet="ActivityorContext" cat="Childrearing"/>
+				<implies facet="ObjectName" cat="ChildCarrierChdCr"/>
 			</heading>
 			<heading id="BasketryCapLid" title="Basketry Cap (Lid)">
 				<synonym value="Basketry Cap (Lids)"/>
@@ -3613,9 +3603,6 @@
 			<heading id="ApothecaryVesselCntnr" title="Apothecary Vessel" noMatch="true"/>
 			<heading id="Aryballos" title="Aryballos">
 				<synonym value="αρύβαλλος"/>
-			</heading>
-			<heading id="Ashtray" title="Ashtray">
-				<synonym value="Ashtrays"/>
 			</heading>
 			<heading id="AsparagusServer" title="Asparagus-Server">
 				<synonym value="Asparagus-Servers"/>
@@ -4301,9 +4288,6 @@
 			</heading>
 			<heading id="Tazza" title="Tazza">
 				<synonym value="Tazzas"/>
-			</heading>
-			<heading id="TeaCaddy" title="Tea-Caddy">
-				<synonym value="Tea-Caddies"/>
 			</heading>
 			<heading id="TeapotVessels" title="Teapot">
 				<synonym value="Teapots"/>
@@ -6418,7 +6402,7 @@
 			<heading id="Acornsoup" title="Acorn Soup"/>
 		</heading>
 		<heading id="TeaFood" title="Tea">
-			<implies facet="ActivityorContext" cat="Teadrinking"/>
+			<implies facet="ActivityorContext" cat="TeaDrinking"/>
 		</heading>
 		<heading id="VodkaFood" title="Vodka"/>
 		<heading id="WeddingcakeFood" title="Wedding Cake">
@@ -10266,9 +10250,6 @@
 		<heading id="Paint" title="Paint">
 			<synonym value="Paints"/>
 		</heading>
-		<heading id="Perfume" title="Perfume">
-			<synonym value="Perfumes"/>
-		</heading>
 		<heading id="Pigment" title="Pigment">
 			<synonym value="Pigments"/>
 		</heading>
@@ -12326,6 +12307,7 @@
 			<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
 			<heading id="AshtraySmkng" title="Ashtray">
 				<synonym value="Ashtrays"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="CigarSmkng" title="Cigar">
 				<synonym value="Cigars"/>
@@ -12605,10 +12587,18 @@
 			<heading id="TeaBox" title="Tea-Box">
 				<synonym value="Tea-Boxes"/>
 			</heading>
-			<heading id="TeaCaddy" title="Tea-Caddy">
-				<heading id="Chaire" title="Chaire"/>
+			<heading id="TeaCaddy" title="Tea Caddy">
+				<synonym value="Tea Caddies"/>
+				<synonym value="Tea-Caddy"/>
+				<synonym value="Tea-Caddies"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
+				<heading id="Chaire" title="Chaire">
+					<synonym value="Chaires"/>
+				</heading>
 			</heading>
-			<heading id="TeaChurn" title="Tea-Churn">
+			<heading id="TeaChurn" title="Tea Churn">
+				<synonym value="Tea Churns"/>
+				<synonym value="Tea-Churn"/>
 				<synonym value="Tea-Churns"/>
 			</heading>
 			<heading id="TeaCosy" title="Tea-Cosy">
@@ -12891,11 +12881,10 @@
 			</heading>
 			<heading id="MascaraPouch" title="Mascara Pouch">
 				<synonym value="Mascara Pouches"/>
-				<synonym value="Mascara-Pouchs"/>
-				<!-- Misspelling -->
+				<synonym value="Mascara-Pouchs"/> <!-- Misspelling -->
 				<synonym value="Mascara-Pouch"/>
 				<synonym value="Mascara-Pouches"/>
-				<implies Value="BagContainer"/>
+				<implies facet="ObjectName" cat="BagContainer"/>
 			</heading>
 		</heading>
 		<heading id="CosmeticPalette" title="Cosmetic-Palette">
@@ -12929,7 +12918,7 @@
 			<synonym value="Manicure-Sets"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
-		<heading id="Perfume" title="Perfume">
+		<heading id="PerfumeCsmtc" title="Perfume">
 			<synonym value="Perfumes"/>
 		</heading>
 		<heading id="ScentFountain" title="Scent-Fountain">
