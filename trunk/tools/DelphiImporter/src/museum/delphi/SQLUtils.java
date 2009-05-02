@@ -413,7 +413,7 @@ public class SQLUtils {
 				writer.append("null,");
 			else {
 				ImageInfo info = imgInfo.get(0);
-				String imgPath = "\""+info.path + "/" + info.filename+"\",";
+				String imgPath = "\""+info.filepath+"\",";
 				writer.append(imgPath);
 			}
 			writer.append("now())");
@@ -433,33 +433,41 @@ public class SQLUtils {
 			HashMap<TaxoNode, Float> matchedCats, HashMap<TaxoNode, Float> inferredCats,
 			BufferedWriter writer, boolean fFirst, boolean fWithNewlines, boolean fDumpAsSQLInsert ) {
 
-		int nCatsMatched = 0;
-		// Now we have sets of the Nodes we matched and inferred, to dump
-		// We dump the matched cats that are not in the inferred map, then the inferred list
-		for( TaxoNode node:matchedCats.keySet() ) {
-			Float ret = matchedCats.get(node); // returns null if not in hashMap
-			float reliability = (ret==null)?0:ret.floatValue();
-			int iRel = Math.min(9,Math.round(10*reliability));
-			if( fDumpAsSQLInsert )
-				writeObjectCatInsertSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
-			else
-				writeObjectCatLoadFileSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
-			nCatsMatched++;
-			fFirst = false;
+		try {
+			int nCatsMatched = 0;
+			// Now we have sets of the Nodes we matched and inferred, to dump
+			// We dump the matched cats that are not in the inferred map, then the inferred list
+			for( TaxoNode node:matchedCats.keySet() ) {
+				Float ret = matchedCats.get(node); // returns null if not in hashMap
+				float reliability = (ret==null)?0:ret.floatValue();
+				int iRel = Math.min(9,Math.round(10*reliability));
+				if( fDumpAsSQLInsert )
+					writeObjectCatInsertSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
+				else
+					writeObjectCatLoadFileSQL(id, node, false, iRel, writer, fFirst, fWithNewlines );
+				nCatsMatched++;
+				fFirst = false;
+			}
+			// Now emit the inferred nodes
+			for( TaxoNode node:inferredCats.keySet() ) {
+				Float ret = inferredCats.get(node); // returns null if not in hashMap
+				float reliability = (ret==null)?0:ret.floatValue();
+				int iRel = Math.min(9,Math.round(10*reliability));
+				if( fDumpAsSQLInsert )
+					writeObjectCatInsertSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
+				else
+					writeObjectCatLoadFileSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
+				nCatsMatched++;
+				fFirst = false;
+			}
+			return nCatsMatched;
+		} catch( Exception e ) {
+			String tmp = "SQLUtils.writeObjCatsSQL: Error encountered writing id:"+id
+				+"\n"+e.toString();
+			debug(1, tmp);
+            debugTrace(2, e);
+			throw new RuntimeException( tmp );
 		}
-		// Now emit the inferred nodes
-		for( TaxoNode node:inferredCats.keySet() ) {
-			Float ret = inferredCats.get(node); // returns null if not in hashMap
-			float reliability = (ret==null)?0:ret.floatValue();
-			int iRel = Math.min(9,Math.round(10*reliability));
-			if( fDumpAsSQLInsert )
-				writeObjectCatInsertSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
-			else
-				writeObjectCatLoadFileSQL(id, node, true, iRel, writer, fFirst, fWithNewlines );
-			nCatsMatched++;
-			fFirst = false;
-		}
-		return nCatsMatched;
 	}
 
 	private static void writeObjectCatInsertSQL( int id, TaxoNode category, boolean inferred, int reliability,
