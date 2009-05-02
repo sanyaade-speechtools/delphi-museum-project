@@ -33,7 +33,7 @@ public class TaxoNode {
 	public int iBitInMask;					// bit number for this node
 	public Node elementNode;				// Used when working with XML and this
 
-	protected int _debugLevel = 2;
+	protected int _debugLevel = 1;
 
 	// Simple constructor uses defaults for synset and inferredByChildren
 	// This is for the trivial keyword tree case
@@ -82,6 +82,7 @@ public class TaxoNode {
 			StringUtils.outputDebugStr( str );
 	}
 
+	@Override
 	public boolean equals(Object o) {
 	    if (this == o) return true;
 	    if (!(o instanceof TaxoNode)) return false;
@@ -188,8 +189,8 @@ public class TaxoNode {
 	boolean ResolvePendingImpliedNodes( DoubleHashTree map ) {
 		if(( impliedNodesPending == null ) || ( impliedNodesPending.size() <= 0 ))
 			return false;
-		for( int i=0; i<impliedNodesPending.size(); i++ ) {
-			Pair<String, String> pair = impliedNodesPending.get(i);
+		while(!impliedNodesPending.isEmpty()) {
+			Pair<String, String> pair = impliedNodesPending.remove(0);
 			TaxoNode implied = map.FindNodeByName(pair.first, pair.second);
 			if( implied != null ) {
 				AddImpliedNode( implied );
@@ -215,6 +216,7 @@ public class TaxoNode {
 		return true;
 	}
 
+	@Override
 	public String toString(){
 		// String str = "TaxoNode{ "+name+", ID:"+id+", tID:"+termID+", "+controlName;
 		String str = "TaxoNode{ "+name+", ID:"+id;
@@ -250,6 +252,7 @@ public class TaxoNode {
 		return 0;
 	} // CmpAscendancy
 
+	/**** OBSOLETE - rewrite to follow pattern of other form, below
 	public void AddInferredNodes(ArrayList<TaxoNode> list) {
 		// while parents not null and inferredByChidren, add to list.
 		// If find a node already in list, can assume we're done, since its
@@ -262,22 +265,34 @@ public class TaxoNode {
 			ascendant = ascendant.parent;
 		}
 	}
+	*/
 
 	public void AddInferredNodes(HashMap<TaxoNode, Float> map, float minValue ) {
-		// while parents not null and inferredByChidren, add to list.
-		// If find a node already in list, can assume we're done, since its
-		// inferreds must also already be there
-		// TODO include the implies nodes for each node, and not just ascendants
-// XXX need to recurse. Each step does 1) parent and 2) impliedNodes
-		TaxoNode ascendant = parent;
-		while( ascendant != null && ascendant.inferredByChildren ) {
-			Float ret = map.get(ascendant); // returns null if not in hashMap
+		// We add the nodes in our inferred list, and recurse for them as well.
+		// We stop when we find a node already in list and with same or higher
+		//  confidence. This is efficient, and ensures we break inference cycles.
+		if( impliedNodes != null && !impliedNodes.isEmpty()) {
+			for(TaxoNode impliedNode:impliedNodes ) {
+				Float ret = map.get(impliedNode); // returns null if not in hashMap
+				float priorVal = (ret==null)?0:ret.floatValue();
+				if( minValue > priorVal ) {	// If not found, or lower confidence
+					map.put(impliedNode, minValue);					// update in map
+					if( priorVal == 0 )
+						debug( 2, "Adding implied concept [" + impliedNode.name + "]");
+					impliedNode.AddInferredNodes(map, minValue);	// Recurse to handle its implieds
+				}
+			}
+		}
+		// Now we handle our parent as well, if it is inferred by this
+		if( parent != null && parent.inferredByChildren ) {
+			Float ret = map.get(parent); // returns null if not in hashMap
 			float priorVal = (ret==null)?0:ret.floatValue();
-			if( minValue > priorVal )
-				map.put(ascendant, minValue);
-			else
-				break;	// If found and higher value, can quit now.
-			ascendant = ascendant.parent;
+			if( minValue > priorVal ) {	// If not found, or lower confidence
+				map.put(parent, minValue);				// update in map
+				if( priorVal == 0 )
+					debug( 2, "Adding implied concept [" + parent.name + "]");
+				parent.AddInferredNodes(map, minValue);	// Recurse to handle its implieds
+			}
 		}
 	}
 
