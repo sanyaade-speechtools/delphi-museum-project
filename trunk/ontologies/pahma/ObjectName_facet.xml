@@ -10,15 +10,18 @@
 		<heading id="AgriculturalEquipment" title="Agricultural Items">
 			<synonym value="Agricultural Equipment"/>
 			<heading id="AgriculturalTools" title="Agricultural Tools">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies tools -->
+				<synonym value="Agricultural Implement"/>
+				<synonym value="Agricultural Implements"/>
+				<synonym value="Agricultural Tool"/>
+				<synonym value="Agricultural Tool/Implement"/>
+				<implies facet="ObjectName" cat="AgriculturalToolsTools"/>
 				<heading id="BillHook" title="Bill Hook">
 					<synonym value="Bill Hooks"/>
 					<synonym value="Bill-Hook"/>
 					<synonym value="Bill-Hooks"/>
 					<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies? also a weapon? -->
 				</heading>
-				<heading id="CottonGinAgTool" title="Cotton Gin">
-					<!-- a machine for separating cotton from its seeds -->
+				<heading id="CottonGinAgTool" title="Cotton Gin"> <!-- a machine for separating cotton from its seeds -->
 					<synonym value="Cotton Gins"/>
 					<synonym value="Cotton-Gin"/>
 					<synonym value="Cotton-Gins"/>
@@ -7345,9 +7348,6 @@
 			<synonym value="Hoops"/>
 			<excl value="Belt"/>
 		</heading>
-		<heading id="KeyMiscEq" title="Key">
-			<synonym value="Keys"/>
-		</heading>
 		<heading id="LadderMiscEq" title="Ladder">
 			<synonym value="Ladders"/>
 		</heading>
@@ -7356,9 +7356,6 @@
 		</heading>
 		<heading id="LineMiscEq" title="Line">
 			<synonym value="Lines"/>
-		</heading>
-		<heading id="LockMiscEq" title="Lock">
-			<synonym value="Locks"/>
 		</heading>
 		<heading id="MarkerMiscEq" title="Marker">
 			<synonym value="Markers"/>
@@ -7505,12 +7502,6 @@
 		</heading>
 		<heading id="ScareMiscEq" title="Scare"> <!-- Disambiguate -->
 			<synonym value="Scares"/>
-		</heading>
-		<heading id="ScissorsMiscEq" title="Scissors">
-			<synonym value="Scissor"/>
-			<synonym value="Shears"/>
-			<synonym value="Shear"/>
-			<!-- <implies facet="ActivityorContext" cat="GroomingPersonal"/> This needs complex inferentiation -->
 		</heading>
 		<heading id="ScreenMiscEq" title="Screen"> <!-- Disambiguate -->
 			<synonym value="Screens"/>
@@ -13128,12 +13119,8 @@
 		<synonym value="Tools"/>
 		<synonym value="Implement"/>
 		<synonym value="Implements"/>
-		<heading id="AdzeTool" title="Adze">
-			<synonym value="Adzes"/>
-		</heading>
-		<heading id="AgriculturalToolsTool" title="Agricultural Tools">
-			<synonym value="Agricultural Tool/Implement"/>
-		</heading>
+		<heading id="AdzeTool" title="Adze" noMatch="true"/>
+		<heading id="AgriculturalToolsTools" title="Agricultural Tools" noMatch="true"/>
 		<heading id="AnvilTool" title="Anvil">
 			<synonym value="Anvils"/>
 		</heading>
@@ -13172,10 +13159,7 @@
 				<synonym value="Basket Awls"/>
 			</heading>
 		</heading>
-		<heading id="AxeTool" title="Axe">
-			<synonym value="Axes"/>
-			<synonym value="Axs"/>
-		</heading>
+		<heading id="AxeTool" title="Axe" noMatch="true"/>
 		<heading id="BackedBladeTool" title="Backed Blade">
 			<synonym value="Backed Blades"/>
 		</heading>
@@ -13272,9 +13256,7 @@
 		<heading id="CombBeaterTool" title="Comb Beater">
 			<synonym value="Comb Beaters"/>
 		</heading>
-		<heading id="CookingImplementTool" title="Cooking-Implement">
-			<synonym value="Cooking-Implements"/>
-		</heading>
+		<heading id="CookingImplementTool" title="Cooking-Implement" noMatch="true"/>
 		<heading id="CorkscrewTool" title="Corkscrew" noMatch="true"/>
 		<heading id="CottonBowTool" title="Cotton-Bow">
 			<synonym value="Cotton-Bows"/>
@@ -13651,43 +13633,51 @@
 			</heading>
 			<heading id="TextileManufactureSewing" title="Textile Manufacture &amp; Sewing">
 				<heading id="AwlTextileTool" title="Awl" noMatch="true"/>
-				<heading id="Needle" title="Needle">
+				<heading id="NeedleTxtlMan" title="Needle">
 					<synonym value="Needles"/>
 				</heading>
-				<heading id="NeedleCase" title="Needle Case">
+				<heading id="NeedleCaseTxtlMan" title="Needle Case">
 					<synonym value="Needle Cases"/>
 					<synonym value="Needlecase"/>
 					<synonym value="Needlecases"/>
 					<synonym value="Needle-Case"/>
 					<synonym value="Needle-Cases"/>
 				</heading>
-				<heading id="Scissors" title="Scissors">
+				<heading id="ScissorsTxtlMan" title="Scissors">
 					<synonym value="Scissor"/>
+					<synonym value="Shears"/>
+					<synonym value="Shear"/>
+					<!-- <implies facet="ActivityorContext" cat="GroomingPersonal"/> This needs complex inferentiation -->
+					<implies facet="ObjectName" cat="MedicalInstrumentInstr"/>
 					<heading id="BetelScissors" title="Betel Scissors">
-						<synonym value="Betel Scissor"/>
-						<!-- For slicing Areca palm nuts -->
+						<synonym value="Betel Scissor"/> <!-- For slicing Areca palm nuts -->
 						<implies facet="ObjectName" cat="BetelNutDrug"/>
 					</heading>
 				</heading>
-				<heading id="Thimble" title="Thimble">
+				<heading id="ThimbleTxtlMan" title="Thimble">
 					<synonym value="Thimbles"/>
 				</heading>
 			</heading>
 			<heading id="WoodworkingTools" title="Woodworking Tools">
+				<synonym value="Woodworking Tool"/>
 				<heading id="Abrader" title="Abrader">
 					<synonym value="Abraders"/>
 				</heading>
 				<heading id="Adze" title="Adze">
+					<synonym value="Adzes"/>
+					<implies facet="ObjectName" cat="AdzeTool"/>
 					<heading id="AdzeHandle" title="Adze Handle">
 						<synonym value="Adze Handles"/>
 					</heading>
 				</heading>
-				<heading id="ArrowStraightener" title="Arrow Straightener"/>
+				<heading id="ArrowStraightener" title="Arrow Straightener">
+					<synonym value="Arrow Straighteners"/>
+				</heading>
 				<heading id="Axe" title="Axe">
 					<synonym value="Axes"/>
 					<synonym value="Ax"/>
-					<synonym value="Axs"/>
-					<!-- Misspelling -->
+					<synonym value="Axs"/> <!-- Misspelling -->
+					<implies facet="ObjectName" cat="AxeTool"/>
 					<heading id="Axehandle" title="Axe Handle">
 						<synonym value="Axe Handles"/>
 					</heading>
