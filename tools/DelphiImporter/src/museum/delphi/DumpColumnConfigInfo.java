@@ -2,7 +2,6 @@ package museum.delphi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Set;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -30,6 +29,7 @@ public class DumpColumnConfigInfo {
 	private static int museumIDColumnIndex = -1;
 	private static int nameColumnIndex = -1;
 	private static HashMap<String, DumpColumnConfigInfo> columnInfoMap = null;
+	private static ArrayList<String> columnNames = null;
 	protected static PriorityQueue<Integer> descColsPQ = null;
 	protected static ArrayList<Integer> hiddenNotesCols = null;
 
@@ -70,7 +70,13 @@ public class DumpColumnConfigInfo {
 		return columnSeparator;
 	}
 
+	public static boolean isInitialized() {
+		return(columnInfoMap!=null);
+	}
+
 	public static int getNumColumns() {
+		if(columnInfoMap==null)
+			throw new RuntimeException("DumpColumnConfigInfo.getNumColumns: Module not initialized.");
 		return columnInfoMap.size();
 	}
 
@@ -98,14 +104,15 @@ public class DumpColumnConfigInfo {
 		DumpColumnConfigInfo returnVal =
 			columnInfoMap.get(forColumn);
 		if( returnVal == null)
-			throw new RuntimeException("DumpColumnConfigInfo."+detail+": Bad column name:"+forColumn);
+			throw new IllegalArgumentException("DumpColumnConfigInfo."+detail+": Bad column name:"+forColumn);
 		return returnVal;
 	}
 
 	protected static String[] getColumnNames() {
-		Set<String> mapKeys = columnInfoMap.keySet();
-		String[] columnNames = new String[mapKeys.size()];
-		return mapKeys.toArray(columnNames);
+		if(columnNames == null)
+			throw new RuntimeException("DumpColumnConfigInfo.getColumnNames: Module not initialized.");
+		String[] retColNames = new String[columnNames.size()];
+		return columnNames.toArray(retColNames);
 	}
 
 	protected static DumpColumnConfigInfo[] getAllColumnInfo( String[] columnNames) {
@@ -204,11 +211,13 @@ public class DumpColumnConfigInfo {
 	public static void PopulateFromConfigFile(
 			Element	processingInfoNode )		// Xml doc with tree
 	{
+		String myName = "DumpColumnConfigInfo.PopulateFromConfigFile";
 		int nAdded = 0;
 		try {
 			if( columnInfoMap != null ) {
 				System.out.println("Rebuilding columnInfoMap...");
 				columnInfoMap = null;
+				columnNames = null;
 				descColsPQ = null;
 				hiddenNotesCols = null;
 				objectIDColumnIndex = -1;
@@ -216,17 +225,18 @@ public class DumpColumnConfigInfo {
 				nameColumnIndex = -1;
 			}
 			columnInfoMap = new HashMap<String, DumpColumnConfigInfo>();
+			columnNames = new ArrayList<String>();
 			descColsPQ = new PriorityQueue<Integer>();
 			hiddenNotesCols = new ArrayList<Integer>();
 			// Get the column separator.
 			NodeList colSepNodes = processingInfoNode.getElementsByTagName( "colSep" );
 			// Only use the first one.
 			if( colSepNodes.getLength() <= 0 )
-				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: missing colSep node.");
+				throw new RuntimeException(myName+": missing colSep node.");
 		    Element colSepNode = (Element)colSepNodes.item(0);
 			String colSepValue = colSepNode.getAttribute("value");
 			if( colSepValue.length() != 1 )
-				throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: bad colSep node (must be 1 char).");
+				throw new RuntimeException(myName+": bad colSep node (must be 1 char).");
 			columnSeparator = colSepValue.charAt(0);
 			// Next, get the info children of the root.
 			NodeList colNodes = processingInfoNode.getElementsByTagName( "colInfo" );
@@ -236,7 +246,7 @@ public class DumpColumnConfigInfo {
 			    Element colInfoEl = (Element)colNodes.item(iCol);
 			    String name = colInfoEl.getAttribute( "name" );
 			    if( name.length() <= 0 )
-					throw new RuntimeException("DumpColumnConfigInfo.PopulateFromConfigFile: No name on colInfo.");
+					throw new RuntimeException(myName+": No name on colInfo.");
 			    String comment = null;
 				ArrayList<String> tokenSeparators = new ArrayList<String>();
 				ArrayList<String> noiseTokens = new ArrayList<String>();
@@ -247,7 +257,9 @@ public class DumpColumnConfigInfo {
 		    		hiddenNotesCols.add(iCol);
 		    	} else if( function.equals("id")) {
 		    		objectIDColumnIndex = iCol;
-		    	} else if( function.equals("museumid")) {
+					if( iCol != 0 )
+						throw new RuntimeException(myName+": ObjectID column must be first column (0).");
+		    	} else if( function.equals("museumID")) {
 		    		museumIDColumnIndex = iCol;
 		    	} else if( function.equals("name")) {
 		    		nameColumnIndex = iCol;
@@ -311,12 +323,16 @@ public class DumpColumnConfigInfo {
 		    	info.reduceRules = reduceRules;
 		    	info.noiseTokens = noiseTokens;
 			    columnInfoMap.put( name, info );
+			    columnNames.add(name);
 			    nAdded++;
 				System.out.println("Parsed col info for: " + name );
 			}
+			if(objectIDColumnIndex != 0)
+				throw new RuntimeException(myName+
+						": ObjectID column must be marked (with function=\"id\"), and must be first column (0).");
 			System.out.println("Parsed info for "+nAdded+" columns.");
 		} catch(Exception ex) {
-			String tmp = "DumpColumnConfigInfo.PopulateFromConfigFile: Exception :"
+			String tmp = myName+": Exception :"
 				+"\n"+ ex.getMessage();
 			debug(1, tmp);
             debugTrace(1, ex);
