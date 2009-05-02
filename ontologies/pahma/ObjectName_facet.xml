@@ -4942,6 +4942,7 @@
 			</heading>
 			<heading id="Handkerchief" title="Handkerchief">
 				<synonym value="Handkerchiefs"/>
+				<implies facet="ObjectName" cat="HandkerchiefCsmtc"/>
 			</heading>
 			<heading id="HandWarmer" title="Hand-Warmer">
 				<synonym value="Hand-Warmers"/>
@@ -7093,18 +7094,19 @@
 		<heading id="EnemaRx" title="Enema">
 			<synonym value="Enemas"/>
 		</heading>
-		<heading id="EnemaFunnelRx" title="Enema Funnel">
-			<synonym value="Enema Funnels"/>
-			<implies facet="ActivityorContext" cat="Healing"/>
-			<implies facet="ObjectName" cat="FunnelTool"/>
-		</heading>
-		<heading id="EyeBathRx" title="Eye-Bath">
+		<heading id="EyeBathRx" title="Eye Bath">
+			<synonym value="Eye Baths"/>
+			<synonym value="Eye-Bath"/>
 			<synonym value="Eye-Baths"/>
 		</heading>
-		<heading id="FingerStallRx" title="Finger-Stall">
+		<heading id="FingerStallRx" title="Finger Stall">
+			<synonym value="Finger Stalls"/>
+			<synonym value="Finger-Stall"/>
 			<synonym value="Finger-Stalls"/>
 		</heading>
-		<heading id="HealingPlateRx" title="Healing-Plate">
+		<heading id="HealingPlateRx" title="Healing Plate">
+			<synonym value="Healing Plates"/>
+			<synonym value="Healing-Plate"/>
 			<synonym value="Healing-Plates"/>
 		</heading>
 		<heading id="InsectRepellentRx" title="Insect Repellent">
@@ -7116,8 +7118,48 @@
 		<heading id="InvalidMugRx" title="Invalid Mug">
 			<synonym value="Invalid Mugs"/>
 		</heading>
-		<heading id="MedicalInstrumentRx" title="Medical Instrument">
+		<heading id="MedicalInstrumentRx" title="Medical Instruments">
 			<synonym value="Medical Instruments"/>
+			<implies facet="ObjectName" cat="MedicalInstrumentInstr"/>
+			<heading id="AcupunctureNeedle" title="Acupuncture Needle">
+				<synonym value="Acupuncture Needles"/>
+				<synonym value="Acupuncture-Needle"/>
+				<synonym value="Acupuncture-Needles"/>
+			</heading>
+			<heading id="Catheter" title="Catheter">
+				<synonym value="Catheters"/>
+			</heading>
+			<heading id="DentalInstrument" title="Dental Instrument">
+				<synonym value="Dental Instruments"/>
+			</heading>
+			<heading id="EnemaFunnel" title="Enema Funnel">
+				<synonym value="Enema Funnels"/>
+				<synonym value="Enema-Funnel"/>
+				<synonym value="Enema-Funnels"/>
+				<implies facet="ActivityorContext" cat="Healing"/>
+				<implies facet="ObjectName" cat="FunnelTool"/>
+			</heading>
+			<heading id="HealingDevice" title="Healing-Device">
+				<synonym value="Healing-Devices"/>
+			</heading>
+			<heading id="Probe" title="Probe">
+				<synonym value="Probes"/>
+			</heading>
+			<heading id="RectalSpeculum" title="Rectal Speculum">
+				<synonym value="Rectal Speculums"/>
+			</heading>
+			<heading id="RejuvenatingDevice" title="Rejuvenating-Device">
+				<synonym value="Rejuvenating-Devices"/>
+			</heading>
+			<heading id="SurgicalInstrument" title="Surgical Instrument">
+				<synonym value="Surgical Instruments"/>
+			</heading>
+			<heading id="Syringe" title="Syringe">
+				<synonym value="Syringes"/>
+			</heading>
+			<heading id="TractionHook" title="Traction-Hook">
+				<synonym value="Traction-Hooks"/>
+			</heading>
 		</heading>
 		<heading id="MedicineRx" title="Medicine">
 			<synonym value="Medicines"/>
@@ -11277,47 +11319,7 @@
 					<synonym value="Wind-Vanes"/>
 				</heading>
 			</heading>
-			<heading id="MedicalInstrument" title="Medical Instrument">
-				<synonym value="Medical Instruments"/>
-				<heading id="AcupunctureNeedle" title="Acupuncture Needle">
-					<synonym value="Acupuncture Needles"/>
-					<synonym value="Acupuncture-Needle"/>
-					<synonym value="Acupuncture-Needles"/>
-				</heading>
-				<heading id="Catheter" title="Catheter">
-					<synonym value="Catheters"/>
-				</heading>
-				<heading id="DentalInstrument" title="Dental Instrument">
-					<synonym value="Dental Instruments"/>
-				</heading>
-				<heading id="EnemaFunnel" title="Enema Funnel">
-					<synonym value="Enema Funnels"/>
-					<synonym value="Enema-Funnel"/>
-					<synonym value="Enema-Funnels"/>
-					<implies facet="ObjectName" cat="FunnelTool"/>
-				</heading>
-				<heading id="HealingDevice" title="Healing-Device">
-					<synonym value="Healing-Devices"/>
-				</heading>
-				<heading id="Probe" title="Probe">
-					<synonym value="Probes"/>
-				</heading>
-				<heading id="RectalSpeculum" title="Rectal Speculum">
-					<synonym value="Rectal Speculums"/>
-				</heading>
-				<heading id="RejuvenatingDevice" title="Rejuvenating-Device">
-					<synonym value="Rejuvenating-Devices"/>
-				</heading>
-				<heading id="SurgicalInstrument" title="Surgical Instrument">
-					<synonym value="Surgical Instruments"/>
-				</heading>
-				<heading id="Syringe" title="Syringe">
-					<synonym value="Syringes"/>
-				</heading>
-				<heading id="TractionHook" title="Traction-Hook">
-					<synonym value="Traction-Hooks"/>
-				</heading>
-			</heading>
+			<heading id="MedicalInstrumentInstr" title="Medical Instruments" noMatch="true"/>
 			<heading id="OpticalInstrument" title="Optical Instrument">
 				<synonym value="Optical Instruments"/>
 				<heading id="CameraOptEq" title="Camera" noMatch="true"/>
@@ -11441,13 +11443,12 @@
 					<synonym value="Ceremonial Dolls"/>
 					<implies facet="ObjectName" cat="CeremonialDollRelRit"/>
 				</heading>
-				<heading id="KachinaDoll" title="Kachina Doll"><!-- Traditionally for use by girls -->
+				<heading id="KachinaDoll" title="Kachina Doll"> <!-- Traditionally for use by girls -->
 					<synonym value="Kachina Dolls"/>
 					<synonym value="Kachina-Doll"/>
 					<synonym value="Kachina-Dolls"/>
 					<synonym value="Kachina"/>
 					<synonym value="Kachinas"/>
-					<synonym value="Kachina"/>
 					<synonym value="Katsina"/>
 					<synonym value="Katsinam"/>
 					<!-- Implies root of cottonwood tree -->
@@ -11497,9 +11498,19 @@
 						dancing outside the lines. His most distinctive features is the presence of a
 						bear footprint on either cheek.-->
 					</heading>
-					<heading id="ClownHopiKachina" title="Clown Kachina"/>
+					<heading id="ClownHopiKachina" title="Clown Kachina">
+						<synonym value="Clown Figure Kachina"/>
+						<synonym value="Clown Figure Kachinas"/>
+						<synonym value="Clown-Figure Kachina"/>
+						<synonym value="Clown-Figure Kachinas"/>
+						<synonym value="Clown Kachinas"/>
+					</heading>
 					<heading id="CrowMotherHopiKachina" title="Crow Mother"/>
-					<heading id="EagleHopiKachina" title="Eagle Kachina"/>
+					<heading id="EagleHopiKachina" title="Eagle Kachina">
+						<synonym value="Eagle Kachinas"/>
+						<synonym value="Bird Kachina"/>
+						<synonym value="Bird Kachinas"/>
+					</heading>
 					<heading id="EototoHopiKachina" title="Eototo Kachina"/>
 					<heading id="FoxHopiKachina" title="Fox Kachina"/>
 					<heading id="KokopelliHopiKachina" title="Kokopelli Kachina"/>
@@ -11526,7 +11537,13 @@
 						arriving, he can easily become a Mudhead by donning that mask. These kachinas
 						appear in almost every Hopi dance.-->
 					</heading>
-					<heading id="SnowHopiKachina" title="Snow Kachina"/>
+					<heading id="SnowHopiKachina" title="Snow Kachina">
+						<synonym value="Snow Kachinas"/>
+						<synonym value="Snow Figure Kachina"/>
+						<synonym value="Snow Figure Kachinas"/>
+						<synonym value="Snow-Figure Kachina"/>
+						<synonym value="Snow-Figure Kachinas"/>
+					</heading>
 					<heading id="SunHopiKachina" title="Sun Kachina"/>
 					<heading id="WolfHopiKachina" title="Wolf Kachina"/>
 					<heading id="WupamoHopiKachina" title="Wupamo Kachina"/>
@@ -11538,15 +11555,6 @@
 					<heading id="ChiefFigureKachina" title="Chief Figure">
 						<synonym value="Chief Kachinas"/>
 						<synonym value="Chief Kachina"/>
-					</heading>
-					<heading id="ClownFigureKachina" title="Clown Figure">
-						<synonym value="Clown Kachinas"/>
-						<synonym value="Clown Kachina"/>
-					</heading>
-					<heading id="EagleFigureKachina" title="Eagle Figure">
-						<synonym value="Eagle Kachinas"/>
-						<synonym value="Eagle Kachina"/>
-						<synonym value="Bird Kachina"/>
 					</heading>
 					<heading id="GuardFigureKachina" title="Guard Figure">
 						<synonym value="Guard Kachinas"/>
@@ -11563,10 +11571,6 @@
 					<heading id="RunnerFigureKachina" title="Runner Figure">
 						<synonym value="Runner Kachinas"/>
 						<synonym value="Runner Kachina"/>
-					</heading>
-					<heading id="SnowFigureKachina" title="Snow Figure">
-						<synonym value="Snow Kachinas"/>
-						<synonym value="Snow Kachina"/>
 					</heading>
 					<heading id="SunFigureKachina" title="Sun Figure">
 						<synonym value="Sun Kachinas"/>
@@ -12876,6 +12880,7 @@
 				<synonym value="Cosmetic Boxes"/>
 				<synonym value="Cosmetic-Box"/>
 				<synonym value="Cosmetic-Boxes"/>
+				<implies facet="ObjectName" cat="CosmeticBoxTltBox"/>
 			</heading>
 			<heading id="CosmeticCase" title="Cosmetic Case">
 				<synonym value="Cosmetic Cases"/>
@@ -12928,9 +12933,7 @@
 		<heading id="HairPinCover" title="Hair-Pin-Cover">
 			<synonym value="Hair-Pin-Covers"/>
 		</heading>
-		<heading id="Handkerchief" title="Handkerchief">
-			<synonym value="Handkerchiefs"/>
-		</heading>
+		<heading id="HandkerchiefCsmtc" title="Handkerchief" noMatch="true"/>
 		<heading id="ManicureSet" title="Manicure-Set">
 			<synonym value="Manicure-Sets"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
@@ -12966,11 +12969,11 @@
 		</heading>
 		<heading id="ToiletBox" title="Toilet-Box">
 			<synonym value="Toilet-Boxes"/>
-			<heading id="CosmeticBox" title="Cosmetic-Box">
-				<synonym value="Cosmetic-Boxes"/>
-			</heading>
+			<heading id="CosmeticBoxTltBox" title="Cosmetic Box" noMatch="true"/>
 		</heading>
-		<heading id="ToiletCase" title="Toilet-Case">
+		<heading id="ToiletCase" title="Toilet Case">
+			<synonym value="Toilet Cases"/>
+			<synonym value="Toilet-Case"/>
 			<synonym value="Toilet-Cases"/>
 		</heading>
 		<heading id="ToiletChest" title="Toilet-Chest">
@@ -12979,8 +12982,8 @@
 		<heading id="ToiletSet" title="Toilet-Set">
 			<synonym value="Toilet-Sets"/>
 		</heading>
-		<heading id="Toiletarticles" title="Toilet Articles">
-			<synonym value="Toilet Articles"/>
+		<heading id="ToiletArticles" title="Toilet Articles">
+			<synonym value="Toilet Article"/>
 			<synonym value="Toilet Implement"/>
 			<synonym value="Toilet Implements"/>
 			<synonym value="Toilet Tool"/>
