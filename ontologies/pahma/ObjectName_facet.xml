@@ -191,7 +191,7 @@
 				<synonym value="Fish Hooks"/>
 				<synonym value="Fish-Hook"/>
 				<synonym value="Fish-Hooks"/>
-				<synonym value="Hook"/> <!-- EXCL needed? -->
+				<synonym value="Hook"/> <!-- Disambiguate -->
 				<synonym value="Hooks"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
@@ -1292,25 +1292,135 @@
 	</heading>
 	<heading id="Armaments" title="Armaments">
 		<synonym value="Arms/Armour"/>
-		<!-- The British Museum Notes: For Associated Equipment, See Arms Equipment. -->
+		<!-- The British Museum notes: for associated equipment, see arms equipment. -->
 		<heading id="Aegis" title="Aegis"/>
-		<heading id="ArchersLoose" title="Archer's Loose"/>
+		<heading id="ArchersLoose" title="Archer's Loose">
+			<synonym value="Archers Loose"/>
+			<synonym value="Archers' Loose"/>
+			<synonym value="Archer's Looses"/>
+			<synonym value="Archers' Looses"/>
+			<synonym value="Archers Looses"/>
+		</heading>
 		<heading id="Armor" title="Armor">
-			<!-- Look at entire Armor section.  "Armor" below needs to be incorporated into this string. -->
 			<synonym value="Armour"/>
-			<heading id="AlmainCollar" title="Almain Collar"/>
-			<heading id="AnkleGuard" title="Ankle-Guard"/>
-			<heading id="ArmGuard" title="Arm-Guard" noMatch="true"/>
-			<heading id="ArmPiece" title="Arm-Piece"/>
+			<heading id="Armorbyconstruction" title="Armor By Construction" noMatch="true">
+				<heading id="MailArmor" title="Mail Armor">
+					<synonym value="Mail Armour"/>
+				</heading>
+				<heading id="PlateArmor" title="Plate Armour"/>
+				<heading id="ScaleArmor" title="Scale Armour"/>
+				<heading id="SegmentedArmor" title="Segmented Armor">
+					<synonym value="Segmented Armour"/>
+				</heading>
+			</heading>
+			<heading id="ArmorByForm" title="Armor By Form" noMatch="true">
+				<heading id="ApronFitting" title="Apron Fitting">
+					<synonym value="Apron Fittings"/>
+				</heading>
+				<heading id="ArmGuard" title="Arm Guard">
+					<synonym value="Arm Guards"/>
+				</heading>
+				<heading id="BackPlate" title="Backplate">
+					<synonym value="Backplates"/>
+					<synonym value="Back Plate"/>
+					<synonym value="Back Plates"/>
+					<synonym value="Back-Plate"/>
+					<synonym value="Back-Plates"/>
+					<implies facet="ObjectName" cat="BackPlateArmor"/>
+				</heading>
+				<heading id="BreastPlate" title="Breastplate">
+					<synonym value="Breast plate"/>
+					<synonym value="Breast plates"/>
+					<synonym value="Breast-plate"/>
+					<synonym value="Breast-plates"/>
+					<synonym value="Breastplates"/>
+					<implies facet="ObjectName" cat="BreastPlateArmor"/>
+				</heading>
+				<heading id="Corslet" title="Corslet">
+					<synonym value="Corslets"/>
+					<implies facet="ObjectName" cat="CorsletArmor"/>
+				</heading>
+				<heading id="Cuirass" title="Cuirass">
+					<synonym value="Cuirasses"/>
+					<implies facet="ObjectName" cat="CuirassArmor"/>
+				</heading>
+				<heading id="FootGuard" title="Foot Guard">
+					<synonym value="Foot Guards"/>
+					<synonym value="Foot-Guard"/>
+					<synonym value="Foot-Guards"/>
+					<synonym value="Footguard"/>
+					<synonym value="Footguards"/>
+					<implies facet="ObjectName" cat="FootGuardArmor"/>
+				</heading>
+				<heading id="Gambeson" title="Gambeson">
+					<synonym value="Gambesons"/>
+				</heading>
+				<heading id="Gauntlet" title="Gauntlet">
+					<synonym value="Gauntlets"/>
+				</heading>
+				<heading id="Helmets" title="Helmets">
+					<synonym value="Helmet"/>
+					<synonym value="Helm"/> <!-- Disambiguate -->
+					<synonym value="Helms"/>
+					<implies facet="ObjectName" cat="HelmetArmor"/>
+					<implies facet="ObjectName" cat="HelmetHeadGear"/>
+					<heading id="Basinet" title="Basinet">
+						<synonym value="Basinets"/>
+					</heading>
+					<heading id="CoifArmor" title="Coif (Armor)">
+						<synonym value="Coif"/>
+						<synonym value="Coifs"/>
+					</heading>
+				</heading>
+				<heading id="LegGuard" title="Leg Guard">
+					<synonym value="Leg Guards"/>
+				</heading>
+				<heading id="PaletteArmor" title="Palette (Armor)">
+					<synonym value="Palette"/>
+					<synonym value="Palettes"/>
+				</heading>
+			</heading>
+			<heading id="ArmorByFunction" title="Armor By Function" noMatch="true">
+				<heading id="HorseArmor" title="Horse Armor">
+					<synonym value="Horse Armour"/>
+				</heading>
+				<heading id="ParadeArmor" title="Parade Armor">
+					<synonym value="Parade Armour"/>
+				</heading>
+			</heading>
+			<heading id="AlmainCollar" title="Almain Collar">
+				<synonym value="Almain Collars"/>
+			</heading>
+			<heading id="AnkleGuard" title="Ankle Guard">
+				<synonym value="Ankle Guards"/>
+				<synonym value="Ankle-Guard"/>
+				<synonym value="Ankle-Guards"/>
+			</heading>
+			<heading id="ArmGuard" title="Arm Guard" noMatch="true"/>
+			<heading id="ArmPiece" title="Arm Piece">
+				<synonym value="Arm Pieces"/>
+				<synonym value="Arm-Piece"/>
+				<synonym value="Arm-Pieces"/>
+			</heading>
 			<heading id="BackPlateArmor" title="Back-Plate" noMatch="true"/>
-			<heading id="Besague" title="Besague"/>
-			<heading id="BevorArmor" title="Bevor"/>
+			<heading id="Besague" title="Besague">
+				<synonym value="Besagues"/>
+			</heading>
+			<heading id="BevorArmor" title="Bevor">
+				<synonym value="Bevors"/>
+			</heading>
 			<heading id="BreastPlateArmor" title="Breast-Plate" noMatch="true"/>
 			<heading id="CorsletArmor" title="Corslet" noMatch="true"/>
-			<heading id="CouterArmor" title="Couter"/>
+			<heading id="CouterArmor" title="Couter">
+				<synonym value="Couters"/>
+			</heading>
 			<heading id="CuirassArmor" title="Cuirass" noMatch="true"/>
-			<heading id="CuisseArmor" title="Cuisse"/>
-			<heading id="CuletArmor" title="Culet"/>
+			<heading id="CuisseArmor" title="Cuisse">
+				<synonym value="Cuisses"/>
+			</heading>
+			<heading id="CuletArmor" title="Culet">
+				<synonym value="Culets"/>
+			</heading>
 			<heading id="FootGuardArmor" title="Foot-Guard" noMatch="true"/>
 			<heading id="Gorgets" title="Gorgets">
 				<synonym value="Gorget"/>
@@ -1336,114 +1446,125 @@
 			<heading id="GreaveArmor" title="Greave">
 				<synonym value="Greaves"/>
 			</heading>
-			<heading id="GussetArmor" title="Gusset"/>
+			<heading id="GussetArmor" title="Gusset">
+				<synonym value="Gussets"/>
+			</heading>
 			<heading id="HelmetArmor" title="Helmet" noMatch="true"/>
-			<heading id="HorseArmor" title="Horse-Armour">
-				<synonym value="Horse-Armours"/>
+			<heading id="HorseArmor" title="Horse Armor">
+				<synonym value="Horse-Armor"/>
+				<synonym value="Horse Armour"/>
+				<synonym value="Horse-Armour"/>
 			</heading>
-			<heading id="Kardiophylax" title="Kardiophylax"/>
-			<heading id="KneeGuard" title="Knee-Guard"/>
-			<heading id="LegPiece" title="Leg-Piece"/>
-			<heading id="LegPlate" title="Leg-Plate"/>
+			<heading id="Kardiophylax" title="Kardiophylax">
+				<synonym value="Kardiophylaces"/>
+				<synonym value="Kardiophylaxes"/>
+				<synonym value="Kardiophylaxs"/>
+			</heading>
+			<heading id="KneeGuard" title="Knee Guard">
+				<synonym value="Knee Guards"/>
+				<synonym value="Knee-Guard"/>
+				<synonym value="Knee-Guards"/>
+			</heading>
+			<heading id="LegPiece" title="Leg Piece">
+				<synonym value="Leg Pieces"/>
+				<synonym value="Leg-Piece"/>
+				<synonym value="Leg-Pieces"/>
+			</heading>
+			<heading id="LegPlate" title="Leg Plate">
+				<synonym value="Leg Plates"/>
+				<synonym value="Leg-Plate"/>
+				<synonym value="Leg-Plates"/>
+			</heading>
 			<heading id="MailArmor" title="Mail Armor">
+				<synonym value="Mail Armour"/>
 				<synonym value="Mail-Armour"/>
+				<synonym value="Mail-Armor"/>
 			</heading>
-			<heading id="Menpo" title="Menpo"/>
-			<heading id="Mitra" title="Mitra"/>
-			<heading id="Muneate" title="Muneate"/>
-			<heading id="NeckPiece" title="Neck-Piece"/>
-			<heading id="Pauldron" title="Pauldron"/>
-			<heading id="Poleyn" title="Poleyn"/>
-			<heading id="Sabaton" title="Sabaton"/>
-			<heading id="SaddleSteel" title="Saddle-Steel"/>
-			<heading id="ShinGuard" title="Shin-Guard"/>
-			<heading id="ShoulderPiece" title="Shoulder-Piece"/>
-			<heading id="Tare" title="Tare"/>
-			<heading id="Tasset" title="Tasset"/>
-			<heading id="Vambrace" title="Vambrace"/>
-			<heading id="Armor" title="Armor">
-				<heading id="Armorbyconstruction" title="Armor By Construction" noMatch="true">
-					<heading id="MailArmor" title="Mail Armor">
-						<synonym value="Mail Armour"/>
-					</heading>
-					<heading id="PlateArmor" title="Plate Armour"/>
-					<heading id="ScaleArmor" title="Scale Armour"/>
-					<heading id="SegmentedArmor" title="Segmented Armor">
-						<synonym value="Segmented Armour"/>
-					</heading>
+			<heading id="Menpo" title="Menpo">
+				<synonym value="Menpos"/>
+			</heading>
+			<heading id="Mitra" title="Mitra">
+				<synonym value="Mitras"/>
+			</heading>
+			<heading id="Muneate" title="Muneate">
+				<synonym value="Muneates"/>
+			</heading>
+			<heading id="NeckPiece" title="Neck Piece">
+				<synonym value="Neck Pieces"/>
+				<synonym value="Neck-Piece"/>
+				<synonym value="Neck-Pieces"/>
+			</heading>
+			<heading id="Pauldron" title="Pauldron">
+				<synonym value="Pauldrons"/>
+			</heading>
+			<heading id="Poleyn" title="Poleyn">
+				<synonym value="Poleyns"/>
+			</heading>
+			<heading id="Sabaton" title="Sabaton">
+				<synonym value="Sabatons"/>
+			</heading>
+			<heading id="SaddleSteel" title="Saddle Steel">
+				<synonym value="Saddle Steels"/>
+				<synonym value="Saddle-Steel"/>
+				<synonym value="Saddle-Steels"/>
+			</heading>
+			<heading id="Armorshields" title="Shields">
+				<synonym value="Shield"/>
+				<heading id="Buckler" title="Buckler">
+					<synonym value="Bucklers"/>
 				</heading>
-				<heading id="ArmorByForm" title="Armor By Form" noMatch="true">
-					<heading id="ApronFitting" title="Apron Fitting"/>
-					<heading id="ArmGuard" title="Arm Guard"/>
-					<heading id="BackPlate" title="Backplate">
-						<synonym value="Backplates"/>
-						<synonym value="Back Plate"/>
-						<synonym value="Back Plates"/>
-						<synonym value="Back-Plate"/>
-						<synonym value="Back-Plates"/>
-						<implies facet="ObjectName" cat="BackPlateArmor"/>
-					</heading>
-					<heading id="BreastPlate" title="Breastplate">
-						<synonym value="Breast plate"/>
-						<synonym value="Breast plates"/>
-						<synonym value="Breast-plate"/>
-						<synonym value="Breast-plates"/>
-						<synonym value="Breastplates"/>
-						<implies facet="ObjectName" cat="BreastPlateArmor"/>
-					</heading>
-					<heading id="Corslet" title="Corslet">
-						<synonym value="Corslets"/>
-						<implies facet="ObjectName" cat="CorsletArmor"/>
-					</heading>
-					<heading id="Cuirass" title="Cuirass">
-						<synonym value="Cuirasses"/>
-						<implies facet="ObjectName" cat="CuirassArmor"/>
-					</heading>
-					<heading id="FootGuard" title="Foot Guard">
-						<synonym value="Foot Guards"/>
-						<synonym value="Foot-Guard"/>
-						<synonym value="Foot-Guards"/>
-						<synonym value="Footguard"/>
-						<synonym value="Footguards"/>
-						<implies facet="ObjectName" cat="FootGuardArmor"/>
-					</heading>
-					<heading id="Gambeson" title="Gambeson"/>
-					<heading id="Gauntlet" title="Gauntlet"/>
-					<heading id="Helmets" title="Helmets">
-						<synonym value="Helmet"/>
-						<synonym value="Helm"/>
-						<!-- EXCL needed? -->
-						<synonym value="Helms"/>
-						<implies facet="ObjectName" cat="HelmetArmor"/>
-						<implies facet="ObjectName" cat="HelmetHeadGear"/>
-						<heading id="Basinet" title="Basinet"/>
-						<heading id="CoifArmor" title="Coif (Armor)"/>
-					</heading>
-					<heading id="LegGuard" title="Leg Guard"/>
-					<heading id="PaletteArmor" title="Palette (Armour)"/>
+				<heading id="Targe" title="Targe">
+					<synonym value="Targes"/>
 				</heading>
-				<heading id="ArmorByFunction" title="Armor By Function" noMatch="true">
-					<heading id="HorseArmor" title="Horse Armor">
-						<synonym value="Horse Armour"/>
-					</heading>
-					<heading id="ParadeArmor" title="Parade Armor">
-						<synonym value="Parade Armour"/>
-					</heading>
+				<heading id="Target" title="Target">
+					<synonym value="Targets"/>
 				</heading>
-				<heading id="Armorshields" title="Shields">
-					<heading id="Buckler" title="Buckler"/>
-					<heading id="Targe" title="Targe"/>
-					<heading id="Target" title="Target"/>
-				</heading>
+			</heading>
+			<heading id="ShinGuard" title="Shin Guard">
+				<synonym value="Shin Guards"/>
+				<synonym value="Shin-Guard"/>
+				<synonym value="Shin-Guards"/>
+			</heading>
+			<heading id="ShoulderPiece" title="Shoulder Piece">
+				<synonym value="Shoulder Pieces"/>
+				<synonym value="Shoulder-Piece"/>
+				<synonym value="Shoulder-Pieces"/>
+			</heading>
+			<heading id="Tare" title="Tare">
+				<synonym value="Tares"/>
+			</heading>
+			<heading id="Tasset" title="Tasset">
+				<synonym value="Tassets"/>
+			</heading>
+			<heading id="Vambrace" title="Vambrace">
+				<synonym value="Vambraces"/>
 			</heading>
 		</heading>
 		<heading id="ArmsEquipment" title="Arms Equipment"/>
-		<heading id="ArrowThrower" title="Arrow-Thrower"/>
-		<heading id="GunFlint" title="Gun-Flint"/>
-		<heading id="GunnersKey" title="Gunner's Key"/>
+		<heading id="ArrowThrower" title="Arrow Thrower">
+			<synonym value="Arrow Throwers"/>
+			<synonym value="Arrow-Thrower"/>
+			<synonym value="Arrow-Throwers"/>
+		</heading>
+		<heading id="GunFlint" title="Gun Flint">
+			<synonym value="Gun Flints"/>
+			<synonym value="Gun-Flint"/>
+			<synonym value="Gun-Flints"/>
+			<synonym value="Gunflint"/>
+			<synonym value="Gunflints"/>
+		</heading>
+		<heading id="GunnersKey" title="Gunner's Key">
+			<synonym value="Gunners' Key"/>
+			<synonym value="Gunners Key"/>
+			<synonym value="Gunner's Keys"/>
+			<synonym value="Gunners' Keys"/>
+			<synonym value="Gunners Keys"/>
+		</heading>
 		<heading id="GunneryInstrArma" title="Gunnery Instrument" noMatch="true"/>
-		<heading id="Koshirae" title="Koshirae"/>
-		<heading id="Linstock" title="Linstock"/>
+		<heading id="Koshirae" title="Koshirae"/> <!-- Japanese Sword mount/furniture (but wearable?) -->
+		<heading id="Linstock" title="Linstock">
+			<synonym value="Linstocks"/>
+		</heading>
 		<heading id="Munitions" title="Munitions">
 			<synonym value="Munition"/>
 			<synonym value="Ammunition"/>
@@ -1474,7 +1595,10 @@
 		</heading>
 		<heading id="Primer" title="Primer"/>
 		<heading id="Ramrod" title="Ramrod"/>
-		<heading id="Sheath" title="Sheath"/>
+		<heading id="SheathArmmnt" title="Sheath">
+			<synonym value="Sheaths"/>
+			<implies facet="ObjectName" cat="SheathEdgWpn"/>
+		</heading>
 		<heading id="Shield" title="Shield">
 			<synonym value="Shields"/>
 			<excl value="Goldweight"/>
@@ -1622,15 +1746,13 @@
 				<heading id="ScabbardEdgWpn" title="Scabbard">
 					<synonym value="Scabbards"/>
 				</heading>
-				<heading id="SheathEdgWpn" title="Sheath">
-					<synonym value="Sheaths"/>
-				</heading>
+				<heading id="SheathEdgWpn" title="Sheath" noMatch="true"/>
 				<heading id="StaffWeaponEdgWpn" title="Staff Weapon">
 					<synonym value="Pole Weapon"/>
 					<synonym value="Pole Weapons"/>
 					<synonym value="Staff Weapons"/>
 					<heading id="BillEdgWpn" title="Bill">
-						<synonym value="Bills"/> <!-- EXCL needed -->
+						<synonym value="Bills"/> <!-- Disambiguate -->
 					</heading>
 					<heading id="FauchardEdgWpn" title="Fauchard">
 						<synonym value="Fauchards"/>
@@ -1658,10 +1780,13 @@
 					</heading>
 					<heading id="SpearEdgWpn" title="Spear">
 						<synonym value="Spears"/>
+						<implies facet="ObjectName" cat="SpearWeaponPrjWpn"/>
 						<heading id="JavelinEdgWpn" title="Javelin"> <!-- A long spear designed to be thrown in order to injure or kill a given target. -->
 							<synonym value="Javelins"/>
+							<implies facet="ObjectName" cat="JavelinPrjWpn"/>
 							<heading id="AngonEdgWpn" title="Angon">
 								<synonym value="Angons"/>
+								<implies facet="ObjectName" cat="AngonPrjWpn"/>
 							</heading>
 						</heading>
 						<heading id="LanceEdgWpn" title="Lance">
@@ -1798,7 +1923,9 @@
 				<heading id="CatapultWeapon" title="Catapult">
 					<synonym value="Catapults"/>
 				</heading>
-				<heading id="Crossbow" title="Crossbow"/>
+				<heading id="Crossbow" title="Crossbow">
+					<synonym value="Crossbows"/>
+				</heading>
 				<heading id="Firearm" title="Firearm">
 					<synonym value="Firearms"/>
 					<synonym value="Gun"/>
@@ -1953,15 +2080,18 @@
 				<heading id="SpearThrower" title="Spear Thrower">
 					<synonym value="Spear Throwers"/>
 				</heading>
-				<heading id="SpearWeapon" title="Spear">
-					<synonym value="Spears"/>
+				<heading id="SpearWeaponPrjWpn" title="Spear" noMatch="true">
+					<heading id="JavelinPrjWpn" title="Javelin" noMatch="true">
+						<heading id="AngonPrjWpn" title="Angon" noMatch="true"/>
+					</heading>
 				</heading>
 				<heading id="TrebuchetWeapon" title="Trebuchet">
 					<synonym value="Trebuchets"/>
 				</heading>
 			</heading>
-			<heading id="Caltrop" title="Caltrop"/>
-			<heading id="Gunflint" title="Gunflint"/>
+			<heading id="Caltrop" title="Caltrop">
+				<synonym value="Caltrops"/>
+			</heading>
 		</heading>
 	</heading>
 	<heading id="Artifacts" title="Artifacts">
@@ -3185,8 +3315,7 @@
 			</heading>
 		</heading>
 		<heading id="BrushCntnrCntnr" title="Brush Container" noMatch="true"/>
-		<heading id="CanContainer" title="Can">
-			<!-- Disambiguate -->
+		<heading id="CanContainer" title="Can"> <!-- Disambiguate -->
 			<synonym value="Cans"/>
 			<synonym value="Tins"/>
 			<excl value="Watering Can"/>
@@ -5873,11 +6002,8 @@
 			</heading>
 			<heading id="Ancientromancoins" title="Ancient Roman Coins">
 				<heading id="RomanCoinsByDenom" title="By Denomination" noMatch="true">
-					<heading id="RomanBronzeCoinDenom" title="Bronze coin denominations"
-						noMatch="true">
-						<heading id="RomanDenomAs" title="As" noMatch="true">
-							<!-- <synonym value="xxxxxxxxxxxxxx"/> -->
-						</heading>
+					<heading id="RomanBronzeCoinDenom" title="Bronze coin denominations" noMatch="true">
+						<heading id="RomanDenomAs" title="As" noMatch="true"/>
 						<heading id="RomanDenomSemis" title="Semis">
 							<synonym value="Semis ?"/>
 						</heading>
@@ -5886,8 +6012,7 @@
 					<heading id="RomanDenomAureus" title="Aureus">
 						<implies facet="Material" cat="GoldMaterial"/>
 					</heading>
-					<heading id="Quinarius" title="Quinarius"/>
-					<!-- could be gold or silver -->
+					<heading id="Quinarius" title="Quinarius"/> <!-- could be gold or silver -->
 				</heading>
 				<heading id="RomanCoinsByType" title="By Type" noMatch="true">
 					<heading id="RomanEarlyBronzeCoins" title="Early bronze coins" noMatch="true">
@@ -7112,7 +7237,8 @@
 		<heading id="CobblingEquipmentMiscEq" title="Cobbling Equipment">
 			<synonym value="Cobbling-Equipment"/>
 		</heading>
-		<heading id="ContraceptiveSheathMiscEq" title="Contraceptive Sheath">
+		<heading id="ContraceptiveSheathMiscEq" title="Condom">
+			<synonym value="Contraceptive Sheath"/>
 			<synonym value="Contraceptive Sheaths"/>
 		</heading>
 		<heading id="CordMiscEq" title="Cord">
@@ -7356,8 +7482,7 @@
 		<heading id="RoundelMiscEq" title="Roundel">
 			<synonym value="Roundels"/>
 		</heading>
-		<heading id="ScareMiscEq" title="Scare">
-			<!-- EXCL needed -->
+		<heading id="ScareMiscEq" title="Scare"> <!-- Disambiguate -->
 			<synonym value="Scares"/>
 		</heading>
 		<heading id="ScissorsMiscEq" title="Scissors">
@@ -7366,12 +7491,10 @@
 			<synonym value="Shear"/>
 			<!-- <implies facet="ActivityorContext" cat="GroomingPersonal"/> This needs complex inferentiation -->
 		</heading>
-		<heading id="ScreenMiscEq" title="Screen">
-			<!-- EXCL needed -->
+		<heading id="ScreenMiscEq" title="Screen"> <!-- Disambiguate -->
 			<synonym value="Screens"/>
 		</heading>
-		<heading id="SealingMiscEq" title="Sealing">
-			<!-- EXCL needed -->
+		<heading id="SealingMiscEq" title="Sealing"> <!-- Disambiguate -->
 			<synonym value="Sealings"/>
 			<excl value="SealingComm"/>
 		</heading>
@@ -9507,8 +9630,6 @@
 		</heading>
 	</heading>
 	<heading id="ProductionReplication" title="Production &amp; Replication">
-		<!-- Includes Cobbling Equipment, Jewellery-Making Equipment, Pottery-Making
-			Equipment, Tools, Textile Crafts -->
 		<!-- This includes by-products but is not intended to cover manufacture
 				in general. See also the top term Tools. -->
 		<heading id="Archetype" title="Archetype">
@@ -9517,8 +9638,7 @@
 		<heading id="Bladelet" title="Bladelet">
 			<synonym value="Bladelets"/>
 		</heading>
-		<heading id="Blank" title="Blank">
-			<!-- EXCL needed -->
+		<heading id="Blank" title="Blank"> <!-- Disambiguate -->
 			<synonym value="Blanks"/>
 		</heading>
 		<heading id="CastReproduction" title="Casts">
@@ -11066,8 +11186,7 @@
 					<synonym value="Alidades"/>
 				</heading>
 				<heading id="BalanceMeasure" title="Balance">
-					<synonym value="Balances"/>
-					<!-- EXCL needed -->
+					<synonym value="Balances"/> <!-- Disambiguate -->
 				</heading>
 				<heading id="BarometerMeasure" title="Barometer">
 					<synonym value="Barometers"/>
@@ -11120,8 +11239,7 @@
 					<synonym value="Hygrometers"/>
 				</heading>
 				<heading id="LevelMeasure" title="Level">
-					<synonym value="Levels"/>
-					<!-- EXCL needed -->
+					<synonym value="Levels"/> <!-- Disambiguate -->
 				</heading>
 				<heading id="MeasuringRodMeasure" title="Measuring Rod">
 					<synonym value="Measuring Rods"/>
@@ -11144,12 +11262,10 @@
 				</heading>
 				<heading id="ProtractorMeasure" title="Protractor" noMatch="true"/>
 				<heading id="QuadrantMeasure" title="Quadrant">
-					<synonym value="Quadrants"/>
-					<!-- EXCL needed -->
+					<synonym value="Quadrants"/> <!-- Disambiguate -->
 				</heading>
 				<heading id="RuleMeasure" title="Rule">
-					<synonym value="Rules"/>
-					<!-- EXCL needed -->
+					<synonym value="Rules"/> <!-- Disambiguate -->
 				</heading>
 				<heading id="SextantMeasure" title="Sextant">
 					<synonym value="Sextants"/>
@@ -11161,8 +11277,7 @@
 					<synonym value="Spring-Reels"/>
 				</heading>
 				<heading id="SquareMeasure" title="Square">
-					<synonym value="Squares"/>
-					<!-- EXCL needed -->
+					<synonym value="Squares"/> <!-- Disambiguate -->
 				</heading>
 				<heading id="SurveyInstrumentMeasure" title="Survey Instrument">
 					<synonym value="Survey Instruments"/>
@@ -11177,8 +11292,7 @@
 					<synonym value="Waywisers"/>
 				</heading>
 				<heading id="WeightMeasure" title="Weight">
-					<synonym value="Weights"/>
-					<!-- EXCL needed -->
+					<synonym value="Weights"/> <!-- Disambiguate -->
 				</heading>
 				<heading id="WindVaneMeasure" title="Wind-Vane">
 					<synonym value="Wind-Vanes"/>
