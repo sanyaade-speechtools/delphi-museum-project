@@ -96,52 +96,66 @@ public class MetaDataReader {
 		ArrayList<String> nextLine = null;
 		Pair<Integer,ArrayList<String>> returnValue = null;
 		boolean fMoreLines = true;
-		while( fMoreLines ) {
-			int id = -1;
-			if((nextLine = getNextLineAsColumns()) == null) {
-				fMoreLines = false;
-				// Handle case of empty file.
-				if( lastStrings.size() == 0 )
-					break;
-			} else {
-				// Look at new line and consider merging with previous
-				if(nextLine.get(objIDCol).length() == 0) {
-					debug(2,"Skipping line with empty id" );
-					continue;
-				}
-				id = Integer.parseInt(nextLine.get(objIDCol));
-				if( lastIDVal < 0 ) {
-					lastStrings.addAll(nextLine);
-					lastIDVal = id;
-					continue;
-				}
-				if( id == lastIDVal ) {
-					// Consider merging the two lines, but only for the columns we care about.
-					// Separate them by '|' chars to ensure we tokenize in next step
-					// Note that we always skip col 0, the ID column
-					for(int i=1; i<nCols; i++ ) {
-						String nextToken = nextLine.get(i);
-						if(nextToken.length()==0)	// If new token is empty ("") skip it
-							continue;
-						String last = lastStrings.get(i);
-						if(last.length()==0)		// If old token is empty (""), just set
-							lastStrings.set(i, nextLine.get(i));
-						else if(nextLine.get(i).equalsIgnoreCase(last)
-								|| last.contains(nextLine.get(i)))
-							continue;
-						else
-							lastStrings.set(i, last+"|"+nextLine.get(i));
-						debug(4,"Combining column["+i+"] for id: "+id+
-											" ["+lastStrings.get(i)+"]");
+		try {
+			while( fMoreLines ) {
+				int id = -1;
+				if((nextLine = getNextLineAsColumns()) == null) {
+					fMoreLines = false;
+					// Handle case of empty file or EOF.
+					if( lastStrings.size() == 0 )
+						break;
+				} else {
+					// Look at new line and consider merging with previous
+					if(nextLine.get(objIDCol).length() == 0) {
+						debug(2,"Skipping line with empty id" );
+						continue;
 					}
-					continue;
+					id = Integer.parseInt(nextLine.get(objIDCol));
+					if( lastIDVal < 0 ) {
+						lastStrings.addAll(nextLine);
+						lastIDVal = id;
+						continue;
+					}
+					if( id == lastIDVal ) {
+						// Consider merging the two lines, but only for the columns we care about.
+						// Separate them by '|' chars to ensure we tokenize in next step
+						// Note that we always skip col 0, the ID column
+						for(int i=1; i<nCols; i++ ) {
+							String nextToken = nextLine.get(i);
+							if(nextToken.length()==0)	// If new token is empty ("") skip it
+								continue;
+							String last = lastStrings.get(i);
+							if(last.length()==0)		// If old token is empty (""), just set
+								lastStrings.set(i, nextLine.get(i));
+							else if(nextLine.get(i).equalsIgnoreCase(last)
+									|| last.contains(nextLine.get(i)))
+								continue;
+							else
+								lastStrings.set(i, last+"|"+nextLine.get(i));
+							debug(4,"Combining column["+i+"] for id: "+id+
+												" ["+lastStrings.get(i)+"]");
+						}
+						continue;
+					}
 				}
+				// Have a full set of info for an object. Pass the lastStrings
+				returnValue = new Pair<Integer,ArrayList<String>>(lastIDVal, lastStrings);
+				lastIDVal = id;
+				if(nextLine != null) {
+					lastStrings = nextLine;
+				} else {
+					lastStrings = new ArrayList<String>();	// Next time in will see it empty
+				}
+				break;	// We have a return value, so break out of loop
 			}
-			// Have a full set of info for an object. Pass the lastStrings
-			returnValue = new Pair<Integer,ArrayList<String>>(lastIDVal, lastStrings);
-			lastIDVal = id;
-			lastStrings = nextLine;
+		} catch( Exception e ) {
+			String tmp = "MetaDataReader.getNextObjectAsColumns: Error encountered processing ID: " + lastIDVal
+				+"\n"+e.toString();
+			debug(1, tmp);
+            //debugTrace(2, e);
+			throw new RuntimeException( tmp );
 		}
+
 		return returnValue;
 	}
 
@@ -158,6 +172,7 @@ public class MetaDataReader {
 		boolean fAtEOL = false;
 		boolean fSeekQuote = false;
 		boolean fEscape = false;
+		boolean reported = false;
 		try {
 			while(reader.ready()){
 				fAtEOL = false;
@@ -195,6 +210,10 @@ public class MetaDataReader {
 					}
 				} // if fall through, just add the char
 				sb.append((char)ch);
+				if(sb.length() > 1000 && !reported) {
+					debug(1, "Warning: long token encountered: ["+sb.toString()+"]" );
+					reported = true;
+				}
 				fEscape = false;
 			}
 			// Deal with last line logic - if not at end of line but at EOF,
