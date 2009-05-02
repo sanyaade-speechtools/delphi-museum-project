@@ -66,11 +66,14 @@ public class DoubleHashTree {
 			if( name != null ) {
 				String hookL = name.toLowerCase();
 				TaxoNode old = hookMap.get(hookL);
-				if( old == null )
+				if( old == null ) {
 					hookMap.put( hookL, node );
-				else
-					debug( 1, "Duplicate hook:["+hookL+"] New node:["+node.name
-							+"] precluded by previous:["+old.name+"]");
+				} else if(node == old ) {
+					debug( 1, "Duplicate hook:["+hookL+"] on concept node:"+node.GetPathToNode());
+				} else {
+					debug( 1, "Duplicate hook:["+hookL+"] on concept:["+node.GetPathToNode()
+							+"] precluded by previous concept:["+old.GetPathToNode()+"]");
+				}
 			}
 		}
 	}
@@ -139,8 +142,12 @@ public class DoubleHashTree {
 
 	public TaxoNode FindNodeByHook( String facetName, String hook ) {
 		FacetInfo facet = facetsByName.get(facetName);
+		if(facet == null){
+			debug(1, "DoubleHashTree.FindNodeByHook: Unknown facet name specified: " + facetName);
+			return null;
+		}
 		// TODO This should be getting a CollationKey
-		return ( facet == null )? null:facet.hookMap.get(hook);
+		return facet.hookMap.get(hook);
 	}
 
 	public TaxoNode FindNodeByID( int id ) {
@@ -323,8 +330,8 @@ public class DoubleHashTree {
 		final String	idName = "id";
 		final String	impliesElName = "implies";
 		final String	isGuideName = "isGuide";
-		final String	noMatchName = "nomatch";
-		final String	asTokenName = "astoken";
+		final String	noMatchName = "noMatch";
+		final String	asTokenName = "asToken";
 		final String	combineName = "combine";
 		final String	synonymElName = "synonym";
 		final String	exclElName = "excl";
