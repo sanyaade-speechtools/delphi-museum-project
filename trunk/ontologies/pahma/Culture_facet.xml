@@ -2995,9 +2995,14 @@
 			</heading>
 			<heading id="MelanesianCulture" title="Melanesian">
 				<heading id="Fijian" title="Fijian">
-					<heading id="Indo-Fijian" title="Indo-Fijian">
-						<implies facet="Location" cat="FijiCountry"/>
-					</heading>
+					<synonym value="Fijians"/>
+					<implies facet="Location" cat="FijiCountry"/>
+				</heading>
+				<heading id="Indo-Fijian" title="Indo-Fijian">
+					<synonym value="Indo-Fijians"/>
+					<synonym value="IndoFijian"/>
+					<synonym value="IndoFijians"/>
+					<implies facet="Location" cat="FijiCountry"/>
 				</heading>
 				<heading id="NewCaledonian" title="New Caledonian">
 					<implies facet="Location" cat="NewCaledonia"/>
@@ -3091,6 +3096,10 @@
 				<heading id="NorfolkIslander" title="Norfolk Islander">
 					<synonym value="Norfolk Islanders"/>
 					<implies facet="Location" cat="NorfolkIsland"/>
+				</heading>
+				<heading id="Rotuman" title="Rotuman">
+					<synonym value="Rotumans"/>
+					<implies facet="Location" cat="RotumaIsland"/>
 				</heading>
 				<heading id="SolomonIslander" title="Solomon Islander">
 					<synonym value="Solomon Islanders"/>
