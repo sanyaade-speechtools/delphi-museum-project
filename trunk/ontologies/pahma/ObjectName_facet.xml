@@ -1847,7 +1847,7 @@
 							<!-- Check In OED -->
 						</heading>
 					</heading>
-					<heading id="PartsofswordsEdgWpn" title="Parts of Swords" noMatch="true">
+					<heading id="PartsofSwordsEdgWpn" title="Parts of Swords" noMatch="true">
 						<heading id="BladeEdgWpn" title="Blade" noMatch="true">
 							<synonym value="Sword Blade"/>
 							<synonym value="Sword Blades"/>
@@ -1893,6 +1893,16 @@
 				<synonym value="Propulsive Weapon"/>
 				<heading id="ArrowWeapon" title="Arrow">
 					<synonym value="Arrows"/>
+					<heading id="PartsofArrow" title="Parts of Arrow" noMatch="true">
+						<heading id="ArrowheadPointPart" title="Arrowpoints" noMatch="true"/>
+						<heading id="ArrowFletching" title="Fletching">
+							<synonym value="Fletchings"/>
+							<implies facet="Material" cat="Feathers"/>
+						</heading>
+						<heading id="ArrowShaft" title="Shaft" noMatch="true">
+							<synonym value="Arrow shaft"/>
+						</heading>
+					</heading>
 				</heading>
 				<heading id="AtlatlWeapon" title="Atlatl">
 					<synonym value="Atlatls"/>
@@ -2038,34 +2048,31 @@
 					<synonym value="Projectile Point"/>
 					<synonym value="Projective Point"/> <!-- Curious usage found in PAHMA cat. cards (e.g. 2-21633–21638, L-18707) -->
 					<synonym value="Projective Points"/>
-					<synonym value="Arrow Head"/>
-					<synonym value="Arrow Heads"/>
-					<synonym value="Arrow Point"/>
-					<synonym value="Arrow Points"/>
-					<synonym value="Arrow-Point"/>
-					<synonym value="Arrow-Points"/>
-					<synonym value="Arrowpoint"/>
-					<synonym value="Arrowpoints"/>
-					<synonym value="Arrowhead"/>
-					<synonym value="Arrowheads"/>
-					<heading id="BarbedAndTangedArrowhead" title="Barbed and Tanged Arrowhead"/>
-					<heading id="LeafArrowhead" title="Leaf Arrowhead"/>
-					<heading id="FlutedArrowhead" title="Fluted Arrowhead"/>
-					<heading id="StemmedArrowhead" title="Stemmed Arrowhead"/>
-					<heading id="ElkoArrowhead" title="Elko Arrowhead"/>
-					<heading id="GuntherArrowhead" title="Gunther Arrowhead"/>
-					<heading id="CottonwoodArrowhead" title="Cottonwood Arrowhead"/>
-					<heading id="DesertSideNotchedArrowhead" title="Desert Side Notched Arrowhead"/>
-					<heading id="MartisArrowhead" title="Martis Arrowhead"/>
-					<heading id="RoseSpringArrowhead" title="Rose Spring Arrowhead"/>
-					<heading id="MostinArrowhead" title="Mostin Arrowhead"/>
-					<heading id="BoraxLakeArrowhead" title="Borax Lake Arrowhead"/>					
-					<heading id="TransverseArrowhead" title="Transverse Arrowhead"/>
-					<heading id="Partsofarrow" title="Parts of Arrow" noMatch="true">
-						<heading id="Fletching" title="Fletching">
-							<synonym value="Fletchings"/>
-							<implies facet="Material" cat="Feathers"/>
-						</heading>
+					<heading id="ArrowheadsPoints" title="Arrowheads">
+						<synonym value="Arrow Head"/>
+						<synonym value="Arrow Heads"/>
+						<synonym value="Arrow Point"/>
+						<synonym value="Arrow Points"/>
+						<synonym value="Arrow-Point"/>
+						<synonym value="Arrow-Points"/>
+						<synonym value="Arrowpoint"/>
+						<synonym value="Arrowpoints"/>
+						<synonym value="Arrowhead"/>
+						<implies facet="ObjectName" cat="ArrowHeadPart"/>
+						<implies facet="ObjectName" cat="ArrowheadPointPart"/>
+						<heading id="BarbedAndTangedArrowhead" title="Barbed and Tanged Arrowhead"/>
+						<heading id="BoraxLakeArrowhead" title="Borax Lake Arrowhead"/>					
+						<heading id="CottonwoodArrowhead" title="Cottonwood Arrowhead"/>
+						<heading id="DesertSideNotchedArrowhead" title="Desert Side Notched Arrowhead"/>
+						<heading id="ElkoArrowhead" title="Elko Arrowhead"/>
+						<heading id="FlutedArrowhead" title="Fluted Arrowhead"/>
+						<heading id="GuntherArrowhead" title="Gunther Arrowhead"/>
+						<heading id="LeafArrowhead" title="Leaf Arrowhead"/>
+						<heading id="MartisArrowhead" title="Martis Arrowhead"/>
+						<heading id="MostinArrowhead" title="Mostin Arrowhead"/>
+						<heading id="RoseSpringArrowhead" title="Rose Spring Arrowhead"/>
+						<heading id="StemmedArrowhead" title="Stemmed Arrowhead"/>
+						<heading id="TransverseArrowhead" title="Transverse Arrowhead"/>
 					</heading>
 				</heading>
 				<heading id="SlingMilitary" title="Sling (Military)">
@@ -2955,13 +2962,7 @@
 		<synonym value="Components"/>
 		<synonym value="Part"/>
 		<synonym value="Parts"/>
-		<heading id="ArrowHeadPart" title="Arrowhead">
-			<synonym value="Arrowheads"/>
-			<synonym value="Arrow Head"/>
-			<synonym value="Arrow Heads"/>
-			<synonym value="Arrow-Head"/>
-			<synonym value="Arrow-Heads"/>
-		</heading>
+		<heading id="ArrowHeadPart" title="Arrowhead" noMatch="true"/>
 		<heading id="BackplatePart" title="Backplate">
 			<synonym value="Backplates"/>
 			<!-- EXCL armor? -->
@@ -2973,12 +2974,6 @@
 			<synonym value="Battery Plates"/>
 			<synonym value="Battery-Plate"/>
 			<synonym value="Battery-Plates"/>
-		</heading>
-		<!-- <heading id="BladePart" title="Blade">
-			<synonym value="Blades"/>
-		</heading> -->
-		<heading id="BossPart" title="Boss">
-			<synonym value="Bosses"/>
 		</heading>
 		<heading id="BowStringPart" title="Bow String">
 			<synonym value="Bow Strings"/>
@@ -3019,9 +3014,6 @@
 		<heading id="HandlePart" title="Handle">
 			<synonym value="Handles"/>
 		</heading>
-		<heading id="HiltPart" title="Hilt">
-			<synonym value="Hilts"/>
-		</heading>
 		<heading id="HubPart" title="Hub">
 			<synonym value="Hubs"/>
 		</heading>
@@ -3051,9 +3043,6 @@
 		</heading>
 		<heading id="PivotPart" title="Pivot">
 			<synonym value="Pivots"/>
-		</heading>
-		<heading id="PommelPart" title="Pommel">
-			<synonym value="Pommels"/>
 		</heading>
 		<heading id="ProngPart" title="Prong">
 			<synonym value="Prongs"/>
@@ -3096,9 +3085,6 @@
 		</heading>
 		<heading id="SwivelPart" title="Swivel">
 			<synonym value="Swivels"/>
-		</heading>
-		<heading id="TangPart" title="Tang">
-			<synonym value="Tangs"/>
 		</heading>
 		<heading id="TerminalPart" title="Terminal">
 			<synonym value="Terminals"/>
@@ -4458,21 +4444,17 @@
 				<synonym value="Cod-Pieces"/>
 			</heading>
 			<heading id="Dresses" title="Dresses">
-				<synonym value="Dress"/>
-				<!-- Exclude The Verb (Both Clothing & Butchery) -->
-				<heading id="Kimono" title="Kimono">
+				<synonym value="Dress"/> <!-- Exclude The Verb (Both Clothing & Butchery) -->
+				<heading id="KimonoDress" title="Kimono">
 					<synonym value="Kimonos"/>
 				</heading>
-				<heading id="Sari" title="Sari">
+				<heading id="SariDress" title="Sari">
 					<synonym value="Saris"/>
 				</heading>
-				<heading id="Skirt" title="Skirt">
-					<!-- Might Be Confused With The Frilly Bit Around A Mattress, Hovercraft, Or Christmas Tree -->
+				<heading id="SkirtDress" title="Skirt"> <!-- Might Be Confused With The Frilly Bit Around A Mattress, Hovercraft, Or Christmas Tree -->
 					<synonym value="Skirts"/>
-					<implies facet="ObjectName" cat="SkirtLowerBody"/>
 				</heading>
-				<heading id="Weddingdress" title="Wedding Dress">
-					<!-- Card For 7-6432 -->
+				<heading id="WeddingDress" title="Wedding Dress"> <!-- Card For 7-6432 -->
 					<synonym value="Wedding Dresses"/>
 					<implies facet="ActivityorContext" cat="BridalAdornment"/>
 				</heading>
@@ -4631,9 +4613,6 @@
 			</heading>
 			<heading id="ShoulderGarmentGarment" title="Shoulder-Garment">
 				<synonym value="Shoulder-Garments"/>
-			</heading>
-			<heading id="SkirtGarment" title="Skirt">
-				<synonym value="Skirts"/>
 			</heading>
 			<heading id="SleeveGarment" title="Sleeve">
 				<synonym value="Sleeves"/>
