@@ -3784,9 +3784,7 @@
 						<implies facet="ActivityorContext" cat="WineDrinking"/>
 					</heading>
 				</heading>
-				<heading id="Rhyton" title="Rhyton">
-					<synonym value="Rhytons"/>
-				</heading>
+				<heading id="RhytonCup" title="Rhyton" noMatch="true"/>
 				<heading id="Stein" title="Stein">
 					<synonym value="Steins"/>
 				</heading>
@@ -6564,9 +6562,7 @@
 				<heading id="PlaceMat" title="Place-Mat">
 					<synonym value="Place-Mats"/>
 				</heading>
-				<heading id="PrayerMat" title="Prayer-Mat">
-					<synonym value="Prayer-Mats"/>
-				</heading>
+				<heading id="PrayerMatMats" title="Prayer Mat" noMatch="true"/>
 				<heading id="SleepingMat" title="Sleeping-Mat">
 					<synonym value="Sleeping-Mats"/>
 				</heading>
@@ -8068,7 +8064,7 @@
 					<synonym value="Anklungs"/>
 				</heading>
 				<heading id="BanglePercussion" title="Bangle" noMatch="true"/>
-				<heading id="Beater" title="Beater"> <!-- beaters/sticks exclusively not intended for drum use. Does not include seed beaters, drums -->
+				<heading id="BeaterMusical" title="Beater"> <!-- beaters/sticks exclusively not intended for drum use. Does not include seed beaters, drums -->
 					<synonym value="Beaters"/>
 					<synonym value="Rhythym Stick"/>
 					<synonym value="Rhythym Sticks"/>
@@ -10244,6 +10240,7 @@
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 			<implies facet="ObjectName" cat="PrayerRugRugPatterns"/>
 			<implies facet="ObjectName" cat="PrayerRugTextiles"/>
+			<implies facet="ObjectName" cat="PrayerMatMats"/>
 		</heading>
 		<heading id="PrayerWheelRelRit" title="Prayer Wheel">
 			<synonym value="Prayer Wheels"/>
@@ -10289,9 +10286,6 @@
 		<heading id="DrugSamples" title="Drugs" noMatch="true"/>
 		<heading id="Dye" title="Dye">
 			<synonym value="Dyes"/>
-		</heading>
-		<heading id="Enema" title="Enema">
-			<synonym value="Enemas"/>
 		</heading>
 		<heading id="Fossil" title="Fossil">
 			<synonym value="Fossils"/>
@@ -11976,6 +11970,7 @@
 			</heading>
 			<heading id="RhytonAlcEq" title="Rhyton">
 				<synonym value="Rhytons"/>
+				<implies facet="ObjectName" cat="RhytonCup"/>
 			</heading>
 			<heading id="RummerAlcEq" title="Rummer">
 				<synonym value="Rummers"/>
@@ -12160,7 +12155,7 @@
 			<implies facet="ObjectName" cat="CoffeeFood"/>
 			<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
 			<implies facet="ActivityorContext" cat="FoodPreparation"/>
-			<heading id="CoffeeCanCfeEq" title="Coffee-Can">
+			<heading id="CoffeeCanCfeEq" title="Coffee Can">
 				<synonym value="Coffee Cans"/>
 				<synonym value="Coffee-Can"/>
 				<synonym value="Coffee-Cans"/>
@@ -13235,9 +13230,9 @@
 		<heading id="BatTool" title="Bat">
 			<synonym value="Bats"/>
 		</heading>
-		<heading id="BeaterTool" title="Beater">
+		<!-- <heading id="BeaterTool" title="Beater">
 			<synonym value="Beaters"/>
-		</heading>
+		</heading> -->
 		<heading id="BeatingBoardTool" title="Beating-Board">
 			<synonym value="Beating-Boards"/>
 		</heading>
