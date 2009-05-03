@@ -3222,8 +3222,14 @@
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 		</heading>
-		<heading id="Bath" title="Bath">
+		<heading id="Bathtub" title="Bathtub">
+			<synonym value="Bath"/>
 			<synonym value="Baths"/>
+			<synonym value="Bathtubs"/>
+			<synonym value="Bath Tub"/>
+			<synonym value="Bath Tubs"/>
+			<synonym value="Bath-Tub"/>
+			<synonym value="Bath-Tubs"/>
 		</heading>
 		<heading id="Bin" title="Bin">
 			<synonym value="Bins"/>
@@ -3294,7 +3300,7 @@
 			</heading>
 		</heading>
 		<heading id="BrushCntnrCntnr" title="Brush Container" noMatch="true"/>
-		<heading id="CanContainer" title="Can"> <!-- Disambiguate -->
+		<heading id="CanContainer" title="Can" noMatch="true"> <!-- Disambiguate -->
 			<synonym value="Cans"/>
 			<synonym value="Tins"/>
 			<excl value="Watering Can"/>
@@ -3743,9 +3749,7 @@
 					<implies facet="ActivityorContext" cat="Drinking"/>
 					<implies facet="ObjectName" cat="ChaliceAlcEq"/>
 				</heading>
-				<heading id="Goblet" title="Goblet">
-					<synonym value="Goblets"/>
-				</heading>
+				<heading id="GobletCup" title="Goblet" noMatch="true"/>
 				<heading id="Kotyle" title="Kotyle">
 					<heading id="Kylix" title="Kylix">
 						<synonym value="κύλιξ"/>
@@ -4230,7 +4234,7 @@
 					<synonym value="Yis"/>
 					<implies facet="ObjectName" cat="VesselContainer"/>
 				</heading>
-				<heading id="YouRelRegVes" title="You">
+				<heading id="YouRelRegVes" title="You" noMatch="true"> <!-- Disambiguate from the pronoun -->
 					<synonym value="Yous"/>
 				</heading>
 				<heading id="ZhaDouRelRegVes" title="Zha Dou">
@@ -4294,10 +4298,6 @@
 				<synonym value="Tea Pot"/>
 				<synonym value="Tea Pots"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
-			</heading>
-			<heading id="ToiletVessel" title="Toilet-Vessel">
-				<synonym value="Toilet-Vessels"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
 			<heading id="TrayVsl" title="Tray" noMatch="true"/>
@@ -7085,6 +7085,7 @@
 			<synonym value="Eye Baths"/>
 			<synonym value="Eye-Bath"/>
 			<synonym value="Eye-Baths"/>
+			<implies facet="ObjectName" cat="EyeBathTreatment"/>
 		</heading>
 		<heading id="FingerStallRx" title="Finger Stall">
 			<synonym value="Finger Stalls"/>
@@ -9498,8 +9499,16 @@
 			<heading id="HeadLcktJwlryPrsOrn" title="Head Lockets">
 				<synonym value="Head Locket"/>
 				<implies facet="ObjectName" cat="LocketJeweleryPrsOrn"/>
-				<heading id="MaangtikaJeweleryPrsOrn" title="Maangtika">
+				<heading id="MaangtikaBridalLocket" title="Mangtika (Bridal Locket)">
+					<synonym value="Bridal Locket"/>
+					<synonym value="Bridal Lockets"/>
+					<synonym value="Maangtika"/>
+					<synonym value="Maangtikas"/>
 					<synonym value="Mangtika"/>
+					<synonym value="Mangtikas"/>
+					<synonym value="Mang Tika"/>
+					<synonym value="Mang Tikas"/>
+					<implies facet="ActivityorContext" cat="BridalAdornment"/>
 				</heading>
 			</heading>
 			<heading id="MenatJeweleryPrsOrn" title="Menat">
@@ -10059,9 +10068,7 @@
 		<heading id="LawWheelRelRit" title="Law-Wheel">
 			<synonym value="Law-Wheels"/>
 		</heading>
-		<heading id="LingaRelRit" title="Linga">
-			<synonym value="Lingas"/>
-		</heading>
+		<heading id="LingaRelRit" title="Linga" noMatch="true"/>
 		<heading id="LonGyiRelRit" title="Lon-Gyi">
 			<synonym value="Lon-Gyis"/>
 		</heading>
@@ -11639,6 +11646,7 @@
 		</heading>
 		<heading id="LingaSculpture" title="Linga">
 			<synonym value="Lingas"/>
+			<implies facet="ObjectName" cat="LingaRelRit"/>
 		</heading>
 		<heading id="Monuminscription" title="Monumental Inscription" noMatch="true"/>
 		<heading id="OkimonoSculpt" title="Okimono">
@@ -11832,6 +11840,7 @@
 			</heading>
 			<heading id="GobletAlcEq" title="Goblet">
 				<synonym value="Goblets"/>
+				<implies facet="ObjectName" cat="GobletCup"/>
 			</heading>
 			<heading id="LiqueurGlass" title="Liqueur Glass">
 				<synonym value="Liqueur Glasses"/>
@@ -12804,8 +12813,7 @@
 			<heading id="WallHanging" title="Wall-Hanging">
 				<implies facet="ObjectName" cat="Wall-Cover"/> <!-- Check -->
 				<implies facet="ObjectName" cat="Wall-Ornament"/> <!-- Check -->
-				<heading id="Kalaga" title="Kalaga">
-					<!-- The Term Refers To A Burmese Wall-Hanging, Or Curtain, Often Made of A Mixture of Local And Imported Materials. -->
+				<heading id="Kalaga" title="Kalaga"> <!-- The term refers to a Burmese wall-hanging, or curtain, often made of a mixture of local and imported materials. -->
 					<synonym value="Kalagas"/>
 				</heading>
 			</heading>
@@ -12815,8 +12823,7 @@
 		</heading>
 		<heading id="Sampler" title="Sampler"> <!-- Done -->
 			<synonym value="Samplers"/>
-			<implies facet="ActivityorContext" cat="NeedleWork"/>
-			<!-- Check -->
+			<implies facet="ActivityorContext" cat="NeedleWork"/> <!-- Check -->
 		</heading>
 		<heading id="Tapestry" title="Tapestry"> <!-- Done -->
 			<synonym value="Tapestries"/>
@@ -12825,11 +12832,9 @@
 	</heading>
 	<heading id="ToiletriesCosmetics" title="Toiletries &amp; Cosmetics">
 		<synonym value="Toilet/Cosmetic Equipment"/>
-		<heading id="Bath" title="Bath">
-			<heading id="EyeBath" title="Eye-Bath">
-				<synonym value="Eye-Baths"/>
-			</heading>
-			<heading id="FootBath" title="Foot-Bath">
+		<heading id="Bath" title="Bath" noMatch="true"> <!-- This needs a better name -->
+			<heading id="EyeBathTreatment" title="Eye Bath" noMatch="true"/>
+			<heading id="FootBath" title="Foot Bath">
 				<synonym value="Foot-Baths"/>
 			</heading>
 		</heading>
@@ -13092,7 +13097,9 @@
 				<synonym value="Wig-Pins"/>
 			</heading>
 		</heading>
-		<heading id="ToiletVessel" title="Toilet-Vessel">
+		<heading id="ToiletVessel" title="Toilet Vessel">
+			<synonym value="Toilet Vessels"/>
+			<synonym value="Toilet-Vessel"/>
 			<synonym value="Toilet-Vessels"/>
 			<implies facet="ObjectName" cat="VesselContainer"/>
 		</heading>
