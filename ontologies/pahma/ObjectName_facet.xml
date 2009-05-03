@@ -433,8 +433,28 @@
 		</heading>
 		<heading id="HuntingEquipmentHuntEq" title="Hunting Equipment">
 			<synonym value="Hunting Items"/>
-			<heading id="BirdCallHuntEq" title="Bird-Call">
-				<synonym value="Bird-Calls"/>
+			<heading id="AnimalCallsHuntEq" title="Animal Calls">
+				<synonym value="Animal Call"/>
+				<synonym value="Animal-Call"/>
+				<synonym value="Animal-Calls"/>
+				<heading id="BirdCallHuntEq" title="Bird-Call">
+					<synonym value="Bird-Calls"/>
+				</heading>
+				<heading id="DeerCallHuntEq" title="Deer-Call">
+					<synonym value="Deer-Calls"/>
+				</heading>
+				<heading id="FalconWhistleHuntEq" title="Falcon-Whistle">
+					<synonym value="Falcon-Whistles"/>
+				</heading>
+				<heading id="FrogCallHuntEq" title="Frog-Call">
+					<synonym value="Frog-Calls"/>
+				</heading>
+				<heading id="MooseCallHuntEq" title="Moose-Call">
+					<synonym value="Moose-Calls"/>
+				</heading>
+				<heading id="ReindeerCallHuntEq" title="Reindeer-Call">
+					<synonym value="Reindeer-Calls"/>
+				</heading>
 			</heading>
 			<heading id="BirdTrapWeightHuntEq" title="Bird-Trap-Weight">
 				<synonym value="Bird-Trap-Weights"/>
@@ -446,24 +466,10 @@
 				<synonym value="Blowpipe"/>
 				<synonym value="Blowpipes"/>
 			</heading>
-			<heading id="BolasHuntEq" title="Bolas">
-				<synonym value="Bola"/>
-			</heading>
-			<heading id="BolasWeightHuntEq" title="Bolas-Weight">
-				<synonym value="Bolas-Weights"/>
-			</heading>
+			<heading id="BolasHuntEq" title="Bolas" noMatch="true"/>
 			<heading id="BrailHuntEq" title="Brail" noMatch="true"/>
-			<heading id="DeerCallHuntEq" title="Deer-Call">
-				<synonym value="Deer-Calls"/>
-			</heading>
-			<heading id="FalconWhistleHuntEq" title="Falcon-Whistle">
-				<synonym value="Falcon-Whistles"/>
-			</heading>
 			<heading id="FloatPlugHuntEq" title="Float-Plug">
 				<synonym value="Float-Plugs"/>
-			</heading>
-			<heading id="FrogCallHuntEq" title="Frog-Call">
-				<synonym value="Frog-Calls"/>
 			</heading>
 			<heading id="HarpoonHuntingEq" title="Harpooning Equipment">
 				<implies facet="ActivityorContext" cat="HarpooningFishing"/>
@@ -544,18 +550,13 @@
 			<heading id="LassoHuntEq" title="Lasso">
 				<synonym value="Lassos"/>
 				<synonym value="Lassoes"/>
+				<!-- Implies Rope -->
 			</heading>
 			<heading id="LureHuntEq" title="Lure">
 				<synonym value="Lures"/>
 			</heading>
-			<heading id="MooseCallHuntEq" title="Moose-Call">
-				<synonym value="Moose-Calls"/>
-			</heading>
 			<heading id="NetWeightHuntEq" title="Net-Weight">
 				<synonym value="Net-Weights"/>
-			</heading>
-			<heading id="ReindeerCallHuntEq" title="Reindeer-Call">
-				<synonym value="Reindeer-Calls"/>
 			</heading>
 			<heading id="SealDragHuntEq" title="Seal-Drag">
 				<synonym value="Seal-Drags"/>
@@ -571,17 +572,19 @@
 				<synonym value="Seal-Indicators"/>
 				<implies facet="ObjectName" cat="SealIndicatorComm"/>
 			</heading>
-			<heading id="SpearGunHuntEq" title="Spear-Gun">
-				<synonym value="Spear-Guns"/>
-			</heading>
-			<heading id="ThrowingWeaponHuntEq" title="Throwing-Weapon">
+			<heading id="SpearGunHuntEq" title="Spear Gun" noMatch="true"/>
+			<heading id="ThrowingWeaponHuntEq" title="Throwing Weapon">
+				<synonym value="Throwing Weapons"/>
+				<synonym value="Throwing-Weapon"/>
 				<synonym value="Throwing-Weapons"/>
 			</heading>
 			<heading id="TrapHuntEq" title="Trap">
 				<synonym value="Traps"/>
 			</heading>
 			<heading id="VervelHuntEq" title="Vervel" noMatch="true"/>
-			<heading id="WoundPlugHuntEq" title="Wound-Plug">
+			<heading id="WoundPlugHuntEq" title="Wound Plug">
+				<synonym value="Wound Plugs"/>
+				<synonym value="Wound-Plug"/>
 				<synonym value="Wound-Plugs"/>
 			</heading>
 		</heading>
@@ -1289,12 +1292,56 @@
 		<synonym value="Arms/Armour"/>
 		<!-- The British Museum notes: for associated equipment, see arms equipment. -->
 		<heading id="AegisArmsArmor" title="Aegis"/>
-		<heading id="ArchersLoose" title="Archer's Loose">
-			<synonym value="Archers Loose"/>
-			<synonym value="Archers' Loose"/>
-			<synonym value="Archer's Looses"/>
-			<synonym value="Archers' Looses"/>
-			<synonym value="Archers Looses"/>
+		<heading id="AmmunitionAmmo" title="Ammunition">
+			<synonym value="Ammo"/>
+			<synonym value="Ammunitions"/>
+			<synonym value="Munition"/>
+			<synonym value="Munitions"/>
+			<heading id="ArmorPiercingShellAmmo" title="Armorpiercing Shell">
+				<synonym value="Armorpiercing Shells"/>
+				<synonym value="Armor-Piercing Shell"/>
+				<synonym value="Armor-Piercing Shells"/>
+			</heading>
+			<heading id="Bullet" title="Bullet">
+				<synonym value="Bullets"/>
+			</heading>
+			<heading id="CanisterShot" title="Canister (Shot)">
+				<synonym value="Canister"/>
+				<synonym value="Canisters"/>
+			</heading>
+			<heading id="CannonBall" title="Cannon Ball">
+				<synonym value="Cannon Balls"/>
+				<synonym value="Cannon-Ball"/>
+				<synonym value="Cannon-Balls"/>
+				<synonym value="Cannonball"/>
+				<synonym value="Cannonballs"/>
+			</heading>
+			<heading id="Cartridge" title="Cartridge">
+				<synonym value="Cartridges"/>
+			</heading>
+			<heading id="Grapeshot" title="Grape Shot">
+				<synonym value="Grape Shots"/> <!-- Improper plural form -->
+				<synonym value="Grape-Shot"/>
+				<synonym value="Grape-Shots"/> <!-- Improper plural form -->
+				<synonym value="Grapeshot"/>
+				<synonym value="Grapeshots"/> <!-- Improper plural form -->
+			</heading>
+			<heading id="Musketball" title="Musket Ball">
+				<synonym value="Musket Balls"/>
+				<synonym value="Musketball"/>
+				<synonym value="Musketballs"/>
+			</heading>
+			<heading id="Powderhorn" title="Powder Horn">
+				<synonym value="Powder Horns"/>
+				<synonym value="Powder-Horn"/>
+				<synonym value="Powder-Horns"/>
+			</heading>
+			<heading id="Primer" title="Primer">
+				<synonym value="Primers"/>
+			</heading>
+			<heading id="Shot" title="Shot"> <!-- Disambiguate -->
+				<synonym value="Shots"/>
+			</heading>
 		</heading>
 		<heading id="Armor" title="Armor">
 			<synonym value="Armour"/>
@@ -1535,65 +1582,7 @@
 				<synonym value="Vambraces"/>
 			</heading>
 		</heading>
-		<heading id="ArmsEquipment" title="Arms Equipment"/>
-		<heading id="ArrowThrower" title="Arrow Thrower">
-			<synonym value="Arrow Throwers"/>
-			<synonym value="Arrow-Thrower"/>
-			<synonym value="Arrow-Throwers"/>
-		</heading>
-		<heading id="GunFlint" title="Gun Flint">
-			<synonym value="Gun Flints"/>
-			<synonym value="Gun-Flint"/>
-			<synonym value="Gun-Flints"/>
-			<synonym value="Gunflint"/>
-			<synonym value="Gunflints"/>
-		</heading>
-		<heading id="GunnersKey" title="Gunner's Key">
-			<synonym value="Gunners' Key"/>
-			<synonym value="Gunners Key"/>
-			<synonym value="Gunner's Keys"/>
-			<synonym value="Gunners' Keys"/>
-			<synonym value="Gunners Keys"/>
-		</heading>
-		<heading id="GunneryInstrArma" title="Gunnery Instrument" noMatch="true"/>
-		<heading id="Koshirae" title="Koshirae"/> <!-- Japanese Sword mount/furniture (but wearable?) -->
-		<heading id="Linstock" title="Linstock">
-			<synonym value="Linstocks"/>
-		</heading>
-		<heading id="Munitions" title="Munitions">
-			<synonym value="Munition"/>
-			<synonym value="Ammunition"/>
-			<heading id="Armorpiercingshell" title="Armorpiercing Shell">
-				<synonym value="Armor-Piercing Shell"/>
-				<synonym value="Armor-Piercing Shells"/>
-			</heading>
-			<heading id="Arrow" title="Arrow">
-				<synonym value="Arrows"/>
-			</heading>
-			<heading id="Bullet" title="Bullet">
-				<synonym value="Bullets"/>
-			</heading>
-			<heading id="Cannonball" title="Cannon Ball">
-				<synonym value="Cannon Balls"/>
-			</heading>
-			<heading id="Grapeshot" title="Grape Shot">
-				<synonym value="Grapeshot"/>
-			</heading>
-			<heading id="Musketball" title="Musket Ball">
-				<synonym value="Musket Balls"/>
-				<synonym value="Musketball"/>
-				<synonym value="Musketballs"/>
-			</heading>
-			<heading id="Powderhorn" title="Powder Horn">
-				<synonym value="Powder Horns"/>
-			</heading>
-		</heading>
-		<heading id="Primer" title="Primer"/>
-		<heading id="Ramrod" title="Ramrod"/>
-		<heading id="SheathArmmnt" title="Sheath">
-			<synonym value="Sheaths"/>
-			<implies facet="ObjectName" cat="SheathEdgWpn"/>
-		</heading>
+		<!-- <heading id="ArmsEquipment" title="Arms Equipment"/> -->
 		<heading id="Shield" title="Shield">
 			<synonym value="Shields"/>
 			<excl value="Goldweight"/>
@@ -1608,9 +1597,6 @@
 		</heading>
 		<heading id="ShieldStrengthener" title="Shield-Strengthener">
 			<synonym value="Shield-Strengtheners"/>
-		</heading>
-		<heading id="SwordRack" title="Sword-Rack">
-			<synonym value="Sword-Racks"/>
 		</heading>
 		<heading id="ThumbRing" title="Thumb-Ring">
 			<synonym value="Thumb-Rings"/>
@@ -1649,7 +1635,7 @@
 		</heading>
 		<heading id="Weapons" title="Weapons"> <!-- An object used in combat to attack or cause damage to an opponent. -->
 			<synonym value="Weapon"/>
-			<heading id="Bluntweapons" title="Blunt Weapons">
+			<heading id="BluntWeapons" title="Blunt Weapons">
 				<synonym value="Blunt Weapon"/>
 				<synonym value="Percussive Weapon"/>
 				<synonym value="Percussive Weapons"/>
@@ -1683,7 +1669,7 @@
 					<synonym value="Warhammers"/>
 				</heading>
 			</heading>
-			<heading id="Edgedweapons" title="Edged Weapons">
+			<heading id="EdgedWeapons" title="Edged Weapons">
 				<heading id="BarongEdgWpn" title="Barong">
 					<synonym value="Barongs"/>
 				</heading>
@@ -1699,9 +1685,6 @@
 						<synonym value="Socket Bayonets"/>
 					</heading>
 					<implies facet="ActivityorContext" cat="Metallurgy"/>
-				</heading>
-				<heading id="BladeEdgWpn" title="Blade">
-					<synonym value="Blades"/>
 				</heading>
 				<heading id="DaggerEdgWpn" title="Dagger">
 					<synonym value="Daggers"/>
@@ -1733,15 +1716,6 @@
 					<synonym value="Parangs"/>
 					<implies facet="ActivityorContext" cat="Metallurgy"/>
 				</heading>
-				<heading id="PikeEdgWpn" title="Pike">
-					<synonym value="Pikes"/>
-					<excl value="Fish"/>
-					<!-- Trying To Exclude The Fish Sense of Pike.  Needs Work. -->
-				</heading>
-				<heading id="ScabbardEdgWpn" title="Scabbard">
-					<synonym value="Scabbards"/>
-				</heading>
-				<heading id="SheathEdgWpn" title="Sheath" noMatch="true"/>
 				<heading id="StaffWeaponEdgWpn" title="Staff Weapon">
 					<synonym value="Pole Weapon"/>
 					<synonym value="Pole Weapons"/>
@@ -1766,29 +1740,23 @@
 					<heading id="HalberdEdgWpn" title="Halberd">
 						<synonym value="Halberds"/>
 					</heading>
+					<heading id="LanceEdgWpn" title="Lance">
+						<synonym value="Lances"/>
+					</heading>
 					<heading id="NaginataEdgWpn" title="Naginata">
 						<synonym value="Naginatas"/>
 						<implies facet="Location" cat="JapanCountry"/>
 					</heading>
+					<heading id="PikeEdgWpn" title="Pike">
+						<synonym value="Pikes"/>
+						<excl value="Fish"/> <!-- Trying to disambiguate from the fish sense of pike.  Needs work. -->
+					</heading>
 					<heading id="PoleAxeEdgWpn" title="Pole Axe">
 						<synonym value="Pole Axes"/>
 					</heading>
-					<heading id="SpearEdgWpn" title="Spear">
-						<synonym value="Spears"/>
-						<implies facet="ObjectName" cat="SpearWeaponPrjWpn"/>
-						<heading id="JavelinEdgWpn" title="Javelin"> <!-- A long spear designed to be thrown in order to injure or kill a given target. -->
-							<synonym value="Javelins"/>
-							<implies facet="ObjectName" cat="JavelinPrjWpn"/>
-							<heading id="AngonEdgWpn" title="Angon">
-								<synonym value="Angons"/>
-								<implies facet="ObjectName" cat="AngonPrjWpn"/>
-							</heading>
-						</heading>
-						<heading id="LanceEdgWpn" title="Lance">
-							<synonym value="Lances"/>
-						</heading>
-						<heading id="PikeEdgWpn" title="Pike">
-							<synonym value="Pikes"/>
+					<heading id="SpearEdgWpn" title="Spear" noMatch="true">
+						<heading id="JavelinEdgWpn" title="Javelin" noMatch="true">
+							<heading id="AngonEdgWpn" title="Angon" noMatch="true"/>
 						</heading>
 					</heading>
 					<heading id="TridentEdgWpn" title="Trident">
@@ -1838,8 +1806,7 @@
 						<heading id="SeaxEdgWpn" title="Seax"/>
 						<heading id="ShortswordEdgWpn" title="Short Sword">
 							<synonym value="Short Swords"/>
-							<heading id="SaxswordEdgWpn" title="Sax"/>
-							<!-- Check In OED -->
+							<heading id="SaxswordEdgWpn" title="Sax"/> <!-- Check in OED -->
 						</heading>
 					</heading>
 					<heading id="PartsofSwordsEdgWpn" title="Parts of Swords" noMatch="true">
@@ -1850,6 +1817,8 @@
 							<synonym value="Blades, Sword"/>
 							<synonym value="Blades Swords"/>
 							<synonym value="Kampilan"/>
+							<synonym value="Kampilans"/>
+							<implies facet="ObjectName" cat="BladeEdgWpn"/>
 						</heading>
 						<heading id="HiltEdgWpn" title="Hilt">
 							<synonym value="Hilts"/>
@@ -1859,8 +1828,12 @@
 						</heading>
 						<heading id="SwordguardEdgWpn" title="Sword Guard">
 							<synonym value="Sword Guards"/>
+							<synonym value="Sword-Guard"/>
+							<synonym value="Sword-Guards"/>
+							<synonym value="Swordguard"/>
 							<synonym value="Swordguards"/>
 							<synonym value="Tsuba"/>
+							<synonym value="Tsubas"/>
 						</heading>
 						<heading id="TangEdgWpn" title="Tang">
 							<synonym value="Tangs"/>
@@ -1876,31 +1849,70 @@
 						<implies facet="ObjectName" cat="FranciscaPrjctl"/>
 					</heading>
 				</heading>
+				<heading id="EdgedWeaponGear" title="[Related gear]" noMatch="true">
+					<heading id="BladeEdgWpn" title="Blade">
+						<synonym value="Blades"/>
+					</heading>
+					<heading id="Koshirae" title="Koshirae"/> <!-- Japanese Sword mount/furniture (also wearable?) -->
+					<heading id="ScabbardEdgWpn" title="Scabbard">
+						<synonym value="Scabbards"/>
+					</heading>
+					<heading id="SheathArmmnt" title="Sheath">
+						<synonym value="Sheaths"/>
+					</heading>
+					<heading id="SwordRack" title="Sword Rack">
+						<synonym value="Sword Racks"/>
+						<synonym value="Sword-Rack"/>
+						<synonym value="Sword-Racks"/>
+					</heading>
+				</heading>
 			</heading>
-			<heading id="ExplosiveWeapon" title="Explosive Weapon">
-				<heading id="Bomb" title="Bomb"/>
-				<heading id="Grenade" title="Grenade"/>
-				<heading id="LandMine" title="Land Mine"/>
+			<heading id="ExplosiveWeapons" title="Explosive Weapon">
+				<heading id="BombExplWpn" title="Bomb">
+					<synonym value="Bombs"/>
+				</heading>
+				<heading id="GrenadeExplWpn" title="Grenade">
+					<synonym value="Grenades"/>
+				</heading>
+				<heading id="LandMineExplWpn" title="Land Mine">
+					<synonym value="Land Mines"/>
+				</heading>
+				<heading id="ExplsvWeaponGear" title="[Related gear]" noMatch="true">
+					<heading id="FuseExplWpn" title="Fuse">
+						<synonym value="Fuses"/>
+						<synonym value="Fuze"/>
+						<synonym value="Fuzes"/>
+					</heading>
+					<heading id="ShrapnelExplWpn" title="Shrapnel">
+						<synonym value="Shrapnels"/> <!-- Improper plural form -->
+					</heading>
+				</heading>
 			</heading>
 			<heading id="PropulsiveWeapons" title="Propulsive Weapons">
 				<synonym value="Projectile Weapon"/>
 				<synonym value="Projectile Weapons"/>
 				<synonym value="Propulsive Weapon"/>
-				<heading id="ArrowWeapon" title="Arrow">
-					<synonym value="Arrows"/>
-					<heading id="PartsofArrow" title="Parts of Arrow" noMatch="true">
-						<heading id="ArrowheadPointPart" title="Arrowpoints" noMatch="true"/>
-						<heading id="ArrowFletching" title="Fletching">
-							<synonym value="Fletchings"/>
-							<implies facet="Material" cat="Feathers"/>
-						</heading>
-						<heading id="ArrowShaft" title="Shaft" noMatch="true">
-							<synonym value="Arrow shaft"/>
-						</heading>
-					</heading>
+				<heading id="ArchersLoose" title="Archer's Loose">
+					<synonym value="Archers Loose"/> <!-- Misspelling -->
+					<synonym value="Archers' Loose"/> <!-- Misspelling -->
+					<synonym value="Archer's Looses"/>
+					<synonym value="Archers' Looses"/>
+					<synonym value="Archers Looses"/> <!-- Misspelling -->
 				</heading>
-				<heading id="AtlatlWeapon" title="Atlatl">
-					<synonym value="Atlatls"/>
+				<heading id="ArrowThrower" title="Arrow Thrower">
+					<synonym value="Arrow Throwers"/>
+					<synonym value="Arrow-Thrower"/>
+					<synonym value="Arrow-Throwers"/>
+				</heading>
+				<heading id="BolasPrjWpn" title="Bolas">
+					<synonym value="Bola"/>
+					<implies facet="ObjectName" cat="BolasHuntEq"/>
+					<implies facet="ObjectName" cat="BolasProjectile"/>
+					<heading id="BolasWeightHuntEq" title="Bolas Weight">
+						<synonym value="Bolas Weights"/>
+						<synonym value="Bolas-Weight"/>
+						<synonym value="Bolas-Weights"/>
+					</heading>
 				</heading>
 				<heading id="BlowpipeWeapon" title="Blowpipe (Weapon)"/>
 				<heading id="BowWeapon" title="Bow (Weapon)">
@@ -1973,33 +1985,17 @@
 				</heading>
 				<heading id="Projectile" title="Projectiles">
 					<synonym value="Projectile"/>
-					<heading id="Ammunition" title="Ammunition">
-						<synonym value="Ammunitions"/>
-						<heading id="Armorpiercingshell" title="Armorpiercing Shell">
-							<synonym value="Armorpiercing Shells"/>
-							<synonym value="Armor-Piercing Shell"/>
-							<synonym value="Armor-Piercing Shells"/>
-						</heading>
-						<heading id="Bullet" title="Bullet">
-							<synonym value="Bullets"/>
-						</heading>
-						<heading id="CanisterShot" title="Canister (Shot)">
-							<synonym value="Canister"/>
-							<synonym value="Canisters"/>
-						</heading>
-						<heading id="CannonBall" title="Cannon Ball">
-							<synonym value="Cannon Balls"/>
-							<synonym value="Cannonball"/>
-							<synonym value="Cannonballs"/>
-						</heading>
-						<heading id="Cartridge" title="Cartridge">
-							<synonym value="Cartridges"/>
-						</heading>
-						<heading id="MusketBall" title="Musket Ball">
-							<synonym value="Musket Balls"/>
-						</heading>
-						<heading id="Shot" title="Shot">
-							<synonym value="Shots"/>
+					<heading id="ArrowWeapon" title="Arrow">
+						<synonym value="Arrows"/>
+						<heading id="PartsofArrow" title="Parts of Arrow" noMatch="true">
+							<heading id="ArrowheadPointPart" title="Arrowpoints" noMatch="true"/>
+							<heading id="ArrowFletching" title="Fletching">
+								<synonym value="Fletchings"/>
+								<implies facet="Material" cat="Feathers"/>
+							</heading>
+							<heading id="ArrowShaft" title="Shaft" noMatch="true">
+								<synonym value="Arrow shaft"/>
+							</heading>
 						</heading>
 					</heading>
 					<heading id="BallistaBall" title="Ballista Ball">
@@ -2008,13 +2004,11 @@
 					<heading id="BallistaBolt" title="Ballista Bolt">
 						<synonym value="Ballista Bolts"/>
 					</heading>
-					<heading id="Bolas" title="Bolas">
-						<synonym value="Bola"/>
-					</heading>
+					<heading id="BolasProjectile" title="Bolas" noMatch="true"/>
 					<heading id="CrossbowBolt" title="Crossbow Bolt">
 						<synonym value="Crossbow Bolts"/>
 					</heading>
-					<heading id="Dart" title="Dart">
+					<heading id="DartProjectile" title="Dart">
 						<synonym value="Darts"/>
 					</heading>
 					<heading id="SlingShot" title="Sling Shot">
@@ -2023,13 +2017,9 @@
 							<synonym value="Sling Bullets"/>
 						</heading>
 					</heading>
-					<heading id="Spear" title="Spear">
-						<synonym value="Spears"/>
-						<heading id="Javelin" title="Javelin">
-							<synonym value="Javelins"/>
-							<heading id="Angon" title="Angon">
-								<synonym value="Angons"/>
-							</heading>
+					<heading id="SpearProjectile" title="Spear" noMatch="true">
+						<heading id="JavelinProjectile" title="Javelin" noMatch="true">
+							<heading id="AngonProjectile" title="Angon" noMatch="true"/>
 						</heading>
 					</heading>
 					<heading id="ThrowingAxePrjctl" title="Throwing Axe" noMatch="true">
@@ -2073,19 +2063,64 @@
 					<synonym value="Slingshot"/>
 					<synonym value="Slingshots"/>
 				</heading>
-				<heading id="SpearGun" title="Spear Gun">
+				<heading id="SpearGunPrjtlWpn" title="Spear Gun">
 					<synonym value="Spear Guns"/>
+					<synonym value="Spear-Gun"/>
+					<synonym value="Spear-Guns"/>
+					<implies facet="ObjectName" cat="SpearGunHuntEq"/>
 				</heading>
 				<heading id="SpearThrower" title="Spear Thrower">
 					<synonym value="Spear Throwers"/>
+					<synonym value="Spear-Thrower"/>
+					<synonym value="Spear-Throwers"/>
+					<heading id="AtlatlWeapon" title="Atlatl">
+						<synonym value="Atlatls"/>
+					</heading>
 				</heading>
-				<heading id="SpearWeaponPrjWpn" title="Spear" noMatch="true">
-					<heading id="JavelinPrjWpn" title="Javelin" noMatch="true">
-						<heading id="AngonPrjWpn" title="Angon" noMatch="true"/>
+				<heading id="SpearWeaponPrjWpn" title="Spear">
+					<synonym value="Spears"/>
+					<implies facet="ObjectName" cat="SpearEdgWpn"/>
+					<implies facet="ObjectName" cat="SpearProjectile"/>
+					<heading id="JavelinPrjWpn" title="Javelin"> <!-- A long spear designed to be thrown in order to injure or kill a given target. -->
+						<synonym value="Javelins"/>
+						<implies facet="ObjectName" cat="JavelinEdgWpn"/>
+						<implies facet="ObjectName" cat="JavelinProjectile"/>
+						<heading id="AngonPrjWpn" title="Angon">
+							<synonym value="Angons"/>
+							<implies facet="ObjectName" cat="AngonEdgWpn"/>
+							<implies facet="ObjectName" cat="AngonProjectile"/>
+						</heading>
 					</heading>
 				</heading>
 				<heading id="TrebuchetWeapon" title="Trebuchet">
 					<synonym value="Trebuchets"/>
+				</heading>
+				<heading id="PropulsWeaponGear" title="[Related gear]" noMatch="true">
+					<heading id="GunFlint" title="Gun Flint">
+						<synonym value="Gun Flints"/>
+						<synonym value="Gun-Flint"/>
+						<synonym value="Gun-Flints"/>
+						<synonym value="Gunflint"/>
+						<synonym value="Gunflints"/>
+					</heading>
+					<heading id="GunnersKey" title="Gunner's Key">
+						<synonym value="Gunners' Key"/>
+						<synonym value="Gunners Key"/>
+						<synonym value="Gunner's Keys"/>
+						<synonym value="Gunners' Keys"/>
+						<synonym value="Gunners Keys"/>
+					</heading>
+					<heading id="GunneryInstrArma" title="Gunnery Instrument" noMatch="true"/>
+					<heading id="Linstock" title="Linstock">
+						<synonym value="Linstocks"/>
+					</heading>
+					<heading id="Ramrod" title="Ramrod">
+						<synonym value="Ramrods"/>
+						<synonym value="Ram Rod"/>
+						<synonym value="Ram Rods"/>
+						<synonym value="Ram-Rod"/>
+						<synonym value="Ram-Rods"/>
+					</heading>
 				</heading>
 			</heading>
 			<heading id="Caltrop" title="Caltrop">
@@ -5254,7 +5289,7 @@
 				<synonym value="Chafing dishes"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 			</heading>
-			<heading id="CoffeePotHeatingCookEq" title="Coffee pot" noMatch="true"/>
+			<heading id="CoffeePotHeatingCookEq" title="Coffee Pot" noMatch="true"/>
 			<heading id="CookingStandCookEq" title="Cooking Stand">
 				<synonym value="Cooking Stands"/>
 				<synonym value="Cooking-Stand"/>
