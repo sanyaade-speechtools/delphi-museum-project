@@ -251,7 +251,6 @@
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="FishingNetFshEq" title="Fishing Net">
-				<synonym value="Fishing Net"/>
 				<synonym value="Fishing Nets"/>
 				<synonym value="Fishing-Net"/>
 				<synonym value="Fishing-Nets"/>
@@ -2160,8 +2159,9 @@
 			<synonym value="Baby-Walker"/>
 			<synonym value="Baby-Walkers"/>
 		</heading>
-		<heading id="ChildBibChdCr" title="Child Bib">
+		<heading id="ChildBibChdCr" title="Child's Bib">
 			<synonym value="Child Bib"/>
+			<synonym value="Child Bibs"/>
 			<synonym value="Child-Bib"/>
 			<synonym value="Child-Bibs"/>
 		</heading>
@@ -2174,7 +2174,9 @@
 			<implies facet="ObjectName" cat="ChildCarrierCrr"/>
 			<heading id="CradleBoardChdCr" title="Cradle Board">
 				<synonym value="Cradle Boards"/>
-				<synonym value="Cradleboards"/>
+				<synonym value="Cradle-Board"/>
+				<synonym value="Cradle-Boards"/>
+				<synonym value="Cradleboard"/>
 				<synonym value="Cradleboards"/>
 				<heading id="HeadFlattenerChdCr" title="Head Flattener">
 					<!-- This is just one part of the cradleboard. Do head flatteners exist on their own as well? -->
@@ -2389,8 +2391,11 @@
 			<heading id="InkWritingComm" title="Ink">
 				<synonym value="Inks"/>
 			</heading>
-			<heading id="InkContainerComm" title="Ink-Container">
+			<heading id="InkContainerComm" title="Ink Container">
+				<synonym value="Ink Containers"/>
+				<synonym value="Ink-Container"/>
 				<synonym value="Ink-Containers"/>
+				<implies facet="ObjectName" cat="InkCntnrCntnr"/>
 			</heading>
 			<heading id="InkPadComm" title="Ink-Pad">
 				<synonym value="Ink-Pads"/>
@@ -3520,12 +3525,7 @@
 		<heading id="HolderContnr" title="Holder">
 			<synonym value="Holders"/>
 		</heading>
-		<heading id="InkContainer" title="Ink Container" noMatch="true">
-			<synonym value="Ink Containers"/>
-			<synonym value="Ink-Container"/>
-			<synonym value="Ink-Containers"/>
-			<implies facet="ObjectName" cat="InkContainerComm"/>
-		</heading>
+		<heading id="InkCntnrCntnr" title="Ink Container" noMatch="true"/>
 		<heading id="InroContainer" title="Inro">
 			<synonym value="Inros"/>
 		</heading>
@@ -4472,9 +4472,6 @@
 			<heading id="KaftanGarment" title="Kaftan">
 				<synonym value="Kaftans"/>
 			</heading>
-			<heading id="KimonoGarment" title="Kimono">
-				<synonym value="Kimonos"/>
-			</heading>
 			<heading id="KuchangGarment" title="Kuchang">
 				<synonym value="Kuchangs"/>
 			</heading>
@@ -4563,8 +4560,6 @@
 				<synonym value="Serapes"/>
 			</heading>
 			<heading id="ShawlGarment" title="Shawl">
-				<synonym value="Serape"/>
-				<synonym value="Serapes"/>
 				<synonym value="Shawls"/>
 				<synonym value="Perraje"/>
 				<synonym value="Perrajes"/>
