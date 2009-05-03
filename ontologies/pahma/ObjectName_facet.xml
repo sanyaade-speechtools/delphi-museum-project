@@ -2835,10 +2835,7 @@
 		<heading id="PosterComm" title="Poster">
 			<synonym value="Posters"/>
 		</heading>
-		<heading id="PreachersPlateComm" title="Preacher's Plate" noMatch="true">
-			<synonym value="Preacher's Plates"/>
-			<implies facet="ObjectName" cat="OfferingVessel"/>
-		</heading>
+		<heading id="PreachersPlateComm" title="Preacher's Plate" noMatch="true"/>
 		<heading id="ProclamationComm" title="Proclamation">
 			<synonym value="Proclamations"/>
 		</heading>
@@ -2862,7 +2859,6 @@
 		<heading id="SealIndicatorComm" title="Seal Indicator" noMatch="true"/>
 		<heading id="SealingComm" title="Sealing">
 			<synonym value="Sealings"/>
-			<excl value="SealingMiscEq"/>
 		</heading>
 		<heading id="SealMatrixComm" title="Seal-Matrix">
 			<synonym value="Seal-Matrices"/>
@@ -3172,10 +3168,7 @@
 				<synonym value="Hanging Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
-			<heading id="MortarBasket" title="Mortar Basket">
-				<synonym value="Mortar Baskets"/>
-				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-			</heading>
+			<heading id="MortarBasketBskts" title="Mortar Basket" noMatch="true"/>
 			<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
 				<synonym value="Mush-Boiling Baskets"/>
 				<synonym value="Mush Boiling Basket"/>
@@ -3265,15 +3258,7 @@
 				<synonym value="Gold Dust Boxes"/>
 				<synonym value="Golddust Boxes"/>
 			</heading>
-			<heading id="MatchBoxContainer" title="Match Box" noMatch="true">
-				<synonym value="Match-Box"/>
-				<synonym value="Matchbox"/>
-				<synonym value="Match-Boxes"/>
-				<synonym value="Match Boxes"/>
-				<synonym value="Matchboxes"/>
-				<implies facet="ActivityorContext" cat="DrugSmoking"/>
-				<implies facet="ObjectName" cat="MatchBoxFireEq"/>
-			</heading>
+			<heading id="MatchBoxContainer" title="Match Box" noMatch="true"/>
 			<heading id="MoneyBoxContainer" title="Money Box" noMatch="true"/>
 			<heading id="PowdercapBoxContainer" title="Powder &amp; Cap Box">
 				<synonym value="Cap Box"/>
@@ -4146,6 +4131,9 @@
 					</heading>
 					<heading id="PreachersPlate" title="Preacher's Plate">
 						<synonym value="Preacher's Plates"/>
+						<synonym value="Preachers Plate"/>
+						<synonym value="Preachers Plates"/>
+						<implies facet="ObjectName" cat="PreachersPlateComm"/>
 					</heading>
 					<heading id="OfferingBowl" title="Offering-Bowl">
 						<synonym value="Offering-Bowls"/>
@@ -5455,8 +5443,10 @@
 						<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					</heading>
 					<heading id="MortarBasketCookEq" title="Mortar Basket">
-						<implies facet="Collection" cat="BasketCollection"/>
+						<synonym value="Mortar Baskets"/>
 						<implies facet="ActivityorContext" cat="FoodPreparation"/>
+						<implies facet="Collection" cat="BasketCollection"/>
+						<implies facet="ObjectName" cat="MortarBasketBskts"/>
 					</heading>
 					<heading id="PestleCookEq" title="Pestle">
 						<synonym value="Pestles"/>
@@ -5644,7 +5634,7 @@
 		</heading>
 		<heading id="BridePrice" title="Bride-Price">
 			<synonym value="Bride Prices"/>
-			<synonym value="Bride-Prices"/>
+			<synonym value="Bride-Price"/>
 			<synonym value="Bride-Prices"/>
 		</heading>
 		<heading id="Cheque" title="Cheque">
@@ -6230,6 +6220,12 @@
 				<synonym value="Match-Boxes"/>
 				<synonym value="Box of Matches"/>
 				<synonym value="Boxed Matches"/>
+				<synonym value="Matchbox"/>
+				<synonym value="Matchboxes"/>
+				<synonym value="Match-Boxes"/>
+				<synonym value="Match Boxes"/>
+				<implies facet="ActivityorContext" cat="DrugSmoking"/>
+				<implies facet="ObjectName" cat="MatchBoxContainer"/>
 			</heading>
 			<heading id="MatchBoxHolderFireEq" title="Match-Box-Holder">
 				<synonym value="Match-Box-Holders"/>
@@ -7460,10 +7456,6 @@
 		<heading id="ScreenMiscEq" title="Screen"> <!-- Disambiguate -->
 			<synonym value="Screens"/>
 		</heading>
-		<heading id="SealingMiscEq" title="Sealing"> <!-- Disambiguate -->
-			<synonym value="Sealings"/>
-			<excl value="SealingComm"/>
-		</heading>
 		<heading id="SexAidMiscEq" title="Sex Aid">
 			<synonym value="Sex Aids"/>
 			<synonym value="Sex-Aid"/>
@@ -7968,20 +7960,7 @@
 				<heading id="Anklung" title="Anklung">
 					<synonym value="Anklungs"/>
 				</heading>
-				<heading id="BanglePercussion" title="Bangle">
-					<synonym value="Bangles"/>
-					<synonym value="Woman's Ankle Bangles"/>
-					<synonym value="Woman's Ankle Bangle"/>
-					<synonym value="Womans Ankle Bangles"/>
-					<synonym value="Womans Ankle Bangle"/>
-					<synonym value="Ankle Bangles"/>
-					<synonym value="Ankle Bangle"/>
-					<synonym value="Woman's Bangles"/>
-					<synonym value="Woman's Bangle"/>
-					<synonym value="Womans Bangles"/>
-					<synonym value="Womans Bangle"/>
-					<excl value="Jewelery"/>
-				</heading>
+				<heading id="BanglePercussion" title="Bangle" noMatch="true"/>
 				<heading id="Beater" title="Beater"> <!-- beaters/sticks exclusively not intended for drum use. Does not include seed beaters, drums -->
 					<synonym value="Beaters"/>
 					<synonym value="Rhythym Stick"/>
@@ -9341,7 +9320,17 @@
 			</heading>
 			<heading id="BangleJeweleryPrsOrn" title="Bangle">
 				<synonym value="Bangles"/>
-				<excl value="BanglePercussion"/>
+				<synonym value="Woman's Ankle Bangles"/>
+				<synonym value="Woman's Ankle Bangle"/>
+				<synonym value="Womans Ankle Bangles"/>
+				<synonym value="Womans Ankle Bangle"/>
+				<synonym value="Ankle Bangle"/>
+				<synonym value="Ankle Bangles"/>
+				<synonym value="Woman's Bangles"/>
+				<synonym value="Woman's Bangle"/>
+				<synonym value="Womans Bangles"/>
+				<synonym value="Womans Bangle"/>
+				<implies facet="ObjectName" cat="BanglePercussion"/>
 			</heading>
 			<heading id="BeadsJeweleryPrsOrn" title="Beads">
 				<synonym value="Bead"/>
