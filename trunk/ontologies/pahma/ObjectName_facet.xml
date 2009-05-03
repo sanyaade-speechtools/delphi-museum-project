@@ -3140,11 +3140,7 @@
 				<synonym value="Dipping Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
-			<heading id="DoctoringBasketBaskets" title="Doctoring Basket">
-				<synonym value="Doctoring Baskets"/>
-				<implies facet="ActivityorContext" cat="Healing"/>
-				<implies facet="ObjectName" cat="DoctoringBasketMedical"/>
-			</heading>
+			<heading id="DoctoringBasketBaskets" title="Doctoring Basket" noMatch="true"/>
 			<heading id="FishTrapBasketBasket" title="Fish Trap Basket" noMatch="true">
 				<heading id="EelTrapBasketBasket" title="Eel Trap Basket" noMatch="true"/>
 				<heading id="SalmonTrapBasketBasket" title="Salmon Trap Basket" noMatch="true"/>
@@ -4897,11 +4893,7 @@
 			<heading id="ButtonHookAccessory" title="Button Hook">
 				<synonym value="Button Hooks"/>
 			</heading>
-			<heading id="CrutchAccessory" title="Crutch">
-				<synonym value="Crutches"/>
-				<synonym value="Crutchs"/>
-				<!-- Misspelling -->
-			</heading>
+			<heading id="CrutchPersAccsry" title="Crutch" noMatch="true"/>
 			<heading id="CufflinkAccessory" title="Cufflink">
 				<synonym value="Cufflinks"/>
 				<implies facet="ObjectName" cat="CufflinkJeweleryPrsOrn"/>
@@ -7068,6 +7060,7 @@
 		<heading id="CrutchRx" title="Crutch">
 			<synonym value="Crutches"/>
 			<synonym value="Crutchs"/> <!-- Misspelling -->
+			<implies facet="ObjectName" cat="CrutchPersAccsry"/>
 		</heading>
 		<heading id="DenturesRx" title="Dentures">
 			<synonym value="Denture"/>
@@ -8130,6 +8123,9 @@
 				<heading id="Castanet" title="Castanet">
 					<synonym value="Castanets"/>
 				</heading>
+				<heading id="ConcussionStick_BM" title="Concussion Stick">  <!-- unknown -->
+					<synonym value="Concussion Sticks"/>
+				</heading>
 				<heading id="Cymbal" title="Cymbal">
 					<!-- includes: finger, hand, rolmo, tingsha -->
 					<synonym value="Cymbals"/>
@@ -8313,6 +8309,9 @@
 						<synonym value="Genggongs"/>
 					</heading>
 				</heading>
+				<heading id="Jingle_BM" title="Jingle"> <!-- unclear -->
+					<synonym value="Jingles"/>
+				</heading>
 				<heading id="Kecer" title="Kecer">
 					<synonym value="Kecers"/>
 				</heading>
@@ -8337,6 +8336,9 @@
 					<heading id="Xylophone" title="Xylophone">
 						<synonym value="Xylophones"/>
 					</heading>
+				</heading>
+				<heading id="PercussionBoard_BM" title="Percussion Board"> <!-- unclear -->
+					<synonym value="Percussion Boards"/>
 				</heading>
 				<heading id="PianoPercussion" title="Piano" noMatch="true"/>
 				<heading id="RaspingStick" title="Rasping Sticks">
@@ -9088,26 +9090,17 @@
 				</heading>
 			</heading>
 
-			<!-- DELETE DUPES AND MERGE UNIQUE TERMS INTO ABOVE CONCEPTS -->
-			<heading id="Chun_BM" title="Chun"> <!-- unknown -->
+			<!-- Terms remaining to be merged into above concepts:
+			<heading id="Chun_BM" title="Chun"> unknown instrument
 				<synonym value="Chuns"/>
 			</heading>
-			<heading id="ConcussionStick_BM" title="Concussion Stick">  <!-- unknown -->
-				<synonym value="Concussion Sticks"/>
-			</heading>
-			<heading id="Jingle_BM" title="Jingle"> <!-- unclear -->
-				<synonym value="Jingles"/>
-			</heading>
-			<heading id="PercussionBoard_BM" title="Percussion Board"> <!-- unclear -->
-				<synonym value="Percussion Boards"/>
-			</heading>
-			<heading id="Reneti_BM" title="Reneti"> <!-- unknown -->
+			<heading id="Reneti_BM" title="Reneti"> unknown instrument
 				<synonym value="Renetis"/>
 			</heading>		
-			<heading id="Surnoi_BM" title="Surnoi"> <!-- unknown -->
+			<heading id="Surnoi_BM" title="Surnoi"> unknown instrument
 				<synonym value="Surnois"/>
 			</heading>
-			<!-- END MERGE ITEMS -->
+			END MERGE ITEMS -->
 
 			<heading id="AcousticJar" title="Acoustic Jar">
 				<synonym value="Acoustic Jars"/>
@@ -9126,9 +9119,7 @@
 			<heading id="GongStand" title="Gong-Stand">
 				<synonym value="Gong-Stands"/>
 			</heading>
-			<heading id="HymnBook" title="Hymn-Book">
-				<synonym value="Hymn-Books"/>
-			</heading>
+			<heading id="HymnBookMusic" title="Hymn-Book" noMatch="true"/>
 			<heading id="MusicalBeater" title="Musical Beater">
 				<synonym value="Musical Beaters"/>
 			</heading>
@@ -9163,6 +9154,7 @@
 			</heading>
 			<heading id="Songsheet" title="Songsheet">
 				<synonym value="Songsheets"/>
+				<implies facet="ActivityorContext" cat="Singing"/>
 				<implies facet="ObjectName" cat="SongsheetComm"/>
 			</heading>
 			<heading id="SulingStand" title="Suling Stand">
@@ -10034,8 +10026,12 @@
 		<heading id="HongbaoRelRit" title="Hongbao">
 			<synonym value="Hongbaos"/>
 		</heading>
-		<heading id="HymnBookRelRit" title="Hymn-Book">
+		<heading id="HymnBookRelRit" title="Hymn Book">
+			<synonym value="Hymn Books"/>
+			<synonym value="Hymn-Book"/>
 			<synonym value="Hymn-Books"/>
+			<implies facet="ActivityorContext" cat="Singing"/>
+			<implies facet="ObjectName" cat="HymnBookMusic"/>
 		</heading>
 		<heading id="IconRelRit" title="Icon">
 			<synonym value="Icons"/>
