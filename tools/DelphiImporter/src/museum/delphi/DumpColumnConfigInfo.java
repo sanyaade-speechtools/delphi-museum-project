@@ -284,18 +284,18 @@ public class DumpColumnConfigInfo {
 				    }
 				    else if( childEl.getNodeName().equals( "tokenSep" ) ) {
 				    	String value = childEl.getAttribute( "value" );
-				    	if( value != null )
+				    	if( value != null && !value.isEmpty())
 				    		tokenSeparators.add(value);
 				    }
 				    else if( childEl.getNodeName().equals( "noiseToken" ) ) {
 				    	String value = childEl.getAttribute( "value" );
-				    	if( value != null )
+				    	if( value != null && !value.isEmpty() )
 				    		noiseTokens.add(value);
 				    }
 				    else if( childEl.getNodeName().equals( "reduce" ) ) {
 				    	String fromStr = childEl.getAttribute( "from" );
 				    	String toStr = childEl.getAttribute( "to" );
-				    	if( fromStr != null && toStr != null) {
+				    	if( fromStr != null && !fromStr.isEmpty() && toStr != null && !toStr.isEmpty()) {
 				    		reduceRules.add(new Pair<String, String>(fromStr, toStr));
 				    	}
 				    }
@@ -303,10 +303,11 @@ public class DumpColumnConfigInfo {
 				    	String fName = childEl.getAttribute( "name" );
 				    	String relevStr = childEl.getAttribute( "relevancy" );
 				    	String filterStr = childEl.getAttribute( "filterTokenOnMatch" );
-				    	if( fName != null && relevStr != null) {
+				    	if( fName != null && !fName.isEmpty()
+				    			&& relevStr != null && !relevStr.isEmpty()) {
 					    	float rel = Float.parseFloat(relevStr);
 					    	// Note filter defaults to true if not set
-					    	boolean filter = ( filterStr == null )
+					    	boolean filter = ( filterStr == null ) || filterStr.isEmpty()
 					    						|| Boolean.parseBoolean(filterStr);
 					    	facetsToMine.add(new MineInfoForColumn(fName, rel, filter));
 				    	}
