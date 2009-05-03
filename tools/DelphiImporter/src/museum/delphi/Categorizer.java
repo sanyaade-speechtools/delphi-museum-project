@@ -25,6 +25,8 @@ public class Categorizer {
 	private HashMap<Integer,ArrayList<ComplexInference>> inferencesByReqID = null;
 	private HashMap<Integer,ArrayList<ComplexInference>> inferencesByExclID = null;
 	private DoubleHashTree facetMapHashTree = null;
+	// TODO We need to either compute this from the ontologies, OR configure it.
+	private int maxNGramLength = 5;
 
 	private static int _debugLevel = 2;
 
@@ -265,11 +267,12 @@ public class Categorizer {
 			String facetName, DumpColumnConfigInfo colInfo,
 			HashMap<TaxoNode, Float> matchedCats ) {
 		// Tokenize the string for this column
-		Pair<ArrayList<String>,ArrayList<String>> tokenPair
+		ArrayList<Pair<String,ArrayList<String>>> tokenList
 				= prepareSourceTokens( source, colInfo );
 		float reliability = colInfo.columnReliabilityForFacet(facetName);
 		// Now, we try to find a category in the hashMap for each token
-		for( String token:tokenPair.first ) {
+		for( Pair<String,ArrayList<String>> pair:tokenList ) {
+			String token = pair.first;
 			// Test where id is 317239 - how do we match FUR?
 			TaxoNode node = facetMapHashTree.FindNodeByHook(facetName,token);
 			if( node == null )
@@ -294,42 +297,27 @@ public class Categorizer {
 			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
 		try {
 			// Tokenize the string for this column. First list is tokens, second is words.
-			Pair<ArrayList<String>,ArrayList<String>> tokenPair
-					= prepareSourceTokens( source, colInfo );
+			ArrayList<Pair<String,ArrayList<String>>> tokenList
+								= prepareSourceTokens( source, colInfo );
 			// Now, we try to find a category in each facet hashMap for each token
-			for( String token:tokenPair.first ) {
-				// Loop over the facets to mine list. Note that list specifies order.
-				// As we find a token, we remove it from further consideration so we
-				// get some auto-exclusion (should we configure this?)
-				boolean foundMatch = false;
-				for( DumpColumnConfigInfo.MineInfoForColumn mineInfo:colInfo.facetsToMine ) {
-					// Test where id is 317239 - how do we match FUR?
-					TaxoNode node = facetMapHashTree.FindNodeByHook(mineInfo.facetName,token);
-					if( node == null )
-						continue;
-					debug(3, "Obj:"+id+" matched concept: ["+
-							mineInfo.facetName+":"+node.displayName+"] on token: "+token);
-					foundMatch = true;
-					// We have a candidate here. Check for the exclusions
-					if( lineContainsExclusions( node.exclset, allStrings )) {
-						debug(3, "Obj:"+id+" excluding matched concept: ["+
-								mineInfo.facetName+":"+node.displayName+"]");
-						continue;
-					}
-					// We have a TaxoNode match! Update matches with this node
-					updateMatches( matchedCats, mineInfo.reliability, node);
-					// Now, consider any pending implied nodes as well.
-					// TODO Verify that this should never happen, and remove this code.
-					if(( node.impliedNodesPending != null ) && ( node.impliedNodesPending.size() > 0 ))
-						for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
-							updateMatches( matchedCats, mineInfo.reliability, node.impliedNodes.get(i));
-						}
-					// Since we got a match, we may stop considering the other facets for this token.
-					if( mineInfo.filterTokenOnMatch )
-						break;
-				}
+			for( Pair<String,ArrayList<String>> pair:tokenList ) {
+				String token = pair.first;
+				boolean foundMatch =
+					checkAllFacetsForToken(id, token, allStrings, false, colInfo, matchedCats );
 				if(!foundMatch) {
-					debug(3, "No matched concept for token: "+token);
+					debug(3, "No matched concept for full token: "+token);
+					// Now we consider the ngrams within, if there are 2 or more words
+					ArrayList<String> words = pair.second;
+					if(words.size()>1) {
+						NGramStack ngrams = new NGramStack(words, maxNGramLength);
+						NGram next;
+						while((next=ngrams.pop())!=null) {
+							if(checkAllFacetsForToken(id, next.getString(),
+									allStrings, true, colInfo, matchedCats )) {
+								ngrams.filterMatch(next);
+							}
+						}
+					}
 				}
 			}
 		} catch (Exception e ) {
@@ -340,6 +328,36 @@ public class Categorizer {
         debugTrace(2, e);
 		throw new RuntimeException( tmp );
 		}
+	}
+
+	private boolean checkAllFacetsForToken(int id, String token,
+			ArrayList<String> allStrings, boolean isNGram,
+			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
+		// Loop over the facets to mine list. Note that list specifies order.
+		// As we find a token, we may remove it from further consideration so we
+		// get some auto-exclusion (configured)
+		boolean foundMatch = false;
+		for( DumpColumnConfigInfo.MineInfoForColumn mineInfo:colInfo.facetsToMine ) {
+			TaxoNode node = facetMapHashTree.FindNodeByHook(mineInfo.facetName,token);
+			if( node == null )
+				continue;
+			debug(3, "Obj:"+id+" matched concept: ["+
+					mineInfo.facetName+":"+node.displayName+"] on "
+						+(isNGram?"NGram: ":"token: ")+token);
+			// We have a candidate here. Check for the exclusions
+			if( lineContainsExclusions( node.exclset, allStrings )) {
+				debug(3, "Obj:"+id+" excluding matched concept: ["+
+						mineInfo.facetName+":"+node.displayName+"]");
+				continue;
+			}
+			foundMatch = true;
+			// We have a TaxoNode match! Update matches with this node
+			updateMatches( matchedCats, mineInfo.reliability, node);
+			// Since we got a match, we may stop considering the other facets for this token.
+			if( mineInfo.filterTokenOnMatch )
+				break;
+		}
+		return foundMatch;
 	}
 
 	private static boolean lineContainsExclusions(ArrayList<String> exclSet, ArrayList<String> line) {
@@ -528,7 +546,7 @@ public class Categorizer {
 				}
 			}
 			if( fReqFailure ) {
-				debug(2, "Requirements failed for inference: " + mi.ci.name);
+				debug(3, "Requirements failed for inference: " + mi.ci.name);
 				continue;
 			} else {
 				if( fRequireAll ) {
@@ -550,11 +568,11 @@ public class Categorizer {
 				}
 			}
 			if( fExclFound ) {
-				debug(2, "Inference failed on exclusions: " + mi.ci.name);
+				debug(3, "Inference failed on exclusions: " + mi.ci.name);
 				continue;
 			}
 			// Have all the requirements, and did not exclude, so add this to inferred concepts
-			debug(1, "Adding inference: " + mi.ci.name + "("+mi.ci.infer.name+")"
+			debug(2, "Adding inference: " + mi.ci.name + "("+mi.ci.infer.name+")"
 								+" with relevance: " + relevanceAccum);
 			inferredCats.put(mi.ci.infer, relevanceAccum);
 		}
@@ -608,61 +626,68 @@ public class Categorizer {
 	 * Also maps all tokens and words to lower case.
 	 * @param source input String
 	 * @param colInfo columnInfo for this string
-	 * @return Pair of Lists: first is tokens, second is words
+	 * @return List of Pairs: first is token, second is words in that token
 	 */
-	private static Pair<ArrayList<String>,ArrayList<String>> prepareSourceTokens(
+	private static ArrayList<Pair<String,ArrayList<String>>> prepareSourceTokens(
 			String source, DumpColumnConfigInfo colInfo ) {  //  @jve:decl-index=0:
-		ArrayList<String> tokens = new ArrayList<String>();
-		ArrayList<String> words = new ArrayList<String>();
+		ArrayList<Pair<String,ArrayList<String>>> returnList =
+						new ArrayList<Pair<String,ArrayList<String>>>();
 		// First we apply reduction. This cleans up certain oddities in the source
 		String reducedSource = source.toLowerCase();
 		for(Pair<String, String> reduce : colInfo.reduceRules) {
 			reducedSource = reducedSource.replaceAll(reduce.first, reduce.second);
 		}
 		// Next, we tokenize with the token separators
-		String[] tokens_1;
+		String[] tokens_strings;
 		if( colInfo.tokenSeparators.size() == 0 ) {
 			// throw new RuntimeException( "No Token separators for column: " + colInfo.name);
-			tokens_1 = new String[1];
-			tokens_1[0] = reducedSource;
+			tokens_strings = new String[1];
+			tokens_strings[0] = reducedSource;
 		} else {
 			String regex = "\\||"+colInfo.tokenSeparators.get(0);
 			for( int i=1; i<colInfo.tokenSeparators.size(); i++)
 				regex += "|"+colInfo.tokenSeparators.get(i);
-			tokens_1 = reducedSource.split(regex);
+			tokens_strings = reducedSource.split(regex);
 		}
 		// Next, we further split up each token on space and certain punctuation and remove the noise items
 		// We also build the words list for Colors
-		for( int i=0; i< tokens_1.length; i++ ){
+		for( int i=0; i< tokens_strings.length; i++ ){
+			String token = tokens_strings[i].trim();
+			if(token.isEmpty())
+				continue;
 			// Split into words, but preserve hyphenated words, and embedded single quotes
-			String[] words_1 = tokens_1[i].trim().split("[\\W&&[^\\-\']]");
+			ArrayList<String> words = new ArrayList<String>();
+			Pair<String,ArrayList<String>> pair = null;
+				new Pair<String,ArrayList<String>>(token,words);
+			String[] words_strings = token.split("[\\W&&[^\\-\']]");
 			if( colInfo.noiseTokens.size() == 0 ){
-				tokens.add(tokens_1[i].trim());
-				for( int iW=0; iW<words_1.length; iW++) {
-					String word = words_1[iW].trim();
+				pair = new Pair<String,ArrayList<String>>(token,words);
+				for( int iW=0; iW<words_strings.length; iW++) {
+					String word = words_strings[iW].trim();
 					if(word.length()>0)
 						words.add(word);
 				}
+				returnList.add(pair);
 			}
 			else {
 				StringBuilder sb = new StringBuilder();
-				for( int iW=0; iW<words_1.length; iW++)
-					if( !colInfo.noiseTokens.contains(words_1[iW]) ) {
+				for( int iW=0; iW<words_strings.length; iW++)
+					if( !colInfo.noiseTokens.contains(words_strings[iW]) ) {
 						if( iW > 0)
 							sb.append(' ');
-						String word = words_1[iW].trim();
+						String word = words_strings[iW].trim();
 						if(word.length()>0) {
 							sb.append(word);
 							words.add(word);
 						}
 					}
-				if(sb.length()>0)
-					tokens.add(sb.toString());
+				if(sb.length()>0) {
+					pair = new Pair<String,ArrayList<String>>(sb.toString(),words);
+					returnList.add(pair);
+				}
 			}
 		}
-		return new Pair<ArrayList<String>,ArrayList<String>>(tokens, words);
+		return returnList;
 	}
-
-
 
 }
