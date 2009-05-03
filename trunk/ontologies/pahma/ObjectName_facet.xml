@@ -6492,21 +6492,22 @@
 		</heading>
 		<heading id="Furnishing" title="Furnishing">
 			<synonym value="Furnishings"/>
-			<heading id="Bedding" title="Bedding">
-				<heading id="Blanket" title="Blanket">
+			<heading id="BeddingFurn" title="Bedding">
+				<heading id="BlanketFurn" title="Blanket">
 					<synonym value="Blankets"/>
 				</heading>
-				<heading id="Headrest" title="Headrest">
+				<heading id="HeadrestFurn" title="Headrest">
 					<synonym value="Headrests"/>
 				</heading>
-				<heading id="Pillow" title="Pillow">
+				<heading id="PillowFurn" title="Pillow">
 					<synonym value="Pillows"/>
 				</heading>
-				<heading id="SleepingMat" title="Sleeping Mat">
+				<heading id="SleepingMatFurn" title="Sleeping Mat">
 					<synonym value="Sleeping Mats"/>
+					<implies facet="ObjectName" cat="SleepingMatMats"/>
 				</heading>
 			</heading>
-			<heading id="Blind" title="Blind">
+			<heading id="BlindFurn" title="Blind">
 				<synonym value="Blinds"/>
 			</heading>
 			<heading id="Canopy" title="Canopy">
@@ -6561,9 +6562,7 @@
 					<synonym value="Place-Mats"/>
 				</heading>
 				<heading id="PrayerMatMats" title="Prayer Mat" noMatch="true"/>
-				<heading id="SleepingMat" title="Sleeping-Mat">
-					<synonym value="Sleeping-Mats"/>
-				</heading>
+				<heading id="SleepingMatMats" title="Sleeping Mat" noMatch="true"/>
 				<heading id="TableMat" title="Table-Mat">
 					<synonym value="Table-Mats"/>
 				</heading>
@@ -10771,18 +10770,31 @@
 					<synonym value="Sand-Glass"/>
 					<synonym value="Sand-Glasses"/>
 				</heading>
-				<heading id="Sundial" title="Sundial">
+				<heading id="SundialHoroEq" title="Sundial">
+					<synonym value="Gnomondial"/>
+					<synonym value="Gnomondials"/>
 					<synonym value="Sundials"/>
+					<implies facet="ObjectName" cat="SundialSciInstr"/>
 					<heading id="AltitudeDial" title="Altitude Dial">
 						<synonym value="Altitude Dials"/>
 					</heading>
-					<heading id="CompassDial" title="Compass-Dial">
+					<heading id="CompassDial" title="Compass Dial">
+						<synonym value="Compass Dials"/>
+						<synonym value="Compass-Dial"/>
 						<synonym value="Compass-Dials"/>
 					</heading>
-					<heading id="DiptychDial" title="Diptych-Dial">
+					<heading id="DiptychDial" title="Diptych Dial">
+						<synonym value="Diptych Dials"/>
+						<synonym value="Diptych-Dial"/>
 						<synonym value="Diptych-Dials"/>
 					</heading>
-					<heading id="DiscDial" title="Disc-Dial">
+					<heading id="DiskDial" title="Disk Dial">
+						<synonym value="Disk Dials"/>
+						<synonym value="Disk-Dial"/>
+						<synonym value="Disk-Dials"/>
+						<synonym value="Disc Dial"/>
+						<synonym value="Disc Dials"/>
+						<synonym value="Disc-Dial"/>
 						<synonym value="Disc-Dials"/>
 					</heading>
 					<heading id="EquinoctialDial" title="Equinoctial Dial">
@@ -11365,47 +11377,12 @@
 					<synonym value="Telescopes"/>
 				</heading>
 			</heading>
-			<heading id="ShadowBox" title="Shadow-Box">
+			<heading id="ShadowBox" title="Shadow Box">
+				<synonym value="Shadow Boxes"/>
+				<synonym value="Shadow-Box"/>
 				<synonym value="Shadow-Boxes"/>
 			</heading>
-			<heading id="Sundial" title="Sundial">
-				<synonym value="Gnomondial"/>
-				<synonym value="Gnomondials"/>
-				<synonym value="Sundials"/>
-				<heading id="AltitudeDial" title="Altitude Dial">
-					<synonym value="Altitude Dials"/>
-				</heading>
-				<heading id="CompassDial" title="Compass-Dial">
-					<synonym value="Compass-Dials"/>
-				</heading>
-				<heading id="DiptychDial" title="Diptych-Dial">
-					<synonym value="Diptych-Dials"/>
-				</heading>
-				<heading id="DiscDial" title="Disc-Dial">
-					<synonym value="Disc-Dials"/>
-				</heading>
-				<heading id="EquinoctialDial" title="Equinoctial Dial">
-					<synonym value="Equinoctial Dials"/>
-				</heading>
-				<heading id="HorizontalDial" title="Horizontal Dial">
-					<synonym value="Horizontal Dials"/>
-				</heading>
-				<heading id="IncliningDial" title="Inclining Dial">
-					<synonym value="Inclining Dials"/>
-				</heading>
-				<heading id="MagneticDial" title="Magnetic Dial">
-					<synonym value="Magnetic Dials"/>
-				</heading>
-				<heading id="PolyhedralDial" title="Polyhedral Dial">
-					<synonym value="Polyhedral Dials"/>
-				</heading>
-				<heading id="ScapheDial" title="Scaphe-Dial">
-					<synonym value="Scaphe-Dials"/>
-				</heading>
-				<heading id="VerticalDial" title="Vertical Dial">
-					<synonym value="Vertical Dials"/>
-				</heading>
-			</heading>
+			<heading id="SundialSciInstr" title="Sundial" noMatch="true"/>
 			<heading id="Volvelle" title="Volvelle">
 				<synonym value="Volvelles"/>
 			</heading>
