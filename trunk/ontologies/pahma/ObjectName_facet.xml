@@ -101,11 +101,7 @@
 					<heading id="Winnower" title="Winnower">
 						<synonym value="Winnowers"/>
 					</heading>
-					<heading id="WinnowingBasket" title="Winnowing Basket">
-						<synonym value="Winnowing Baskets"/>
-						<synonym value="Winnowing-Basket"/>
-						<synonym value="Winnowing-Baskets"/>
-					</heading>
+					<heading id="WinnowingBasketAgTool" title="Winnowing Basket" noMatch="true"/>
 					<heading id="WinnowingFan" title="Winnowing Fan">
 						<synonym value="Winnowing Fans"/>
 						<synonym value="Winnowing-Fan"/>
@@ -2184,10 +2180,10 @@
 					<synonym value="Head-Flattener"/>
 					<synonym value="Head-Flatteners"/>
 				</heading>
-				<heading id="HeadGuardChdCr" title="Head Guard">
-					<!-- This is just one part of the cradleboard. Differntiate from other head guards? -->
-					<synonym value="Head Guards"/>
-				</heading>
+				<!-- <heading id="HeadGuardChdCr" title="Head Guard"> -->
+					<!-- This is just one part of the cradleboard. Differentiate from other head guards? -->
+				<!-- <synonym value="Head Guards"/> -->
+				<!-- </heading> -->
 			</heading>
 		</heading>
 		<heading id="CotChdCr" title="Cot">
@@ -3220,6 +3216,8 @@
 			</heading>
 			<heading id="WinnowingBasket" title="Winnowing Basket">
 				<synonym value="Winnowing Baskets"/>
+				<synonym value="Winnowing-Basket"/>
+				<synonym value="Winnowing-Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 		</heading>
@@ -3684,9 +3682,8 @@
 				<synonym value="Churns"/>
 			</heading>
 			<heading id="CocktailShaker" title="Cocktail-Shaker">
-				<synonym value="Cocktail-Shakers"/>
+				<synonym value="Cocktail Shaker"/>
 				<synonym value="Cocktail Shakers"/>
-				<synonym value="Cocktail-Shaker"/>
 				<synonym value="Cocktail-Shakers"/>
 				<implies facet="ObjectName" cat="CocktailShakerAlcEq"/>
 			</heading>
@@ -4427,14 +4424,23 @@
 				<synonym value="Cod-Pieces"/>
 			</heading>
 			<heading id="Dresses" title="Dresses">
-				<synonym value="Dress"/> <!-- Exclude The Verb (Both Clothing & Butchery) -->
+				<synonym value="Dress"/> <!-- exclude the verb (both clothing & butchery) -->
+				<heading id="FrockGarment" title="Frock">
+					<synonym value="Frocks"/>
+				</heading>
+				<heading id="GownGarment" title="Gown">
+					<synonym value="Gowns"/>
+				</heading>
 				<heading id="KimonoDress" title="Kimono">
 					<synonym value="Kimonos"/>
 				</heading>
 				<heading id="SariDress" title="Sari">
 					<synonym value="Saris"/>
 				</heading>
-				<heading id="SkirtDress" title="Skirt"> <!-- Might Be Confused With The Frilly Bit Around A Mattress, Hovercraft, Or Christmas Tree -->
+				<heading id="ShiftGarment" title="Shift">
+					<synonym value="Shifts"/>
+				</heading>
+				<heading id="SkirtDress" title="Skirt"> <!-- might be confused with the frilly bit around a mattress, hovercraft, or christmas tree -->
 					<synonym value="Skirts"/>
 				</heading>
 				<heading id="WeddingDress" title="Wedding Dress"> <!-- Card For 7-6432 -->
@@ -4442,17 +4448,8 @@
 					<implies facet="ActivityorContext" cat="BridalAdornment"/>
 				</heading>
 			</heading>
-			<heading id="FrockGarment" title="Frock">
-				<synonym value="Frocks"/>
-			</heading>
 			<heading id="GandourahGarment" title="Gandourah">
 				<synonym value="Gandourahs"/>
-			</heading>
-			<heading id="GirdleGarment" title="Girdle">
-				<synonym value="Girdles"/>
-			</heading>
-			<heading id="GownGarment" title="Gown">
-				<synonym value="Gowns"/>
 			</heading>
 			<heading id="JacketGarment" title="Jacket">
 				<synonym value="Jackets"/>
@@ -4565,9 +4562,6 @@
 				<synonym value="Perrajes"/>
 				<synonym value="Rebozo"/>
 				<synonym value="Rebozos"/>
-			</heading>
-			<heading id="ShiftGarment" title="Shift">
-				<synonym value="Shifts"/>
 			</heading>
 			<heading id="ShirtGarment" title="Shirt">
 				<synonym value="Shirts"/>
@@ -4793,14 +4787,14 @@
 				<synonym value="Head-Covers"/>
 			</heading>
 			<heading id="HeadDressHdWr" title="Headdress">
-				
+				<synonym value="Headdresses"/>
 			</heading>
-			<heading id="HeadGuard" title="Head Guard">
+			<!-- <heading id="HeadGuard" title="Head Guard">
 				<synonym value="Head Guards"/>
 				<synonym value="Head-Guard"/>
 				<synonym value="Head-Guards"/>
-				<excl value="HeadGuardChdCr"/>
-			</heading>
+				<excl value="Cradle"/>
+			</heading> -->
 			<heading id="HeadNetHdWr" title="Head-Net">
 				<synonym value="Head-Nets"/>
 			</heading>
@@ -4863,7 +4857,7 @@
 				<synonym value="Neck-Covers"/>
 			</heading>
 			<heading id="Tie" title="Tie">
-				<!-- Need Disambiguation With The Verb And The Railroad Timber -->
+				<!-- Need disambiguation With The Verb And The Railroad Timber -->
 				<synonym value="Ties"/>
 			</heading>
 		</heading>
