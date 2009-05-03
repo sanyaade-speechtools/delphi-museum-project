@@ -211,7 +211,7 @@ public class MetaDataReader {
 				} // if fall through, just add the char
 				sb.append((char)ch);
 				if(sb.length() > 1000 && !reported) {
-					debug(1, "Warning: long token encountered: ["+sb.toString()+"]" );
+					debug(2, "Warning: long token encountered: ["+sb.toString()+"]" );
 					reported = true;
 				}
 				fEscape = false;
