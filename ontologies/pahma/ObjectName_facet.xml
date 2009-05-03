@@ -1293,7 +1293,7 @@
 	<heading id="Armaments" title="Armaments">
 		<synonym value="Arms/Armour"/>
 		<!-- The British Museum notes: for associated equipment, see arms equipment. -->
-		<heading id="Aegis" title="Aegis"/>
+		<heading id="AegisArmsArmor" title="Aegis"/>
 		<heading id="ArchersLoose" title="Archer's Loose">
 			<synonym value="Archers Loose"/>
 			<synonym value="Archers' Loose"/>
@@ -4759,11 +4759,10 @@
 			<heading id="CapHeadGear" title="Cap">
 				<synonym value="Caps"/>
 			</heading>
-			<heading id="Circlet" title="Circlet" noMatch="true">
-				<synonym value="Circlets" noMatch="true"/>
-				<implies facet="ObjectName" cat="HeadOrnamentationPrsOrn"/>
-			</heading>
-			<heading id="EarMuff" title="Ear-Muff">
+			<heading id="CircletHeadGear" title="Circlet" noMatch="true"/>
+			<heading id="EarMuff" title="Ear Muff">
+				<synonym value="Ear Muffs"/>
+				<synonym value="Ear-Muff"/>
 				<synonym value="Ear-Muffs"/>
 			</heading>
 			<heading id="FaceCover" title="Face-Cover">
@@ -4773,10 +4772,14 @@
 				<synonym value="Fes"/>
 				<synonym value="Fezzes"/>
 			</heading>
-			<heading id="HairCover" title="Hair-Cover">
+			<heading id="HairCover" title="Hair Cover">
+				<synonym value="Hair Covers"/>
+				<synonym value="Hair-Cover"/>
 				<synonym value="Hair-Covers"/>
 			</heading>
-			<heading id="HairNet" title="Hair-Net">
+			<heading id="HairNet" title="Hair Net">
+				<synonym value="Hair Nets"/>
+				<synonym value="Hair-Net"/>
 				<synonym value="Hair-Nets"/>
 			</heading>
 			<heading id="HatHeadGear" title="Hat">
@@ -4835,6 +4838,8 @@
 			</heading>
 			<heading id="VeilHdWr" title="Veil">
 				<synonym value="Veils"/>
+				<synonym value="Viel"/> <!-- Misspelling -->
+				<synonym value="Viels"/> <!-- Misspelling -->
 			</heading>
 			<heading id="YashmakGarment" title="Yashmak">
 				<synonym value="Yashmaks"/>
@@ -4847,12 +4852,12 @@
 			<implies facet="ObjectName" cat="MasqueradeCostumeRelRit"/>
 		</heading>
 		<heading id="Neckwear" title="Neckwear">
-			<synonym value="Neck Ware"/>
+			<synonym value="Neck Ware"/> <!-- Misspelling -->
 			<synonym value="Neck Wear"/>
-			<synonym value="Neckware"/>
-			<heading id="Collar" title="Collar">
+			<synonym value="Neckware"/> <!-- Misspelling -->
+			<heading id="CollarNeckwear" title="Collar">
 				<synonym value="Collars"/>
-				<excl value="CollarJewelery"/>
+				<implies facet="ObjectName" cat="CollarJeweleryPrsOrn"/>
 			</heading>
 			<heading id="Cravatte" title="Cravatte">
 				<synonym value="Cravattes"/>
@@ -7909,7 +7914,7 @@
 					<synonym value="Dulcimers"/>
 				</heading>
 				<heading id="Gittern" title="Gittern">
-					<synonym value="Gittern"/>
+					<synonym value="Gitterns"/>
 				</heading>
 				<heading id="Guitar" title="Guitar"> <!-- includes Charango, dobro, Mandolin -->
 					<synonym value="Guitars"/>
@@ -8069,8 +8074,6 @@
 						<synonym value="Horn Bell"/>
 						<synonym value="Hornbell"/>
 						<synonym value="Hornbells"/>
-						<synonym value="Horn With Bell"/>
-						<synonym value="Horn With Bells"/>
 					</heading>
 					<heading id="AnimalBell" title="Animal Bells">
 						<synonym value="Animal Bell"/>
@@ -8610,8 +8613,6 @@
 						<synonym value="Knee to Ankle Rattles"/>
 						<synonym value="Ankle to Knee Rattle"/>
 						<synonym value="Ankle to Knee Rattles"/>
-						<synonym value="Anklet" noMatch="true"/>
-						<synonym value="Anklets" noMatch="true"/>
 					</heading>
 					<heading id="MaracaRattle" title="Maraca">
 						<synonym value="Maracas"/>
@@ -8930,7 +8931,7 @@
 							<implies facet="Material" cat="BrassMetal"/>
 						</heading>
 					</heading>
-					<heading id="HornWithBell" title="Horn With Bell" noMatch="true">
+					<heading id="HornWithBell" title="Horn with Bell" noMatch="true">
 						<!-- also incl in Bell concept -->
 						<synonym value="Horn With Bells"/>
 						<synonym value="Horns With Bell"/>
@@ -9318,11 +9319,11 @@
 		</heading>
 		<heading id="HatOrnamentPrsOrn" title="Hat Ornament">
 			<synonym value="Hat Ornaments"/>
-			<synonym value="Hat-Ornaments"/>
+			<synonym value="Hat-Ornament"/>
 			<synonym value="Hat-Ornaments"/>
 			<heading id="HatpinPrsOrn" title="Hat Pin">
 				<synonym value="Hat Pins"/>
-				<synonym value="Pin" noMatch="true"/>
+				<implies facet="ObjectName" cat="PinJeweleryPrsOrn"/>
 			</heading>
 		</heading>
 		<heading id="HeadDressOrnamPrsOrn" title="Head Dress Ornament">
@@ -9336,6 +9337,7 @@
 			<synonym value="Head Ornamentations"/>
 			<heading id="CircletPrsOrn" title="Circlet">
 				<synonym value="Circlets"/>
+				<implies facet="ObjectName" cat="CircletHeadGear"/>
 			</heading>
 			<heading id="CrownPrsOrn" title="Crown">
 				<!-- Other Exclusions? -->
@@ -9433,10 +9435,7 @@
 			<heading id="ChokerJeweleryPrsOrn" title="Choker">
 				<synonym value="Chokers"/>
 			</heading>
-			<heading id="CollarJeweleryPrsOrn" title="Collar">
-				<synonym value="Collars"/>
-				<excl value="Neckwear"/>
-			</heading>
+			<heading id="CollarJeweleryPrsOrn" title="Collar" noMatch="true"/>
 			<heading id="CoronetJeweleryPrsOrn" title="Coronet">
 				<synonym value="Coronets"/>
 			</heading>
@@ -9445,7 +9444,7 @@
 				<synonym value="Dress Pins"/>
 				<synonym value="Dress-Pin"/>
 				<synonym value="Dress-Pins"/>
-				<synonym value="Pin" noMatch="true"/>
+				<implies facet="ObjectName" cat="PinJeweleryPrsOrn"/>
 			</heading>
 			<heading id="DressStudJeweleryPrsOrn" title="Dress Stud">
 				<synonym value="Dress Studs"/>
@@ -9805,11 +9804,10 @@
 		<synonym value="Ritual Items"/>
 		<synonym value="Ritual Object"/>
 		<synonym value="Ritual Objects"/>
-		<heading id="AegisreligionRelRit" title="Aegis">
-			<synonym value="Aegi"/>
-			<!-- Check -->
-			<!-- Needs exclusions for non-religious. e.g. Aegis Armaments. -->
-		</heading>
+		<!-- <heading id="AegisReligionRelRit" title="Aegis">
+			<synonym value="Aegi"/> Check
+			 Needs disambiguation from aegis as arms/armor.
+		</heading> -->
 		<heading id="AltarRelRit" title="Altar">
 			<synonym value="Altars"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
