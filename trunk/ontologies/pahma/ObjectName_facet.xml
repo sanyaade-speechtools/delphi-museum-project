@@ -899,14 +899,21 @@
 		</heading>
 	</heading>
 	<heading id="BiologicalRemains" title="Biological Remains">
-		<!-- BM ok -->
 		<synonym value="Animal/Vegetal Remains"/>
-		<!-- Following The British Museum, This Term Includes Human Remains. -->
 		<heading id="AnimalRemains" title="Animal Remains">
-			<!-- The British Museum Specifies That For Their Department of Egyptian Antiquities,
-				The Term Should Be Multiple-Keyworded With Mummy, When Appropriate. -->
 			<synonym value="Bone"/>
 			<synonym value="Bones"/>
+			<synonym value="'faunal'"/>
+			<synonym value="unmodified 'faunal'"/>
+			<synonym value="faunal"/>
+			<synonym value="faunal remain"/>
+			<synonym value="faunal remains"/> <!-- Unless it says "faunal remains and artifacts removed" -->
+			<synonym value="faunal bones"/>
+			<synonym value="modified faunal"/>
+			<synonym value="unmodified faunal"/>
+			<synonym value="faunal remains'"/>
+			<synonym value="header labeled 'faunal remains'"/>
+			<synonym value="labeled 'faunal"/>
 			<synonym value="Faunal Material"/>
 			<synonym value="Faunal Remains"/>
 			<synonym value="Skeleton"/>
@@ -14282,6 +14289,7 @@
 			<implies facet="ObjectName" cat="PauComm"/>
 		</heading>
 		<heading id="PhotographsVisRep" title="Photographs">
+			<synonym value="Film"/> <!-- Disambiguate -->
 			<synonym value="Photograph"/>
 			<synonym value="Photo"/>
 			<synonym value="Photos"/>
@@ -14292,6 +14300,9 @@
 				<synonym value="photograph   negative"/>
 				<!-- Check for possible exclusions -->
 				<heading id="GlassPlateNegativeVisRep" title="Glass Plate Negative">
+					<synonym value="film glass"/>
+					<synonym value="film   glass plate"/>
+					<synonym value="glass plate"/>
 					<synonym value="Glass Plate Negatives"/>
 					<synonym value="Glass-Plate Negative"/>
 					<synonym value="Glass-Plate Negatives"/>
