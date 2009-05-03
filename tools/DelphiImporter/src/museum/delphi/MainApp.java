@@ -1727,6 +1727,11 @@ public class MainApp {
 	    		throw new RuntimeException("categorizeForFacet: odd input filename:\n"+filename);
 	    	String basefilename = filename.substring(0, iSlash+1)+"obj_cats_";
 			userProjInfo.metaDataReader.resetToLine1();
+			boolean compileUnmatchedUsage =
+				(JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(getJFrame(),
+						"Compile statistics for unmatched tokens and n-grams?",
+						"Choose Yes or No",
+						JOptionPane.YES_NO_OPTION));
 			if( !fAllFacets ) {
 				JOptionPane.showMessageDialog(getJFrame(),
 						"Single facet concept association is net yet implemented.\n",
@@ -1742,7 +1747,8 @@ public class MainApp {
 		    	userProjInfo.categorizer.categorizeForFacet(userProjInfo.metaDataReader,
 												null /*Do all facets at once */,
 												Categorizer.COMPLEX_INFER_5_STEPS,
-												basefilename, false, dbName);
+												basefilename, false, dbName,
+												compileUnmatchedUsage );
 			}
 		} catch( Exception e ) {
 			JOptionPane.showMessageDialog(getJFrame(),
