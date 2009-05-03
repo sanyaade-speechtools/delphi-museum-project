@@ -3961,10 +3961,7 @@
 				<synonym value="Plates"/>
 				<implies facet="ObjectName" cat="PlateCookEq"/>
 			</heading>
-			<heading id="Platter" title="Platter" noMatch="true">
-				<synonym value="Platters"/>
-				<implies facet="ObjectName" cat="PlatterCookEq"/>
-			</heading>
+			<heading id="PlatterVsl" title="Platter" noMatch="true"/>
 			<heading id="PopeJoanBoard" title="Pope Joan Board">
 				<synonym value="Pope Joan Boards"/>
 			</heading>
@@ -5345,6 +5342,7 @@
 			<heading id="PlatterCookEq" title="Platter">
 				<synonym value="Platters"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<implies facet="ObjectName" cat="PlatterVsl"/>
 			</heading>
 		</heading>
 		<heading id="FishDrierCookEq" title="Fish Drier">
@@ -7430,10 +7428,7 @@
 			<synonym value="Mirrors"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
-		<heading id="ModelMiscEq" title="Model">
-			<synonym value="Models"/>
-			<!-- Need to differentiate from ModelProdReplic.  How to do this? -->
-		</heading>
+		<heading id="ModelMiscEq" title="Model" noMatch="true"/>
 		<heading id="NapkinRingMiscEq" title="Napkin Ring">
 			<synonym value="Napkin Rings"/>
 			<synonym value="Napkin-Ring"/>
@@ -9811,6 +9806,7 @@
 		</heading>
 		<heading id="ModelProdReplic" title="Model">
 			<synonym value="Models"/>
+			<implies facet="ObjectName" cat="ModelMiscEq"/>
 		</heading>
 		<heading id="MoldsProdReplic" title="Mold">
 			<synonym value="Molds"/>
@@ -13994,6 +13990,7 @@
 						<synonym value="Boat Model"/>
 						<synonym value="Boat Models"/>
 						<synonym value="Model Boats"/>
+						<implies facet="ObjectName" cat="ModelProdReplic"/>
 					</heading>
 					<heading id="OutriggerCanoeBoat" title="Outrigger">
 						<synonym value="Outriggers"/>
