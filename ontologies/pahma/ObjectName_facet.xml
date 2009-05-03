@@ -643,9 +643,7 @@
 		<heading id="ChickenCoopAnmlEq" title="Chicken-Coop">
 			<synonym value="Chicken-Coops"/>
 		</heading>
-		<heading id="CockspurAnmlEq" title="Cockspur">
-			<synonym value="Cockspurs"/>
-		</heading>
+		<heading id="CockspurAnmlEq" title="Cockspur" noMatch="true"/>
 		<heading id="DogBellAnmlEq" title="Dog-Bell">
 			<synonym value="Dog-Bells"/>
 		</heading>
@@ -1234,9 +1232,9 @@
 		<heading id="Ramp" title="Ramp">
 			<synonym value="Ramps"/>
 		</heading>
-		<heading id="Relief" title="Relief">
+		<!-- <heading id="Relief" title="Relief">
 			<synonym value="Reliefs"/>
-		</heading>
+		</heading> -->
 		<heading id="Revetment" title="Revetment">
 			<synonym value="Revetments"/>
 			<synonym value="Revêtment"/>
@@ -2291,7 +2289,10 @@
 		</heading>
 		<heading id="ArtWritingItemsComm" title="Art &amp; Writing Items">
 			<synonym value="Art/Writing Equipment"/>
-			<heading id="AlphabetComm" title="Alphabet"/>
+			<heading id="AlphabetComm" title="Alphabet">
+				<synonym value="Alphabets"/>
+				<implies facet="ObjectName" cat="AlphabetVisRep"/>
+			</heading>
 			<heading id="ArtWritingImplementsComm" title="Art &amp; Writing Implements">
 				<synonym value="Art/Writing-Implement"/>
 				<synonym value="Art/ Writing-Implement"/>
@@ -3789,9 +3790,7 @@
 					<synonym value="Steins"/>
 				</heading>
 			</heading>
-			<heading id="Cupel" title="Cupel">
-				<synonym value="Cupels"/>
-			</heading>
+			<heading id="CupelVessel" title="Cupel" noMatch="true"/>
 			<heading id="CuppingVessel" title="Cupping-Vessel">
 				<synonym value="Cupping-Vessels"/>
 			</heading>
@@ -5406,6 +5405,7 @@
 			</heading>
 			<heading id="OvenCookEq" title="Oven">
 				<synonym value="Ovens"/>
+				<implies facet="ObjectName" cat="OvenFireEq"/>
 				<heading id="BreadOvenCookEq" title="Bread Oven">
 					<synonym value="Bread Ovens"/>
 					<implies facet="ObjectName" cat="BreadFood"/>
@@ -6259,9 +6259,7 @@
 			<heading id="KilnFireEq" title="Kiln">
 				<synonym value="Kilns"/>
 			</heading>
-			<heading id="OvenFireEq" title="Oven">
-				<synonym value="Ovens"/>
-			</heading>
+			<heading id="OvenFireEq" title="Oven" noMatch="true"/>
 			<heading id="StoveFireEq" title="Stove">
 				<synonym value="Stoves"/>
 			</heading>
@@ -6848,7 +6846,7 @@
 				<synonym value="Chess-Set"/>
 				<synonym value="Chess-Sets"/>
 			</heading>
-			<heading id="CockspurGmSprt" title="Cockspur" noMatch="true">
+			<heading id="CockspurGmSprt" title="Cockspur">
 				<synonym value="Cockspurs"/>
 				<implies facet="ObjectName" cat="CockspurAnmlEq"/>
 			</heading>
@@ -7469,31 +7467,7 @@
 			<heading id="FanMiscEq" title="Fan">
 				<synonym value="Fans"/>
 			</heading>
-			<heading id="PipeMiscEq" title="Pipe">
-				<excl value="Lead pipe"/> <!-- Disambiguates from pipe for plumbing -->
-				<excl value="Lead pipes"/> <!-- Ibid. -->
-				<excl value="Copper pipe"/> <!-- Ibid. -->
-				<excl value="Copper pipes"/> <!-- Ibid. -->
-				<excl value="Drone"/> <!-- Disambiguates from musical instruments -->
-				<excl value="music"/> <!-- Ibid. -->
-				<excl value="musical"/> <!-- Ibid. -->
-				<excl value="instrument"/> <!-- Ibid. -->
-				<excl value="instruments"/> <!-- Ibid. -->
-				<synonym value="Pipes"/>
-				<heading id="OpiumPipeMiscEq" title="OpiumPipe">
-					<synonym value="Opium Pipes"/>
-					<implies facet="ActivityorContext" cat="DrugUse"/>
-				</heading>
-				<heading id="PipePartsMiscEq" title="Pipe Parts">
-					<heading id="PipeBowlMiscEq" title="Pipe Bowl">
-						<synonym value="Pipe Bowls"/>
-						<synonym value="Pipe-Bowl"/>
-						<synonym value="Pipe-Bowls"/>
-						<synonym value="Smoking Pipe Bowl"/>
-						<synonym value="Smoking Pipe Bowls"/>
-					</heading>
-				</heading>
-			</heading>
+			
 		</heading>
 		<heading id="PicnicSetMiscEq" title="Picnic Set">
 			<synonym value="Picnic Sets"/>
@@ -8471,8 +8445,8 @@
 						<synonym value="Hoop Belts"/>
 						<synonym value="Hoop Rattle"/>
 						<synonym value="Hoop Rattles"/>
-						<synonym value="Hoop"/>
-						<synonym value="Hoops"/>
+						<!-- <synonym value="Hoop"/> -->
+						<!-- <synonym value="Hoops"/> -->
 					</heading>
 					<heading id="BowlRattle" title="Bowl Rattle">
 						<synonym value="Bowl Rattles"/>
@@ -8855,8 +8829,8 @@
 							<implies facet="Material" cat="PotteryMaterial"/>
 						</heading>
 					</heading>
-					<heading id="PipeInstrument" title="Pipe">
-						<synonym value="Pipes"/>
+					<heading id="PipeInstrument" title="Pipes (musical)">
+						<!-- <synonym value="Pipes"/> -->
 						<synonym value="Musical Pipe"/>
 						<synonym value="Musical Pipes"/>
 						<synonym value="Set of Single Pipes"/>
@@ -9587,6 +9561,7 @@
 				</heading>
 				<heading id="CharmJeweleryPrsOrn" title="Charm">
 					<synonym value="Charms"/>
+					<implies facet="ObjectName" cat="CharmRelRit"/>
 				</heading>
 				<heading id="LocketJeweleryPrsOrn" title="Locket">
 					<synonym value="Lockets"/>
@@ -9951,9 +9926,7 @@
 		<heading id="CeremonialStaffRelRit" title="Ceremonial Staff">
 			<synonym value="Ceremonial Staffs"/>
 		</heading>
-		<heading id="CharmRelRit" title="Charm">
-			<synonym value="Charms"/>
-		</heading>
+		<heading id="CharmRelRit" title="Charm" noMatch="true"/>
 		<heading id="CharmBoxRelRit" title="Charm-Box">
 			<synonym value="Charm-Boxes"/>
 		</heading>
@@ -10290,9 +10263,6 @@
 		<heading id="Fossil" title="Fossil">
 			<synonym value="Fossils"/>
 		</heading>
-		<heading id="Fuel" title="Fuel">
-			<synonym value="Fuels"/>
-		</heading>
 		<heading id="Gunpowder" title="Gunpowder">
 			<synonym value="Gunpowders"/>
 		</heading>
@@ -10311,9 +10281,6 @@
 		</heading>
 		<heading id="Osmund" title="Osmund">
 			<synonym value="Osmunds"/>
-		</heading>
-		<heading id="Paint" title="Paint">
-			<synonym value="Paints"/>
 		</heading>
 		<heading id="Pigment" title="Pigment">
 			<synonym value="Pigments"/>
@@ -10512,8 +10479,6 @@
 		<synonym value="Science"/>
 		<synonym value="Sciences"/>
 		<synonym value="Scientific"/>
-		<synonym value="Measure"/>
-		<synonym value="Measures"/>
 		<heading id="CalendarScience" title="Calendar">
 			<synonym value="Calendars"/>
 			<implies facet="ObjectName" cat="CalendarComm"/>
@@ -10553,6 +10518,7 @@
 		</heading>
 		<heading id="CupelScience" title="Cupel">
 			<synonym value="Cupels"/>
+			<implies facet="ObjectName" cat="CupelVessel"/>
 		</heading>
 		<heading id="GlobeScience" title="Globe">
 			<synonym value="Globes"/>
@@ -12448,8 +12414,29 @@
 				<synonym value="Smoking Pipes"/>
 				<synonym value="Smoking-Pipe"/>
 				<synonym value="Smoking-Pipes"/>
-				<excl value="Lead"/>
+				<excl value="Lead pipe"/> <!-- Disambiguates from pipe for plumbing -->
+				<excl value="Lead pipes"/> <!-- Ibid. -->
+				<excl value="Copper pipe"/> <!-- Ibid. -->
+				<excl value="Copper pipes"/> <!-- Ibid. -->
+				<excl value="Drone"/> <!-- Disambiguates from musical instruments -->
+				<excl value="Music"/> <!-- Ibid. -->
+				<excl value="Musical"/> <!-- Ibid. -->
+				<excl value="Instrument"/> <!-- Ibid. -->
+				<excl value="Instruments"/> <!-- Ibid. -->
 				<!-- other EXCL needed? -->
+				<heading id="OpiumPipeMiscEq" title="OpiumPipe">
+					<synonym value="Opium Pipes"/>
+					<implies facet="ActivityorContext" cat="DrugUse"/>
+				</heading>
+				<heading id="PipePartsMiscEq" title="Pipe Parts">
+					<heading id="PipeBowlMiscEq" title="Pipe Bowl">
+						<synonym value="Pipe Bowls"/>
+						<synonym value="Pipe-Bowl"/>
+						<synonym value="Pipe-Bowls"/>
+						<synonym value="Smoking Pipe Bowl"/>
+						<synonym value="Smoking Pipe Bowls"/>
+					</heading>
+				</heading>
 			</heading>
 			<heading id="PipeBagSmkng" title="Pipe Bag">
 				<synonym value="Pipe Bags"/>
@@ -14143,9 +14130,7 @@
 		<heading id="AlbumVisRep" title="Album">
 			<synonym value="Albums"/>
 		</heading>
-		<heading id="AlphabetVisRep" title="Alphabet">
-			<synonym value="Alphabets"/>
-		</heading>
+		<heading id="AlphabetVisRep" title="Alphabet" noMatch="true"/>
 		<heading id="BanknoteVisRep" title="Banknote" noMatch="true"/>
 		<heading id="BookofPrintsVisRep" title="Book of Prints">
 			<synonym value="Books of Prints"/>
