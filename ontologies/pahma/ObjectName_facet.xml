@@ -3343,12 +3343,7 @@
 			<synonym value="Eel-Container"/>
 			<synonym value="Eel-Containers"/>
 		</heading>
-		<heading id="FireStickCntnrCntnr" title="Fire Stick Container">
-			<synonym value="Fire Stick Containers"/>
-			<synonym value="Fire-Stick-Container"/>
-			<synonym value="Fire-Stick-Containers"/>
-			<implies facet="ObjectName" cat="FireStickContainerFireEq"/>
-		</heading>
+		<heading id="FireStickCntnrCntnr" title="Fire Stick Container" noMatch="true"/>
 		<heading id="DrugContainers" title="Drug Containers">
 			<heading id="BetelContainerCntnr" title="Betel Container" noMatch="true"/>
 			<heading id="CocaContainerCntnr" title="Coca Container">
@@ -3795,12 +3790,6 @@
 			<heading id="Ewer" title="Ewer">
 				<synonym value="Ewers"/>
 			</heading>
-			<heading id="FireDevil" title="Fire evil" noMatch="true">
-				<synonym value="Fire Devils"/>
-				<synonym value="Fire-Devil"/>
-				<synonym value="Fire-Devils"/>
-				<implies facet="ObjectName" cat="FireDevilFireEq"/>
-			</heading>
 			<heading id="Flask" title="Flask">
 				<synonym value="Flasks"/>
 				<heading id="Alabastron" title="Alabastron">
@@ -3896,13 +3885,7 @@
 			<heading id="Kero" title="Kero">
 				<synonym value="Keros"/>
 			</heading>
-			<heading id="Kettlevessels" title="Kettle" noMatch="true">
-				<synonym value="Kettles"/>
-				<implies facet="ActivityorContext" cat="Metallurgy"/>
-				<!-- Are All Kettles Made of Metal? -->
-				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="ObjectName" cat="KettleHeatingCookEq"/>
-			</heading>
+			<heading id="KettleVessels" title="Kettle" noMatch="true"/>
 			<heading id="Kuduo" title="Kuduo">
 				<synonym value="Kuduos"/>
 			</heading>
@@ -4568,10 +4551,7 @@
 				<heading id="Hairshirtshirt" title="Hairshirt" noMatch="true">
 					<implies facet="ObjectName" cat="HairshirtUnderwear"/>
 				</heading>
-				<heading id="Undershirtshirt" title="Undershirt" noMatch="true">
-					<synonym value="Undershirts"/>
-					<implies facet="ObjectName" cat="UndershirtUnderwearUpper"/>
-				</heading>
+				<heading id="UndershirtShirt" title="Undershirt" noMatch="true"/>
 				<heading id="T-shirtShirtGarment" title="T-shirt"/>
 			</heading>
 			<heading id="ShirtFrontGarment" title="Shirt-Front">
@@ -4711,6 +4691,7 @@
 					<synonym value="Under-Shirts"/>
 					<synonym value="Under Shirts"/>
 					<synonym value="Undershirts"/>
+					<implies facet="ObjectName" cat="UndershirtShirt"/>
 				</heading>
 			</heading>
 			<heading id="VestGarment" title="Vest">
@@ -5929,7 +5910,7 @@
 				</heading>
 				<heading id="Twostater" title="Two Stater">
 					<synonym value="Two Staters"/>
-					<synonym value="Two-Staters"/>
+					<synonym value="Two-Stater"/>
 					<synonym value="Two-Staters"/>
 					<synonym value="2 Stater"/>
 					<synonym value="2 Staters"/>
@@ -6263,10 +6244,11 @@
 			<synonym value="Fire-Sticks"/>
 			<implies facet="ObjectName" cat="FireStickTool"/>
 		</heading>
-		<heading id="FireStickContainerFireEq" title="Fire Stick Container">
+		<heading id="FireStickCntnrFireEq" title="Fire Stick Container">
 			<synonym value="Fire Stick Containers"/>
 			<synonym value="Fire-Stick-Container"/>
 			<synonym value="Fire-Stick-Containers"/>
+			<implies facet="ObjectName" cat="FireStickCntnrCntnr"/>
 		</heading>
 		<heading id="FireStoneFireEq" title="Fire Stone">
 			<synonym value="Fire Stones"/>
@@ -8205,14 +8187,16 @@
 						<synonym value="Hour-Glass Drums"/>
 						<synonym value="Hour Glass Drum"/>
 						<synonym value="Hour Glass Drums"/>
-						<synonym value="Damaru Drum"/>
-						<synonym value="Damaru Drums"/>
-						<synonym value="Damaru"/>
-						<synonym value="Damarus"/>
-						<synonym value="Damru Drum"/>
-						<synonym value="Damru Drums"/>
-						<synonym value="Damru"/>
-						<synonym value="Damrus"/>
+						<heading id="DamaruRelRit" title="Damaru">
+							<synonym value="Damarus"/>
+							<synonym value="Damaru Drum"/>
+							<synonym value="Damaru Drums"/>
+							<synonym value="Damru Drum"/>
+							<synonym value="Damru Drums"/>
+							<synonym value="Damru"/>
+							<synonym value="Damrus"/>
+							<implies facet="ObjectName" cat="DamaruRelRit"/>
+						</heading>
 					</heading>
 					<heading id="LacedDrum" title="Laced Drum">
 						<synonym value="Laced Drums"/>
@@ -9937,9 +9921,7 @@
 		<heading id="CylconRelRit" title="Cylcon">
 			<synonym value="Cylcons"/>
 		</heading>
-		<heading id="DamaruRelRit" title="Damaru">
-			<synonym value="Damarus"/>
-		</heading>
+		<heading id="DamaruRelRit" title="Damaru" noMatch="true"/>
 		<heading id="DivinationEquipmentRelRit" title="Divination Equipment">
 			<synonym value="Divination Items"/>
 		</heading>
