@@ -92,11 +92,12 @@ public class Categorizer {
 	 *          If after n steps no new inferences are found, it will also stop.
 	 * @param fDumpAsSQLInsert set TRUE for an insert statement, FALSE for a loadfile
 	 * @param dbName the name of the DB to be used.
+	 * @param compileUnmatchedUsage if TRUE, builds up a report of unmatched tokens, by column
 	 */
 	public void categorizeForFacet(MetaDataReader metaDataReader, String facetName,
 			int complexInferenceSteps,
-			String basefilename, boolean fDumpAsSQLInsert, String dbName ) {
-    	String filename = null;
+			String basefilename, boolean fDumpAsSQLInsert, String dbName,
+			boolean compileUnmatchedUsage ) {
     	String extension = ".sql";
     	String currFilename = null;
     	int iOutputFile;
@@ -130,10 +131,15 @@ public class Categorizer {
 			int nCols = columnNames.length;
 			// Since we run through lots of lines, cache the skip columns info for speed
 			boolean[] skipCol = new boolean[nCols];
+			ArrayList<Counter<String>> vocabCounts = new ArrayList<Counter<String>>(nCols);
 			for( int iCol=0; iCol<nCols; iCol++ ) {
 				skipCol[iCol] = !((facetName==null)?
 								 colDumpInfo[iCol].columnMinedForAnyFacet()
 								:colDumpInfo[iCol].columnMinedForFacet(facetName));
+				if(compileUnmatchedUsage && !skipCol[iCol])
+					vocabCounts.add(new Counter<String>());
+				else
+					vocabCounts.add(null);
 			}
 			BufferedWriter objCatsWriter = null;
 	    	iOutputFile = 0;
@@ -179,10 +185,10 @@ public class Categorizer {
 							continue;
 						if( facetName != null )
 							categorizeObjectForFacet( currID, source, objStrings,
-								facetName, colDumpInfo[i], matchedCats );
+								facetName, colDumpInfo[i], matchedCats, vocabCounts.get(i) );
 						else
 							categorizeObjectForAllFacets( currID, source, objStrings,
-									colDumpInfo[i], matchedCats );
+									colDumpInfo[i], matchedCats, vocabCounts.get(i) );
 					}
 					// Now we handle inferences. First get all the simple inferences,
 					// including inherited (ascendant) concepts, and simple declarations.
@@ -246,9 +252,25 @@ public class Categorizer {
 			}
 			debug(1,"Wrote "+nObjCatsDumpedTotal+" total object categories"
 					+ ((facetName==null)?"":(" for facet: "+facetName)));
+			// Now, consider the unmatched usage
+			if(compileUnmatchedUsage) {
+				// We're going to dump the usage per column
+				for(int i=1; i<nCols; i++ ) {
+					Counter<String> vocabCountsForCol = vocabCounts.get(i);
+					if(vocabCountsForCol == null)
+						continue;
+					currFilename = basefilename
+	    						+"_"+(colDumpInfo[i].name.replaceAll("\\W", "_"))+"_Usage.txt";
+					BufferedWriter usageWriter = new BufferedWriter(new FileWriter( currFilename ));
+	    			debug(1,"Saving column usage info to file: " + currFilename);
+	    			vocabCountsForCol.write(usageWriter, true, 0, true);
+					usageWriter.flush();
+					usageWriter.close();
+				}
+			}
 		} catch( IOException e ) {
 			String tmp = "Categorizer.categorizeForFacet: Could not create or other problem writing:\n  "
-				+((filename==null)?"null":filename)
+				+((currFilename==null)?"null":currFilename)
 				+"\n Processing ID: " + currID
 				+"\n"+e.toString();
 			debug(1, tmp);
@@ -265,7 +287,7 @@ public class Categorizer {
 
 	private void categorizeObjectForFacet( int id, String source, ArrayList<String> allStrings,
 			String facetName, DumpColumnConfigInfo colInfo,
-			HashMap<TaxoNode, Float> matchedCats ) {
+			HashMap<TaxoNode, Float> matchedCats, Counter<String> vocabCounts ) {
 		// Tokenize the string for this column
 		ArrayList<Pair<String,ArrayList<String>>> tokenList
 				= prepareSourceTokens( source, colInfo );
@@ -273,28 +295,48 @@ public class Categorizer {
 		// Now, we try to find a category in the hashMap for each token
 		for( Pair<String,ArrayList<String>> pair:tokenList ) {
 			String token = pair.first;
-			// Test where id is 317239 - how do we match FUR?
 			TaxoNode node = facetMapHashTree.FindNodeByHook(facetName,token);
-			if( node == null )
-				continue;
-			debug(3, "Obj:"+id+" matched concept: ["+
-					facetName+":"+node.displayName+"] on token: "+token);
-			// We have a candidate here. Check for the exclusions
-			if( lineContainsExclusions( node.exclset, allStrings ))
-				continue;
-			// We have a TaxoNode match! Update matches with this node
-			updateMatches( matchedCats, reliability, node);
-			// Now, consider any pending implied nodes as well.
-			// TODO Verify that this should never happen, and remove this code.
-			if(( node.impliedNodesPending != null ) && ( node.impliedNodesPending.size() > 0 ))
-				for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
-					updateMatches( matchedCats, reliability, node.impliedNodes.get(i));
+			if( node != null ) {
+				debug(3, "Obj:"+id+" matched concept: ["+
+						facetName+":"+node.displayName+"] on token: "+token);
+				// We have a candidate here. Check for the exclusions
+				if( !lineContainsExclusions( node.exclset, allStrings )) {
+					// We have a TaxoNode match! Update matches with this node
+					updateMatches( matchedCats, reliability, node);
 				}
+			} else {
+				debug(3, "No matched concept for full token: "+token);
+				if(vocabCounts != null)
+					vocabCounts.incrementCount(token, 1);
+				// Now we consider the ngrams within, if there are 2 or more words
+				ArrayList<String> words = pair.second;
+				if(words.size()>1) {
+					NGramStack ngrams = new NGramStack(words, maxNGramLength);
+					NGram next;
+					while((next=ngrams.pop())!=null) {
+						String ngramStr = next.getString();
+						node = facetMapHashTree.FindNodeByHook(facetName,ngramStr);
+						if(node != null ) {
+							debug(3, "Obj:"+id+" matched concept: ["+
+									facetName+":"+node.displayName+"] on NGram: "+ngramStr);
+							// We have a candidate here. Check for the exclusions
+							if( !lineContainsExclusions( node.exclset, allStrings )) {
+								// We have a TaxoNode match! Update matches with this node
+								updateMatches( matchedCats, reliability, node);
+								// And filter this nGram out from the list
+								ngrams.filterMatch(next);
+							}
+						} else if(vocabCounts != null) {
+							vocabCounts.incrementCount(ngramStr, 1);
+						}
+					}
+				}
+			}
 		}
 	}
 
 	private void categorizeObjectForAllFacets( int id, String source, ArrayList<String> allStrings,
-			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
+			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats, Counter<String> vocabCounts ) {
 		try {
 			// Tokenize the string for this column. First list is tokens, second is words.
 			ArrayList<Pair<String,ArrayList<String>>> tokenList
@@ -306,15 +348,20 @@ public class Categorizer {
 					checkAllFacetsForToken(id, token, allStrings, false, colInfo, matchedCats );
 				if(!foundMatch) {
 					debug(3, "No matched concept for full token: "+token);
+					if(vocabCounts != null)
+						vocabCounts.incrementCount(token, 1);
 					// Now we consider the ngrams within, if there are 2 or more words
 					ArrayList<String> words = pair.second;
 					if(words.size()>1) {
 						NGramStack ngrams = new NGramStack(words, maxNGramLength);
 						NGram next;
 						while((next=ngrams.pop())!=null) {
-							if(checkAllFacetsForToken(id, next.getString(),
+							String ngramStr = next.getString();
+							if(checkAllFacetsForToken(id, ngramStr,
 									allStrings, true, colInfo, matchedCats )) {
 								ngrams.filterMatch(next);
+							} else if(vocabCounts != null) {
+								vocabCounts.incrementCount(ngramStr, 1);
 							}
 						}
 					}
