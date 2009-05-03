@@ -3990,45 +3990,83 @@
 					<synonym value="Baked Clay Object"/>
 					<synonym value="baked clay pottery"/>
 					<synonym value="baked clay lump"/>
+					<synonym value="Baked Clay Flattened Oval"/>
 					<synonym value="a baked clay object"/>
 					<synonym value="baked clay lumps"/>
+					<synonym value="unshaped baked clay"/>
+					<synonym value="baked clay artifact"/>
+					<synonym value="baked clay artifacts"/>
+					<synonym value="baked clay finger"/>
 					<implies facet="Material" cat="BakedClay"/>
 					<heading id="BakedClayBall" title="Baked Clay Ball">
 						<synonym value="Baked Clay Balls"/>
 						<synonym value="baked clay  ball"/>
+						<synonym value="baked clay 'ball'"/>
+						<synonym value="baked clay 'ball' with"/>
+						<synonym value="baked clay  balls"/>
+						<synonym value="baked clay ball with"/>
 					</heading>
-					<heading id="BakedClayFlatOval" title="Baked Clay Flattened Oval"/>
-					<heading id="BakedClaySlab" title="Baked Clay Slab"/>
-					<heading id="BakedClayEffigies" title="Baked Clay Effigies">
-						<synonym value="Baked Clay  effigies"/>
-						<synonym value="Baked Clay Effigy"/>
-						<synonym value="effigy of baked clay"/>
-						<heading id="BakedClayBirds" title="Baked Clay Bird Effigy">
-							<synonym value="Baked Clay Bird"/>
-							<synonym value="Baked Clay Birds"/>
-							<synonym value="Baked Clay Bird Effigies"/>
+					<heading id="BakedClayCookingStone" title="Baked Clay Cooking Stone"/>
+					<heading id="BakedClayCylinder" title="Baked Clay Cylinder">
+						<synonym value="Baked Clay Cylinders"/>
+						<synonym value="baked clay cylindrical"/>
+						<synonym value="baked clay  cylinder"/>
+						<synonym value="baked Clay Constricted Cylinder"/>
+					</heading>
+					<heading id="BakedClayDisk" title="Baked Clay Disk">
+						<synonym value="Baked Clay Disks"/>
+						<synonym value="Baked Clay Disc"/>
+						<synonym value="Baked Clay Discs"/>
+						<synonym value="baked clay  disk"/>
+					</heading>
+					<heading id="BakedClayFigurine" title="Baked Clay Figurine">
+						<synonym value="Baked Clay Figurines"/>
+						<heading id="BakedClayEffigies" title="Baked Clay Effigies">
+							<synonym value="Baked Clay  effigies"/>
+							<synonym value="Baked Clay Effigy"/>
+							<synonym value="effigy of baked clay"/>
+							<heading id="BakedClayBirds" title="Baked Clay Bird Effigy">
+								<synonym value="Baked Clay Bird"/>
+								<synonym value="Baked Clay Birds"/>
+								<synonym value="Baked Clay Bird Effigies"/>
+							</heading>
 						</heading>
 					</heading>
-					<heading id="BakedClayPit" title="Baked Clay Pit"/>
-					<heading id="BakedClayDisk" title="Baked Clay Disk"/>
+					<heading id="BakedClayNetSinker" title="Baked Clay Net Sinker">
+						<synonym value="baked clay spindle-type sinker"/>
+					</heading>
+					<heading id="BakedClayPipe" title="Baked Clay Pipe">
+						<synonym value="Baked Clay Pipes"/>
+						<synonym value="baked clay  pipe"/>
+						<!-- implies pipes -->
+					</heading>
+					<heading id="BakedClayPit" title="Baked Clay Pit">
+						<synonym value="Baked Clay Pits"/>
+					</heading>
+					<heading id="BakedClayPole" title="Baked Clay Pole">
+						<synonym value="Baked Clay Poles"/>
+					</heading>
+					<heading id="BakedClaySlab" title="Baked Clay Slab">
+						<synonym value="Baked Clay Slabs"/>
+					</heading>
 					<heading id="BakedClaySpool" title="Baked Clay Spool">
+						<synonym value="Baked Clay Spools"/>
 						<synonym value="baked clay ball spool"/>
 						<synonym value="baked clay ball  spool shaped"/>
 						<synonym value="spool-shaped baked clay"/>
 						<synonym value="spool-shaped baked clay object"/>
+						<synonym value="spool shaped baked clay object"/>
+						<synonym value="smoothed spool-shaped baked clay object"/>
+						<synonym value="smoothed spool-shaped baked clay"/>
+						<synonym value="baked clay  spool shape"/>
+						<synonym value="baked clay spool shape"/>
 					</heading>
-					<heading id="BakedClayCylinder" title="Baked Clay Cylinder">
-						<synonym value="baked clay constricted cylinder"/>
-					</heading>
+					<heading id="BakedClayStick" title="Baked Clay Stick"/>
 					<heading id="BakedClayStool" title="Baked Clay Stool"> <!-- Typo for spool? -->
 						<synonym value="Baked Clay Stools"/>
 					</heading>
 					<heading id="BakedClayTablet" title="Baked Clay Tablet">
 						<synonym value="baked clay  tablet"/>
-					</heading>
-					<heading id="BakedClayPipe" title="Baked Clay Pipe">
-						<synonym value="baked clay pipes"/>
-						<!-- implies pipes -->
 					</heading>
 				</heading>
 				<heading id="Potterybyshape" title="By Shape" noMatch="true">
@@ -4102,8 +4140,7 @@
 			</heading>
 			<heading id="ReligiousRitualVessel" title="Religious &amp; Ritual Vessels">
 				<synonym value="Religious/Ritual Vessels"/>
-				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> -->
-				<!-- implies vessel -->
+				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> --> <!-- implies vessel -->
 				<heading id="AltarVessel" title="Altar-Vessel">
 					<synonym value="Altar-Vessels"/>
 				</heading>
