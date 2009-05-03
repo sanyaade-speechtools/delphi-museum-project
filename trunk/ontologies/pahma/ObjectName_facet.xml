@@ -1883,6 +1883,7 @@
 						<synonym value="Fuze"/>
 						<synonym value="Fuzes"/>
 					</heading>
+					<heading id="GunpwdrBarrlExpl" title="Gunpowder Barrel" noMatch="true"/>
 					<heading id="ShrapnelExplWpn" title="Shrapnel">
 						<synonym value="Shrapnels"/> <!-- Improper plural form -->
 					</heading>
@@ -2698,12 +2699,7 @@
 		</heading>
 		<heading id="CardsComm" title="Cards">
 			<synonym value="Card"/>
-			<heading id="AltarcardcardsComm" title="Altar Cards">
-				<synonym value="Altar Card"/>
-				<synonym value="Altar-Card"/>
-				<synonym value="Altar-Cards"/>
-				<implies facet="ObjectName" cat="AltarCardReligRelRit"/>
-			</heading>
+			<heading id="AltarCardCardsComm" title="Altar Cards" noMatch="true"/>
 			<heading id="CatalogCardsComm" title="Catalog Cards">
 				<synonym value="Catalog Card"/>
 			</heading>
@@ -3130,8 +3126,14 @@
 			<synonym value="Sacks"/>
 			<implies facet="ObjectName" cat="BagAccessory"/>
 		</heading>
-		<heading id="Barrel" title="Barrel">
+		<heading id="BarrelCntnr" title="Barrel">
 			<synonym value="Barrels"/>
+			<heading id="GunpowderBarrel" title="Gunpowder Barrel">
+				<synonym value="Gunpowder Barrels"/>
+				<synonym value="Gunpowder-Barrel"/>
+				<synonym value="Gunpowder-Barrels"/>
+				<implies facet="ObjectName" cat="GunpwdrBarrlExpl"/>
+			</heading>
 		</heading>
 		<heading id="Baskets" title="Baskets">
 			<synonym value="Basket"/>
@@ -3163,7 +3165,8 @@
 			<heading id="CookingBasketBaskets" title="Cooking Basket">
 				<synonym value="Cooking Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="ObjectName" cat="CookingBasketheating"/>
+				<implies facet="Collection" cat="BasketCollection"/>
+				<implies facet="ObjectName" cat="CookingBasketCookEq"/>
 			</heading>
 			<heading id="DecorativeBasket" title="Decorative Basket">
 				<synonym value="Decorative Baskets"/>
@@ -3455,9 +3458,7 @@
 			<heading id="Casket" title="Casket">
 				<synonym value="Caskets"/>
 			</heading>
-			<heading id="Coffin" title="Coffin">
-				<synonym value="Coffins"/>
-			</heading>
+			<heading id="CoffinCntnr" title="Coffin" noMatch="true"/>
 			<heading id="OssuaryContainer" title="Ossuary">
 				<synonym value="Ossuaries"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
@@ -3623,13 +3624,6 @@
 				<synonym value="Asparagus-Servers"/>
 			</heading>
 			<heading id="BabyFeederCntnr" title="Baby Feeder" noMatch="true"/>
-			<heading id="Barrel" title="Barrel">
-				<synonym value="Barrels"/>
-				<heading id="Gunpowderbarrel" title="Gunpowder Barrel">
-					<synonym value="Gunpowder Barrel"/>
-					<!-- Infer Firearms -->
-				</heading>
-			</heading>
 			<heading id="Basin" title="Basin" noMatch="true">
 				<synonym value="Basins"/>
 			</heading>
@@ -4511,6 +4505,7 @@
 				<synonym value="Lon Gyis"/>
 				<synonym value="Lon-Gyi"/>
 				<synonym value="Lon-Gyis"/>
+				<implies facet="ObjectName" cat="LonGyiRelRit"/>
 			</heading>
 			<heading id="MantillaGarment" title="Mantilla">
 				<synonym value="Mantillas"/>
@@ -4790,9 +4785,7 @@
 			<heading id="HeadCover" title="Head-Cover">
 				<synonym value="Head-Covers"/>
 			</heading>
-			<heading id="HeadDressHdWr" title="Headdress">
-				<synonym value="Headdresses"/>
-			</heading>
+			<heading id="HeadDressHdWr" title="Headdress" noMatch="true"/>
 			<!-- <heading id="HeadGuard" title="Head Guard">
 				<synonym value="Head Guards"/>
 				<synonym value="Head-Guard"/>
@@ -4896,30 +4889,26 @@
 				<synonym value="Cufflinks"/>
 				<implies facet="ObjectName" cat="CufflinkJeweleryPrsOrn"/>
 			</heading>
-			<heading id="Epaulette" title="Epaulette">
+			<heading id="EpaulettePersAcc" title="Epaulette">
 				<synonym value="Epaulettes"/>
 			</heading>
-			<heading id="EyeShade" title="Eye-Shade">
+			<heading id="EyeShadePersAcc" title="Eye-Shade">
 				<synonym value="Eye-Shades"/>
 			</heading>
-			<heading id="Gaiter" title="Gaiter">
+			<heading id="GaiterPersAcc" title="Gaiter">
 				<synonym value="Gaiters"/>
 			</heading>
 			<heading id="GarterAccessory" title="Garter" noMatch="true"/>
-			<heading id="Glove" title="Glove">
+			<heading id="GlovePersAcc" title="Glove">
 				<synonym value="Gloves"/>
 			</heading>
-			<heading id="Goggles" title="Goggles">
+			<heading id="GogglesPersAcc" title="Goggles">
 				<synonym value="Goggle"/>
-			</heading>
-			<heading id="Handbag" title="Handbag" noMatch="true">
-				<synonym value="Handbags"/>
-				<implies facet="ObjectName" cat="PurseAccessory"/>
-				<implies facet="ObjectName" cat="PurseContainer"/>
 			</heading>
 			<heading id="Handkerchief" title="Handkerchief">
 				<synonym value="Handkerchiefs"/>
 				<implies facet="ObjectName" cat="HandkerchiefCsmtc"/>
+				<!-- Implies textiles -->
 			</heading>
 			<heading id="HandWarmer" title="Hand-Warmer">
 				<synonym value="Hand-Warmers"/>
@@ -4927,7 +4916,7 @@
 			<heading id="MoustacheStick" title="Moustache-Stick">
 				<synonym value="Moustache-Sticks"/>
 			</heading>
-			<heading id="Muff" title="Muff">
+			<heading id="MuffPersAcc" title="Muff">
 				<synonym value="Muffs"/>
 			</heading>
 			<heading id="Neckerchief" title="Neckerchief">
@@ -4948,12 +4937,16 @@
 				<implies facet="ObjectName" cat="PocketBookContnr"/>
 			</heading>
 			<heading id="PursePersAcc" title="Purse">
-				<!-- Main latch -->
 				<synonym value="Purses"/>
+				<synonym value="Hand Bag"/>
+				<synonym value="Hand Bags"/>
+				<synonym value="Hand-Bag"/>
+				<synonym value="Hand-Bags"/>
 				<synonym value="Handbag"/>
 				<synonym value="Handbags"/>
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-				<implies facet="ObjectName" cat="PurseAccessory"/>
+				<implies facet="ObjectName" cat="PursePersAcc"/>
+				<implies facet="ObjectName" cat="PurseCommerceCurrency"/>
 				<implies facet="ObjectName" cat="PurseContainer"/>
 			</heading>
 			<heading id="Puttee" title="Puttee">
@@ -5136,12 +5129,7 @@
 				<excl value="Basinet"/>
 				<synonym value="Basins"/>
 			</heading>
-			<heading id="CookingBasketHeatingCookEq" title="Cooking Basket" noMatch="true"> 
-				<synonym value="Cooking Baskets"/>
-				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="ObjectName" cat="CookingBasketBaskets"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-			</heading>
+			<heading id="CookingBasketCookEq" title="Cooking Basket" noMatch="true"/> 
 			<heading id="CookingBowlCookEq" title="Cooking Bowl"/>
 				<synonym value="Cooking Bowls"/>
 				<synonym value="Cooking-Bowl"/>
@@ -6335,11 +6323,7 @@
 		<heading id="TinderBoxFireEq" title="Tinder-Box">
 			<synonym value="Tinder-Boxes"/>
 		</heading>
-		<heading id="TorchFireEq" title="Torch">
-			<synonym value="Torches"/>
-			<synonym value="Torchs"/>
-			<!-- Misspelling -->
-		</heading>
+		<heading id="TorchFireEq" title="Torch" noMatch="true"/>
 		<heading id="TorchHolderFireEq" title="Torch-Holder">
 			<synonym value="Torch-Holders"/>
 		</heading>
@@ -7007,7 +6991,7 @@
 		<heading id="SnufferStandLghtEq" title="Snuffer Stand">
 			<synonym value="Snuffer Stands"/>
 		</heading>
-		<heading id="TorchLghtEq" title="Torch" noMatch="true">
+		<heading id="TorchLghtEq" title="Torch">
 			<synonym value="Torches"/>
 			<synonym value="Torchs"/> <!-- Misspelling -->
 			<implies facet="ObjectName" cat="TorchFireEq"/>
@@ -7035,8 +7019,6 @@
 		<synonym value="Healings"/>
 		<synonym value="Medical"/>
 		<synonym value="Medical/Medicine Equipment"/>
-		<synonym value="Medicine"/>
-		<synonym value="Medicines"/>
 		<heading id="ApothecaryLadleRx" title="Apothecary Ladle">
 			<synonym value="Apothecary Ladles"/>
 			<synonym value="Apothecary-Ladle"/>
@@ -7629,7 +7611,6 @@
 				<synonym value="Stela-Stands"/>
 			</heading>
 			<heading id="SulingStandStndMiscEq" title="Suling Stand" noMatch="true"/>
-			<synonym value="Suling Stands"/>
 			<heading id="TrestleStndMiscEq" title="Trestle">
 				<synonym value="Trestles"/>
 			</heading>
@@ -9138,7 +9119,7 @@
 			</heading>
 			<heading id="RebabStand" title="Rebab-Stand">
 				<synonym value="Rebab-Stands"/>
-				<implies facet="ObjectName" cat="RebabStandStnd"/>
+				<implies facet="ObjectName" cat="RebabStandStndMiscEq"/>
 			</heading>
 			<heading id="Songsheet" title="Songsheet">
 				<synonym value="Songsheets"/>
@@ -9232,8 +9213,8 @@
 		<heading id="ClaspPrsOrn" title="Clasp">
 			<synonym value="Clasps"/>
 			<heading id="MorsePrsOrn" title="Morse">
-				<synonym value="Morses"/>
-				<!-- Type of clasp? -->
+				<synonym value="Morses"/> <!-- Type of clasp? -->
+				<implies facet="ObjectName" cat="MorseRelRit"/>
 			</heading>
 			<heading id="ShoulderClaspPrsOrn" title="Shoulder Clasp">
 				<synonym value="Shoulder Clasps"/>
@@ -9811,6 +9792,9 @@
 		</heading>
 		<heading id="AltarCardReligRelRit" title="Altar Card">
 			<synonym value="Altar Cards"/>
+			<synonym value="Altar-Card"/>
+			<synonym value="Altar-Cards"/>
+			<implies facet="ObjectName" cat="AltarCardCardsComm"/>
 		</heading>
 		<heading id="AltarClothRelRit" title="Altar-Cloth">
 			<synonym value="Altar-Cloths"/>
@@ -9980,6 +9964,7 @@
 				<synonym value="Coffins"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
 				<implies facet="ObjectName" cat="CoffinBoxContainer"/>
+				<implies facet="ObjectName" cat="CoffinCntnr"/>
 			</heading>
 			<heading id="MummyFuneraryItemRelRit" title="Mummy" noMatch="true">
 				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
@@ -10007,6 +9992,7 @@
 		</heading>
 		<heading id="HanukahLampRelRit" title="Hanukah Lamp">
 			<synonym value="Hanukah Lamps"/>
+			<!-- Implies Judaism -->
 		</heading>
 		<heading id="HeaddressRelRit" title="Headdress">
 			<synonym value="Headdresses"/>
@@ -10058,9 +10044,7 @@
 			<synonym value="Law-Wheels"/>
 		</heading>
 		<heading id="LingaRelRit" title="Linga" noMatch="true"/>
-		<heading id="LonGyiRelRit" title="Lon-Gyi">
-			<synonym value="Lon-Gyis"/>
-		</heading>
+		<heading id="LonGyiRelRit" title="Lon-Gyi" noMatch="true"/>
 		<heading id="MagicSquareRelRit" title="Magic Square">
 			<synonym value="Magic Squares"/>
 		</heading>
@@ -10093,11 +10077,10 @@
 			<implies facet="ObjectName" cat="MonstranceContnr"/>
 			<!-- Implies Roman Catholicism -->
 		</heading>
-		<heading id="MorseRelRit" title="Morse">
-			<synonym value="Morses"/>
-		</heading>
+		<heading id="MorseRelRit" title="Morse" noMatch="true"/>
 		<heading id="MosqueLampRelRit" title="Mosque-Lamp">
 			<synonym value="Mosque-Lamps"/>
+			<!-- Implies Islam -->
 		</heading>
 		<heading id="OfferingEquipmentRelRit" title="Offering Equipment">
 			<synonym value="Offering Items"/>
@@ -12180,7 +12163,7 @@
 				<implies facet="ActivityorContext" cat="BetelChewingStimulant"/>
 			</heading>
 			<heading id="ChocolateDrug" title="Chocolate">
-				<implies facet="ActivityorContext" cat="ChocolateFood"/>
+				<implies facet="ObjectName" cat="ChocolateFood"/>
 				<implies facet="ActivityorContext" cat="ChocolateCaffeineStimulant"/>
 			</heading>
 			<heading id="CocaDrug" title="Coca">
