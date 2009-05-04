@@ -3579,9 +3579,7 @@
 		<heading id="PocketContnr" title="Pocket">
 			<synonym value="Pockets"/>
 		</heading>
-		<heading id="PocketBookContnr" title="Pocket-Book">
-			<synonym value="Pocket-Books"/>
-		</heading>
+		<heading id="PocketBookContnr" title="Pocket-Book" noMatch="true"/>
 		<heading id="PomanderContnr" title="Pomander">
 			<synonym value="Pomanders"/>
 		</heading>
@@ -3647,10 +3645,7 @@
 			<heading id="Biberon" title="Biberon">
 				<synonym value="Biberons"/>
 			</heading>
-			<heading id="Boiler" title="Boiler" noMatch="true">
-				<synonym value="Boilers"/>
-				<implies facet="ObjectName" cat="CookingPotCookEq"/>
-			</heading>
+			<heading id="BoilerVessel" title="Boiler" noMatch="true"/>
 			<heading id="Bottle" title="Bottle">
 				<synonym value="Bottles"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
@@ -5022,7 +5017,9 @@
 			<heading id="Parasol" title="Parasol">
 				<synonym value="Parasols"/>
 			</heading>
-			<heading id="PocketBook" title="Pocket-Book" noMatch="true">
+			<heading id="PocketBook" title="Pocket Book">
+				<synonym value="Pocket Books"/>
+				<synonym value="Pocket-Book"/>
 				<synonym value="Pocket-Books"/>
 				<implies facet="ObjectName" cat="PocketBookContnr"/>
 			</heading>
@@ -5250,19 +5247,22 @@
 				<synonym value="Cooking Pots"/>
 				<synonym value="Cooking-Pot"/>
 				<synonym value="Cooking-Pots"/>
-				<synonym value="Pots"/>  <synonym value="Pot"/>
-				<!-- Need to differentiate from other non-cooking equip. pots -->
+				<!-- <synonym value="Pot"/>  Need to differentiate from other non-cooking pots -->
+				<!-- <synonym value="Pots"/> Need to differentiate from other non-cooking pots -->
 				<synonym value="Boiler"/>
 				<synonym value="Boilers"/>
 				<synonym value="Cauldron"/>
 				<synonym value="Cauldrons"/>
 				<synonym value="Caldron"/>
 				<synonym value="Caldrons"/>
-				<heading id="ChytraCookEq" title="Chytra"/>
+				<implies facet="ObjectName" cat="BoilerVessel"/>
+				<heading id="ChytraCookEq" title="Chytra">
+					<synonym value="Chytra"/>
+				</heading>
 				<heading id="LopasCookEq" title="Lopas"/>
-				<heading id="PipkinCookEq" title="Pipkin">
+				<heading id="PipkinCookEq" title="Pipkin"> <!-- Earthenware pot or pan, also a drinking vessel. -->
 					<synonym value="Pipkins"/>
-					<!-- Earthenware pot or pan, also a drinking vessel. -->
+					<!-- Implies Earthenware -->
 				</heading>
 			</heading>
 			<heading id="DokaCookEq" title="Doka">
@@ -6204,7 +6204,9 @@
 	</heading>
 	<heading id="FireFireLightingEquip" title="Fire &amp; Fire-Lighting Items">
 		<synonym value="Fire/Fire-Lighting Equipment"/>
-		<heading id="BellowsFireEq" title="Bellows"/>
+		<heading id="BellowsFireEq" title="Bellows">
+			<implies facet="ObjectName" cat="BellowsTool"/>
+		</heading>
 		<heading id="BlowTubeFireEq" title="Blow Tube">
 			<synonym value="Blow Tubes"/>
 			<synonym value="Blow-Tube"/>
@@ -9848,13 +9850,13 @@
 		<synonym value="Ritual Items"/>
 		<synonym value="Ritual Object"/>
 		<synonym value="Ritual Objects"/>
+		<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		<!-- <heading id="AegisReligionRelRit" title="Aegis">
 			<synonym value="Aegi"/> Check
 			 Needs disambiguation from aegis as arms/armor.
 		</heading> -->
 		<heading id="AltarRelRit" title="Altar">
 			<synonym value="Altars"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="AltarCardReligRelRit" title="Altar Card">
 			<synonym value="Altar Cards"/>
@@ -9882,7 +9884,6 @@
 		</heading>
 		<heading id="AmuletRelRit" title="Amulet">
 			<synonym value="Amulets"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="AmuletBeltRelRit" title="Amulet-Belt">
 			<synonym value="Amulet-Belts"/>
@@ -9951,7 +9952,6 @@
 			<synonym value="Charm stones"/>
 			<synonym value="Charm-stone"/>
 			<synonym value="Charm-stones"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="ChristmasCardRelRit" title="Christmas-Card">
 			<synonym value="Christmas-Cards"/>
@@ -9961,6 +9961,7 @@
 		</heading>
 		<heading id="CircumcisionEquipmentRelRit" title="Circumcision Equipment">
 			<synonym value="Circumcision Items"/>
+			<!-- Implies circumcision ceremony -->
 		</heading>
 		<heading id="CopperRelRit" title="Copper">
 			<synonym value="Coppers"/>
@@ -10016,7 +10017,6 @@
 		</heading>
 		<!-- <heading id="FleshHookRelRit" title="Flesh Hook" noMatch="true">
 			<synonym value="Flesh Hooks"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 			This is, by default, also a Cooking Equipment term- used in religious ceremony 
 			to pull cooked meat out of cauldrons... differentiate ceremonial and non-ceremonial 
 			without making them mutually exclusive?
@@ -10036,7 +10036,6 @@
 				<implies facet="ObjectName" cat="CoffinCntnr"/>
 			</heading>
 			<heading id="MummyFuneraryItemRelRit" title="Mummy" noMatch="true">
-				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
 			</heading>
 			<heading id="SarcophagusFunerItemRelRit" title="Sarcophagus" noMatch="true">
@@ -10083,6 +10082,11 @@
 		</heading>
 		<heading id="IconRelRit" title="Icon">
 			<synonym value="Icons"/>
+			<implies facet="ObjectName" cat="IconVisRep"/>
+		</heading>
+		<heading id="IdolRelRit" title="Idols">
+			<synonym value="Idols"/>
+			<implies facet="ObjectName" cat="IdolVisRep"/>
 		</heading>
 		<heading id="InauRelRit" title="Inau">
 			<synonym value="Inaus"/>
@@ -10120,13 +10124,11 @@
 		<heading id="MalaRelRit" title="Mala">
 			<synonym value="Malas"/>
 			<implies facet="ObjectName" cat="PrayerBeadRelRit"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="MandalaRelRit" title="Mandala">
 			<synonym value="Mandalas"/>
 			<synonym value="Dreamcatcher"/>
 			<synonym value="Dreamcatchers"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="MarriageEquipmentRelRit" title="Marriage Equipment">
 			<synonym value="Marriage Items"/>
@@ -10220,29 +10222,24 @@
 			<synonym value="Prayer Rugs"/>
 			<synonym value="Prayer-Rug"/>
 			<synonym value="Prayer-Rugs"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 			<implies facet="ObjectName" cat="PrayerRugRugPatterns"/>
 			<implies facet="ObjectName" cat="PrayerRugTextiles"/>
 			<implies facet="ObjectName" cat="PrayerMatMats"/>
 		</heading>
 		<heading id="PrayerWheelRelRit" title="Prayer Wheel">
 			<synonym value="Prayer Wheels"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="RitualSpoonRelRit" title="Ritual Spoon">
 			<synonym value="Ritual Spoons"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="ScarabRelRit" title="Scarab">
 			<synonym value="Scarabs"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="ScepterRelRit" title="Scepter">
 			<synonym value="Scepters"/>
 		</heading>
 		<heading id="ShrineRelRit" title="Shrine">
 			<synonym value="Shrines"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 		</heading>
 		<heading id="UshabtiRelRit" title="Ushabti">
 			<synonym value="Ushabtis"/>
@@ -10250,7 +10247,6 @@
 			<synonym value="Shabtis"/>
 			<synonym value="Shawabti"/>
 			<synonym value="Shawabtis"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 			<implies facet="ObjectName" cat="ShabtiFigure"/>
 		</heading>
 		<heading id="WandRelRit" title="Wand">
@@ -10405,9 +10401,6 @@
 		</heading>
 		<heading id="IncenseSample" title="Incense">
 			<synonym value="Incenses"/>
-		</heading>
-		<heading id="InkSample" title="Ink">
-			<synonym value="Inks"/>
 		</heading>
 		<heading id="MaterialSample" title="Material Sample">
 			<synonym value="Material Samples"/>
@@ -13226,7 +13219,7 @@
 		<heading id="BeatingBoardTool" title="Beating-Board">
 			<synonym value="Beating-Boards"/>
 		</heading>
-		<heading id="BellowsTool" title="Bellows"/>
+		<heading id="BellowsTool" title="Bellows" noMatch="true"/>
 		<heading id="BevelledPebbleTool" title="Bevelled Pebble">
 			<synonym value="Bevelled Pebbles"/>
 		</heading>
@@ -14160,16 +14153,12 @@
 			<synonym value="Greeting-Card"/>
 			<synonym value="Greeting-Cards"/>
 		</heading>
-		<heading id="IconVisRep" title="Icon">
-			<synonym value="Icons"/>
-		</heading>
-		<heading id="IdolVisRep" title="Idol">
-			<synonym value="Idols"/>
-			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-		</heading>
+		<heading id="IconVisRep" title="Icon" noMatch="true"/>
+		<heading id="IdolVisRep" title="Idol" noMatch="true"/>
 		<heading id="ImpressionVisRep" title="Impression" noMatch="true"/>
 		<heading id="LanternSlideVisRep" title="Lantern Slide">
 			<synonym value="Lantern Slides"/>
+			<!-- Implies photography -->
 		</heading>
 		<heading id="MedalVisRep" title="Medal">
 			<synonym value="Medal"/>
