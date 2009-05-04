@@ -1318,6 +1318,7 @@
 				<synonym value="Cannon-Balls"/>
 				<synonym value="Cannonball"/>
 				<synonym value="Cannonballs"/>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 			</heading>
 			<heading id="Cartridge" title="Cartridge">
 				<synonym value="Cartridges"/>
@@ -1333,6 +1334,7 @@
 				<synonym value="Musket Balls"/>
 				<synonym value="Musketball"/>
 				<synonym value="Musketballs"/>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 			</heading>
 			<heading id="Powderhorn" title="Powder Horn">
 				<synonym value="Powder Horns"/>
@@ -2137,7 +2139,9 @@
 		<synonym value="Artifact"/>
 		<synonym value="Artefact"/>
 		<synonym value="Artefacts"/>
-		<heading id="Ball" title="Ball"/>
+		<heading id="Ball" title="Ball">
+			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
+		</heading>
 		<heading id="BifaciallyWorkedPiece" title="Bifacially Worked Piece"/>
 		<heading id="CarvedStone" title="Carved Stone">
 			<implies facet="ActivityorContext" cat="Carving"/>
@@ -3148,7 +3152,7 @@
 		<heading id="Baskets" title="Baskets">
 			<synonym value="Basket"/>
 			<synonym value="Bakset"/>
-			<implies facet="ActivityorContext" cat="Basketmaking"/>
+			<implies facet="ActivityorContext" cat="BasketMaking"/>
 			<implies facet="Collection" cat="BasketCollection"/>
 			<heading id="BabyBasket" title="Baby Basket">
 				<synonym value="Baby Baskets"/>
@@ -4001,6 +4005,7 @@
 						<synonym value="baked clay 'ball' with"/>
 						<synonym value="baked clay  balls"/>
 						<synonym value="baked clay ball with"/>
+						<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 					</heading>
 					<heading id="BakedClayCookingStone" title="Baked Clay Cooking Stone"/>
 					<heading id="BakedClayCylinder" title="Baked Clay Cylinder">
@@ -6873,6 +6878,7 @@
 			</heading>
 			<heading id="GameBallGmSprt" title="Game-Ball">
 				<synonym value="Game-Balls"/>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 			</heading>
 			<heading id="GameBoardGmSprt" title="Game-Board">
 				<synonym value="Game-Boards"/>
@@ -6942,7 +6948,7 @@
 			<synonym value="Sport Equipment"/>
 			<implies facet="ActivityorContext" cat="PlayingSports"/>
 			<heading id="BallGmSprt" title="Ball">
-				<implies facet="TechniqueDesignorDecoration" cat="Spherical"/>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 				<!-- Check Cat. -->
 				<synonym value="Balls"/>
 			</heading>
@@ -6970,10 +6976,9 @@
 			<heading id="PugilisticRingGmSprt" title="Pugilistic Ring">
 				<synonym value="Pugilistic Rings"/>
 			</heading>
-			<heading id="ShinnyballGmSprt" title="Shinny Ball">
-				<implies facet="TechniqueDesignorDecoration" cat="Spherical"/>
-				<!-- Check Cat. -->
+			<heading id="ShinnyBallGmSprt" title="Shinny Ball">
 				<synonym value="Shinny Balls"/>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 			</heading>
 			<heading id="ShuttlecockGmSprt" title="Shuttlecock">
 				<synonym value="Shuttlecocks"/>
@@ -10648,6 +10653,7 @@
 		</heading>
 		<heading id="GlobeScience" title="Globe">
 			<synonym value="Globes"/>
+			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 			<heading id="CelestialGlobeSci" title="Celestial Globe" noMatch="true"/>
 			<heading id="TerrestrialGlobeSci" title="Terrestrial Globe">
 				<synonym value="Terrestrial Globes"/>
@@ -11247,6 +11253,7 @@
 				<synonym value="Astronomical Instruments"/>
 				<heading id="ArmillarySphere" title="Armillary Sphere">
 					<synonym value="Armillary Spheres"/>
+					<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 				</heading>
 				<heading id="Astrolabe" title="Astrolabe">
 					<synonym value="Astrolabes"/>
@@ -11263,9 +11270,11 @@
 				<heading id="CelestialGlobeAst" title="Celestial Globe"> <!-- MAIN TERM -->
 					<synonym value="Celestial Globes"/>
 					<implies facet="ObjectName" cat="CelestialGlobeSci"/>
+					<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 				</heading>
 				<heading id="Planisphere" title="Planisphere">
 					<synonym value="Planispheres"/>
+					<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 				</heading>
 				<heading id="Tellurium" title="Tellurium">
 					<synonym value="Telluriums"/>
