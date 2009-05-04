@@ -3924,10 +3924,7 @@
 			<heading id="MilkVessel" title="Milk-Vessel">
 				<synonym value="Milk-Vessels"/>
 			</heading>
-			<heading id="Mortar" title="Mortar" noMatch="true">
-				<synonym value="Mortars"/>
-				<implies facet="ObjectName" cat="MortarCookEq"/>
-			</heading>
+			<heading id="MortarVessel" title="Mortar" noMatch="true"/>
 			<heading id="MustardShaker" title="Mustard-Shaker">
 				<synonym value="Mustard-Shakers"/>
 			</heading>
@@ -5556,6 +5553,7 @@
 						<synonym value="Molcajete"/>
 						<excl value="Weapon"/>
 						<implies facet="ActivityorContext" cat="FoodPreparation"/>
+						<implies facet="ObjectName" cat="MortarVessel"/>
 					</heading>
 					<heading id="MortarBasketCookEq" title="Mortar Basket">
 						<synonym value="Mortar Baskets"/>
@@ -5672,7 +5670,7 @@
 					<heading id="ChocolatestirrerCookEq" title="Chocolate stirrer">
 						<synonym value="Chocolate stirrers"/>
 						<implies facet="ActivityorContext" cat="FoodServing"/>
-						<implies facet="ObjectName" cat="ChocolateFood"/>
+						<implies facet="ObjectName" cat="ChocolateDrug"/>
 					</heading>
 				</heading>
 				<heading id="FoodPaddleCookEq" title="Food Paddle">
@@ -6734,9 +6732,7 @@
 			<heading id="Tablecloth" title="Tablecloth">
 				<synonym value="Tablecloths"/>
 			</heading>
-			<heading id="TeaCosy" title="Tea-Cosy">
-				<synonym value="Tea-Cosies"/>
-			</heading>
+			<heading id="TeaCosyFurn" title="Tea Cosy" noMatch="true"/>
 			<heading id="Valance" title="Valance">
 				<synonym value="Valances"/>
 			</heading>
@@ -7395,9 +7391,9 @@
 		<heading id="HobbyHorseMiscEq" title="Hobby-Horse">
 			<synonym value="Hobby-Horses"/>
 		</heading>
-		<heading id="HookMiscEq" title="Hook">
+		<!-- <heading id="HookMiscEq" title="Hook">
 			<synonym value="Hooks"/>
-		</heading>
+		</heading> -->
 		<heading id="HoopMiscEq" title="Hoop">
 			<synonym value="Hoops"/>
 			<excl value="Belt"/>
@@ -8216,8 +8212,8 @@
 						<synonym value="Drumstick"/>
 						<synonym value="Drum Stick"/>
 						<synonym value="Drum Sticks"/>
-						<synonym value="Stick"/>
-						<synonym value="Sticks"/>
+						<!-- <synonym value="Stick"/> -->
+						<!-- <synonym value="Sticks"/> -->
 						<synonym value="BeatingStick"/>
 						<synonym value="BeatingSticks"/>
 						<synonym value="Beating Stick"/>
@@ -9367,14 +9363,7 @@
 				<synonym value="Circlets"/>
 				<implies facet="ObjectName" cat="CircletHeadGear"/>
 			</heading>
-			<heading id="CrownPrsOrn" title="Crown">
-				<!-- Other Exclusions? -->
-				<excl value="Dental Crown"/>
-				<excl value="Dental Crowns"/>
-				<excl value="Tooth Crown"/>
-				<excl value="Tooth Crowns"/>
-				<synonym value="Crowns"/>
-			</heading>
+			<heading id="CrownPrsOrn" title="Crown" noMatch="true"/>
 			<heading id="TiaraPrsOrn" title="Tiara">
 				<synonym value="Tiaras"/>
 			</heading>
@@ -9973,6 +9962,11 @@
 		</heading>
 		<heading id="CrownRelRit" title="Crown">
 			<synonym value="Crowns"/>
+			<excl value="Dental Crown"/> <!-- Other exclusions? -->
+			<excl value="Dental Crowns"/>
+			<excl value="Tooth Crown"/>
+			<excl value="Tooth Crowns"/>
+			<implies facet="ObjectName" cat="CrownPrsOrn"/>
 		</heading>
 		<heading id="CrozierRelRit" title="Crozier">
 			<synonym value="Croziers"/>
@@ -10005,13 +9999,13 @@
 		<heading id="EucharisticSpoonRelRit" title="Eucharistic Spoon">
 			<synonym value="Eucharistic Spoons"/>
 		</heading>
-		<heading id="FleshHookRelRit" title="Flesh Hook" noMatch="true">
+		<!-- <heading id="FleshHookRelRit" title="Flesh Hook" noMatch="true">
 			<synonym value="Flesh Hooks"/>
 			<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-			<!-- This is, by default, also a Cooking Equipment term- used in religious ceremony 
+			This is, by default, also a Cooking Equipment term- used in religious ceremony 
 			to pull cooked meat out of cauldrons... differentiate ceremonial and non-ceremonial 
-			without making them mutually exclusive? -->
-		</heading>
+			without making them mutually exclusive?
+		</heading> -->
 		<heading id="FontRelRit" title="Font">
 			<synonym value="Fonts"/>
 		</heading>
@@ -10251,9 +10245,6 @@
 		<synonym value="Scientific Sample"/>
 		<heading id="Adhesive" title="Adhesive">
 			<synonym value="Adhesives"/>
-		</heading>
-		<heading id="Cosmetic" title="Cosmetic">
-			<synonym value="Cosmetics"/>
 		</heading>
 		<heading id="DrugSamples" title="Drugs" noMatch="true"/>
 		<heading id="Dye" title="Dye">
@@ -11524,7 +11515,13 @@
 						<synonym value="Snow-Figure Kachina"/>
 						<synonym value="Snow-Figure Kachinas"/>
 					</heading>
-					<heading id="SunHopiKachina" title="Sun Kachina"/>
+					<heading id="SunHopiKachina" title="Sun Kachina">
+						<synonym value="Sun Kachinas"/>
+						<synonym value="Sun Figure Kachina"/>
+						<synonym value="Sun Figure Kachinas"/>
+						<synonym value="Sun-Figure Kachina"/>
+						<synonym value="Sun-Figure Kachinas"/>
+					</heading>
 					<heading id="WolfHopiKachina" title="Wolf Kachina"/>
 					<heading id="WupamoHopiKachina" title="Wupamo Kachina"/>
 					<!-- ************************ -->
@@ -11551,10 +11548,6 @@
 					<heading id="RunnerFigureKachina" title="Runner Figure">
 						<synonym value="Runner Kachinas"/>
 						<synonym value="Runner Kachina"/>
-					</heading>
-					<heading id="SunFigureKachina" title="Sun Figure">
-						<synonym value="Sun Kachinas"/>
-						<synonym value="Sun Kachina"/>
 					</heading>
 					<heading id="WomenFigureKachina" title="Women Figure">
 						<synonym value="Women Kachinas"/>
@@ -12079,7 +12072,7 @@
 			</heading>
 		</heading>
 		<heading id="ChocolateEquipment" title="Chocolate Equipment" noMatch="true">
-			<implies facet="ObjectName" cat="ChocolateFood"/>
+			<implies facet="ObjectName" cat="ChocolateDrug"/>
 			<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			<implies facet="ActivityorContext" cat="ChocolateDrinking"/>
 			<heading id="ChocolateCup" title="Chocolate Cup">
@@ -12192,7 +12185,7 @@
 				<synonym value="Betel Nut"/>
 				<implies facet="ActivityorContext" cat="BetelChewingStimulant"/>
 			</heading>
-			<heading id="ChocolateDrug" title="Chocolate">
+			<heading id="ChocolateDrug" title="Chocolate" noMatch="true">
 				<implies facet="ObjectName" cat="ChocolateFood"/>
 				<implies facet="ActivityorContext" cat="ChocolateCaffeineStimulant"/>
 			</heading>
@@ -12633,8 +12626,11 @@
 				<synonym value="Tea-Churn"/>
 				<synonym value="Tea-Churns"/>
 			</heading>
-			<heading id="TeaCosy" title="Tea-Cosy">
+			<heading id="TeaCosyTea" title="Tea Cosy">
+				<synonym value="Tea Cosies"/>
+				<synonym value="Tea-Cosy"/>
 				<synonym value="Tea-Cosies"/>
+				<implies facet="ObjectName" cat="TeaCosyFurn"/>
 			</heading>
 			<heading id="TeaCup" title="Tea-Cup">
 				<synonym value="Tea-Cups"/>
