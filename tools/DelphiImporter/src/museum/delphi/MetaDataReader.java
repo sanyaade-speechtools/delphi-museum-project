@@ -304,23 +304,6 @@ public class MetaDataReader {
 		int nLinesEmpty = 0;
 		int nLinesTooLong = 0;
 		int reportFreq = 10000;
-		// Should get the separators and the noise tokens for this column
-		// add " and ", but note issues - if ends with fragments or bones, need to propagate to both
-		// could just allow " and " if word n-1
-		// include ". " for at least some cols
-		// Strip '.' and ':' at end of tokens
-		// Reduce number sequences to '#'
-		// Consider mining especially for "used for", "used to", "used with", "used by", "for " etc.
-		// run greps on all the report files for these. Also "made by"
-		// remove "etc." and "etc" as noise words. Remove '?'.
-		// remove fragment as noise word, although in the mining, want to reduce relevance if present.
-		// Need to consider general purpose means of describing relevance reduction tokens
-		//   e.g., if fragment(s) or "part of" there, or if preceded with "probably" or "maybe" or "possibly"
-		//         or if includes "?"
-		// TODO Need to detect when repeat of last line, and not bother with dupes.
-		// TODO Need to put main work into a worker thread, so can report back into UI.
-		String sepregex = "[;,]";
-		HashSet<String> noiseTokens = new HashSet<String>();
 		vocabCounts = new Counter<String>();
 		// noiseTokens.add("each");
 		if(maxLines < 0)
@@ -328,6 +311,15 @@ public class MetaDataReader {
 		if( iCol < 1 )
 			throw new RuntimeException( "Illegal column index: " + iCol);
 		try {
+			DumpColumnConfigInfo colDumpInfo = null;
+			try {
+				colDumpInfo = DumpColumnConfigInfo.GetColInfo(columnNames[iCol], "Compile Usage");
+			} catch( IllegalArgumentException iae ) {
+				String msg = "Problem with metadata configuration.\n"
+					+ iae.getLocalizedMessage();
+				debug(0, msg);
+				throw new RuntimeException(msg);
+			}
 			resetToLine1();
 			String token = null;
 			while(((token = getNextLineColumn(iCol))!= null) && (currLine < maxLines)) {
@@ -350,12 +342,11 @@ public class MetaDataReader {
 					nLinesTooLong++;
 					continue;
 				}
-				String[] subtokens = token.split(sepregex);
-				for( String str : subtokens ) {
-					String trimmed = str.trim().toLowerCase();
-					if( noiseTokens.contains(trimmed) )
-						continue;
-					vocabCounts.incrementCount(trimmed, 1);
+				ArrayList<Pair<String,ArrayList<String>>> tokenList
+					= StringUtils.prepareSourceTokens( token, colDumpInfo );
+				for( Pair<String,ArrayList<String>> pair:tokenList ) {
+					String subtoken = pair.first;
+					vocabCounts.incrementCount(subtoken, 1);
 				}
 			}
 		}catch (RuntimeException e) {
@@ -367,6 +358,73 @@ public class MetaDataReader {
 		if( app != null )
 			app.setStatus("Read "+currLine+" lines. Found "+vocabCounts.size()+" distinct tokens");
 		return vocabCounts;
+	}
+
+	protected ArrayList<Pair<String,Counter<String>>> compileUsageForAllColumns(
+							int minLength, int maxLength, int maxLines, MainApp app ) {
+		if(maxLines < 0)
+			maxLines = Integer.MAX_VALUE;
+		int nTillReport = 100000;
+		int nObjsRead = 0;
+		int nObjsReadTotal = 0;
+		ArrayList<Pair<String,Counter<String>>> returnCounts = new ArrayList<Pair<String,Counter<String>>>();
+		try {
+			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
+	    	DumpColumnConfigInfo[] colDumpInfo = null;
+			try {
+				colDumpInfo = DumpColumnConfigInfo.getAllColumnInfo(columnNames);
+			} catch( IllegalArgumentException iae ) {
+				String msg = "Mismatched columns between metadata configuration and metadata file.\n"
+					+ iae.getLocalizedMessage();
+				debug(0, msg);
+				throw new RuntimeException(msg);
+			}
+			int nCols = columnNames.length;
+			boolean[] skipCol = new boolean[nCols];
+			int[] countIndexes = new int[nCols];
+			for( int iCol=0; iCol<nCols; iCol++ ) {
+				if(!(skipCol[iCol] = !colDumpInfo[iCol].columnMinedForAnyFacet())) {
+					countIndexes[iCol] = returnCounts.size();
+					returnCounts.add(new Pair<String,Counter<String>>(columnNames[iCol],
+																new Counter<String>()));
+				} else {
+					countIndexes[iCol] = -1;
+				}
+			}
+			resetToLine1();
+			Pair<Integer,ArrayList<String>> objInfo = null;
+			while((objInfo = getNextObjectAsColumns()) != null ) {
+				int currID = objInfo.first;
+				ArrayList<String> objStrings = objInfo.second;
+				assert (objStrings.size()==nCols) : "Bad parse for obj:"+currID;
+				// Have a complete line. Check for validity
+				String objNumStr = objStrings.get(objNumCol);
+				if(DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
+					nObjsReadTotal++;
+					if(++nObjsRead >= nTillReport) {
+						nObjsRead = 0;
+						debug(1, "MDR.compileUsageForAllColumns: read: "+nObjsReadTotal+" objects");
+					}
+					for(int iCol=1; iCol<nCols; iCol++ ) {
+						if(skipCol[iCol])				// Do not bother with misc cols
+							continue;
+						String source = objStrings.get(iCol);
+						if(( source.length() >= minLength ) && ( source.length() < maxLength )) {
+							ArrayList<Pair<String,ArrayList<String>>> tokenList
+								= StringUtils.prepareSourceTokens( source, colDumpInfo[iCol] );
+							for( Pair<String,ArrayList<String>> pair:tokenList ) {
+								String subtoken = pair.first.trim();
+								if(subtoken.length()>1)
+									returnCounts.get(countIndexes[iCol]).second.incrementCount(subtoken, 1);
+							}
+						}
+					}
+				}
+			}
+		} catch (RuntimeException e) {
+			e.printStackTrace();
+		}
+		return returnCounts;
 	}
 
 }
