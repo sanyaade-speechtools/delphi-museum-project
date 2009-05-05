@@ -238,11 +238,19 @@
 				<synonym value="Fishing-Lines"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="FishingLineHolderFshEq" title="Fishing-Line-Holder">
+			<heading id="FishingLineHolderFshEq" title="Fishing Line Holder">
+				<synonym value="Fishing Line Holders"/>
+				<synonym value="Fishing-Line Holder"/>
+				<synonym value="Fishing-Line Holders"/>
+				<synonym value="Fishing-Line-Holder"/>
 				<synonym value="Fishing-Line-Holders"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="FishingLineWinderFshEq" title="Fishing-Line-Winder">
+			<heading id="FishingLineWinderFshEq" title="Fishing Line Winder">
+				<synonym value="Fishing Line Winders"/>
+				<synonym value="Fishing-Line Winder"/>
+				<synonym value="Fishing-Line Winders"/>
+				<synonym value="Fishing-Line-Winder"/>
 				<synonym value="Fishing-Line-Winders"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
@@ -253,7 +261,10 @@
 				<synonym value="Net"/>
 				<synonym value="Nets"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
-				<heading id="LandingNetFshEq" title="Landing-Net">
+				<implies facet="ObjectName" cat="NetMiscEq"/>
+				<heading id="LandingNetFshEq" title="Landing Net">
+					<synonym value="Landing Nets"/>
+					<synonym value="Landing-Net"/>
 					<synonym value="Landing-Nets"/>
 				</heading>
 			</heading>
@@ -276,7 +287,11 @@
 				<synonym value="Fishing-Rods"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
-			<heading id="FishingRodHolderFshEq" title="Fishing-Rod-Holder">
+			<heading id="FishingRodHolderFshEq" title="Fishing Rod Holder">
+				<synonym value="Fishing Rod Holders"/>
+				<synonym value="Fishing-Rod Holder"/>
+				<synonym value="Fishing-Rod Holders"/>
+				<synonym value="Fishing-Rod-Holder"/>
 				<synonym value="Fishing-Rod-Holders"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
@@ -2139,7 +2154,8 @@
 		<synonym value="Artifact"/>
 		<synonym value="Artefact"/>
 		<synonym value="Artefacts"/>
-		<heading id="Ball" title="Ball">
+		<heading id="BallArtifact" title="Ball">
+			<synonym value="Balls"/>
 			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 		</heading>
 		<heading id="BifaciallyWorkedPiece" title="Bifacially Worked Piece"/>
@@ -2151,7 +2167,8 @@
 			<synonym value="Discs"/>
 			<heading id="BiJadeDisk" title="Bi (jade disk)">
 				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a flat jade disc for ritual use. -->
-				<synonym value="Bis"/> <!-- Check -->
+				<synonym value="Bi"/>
+				<synonym value="Bis"/>
 				<implies facet="ObjectName" cat="BiJadeDiskRelRit"/>
 			</heading>
 			<heading id="MagicalDisc" title="Magical Disc">
@@ -2257,9 +2274,7 @@
 			<synonym value="Swaddling-Cloth"/>
 			<synonym value="Swaddling-Cloths"/>
 		</heading>
-		<heading id="ToyChdCr" title="Toy">
-			<synonym value="Toys"/>
-		</heading>
+		<heading id="ToyChdCr" title="Toy" noMatch="true"/>
 		<heading id="UrinePipeChdCr" title="Urine Pipe">
 			<synonym value="Urine Pipes"/>
 			<synonym value="Urine-Pipe"/>
@@ -3654,10 +3669,13 @@
 				<synonym value="Bottles"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
-			<heading id="Bowl" title="Bowl">
-				<synonym value="Bowls"/>
-				<heading id="Offeringbowl" title="Offering Bowl"/>
-				<heading id="Monksbowl" title="Monk's Bowl"/>
+			<heading id="BowlVessel" title="Bowl" noMatch="true">
+				<heading id="OfferingBowl" title="Offering Bowl">
+					<synonym value="Offering Bowls"/>
+				</heading>
+				<heading id="Monksbowl" title="Monk's Bowl">
+					<synonym value="Monk's Bowls"/>
+				</heading>
 			</heading>
 			<heading id="Bucket" title="Bucket">
 				<synonym value="Buckets"/>
@@ -3930,10 +3948,7 @@
 			<heading id="OilVessel" title="Oil-Vessel">
 				<synonym value="Oil-Vessels"/>
 			</heading>
-			<heading id="Pan" title="Pan" noMatch="true">
-				<synonym value="Pans"/>
-				<implies facet="ObjectName" cat="CookingPanCookEq"/>
-			</heading>
+			<heading id="PanVessel" title="Pan" noMatch="true"/>
 			<heading id="Pañca-Pátra">
 				<synonym value="Pañca-Pátras"/>
 			</heading>
@@ -4270,8 +4285,8 @@
 					</heading>
 				</heading>
 				<heading id="PanRelRegVes" title="Pan" noMatch="true">
-					<synonym value="Pans"/>
 					<excl value="Cooking"/>
+					<implies facet="ObjectName" cat="PanVessel"/>
 				</heading>
 				<heading id="PouRelRegVes" title="Pou">
 					<synonym value="Pous"/>
@@ -4382,9 +4397,7 @@
 				<synonym value="Vials"/>
 			</heading>
 		</heading>
-		<heading id="WalletContainer" title="Wallet">
-			<synonym value="Wallets"/>
-		</heading>
+		<heading id="WalletContainer" title="Wallet" noMatch="true"/>
 		<heading id="WallPocketContnr" title="Wall-Pocket">
 			<synonym value="Wall-Pockets"/>
 		</heading>
@@ -5064,14 +5077,11 @@
 			<heading id="WalkingStick" title="Walking-Stick">
 				<synonym value="Walking-Sticks"/>
 			</heading>
-			<heading id="Wallet" title="Wallet" noMatch="true">
+			<heading id="WalletPersAcc" title="Wallet">
 				<synonym value="Wallets"/>
 				<implies facet="ObjectName" cat="WalletContainer"/>
 			</heading>
-			<heading id="Wig" title="Wig" noMatch="true">
-				<synonym value="Wigs"/>
-				<implies facet="ObjectName" cat="WigPrsOrn"/>
-			</heading>
+			<heading id="WigPersAcc" title="Wig" noMatch="true"/>
 		</heading>
 		<heading id="TheaterCostumeCostumes" title="Theater Costume" noMatch="true"/>
 		<heading id="Uniform" title="Uniform">
@@ -5213,9 +5223,10 @@
 				<synonym value="Cooking Bowls"/>
 				<synonym value="Cooking-Bowl"/>
 				<synonym value="Cooking-Bowls"/>
-				<heading id="BowlCookEq" title="Bowl" noMatch="true">
+				<heading id="BowlCookEq" title="Bowl">
 					<synonym value="Bowls"/>
 					<implies facet="ActivityorContext" cat="FoodServing"/>
+					<implies facet="ObjectName" cat="BowlVessel"/>
 					<!-- need complex inferentiation to remove ritual bowls, etc. -->
 				</heading>
 				<heading id="BreadBowlCookEq" title="Bread Bowl"/>
@@ -5226,6 +5237,7 @@
 				<synonym value="Pan"/>
 				<synonym value="Pans"/>
 				<implies facet="ActivityorContext" cat="Metallurgy"/>
+				<implies facet="ObjectName" cat="PanVessel"/>
 				<heading id="SkilletCookEq" title="Skillet">
 					<synonym value="Skillets"/>
 					<synonym value="Fry Pan"/>
@@ -6485,9 +6497,7 @@
 			<synonym value="Soups"/>
 			<heading id="AcornSoup" title="Acorn Soup"/>
 		</heading>
-		<heading id="TeaFood" title="Tea">
-			<implies facet="ActivityorContext" cat="TeaDrinking"/>
-		</heading>
+		<heading id="TeaFood" title="Tea" noMatch="true"/>
 		<heading id="VodkaFood" title="Vodka"/>
 		<heading id="WeddingcakeFood" title="Wedding Cake">
 			<synonym value="Wedding Cakes"/>
@@ -6936,11 +6946,10 @@
 			<synonym value="Sports"/>
 			<synonym value="Sport Equipment"/>
 			<implies facet="ActivityorContext" cat="PlayingSports"/>
-			<heading id="BallGmSprt" title="Ball">
-				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
-				<!-- Check Cat. -->
+			<!-- <heading id="BallGmSprt" title="Ball">
 				<synonym value="Balls"/>
-			</heading>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
+			</heading> -->
 			<heading id="DiscusGmSprt" title="Discus">
 				<synonym value="Discuses"/>
 			</heading>
@@ -6982,7 +6991,7 @@
 		<heading id="SugorokuGmSprt" title="Sugoroku">
 			<synonym value="Sugorokus"/>
 		</heading>
-		<heading id="ToyGmSprt" title="Toy" noMatch="true">
+		<heading id="ToyGmSprt" title="Toy">
 			<synonym value="Toys"/>
 			<implies facet="ObjectName" cat="ToyChdCr"/>
 		</heading>
@@ -7437,10 +7446,7 @@
 		<heading id="NefMiscEq" title="Nef">
 			<synonym value="Nefs"/>
 		</heading>
-		<heading id="NetMiscEq" title="Net">
-			<synonym value="Nets"/>
-			<excl value="Fishing"/>
-		</heading>
+		<heading id="NetMiscEq" title="Net" noMatch="true"/>
 		<heading id="NooseMiscEq" title="Noose">
 			<synonym value="Nooses"/>
 		</heading>
@@ -9473,6 +9479,7 @@
 			</heading>
 			<heading id="WigPrsOrn" title="Wig">
 				<synonym value="Wigs"/>
+				<implies facet="ObjectName" cat="WigPersAcc"/>
 			</heading>
 		</heading>
 		<heading id="HandOrnamentPrsOrn" title="Hand Ornament">
@@ -10038,9 +10045,7 @@
 		<heading id="BaptismalShellRelRit" title="Baptismal Shell">
 			<synonym value="Baptismal Shells"/>
 		</heading>
-		<heading id="BiJadeDiskRelRit" title="Bi" noMatch="true">
-			<synonym value="Bis"/>
-		</heading>
+		<heading id="BiJadeDiskRelRit" title="Bi" noMatch="true"/>
 		<heading id="BodyPaintRelRit" title="Body-Paint" noMatch="true"/>
 		<heading id="CandelonRelRit" title="Candelon" noMatch="true"/>
 		<heading id="CenserFittingRelRit" title="Censer-Fitting">
@@ -12356,9 +12361,12 @@
 				<!-- <implies facet="ActivityorContext" cat="xxxxxxxxxxxxxxx"/> -->
 			</heading>
 			<heading id="TeaDrug" title="Tea">
+				<synonym value="Teas"/>
 				<implies facet="ActivityorContext" cat="TeaDrinking"/>
 				<implies facet="ActivityorContext" cat="CoffeeCaffeineStimulant"/>
+				<implies facet="ObjectName" cat="TeaCaffeine"/>
 				<implies facet="ObjectName" cat="TeaDrugTheobr"/>
+				<implies facet="ObjectName" cat="TeaFood"/>
 			</heading>
 			<heading id="TobaccoDrug" title="Tobacco" noMatch="true">
 				<implies facet="ObjectName" cat="TobaccoNicotineDrug"/>
