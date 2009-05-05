@@ -37,7 +37,7 @@ public abstract class DBMetaDataReader {
 			throw new RuntimeException(myName+"No password specified.");
 		sources = new ArrayList<DBSourceInfo>();
 		scanDBSourceInfo(dbSourceInfoNode);
-	    debug( 2, myName+"Added "+sources.size()+" sources.");
+	    debug( 2, "DBMetaDataReader.Ctor: Added "+sources.size()+" sources.");
 	}
 
 	protected void scanDBSourceInfo(Element dbSourceInfoNode) {

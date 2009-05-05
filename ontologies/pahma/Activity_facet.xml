@@ -99,16 +99,13 @@
 		</heading>
 	</heading>
 	<heading id="DrugUse" title="Drug Use">
-		<heading id="AlcoholicDrugs" title="Drinking (Alcohol)">
+		<heading id="AlcoholicDrugs" title="Alcohol">
 			<heading id="DrugsAlcoholBeer" title="Drinking Beer" noMatch="true"/>
 			<heading id="DrugsAlcoholLiqour" title="Drinking Liquor" noMatch="true"/>
 			<heading id="DrugsAlcoholWine" title="Drinking Wine" noMatch="true"/>
 		</heading>
 		<heading id="HallucinogenicDrugs" title="Hallucinogens"/>
-		<heading id="DrugSwallowing" title="Injesting Drugs">
-			<heading id="MescalineUse" title="Mescaline use"/>
-		</heading>
-		<heading id="DrugSmoking" title="Smoking">
+		<heading id="AnySmoking" title="Smoking">
 			<heading id="CannibisSmoking" title="Cannibis smoking">
 				<synonym value="Smoking cannibis"/>
 				<synonym value="Smoking marijuana"/>
@@ -123,9 +120,9 @@
 			<excl value="Salmon"/>
 			<excl value="Meat"/>
 		</heading>
-		<heading id="DrugSniffing" title="Sniffing Drugs">
-			<heading id="CocaineDrugUse" title="Cocaine Use"/>
-			<heading id="SnuffDrugUse" title="Snuff Use"/>
+		<heading id="SniffedDrugs" title="SniffedDrugs">
+			<!-- others?  Or should this be merged? -->
+			<heading id="SnuffDrug" title="Snuff"/>
 		</heading>
 		<heading id="StimulantDrugs" title="Stimulants">
 			<heading id="CocaChewingStimulant" title="Coca Chewing">
@@ -133,9 +130,9 @@
 			</heading>
 			<heading id="BetelChewingStimulant" title="Betel Chewing"/>
 			<heading id="DrugsCaffeine" title="CaffeineUse" noMatch="true">
-				<heading id="ChocolateCaffeineStimulant" title="Using Chocolate"/>
-				<heading id="CoffeeCaffeineStimulant" title="Using Coffee"/>
-				<heading id="TeaCaffeineStimulant" title="Using Tea"/>
+				<heading id="ChocolateCaffeineStimulant" title="Chocolate"/>
+				<heading id="CoffeeCaffeineStimulant" title="Coffee"/>
+				<heading id="TeaCaffeineStimulant" title="Tea"/>
 			</heading>
 		</heading>
 	</heading>
@@ -143,7 +140,6 @@
 		<heading id="Drinking" title="Drinking">
 			<synonym value="Imbibing"/>
 			<heading id="DrinkingAlcohol" title="Drinking Alcohol">
-				<implies facet="ActivityorContext" cat="AlcoholicDrugs"/>
 				<heading id="BeerDrinking" title="Beer Drinking">
 					<synonym value="Drinking Beer"/>
 					<implies facet="ActivityorContext" cat="DrugsAlcoholBeer"/>
@@ -184,9 +180,8 @@
 				<synonym value="Making Breakfast"/>
 				<synonym value="Making Lunch"/>
 				<synonym value="Making Dinner"/>
-				<heading id="SmokingFood" title="Smoking" noMatch="true">
-					<synonym value="Smoked"/>
-					<excl value="Tobacco"/>
+				<heading id="SmokingFood" title="Smoking">
+					<excl value="Anysmoking"/>
 				</heading>
 			</heading>
 			<heading id="FoodServing" title="Food serving">
@@ -254,6 +249,7 @@
 				</heading>
 				<heading id="FuneraryRites" title="Funerary Rites">
 					<heading id="Cremations" title="Cremations">
+						<synonym value="Funeral"/>
 						<heading id="FuneralPyre" title="Funeral Pyre"> <!-- Is a pyre a kind of cremation?  Vice-versa?  Or something different? -->
 							<synonym value="Funerary Pyre"/>
 							<synonym value="Pyre"/>
@@ -273,7 +269,15 @@
 					<synonym value="Wedding"/>
 					<synonym value="Weddings"/>
 					<synonym value="Marriages"/>
-					<heading id="BridalAdornment" title="Bridal Adornment"/>
+					<heading id="BridalAdornment" title="Bridal Adornment">
+						<heading id="MaangtikaBridalLocket" title="Mangtika (Bridal Locket)">
+							<synonym value="Bridal Locket"/>
+							<synonym value="Mangtika"/>
+							<synonym value="Maangtika"/>
+							<synonym value="Mangtika"/>
+							<synonym value="Mang Tika"/>
+						</heading>
+					</heading>
 				</heading>
 				<heading id="MourningCeremonies" title="Mourning Ceremonies">
 					<synonym value="Mourning Ceremony"/>
@@ -369,6 +373,7 @@
 			</heading>
 		</heading>
 		<heading id="Gatherings" title="Gatherings">
+			<synonym value="Gathering"/>
 		</heading>
 		<heading id="InternationalFairsExpos" title="International Fairs &amp; Expos">
 			<synonym value="World's Fair"/>
@@ -438,9 +443,6 @@
 		</heading>
 		<heading id="GatheringActivity" title="Gathering">
 			<heading id="BerryGathering" title="Berry Gathering"/>
-			<heading id="FishGathering" title="Fish Gathering">
-				<implies facet="ActivityorContext" cat="HandGatheringFishing"/>
-			</heading>
 			<heading id="SeedGathering" title="Seed Gathering"/>
 		</heading>
 		<heading id="HuntingActivity" title="Hunting"/>

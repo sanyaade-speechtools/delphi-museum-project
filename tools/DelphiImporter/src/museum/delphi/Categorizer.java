@@ -25,10 +25,8 @@ public class Categorizer {
 	private HashMap<Integer,ArrayList<ComplexInference>> inferencesByReqID = null;
 	private HashMap<Integer,ArrayList<ComplexInference>> inferencesByExclID = null;
 	private DoubleHashTree facetMapHashTree = null;
-	// TODO We need to either compute this from the ontologies, OR configure it.
-	private int maxNGramLength = 5;
 
-	private static int _debugLevel = 2;
+	private static int _debugLevel = 1;
 
 	protected static void debug( int level, String str ){
 		if( level <= _debugLevel )
@@ -92,12 +90,11 @@ public class Categorizer {
 	 *          If after n steps no new inferences are found, it will also stop.
 	 * @param fDumpAsSQLInsert set TRUE for an insert statement, FALSE for a loadfile
 	 * @param dbName the name of the DB to be used.
-	 * @param compileUnmatchedUsage if TRUE, builds up a report of unmatched tokens, by column
 	 */
 	public void categorizeForFacet(MetaDataReader metaDataReader, String facetName,
 			int complexInferenceSteps,
-			String basefilename, boolean fDumpAsSQLInsert, String dbName,
-			boolean compileUnmatchedUsage ) {
+			String basefilename, boolean fDumpAsSQLInsert, String dbName ) {
+    	String filename = null;
     	String extension = ".sql";
     	String currFilename = null;
     	int iOutputFile;
@@ -113,33 +110,21 @@ public class Categorizer {
     	int nObjCatsDumpedToFile = 0;
     	int nObjCatsDumpedTotal = 0;
     	int nObjsSkippedTotal = 0;
-		int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
-		int currID = -1;
+    	// TODO get this from col config
+		int objNumCol = 4;
     	// Hold the information for the Facet(s)
     	DumpColumnConfigInfo[] colDumpInfo = null;
 		try {
 			// Open the dump file
 			String columnNames[] = metaDataReader.getColumnNames();
-			try {
 			colDumpInfo = DumpColumnConfigInfo.getAllColumnInfo(columnNames);
-			} catch( IllegalArgumentException iae ) {
-				String msg = "Mismatched columns between metadata configuration and metadata file.\n"
-					+ iae.getLocalizedMessage();
-				debug(0, msg);
-				throw new RuntimeException(msg);
-			}
 			int nCols = columnNames.length;
 			// Since we run through lots of lines, cache the skip columns info for speed
 			boolean[] skipCol = new boolean[nCols];
-			ArrayList<Counter<String>> vocabCounts = new ArrayList<Counter<String>>(nCols);
 			for( int iCol=0; iCol<nCols; iCol++ ) {
 				skipCol[iCol] = !((facetName==null)?
 								 colDumpInfo[iCol].columnMinedForAnyFacet()
 								:colDumpInfo[iCol].columnMinedForFacet(facetName));
-				if(compileUnmatchedUsage && !skipCol[iCol])
-					vocabCounts.add(new Counter<String>());
-				else
-					vocabCounts.add(null);
 			}
 			BufferedWriter objCatsWriter = null;
 	    	iOutputFile = 0;
@@ -149,14 +134,13 @@ public class Categorizer {
 			nObjCatsTillReport = nObjCatsReport;
 			Pair<Integer,ArrayList<String>> objInfo = null;
 			while((objInfo = metaDataReader.getNextObjectAsColumns()) != null ) {
-				currID = objInfo.first;
+				int id = objInfo.first;
 				ArrayList<String> objStrings = objInfo.second;
-				assert (objStrings.size()==nCols) : "Bad parse for obj:"+currID;
 				// Have a complete line. Check for validity
 				String objNumStr = objStrings.get(objNumCol);
 				if(!DumpColumnConfigInfo.objNumIsValid(objNumStr)) {
 					// Skip lines with no object number.
-					debug(1,"CategorizeForFacet: Discarding line for id (bad objNum): "+currID );
+					debug(1,"CategorizeForFacet: Discarding line for id (bad objNum): "+id );
 					nObjsSkippedTotal++;
 				} else { //  Process a valid line
 					if( objCatsWriter == null ) {
@@ -184,11 +168,11 @@ public class Categorizer {
 						if( source.length() <= 1 )
 							continue;
 						if( facetName != null )
-							categorizeObjectForFacet( currID, source, objStrings,
-								facetName, colDumpInfo[i], matchedCats, vocabCounts.get(i) );
+							categorizeObjectForFacet( id, source, objStrings,
+								facetName, colDumpInfo[i], matchedCats );
 						else
-							categorizeObjectForAllFacets( currID, source, objStrings,
-									colDumpInfo[i], matchedCats, vocabCounts.get(i) );
+							categorizeObjectForAllFacets( id, source, objStrings,
+									colDumpInfo[i], matchedCats );
 					}
 					// Now we handle inferences. First get all the simple inferences,
 					// including inherited (ascendant) concepts, and simple declarations.
@@ -216,7 +200,7 @@ public class Categorizer {
 							}
 						}
 					}
-					int nCatsDumped = SQLUtils.writeObjCatsSQL( currID,
+					int nCatsDumped = SQLUtils.writeObjCatsSQL( id,
 											matchedCats, inferredCats, objCatsWriter,
 											fFirst, fWithNewlines, fDumpAsSQLInsert );
 					matchedCats.clear();
@@ -252,32 +236,15 @@ public class Categorizer {
 			}
 			debug(1,"Wrote "+nObjCatsDumpedTotal+" total object categories"
 					+ ((facetName==null)?"":(" for facet: "+facetName)));
-			// Now, consider the unmatched usage
-			if(compileUnmatchedUsage) {
-				// We're going to dump the usage per column
-				for(int i=1; i<nCols; i++ ) {
-					Counter<String> vocabCountsForCol = vocabCounts.get(i);
-					if(vocabCountsForCol == null)
-						continue;
-					currFilename = basefilename
-	    						+"_"+(colDumpInfo[i].name.replaceAll("\\W", "_"))+"_Usage.txt";
-					BufferedWriter usageWriter = new BufferedWriter(new FileWriter( currFilename ));
-	    			debug(1,"Saving column usage info to file: " + currFilename);
-	    			vocabCountsForCol.write(usageWriter, true, 0, true);
-					usageWriter.flush();
-					usageWriter.close();
-				}
-			}
 		} catch( IOException e ) {
 			String tmp = "Categorizer.categorizeForFacet: Could not create or other problem writing:\n  "
-				+((currFilename==null)?"null":currFilename)
-				+"\n Processing ID: " + currID
+				+((filename==null)?"null":filename)
 				+"\n"+e.toString();
 			debug(1, tmp);
             debugTrace(2, e);
 			throw new RuntimeException( tmp );
 		} catch( RuntimeException e ) {
-			String tmp = "Categorizer.categorizeForFacet: Error encountered processing ID: " + currID
+			String tmp = "Categorizer.categorizeForFacet: Error encountered:"
 				+"\n"+e.toString();
 			debug(1, tmp);
             debugTrace(2, e);
@@ -287,139 +254,71 @@ public class Categorizer {
 
 	private void categorizeObjectForFacet( int id, String source, ArrayList<String> allStrings,
 			String facetName, DumpColumnConfigInfo colInfo,
-			HashMap<TaxoNode, Float> matchedCats, Counter<String> vocabCounts ) {
+			HashMap<TaxoNode, Float> matchedCats ) {
 		// Tokenize the string for this column
-		ArrayList<Pair<String,ArrayList<String>>> tokenList
-				= StringUtils.prepareSourceTokens( source, colInfo );
+		Pair<ArrayList<String>,ArrayList<String>> tokenPair
+				= prepareSourceTokens( source, colInfo );
 		float reliability = colInfo.columnReliabilityForFacet(facetName);
 		// Now, we try to find a category in the hashMap for each token
-		for( Pair<String,ArrayList<String>> pair:tokenList ) {
-			String token = pair.first;
+		for( String token:tokenPair.first ) {
+			// Test where id is 317239 - how do we match FUR?
 			TaxoNode node = facetMapHashTree.FindNodeByHook(facetName,token);
-			if( node != null ) {
-				debug(3, "Obj:"+id+" matched concept: ["+
-						facetName+":"+node.displayName+"] on token: "+token);
-				// We have a candidate here. Check for the exclusions
-				if( !lineContainsExclusions( node.exclset, allStrings )) {
-					// We have a TaxoNode match! Update matches with this node
-					updateMatches( matchedCats, reliability, node);
+			if( node == null )
+				continue;
+			debug(3, "Obj:"+id+" matched concept: ["+
+					facetName+":"+node.displayName+"] on token: "+token);
+			// We have a candidate here. Check for the exclusions
+			if( lineContainsExclusions( node.exclset, allStrings ))
+				continue;
+			// We have a TaxoNode match! Update matches with this node
+			updateMatches( matchedCats, reliability, node);
+			// Now, consider any pending implied nodes as well.
+			if(( node.impliedNodesPending != null ) && ( node.impliedNodesPending.size() > 0 ))
+				for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
+					updateMatches( matchedCats, reliability, node.impliedNodes.get(i));
 				}
-			} else {
-				debug(3, "No matched concept for full token: "+token);
-				if(vocabCounts != null)
-					vocabCounts.incrementCount(token, 1);
-				// Now we consider the ngrams within, if there are 2 or more words
-				ArrayList<String> words = pair.second;
-				if(words.size()>1) {
-					NGramStack ngrams = new NGramStack(words, maxNGramLength);
-					NGram next;
-					while((next=ngrams.pop())!=null) {
-						String ngramStr = next.getString();
-						node = facetMapHashTree.FindNodeByHook(facetName,ngramStr);
-						if(node != null ) {
-							debug(3, "Obj:"+id+" matched concept: ["+
-									facetName+":"+node.displayName+"] on NGram: "+ngramStr);
-							// We have a candidate here. Check for the exclusions
-							if( !lineContainsExclusions( node.exclset, allStrings )) {
-								// We have a TaxoNode match! Update matches with this node
-								updateMatches( matchedCats, reliability, node);
-								// And filter this nGram out from the list
-								ngrams.filterMatch(next);
-							}
-						} else if(vocabCounts != null) {
-							vocabCounts.incrementCount(ngramStr, 1);
-						}
-					}
-				}
-			}
 		}
 	}
 
 	private void categorizeObjectForAllFacets( int id, String source, ArrayList<String> allStrings,
-			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats, Counter<String> vocabCounts ) {
-		try {
-			// Tokenize the string for this column. First list is tokens, second is words.
-			ArrayList<Pair<String,ArrayList<String>>> tokenList
-								= StringUtils.prepareSourceTokens( source, colInfo );
-			// Now, we try to find a category in each facet hashMap for each token
-			for( Pair<String,ArrayList<String>> pair:tokenList ) {
-				String token = pair.first;
-				boolean foundMatch =
-					checkAllFacetsForToken(id, token, allStrings, false, colInfo, matchedCats );
-				if(!foundMatch) {
-					debug(3, "No matched concept for full token: "+token);
-					ArrayList<String> words = pair.second;
-					NGramStack missedngrams = null;
-					if(vocabCounts != null) {
-						//vocabCounts.incrementCount(token, 1);
-						missedngrams = new NGramStack();
-						// Treat as an ngram, to filter if partial ngrams match.
-						if(words.size()>0)	// Some tokens are all punct, etc. - skip them
-							missedngrams.add(new NGram(token, 0, words.size()-1));
-					}
-					// Now we consider the ngrams within, if there are 2 or more words
-					if(words.size()>1) {
-						NGramStack ngrams = new NGramStack(words, maxNGramLength);
-						NGram next;
-						while((next=ngrams.pop())!=null) {
-							String ngramStr = next.getString();
-							if(checkAllFacetsForToken(id, ngramStr,
-									allStrings, true, colInfo, matchedCats )) {
-								ngrams.filterMatch(next);
-								if(missedngrams != null)
-									missedngrams.filterMatch(next);
-							} else if(missedngrams != null) {
-								missedngrams.add(next);
-							}
-						}
-					}
-					// Now for all the ngrams left on the missed stack, add them
-					if(missedngrams != null) {
-						NGram next;
-						while((next=missedngrams.pop())!=null) {
-							vocabCounts.incrementCount(next.getString(), 1);
-						}
-					}
-				}
-			}
-		} catch (Exception e ) {
-		String tmp = "Categorizer.categorizeObjectForAllFacets: Error encountered processing ID: " + id
-			+"\nSrc:"+source
-			+"\n"+e.toString();
-		debug(1, tmp);
-        debugTrace(2, e);
-		throw new RuntimeException( tmp );
-		}
-	}
-
-	private boolean checkAllFacetsForToken(int id, String token,
-			ArrayList<String> allStrings, boolean isNGram,
 			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
-		// Loop over the facets to mine list. Note that list specifies order.
-		// As we find a token, we may remove it from further consideration so we
-		// get some auto-exclusion (configured)
-		boolean foundMatch = false;
-		for( DumpColumnConfigInfo.MineInfoForColumn mineInfo:colInfo.facetsToMine ) {
-			TaxoNode node = facetMapHashTree.FindNodeByHook(mineInfo.facetName,token);
-			if( node == null )
-				continue;
-			debug(3, "Obj:"+id+" matched concept: ["+
-					mineInfo.facetName+":"+node.displayName+"] on "
-						+(isNGram?"NGram: ":"token: ")+token);
-			// We have a candidate here. Check for the exclusions
-			if( lineContainsExclusions( node.exclset, allStrings )) {
-				debug(3, "Obj:"+id+" excluding matched concept: ["+
-						mineInfo.facetName+":"+node.displayName+"]");
-				continue;
+		// Tokenize the string for this column. First list is tokens, second is words.
+		Pair<ArrayList<String>,ArrayList<String>> tokenPair
+				= prepareSourceTokens( source, colInfo );
+		// Now, we try to find a category in each facet hashMap for each token
+		for( String token:tokenPair.first ) {
+			// Loop over the facets to mine list. Note that list specifies order.
+			// As we find a token, we remove it from further consideration so we
+			// get some auto-exclusion (should we configure this?)
+			for( DumpColumnConfigInfo.MineInfoForColumn mineInfo:colInfo.facetsToMine ) {
+				// Test where id is 317239 - how do we match FUR?
+				TaxoNode node = facetMapHashTree.FindNodeByHook(mineInfo.facetName,token);
+				if( node == null )
+					continue;
+				debug(3, "Obj:"+id+" matched concept: ["+
+						mineInfo.facetName+":"+node.displayName+"] on token: "+token);
+				// We have a candidate here. Check for the exclusions
+				// TODO - shouldn't the exclusion be checked in the entire string?
+				// If we only check the current token, then we'll only catch exclusions
+				// that match hooks!
+				if( lineContainsExclusions( node.exclset, allStrings )) {
+					debug(3, "Obj:"+id+" excluding matched concept: ["+
+							mineInfo.facetName+":"+node.displayName+"]");
+					continue;
+				}
+				// We have a TaxoNode match! Update matches with this node
+				updateMatches( matchedCats, mineInfo.reliability, node);
+				// Now, consider any pending implied nodes as well.
+				// TODO Verify that this should never happen, and remove this code.
+				if(( node.impliedNodesPending != null ) && ( node.impliedNodesPending.size() > 0 ))
+					for( int i=0; i<node.impliedNodesPending.size(); i++ ) {
+						updateMatches( matchedCats, mineInfo.reliability, node.impliedNodes.get(i));
+					}
+				// Since we got a match, we may stop considering the other facets for this token.
+				if( mineInfo.filterTokenOnMatch )
+					break;
 			}
-			foundMatch = true;
-			// We have a TaxoNode match! Update matches with this node
-			updateMatches( matchedCats, mineInfo.reliability, node);
-			// Since we got a match, we may stop considering the other facets for this token.
-			if( mineInfo.filterTokenOnMatch )
-				break;
 		}
-		return foundMatch;
 	}
 
 	private static boolean lineContainsExclusions(ArrayList<String> exclSet, ArrayList<String> line) {
@@ -454,22 +353,14 @@ public class Categorizer {
 	 */
 	protected static HashMap<TaxoNode, Float> deriveSimpleInferences(
 						HashMap<TaxoNode, Float> matchedCats) {
-		try {
-			HashMap<TaxoNode, Float> inferredCats = new HashMap<TaxoNode, Float>();
-			// We just consider each match in turn, and get all the inferred nodes.
-			for( TaxoNode node:matchedCats.keySet() ) {
-				Float ret = matchedCats.get(node); // returns null if not in hashMap
-				float currRel = (ret==null)?0:ret.floatValue();
-				node.AddInferredNodes(inferredCats, currRel);
-			}
-			return inferredCats;
-		} catch ( Exception e ) {
-			String tmp = "Categorizer.deriveSimpleInferences: Error encountered:"
-				+"\n"+e.toString();
-			debug(1, tmp);
-            debugTrace(2, e);
-			throw new RuntimeException( tmp );
+		HashMap<TaxoNode, Float> inferredCats = new HashMap<TaxoNode, Float>();
+		// We just consider each match in turn, and get all the inferred nodes.
+		for( TaxoNode node:matchedCats.keySet() ) {
+			Float ret = matchedCats.get(node); // returns null if not in hashMap
+			float currRel = (ret==null)?0:ret.floatValue();
+			node.AddInferredNodes(inferredCats, currRel);
 		}
+		return inferredCats;
 	}
 
 	/**
@@ -608,7 +499,7 @@ public class Categorizer {
 				}
 			}
 			if( fReqFailure ) {
-				debug(3, "Requirements failed for inference: " + mi.ci.name);
+				debug(2, "Requirements failed for inference: " + mi.ci.name);
 				continue;
 			} else {
 				if( fRequireAll ) {
@@ -630,11 +521,11 @@ public class Categorizer {
 				}
 			}
 			if( fExclFound ) {
-				debug(3, "Inference failed on exclusions: " + mi.ci.name);
+				debug(2, "Inference failed on exclusions: " + mi.ci.name);
 				continue;
 			}
 			// Have all the requirements, and did not exclude, so add this to inferred concepts
-			debug(2, "Adding inference: " + mi.ci.name + "("+mi.ci.infer.name+")"
+			debug(1, "Adding inference: " + mi.ci.name + "("+mi.ci.infer.name+")"
 								+" with relevance: " + relevanceAccum);
 			inferredCats.put(mi.ci.infer, relevanceAccum);
 		}
@@ -652,35 +543,82 @@ public class Categorizer {
 						HashMap<TaxoNode, Float> inferredCats) {
 		// Remove all the matchedCats that were otherwise inferred.
 		// Before we do that, we adjust the reliability of the inferred node.
-		try {
-			ArrayList<TaxoNode> toRemove = null;
-			for( TaxoNode node:matchedCats.keySet() ) {
-				if( inferredCats.containsKey(node)) {
-					Float ret = matchedCats.get(node);	// Should not return null, but be safe
-					float matchRel = (ret==null)?0:ret.floatValue();
-					ret = inferredCats.get(node);		// Should not return null, but be safe
-					float infRel = (ret==null)?0:ret.floatValue();
-					// We will boost reliability given match and inference
-					float boostedRel = (float)(1.0 - ((1.0-matchRel)*(1.0-infRel)));
-					inferredCats.put(node, boostedRel);
-					// And add to list of nodes to remove from Matched Cats
-					if( toRemove == null)
-						toRemove = new ArrayList<TaxoNode>();
-					toRemove.add(node);
-				}
+		ArrayList<TaxoNode> toRemove = null;
+		for( TaxoNode node:matchedCats.keySet() ) {
+			if( inferredCats.containsKey(node)) {
+				Float ret = matchedCats.get(node);	// Should not return null, but be safe
+				float matchRel = (ret==null)?0:ret.floatValue();
+				ret = inferredCats.get(node);		// Should not return null, but be safe
+				float infRel = (ret==null)?0:ret.floatValue();
+				// We will boost reliability given match and inference
+				float boostedRel = (float)(1.0 - ((1.0-matchRel)*(1.0-infRel)));
+				inferredCats.put(node, boostedRel);
+				// And add to list of nodes to remove from Matched Cats
+				if( toRemove == null)
+					toRemove = new ArrayList<TaxoNode>();
+				toRemove.add(node);
 			}
-			// Now remove the nodes from the matchedCats set.
-			if( toRemove != null )
-				for( TaxoNode node:toRemove )
-					matchedCats.remove(node);
-		} catch ( Exception e ) {
-			String tmp = "Categorizer.filterMatchedInferences: Error encountered:"
-				+"\n"+e.toString();
-			debug(1, tmp);
-            debugTrace(2, e);
-			throw new RuntimeException( tmp );
 		}
+		// Now remove the nodes from the matchedCats set.
+		if( toRemove != null )
+			for( TaxoNode node:toRemove )
+				matchedCats.remove(node);
 	}
+
+	//
+	/**
+	 * Tokenizes an input string according to column info rules.
+	 * Also maps all tokens and words to lower case.
+	 * @param source input String
+	 * @param colInfo columnInfo for this string
+	 * @return Pair of Lists: first is tokens, second is words
+	 */
+	private static Pair<ArrayList<String>,ArrayList<String>> prepareSourceTokens(
+			String source, DumpColumnConfigInfo colInfo ) {  //  @jve:decl-index=0:
+		ArrayList<String> tokens = new ArrayList<String>();
+		ArrayList<String> words = new ArrayList<String>();
+		// First we apply reduction. This cleans up certain oddities in the source
+		String reducedSource = source.toLowerCase();
+		for(Pair<String, String> reduce : colInfo.reduceRules) {
+			reducedSource = reducedSource.replaceAll(reduce.first, reduce.second);
+		}
+		// Next, we tokenize with the token separators
+		String[] tokens_1;
+		if( colInfo.tokenSeparators.size() == 0 ) {
+			// throw new RuntimeException( "No Token separators for column: " + colInfo.name);
+			tokens_1 = new String[1];
+			tokens_1[0] = reducedSource;
+		} else {
+			String regex = "\\||"+colInfo.tokenSeparators.get(0);
+			for( int i=1; i<colInfo.tokenSeparators.size(); i++)
+				regex += "|"+colInfo.tokenSeparators.get(i);
+			tokens_1 = reducedSource.split(regex);
+		}
+		// Next, we further split up each token on space and certain punctuation and remove the noise items
+		// We also build the words list for Colors
+		for( int i=0; i< tokens_1.length; i++ ){
+			String[] words_1 = tokens_1[i].trim().split("[\\W&&[^\\-]]");
+			if( colInfo.noiseTokens.size() == 0 ){
+				tokens.add(tokens_1[i].trim());
+				for( int iW=0; iW<words_1.length; iW++)
+					words.add(words_1[iW].trim());
+			}
+			else {
+				StringBuilder sb = new StringBuilder();
+				for( int iW=0; iW<words_1.length; iW++)
+					if( !colInfo.noiseTokens.contains(words_1[iW]) ) {
+						if( iW > 0)
+							sb.append(' ');
+						String word = words_1[iW].trim();
+						sb.append(word);
+						words.add(word);
+					}
+				tokens.add(sb.toString());
+			}
+		}
+		return new Pair<ArrayList<String>,ArrayList<String>>(tokens, words);
+	}
+
 
 
 }

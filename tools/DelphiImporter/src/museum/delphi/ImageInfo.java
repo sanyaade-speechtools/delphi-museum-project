@@ -13,9 +13,15 @@ public class ImageInfo {
 	public static final double UNKNOWN_ORIENTATION = 0;
 
 	/**
-	 * Represents the relative path to the file.
+	 * Represents the top of the path to the file. We
+	 * may append another folder underneath (e.g., "thumbs") for specific
+	 * derivatives.
 	 */
-	public String	filepath = null;
+	public String	path = null;
+	/**
+	 * Simple filename. All images/derivatives are .jpg's
+	 */
+	public String	filename = null;
 
 	private int		width = 0;
 	private int		height = 0;
@@ -46,22 +52,13 @@ public class ImageInfo {
 	private double	aspectR = UNKNOWN_ORIENTATION;	// Represents W/H
 
 	public ImageInfo( String fpath, String fname ) {
-		filepath = fpath+'/'+fname;
+		path = fpath;
+		filename = fname;
 	}
 
 	public ImageInfo( String fpath, String fname, int w, int h ) {
-		filepath = fpath+'/'+fname;
-		width = w;
-		height = h;
-		checkAspect();
-	}
-
-	public ImageInfo( String fpath ) {
-		filepath = fpath;
-	}
-
-	public ImageInfo( String fpath, int w, int h ) {
-		filepath = fpath;
+		path = fpath;
+		filename = fname;
 		width = w;
 		height = h;
 		checkAspect();
@@ -81,19 +78,22 @@ public class ImageInfo {
 	 * @return true if aspectR is known and (width >= height)
 	 */
 	public boolean computeAspectR( String basePath) {
-		if( aspectR == UNKNOWN_ORIENTATION ) {
-			try {
-				// We need to load one of the image variants (mid, thumb)
-				// and then compute and set the orientation
-			    ImageIcon image = new ImageIcon(basePath + filepath );
-			    setDims(image.getIconWidth(), image.getIconHeight());
-			} catch( RuntimeException e ) {
-				debug( 1, "Error encountered computing aspect ratios for image:[" +
-						filepath +"]\n  " + e.toString() );
-				debugTrace( 2, e );
-			}
+		if( aspectR != UNKNOWN_ORIENTATION ) {
+			return false;
 		}
-		return ( aspectR != UNKNOWN_ORIENTATION );
+		try {
+			// We need to load one of the image variants (mid, thumb)
+			// and then compute and set the orientation
+		    ImageIcon image = new ImageIcon(basePath + path + "/" + filename);
+		    setWidth(image.getIconWidth());
+		    setHeight(image.getIconHeight());
+		} catch( RuntimeException e ) {
+			debug( 1, "Error encountered computing aspect ratios for image:[" +
+					path + "/" + filename+"]\n  " + e.toString() );
+			debugTrace( 2, e );
+			throw e;
+		}
+		return true;
 	}
 
 	/**
@@ -101,6 +101,29 @@ public class ImageInfo {
 	 */
 	public boolean isLandscape() {
 		return( aspectR >= 1 );
+	}
+
+	/**
+	 * Takes the first configured path for the id, if any, and adds a subpath.
+	 * @param subPath Pass in a simple relative path, with no leading or trailing slashes
+	 * @return
+	 */
+	public String GetSimpleSubPath( String subPath ) {
+		if( subPath != null )
+			return path + "/" + subPath + "/" + filename;
+		return path + "/" + filename;
+	}
+
+	/**
+	 * Takes the first configured path for the id, if any, and adds the subpaths.
+	 * @param subPath1 Pass in a simple relative path, with no leading or trailing slashes
+	 * @param subPath2 Pass in a simple relative path, with no leading or trailing slashes
+	 * @return
+	 */
+	public Pair<String,String> GetSimpleSubPaths( String subPath1, String subPath2 ) {
+		String retString1 = path + "/" + subPath1 + "/" + filename;
+		String retString2 = path + "/" + subPath2 + "/" + filename;
+		return new Pair<String,String>(retString1, retString2);
 	}
 
 	public int getHeight() {
@@ -121,19 +144,13 @@ public class ImageInfo {
 		checkAspect();
 	}
 
-	public void setDims(int width, int height) {
-		this.width = (width < 0 ? 0:width);
-		this.height = (height < 0 ? 0:height);
-		checkAspect();
-	}
-
 	public double getAspectR() {
 		return aspectR;
 	}
 
 	@Override
 	public String toString() {
-		return( "Path: " + filepath + " W: " + width + " H: " + height
+		return( "Path: " + path + '/' + filename + " W: " + width + " H: " + height
 			+ " aR: " + getAspectR() + (isLandscape() ? " Landscape":" Portrait") );
 	}
 
@@ -142,15 +159,17 @@ public class ImageInfo {
 		if ( this == oThat ) return true;
 		if ( !(oThat instanceof ImageInfo) ) return false;
 		ImageInfo that = (ImageInfo)oThat;
-		return( this.filepath.equals(that.filepath) );
+		return( this.path.equals(that.path) && this.filename.equals(that.filename) );
 	}
 
 	@Override
 	public int hashCode() {
 		if( myHashCode == 0 ) {
 			myHashCode = 13;		// Start with a non-zero prime
-			if( filepath != null )
-				myHashCode += filepath.hashCode();
+			if( path != null )
+				myHashCode += path.hashCode();
+			if( filename != null )
+				myHashCode = myHashCode*37 + filename.hashCode();
 		}
 		return myHashCode;
 	}

@@ -39,7 +39,7 @@
 					<synonym value="Twareg"/>
 				</heading>
 			</heading>
-			<heading id="HornOfAfricaTribes" title="Horn of Africa" noMatch="true">
+			<heading id="HornOfAfricaTribe" title="Horn of Africa" noMatch="true">
 				<heading id="AfarTribe" title="Afar"/>
 				<heading id="AmharaTribe" title="Amhara"/>
 				<heading id="FalashaTribe" title="Falasha"/>
@@ -369,10 +369,8 @@
 					</heading>
 					<heading id="YorubaPeople" title="Yoruba"/>
 				</heading>
-				<heading id="BurkinaFasoGroups" title="Burkina Faso" noMatch="true">
-					<synonym value="Upper Volta tribes"/>
+				<heading id="UpperVoltaTribes" title="Upper Volta" noMatch="true">
 					<heading id="BoboTribe" title="Bobo"/>
-					<heading id="Burkinabe" title="Burkinabè"/> <!-- General name for the inhabitants of Burkina Faso -->
 					<heading id="DagariTribe" title="Dagari"/>
 					<heading id="LobiTribe" title="Lobi">
 						<synonym value="Labi"/>
@@ -2643,9 +2641,6 @@
 				<heading id="ArguornaIndians" title="Arguorna"/> <!-- Where is this group from? -->
 				<heading id="BrazilianIndCultures" title="Brazilian Indian Cultures">
 					<heading id="FulnioIndians" title="Fulnio"/>
-					<heading id="GuaraniIndians" title="Guaraní">
-						<synonym value="Guarani"/>
-					</heading>
 					<heading id="HuamueIndians" title="Huamue"/>
 					<heading id="MaueIndians" title="Maue"/>
 					<heading id="PacaraIndians" title="Pacara"/>
@@ -2653,7 +2648,6 @@
 					<heading id="ParintintinIndians" title="Parintintin"/>
 					<heading id="PernambuceIndians" title="Pernambuce"/>
 					<heading id="TashaIndians" title="Tasha"/>
-					<heading id="TupiIndians" title="Tupi"/>
 					<heading id="XinguIndians" title="Xingu tribes">
 						<heading id="AwetiIndians" title="Aweti"/>
 						<heading id="KalapaloIndians" title="Kalapalo"/>
@@ -2969,7 +2963,7 @@
 						<implies facet="Location" cat="ChuukIslandMicronesia"/>
 					</heading>
 					<heading id="Kosraean" title="Kosraean"> <!-- possibly only a language group -->
-						<!-- <implies facet="Location" cat="KosraeIslandMicronesia"/> -->
+						<implies facet="Location" cat="KosraeIslandMicronesia"/>
 					</heading>
 					<heading id="Palauan" title="Palauan">
 						<implies facet="Location" cat="Palau"/>
@@ -2997,14 +2991,9 @@
 			</heading>
 			<heading id="MelanesianCulture" title="Melanesian">
 				<heading id="Fijian" title="Fijian">
-					<synonym value="Fijians"/>
-					<implies facet="Location" cat="FijiCountry"/>
-				</heading>
-				<heading id="Indo-Fijian" title="Indo-Fijian">
-					<synonym value="Indo-Fijians"/>
-					<synonym value="IndoFijian"/>
-					<synonym value="IndoFijians"/>
-					<implies facet="Location" cat="FijiCountry"/>
+					<heading id="Indo-Fijian" title="Indo-Fijian">
+						<implies facet="Location" cat="Fiji"/>
+					</heading>
 				</heading>
 				<heading id="NewCaledonian" title="New Caledonian">
 					<implies facet="Location" cat="NewCaledonia"/>
@@ -3098,10 +3087,6 @@
 				<heading id="NorfolkIslander" title="Norfolk Islander">
 					<synonym value="Norfolk Islanders"/>
 					<implies facet="Location" cat="NorfolkIsland"/>
-				</heading>
-				<heading id="Rotuman" title="Rotuman">
-					<synonym value="Rotumans"/>
-					<implies facet="Location" cat="RotumaIsland"/>
 				</heading>
 				<heading id="SolomonIslander" title="Solomon Islander">
 					<synonym value="Solomon Islanders"/>

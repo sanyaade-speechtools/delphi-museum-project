@@ -49,10 +49,9 @@ public class DBSourceInfo {
 	protected ArrayList<DBColumnInfo> columns;
 	private ArrayList<String> destinationColumnNames = null;
 	private String destColSeparator = "|";
-	private Statement sqlStatement = null;
 	private ResultSet currResults = null;
 
-	private static int _debugLevel = 2;
+	private static int _debugLevel = 1;
 
 	protected static void debug( int level, String str ) {
 		if( level <= _debugLevel )
@@ -76,11 +75,11 @@ public class DBSourceInfo {
 	    if(!isJoinCol) {
 	    	return new DBSourceInfo.DBColumnInfo( name, destination);
 	    }
-		String joinTableName = columnEl.getAttribute( "jointable" );
+		String joinTableName = columnEl.getAttribute( "joinTableName" );
 	    if( joinTableName.length() <= 0 )
 			throw new RuntimeException("DBColumnInfo.createFromConfig: No name on column.");
-		String localKey = columnEl.getAttribute( "localkey" );
-		String joinKey = columnEl.getAttribute( "joinkey" );
+		String localKey = columnEl.getAttribute( "localKey" );
+		String joinKey = columnEl.getAttribute( "joinKey" );
     	return new DBSourceInfo.DBJoinColumnInfo( name, destination, joinTableName, localKey, joinKey);
 	}
 
@@ -110,14 +109,13 @@ public class DBSourceInfo {
 			    Element colInfoEl = (Element)colNodes.item(iCol);
 			    DBColumnInfo colInfo = DBSourceInfo.createColInfoFromConfig(colInfoEl, false);
 			    newSourceInfo.columns.add(colInfo);
-			    newSourceInfo.destinationColumnNames.add(colInfo.destination);
+			    newSourceInfo.destinationColumnNames.add(colInfo.name);
 			    debug( 2, "DBSourceInfo.createFromConfig: Added col info: "
 			    		+colInfo.name+", "+colInfo.destination);
 			}
 		}
 		colNodes = sourceEl.getElementsByTagName( "joincolumn" );
 		if( colNodes.getLength() < 1 ) {
-			// If no joincolumns, and also no columns, complain
 			if(nCols < 1)
 				throw new RuntimeException(
 					"DBSourceInfo.createFromConfig: Source for: "
@@ -127,9 +125,9 @@ public class DBSourceInfo {
 			nNodes = colNodes.getLength();
 			for( int iCol = 0; iCol < nNodes; iCol++) {
 			    Element colInfoEl = (Element)colNodes.item(iCol);
-			    DBColumnInfo colInfo = DBSourceInfo.createColInfoFromConfig(colInfoEl, true);
+			    DBColumnInfo colInfo = DBSourceInfo.createColInfoFromConfig(colInfoEl, false);
 			    newSourceInfo.columns.add(colInfo);
-			    newSourceInfo.destinationColumnNames.add(colInfo.destination);
+			    newSourceInfo.destinationColumnNames.add(colInfo.name);
 			    debug( 2, "DBSourceInfo.createFromConfig: Source for: "
 			    		+dbName+":"+tableName+": Added col info: "
 			    		+colInfo.name+", "+colInfo.destination);
@@ -231,40 +229,11 @@ public class DBSourceInfo {
 	 * @return SQL select string for this source
 	 */
 	protected String buildSelect() {
-		StringBuilder select = new StringBuilder("SELECT "+tableName+"."+objIDColName);
-		//StringBuilder select = new StringBuilder("SELECT TOP 50000 "+tableName+"."+objIDColName);
-		//StringBuilder tables = new StringBuilder(" FROM "+dbName+".dbo."+tableName);
-		StringBuilder tables = new StringBuilder(" FROM "+tableName);
-		// Keep track of which tables already added to FROM
-		ArrayList<String> tableNames = new ArrayList<String>();
-		tableNames.add(tableName);
-		int nCols = columns.size();
-		// Loop across the columns
-		for( int iCol=0; iCol < nCols; iCol++ ) {
-			select.append(",");
-			DBColumnInfo colInfo = columns.get(iCol);
-			try {
-				DBJoinColumnInfo joinColInfo = (DBJoinColumnInfo)colInfo;
-				// If we have not added this table yet, add it to the FROM clause
-				String joinTable = joinColInfo.joinTableName;
-				if( !tableNames.contains(joinTable) ) {
-					tableNames.add(joinTable);
-					tables.append(" JOIN "+joinTable
-								+" ON ("+tableName+"."+joinColInfo.localKey+
-									"="+joinTable+"."+joinColInfo.joinKey+")");
-				}
-				select.append(joinTable+"."+colInfo.name);
-			} catch( ClassCastException cce ) {
-				select.append(tableName+"."+colInfo.name);
-			}
-		}
-		select.append(tables);	// combine the select and the from clauses
-		// Add the where clause, if any
-		if(rowFilter!= null && !rowFilter.isEmpty())
-			select.append(" WHERE NOT("+rowFilter+")");
-		// Add the order clause
-		select.append(" ORDER BY "+tableName+"."+objIDColName);
-		debug(2, "DBSourceInfo.buildSelect: "+select.toString());
+		StringBuilder select = new StringBuilder("SELECT ");
+		// Create a basic select, adding the columns for the primary table and
+		// the joined columns qualified by their table names
+		// Add the join rules, if any
+		// Add the row filter clause
 		return select.toString();
 	}
 
@@ -275,9 +244,10 @@ public class DBSourceInfo {
 		// column types to be other scalar values.
 		String select = buildSelect();
 		// Execute the query
+		Statement stmt = null;
 		try {
-			sqlStatement = dbConnection.createStatement();
-			currResults = sqlStatement.executeQuery(select);
+			stmt = dbConnection.createStatement();
+			currResults = stmt.executeQuery(select);
 		} catch (SQLException se) {
 			String tmp = "DBSourceInfo.prepareResults: Problem with select SQL: "
 				+"\n"+ se.getMessage();
@@ -287,12 +257,12 @@ public class DBSourceInfo {
 			String tmp = "DBSourceInfo.prepareResults: "+"\n"+ e.getMessage();
 			debug(1, tmp);
 			throw new RuntimeException( tmp );
+		} finally {
+			if (stmt != null) try { stmt.close(); } catch(Exception e) {}
 		}
 	}
 
 	protected void releaseResults() {
-		if (sqlStatement != null)
-			try { sqlStatement.close(); sqlStatement=null;} catch(Exception e) {}
 		if (currResults != null)
 			try { currResults.close(); currResults = null;} catch(Exception e) {}
 	}
@@ -307,12 +277,10 @@ public class DBSourceInfo {
 				HashMap<String, String> destMap = new HashMap<String, String>();
 				// Now, run through the src columns, process them through the filters,
 				// and map them to the destination columns.
-				// Results columns are indexed from 1, but also include the ObjectID,
-				// while destinationColumnNames is indexed from 0, with no ObjectID entry
-				for( int iCol=0; iCol<nCols; iCol++ ) {
-					String colText = currResults.getString(iCol+2);	// SQL indexes from 1, not 0
+				for( int iCol=1; iCol<=nCols; iCol++ ) {
+					String colText = currResults.getString(iCol+1);
 					if( colText != null && !colText.isEmpty() ) {
-						colText = applyTextRules(colText.trim());
+						colText = applyTextRules(colText);
 						String destCol = destinationColumnNames.get(iCol);
 						String currDestCol = destMap.get(destCol);
 						if( currDestCol != null && !currDestCol.isEmpty() ) {
@@ -324,7 +292,7 @@ public class DBSourceInfo {
 				}
 				retPair = new Pair<Integer, HashMap<String, String>>(objID, destMap);
 			} else {
-				try { currResults.close();} catch(Exception e) {} finally {currResults = null;}
+				try { currResults.close(); currResults = null;} catch(Exception e) {}
 			}
 		} catch (SQLException se) {
 			String tmp = "DBSourceInfo.getNextDestinationColumns: SQL exception: "
@@ -332,7 +300,7 @@ public class DBSourceInfo {
 			debug(0, tmp);
 			throw new RuntimeException( tmp );
 		} catch (Exception e) {
-			String tmp = "DBSourceInfo.getNextDestinationColumns: "+"\n"+ e.toString();
+			String tmp = "DBSourceInfo.getgetNextDestinationColumns: "+"\n"+ e.getMessage();
 			debug(1, tmp);
 			throw new RuntimeException( tmp );
 		}
@@ -346,13 +314,7 @@ public class DBSourceInfo {
 		int nRules = textRules.size();
 		for( int iRule=0; iRule<nRules; iRule++) {
 			Pair<Pattern,String> rule = textRules.get(iRule);
-			try {
 			output = rule.first.matcher(output).replaceAll(rule.second);
-			} catch (Exception e ) {
-				debug(1, "DBSourceInfo.applyTextRules rule:"+iRule
-							+"["+rule.first.toString()+","+rule.second+"]\n"+e.toString());
-				throw new RuntimeException(e);
-			}
 		}
 		return output;
 	}

@@ -5,6 +5,7 @@ package museum.delphi;
 
 //import java.util.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -693,9 +694,7 @@ public class MainApp {
 			objConceptAssocByFacetMenuItem.setEnabled(false);
 			// Images Menu
 			computeImageOrientationsMenuItem.setEnabled(false);
-			// Import Menu
-			fromDBMenuItem.setEnabled(false);
-			// Export Menu
+			// Analyze Menu
 			buildObjectSQLMenuItem.setEnabled(false);
 			saveOntologyAsSQLMenuItem.setEnabled(false);
 			saveVocabAsXMLMenuItem.setEnabled(false);
@@ -728,11 +727,7 @@ public class MainApp {
 				text = "";
 			jTextField_ColConfigFile.setText(text);
 
-			// Import Menu
-			boolean haveDBsource = ( userProjInfo.dbMetaDataReader != null );
-			fromDBMenuItem.setEnabled(haveDBsource);
-
-			// Export Menu
+			// Analyze Menu
 			text = userProjInfo.getMetadataPath();
 			boolean metadataReady = (text != null)
 										&& (userProjInfo.metaDataReader != null );
@@ -750,7 +745,8 @@ public class MainApp {
 			objConceptAssocByFacetMenuItem.setEnabled(metadataReady&&ontoReady);
 			// Images Menu
 			text = userProjInfo.getImagePathsPath();
-			boolean imagePathsReady = (userProjInfo.imagePathsReader != null);
+			boolean imagePathsReady = (text != null)
+										&& (userProjInfo.imagePathsReader != null);
 			if( text == null )
 				text = "";
 			jTextField_ImgPathsFile.setText(text);
@@ -790,14 +786,11 @@ public class MainApp {
 			if(( filename = userProjInfo.getOntologyPath()) != null )
 				loadOntology(filename);
 			if(( filename = userProjInfo.getMetadataConfigPath()) != null ) {
-				MetaDataConfigManager mdcfgMgr = loadMDConfig( filename );
-				if( mdcfgMgr.GetDumpColConfigInfo() ) {
-			        DBMetaDataReader dbmdRdr = mdcfgMgr.GetDBSourceInfo();
-			        if(dbmdRdr != null)
-			        	userProjInfo.dbMetaDataReader = dbmdRdr;
-			        ImagePathsReader dbImageRdr = mdcfgMgr.GetDBImageInfo();
-			        if(dbImageRdr != null)
-			        	userProjInfo.imagePathsReader = dbImageRdr;
+				loadMDConfig(filename);
+				Pair<Boolean, DBMetaDataReader> mdInfo = loadMDConfig( filename );
+				if( mdInfo.first ) {
+			        if(mdInfo.second != null)
+			        	userProjInfo.dbMetaDataReader = mdInfo.second;
 				}
 			}
 			if(( filename = userProjInfo.getMetadataPath()) != null )
@@ -1094,7 +1087,7 @@ public class MainApp {
 					loc.translate(50, 50);
 					burDialog.setLocation(loc);
 					burDialog.setVisible(true);
-					//debug(1,"Generate Usage report...");
+					debug(1,"Generate Usage report...");
 				}
 			} );
 		}
@@ -1283,20 +1276,10 @@ public class MainApp {
 				outFileName = outFileName.substring(0, lastSlash+1) + "mediaInsert.sql";
 			else
 				outFileName = "mediaInsert.sql";
-    		String filename = getSafeOutfile("Save SQL Media Insert file...", outFileName,sqlFilter);
+    		String filename = getSafeOutfile(outFileName,sqlFilter);
 		    if(filename != null) {
-	    		int nImgs = userProjInfo.imagePathsReader.getNumObjs();
-	    		int nWithDims = userProjInfo.imagePathsReader.getNImagesWithDims();
-	    		boolean omitMediaWithNoDims = false;
-	    		if( nWithDims < nImgs ) {
-	    			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
-	    					"Omit Images with no dimension info (probably invalid paths)?"
-	    					+"\nClick YES to omit; click NO to include all media references.");
-	    			if( confirm == JOptionPane.YES_OPTION )
-	    				omitMediaWithNoDims = true;
-	    		}
 		        setStatus("Saving SQL Media Load File to file: " + filename);
-		        userProjInfo.imagePathsReader.writeSQLMediaTableInsertFile(filename, omitMediaWithNoDims);
+		        userProjInfo.imagePathsReader.writeSQLMediaTableInsertFile(filename);
 		    }
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -1328,27 +1311,15 @@ public class MainApp {
 		debug(1,"Saving SQL Media Load File...");
 		try {
 			String outFileName = userProjInfo.getImagePathsPath();
-			if(outFileName == null)
-				outFileName = userProjInfo.getMetadataConfigPath();
 			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
 			if( lastSlash >= 0 )
 				outFileName = outFileName.substring(0, lastSlash+1) + "mediaLoadFile.sql";
 			else
 				outFileName = "mediaLoadFile.sql";
-    		String filename = getSafeOutfile("Save SQL Media load-file...", outFileName,sqlFilter);
+    		String filename = getSafeOutfile(outFileName,sqlFilter);
 		    if(filename != null) {
-	    		int nImgs = userProjInfo.imagePathsReader.getNumObjs();
-	    		int nWithDims = userProjInfo.imagePathsReader.getNImagesWithDims();
-	    		boolean omitMediaWithNoDims = false;
-	    		if( nWithDims < nImgs ) {
-	    			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
-	    					"Omit Images with no dimension info (probably invalid paths)?"
-	    					+"\nClick YES to omit; click NO to include all media references.");
-	    			if( confirm == JOptionPane.YES_OPTION )
-	    				omitMediaWithNoDims = true;
-	    		}
 		        setStatus("Saving SQL Media Load File to file: " + filename);
-		        userProjInfo.imagePathsReader.writeSQLMediaTableLoadFile(filename, omitMediaWithNoDims);
+		        userProjInfo.imagePathsReader.writeSQLMediaTableLoadFile(filename);
 		    }
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -1444,23 +1415,21 @@ public class MainApp {
 				// Ask user to save info to a file.
 				String outFileName;
 				if(( outFileName = userProjInfo.getMetadataPath()) == null ) {
-					outFileName = userProjInfo.getMetadataConfigPath();
+					outFileName = userProjInfo.metaDataReader.getFileName();
 					int iDot = outFileName.lastIndexOf('.');
 					if( iDot > 0 )
 						outFileName = outFileName.substring(0, iDot);
 					outFileName += "_dump.txt";
 				}
-	    		String filename = getSafeOutfile("Save Object Metadata to file...",
-															outFileName,txtFilter);
+	    		String filename = getSafeOutfile(outFileName,txtFilter);
 	    		if( filename != null ) {
 	    			debug(1,"Saving metadata from DB to file: " + filename);
 					setStatus( "Saving metadata from DB to file...");
-					int nObjsWritten = 0;
 			        try {
 						BufferedWriter writer = new BufferedWriter(
 												  new OutputStreamWriter(
 													new FileOutputStream(filename),"UTF8"));
-						String separator = ""+(char)DumpColumnConfigInfo.getColumnSeparator();
+						String separator = "" + DumpColumnConfigInfo.getColumnSeparator();
 						// Write the col headings
 						int nCols = colNames.length;
 						for(int iCol=0; iCol<nCols; iCol++) {
@@ -1471,36 +1440,19 @@ public class MainApp {
 								writer.newLine();
 						}
 						Pair<Integer,ArrayList<String>> nextObjInfo;
-						//int nStringCols = nCols-1;
-						//int nSeps = nStringCols-1;
-						int nSeps = nCols-1;
+						int nStringCols = nCols-1;
 						// Write the data
 						while((nextObjInfo = userProjInfo.dbMetaDataReader.getNextObjectAsColumns())
 								!= null ) {
-							writer.write(nextObjInfo.first+separator+'"');
-							String sepWithQuotes = '"'+separator+'"';
+							writer.write(nextObjInfo.first+separator);
 							ArrayList<String> colStrings = nextObjInfo.second;
-							// Note we skip the id column (0) in the returned strings
-							//for(int iCol=1; iCol<nStringCols; iCol++) {
-							for(int iCol=1; iCol<nCols; iCol++) {
-								// Must escape quotes in output
-								String curr = colStrings.get(iCol);
-								String replaced;
-								if(curr.length()>0) {
-									replaced = curr.replaceAll("[\\\\]", "\\\\\\\\");
-									replaced = replaced.replaceAll("[\"]", "\\\\\"");
-								} else {
-									replaced = curr;
-								}
-								writer.write(replaced);
-								if( iCol < nSeps) {
-									writer.write(sepWithQuotes);
-								} else {
-									writer.write('"');
+							for(int iCol=0; iCol<nStringCols; iCol++) {
+								writer.write(colStrings.get(iCol));
+								if( iCol < nCols-1)
+									writer.write(separator);
+								else
 									writer.newLine();
-								}
 							}
-							nObjsWritten++;
 						}
 						writer.flush();
 						writer.close();
@@ -1510,10 +1462,6 @@ public class MainApp {
 					}
 					// If we successfully write the metadata, update the path.
 					userProjInfo.setMetadataPath(filename);
-					String msg = "Wrote DB import of "+nObjsWritten+" objects to file: " + filename;
-					JOptionPane.showMessageDialog(getJFrame(), msg,
-							"Metadata import from database: ", JOptionPane.INFORMATION_MESSAGE);
-					setStatus(msg);
 			    }
 			} catch (RuntimeException re ) {
 				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + re.getMessage(),
@@ -1526,7 +1474,7 @@ public class MainApp {
 	/**
 	 * Creates a new project file, and sets the it to be the current project.
 	 */
-	protected void createNewProjectFile(UserProjectInfo pattern) {
+	private void createNewProjectFile(UserProjectInfo pattern) {
 		UserProjectInfo upi = new UserProjectInfo( "New Project" );
 		if( pattern != null )
 			upi.copyFrom(pattern);
@@ -1543,7 +1491,6 @@ public class MainApp {
 		String startDir = appSettings.getLastUserProjectFolder()+"*.dpf";
     	if( startDir != null )
     		chooser.setSelectedFile(new File( startDir ));
-	    chooser.setDialogTitle("Open Delphi Project file...");
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -1578,8 +1525,7 @@ public class MainApp {
 	 */
 	private void saveProjectFileAs() {
 		try {
-    		String filename = getSafeOutfile("Save Delphi Project file...",
-												appSettings.getLastUserProjectFolder()+"*.dpf",dpfFilter);
+    		String filename = getSafeOutfile(appSettings.getLastUserProjectFolder()+"*.dpf",dpfFilter);
 		    if(filename != null) {
 				UserProjectInfo.saveToPath(userProjInfo, filename);
 		    	appSettings.setLastUserProjectPath(filename);
@@ -1605,12 +1551,7 @@ public class MainApp {
 	private boolean browseToImagePathsFile() {
 		boolean opened = false;
 		chooser.setFileFilter(txtFilter);
-		String outFileName = userProjInfo.getImagePathsPath();
-		if(outFileName == null)
-			outFileName = userProjInfo.getMetadataConfigPath();
-		setChooserStartFor( outFileName, txtWildcard );
-	    chooser.setDialogTitle("Open Image Paths data file...");
-
+		setChooserStartFor( userProjInfo.getImagePathsPath(), txtWildcard );
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -1639,17 +1580,19 @@ public class MainApp {
 	 */
 	private boolean loadImagePaths( String filename ) {
 		boolean opened = false;
-		if(userProjInfo.imagePathsReader != null) {
-			throw new RuntimeException("loadImagePaths: Already loaded image paths from database!");
-		}
+        // TODO consider deferring this until we actually need it
 		debug(1,"Loading Image paths...");
 		try {
 	        debug(1,"Scanning image paths from file: " + filename);
 	        setStatus("Scanning image paths from file: " + filename);
 	        userProjInfo.imagePathsReader = new ImagePathsReader(filename);
-	    	int nObjs = userProjInfo.imagePathsReader.getNumObjs();
+	    	int nObjs = userProjInfo.imagePathsReader.readInfo(Integer.MAX_VALUE, true);
 	        setStatus("Found: " + nObjs + " objects with images.");
 	        debug(2,"Found: " + nObjs + " objects with images.");
+	        debug(3, "Mid path for 3716: [mids/"
+	        		+userProjInfo.imagePathsReader.GetSimpleSubPathForID(3716, null)+"]" );
+	        debug(3,"Thumb path for 5204: [thumbs/"
+	        		+userProjInfo.imagePathsReader.GetSimpleSubPathForID(5204, null)+"]" );
 			opened = true;
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -1669,24 +1612,41 @@ public class MainApp {
 			return;
 		}
 		// Let the user point to the base path for the images.
-		String outFileName = userProjInfo.getImagePathsPath();
-		if(outFileName == null)
-			outFileName = userProjInfo.getMetadataConfigPath();
-		chooser.setSelectedFile(new File( outFileName ));
-		int selMode = chooser.getFileSelectionMode();
+		chooser.setSelectedFile(new File( userProjInfo.getImagePathsPath() ));
+		chooser.setFileFilter(sqlFilter);
 		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		chooser.setDialogTitle("Choose root folder where images are located...");
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 		String pathBase;
-	    if(returnVal != JFileChooser.APPROVE_OPTION) {
-			chooser.setFileSelectionMode(selMode);
+	    if(returnVal != JFileChooser.APPROVE_OPTION)
 	    	return;
-	    }
     	pathBase = chooser.getSelectedFile().getPath();
-		chooser.setFileSelectionMode(selMode);
 		debug(1,"Computing Image Orientations...");
 		try {
-			userProjInfo.imagePathsReader.computeImageOrientations( pathBase );
+			int nToProcessMax = Integer.MAX_VALUE;
+			int nToReport = 2500;
+			int nTillReport = nToReport;
+			int nProcessed = 0;
+			Collection<ArrayList<ImageInfo>> allImgs = userProjInfo.imagePathsReader.GetAllAsList();
+			java.util.Iterator<ArrayList<ImageInfo>> allImgsIterator = allImgs.iterator();
+			while( allImgsIterator.hasNext() ) {
+				ArrayList<ImageInfo> imgsForId = allImgsIterator.next();
+				java.util.ListIterator<ImageInfo> objImgIterator = imgsForId.listIterator();
+				while( objImgIterator.hasNext() ) {
+					ImageInfo ii = objImgIterator.next();
+					if(ii.computeAspectR(pathBase)) {
+						nProcessed++;
+						if( nProcessed >= nToProcessMax )
+							break;
+						if( --nTillReport <= 0 ) {
+					        debug(1, "Processed " + nProcessed + " entries" );
+							nTillReport = nToReport;
+						}
+				        debug(3, ii.toString() );
+					}
+				}
+				if( nProcessed >= nToProcessMax )
+					break;
+			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Computing Aspect ratios: ", JOptionPane.ERROR_MESSAGE);
@@ -1719,7 +1679,7 @@ public class MainApp {
 			JOptionPane.showMessageDialog(getJFrame(),
 					"You must specify a metadata source to categorize.\n",
 					"Categorize error", JOptionPane.ERROR_MESSAGE);
-		} else try {
+		} else {
 			String filename = userProjInfo.getMetadataPath();
 			// Find last slash or backslash (to allow for windows paths), to get basepath
 	    	int iSlash = Math.max(filename.lastIndexOf('/'), filename.lastIndexOf('\\'));
@@ -1727,11 +1687,6 @@ public class MainApp {
 	    		throw new RuntimeException("categorizeForFacet: odd input filename:\n"+filename);
 	    	String basefilename = filename.substring(0, iSlash+1)+"obj_cats_";
 			userProjInfo.metaDataReader.resetToLine1();
-			boolean compileUnmatchedUsage =
-				(JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(getJFrame(),
-						"Compile statistics for unmatched tokens and n-grams?",
-						"Choose Yes or No",
-						JOptionPane.YES_NO_OPTION));
 			if( !fAllFacets ) {
 				JOptionPane.showMessageDialog(getJFrame(),
 						"Single facet concept association is net yet implemented.\n",
@@ -1747,14 +1702,8 @@ public class MainApp {
 		    	userProjInfo.categorizer.categorizeForFacet(userProjInfo.metaDataReader,
 												null /*Do all facets at once */,
 												Categorizer.COMPLEX_INFER_5_STEPS,
-												basefilename, false, dbName,
-												compileUnmatchedUsage );
+												basefilename, false, dbName);
 			}
-		} catch( Exception e ) {
-			JOptionPane.showMessageDialog(getJFrame(),
-					"Problem encountered when in categorizing the object metadata.\n" + e.toString(),
-					"Categorize error", JOptionPane.ERROR_MESSAGE);
-
 		}
 	}
 
@@ -1979,11 +1928,12 @@ public class MainApp {
 	 */
 	private JList getBURColumnList() {
 		if (burColumnList == null) {
-			String showColumnNames[] = userProjInfo.metaDataReader.getColumnNames().clone();
-			showColumnNames[0] = "All";
-			burColumnList = new JList(showColumnNames);
+			String columnNames[] = userProjInfo.metaDataReader.getColumnNames();
+			String[] allButObjID = new String[columnNames.length-1];
+			System.arraycopy(columnNames, 1, allButObjID, 0, columnNames.length-1);
+			burColumnList = new JList(allButObjID);
 			burColumnList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
-			if( showColumnNames.length > 6 )
+			if( allButObjID.length > 6 )
 				burColumnList.setVisibleRowCount(6);
 		}
 		return burColumnList;
@@ -2021,13 +1971,9 @@ public class MainApp {
 					buildReportButton.setEnabled(false);
 					// Note that we remove the first ObjectID column from the list
 					// to build the UI.
-					int colIdx = burColumnList.getSelectedIndex();
-					if(colIdx==0) {
-						buildFullReport();
-					} else { // build all of them
-						buildReportForColumn(colIdx);
-					}
-					buildUsageReportDialog.setVisible(false);
+					int colIdx = 1+ burColumnList.getSelectedIndex();
+					if( buildReport(colIdx) )
+						buildUsageReportDialog.setVisible(false);
 					burColListScrollPane.setEnabled(true);
 					buildReportButton.setEnabled(true);
 				}
@@ -2045,7 +1991,6 @@ public class MainApp {
 		boolean opened = false;
 		chooser.setFileFilter(xmlFilter);
 		setChooserStartFor( userProjInfo.getOntologyPath(), xmlWildcard );
-		chooser.setDialogTitle("Open Ontology file...");
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	if( opened = setOntologyFile(chooser.getSelectedFile().getPath()))
@@ -2130,7 +2075,6 @@ public class MainApp {
 		boolean opened = false;
 		chooser.setFileFilter(txtFilter);
 		setChooserStartFor( userProjInfo.getVocabTermsPath(), txtWildcard );
-		chooser.setDialogTitle("Open Vocabulary export file...");
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	if( opened = setVocabFile(chooser.getSelectedFile().getPath()))
@@ -2192,7 +2136,6 @@ public class MainApp {
 		boolean opened = false;
 		chooser.setFileFilter(xmlFilter);
 		setChooserStartFor( userProjInfo.getMetadataConfigPath(), xmlWildcard );
-	    chooser.setDialogTitle("Open Metadata Configuration file...");
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -2203,40 +2146,37 @@ public class MainApp {
 	}
 
 	private boolean setMDConfigFile(String filename) {
-		MetaDataConfigManager mdcfgMgr = loadMDConfig( filename );
-		if( mdcfgMgr.GetDumpColConfigInfo() ) {
+		Pair<Boolean, DBMetaDataReader> mdInfo = loadMDConfig( filename );
+		if( mdInfo.first ) {
 	        userProjInfo.setMetadataConfigPath(filename);
-	        DBMetaDataReader dbmdRdr = mdcfgMgr.GetDBSourceInfo();
-	        if(dbmdRdr != null)
-	        	userProjInfo.dbMetaDataReader = dbmdRdr;
-	        ImagePathsReader dbImageRdr = mdcfgMgr.GetDBImageInfo();
-	        if(dbImageRdr != null)
-	        	userProjInfo.imagePathsReader = dbImageRdr;
+	        if(mdInfo.second != null)
+	        	userProjInfo.dbMetaDataReader = mdInfo.second;
 			updateUIForUserProjectInfo();
-			return true;
 		}
-		return false;
+		return mdInfo.first;
 	}
 
-	protected MetaDataConfigManager loadMDConfig( String filename ) {
-		MetaDataConfigManager mdcfgMgr = null;
+	protected Pair<Boolean, DBMetaDataReader> loadMDConfig( String filename ) {
+		Pair<Boolean, DBMetaDataReader> retVal = null;
 		try {
 	        debug(2,"Scanning column config info from file: " + filename);
 	        setStatus("Scanning column config info from file: " + filename);
-	        mdcfgMgr = new MetaDataConfigManager(filename);
+	        MetaDataConfigManager mdcfgMgr = new MetaDataConfigManager(filename);
+	        boolean opened = mdcfgMgr.GetDumpColConfigInfo();
+	        DBMetaDataReader dbmdRdr = mdcfgMgr.GetDBSourceInfo();
+	        retVal = new Pair<Boolean, DBMetaDataReader>(opened, dbmdRdr);
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Open MetaData File Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
-		return mdcfgMgr;
+		return retVal;
 	}
 
 	protected boolean browseToMDFile() {
 		boolean opened = false;
 		chooser.setFileFilter(txtFilter);
 		setChooserStartFor( userProjInfo.getMetadataPath(), txtWildcard );
-	    chooser.setDialogTitle("Open Object Metadata file...");
 	    int returnVal = chooser.showOpenDialog(getJFrame());
 	    if(returnVal == JFileChooser.APPROVE_OPTION) {
 	    	String filename = chooser.getSelectedFile().getPath();
@@ -2287,55 +2227,7 @@ public class MainApp {
 		return opened;
 	}
 
-	protected void buildFullReport() {
-		try {
-			setStatus( "Building usage reports...");
-			String[] colNames = userProjInfo.metaDataReader.getColumnNames();
-			ArrayList<Pair<String,Counter<String>>> allVocabCounts =
-				userProjInfo.metaDataReader.compileUsageForAllColumns(2, 100, -1, this );
-			String outFileName = userProjInfo.metaDataReader.getFileName();
-			int iDot = outFileName.lastIndexOf('.');
-			if( iDot >0 )
-				outFileName = outFileName.substring(0, iDot);
-			Counter<String> totalCounts = new Counter<String>();
-			String filename;
-			for(Pair<String,Counter<String>> pair : allVocabCounts) {
-				filename = outFileName+"_"+(pair.first.replaceAll("\\W", "_"))+"_Usage.txt";
-				debug(1,"Saving column usage info to file: " + filename);
-		        setStatus("Saving usage report to file: " + filename);
-		        try {
-		        	// TODO Make this a UTF8 file out.
-					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-					Counter<String> colCounts = pair.second;
-					totalCounts.addCounts(colCounts);
-					colCounts.write(writer, true, 0, true);
-					writer.flush();
-					writer.close();
-				} catch( IOException e ) {
-		            e.printStackTrace();
-					throw new RuntimeException("Could not create output file: " + filename);
-				}
-		    }
-			filename = outFileName+"_Total_Usage.txt";
-			debug(1,"Saving total usage info to file: " + filename);
-	        try {
-	        	// TODO Make this a UTF8 file out.
-				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-				totalCounts.write(writer, true, 0, true);
-				writer.flush();
-				writer.close();
-			} catch( IOException e ) {
-	            e.printStackTrace();
-				throw new RuntimeException("Could not create output file: " + filename);
-			}
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Build Usage Report Error", JOptionPane.ERROR_MESSAGE);
-	        e.printStackTrace();
-		}
-	}
-
-	protected boolean buildReportForColumn( int colIndex ) {
+	protected boolean buildReport( int colIndex ) {
 		boolean built = false;
 		try {
 			setStatus( "Building usage report...");
@@ -2346,7 +2238,7 @@ public class MainApp {
 			if( iDot >0 )
 				outFileName = outFileName.substring(0, iDot);
 			outFileName += "_"+(userProjInfo.metaDataReader.getColumnName(colIndex).replaceAll("\\W", "_"))+"_Usage.txt";
-    		String filename = getSafeOutfile("Save Usage report to file...", outFileName,null);
+    		String filename = getSafeOutfile(outFileName,null);
     		if( filename != null ) {
     			debug(1,"Saving column usage info to file: " + filename);
 		        setStatus("Saving usage report to file: " + filename);
@@ -2375,8 +2267,7 @@ public class MainApp {
 		try {
 			setStatus( "Building SQL Ontology load file...");
 			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$", ".sql");
-    		String filename = getSafeOutfile("Save Ontology as SQL load file...",
-																					suggest,sqlFilter);
+    		String filename = getSafeOutfile(suggest,sqlFilter);
     		if( filename == null )
     			return;
 	        setStatus("Saving SQL Ontology Load to file: " + filename);
@@ -2401,15 +2292,12 @@ public class MainApp {
 		}
 	}
 
-	protected String getSafeOutfile( String title, String suggest, FileNameExtensionFilter filter ) {
+	protected String getSafeOutfile( String suggest, FileNameExtensionFilter filter ) {
     	String filename;
     	if( suggest != null )
     		chooser.setSelectedFile(new File( suggest ));
 		chooser.setFileFilter(filter);
-		if( title == null )
-			title = "Save to file...";
 		while(true) {
-	    chooser.setDialogTitle(title);
 			int returnVal = chooser.showSaveDialog(getJFrame());
 		    if(returnVal != JFileChooser.APPROVE_OPTION)
 		    	return null;
@@ -2436,16 +2324,15 @@ public class MainApp {
 	protected void saveVocabHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-   		String variant = fSaveHooks ? "Hook ":"Exclusion";
 			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$",
-					variant+"s.sql");
-    		String filename = getSafeOutfile("Save "+variant
-    							+" values as SQL Insert file...", suggest,sqlFilter);
+					(fSaveHooks ? "Hooks.sql":"Exclusions.sql"));
+    		String filename = getSafeOutfile(suggest,sqlFilter);
     		if( filename == null )
     			return;
-			setStatus("Saving SQL for "+variant+" values to file: " + filename);
+    		String action = fSaveHooks ? "hooks":"exclusions";
+	        setStatus("Saving SQL for "+action+" to file: " + filename);
 	        try {
-	    		setStatus( "Building SQL "+variant+" Load file...");
+	    		setStatus( "Building SQL "+action+" Load file...");
 				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
 				SQLUtils.writeHooksOrExclusionsSQL(userProjInfo.facetMapHashTree.GetFacets(),
 												dbName, fSaveHooks, writer, fWithNewlines);
@@ -2466,8 +2353,7 @@ public class MainApp {
 
 	protected void saveVocabAsXML() {
 		try {
-    		String filename = getSafeOutfile("Save Ontology as XML to file...",
-    											userProjInfo.getOntologyPath(),xmlFilter);
+    		String filename = getSafeOutfile(userProjInfo.getOntologyPath(),xmlFilter);
 		    if(filename != null) {
 		    	XMLUtils.writeXMLDocToFile(userProjInfo.vocabOutputDoc, filename);
 		        setStatus("Saved Vocabulary as XML to file: " + filename);

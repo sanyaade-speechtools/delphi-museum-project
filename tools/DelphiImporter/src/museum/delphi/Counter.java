@@ -102,17 +102,6 @@ public class Counter <I> {
 	}
 
 	/**
-	 * Add in counts from another counter
-	 *
-	 * @param counter Another counter to sum into this one
-	 */
-	public void addCounts(Counter<I> counter) {
-		for( I item : counter.itemMap.keySet() ) {
-			setCount(item, getCount(item) + counter.getCount(item));
-		}
-	}
-
-	/**
 	 * Finds the total of all counts in the counter.  This implementation uses
 	 * cached count which may get out of sync if the itemMap map is modified in
 	 * some unantipicated way.
