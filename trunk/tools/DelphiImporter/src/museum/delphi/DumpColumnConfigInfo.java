@@ -98,7 +98,7 @@ public class DumpColumnConfigInfo {
 		return nameColumnIndex;
 	}
 
-	private static DumpColumnConfigInfo GetColInfo( String forColumn, String detail ) {
+	protected static DumpColumnConfigInfo GetColInfo( String forColumn, String detail ) {
 		if( columnInfoMap == null )
 			throw new RuntimeException("DumpColumnConfigInfo."+detail+": Module not initialized.");
 		DumpColumnConfigInfo returnVal =

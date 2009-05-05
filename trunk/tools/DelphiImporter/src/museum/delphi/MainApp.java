@@ -1094,7 +1094,7 @@ public class MainApp {
 					loc.translate(50, 50);
 					burDialog.setLocation(loc);
 					burDialog.setVisible(true);
-					debug(1,"Generate Usage report...");
+					//debug(1,"Generate Usage report...");
 				}
 			} );
 		}
@@ -1979,12 +1979,11 @@ public class MainApp {
 	 */
 	private JList getBURColumnList() {
 		if (burColumnList == null) {
-			String columnNames[] = userProjInfo.metaDataReader.getColumnNames();
-			String[] allButObjID = new String[columnNames.length-1];
-			System.arraycopy(columnNames, 1, allButObjID, 0, columnNames.length-1);
-			burColumnList = new JList(allButObjID);
+			String showColumnNames[] = userProjInfo.metaDataReader.getColumnNames().clone();
+			showColumnNames[0] = "All";
+			burColumnList = new JList(showColumnNames);
 			burColumnList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
-			if( allButObjID.length > 6 )
+			if( showColumnNames.length > 6 )
 				burColumnList.setVisibleRowCount(6);
 		}
 		return burColumnList;
@@ -2022,9 +2021,13 @@ public class MainApp {
 					buildReportButton.setEnabled(false);
 					// Note that we remove the first ObjectID column from the list
 					// to build the UI.
-					int colIdx = 1+ burColumnList.getSelectedIndex();
-					if( buildReport(colIdx) )
-						buildUsageReportDialog.setVisible(false);
+					int colIdx = burColumnList.getSelectedIndex();
+					if(colIdx==0) {
+						buildFullReport();
+					} else { // build all of them
+						buildReportForColumn(colIdx);
+					}
+					buildUsageReportDialog.setVisible(false);
 					burColListScrollPane.setEnabled(true);
 					buildReportButton.setEnabled(true);
 				}
@@ -2284,7 +2287,55 @@ public class MainApp {
 		return opened;
 	}
 
-	protected boolean buildReport( int colIndex ) {
+	protected void buildFullReport() {
+		try {
+			setStatus( "Building usage reports...");
+			String[] colNames = userProjInfo.metaDataReader.getColumnNames();
+			ArrayList<Pair<String,Counter<String>>> allVocabCounts =
+				userProjInfo.metaDataReader.compileUsageForAllColumns(2, 100, -1, this );
+			String outFileName = userProjInfo.metaDataReader.getFileName();
+			int iDot = outFileName.lastIndexOf('.');
+			if( iDot >0 )
+				outFileName = outFileName.substring(0, iDot);
+			Counter<String> totalCounts = new Counter<String>();
+			String filename;
+			for(Pair<String,Counter<String>> pair : allVocabCounts) {
+				filename = outFileName+"_"+(pair.first.replaceAll("\\W", "_"))+"_Usage.txt";
+				debug(1,"Saving column usage info to file: " + filename);
+		        setStatus("Saving usage report to file: " + filename);
+		        try {
+		        	// TODO Make this a UTF8 file out.
+					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+					Counter<String> colCounts = pair.second;
+					totalCounts.addCounts(colCounts);
+					colCounts.write(writer, true, 0, true);
+					writer.flush();
+					writer.close();
+				} catch( IOException e ) {
+		            e.printStackTrace();
+					throw new RuntimeException("Could not create output file: " + filename);
+				}
+		    }
+			filename = outFileName+"_Total_Usage.txt";
+			debug(1,"Saving total usage info to file: " + filename);
+	        try {
+	        	// TODO Make this a UTF8 file out.
+				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+				totalCounts.write(writer, true, 0, true);
+				writer.flush();
+				writer.close();
+			} catch( IOException e ) {
+	            e.printStackTrace();
+				throw new RuntimeException("Could not create output file: " + filename);
+			}
+		} catch( RuntimeException e ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+											"Build Usage Report Error", JOptionPane.ERROR_MESSAGE);
+	        e.printStackTrace();
+		}
+	}
+
+	protected boolean buildReportForColumn( int colIndex ) {
 		boolean built = false;
 		try {
 			setStatus( "Building usage report...");
@@ -2295,8 +2346,7 @@ public class MainApp {
 			if( iDot >0 )
 				outFileName = outFileName.substring(0, iDot);
 			outFileName += "_"+(userProjInfo.metaDataReader.getColumnName(colIndex).replaceAll("\\W", "_"))+"_Usage.txt";
-    		String filename = getSafeOutfile("Save Usage report to file...",
-																						outFileName,null);
+    		String filename = getSafeOutfile("Save Usage report to file...", outFileName,null);
     		if( filename != null ) {
     			debug(1,"Saving column usage info to file: " + filename);
 		        setStatus("Saving usage report to file: " + filename);
