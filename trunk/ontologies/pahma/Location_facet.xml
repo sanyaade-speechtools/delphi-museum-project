@@ -1498,7 +1498,7 @@
 						<synonym value="South Italy"/>
 						<synonym value="Southern Italian"/>
 						<heading id="PugliaItaly" title="Puglia" noMatch="true">
-							<heading id="Barletta" title="Barletta"/>
+							<heading id="BarlettaItaly" title="Barletta" noMatch="true"/>
 							<heading id="Taranto" title="Taranto">
 								<synonym value="Tarentum"/>
 								<synonym value="Taras"/>
@@ -22268,7 +22268,6 @@
 			</heading>
 			<heading id="AncientGreece" title="Ancient Greece">
 				<synonym value="Greece (ancient)"/>
-				<synonym value="Ancient Greece"/>
 				<synonym value="Ancient Greek"/>
 				<synonym value="Classical Greece"/>
 				<heading id="MagnaGraeciaOlGrce" title="Magna Graecia">
@@ -22282,7 +22281,9 @@
 						<synonym value="Puglia"/>
 						<implies facet="Location" cat="PugliaItaly"/>
 					</heading>
-					<heading id="BarlettaOldGreece" title="Barletta"/> 
+					<heading id="BarlettaOldGreece" title="Barletta">
+						<implies facet="Location" cat="BarlettaItaly"/>
+					</heading> 
 					<heading id="NaplesOldGreece" title="Neápolis"> <!-- Literally means "New City" -->
 						<synonym value="Naples"/>
 						<synonym value="Napoli"/>

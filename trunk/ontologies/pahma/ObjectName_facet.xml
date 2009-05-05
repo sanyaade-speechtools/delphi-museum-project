@@ -3800,10 +3800,7 @@
 			<heading id="Dipper" title="Dipper">
 				<synonym value="Dippers"/>
 			</heading>
-			<heading id="Dish" title="Dish" noMatch="true">
-				<synonym value="Dishes"/>
-				<implies facet="ObjectName" cat="DishCookEq"/>
-			</heading>
+			<heading id="DishVessel" title="Dish" noMatch="true"/>
 			<heading id="DrinkingVessel" title="Drinking-Vessel">
 				<synonym value="Drinking-Vessels"/>
 			</heading>
@@ -3953,10 +3950,7 @@
 			<heading id="PickleTray" title="Pickle-Tray">
 				<synonym value="Pickle-Trays"/>
 			</heading>
-			<heading id="Plate" title="Plate" noMatch="true">
-				<synonym value="Plates"/>
-				<implies facet="ObjectName" cat="PlateCookEq"/>
-			</heading>
+			<heading id="PlateVessel" title="Plate" noMatch="true"/>
 			<heading id="PlatterVsl" title="Platter" noMatch="true"/>
 			<heading id="PopeJoanBoard" title="Pope Joan Board">
 				<synonym value="Pope Joan Boards"/>
@@ -4078,9 +4072,7 @@
 						<synonym value="Oil Lamps"/>
 						<implies facet="ObjectName" cat="LampLightingLghtEq"/>
 					</heading>
-					<heading id="PotteryPlate" title="Plate" noMatch="true">
-						<synonym value="Plates"/>
-					</heading>
+					<heading id="PotteryPlate" title="Plate" noMatch="true"/>
 					<heading id="Potstand" title="Pot Stand">
 						<synonym value="Pot Stands"/>
 					</heading>
@@ -4376,13 +4368,7 @@
 			<heading id="Tazza" title="Tazza">
 				<synonym value="Tazzas"/>
 			</heading>
-			<heading id="TeapotVessels" title="Teapot">
-				<synonym value="Teapots"/>
-				<synonym value="Tea Pot"/>
-				<synonym value="Tea Pots"/>
-				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
-			</heading>
+			<heading id="TeapotVessels" title="Teapot" noMatch="true"/>
 			<heading id="TrayVsl" title="Tray" noMatch="true"/>
 			<heading id="Vase" title="Vase">
 				<synonym value="Vases"/>
@@ -5312,13 +5298,27 @@
 		<heading id="DishCookEq" title="Dish">
 			<synonym value="Dishes"/>
 			<excl value="Offering"/>
+			<implies facet="ObjectName" cat="DishVessel"/>
 			<implies facet="ActivityorContext" cat="FoodServing"/>
 			<heading id="FeastDishCookEq" title="Feast Dish">
 				<synonym value="Feast Dishes"/>
 			</heading>
 			<heading id="PlateCookEq" title="Plate">
 				<synonym value="Plates"/>
-				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<excl value="Copper plate"/>
+				<excl value="Copper-plate"/>
+				<excl value="Copper plated"/>
+				<excl value="Copper-plated"/>
+				<excl value="Copperplate"/>
+				<excl value="Copperplated"/>
+				<excl value="Gold plate"/>
+				<excl value="Gold-plate"/>
+				<excl value="Gold plated"/>
+				<excl value="Gold-plated"/>
+				<excl value="Goldplate"/>
+				<excl value="Goldplated"/>
+				<excl value="negative"/>
+				<excl value="negatives"/>
 				<excl value="photographic plate"/>
 				<excl value="photographic plate"/>
 				<excl value="Silver plate"/>
@@ -5327,20 +5327,9 @@
 				<excl value="Silver-plated"/>
 				<excl value="Silverplate"/>
 				<excl value="Silverplated"/>
-				<excl value="Gold plate"/>
-				<excl value="Gold-plate"/>
-				<excl value="Gold plated"/>
-				<excl value="Gold-plated"/>
-				<excl value="Goldplate"/>
-				<excl value="Goldplated"/>
-				<excl value="Copper plate"/>
-				<excl value="Copper-plate"/>
-				<excl value="Copper plated"/>
-				<excl value="Copper-plated"/>
-				<excl value="Copperplate"/>
-				<excl value="Copperplated"/>
-				<excl value="negative"/>
-				<excl value="negatives"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<implies facet="ObjectName" cat="PlateVessel"/>
+				<implies facet="ObjectName" cat="PotteryPlate"/>
 			</heading>
 			<heading id="PlatterCookEq" title="Platter">
 				<synonym value="Platters"/>
@@ -12742,6 +12731,7 @@
 			</heading>
 		</heading>
 		<heading id="TeaEquipment" title="Tea Equipment">
+			<!-- Implies Tea drinking -->
 			<heading id="CaddySpoon" title="Caddy-Spoon">
 				<synonym value="Caddy-Spoons"/>
 			</heading>
@@ -12825,7 +12815,12 @@
 				<synonym value="Tea-Packets"/>
 				<implies facet="ObjectName" cat="TeaBagContnr"/>
 			</heading>
-			<heading id="Teapot" title="Teapot">
+			<heading id="TeapotTeaEq" title="Teapot">
+				<synonym value="Teapots"/>
+				<synonym value="Tea Pot"/>
+				<synonym value="Tea Pots"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<implies facet="ObjectName" cat="TeapotVessels"/>
 				<heading id="DoubleTeapot" title="Double Teapot">
 					<synonym value="Double Teapots"/>
 				</heading>
@@ -14300,7 +14295,7 @@
 			<!-- Implies photography -->
 		</heading>
 		<heading id="MedalVisRep" title="Medal">
-			<synonym value="Medal"/>
+			<synonym value="Medals"/>
 		</heading>
 		<heading id="MedallionVisRep" title="Medallion">
 			<synonym value="Medallions"/>
@@ -14337,7 +14332,7 @@
 				<synonym value="Otsu-Es"/>
 			</heading>
 			<heading id="PataVisRep" title="Pata">
-				<synonym value="Pata"/>
+				<synonym value="Patas"/>
 			</heading>
 			<heading id="PichwaiVisRep" title="Pichwai">
 				<synonym value="Pichwais"/>
