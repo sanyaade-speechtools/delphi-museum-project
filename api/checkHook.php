@@ -40,11 +40,11 @@ require_once "apiSetup.php";
 					echo '<h3>No matches found for term: "'.$_GET['term'].'"</h3>';
 			} else if($nrows==$lowLimit) {
 				$pageURL = 'http://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"].'&catlimit='.$highLimit;
-				echo '...<em><a href="'.$pageURL.'">more</a>...<br /></p>';
+				echo '...<a href="'.$pageURL.'">more</a>...<br /></p>';
 			} else if($nrows==$highLimit) {
-				echo '...<em>(results truncated at '.$highLimit.')</em>...<br /></p>';
+				echo '...(results truncated at '.$highLimit.')...<br /></p>';
 			} else {
-				echo '</p>';
+				echo '</em></p>';
 			}
 		echo '<hr>';
 		}
