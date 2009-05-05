@@ -1,0 +1,652 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Delphi Ontology Schema Notes</title>
+<style>
+body {font-family: Arial, Helvetica, sans; font-size:0.86em;}
+h2, h3, h4 {text-transform: uppercase;}
+p.spaced, ol.spaced li {line-height:1.6em;}
+p.caption {text-align:center; font-weight:bold;}
+pre.xml {font-size:0.7em; background-color: #eeeeee; padding:10px;}
+code {font-size:1.07em; }
+dt { font-weight:bold; }
+dt.element,dt.attr { font-family:Courier New, fixed; font-size:1.15em; }
+dl.attrs, dl.elems { padding-left:20px; }
+blockquote.excerpt {font-size:0.85em;line-height:1.2em; padding-left:5px; padding-right:10px; text-align:justify;}
+div.space {height:15px;}
+div.smspace {height:8px;}
+@media screen {
+  body { padding: 0.25in 0.5in 0.25in 0.5in; }
+  }
+</style>
+
+</head>
+
+<body>
+
+<h1>Delphi Ontology Schema Notes</h1>
+<p>Version 1.01, Oct 30, 2008 by Patrick Schmitz</p>
+
+<h2>Intro</h2>
+<p>These notes describe the XML schema used to describe the faceted ontologies 
+within the Delphi framework. The ontologies serve the linguistic needs of the
+Natural Language Processing (NLP) engine, the knowledge modeling support for the given domain (including 
+metadata enrichment through inference) and also must serve as the basis of the 
+faceted browser UI for the Delphi collections browser. These diverse needs have 
+dictated the required features of the schema. </p>
+<p>We designed the schema for simplicity and ease of use in our code, and not to 
+replace existing common exchange schema like SKOS, OWL*, and others. We will 
+look at translations to other schemas if and when the need arises (it likely 
+will, but is not a high priority at this point).</p>
+<p>The current schema uses some element names that may be somewhat confusing, 
+and the last section of this document includes a list proposed changes to 
+address this. For example, we use &quot;category&quot;, &quot;concept&quot; and &quot;heading&quot; to refer to 
+the same idea. Bear with us until we get this straightened out.</p>
+<p>We present an overview of the principles and terms we use, and then describe 
+the <a href="#Element_Syntax">element syntax</a> in detail.</p>
+<h2>Overview</h2>
+<p>We talk about an ontology as a collection of facets, each of which contains 
+groupings of concepts and some linguistic hints about how to recognize the 
+concepts in some input text. Each <b>facet</b> is described in a separate XML file 
+to simplify maintenance, and then these files are merged with a simple script (<code>buildVocab.bat</code>) 
+to produce the ontology file read by the Delphi tools. </p>
+<p>Each facet file begins 
+with a <code><a href="#taxonomy_el">&lt;taxonomy&gt;</a></code> element at the top, 
+which has attributes to declare an id and the title string for the facet. The id 
+string is constrained by XML rules to only use certain characters (in 
+particular, no spaces), and is mostly for internal reference. The title is a 
+human-friendly string used in the UI to identify the facet. It should be brief 
+enough to fit where facets are labeled in the UI, but can have spaces and other 
+characters. The <code>&lt;taxonomy&gt;</code> element has two descriptive child 
+elements (<code><a href="#description_el">&lt;description&gt;</a></code> and <code><a href="#notes_el">&lt;notes&gt;</a></code>), 
+and then the concept <code>&lt;heading&gt;</code> elements. </p>
+<ul>
+	<li>The <code><a href="#description_el">&lt;description&gt;</a></code> contains text 
+	intended to explain the purpose and model for that facet to the intended 
+	audience for the collections browser. The contents of the <code>
+	&lt;description&gt;</code> text will appear in the category browser UI. </li>
+	<li>The <code><a href="#notes_el">&lt;notes&gt;</a></code> element contains text that 
+	documents issues, development plans, etc. for the facet, and is intended for 
+	use by the editors and development staff for the ontology. The contents of 
+	the <code>&lt;notes&gt;</code> text do not currently appear in the UI. </li>
+</ul>
+<p>The rest of the element children of a <code>&lt;taxonomy&gt;</code> element are 
+concept <code><a href="#heading_el">&lt;heading&gt;</a></code> elements, which in turn 
+contain more concept <code>&lt;heading&gt;</code> elements. The <code>&lt;heading&gt;</code> 
+element also has an id attribute for internal reference, and a title attribute 
+that defines the user-friendly name for the concept. The title can be thought of 
+as the preferred name for the concept. The title is also generally used by the 
+NLP processor as one of the strings that indicate a concept (although this can 
+be controlled with additional attributes described below). </p>
+<p>It is important that the id values for the facet <code>&lt;taxonomy&gt;</code> 
+elements and for the concept <code>&lt;heading&gt;</code> elements be unique, or 
+other aspects of the ontology will break!</p>
+<h3>Linguistic Support</h3>
+<p>In order to recognize the concepts in the metadata text for collections 
+objects, we need to describe the different words or phrases that can be used to 
+indicate the concept. For some concepts, e.g., the material gold, there are just 
+a few words or abbreviations that would commonly indicate the concept: &quot;gold&quot;, 
+&quot;au&quot;. In this case, we often use the title of the concept (&quot;gold&quot;) and then 
+describe a few synonyms or &quot;hooks&quot; that should also be associated with the 
+concept (e.g., &quot;au&quot;). </p>
+<p>For other concepts, e.g., <em>deer designs or motifs</em>, a simple word is 
+often not enough and may even be misleading: &quot;deer&quot; could refer to bones or 
+teeth as well as to a design. It is often the case that certain &quot;entailment 
+phrases&quot; can be used to recognize these concepts (e.g., &quot;deer pattern&quot;, 
+&quot;painting of a deer&quot;). Furthermore, these entailment phrases tend to come in 
+patterns that apply to a number of related concepts. We describe these patterns 
+as prefix and suffix strings that are combined with the basic tokens for the 
+concept. Thus, we can combine the prefix &quot;painting of a &quot; with the token &quot;deer&quot; 
+to produce the entailment string. The <code><a href="#prefix_el">&lt;prefix&gt;</a></code> and
+<code><a href="#suffix_el">&lt;suffix&gt;</a></code> elements describe the 
+patterns that can be combined with tokens. To make it easier to reuse these 
+patterns, <code>
+&lt;prefix&gt;</code> and <code>&lt;suffix&gt;</code> definitions apply not just to the concept
+<code>&lt;heading&gt;</code> element that contains the <code>&lt;prefix&gt;</code> or a 
+<code>&lt;suffix&gt;</code> element, <em>but to all the descendent</em> <code>&lt;heading&gt;</code> <em>elements as well</em>.</p>
+<p>It is often the case that a given word may have several meanings. In some 
+cases, it may be easier to use a simple word or string to describe a concept and 
+then define a few exceptions or exclusions that sufficiently disambiguate the 
+concept in a given corpus or collection. For example, &quot;plate&quot; can refer to the 
+object on which food is served, to the glass objects used in photography, to a 
+section of the earth's crust (in tectonics), and other meanings as well. For a 
+given collection (e.g., in a museum of anthropology), it is often easiest to 
+simply specify the word &quot;plate&quot; for a concept (e.g., the one for food) and then
+<em>exclude</em> the few other uses that actually occur in the metadata for that 
+collection (e.g., &quot;photographic plate&quot;). The <code><a href="#excl_el">&lt;excl&gt;</a></code> 
+element is used to define the exclusions. </p>
+<h3>Structure and organizing principles</h3>
+<p>It is important to remember that the titles, structure and organization of the headings 
+are more than just a model for you as a collections manager or taxonomist. These 
+features are also used directly to produce the UI for your collections browser. 
+To make the browser easy to use by your intended audience, you need to consider 
+some principles of usability as you develop the ontology. Here are some things 
+to think about:</p>
+<ul>
+	<li>Select titles that will make sense to your audience, rather than jargon 
+	that may be common among experts. E.g., if your audience is the general 
+	public, use common names for plants and animals, and not the Latin names.</li>
+	<li>Consider organizations of concepts that match the common point of view 
+	of your audience. For a public audience, this may mean using folk 
+	organizations of living things rather than Linnaean taxonomy.</li>
+	<li>As you gather concepts into groups, remember that the faceted browser 
+	will present related concepts to support query refinement. If you group 40 
+	or 50 concepts under a single parent concept, the UI for refinement might 
+	have to present a long list that would be awkward at best. In addition, it 
+	makes it harder for a user to get an overview of how objects are distributed 
+	if they have to scan a long list of concepts and compare all the associated 
+	object counts. For example, rather than just grouping all the U.S. states 
+	under the concept for the country, you should consider adding regional 
+	groupings of states with perhaps 5 to 10 states per region. The result is a 
+	deeper and narrower structure than might be used by other standard 
+	vocabularies.</li>
+</ul>
+<h3>Knowledge modeling and reasoning support</h3>
+<p>The NLP engine is designed to associate individual concepts to objects in the 
+collections. However, since the ontology generally models broader and narrower 
+concepts, the engine infers the broader concepts (the parent and ascendant 
+concepts), and associates these concepts to the objects as well. In addition, 
+however, the ontology can model real-world knowledge that allows additional 
+inferences to be made from concepts that are associated from the text 
+processing.</p>
+<p>In the current version, the only additional inferences are defined with the
+<code>implies</code> attribute on the concept <code><a href="#heading_el">&lt;heading&gt;</a></code> 
+element. As described in the Proposed Changes appendix, we need to add support 
+for complex inferences.</p>
+<h3>I18n and Unicode issues</h3>
+<p>The Delphi codebase supports the use of Unicode (UTF-8), and the XML for the 
+ontology definitions </p><hr>
+<h2><a name="Element_Syntax"></a>Element Syntax</h2>
+<p>The elements are described more or less in the expected order in which they would be 
+encountered in a typical file. Some lesser-used elements have been sorted to the
+end.</p>
+<dl>
+	<dt class="element"><a name="taxonomy_el"></a>&lt;taxonomy&gt;</dt>
+	<dd>This is really the &quot;facet&quot; declaration.<br>
+		It includes child elements for the <code>description</code> and <code>notes</code>, 
+		that are used in the UI for the categories browser, AND&nbsp; <code>heading</code> children for the top level concepts in the 
+		facet. There are a few other elements for noise reduction in the NLP
+      processing, but these will generally only be used by developers looking
+      closely at the input collections metadata.<br>
+      Valid only as the root of a facet tree. Must be the top-most element in a
+      facet declaration.. <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">id=&quot;<em>id-string</em>&quot;</dt>
+			<dd>A unique string ID used for reference in the XML model. Must adhere 
+			to XML ID rules: string must begin with normal letter chars: [a-zA-Z] 
+			and the rest of the ID must use letters, numbers a few allowed 
+			punctuation chars: [a-zA-Z0-9<code>:_.-]</code>. I would recommend sticking with 
+			letters, numbers, underscore and hyphen.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">title=&quot;<em>Facet Name</em>&quot;</dt>
+			<dd>A string used in the user interface and elsewhere to indicate the 
+			title of the facet. This can have embedded spaces, but cannot use XHTML 
+			markup.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">selectmode={&quot;single&quot;|&quot;multiple&quot;}</dt>
+			<dd>Indicates whether an object can match only one category in this
+              facet, or multiple.<br>
+              If &quot;single&quot; then the NLP categorization will allow a
+              single match for each object.<br>
+              Otherwise (and if not specified), each object can have multiple
+              concept associations for this facet.
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>:
+		<dl class="elems">
+			<dt class="element"><a href="#description_el">&lt;description&gt;</a></dt>
+			<dt class="element"><a href="#notes_el">&lt;notes&gt;</a></dt>
+		</dl>
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="description_el"></a>&lt;description&gt;</dt>
+	<dd>A simple container for text used to provide a friendly description of 
+		the purpose and scope of the facet. This can contain embedded XHTML markup 
+		(e.g., <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, etc. )that will show up in the UI.<br>
+      Valid only as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		(none)<br>
+		<strong>Child elements</strong>:
+		(none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="notes_el"></a>&lt;notes&gt;</dt>
+	<dd>A simple container for text used to provide additional notes for the 
+	facet. The notes contain text that documents issues, development plans, etc. 
+	for the facet, and is intended for use by the editors and development staff 
+	for the ontology. The contents of the <code>&lt;notes&gt;</code> text do not 
+	currently appear in the UI, but can contain embedded XHTML markup 
+		(e.g., <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, etc. ).<br>
+      Valid only as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		(none)<br>
+		<strong>Child elements</strong>:
+		(none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="heading_el"></a>&lt;heading&gt;</dt>
+	<dd>The declaration of a concept in the ontology. This is really the heart
+      of the schema. It contains the narrower concepts as children, and contains
+      all the information about how to recognize the concept in the NLP
+      processing.<br>
+      Valid as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>)
+      or of a concept (<code>&lt;heading&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">id=&quot;<em>id-string</em>&quot;</dt>
+			<dd>A unique string ID used for reference in the XML model. Must adhere 
+			to XML ID rules: string must begin with normal letter chars: [a-zA-Z] 
+			and the rest of the ID must use letters, numbers a few allowed 
+			punctuation chars: [a-zA-Z0-9<code>:_.-]</code>. I would recommend sticking with 
+			letters, numbers, underscore and hyphen.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">title=&quot;<em>Concept Name</em>&quot;</dt>
+			<dd>A string used in the user interface and elsewhere to indicate the 
+			title of the concept. This can have embedded spaces, but cannot use XHTML 
+			markup. No case folding is done for the UI, however if this is used
+              as a hook (subject to the <code>nomatch</code> and <code>astoken</code>
+              attributes), it will be folded to lower case.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">noMatch={&quot;true&quot;|&quot;false&quot;}</dt>
+			<dd>A boolean (true/false) attribute that controls whether the title
+              is used as a hook for NLP processing.&nbsp;<br>
+              If <em>false</em>, then the title is used as a hook. This is the
+              default value if the attribute is not specified, and so by default
+              the title is used as a hook.<br>
+              If <em>true</em>, then the title is not used as a hook, and so
+              only synonyms and entailment phrases will be used to associate the
+              concept in NLP processing.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">asToken={&quot;plural&quot;|&quot;noplural&quot;}</dt>
+			<dd>Controls whether and how the title is used as a token together
+              with entailment phrases for NLP processing. See also the <code><a href="#prefix_el">&lt;prefix&gt;</a></code>
+              and <code><a href="#suffix_el">&lt;suffix&gt;</a></code> elements.&nbsp;If 
+			this attribute is not specified, the title is not used as a token.<br>
+              This attribute is ignored if <code>nomatch</code> is <em>true</em>.<br>
+              If <em>plural</em>, then the title is used as a token, and is
+              added with a common plural ending as well ('s').&nbsp;<br>
+              If <em>noplural</em>, then the title will be used as a token in
+              the simple form.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">implies={<em>concept-id-reference</em>}</dt>
+			<dd>Indicates that if this concept is associated to an object, then
+              the additional concept referred to by <code>concept-id-reference</code> 
+			should also be associated to the object. This is often used where 
+			there are relationships across or between facets. E.g., the material 
+			gold is generally golden in color, and so the concept in a materials 
+			facet would imply the concept in a color facet.<br>
+              Note that by default, a parent (broader) concept is implied by the
+              child (narrower) concept, and so this must not be declared. <br>
+			The value of the attribute is the id of another concept <code>
+			&lt;heading&gt;</code> element. <em>Currently, all facets are treated as 
+			being in a single namespace, and so it does not matter which facet 
+			this is in.</em><div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>:
+		<dl class="elems">
+			<dt class="element"><a href="#heading_el">&lt;heading&gt;</a></dt>
+            <dd>Narrower concept organized under this concept.</dd>
+			<dt class="element"><a href="#synonym_el">&lt;synonym&gt;</a></dt>
+            <dd>Synonym (hook) for this concept.</dd>
+			<dt class="element"><a href="#prefix_el">&lt;prefix&gt;</a></dt>
+            <dd>Prefix string that will be prepended to all the tokens for this
+              concept to form entailment strings as hooks.</dd>
+			<dt class="element"><a href="#suffix_el">&lt;suffix&gt;</a></dt>
+            <dd>Suffix string that will be appended to all the tokens for this
+              concept to form entailment strings as hooks.</dd>
+			<dt class="element"><a href="#token_el">&lt;token&gt;</a></dt>
+            <dd>Additional token to be combined with prefix and suffix values to
+              create entailment strings.</dd>
+			<dt class="element"><a href="#excl_el">&lt;excl&gt;</a></dt>
+            <dd>Exclusion term for this concept.</dd>
+		</dl>
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="synonym_el"></a>&lt;synonym&gt;</dt>
+	<dd>This declares a synonym or more generally a hook: a string token that should be
+      associated to the concept. <br>
+      Valid as a child element of a concept (<code>&lt;heading&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">value=&quot;<em>synonym string</em>&quot;</dt>
+			<dd>The string token to be recognized. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.&nbsp;<br>
+              <em>Coming soon: we will do smarter matching of tokens that
+              consider simplifications of diacriticals. You will be able to
+              specify unicode strings that include diacriticals like accents,
+              and these will match exactly as well as equivalent simplified
+              strings.</em>
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="prefix_el"></a>&lt;prefix&gt;</dt>
+	<dd>This declares a prefix string that will be prepended to all the tokens
+      for this concept to form entailment strings as hooks. Note that the prefix
+      will be inherited by all descendent concepts (<code>&lt;heading&gt;'</code>s).
+      Thus the set of prefix strings applied to a given concept (<code>&lt;heading&gt;</code>)
+      is the union of all the prefix strings defined for the the current and all
+      parent and ancestor concepts (<code>&lt;heading&gt;'</code>s). <br>
+      Valid as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>)
+      or of a concept (<code>&lt;heading&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">value=&quot;<em>prefix string </em>&quot;</dt>
+			<dd>The string token to be prepended to tokens for the concept. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.&nbsp;The string is
+              prepended literally, without the addition of a space. If the
+              prefix is separate words (the typical case), then the prefix must
+              include the trailing space (e.g., &quot;image of a &quot;).
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="suffix_el"></a>&lt;suffix&gt;</dt>
+	<dd>This declares a suffix string that will be appended to all the tokens
+      for this concept to form entailment strings as hooks. Note that the suffix
+      will be inherited by all descendent concepts (<code>&lt;heading&gt;'</code>s).
+      Thus the set of suffix strings applied to a given concept (<code>&lt;heading&gt;</code>)
+      is the union of all the suffix strings defined for the the current and all
+      parent and ancestor concepts (<code>&lt;heading&gt;'</code>s). <br>
+      Valid as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>)
+      or of a concept (<code>&lt;heading&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">value=&quot;<em> suffix string</em>&quot;</dt>
+			<dd>The string token to be appended to tokens for the concept. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.&nbsp;The string is appended literally, without the addition of a space. If the
+              suffix is separate words (the typical case), then the suffix must
+              include the leading space (e.g., &quot; motif&quot;).
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="token_el"></a>&lt;token&gt;</dt>
+	<dd>Additional token to be combined with prefix and suffix values to
+              create entailment strings. The prefix and suffix strings include
+      those defined for the parent given concept (<code>&lt;heading&gt;</code>)
+      as well as prefix and suffix strings defined for all
+      parent and ancestor concepts (<code>&lt;heading&gt;'</code>s). <br>
+      Valid as a child element of a concept (<code>&lt;heading&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">value=&quot;<em>token string</em>&quot;</dt>
+			<dd>The string token to be combined with prefix and/or suffix
+              strings. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">combine={&quot;prefix&quot;|&quot;suffix&quot;|&quot;both&quot;}</dt>
+			<dd>Controls the combination behavior of the token with prefix and
+              suffix strings.&nbsp;<br>
+              If the value is &quot;<em>prefix</em>&quot;, the token will only
+              be combined with prefix strings.&nbsp;<br>
+              If the value is &quot;<em>suffix</em>&quot;, the token will only
+              be combined with suffix strings.<br>
+              If set to any other value or if not specified, the token will be
+              combined with both prefix and suffix strings.&nbsp;
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="excl_el"></a>&lt;excl&gt;</dt>
+	<dd>This declares an exclusion: a token that contraindicates the concept.
+      If seen, it will preclude the association of a concept to an object.&nbsp;<br>
+      Valid as a child element of a concept (<code>&lt;heading&gt;</code>). <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">value=&quot;<em>excl string</em>&quot;</dt>
+			<dd>The string token to be recognized as an exclusion. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.&nbsp;
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="noiseToken_el"></a>&lt;noiseToken&gt;</dt>
+	<dd>This declares a string token that should be elided from the input before
+      further NLP processing. These can be used to remove common words or
+      phrases that have no semantic or disambiguating value. These can be
+      compared to &quot;stop words&quot; in other models, but tend to be longer
+      than most stop words, and are often adjectives or adverbs that would
+      complicate the specification of hooks. <br>
+      Valid as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>)
+      or of a concept (<code>&lt;heading&gt;</code>). <br>
+      <i>N.B.: This element may be deprecated as we allow n-grams and other
+      means of matching concepts in the </i><em>input metadata. The
+      functionality for this element is not yet implemented.</em> <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">value=&quot;<em>noisetoken string</em>&quot;</dt>
+			<dd>The string token to be recognized. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.&nbsp;
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+		<div class="space"></div>
+	</dd>
+	<dt class="element"><a name="reduce_el"></a>&lt;reduce&gt;</dt>
+	<dd>This declares a string token that should be simplified in the input before
+      further NLP processing. These can be used to simplify very common
+      phrases to tokens that will be matched in the ontology.&nbsp;<br>
+      Valid as a child element of the facet root&nbsp; (<code>&lt;taxonomy&gt;</code>)
+      or of a concept (<code>&lt;heading&gt;</code>). <br>
+      <i>N.B.: This element may be deprecated as we allow n-grams and other
+      means of matching concepts in the </i><em>input metadata. The
+      functionality for this element is not yet implemented.</em> <br>
+		<strong>Attributes</strong>:
+		<dl class="attrs">
+			<dt class="attr">from=&quot;<em>some more complex input string</em>&quot;</dt>
+			<dd>The input string token to be recognized. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.
+			<div class="smspace"></div>
+			</dd>
+			<dt class="attr">to=&quot;<em>simpler string</em>&quot;</dt>
+			<dd>The string token to be produced as input to further NLP
+              processing. This can be mixed case, but
+              all NLP processing is done folded to lower case, so you might as
+              well type the token all in lower case.
+			<div class="smspace"></div>
+			</dd>
+		</dl>
+		<strong>Child elements</strong>: (none)
+	</dd>
+</dl>
+
+<hr>
+
+<h2>Appendix: Proposed Changes</h2>
+
+<p>This is a living document for an evolving schema. A number of changes to the
+schema have been proposed or considered. These include:</p>
+<ul>
+  <li>Rename the root element for each facet from <code>&lt;taxonomy&gt;</code>
+    to <code>&lt;facet&gt;</code>.</li>
+  <li>Rename the element used to declare concepts from <code>&lt;heading&gt;</code>
+    to <code>&lt;concept&gt;</code>.</li>
+  <li>Rename the element used to declare hooks from <code>&lt;synonym&gt;</code>
+    to <code>&lt;hook&gt;</code> or <code>&lt;match&gt;</code>.</li>
+  <li>Rename the element used to declare exclusions from <code>&lt;excl&gt;</code>
+    to <code>&lt;exclude&gt;</code> or <code>&lt;exclusion&gt;</code>.</li>
+  <li>Allow <code>&lt;heading&gt;</code>/<code>&lt;concept&gt;</code>
+    elements to control the inheritance of prefix and suffix strings. This would
+    be an additional attribute.</li>
+  <li>Allow <code>&lt;taxonomy&gt;</code>/<code>&lt;facet&gt;</code>
+    elements to contain prefix and suffix declarations. Sometimes, an entire 
+	facet shares these, and as it is, they must be duplicated across each top 
+	level concept.</li>
+	<li>Add description and notes to <code>&lt;heading&gt;</code>/<code>&lt;concept&gt;</code>
+    elements. This will be important for maintenance.</li>
+	<li>Change the default behavior of the <code>asToken</code> attribute to be 
+	&quot;<em>asPlural</em>&quot;. If there are prefix/suffix values for the element, the 
+	default behavior should be to use them. We can then override this by 
+	specifying <code>asToken</code><code>=</code>&quot;<i>no</i>&quot;.</li>
+  <li>Deprecate/remove the <code>&lt;reduce&gt;</code> element. This is not yet
+    implemented anyway, and is of questionable use. Raises the larger question
+    of whether noise reduction should be done as a separate pass or not.
+    Currently moving more to a model of cleansing data before processing it with
+    Delphi tools, in large part because this seems to contain many
+    institution-specific rules and considerations. However, this approach&nbsp;
+    requires access to and familiarity with sed or equivalent tools. </li>
+  <li>Add an attribute to indicate the <em>generic</em> level within a subtree.
+    This would be used in the pruning algorithms and other UI logic. Define the
+    constraints on this (e.g., if there are conflicting definitions).</li>
+  <li>Add an attribute to indicate the <em>specific</em> level within a subtree.
+    The need and use for this is less clear, but it might be used to limit the
+    level of detail shown in certain UI. Define the constraints on this (e.g.,
+    if there are conflicting definitions).</li>
+	<li>Modify the reference for the <code>implies</code> attribute of the <code>&lt;heading&gt;</code> 
+	element so that it includes a facet id as well as an element id. This would 
+	use the colon separator to mark the two, e.g.:<br>
+	<code>&nbsp;&nbsp; &lt;heading id=&quot;Gold&quot; title=&quot;Gold&quot; implies=&quot;Color:GoldColored&quot;&gt;
+&nbsp;</code><br>Since colon (':') is a legal character for XML ID values, we 
+	would specify that only the first unescaped colon character would be 
+	recognized as the separator for this purpose.</li>
+	<li>Add examples and snippets to explain the various features. Add 
+	informative usage notes that explain how features interact, e.g., how to use 
+	noMatch for grouping concepts, how noMatch and asToken can be used with 
+	prefix/suffix values to get at subtle concepts.</li>
+	<li>Consider <code>&lt;with&gt;</code> or <code>&lt;near&gt;</code> tokens to support 
+	additional matching cases.</li>
+</ul>
+<h3>Adding support for inference rules:</h3>
+We need to add support for complex inference rules. Inasmuch as these will often be 
+	defined as a function of several concepts across different facets, it 
+	probably does not make sense to locate the rules in the individual facet 
+	files. We will probably define a separate file (or files) that contain the 
+	rules. Initially, a simple model should suffice. We present several examples 
+to illustrate our thinking.<h5>Example 1: Combining concepts to infer another</h5>
+The following rule asserts that if both the concepts <em>mask</em> and <em>wood</em>
+are associated to an object, and that neither of <em>willow</em> or <em>yucca</em>
+are, we can infer that the object was <em>carved</em>.
+   <pre>  &lt;infer id=&quot;i1&quot; ref=&quot;TechniqueDesignorDecoration:Carved&quot; confidence=&quot;.9&quot;&gt;
+    &lt;notes&gt;We generally assume that something used as a mask and made of wood 
+           was carved. The wood/materials from some trees are not generally
+           carved and so we exclude them (Willow, Yucca). 
+    &lt;/notes&gt;
+    &lt;require mode=&quot;all&quot;&gt;
+      &lt;concept ref=&quot;UseorContext:Mask&quot; /&gt;
+      &lt;concept ref=&quot;Material:Wood&quot; /&gt;
+    &lt;/require&gt;
+    &lt;exclude mode=&quot;any&quot;&gt;
+      &lt;concept ref=&quot;Material:Willow&quot; /&gt;
+      &lt;concept ref=&quot;Material:Yucca&quot; /&gt;
+    &lt;/exclude&gt;
+&nbsp; &lt;/infer&gt;</pre>
+      <h5>Example 2: Grouping concepts any of which can infer another</h5>
+      <p>Consider another example that makes a simple association for a set
+      of concepts. Here the <code>&lt;require&gt;</code> mode is <em>any </em>and
+      so we express this rule as &quot;If an object is associated to any of the
+      concepts <em>brick</em>, <em>earthenware</em>, <em>stoneware</em>, <em>terracotta</em>
+      or <em>porcelain</em>, then we can infer it was <em>fired</em> (unless the
+      metadata includes the term <em>unfired</em>).&quot;</p>
+<pre>  &lt;infer id=&quot;i2&quot; ref=&quot;TechniqueDesignorDecoration:Fired&quot; confidence=&quot;.95&quot;&gt;
+    &lt;notes&gt;These materials are by definition fired, unless specifically declared unfired.
+    &lt;/notes&gt;
+    &lt;require mode=&quot;any&quot;&gt;
+      &lt;concept ref=&quot;Material:Brick&quot; /&gt;
+      &lt;concept ref=&quot;Material:Earthenware&quot; /&gt;
+      &lt;concept ref=&quot;Material:Stoneware&quot; /&gt;
+      &lt;concept ref=&quot;Material:Terracotta&quot; /&gt;
+      &lt;concept ref=&quot;Material:Porcelain&quot; /&gt;
+    &lt;/require&gt;
+    &lt;exclude mode=&quot;any&quot;&gt;
+      &lt;term value=&quot;unfired&quot; /&gt;
+    &lt;/exclude&gt;
+&nbsp; &lt;/infer&gt;</pre>
+      <h4>Computing confidence</h4>
+      <p>
+      We compute the confidence for any inferred concept (just as the text 
+		mining assigns confidence to mined concepts). This confidence is used to 
+		rank query results (it is a predictor of relevance).</p>
+<p>
+      It should be noted that the declared confidence 
+      is for the <em>rule</em>. Thus in Example 1, the confidence value of 0.9 expresses the assertion that 9 out
+          of 10 wooden masks (in this collection) are carved. This confidence
+      value will be combined with the confidence
+    of the required concept associations to produce the net confidence for the
+    inferred association. Thus for some object X with the following confidence
+      levels:</p>
+      <ul>
+        <li>confidence that object X was used as a <em>mask</em> is 0.9 </li>
+        <li>confidence that the material for object X is wood is 0.8</li>
+        <li>declared confidence of our inference rule above is 0.9</li>
+      </ul>
+      <p>the inferred confidence that object X was carved would be (0.9 * 0.8 *
+      0.9) = 0.648. In practice, this means that in a search for
+      &quot;carved&quot; objects, object X will likely be sorted below (i.e.,
+      have lower relevance than ) other objects for which the NLP processing
+      found an indication of &quot;carved&quot; in the text. This seems
+      appropriate.</p>
+<p>
+      This confidence computation should be a function of the <code>&lt;require&gt;</code> 
+		mode. In Example 2 with a mode of &quot;any&quot;, the confidence for the rule 
+		(0.95) will be combined with the confidence
+    of the individual required concept association to produce the net confidence for the
+    inferred association. Thus for some object Y with the following confidence
+      levels:</p>
+      <ul>
+        <li>confidence that object Y was made of <em>stoneware</em> is 0.8 </li>
+        <li>declared confidence of our inference rule above is 0.95</li>
+      </ul>
+      <p>the inferred confidence that object Y was fired would be (0.8 * 0.95) = 0.76. 
+		Note that the object may also be declared to be made of, e.g., <em>
+		terracotta</em> (it may have several parts of different materials). If 
+		the <em>terracotta</em> association has a confidence level of 0.9, we 
+		get an inferred confidence of (0.9 * 0.95) = 0.855 for <em>fired</em>. 
+		Because the <code>&lt;require&gt;</code> mode is &quot;any&quot;, we compare the 
+		two computed confidence levels and use the higher one (0.855).</p>
+<h4>Issues and questions:</h4>
+      <ol>
+		<li>Do we need alternate methods of computing confidence (e.g., taking the
+      	<em>max</em> or <em>min</em> confidence rather than multiplying them)?
+		<p>In Example 1, the <em>min</em> approach yield a confidence of 0.72 
+		that it was fired, and the <em>max</em> approach yield a confidence of 
+		0.81. It is attractive to think that these results closer to (our sense 
+		of) reality than the combined result of 0.648, however this approach is 
+		harder to justify theoretically than the combined approach.</p>
+		<p>We need some use-cases to support any of this, and for now, can just 
+		talk to the users to see whether any of this makes sense.</p> </li>
+	<li><p>I think that on <code>&lt;require&gt;</code>, the mode should default to 
+	&quot;all&quot;, and on <code>&lt;exclude&gt;</code>,&nbsp; the mode should default to 
+	&quot;any&quot;. I am pretty sure that this will be the typical usage, however it 
+	might confuse some people.</p></li>
+		<li><p>Should we continue to support the simplified syntax on the &lt;concept&gt; 
+		element when a single concept can infer another concept, or should we 
+		place all the inferences in one section? As soon as we move to a service 
+		that maintains the model, this will be a moot point. I think it will 
+		probably make sense to put all inference in one section for easier 
+		maintenance, since authoring ease will (hopefully soon) no longer be an 
+		issue.</p></li>
+</ol>
+</body>
+
+</html>
