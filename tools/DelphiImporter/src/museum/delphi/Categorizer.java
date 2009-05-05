@@ -290,7 +290,7 @@ public class Categorizer {
 			HashMap<TaxoNode, Float> matchedCats, Counter<String> vocabCounts ) {
 		// Tokenize the string for this column
 		ArrayList<Pair<String,ArrayList<String>>> tokenList
-				= prepareSourceTokens( source, colInfo );
+				= StringUtils.prepareSourceTokens( source, colInfo );
 		float reliability = colInfo.columnReliabilityForFacet(facetName);
 		// Now, we try to find a category in the hashMap for each token
 		for( Pair<String,ArrayList<String>> pair:tokenList ) {
@@ -340,7 +340,7 @@ public class Categorizer {
 		try {
 			// Tokenize the string for this column. First list is tokens, second is words.
 			ArrayList<Pair<String,ArrayList<String>>> tokenList
-								= prepareSourceTokens( source, colInfo );
+								= StringUtils.prepareSourceTokens( source, colInfo );
 			// Now, we try to find a category in each facet hashMap for each token
 			for( Pair<String,ArrayList<String>> pair:tokenList ) {
 				String token = pair.first;
@@ -682,74 +682,5 @@ public class Categorizer {
 		}
 	}
 
-	//
-	/**
-	 * Tokenizes an input string according to column info rules.
-	 * Also maps all tokens and words to lower case.
-	 * @param source input String
-	 * @param colInfo columnInfo for this string
-	 * @return List of Pairs: first is token, second is words in that token
-	 */
-	private static ArrayList<Pair<String,ArrayList<String>>> prepareSourceTokens(
-			String source, DumpColumnConfigInfo colInfo ) {  //  @jve:decl-index=0:
-		ArrayList<Pair<String,ArrayList<String>>> returnList =
-						new ArrayList<Pair<String,ArrayList<String>>>();
-		// First we apply reduction. This cleans up certain oddities in the source
-		String reducedSource = source.toLowerCase();
-		for(Pair<String, String> reduce : colInfo.reduceRules) {
-			reducedSource = reducedSource.replaceAll(reduce.first, reduce.second);
-		}
-		// Next, we tokenize with the token separators
-		String[] tokens_strings;
-		if( colInfo.tokenSeparators.size() == 0 ) {
-			// throw new RuntimeException( "No Token separators for column: " + colInfo.name);
-			tokens_strings = new String[1];
-			tokens_strings[0] = reducedSource;
-		} else {
-			String regex = "\\||"+colInfo.tokenSeparators.get(0);
-			for( int i=1; i<colInfo.tokenSeparators.size(); i++)
-				regex += "|"+colInfo.tokenSeparators.get(i);
-			tokens_strings = reducedSource.split(regex);
-		}
-		// Next, we further split up each token on space and certain punctuation and remove the noise items
-		// We also build the words list for Colors
-		for( int i=0; i< tokens_strings.length; i++ ){
-			String token = tokens_strings[i].trim();
-			if(token.isEmpty())
-				continue;
-			// Split into words, but preserve hyphenated words, and embedded single quotes
-			ArrayList<String> words = new ArrayList<String>();
-			Pair<String,ArrayList<String>> pair = null;
-				new Pair<String,ArrayList<String>>(token,words);
-			String[] words_strings = token.split("[\\W&&[^\\-\']]");
-			if( colInfo.noiseTokens.size() == 0 ){
-				pair = new Pair<String,ArrayList<String>>(token,words);
-				for( int iW=0; iW<words_strings.length; iW++) {
-					String word = words_strings[iW].trim();
-					if(word.length()>0)
-						words.add(word);
-				}
-				returnList.add(pair);
-			}
-			else {
-				StringBuilder sb = new StringBuilder();
-				for( int iW=0; iW<words_strings.length; iW++)
-					if( !colInfo.noiseTokens.contains(words_strings[iW]) ) {
-						if( iW > 0)
-							sb.append(' ');
-						String word = words_strings[iW].trim();
-						if(word.length()>0) {
-							sb.append(word);
-							words.add(word);
-						}
-					}
-				if(sb.length()>0) {
-					pair = new Pair<String,ArrayList<String>>(sb.toString(),words);
-					returnList.add(pair);
-				}
-			}
-		}
-		return returnList;
-	}
 
 }
