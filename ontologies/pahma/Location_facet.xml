@@ -803,7 +803,13 @@
 				<heading id="BeninCountry" title="Benin">
 					<heading id="PortoNovo" title="Porto Novo"/>
 				</heading>
-				<heading id="BurkinaFaso" title="Burkina Faso">
+				<heading id="BurkinaFaso" title="Burkina Faso"> <!-- Name used since August 4, 1984 -->
+					<synonym value="Burkina"/>
+					<synonym value="Republic of Upper Volta"/> <!-- From 1958 until Aug. 3, 1984 -->
+					<synonym value="French Upper Volta"/> <!-- From March 1, 1919 until 1932, and 1947 until 1958 -->
+					<synonym value="Haute-Volta"/> <!-- Ibid. (French name) -->
+					<synonym value="Upper Volta"/>
+					<implies facet="Culture" cat="Burkinabe"/>
 					<heading id="Ouagadougou" title="Ouagadougou"/>
 				</heading>
 				<heading id="CameroonCountry" title="Cameroon">
@@ -833,7 +839,7 @@
 					<heading id="Accra" title="Accra"/>
 					<heading id="Adwuku" title="Adwuku"/>
 					<heading id="DawuGhana" title="Dawu">
-						<synonym value="Dawn"/>
+						<synonym value="Dawn"/> <!-- Disambiguate -->
 					</heading>
 					<heading id="LegonGhana" title="Legon"/>
 				</heading>
@@ -3129,14 +3135,18 @@
 					</heading>
 					<heading id="MindoroIslPhilip" title="Mindoro Island">
 						<synonym value="Mindaro"/>
-						<synonym value="Mindaro"/>
+						<synonym value="Mindaro I"/>
+						<synonym value="Mindaro I."/>
+						<synonym value="Mindaro Is"/>
+						<synonym value="Mindaro Is."/>
+						<synonym value="Mindaro Isl"/>
+						<synonym value="Mindaro Isl."/>
 					</heading>
 				</heading>
 				<heading id="MindanaoIslGrpPhilip" title="Mindanao (South) Group">
 					<synonym value="Gran Molucas"/>
 					<synonym value="Great Mollucas"/>
 					<synonym value="Mindanao"/>
-					<synonym value="Mindanao Island"/>
 					<synonym value="Mindanao Island Group"/>
 					<synonym value="Mindanao Islands"/>
 					<synonym value="Mindanao Group"/>
@@ -5575,9 +5585,8 @@
 							</heading>
 							<heading id="TulalacIndianReservation" title="Tulalac Indian Reservation"/>
 							<heading id="WallaWallaCounty" title="Walla Walla County">
-								<synonym value="Walla Walla"/> <!-- Synonym or city? -->
+								<synonym value="Walla Walla"/>
 								<synonym value="Walla Walla Co."/>
-								<heading id="WallaWalla" title="Walla Walla"/> <!-- Synonym or city? -->
 							</heading>
 							<heading id="WesternWashington" title="Western Washington">
 								<heading id="OlympicPeninsula" title="Olympic Peninsula"/>
@@ -5589,9 +5598,8 @@
 							</heading>
 							<heading id="WhiteSalmonRiver" title="White Salmon River"/>
 							<heading id="YakimaCounty" title="Yakima County">
-								<synonym value="Yakima"/> <!-- Synonym or city? -->
+								<synonym value="Yakima"/>
 								<synonym value="Yakima Co."/>
-								<heading id="Yakima" title="Yakima"/> <!-- Synonym or city? -->
 								<heading id="YakimaReservation" title="Yakima Reservation">
 									<synonym value="Yakima Indian Reservation"/>
 								</heading>
@@ -5666,7 +5674,7 @@
 								<heading id="OldTown" title="Old Town"/>
 							</heading>
 							<heading id="PleasantPointReserv" title="Pleasant Point Reservation"/>
-							<heading id="Washington" title="Washington">
+							<heading id="WashingtonMaine" title="Washington" noMatch="true">
 								<heading id="IndianTwnspReserv" title="Indian Township Reservation"/>
 							</heading>
 						</heading>
