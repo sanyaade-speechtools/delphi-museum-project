@@ -99,7 +99,7 @@
 		</heading>
 	</heading>
 	<heading id="DrugUse" title="Drug Use">
-		<heading id="AlcoholicDrugs" title="Drinking">
+		<heading id="AlcoholicDrugs" title="Drinking (Alcohol)">
 			<heading id="DrugsAlcoholBeer" title="Drinking Beer" noMatch="true"/>
 			<heading id="DrugsAlcoholLiqour" title="Drinking Liquor" noMatch="true"/>
 			<heading id="DrugsAlcoholWine" title="Drinking Wine" noMatch="true"/>
@@ -143,6 +143,7 @@
 		<heading id="Drinking" title="Drinking">
 			<synonym value="Imbibing"/>
 			<heading id="DrinkingAlcohol" title="Drinking Alcohol">
+				<implies facet="ActivityorContext" cat="AlcoholicDrugs"/>
 				<heading id="BeerDrinking" title="Beer Drinking">
 					<synonym value="Drinking Beer"/>
 					<implies facet="ActivityorContext" cat="DrugsAlcoholBeer"/>
@@ -369,7 +370,6 @@
 			</heading>
 		</heading>
 		<heading id="Gatherings" title="Gatherings">
-			<synonym value="Gathering"/>
 		</heading>
 		<heading id="InternationalFairsExpos" title="International Fairs &amp; Expos">
 			<synonym value="World's Fair"/>
@@ -439,6 +439,9 @@
 		</heading>
 		<heading id="GatheringActivity" title="Gathering">
 			<heading id="BerryGathering" title="Berry Gathering"/>
+			<heading id="FishGathering" title="Fish Gathering">
+				<implies facet="ActivityorContext" cat="HandGatheringFishing"/>
+			</heading>
 			<heading id="SeedGathering" title="Seed Gathering"/>
 		</heading>
 		<heading id="HuntingActivity" title="Hunting"/>
