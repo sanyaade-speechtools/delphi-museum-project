@@ -52,7 +52,7 @@ public class DBSourceInfo {
 	private Statement sqlStatement = null;
 	private ResultSet currResults = null;
 
-	private static int _debugLevel = 1;
+	private static int _debugLevel = 2;
 
 	protected static void debug( int level, String str ) {
 		if( level <= _debugLevel )
@@ -110,7 +110,7 @@ public class DBSourceInfo {
 			    Element colInfoEl = (Element)colNodes.item(iCol);
 			    DBColumnInfo colInfo = DBSourceInfo.createColInfoFromConfig(colInfoEl, false);
 			    newSourceInfo.columns.add(colInfo);
-			    newSourceInfo.destinationColumnNames.add(colInfo.name);
+			    newSourceInfo.destinationColumnNames.add(colInfo.destination);
 			    debug( 2, "DBSourceInfo.createFromConfig: Added col info: "
 			    		+colInfo.name+", "+colInfo.destination);
 			}
@@ -129,7 +129,7 @@ public class DBSourceInfo {
 			    Element colInfoEl = (Element)colNodes.item(iCol);
 			    DBColumnInfo colInfo = DBSourceInfo.createColInfoFromConfig(colInfoEl, true);
 			    newSourceInfo.columns.add(colInfo);
-			    newSourceInfo.destinationColumnNames.add(colInfo.name);
+			    newSourceInfo.destinationColumnNames.add(colInfo.destination);
 			    debug( 2, "DBSourceInfo.createFromConfig: Source for: "
 			    		+dbName+":"+tableName+": Added col info: "
 			    		+colInfo.name+", "+colInfo.destination);

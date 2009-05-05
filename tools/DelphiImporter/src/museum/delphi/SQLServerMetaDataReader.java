@@ -105,7 +105,12 @@ public class SQLServerMetaDataReader extends DBMetaDataReader {
 							for(int iCol=0; iCol<destColumns.length; iCol++) {
 								String newCol = newCols.get(destColumns[iCol]);
 								if( newCol != null && !newCol.isEmpty()) {
-									String newStr = destCols.get(iCol)+separator+newCol;
+									String oldStr = destCols.get(iCol);
+									String newStr;
+									if(!oldStr.isEmpty())
+										newStr = oldStr+separator+newCol;
+									else
+										newStr = newCol;
 									destCols.set(iCol,newStr);
 								}
 							}

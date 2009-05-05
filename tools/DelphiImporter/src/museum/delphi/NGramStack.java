@@ -6,6 +6,9 @@ public class NGramStack extends ArrayList<NGram> {
 
 	private static final long serialVersionUID = 1L;
 
+	public NGramStack() {
+	}
+
 	/**
 	 * Constructs a stack of NGrams from the passed wordlist, up to
 	 * length maxLen. Longest, earliest NGrams are added first;

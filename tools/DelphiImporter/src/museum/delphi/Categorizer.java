@@ -348,10 +348,16 @@ public class Categorizer {
 					checkAllFacetsForToken(id, token, allStrings, false, colInfo, matchedCats );
 				if(!foundMatch) {
 					debug(3, "No matched concept for full token: "+token);
-					if(vocabCounts != null)
-						vocabCounts.incrementCount(token, 1);
-					// Now we consider the ngrams within, if there are 2 or more words
 					ArrayList<String> words = pair.second;
+					NGramStack missedngrams = null;
+					if(vocabCounts != null) {
+						//vocabCounts.incrementCount(token, 1);
+						missedngrams = new NGramStack();
+						// Treat as an ngram, to filter if partial ngrams match.
+						if(words.size()>0)	// Some tokens are all punct, etc. - skip them
+							missedngrams.add(new NGram(token, 0, words.size()-1));
+					}
+					// Now we consider the ngrams within, if there are 2 or more words
 					if(words.size()>1) {
 						NGramStack ngrams = new NGramStack(words, maxNGramLength);
 						NGram next;
@@ -360,9 +366,18 @@ public class Categorizer {
 							if(checkAllFacetsForToken(id, ngramStr,
 									allStrings, true, colInfo, matchedCats )) {
 								ngrams.filterMatch(next);
-							} else if(vocabCounts != null) {
-								vocabCounts.incrementCount(ngramStr, 1);
+								if(missedngrams != null)
+									missedngrams.filterMatch(next);
+							} else if(missedngrams != null) {
+								missedngrams.add(next);
 							}
+						}
+					}
+					// Now for all the ngrams left on the missed stack, add them
+					if(missedngrams != null) {
+						NGram next;
+						while((next=missedngrams.pop())!=null) {
+							vocabCounts.incrementCount(next.getString(), 1);
 						}
 					}
 				}
