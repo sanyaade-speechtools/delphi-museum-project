@@ -21,7 +21,7 @@
 		Reservations and Rancherias
 	</notes>
 	<heading id="ModernLocations" title="Modern Placenames" noMatch="true">
-		<heading id="Africa" title="Africa"> <!-- done -->
+		<heading id="Africa" title="Africa">
 			<heading id="NorthernAfrica" title="Northern Africa">
 				<synonym value="North Africa"/>
 				<heading id="Algeria" title="Algeria">
@@ -88,7 +88,7 @@
 					</heading>
 					<heading id="SouthernUpperEgypt" title="Southern (Upper) Egypt">
 						<heading id="Abka" title="Abka"/>
-						<heading id="Abydos" title="Abydos"/>
+						<!-- <heading id="Abydos" title="Abydos"/> Disambiguate -->
 						<heading id="Aswan" title="Aswan">
 							<synonym value="Assuan"/>
 						</heading>
@@ -449,10 +449,10 @@
 				<synonym value="East Africa"/>
 				<synonym value="East African"/>
 				<synonym value="East Africans"/>
-				<heading id="DjiboutiCountry" title="Djibouti"> <!-- Done -->
-					<heading id="DjiboutiCity" title="Djibouti"/>
+				<heading id="DjiboutiCountry" title="Djibouti">
+					<heading id="DjiboutiCity" title="Djibouti" noMatch="true"/> <!-- Need to disambiguate -->
 				</heading>
-				<heading id="Eritrea" title="Eritrea"> <!-- Done -->
+				<heading id="Eritrea" title="Eritrea">
 					<synonym value="Eritrean"/>
 					<synonym value="Eritreans"/>
 					<synonym value="Eretrea"/>
@@ -463,7 +463,7 @@
 					<heading id="Koken" title="Koken"/>
 					<heading id="Massawa" title="Massawa"/>
 				</heading>
-				<heading id="Ethiopia" title="Ethiopia"> <!-- Done -->
+				<heading id="Ethiopia" title="Ethiopia">
 					<synonym value="Ethiopian"/>
 					<synonym value="Ethiopians"/>
 					<synonym value="Sheba"/>
@@ -586,12 +586,12 @@
 					<heading id="ShireHighlands" title="Shire Highlands"/>
 					<heading id="Tumbuka" title="Tumbuka"/>
 				</heading>
-				<heading id="SeychellesIslands" title="Seychelles Islands"> <!-- Done -->
+				<heading id="SeychellesIslands" title="Seychelles Islands">
 					<heading id="MaheIsland" title="Mahe' Island">
 						<synonym value="Mahe Island"/>
 					</heading>
 				</heading>
-				<heading id="Somalia" title="Somalia"> <!-- Done -->
+				<heading id="Somalia" title="Somalia">
 					<synonym value="Somali"/>
 					<synonym value="Somalis"/>
 					<synonym value="Somalian"/>
@@ -606,7 +606,7 @@
 						<heading id="Berbera" title="Berbera"/>
 					</heading>
 				</heading>
-				<heading id="TanzaniaCountry" title="Tanzania"> <!-- Done -->
+				<heading id="TanzaniaCountry" title="Tanzania">
 					<synonym value="Tanganyika"/>
 					<synonym value="Tanzanian"/>
 					<synonym value="Tanzanians"/>
@@ -754,7 +754,7 @@
 						<heading id="Harrismith" title="Harrismith"/>
 						<heading id="Thabanchu" title="Thabanchu"/>
 						<heading id="Thabanohee" title="Thabanohee"/>
-						<heading id="Witkrans" title="Witkrans"/> <!-- Latitude. -27.5166667°, Longitude. 26.2333333° -->
+						<heading id="Witkrans" title="Witkrans"/>
 						<heading id="Zeekoigat" title="Zeekoigat"/>
 					</heading>
 				</heading>
@@ -934,7 +934,7 @@
 						<heading id="Sanga" title="Sanga"/>
 					</heading>
 					<heading id="Kinshasa" title="Kinshasa">
-						<synonym value="Leopoldville"/>
+						<!-- <synonym value="Leopoldville"/> Disambiguate -->
 						<heading id="giteA" title="gite A"/>
 					</heading>
 					<heading id="Kivuprovince" title="Kivu province">
@@ -980,7 +980,7 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Europe" title="Europe"> <!-- done -->
+		<heading id="Europe" title="Europe">
 			<synonym value="European"/>
 			<synonym value="Europeans"/>
 			<heading id="CentralEurope" title="Central Europe">
@@ -1250,7 +1250,7 @@
 							</heading>
 						</heading>
 						<heading id="PeloponneseGreece" title="Peloponnese" noMatch="true">
-							<heading id="CorinthGreece" title="Corinth"/>
+							<heading id="CorinthGreece" title="Corinth" noMatch="true"/>
 							<heading id="KalamataGreece" title="Kalamata"/>
 							<heading id="TirynsGreece" title="Tiryns"/>
 						</heading>
@@ -1879,7 +1879,7 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Asia" title="Asia"> <!-- done -->
+		<heading id="Asia" title="Asia">
 			<synonym value="Asian"/>
 			<heading id="CentralAsia" title="Central Asia">
 				<synonym value="Central Asian"/>
@@ -2170,7 +2170,7 @@
 						<heading id="Nagaland" title="Nagaland"/>
 						<heading id="Orissa" title="Orissa"/>
 						<heading id="Punjab" title="Punjab"/>
-						<heading id="Rajasthan" title="Rajasthan"> <!-- done -->
+						<heading id="Rajasthan" title="Rajasthan">
 							<heading id="Bassi" title="Bassi">
 								<synonym value="Bussi"/>
 								<synonym value="Basi"/>
@@ -2196,7 +2196,7 @@
 							</heading>
 						</heading>
 						<heading id="Tripura" title="Tripura"/>
-						<heading id="UttarPradesh" title="Uttar Pradesh"> <!-- done -->
+						<heading id="UttarPradesh" title="Uttar Pradesh">
 							<synonym value="Utter Pradesh"/>
 							<heading id="AgraDistrict" title="Agra District">
 								<synonym value="Agra Dstrict"/>
@@ -2457,7 +2457,7 @@
 					<heading id="Riyadh" title="Riyadh"/>
 					<heading id="Tabuk" title="Tabuk"/>
 				</heading>
-				<heading id="Syria" title="Syria"> <!-- done -->
+				<heading id="Syria" title="Syria">
 					<synonym value="Syrian"/>
 					<synonym value="Syrians"/>
 					<heading id="AleppoSyria" title="Aleppo" noMatch="true"/>
@@ -2621,7 +2621,7 @@
 				</heading>
 			</heading>
 		</heading>
-	 	<heading id="Oceania" title="Oceania"> <!-- done -->
+	 	<heading id="Oceania" title="Oceania">
 	 		<synonym value="Oceanian"/>
 			<synonym value="South Pacific Islands"/>
 			<synonym value="South Pacific"/>
@@ -3454,7 +3454,7 @@
 				<synonym value="South American"/>
 				<synonym value="South Americans"/>
 				<heading id="Argentina" title="Argentina"/> <!--  done -->
-				<heading id="Bolivia" title="Bolivia"> <!-- done -->
+				<heading id="Bolivia" title="Bolivia">
 					<heading id="Quichua" title="Quichua"/>
 					<heading id="TiwanakuSite" title="Tiwanaku">
 						<synonym value="Tiahuanaco"/>
@@ -3462,11 +3462,11 @@
 						<implies facet="Culture" cat="TiwanakuCulture"/>
 					</heading>
 				</heading>
-				<heading id="Brazil" title="Brazil"> <!-- done -->
+				<heading id="Brazil" title="Brazil">
 					<synonym value="Brasil"/>
 					<heading id="Amazonjungle" title="Amazon jungle"/>
 				</heading>
-				<heading id="ChileCountry" title="Chile"> <!-- done -->
+				<heading id="ChileCountry" title="Chile">
 					<heading id="SantiagoChile" title="Santiago">
 						<excl value="Peru"/>
 						<heading id="ElTempleChile" title="El Temple"/>
@@ -3483,7 +3483,7 @@
 						</heading>
 					</heading>
 				</heading>
-				<heading id="Colombia" title="Colombia"> <!-- done -->
+				<heading id="Colombia" title="Colombia">
 					<heading id="BolivarClmb" title="Bolivar"/>
 					<heading id="NarinoDepClmb" title="Nariño Dept.">
 						<synonym value="Nariño"/>
@@ -3508,15 +3508,15 @@
 						</heading>
 					</heading>
 				</heading>
-				<heading id="Ecuador" title="Ecuador"> <!-- done -->
+				<heading id="Ecuador" title="Ecuador">
 					<heading id="MantaBeachsite" title="Manta Beach site"/>
 				</heading>
 				<heading id="FrenchGuiana" title="French Guiana"/> <!--  done -->
-				<heading id="GalapagosIslands" title="Galapagos Islands"> <!-- done -->
+				<heading id="GalapagosIslands" title="Galapagos Islands">
 					<synonym value="Galapagos"/>
 				</heading>
 				<heading id="Guyana" title="Guyana"/> <!--  done -->
-				<heading id="Paraguay" title="Paraguay"> <!-- done -->
+				<heading id="Paraguay" title="Paraguay">
 					<heading id="Angayte" title="Angayte"/>
 					<heading id="Apiaca" title="Apiaca"/>
 					<heading id="Ashluslay" title="Ashluslay"/>
@@ -3942,7 +3942,7 @@
 				</heading>
 				<heading id="Suriname" title="Suriname"/> <!--  done -->
 				<heading id="Uruguay" title="Uruguay"/> <!--  done -->
-				<heading id="Venezuela" title="Venezuela"> <!-- done -->
+				<heading id="Venezuela" title="Venezuela">
 					<heading id="Amazonasstate" title="Amazonas state"/>
 					<heading id="Anzoateguistate" title="Anzoategui state"/>
 					<heading id="Apurestate" title="Apure state"/>
@@ -3987,7 +3987,7 @@
 			<heading id="NorthAmerica" title="North America"> <!-- All alphabetized except for United States -->
 				<synonym value="North American"/>
 				<synonym value="North Americans"/>
-				<heading id="CanadaCountry" title="Canada"> <!-- done -->
+				<heading id="CanadaCountry" title="Canada">
 					<heading id="AlbertaCanada" title="Alberta">
 						<heading id="ClunyCanada" title="Cluny"/>
 						<heading id="GleichenCan" title="Gleichen"/>
@@ -4021,7 +4021,7 @@
 						<heading id="NewWestminster" title="New Westminster"/>
 						<heading id="NootkaSound" title="Nootka Sound"/>
 						<heading id="OldMetlakatlaBCCA" title="Old Metlakatla">
-							<synonym value="Metlakatla"/>
+							<!-- <synonym value="Metlakatla"/> Need to disambiguate -->
 							<excl value="AK"/>
 							<excl value="Alaska"/>
 							<excl value="New Metlakatla"/>
@@ -4130,13 +4130,13 @@
 						<heading id="Whitehorse" title="Whitehorse"/>
 					</heading>
 				</heading>
-				<heading id="GreenlandCountry" title="Greenland"> <!-- done -->
+				<heading id="GreenlandCountry" title="Greenland">
 					<heading id="Thule" title="Thule">
 						<synonym value="Dundas"/>
 						<synonym value="Northwest Greenland"/>
 					</heading>
 				</heading>
-				<heading id="MexicoCountry" title="Mexico"> <!-- done -->
+				<heading id="MexicoCountry" title="Mexico">
 					<synonym value="México"/>
 					<heading id="AguascalientesStMX" title="Aguascalientes state">
 						<synonym value="Aguascalientes"/>
@@ -4250,7 +4250,7 @@
 						<heading id="ArechuyvoMX" title="Arechuyvo"/>
 						<heading id="CreelMX" title="Creel"/>
 						<heading id="ChihuahuaPresidioMX" title="Presidio">
-							<excl value="San Francisco"/> <!-- Exclusion for San Francisco's Presidio (need others?) -->
+							<excl value="San Francisco"/> <!-- disambiguates from San Francisco's Presidio (need others?) -->
 						</heading>
 						<heading id="NamquipaMX" title="Namquipa"/>
 						<heading id="SanPedroConchosMX" title="San Pedro de los Conchos"/>
@@ -4322,9 +4322,9 @@
 						<heading id="Pipichahuasco" title="Pipichahuasco"/>
 						<heading id="Potrerillo" title="Potrerillo"/>
 						<heading id="SanAgustinOapan" title="San Agustin Oapan"/>
-						<heading id="SanFranciscoMX" title="San Francisco">
-							<excl value="California"/> <!-- Disambiguate from California city -->
-						</heading>
+						<!-- <heading id="SanFranciscoMX" title="San Francisco">
+							<excl value="California"/> Disambiguate from California city
+						</heading> -->
 						<heading id="SanMartinPachivia" title="San Martin Pachivia"/>
 						<heading id="SanMiguelGuerrMX" title="San Miguel"/>
 						<heading id="SanMiguelHuapanMX" title="San Miguel Huapan"/>
@@ -4565,7 +4565,7 @@
 					<synonym value="USA-NL-15"/>
 					<synonym value="USA-NL-16"/>
 					<synonym value="Western United States"/>
-					<heading id="Southeasternstates" title="Southeastern states"> <!-- done -->
+					<heading id="Southeasternstates" title="Southeastern states">
 						<synonym value="Southeast"/> <!-- Check for other exclusions -->
 						<excl value="Southeast Asia"/>
 						<heading id="AlabamaState" title="Alabama"/>
@@ -4749,7 +4749,6 @@
 									<synonym value="Prince of Wales-Outer Ketchikan"/>
 									<heading id="AnnetteIsland" title="Annette Island">
 										<heading id="NewMetlakatla" title="New Metlakatla">
-											<!--  55°7′37″N 131°34′35″W (55.126916, -131.576393) -->
 											<synonym value="Metlakatla"/>
 											<excl value="BC"/>
 											<excl value="B.C."/>
@@ -5058,8 +5057,10 @@
 										</heading>
 									</heading>
 									<heading id="PunukIslands" title="Punuk Islands"/>
-									<heading id="StMichaelAK" title="St. Michael">
-										<synonym value="St. Michael or Teller"/>
+									<heading id="StMichaelAK" title="St. Michael"/>
+									<heading id="StMichaelTellerAK" title="St. Michael or Teller"> <!-- Trim from UI -->
+										<implies facet="Location" cat="StMichaelAK"/>
+										<implies facet="Location" cat="TellerAK"/>
 									</heading>
 									<heading id="SewardPeninsula" title="Seward Peninsula">
 										<heading id="CaviaAK" title="Cavia"/>
@@ -5069,9 +5070,7 @@
 										<heading id="SledgeIsland" title="Sledge Island"/>
 									</heading>
 									<heading id="StebbinsAK" title="Stebbins"/>
-									<heading id="TellerAK" title="Teller">
-										<synonym value="St. Michael or Teller"/>
-									</heading>
+									<heading id="TellerAK" title="Teller"/>
 								</heading>
 								<heading id="WadeHamptonDivAK" title="Wade-Hampton">
 									<heading id="CapeRomanzof" title="Cape Romanzof"/> <!-- same as Cape Romanof? -->
@@ -5104,13 +5103,13 @@
 							<heading id="StMichaelIslAK" title="St. Michael Island"/> <!-- No Encarta results -->
 							<heading id="WindslowIslAK" title="Windslow Island"/> <!-- No Encarta results -->
 						</heading>
-						<heading id="IdahoState" title="Idaho"> <!-- done -->
+						<heading id="IdahoState" title="Idaho">
 							<heading id="Bannock" title="Bannock">
 								<heading id="Pocatello" title="Pocatello"/>
 							</heading>
 							<heading id="SalmonRiverCanyon" title="Salmon River Canyon"/>
 						</heading>
-						<heading id="OregonState" title="Oregon"> <!-- done -->
+						<heading id="OregonState" title="Oregon">
 							<synonym value="PROVENIENCE = Oregon"/>
 							<heading id="EasternOregon" title="Eastern Oregon"/> <!-- FIX -->
 							<heading id="NorthwestOregon" title="Northwest Oregon"/> <!-- FIX -->
@@ -5368,7 +5367,7 @@
 								<synonym value="OR-YA-NL"/>
 							</heading>
 						</heading>
-						<heading id="MontanaState" title="Montana"> <!-- done -->
+						<heading id="MontanaState" title="Montana">
 							<heading id="AvonValley" title="Avon Valley"/>
 							<heading id="BigHorn" title="Big Horn">
 								<heading id="LittleBighorn" title="Little Bighorn"/>
@@ -5389,7 +5388,7 @@
 							</heading>
 							<heading id="GlacierNationalPark" title="Glacier National Park"/>
 						</heading>
-						<heading id="WashingtonState" title="Washington"> <!-- done -->
+						<heading id="WashingtonState" title="Washington">
 							<synonym value="Eastern Washington"/>
 							<heading id="AsotinCounty" title="Asotin County">
 								<synonym value="Asotin"/>
@@ -5605,7 +5604,7 @@
 								</heading>
 							</heading>
 						</heading>
-						<heading id="WyomingState" title="Wyoming"> <!-- done -->
+						<heading id="WyomingState" title="Wyoming">
 							<heading id="Natrona" title="Natrona">
 								<heading id="Casper" title="Casper"/>
 							</heading>
@@ -5625,7 +5624,7 @@
 						<heading id="ColumbiaRiver" title="Columbia River"/>
 						<heading id="YellowstoneNationalPark" title="Yellowstone National Park"/>
 					</heading>
-					<heading id="Northeasternstates" title="Northeastern states"> <!-- done -->
+					<heading id="Northeasternstates" title="Northeastern states">
 						<synonym value="Northeast"/> <!-- Check for exclusions -->
 						<heading id="Connecticut" title="Connecticut"/>
 						<heading id="Delaware" title="Delaware"/>
@@ -8516,7 +8515,7 @@
 										<heading id="CAMenNL12" title="CA-Men-NL-12"/>
 									</heading>
 								</heading>
-								<heading id="ModocCounty" title="Modoc county"> <!-- done -->
+								<heading id="ModocCounty" title="Modoc county">
 									<synonym value="CA-Mod"/>
 									<synonym value="CA-Mod-"/>
 									<synonym value="CA-Mod-NL"/>
@@ -10437,7 +10436,7 @@
 										</heading>
 									</heading>
 								</heading>
-								<heading id="YubaCounty" title="Yuba county"> <!-- DONE -->
+								<heading id="YubaCounty" title="Yuba county">
 									<synonym value="CA-Yub"/>
 									<synonym value="CA-Yub-NL"/>
 									<synonym value="CA-Yub- NL"/>
@@ -13038,7 +13037,6 @@
 										<heading id="CANap1" title="CA-Nap-1">
 											<synonym value="CA-Nap- 1"/>
 											<synonym value="CA-Nap-  1"/>
-											<synonym value="Oakville"/>
 											<implies facet="Location" cat="GoddardMoundNapaCA"/>
 										</heading>
 										<heading id="CANap4" title="CA-Nap-4">
@@ -14046,7 +14044,6 @@
 												<synonym value="San Francisco de Asís Mission"/>
 												<synonym value="Mission San Francisco de Asis"/>
 												<synonym value="Mission San Francisco de Asís"/>
-												<synonym value="Mission Dolores"/>
 												<synonym value="Mission Dolores graveyard"/>
 											</heading>
 											<heading id="SanFranPanPacIntExpo" title="Panama Pacific Int'l Expo. site">
@@ -20508,7 +20505,7 @@
 									<heading id="CarsonDesertNV" title="Carson Desert">
 										<heading id="CarsonSinkNV" title="Carson Sink">
 											<heading id="ClambakeSiteNV" title="Clambake Site"/>
-											<heading id="StillwaterMRidgeNV" title="Stillwater Marsh Ridge"/> <!-- Lat: 39.61417 Long: -118.44972 -->
+											<heading id="StillwaterMRidgeNV" title="Stillwater Marsh Ridge"/>
 										</heading>
 									</heading>
 									<heading id="ClamshellLakeSite" title="Clamshell Lake Site"/>
@@ -20538,11 +20535,9 @@
 										<synonym value="Grimes Petroglyphs"/>
 										<synonym value="Grimes Point Petroglyph"/>
 									</heading>
-									<heading id="GutPastureChNV" title="Gut Pasture"/> <!-- Where beer bellies go upon retirement? -->
+									<heading id="GutPastureChNV" title="Gut Pasture"/>
 									<heading id="HathawayBeachChNV" title="Hathaway Beach"/>
-									<heading id="HazenChNV" title="Hazen">
-										<!-- 	Latitude: 39.56528°; Longitude: -119.04528° -->
-									</heading>
+									<heading id="HazenChNV" title="Hazen"/>
 									<heading id="HiddenCaveChNV" title="Hidden Cave">
 										<heading id="HiddenCaveLBedChNV" title="Lakebed below Hidden Cave"/>
 									</heading>
@@ -21299,7 +21294,7 @@
 									</heading>
 								</heading>
 							</heading>
-							<heading id="LanderCoNV" title="Lander county"> <!-- Done -->
+							<heading id="LanderCoNV" title="Lander county">
 								<synonym value="PROVENIENCE = Lander county, Nevada"/>
 								<heading id="PlacesLanderNV" title="Place Names" noMatch="true">
 									<heading id="AckermanSprNV" title="Ackerman Springs"/>
@@ -21685,9 +21680,7 @@
 								<synonym value="Smelser Pass"/>
 								<synonym value="Louds Site #5"/>
 								<heading id="PlacesPershingNV" title="Place Names" noMatch="true">
-									<heading id="HumboldtLake" title="Humboldt Lake"> <!-- was missplaced in Humboldt co., NV -->
-										<!-- 	Latitude: 40.00306°; Longitude: -118.62056° -->
-									</heading>
+									<heading id="HumboldtLake" title="Humboldt Lake"/> <!-- was missplaced in Humboldt co., NV -->
 									<heading id="LovelockPershingNV" title="Lovelock city"> <!-- As opposed to cave.  Do we have anything from here? -->
 										<synonym value="Lovelock, city of"/>
 									</heading>
@@ -22103,7 +22096,7 @@
 							<heading id="CliffDwellers" title="Cliff Dwellers"/>
 						</heading>
 					</heading>
-					<heading id="Southerncentralstates" title="Southern central states"> <!-- done -->
+					<heading id="Southerncentralstates" title="Southern central states">
 						<heading id="ArkansasState" title="Arkansas"/>
 						<heading id="KansasState" title="Kansas">
 							<heading id="BrownCounty" title="Brown county"> <!-- FIX!  (was just "Brown") change back to Brown and specify exclusions -->
@@ -22365,7 +22358,6 @@
 					<heading id="DeliumOldGreece" title="Delium"> <!-- Not modern? -->
 						<synonym value="Δήλιον"/>
 						<synonym value="Dêlion"/>
-						<synonym value="Delium"/>
 					</heading>
 					<heading id="LivadeiaOldGreece" title="Livadeia">
 						<synonym value="Lebadeia"/>
@@ -22736,7 +22728,6 @@
 						<synonym value="Rodos"/>
 						<synonym value="Rodi"/>
 						<synonym value="Rodes"/>
-						<synonym value="Rhodos"/>
 						<synonym value="Rhodian"/>
 						<synonym value="Rhodians"/>
 						<implies facet="Location" cat="RhodesGreece"/>

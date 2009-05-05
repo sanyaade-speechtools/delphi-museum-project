@@ -448,6 +448,7 @@
 		</heading>
 		<heading id="HuntingEquipmentHuntEq" title="Hunting Equipment">
 			<synonym value="Hunting Items"/>
+			<implies facet="ActivityorContext" cat="HuntingActivity"/>
 			<heading id="AnimalCallsHuntEq" title="Animal Calls">
 				<synonym value="Animal Call"/>
 				<synonym value="Animal-Call"/>
@@ -3179,12 +3180,11 @@
 				<synonym value="Basketry Caps (Lid)"/>
 				<synonym value="Basketry Caps (Lids)"/>
 			</heading>
-			<heading id="BasketBirdTrapBasket" title="Bird Trap Basket">
-				<!-- Should Also Be Made A Kind of Trap (Armament) -->
+			<heading id="BasketBirdTrapBasket" title="Bird Trap Basket"> <!-- should also be made a kind of trap (armament) -->
 				<synonym value="Bird Trap Baskets"/>
 				<synonym value="Bird-Trap Basket"/>
 				<synonym value="Bird-Trap Baskets"/>
-				<implies facet="ActivityorContext" cat="Hunting"/>
+				<implies facet="ActivityorContext" cat="HuntingActivity"/>
 			</heading>
 			<heading id="BurdenBasket" title="Burden Basket">
 				<synonym value="Burden Baskets"/>
@@ -8153,6 +8153,7 @@
 							<synonym value="Hunting Bells"/>
 							<synonym value="Hunt Bell"/>
 							<synonym value="Hunt Bells"/>
+							<implies facet="ActivityorContext" cat="HuntingActivity"/>
 						</heading>
 						<heading id="OrnamentBell" title="Ornament Bell">
 							<synonym value="Ornament Bells"/>
