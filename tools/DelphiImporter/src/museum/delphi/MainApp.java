@@ -2290,7 +2290,6 @@ public class MainApp {
 	protected void buildFullReport() {
 		try {
 			setStatus( "Building usage reports...");
-			String[] colNames = userProjInfo.metaDataReader.getColumnNames();
 			ArrayList<Pair<String,Counter<String>>> allVocabCounts =
 				userProjInfo.metaDataReader.compileUsageForAllColumns(2, 100, -1, this );
 			String outFileName = userProjInfo.metaDataReader.getFileName();
@@ -2308,7 +2307,7 @@ public class MainApp {
 					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
 					Counter<String> colCounts = pair.second;
 					totalCounts.addCounts(colCounts);
-					colCounts.write(writer, true, 0, true);
+					colCounts.write(writer, true, 0, null, false, true);
 					writer.flush();
 					writer.close();
 				} catch( IOException e ) {
@@ -2316,17 +2315,37 @@ public class MainApp {
 					throw new RuntimeException("Could not create output file: " + filename);
 				}
 		    }
-			filename = outFileName+"_Total_Usage.txt";
-			debug(1,"Saving total usage info to file: " + filename);
-	        try {
-	        	// TODO Make this a UTF8 file out.
-				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-				totalCounts.write(writer, true, 0, true);
-				writer.flush();
-				writer.close();
-			} catch( IOException e ) {
-	            e.printStackTrace();
-				throw new RuntimeException("Could not create output file: " + filename);
+			// Ask the user whether to save total Usage to a text file, or to a sql load file.
+			Object[] options = { "Text", "SQL", "CANCEL" };
+			int response = JOptionPane.showOptionDialog(getJFrame(),
+					            "Do you want to save the statistics as \n"
+								+"a text listing, or as an SQL load file?",
+								"Saving vocab statistics to file",
+								JOptionPane.YES_NO_CANCEL_OPTION,
+								JOptionPane.QUESTION_MESSAGE, null,
+								options, options[1] );
+			String separator = null;
+			if( response == 0 ) {	// Save to txt file
+				filename = outFileName+"_Total_Usage.txt";
+				debug(1,"Saving total usage info to file: " + filename);
+			} else if( response == 1 ) {	// Save to SQL load file
+				filename = outFileName+"_Total_Usage.sql";
+				separator = "|";
+				debug(1,"Saving total usage info to SQL load file: " + filename);
+			} else {
+				filename = null;
+			}
+			if(filename!= null) {
+		        try {
+		        	// TODO Make this a UTF8 file out.
+					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+					totalCounts.write(writer, true, 0, separator, true, true);
+					writer.flush();
+					writer.close();
+				} catch( IOException e ) {
+		            e.printStackTrace();
+					throw new RuntimeException("Could not create output file: " + filename);
+				}
 			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -2353,7 +2372,7 @@ public class MainApp {
 		        try {
 		        	// TODO Make this a UTF8 file out.
 					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
-					vocabCounts.write(writer, true, 0, true);
+					vocabCounts.write(writer, true, 0, null, false, true);
 					writer.flush();
 					writer.close();
 				} catch( IOException e ) {

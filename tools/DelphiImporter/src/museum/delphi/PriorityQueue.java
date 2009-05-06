@@ -221,17 +221,23 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 	  *
 	  * @param minPrioToPrint
 	  */
-	 public void write( java.io.BufferedWriter writer, boolean fDestructive, int minPrioToPrint, boolean fWithNewlines)
+	 public void write( java.io.BufferedWriter writer, boolean fDestructive,
+			 int minPrioToPrint, String separator, boolean escapeStrings, boolean fWithNewlines)
 	 			throws java.io.IOException {
+		 if(separator==null)
+			 separator = " : ";
 		 PriorityQueue<I> pq = fDestructive?this:clone();
 		 int numItemsPrinted = 0;
 		 int nTotalMinus1 = size()-1;
 		 while(pq.hasNext()) {
-			 double priority = pq.getPriority();
+			 int priority = (int)pq.getPriority();
 			 if(priority < minPrioToPrint)
 				 break;
 			 I item = pq.next();
-			 writer.append(priority+" : "+item.toString());
+			 String outStr = item.toString();
+			 if(escapeStrings)
+				 outStr = StringUtils.escapeForDBAndXML(outStr);
+			 writer.append(priority+separator+outStr);
 			 if (numItemsPrinted < nTotalMinus1) {
 				 if(fWithNewlines)
 					 writer.newLine();

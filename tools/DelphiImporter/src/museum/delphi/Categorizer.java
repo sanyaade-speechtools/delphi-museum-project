@@ -263,7 +263,7 @@ public class Categorizer {
 	    						+"_"+(colDumpInfo[i].name.replaceAll("\\W", "_"))+"_Usage.txt";
 					BufferedWriter usageWriter = new BufferedWriter(new FileWriter( currFilename ));
 	    			debug(1,"Saving column usage info to file: " + currFilename);
-	    			vocabCountsForCol.write(usageWriter, true, 0, true);
+	    			vocabCountsForCol.write(usageWriter, true, 0, null, false, true);
 					usageWriter.flush();
 					usageWriter.close();
 				}
