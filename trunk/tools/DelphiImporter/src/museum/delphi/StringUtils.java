@@ -2,18 +2,20 @@
  *
  */
 package museum.delphi;
+import java.io.StringWriter;
+import java.text.CharacterIterator;
+import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.w3c.dom.*;
-import java.io.*;
+import org.w3c.dom.Element;
 
 /**
  * @author Patrick
@@ -50,6 +52,24 @@ public class StringUtils {
 			return str;
 		debug( 2, "trimQuotes mapping ["+str+"] to ["+ret+"]");
 		return ret;
+	}
+
+	public static String escapeForDBAndXML(String input) {
+		final StringBuilder result = new StringBuilder();
+		final StringCharacterIterator iterator = new StringCharacterIterator(input);
+		char character =  iterator.current();
+		while (character != CharacterIterator.DONE ){
+			if((character == '\"')
+				||(character == '\'')
+				||(character == '\\')
+				||(character == '`' )
+				||(character == '|' )) {
+				result.append('\\');
+			}
+			result.append(character);
+			character = iterator.next();
+		}
+		return result.toString();
 	}
 
 	public static String buildLineFromTokens( ArrayList<String> tokens, int sepChar ){

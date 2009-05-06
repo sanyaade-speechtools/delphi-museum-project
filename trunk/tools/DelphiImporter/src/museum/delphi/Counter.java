@@ -186,9 +186,11 @@ public class Counter <I> {
 	 * @param minCountToPrint
 	 * @return partial string representation
 	 */
-	 public void write( java.io.BufferedWriter writer, boolean fDestructive, int minCountToPrint, boolean fWithNewlines)
+	 public void write( java.io.BufferedWriter writer, boolean fDestructive,
+			 int minCountToPrint, String separator, boolean escapeStrings, boolean fWithNewlines)
 		throws java.io.IOException {
-		asPriorityQueue().write( writer, fDestructive, minCountToPrint, fWithNewlines);
+		asPriorityQueue().write( writer, fDestructive, minCountToPrint,
+									separator, escapeStrings, fWithNewlines);
 	 }
 
 	/**
