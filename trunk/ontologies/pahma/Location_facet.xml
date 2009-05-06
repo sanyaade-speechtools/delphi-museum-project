@@ -19,6 +19,14 @@
 		State Forests,
 		Missions (done),
 		Reservations and Rancherias
+		
+		To add:
+		
+		 (2121 objects)
+		El Tepetate
+		Kynumpt Harbor
+		La Mezcalera
+		Paso Real
 	</notes>
 	<heading id="ModernLocations" title="Modern Placenames" noMatch="true">
 		<heading id="Africa" title="Africa">
@@ -493,6 +501,9 @@
 					<heading id="Harar" title="Harar"/>
 					<heading id="Jijiga" title="Jijiga"/>
 					<heading id="Jimma" title="Jimma"/>
+					<heading id="KarkarDistrict" title="Kärkär District">
+						<synonym value="Kärkär"/>
+					</heading>
 					<heading id="LakeBeseka" title="Lake Beseka"/>
 					<heading id="Lalibela" title="Lalibela"/>
 					<heading id="Nazaret" title="Nazaret">
@@ -3205,7 +3216,7 @@
 					<synonym value="Amerika Samoa"/>
 					<synonym value="Samoa Amelika"/>
 					<synonym value="Samoa"/>
-					<synonym value="Samoan"/>
+					<implies facet="Culture" cat="SamoanCulture"/>
 					<heading id="AunuuIsland" title="Aunu'u Island">
 						<synonym value="Aunuu Island"/>
 						<synonym value="Aunu'u"/>
@@ -3328,7 +3339,7 @@
 					<synonym value="German Samoa"/>
 					<synonym value="Navigators Islands"/>
 					<synonym value="Malo Sa'oloto Tuto'atasi o Somoa"/>
-					<implies facet="Culture" cat="PolynesianCultures"/>
+					<implies facet="Culture" cat="SamoanCulture"/>
 					<heading id="SavaiiIsland" title="Savai'i Island"/>
 					<heading id="UpoluIsland" title="Upolu Island"/>
 				</heading>
@@ -3652,6 +3663,9 @@
 								<heading id="Rimacvalley" title="Rimac valley">
 									<heading id="Nieveria" title="Nieveria"/>
 								</heading>
+								<heading id="SanBartoloTownPeru" title="San Bartolo">
+									<heading id="CurayacuPeru" title="Curayacu"/>
+								</heading>
 								<heading id="SupeDistrict" title="Supe District">
 									<heading id="Paramonga" title="Paramonga"/>
 								</heading>
@@ -3808,6 +3822,7 @@
 							</heading>
 							<heading id="ToparoWashPeru" title="Topara Wash">
 								<synonym value="Topara"/>
+								<heading id="JahuayPeru" title="Jahuay"/>
 							</heading>
 							<!-- End of Verify -->
 						</heading>
@@ -4368,6 +4383,9 @@
 						<heading id="Chachahuatlan" title="Chachahuatlan"/>
 						<heading id="Chapala" title="Chapala"/>
 						<heading id="Chiquistlan" title="Chiquistlan"/>
+						<heading id="CihautlanMX" title="Cihautlan">
+							<synonym value="Sihuatlan"/>
+						</heading>
 						<heading id="Guadalajara" title="Guadalajara"/>
 						<heading id="Jazmin" title="Jazmín">
 							<synonym value="Jazmin"/>
@@ -4497,9 +4515,9 @@
 						<heading id="Navojoa" title="Navojoa">
 							<heading id="Mayo" title="Mayo"/>
 						</heading>
-						<heading id="NogalesMX" title="Nogales">
+						<!-- <heading id="NogalesMX" title="Nogales"> Disambiguate
 							<excl value="Arizona"/>
-						</heading>
+						</heading> -->
 						<heading id="PuntaLaCholea" title="Punta La Cholea"/>
 						<heading id="PuntaPenasco" title="Punta Penasco"/>
 						<heading id="SanCarloCove" title="San Carlo Cove"/>
@@ -5881,7 +5899,6 @@
 									</heading>
 									<heading id="TheodoreRooseveltDam" title="Theodore Roosevelt Dam"/>
 								</heading>
-								<heading id="GilaRiver" title="Gila River"/>
 								<heading id="Grahamcounty" title="Graham county">
 									<synonym value="AZ-Graham County"/>
 									<heading id="DeweyFlat" title="Dewey Flat"/>
@@ -7289,7 +7306,6 @@
 											</heading>
 											<heading id="CAHumNL11" title="CA-Hum-NL-11"/>
 											<heading id="CAHumNL12" title="CA-Hum-NL-12">
-												<synonym value="Chinach"/>
 												<implies facet="Location" cat="ChinachHumboldtCA"/>
 											</heading>
 										</heading>
@@ -8822,6 +8838,7 @@
 										</heading>
 										<heading id="LakeCitySiteNevCA" title="Lake City site"/>
 										<heading id="NevadaCityNevCA" title="Nevada City"/>
+										<heading id="NoBloomfieldSNevCA" title="North Bloomfield site"/>
 									</heading>
 									<heading id="TrinomNevadaCA" title="Trinomial site names" noMatch="true">
 										<heading id="CANev1" title="CA-Nev-1">
@@ -8949,11 +8966,11 @@
 										</heading>
 										<heading id="CANev53" title="CA-Nev-53">
 											<synonym value="CA-Nev- 53"/>
-											<synonym value="North Bloomfield site"/>
+											<implies facet="Location" cat="NoBloomfieldSNevCA"/>
 										</heading>
 										<heading id="CANev54" title="CA-Nev-54">
 											<synonym value="CA-Nev- 54"/>
-											<synonym value="North Bloomfield site"/>
+											<implies facet="Location" cat="NoBloomfieldSNevCA"/>
 										</heading>
 										<heading id="CANev55" title="CA-Nev-55">
 											<synonym value="CA-Nev- 55"/>
