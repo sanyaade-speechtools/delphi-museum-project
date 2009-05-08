@@ -258,11 +258,10 @@ public class SQLUtils {
 	 * @param metaDataReader initialized reader of metadata source.
 	 * @param imagePathsReader pass in non-NULL to add image path info
 	 */
-	public static void writeObjectsSQL( MetaDataReader metaDataReader,
+	public static void writeObjectsSQL( String filename, MetaDataReader metaDataReader,
 										ImagePathsReader imagePathsReader ) {
-    	String filename = null;
     	String basefilename = null;
-    	String extension = ".sql";
+    	String extension = ".txt";
     	String currFilename = null;
     	int iOutputFile;
     	int nObjsOutMax = Integer.MAX_VALUE;
@@ -275,7 +274,6 @@ public class SQLUtils {
 			// We need ObjectID, ObjectNumber, ObjectName, Description
 			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
 
-			filename = metaDataReader.getFileName();
 	    	int iDot = filename.lastIndexOf('.');
 	    	if( iDot<=0 )
 	    		throw new RuntimeException("BuildObjectSQL: bad output filename!");
