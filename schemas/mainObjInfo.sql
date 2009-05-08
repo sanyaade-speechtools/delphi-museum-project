@@ -187,6 +187,8 @@ CREATE TABLE `hooks` (
   `token`    VARCHAR(255) NOT NULL,
   INDEX `hk_cat_index` (`cat_id`),
   INDEX `hk_token_index` (`token`),
+	-- This can be omitted if not supporting api/checkTerms.php
+	FULLTEXT KEY `hk_token_fulltext` (token),
   CONSTRAINT `hk_ibfk_1` FOREIGN KEY (`cat_id`)
       REFERENCES `categories` (`id`)
 )ENGINE=MyIsam;
