@@ -1686,15 +1686,17 @@ public class MainApp {
 							//for(int iCol=1; iCol<nStringCols; iCol++) {
 							for(int iCol=1; iCol<nCols; iCol++) {
 								// Must escape quotes in output
-								String curr = colStrings.get(iCol);
-								String replaced;
-								if(curr.length()>0) {
-									replaced = curr.replaceAll("[\\\\]", "\\\\\\\\");
-									replaced = replaced.replaceAll("[\"]", "\\\\\"");
-								} else {
-									replaced = curr;
+								String curr = colStrings.get(iCol).trim();
+								if(!curr.isEmpty()) {
+									String replaced;
+									if(curr.length()>0) {
+										replaced = curr.replaceAll("[\\\\]", "\\\\\\\\");
+										replaced = replaced.replaceAll("[\"]", "\\\\\"");
+									} else {
+										replaced = curr;
+									}
+									writer.write(replaced);
 								}
-								writer.write(replaced);
 								if( iCol < nSeps) {
 									writer.write(sepWithQuotes);
 								} else {
