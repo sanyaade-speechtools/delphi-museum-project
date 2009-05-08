@@ -351,8 +351,11 @@ public class SQLUtils {
 		try {
 			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
 			int objNameCol = DumpColumnConfigInfo.getNameColumnIndex();
+			// There are some pipes as field separators when Name is merged
+			// from several lines or DB fields. Turn these into line breaks.
+			// Since name is displayed, let's convert to semi-colon.
 			String name = (line.get(objNameCol).length() == 0)?"(no name)"
-					:(line.get(objNameCol).replace("\"", "\\\"").replace("'", "\\'"));
+					:(line.get(objNameCol).replace("\"", "\\\"").replace("'", "\\'")).replace("|", ";" );
 			ArrayList<ImageInfo> imgInfo = null;
 			if( imagePathsReader != null )
 				imgInfo = imagePathsReader.GetInfoForID(id);
@@ -388,7 +391,10 @@ public class SQLUtils {
 				String newHNLine = line.get(DumpColumnConfigInfo.hiddenNotesCols.get(i)).trim();
 				if( newHNLine.isEmpty() )
 					continue;
-				newHNLine = newHNLine.replaceAll("[\\s]+", " " );
+				// There are some pipes as field separators when Description is merged
+				// from several lines or DB fields. Convert to spaces, since hiddenNotes is keyword indexed.
+				// Also, fold multiple spaces and newlines into single space.
+				newHNLine = newHNLine.replaceAll("[|\\s]+", " " );
 				// newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
 				newHNLine = newHNLine.replace("\"", "\\\"");
 				newHNLine = newHNLine.replace("'", "\\'");
