@@ -47,6 +47,7 @@ import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 
 
@@ -148,6 +149,16 @@ public class MainApp {
 	private JButton jButton_VocabBrowse = null;
 	private JTextField jTextField_ImgPathsFile = null;
 	private JButton jButton_ImgPathsBrowse = null;
+	private JMenu uploadMenu = null;
+	private JMenuItem uploadObjMDMenuItem = null;
+	private JMenu uploadOntologyMDMenu = null;
+	private JMenu uploadImageMDMenu = null;
+	private JMenuItem uploadOntoConceptsMDMenuItem = null;
+	private JMenuItem uploadObjectConceptAssocMDMenuItem = null;
+	private JMenuItem uploadImageMDMenuItem = null;
+	private JMenuItem rebuildCachedImageMDMenuItem = null;
+	private JMenuItem uploadCatCardImageMDMenuItem = null;
+	private JMenuItem uploadOntoHooksAndExclMenuItem = null;
 
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
@@ -639,6 +650,196 @@ public class MainApp {
 
 
 	/**
+	 * This method initializes uploadMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getUploadMenu() {
+		if (uploadMenu == null) {
+			uploadMenu = new JMenu();
+			uploadMenu.setName("Upload");
+			uploadMenu.setText("Upload");
+			uploadMenu.setMnemonic(KeyEvent.VK_U);
+			uploadMenu.add(getUploadObjMDMenuItem());
+			uploadMenu.add(getUploadOntologyMDMenu());
+			uploadMenu.add(getUploadImageMDMenu());
+		}
+		return uploadMenu;
+	}
+
+	/**
+	 * This method initializes uploadObjMDMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadObjMDMenuItem() {
+		if (uploadObjMDMenuItem == null) {
+			uploadObjMDMenuItem = new JMenuItem();
+			uploadObjMDMenuItem.setText("Objects Metadata...");
+			uploadObjMDMenuItem.setMnemonic(KeyEvent.VK_O);
+			uploadObjMDMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+				}
+			});
+		}
+		return uploadObjMDMenuItem;
+	}
+
+	/**
+	 * This method initializes uploadOntologyMDMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getUploadOntologyMDMenu() {
+		if (uploadOntologyMDMenu == null) {
+			uploadOntologyMDMenu = new JMenu();
+			uploadOntologyMDMenu.setText("Ontology");
+			uploadOntologyMDMenu.setMnemonic(KeyEvent.VK_N);
+			uploadOntologyMDMenu.add(getUploadOntoConceptsMDMenuItem());
+			uploadOntologyMDMenu.add(getUploadOntoHooksAndExclMenuItem());
+			uploadOntologyMDMenu.add(getUploadObjectConceptAssocMDMenuItem());
+		}
+		return uploadOntologyMDMenu;
+	}
+
+	/**
+	 * This method initializes uploadImageMDMenu
+	 *
+	 * @return javax.swing.JMenu
+	 */
+	private JMenu getUploadImageMDMenu() {
+		if (uploadImageMDMenu == null) {
+			uploadImageMDMenu = new JMenu();
+			uploadImageMDMenu.setText("Images");
+			uploadImageMDMenu.setMnemonic(KeyEvent.VK_I);
+			uploadImageMDMenu.add(getUploadImageMDMenuItem());
+			uploadImageMDMenu.add(getRebuildCachedImageMDMenuItem());
+			uploadImageMDMenu.add(getUploadCatCardImageMDMenuItem());
+		}
+		return uploadImageMDMenu;
+	}
+
+	/**
+	 * This method initializes uploadOntoConceptsMDMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadOntoConceptsMDMenuItem() {
+		if (uploadOntoConceptsMDMenuItem == null) {
+			uploadOntoConceptsMDMenuItem = new JMenuItem();
+			uploadOntoConceptsMDMenuItem.setText("Concepts Metadata...");
+			uploadOntoConceptsMDMenuItem.setMnemonic(KeyEvent.VK_C);
+			uploadOntoConceptsMDMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+						}
+					});
+		}
+		return uploadOntoConceptsMDMenuItem;
+	}
+
+	/**
+	 * This method initializes uploadObjectConceptAssocMDMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadObjectConceptAssocMDMenuItem() {
+		if (uploadObjectConceptAssocMDMenuItem == null) {
+			uploadObjectConceptAssocMDMenuItem = new JMenuItem();
+			uploadObjectConceptAssocMDMenuItem.setText("Object to Concept Associations...");
+			uploadObjectConceptAssocMDMenuItem.setMnemonic(KeyEvent.VK_A);
+			uploadObjectConceptAssocMDMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+						}
+					});
+		}
+		return uploadObjectConceptAssocMDMenuItem;
+	}
+
+	/**
+	 * This method initializes uploadImageMDMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadImageMDMenuItem() {
+		if (uploadImageMDMenuItem == null) {
+			uploadImageMDMenuItem = new JMenuItem();
+			uploadImageMDMenuItem.setText("Image Metadata...");
+			uploadImageMDMenuItem.setMnemonic(KeyEvent.VK_I);
+			uploadImageMDMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+				}
+			});
+		}
+		return uploadImageMDMenuItem;
+	}
+
+	/**
+	 * This method initializes rebuildCachedImageMDMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getRebuildCachedImageMDMenuItem() {
+		if (rebuildCachedImageMDMenuItem == null) {
+			rebuildCachedImageMDMenuItem = new JMenuItem();
+			rebuildCachedImageMDMenuItem.setText("Rebuild Cached Image Paths...");
+			rebuildCachedImageMDMenuItem.setMnemonic(KeyEvent.VK_R);
+			rebuildCachedImageMDMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+						}
+					});
+		}
+		return rebuildCachedImageMDMenuItem;
+	}
+
+	/**
+	 * This method initializes uploadCatCardImageMDMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadCatCardImageMDMenuItem() {
+		if (uploadCatCardImageMDMenuItem == null) {
+			uploadCatCardImageMDMenuItem = new JMenuItem();
+			uploadCatCardImageMDMenuItem.setText("Catalog Card Image Metadata...");
+			uploadCatCardImageMDMenuItem.setMnemonic(KeyEvent.VK_C);
+			uploadCatCardImageMDMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+						}
+					});
+		}
+		return uploadCatCardImageMDMenuItem;
+	}
+
+	/**
+	 * This method initializes uploadOntoHooksAndExclMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadOntoHooksAndExclMenuItem() {
+		if (uploadOntoHooksAndExclMenuItem == null) {
+			uploadOntoHooksAndExclMenuItem = new JMenuItem();
+			uploadOntoHooksAndExclMenuItem.setText("Hooks and Exclusions...");
+			uploadOntoHooksAndExclMenuItem.setMnemonic(KeyEvent.VK_H);
+			uploadOntoHooksAndExclMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+						}
+					});
+		}
+		return uploadOntoHooksAndExclMenuItem;
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -853,6 +1054,7 @@ public class MainApp {
 			//jJMenuBar.add(getVocabActionsMenu());
 			//jJMenuBar.add(getDataActionsMenu());
 			//jJMenuBar.add(getObjectActionsMenu());
+			jJMenuBar.add(getUploadMenu());
 			jJMenuBar.add(getHelpMenu());
 		}
 		return jJMenuBar;
@@ -1214,7 +1416,7 @@ public class MainApp {
 			buildObjectSQLMenuItem.setMnemonic('O');
 			buildObjectSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					buildObjectSQL();
+					saveObjectSQL();
 				}
 			});
 		}
@@ -1693,12 +1895,29 @@ public class MainApp {
 		}
 	}
 
-	private void buildObjectSQL() {
+	/**
+	 *
+	 */
+	private void saveObjectSQL() {
+		if( userProjInfo.metaDataReader == null ) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Object info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
 		try {
 			debug(1,"Build Objects SQL...");
-			// We need to pick an output file
-			if( userProjInfo.metaDataReader != null ) {
-				SQLUtils.writeObjectsSQL(userProjInfo.metaDataReader,
+			// Ask user to save info to a file.
+			String outFileName;
+			if(( outFileName = userProjInfo.getMetadataPath()) == null ) {
+				outFileName = userProjInfo.getMetadataConfigPath();
+			}
+			int iDot = outFileName.lastIndexOf('.');
+			if( iDot > 0 )
+				outFileName = outFileName.substring(0, iDot);
+			outFileName += "_SQL.txt";
+    		String filename = getSafeOutfile("Save Object Metadata to files", outFileName, txtFilter);
+    		if( filename != null ) {
+				SQLUtils.writeObjectsSQL( filename, userProjInfo.metaDataReader,
 											userProjInfo.imagePathsReader);
 			}
 		} catch( RuntimeException e ) {
