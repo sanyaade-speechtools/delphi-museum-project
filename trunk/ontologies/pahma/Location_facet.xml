@@ -376,7 +376,7 @@
 						<heading id="Panapolis" title="Panapolis"/>
 						<heading id="QusEgypt" title="Qus"/>
 						<heading id="ShurafaEgypt" title="Shurafa"/>
-						<heading id="ThebesEgypt" title="Thebes">
+						<heading id="ThebesEgypt" title="Thebes" noMatch="true"> <!-- Disambiguate from Greek city -->
 							<excl value="Greece"/>
 							<heading id="KarnakEgypt" title="Karnak"/>
 							<heading id="LuxorEgypt" title="Luxor"/>
@@ -440,10 +440,7 @@
 						<synonym value="Djebel Tomat"/>
 					</heading>
 					<heading id="Khartoum" title="Khartoum"/>
-					<heading id="MeroeEgypt" title="Meroë">
-						<synonym value="Meroe"/>
-						<implies facet="Location" cat="MeroeNubia"/>
-					</heading>
+					<heading id="MeroeEgypt" title="Meroë" noMatch="true"/>
 					<heading id="Shabona" title="Shabona">
 						<synonym value="Shabonna"/>
 					</heading>
@@ -1231,7 +1228,7 @@
 							<heading id="MtHymettosGreece" title="Mount Hymettos"/>
 							<heading id="ParosGreece" title="Paros" noMatch="true"/>
 							<heading id="PiraeusGreece" title="Piraeus"/>
-							<heading id="PorosGreece" title="Poros"/>
+							<heading id="PorosGreece" title="Poros" noMatch="true"/>
 							<heading id="SalamisGreece" title="Salamis"/>
 							<heading id="SpataGreece" title="Spata"/>
 							<heading id="SpetsesGreece" title="Spetses"/>
@@ -1266,7 +1263,7 @@
 						<heading id="PeloponneseGreece" title="Peloponnese" noMatch="true">
 							<heading id="CorinthGreece" title="Corinth" noMatch="true"/>
 							<heading id="KalamataGreece" title="Kalamata"/>
-							<heading id="TirynsGreece" title="Tiryns"/>
+							<heading id="TirynsGreece" title="Tiryns" noMatch="true"/>
 						</heading>
 						<heading id="NorthAegean" title="North Aegean">
 							<heading id="LesbosGreece" title="Lesbos" noMatch="true"/>
@@ -1623,7 +1620,6 @@
 					</heading>
 				</heading>
 				<heading id="France" title="France">
-					<synonym value="French"/>
 					<synonym value="Francais"/>
 					<synonym value="Français"/>
 					<synonym value="Francaise"/>
@@ -3218,7 +3214,7 @@
 					<synonym value="Territory of American Samoa"/>
 					<synonym value="Amerika Samoa"/>
 					<synonym value="Samoa Amelika"/>
-					<synonym value="Samoa"/>
+					<!-- <synonym value="Samoa"/> Disambiguate -->
 					<implies facet="Culture" cat="SamoanCulture"/>
 					<heading id="AunuuIsland" title="Aunu'u Island">
 						<synonym value="Aunuu Island"/>
@@ -3338,7 +3334,6 @@
 				<heading id="WSamoaCountry" title="Western Samoa">
 					<synonym value="Independent State of Somoa"/>
 					<synonym value="Samoa"/>
-					<synonym value="Samoan"/>
 					<synonym value="German Samoa"/>
 					<synonym value="Navigators Islands"/>
 					<synonym value="Malo Sa'oloto Tuto'atasi o Somoa"/>
@@ -3396,7 +3391,7 @@
 				<heading id="AntiguaandBarbuda" title="Antigua and Barbuda"/>
 				<heading id="TheBahamas" title="The Bahamas">
 					<synonym value="Bahamas"/>
-					<heading id="BahamanNassau" title="Nassau"/> <!-- need to differentiate from city in Germany -->
+					<heading id="BahamanNassau" title="Nassau" noMatch="true"/> <!-- need to differentiate from city in Germany -->
 				</heading>
 				<heading id="Barbados" title="Barbados"/>
 				<heading id="Cuba" title="Cuba"/>
@@ -3621,7 +3616,7 @@
 								</heading>
 							</heading>
 							<heading id="PeruMotupe" title="Motupe"/>
-							<heading id="PeruViru" title="Motupe"/>
+							<heading id="PeruViru" title="Viru"/>
 						</heading>
 						<heading id="PeruCentralCoast" title="Central Coast">
 							<synonym value="Central Peru"/>
@@ -4185,7 +4180,7 @@
 								<synonym value="La Huerta de Los Indios"/>
 							</heading>
 							<heading id="Picachopeaks" title="Picacho peaks"/>
-							<heading id="SanMiguelBCMX" title="San Miguel"/>
+							<heading id="SanMiguelBCMX" title="San Miguel" noMatch="true"/> <!-- Disambiguate -->
 							<heading id="SanQuintinBCMX" title="San Quintin">
 								<synonym value="San Quentin"/>
 								<excl value="Prison"/> <!-- Disambiguates from facility in Marin co., California -->
@@ -4345,7 +4340,7 @@
 							<excl value="California"/> Disambiguate from California city
 						</heading> -->
 						<heading id="SanMartinPachivia" title="San Martin Pachivia"/>
-						<heading id="SanMiguelGuerrMX" title="San Miguel"/>
+						<heading id="SanMiguelGuerrMX" title="San Miguel" noMatch="true"/> <!-- Disambiguate -->
 						<heading id="SanMiguelHuapanMX" title="San Miguel Huapan"/>
 						<heading id="TaxcoMX" title="Taxco"/>
 						<heading id="Tecoanapa" title="Tecoanapa"/>
@@ -4371,7 +4366,7 @@
 						<heading id="Ixmiquilpan" title="Ixmiquilpan"/>
 						<heading id="LaCueva" title="La Cueva"/>
 						<heading id="SanMateo" title="San Mateo"/>
-						<heading id="SanMiguelHidalMX" title="San Miguel"/>
+						<heading id="SanMiguelHidalMX" title="San Miguel" noMatch="true"/> <!-- Disambiguate -->
 						<heading id="ValledeMesquetal" title="Valle de Mesquetal"/>
 						<heading id="Zimapan" title="Zimapan"/>
 					</heading>
@@ -4620,7 +4615,7 @@
 						<heading id="NorthCarolina" title="North Carolina">
 							<heading id="CherokeeLodge" title="Cherokee Lodge"/>
 							<heading id="HorryCoNC" title="Horry county">
-								<heading id="GreenvilleHorryNC" title="Greenville">
+								<heading id="GreenvilleHorryNC" title="Greenville" noMatch="true"> <!-- Disambiguate from place of same name in Plumas co., CA -->
 									<heading id="TarRiverHorryNC" title="Tar River"/>
 								</heading>
 							</heading>
@@ -5231,7 +5226,7 @@
 								<synonym value="OR-Jefferson-NL"/>
 								<excl value="Washington"/>
 								<excl value="Missouri"/>
-								<heading id="WarmSpringsJeffOR" title="Warm Springs">
+								<heading id="WarmSpringsJeffOR" title="Warm Springs" noMatch="true"> <!-- Need to disambiguate -->
 									<excl value="Napa"/>
 									<heading id="WarmSpringsReservation" title="Warm Springs Reservation"/>
 								</heading>
@@ -5241,11 +5236,11 @@
 								<synonym value="Klamath Co."/>
 								<synonym value="OR-KL-NL-1"/>
 								<synonym value="OR-KL-NL-2"/>
-								<heading id="BeattyKlamathOR" title="Beatty"/>
+								<heading id="BeattyKlamathOR" title="Beatty" noMatch="true"/> <!-- Disambiguate -->
 								<heading id="ChiloquinKlamOR" title="Chiloquin"/>
 								<heading id="CraterLkKlamOR" title="Crater Lake"/>
 								<heading id="KlamathFallsKlamOR" title="Klamath Falls"/>
-								<heading id="KlamathLkKlamOR" title="Klamath Lake">
+								<heading id="KlamathLkKlamOR" title="Klamath Lake" noMatch="true"> <!-- Disambiguate -->
 									<heading id="UpperKlamathLake" title="Upper Klamath Lake">
 										<heading id="PelicanBayKlamOR" title="Pelican Bay"/>
 									</heading>
@@ -6139,7 +6134,6 @@
 										<heading id="TuleSpringsYumaCoAZ" title="Tule Springs">
 											<synonym value="Dome Rock Mountains Western Yuma County"/>
 											<synonym value="Tule Springs, Dome Rock Mountains Western Yuma County"/>
-											<synonym value="Tule Springs"/>
 										</heading>
 									</heading>
 									<heading id="GilaRiverYumaCoAZ" title="Gila River">
@@ -6569,7 +6563,7 @@
 							</heading>
 							<heading id="CaliforniaCountiesNorth" title="Northern CA" noMatch="true">
 								<synonym value="North Central"/> <!-- Disambiguate -->
-								<heading id="KlamathRiver" title="Klamath River">
+								<heading id="KlamathRiver" title="Klamath River" noMatch="true"> <!-- Disambiguate -->
 									<synonym value="Lower Klamath River"/>
 									<synonym value="Upper Klamath River"/>
 									<synonym value="Klamath River, N. W."/>
@@ -6703,7 +6697,6 @@
 										<heading id="CACol2" title="CA-Col-2">
 											<synonym value="CA-Col- 2"/>
 											<synonym value="Howell's Point"/>
-											<synonym value="Howell's Point Mound"/>
 											<synonym value="S-2"/>
 											<implies facet="Location" cat="HowellsPtMdColusaCA"/>
 										</heading>
@@ -6712,7 +6705,6 @@
 											<synonym value="Sandhill Site S.3 (Lillard)"/>
 											<synonym value="Sandhill #1"/>
 											<synonym value="Sandhill Site"/>
-											<synonym value="Sandhill Mound"/>
 											<implies facet="Location" cat="SandhillMdColusaCA"/>
 										</heading>
 										<heading id="CACol4" title="CA-Col-4">
@@ -6913,7 +6905,6 @@
 										</heading>
 										<heading id="PointGorda" title="Point Gorda"/>
 										<heading id="RedwoodCkHumboldtCA" title="Redwood Creek"/>
-										<heading id="RequaHumboldtCA" title="Requa"/>
 										<heading id="RequaRancheria" title="Requa Rancheria"/>
 										<heading id="RobertBchHumboldtCA" title="Robert Beach"/>
 										<heading id="SalmonCreekHumboldtCA" title="Salmon Creek"/>
@@ -6923,7 +6914,7 @@
 										<heading id="ShelterCoveHumboldtCA" title="Shelter Cove"/>
 										<heading id="ShregegonHumboldtCA" title="Shregon">
 											<synonym value="Shegegon"/> <!-- misspelling -->
-											<synonym value="Shregon"/> <!-- misspelling -->
+											<synonym value="Shergon"/> <!-- misspelling -->
 										</heading>
 										<heading id="SpyrockHumboldtCA" title="Spyrock"/>
 										<heading id="StoneLagHumboldtCA" title="Stone Lagoon"/>
@@ -7386,7 +7377,7 @@
 										</heading>
 										<heading id="CALak11" title="CA-Lak-11">
 											<synonym value="CA-Lak- 11"/>
-											<synonym value="Mauldin 3"/>
+											<!-- <synonym value="Mauldin 3"/> -->
 										</heading>
 										<heading id="CALak12" title="CA-Lak-12">
 											<synonym value="CA-Lak- 12"/>
@@ -7490,7 +7481,7 @@
 										</heading>
 										<heading id="CALak57" title="CA-Lak-57">
 											<synonym value="CA-Lak- 57"/>
-											<synonym value="Mauldin 3"/>
+											<!-- <synonym value="Mauldin 3"/> -->
 											<synonym value="Mauldin 135"/>
 										</heading>
 										<heading id="CALak59" title="CA-Lak-59">
@@ -7978,37 +7969,41 @@
 									<synonym value="Mendocino County, CA, no loc"/>
 									<synonym value="Mendocino County, CA, no loc."/>
 									<heading id="PlacesMendocinoCA" title="Place Names" noMatch="true">
-										<heading id="PotterValley" title="Potter Valley"/>
-										<heading id="CoyoteValley" title="Coyote Valley"/>
-										<heading id="Manchester" title="Manchester"/>
-										<heading id="RedwoodValley" title="Redwood Valley"/>
-										<heading id="JunctionWhitneyCrEelR" title="Junction Whitney Cr. &amp; Eel R."/>
-										<heading id="SherwoodValley" title="Sherwood Valley">
-											<heading id="SherwoodMendoCA" title="Sherwood"/>
-											<excl value="Contra Costa"/>
-										</heading>
-										<heading id="EllegePlace" title="Ellege Place"/>
-										<heading id="HoplandRancheria" title="Hopland Rancheria"/>
-										<heading id="FortBragg" title="Fort Bragg"/>
-										<heading id="CoyoteValleyRancheria" title="Coyote Valley Rancheria"/>
-										<heading id="Pinoleville" title="Pinoleville"/>
-										<heading id="HoplandMendocinoCA" title="Hopland"/>
-										<heading id="TalmageMendocinoCA" title="Talmage">
-											<heading id="MountainsouthofTalmage" title="Mountain south of Talmage"/>
-										</heading>
-										<heading id="DuttonRanch" title="Dutton Ranch"/>
 										<heading id="AndersonValley" title="Anderson Valley"/>
-										<heading id="Laytonville" title="Laytonville"/>
-										<heading id="BonnieBraeColony" title="Bonnie Brae Colony"/>
-										<heading id="CCrawfordRanch" title="C. Crawford Ranch"/>
-										<heading id="Booneville" title="Booneville"/>
 										<heading id="AsylumRancheria" title="Asylum Rancheria"/>
+										<heading id="BonnieBraeColony" title="Bonnie Brae Colony"/>
+										<heading id="Booneville" title="Booneville"/>
+										<heading id="CoyoteValley" title="Coyote Valley">
+											<heading id="CoyoteValleyRancheria" title="Coyote Valley Rancheria"/>
+										</heading>
+										<heading id="CCrawfordRanch" title="C. Crawford Ranch"/>
+										<heading id="DuttonRanch" title="Dutton Ranch"/>
+										<heading id="EllegePlace" title="Ellege Place"/>
+										<heading id="FortBragg" title="Fort Bragg"/>
+										<heading id="TheFourCorners" title="The Four Corners">
+											<heading id="French" title="French" noMatch="true"/> <!-- Disambiguate -->
+										</heading>
+										<heading id="Guidiville" title="Guidiville"/>
+										<heading id="HigginsRanch" title="Higgins Ranch"/>
+										<heading id="HoplandMendocinoCA" title="Hopland">
+											<heading id="HoplandRancheria" title="Hopland Rancheria"/>
+										</heading>
+										<heading id="Laytonville" title="Laytonville"/>
+										<heading id="Manchester" title="Manchester"/>
+										<heading id="NoyoRiver" title="Noyo River">
+											<heading id="MouthofNoyoRiver" title="Mouth of Noyo River"/>
+										</heading>
+										<heading id="PietaCreek" title="Pieta Creek"/>
+										<heading id="PineGrove" title="Pine Grove"/>
+										<heading id="Pinoleville" title="Pinoleville"/>
 										<heading id="PointArena" title="Point Arena">
 											<heading id="GarciaRiver" title="Garcia River"/>
 											<heading id="PointArenaRancheria" title="Point Arena Rancheria"/>
 										</heading>
-										<heading id="TheFourCorners" title="The Four Corners">
-											<heading id="French" title="French"/>
+										<heading id="PoonkineyRoad" title="Poonkiney Road"/>
+										<heading id="PotterValley" title="Potter Valley"/>
+										<heading id="RedwoodValley" title="Redwood Valley">
+											<heading id="RedwoodValleyRancheria" title="Redwood Valley Rancheria"/>
 										</heading>
 										<heading id="RoundValleyMenCA" title="Round Valley">
 											<excl value="Inyo"/>
@@ -8016,22 +8011,21 @@
 											<heading id="LittleLakequarters" title="Little Lake quarters"/>
 											<heading id="WrightCamp" title="Wright Camp"/>
 										</heading>
-										<heading id="PineGrove" title="Pine Grove"/>
-										<heading id="NoyoRiver" title="Noyo River">
-											<heading id="MouthofNoyoRiver" title="Mouth of Noyo River"/>
+										<heading id="SherwoodValley" title="Sherwood Valley">
+											<heading id="SherwoodMendoCA" title="Sherwood"/>
+											<excl value="Contra Costa"/>
 										</heading>
-										<heading id="PietaCreek" title="Pieta Creek"/>
-										<heading id="YokaiaRancheria" title="Yokaia Rancheria"/>
-										<heading id="HigginsRanch" title="Higgins Ranch"/>
+										<heading id="TalmageMendocinoCA" title="Talmage">
+											<heading id="MountainsouthofTalmage" title="Mountain south of Talmage"/>
+										</heading>
+										<heading id="TcumkawiMendoCA" title="Tcumkawi"/>
 										<heading id="UkiahValley" title="Ukiah Valley">
 											<heading id="BurkRanch" title="Burk Ranch"/>
 											<heading id="Ukiah" title="Ukiah"/>
 										</heading>
 										<heading id="WestportMendoCA" title="Westport"/>
-										<heading id="Guidiville" title="Guidiville"/>
-										<heading id="PoonkineyRoad" title="Poonkiney Road"/>
-										<heading id="TcumkawiMendoCA" title="Tcumkawi"/>
-										<heading id="RedwoodValleyRancheria" title="Redwood Valley Rancheria"/>
+										<heading id="JunctionWhitneyCrEelR" title="Junction Whitney Cr. &amp; Eel R."/>
+										<heading id="YokaiaRancheria" title="Yokaia Rancheria"/>
 									</heading>
 									<heading id="TrinomMendocinoCA" title="Trinomial site names" noMatch="true">
 										<heading id="CAMen1" title="CA-Men-1">
@@ -8568,7 +8562,7 @@
 											</heading>
 										</heading>
 										<heading id="TuleLakeCenter" title="Tule Lake Center"/>
-										<heading id="KlamathRiverModocCA" title="Klamath River"/> <!-- Disambiguate from other counties -->
+										<heading id="KlamathRiverModocCA" title="Klamath River" noMatch="true"/> <!-- Disambiguate from other counties -->
 										<heading id="LikelyRancheria" title="Likely Rancheria"/>
 										<!-- <heading id="LikelyModocCA" title="Likely"/> Disambiguate -->
 										<heading id="ModocBattlefield" title="Modoc Battlefield"/>
@@ -9678,12 +9672,13 @@
 										<heading id="ColeStationSiskCA" title="Cole Station">
 											<synonym value="Cole Sation 4 miles west of Grizzly Flat"/>
 										</heading>
+										<heading id="FosterSiteSisCA" title="Foster site" noMatch="true"/>
 										<heading id="HiltSiskiyouCA" title="Hilt"/>
 										<heading id="KatiminSiskCA" title="Katimin"/>
-										<heading id="KlamathLakeSiskCA" title="Klamath Lake">
+										<heading id="KlamathLakeSiskCA" title="Klamath Lake"> <!-- Disambiguate -->
 											<synonym value="Klamath Lake Area"/>
 										</heading>
-										<heading id="KlamathRiverSiskCA" title="Klamath River">
+										<heading id="KlamathRiverSiskCA" title="Klamath River"> <!-- Disambiguate -->
 											<heading id="HappyCampSiskCA" title="Happy Camp"/>
 										</heading>
 										<heading id="NoltonSiskiyouCA" title="Nolton"/>
@@ -10165,7 +10160,7 @@
 										<heading id="CASis258" title="CA-Sis-258"/>
 										<heading id="CASis259" title="CA-Sis-259"/>
 										<heading id="CASis262" title="CA-Sis-262">
-											<synonym value="Foster Site"/>
+											<implies facet="Location" cat="FosterSiteSisCA"/>
 										</heading>
 										<heading id="CASis263" title="CA-Sis-263">
 											<synonym value="Z-1"/>
@@ -10970,6 +10965,7 @@
 										<heading id="SheepRanchCalavCA" title="Sheep Ranch"/>
 										<heading id="SheepRRnchriaCalCA" title="Sheepranch Rancheria"/>
 										<heading id="SixMileCalaverasCA" title="Six Mile"/>
+										<heading id="TableMtCalaverasCA" title="Table Mountain" noMatch="true"/>
 										<heading id="ThompsonRanchCalavCA" title="Thompson Ranch"/>
 										<heading id="VallecitoCalavCA" title="Vallecito"/>
 										<heading id="WestPointCalavCA" title="West Point"/>
@@ -10999,7 +10995,7 @@
 										<heading id="CACal8" title="CA-Cal-8">
 											<synonym value="CA-Cal- 8"/>
 											<synonym value="CA-Cal-  8"/>
-											<synonym value="Table Mountain"/>
+											<implies facet="Location" cat="TableMtCalaverasCA"/>
 										</heading>
 										<heading id="CACal9" title="CA-Cal-9">
 											<synonym value="CA-Cal- 9"/>
@@ -11207,7 +11203,7 @@
 										</heading>
 										<heading id="SanPabloCityCCoCA" title="San Pablo"/>
 										<heading id="SanPabloCrCCoCA" title="San Pablo Creek"/> <!-- Where is this located? -->
-										<heading id="SherwoodCCoCA" title="Sherwood">
+										<heading id="SherwoodCCoCA" title="Sherwood" noMatch="true"> <!-- Disambiguate from place with same name in Mendocino -->
 											<excl value="Mendocino"/>
 										</heading>
 										<heading id="WalnutCreekCCoCA" title="Walnut Creek"/>
@@ -11241,7 +11237,6 @@
 										</heading>
 										<heading id="CACCo11" title="CA-CCo-11">
 											<synonym value="CA-CCo- 11"/>
-											<synonym value="Hansen site"/>
 											<implies facet="Location" cat="HansenSiteCCoCA"/>
 										</heading>
 										<heading id="CACCo12" title="CA-CCo-12">
@@ -11301,7 +11296,6 @@
 										</heading>
 										<heading id="CACCo138" title="CA-CCo-138">
 											<synonym value="Hotchkiss Mound A, B, C-138"/>
-											<synonym value="Hotchkiss Site"/>
 											<implies facet="Location" cat="HotchkissSiteCCoCA"/>
 										</heading>
 										<heading id="CACCo139" title="CA-CCo-139">
@@ -11327,12 +11321,13 @@
 										<heading id="CACCo142" title="CA-CCo-142">
 											<implies facet="Location" cat="OrindaCountryClub"/>
 										</heading>
-										<heading id="CACCo143" title="CA-CCo-143">
+										<heading id="CACCo143" title="CA-CCo-143"/>
+										<heading id="CACCo143144" title="CA-CCo-143 or 144"> <!-- TRIM from UI -->
 											<synonym value="CA-CCo-143 or CCo-144"/>
+											<implies facet="Location" cat="CACCo143"/>
+											<implies facet="Location" cat="CACCo144"/>
 										</heading>
-										<heading id="CACCo144" title="CA-CCo-144">
-											<synonym value="CA-CCo-143 or CCo-144"/>
-										</heading>
+										<heading id="CACCo144" title="CA-CCo-144"/>
 										<heading id="CACCo145" title="CA-CCo-145">
 											<synonym value="Byron Tract"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
@@ -11368,12 +11363,9 @@
 										<heading id="CACCo157" title="CA-CCo-157"/>
 										<heading id="CACCo178" title="CA-CCo-178"/> <!-- CCO-222: Keller Ranch Site -->
 										<heading id="CACCo224" title="CA-CCo-224">
-											<synonym value="Marsh Creek Pass"/>
 											<implies facet="Location" cat="MarshCrPassCCoCA"/>
 										</heading>
 										<heading id="CACCo225" title="CA-CCo-225">
-											<synonym value="Marsh Creek"/>
-											<synonym value="Old Indian Village"/>
 											<implies facet="Location" cat="MarshIndianVillCCoCA"/>
 										</heading>
 										<heading id="CACCo226" title="CA-CCo-226"/>
@@ -11506,7 +11498,6 @@
 										</heading>
 										<heading id="CACCoNL2" title="CA-CCo-NL-2">
 											<synonym value="CA-CCo-NL- 2"/>
-											<synonym value="Wild Cat Creek"/>
 											<implies facet="Location" cat="WildCatCreekCCoCA"/>
 										</heading>
 										<heading id="CACCoNL3" title="CA-CCo-NL-3">
@@ -11521,7 +11512,6 @@
 										</heading>
 										<heading id="CACCoNL7" title="CA-CCo-NL-7">
 											<synonym value="CA-CCo-NL- 7"/>
-											<synonym value="Martinez"/>
 											<implies facet="Location" cat="MartinezCCoCA"/>
 										</heading>
 										<heading id="CACCoNL8" title="CA-CCo-NL-8">
@@ -11695,6 +11685,7 @@
 											<synonym value="Drakes Bay"/>
 											<synonym value="Drakes' Bay"/>
 										</heading>
+										<heading id="FosterSiteMrnCA" title="Foster site" noMatch="true"/>
 										<heading id="HillaritaMdMarinCA" title="Hillarita mound">
 											<synonym value="Hillarita Shellmound"/>
 											<synonym value="Hillarita Md"/>
@@ -12001,20 +11992,20 @@
 											<synonym value="PB-235a"/>
 											<synonym value="Hall Mound"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="Hall Mound"/> -->
 										</heading>
 										<heading id="CAMrn302" title="CA-Mrn-302">
 											<synonym value="PB-275a"/>
 											<synonym value="Mendoza Mound #2"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="Mendoza Mound #2"/> -->
 										</heading>
 										<heading id="CAMrn307" title="CA-Mrn-307">
 											<synonym value="PB-232c (?)"/>
 										</heading>
 										<heading id="CAMrn315" title="CA-Mrn-315">
 											<synonym value="N-86c"/>
-											<synonym value="Foster site"/>
+											<implies facet="Location" cat="FosterSiteMrnCA"/>
 											<synonym value="San Rafael Shellmound"/>
 											<!-- <implies facet="Location" cat="SanRafaelMdMarinCA"/> -->
 											<!-- <heading id="SanRafaelMdMarinCA" title="San Rafael Shellmound"/> -->
@@ -12023,7 +12014,7 @@
 										<heading id="CAMrn342" title="CA-Mrn-342">
 											<synonym value="Novato Dam site"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="Novato Dam site"/> -->
 										</heading>
 										<heading id="CAMrn344" title="CA-Mrn-344">
 											<implies facet="Location" cat="SRafaelArcMarCA"/>
@@ -12032,7 +12023,7 @@
 										<heading id="CAMrn353" title="CA-Mrn-353">
 											<synonym value="Rancho Oscar"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="Rancho Oscar"/> -->
 										</heading>
 										<heading id="CAMrn355" title="CA-Mrn-355">
 											<synonym value="Trumbull Estate, opposite 56 Buena Vista, Novato"/>
@@ -12065,7 +12056,7 @@
 											<synonym value="CA-Mrn-NL-4"/>
 											<synonym value="Shellmound No. 10, Mill Valley, Cal."/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="Shellmound No. 10"/> -->
 										</heading>
 										<heading id="CAMrnNL5" title="CA-Mrn-NL-5">
 											<synonym value="CA-Mrn-NL- 5"/>
@@ -12140,7 +12131,7 @@
 											<synonym value="CA-Mrp- 3"/>
 											<synonym value="Big Meadows Rancheria site"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<!-- <heading id="yyyyyyyyy" title="Big Meadows Rancheria site"/> -->
 										</heading>
 										<heading id="CAMrp5" title="CA-Mrp-5">
 											<synonym value="CA-Mrp- 5"/>
@@ -13029,6 +13020,7 @@
 											<synonym value="Glass Mt"/>
 											<excl value="CA-Sis"/>
 										</heading>
+										<heading id="LasTrancasNapCA" title="Las Trancas" noMatch="true"/>
 										<heading id="OakvilleNapaCA" title="Oakville">
 											<heading id="GoddardMoundNapaCA" title="Goddard Mound"/>
 										</heading>
@@ -13044,7 +13036,7 @@
 											<heading id="MeeRanchNapaCA" title="Mee Ranch"/>
 										</heading>
 										<heading id="SuscolMdsNapaCA" title="Suscol mounds"/>
-										<heading id="WarmSpringsNapaCA" title="Warm Springs">
+										<heading id="WarmSpringsNapaCA" title="Warm Springs"> <!-- Need to disambiguate -->
 											<excl value="Jefferson"/>
 											<excl value="Oregon"/>
 										</heading>
@@ -13090,9 +13082,7 @@
 										</heading>
 										<heading id="CANap14" title="CA-Nap-14">
 											<synonym value="CA-Nap- 14"/>
-											<synonym value="Las Trancas"/>
-											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Las Trancas"/> -->
+											<implies facet="Location" cat="LasTrancasNapCA"/>
 										</heading>
 										<heading id="CANap15" title="CA-Nap-15">
 											<synonym value="CA-Nap- 15"/>
@@ -13511,6 +13501,7 @@
 											<synonym value="Indian Head Md"/>
 											<synonym value="Indian Head Md."/>
 										</heading>
+										<heading id="OldGlennSacCA" title="Old Glenn"/>
 										<heading id="OldHarveySacCA" title="Old Harvey"/>
 										<heading id="RiversideSactoCA" title="Riverside" noMatch="true"/>
 										<heading id="SacramentoSactoCA" title="Sacramento">
@@ -13560,7 +13551,7 @@
 											<synonym value="CA-Sac- 8"/>
 											<synonym value="CA-Sac-  8"/>
 											<synonym value="Schenck-Dawson 8"/>
-											<synonym value="Old Harvey"/>
+											<implies facet="Location" cat="OldHarveySacCA"/>
 										</heading>
 										<heading id="CASac9" title="CA-Sac-9">
 											<synonym value="CA-Sac- 9"/>
@@ -13604,7 +13595,7 @@
 										<heading id="CASac20" title="CA-Sac-20">
 											<synonym value="CA-Sac- 20"/>
 											<synonym value="Schenck-Dawson 20"/>
-											<synonym value="Old Glenn"/>
+											<implies facet="Location" cat="OldGlennSacCA"/>
 										</heading>
 										<heading id="CASac21" title="CA-Sac-21">
 											<synonym value="CA-Sac- 21"/>
@@ -13736,7 +13727,7 @@
 											<synonym value="Morse Mound"/>
 											<synonym value="Glenn site"/>
 											<synonym value="C 66"/>
-											<synonym value="Old Glenn"/>
+											<implies facet="Location" cat="OldGlennSacCA"/>
 										</heading>
 										<heading id="CASac68" title="CA-Sac-68">
 											<synonym value="CA-Sac- 68"/>
@@ -16230,7 +16221,7 @@
 										<heading id="CAFre55" title="CA-Fre-55">
 											<synonym value="CA-Fre- 55"/>
 											<synonym value="J 67, 109 (Hewes)"/>
-											<synonym value="Noren's site 7"/>
+											<!-- <synonym value="Noren's site 7"/> -->
 										</heading>
 										<heading id="CAFre56" title="CA-Fre-56">
 											<synonym value="CA-Fre- 56"/>
@@ -16272,7 +16263,7 @@
 										<heading id="CAFre63" title="CA-Fre-63">
 											<synonym value="CA-Fre- 63"/>
 											<synonym value="J 77, 119 (Hewes)"/>
-											<synonym value="Noren's site 7"/>
+											<!-- <synonym value="Noren's site 7"/> -->
 										</heading>
 										<heading id="CAFre64" title="CA-Fre-64">
 											<synonym value="CA-Fre- 64"/>
@@ -16993,7 +16984,7 @@
 											<synonym value="Ballarat C"/>
 										</heading>
 										<heading id="CAIny186" title="CA-Iny-186">
-											<synonym value="Ballarat D (part)"/>
+											<!-- <synonym value="Ballarat D (part)"/> -->
 										</heading>
 										<heading id="CAIny187" title="CA-Iny-187">
 											<synonym value="Ballarat E"/>
@@ -17014,7 +17005,7 @@
 											<synonym value="Pictured Rocks on Ballarat sheet"/>
 										</heading>
 										<heading id="CAIny199" title="CA-Iny-199">
-											<synonym value="Ballarat D (part)"/>
+											<!-- <synonym value="Ballarat D (part)"/> -->
 										</heading>
 										<heading id="CAIny200" title="CA-Iny-200">
 											<synonym value="Shoshone A"/>
@@ -17254,7 +17245,7 @@
 												<excl value="Churchill"/>
 												<excl value="Nevada"/>
 												<excl value="NV"/>
-												<!-- 35.211ºN; 119.268ºW -->
+												<!-- LATITUDE 35.211ºN; 119.268ºW -->
 											</heading>
 										</heading>
 										<heading id="ButtonwillowKernCA" title="Buttonwillow"/> 
@@ -17264,9 +17255,9 @@
 										<heading id="ElkGroveKernCA" title="Elk Grove"/>
 										<heading id="ElkHillsKernCA" title="Elk Hills"/>
 										<heading id="FortTejonKernCA" title="Fort Tejon"/>
-										<heading id="GooseLakeKernCA" title="Goose Lake"/>
+										<heading id="GooseLakeKernCA" title="Goose Lake" noMatch="true"/>
 										<heading id="HotSpringsKernCA" title="Hot Springs"/>
-										<heading id="IndianWellsKernCA" title="Indian Wells">
+										<heading id="IndianWellsKernCA" title="Indian Wells" noMatch="true"> <!-- Disambiguate -->
 											<excl value="Riverside"/>
 										</heading>
 										<heading id="IsabellaKernCA" title="Isabella"/>
@@ -17279,7 +17270,7 @@
 										<heading id="KelsoVallKernCA" title="Kelso Valley"/>
 										<heading id="KernLakeKernCA" title="Kern Lake"/>
 										<heading id="KernRiverKernCA" title="Kern River">
-											<heading id="SouthForkofKernRiver" title="South Fork">
+											<heading id="SouthForkofKernRiver" title="South Fork" noMatch="true">
 												<synonym value="South Fork of Kern River"/>
 											</heading>
 										</heading>
@@ -17713,107 +17704,107 @@
 										<heading id="FresnoRiver" title="Fresno River"/>
 										<heading id="NorthFork" title="North Fork"/>
 										<heading id="Picayune" title="Picayune"/>
-										<heading id="SouthFork" title="South Fork"/>
+										<heading id="SouthFork" title="South Fork" noMatch="true"/> <!-- Disambiguate -->
 									</heading>
 									<heading id="TrinomMaderaCA" title="Trinomial site names" noMatch="true">
-										<heading id="CAMad1" title="CA-Mad- 1">
-											<synonym value="CA-Mad-1"/>
+										<heading id="CAMad1" title="CA-Mad-1">
+											<synonym value="CA-Mad- 1"/>
 											<synonym value="GWH 60"/>
 											<synonym value="J-18"/>
 										</heading>
-										<heading id="CAMad2" title="CA-Mad- 2">
-											<synonym value="CA-Mad-2"/>
+										<heading id="CAMad2" title="CA-Mad-2">
+											<synonym value="CA-Mad- 2"/>
 											<synonym value="GWH 61"/>
 											<synonym value="J-19"/>
 										</heading>
-										<heading id="CAMad3" title="CA-Mad- 3">
-											<synonym value="CA-Mad-3"/>
+										<heading id="CAMad3" title="CA-Mad-3">
+											<synonym value="CA-Mad- 3"/>
 											<synonym value="GWH 77"/>
 											<synonym value="J-35"/>
 										</heading>
-										<heading id="CAMad4" title="CA-Mad- 4">
-											<synonym value="CA-Mad-4"/>
+										<heading id="CAMad4" title="CA-Mad-4">
+											<synonym value="CA-Mad- 4"/>
 											<synonym value="GWH 78"/>
 											<synonym value="J-36"/>
 										</heading>
-										<heading id="CAMad5" title="CA-Mad- 5">
-											<synonym value="CA-Mad-5"/>
+										<heading id="CAMad5" title="CA-Mad-5">
+											<synonym value="CA-Mad- 5"/>
 											<synonym value="GWH 79"/>
 											<synonym value="J-37"/>
 										</heading>
-										<heading id="CAMad6" title="CA-Mad- 6">
-											<synonym value="CA-Mad-6"/>
+										<heading id="CAMad6" title="CA-Mad-6">
+											<synonym value="CA-Mad- 6"/>
 											<synonym value="GWH 129"/>
 											<synonym value="J-87"/>
 										</heading>
-										<heading id="CAMad7" title="CA-Mad- 7">
-											<synonym value="CA-Mad-7"/>
+										<heading id="CAMad7" title="CA-Mad-7">
+											<synonym value="CA-Mad- 7"/>
 											<synonym value="GWH 131"/>
 											<synonym value="J-89"/>
 										</heading>
-										<heading id="CAMad8" title="CA-Mad- 8">
-											<synonym value="CA-Mad-8"/>
+										<heading id="CAMad8" title="CA-Mad-8">
+											<synonym value="CA-Mad- 8"/>
 											<synonym value="GWH 135"/>
 											<synonym value="J-93"/>
 										</heading>
-										<heading id="CAMad9" title="CA-Mad- 9">
-											<synonym value="CA-Mad-9"/>
+										<heading id="CAMad9" title="CA-Mad-9">
+											<synonym value="CA-Mad- 9"/>
 											<synonym value="GWH 137"/>
 											<synonym value="J-95"/>
 										</heading>
-										<heading id="CAMad10" title="CA-Mad- 10">
-											<synonym value="CA-Mad-10"/>
+										<heading id="CAMad10" title="CA-Mad-10">
+											<synonym value="CA-Mad- 10"/>
 											<synonym value="GWH 138"/>
 											<synonym value="J-96"/>
 										</heading>
-										<heading id="CAMad11" title="CA-Mad- 11">
-											<synonym value="CA-Mad-11"/>
+										<heading id="CAMad11" title="CA-Mad-11">
+											<synonym value="CA-Mad- 11"/>
 											<synonym value="GWH 139"/>
 											<synonym value="J-97"/>
 										</heading>
-										<heading id="CAMad12" title="CA-Mad- 12">
-											<synonym value="CA-Mad-12"/>
+										<heading id="CAMad12" title="CA-Mad-12">
+											<synonym value="CA-Mad- 12"/>
 											<synonym value="GWH 140"/>
 											<synonym value="J-98"/>
 										</heading>
-										<heading id="CAMad43" title="CA-Mad- 43">
-											<synonym value="CA-Mad-43"/>
+										<heading id="CAMad43" title="CA-Mad-43">
+											<synonym value="CA-Mad- 43"/>
 										</heading>
-										<heading id="CAMad51" title="CA-Mad- 51">
-											<synonym value="CA-Mad-51"/>
+										<heading id="CAMad51" title="CA-Mad-51">
+											<synonym value="CA-Mad- 51"/>
 										</heading>
-										<heading id="CAMad52" title="CA-Mad- 52">
-											<synonym value="CA-Mad-52"/>
+										<heading id="CAMad52" title="CA-Mad-52">
+											<synonym value="CA-Mad- 52"/>
 										</heading>
-										<heading id="CAMad54" title="CA-Mad- 54">
-											<synonym value="CA-Mad-54"/>
+										<heading id="CAMad54" title="CA-Mad-54">
+											<synonym value="CA-Mad- 54"/>
 										</heading>
-										<heading id="CAMad55" title="CA-Mad- 55">
-											<synonym value="CA-Mad-55"/>
+										<heading id="CAMad55" title="CA-Mad-55">
+											<synonym value="CA-Mad- 55"/>
 										</heading>
-										<heading id="CAMad59" title="CA-Mad- 59">
-											<synonym value="CA-Mad-59"/>
+										<heading id="CAMad59" title="CA-Mad-59">
+											<synonym value="CA-Mad- 59"/>
 										</heading>
-										<heading id="CAMad60" title="CA-Mad- 60">
-											<synonym value="CA-Mad-60"/>
+										<heading id="CAMad60" title="CA-Mad-60">
+											<synonym value="CA-Mad- 60"/>
 										</heading>
-										<heading id="CAMad61" title="CA-Mad- 61">
-											<synonym value="CA-Mad-61"/>
+										<heading id="CAMad61" title="CA-Mad-61">
+											<synonym value="CA-Mad- 61"/>
 										</heading>
-										<heading id="CAMad66" title="CA-Mad- 66">
-											<synonym value="CA-Mad-66"/>
+										<heading id="CAMad66" title="CA-Mad-66">
+											<synonym value="CA-Mad- 66"/>
 										</heading>
-										<heading id="CAMad68" title="CA-Mad- 68">
-											<synonym value="CA-Mad-68"/>
+										<heading id="CAMad68" title="CA-Mad-68">
+											<synonym value="CA-Mad- 68"/>
 										</heading>
-										<heading id="CAMad77" title="CA-Mad- 77">
-											<synonym value="CA-Mad-77"/>
+										<heading id="CAMad77" title="CA-Mad-77">
+											<synonym value="CA-Mad- 77"/>
 										</heading>
-										<heading id="CAMad78" title="CA-Mad- 78">
-											<synonym value="CA-Mad-78"/>
+										<heading id="CAMad78" title="CA-Mad-78">
+											<synonym value="CA-Mad- 78"/>
 										</heading>
-										<heading id="CAMad79" title="CA-Mad- 79">
-											<synonym value="CA-Mad-79"/>
+										<heading id="CAMad79" title="CA-Mad-79">
+											<synonym value="CA-Mad- 79"/>
 										</heading>
 										<heading id="CAMad103" title="CA-Mad-103"/>
 										<heading id="CAMad135" title="CA-Mad-135"/>
@@ -18170,7 +18161,7 @@
 										<heading id="CAMnt227" title="CA-Mnt-227">
 											<synonym value="Hill 1"/>
 											<!-- <synonym value="Golomshtok 1"/> -->
-											<synonym value="Wood I-3"/>
+											<!-- <synonym value="Wood I-3"/> -->
 										</heading>
 										<heading id="CAMnt228" title="CA-Mnt-228">
 											<synonym value="Hill 2"/>
@@ -18179,7 +18170,7 @@
 										</heading>
 										<heading id="CAMnt229" title="CA-Mnt-229">
 											<synonym value="Hill 3"/>
-											<synonym value="Wood I-3"/>
+											<!-- <synonym value="Wood I-3"/> -->
 											<synonym value="Golomshtok 2"/>
 										</heading>
 										<heading id="CAMnt233" title="CA-Mnt-233">
@@ -19088,7 +19079,7 @@
 										<heading id="CoachellaRvrsdeCA" title="Coachella"/>
 										<heading id="CottonwoodMtsCA" title="Cottonwood Mountains"/>
 										<!-- <heading id="xxxxxxxxx" title="Cahuilla Valley"/> -->
-										<heading id="IndianWellsRvrsdeCA" title="Indian Wells">
+										<heading id="IndianWellsRvrsdeCA" title="Indian Wells" noMatch="true"> <!-- Disambiguate -->
 											<excl value="Kern"/>
 										</heading>
 										<heading id="IndioRvrsdeCA" title="Indio"/>
@@ -19411,10 +19402,10 @@
 											<synonym value="Cronese P"/>
 										</heading>
 										<heading id="CASBr258" title="CA-SBr-258">
-											<synonym value="Cronese R (part)"/>
+											<!-- <synonym value="Cronese R (part)"/> -->
 										</heading>
 										<heading id="CASBr259" title="CA-SBr-259">
-											<synonym value="Cronese R (part)"/>
+											<!-- <synonym value="Cronese R (part)"/> -->
 										</heading>
 										<heading id="CASBr260" title="CA-SBr-260">
 											<synonym value="Cronese S"/>
@@ -19844,14 +19835,14 @@
 											<heading id="CASCrI3" title="CA-SCrI-3">
 												<synonym value="CA-SCrI- 3"/>
 												<synonym value="CA-SCrI-  3"/>
-												<synonym value="Outhwaite 85"/>
+												<!-- <synonym value="Outhwaite 85"/> -->
 												<synonym value="Olson 6"/>
 												<implies facet="Location" cat="ForneysCoveSBaCA"/>
 												<implies facet="Location" cat="FraziersPtSBaCA"/>
 											</heading>
 											<heading id="CASCrI11" title="CA-SCrI- 11">
 												<synonym value="CA-SCrI-11"/>
-												<synonym value="Outhwaite 85"/>
+												<!-- <synonym value="Outhwaite 85"/> -->
 												<synonym value="Olson 110"/>
 												<implies facet="Location" cat="FraziersPtSBaCA"/>
 											</heading>
@@ -21580,7 +21571,7 @@
 									<heading id="AshMeadwsNyeNV" title="Ash Meadows" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 										<excl value="California"/>
 									</heading>
-									<heading id="BeattyNyeNV" title="Beatty"/>
+									<heading id="BeattyNyeNV" title="Beatty"/> <!-- Disambiguate -->
 									<heading id="CottonwdCynNyeNV" title="Cottonwood Canyon" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 										<excl value="California"/>
 										<excl value="Inyo"/>
@@ -21911,7 +21902,6 @@
 								<synonym value="Shulley Shelter"/>
 								<synonym value="Smokey Flat"/>
 								<synonym value="Spanish Springs Valley"/>
-								<synonym value="Winnemucca Lake"/>
 								<synonym value="Wa.-1"/>
 								<synonym value="Wa-X1"/>
 								<synonym value="Washoe Valley"/>
@@ -22209,7 +22199,7 @@
 								<heading id="Pipestonequarry" title="Pipestone quarry"/>
 							</heading>
 							<heading id="RamseyCountyMN" title="Ramsey">
-								<heading id="StPaulMN" title="St. Paul"/>
+								<heading id="StPaulMN" title="St. Paul" noMatch="true"/>
 							</heading>
 							<heading id="StLouis" title="St. Louis">
 								<heading id="Duluth" title="Duluth"/>
@@ -22350,7 +22340,6 @@
 							<synonym value="Siracusans"/>
 							<synonym value="Sarausa"/> <!-- Sicilian -->
 							<synonym value="Συρακοῦσαι"/> <!-- Greek -->
-							<synonym value="Syrakousae"/> <!-- Transliterated Greek -->
 							<implies facet="Location" cat="SiracusaItaly"/>
 						</heading>
 					</heading>
@@ -22398,7 +22387,6 @@
 						<synonym value="Levádeia"/>
 						<synonym value="Levadeia"/>
 						<synonym value="Livadeiá"/>
-						<synonym value="Livadeia"/>
 						<synonym value="Livadia"/>
 						<synonym value="Λεβάδεια"/>
 						<synonym value="Λιβαδειά"/>
@@ -22509,8 +22497,9 @@
 					<synonym value="Spartē"/>
 				</heading>
 				<heading id="TirynsOldGreece" title="Tiryns">
-						<synonym value="Τίρυνς"/>
-						<synonym value="Τίρυνθα"/>
+					<synonym value="Τίρυνς"/>
+					<synonym value="Τίρυνθα"/>
+					<implies facet="Location" cat="TirynsGreece"/>
 					</heading>
 				<heading id="IslandsOldGreece" title="Islands" noMatch="true">
 					<heading id="EuboeaOldGreece" title="Euboea">
@@ -22535,6 +22524,7 @@
 						</heading>
 						<heading id="PorosOldGreece" title="Poros">
 							<synonym value="Πόρος"/>
+							<implies facet="Location" cat="PorosGreece"/>
 						</heading>
 					</heading>
 					<heading id="CycladesIslGreece" title="Cyclades"> <!-- Cyclades (Islands) -->
@@ -23563,6 +23553,7 @@ Moesia,
 				<synonym value="Nubia (ancient)"/>
 				<heading id="MeroeNubia" title="Meroë">
 					<synonym value="Meroe"/>
+					<implies facet="Location" cat="MeroeEgypt"/>
 				</heading>
 			</heading>
 		</heading>
