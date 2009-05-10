@@ -8,7 +8,8 @@
 </script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/getParams.js"></script>
 <script type="text/javascript" src="{$themeroot}/scripts/results.js"></script>
-<div id="results_menuCol">
+<table cellspacing="0" cellpadding="0"><tr>
+<td valign="top"><div id="results_menuCol">
 	<div id="results_filterContainer">
 		<h2>Found Objects where...</h2>
 		<div id="results_searchFilters">
@@ -47,8 +48,8 @@
 			</div>
 		{/if}
 	{/if}
-</div>
-<div id="results_resultsCol">
+</div></td>
+<td valign="top"><div id="results_resultsCol">
 	{if $results_total > 0}
 	<div id="results_pagerCount">
 		<h2>{$results_start} - {$results_end} of {$results_total} Results</h2>
@@ -71,7 +72,8 @@
 	{else}
 	<h2>No results!</h2>
 	{/if}
-</div>
+</div></td>
+</tr></table>
 
 
 
