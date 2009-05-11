@@ -201,7 +201,7 @@ span.fullterm { background-color:#ff6666; }
 				 <?php if(!empty($term)) echo 'value="'.$term.'"'; ?> /></p>
 		<p><input type="checkbox" name="limithooks" value="0" 
 			<?php if(!$limithooks) echo "CHECKED"; ?> />
-           &nbsp;Show all hook matches (uncheck to limit matches to 5 per concept)</p>
+           &nbsp;Show <b><i>all</i></b> synonym matches (uncheck to limit matches to 5 per concept)</p>
 		<p><input type="checkbox" name="usepartial" value="1" 
 			<?php if($usepartial) echo "CHECKED"; ?> />
            &nbsp;Allow partial matches of the term</p>
