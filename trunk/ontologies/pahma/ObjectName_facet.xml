@@ -325,14 +325,12 @@
 				<synonym value="Fish Trap"/>
 				<synonym value="Fish-Trap"/>
 				<synonym value="Fish-Traps"/>
+				<synonym value="Fishtrap"/>
+				<synonym value="Fishtraps"/>
 				<heading id="TrapFishTrapBasketsFshEq" title="Fish Trap Baskets">
 					<synonym value="Fish Trap Basket"/>
 					<synonym value="Fish-Trap Basket"/>
 					<synonym value="Fish-Trap Baskets"/>
-					<synonym value="Fish-Trap"/>
-					<synonym value="Fish-Traps"/>
-					<synonym value="Fishtrap"/>
-					<synonym value="Fishtraps"/>
 					<implies facet="ActivityorContext" cat="FishingActivity"/>
 					<implies facet="Collection" cat="BasketCollection"/>
 					<implies facet="ObjectName" cat="FishTrapBasketBasket"/>
@@ -756,9 +754,6 @@
 			<!-- Used To Describe Any of The Various Equipment And Accessories 
 				Worn By Horses In The Course of Their Use As Domesticated Animals -->
 			<implies facet="ActivityorContext" cat="HorsebackRiding"/>
-			<heading id="HorsebreastplateAnmlEq" title="Breastplate">
-				<synonym value="Breastplates"/>
-			</heading>
 			<heading id="BridleAnmlEq" title="Bridle">
 				<synonym value="Bridles"/>
 				<implies facet="ObjectName" cat="BridleHarnessAnmlEq"/>
@@ -770,8 +765,9 @@
 				<synonym value="Halters"/>
 				<implies facet="ObjectName" cat="HalterHarnessAnmlEq"/>
 			</heading>
-			<heading id="HarnessHorseTack" title="Harness">
-				<synonym value="Harnesses"/>
+			<heading id="HarnessHorseTack" title="Harness" noMatch="true">
+				<synonym value="Horse Harness"/>
+				<synonym value="Horse Harnesses"/>
 				<excl value="Mule Harness"/>
 				<excl value="Mule Harnesses"/>
 				<excl value="Camel Harness"/>
@@ -929,7 +925,6 @@
 			<synonym value="header labeled 'faunal remains'"/>
 			<synonym value="labeled 'faunal"/>
 			<synonym value="Faunal Material"/>
-			<synonym value="Faunal Remains"/>
 			<synonym value="Skeleton"/>
 			<synonym value="Skeletons"/>
 			<heading id="HumanRemains" title="Human Remains"/>
@@ -1309,7 +1304,6 @@
 	</heading>
 	<heading id="Armaments" title="Armaments">
 		<synonym value="Arms/Armour"/>
-		<!-- The British Museum notes: for associated equipment, see arms equipment. -->
 		<heading id="AegisArmsArmor" title="Aegis"/>
 		<heading id="AmmunitionAmmo" title="Ammunition">
 			<synonym value="Ammo"/>
@@ -1438,10 +1432,10 @@
 				<heading id="LegGuard" title="Leg Guard">
 					<synonym value="Leg Guards"/>
 				</heading>
-				<heading id="PaletteArmor" title="Palette (Armor)">
+				<!-- <heading id="PaletteArmor" title="Palette (Armor)"> Disambiguate from artist's tool, cosmetics tool, and scribe's tool
 					<synonym value="Palette"/>
 					<synonym value="Palettes"/>
-				</heading>
+				</heading> -->
 			</heading>
 			<heading id="ArmorByFunction" title="Armor By Function" noMatch="true">
 				<heading id="HorseArmor" title="Horse Armor">
@@ -1573,6 +1567,7 @@
 			</heading>
 			<heading id="Armorshields" title="Shields">
 				<synonym value="Shield"/>
+				<excl value="Goldweight"/> <!-- Ashanti goldweights are sometimes made with a shield motif -->
 				<heading id="Buckler" title="Buckler">
 					<synonym value="Bucklers"/>
 				</heading>
@@ -1581,6 +1576,17 @@
 				</heading>
 				<heading id="Target" title="Target">
 					<synonym value="Targets"/>
+				</heading>
+				<heading id="PartsOfShields" title="Parts of Shields">
+					<heading id="Boss" title="Boss">
+						<synonym value="Bosses"/> <!-- Exclude managers once 'people' facet grows to include professions -->
+					</heading>
+					<heading id="ShieldOrnament" title="Shield-Ornament">
+						<synonym value="Shield-Ornaments"/>
+					</heading>
+					<heading id="ShieldStrengthener" title="Shield-Strengthener">
+						<synonym value="Shield-Strengtheners"/>
+					</heading>
 				</heading>
 			</heading>
 			<heading id="ShinGuard" title="Shin Guard">
@@ -1602,22 +1608,6 @@
 			<heading id="Vambrace" title="Vambrace">
 				<synonym value="Vambraces"/>
 			</heading>
-		</heading>
-		<!-- <heading id="ArmsEquipment" title="Arms Equipment"/> -->
-		<heading id="Shield" title="Shield">
-			<synonym value="Shields"/>
-			<excl value="Goldweight"/>
-			<!-- Ashanti Goldweights Are Sometimes Made With A Shield Motif -->
-			<heading id="Boss" title="Boss">
-				<synonym value="Bosses"/>
-				<!-- Exclude managers -->
-			</heading>
-		</heading>
-		<heading id="ShieldOrnament" title="Shield-Ornament">
-			<synonym value="Shield-Ornaments"/>
-		</heading>
-		<heading id="ShieldStrengthener" title="Shield-Strengthener">
-			<synonym value="Shield-Strengtheners"/>
 		</heading>
 		<heading id="ThumbRing" title="Thumb-Ring">
 			<synonym value="Thumb-Rings"/>
@@ -2574,6 +2564,9 @@
 			</heading>
 			<heading id="ScribalPaletteComm" title="Scribal Palette">
 				<synonym value="Scribal Palettes"/>
+				<synonym value="Scribal-Palette"/>
+				<synonym value="Scribal-Palettes"/>
+				<implies facet="ObjectName" cat="ScribalPalPalettes"/>
 			</heading>
 			<heading id="ScrollComm" title="Scroll">
 				<synonym value="Scrolls"/>
@@ -3013,10 +3006,6 @@
 		<synonym value="Part"/>
 		<synonym value="Parts"/>
 		<heading id="ArrowHeadPart" title="Arrowhead" noMatch="true"/>
-		<heading id="BackplatePart" title="Backplate">
-			<synonym value="Backplates"/>
-			<!-- EXCL armor? -->
-		</heading>
 		<heading id="BarbPart" title="Barb">
 			<synonym value="Barbs"/>
 		</heading>
@@ -6345,8 +6334,6 @@
 				<synonym value="Boxed Matches"/>
 				<synonym value="Matchbox"/>
 				<synonym value="Matchboxes"/>
-				<synonym value="Match-Boxes"/>
-				<synonym value="Match Boxes"/>
 				<implies facet="ActivityorContext" cat="DrugSmoking"/>
 				<implies facet="ObjectName" cat="MatchBoxContainer"/>
 			</heading>
@@ -7458,6 +7445,9 @@
 		</heading>
 		<heading id="PaletteMiscEq" title="Palette">
 			<synonym value="Palettes"/>
+			<heading id="ArtistsPalPalettes" title="Artist's Palette"/>
+			<heading id="CosmeticPalPalettes" title="Cosmetic Palette" noMatch="true"/>
+			<heading id="ScribalPalPalettes" title="Scribal Palette" noMatch="true"/>
 		</heading>
 		<heading id="PanelMiscEq" title="Panel">
 			<synonym value="Panels"/>
@@ -13069,8 +13059,11 @@
 				<implies facet="ObjectName" cat="BagContainer"/>
 			</heading>
 		</heading>
-		<heading id="CosmeticPalette" title="Cosmetic-Palette">
+		<heading id="CosmeticPalette" title="Cosmetic Palette">
+			<synonym value="Cosmetic Palettes"/>
+			<synonym value="Cosmetic-Palette"/>
 			<synonym value="Cosmetic-Palettes"/>
+			<implies facet="ObjectName" cat="CosmeticPalPalettes"/>
 		</heading>
 		<heading id="CosmeticPaletteCover" title="Cosmetic-Palette-Cover">
 			<synonym value="Cosmetic-Palette-Covers"/>
