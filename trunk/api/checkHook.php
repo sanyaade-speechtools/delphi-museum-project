@@ -38,7 +38,7 @@ span.fullterm { background-color:#ff6666; }
 		foreach($terms as $subterm) {
 			$word = trim($subterm);
 			if(!empty($word) ) {
-				$kwdterms[] = '+'.$word.(($usepartial)?'*':'');
+				$kwdterms[] = '+'.(($usepartial)?($word.'*'):'"'.$word.'"');
 				$modterms[] = '<span class="term">'.$word.'</span>';
 			}
 		}
