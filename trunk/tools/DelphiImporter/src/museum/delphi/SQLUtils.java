@@ -4,8 +4,10 @@
 package museum.delphi;
 
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,6 +20,9 @@ import java.util.HashMap;
  *
  */
 public class SQLUtils {
+
+	public static final boolean WRITE_AS_INSERT = true;
+	public static final boolean WRITE_AS_LOADFILE = false;
 
 	private static int _debugLevel = 1;
 
@@ -101,7 +106,8 @@ public class SQLUtils {
 				// We use display names (in most cases) as hooks, but do not
 				// fold to lower in the TaxoNode structure. Hooks assumes all lower.
 				// TODO this should properly deal with Unicode collation mechanisms.
-				writer.append("("+node.id+",\""+node.displayName.toLowerCase()+"\")");
+				String name = node.displayName.toLowerCase().replace("\"", "\\\"").replace("'", "\\'");
+				writer.append("("+node.id+",\""+name+"\")");
 				fFirst = false;
 				// Save any synonyms as hooks
 				if( node.synset != null )
@@ -111,7 +117,8 @@ public class SQLUtils {
 							if( fWithNewlines )
 								writer.newLine();
 						}
-						writer.append("("+node.id+",\""+hook+"\")");
+						name = hook.replace("\"", "\\\"").replace("'", "\\'");
+						writer.append("("+node.id+",\""+name+"\")");
 						fFirst = false;
 					}
 			} else {
@@ -123,7 +130,8 @@ public class SQLUtils {
 							if( fWithNewlines )
 								writer.newLine();
 						}
-						writer.append("("+node.id+",\""+excl+"\")");
+						String name = excl.replace("\"", "\\\"").replace("'", "\\'");
+						writer.append("("+node.id+",\""+name+"\")");
 						fFirst = false;
 					}
 			}
@@ -169,8 +177,15 @@ public class SQLUtils {
 					writer.append(',');
 				if(fWithNewlines)
 					writer.newLine();
-				writer.append("("+facet.id+",\""+facet.name+"\",\""+facet.displayName+"\", \'"
-									+facet.description+"\', \'" + facet.notes + "\')");
+				String name = (facet.name==null||facet.name.isEmpty())?"":
+								facet.name.replace("\"", "\\\"").replace("'", "\\'");
+				String dname = (facet.displayName==null||facet.displayName.isEmpty())?"":
+								facet.displayName.replace("\"", "\\\"").replace("'", "\\'");
+				String desc = (facet.description==null||facet.description.isEmpty())?"":
+								facet.description.replace("\"", "\\\"").replace("'", "\\'");
+				String notes = (facet.notes==null||facet.notes.isEmpty())?"":
+								facet.notes.replace("\"", "\\\"").replace("'", "\\'");
+				writer.append("("+facet.id+",\""+name+"\",\""+dname+"\", \'"+desc+"\', \'" +notes + "\')");
 			}
 			writer.append(';');
 			writer.newLine();
@@ -258,7 +273,8 @@ public class SQLUtils {
 	 * @param metaDataReader initialized reader of metadata source.
 	 * @param imagePathsReader pass in non-NULL to add image path info
 	 */
-	public static void writeObjectsSQL( String filename, MetaDataReader metaDataReader,
+	public static void writeObjectsSQL( String filename, boolean asInsertFile,
+										MetaDataReader metaDataReader,
 										ImagePathsReader imagePathsReader ) {
     	String basefilename = null;
     	String extension = ".txt";
@@ -299,16 +315,28 @@ public class SQLUtils {
 			        	nObjsProcessedFile = 0;
 			    		iOutputFile++;
 						fFirst = true;
-			    		currFilename = basefilename + iOutputFile + extension;
-						objWriter = new BufferedWriter(new FileWriter( currFilename ));
-						// INSERT ALL in order:
-						// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
-						objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, hiddenNotes, img_path, creation_time) VALUES" );
-						objWriter.newLine();
+			    		currFilename = basefilename
+			    						+ (asInsertFile?Integer.toString(iOutputFile):"all")
+			    						+ extension;
+						objWriter = new BufferedWriter(
+									  new OutputStreamWriter(
+										new FileOutputStream(currFilename),"UTF8"));
+						if(asInsertFile) {
+							// INSERT ALL in order:
+							// id, objnum, name, description, thumb_path, med_img_path, lg_img_path, creation_time
+							objWriter.append("INSERT IGNORE INTO objects(id, objnum, name, description, hiddenNotes, img_path, creation_time) VALUES\n" );
+						} else {
+							objWriter.append("To load this file, use a sql command:\n");
+							objWriter.append("SET NAMES utf8;\n");
+							objWriter.append("LOAD DATA LOCAL INFILE '"+currFilename+"' INTO TABLE objects CHARACTER SET utf8\n");
+							objWriter.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 6 LINES\n");
+							objWriter.append("(id, objnum, name, description, hiddenNotes, img_path)\n");
+							objWriter.append("SET creation_time=now();\n");
+						}
 					}
 					// Otherwise, now we output the info for the last Line, and then transfer
 					// the next line to Last line and loop
-					writeObjectSQL( id, objStrings, objWriter,
+					writeObjectSQL( id, asInsertFile, objStrings, objWriter,
 										fFirst, fWithNewlines, imagePathsReader );
 					fFirst = false;
 					nObjsProcessedFile++;
@@ -316,7 +344,7 @@ public class SQLUtils {
 					if( nObjsProcessedTotal >= nObjsOutMax ) {
 						break;
 					}
-					if( nObjsProcessedFile >= nObjsPerDumpFile ) {
+					if(asInsertFile && nObjsProcessedFile >= nObjsPerDumpFile ) {
 						objWriter.append(";");
 						objWriter.flush();
 						objWriter.close();
@@ -326,9 +354,11 @@ public class SQLUtils {
 				}
 			}
 			if( objWriter != null ) {
-				objWriter.append(";");
-				objWriter.newLine();
-				objWriter.append("SHOW WARNINGS;");
+				if(asInsertFile) {
+					objWriter.append(";");
+					objWriter.newLine();
+					objWriter.append("SHOW WARNINGS;");
+				}
 				objWriter.flush();
 				objWriter.close();
 			}
@@ -346,7 +376,8 @@ public class SQLUtils {
 		}
 	}
 
-	public static void writeObjectSQL( int id, ArrayList<String> line, BufferedWriter writer,
+	public static void writeObjectSQL( int id, boolean asInsertFile,
+			ArrayList<String> line, BufferedWriter writer,
 			boolean fFirst, boolean fWithNewlines, ImagePathsReader imagePathsReader ) {
 		try {
 			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
@@ -373,6 +404,7 @@ public class SQLUtils {
 				// There are some pipes as field separators when Description is merged
 				// from several lines or DB fields. Turn these into line breaks.
 				newDescLine = newDescLine.replaceAll("[|]", "<br />" );
+				newDescLine = newDescLine.replace("\\", "\\\\");
 				// newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
 				newDescLine = newDescLine.replace("\"", "\\\"");
 				newDescLine = newDescLine.replace("'", "\\'");
@@ -395,6 +427,7 @@ public class SQLUtils {
 				// from several lines or DB fields. Convert to spaces, since hiddenNotes is keyword indexed.
 				// Also, fold multiple spaces and newlines into single space.
 				newHNLine = newHNLine.replaceAll("[|\\s]+", " " );
+				newHNLine = newHNLine.replace("\\", "\\\\");
 				// newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
 				newHNLine = newHNLine.replace("\"", "\\\"");
 				newHNLine = newHNLine.replace("'", "\\'");
@@ -406,21 +439,34 @@ public class SQLUtils {
 			}
 			// Deal with line separation
 			if( !fFirst ) {
-				writer.append(',');
+				if( asInsertFile )
+					writer.append(',');
 				if( fWithNewlines )
-					writer.newLine();
+					writer.append('\n');
 			}
 			// Dump the data
-			writer.append("("+id+",\""+line.get(objNumCol).trim()+"\",\""+name+"\",\""
-					+description+"\",\""+hiddenNotes+"\",");
-			if(imgInfo == null)
-				writer.append("null,");
-			else {
-				ImageInfo info = imgInfo.get(0);
-				String imgPath = "\""+info.filepath+"\",";
-				writer.append(imgPath);
+			if( asInsertFile ) {
+				writer.append("("+id+",\""+line.get(objNumCol).trim()+"\",\""+name+"\",\""
+						+description+"\",\""+hiddenNotes+"\",");
+				if(imgInfo == null)
+					writer.append("null,");
+				else {
+					ImageInfo info = imgInfo.get(0);
+					String imgPath = "\""+info.filepath+"\",";
+					writer.append(imgPath);
+				}
+				writer.append("now())");
+			} else {
+				writer.append(id+"|\""+line.get(objNumCol).trim()+"\"|\""+name+"\"|\""
+						+description+"\"|\""+hiddenNotes+"\"|");
+				if(imgInfo == null)
+					writer.append("\\N");
+				else {
+					ImageInfo info = imgInfo.get(0);
+					String imgPath = "\""+info.filepath+"\"";
+					writer.append(imgPath);
+				}
 			}
-			writer.append("now())");
 		} catch( IOException e ) {
 			e.printStackTrace();
 			throw new RuntimeException("Could not create or other problem writing MD SQL file." );
