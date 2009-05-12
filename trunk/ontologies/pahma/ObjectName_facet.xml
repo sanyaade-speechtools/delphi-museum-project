@@ -9980,7 +9980,7 @@
 		<heading id="PalimpsestProdRepl" title="Palimpsest">
 			<synonym value="Palimpsests"/>
 		</heading>
-		<heading id="PatternProdRepl" title="Pattern" noMatch="true"/>
+		<!-- <heading id="PatternProdRepl" title="Pattern" noMatch="true"/> Disambiguate --> 
 		<heading id="PotteryMakingEquipment" title="Pottery-Making Equipment">
 			<synonym value="Pottery-Making Items"/>
 		</heading>
@@ -11497,9 +11497,9 @@
 				<heading id="SpringReelMeasure" title="Spring-Reel">
 					<synonym value="Spring-Reels"/>
 				</heading>
-				<heading id="SquareMeasure" title="Square">
-					<synonym value="Squares"/> <!-- Disambiguate -->
-				</heading>
+				<!-- <heading id="SquareMeasure" title="Square">
+					<synonym value="Squares"/>  Disambiguate 
+				</heading> -->
 				<heading id="SurveyInstrumentMeasure" title="Survey Instrument">
 					<synonym value="Survey Instruments"/>
 				</heading>
@@ -14425,10 +14425,10 @@
 		</heading>
 		<heading id="PaperworkVisRep" title="Paperwork"/>
 		<heading id="PapyrusVisRep" title="Papyrus" noMatch="true"/>
-		<heading id="PatternVisRep" title="Pattern">
+		<!-- <heading id="PatternVisRep" title="Pattern"> Disambiguate
 			<synonym value="Patterns"/>
 			<implies facet="ObjectName" cat="PatternProdRepl"/>
-		</heading>
+		</heading> -->
 		<heading id="PauVisRep" title="Pau">
 			<synonym value="Paus"/>
 			<implies facet="ObjectName" cat="PauComm"/>
