@@ -272,20 +272,16 @@ public class ImagePathsReader {
 			// Write out the header
 			writer.append("To load this file, use a sql command: ");
 			writer.newLine();
-			writer.append("LOAD DATA INFILE '");
+			writer.append("LOAD DATA LOCAL INFILE '");
 			// MySQL cannot handle Windows path separators
 			if( java.io.File.separatorChar == '/' )
 				writer.append(outFileName);
 			else
 				writer.append(outFileName.replace(java.io.File.separatorChar, '/'));
-			writer.append("' INTO TABLE media" );
-			writer.newLine();
-			writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES" );
-			writer.newLine();
-			writer.append("(obj_id, name, description, path, type, width, height)" );
-			writer.newLine();
-			writer.append("SET aspectR=width/height, creation_time=now();" );
-			writer.newLine();
+			writer.append("' INTO TABLE media\n" );
+			writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES\n" );
+			writer.append("(obj_id, name, description, path, type, width, height)\n" );
+			writer.append("SET aspectR=width/height, creation_time=now();\n" );
 			TreeSet<Integer> sortedKeys = new TreeSet<Integer>(imageInfoMap.keySet());
 			Iterator<Integer> keysIterator = sortedKeys.iterator();
 			while( keysIterator.hasNext() ) {
@@ -300,8 +296,7 @@ public class ImagePathsReader {
 						&& (ii.getAspectR() == ImageInfo.UNKNOWN_ORIENTATION))
 						continue;
 					writer.append(id + "|\\N|\\N|\"" + ii.filepath );
-					writer.append("\"|\"image\"|" + ii.getWidth() + '|' + ii.getHeight() );
-					writer.newLine();
+					writer.append("\"|\"image\"|" + ii.getWidth() + '|' + ii.getHeight()+'\n' );
 				}
 			}
 			writer.flush();
