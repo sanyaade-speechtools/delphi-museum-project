@@ -257,7 +257,9 @@
 				<heading id="FonTribe" title="Fon"/>
 				<heading id="GabonTribes" title="Gabon" noMatch="true">
 					<implies facet="Location" cat="GabonCountry"/>
-					<heading id="FangTribe" title="Fang"/>
+					<heading id="FangTribe" title="Fang">
+						<excl value="Ilse"/>
+					</heading>
 					<heading id="TsogoTribe" title="Tsogo">
 						<synonym value="Mitsogho"/>
 						<synonym value="Shogo"/>
@@ -3120,6 +3122,7 @@
 			</heading>
 			<heading id="PolynesianCultures" title="Polynesian Cultures">
 				<heading id="Polynesian" title="Polynesian">
+					<synonym value="Polynesians"/>
 					<heading id="Hawaiian" title="Hawaiian">
 						<synonym value="Hawai'i maoli"/>
 						<synonym value="Kanaka maoli"/>
