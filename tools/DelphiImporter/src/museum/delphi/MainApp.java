@@ -1919,8 +1919,8 @@ public class MainApp {
 			outFileName += "_SQL.txt";
     		String filename = getSafeOutfile("Save Object Metadata to files", outFileName, txtFilter);
     		if( filename != null ) {
-				SQLUtils.writeObjectsSQL( filename, userProjInfo.metaDataReader,
-											userProjInfo.imagePathsReader);
+				SQLUtils.writeObjectsSQL( filename, SQLUtils.WRITE_AS_LOADFILE,
+							userProjInfo.metaDataReader, userProjInfo.imagePathsReader);
 			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -2676,7 +2676,7 @@ public class MainApp {
 	protected void saveVocabHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-   		String variant = fSaveHooks ? "Hook ":"Exclusion";
+   		String variant = fSaveHooks ? "Hook":"Exclusion";
 			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$",
 					variant+"s.sql");
     		String filename = getSafeOutfile("Save "+variant
