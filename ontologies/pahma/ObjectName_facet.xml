@@ -1424,12 +1424,22 @@
 		</heading>
 		<heading id="Armor" title="Armor">
 			<synonym value="Armour"/>
-			<heading id="Armorbyconstruction" title="Armor By Construction" noMatch="true">
+			<heading id="ArmorByConstruction" title="Armor By Construction" noMatch="true">
 				<heading id="MailArmor" title="Mail Armor">
 					<synonym value="Mail Armour"/>
+					<synonym value="Mail-Armour"/>
+					<synonym value="Mail-Armor"/>
 				</heading>
-				<heading id="PlateArmor" title="Plate Armour"/>
-				<heading id="ScaleArmor" title="Scale Armour"/>
+				<heading id="PlateArmor" title="Plate Armour">
+					<synonym value="Plate Armour"/>
+					<synonym value="Plate-Armour"/>
+					<synonym value="Plate-Armor"/>
+				</heading>
+				<heading id="ScaleArmor" title="Scale Armour">
+					<synonym value="Scale Armour"/>
+					<synonym value="Scale-Armour"/>
+					<synonym value="Scale-Armor"/>
+				</heading>
 				<heading id="SegmentedArmor" title="Segmented Armor">
 					<synonym value="Segmented Armour"/>
 				</heading>
@@ -1441,37 +1451,32 @@
 				<heading id="ArmGuard" title="Arm Guard">
 					<synonym value="Arm Guards"/>
 				</heading>
-				<heading id="BackPlate" title="Backplate">
+				<heading id="BackPlateArmor" title="Backplate">
 					<synonym value="Backplates"/>
 					<synonym value="Back Plate"/>
 					<synonym value="Back Plates"/>
 					<synonym value="Back-Plate"/>
 					<synonym value="Back-Plates"/>
-					<implies facet="ObjectName" cat="BackPlateArmor"/>
 				</heading>
-				<heading id="BreastPlate" title="Breastplate">
+				<heading id="BreastPlateArmor" title="Breastplate">
 					<synonym value="Breast plate"/>
 					<synonym value="Breast plates"/>
 					<synonym value="Breast-plate"/>
 					<synonym value="Breast-plates"/>
 					<synonym value="Breastplates"/>
-					<implies facet="ObjectName" cat="BreastPlateArmor"/>
 				</heading>
-				<heading id="Corslet" title="Corslet">
+				<heading id="CorsletArmor" title="Corslet">
 					<synonym value="Corslets"/>
-					<implies facet="ObjectName" cat="CorsletArmor"/>
 				</heading>
-				<heading id="Cuirass" title="Cuirass">
+				<heading id="CuirassArmor" title="Cuirass">
 					<synonym value="Cuirasses"/>
-					<implies facet="ObjectName" cat="CuirassArmor"/>
 				</heading>
-				<heading id="FootGuard" title="Foot Guard">
+				<heading id="FootGuardArmor" title="Foot Guard">
 					<synonym value="Foot Guards"/>
 					<synonym value="Foot-Guard"/>
 					<synonym value="Foot-Guards"/>
 					<synonym value="Footguard"/>
 					<synonym value="Footguards"/>
-					<implies facet="ObjectName" cat="FootGuardArmor"/>
 				</heading>
 				<heading id="Gambeson" title="Gambeson">
 					<synonym value="Gambesons"/>
@@ -1479,11 +1484,10 @@
 				<heading id="Gauntlet" title="Gauntlet">
 					<synonym value="Gauntlets"/>
 				</heading>
-				<heading id="Helmets" title="Helmets">
+				<heading id="HelmetArmor" title="Helmets">
 					<synonym value="Helmet"/>
 					<synonym value="Helm"/> <!-- Disambiguate -->
 					<synonym value="Helms"/>
-					<implies facet="ObjectName" cat="HelmetArmor"/>
 					<implies facet="ObjectName" cat="HelmetHeadGear"/>
 					<heading id="Basinet" title="Basinet">
 						<synonym value="Basinets"/>
@@ -1493,20 +1497,54 @@
 						<synonym value="Coifs"/>
 					</heading>
 				</heading>
+				<heading id="KneeGuard" title="Knee Guard">
+					<synonym value="Knee Guards"/>
+					<synonym value="Knee-Guard"/>
+					<synonym value="Knee-Guards"/>
+				</heading>
 				<heading id="LegGuard" title="Leg Guard">
 					<synonym value="Leg Guards"/>
+				</heading>
+				<heading id="LegPiece" title="Leg Piece">
+					<synonym value="Leg Pieces"/>
+					<synonym value="Leg-Piece"/>
+					<synonym value="Leg-Pieces"/>
+				</heading>
+				<heading id="LegPlate" title="Leg Plate">
+					<synonym value="Leg Plates"/>
+					<synonym value="Leg-Plate"/>
+					<synonym value="Leg-Plates"/>
 				</heading>
 				<!-- <heading id="PaletteArmor" title="Palette (Armor)"> Disambiguate from artist's tool, cosmetics tool, and scribe's tool
 					<synonym value="Palette"/>
 					<synonym value="Palettes"/>
 				</heading> -->
+				<heading id="NeckPiece" title="Neck Piece">
+					<synonym value="Neck Pieces"/>
+					<synonym value="Neck-Piece"/>
+					<synonym value="Neck-Pieces"/>
+				</heading>
+				<heading id="ShinGuard" title="Shin Guard">
+					<synonym value="Shin Guards"/>
+					<synonym value="Shin-Guard"/>
+					<synonym value="Shin-Guards"/>
+				</heading>
+				<heading id="ShoulderPiece" title="Shoulder Piece">
+					<synonym value="Shoulder Pieces"/>
+					<synonym value="Shoulder-Piece"/>
+					<synonym value="Shoulder-Pieces"/>
+				</heading>
 			</heading>
 			<heading id="ArmorByFunction" title="Armor By Function" noMatch="true">
 				<heading id="HorseArmor" title="Horse Armor">
+					<synonym value="Horse-Armor"/>
 					<synonym value="Horse Armour"/>
+					<synonym value="Horse-Armour"/>
 				</heading>
 				<heading id="ParadeArmor" title="Parade Armor">
+					<synonym value="Parade-Armor"/>
 					<synonym value="Parade Armour"/>
+					<synonym value="Parade-Armour"/>
 				</heading>
 			</heading>
 			<heading id="AlmainCollar" title="Almain Collar">
@@ -1517,32 +1555,26 @@
 				<synonym value="Ankle-Guard"/>
 				<synonym value="Ankle-Guards"/>
 			</heading>
-			<heading id="ArmGuard" title="Arm Guard" noMatch="true"/>
 			<heading id="ArmPiece" title="Arm Piece">
 				<synonym value="Arm Pieces"/>
 				<synonym value="Arm-Piece"/>
 				<synonym value="Arm-Pieces"/>
 			</heading>
-			<heading id="BackPlateArmor" title="Back-Plate" noMatch="true"/>
 			<heading id="Besague" title="Besague">
 				<synonym value="Besagues"/>
 			</heading>
 			<heading id="BevorArmor" title="Bevor">
 				<synonym value="Bevors"/>
 			</heading>
-			<heading id="BreastPlateArmor" title="Breast-Plate" noMatch="true"/>
-			<heading id="CorsletArmor" title="Corslet" noMatch="true"/>
 			<heading id="CouterArmor" title="Couter">
 				<synonym value="Couters"/>
 			</heading>
-			<heading id="CuirassArmor" title="Cuirass" noMatch="true"/>
 			<heading id="CuisseArmor" title="Cuisse">
 				<synonym value="Cuisses"/>
 			</heading>
 			<heading id="CuletArmor" title="Culet">
 				<synonym value="Culets"/>
 			</heading>
-			<heading id="FootGuardArmor" title="Foot-Guard" noMatch="true"/>
 			<heading id="Gorgets" title="Gorgets">
 				<synonym value="Gorget"/>
 				<heading id="ArmorBanjo" title="Banjo" noMatch="true">
@@ -1570,36 +1602,10 @@
 			<heading id="GussetArmor" title="Gusset">
 				<synonym value="Gussets"/>
 			</heading>
-			<heading id="HelmetArmor" title="Helmet" noMatch="true"/>
-			<heading id="HorseArmor" title="Horse Armor">
-				<synonym value="Horse-Armor"/>
-				<synonym value="Horse Armour"/>
-				<synonym value="Horse-Armour"/>
-			</heading>
 			<heading id="Kardiophylax" title="Kardiophylax">
 				<synonym value="Kardiophylaces"/>
 				<synonym value="Kardiophylaxes"/>
 				<synonym value="Kardiophylaxs"/>
-			</heading>
-			<heading id="KneeGuard" title="Knee Guard">
-				<synonym value="Knee Guards"/>
-				<synonym value="Knee-Guard"/>
-				<synonym value="Knee-Guards"/>
-			</heading>
-			<heading id="LegPiece" title="Leg Piece">
-				<synonym value="Leg Pieces"/>
-				<synonym value="Leg-Piece"/>
-				<synonym value="Leg-Pieces"/>
-			</heading>
-			<heading id="LegPlate" title="Leg Plate">
-				<synonym value="Leg Plates"/>
-				<synonym value="Leg-Plate"/>
-				<synonym value="Leg-Plates"/>
-			</heading>
-			<heading id="MailArmor" title="Mail Armor">
-				<synonym value="Mail Armour"/>
-				<synonym value="Mail-Armour"/>
-				<synonym value="Mail-Armor"/>
 			</heading>
 			<heading id="Menpo" title="Menpo">
 				<synonym value="Menpos"/>
@@ -1609,11 +1615,6 @@
 			</heading>
 			<heading id="Muneate" title="Muneate">
 				<synonym value="Muneates"/>
-			</heading>
-			<heading id="NeckPiece" title="Neck Piece">
-				<synonym value="Neck Pieces"/>
-				<synonym value="Neck-Piece"/>
-				<synonym value="Neck-Pieces"/>
 			</heading>
 			<heading id="Pauldron" title="Pauldron">
 				<synonym value="Pauldrons"/>
@@ -1638,9 +1639,9 @@
 				<heading id="Targe" title="Targe">
 					<synonym value="Targes"/>
 				</heading>
-				<heading id="Target" title="Target">
+				<!-- <heading id="Target" title="Target">
 					<synonym value="Targets"/>
-				</heading>
+				</heading> -->
 				<heading id="PartsOfShields" title="Parts of Shields">
 					<heading id="Boss" title="Boss">
 						<synonym value="Bosses"/> <!-- Exclude managers once 'people' facet grows to include professions -->
@@ -1652,16 +1653,6 @@
 						<synonym value="Shield-Strengtheners"/>
 					</heading>
 				</heading>
-			</heading>
-			<heading id="ShinGuard" title="Shin Guard">
-				<synonym value="Shin Guards"/>
-				<synonym value="Shin-Guard"/>
-				<synonym value="Shin-Guards"/>
-			</heading>
-			<heading id="ShoulderPiece" title="Shoulder Piece">
-				<synonym value="Shoulder Pieces"/>
-				<synonym value="Shoulder-Piece"/>
-				<synonym value="Shoulder-Pieces"/>
 			</heading>
 			<heading id="Tare" title="Tare">
 				<synonym value="Tares"/>
@@ -1807,7 +1798,7 @@
 					<heading id="GuandaoEdgWpn" title="Guandao">
 						<synonym value="Kwandao"/>
 						<synonym value="Kuantao"/>
-						<implies facet="Location" cat="China"/>
+						<implies facet="Location" cat="ChinaCountry"/>
 					</heading>
 					<heading id="GuisarmeEdgWpn" title="Guisarme">
 						<synonym value="Guisarmes"/>
@@ -1893,7 +1884,7 @@
 							<synonym value="Blades Swords"/>
 							<synonym value="Kampilan"/>
 							<synonym value="Kampilans"/>
-							<implies facet="ObjectName" cat="BladeEdgWpn"/>
+							<implies facet="ObjectName" cat="BladeEdgWpnGear"/>
 						</heading>
 						<heading id="HiltEdgWpn" title="Hilt">
 							<synonym value="Hilts"/>
@@ -1925,7 +1916,7 @@
 					</heading>
 				</heading>
 				<heading id="EdgedWeaponGear" title="[Related gear]" noMatch="true">
-					<heading id="BladeEdgWpn" title="Blade">
+					<heading id="BladeEdgWpnGear" title="Blade">
 						<synonym value="Blades"/>
 					</heading>
 					<heading id="Koshirae" title="Koshirae"/> <!-- Japanese Sword mount/furniture (also wearable?) -->
@@ -2353,11 +2344,17 @@
 			<heading id="PlayBillComm" title="Play-Bill">
 				<synonym value="Play-Bills"/>
 			</heading>
-			<heading id="ShowCardComm" title="Show-Card">
+			<heading id="ShowCardComm" title="Show Card">
+				<synonym value="Show Cards"/>
+				<synonym value="Show-Card "/>
 				<synonym value="Show-Cards"/>
+				<implies facet="ObjectName" cat="ShowCardCardsComm"/>
 			</heading>
-			<heading id="TradeCardComm" title="Trade-Card">
+			<heading id="TradeCardComm" title="Trade Card">
+				<synonym value="Trade Cards"/>
+				<synonym value="Trade-Card "/>
 				<synonym value="Trade-Cards"/>
+				<implies facet="ObjectName" cat="TradeCardCardsComm"/>
 			</heading>
 		</heading>
 		<heading id="ArtWritingItemsComm" title="Art &amp; Writing Items">
@@ -2783,17 +2780,21 @@
 		</heading>
 		<heading id="CardsComm" title="Cards">
 			<synonym value="Card"/>
-			<heading id="AltarCardCardsComm" title="Altar Cards" noMatch="true"/>
-			<heading id="CatalogCardsComm" title="Catalog Cards">
-				<synonym value="Catalog Card"/>
+			<excl value="Catalog Card"/>
+			<heading id="AltarCardCardsComm" title="Altar Card" noMatch="true"/>
+			<heading id="CheckCardCardsComm" title="Check Card" noMatch="true"/>
+			<heading id="CollectingCardsComm" title="Collecting Card">
+				<synonym value="Collecting Cards"/>
 			</heading>
-			<heading id="CollectingCardsComm" title="Collecting Cards">
-				<synonym value="Collecting Card"/>
+			<heading id="CreditCardComm" title="Credit Card">
+				<synonym value="Credit Cards"/>
 			</heading>
-			<heading id="CreditCardComm" title="Credit Card"/>
-			<heading id="DanceCardsComm" title="Dance Cards">
-				<synonym value="Dance Card"/>
+			<heading id="DanceCardsComm" title="Dance Card">
+				<synonym value="Dance Cards"/>
 				<implies facet="ActivityorContext" cat="DancesEvents"/>
+			</heading>
+			<heading id="GreetingCardCardsComm" title="Greeting Cards" noMatch="true">
+				<heading id="XmasCardCardsComm" title="Christmas Card" noMatch="true"/>
 			</heading>
 			<heading id="MassCardComm" title="Mass Card">
 				<synonym value="Mass Cards"/>
@@ -2804,9 +2805,12 @@
 			<heading id="MemorialCardComm" title="Memorial Card">
 				<synonym value="Memorial Cards"/>
 			</heading>
-			<heading id="SampleCardsComm" title="Sample Cards">
-				<synonym value="Sample Card"/>
+			<heading id="PlayingCardCardsComm" title="Playing Card" noMatch="true"/>
+			<heading id="SampleCardsComm" title="Sample Card">
+				<synonym value="Sample Cards"/>
 			</heading>
+			<heading id="ShowCardCardsComm" title="Show Card" noMatch="true"/>
+			<heading id="TradeCardCardsComm" title="Trade Card" noMatch="true"/>
 		</heading>
 		<heading id="CatalogComm" title="Catalog">
 			<!-- Be Careful -->
@@ -3414,17 +3418,17 @@
 				<synonym value="Billy Cans"/>
 				<synonym value="Tin Billy"/>
 			</heading>
-			<heading id="Cigarettetin" title="Cigarette Tin"/>
-			<heading id="Coffeecan" title="Coffee Can"/>
-			<heading id="Gunpowdercan" title="Gunpowder Can">
+			<heading id="CigaretteTin" title="Cigarette Tin"/>
+			<heading id="CoffeeCanCntnr" title="Coffee Can" noMatch="true"/>
+			<heading id="GunpowderCan" title="Gunpowder Can">
 				<synonym value="Gunpowder Cans"/>
 				<!-- Infer Firearms -->
 			</heading>
-			<heading id="Milktin" title="Milk Tin"/>
-			<heading id="Opiumtin" title="Opium Tin"/>
-			<heading id="Sardinecan" title="Sardine Can"/>
-			<heading id="Sodacan" title="Soda Can"/>
-			<heading id="Teacan" title="Tea Can"/>
+			<heading id="MilkTin" title="Milk Tin"/>
+			<heading id="OpiumTin" title="Opium Tin"/>
+			<heading id="SardineCan" title="Sardine Can"/>
+			<heading id="SodaCan" title="Soda Can"/>
+			<heading id="TeaCan" title="Tea Can"/>
 		</heading>
 		<heading id="Case" title="Case">
 			<synonym value="Cases"/>
@@ -3586,6 +3590,7 @@
 						<synonym value="Incense Bowls"/>
 						<synonym value="Incense-Bowl"/>
 						<synonym value="Incense-Bowls"/>
+						<implies facet="ObjectName" cat="BowlVessel"/>
 					</heading>
 					<heading id="IncenseJarCntnr" title="Incense Jar">
 						<synonym value="Incense Jars"/>
@@ -3722,10 +3727,13 @@
 				<synonym value="Bottles"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
-			<heading id="BowlVessel" title="Bowl" noMatch="true">
-				<heading id="OfferingBowl" title="Offering Bowl">
-					<synonym value="Offering Bowls"/>
-				</heading>
+			<heading id="BowlVessel" title="Bowls" noMatch="true">
+				<heading id="IncantationBowl" title="Incantation Bowl">
+					<synonym value="Incantation Bowls"/>
+					</heading>
+				<heading id="MagicBowl" title="Magic Bowl">
+					<synonym value="Magic Bowls"/>
+					</heading>
 				<heading id="Monksbowl" title="Monk's Bowl">
 					<synonym value="Monk's Bowls"/>
 				</heading>
@@ -3828,7 +3836,6 @@
 				</heading>
 				<heading id="ChaliceCup" title="Chalice">
 					<synonym value="Chalices"/>
-					<synonym value="Wine Cup"/>
 					<implies facet="ActivityorContext" cat="Drinking"/>
 					<implies facet="ObjectName" cat="ChaliceAlcEq"/>
 				</heading>
@@ -3839,7 +3846,7 @@
 						<synonym value="Cylix"/>
 						<synonym value="Kylixes"/>
 						<synonym value="Kylikes"/>
-						<implies facet="Culture" cat="AncientGreece"/>
+						<implies facet="Culture" cat="AncGreekCulture"/>
 						<implies facet="ActivityorContext" cat="WineDrinking"/>
 						<heading id="Tondo" title="Tondo">
 							<!--The Almost Flat Interior Circle On The interior Base of The Cup, 
@@ -3854,7 +3861,7 @@
 					<heading id="Skyphos" title="Skyphos">
 						<synonym value="σκύφος"/>
 						<synonym value="Skyphoi"/>
-						<implies facet="Culture" cat="AncientGreece"/>
+						<implies facet="Culture" cat="AncGreekCulture"/>
 						<implies facet="ActivityorContext" cat="WineDrinking"/>
 					</heading>
 				</heading>
@@ -3957,7 +3964,7 @@
 						<synonym value="Οινοχόη"/>
 						<synonym value="Oenochoe"/>
 						<heading id="Olpe" title="Olpe">
-							<implies facet="Culture" cat="Corinthian"/>
+							<implies facet="Culture" cat="CorinthianCul"/>
 							<implies facet="TechniqueDesignorDecoration" cat="SShaped"/>
 							<implies facet="ActivityorContext" cat="WineDrinking"/>
 						</heading>
@@ -4161,7 +4168,7 @@
 					</heading>
 					<heading id="Celadonware" title="Celadon Ware">
 						<synonym value="Celadon"/>
-						<implies facet="Color" cat="Celadoncolor"/>
+						<implies facet="Color" cat="JadeGreen"/>
 					</heading>
 					<heading id="Lusterware" title="Lusterware">
 						<synonym value="Lustre Ware"/>
@@ -4273,9 +4280,6 @@
 				<heading id="HuRelRegVes" title="Hu">
 					<synonym value="Hus"/>
 				</heading>
-				<heading id="IncantationBowl" title="Incantation Bowl">
-					<synonym value="Incantation Bowls"/>
-				</heading>
 				<heading id="JiaRelRegVes" title="Jia">
 					<synonym value="Jias"/>
 				</heading>
@@ -4287,9 +4291,6 @@
 				</heading>
 				<heading id="Loutrophoros" title="Loutrophoros">
 					<!-- <synonym value="xxxxxxxxx"/> Does this have a plural? -->
-				</heading>
-				<heading id="MagicBowl" title="Magic Bowl">
-					<synonym value="Magic Bowls"/>
 				</heading>
 				<heading id="MultipleVase" title="Multiple Vase">
 					<synonym value="Multiple Vases"/>
@@ -4314,8 +4315,11 @@
 						<synonym value="Preachers Plates"/>
 						<implies facet="ObjectName" cat="PreachersPlateComm"/>
 					</heading>
-					<heading id="OfferingBowl" title="Offering-Bowl">
+					<heading id="OfferingBowl" title="Offering Bowl">
+						<synonym value="Offering Bowls"/>
+						<synonym value="Offering-Bowl"/>
 						<synonym value="Offering-Bowls"/>
+						<implies facet="ObjectName" cat="BowlVessel"/>
 					</heading>
 					<heading id="OfferingCup" title="Offering-Cup">
 						<synonym value="Offering-Cups"/>
@@ -5246,10 +5250,14 @@
 					<heading id="FixedBarrelCorkscrewCookEq" title="Fixed Barrel">
 						<synonym value="Fixed Barrel Corkscrew"/>
 						<synonym value="Fixed Barrel Corkscrews"/>
+						<synonym value="Fixed-Barrel Corkscrew"/>
+						<synonym value="Fixed-Barrel Corkscrews"/>
 					</heading>
 					<heading id="SlidingBarrelCorkscrewCookEq" title="Sliding Barrel">
 						<synonym value="Sliding Barrel Corkscrew"/>
 						<synonym value="Sliding Barrel Corkscrews"/>
+						<synonym value="Sliding-Barrel Corkscrew"/>
+						<synonym value="Sliding-Barrel Corkscrews"/>
 					</heading>
 				</heading>
 			</heading>
@@ -5264,25 +5272,62 @@
 			</heading>
 			<heading id="BasinCookEq" title="Basin">
 				<synonym value="Basins"/>
-				<excl value="Great Basin"/>
+				<excl value="Amazon Basin"/>
+				<excl value="Basin Shape"/>
+				<excl value="Basin Shaped"/>
+				<excl value="Basin-Shape"/>
+				<excl value="Basin-Shaped"/>
 				<excl value="Basin and Plain"/>
 				<excl value="Basin &amp; Plain"/>
-				<excl value="Wash"/>
 				<excl value="Basinet"/>
+				<excl value="Big Basin"/>
+				<excl value="Catchment Basin"/>
+				<excl value="Colorado Basin"/>
+				<excl value="Colorado River Basin"/>
+				<excl value="Columbia Basin"/>
+				<excl value="Gila Basin"/>
+				<excl value="Great Basin"/>
+				<excl value="Jose Basin"/>
+				<excl value="Klamath Basin"/>
+				<excl value="Lake Basin"/>
+				<excl value="Lake Victoria Basin"/>
+				<excl value="Munson Basin"/>
+				<excl value="Pelvic Basin"/>
+				<excl value="Richmond Basin"/>
+				<excl value="Rio Grande Basin"/>
+				<excl value="River"/>
+				<excl value="San Juan Basin"/>
+				<excl value="Siska Horonai Basin"/> <!-- What/where is this? -->
+				<excl value="Soldier Basin"/>
+				<excl value="Tonto Basin"/>
+				<excl value="Walker Basin"/>
+				<excl value="Wash"/>
 				<implies facet="ObjectName" cat="BasinVessel"/>
 			</heading>
 			<heading id="CookingBasketCookEq" title="Cooking Basket" noMatch="true"/> 
-			<heading id="CookingBowlCookEq" title="Cooking Bowl"/>
+			<heading id="CookingBowlCookEq" title="Cooking Bowl">
 				<synonym value="Cooking Bowls"/>
 				<synonym value="Cooking-Bowl"/>
 				<synonym value="Cooking-Bowls"/>
-				<heading id="BowlCookEq" title="Bowl">
-					<synonym value="Bowls"/>
-					<implies facet="ActivityorContext" cat="FoodServing"/>
-					<implies facet="ObjectName" cat="BowlVessel"/>
-					<!-- need complex inferentiation to remove ritual bowls, etc. -->
+				<synonym value="Bowl"/>
+				<synonym value="Bowls"/>
+				<excl value="Brandy"/>
+				<excl value="Carpet"/>
+				<excl value="Incantation"/>
+				<excl value="Incense"/>
+				<excl value="Kava"/>
+				<excl value="Magic"/>
+				<excl value="Monk's"/>
+				<excl value="Offering"/>
+				<excl value="Pipe"/>
+				<excl value="Punch"/>
+				<excl value="Ritual"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<implies facet="ObjectName" cat="BowlVessel"/>
+				<heading id="BreadBowlCookEq" title="Bread Bowl">
+					<synonym value="Bread Bowls"/>
 				</heading>
-				<heading id="BreadBowlCookEq" title="Bread Bowl"/>
+			</heading>
 			<heading id="CookingPanCookEq" title="Cooking Pan">
 				<synonym value="Cooking Pans"/>
 				<synonym value="Cooking-Pan"/>
@@ -5313,7 +5358,7 @@
 				<synonym value="Caldrons"/>
 				<implies facet="ObjectName" cat="BoilerVessel"/>
 				<heading id="ChytraCookEq" title="Chytra">
-					<synonym value="Chytra"/>
+					<synonym value="Chytras"/>
 				</heading>
 				<heading id="LopasCookEq" title="Lopas"/>
 				<heading id="PipkinCookEq" title="Pipkin"> <!-- Earthenware pot or pan, also a drinking vessel. -->
@@ -5808,19 +5853,38 @@
 			<synonym value="Banknotes"/>
 			<implies facet="ObjectName" cat="BanknoteVisRep"/>
 		</heading>
-		<heading id="BridePrice" title="Bride-Price">
+		<heading id="BridePrice" title="Bride Price">
 			<synonym value="Bride Prices"/>
 			<synonym value="Bride-Price"/>
 			<synonym value="Bride-Prices"/>
 		</heading>
-		<heading id="Cheque" title="Cheque">
+		<heading id="ChequeOrCheck" title="Check" noMatch="true">
+			<!-- <synonym value="Checks"/> -->
+			<synonym value="Cheque"/>
 			<synonym value="Cheques"/>
 		</heading>
-		<heading id="ChequeBook" title="Cheque-Book">
+		<heading id="CheckBook" title="Check Book">
+			<synonym value="Checkbook"/>
+			<synonym value="Checkbooks"/>
+			<synonym value="Check Books"/>
+			<synonym value="Check-Book"/>
+			<synonym value="Check-Books"/>
+			<synonym value="Chequebook"/>
+			<synonym value="Chequebooks"/>
+			<synonym value="Cheque Book"/>
+			<synonym value="Cheque Books"/>
+			<synonym value="Cheque-Book"/>
 			<synonym value="Cheque-Books"/>
 		</heading>
-		<heading id="ChequeCard" title="Cheque-Card">
+		<heading id="CheckCard" title="Check Card">
+			<synonym value="Check Cards"/>
+			<synonym value="Check-Card"/>
+			<synonym value="Check-Cards"/>
+			<synonym value="Cheque Card"/>
+			<synonym value="Cheque Cards"/>
+			<synonym value="Cheque-Card"/>
 			<synonym value="Cheque-Cards"/>
+			<implies facet="ObjectName" cat="CheckCardCardsComm"/>
 		</heading>
 		<heading id="Coin" title="Coin">
 			<synonym value="Coins"/>
@@ -7142,9 +7206,7 @@
 		<heading id="SnufferLghtEq" title="Snuffer">
 			<synonym value="Snuffers"/>
 		</heading>
-		<heading id="SnufferStandLghtEq" title="Snuffer Stand">
-			<synonym value="Snuffer Stands"/>
-		</heading>
+		<heading id="SnufferStandLghtEq" title="Snuffer Stand" noMatch="true"/>
 		<heading id="TorchLghtEq" title="Torch">
 			<synonym value="Torches"/>
 			<synonym value="Torchs"/> <!-- Misspelling -->
@@ -7243,7 +7305,7 @@
 			<synonym value="Invalid Mugs"/>
 		</heading>
 		<heading id="MedicalInstrumentRx" title="Medical Instruments">
-			<synonym value="Medical Instruments"/>
+			<synonym value="Medical Instrument"/>
 			<implies facet="ObjectName" cat="MedicalInstrumentInstr"/>
 			<heading id="AcupunctureNeedle" title="Acupuncture Needle">
 				<synonym value="Acupuncture Needles"/>
@@ -7472,11 +7534,12 @@
 		<heading id="LidMiscEq" title="Lid">
 			<synonym value="Lids"/>
 		</heading>
-		<heading id="LineMiscEq" title="Line">
+		<!-- <heading id="LineMiscEq" title="Line">
 			<synonym value="Lines"/>
-		</heading>
+		</heading> -->
 		<heading id="MarkerMiscEq" title="Marker">
 			<synonym value="Markers"/>
+			<excl value="grave"/> <!-- Disambiguates from grave markers -->
 		</heading>
 		<heading id="MaskMiscEq" title="Mask">
 			<synonym value="Masks"/>
@@ -7712,7 +7775,7 @@
 				<synonym value="Snuffer Stands"/>
 				<synonym value="Snuffer-Stand"/>
 				<synonym value="Snuffer-Stands"/>
-				<implies facet="ObjectName" cat="SnuffDrug"/>
+				<implies facet="ObjectName" cat="SnufferStandLghtEq"/>
 			</heading>
 			<heading id="StelaStandStndMiscEq" title="Stela Stand">
 				<synonym value="Stela Stands"/>
@@ -8382,7 +8445,7 @@
 						<synonym value="Hour-Glass Drums"/>
 						<synonym value="Hour Glass Drum"/>
 						<synonym value="Hour Glass Drums"/>
-						<heading id="DamaruRelRit" title="Damaru">
+						<heading id="DamaruRelRitDrum" title="Damaru">
 							<synonym value="Damarus"/>
 							<synonym value="Damaru Drum"/>
 							<synonym value="Damaru Drums"/>
@@ -9343,7 +9406,6 @@
 				<synonym value="Score"/>
 				<synonym value="Scores"/>
 				<synonym value="Music Sheet"/>
-				<synonym value="Music Sheets"/>
 				<synonym value="Sheet Music"/>
 				<synonym value="Sheetmusic"/>
 				<synonym value="Music Sheets"/>
@@ -10117,8 +10179,11 @@
 			<synonym value="Charm-stone"/>
 			<synonym value="Charm-stones"/>
 		</heading>
-		<heading id="ChristmasCardRelRit" title="Christmas-Card">
+		<heading id="ChristmasCardRelRit" title="Christmas Card">
+			<synonym value="Christmas Cards"/>
+			<synonym value="Christmas-Card"/>
 			<synonym value="Christmas-Cards"/>
+			<implies facet="ObjectName" cat="XmasCardCardsComm"/>
 		</heading>
 		<heading id="ChuringaRelRit" title="Churinga">
 			<synonym value="Churingas"/>
@@ -10249,7 +10314,7 @@
 			<implies facet="ObjectName" cat="IconVisRep"/>
 		</heading>
 		<heading id="IdolRelRit" title="Idols">
-			<synonym value="Idols"/>
+			<synonym value="Idol"/>
 			<implies facet="ObjectName" cat="IdolVisRep"/>
 		</heading>
 		<heading id="InauRelRit" title="Inau">
@@ -11775,7 +11840,6 @@
 						<implies facet="Culture" cat="TurkishGroups"/>
 					</heading>
 					<heading id="KaragozShadowFigure" title="Karagöz (The Black-Eyed Man)">
-						<!-- MTB: check accents -->
 						<synonym value="Karagöz"/>
 						<synonym value="Karagoz"/>
 						<implies facet="Culture" cat="TurkishGroups"/>
@@ -11962,6 +12026,7 @@
 				<synonym value="Brandy-Bowl"/>
 				<synonym value="Brandy-Bowls"/>
 				<implies facet="ObjectName" cat="BrandyFood"/>
+				<implies facet="ObjectName" cat="BowlVessel"/>
 			</heading>
 			<heading id="CaudleCupAlcEq" title="Caudle Cup">
 				<synonym value="Caudle Cups"/>
@@ -11976,6 +12041,7 @@
 					<synonym value="Cider Glasses"/>
 					<synonym value="Cider-Glass"/>
 					<synonym value="Cider-Glasses"/>
+					<!-- implies drinking glass -->
 				</heading>
 				<heading id="CiderJug" title="Cider Jug">
 					<synonym value="Cider Jugs"/>
@@ -12012,9 +12078,11 @@
 				<synonym value="Liqueur Glasses"/>
 				<synonym value="Liqueur-Glass"/>
 				<synonym value="Liqueur-Glasses"/>
+				<!-- implies drinking glass -->
 			</heading>
 			<heading id="MazerBowl" title="Mazer Bowl">
 				<synonym value="Mazer Bowls"/>
+				<implies facet="ObjectName" cat="BowlVessel"/>
 			</heading>
 			<heading id="MazerCup" title="Mazer Cup">
 				<synonym value="Mazer Cups"/>
@@ -12024,6 +12092,7 @@
 				<synonym value="Mead-Glass"/>
 				<synonym value="Mead-Glasses"/>
 				<implies facet="ObjectName" cat="MeadFood"/>
+				<!-- implies drinking glass -->
 			</heading>
 			<heading id="Mether" title="Mether">
 				<synonym value="Methers"/>
@@ -12051,6 +12120,7 @@
 					<synonym value="Punch-Bowl"/>
 					<synonym value="Punch-Bowls"/>
 					<implies facet="ObjectName" cat="PunchBowlVsl"/>
+					<implies facet="ObjectName" cat="BowlVessel"/>
 				</heading>
 				<heading id="PunchKettleAlcEq" title="Punch-Kettle">
 					<synonym value="Punch-Kettles"/>
@@ -12088,6 +12158,7 @@
 				<synonym value="Schnapps-Glass"/>
 				<synonym value="Schnapps-Glasses"/>
 				<implies facet="ObjectName" cat="SchnappsFood"/>
+				<!-- implies drinking glass -->
 			</heading>
 			<heading id="StandingCup" title="Standing Cup">
 				<synonym value="Standing Cups"/>
@@ -12121,6 +12192,7 @@
 			<heading id="WagerCupAlcEq" title="Wager Cup" noMatch="true"/>
 			<heading id="WassailBowl" title="Wassail-Bowl">
 				<synonym value="Wassail-Bowls"/>
+				<implies facet="ObjectName" cat="BowlVessel"/>
 			</heading>
 			<heading id="WeddingCupAlcEq" title="Wedding Cup" noMatch="true"/>
 			<heading id="WineEqAlcEq" title="Wine-related items" noMatch="true">
@@ -12137,6 +12209,7 @@
 					<synonym value="Wine Cups"/>
 					<synonym value="Wine-Cup"/>
 					<synonym value="Wine-Cups"/>
+					<implies facet="ObjectName" cat="ChaliceCup"/>
 				</heading>
 				<heading id="WineCupHolder" title="Wine-Cup-Holder">
 					<synonym value="Wine-Cup-Holders"/>
@@ -12151,12 +12224,12 @@
 					<synonym value="Wine Glasses"/>
 					<synonym value="Wine-Glass"/>
 					<synonym value="Wine-Glasses"/>
-					<!-- <implies facet="ObjectName" cat="mmmmmmmm"/> Implies Drinking-Glass -->
+					<!-- implies drinking glass -->
 					<heading id="ChampagneGlass" title="Champagne Glass">
 						<synonym value="Champagne Glasses"/>
 						<synonym value="Champagne-Glass"/>
 						<synonym value="Champagne-Glasses"/>
-						<implies facet="ObjectName" cat="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+						<implies facet="ObjectName" cat="ChampagneFood"/>
 					</heading>
 					<heading id="FluteGlass" title="Flute Glass">
 						<synonym value="Flute Glasses"/>
@@ -12165,13 +12238,13 @@
 						<synonym value="Port Glasses"/>
 						<synonym value="Port-Glass"/>
 						<synonym value="Port-Glasses"/>
-						<implies facet="ObjectName" cat="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+						<implies facet="ObjectName" cat="PortFood"/>
 					</heading>
 					<heading id="SherryGlass" title="Sherry Glass">
 						<synonym value="Sherry Glasses"/>
 						<synonym value="Sherry-Glass"/>
 						<synonym value="Sherry-Glasses"/>
-						<implies facet="ObjectName" cat="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+						<implies facet="ObjectName" cat="SherryFood"/>
 					</heading>
 					<heading id="ToastmastersGlass" title="Toastmaster's Glass">
 						<synonym value="Toastmaster's Glasses"/>
@@ -12267,6 +12340,7 @@
 				<synonym value="Coffee Cans"/>
 				<synonym value="Coffee-Can"/>
 				<synonym value="Coffee-Cans"/>
+				<implies facet="ObjectName" cat="CoffeeCanCntnr"/>
 			</heading>
 			<heading id="CoffeeCoolerCfeEq" title="Coffee Cooler">
 				<synonym value="Coffee Coolers"/>
@@ -12302,7 +12376,6 @@
 				<synonym value="Coffee Percolators"/>
 				<synonym value="Coffee-Percolator"/>
 				<synonym value="Coffee-Percolators"/>
-				<implies facet="ObjectName" cat="CoffeeFood"/>
 				<implies facet="ObjectName" cat="CoffeePercolatorVess"/>
 			</heading>
 			<heading id="CoffeePotCfeEq" title="Coffee Pot">
@@ -12459,6 +12532,7 @@
 		</heading>
 		<heading id="KavaBowl" title="Kava-Bowl">
 			<synonym value="Kava-Bowls"/>
+			<implies facet="ObjectName" cat="BowlVessel"/>
 		</heading>
 		<heading id="KavaCup" title="Kava-Cup">
 			<synonym value="Kava-Cups"/>
@@ -12779,8 +12853,11 @@
 			<heading id="Kensui" title="Kensui">
 				<synonym value="Kensuis"/>
 			</heading>
-			<heading id="TeaBowl" title="Tea-Bowl">
+			<heading id="TeaBowl" title="Tea Bowl">
+				<synonym value="Tea Bowls"/>
+				<synonym value="Tea-Bowl"/>
 				<synonym value="Tea-Bowls"/>
+				<implies facet="ObjectName" cat="BowlVessel"/>
 			</heading>
 			<heading id="TeaBox" title="Tea-Box">
 				<synonym value="Tea-Boxes"/>
@@ -14331,6 +14408,7 @@
 			<synonym value="Greeting Cards"/>
 			<synonym value="Greeting-Card"/>
 			<synonym value="Greeting-Cards"/>
+			<implies facet="ObjectName" cat="GreetingCardCardsComm"/>
 		</heading>
 		<heading id="IconVisRep" title="Icon" noMatch="true"/>
 		<heading id="IdolVisRep" title="Idol" noMatch="true"/>
@@ -14454,6 +14532,7 @@
 			<synonym value="Playing Cards"/>
 			<synonym value="Playing-Card"/>
 			<synonym value="Playing-Cards"/>
+			<implies facet="ObjectName" cat="PlayingCardCardsComm"/>
 		</heading>
 		<heading id="PolyptychVisRep" title="Polyptych">
 			<synonym value="Polyptychs"/>

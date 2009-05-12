@@ -12,7 +12,7 @@
 	<notes>
 		<!-- Terms to add:
 			Crystal
-				Lead/leaded Crystal Paolo testing
+				Lead/leaded Crystal
 		-->
 	</notes>
 	<heading id="FromAnimals" title="From Animals">
@@ -518,7 +518,7 @@
 				<synonym value="reindeer Incisor"/>
 				<synonym value="reindeer Incisors"/>
 				<synonym value="Elk teeth"/>
-				<synonym value="Elk check teeth"/>
+				<synonym value="Elk check teeth"/> <!-- Misspelling of cheek teeth -->
 				<synonym value="Elk tooth"/>
 				<synonym value="Elk molars"/>
 				<synonym value="Teeth of an elk"/>
@@ -795,6 +795,25 @@
 				<heading id="BirchTree" title="Birch">
 					<heading id="Hazel" title="Hazel"/>
 				</heading>
+				<heading id="CamwoodTree" title="Camwood">
+					<synonym value="Baphia nitida"/> <!-- Linnaean binomial -->
+					<synonym value="Barwood"/>
+					<synonym value="Bar-Wood"/>
+					<synonym value="Cam Wood"/>
+					<synonym value="Cam-Wood"/>
+					<synonym value="Leguminosæ"/> <!-- Taxonomic family -->
+					<synonym value="Leguminosae"/> <!-- Taxonomic family -->
+					<implies facet="ActivityorContext" cat="DyingArtCraft"/>
+					<implies facet="Location" cat="WesternAfrica"/>
+					<!-- From OED: 
+						Cam-wood: The hard red wood of Baphia nitida (family Leguminosæ), imported
+						from West Africa, and used for dyeing, and in turning and cabinet-making;
+						called also BARWOOD.
+						
+						Barwood: A red wood imported from the Gaboon and adjacent parts of Africa,
+						used chiefly for dyeing purposes, and also for ramrods and violin bows. It
+						is the produce of the Baphita nitida. -->
+				</heading>
 				<heading id="CedarTree" title="Cedar"/>
 				<heading id="CoconutTree" title="Coconut">
 					<synonym value="Coconuts"/>
@@ -808,7 +827,7 @@
 						<synonym value="Junipers"/>
 						<synonym value="Juniper berry"/>
 						<synonym value="Juniper berries"/>
-						<implies facet="Materials" cat="JuniperBush"/>
+						<implies facet="Material" cat="JuniperBush"/>
 					</heading>
 					<heading id="PineTree" title="Pine">
 						<synonym value="Pinenut"/>
@@ -881,7 +900,6 @@
 		<heading id="GlassAndCeramic" title="Glass And Ceramic">
 			<synonym value="Ceramic"/>
 			<synonym value="Ceramics"/>
-			<synonym value="Glass"/>
 			<heading id="Bucchero" title="Bucchero"/>
 			<heading id="Clay" title="Clay">
 				<heading id="Adobe" title="Adobe"/>
