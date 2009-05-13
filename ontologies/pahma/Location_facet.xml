@@ -1003,12 +1003,12 @@
 			<heading id="CentralEurope" title="Central Europe">
 				<synonym value="Central European"/>
 				<synonym value="Central Europeans"/>
-				<heading id="Austria" title="Austria">
+				<heading id="AustriaCountry" title="Austria">
 					<synonym value="Austrian"/>
 					<synonym value="Austrians"/>
 					<heading id="Carnuntum" title="Carnuntum"/>
 					<heading id="Vienna" title="Vienna">
-						<synonym value="Vindobona"/>
+						<synonym value="Vindobona"/> <!-- Move to Non-Modern placenames -->
 						<synonym value="Wien"/>
 					</heading>
 				</heading>
@@ -1016,7 +1016,8 @@
 					<synonym value="Czech"/>
 					<synonym value="Czechs"/>
 				</heading>
-				<heading id="Germany" title="Germany">
+				<heading id="GermanyCountry" title="Germany">
+					<synonym value="Deutschland"/>
 					<synonym value="German"/>
 					<synonym value="Germans"/>
 					<heading id="BadenWuerttemberg" title="Baden-Wuerttemberg">
@@ -1061,7 +1062,7 @@
 						<heading id="Meissen" title="Meissen"/>
 					</heading>
 				</heading>
-				<heading id="Hungary" title="Hungary">
+				<heading id="HungaryCountry" title="Hungary">
 					<synonym value="Hungarian"/>
 					<synonym value="Hungarians"/>
 					<heading id="Bohema" title="Bohema"/>
@@ -1069,14 +1070,14 @@
 					<heading id="Truaon" title="Truaon"/> <!-- can find no record of this place, but it's listed as a site in Museum records -->
 				</heading>
 				<heading id="Liechtenstein" title="Liechtenstein"/>
-				<heading id="Luxembourg" title="Luxembourg"/>
-				<heading id="Poland" title="Poland">
+				<heading id="LuxembourgCountry" title="Luxembourg"/>
+				<heading id="PolandCountry" title="Poland">
 					<synonym value="Polish"/>
 					<synonym value="Polack"/>
 					<synonym value="Polacks"/>
 					<heading id="Breslau" title="Breslau"/>
 				</heading>
-				<heading id="Romania" title="Romania">
+				<heading id="RomaniaCountry" title="Romania">
 					<synonym value="Romanian"/>
 					<synonym value="Romanians"/>
 					<synonym value="Roumania"/>
@@ -1094,7 +1095,7 @@
 						<synonym value="Prespurk, Slovakia"/>
 					</heading>
 				</heading>
-				<heading id="Slovenia" title="Slovenia">
+				<heading id="SloveniaCountry" title="Slovenia">
 					<synonym value="Slovenian"/>
 					<synonym value="Slovenians"/>
 				</heading>
@@ -1329,11 +1330,6 @@
 						</heading>
 						<heading id="Chiusi" title="Chiusi"/>
 						<heading id="CivitaCastellana" title="Civita Castellana"/>
-						<heading id="Etruria" title="Etruria">
-							<heading id="Campomorto" title="Campomorto"/>
-							<heading id="Narce" title="Narce"/>
-							<heading id="Zambra" title="Zambra"/>
-						</heading>
 						<heading id="Florence" title="Florence">
 							<synonym value="Florentine"/>
 						</heading>
@@ -1618,7 +1614,7 @@
 			<heading id="WesternEurope" title="Western Europe">
 				<synonym value="Western European"/>
 				<synonym value="Western Europeans"/>
-				<heading id="Belgium" title="Belgium">
+				<heading id="BelgiumCountry" title="Belgium">
 					<synonym value="Belgian"/>
 					<heading id="Flanders" title="Flanders">
 						<synonym value="Flemish"/>
@@ -2788,6 +2784,7 @@
 					</heading>
 					<heading id="AroraeIsland" title="Arorae Island">
 						<synonym value="Arorae"/>
+						<synonym value="Aroræ"/>
 						<heading id="RoretiVillage" title="Roreti Village">
 							<synonym value="Roreti"/>
 						</heading>
@@ -4494,7 +4491,7 @@
 						</heading>
 						<heading id="LaMesa" title="La Mesa"/>
 						<heading id="MesadeNayar" title="Mesa de Nayar"/>
-						<heading id="SantiagoIxcMX" title="Santiago Ixc.">
+						<heading id="SantiagoIxcMX" title="Santiago de Ixcuintla">
 							<synonym value="Santiago Ixc."/>
 						</heading>
 					</heading>
@@ -22332,1280 +22329,1341 @@
 	<heading id="NonModernLocations" title="Historic Placenames" noMatch="true">
 		<!-- "Obtained at Ko Lauwa la, the sacred lake of the gods near the confluence of the Zuni and Little Colorado Rivers" -->
 		<heading id="NonModernEurope" title="Europe" noMatch="true">
-			<heading id="Czechoslovakia" title="Czechoslovakia">
-				<synonym value="Czechoslovakian"/>
-				<synonym value="Czechoslovakians"/>
-				<synonym value="Czechoslovak"/>
-				<synonym value="Czechoslovaks"/>
-				<implies facet="Location" cat="CzechRepublic"/> <!-- Need to work on this inference rule -->
-				<implies facet="Location" cat="SlovakiaCountry"/> <!-- Need to work on this inference rule -->
-			</heading>
-			<heading id="Yugoslavia" title="Yugoslavia">
-				<synonym value="Yugoslavia (former)"/>
-				<synonym value="Yugoslavian"/>
-				<synonym value="Yugoslavians"/>
-				<synonym value="Jugoslavija"/>
-				<synonym value="Kingdom of Yugoslavia"/>
-				<synonym value="Federal Republic of Yugoslavia"/>
-				<synonym value="Republic of Yugoslavia"/>
-				<synonym value="Socialist Federal Republic of Yugoslavia"/>
-				<synonym value="Југославија"/>
-				<implies facet="Location" cat="BosniaHerzegovina"/> <!-- Need to work on this inference rule -->
-				<implies facet="Location" cat="CroatiaCountry"/> <!-- Need to work on this inference rule -->
-				<implies facet="Location" cat="SerbiaCountry"/> <!-- Need to work on this inference rule -->
-			</heading>
-			<heading id="AncientGreece" title="Ancient Greece">
-				<synonym value="Greece (ancient)"/>
-				<synonym value="Ancient Greek"/>
-				<synonym value="Classical Greece"/>
-				<heading id="MagnaGraeciaOlGrce" title="Magna Graecia">
-					<implies facet="Location" cat="SouthernItaly"/>
-					<!-- Central Italy- 
-					Etruria — usually referred to in Greek and Latin source texts as Tyrrhenia -->
-					<!-- Southern Italy- -->
-					<heading id="TuscanyOldGreece" title="Tuscany"/> <!-- Shouldn't this be Toscana or something? -->
-					<heading id="ApuliaOldGreece" title="Apulia">
-						<synonym value="Ἀπουλία"/>
-						<synonym value="Puglia"/>
-						<implies facet="Location" cat="PugliaItaly"/>
-					</heading>
-					<heading id="BarlettaOldGreece" title="Barletta">
-						<implies facet="Location" cat="BarlettaItaly"/>
-					</heading> 
-					<heading id="NaplesOldGreece" title="Neápolis"> <!-- Literally means "New City" -->
-						<synonym value="Naples"/>
-						<synonym value="Napoli"/>
-						<synonym value="Neapolitan"/>
-						<synonym value="Napule"/>
-						<synonym value="Νεάπολις"/>
-						<implies facet="Location" cat="NaplesItaly"/>
-					</heading>
-					<heading id="RhegionOldGreece" title="Rhegion"> <!-- Literally means "it breaks away" -->
-						<synonym value="Reggio di Calabria"/>
-						<synonym value="Reggio Calabria"/>
-						<synonym value="Rìggiu"/>
-						<synonym value="Righi"/>
-						<synonym value="Ῥήγιον"/>
-						<implies facet="Location" cat="ReggioCalabrItaly"/>
-					</heading>
-					<heading id="MessorofeOldGreece" title="Messorofè"/> 
-					<heading id="OrthioiOldGreece" title="Orthioi"/> 
-					<heading id="PellarosOldGreece" title="Pèllaros"/>
-					<heading id="SiciliaOldGreece" title="Sicilia">
-						<synonym value="Sicily"/>
-						<synonym value="Sicilian"/>
-						<synonym value="Sicilians"/>
-						<implies facet="Location" cat="SicilyItaly"/>
-						<heading id="GelaOldGreece" title="Gela">
-							<implies facet="Location" cat="GelaItaly"/>
+			<heading id="AncientEurope" title="Ancient Europe">
+				<heading id="Etruria" title="Etruria">
+					<heading id="Campomorto" title="Campomorto"/>
+					<heading id="Narce" title="Narce"/>
+					<heading id="Zambra" title="Zambra"/>
+				</heading>
+				<heading id="AncientGreece" title="Ancient Greece">
+					<synonym value="Greece (ancient)"/>
+					<synonym value="Ancient Greek"/>
+					<synonym value="Classical Greece"/>
+					<heading id="MagnaGraeciaOlGrce" title="Magna Graecia">
+						<implies facet="Location" cat="SouthernItaly"/>
+						<!-- Central Italy- 
+						Etruria — usually referred to in Greek and Latin source texts as Tyrrhenia -->
+						<!-- Southern Italy- -->
+						<heading id="TuscanyOldGreece" title="Tuscany"/> <!-- Shouldn't this be Toscana or something? -->
+						<heading id="ApuliaOldGreece" title="Apulia">
+							<synonym value="Ἀπουλία"/>
+							<synonym value="Puglia"/>
+							<implies facet="Location" cat="PugliaItaly"/>
 						</heading>
-						<heading id="SyrakousaeOldGreece" title="Syrakousae">
-							<synonym value="Siracusa"/> <!-- Italian -->
-							<synonym value="Siracusan"/>
-							<synonym value="Siracusans"/>
-							<synonym value="Sarausa"/> <!-- Sicilian -->
-							<synonym value="Συρακοῦσαι"/> <!-- Greek -->
-							<implies facet="Location" cat="SiracusaItaly"/>
+						<heading id="BarlettaOldGreece" title="Barletta">
+							<implies facet="Location" cat="BarlettaItaly"/>
+						</heading> 
+						<heading id="NaplesOldGreece" title="Neápolis"> <!-- Literally means "New City" -->
+							<synonym value="Naples"/>
+							<synonym value="Napoli"/>
+							<synonym value="Neapolitan"/>
+							<synonym value="Napule"/>
+							<synonym value="Νεάπολις"/>
+							<implies facet="Location" cat="NaplesItaly"/>
 						</heading>
-					</heading>
-				</heading>
-				<heading id="GreeceProper" title="Greek mainland">
-					<heading id="AtticaOldGreece" title="Attica">
-						<synonym value="Αττική"/>
-						<synonym value="Attikí"/>
-						<synonym value="Attic"/> <!-- If we ever start collecting sub-roof spaces, beware... -->
-						<synonym value="Attican"/>
-						<synonym value="Atticans"/>
-						<implies facet="Location" cat="AtticaGreece"/>
-					</heading>
-					<heading id="AthensOldGreece" title="Athens">
-						<synonym value="Αθήνα"/>
-						<synonym value="Athina"/>
-						<implies facet="Location" cat="AthensGreece"/>
-						<heading id="AcropolisAthens" title="Acropolis"/>
-					</heading>
-					<heading id="BoeotiaOldGreece" title="Boeotia">
-						<synonym value="Beotia"/>
-						<synonym value="Beotian"/>
-						<synonym value="Beotians"/>
-						<synonym value="Βοιωτία"/>
-						<synonym value="Boetia"/>
-						<synonym value="Boetian"/>
-						<synonym value="Boetians"/>
-						<synonym value="Boeotian"/>
-						<synonym value="Boeotians"/>
-						<synonym value="Bœotia"/>
-						<synonym value="Bœotian"/>
-						<synonym value="Bœotians"/>
-						<synonym value="Cadmeis"/>
-						<implies facet="Location" cat="BoeotiaGreece"/>
-						<implies facet="Culture" cat="BoetianCulture"/>
-					</heading>
-					<heading id="DeliumOldGreece" title="Delium"> <!-- Not modern? -->
-						<synonym value="Δήλιον"/>
-						<synonym value="Dêlion"/>
-					</heading>
-					<heading id="LivadeiaOldGreece" title="Livadeia">
-						<synonym value="Lebadeia"/>
-						<synonym value="Lebadia"/>
-						<synonym value="Leivadia"/>
-						<synonym value="Levádeia"/>
-						<synonym value="Levadeia"/>
-						<synonym value="Livadeiá"/>
-						<synonym value="Livadia"/>
-						<synonym value="Λεβάδεια"/>
-						<synonym value="Λιβαδειά"/>
-						<synonym value="Λειβαδιά"/>
-						<implies facet="Location" cat="LebadeiaGreece"/>
-					</heading>
-					<heading id="TanagraOldGreece" title="Tanagra">
-						<synonym value="Τανάγρα"/>
-						<implies facet="Location" cat="TanagraGreece"/>
-					</heading>
-					<heading id="ThebesOldGreece" title="Thebes">
-						<synonym value="Θῆβαι"/>
-						<synonym value="Thēbai"/>
-						<synonym value="Thebai"/>
-						<synonym value="Θήβα"/>
-						<synonym value="Thiva"/>
-						<synonym value="Thívai"/>
-						<synonym value="Thivai"/>
-						<excl value="Egypt"/>
-						<implies facet="Location" cat="ThebesGreece"/>
-					</heading>
-					<heading id="ThessalyOldGreece" title="Thessaly">
-						<synonym value="Θεσσαλία"/>
-						<synonym value="Thessalía"/>
-						<synonym value="Thessalian"/>
-						<synonym value="Πετθαλία"/>
-						<synonym value="Petthalia"/>
-						<!-- <synonym value="Aeolia"/> Disambiguate from Asia Minor location. In Homer, there is also a same place name in Asia Minor -->
-					</heading>
-					<heading id="TrikalaOldGreece" title="Trikala">
-						<synonym value="Τρίκαλα"/>
-						<synonym value="Trikka"/> <!-- Of Homeric fame -->
-						<synonym value="Trikki"/>
-					</heading>
-					<heading id="DelphiOldGreece" title="Delphi">
-						<synonym value="Δελφοί"/>
-					</heading>
-					<heading id="LocrisOldGreece" title="Locris">
-						<synonym value="Λοκρίδα"/>
-						<synonym value="Lokrida"/>
-						<synonym value="Λοκρίς"/>
-						<synonym value="Lokris"/>
-						<implies facet="Location" cat="LocrisGreece"/>
-					</heading>
-				</heading>
-				<heading id="PeloponnesusOldGrc" title="Peloponnesus">
-					<synonym value="Peloponnese"/>
-					<synonym value="Πελοπόννησος"/>
-					<synonym value="Pelopónnisos"/>
-					<implies facet="Location" cat="PeloponneseGreece"/>
-					<heading id="AchaeaOldGreece" title="Achaea"/>
-					<heading id="IsthmusCorinthOldGrc" title="Isthmus of Corinth">
-						<heading id="CorinthOldGreece" title="Corinth">
-							<synonym value="Korinth"/>
-							<synonym value="Κόρινθος"/>
-							<implies facet="Location" cat="CorinthGreece"/>
+						<heading id="RhegionOldGreece" title="Rhegion"> <!-- Literally means "it breaks away" -->
+							<synonym value="Reggio di Calabria"/>
+							<synonym value="Reggio Calabria"/>
+							<synonym value="Rìggiu"/>
+							<synonym value="Righi"/>
+							<synonym value="Ῥήγιον"/>
+							<implies facet="Location" cat="ReggioCalabrItaly"/>
 						</heading>
-					</heading>
-				</heading>
-				<heading id="ArcadiaOldGreece" title="Arcadia">
-					<synonym value="Arkadía"/>
-					<synonym value="Αρκαδία"/>
-					<synonym value="Arcady"/>
-				</heading>
-				<heading id="KleitorOldGreece" title="Kleitor">
-					<synonym value="Klitor"/>
-					<synonym value="Kl(e)itoras"/>
-					<synonym value="Kl[e]itoras"/>
-					<synonym value="Kleitoras"/>
-					<synonym value="Klitoras"/>
-					<synonym value="Κλείτωρ"/>
-				</heading>
-				<heading id="TripoliOldGreece" title="Tripoli"><!-- Infer modern Tripoli -->
-					<synonym value="Τρίπολη"/>
-					<synonym value="Trípoli"/>
-					<synonym value="Τρίπολις"/>
-					<synonym value="Trípolis"/>
-					<synonym value="Tripolitsa"/>
-					<synonym value="Tripolitza"/>
-					<synonym value="Tripolizza"/>
-					<implies facet="Location" cat="TripoliLibya"/>
-				</heading>
-				<heading id="ArgolisOldGreece" title="Argolis">
-					<synonym value="Αργολίδα"/>
-					<synonym value="Argolída"/>
-					<synonym value="Ἀργολίς"/>
-					<synonym value="Argolís"/>
-				</heading>
-				<heading id="OlympiaOldGreece" title="Olympia">
-					<synonym value="Ολυμπία"/>
-					<synonym value="Olympí'a"/>
-					<synonym value="Ολύμπια"/>
-					<synonym value="Olýmpia"/>
-					<synonym value="Olimpia"/>
-					<synonym value="Olimbia"/>
-				</heading>
-				<heading id="PrefectIliaOldGreece" title="Prefecture of Ilia"/>
-				<heading id="PyrgosOldGreece" title="Pyrgos">
-					<synonym value="Πύργος"/>
-				</heading>
-				<heading id="VarvasenaOldGrc" title="Varvasena">
-					<synonym value="Varvassena"/>
-					<synonym value="Βαρβάσαινα"/>
-				</heading>
-				<heading id="SpartaOldGreece" title="Sparta">
-					<synonym value="Σπάρτα"/>
-					<synonym value="Σπάρτη"/>
-					<synonym value="Spartē"/>
-				</heading>
-				<heading id="TirynsOldGreece" title="Tiryns">
-					<synonym value="Τίρυνς"/>
-					<synonym value="Τίρυνθα"/>
-					<implies facet="Location" cat="TirynsGreece"/>
-					</heading>
-				<heading id="IslandsOldGreece" title="Islands" noMatch="true">
-					<heading id="EuboeaOldGreece" title="Euboea">
-						<synonym value="Evvoia"/> <!-- modern -->
-						<synonym value="Evia"/>
-						<synonym value="Evia Island"/>
-					</heading>
-					<heading id="EretriaOldGreece" title="Eretria">
-						<synonym value="Ερέτρια"/>
-					</heading>
-					<heading id="SaronicIslOldGrc" title="Saronic Islands">
-						<heading id="AeginaOldGreece" title="Aegina">
-							<synonym value="Αίγινα"/>
-							<synonym value="Egina"/>
-							<implies facet="Location" cat="AeginaGreece"/>
-						</heading>
-						<heading id="AngistriOldGreece" title="Angistri"> <!-- means "Fishing Hook" -->
-							<synonym value="Agistri"/>
-							<synonym value="Ankistri"/>
-							<synonym value="Agkistri"/>
-							<synonym value="αγκίστρι"/>
-						</heading>
-						<heading id="PorosOldGreece" title="Poros">
-							<synonym value="Πόρος"/>
-							<implies facet="Location" cat="PorosGreece"/>
-						</heading>
-					</heading>
-					<heading id="CycladesIslGreece" title="Cyclades"> <!-- Cyclades (Islands) -->
-						<synonym value="Cyclades islands"/>
-						<synonym value="Κυκλάδες"/>
-						<heading id="AndrosIslOldGreece" title="Andros">
-							<synonym value="Andro"/>
-							<synonym value="Άνδρος"/>
-							<implies facet="Location" cat="AndrosGreece"/>
-							<heading id="AladinonOldGreece" title="Aladinon"/>
-							<heading id="ApoikiaOldGreece" title="Apoikia"/>
-							<heading id="AmmolochosOldGrc" title="Ammolochos"/>
-							<heading id="AndrosOldGreece" title="Andros (Chora)">
-								<!-- <synonym value="Chora"/> Disambiguate -->
+						<heading id="MessorofeOldGreece" title="Messorofè"/> 
+						<heading id="OrthioiOldGreece" title="Orthioi"/> 
+						<heading id="PellarosOldGreece" title="Pèllaros"/>
+						<heading id="SiciliaOldGreece" title="Sicilia">
+							<synonym value="Sicily"/>
+							<synonym value="Sicilian"/>
+							<synonym value="Sicilians"/>
+							<implies facet="Location" cat="SicilyItaly"/>
+							<heading id="GelaOldGreece" title="Gela">
+								<implies facet="Location" cat="GelaItaly"/>
 							</heading>
-							<heading id="AnoAprovatoOldGrc" title="Ano Aprovato"/>
-							<heading id="AnoGavrioOldGreece" title="Ano Gavrio"/>
-							<heading id="ArnasOldGreece" title="Arnas"/>
-							<heading id="BatsiOldGreece" title="Batsi"/>
-							<heading id="EpanoFellosOldGrc" title="Epano Fellos"/>
-							<heading id="GavrioOldGreece" title="Gavrio"/>
-							<heading id="KalyvariOldGreece" title="Kalyvari"/>
-							<heading id="KapariaOldGreece" title="Kaparia"/>
-							<heading id="KatakiloOldGreece" title="Katakilo"/>
-							<heading id="KipriOldGreece" title="Kipri"/>
-							<heading id="KochylosOldGreece" title="Kochylos"/>
-							<heading id="LamiraOldGreece" title="Lamira"/>
-							<!-- <heading id="LivadiaOldGreece" title="Livadia"/> Listed elswhere in this facet -->
-							<heading id="MakrotantaloOldGrc" title="Makrotantalo"/>
-							<heading id="MermingiesOldGrc" title="Mermingies"/>
-							<heading id="MesariaOldGreece" title="Mesaria"/>
-							<heading id="OrmosKorthiouOldGrc" title="Ormos Korthiou"/>
-							<heading id="PalaiokastroOldGrc" title="Palaiokastro"/>
-							<heading id="PalaiopolisOldGrc" title="Palaiopolis"/>
-							<heading id="PisoMeriaOldGreece" title="Piso Meria"/>
-							<heading id="PitrofosOldGreece" title="Pitrofos"/>
-							<heading id="SinetiOldGreece" title="Sineti"/>
-							<heading id="SteniesOldGreece" title="Stenies"/>
-							<heading id="VaridioOldGreece" title="Varidio"/>
-							<heading id="VitalioOldGreece" title="Vitalio"/>
-							<heading id="VouniOldGreece" title="Vouni"/>
-							<heading id="VourkotiOldGreece" title="Vourkoti"/>
-							<heading id="YpsilouOldGreece" title="Ypsilou"/>
-							<heading id="ZaganiarisOldGrc" title="Zaganiaris"/>
-						</heading>
-						<heading id="AmorgosOldGreece" title="Amorgos">
-							<!-- <synonym value="Αμοργός"/> Disambiguate -->
-							<!-- <heading id="AigialiOldGreece" title="Aigiali"/> Is this the same [Greek] Aigiali listed under Anatolia? -->
-							<heading id="ChoraOldGreece" title="Chora"/>
-							<!-- How is this different from the Chora further above? Same name, different island? -->
-							<heading id="ArkesiniOldGreece" title="Arkesini"/>
-							<heading id="KatapolaOldGreece" title="Katapola"/>
-							<heading id="OrmosEgialisOldGreece" title="Ormos Egialis">
-								<synonym value="Aegiali"/>
-							</heading>
-							<heading id="PotamosOldGreece" title="Potamos"/>
-							<heading id="RachidiOldGreece" title="Rachidi"/>
-							<heading id="TholariaOldGreece" title="Tholaria"/>
-							<heading id="XylokeratidionOldGreece" title="Xylokeratidion"/>
-						</heading>
-						<heading id="AnafiIslOldGreece" title="Anafi">
-							<!-- <synonym value="Αμοργός"/> Disambiguate -->
-							<synonym value="Anaphe"/>
-							<implies facet="Location" cat="AnafiGreece"/>
-							<heading id="AnafiOldGreece" title="Anafi" noMatch="true">
-								<synonym value="Ανάφη"/>
+							<heading id="SyrakousaeOldGreece" title="Syrakousae">
+								<synonym value="Syrakousæ"/>
+								<synonym value="Siracusa"/> <!-- Italian -->
+								<synonym value="Siracusan"/>
+								<synonym value="Siracusans"/>
+								<synonym value="Sarausa"/> <!-- Sicilian -->
+								<synonym value="Συρακοῦσαι"/> <!-- Greek -->
+								<implies facet="Location" cat="SiracusaItaly"/>
 							</heading>
 						</heading>
-						<heading id="AntiparosOldGreece" title="Antiparos">
-							<synonym value="Αντιπαρος"/>
+					</heading>
+					<heading id="GreeceProper" title="Greek mainland">
+						<heading id="AtticaOldGreece" title="Attica">
+							<synonym value="Αττική"/>
+							<synonym value="Attikí"/>
+							<synonym value="Attic"/> <!-- If we ever start collecting sub-roof spaces, beware... -->
+							<synonym value="Attican"/>
+							<synonym value="Atticans"/>
+							<implies facet="Location" cat="AtticaGreece"/>
 						</heading>
-						<heading id="DelosOldGreece" title="Delos">
-							<synonym value="Δήλος"/>
-							<synonym value="Dhilos"/>
+						<heading id="AthensOldGreece" title="Athens">
+							<synonym value="Αθήνα"/>
+							<synonym value="Athina"/>
+							<implies facet="Location" cat="AthensGreece"/>
+							<heading id="AcropolisAthens" title="Acropolis"/>
 						</heading>
-						<heading id="EschatiOldGreece" title="Eschati"/> 
-						<heading id="IosOldGreece" title="Ios">
-							<synonym value="Ίος"/>
-							<synonym value="Νιός"/>
-							<synonym value="Nios"/>
+						<heading id="BoeotiaOldGreece" title="Boeotia">
+							<synonym value="Beotia"/>
+							<synonym value="Beotian"/>
+							<synonym value="Beotians"/>
+							<synonym value="Βοιωτία"/>
+							<synonym value="Boetia"/>
+							<synonym value="Boetian"/>
+							<synonym value="Boetians"/>
+							<synonym value="Boeotian"/>
+							<synonym value="Boeotians"/>
+							<synonym value="Bœotia"/>
+							<synonym value="Bœotian"/>
+							<synonym value="Bœotians"/>
+							<synonym value="Cadmeis"/>
+							<implies facet="Location" cat="BoeotiaGreece"/>
+							<implies facet="Culture" cat="BoetianCulture"/>
 						</heading>
-						<heading id="KeaOldGreece" title="Kea">
-							<synonym value="Gia"/>
-							<synonym value="Κέα"/>
-							<synonym value="Τζια"/>
-							<synonym value="Tzia"/>
-							<synonym value="Zea"/>
-							<synonym value="Keos"/>
-							<synonym value="Κέως"/>
-							<synonym value="Ceos"/>
+						<heading id="DeliumOldGreece" title="Delium"> <!-- Not modern? -->
+							<synonym value="Δήλιον"/>
+							<synonym value="Dêlion"/>
 						</heading>
-						<heading id="KimolosOldGreece" title="Kimolos"/>
-						<heading id="KythnosOldGreece" title="Kythnos">
-							<synonym value="Kithnos"/>
-							<synonym value="Κύθνος"/>
+						<heading id="LivadeiaOldGreece" title="Livadeia">
+							<synonym value="Lebadeia"/>
+							<synonym value="Lebadia"/>
+							<synonym value="Leivadia"/>
+							<synonym value="Levádeia"/>
+							<synonym value="Levadeia"/>
+							<synonym value="Livadeiá"/>
+							<synonym value="Livadia"/>
+							<synonym value="Λεβάδεια"/>
+							<synonym value="Λιβαδειά"/>
+							<synonym value="Λειβαδιά"/>
+							<implies facet="Location" cat="LebadeiaGreece"/>
 						</heading>
-						<heading id="MilosOldGreece" title="Milos">
-							<synonym value="Μήλος"/>
-							<synonym value="Μῆλος"/>
-							<synonym value="Melos"/>
-							<synonym value="Μάλος"/>
-							<synonym value="Malos"/>
+						<heading id="TanagraOldGreece" title="Tanagra">
+							<synonym value="Τανάγρα"/>
+							<implies facet="Location" cat="TanagraGreece"/>
 						</heading>
-						<heading id="CreteOldGreece" title="Crete">
-							<synonym value="Κρήτη"/> <!-- Greek -->
-							<synonym value="Krētē"/> <!-- Transliteration -->
-							<synonym value="Kriti"/> <!-- Modern transliteration -->
-							<implies facet="Location" cat="CreteGreece"/>
-							<heading id="MykonosOldGreece" title="Mykonos">
-								<synonym value="Μύκονος"/>
+						<heading id="ThebesOldGreece" title="Thebes">
+							<synonym value="Θῆβαι"/>
+							<synonym value="Thēbai"/>
+							<synonym value="Thebai"/>
+							<synonym value="Θήβα"/>
+							<synonym value="Thiva"/>
+							<synonym value="Thívai"/>
+							<synonym value="Thivai"/>
+							<excl value="Egypt"/>
+							<implies facet="Location" cat="ThebesGreece"/>
+						</heading>
+						<heading id="ThessalyOldGreece" title="Thessaly">
+							<synonym value="Θεσσαλία"/>
+							<synonym value="Thessalía"/>
+							<synonym value="Thessalian"/>
+							<synonym value="Πετθαλία"/>
+							<synonym value="Petthalia"/>
+							<!-- <synonym value="Aeolia"/> Disambiguate from Asia Minor location. In Homer, there is also a same place name in Asia Minor -->
+						</heading>
+						<heading id="TrikalaOldGreece" title="Trikala">
+							<synonym value="Τρίκαλα"/>
+							<synonym value="Trikka"/> <!-- Of Homeric fame -->
+							<synonym value="Trikki"/>
+						</heading>
+						<heading id="DelphiOldGreece" title="Delphi">
+							<synonym value="Δελφοί"/>
+						</heading>
+						<heading id="LocrisOldGreece" title="Locris">
+							<synonym value="Λοκρίδα"/>
+							<synonym value="Lokrida"/>
+							<synonym value="Λοκρίς"/>
+							<synonym value="Lokris"/>
+							<implies facet="Location" cat="LocrisGreece"/>
+						</heading>
+					</heading>
+					<heading id="PeloponnesusOldGrc" title="Peloponnesus">
+						<synonym value="Peloponnese"/>
+						<synonym value="Πελοπόννησος"/>
+						<synonym value="Pelopónnisos"/>
+						<implies facet="Location" cat="PeloponneseGreece"/>
+						<heading id="AchaeaOldGreece" title="Achaea"/>
+						<heading id="IsthmusCorinthOldGrc" title="Isthmus of Corinth">
+							<heading id="CorinthOldGreece" title="Corinth">
+								<synonym value="Korinth"/>
+								<synonym value="Κόρινθος"/>
+								<implies facet="Location" cat="CorinthGreece"/>
 							</heading>
-							<heading id="NaxosOldGreece" title="Naxos">
-								<synonym value="Νάξος"/>
-								<implies facet="Location" cat="NaxosGreece"/>
+						</heading>
+					</heading>
+					<heading id="ArcadiaOldGreece" title="Arcadia">
+						<synonym value="Arkadía"/>
+						<synonym value="Αρκαδία"/>
+						<synonym value="Arcady"/>
+					</heading>
+					<heading id="KleitorOldGreece" title="Kleitor">
+						<synonym value="Klitor"/>
+						<synonym value="Kl(e)itoras"/>
+						<synonym value="Kl[e]itoras"/>
+						<synonym value="Kleitoras"/>
+						<synonym value="Klitoras"/>
+						<synonym value="Κλείτωρ"/>
+					</heading>
+					<heading id="TripoliOldGreece" title="Tripoli"><!-- Infer modern Tripoli -->
+						<synonym value="Τρίπολη"/>
+						<synonym value="Trípoli"/>
+						<synonym value="Τρίπολις"/>
+						<synonym value="Trípolis"/>
+						<synonym value="Tripolitsa"/>
+						<synonym value="Tripolitza"/>
+						<synonym value="Tripolizza"/>
+						<implies facet="Location" cat="TripoliLibya"/>
+					</heading>
+					<heading id="ArgolisOldGreece" title="Argolis">
+						<synonym value="Αργολίδα"/>
+						<synonym value="Argolída"/>
+						<synonym value="Ἀργολίς"/>
+						<synonym value="Argolís"/>
+					</heading>
+					<heading id="OlympiaOldGreece" title="Olympia">
+						<synonym value="Ολυμπία"/>
+						<synonym value="Olympí'a"/>
+						<synonym value="Ολύμπια"/>
+						<synonym value="Olýmpia"/>
+						<synonym value="Olimpia"/>
+						<synonym value="Olimbia"/>
+					</heading>
+					<heading id="PrefectIliaOldGreece" title="Prefecture of Ilia"/>
+					<heading id="PyrgosOldGreece" title="Pyrgos">
+						<synonym value="Πύργος"/>
+					</heading>
+					<heading id="VarvasenaOldGrc" title="Varvasena">
+						<synonym value="Varvassena"/>
+						<synonym value="Βαρβάσαινα"/>
+					</heading>
+					<heading id="SpartaOldGreece" title="Sparta">
+						<synonym value="Σπάρτα"/>
+						<synonym value="Σπάρτη"/>
+						<synonym value="Spartē"/>
+					</heading>
+					<heading id="TirynsOldGreece" title="Tiryns">
+						<synonym value="Τίρυνς"/>
+						<synonym value="Τίρυνθα"/>
+						<implies facet="Location" cat="TirynsGreece"/>
+						</heading>
+					<heading id="IslandsOldGreece" title="Islands" noMatch="true">
+						<heading id="EuboeaOldGreece" title="Euboea">
+							<synonym value="Evvoia"/> <!-- modern -->
+							<synonym value="Evia"/>
+							<synonym value="Evia Island"/>
+						</heading>
+						<heading id="EretriaOldGreece" title="Eretria">
+							<synonym value="Ερέτρια"/>
+						</heading>
+						<heading id="SaronicIslOldGrc" title="Saronic Islands">
+							<heading id="AeginaOldGreece" title="Aegina">
+								<synonym value="Αίγινα"/>
+								<synonym value="Egina"/>
+								<implies facet="Location" cat="AeginaGreece"/>
+							</heading>
+							<heading id="AngistriOldGreece" title="Angistri"> <!-- means "Fishing Hook" -->
+								<synonym value="Agistri"/>
+								<synonym value="Ankistri"/>
+								<synonym value="Agkistri"/>
+								<synonym value="αγκίστρι"/>
+							</heading>
+							<heading id="PorosOldGreece" title="Poros">
+								<synonym value="Πόρος"/>
+								<implies facet="Location" cat="PorosGreece"/>
 							</heading>
 						</heading>
-						<heading id="ParosOldGreece" title="Paros">
-							<synonym value="Πάρος"/>
-							<synonym value="Paro"/>
-							<implies facet="Location" cat="ParosGreece"/>
+						<heading id="CycladesIslGreece" title="Cyclades"> <!-- Cyclades (Islands) -->
+							<synonym value="Cyclades islands"/>
+							<synonym value="Κυκλάδες"/>
+							<heading id="AndrosIslOldGreece" title="Andros">
+								<synonym value="Andro"/>
+								<synonym value="Άνδρος"/>
+								<implies facet="Location" cat="AndrosGreece"/>
+								<heading id="AladinonOldGreece" title="Aladinon"/>
+								<heading id="ApoikiaOldGreece" title="Apoikia"/>
+								<heading id="AmmolochosOldGrc" title="Ammolochos"/>
+								<heading id="AndrosOldGreece" title="Andros (Chora)">
+									<!-- <synonym value="Chora"/> Disambiguate -->
+								</heading>
+								<heading id="AnoAprovatoOldGrc" title="Ano Aprovato"/>
+								<heading id="AnoGavrioOldGreece" title="Ano Gavrio"/>
+								<heading id="ArnasOldGreece" title="Arnas"/>
+								<heading id="BatsiOldGreece" title="Batsi"/>
+								<heading id="EpanoFellosOldGrc" title="Epano Fellos"/>
+								<heading id="GavrioOldGreece" title="Gavrio"/>
+								<heading id="KalyvariOldGreece" title="Kalyvari"/>
+								<heading id="KapariaOldGreece" title="Kaparia"/>
+								<heading id="KatakiloOldGreece" title="Katakilo"/>
+								<heading id="KipriOldGreece" title="Kipri"/>
+								<heading id="KochylosOldGreece" title="Kochylos"/>
+								<heading id="LamiraOldGreece" title="Lamira"/>
+								<!-- <heading id="LivadiaOldGreece" title="Livadia"/> Listed elswhere in this facet -->
+								<heading id="MakrotantaloOldGrc" title="Makrotantalo"/>
+								<heading id="MermingiesOldGrc" title="Mermingies"/>
+								<heading id="MesariaOldGreece" title="Mesaria"/>
+								<heading id="OrmosKorthiouOldGrc" title="Ormos Korthiou"/>
+								<heading id="PalaiokastroOldGrc" title="Palaiokastro"/>
+								<heading id="PalaiopolisOldGrc" title="Palaiopolis"/>
+								<heading id="PisoMeriaOldGreece" title="Piso Meria"/>
+								<heading id="PitrofosOldGreece" title="Pitrofos"/>
+								<heading id="SinetiOldGreece" title="Sineti"/>
+								<heading id="SteniesOldGreece" title="Stenies"/>
+								<heading id="VaridioOldGreece" title="Varidio"/>
+								<heading id="VitalioOldGreece" title="Vitalio"/>
+								<heading id="VouniOldGreece" title="Vouni"/>
+								<heading id="VourkotiOldGreece" title="Vourkoti"/>
+								<heading id="YpsilouOldGreece" title="Ypsilou"/>
+								<heading id="ZaganiarisOldGrc" title="Zaganiaris"/>
+							</heading>
+							<heading id="AmorgosOldGreece" title="Amorgos">
+								<!-- <synonym value="Αμοργός"/> Disambiguate -->
+								<!-- <heading id="AigialiOldGreece" title="Aigiali"/> Is this the same [Greek] Aigiali listed under Anatolia? -->
+								<heading id="ChoraOldGreece" title="Chora"/>
+								<!-- How is this different from the Chora further above? Same name, different island? -->
+								<heading id="ArkesiniOldGreece" title="Arkesini"/>
+								<heading id="KatapolaOldGreece" title="Katapola"/>
+								<heading id="OrmosEgialisOldGreece" title="Ormos Egialis">
+									<synonym value="Aegiali"/>
+								</heading>
+								<heading id="PotamosOldGreece" title="Potamos"/>
+								<heading id="RachidiOldGreece" title="Rachidi"/>
+								<heading id="TholariaOldGreece" title="Tholaria"/>
+								<heading id="XylokeratidionOldGreece" title="Xylokeratidion"/>
+							</heading>
+							<heading id="AnafiIslOldGreece" title="Anafi">
+								<!-- <synonym value="Αμοργός"/> Disambiguate -->
+								<synonym value="Anaphe"/>
+								<implies facet="Location" cat="AnafiGreece"/>
+								<heading id="AnafiOldGreece" title="Anafi" noMatch="true">
+									<synonym value="Ανάφη"/>
+								</heading>
+							</heading>
+							<heading id="AntiparosOldGreece" title="Antiparos">
+								<synonym value="Αντιπαρος"/>
+							</heading>
+							<heading id="DelosOldGreece" title="Delos">
+								<synonym value="Δήλος"/>
+								<synonym value="Dhilos"/>
+							</heading>
+							<heading id="EschatiOldGreece" title="Eschati"/> 
+							<heading id="IosOldGreece" title="Ios">
+								<synonym value="Ίος"/>
+								<synonym value="Νιός"/>
+								<synonym value="Nios"/>
+							</heading>
+							<heading id="KeaOldGreece" title="Kea">
+								<synonym value="Gia"/>
+								<synonym value="Κέα"/>
+								<synonym value="Τζια"/>
+								<synonym value="Tzia"/>
+								<synonym value="Zea"/>
+								<synonym value="Keos"/>
+								<synonym value="Κέως"/>
+								<synonym value="Ceos"/>
+							</heading>
+							<heading id="KimolosOldGreece" title="Kimolos"/>
+							<heading id="KythnosOldGreece" title="Kythnos">
+								<synonym value="Kithnos"/>
+								<synonym value="Κύθνος"/>
+							</heading>
+							<heading id="MilosOldGreece" title="Milos">
+								<synonym value="Μήλος"/>
+								<synonym value="Μῆλος"/>
+								<synonym value="Melos"/>
+								<synonym value="Μάλος"/>
+								<synonym value="Malos"/>
+							</heading>
+							<heading id="CreteOldGreece" title="Crete">
+								<synonym value="Κρήτη"/> <!-- Greek -->
+								<synonym value="Krētē"/> <!-- Transliteration -->
+								<synonym value="Kriti"/> <!-- Modern transliteration -->
+								<implies facet="Location" cat="CreteGreece"/>
+								<heading id="MykonosOldGreece" title="Mykonos">
+									<synonym value="Μύκονος"/>
+								</heading>
+								<heading id="NaxosOldGreece" title="Naxos">
+									<synonym value="Νάξος"/>
+									<implies facet="Location" cat="NaxosGreece"/>
+								</heading>
+							</heading>
+							<heading id="ParosOldGreece" title="Paros">
+								<synonym value="Πάρος"/>
+								<synonym value="Paro"/>
+								<implies facet="Location" cat="ParosGreece"/>
+							</heading>
+							<heading id="PholegandrosOldGreece" title="Pholegandros">
+								<synonym value="Folegandros"/>
+								<synonym value="Φολέγανδρος"/>
+							</heading>
+							<heading id="SeriphosOldGreece" title="Seriphos">
+								<synonym value="Serifos"/>
+								<synonym value="Σέριφος"/>
+							</heading>
+							<heading id="SifnosOldGreece" title="Sifnos">
+								<synonym value="Σίφνος"/>
+							</heading>
+							<heading id="SikinosOldGreece" title="Sikinos">
+								<synonym value="Σίκινος"/>
+							</heading>
 						</heading>
-						<heading id="PholegandrosOldGreece" title="Pholegandros">
-							<synonym value="Folegandros"/>
-							<synonym value="Φολέγανδρος"/>
+					</heading>
+					<heading id="AsiaMinOldGreece" title="Asia Minor">
+						<synonym value="Anatolia"/>
+						<synonym value="Anadolu"/>
+						<synonym value="Ανατολία"/>
+						<synonym value="Anatolía"/>
+						<implies facet="Location" cat="AnatoliaTurkey"/>
+						<heading id="AigialiOldGrece" title="Aigiali">
+							<synonym value="Aeolis"/>
+							<synonym value="Αιολίς"/>
+							<synonym value="Aiolís"/>
+							<synonym value="Aeolia"/>
+							<synonym value="Αιολία"/>
+							<synonym value="Aiolía"/>
+							<implies facet="Location" cat="AeolisMarmara"/>
 						</heading>
-						<heading id="SeriphosOldGreece" title="Seriphos">
-							<synonym value="Serifos"/>
-							<synonym value="Σέριφος"/>
+						<heading id="LesbosOldGreece" title="Lesbos">
+							<synonym value="Lesbos Island"/>
+							<implies facet="Location" cat="LesbosGreece"/>
 						</heading>
-						<heading id="SifnosOldGreece" title="Sifnos">
-							<synonym value="Σίφνος"/>
+						<heading id="PitaneOldGreece" title="Pitane"/>
+						<heading id="AydınOldGreece" title="Aydın">
+							<synonym value="Αϊδίνιο"/>
 						</heading>
-						<heading id="SikinosOldGreece" title="Sikinos">
-							<synonym value="Σίκινος"/>
+						<heading id="ColophonOldGreece" title="Colophon">
+							<synonym value="Κολοφών"/>
+						</heading>
+						<heading id="CyprusOldGreece" title="Cyprus">
+							<synonym value="Cypriot"/>
+							<synonym value="Cypriots"/>
+							<synonym value="Κύπρος"/>
+							<synonym value="Kýpros"/>
+							<synonym value="Kıbrıs"/>
+							<synonym value="Republic of Cyprus"/>
+							<synonym value="Κυπριακή"/>
+							<synonym value="Δημοκρατία"/>
+							<synonym value="Kypriakī́ Dīmokratía"/>
+							<synonym value="Kıbrıs Cumhuriyeti"/>
+							<excl value="Cyprus tree"/>
+							<implies facet="Location" cat="CyprusCountry"/>
+						</heading>
+						<heading id="IoniaOldGreece" title="Ionia">
+							<synonym value="Ἰωνία"/>
+							<synonym value="Ἰωνίη"/>
+							<implies facet="Location" cat="IonianIslGreece"/>
+						</heading>
+						<heading id="KlazomenaiOldGreece" title="Klazomenai">
+							<synonym value="Clazomenae"/>
+							<synonym value="Clazomenæ"/>
+							<synonym value="Κλαζομεναί"/>
+							<synonym value="Kilizman"/>
+						</heading>
+						<heading id="MiletusOldGreece" title="Miletus">
+							<synonym value="Μίλητος"/>
+							<synonym value="Milētos"/>
+						</heading>
+						<heading id="MysiaOldGreece" title="Mysia">
+							<synonym value="Μυσία"/>
+						</heading>
+						<heading id="AbydosOldGreece" title="Abydos"> <!-- But isn't this in Egypt? -->
+							<synonym value="Άβυδος"/>
+						</heading>
+						<heading id="AssosOldGreece" title="Assos">
+							<synonym value="Άσσος"/>
+							<synonym value="Assus"/>
+						</heading>
+						<heading id="CyzicusOldGreece" title="Cyzicus">
+							<synonym value="Κύζικος"/>
+						</heading>
+						<heading id="LampsacusOldGreece" title="Lampsacus">
+							<synonym value="Λάμψακος"/>
+							<synonym value="Lampsakos"/>
+							<synonym value="Lapseki"/>
+						</heading>
+						<heading id="PariumOldGreece" title="Parium">
+							<synonym value="Parion"/>
+						</heading>
+						<heading id="PergamonOldGreece" title="Pergamon">
+							<synonym value="Pergamum"/>
+							<synonym value="Πέργαμος"/>
+							<implies facet="Location" cat="PergamonTurkey"/>
+						</heading>
+						<heading id="RhodosOldGreece" title="Rhodos">
+							<synonym value="Rhodes"/>
+							<synonym value="Ρόδος"/>
+							<synonym value="Ródos"/>
+							<synonym value="Rodi"/>
+							<synonym value="Rodos"/>
+							<synonym value="Rodes"/>
+							<synonym value="Rhodian"/>
+							<synonym value="Rhodians"/>
+							<implies facet="Location" cat="RhodesGreece"/>
+						</heading>
+						<heading id="SmyrnaOldGreece" title="Smyrna"> <!-- an ancient city in İzmir in Turkey -->
+							<synonym value="Σμύρνη"/>
+							<synonym value="Izmir"/>
+							<synonym value="Smyrne"/>
+							<implies facet="Location" cat="SmyrnaTurkey"/>
+						</heading>
+					</heading>
+					<heading id="MiscOldGreece" title="Other Greek Areas">
+						<heading id="AleppoOldGreece" title="Aleppo">
+							<synonym value="Αλεππο"/>
+							<synonym value="Halep"/>
+							<implies facet="Location" cat="AleppoSyria"/>
+						</heading>
+						<heading id="AlexandriaOldGreece" title="Alexandria" noMatch="true"/>
+						<heading id="MacedonOldGreece" title="Macedon">
+							<synonym value="Macedonia"/>
+							<synonym value="Μακεδονία"/>
+							<synonym value="Makedonía"/>
+						</heading>
+						<heading id="SinaiOldGreece" title="Sinai">
+							<synonym value="The Sinai Peninsula"/>
+							<synonym value="Sinai Peninsula"/>
+							<synonym value="The Sinai"/>
+							<synonym value="Sina"/>
+							<synonym value="Sina'a"/>
+							<implies facet="Location" cat="SinaiPeninsula"/>
+						</heading>
+						<heading id="ThraceOldGreece" title="Thrace">
+							<synonym value="Тракия"/>
+							<synonym value="Trakiya"/>
+							<synonym value="Trakija"/>
+							<synonym value="Trakia"/>
+							<synonym value="Θράκη"/>
+							<synonym value="Thráki"/>
+							<synonym value="Trakya"/>
 						</heading>
 					</heading>
 				</heading>
-				<heading id="AsiaMinOldGreece" title="Asia Minor">
-					<synonym value="Anatolia"/>
-					<synonym value="Anadolu"/>
-					<synonym value="Ανατολία"/>
-					<synonym value="Anatolía"/>
-					<implies facet="Location" cat="AnatoliaTurkey"/>
-					<heading id="AigialiOldGrece" title="Aigiali">
-						<synonym value="Aeolis"/>
-						<synonym value="Αιολίς"/>
-						<synonym value="Aiolís"/>
-						<synonym value="Aeolia"/>
-						<synonym value="Αιολία"/>
-						<synonym value="Aiolía"/>
-						<implies facet="Location" cat="AeolisMarmara"/>
+				<heading id="AncientRome" title="Ancient Rome">
+					<synonym value="Classical Rome"/>
+					<synonym value="Imperial Rome"/>
+					<synonym value="Republican Rome"/>
+					<synonym value="Roman Empire"/>
+					<synonym value="Roman Republic"/>
+					<heading id="AncientCityOfRome" title="Rome" noMatch="true">
+						<heading id="OldRomeMunOne" title="Municipio I"/>
+						<heading id="OldRomeMunTwo" title="Municipio II"/> 
+						<heading id="OldRomeMunThree" title="Municipio III"/>
+						<heading id="OldRomeMunFour" title="Municipio IV"/>
+						<heading id="OldRomeMunFive" title="Municipio V"/>
+						<heading id="OldRomeMunSix" title="Municipio VI"/>
+						<heading id="OldRomeMunSeven" title="Municipio VII"/>
+						<heading id="OldRomeMunEight" title="Municipio VIII"/>
+						<heading id="OldRomeMunNine" title="Municipio IX"/>
+						<heading id="OldRomeMunTen" title="Municipio X"/>
+						<heading id="OldRomeMunEleven" title="Municipio XI"/>
+						<heading id="OldRomeMunTwelve" title="Municipio XII"/>
+						<heading id="OldRomeMunThirteen" title="Municipio XIII"/>
+						<heading id="OldRomeMunFourteen" title="Municipio XIV"/>
+						<heading id="OldRomeMunFifteen" title="Municipio XV"/>
+						<heading id="OldRomeMunSixteen" title="Municipio XVI"/>
+						<heading id="OldRomeMunSeventeen" title="Municipio XVII"/>
+						<heading id="OldRomeMunEightteen" title="Municipio XVIII"/>
+						<heading id="OldRomeMunNineteen" title="Municipio IXX"/>
+						<heading id="OldRomeMunTwenty" title="Municipio XX"/>
 					</heading>
-					<heading id="LesbosOldGreece" title="Lesbos">
-						<synonym value="Lesbos Island"/>
-						<implies facet="Location" cat="LesbosGreece"/>
-					</heading>
-					<heading id="PitaneOldGreece" title="Pitane"/>
-					<heading id="AydınOldGreece" title="Aydın">
-						<synonym value="Αϊδίνιο"/>
-					</heading>
-					<heading id="ColophonOldGreece" title="Colophon">
-						<synonym value="Κολοφών"/>
-					</heading>
-					<heading id="CyprusOldGreece" title="Cyprus">
-						<synonym value="Cypriot"/>
-						<synonym value="Cypriots"/>
-						<synonym value="Κύπρος"/>
-						<synonym value="Kýpros"/>
-						<synonym value="Kıbrıs"/>
-						<synonym value="Republic of Cyprus"/>
-						<synonym value="Κυπριακή"/>
-						<synonym value="Δημοκρατία"/>
-						<synonym value="Kypriakī́ Dīmokratía"/>
-						<synonym value="Kıbrıs Cumhuriyeti"/>
-						<excl value="Cyprus tree"/>
-						<implies facet="Location" cat="CyprusCountry"/>
-					</heading>
-					<heading id="IoniaOldGreece" title="Ionia">
-						<synonym value="Ἰωνία"/>
-						<synonym value="Ἰωνίη"/>
-						<implies facet="Location" cat="IonianIslGreece"/>
-					</heading>
-					<heading id="KlazomenaiOldGreece" title="Klazomenai">
-						<synonym value="Clazomenae"/>
-						<synonym value="Κλαζομεναί"/>
-						<synonym value="Kilizman"/>
-					</heading>
-					<heading id="MiletusOldGreece" title="Miletus">
-						<synonym value="Μίλητος"/>
-						<synonym value="Milētos"/>
-					</heading>
-					<heading id="MysiaOldGreece" title="Mysia">
-						<synonym value="Μυσία"/>
-					</heading>
-					<heading id="AbydosOldGreece" title="Abydos"> <!-- But isn't this in Egypt? -->
-						<synonym value="Άβυδος"/>
-					</heading>
-					<heading id="AssosOldGreece" title="Assos">
-						<synonym value="Άσσος"/>
-						<synonym value="Assus"/>
-					</heading>
-					<heading id="CyzicusOldGreece" title="Cyzicus">
-						<synonym value="Κύζικος"/>
-					</heading>
-					<heading id="LampsacusOldGreece" title="Lampsacus">
-						<synonym value="Λάμψακος"/>
-						<synonym value="Lampsakos"/>
-						<synonym value="Lapseki"/>
-					</heading>
-					<heading id="PariumOldGreece" title="Parium">
-						<synonym value="Parion"/>
-					</heading>
-					<heading id="PergamonOldGreece" title="Pergamon">
-						<synonym value="Pergamum"/>
-						<synonym value="Πέργαμος"/>
-						<implies facet="Location" cat="PergamonTurkey"/>
-					</heading>
-					<heading id="RhodosOldGreece" title="Rhodos">
-						<synonym value="Rhodes"/>
-						<synonym value="Ρόδος"/>
-						<synonym value="Ródos"/>
-						<synonym value="Rodi"/>
-						<synonym value="Rodos"/>
-						<synonym value="Rodes"/>
-						<synonym value="Rhodian"/>
-						<synonym value="Rhodians"/>
-						<implies facet="Location" cat="RhodesGreece"/>
-					</heading>
-					<heading id="SmyrnaOldGreece" title="Smyrna"> <!-- an ancient city in İzmir in Turkey -->
-						<synonym value="Σμύρνη"/>
-						<synonym value="Izmir"/>
-						<synonym value="Smyrne"/>
-						<implies facet="Location" cat="SmyrnaTurkey"/>
+	<!--
+	Cyrenaica
+	
+	Dacia
+	
+	Epirus
+	
+	Gallia- or Gallic Empire
+	    Baetica
+	    
+	    Britannia
+	    
+	    Hispania   
+	
+	    Gaul-
+	
+	        Gallia Cisalpina  or "Gaul this side of the Alps" 
+	
+	        Gallia Narbonensis   formerly Gallia Transalpina or "Gaul across the Alps"        
+	
+	            Gallia Comata, or "long haired Gaul"-
+	                       Gallia Aquitania,Aquitaine, Aquitaine Gaul
+	                        Gallia Belgica, Belgica Prima
+	                        Gallia Lugdunensis-
+	                                    Lugdunum (today's Lyon
+	
+	Republican provinces
+	
+	Sicilia, Sicily
+	    Sicily 
+	         Akragas, Akragras (also known as Acragas in Greek, Agrigentum in Latin and Kerkent in Arabic)
+	            Church of San Biagio
+	            Church of Santa Maria dei Greci ("Our Lady of the Greeks")
+	            Church of San Nicola
+	            Temple of Olympian Zeus
+	            Temple of Concordia
+	            Temple of Demeter
+	            Tomb of Theron
+	            Valle dei Templi ("Valley of the Temples"
+	         Gela, Terranova, Terranova di Sicilia, Heracles
+	            Akropolis.
+	            Regional Archeological museum.
+	            Capo Soprano.
+	            The Castelluccio ("Small Castle"),
+	            The Cathedral, dedicated to the Holy Virgin Assunta, 
+	            Madonna della Platea. 
+	            Natural Reserve of Biviere di Gela, 
+	            Manfria,  Torre di Manfria ("Manfria Tower").
+	
+	         Himera, Χειμέρα
+	         Selinunte, Σελινοῦς; Selinus"/>
+					<heading id="xxxxxxxxxx" title="temple E, the so-called "Temple of Hera"
+				<heading id="xxxxxxxxxx" title="Syracuse">
+					Siracusa,  Sarausa, Συρακοῦσαι Syrakousae
+					<heading id="xxxxxxxxxx" title="The Temple of Apollo"/>
+					<heading id="xxxxxxxxxx" title="The Fountain of Arethusa"/>
+					<heading id="xxxxxxxxxx" title="The Theatre"/>
+					<heading id="xxxxxxxxxx" title="The Roman amphitheatre"/>
+					<heading id="xxxxxxxxxx" title="The Tomb of Archimede"/> ••• ...in the... •••
+					<heading id="xxxxxxxxxx" title="Grotticelli Necropolis"/>
+					<heading id="xxxxxxxxxx" title="The Temple of Olympian Zeus"/>
+					<heading id="xxxxxxxxxx" title="The Cathedral"/>
+					<heading id="xxxxxxxxxx" title="Church of San Paolo"/>
+					<heading id="xxxxxxxxxx" title="Church of San Cristoforo"/>
+					<heading id="xxxxxxxxxx" title="Church of Santa Lucìa alla Badìa"/>
+					<heading id="xxxxxxxxxx" title="Church of Santa Maria dei Miracoli"/>
+					<heading id="xxxxxxxxxx" title="Church of the Spirito Santo"/>
+					<heading id="xxxxxxxxxx" title="Church of the Jesuite College"/>
+					<heading id="xxxxxxxxxx" title="Church of St. Benedict"/>
+					<heading id="xxxxxxxxxx" title="Chiesa della Concezione"/>
+					<heading id="xxxxxxxxxx" title="Church of San Francesco all'Immacolata"/>
+					<heading id="xxxxxxxxxx" title="Basilica of St. John the Evangelist"/>
+					<heading id="xxxxxxxxxx" title="Catacombs of San Giovanni"/>
+					<heading id="xxxxxxxxxx" title="The Castello Maniace"/>
+					<heading id="xxxxxxxxxx" title="Archaeological Museum"/>
+					<heading id="xxxxxxxxxx" title="Palazzo Lanza Buccheri"/>
+					<heading id="xxxxxxxxxx" title="Palazzo Mergulese-Montalto"/>
+					<heading id="xxxxxxxxxx" title="The Archbishop's Palace"/>
+					<heading id="xxxxxxxxxx" title="The Palazzo Vermexio,"/>
+					<heading id="xxxxxxxxxx" title="Palazzo Francica Nava,"/>
+					<heading id="xxxxxxxxxx" title="Palazzo Beneventano del Bosco"/>
+					<heading id="xxxxxxxxxx" title="Palazzo Migliaccio"/>
+					<heading id="xxxxxxxxxx" title="The Senate Palace"/>
+					<heading id="xxxxxxxxxx" title="The Castle of Euryalos"/>
+					<heading id="xxxxxxxxxx" title="Zancle Missina"/>
+					<heading id="xxxxxxxxxx" title="The Cathedral"/>
+					<heading id="xxxxxxxxxx" title="The Annunziata dei Catalani"/>
+					<heading id="xxxxxxxxxx" title="Santa Maria degli Alemanni"/>
+					<heading id="xxxxxxxxxx" title="Sanctuary of Montevergine"/>
+					<heading id="xxxxxxxxxx" title="The Fountain of Orion"/>
+					<heading id="xxxxxxxxxx" title="The Fountain of Neptune"/>
+					<heading id="xxxxxxxxxx" title="The Senatory Fountain"/>
+					<heading id="xxxxxxxxxx" title="The Four Fountains"/>
+					<heading id="xxxxxxxxxx" title="Palazzo Calapaj"/>
+				</heading>
+	The San Ranieri Lighthouse (or Tower), 
+	The Botanical Garden "Pietro Castelli" of Messina's University
+	The Regional Museum, 
+	
+	
+	    Malta. Republic of Malta, Repubblika ta' Malta
+	         Malta Island (Malta), 
+	            Attard (or Ħ'Attard)
+	            Balzan (or Ħal-Balzan, pronounced bal-tsan)
+	            Birgu (Maltese: Città Vittoriosa or Birgu
+	            Birkirkara B'Kara (English: Birchircara
+	               Birzebbugia (Maltese: Birżebbuġa or BʼBuġa
+	               Cospicua (Maltese: Città Cospicua or Bormla
+	               Dingli (or Ħad-Dingli
+	               Fgura
+	               Floriana (Maltese: Furjana
+	               Għargħur
+	               Għaxaq (English: Ashiak)
+	            Gudja (English: Gudia
+	            Gżira (or il-Gżira
+	               Hamrun (Maltese: Ħamrun
+	               Iklin (English: Iclin) 
+	            Imtarfa, or Mtarfa
+	            Senglea (Maltese: L-Isla) Civitas Invicta,
+	            Kalkara 
+	            Kirkop (English: Chircop
+	               Lija or Lia
+	               Luqa, poplar in Aramaic      
+	            Marsa, Il-Marsa
+	               Marsascala (Maltese: Marsaskala or just M'skala  
+	               Marsaxlokk 
+	            Mġarr, Imġarr, or Mugiarro, Mgiarro 
+	            Mosta (or Il-Mosta) 
+	            Mqabba or Imqabba (English: Micabba
+	               Msida or Imsida (English: Misida
+	               Naxxar (English: Naxaro)
+	            Pembroke, 
+	            Pietà (English Pieta)
+	            Valletta, Belt Valletta, Città Umilissima, or Humilissima Civitas Valletta
+	            Qormi, Città Pinto
+	            Birkirkara B'Kara (English: Birchircara
+	               Mdina, Città Vecchia, or Città Notabile, (English: Notabile, or Imdina
+	               Mellieħa (English: Mellieha)
+	            Paola, (or old name Casal Paula) Raħal Ġdid, which means new town in Maltese.
+	            Qormi or Città Pinto (Maltese: Ħal Qormi[
+	            Qrendi (English: Crendi or Krendi
+	               Rabat (or Ir-Rabat)
+	            Safi 
+	            San Giljan (English: St. Julian's
+	               San Ġwann (English: San Giovanni) 
+	            Saint Paul's Bay (Maltese: San Pawl il-Baħar)
+	            Santa Luċija (English: Santa Lucia
+	            Santa Venera 
+	            Siġġiewi, Città Ferdinand, or Siggieui,
+	            Sliema (or Tas-Sliema) 
+	            Swieqi (English: Swieki)
+	            Tarxien
+	               Ta' Xbiex
+	               Valletta (alternatively Belt Valletta, Città Umilissima, or Humilissima Civitas Valletta
+	               Xgħajra (English: Sh'ayra
+	               Żabbar (Maltese: Città Hompesch or Żabbar)
+	            Żebbuġ or Città Rohan
+	               Zeitun (Maltese: Żejtun or Città Beland)
+	            Żurrieq (Maltese: Żurrieq, also English: Zurrico
+	
+	         Gozo (Għawdex), Isle of Calypso Ogygia
+	            Fontana (or Il-Fontana) 
+	            Għajnsielem, "Spring of Peace" (English: Ainsielem)
+	            Għarb
+	               Għasri (or L-Għasri)
+	            Kerċem (English: Kerchem)
+	            Munxar or Il-Munxar
+	               Nadur (or In-Nadur)
+	            Qala (English: Cala) 
+	            Saint Lawrence (Maltese: San Lawrenz) 
+	            Sannat (or Ta' Sannat)
+	            Victoria or Città Vittoria 
+	            Ix-Xagħra
+	               Xewkija (English: Xeuchia)
+	            Iż-Żebbuġ 
+	
+	         Comino (Kemmuna) 
+	         Fungus Rock, which also has the affectionate Maltese name 'Il-Ġebla tal-Ġeneral' (the General's Rock)
+	         Filfla
+	         Cominotto 
+	         Islands of St. Paul 
+	
+	Corsica et Sardinia
+	    Corsica (French: Corse; Corsican and Italian: Corsica)
+	            Communes of the Haute-Corse department
+					<heading id="xxxxxxxxxx" title="Aghione"/>
+					<heading id="xxxxxxxxxx" title="Aiti"/>
+					<heading id="xxxxxxxxxx" title="Alando"/>
+					<heading id="xxxxxxxxxx" title="Albertacce"/>
+					<heading id="xxxxxxxxxx" title="Aléria (Ancient Greek: Ἀλαλίη, Alaliē; Latin and Corsican: Aleria)"/>
+					<heading id="xxxxxxxxxx" title="Algajola"/>
+					<heading id="xxxxxxxxxx" title="Altiani"/>
+					<heading id="xxxxxxxxxx" title="Alzi"/>
+					<heading id="xxxxxxxxxx" title="Ampriani"/>
+					<heading id="xxxxxxxxxx" title="Antisanti"/>
+					<heading id="xxxxxxxxxx" title="Aregno"/>
+					<heading id="xxxxxxxxxx" title="Asco"/>
+					<heading id="xxxxxxxxxx" title="Avapessa"/>
+					<heading id="xxxxxxxxxx" title="Barbaggio"/>
+					<heading id="xxxxxxxxxx" title="Barrettali"/>
+					<heading id="xxxxxxxxxx" title="Bastia (French &amp; Corsican: Bastia),"/>
+					<heading id="xxxxxxxxxx" title="Belgodère"/>
+					<heading id="xxxxxxxxxx" title="Bigorno"/>
+					<heading id="xxxxxxxxxx" title="Biguglia"/>
+					<heading id="xxxxxxxxxx" title="Bisinchi"/>
+					<heading id="xxxxxxxxxx" title="Borgo"/>
+					<heading id="xxxxxxxxxx" title="Brando"/>
+					<heading id="xxxxxxxxxx" title="Bustanico"/>
+					<heading id="xxxxxxxxxx" title="Cagnano"/>
+					<heading id="xxxxxxxxxx" title="Calacuccia"/>
+					<heading id="xxxxxxxxxx" title="Calenzana"/>
+					<heading id="xxxxxxxxxx" title="Calvi"/>
+					<heading id="xxxxxxxxxx" title="Cambia"/>
+					<heading id="xxxxxxxxxx" title="Campana"/>
+					<heading id="xxxxxxxxxx" title="Campi"/>
+					<heading id="xxxxxxxxxx" title="Campile"/>
+					<heading id="xxxxxxxxxx" title="Campitello"/>
+					<heading id="xxxxxxxxxx" title="Canale-di-Verde"/>
+					<heading id="xxxxxxxxxx" title="Canari"/>
+					<heading id="xxxxxxxxxx" title="Canavaggia"/>
+					<heading id="xxxxxxxxxx" title="Carcheto-Brustico"/>
+					<heading id="xxxxxxxxxx" title="Carpineto"/>
+					<heading id="xxxxxxxxxx" title="Carticasi"/>
+					<heading id="xxxxxxxxxx" title="Casabianca"/>
+					<heading id="xxxxxxxxxx" title="Casalta"/>
+					<heading id="xxxxxxxxxx" title="Casamaccioli"/>
+					<heading id="xxxxxxxxxx" title="Casanova"/>
+					<heading id="xxxxxxxxxx" title="Casevecchie"/>
+					<heading id="xxxxxxxxxx" title="Castellare-di-Casinca"/>
+					<heading id="xxxxxxxxxx" title="Castellare-di-Mercurio"/>
+					<heading id="xxxxxxxxxx" title="Castello-di-Rostino"/>
+					<heading id="xxxxxxxxxx" title="Castifao"/>
+					<heading id="xxxxxxxxxx" title="Castiglione"/>
+					<heading id="xxxxxxxxxx" title="Castineta"/>
+					<heading id="xxxxxxxxxx" title="Castirla"/>
+					<heading id="xxxxxxxxxx" title="Cateri"/>
+					<heading id="xxxxxxxxxx" title="Centuri"/>
+					<heading id="xxxxxxxxxx" title="Cervione"/>
+					<heading id="xxxxxxxxxx" title="Chiatra"/>
+					<heading id="xxxxxxxxxx" title="Chisa"/>
+					<heading id="xxxxxxxxxx" title="Corbara"/>
+					<heading id="xxxxxxxxxx" title="Corscia"/>
+					<heading id="xxxxxxxxxx" title="Corte"/>
+					<heading id="xxxxxxxxxx" title="Costa"/>
+					<heading id="xxxxxxxxxx" title="Croce"/>
+					<heading id="xxxxxxxxxx" title="Crocicchia"/>
+					<heading id="xxxxxxxxxx" title="Erbajolo"/>
+					<heading id="xxxxxxxxxx" title="Érone"/>
+					<heading id="xxxxxxxxxx" title="Ersa"/>
+					<heading id="xxxxxxxxxx" title="Farinole"/>
+					<heading id="xxxxxxxxxx" title="Favalello"/>
+					<heading id="xxxxxxxxxx" title="Felce"/>
+					<heading id="xxxxxxxxxx" title="Feliceto"/>
+					<heading id="xxxxxxxxxx" title="Ficaja"/>
+					<heading id="xxxxxxxxxx" title="Focicchia"/>
+					<heading id="xxxxxxxxxx" title="Furiani (CAB)"/>
+					<heading id="xxxxxxxxxx" title="Galéria"/>
+					<heading id="xxxxxxxxxx" title="Gavignano"/>
+					<heading id="xxxxxxxxxx" title="Ghisonaccia"/>
+					<heading id="xxxxxxxxxx" title="Ghisoni"/>
+					<heading id="xxxxxxxxxx" title="Giocatojo"/>
+					<heading id="xxxxxxxxxx" title="Giuncaggio"/>
+					<heading id="xxxxxxxxxx" title="L'Île-Rousse"/>
+					<heading id="xxxxxxxxxx" title="Isolaccio-di-Fiumorbo"/>
+					<heading id="xxxxxxxxxx" title="Lama"/>
+					<heading id="xxxxxxxxxx" title="Lano"/>
+					<heading id="xxxxxxxxxx" title="Lavatoggio"/>
+					<heading id="xxxxxxxxxx" title="Lento"/>
+					<heading id="xxxxxxxxxx" title="Linguizzetta"/>
+					<heading id="xxxxxxxxxx" title="Loreto-di-Casinca"/>
+					<heading id="xxxxxxxxxx" title="Lozzi"/>
+					<heading id="xxxxxxxxxx" title="Lucciana"/>
+					<heading id="xxxxxxxxxx" title="Lugo-di-Nazza"/>
+					<heading id="xxxxxxxxxx" title="Lumio"/>
+					<heading id="xxxxxxxxxx" title="Luri"/>
+					<heading id="xxxxxxxxxx" title="Manso"/>
+					<heading id="xxxxxxxxxx" title="Matra"/>
+					<heading id="xxxxxxxxxx" title="Mausoléo"/>
+					<heading id="xxxxxxxxxx" title="Mazzola"/>
+					<heading id="xxxxxxxxxx" title="Meria"/>
+					<heading id="xxxxxxxxxx" title="Moïta"/>
+					<heading id="xxxxxxxxxx" title="Moltifao"/>
+					<heading id="xxxxxxxxxx" title="Monacia-d'Orezza"/>
+					<heading id="xxxxxxxxxx" title="Moncale"/>
+					<heading id="xxxxxxxxxx" title="Monte"/>
+					<heading id="xxxxxxxxxx" title="Montegrosso"/>
+					<heading id="xxxxxxxxxx" title="Monticello"/>
+					<heading id="xxxxxxxxxx" title="Morosaglia"/>
+					<heading id="xxxxxxxxxx" title="Morsiglia"/>
+					<heading id="xxxxxxxxxx" title="Muracciole"/>
+					<heading id="xxxxxxxxxx" title="Murato"/>
+					<heading id="xxxxxxxxxx" title="Muro"/>
+					<heading id="xxxxxxxxxx" title="Nessa"/>
+					<heading id="xxxxxxxxxx" title="Nocario"/>
+					<heading id="xxxxxxxxxx" title="Noceta"/>
+					<heading id="xxxxxxxxxx" title="Nonza"/>
+					<heading id="xxxxxxxxxx" title="Novale"/>
+					<heading id="xxxxxxxxxx" title="Novella"/>
+					<heading id="xxxxxxxxxx" title="Occhiatana"/>
+					<heading id="xxxxxxxxxx" title="Ogliastro"/>
+					<heading id="xxxxxxxxxx" title="Olcani"/>
+					<heading id="xxxxxxxxxx" title="Oletta"/>
+					<heading id="xxxxxxxxxx" title="Olmeta-di-Capocorso"/>
+					<heading id="xxxxxxxxxx" title="Olmeta-di-Tuda"/>
+					<heading id="xxxxxxxxxx" title="Olmi-Cappella"/>
+					<heading id="xxxxxxxxxx" title="Olmo"/>
+					<heading id="xxxxxxxxxx" title="Omessa"/>
+					<heading id="xxxxxxxxxx" title="Ortale"/>
+					<heading id="xxxxxxxxxx" title="Ortiporio"/>
+					<heading id="xxxxxxxxxx" title="Palasca"/>
+					<heading id="xxxxxxxxxx" title="Pancheraccia"/>
+					<heading id="xxxxxxxxxx" title="Parata"/>
+					<heading id="xxxxxxxxxx" title="Patrimonio"/>
+					<heading id="xxxxxxxxxx" title="Penta-Acquatella"/>
+					<heading id="xxxxxxxxxx" title="Penta-di-Casinca"/>
+					<heading id="xxxxxxxxxx" title="Perelli"/>
+					<heading id="xxxxxxxxxx" title="Pero-Casevecchie"/>
+					<heading id="xxxxxxxxxx" title="Pianello"/>
+					<heading id="xxxxxxxxxx" title="Piano"/>
+					<heading id="xxxxxxxxxx" title="Piazzali"/>
+					<heading id="xxxxxxxxxx" title="Piazzole"/>
+					<heading id="xxxxxxxxxx" title="Piedicorte-di-Gaggio"/>
+					<heading id="xxxxxxxxxx" title="Piedicroce"/>
+					<heading id="xxxxxxxxxx" title="Piedigriggio"/>
+					<heading id="xxxxxxxxxx" title="Piedipartino"/>
+					<heading id="xxxxxxxxxx" title="Pie-d'Orezza"/>
+					<heading id="xxxxxxxxxx" title="Pietracorbara"/>
+					<heading id="xxxxxxxxxx" title="Pietra-di-Verde"/>
+					<heading id="xxxxxxxxxx" title="Pietralba"/>
+					<heading id="xxxxxxxxxx" title="Pietraserena"/>
+					<heading id="xxxxxxxxxx" title="Pietricaggio"/>
+					<heading id="xxxxxxxxxx" title="Pietroso"/>
+					<heading id="xxxxxxxxxx" title="Piève"/>
+					<heading id="xxxxxxxxxx" title="Pigna"/>
+					<heading id="xxxxxxxxxx" title="Pino"/>
+					<heading id="xxxxxxxxxx" title="Piobetta"/>
+					<heading id="xxxxxxxxxx" title="Pioggiola"/>
+					<heading id="xxxxxxxxxx" title="Poggio-di-Nazza"/>
+					<heading id="xxxxxxxxxx" title="Poggio-di-Venaco"/>
+					<heading id="xxxxxxxxxx" title="Poggio-d'Oletta"/>
+					<heading id="xxxxxxxxxx" title="Poggio-Marinaccio"/>
+					<heading id="xxxxxxxxxx" title="Poggio-Mezzana"/>
+					<heading id="xxxxxxxxxx" title="Polveroso"/>
+					<heading id="xxxxxxxxxx" title="Popolasca"/>
+					<heading id="xxxxxxxxxx" title="Porri"/>
+					<heading id="xxxxxxxxxx" title="La Porta"/>
+					<heading id="xxxxxxxxxx" title="Prato-di-Giovellina"/>
+					<heading id="xxxxxxxxxx" title="Prunelli-di-Casacconi"/>
+					<heading id="xxxxxxxxxx" title="Prunelli-di-Fiumorbo"/>
+					<heading id="xxxxxxxxxx" title="Pruno"/>
+					<heading id="xxxxxxxxxx" title="Quercitello"/>
+					<heading id="xxxxxxxxxx" title="Rapaggio"/>
+					<heading id="xxxxxxxxxx" title="Rapale"/>
+					<heading id="xxxxxxxxxx" title="Riventosa"/>
+					<heading id="xxxxxxxxxx" title="Rogliano"/>
+					<heading id="xxxxxxxxxx" title="Rospigliani"/>
+					<heading id="xxxxxxxxxx" title="Rusio"/>
+					<heading id="xxxxxxxxxx" title="Rutali"/>
+					<heading id="xxxxxxxxxx" title="Saint-Florent"/>
+					<heading id="xxxxxxxxxx" title="Saliceto"/>
+					<heading id="xxxxxxxxxx" title="San-Damiano"/>
+					<heading id="xxxxxxxxxx" title="San-Gavino-d'Ampugnani"/>
+					<heading id="xxxxxxxxxx" title="San-Gavino-di-Fiumorbo"/>
+					<heading id="xxxxxxxxxx" title="San-Gavino-di-Tenda"/>
+					<heading id="xxxxxxxxxx" title="San-Giovanni-di-Moriani"/>
+					<heading id="xxxxxxxxxx" title="San-Giuliano"/>
+					<heading id="xxxxxxxxxx" title="San-Lorenzo"/>
+					<heading id="xxxxxxxxxx" title="San-Martino-di-Lota (CAB)"/>
+					<heading id="xxxxxxxxxx" title="San-Nicolao"/>
+					<heading id="xxxxxxxxxx" title="Santa-Lucia-di-Mercurio"/>
+					<heading id="xxxxxxxxxx" title="Santa-Lucia-di-Moriani"/>
+					<heading id="xxxxxxxxxx" title="Santa-Maria-di-Lota (CAB)"/>
+					<heading id="xxxxxxxxxx" title="Santa-Maria-Poggio"/>
+					<heading id="xxxxxxxxxx" title="Sant'Andréa-di-Bozio"/>
+					<heading id="xxxxxxxxxx" title="Sant'Andréa-di-Cotone"/>
+					<heading id="xxxxxxxxxx" title="Sant'Antonino"/>
+					<heading id="xxxxxxxxxx" title="Santa-Reparata-di-Balagna"/>
+					<heading id="xxxxxxxxxx" title="Santa-Reparata-di-Moriani"/>
+					<heading id="xxxxxxxxxx" title="Santo-Pietro-di-Tenda"/>
+					<heading id="xxxxxxxxxx" title="Santo-Pietro-di-Venaco"/>
+					<heading id="xxxxxxxxxx" title="Scata"/>
+					<heading id="xxxxxxxxxx" title="Scolca"/>
+					<heading id="xxxxxxxxxx" title="Sermano"/>
+					<heading id="xxxxxxxxxx" title="Serra-di-Fiumorbo"/>
+					<heading id="xxxxxxxxxx" title="Silvareccio"/>
+					<heading id="xxxxxxxxxx" title="Sisco"/>
+					<heading id="xxxxxxxxxx" title="Solaro"/>
+					<heading id="xxxxxxxxxx" title="Sorbo-Ocagnano"/>
+					<heading id="xxxxxxxxxx" title="Sorio"/>
+					<heading id="xxxxxxxxxx" title="Soveria"/>
+					<heading id="xxxxxxxxxx" title="Speloncato"/>
+					<heading id="xxxxxxxxxx" title="Stazzona"/>
+					<heading id="xxxxxxxxxx" title="Taglio-Isolaccio"/>
+					<heading id="xxxxxxxxxx" title="Talasani"/>
+					<heading id="xxxxxxxxxx" title="Tallone"/>
+					<heading id="xxxxxxxxxx" title="Tarrano"/>
+					<heading id="xxxxxxxxxx" title="Tomino"/>
+					<heading id="xxxxxxxxxx" title="Tox"/>
+					<heading id="xxxxxxxxxx" title="Tralonca"/>
+					<heading id="xxxxxxxxxx" title="Urtaca"/>
+					<heading id="xxxxxxxxxx" title="Vallecalle"/>
+					<heading id="xxxxxxxxxx" title="Valle-d'Alesani"/>
+					<heading id="xxxxxxxxxx" title="Valle-di-Campoloro"/>
+					<heading id="xxxxxxxxxx" title="Valle-di-Rostino"/>
+					<heading id="xxxxxxxxxx" title="Valle-d'Orezza"/>
+					<heading id="xxxxxxxxxx" title="Vallica"/>
+					<heading id="xxxxxxxxxx" title="Velone-Orneto"/>
+					<heading id="xxxxxxxxxx" title="Venaco"/>
+					<heading id="xxxxxxxxxx" title="Ventiseri"/>
+					<heading id="xxxxxxxxxx" title="Venzolasca"/>
+					<heading id="xxxxxxxxxx" title="Verdèse"/>
+					<heading id="xxxxxxxxxx" title="Vescovato"/>
+					<heading id="xxxxxxxxxx" title="Vezzani"/>
+					<heading id="xxxxxxxxxx" title="Vignale"/>
+					<heading id="xxxxxxxxxx" title="Ville-di-Paraso"/>
+					<heading id="xxxxxxxxxx" title="Ville-di-Pietrabugno (CAB)"/>
+					<heading id="xxxxxxxxxx" title="Vivario"/>
+					<heading id="xxxxxxxxxx" title="Volpajola"/>
+					<heading id="xxxxxxxxxx" title="Zalana"/>
+					<heading id="xxxxxxxxxx" title="Zilia"/>
+					<heading id="xxxxxxxxxx" title="Zuani"/>
+				</heading>
+				<heading id="xxxxxxxxxx" title="Communes of the Corse-du-Sud department">
+					<heading id="xxxxxxxxxx" title="Afa"/>
+					<heading id="xxxxxxxxxx" title="Ajaccio"/>
+					<heading id="xxxxxxxxxx" title="Alata"/>
+					<heading id="xxxxxxxxxx" title="Albitreccia"/>
+					<heading id="xxxxxxxxxx" title="Altagène"/>
+					<heading id="xxxxxxxxxx" title="Ambiegna"/>
+					<heading id="xxxxxxxxxx" title="Appietto"/>
+					<heading id="xxxxxxxxxx" title="Arbellara"/>
+					<heading id="xxxxxxxxxx" title="Arbori"/>
+					<heading id="xxxxxxxxxx" title="Argiusta-Moriccio"/>
+					<heading id="xxxxxxxxxx" title="Arro"/>
+					<heading id="xxxxxxxxxx" title="Aullène"/>
+					<heading id="xxxxxxxxxx" title="Azilone-Ampaza"/>
+					<heading id="xxxxxxxxxx" title="Azzana"/>
+					<heading id="xxxxxxxxxx" title="Balogna"/>
+					<heading id="xxxxxxxxxx" title="Bastelica"/>
+					<heading id="xxxxxxxxxx" title="Bastelicaccia"/>
+					<heading id="xxxxxxxxxx" title="Belvédère-Campomoro"/>
+					<heading id="xxxxxxxxxx" title="Bilia"/>
+					<heading id="xxxxxxxxxx" title="Bocognano"/>
+					<heading id="xxxxxxxxxx" title="Bonifacio"/>
+					<heading id="xxxxxxxxxx" title="Calcatoggio"/>
+					<heading id="xxxxxxxxxx" title="Campo"/>
+					<heading id="xxxxxxxxxx" title="Cannelle"/>
+					<heading id="xxxxxxxxxx" title="Carbini"/>
+					<heading id="xxxxxxxxxx" title="Carbuccia"/>
+					<heading id="xxxxxxxxxx" title="Cardo-Torgia"/>
+					<heading id="xxxxxxxxxx" title="Cargèse"/>
+					<heading id="xxxxxxxxxx" title="Cargiaca"/>
+					<heading id="xxxxxxxxxx" title="Casaglione"/>
+					<heading id="xxxxxxxxxx" title="Casalabriva"/>
+					<heading id="xxxxxxxxxx" title="Cauro"/>
+					<heading id="xxxxxxxxxx" title="Ciamannacce"/>
+					<heading id="xxxxxxxxxx" title="Coggia"/>
+					<heading id="xxxxxxxxxx" title="Cognocoli-Monticchi"/>
+					<heading id="xxxxxxxxxx" title="Conca"/>
+					<heading id="xxxxxxxxxx" title="Corrano"/>
+					<heading id="xxxxxxxxxx" title="Coti-Chiavari"/>
+					<heading id="xxxxxxxxxx" title="Cozzano"/>
+					<heading id="xxxxxxxxxx" title="Cristinacce"/>
+					<heading id="xxxxxxxxxx" title="Cuttoli-Corticchiato"/>
+					<heading id="xxxxxxxxxx" title="Eccica-Suarella"/>
+					<heading id="xxxxxxxxxx" title="Évisa"/>
+					<heading id="xxxxxxxxxx" title="Figari"/>
+					<heading id="xxxxxxxxxx" title="Foce"/>
+					<heading id="xxxxxxxxxx" title="Forciolo"/>
+					<heading id="xxxxxxxxxx" title="Fozzano"/>
+					<heading id="xxxxxxxxxx" title="Frasseto"/>
+					<heading id="xxxxxxxxxx" title="Giuncheto"/>
+					<heading id="xxxxxxxxxx" title="Granace"/>
+					<heading id="xxxxxxxxxx" title="Grossa"/>
+					<heading id="xxxxxxxxxx" title="Grosseto-Prugna"/>
+					<heading id="xxxxxxxxxx" title="Guagno"/>
+					<heading id="xxxxxxxxxx" title="Guargualé"/>
+					<heading id="xxxxxxxxxx" title="Guitera-les-Bains"/>
+					<heading id="xxxxxxxxxx" title="Lecci"/>
+					<heading id="xxxxxxxxxx" title="Letia"/>
+					<heading id="xxxxxxxxxx" title="Levie"/>
+					<heading id="xxxxxxxxxx" title="Lopigna"/>
+					<heading id="xxxxxxxxxx" title="Loreto-di-Tallano"/>
+					<heading id="xxxxxxxxxx" title="Marignana"/>
+					<heading id="xxxxxxxxxx" title="Mela"/>
+					<heading id="xxxxxxxxxx" title="Moca-Croce"/>
+					<heading id="xxxxxxxxxx" title="Monacia-d'Aullène"/>
+					<heading id="xxxxxxxxxx" title="Murzo"/>
+					<heading id="xxxxxxxxxx" title="Ocana"/>
+					<heading id="xxxxxxxxxx" title="Olivese"/>
+					<heading id="xxxxxxxxxx" title="Olmeto"/>
+					<heading id="xxxxxxxxxx" title="Olmiccia"/>
+					<heading id="xxxxxxxxxx" title="Orto"/>
+					<heading id="xxxxxxxxxx" title="Osani"/>
+					<heading id="xxxxxxxxxx" title="Ota"/>
+					<heading id="xxxxxxxxxx" title="Palneca"/>
+					<heading id="xxxxxxxxxx" title="Partinello"/>
+					<heading id="xxxxxxxxxx" title="Pastricciola"/>
+					<heading id="xxxxxxxxxx" title="Peri"/>
+					<heading id="xxxxxxxxxx" title="Petreto-Bicchisano"/>
+					<heading id="xxxxxxxxxx" title="Piana"/>
+					<heading id="xxxxxxxxxx" title="Pianotolli-Caldarello"/>
+					<heading id="xxxxxxxxxx" title="Pietrosella"/>
+					<heading id="xxxxxxxxxx" title="Pila-Canale"/>
+					<heading id="xxxxxxxxxx" title="Poggiolo"/>
+					<heading id="xxxxxxxxxx" title="Porto-Vecchio"/>
+					<heading id="xxxxxxxxxx" title="Propriano"/>
+					<heading id="xxxxxxxxxx" title="Quasquara"/>
+					<heading id="xxxxxxxxxx" title="Quenza"/>
+					<heading id="xxxxxxxxxx" title="Renno"/>
+					<heading id="xxxxxxxxxx" title="Rezza"/>
+					<heading id="xxxxxxxxxx" title="Rosazia"/>
+					<heading id="xxxxxxxxxx" title="Sainte-Lucie-de-Tallano"/>
+					<heading id="xxxxxxxxxx" title="Salice"/>
+					<heading id="xxxxxxxxxx" title="Sampolo"/>
+					<heading id="xxxxxxxxxx" title="San-Gavino-di-Carbini"/>
+					<heading id="xxxxxxxxxx" title="Santa-Maria-Figaniella"/>
+					<heading id="xxxxxxxxxx" title="Santa-Maria-Siché"/>
+					<heading id="xxxxxxxxxx" title="Sant'Andréa-d'Orcino"/>
+					<heading id="xxxxxxxxxx" title="Sari-d'Orcino"/>
+					<heading id="xxxxxxxxxx" title="Sari-Solenzara"/>
+					<heading id="xxxxxxxxxx" title="Sarrola-Carcopino"/>
+					<heading id="xxxxxxxxxx" title="Sartène"/>
+					<heading id="xxxxxxxxxx" title="Serra-di-Ferro"/>
+					<heading id="xxxxxxxxxx" title="Serra-di-Scopamène"/>
+					<heading id="xxxxxxxxxx" title="Serriera"/>
+					<heading id="xxxxxxxxxx" title="Soccia"/>
+					<heading id="xxxxxxxxxx" title="Sollacaro"/>
+					<heading id="xxxxxxxxxx" title="Sorbollano"/>
+					<heading id="xxxxxxxxxx" title="Sotta"/>
+					<heading id="xxxxxxxxxx" title="Tasso"/>
+					<heading id="xxxxxxxxxx" title="Tavaco"/>
+					<heading id="xxxxxxxxxx" title="Tavera"/>
+					<heading id="xxxxxxxxxx" title="Tolla"/>
+					<heading id="xxxxxxxxxx" title="Ucciani"/>
+					<heading id="xxxxxxxxxx" title="Urbalacone"/>
+					<heading id="xxxxxxxxxx" title="Valle-di-Mezzana"/>
+					<heading id="xxxxxxxxxx" title="Vero"/>
+					<heading id="xxxxxxxxxx" title="Vico"/>
+					<heading id="xxxxxxxxxx" title="Viggianello"/>
+					<heading id="xxxxxxxxxx" title="Villanova"/>
+					<heading id="xxxxxxxxxx" title="Zérubia"/>
+					<heading id="xxxxxxxxxx" title="Zévaco"/>
+					<heading id="xxxxxxxxxx" title="Zicavo"/>
+					<heading id="xxxxxxxxxx" title="Zigliara"/>
+					<heading id="xxxxxxxxxx" title="Zonza"/>
+					<heading id="xxxxxxxxxx" title="Zoza"/>
+				</heading>
+	    Sardinia (pronounced /sɑrˈdɪnɪə/; Italian: Sardegna; Sardinian: Sardigna or Sardinnya
+	        Cagliari (Italian: Provincia di Cagliari; Sardinian: Provìntzia de Casteddu)
+	            Cagliari (Sardinian: Casteddu)"/>
+					<heading id="xxxxxxxxxx" title="Basilica di San Saturnino"/>
+					<heading id="xxxxxxxxxx" title="Castello, the castle"/>
+						<heading id="xxxxxxxxxx" title="Elephant Tower"/>
+						<heading id="xxxxxxxxxx" title="St. Pancras Tower "/>
+					<heading id="xxxxxxxxxx" title="The Chiesa della Purissima"/>
+					<heading id="xxxxxxxxxx" title="Justice Court /Palazzo di Giustizia"/>
+					<heading id="xxxxxxxxxx" title="Marina"/>
+					<heading id="xxxxxxxxxx" title="Marinery Museum"/>
+					<heading id="xxxxxxxxxx" title="Monte Urpinu"/>
+					<heading id="xxxxxxxxxx" title="necropolis"/>
+					<heading id="xxxxxxxxxx" title="Orto Botanico dell'Università di Cagliari, the city's botanical garden"/>
+					<heading id="xxxxxxxxxx" title="Our Lady of Bonaria"/>
+					<heading id="xxxxxxxxxx" title="The Poetto beach"/>
+					<heading id="xxxxxxxxxx" title="Republic Square"/>
+					<heading id="xxxxxxxxxx" title="Roman Amphitheatre"/>
+					<heading id="xxxxxxxxxx" title="Sardinian Archaeological Museum"/>
+					<heading id="xxxxxxxxxx" title="Stampace        
+	            Quartu Sant'Elena  (Sardinian: Cuartu Santa Alèni) "/>
+					<heading id="xxxxxxxxxx" title="Sant'Agata"/>
+					<heading id="xxxxxxxxxx" title="Santa Maria Cepola "/>
+					<heading id="xxxxxxxxxx" title="Sant'Elena Imperatrice
+	            Selargius 
+	            Assemini"/>
+					<heading id="xxxxxxxxxx" title="Church and Oratory of St. John "/>
+					<heading id="xxxxxxxxxx" title="Church of St. Peter
+	            Capoterra 
+	            Monserrato 
+	            Sestu"/>
+					<heading id="xxxxxxxxxx" title="Church of San Gemiliano 
+	            Sinnai 
+	            Quartucciu 
+	            Elmas 
+	            Dolianova"/>
+					<heading id="xxxxxxxxxx" title="Cathedral of San Pantaleo"/>
+					<heading id="xxxxxxxxxx" title="The Giants tombs in Su Tiriaxiu"/>
+					<heading id="xxxxxxxxxx" title="Mitza salamu"/>
+					<heading id="xxxxxxxxxx" title="Nuraghe sa dom'e S'Orcu"/>
+					<heading id="xxxxxxxxxx" title="Roman Baths"/>
+					<heading id="xxxxxxxxxx" title="Sa dom’ ‘e s’ossu
+	            Decimomannu 
+	            San Sperate 
+	            Villasor 
+	            Maracalagonis 
+	            Pula 
+	            Uta 
+	            Settimo San Pietro 
+	            Sarroch 
+	        Province of Carbonia-Iglesias Provincia di Carbonia-Iglesias, Sardinian: Provìntzia de Carbònia-Igrèsias
+	            Carbonia"/>
+					<heading id="xxxxxxxxxx" title="Monte Sirai"/>
+					<heading id="xxxxxxxxxx" title="Serbariu coalmine
+	            Iglesias (Sardinian: Igrèsias)"/>
+					<heading id="xxxxxxxxxx" title="Church of San Francesco"/>
+					<heading id="xxxxxxxxxx" title="Giardino Montano Linasia,"/>
+					<heading id="xxxxxxxxxx" title="Iglesias' cathedral
+	            Sant'Antioco"/>
+					<heading id="xxxxxxxxxx" title="akropolis"/>
+					<heading id="xxxxxxxxxx" title="Basilica of Sant'Antioco"/>
+					<heading id="xxxxxxxxxx" title="Ferruccio Barreca Archaeological Museum"/>
+					<heading id="xxxxxxxxxx" title="The Forte Su Pisu "/>
+					<heading id="xxxxxxxxxx" title="Phoenician and Punic necropolises"/>
+					<heading id="xxxxxxxxxx" title="Roman bridge"/>
+					<heading id="xxxxxxxxxx" title="Sulci (ancient city)
+	        Province of Medio Campidano
+	            Arbus"/>
+					<heading id="xxxxxxxxxx" title="Tombe dei Giganti (Giant graves)
+	            Gonnosfanadiga
+	            Guspini
+	            Samassi
+	            San Gavino Monreale
+	            Sanluri
+	            Sardara
+	            Serramanna
+	            Serrenti
+	            Villacidro (Sardinian: Biddexidru)
+	        Province of Nuoro  (Italian: Provincia di Nuoro; Sardinian: Provìntzia de Nùgoro)
+	            Aritzo
+	            Atzara 
+	            Austis (Latin: Augustae[1]
+	            Belvì
+	            Birori
+	            Bitti  Bitthe
+	            Bolotana
+	            Desulo"/>
+					<heading id="xxxxxxxxxx" title="Asuai"/>
+					<heading id="xxxxxxxxxx" title="Issiria"/>
+					<heading id="xxxxxxxxxx" title="Ovolaccio,
+	            Dorgali
+	            Dualchi
+	            Fonni
+	            Gadoni
+	            Galtellì"/>
+					<heading id="xxxxxxxxxx" title="cathedral of Saint Peter"/>
+					<heading id="xxxxxxxxxx" title="church of Saint Maria of the Towers
+	            Gavoi"/>
+					<heading id="xxxxxxxxxx" title="Antana 'e Cartzonna"."/>
+					<heading id="xxxxxxxxxx" title="Roman bridge
+	            Irgoli (Latin: Fanum Carisi or Fanum Carisii
+	            Lei
+	            Loculi
+	            Lodè
+	            Lodine
+	            Lula
+	            Macomer (Sardinian: Macumère)    "Macopsissa,""/>
+					<heading id="xxxxxxxxxx" title="San Pantaleone
+	            Mamoiada 
+	            Meana Sardo
+	            Noragugume
+	            Nuoro (Nùgoro[1], in the ancient Nuoro's dialect)
+	            Oliena
+	            Ollolai
+	            Olzai
+	            Onani 
+	            Onifai
+	            Oniferi
+	            Orani
+	            Orgosolo
+	            Orosei"/>
+					<heading id="xxxxxxxxxx" title="Sos Alinos.
+	            Orotelli
+	            Ortueri
+	            Orune 
+	            Osidda
+	            Posada (Latin: Pheronia[1] or Feronia, and later Pausata)"/>
+					<heading id="xxxxxxxxxx" title="Castello della Fava
+	            Sarule
+	            Silanus
+	            Sindia
+	            Siniscola (Sardinian: Thiniscòle)
+	            Sorgono
+	            Teti 
+	            Tiana 
+	            Tonara"/>
+					<heading id="xxxxxxxxxx" title="Arasulè,"/>
+					<heading id="xxxxxxxxxx" title="Ilalà "/>
+					<heading id="xxxxxxxxxx" title="Su Pranu,"/>
+					<heading id="xxxxxxxxxx" title="Teliseri,"/>
+					<heading id="xxxxxxxxxx" title="Toneri,
+	            Torpè"/>
+					<heading id="xxxxxxxxxx" title="Brunella"/>
+					<heading id="xxxxxxxxxx" title="Biddanoa, "/>
+					<heading id="xxxxxxxxxx" title="Concas"/>
+					<heading id="xxxxxxxxxx" title="Su cossu"/>
+					<heading id="xxxxxxxxxx" title="Talava
+	        Province of Ogliastra
+	            Bari Sardo (Latin: Custodia Rubriensis[1]) 
+	            Baunei
+	            Jerzu
+	            Lanusei (Sardinian: Lanusè)
+	            Tertenia
+	            Tortolì (Sardinian: Tortuelie, Latin: Portus Ilii) 
+	            Villagrande Strisaili 
+	        Province of Olbia-Tempio  (Italian: Provincia di Olbia-Tempio, Sardinian: Provìntzia de Terranòa-Tèmpiu)
+	            Olbia Sardinian name: Terranoa, Gallurese: Tarranoa
+	        Province of Oristano
+	        Province of Sassari
+	
+	            
+	
+	Gallia Cisalpina,
+	Hispania Citerior
+	Hispania Ulterior
+	Illyricum,
+	Macedonia, 
+	Africa proconsularis, 
+	Asia,
+	Gallia Transalpina (later Gallia Narbonensis)
+	Bithynia, 
+	Creta et Cyrenaica, 
+	Corduene 
+	Cilicia et Cyprus, 
+	Syria, 
+	Gallia Comata 
+	Aegyptus,
+	Moesia,
+					-->
+				</heading>
+			</heading>
+			<heading id="RecentEurope" title="Recent Europe">
+				<heading id="AustriaHungary" title="Austria-Hungary">
+					<synonym value="Austro-Hungarian Empire"/>
+					<synonym value="Dual Monarchy"/> <!-- Disambiguate? -->
+					<synonym value="k.u.k. Monarchy"/> <!-- Lowercase k's are intentional -->
+					<synonym value="k. und k. Monarchy"/> <!-- Ibid. -->
+					<synonym value="k&amp;k Monarchy"/> <!-- Ibid. -->
+					<synonym value="k &amp; k Monarchy"/> <!-- Ibid. -->
+					<synonym value="k. &amp; k. Monarchy"/> <!-- Ibid. -->
+					<synonym value="Kaiserlich und königlich Monarchy"/>
+					<synonym value="Kaiserlich und koeniglich Monarchy"/>
+					<synonym value="Kaiserlich-königlich Monarchy"/>
+					<synonym value="Kaiserlich-koeniglich Monarchy"/>
+					<implies facet="Location" cat="AustriaCountry"/> <!-- Need to work on this inference rule -->
+					<implies facet="Location" cat="HungaryCountry"/> <!-- Need to work on this inference rule -->
+				</heading>
+				<heading id="Czechoslovakia" title="Czechoslovakia">
+					<synonym value="Czechoslovakian"/>
+					<synonym value="Czechoslovakians"/>
+					<synonym value="Czechoslovak"/>
+					<synonym value="Czechoslovaks"/>
+					<implies facet="Location" cat="CzechRepublic"/> <!-- Need to work on this inference rule -->
+					<implies facet="Location" cat="SlovakiaCountry"/> <!-- Need to work on this inference rule -->
+				</heading>
+				<heading id="HolyRomanEmpire" title="Holy Roman Empire (962 &ndash; 1806)" noMatch="true">
+					<synonym value="Holy Roman Empire"/>
+					<synonym value="Holy Roman Empire of the German Nation"/>
+					<synonym value="Heiliges Römisches Reich"/> <!-- German -->
+					<synonym value="eiliges Römisches Reich Deutscher Nation"/> <!-- German -->
+					<synonym value="Sacrum Romanum Imperium"/> <!-- Latin -->
+					<synonym value="Sacrum Romanum Imperium Nationis Germanicæ"/> <!-- Latin -->
+					<synonym value="Sacrum Romanum Imperium Nationis Germanicae"/> <!-- Latin -->
+					<heading id="LimburgDuchy" title="Duchy of Limburg">
+						<synonym value="Herzogtum Limburg"/> <!-- German -->
+						<synonym value="Duché de Limbourg"/> <!-- French -->
+						<synonym value="Hertogdom Limburg"/> <!-- Dutch -->
+						<implies facet="Location" cat="BelgiumCountry"/> <!-- Need to work on this inference rule -->
+						<implies facet="Location" cat="GermanyCountry"/> <!-- Need to work on this inference rule -->
 					</heading>
 				</heading>
-				<heading id="MiscOldGreece" title="Other Greek Areas">
-					<heading id="AleppoOldGreece" title="Aleppo">
-						<synonym value="Αλεππο"/>
-						<synonym value="Halep"/>
-						<implies facet="Location" cat="AleppoSyria"/>
-					</heading>
-					<heading id="AlexandriaOldGreece" title="Alexandria" noMatch="true"/>
-					<heading id="MacedonOldGreece" title="Macedon">
-						<synonym value="Macedonia"/>
-						<synonym value="Μακεδονία"/>
-						<synonym value="Makedonía"/>
-					</heading>
-					<heading id="SinaiOldGreece" title="Sinai">
-						<synonym value="The Sinai Peninsula"/>
-						<synonym value="Sinai Peninsula"/>
-						<synonym value="The Sinai"/>
-						<synonym value="Sina"/>
-						<synonym value="Sina'a"/>
-						<implies facet="Location" cat="SinaiPeninsula"/>
-					</heading>
-					<heading id="ThraceOldGreece" title="Thrace">
-						<synonym value="Тракия"/>
-						<synonym value="Trakiya"/>
-						<synonym value="Trakija"/>
-						<synonym value="Trakia"/>
-						<synonym value="Θράκη"/>
-						<synonym value="Thráki"/>
-						<synonym value="Trakya"/>
-					</heading>
+				<heading id="Prussia" title="Prussia">
+					<synonym value="Kingdom of Prussia"/>
+					<synonym value="Königreich Preußen"/>
+					<synonym value="Königreich Preussen"/>
+					<synonym value="Koenigreich Preußen"/>
+					<synonym value="Koenigreich Preussen"/>
+					<implies facet="Location" cat="GermanyCountry"/> <!-- Need to work on this inference rule -->
 				</heading>
-			</heading>
-			<heading id="AncientRome" title="Ancient Rome">
-				<heading id="AncientCityOfRome" title="Rome" noMatch="true">
-					<heading id="OldRomeMunOne" title="Municipio I"/>
-					<heading id="OldRomeMunTwo" title="Municipio II"/> 
-					<heading id="OldRomeMunThree" title="Municipio III"/>
-					<heading id="OldRomeMunFour" title="Municipio IV"/>
-					<heading id="OldRomeMunFive" title="Municipio V"/>
-					<heading id="OldRomeMunSix" title="Municipio VI"/>
-					<heading id="OldRomeMunSeven" title="Municipio VII"/>
-					<heading id="OldRomeMunEight" title="Municipio VIII"/>
-					<heading id="OldRomeMunNine" title="Municipio IX"/>
-					<heading id="OldRomeMunTen" title="Municipio X"/>
-					<heading id="OldRomeMunEleven" title="Municipio XI"/>
-					<heading id="OldRomeMunTwelve" title="Municipio XII"/>
-					<heading id="OldRomeMunThirteen" title="Municipio XIII"/>
-					<heading id="OldRomeMunFourteen" title="Municipio XIV"/>
-					<heading id="OldRomeMunFifteen" title="Municipio XV"/>
-					<heading id="OldRomeMunSixteen" title="Municipio XVI"/>
-					<heading id="OldRomeMunSeventeen" title="Municipio XVII"/>
-					<heading id="OldRomeMunEightteen" title="Municipio XVIII"/>
-					<heading id="OldRomeMunNineteen" title="Municipio IXX"/>
-					<heading id="OldRomeMunTwenty" title="Municipio XX"/>
+				<heading id="EastGermany" title="East Germany">
+					<synonym value="xxxxxxxxxx"/>
+					<synonym value="xxxxxxxxxx"/>
+					<synonym value="xxxxxxxxxx"/>
+					<synonym value="xxxxxxxxxx"/>
 				</heading>
-<!--
-Cyrenaica
-
-Dacia
-
-Epirus
-
-Gallia- or Gallic Empire
-    Baetica
-    
-    Britannia
-    
-    Hispania   
-
-    Gaul-
-
-        Gallia Cisalpina  or "Gaul this side of the Alps" 
-
-        Gallia Narbonensis   formerly Gallia Transalpina or "Gaul across the Alps"        
-
-            Gallia Comata, or "long haired Gaul"-
-                       Gallia Aquitania,Aquitaine, Aquitaine Gaul
-                        Gallia Belgica, Belgica Prima
-                        Gallia Lugdunensis-
-                                    Lugdunum (today's Lyon
-
-Republican provinces
-
-Sicilia, Sicily
-    Sicily 
-         Akragas, Akragras (also known as Acragas in Greek, Agrigentum in Latin and Kerkent in Arabic)
-            Church of San Biagio
-            Church of Santa Maria dei Greci ("Our Lady of the Greeks")
-            Church of San Nicola
-            Temple of Olympian Zeus
-            Temple of Concordia
-            Temple of Demeter
-            Tomb of Theron
-            Valle dei Templi ("Valley of the Temples"
-         Gela, Terranova, Terranova di Sicilia, Heracles
-            Akropolis.
-            Regional Archeological museum.
-            Capo Soprano.
-            The Castelluccio ("Small Castle"),
-            The Cathedral, dedicated to the Holy Virgin Assunta, 
-            Madonna della Platea. 
-            Natural Reserve of Biviere di Gela, 
-            Manfria,  Torre di Manfria ("Manfria Tower").
-
-         Himera, Χειμέρα
-         Selinunte, Σελινοῦς; Selinus"/>
-				<heading id="xxxxxxxxxx" title="temple E, the so-called "Temple of Hera"
-			<heading id="xxxxxxxxxx" title="Syracuse">
-				Siracusa,  Sarausa, Συρακοῦσαι Syrakousae
-				<heading id="xxxxxxxxxx" title="The Temple of Apollo"/>
-				<heading id="xxxxxxxxxx" title="The Fountain of Arethusa"/>
-				<heading id="xxxxxxxxxx" title="The Theatre"/>
-				<heading id="xxxxxxxxxx" title="The Roman amphitheatre"/>
-				<heading id="xxxxxxxxxx" title="The Tomb of Archimede"/> ••• ...in the... •••
-				<heading id="xxxxxxxxxx" title="Grotticelli Necropolis"/>
-				<heading id="xxxxxxxxxx" title="The Temple of Olympian Zeus"/>
-				<heading id="xxxxxxxxxx" title="The Cathedral"/>
-				<heading id="xxxxxxxxxx" title="Church of San Paolo"/>
-				<heading id="xxxxxxxxxx" title="Church of San Cristoforo"/>
-				<heading id="xxxxxxxxxx" title="Church of Santa Lucìa alla Badìa"/>
-				<heading id="xxxxxxxxxx" title="Church of Santa Maria dei Miracoli"/>
-				<heading id="xxxxxxxxxx" title="Church of the Spirito Santo"/>
-				<heading id="xxxxxxxxxx" title="Church of the Jesuite College"/>
-				<heading id="xxxxxxxxxx" title="Church of St. Benedict"/>
-				<heading id="xxxxxxxxxx" title="Chiesa della Concezione"/>
-				<heading id="xxxxxxxxxx" title="Church of San Francesco all'Immacolata"/>
-				<heading id="xxxxxxxxxx" title="Basilica of St. John the Evangelist"/>
-				<heading id="xxxxxxxxxx" title="Catacombs of San Giovanni"/>
-				<heading id="xxxxxxxxxx" title="The Castello Maniace"/>
-				<heading id="xxxxxxxxxx" title="Archaeological Museum"/>
-				<heading id="xxxxxxxxxx" title="Palazzo Lanza Buccheri"/>
-				<heading id="xxxxxxxxxx" title="Palazzo Mergulese-Montalto"/>
-				<heading id="xxxxxxxxxx" title="The Archbishop's Palace"/>
-				<heading id="xxxxxxxxxx" title="The Palazzo Vermexio,"/>
-				<heading id="xxxxxxxxxx" title="Palazzo Francica Nava,"/>
-				<heading id="xxxxxxxxxx" title="Palazzo Beneventano del Bosco"/>
-				<heading id="xxxxxxxxxx" title="Palazzo Migliaccio"/>
-				<heading id="xxxxxxxxxx" title="The Senate Palace"/>
-				<heading id="xxxxxxxxxx" title="The Castle of Euryalos"/>
-				<heading id="xxxxxxxxxx" title="Zancle Missina"/>
-				<heading id="xxxxxxxxxx" title="The Cathedral"/>
-				<heading id="xxxxxxxxxx" title="The Annunziata dei Catalani"/>
-				<heading id="xxxxxxxxxx" title="Santa Maria degli Alemanni"/>
-				<heading id="xxxxxxxxxx" title="Sanctuary of Montevergine"/>
-				<heading id="xxxxxxxxxx" title="The Fountain of Orion"/>
-				<heading id="xxxxxxxxxx" title="The Fountain of Neptune"/>
-				<heading id="xxxxxxxxxx" title="The Senatory Fountain"/>
-				<heading id="xxxxxxxxxx" title="The Four Fountains"/>
-				<heading id="xxxxxxxxxx" title="Palazzo Calapaj"/>
-			</heading>
-The San Ranieri Lighthouse (or Tower), 
-The Botanical Garden "Pietro Castelli" of Messina's University
-The Regional Museum, 
-
-
-    Malta. Republic of Malta, Repubblika ta' Malta
-         Malta Island (Malta), 
-            Attard (or Ħ'Attard)
-            Balzan (or Ħal-Balzan, pronounced bal-tsan)
-            Birgu (Maltese: Città Vittoriosa or Birgu
-            Birkirkara B'Kara (English: Birchircara
-               Birzebbugia (Maltese: Birżebbuġa or BʼBuġa
-               Cospicua (Maltese: Città Cospicua or Bormla
-               Dingli (or Ħad-Dingli
-               Fgura
-               Floriana (Maltese: Furjana
-               Għargħur
-               Għaxaq (English: Ashiak)
-            Gudja (English: Gudia
-            Gżira (or il-Gżira
-               Hamrun (Maltese: Ħamrun
-               Iklin (English: Iclin) 
-            Imtarfa, or Mtarfa
-            Senglea (Maltese: L-Isla) Civitas Invicta,
-            Kalkara 
-            Kirkop (English: Chircop
-               Lija or Lia
-               Luqa, poplar in Aramaic      
-            Marsa, Il-Marsa
-               Marsascala (Maltese: Marsaskala or just M'skala  
-               Marsaxlokk 
-            Mġarr, Imġarr, or Mugiarro, Mgiarro 
-            Mosta (or Il-Mosta) 
-            Mqabba or Imqabba (English: Micabba
-               Msida or Imsida (English: Misida
-               Naxxar (English: Naxaro)
-            Pembroke, 
-            Pietà (English Pieta)
-            Valletta, Belt Valletta, Città Umilissima, or Humilissima Civitas Valletta
-            Qormi, Città Pinto
-            Birkirkara B'Kara (English: Birchircara
-               Mdina, Città Vecchia, or Città Notabile, (English: Notabile, or Imdina
-               Mellieħa (English: Mellieha)
-            Paola, (or old name Casal Paula) Raħal Ġdid, which means new town in Maltese.
-            Qormi or Città Pinto (Maltese: Ħal Qormi[
-            Qrendi (English: Crendi or Krendi
-               Rabat (or Ir-Rabat)
-            Safi 
-            San Giljan (English: St. Julian's
-               San Ġwann (English: San Giovanni) 
-            Saint Paul's Bay (Maltese: San Pawl il-Baħar)
-            Santa Luċija (English: Santa Lucia
-            Santa Venera 
-            Siġġiewi, Città Ferdinand, or Siggieui,
-            Sliema (or Tas-Sliema) 
-            Swieqi (English: Swieki)
-            Tarxien
-               Ta' Xbiex
-               Valletta (alternatively Belt Valletta, Città Umilissima, or Humilissima Civitas Valletta
-               Xgħajra (English: Sh'ayra
-               Żabbar (Maltese: Città Hompesch or Żabbar)
-            Żebbuġ or Città Rohan
-               Zeitun (Maltese: Żejtun or Città Beland)
-            Żurrieq (Maltese: Żurrieq, also English: Zurrico
-
-         Gozo (Għawdex), Isle of Calypso Ogygia
-            Fontana (or Il-Fontana) 
-            Għajnsielem, "Spring of Peace" (English: Ainsielem)
-            Għarb
-               Għasri (or L-Għasri)
-            Kerċem (English: Kerchem)
-            Munxar or Il-Munxar
-               Nadur (or In-Nadur)
-            Qala (English: Cala) 
-            Saint Lawrence (Maltese: San Lawrenz) 
-            Sannat (or Ta' Sannat)
-            Victoria or Città Vittoria 
-            Ix-Xagħra
-               Xewkija (English: Xeuchia)
-            Iż-Żebbuġ 
-
-         Comino (Kemmuna) 
-         Fungus Rock, which also has the affectionate Maltese name 'Il-Ġebla tal-Ġeneral' (the General's Rock)
-         Filfla
-         Cominotto 
-         Islands of St. Paul 
-
-Corsica et Sardinia
-    Corsica (French: Corse; Corsican and Italian: Corsica)
-            Communes of the Haute-Corse department
-				<heading id="xxxxxxxxxx" title="Aghione"/>
-				<heading id="xxxxxxxxxx" title="Aiti"/>
-				<heading id="xxxxxxxxxx" title="Alando"/>
-				<heading id="xxxxxxxxxx" title="Albertacce"/>
-				<heading id="xxxxxxxxxx" title="Aléria (Ancient Greek: Ἀλαλίη, Alaliē; Latin and Corsican: Aleria)"/>
-				<heading id="xxxxxxxxxx" title="Algajola"/>
-				<heading id="xxxxxxxxxx" title="Altiani"/>
-				<heading id="xxxxxxxxxx" title="Alzi"/>
-				<heading id="xxxxxxxxxx" title="Ampriani"/>
-				<heading id="xxxxxxxxxx" title="Antisanti"/>
-				<heading id="xxxxxxxxxx" title="Aregno"/>
-				<heading id="xxxxxxxxxx" title="Asco"/>
-				<heading id="xxxxxxxxxx" title="Avapessa"/>
-				<heading id="xxxxxxxxxx" title="Barbaggio"/>
-				<heading id="xxxxxxxxxx" title="Barrettali"/>
-				<heading id="xxxxxxxxxx" title="Bastia (French &amp; Corsican: Bastia),"/>
-				<heading id="xxxxxxxxxx" title="Belgodère"/>
-				<heading id="xxxxxxxxxx" title="Bigorno"/>
-				<heading id="xxxxxxxxxx" title="Biguglia"/>
-				<heading id="xxxxxxxxxx" title="Bisinchi"/>
-				<heading id="xxxxxxxxxx" title="Borgo"/>
-				<heading id="xxxxxxxxxx" title="Brando"/>
-				<heading id="xxxxxxxxxx" title="Bustanico"/>
-				<heading id="xxxxxxxxxx" title="Cagnano"/>
-				<heading id="xxxxxxxxxx" title="Calacuccia"/>
-				<heading id="xxxxxxxxxx" title="Calenzana"/>
-				<heading id="xxxxxxxxxx" title="Calvi"/>
-				<heading id="xxxxxxxxxx" title="Cambia"/>
-				<heading id="xxxxxxxxxx" title="Campana"/>
-				<heading id="xxxxxxxxxx" title="Campi"/>
-				<heading id="xxxxxxxxxx" title="Campile"/>
-				<heading id="xxxxxxxxxx" title="Campitello"/>
-				<heading id="xxxxxxxxxx" title="Canale-di-Verde"/>
-				<heading id="xxxxxxxxxx" title="Canari"/>
-				<heading id="xxxxxxxxxx" title="Canavaggia"/>
-				<heading id="xxxxxxxxxx" title="Carcheto-Brustico"/>
-				<heading id="xxxxxxxxxx" title="Carpineto"/>
-				<heading id="xxxxxxxxxx" title="Carticasi"/>
-				<heading id="xxxxxxxxxx" title="Casabianca"/>
-				<heading id="xxxxxxxxxx" title="Casalta"/>
-				<heading id="xxxxxxxxxx" title="Casamaccioli"/>
-				<heading id="xxxxxxxxxx" title="Casanova"/>
-				<heading id="xxxxxxxxxx" title="Casevecchie"/>
-				<heading id="xxxxxxxxxx" title="Castellare-di-Casinca"/>
-				<heading id="xxxxxxxxxx" title="Castellare-di-Mercurio"/>
-				<heading id="xxxxxxxxxx" title="Castello-di-Rostino"/>
-				<heading id="xxxxxxxxxx" title="Castifao"/>
-				<heading id="xxxxxxxxxx" title="Castiglione"/>
-				<heading id="xxxxxxxxxx" title="Castineta"/>
-				<heading id="xxxxxxxxxx" title="Castirla"/>
-				<heading id="xxxxxxxxxx" title="Cateri"/>
-				<heading id="xxxxxxxxxx" title="Centuri"/>
-				<heading id="xxxxxxxxxx" title="Cervione"/>
-				<heading id="xxxxxxxxxx" title="Chiatra"/>
-				<heading id="xxxxxxxxxx" title="Chisa"/>
-				<heading id="xxxxxxxxxx" title="Corbara"/>
-				<heading id="xxxxxxxxxx" title="Corscia"/>
-				<heading id="xxxxxxxxxx" title="Corte"/>
-				<heading id="xxxxxxxxxx" title="Costa"/>
-				<heading id="xxxxxxxxxx" title="Croce"/>
-				<heading id="xxxxxxxxxx" title="Crocicchia"/>
-				<heading id="xxxxxxxxxx" title="Erbajolo"/>
-				<heading id="xxxxxxxxxx" title="Érone"/>
-				<heading id="xxxxxxxxxx" title="Ersa"/>
-				<heading id="xxxxxxxxxx" title="Farinole"/>
-				<heading id="xxxxxxxxxx" title="Favalello"/>
-				<heading id="xxxxxxxxxx" title="Felce"/>
-				<heading id="xxxxxxxxxx" title="Feliceto"/>
-				<heading id="xxxxxxxxxx" title="Ficaja"/>
-				<heading id="xxxxxxxxxx" title="Focicchia"/>
-				<heading id="xxxxxxxxxx" title="Furiani (CAB)"/>
-				<heading id="xxxxxxxxxx" title="Galéria"/>
-				<heading id="xxxxxxxxxx" title="Gavignano"/>
-				<heading id="xxxxxxxxxx" title="Ghisonaccia"/>
-				<heading id="xxxxxxxxxx" title="Ghisoni"/>
-				<heading id="xxxxxxxxxx" title="Giocatojo"/>
-				<heading id="xxxxxxxxxx" title="Giuncaggio"/>
-				<heading id="xxxxxxxxxx" title="L'Île-Rousse"/>
-				<heading id="xxxxxxxxxx" title="Isolaccio-di-Fiumorbo"/>
-				<heading id="xxxxxxxxxx" title="Lama"/>
-				<heading id="xxxxxxxxxx" title="Lano"/>
-				<heading id="xxxxxxxxxx" title="Lavatoggio"/>
-				<heading id="xxxxxxxxxx" title="Lento"/>
-				<heading id="xxxxxxxxxx" title="Linguizzetta"/>
-				<heading id="xxxxxxxxxx" title="Loreto-di-Casinca"/>
-				<heading id="xxxxxxxxxx" title="Lozzi"/>
-				<heading id="xxxxxxxxxx" title="Lucciana"/>
-				<heading id="xxxxxxxxxx" title="Lugo-di-Nazza"/>
-				<heading id="xxxxxxxxxx" title="Lumio"/>
-				<heading id="xxxxxxxxxx" title="Luri"/>
-				<heading id="xxxxxxxxxx" title="Manso"/>
-				<heading id="xxxxxxxxxx" title="Matra"/>
-				<heading id="xxxxxxxxxx" title="Mausoléo"/>
-				<heading id="xxxxxxxxxx" title="Mazzola"/>
-				<heading id="xxxxxxxxxx" title="Meria"/>
-				<heading id="xxxxxxxxxx" title="Moïta"/>
-				<heading id="xxxxxxxxxx" title="Moltifao"/>
-				<heading id="xxxxxxxxxx" title="Monacia-d'Orezza"/>
-				<heading id="xxxxxxxxxx" title="Moncale"/>
-				<heading id="xxxxxxxxxx" title="Monte"/>
-				<heading id="xxxxxxxxxx" title="Montegrosso"/>
-				<heading id="xxxxxxxxxx" title="Monticello"/>
-				<heading id="xxxxxxxxxx" title="Morosaglia"/>
-				<heading id="xxxxxxxxxx" title="Morsiglia"/>
-				<heading id="xxxxxxxxxx" title="Muracciole"/>
-				<heading id="xxxxxxxxxx" title="Murato"/>
-				<heading id="xxxxxxxxxx" title="Muro"/>
-				<heading id="xxxxxxxxxx" title="Nessa"/>
-				<heading id="xxxxxxxxxx" title="Nocario"/>
-				<heading id="xxxxxxxxxx" title="Noceta"/>
-				<heading id="xxxxxxxxxx" title="Nonza"/>
-				<heading id="xxxxxxxxxx" title="Novale"/>
-				<heading id="xxxxxxxxxx" title="Novella"/>
-				<heading id="xxxxxxxxxx" title="Occhiatana"/>
-				<heading id="xxxxxxxxxx" title="Ogliastro"/>
-				<heading id="xxxxxxxxxx" title="Olcani"/>
-				<heading id="xxxxxxxxxx" title="Oletta"/>
-				<heading id="xxxxxxxxxx" title="Olmeta-di-Capocorso"/>
-				<heading id="xxxxxxxxxx" title="Olmeta-di-Tuda"/>
-				<heading id="xxxxxxxxxx" title="Olmi-Cappella"/>
-				<heading id="xxxxxxxxxx" title="Olmo"/>
-				<heading id="xxxxxxxxxx" title="Omessa"/>
-				<heading id="xxxxxxxxxx" title="Ortale"/>
-				<heading id="xxxxxxxxxx" title="Ortiporio"/>
-				<heading id="xxxxxxxxxx" title="Palasca"/>
-				<heading id="xxxxxxxxxx" title="Pancheraccia"/>
-				<heading id="xxxxxxxxxx" title="Parata"/>
-				<heading id="xxxxxxxxxx" title="Patrimonio"/>
-				<heading id="xxxxxxxxxx" title="Penta-Acquatella"/>
-				<heading id="xxxxxxxxxx" title="Penta-di-Casinca"/>
-				<heading id="xxxxxxxxxx" title="Perelli"/>
-				<heading id="xxxxxxxxxx" title="Pero-Casevecchie"/>
-				<heading id="xxxxxxxxxx" title="Pianello"/>
-				<heading id="xxxxxxxxxx" title="Piano"/>
-				<heading id="xxxxxxxxxx" title="Piazzali"/>
-				<heading id="xxxxxxxxxx" title="Piazzole"/>
-				<heading id="xxxxxxxxxx" title="Piedicorte-di-Gaggio"/>
-				<heading id="xxxxxxxxxx" title="Piedicroce"/>
-				<heading id="xxxxxxxxxx" title="Piedigriggio"/>
-				<heading id="xxxxxxxxxx" title="Piedipartino"/>
-				<heading id="xxxxxxxxxx" title="Pie-d'Orezza"/>
-				<heading id="xxxxxxxxxx" title="Pietracorbara"/>
-				<heading id="xxxxxxxxxx" title="Pietra-di-Verde"/>
-				<heading id="xxxxxxxxxx" title="Pietralba"/>
-				<heading id="xxxxxxxxxx" title="Pietraserena"/>
-				<heading id="xxxxxxxxxx" title="Pietricaggio"/>
-				<heading id="xxxxxxxxxx" title="Pietroso"/>
-				<heading id="xxxxxxxxxx" title="Piève"/>
-				<heading id="xxxxxxxxxx" title="Pigna"/>
-				<heading id="xxxxxxxxxx" title="Pino"/>
-				<heading id="xxxxxxxxxx" title="Piobetta"/>
-				<heading id="xxxxxxxxxx" title="Pioggiola"/>
-				<heading id="xxxxxxxxxx" title="Poggio-di-Nazza"/>
-				<heading id="xxxxxxxxxx" title="Poggio-di-Venaco"/>
-				<heading id="xxxxxxxxxx" title="Poggio-d'Oletta"/>
-				<heading id="xxxxxxxxxx" title="Poggio-Marinaccio"/>
-				<heading id="xxxxxxxxxx" title="Poggio-Mezzana"/>
-				<heading id="xxxxxxxxxx" title="Polveroso"/>
-				<heading id="xxxxxxxxxx" title="Popolasca"/>
-				<heading id="xxxxxxxxxx" title="Porri"/>
-				<heading id="xxxxxxxxxx" title="La Porta"/>
-				<heading id="xxxxxxxxxx" title="Prato-di-Giovellina"/>
-				<heading id="xxxxxxxxxx" title="Prunelli-di-Casacconi"/>
-				<heading id="xxxxxxxxxx" title="Prunelli-di-Fiumorbo"/>
-				<heading id="xxxxxxxxxx" title="Pruno"/>
-				<heading id="xxxxxxxxxx" title="Quercitello"/>
-				<heading id="xxxxxxxxxx" title="Rapaggio"/>
-				<heading id="xxxxxxxxxx" title="Rapale"/>
-				<heading id="xxxxxxxxxx" title="Riventosa"/>
-				<heading id="xxxxxxxxxx" title="Rogliano"/>
-				<heading id="xxxxxxxxxx" title="Rospigliani"/>
-				<heading id="xxxxxxxxxx" title="Rusio"/>
-				<heading id="xxxxxxxxxx" title="Rutali"/>
-				<heading id="xxxxxxxxxx" title="Saint-Florent"/>
-				<heading id="xxxxxxxxxx" title="Saliceto"/>
-				<heading id="xxxxxxxxxx" title="San-Damiano"/>
-				<heading id="xxxxxxxxxx" title="San-Gavino-d'Ampugnani"/>
-				<heading id="xxxxxxxxxx" title="San-Gavino-di-Fiumorbo"/>
-				<heading id="xxxxxxxxxx" title="San-Gavino-di-Tenda"/>
-				<heading id="xxxxxxxxxx" title="San-Giovanni-di-Moriani"/>
-				<heading id="xxxxxxxxxx" title="San-Giuliano"/>
-				<heading id="xxxxxxxxxx" title="San-Lorenzo"/>
-				<heading id="xxxxxxxxxx" title="San-Martino-di-Lota (CAB)"/>
-				<heading id="xxxxxxxxxx" title="San-Nicolao"/>
-				<heading id="xxxxxxxxxx" title="Santa-Lucia-di-Mercurio"/>
-				<heading id="xxxxxxxxxx" title="Santa-Lucia-di-Moriani"/>
-				<heading id="xxxxxxxxxx" title="Santa-Maria-di-Lota (CAB)"/>
-				<heading id="xxxxxxxxxx" title="Santa-Maria-Poggio"/>
-				<heading id="xxxxxxxxxx" title="Sant'Andréa-di-Bozio"/>
-				<heading id="xxxxxxxxxx" title="Sant'Andréa-di-Cotone"/>
-				<heading id="xxxxxxxxxx" title="Sant'Antonino"/>
-				<heading id="xxxxxxxxxx" title="Santa-Reparata-di-Balagna"/>
-				<heading id="xxxxxxxxxx" title="Santa-Reparata-di-Moriani"/>
-				<heading id="xxxxxxxxxx" title="Santo-Pietro-di-Tenda"/>
-				<heading id="xxxxxxxxxx" title="Santo-Pietro-di-Venaco"/>
-				<heading id="xxxxxxxxxx" title="Scata"/>
-				<heading id="xxxxxxxxxx" title="Scolca"/>
-				<heading id="xxxxxxxxxx" title="Sermano"/>
-				<heading id="xxxxxxxxxx" title="Serra-di-Fiumorbo"/>
-				<heading id="xxxxxxxxxx" title="Silvareccio"/>
-				<heading id="xxxxxxxxxx" title="Sisco"/>
-				<heading id="xxxxxxxxxx" title="Solaro"/>
-				<heading id="xxxxxxxxxx" title="Sorbo-Ocagnano"/>
-				<heading id="xxxxxxxxxx" title="Sorio"/>
-				<heading id="xxxxxxxxxx" title="Soveria"/>
-				<heading id="xxxxxxxxxx" title="Speloncato"/>
-				<heading id="xxxxxxxxxx" title="Stazzona"/>
-				<heading id="xxxxxxxxxx" title="Taglio-Isolaccio"/>
-				<heading id="xxxxxxxxxx" title="Talasani"/>
-				<heading id="xxxxxxxxxx" title="Tallone"/>
-				<heading id="xxxxxxxxxx" title="Tarrano"/>
-				<heading id="xxxxxxxxxx" title="Tomino"/>
-				<heading id="xxxxxxxxxx" title="Tox"/>
-				<heading id="xxxxxxxxxx" title="Tralonca"/>
-				<heading id="xxxxxxxxxx" title="Urtaca"/>
-				<heading id="xxxxxxxxxx" title="Vallecalle"/>
-				<heading id="xxxxxxxxxx" title="Valle-d'Alesani"/>
-				<heading id="xxxxxxxxxx" title="Valle-di-Campoloro"/>
-				<heading id="xxxxxxxxxx" title="Valle-di-Rostino"/>
-				<heading id="xxxxxxxxxx" title="Valle-d'Orezza"/>
-				<heading id="xxxxxxxxxx" title="Vallica"/>
-				<heading id="xxxxxxxxxx" title="Velone-Orneto"/>
-				<heading id="xxxxxxxxxx" title="Venaco"/>
-				<heading id="xxxxxxxxxx" title="Ventiseri"/>
-				<heading id="xxxxxxxxxx" title="Venzolasca"/>
-				<heading id="xxxxxxxxxx" title="Verdèse"/>
-				<heading id="xxxxxxxxxx" title="Vescovato"/>
-				<heading id="xxxxxxxxxx" title="Vezzani"/>
-				<heading id="xxxxxxxxxx" title="Vignale"/>
-				<heading id="xxxxxxxxxx" title="Ville-di-Paraso"/>
-				<heading id="xxxxxxxxxx" title="Ville-di-Pietrabugno (CAB)"/>
-				<heading id="xxxxxxxxxx" title="Vivario"/>
-				<heading id="xxxxxxxxxx" title="Volpajola"/>
-				<heading id="xxxxxxxxxx" title="Zalana"/>
-				<heading id="xxxxxxxxxx" title="Zilia"/>
-				<heading id="xxxxxxxxxx" title="Zuani"/>
-			</heading>
-			<heading id="xxxxxxxxxx" title="Communes of the Corse-du-Sud department">
-				<heading id="xxxxxxxxxx" title="Afa"/>
-				<heading id="xxxxxxxxxx" title="Ajaccio"/>
-				<heading id="xxxxxxxxxx" title="Alata"/>
-				<heading id="xxxxxxxxxx" title="Albitreccia"/>
-				<heading id="xxxxxxxxxx" title="Altagène"/>
-				<heading id="xxxxxxxxxx" title="Ambiegna"/>
-				<heading id="xxxxxxxxxx" title="Appietto"/>
-				<heading id="xxxxxxxxxx" title="Arbellara"/>
-				<heading id="xxxxxxxxxx" title="Arbori"/>
-				<heading id="xxxxxxxxxx" title="Argiusta-Moriccio"/>
-				<heading id="xxxxxxxxxx" title="Arro"/>
-				<heading id="xxxxxxxxxx" title="Aullène"/>
-				<heading id="xxxxxxxxxx" title="Azilone-Ampaza"/>
-				<heading id="xxxxxxxxxx" title="Azzana"/>
-				<heading id="xxxxxxxxxx" title="Balogna"/>
-				<heading id="xxxxxxxxxx" title="Bastelica"/>
-				<heading id="xxxxxxxxxx" title="Bastelicaccia"/>
-				<heading id="xxxxxxxxxx" title="Belvédère-Campomoro"/>
-				<heading id="xxxxxxxxxx" title="Bilia"/>
-				<heading id="xxxxxxxxxx" title="Bocognano"/>
-				<heading id="xxxxxxxxxx" title="Bonifacio"/>
-				<heading id="xxxxxxxxxx" title="Calcatoggio"/>
-				<heading id="xxxxxxxxxx" title="Campo"/>
-				<heading id="xxxxxxxxxx" title="Cannelle"/>
-				<heading id="xxxxxxxxxx" title="Carbini"/>
-				<heading id="xxxxxxxxxx" title="Carbuccia"/>
-				<heading id="xxxxxxxxxx" title="Cardo-Torgia"/>
-				<heading id="xxxxxxxxxx" title="Cargèse"/>
-				<heading id="xxxxxxxxxx" title="Cargiaca"/>
-				<heading id="xxxxxxxxxx" title="Casaglione"/>
-				<heading id="xxxxxxxxxx" title="Casalabriva"/>
-				<heading id="xxxxxxxxxx" title="Cauro"/>
-				<heading id="xxxxxxxxxx" title="Ciamannacce"/>
-				<heading id="xxxxxxxxxx" title="Coggia"/>
-				<heading id="xxxxxxxxxx" title="Cognocoli-Monticchi"/>
-				<heading id="xxxxxxxxxx" title="Conca"/>
-				<heading id="xxxxxxxxxx" title="Corrano"/>
-				<heading id="xxxxxxxxxx" title="Coti-Chiavari"/>
-				<heading id="xxxxxxxxxx" title="Cozzano"/>
-				<heading id="xxxxxxxxxx" title="Cristinacce"/>
-				<heading id="xxxxxxxxxx" title="Cuttoli-Corticchiato"/>
-				<heading id="xxxxxxxxxx" title="Eccica-Suarella"/>
-				<heading id="xxxxxxxxxx" title="Évisa"/>
-				<heading id="xxxxxxxxxx" title="Figari"/>
-				<heading id="xxxxxxxxxx" title="Foce"/>
-				<heading id="xxxxxxxxxx" title="Forciolo"/>
-				<heading id="xxxxxxxxxx" title="Fozzano"/>
-				<heading id="xxxxxxxxxx" title="Frasseto"/>
-				<heading id="xxxxxxxxxx" title="Giuncheto"/>
-				<heading id="xxxxxxxxxx" title="Granace"/>
-				<heading id="xxxxxxxxxx" title="Grossa"/>
-				<heading id="xxxxxxxxxx" title="Grosseto-Prugna"/>
-				<heading id="xxxxxxxxxx" title="Guagno"/>
-				<heading id="xxxxxxxxxx" title="Guargualé"/>
-				<heading id="xxxxxxxxxx" title="Guitera-les-Bains"/>
-				<heading id="xxxxxxxxxx" title="Lecci"/>
-				<heading id="xxxxxxxxxx" title="Letia"/>
-				<heading id="xxxxxxxxxx" title="Levie"/>
-				<heading id="xxxxxxxxxx" title="Lopigna"/>
-				<heading id="xxxxxxxxxx" title="Loreto-di-Tallano"/>
-				<heading id="xxxxxxxxxx" title="Marignana"/>
-				<heading id="xxxxxxxxxx" title="Mela"/>
-				<heading id="xxxxxxxxxx" title="Moca-Croce"/>
-				<heading id="xxxxxxxxxx" title="Monacia-d'Aullène"/>
-				<heading id="xxxxxxxxxx" title="Murzo"/>
-				<heading id="xxxxxxxxxx" title="Ocana"/>
-				<heading id="xxxxxxxxxx" title="Olivese"/>
-				<heading id="xxxxxxxxxx" title="Olmeto"/>
-				<heading id="xxxxxxxxxx" title="Olmiccia"/>
-				<heading id="xxxxxxxxxx" title="Orto"/>
-				<heading id="xxxxxxxxxx" title="Osani"/>
-				<heading id="xxxxxxxxxx" title="Ota"/>
-				<heading id="xxxxxxxxxx" title="Palneca"/>
-				<heading id="xxxxxxxxxx" title="Partinello"/>
-				<heading id="xxxxxxxxxx" title="Pastricciola"/>
-				<heading id="xxxxxxxxxx" title="Peri"/>
-				<heading id="xxxxxxxxxx" title="Petreto-Bicchisano"/>
-				<heading id="xxxxxxxxxx" title="Piana"/>
-				<heading id="xxxxxxxxxx" title="Pianotolli-Caldarello"/>
-				<heading id="xxxxxxxxxx" title="Pietrosella"/>
-				<heading id="xxxxxxxxxx" title="Pila-Canale"/>
-				<heading id="xxxxxxxxxx" title="Poggiolo"/>
-				<heading id="xxxxxxxxxx" title="Porto-Vecchio"/>
-				<heading id="xxxxxxxxxx" title="Propriano"/>
-				<heading id="xxxxxxxxxx" title="Quasquara"/>
-				<heading id="xxxxxxxxxx" title="Quenza"/>
-				<heading id="xxxxxxxxxx" title="Renno"/>
-				<heading id="xxxxxxxxxx" title="Rezza"/>
-				<heading id="xxxxxxxxxx" title="Rosazia"/>
-				<heading id="xxxxxxxxxx" title="Sainte-Lucie-de-Tallano"/>
-				<heading id="xxxxxxxxxx" title="Salice"/>
-				<heading id="xxxxxxxxxx" title="Sampolo"/>
-				<heading id="xxxxxxxxxx" title="San-Gavino-di-Carbini"/>
-				<heading id="xxxxxxxxxx" title="Santa-Maria-Figaniella"/>
-				<heading id="xxxxxxxxxx" title="Santa-Maria-Siché"/>
-				<heading id="xxxxxxxxxx" title="Sant'Andréa-d'Orcino"/>
-				<heading id="xxxxxxxxxx" title="Sari-d'Orcino"/>
-				<heading id="xxxxxxxxxx" title="Sari-Solenzara"/>
-				<heading id="xxxxxxxxxx" title="Sarrola-Carcopino"/>
-				<heading id="xxxxxxxxxx" title="Sartène"/>
-				<heading id="xxxxxxxxxx" title="Serra-di-Ferro"/>
-				<heading id="xxxxxxxxxx" title="Serra-di-Scopamène"/>
-				<heading id="xxxxxxxxxx" title="Serriera"/>
-				<heading id="xxxxxxxxxx" title="Soccia"/>
-				<heading id="xxxxxxxxxx" title="Sollacaro"/>
-				<heading id="xxxxxxxxxx" title="Sorbollano"/>
-				<heading id="xxxxxxxxxx" title="Sotta"/>
-				<heading id="xxxxxxxxxx" title="Tasso"/>
-				<heading id="xxxxxxxxxx" title="Tavaco"/>
-				<heading id="xxxxxxxxxx" title="Tavera"/>
-				<heading id="xxxxxxxxxx" title="Tolla"/>
-				<heading id="xxxxxxxxxx" title="Ucciani"/>
-				<heading id="xxxxxxxxxx" title="Urbalacone"/>
-				<heading id="xxxxxxxxxx" title="Valle-di-Mezzana"/>
-				<heading id="xxxxxxxxxx" title="Vero"/>
-				<heading id="xxxxxxxxxx" title="Vico"/>
-				<heading id="xxxxxxxxxx" title="Viggianello"/>
-				<heading id="xxxxxxxxxx" title="Villanova"/>
-				<heading id="xxxxxxxxxx" title="Zérubia"/>
-				<heading id="xxxxxxxxxx" title="Zévaco"/>
-				<heading id="xxxxxxxxxx" title="Zicavo"/>
-				<heading id="xxxxxxxxxx" title="Zigliara"/>
-				<heading id="xxxxxxxxxx" title="Zonza"/>
-				<heading id="xxxxxxxxxx" title="Zoza"/>
-			</heading>
-    Sardinia (pronounced /sɑrˈdɪnɪə/; Italian: Sardegna; Sardinian: Sardigna or Sardinnya
-        Cagliari (Italian: Provincia di Cagliari; Sardinian: Provìntzia de Casteddu)
-            Cagliari (Sardinian: Casteddu)"/>
-				<heading id="xxxxxxxxxx" title="Basilica di San Saturnino"/>
-				<heading id="xxxxxxxxxx" title="Castello, the castle"/>
-					<heading id="xxxxxxxxxx" title="Elephant Tower"/>
-					<heading id="xxxxxxxxxx" title="St. Pancras Tower "/>
-				<heading id="xxxxxxxxxx" title="The Chiesa della Purissima"/>
-				<heading id="xxxxxxxxxx" title="Justice Court /Palazzo di Giustizia"/>
-				<heading id="xxxxxxxxxx" title="Marina"/>
-				<heading id="xxxxxxxxxx" title="Marinery Museum"/>
-				<heading id="xxxxxxxxxx" title="Monte Urpinu"/>
-				<heading id="xxxxxxxxxx" title="necropolis"/>
-				<heading id="xxxxxxxxxx" title="Orto Botanico dell'Università di Cagliari, the city's botanical garden"/>
-				<heading id="xxxxxxxxxx" title="Our Lady of Bonaria"/>
-				<heading id="xxxxxxxxxx" title="The Poetto beach"/>
-				<heading id="xxxxxxxxxx" title="Republic Square"/>
-				<heading id="xxxxxxxxxx" title="Roman Amphitheatre"/>
-				<heading id="xxxxxxxxxx" title="Sardinian Archaeological Museum"/>
-				<heading id="xxxxxxxxxx" title="Stampace        
-            Quartu Sant'Elena  (Sardinian: Cuartu Santa Alèni) "/>
-				<heading id="xxxxxxxxxx" title="Sant'Agata"/>
-				<heading id="xxxxxxxxxx" title="Santa Maria Cepola "/>
-				<heading id="xxxxxxxxxx" title="Sant'Elena Imperatrice
-            Selargius 
-            Assemini"/>
-				<heading id="xxxxxxxxxx" title="Church and Oratory of St. John "/>
-				<heading id="xxxxxxxxxx" title="Church of St. Peter
-            Capoterra 
-            Monserrato 
-            Sestu"/>
-				<heading id="xxxxxxxxxx" title="Church of San Gemiliano 
-            Sinnai 
-            Quartucciu 
-            Elmas 
-            Dolianova"/>
-				<heading id="xxxxxxxxxx" title="Cathedral of San Pantaleo"/>
-				<heading id="xxxxxxxxxx" title="The Giants tombs in Su Tiriaxiu"/>
-				<heading id="xxxxxxxxxx" title="Mitza salamu"/>
-				<heading id="xxxxxxxxxx" title="Nuraghe sa dom'e S'Orcu"/>
-				<heading id="xxxxxxxxxx" title="Roman Baths"/>
-				<heading id="xxxxxxxxxx" title="Sa dom’ ‘e s’ossu
-            Decimomannu 
-            San Sperate 
-            Villasor 
-            Maracalagonis 
-            Pula 
-            Uta 
-            Settimo San Pietro 
-            Sarroch 
-        Province of Carbonia-Iglesias Provincia di Carbonia-Iglesias, Sardinian: Provìntzia de Carbònia-Igrèsias
-            Carbonia"/>
-				<heading id="xxxxxxxxxx" title="Monte Sirai"/>
-				<heading id="xxxxxxxxxx" title="Serbariu coalmine
-            Iglesias (Sardinian: Igrèsias)"/>
-				<heading id="xxxxxxxxxx" title="Church of San Francesco"/>
-				<heading id="xxxxxxxxxx" title="Giardino Montano Linasia,"/>
-				<heading id="xxxxxxxxxx" title="Iglesias' cathedral
-            Sant'Antioco"/>
-				<heading id="xxxxxxxxxx" title="akropolis"/>
-				<heading id="xxxxxxxxxx" title="Basilica of Sant'Antioco"/>
-				<heading id="xxxxxxxxxx" title="Ferruccio Barreca Archaeological Museum"/>
-				<heading id="xxxxxxxxxx" title="The Forte Su Pisu "/>
-				<heading id="xxxxxxxxxx" title="Phoenician and Punic necropolises"/>
-				<heading id="xxxxxxxxxx" title="Roman bridge"/>
-				<heading id="xxxxxxxxxx" title="Sulci (ancient city)
-        Province of Medio Campidano
-            Arbus"/>
-				<heading id="xxxxxxxxxx" title="Tombe dei Giganti (Giant graves)
-            Gonnosfanadiga
-            Guspini
-            Samassi
-            San Gavino Monreale
-            Sanluri
-            Sardara
-            Serramanna
-            Serrenti
-            Villacidro (Sardinian: Biddexidru)
-        Province of Nuoro  (Italian: Provincia di Nuoro; Sardinian: Provìntzia de Nùgoro)
-            Aritzo
-            Atzara 
-            Austis (Latin: Augustae[1]
-            Belvì
-            Birori
-            Bitti  Bitthe
-            Bolotana
-            Desulo"/>
-				<heading id="xxxxxxxxxx" title="Asuai"/>
-				<heading id="xxxxxxxxxx" title="Issiria"/>
-				<heading id="xxxxxxxxxx" title="Ovolaccio,
-            Dorgali
-            Dualchi
-            Fonni
-            Gadoni
-            Galtellì"/>
-				<heading id="xxxxxxxxxx" title="cathedral of Saint Peter"/>
-				<heading id="xxxxxxxxxx" title="church of Saint Maria of the Towers
-            Gavoi"/>
-				<heading id="xxxxxxxxxx" title="Antana 'e Cartzonna"."/>
-				<heading id="xxxxxxxxxx" title="Roman bridge
-            Irgoli (Latin: Fanum Carisi or Fanum Carisii
-            Lei
-            Loculi
-            Lodè
-            Lodine
-            Lula
-            Macomer (Sardinian: Macumère)    "Macopsissa,""/>
-				<heading id="xxxxxxxxxx" title="San Pantaleone
-            Mamoiada 
-            Meana Sardo
-            Noragugume
-            Nuoro (Nùgoro[1], in the ancient Nuoro's dialect)
-            Oliena
-            Ollolai
-            Olzai
-            Onani 
-            Onifai
-            Oniferi
-            Orani
-            Orgosolo
-            Orosei"/>
-				<heading id="xxxxxxxxxx" title="Sos Alinos.
-            Orotelli
-            Ortueri
-            Orune 
-            Osidda
-            Posada (Latin: Pheronia[1] or Feronia, and later Pausata)"/>
-				<heading id="xxxxxxxxxx" title="Castello della Fava
-            Sarule
-            Silanus
-            Sindia
-            Siniscola (Sardinian: Thiniscòle)
-            Sorgono
-            Teti 
-            Tiana 
-            Tonara"/>
-				<heading id="xxxxxxxxxx" title="Arasulè,"/>
-				<heading id="xxxxxxxxxx" title="Ilalà "/>
-				<heading id="xxxxxxxxxx" title="Su Pranu,"/>
-				<heading id="xxxxxxxxxx" title="Teliseri,"/>
-				<heading id="xxxxxxxxxx" title="Toneri,
-            Torpè"/>
-				<heading id="xxxxxxxxxx" title="Brunella"/>
-				<heading id="xxxxxxxxxx" title="Biddanoa, "/>
-				<heading id="xxxxxxxxxx" title="Concas"/>
-				<heading id="xxxxxxxxxx" title="Su cossu"/>
-				<heading id="xxxxxxxxxx" title="Talava
-        Province of Ogliastra
-            Bari Sardo (Latin: Custodia Rubriensis[1]) 
-            Baunei
-            Jerzu
-            Lanusei (Sardinian: Lanusè)
-            Tertenia
-            Tortolì (Sardinian: Tortuelie, Latin: Portus Ilii) 
-            Villagrande Strisaili 
-        Province of Olbia-Tempio  (Italian: Provincia di Olbia-Tempio, Sardinian: Provìntzia de Terranòa-Tèmpiu)
-            Olbia Sardinian name: Terranoa, Gallurese: Tarranoa
-        Province of Oristano
-        Province of Sassari
-
-            
-
-Gallia Cisalpina,
-Hispania Citerior
-Hispania Ulterior
-Illyricum,
-Macedonia, 
-Africa proconsularis, 
-Asia,
-Gallia Transalpina (later Gallia Narbonensis)
-Bithynia, 
-Creta et Cyrenaica, 
-Corduene 
-Cilicia et Cyprus, 
-Syria, 
-Gallia Comata 
-Aegyptus,
-Moesia,
-				-->
+				<heading id="Yugoslavia" title="Yugoslavia">
+					<synonym value="Yugoslavia (former)"/>
+					<synonym value="Yugoslavian"/>
+					<synonym value="Yugoslavians"/>
+					<synonym value="Jugoslavija"/>
+					<synonym value="Kingdom of Yugoslavia"/>
+					<synonym value="Federal Republic of Yugoslavia"/>
+					<synonym value="Republic of Yugoslavia"/>
+					<synonym value="Socialist Federal Republic of Yugoslavia"/>
+					<synonym value="Југославија"/>
+					<implies facet="Location" cat="BosniaHerzegovina"/> <!-- Need to work on this inference rule -->
+					<implies facet="Location" cat="CroatiaCountry"/> <!-- Need to work on this inference rule -->
+					<implies facet="Location" cat="SerbiaCountry"/> <!-- Need to work on this inference rule -->
+				</heading>
 			</heading>
 		</heading>
 		<heading id="NonModernAfrica" title="Africa" noMatch="true">
