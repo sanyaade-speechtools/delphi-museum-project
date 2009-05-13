@@ -511,7 +511,8 @@
 					<token value="flowers"/>
 					<token value="floral"/>
 					<synonym value="floral decorated"/>
-					<synonym value="floral decorated"/>
+					<synonym value="floral decoration"/>
+					<synonym value="floral decorations"/>
 					<synonym value="floral beaded design"/>
 					<heading id="Lotus" title="Lotus" noMatch="true" asToken="noplural"/>
 					<heading id="Petal" title="Petal" noMatch="true"/>
@@ -533,7 +534,9 @@
 						</heading>
 						<heading id="Wheat" title="Wheat" noMatch="true" asToken="noplural"/>
 					</heading>
-					<heading id="Pear" title="Pear" noMatch="true" asToken="noplural"/>
+					<heading id="Pear" title="Pear" noMatch="true" asToken="noplural">
+						<implies facet="TechniqueDesignorDecoration" cat="Piriform"/>
+					</heading>
 					<heading id="Gourd" title="Gourd" noMatch="true" asToken="noplural">
 						<token value="Squash"/>
 					</heading>
@@ -857,8 +860,6 @@
 			</heading>
 			<heading id="Piriform" title="Piriform (Pear-shaped)">
 				<synonym value="Piriform"/>
-				<synonym value="Pear shaped"/>
-				<synonym value="Pear-shaped"/>
 			</heading>
 			<heading id="Ring" title="Ring, Hoop or Crown">
 				<synonym value="ring-shaped"/>
