@@ -3112,7 +3112,14 @@
 				</heading>
 				<heading id="Rotuman" title="Rotuman">
 					<synonym value="Rotumans"/>
+					<!-- The Rotuma Island Group is a cultural melting pot at the crossroads
+						of the Micronesian, Melanesian and Polynesian divisions of the Pacific
+						Ocean, and thus the indigenous Rotuman have adopted or share many
+						aspects of its multifaceted culture with their Melanesian, Micronesian
+						and Polynesian neighbors. -->
 					<implies facet="Location" cat="RotumaIsland"/>
+					<implies facet="Culture" cat="MicronesianCultures"/>
+					<implies facet="Culture" cat="PolynesianCultures"/>
 				</heading>
 				<heading id="SolomonIslander" title="Solomon Islander">
 					<synonym value="Solomon Islanders"/>
@@ -3126,12 +3133,11 @@
 					<heading id="Hawaiian" title="Hawaiian">
 						<synonym value="Hawai'i maoli"/>
 						<synonym value="Kanaka maoli"/>
-						<synonym value="kanaka"/>
+						<synonym value="Kanaka"/>
 						<synonym value="Native Hawaiians"/>
 						<synonym value="'oiwi"/>
 						<implies facet="Location" cat="HawaiianIslands"/>
 					</heading>
-					<heading id="Rotuman" title="Rotuman"/>	
 					<heading id="EasternPolynesians" title="Eastern Polynesians">
 						<heading id="FrenchPolynesian" title="French Polynesian">
 							<implies facet="Location" cat="FrenchPolynesia"/>
@@ -3269,19 +3275,14 @@
 					<synonym value="Mycenian"/>
 					<synonym value="Mycenians"/>
 				</heading>
-				<heading id="AncientRome" title="Ancient Rome">
+				<heading id="AncRomanCulture" title="Ancient Rome" noMatch="true">
 					<synonym value="Ancient Roman"/>
-					<synonym value="Classical Rome"/>
+					<synonym value="Ancient Romans"/>
 					<synonym value="Classical Roman"/>
-					<synonym value="Imperial Rome"/>
-					<synonym value="Republican Rome"/>
 					<synonym value="Imperial Roman"/>
 					<synonym value="Republican Roman"/>
-					<synonym value="Roman Empire"/>
-					<synonym value="Roman Republic"/>
-					<synonym value="Roman"/>
+					<synonym value="Roman"/> <!-- Need complex inferencing: if cat 8 *and* Rome... --> 
 					<synonym value="Romans"/>
-					<!-- Need complex inferencing: if cat 8 *and* Rome... --> 
 				</heading>
 			</heading>
 			<heading id="CelticTribes" title="Celtic tribes">
@@ -3345,6 +3346,7 @@
 			<heading id="Etruscan" title="Etruscan">
 				<synonym value="Etruscans"/>
 				<synonym value="Etruria"/>
+				<synonym value="Etruria (?)"/>
 			</heading>
 			<heading id="IllyrianTribes" title="Illyrian tribes">
 				<heading id="Abri" title="Abri"/>

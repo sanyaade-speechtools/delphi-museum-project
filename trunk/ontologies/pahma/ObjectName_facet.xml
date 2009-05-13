@@ -487,6 +487,8 @@
 				<synonym value="Fish Gorges"/>
 				<synonym value="Fish-Gorge"/>
 				<synonym value="Fish-Gorges"/>
+				<synonym value="Gorge Hook"/>
+				<synonym value="Gorge Hooks"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="FishHookFshEq" title="Fishhook">
@@ -497,7 +499,6 @@
 				<synonym value="Fish Hooks"/>
 				<synonym value="Fish-Hook"/>
 				<synonym value="Fish-Hooks"/>
-				<synonym value="Gorge hook"/> <!-- Not really, but for now... -->
 				<synonym value="Hook model"/>
 				<synonym value="Hook models"/>
 				<synonym value="Fishing hook"/>
@@ -725,10 +726,6 @@
 			<heading id="GigFshEq" title="Gig">
 				<!-- A trident or three-pronged spear for fishing -->
 				<synonym value="Gigs"/>
-				<implies facet="ActivityorContext" cat="FishingActivity"/>
-			</heading>
-			<heading id="GorgehookFshEq" title="Gorge Hook">
-				<synonym value="Gorge Hooks"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 			</heading>
 			<heading id="HarpoonFshEq" title="Harpoon">
@@ -3178,6 +3175,7 @@
 					<heading id="FibulaJeweleryPrsOrn" title="Fibula">
 						<synonym value="Fibulas"/>
 						<synonym value="Fibulae"/>
+						<synonym value="Fibulæ"/>
 						<implies facet="ActivityorContext" cat="Metallurgy"/>
 					</heading>
 				</heading>
@@ -3266,11 +3264,14 @@
 						<excl value="Tympanic Bulla"/>
 						<excl value="Tympanic Bullas"/>
 						<excl value="Tympanic Bullae"/>
+						<excl value="Tympanic Bullæ"/>
 						<excl value="Auditory Bulla"/>
 						<excl value="Auditory Bullas"/>
 						<excl value="Auditory Bullae"/>
+						<excl value="Auditory Bullæ"/>
 						<synonym value="Bullas"/>
 						<synonym value="Bullae"/>
+						<synonym value="Bullæ"/>
 					</heading>
 					<heading id="CharmJeweleryPrsOrn" title="Charm">
 						<synonym value="Charms"/>
@@ -3679,6 +3680,7 @@
 	<heading id="ArchitecturalElements" title="Architectural Elements">
 		<synonym value="Architectural Element"/>
 		<synonym value="Architecture"/>
+		<synonym value="Architectural"/>
 		<heading id="Arcade" title="Arcade">
 			<synonym value="Arcades"/>
 		</heading>
@@ -4052,22 +4054,27 @@
 			<synonym value="Armour"/>
 			<heading id="ArmorByConstruction" title="Armor By Construction" noMatch="true">
 				<heading id="MailArmor" title="Mail Armor">
+					<synonym value="Chain mail"/>
+					<synonym value="Chain maille"/>
 					<synonym value="Mail Armour"/>
 					<synonym value="Mail-Armour"/>
 					<synonym value="Mail-Armor"/>
+					<synonym value="Maille"/>
 				</heading>
-				<heading id="PlateArmor" title="Plate Armour">
+				<heading id="PlateArmor" title="Plate Armor">
 					<synonym value="Plate Armour"/>
 					<synonym value="Plate-Armour"/>
 					<synonym value="Plate-Armor"/>
 				</heading>
-				<heading id="ScaleArmor" title="Scale Armour">
+				<heading id="ScaleArmor" title="Scale Armor">
 					<synonym value="Scale Armour"/>
 					<synonym value="Scale-Armour"/>
 					<synonym value="Scale-Armor"/>
 				</heading>
 				<heading id="SegmentedArmor" title="Segmented Armor">
 					<synonym value="Segmented Armour"/>
+					<synonym value="Segmented-Armour"/>
+					<synonym value="Segmented-Armor"/>
 				</heading>
 			</heading>
 			<heading id="ArmorByForm" title="Armor By Form" noMatch="true">
@@ -4545,7 +4552,9 @@
 					<heading id="BladeEdgWpnGear" title="Blade">
 						<synonym value="Blades"/>
 					</heading>
-					<heading id="Koshirae" title="Koshirae"/> <!-- Japanese Sword mount/furniture (also wearable?) -->
+					<heading id="Koshirae" title="Koshirae"> <!-- Japanese Sword mount/furniture (also wearable?) -->
+						<synonym value="Koshiræ"/>
+					</heading>
 					<heading id="ScabbardEdgWpn" title="Scabbard">
 						<synonym value="Scabbards"/>
 					</heading>
@@ -4592,11 +4601,6 @@
 					<synonym value="Archers' Looses"/>
 					<synonym value="Archers Looses"/> <!-- Misspelling -->
 				</heading>
-				<heading id="ArrowThrower" title="Arrow Thrower">
-					<synonym value="Arrow Throwers"/>
-					<synonym value="Arrow-Thrower"/>
-					<synonym value="Arrow-Throwers"/>
-				</heading>
 				<heading id="BolasPrjWpn" title="Bolas">
 					<synonym value="Bola"/>
 					<implies facet="ObjectName" cat="BolasHuntEq"/>
@@ -4608,7 +4612,7 @@
 					</heading>
 				</heading>
 				<heading id="BlowpipeWeapon" title="Blowpipe (Weapon)"/>
-				<heading id="BowWeapon" title="Bow (Weapon)">
+				<heading id="BowWeapon" title="Bows &amp; Arrow Throwers" noMatch="true">
 					<synonym value="Bow"/>
 					<synonym value="Bows"/>
 					<excl value="Bass"/>
@@ -4626,6 +4630,11 @@
 					<excl value="Violins"/>
 					<excl value="Viola"/>
 					<excl value="Violas"/>
+					<heading id="ArrowThrower" title="Arrow Thrower">
+						<synonym value="Arrow Throwers"/>
+						<synonym value="Arrow-Thrower"/>
+						<synonym value="Arrow-Throwers"/>
+					</heading>
 				</heading>
 				<heading id="BoomerangWeapon" title="Boomerang">
 					<synonym value="Boomerangs"/>
@@ -4756,32 +4765,55 @@
 					<synonym value="Slingshot"/>
 					<synonym value="Slingshots"/>
 				</heading>
-				<heading id="SpearGunPrjtlWpn" title="Spear Gun">
-					<synonym value="Spear Guns"/>
-					<synonym value="Spear-Gun"/>
-					<synonym value="Spear-Guns"/>
-					<implies facet="ObjectName" cat="SpearGunHuntEq"/>
-				</heading>
-				<heading id="SpearThrower" title="Spear Thrower">
-					<synonym value="Spear Throwers"/>
-					<synonym value="Spear-Thrower"/>
-					<synonym value="Spear-Throwers"/>
-					<heading id="AtlatlWeapon" title="Atlatl">
-						<synonym value="Atlatls"/>
+				<heading id="SpearsThrowersPrjWpn" title="Spears &amp; Spear Throwers" noMatch="true">
+					<heading id="SpearWeaponPrjWpn" title="Spears">
+						<synonym value="Spear"/>
+						<implies facet="ObjectName" cat="SpearEdgWpn"/>
+						<implies facet="ObjectName" cat="SpearProjectile"/>
+						<heading id="JavelinPrjWpn" title="Javelin">
+							<!-- A long spear designed to be thrown in order to injure or kill a given target. -->
+							<synonym value="Javelins"/>
+							<implies facet="ObjectName" cat="JavelinEdgWpn"/>
+							<implies facet="ObjectName" cat="JavelinProjectile"/>
+							<heading id="AngonPrjWpn" title="Angon">
+								<synonym value="Angons"/>
+								<synonym value="ἄγγων"/>
+								<implies facet="ObjectName" cat="AngonEdgWpn"/>
+								<implies facet="ObjectName" cat="AngonProjectile"/>
+							</heading>
+							<heading id="PilumPrjWpn" title="Pilum">
+								<!-- A heavy javelin commonly used by the Roman army in ancient times. It was
+									generally about two meters long overall, consisting of an iron shank about
+									7 mm in diameter and 60 cm long with pyramidal head. The iron shank may be
+									socketed, but more usually widens to a flat tang; this was secured to a
+									wooden shaft. A pilum usually weighed between two and five kilograms, with
+									the versions produced during the Empire being a bit lighter. Pictorial
+									evidence suggests that some versions of the weapon were weighted by a lead
+									ball to increase penetrative power, but no archeological specimens have
+									been found. Recent experiments have shown pila to have a range of approx-
+									imately 30 metres (98 ft), although effective range is up to 15–20 meters
+									(49–66 ft). From <http://en.wikipedia.org/wiki/Pilum> 2009.05.13 -->
+								<synonym value="Pila"/> <!-- Correct plural -->
+								<synonym value="Pilums"/> <!-- Misspelled plural -->
+								<implies facet="Culture" cat="AncRomanCulture"/>
+							</heading>
+						</heading>
+						<heading id="SpearHeadPart" title="Spear-Head">
+							<synonym value="Spear-Heads"/>
+						</heading>
 					</heading>
-				</heading>
-				<heading id="SpearWeaponPrjWpn" title="Spear">
-					<synonym value="Spears"/>
-					<implies facet="ObjectName" cat="SpearEdgWpn"/>
-					<implies facet="ObjectName" cat="SpearProjectile"/>
-					<heading id="JavelinPrjWpn" title="Javelin"> <!-- A long spear designed to be thrown in order to injure or kill a given target. -->
-						<synonym value="Javelins"/>
-						<implies facet="ObjectName" cat="JavelinEdgWpn"/>
-						<implies facet="ObjectName" cat="JavelinProjectile"/>
-						<heading id="AngonPrjWpn" title="Angon">
-							<synonym value="Angons"/>
-							<implies facet="ObjectName" cat="AngonEdgWpn"/>
-							<implies facet="ObjectName" cat="AngonProjectile"/>
+					<heading id="SpearGunPrjtlWpn" title="Spear Gun">
+						<synonym value="Spear Guns"/>
+						<synonym value="Spear-Gun"/>
+						<synonym value="Spear-Guns"/>
+						<implies facet="ObjectName" cat="SpearGunHuntEq"/>
+					</heading>
+					<heading id="SpearThrower" title="Spear Throwers">
+						<synonym value="Spear Throwers"/>
+						<synonym value="Spear-Thrower"/>
+						<synonym value="Spear-Throwers"/>
+						<heading id="AtlatlWeapon" title="Atlatl">
+							<synonym value="Atlatls"/>
 						</heading>
 					</heading>
 				</heading>
@@ -4822,7 +4854,7 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Artifacts" title="Artifacts">
+	<heading id="Artifacts" title="Artifacts"> <!-- PARSE OUT AND MERGE ELSEWHERE -->
 		<synonym value="Artifact"/>
 		<synonym value="Artefact"/>
 		<synonym value="Artefacts"/>
@@ -5565,6 +5597,7 @@
 		</heading>
 		<heading id="StelaComm" title="Stela">
 			<synonym value="Stelae"/>
+			<synonym value="Stelæ"/>
 			<synonym value="Stelas"/>
 		</heading>
 		<heading id="SteleComm" title="Stele">
@@ -5598,7 +5631,7 @@
 			<synonym value="Warrants"/>
 		</heading>
 	</heading>
-	<heading id="ComponentsParts" title="Components &amp; Parts">
+	<heading id="ComponentsParts" title="Components &amp; Parts"> <!-- PARSE OUT AND MERGE ELSEWHERE -->
 		<synonym value="Component"/>
 		<synonym value="Components"/>
 		<synonym value="Part"/>
@@ -5701,9 +5734,6 @@
 		</heading>
 		<heading id="SocketPart" title="Socket">
 			<synonym value="Sockets"/>
-		</heading>
-		<heading id="SpearHeadPart" title="Spear-Head">
-			<synonym value="Spear-Heads"/>
 		</heading>
 		<heading id="SpindleWhorlPart" title="Spindle-Whorl">
 			<synonym value="Spindle-Whorls"/>
@@ -6226,6 +6256,7 @@
 			<heading id="Amphora" title="Amphora">
 				<synonym value="Amphoras"/>
 				<synonym value="Amphorae"/>
+				<synonym value="Amphoræ"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Amphorisk" title="Amphorisk">
@@ -6795,6 +6826,7 @@
 					<synonym value="Holy Water-Vessels"/>
 					<heading id="Ampulla" title="Ampulla">
 						<synonym value="Ampullae"/>
+						<synonym value="Ampullæ"/>
 						<synonym value="Ampullas"/>
 					</heading>
 					<heading id="HolyWaterBox" title="Holy Water-Box">
@@ -8130,7 +8162,7 @@
 			<synonym value="Surgical Items"/>
 		</heading>
 	</heading>
-	<heading id="MiscellaneousEquipment" title="Miscellaneous Equipment">
+	<heading id="MiscellaneousEquipment" title="Miscellaneous Equipment"> <!-- PARSE OUT AND MERGE ELSEWHERE -->
 		<synonym value="Apparatus"/>
 		<!-- British Museum notes that, generally speaking, this category is a catch-all
 			for terms which do not fit under other top terms -->
@@ -8617,7 +8649,7 @@
 				<synonym value="Cordophone"/>
 				<synonym value="Cordophones"/>
 				<synonym value="Stringed"/>
-				<synonym value="Strings"/>
+				<synonym value="Strings"/> <!-- Disambiguate ? -->
 				<synonym value="gourd string instrument"/>
 				<synonym value="gourd string instruments"/>
 				<heading id="BanjoMusical" title="Banjo">
