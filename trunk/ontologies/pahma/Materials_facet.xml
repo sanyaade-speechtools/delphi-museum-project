@@ -902,7 +902,7 @@
 			<synonym value="Ceramics"/>
 			<heading id="Bucchero" title="Bucchero"/>
 			<heading id="Clay" title="Clay">
-				<heading id="Adobe" title="Adobe"/>
+				<heading id="AdobeMaterial" title="Adobe"/>
 				<heading id="BakedClay" title="Baked Clay"/>
 				<heading id="Brick" title="Brick">
 					<excl value="brick red"/>
@@ -914,13 +914,14 @@
 				<heading id="Stoneware" title="Stoneware"/>
 				<heading id="Terracotta" title="Terracotta">
 					<synonym value="Terra cotta"/>
+					<synonym value="Terra-cotta"/>
 				</heading>
 			</heading>
 			<heading id="Glass" title="Glass"/>
 			<heading id="Porcelain" title="Porcelain">
-				<synonym value="porcelin"/>
-				<synonym value="porcelanite"/>
-				<synonym value="porcellaneous"/>
+				<synonym value="Porcelin"/>
+				<synonym value="Porcelanite"/>
+				<synonym value="Porcellaneous"/>
 			</heading>
 		</heading>
 		<heading id="MetalMaterial" title="Metal">
@@ -1024,8 +1025,8 @@
 				<heading id="Shale" title="Shale"/>
 				<heading id="Slate" title="Slate"/>
 				<heading id="Tufa" title="Tufa">
-					<synonym value="calcarious tufa"/>
-					<synonym value="calcarecustufa"/>
+					<synonym value="Calcarious tufa"/>
+					<synonym value="Calcarecustufa"/>
 					<heading id="Peperino" title="Peperino">
 						<synonym value="Lapis albanus"/>
 					</heading>
@@ -1074,8 +1075,8 @@
 			</heading>
 			<heading id="Volcanic" title="Volcanic">
 				<heading id="Basalt" title="Basalt">
-					<heading id="Finegrainedbasalt" title="Fine-grained basalt"/>
-					<heading id="Vesilicbasalt" title="Vesilic basalt"/>
+					<heading id="FineGrainedBasalt" title="Fine-grained basalt"/>
+					<heading id="VesilicBasalt" title="Vesilic basalt"/>
 				</heading>
 				<heading id="Lava" title="Lava"/>
 				<heading id="Obsidian" title="Obsidian">
@@ -1105,6 +1106,19 @@
 		<heading id="PaperProducts" title="Paper Products">
 			<heading id="Paper" title="Paper"/>
 			<heading id="Cardboard" title="Cardboard"/>
+		</heading>
+		<heading id="PlasterMaterial" title="Plaster">
+			<synonym value="Plaster-cast"/>
+			<synonym value="Plasters"/>
+			<heading id="AdobePlasterMaterial" title="Adobe Plaster">
+				<synonym value="Adobe Plastered"/>
+			</heading>
+			<heading id="PlasterOfParisMaterial" title="Plaster of Paris">
+				<synonym value="Plaster-of-Paris"/>
+			</heading>
+			<heading id="WallPlasterMaterial" title="Wall Plaster">
+				<synonym value="Wall Plastering"/>
+			</heading>
 		</heading>
 		<heading id="Plastic" title="Plastic">
 			<synonym value="Plastics"/>

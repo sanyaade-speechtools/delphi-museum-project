@@ -915,6 +915,10 @@
 		</heading>
 	</heading>
 	<heading id="StyleOrType" title="StyleOrType" noMatch="true">
+		<heading id="EtruscanBuccheroWare" title="Etruscan Bucchero ware">
+			<synonym value="Bucchero"/>
+			<implies facet="Location" cat="Etruria"/>
+		</heading>
 		<heading id="GreekPotteryStyles" title="Greek Pottery Styles">
 			<heading id="BlackFigureWare" title="BlackFigureWare"/>
 		</heading>
@@ -964,28 +968,31 @@
 			<heading id="Sequined" title="Sequined"/>
 			<heading id="Strung" title="Strung"/>
 		</heading>
-		<heading id="CarvedOrShaped" title="Carved Or Shaped">
-			<heading id="BasRelief" title="Bas Relief"/>
-			<heading id="Carved" title="Carved"/>
-			<heading id="CastOrMolded" title="Cast or Molded">
-				<heading id="CastManufacture" title="Cast">
-					<synonym value="Casts"/>
-					<synonym value="Casted"/>
-					<synonym value="Casting"/>
-					<synonym value="Castings"/>
-				</heading>
-				<heading id="MoldManufacture" title="Molded">
-					<synonym value="Mold"/>
-					<synonym value="Molding"/>
-					<synonym value="Moldings"/>
-					<synonym value="Molds"/>
-					<synonym value="Mould"/>
-					<synonym value="Moulding"/>
-					<synonym value="Mouldings"/>
-					<synonym value="Moulds"/>
-					<synonym value="Moulded"/>
+		<heading id="CastOrMolded" title="Cast or Molded">
+			<heading id="CastManufacture" title="Cast">
+				<synonym value="Casts"/>
+				<synonym value="Casted"/>
+				<synonym value="Casting"/>
+				<synonym value="Castings"/>
+				<heading id="PlasterCast" title="Plaster Cast">
+					<synonym value="Plaster Casts"/>
 				</heading>
 			</heading>
+			<heading id="MoldManufacture" title="Molded">
+				<synonym value="Mold"/>
+				<synonym value="Molding"/>
+				<synonym value="Moldings"/>
+				<synonym value="Molds"/>
+				<synonym value="Mould"/>
+				<synonym value="Moulding"/>
+				<synonym value="Mouldings"/>
+				<synonym value="Moulds"/>
+				<synonym value="Moulded"/>
+			</heading>
+		</heading>
+		<heading id="CarvedOrShaped" title="Carved or Shaped">
+			<heading id="BasRelief" title="Bas Relief"/>
+			<heading id="Carved" title="Carved"/>
 			<heading id="Coiled" title="Coiled"/>
 			<heading id="Engraved" title="Engraved">
 				<synonym value="Engravings"/>
