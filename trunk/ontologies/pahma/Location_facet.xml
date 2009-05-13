@@ -6442,7 +6442,6 @@
 									<heading id="SantoDomingo" title="Santo Domingo"/>
 								</heading>
 								<heading id="SanJuanCoNM" title="San Juan County" noMatch="true">
-									<synonym value="xxxxxxxxx"/>
 									<excl value="California"/>
 									<excl value="Capistrano"/>
 									<excl value="Island"/>
@@ -6692,7 +6691,7 @@
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
-										<heading id="CAButNL2" title="CA-But-NL-2"> </heading>
+										<heading id="CAButNL2" title="CA-But-NL-2"/> 
 										<heading id="CAButNL3" title="CA-But-NL-3">
 											<synonym value="Vina"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
@@ -6800,7 +6799,7 @@
 										<heading id="TuripDelNorteCA" title="Turip"/>
 										<heading id="WohkelDelNorteCA" title="Wohkel"/>
 									</heading>
-									<heading id="NativePlacesDelNorteCA" title="Native place names" noMatch="true"> </heading>
+									<heading id="NativePlacesDelNorteCA" title="Native place names" noMatch="true"/> 
 									<heading id="TrinomDelNorteCA" title="Trinomial site names" noMatch="true">
 										<heading id="CADNo1" title="CA-DNo-1">
 											<synonym value="CA-DNo- 1"/>
@@ -23620,7 +23619,7 @@
 					<implies facet="Location" cat="CzechRepublic"/> <!-- Need to work on this inference rule -->
 					<implies facet="Location" cat="SlovakiaCountry"/> <!-- Need to work on this inference rule -->
 				</heading>
-				<heading id="HolyRomanEmpire" title="Holy Roman Empire (962 &#8211; 1806)" noMatch="true">
+				<heading id="HolyRomanEmpire" title="Holy Roman Empire (962-1806)" noMatch="true">
 					<synonym value="Holy Roman Empire"/>
 					<synonym value="Holy Roman Empire of the German Nation"/>
 					<synonym value="Heiliges Römisches Reich"/> <!-- German -->
@@ -23644,11 +23643,13 @@
 					<synonym value="Koenigreich Preussen"/>
 					<implies facet="Location" cat="GermanyCountry"/> <!-- Need to work on this inference rule -->
 				</heading>
-				<heading id="EastGermany" title="East Germany">
-					<synonym value="xxxxxxxxxx"/>
-					<synonym value="xxxxxxxxxx"/>
-					<synonym value="xxxxxxxxxx"/>
-					<synonym value="xxxxxxxxxx"/>
+				<heading id="EastGermany" title="East Germany  (1949-1990)" noMatch="true">
+					<synonym value="German Democratic Republic"/>
+					<synonym value="GDR"/>
+					<synonym value="Deutsche Demokratische Republik"/>
+					<synonym value="DDR"/>
+					<synonym value="East Germany"/>
+					<implies facet="Location" cat="GermanyCountry"/>
 				</heading>
 				<heading id="Yugoslavia" title="Yugoslavia">
 					<synonym value="Yugoslavia (former)"/>
