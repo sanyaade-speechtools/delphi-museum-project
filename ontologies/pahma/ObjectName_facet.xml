@@ -3741,6 +3741,7 @@
 			</heading>
 			<heading id="House" title="House">
 				<synonym value="Houses"/>
+				<excl value="Frontal House"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
 			<heading id="Roundhouse" title="Roundhouse">
@@ -8319,7 +8320,6 @@
 			<synonym value="Mirrors"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
-		<heading id="ModelMiscEq" title="Model" noMatch="true"/>
 		<heading id="NapkinRingMiscEq" title="Napkin Ring">
 			<synonym value="Napkin Rings"/>
 			<synonym value="Napkin-Ring"/>
@@ -13481,17 +13481,6 @@
 			<heading id="Bladelet" title="Bladelet">
 				<synonym value="Bladelets"/>
 			</heading>
-			<heading id="Blank" title="Blank"> <!-- Disambiguate -->
-				<synonym value="Blanks"/>
-			</heading>
-			<heading id="CastReproduction" title="Casts">
-				<synonym value="Cast"/>
-				<synonym value="Casting"/>
-				<synonym value="Castings"/>
-				<heading id="PlasterCast" title="Plaster Cast">
-					<synonym value="Plaster Casts"/>
-				</heading>
-			</heading>
 			<heading id="CastingWaste" title="Casting Waste">
 				<synonym value="Casting Wastes"/>
 			</heading>
@@ -13584,7 +13573,41 @@
 			</heading>
 			<heading id="ModelProdReplic" title="Model">
 				<synonym value="Models"/>
-				<implies facet="ObjectName" cat="ModelMiscEq"/>
+				<heading id="BasketModel" title="Basket Model">
+					<synonym value="Basket Models"/>
+					<synonym value="Model Basket"/>
+					<synonym value="Model Baskets"/>
+				</heading>
+				<heading id="BoatModel" title="Boat Model">
+					<synonym value="Boat Models"/>
+					<synonym value="Model Boat"/>
+					<synonym value="Model Boats"/>
+					<heading id="CanoeModel" title="Canoe Model">
+						<synonym value="Canoe Models"/>
+						<synonym value="Model Canoe"/>
+						<synonym value="Model Canoes"/>
+					</heading>
+					<heading id="KayakModel" title="Kayak Model">
+						<synonym value="Kayak Models"/>
+						<synonym value="Model Kayak"/>
+						<synonym value="Model Kayaks"/>
+					</heading>
+					<heading id="PaddleModel" title="Paddle Model">
+						<synonym value="Paddle Models"/>
+						<synonym value="Model Paddle"/>
+						<synonym value="Model Paddles"/>
+					</heading>
+				</heading>
+				<heading id="TombModel" title="Tomb Model">
+					<synonym value="Tomb Models"/>
+					<synonym value="Model Tomb"/>
+					<synonym value="Model Tombs"/>
+				</heading>
+				<heading id="TotemPoleModel" title="Totem Pole Model">
+					<synonym value="Totem Pole Models"/>
+					<synonym value="Model Totem Pole"/>
+					<synonym value="Model Totem Poles"/>
+				</heading>
 			</heading>
 			<heading id="MoldsProdReplic" title="Mold">
 				<synonym value="Molds"/>
@@ -14309,6 +14332,7 @@
 					<synonym value="Acroterions"/>
 				</heading>
 				<heading id="BustFigure" title="Bust">
+					<synonym value="Busts"/>
 					<excl value="Half Dollar"/>
 					<excl value="Half-Dollar"/>
 				</heading>
