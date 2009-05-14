@@ -4636,6 +4636,12 @@
 						<synonym value="Arrow-Thrower"/>
 						<synonym value="Arrow-Throwers"/>
 					</heading>
+					<heading id="BowStringPart" title="Bow String">
+						<synonym value="Bow Strings"/>
+						<synonym value="Bow-String"/>
+						<synonym value="Bow-Strings"/>
+						<!-- Implies archery -->
+					</heading>
 				</heading>
 				<heading id="BoomerangWeapon" title="Boomerang">
 					<synonym value="Boomerangs"/>
@@ -4699,6 +4705,7 @@
 							<heading id="ArrowShaft" title="Shaft" noMatch="true">
 								<synonym value="Arrow shaft"/>
 							</heading>
+							<heading id="ArrowHeadPart" title="Arrowhead" noMatch="true"/>
 						</heading>
 					</heading>
 					<heading id="BallistaBall" title="Ballista Ball">
@@ -5637,20 +5644,8 @@
 		<synonym value="Components"/>
 		<synonym value="Part"/>
 		<synonym value="Parts"/>
-		<heading id="ArrowHeadPart" title="Arrowhead" noMatch="true"/>
 		<heading id="BarbPart" title="Barb">
 			<synonym value="Barbs"/>
-		</heading>
-		<heading id="BatteryPlatePart" title="Battery Plate">
-			<synonym value="Battery Plates"/>
-			<synonym value="Battery-Plate"/>
-			<synonym value="Battery-Plates"/>
-		</heading>
-		<heading id="BowStringPart" title="Bow String">
-			<synonym value="Bow Strings"/>
-			<synonym value="Bow-String"/>
-			<synonym value="Bow-Strings"/>
-			<!-- Implies archery -->
 		</heading>
 		<heading id="ChuckPart" title="Chuck">
 			<synonym value="Chucks"/>
@@ -5697,15 +5692,6 @@
 		<heading id="LoopPart" title="Loop">
 			<synonym value="Loops"/>
 		</heading>
-		<heading id="LynchPinPart" title="Lynch Pin">
-			<synonym value="Linch Pin"/>
-			<synonym value="Linch Pins"/>
-			<synonym value="Linch-Pin"/>
-			<synonym value="Linch-Pins"/>
-			<synonym value="Lynch Pins"/>
-			<synonym value="Lynch-Pin"/>
-			<synonym value="Lynch-Pins"/>
-		</heading>
 		<heading id="NozzlePart" title="Nozzle">
 			<synonym value="Nozzles"/>
 		</heading>
@@ -5724,9 +5710,6 @@
 			<synonym value="Ridge-Pole"/>
 			<synonym value="Ridge-Poles"/>
 		</heading>
-		<heading id="RovePart" title="Rove">
-			<synonym value="Roves"/>
-		</heading>
 		<heading id="ShaftPart" title="Shaft">
 			<synonym value="Shafts"/>
 		</heading>
@@ -5736,7 +5719,9 @@
 		<heading id="SocketPart" title="Socket">
 			<synonym value="Sockets"/>
 		</heading>
-		<heading id="SpindleWhorlPart" title="Spindle-Whorl">
+		<heading id="SpindleWhorlPart" title="Spindle Whorl">
+			<synonym value="Spindle Whorls"/>
+			<synonym value="Spindle-Whorl"/>
 			<synonym value="Spindle-Whorls"/>
 		</heading>
 		<heading id="SpringPart" title="Spring">
@@ -5744,12 +5729,6 @@
 		</heading>
 		<heading id="StaplePart" title="Staple">
 			<synonym value="Staples"/>
-		</heading>
-		<heading id="SuspensionElementPart" title="Suspension-Element">
-			<synonym value="Suspension-Elements"/>
-		</heading>
-		<heading id="SuspensionPlatePart" title="Suspension-Plate">
-			<synonym value="Suspension-Plates"/>
 		</heading>
 		<heading id="SwivelPart" title="Swivel">
 			<synonym value="Swivels"/>
