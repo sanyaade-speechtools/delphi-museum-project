@@ -4870,34 +4870,20 @@
 			<synonym value="Balls"/>
 			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 		</heading>
-		<heading id="BifaciallyWorkedPiece" title="Bifacially Worked Piece"/>
 		<heading id="CarvedStone" title="Carved Stone">
 			<implies facet="ActivityorContext" cat="Carving"/>
 			<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
 		</heading>
-		<heading id="Disc" title="Disc"> <!-- Done -->
+		<heading id="Disc" title="Disc">
 			<synonym value="Discs"/>
-			<heading id="BiJadeDisk" title="Bi (jade disk)">
-				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a flat jade disc for ritual use. -->
-				<synonym value="Bi"/>
-				<synonym value="Bis"/>
-				<implies facet="ObjectName" cat="BiJadeDiskRelRit"/>
-			</heading>
-			<heading id="MagicalDisc" title="Magical Disc">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies Amulet -->
-			</heading>
-			<heading id="Sara" title="Sara"> <!-- Done -->
-				<!-- In the British Museum's Department of Oriental Antiquities this term refers to a painted disc. -->
-				<synonym value="Saras"/>
-			</heading>
-			<heading id="Xuanji" title="Xuanji">
-				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>Implies Religious/Ritual Equipment -->
-			</heading>
+			<synonym value="Disk"/>
+			<synonym value="Disks"/>
 		</heading>
 		<heading id="EngravedStone" title="Engraved Stone"/>
 		<heading id="RetouchedPiece" title="Retouched Piece"/>
-		<heading id="Rod" title="Rod"> <!-- Done -->
+		<heading id="Rod" title="Rod">
 			<synonym value="Rods"/>
+			<excl value="Single rod"/> <!-- A coiled basketry technique -->
 		</heading>
 	</heading>
 	<heading id="CommunicationRelatedItems" title="Communication-Related Items">
@@ -10279,7 +10265,6 @@
 		<heading id="BaptismalShellRelRit" title="Baptismal Shell">
 			<synonym value="Baptismal Shells"/>
 		</heading>
-		<heading id="BiJadeDiskRelRit" title="Bi" noMatch="true"/>
 		<heading id="BodyPaintRelRit" title="Body-Paint" noMatch="true"/>
 		<heading id="CandelonRelRit" title="Candelon" noMatch="true"/>
 		<heading id="CenserFittingRelRit" title="Censer-Fitting">

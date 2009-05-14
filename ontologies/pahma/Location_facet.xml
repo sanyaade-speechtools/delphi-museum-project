@@ -5851,7 +5851,7 @@
 									<synonym value="Ruin 55"/>
 									<synonym value="Ruin 57"/>
 									<synonym value="Ruin 58"/>
-									<heading id="AlpineApacheAZ" title="Alpine"/> <!-- Disambiguate with Alpine co., CA -->
+									<heading id="AlpineApacheAZ" title="Alpine" noMatch="true"/> <!-- Disambiguate with Alpine co., CA -->
 									<heading id="BadgerCreekAZ" title="Badger Creek"/>
 									<heading id="BrokenFluteCAZ" title="Broken Flute Cave"/>
 									<heading id="BurkeRanchAZ" title="Burke Ranch"/>
@@ -22224,6 +22224,11 @@
 							</heading>
 						</heading>
 						<heading id="Texas" title="Texas">
+							<heading id="BrewsterCountyTX" title="Brewster county">
+								<heading id="AlpineTX" title="Alpine" noMatch="true">
+									<synonym value="Alpine, TX"/>
+								</heading>
+							</heading>
 							<heading id="FortStantonTX" title="Fort Stanton"/>
 							<heading id="PolkCountyTX" title="Polk county" noMatch="true"> <!-- Need to find a way to deal with these, as synonym + excl doesn't work -->
 								<!-- <synonym value="Polk"/> Need to find a way to deal with these, as synonym + excl doesn't work -->
