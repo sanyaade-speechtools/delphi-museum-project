@@ -1322,14 +1322,12 @@
 						<heading id="Anagni" title="Anagni"/>
 						<heading id="Arezzo" title="Arezzo"/>
 						<heading id="Bieda" title="Bieda"/>
-						<heading id="Capena" title="Capena">
+						<heading id="CapenaNew" title="Capena" noMatch="true">
 							<synonym value="Leprignano"/>
 						</heading>
-						<heading id="Cerveteri" title="Cerveteri">
-							<synonym value="Caere"/>
-						</heading>
-						<heading id="Chiusi" title="Chiusi"/>
-						<heading id="CivitaCastellana" title="Civita Castellana"/>
+						<heading id="Cerveteri" title="Cerveteri"/>
+						<heading id="ChiusiNew" title="Chiusi" noMatch="true"/>
+						<heading id="CivitaCastellanaNew" title="Civita Castellana" noMatch="true"/>
 						<heading id="Florence" title="Florence">
 							<synonym value="Florentine"/>
 						</heading>
@@ -1365,21 +1363,12 @@
 							<heading id="Tivoli" title="Tivoli"/>
 							<heading id="ViaLatina" title="Via Latina"/>
 							<heading id="Vicovaro" title="Vicovaro"/>
-							<heading id="Viterbo" title="Viterbo">
-								<heading id="Musarna" title="Musarna"/>
-							</heading>
+							<heading id="ViterboNew" title="Viterbo" noMatch="true"/>
 						</heading>
-						<heading id="Orvieto" title="Orvieto">
-							<heading id="OrvietoTombS" title="Tomb S" noMatch="true">
-								<synonym value="Orvieto: Tomb S"/>
-								<synonym value="Orvieto Tomb S"/>
-								<synonym value="Orvieto, Tomb S"/>
-								<synonym value="Tomb S, Orvieto"/>
-							</heading>
-						</heading>
-						<heading id="Perugia" title="Perugia"/>
+						<heading id="OrvietoNew" title="Orvieto" noMatch="true"/>
+						<heading id="PerugiaNew" title="Perugia" noMatch="true"/>
 						<heading id="Piombino" title="Piombino"/>
-						<heading id="Pitigliano" title="Pitigliano"/>
+						<heading id="PitiglianoNew" title="Pitigliano" noMatch="true"/>
 						<heading id="PoggioBuco" title="Poggio Buco">
 							<heading id="AbbadiadelFiume" title="Abbadia del Fiume">
 								<heading id="AbbadiadelFiumeTombA" title="Tomb A" noMatch="true">
@@ -22335,10 +22324,46 @@
 		<heading id="NonModernEurope" title="Europe" noMatch="true">
 			<heading id="AncientEurope" title="Ancient Europe">
 				<heading id="Etruria" title="Etruria">
-					<heading id="Campomorto" title="Campomorto"/>
-					<heading id="Narce" title="Narce"/>
-					<heading id="Zambra" title="Zambra"/>
 					<implies facet="Location" cat="CentralItaly"/>
+					<heading id="BleraEtruria" title="Blera"/>
+					<heading id="CaereEtruria" title="Caere">
+						<implies facet="Location" cat="Cerveteri"/>
+					</heading>
+					<heading id="Campomorto" title="Campomorto"/>
+					<heading id="CapenaEtruria" title="Capena">
+						<implies facet="Location" cat="CapenaNew"/>
+					</heading>
+					<heading id="ChiusiEtruria" title="Chiusi">
+						<implies facet="Location" cat="ChiusiNew"/>
+					</heading>
+					<heading id="CivitaCastellEtruria" title="Civita Castellana">
+						<implies facet="Location" cat="CivitaCastellanaNew"/>
+					</heading>
+					<heading id="CortonaEtruria" title="Cortona"/>
+					<heading id="FirenzeEtruria" title="Firenze">
+						<implies facet="Location" cat="Florence"/>
+					</heading>
+					<heading id="NarceEtruria" title="Narce"/>
+					<heading id="OrvietoEtruria" title="Orvieto">
+						<implies facet="Location" cat="OrvietoNew"/>
+						<heading id="OrvietoTombS" title="Tomb S" noMatch="true">
+							<synonym value="Orvieto: Tomb S"/>
+							<synonym value="Orvieto Tomb S"/>
+							<synonym value="Orvieto, Tomb S"/>
+							<synonym value="Tomb S, Orvieto"/>
+						</heading>
+					</heading>
+					<heading id="PerugiaEtruria" title="Perugia">
+						<implies facet="Location" cat="PerugiaNew"/>
+					</heading>
+					<heading id="PitiglianoEtruria" title="Pitigliano">
+						<implies facet="Location" cat="PitiglianoNew"/>
+					</heading>
+					<heading id="ViterboEtruria" title="Viterbo">
+						<implies facet="Location" cat="ViterboNew"/>
+						<heading id="Musarna" title="Musarna"/>
+					</heading>
+					<heading id="ZambraEtruria" title="Zambra"/>
 				</heading>
 				<heading id="AncientGreece" title="Ancient Greece">
 					<synonym value="Greece (ancient)"/>
