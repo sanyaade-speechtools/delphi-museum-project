@@ -631,7 +631,6 @@
 				<synonym value="Net"/>
 				<synonym value="Nets"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
-				<implies facet="ObjectName" cat="NetMiscEq"/>
 				<heading id="LandingNetFshEq" title="Landing Net">
 					<synonym value="Landing Nets"/>
 					<synonym value="Landing-Net"/>
@@ -8130,17 +8129,10 @@
 	</heading>
 	<heading id="MiscellaneousEquipment" title="Miscellaneous Equipment"> <!-- PARSE OUT AND MERGE ELSEWHERE -->
 		<synonym value="Apparatus"/>
-		<!-- British Museum notes that, generally speaking, this category is a catch-all
-			for terms which do not fit under other top terms -->
 		<heading id="BatteryMiscEq" title="Battery">
 			<synonym value="Batteries"/>
 			<synonym value="Batterys"/>
 			<!-- Misspelling -->
-		</heading>
-		<heading id="BellPullMiscEq" title="Bell Pull">
-			<synonym value="Bell Pulls"/>
-			<synonym value="Bell-Pull"/>
-			<synonym value="Bell-Pulls"/>
 		</heading>
 		<heading id="BirdstoneMiscEq" title="Birdstone">
 			<synonym value="Birdstones"/>
@@ -8157,16 +8149,6 @@
 		<heading id="BouquetMiscEq" title="Bouquet">
 			<synonym value="Bouquets"/>
 		</heading>
-		<heading id="BreakfastSetMiscEq" title="Breakfast Set">
-			<synonym value="Breakfast Sets"/>
-			<synonym value="Breakfast-Set"/>
-			<synonym value="Breakfast-Sets"/>
-		</heading>
-		<heading id="CarpetWeightMiscEq" title="Carpet Weight">
-			<synonym value="Carpet Weights"/>
-			<synonym value="Carpet-Weight"/>
-			<synonym value="Carpet-Weights"/>
-		</heading>
 		<!-- <heading id="ChainMiscEq" title="Chain"> Disambiguate with jewelery
 			<synonym value="Chains"/>
 		</heading> -->
@@ -8174,13 +8156,6 @@
 			<synonym value="Chopping Blocks"/>
 			<synonym value="Chopping-Block"/>
 			<synonym value="Chopping-Blocks"/>
-		</heading>
-		<heading id="CobblingEquipmentMiscEq" title="Cobbling Equipment">
-			<synonym value="Cobbling-Equipment"/>
-		</heading>
-		<heading id="ContraceptiveSheathMiscEq" title="Condom">
-			<synonym value="Contraceptive Sheath"/>
-			<synonym value="Contraceptive Sheaths"/>
 		</heading>
 		<heading id="CordMiscEq" title="Cord">
 			<synonym value="Cords"/>
@@ -8194,16 +8169,11 @@
 			<synonym value="Dinner-Set"/>
 			<synonym value="Dinner-Sets"/>
 		</heading>
-		<heading id="DoorStopMiscEq" title="Door Stop">
-			<synonym value="Door Stops"/>
-			<synonym value="Door-Stop"/>
-			<synonym value="Door-Stops"/>
-		</heading>
 		<heading id="DusterMiscEq" title="Duster">
 			<synonym value="Dusters"/>
 		</heading>
-		<heading id="ErnatonMiscEq" title="Ernaton">
-			<synonym value="Ernatons"/>
+		<heading id="FanMiscEq" title="Fan">
+			<synonym value="Fans"/>
 		</heading>
 		<heading id="FastenerMiscEq" title="Fastener">
 			<synonym value="Fasteners"/>
@@ -8226,41 +8196,21 @@
 		<heading id="FringeMiscEq" title="Fringe">
 			<synonym value="Fringes"/>
 		</heading>
-		<heading id="FumigatorMiscEq" title="Fumigator">
-			<synonym value="Fumigators"/>
-		</heading>
 		<heading id="GratingMiscEq" title="Grating">
 			<synonym value="Gratings"/>
 		</heading>
 		<heading id="GridMiscEq" title="Grid">
 			<synonym value="Grids"/>
 		</heading>
-		<heading id="GridironMiscEq" title="Gridiron">
-			<synonym value="Gridirons"/>
-		</heading>
 		<heading id="GuardMiscEq" title="Guard">
 			<synonym value="Guards"/>
-		</heading>
-		<heading id="HandScreenMiscEq" title="Hand Screen">
-			<synonym value="Hand Screens"/>
-			<synonym value="Hand-Screen"/>
-			<synonym value="Hand-Screens"/>
 		</heading>
 		<heading id="HangerMiscEq" title="Hanger">
 			<synonym value="Hangers"/>
 		</heading>
-		<heading id="HeadStickMiscEq" title="Head-Stick">
-			<synonym value="Head-Sticks"/>
-		</heading>
 		<heading id="HeaterMiscEq" title="Heater">
 			<synonym value="Heaters"/>
 		</heading>
-		<heading id="HobbyHorseMiscEq" title="Hobby-Horse">
-			<synonym value="Hobby-Horses"/>
-		</heading>
-		<!-- <heading id="HookMiscEq" title="Hook">
-			<synonym value="Hooks"/>
-		</heading> -->
 		<heading id="HoopMiscEq" title="Hoop">
 			<synonym value="Hoops"/>
 			<excl value="Belt"/>
@@ -8271,9 +8221,6 @@
 		<heading id="LidMiscEq" title="Lid">
 			<synonym value="Lids"/>
 		</heading>
-		<!-- <heading id="LineMiscEq" title="Line">
-			<synonym value="Lines"/>
-		</heading> -->
 		<heading id="MarkerMiscEq" title="Marker">
 			<synonym value="Markers"/>
 			<excl value="grave"/> <!-- Disambiguates from grave markers -->
@@ -8290,10 +8237,6 @@
 			<synonym value="Napkin-Ring"/>
 			<synonym value="Napkin-Rings"/>
 		</heading>
-		<heading id="NefMiscEq" title="Nef">
-			<synonym value="Nefs"/>
-		</heading>
-		<heading id="NetMiscEq" title="Net" noMatch="true"/>
 		<heading id="NooseMiscEq" title="Noose">
 			<synonym value="Nooses"/>
 		</heading>
@@ -8303,29 +8246,8 @@
 		<heading id="PadMiscEq" title="Pad">
 			<synonym value="Pads"/>
 		</heading>
-		<heading id="PaletteMiscEq" title="Palette">
-			<synonym value="Palettes"/>
-			<heading id="ArtistsPalPalettes" title="Artist's Palette"/>
-			<heading id="CosmeticPalPalettes" title="Cosmetic Palette" noMatch="true"/>
-			<heading id="ScribalPalPalettes" title="Scribal Palette" noMatch="true"/>
-		</heading>
 		<heading id="PegMiscEq" title="Peg">
 			<synonym value="Pegs"/>
-		</heading>
-		<heading id="PegBoardMiscEq" title="Peg Board">
-			<synonym value="Peg Boards"/>
-			<synonym value="Peg-Board"/>
-			<synonym value="Peg-Boards"/>
-		</heading>
-		<heading id="PersonalGearMiscEq" title="Personal Gear">
-			<heading id="FanMiscEq" title="Fan">
-				<synonym value="Fans"/>
-			</heading>
-		</heading>
-		<heading id="PicnicSetMiscEq" title="Picnic Set">
-			<synonym value="Picnic Sets"/>
-			<synonym value="Picnic-Set"/>
-			<synonym value="Picnic-Sets"/>
 		</heading>
 		<heading id="PintleMiscEq" title="Pintle">
 			<synonym value="Pintles"/>
@@ -8357,9 +8279,6 @@
 		<heading id="ReelMiscEq" title="Reel">
 			<synonym value="Reels"/>
 		</heading>
-		<heading id="ReelerMiscEq" title="Reeler">
-			<synonym value="Reelers"/>
-		</heading>
 		<heading id="ReflectorMiscEq" title="Reflector">
 			<synonym value="Reflectors"/>
 		</heading>
@@ -8370,11 +8289,6 @@
 			<synonym value="Rings"/>
 			<excl value="RingJewelery"/>
 		</heading>-->
-		<heading id="RingStoneMiscEq" title="Ring Stone">
-			<synonym value="Ring Stones"/>
-			<synonym value="Ring-Stone"/>
-			<synonym value="Ring-Stones"/>
-		</heading>
 		<heading id="RopesMainMiscEq" title="Rope">
 			<synonym value="Ropes"/>
 		</heading>
@@ -8387,21 +8301,11 @@
 		<heading id="ScreenMiscEq" title="Screen"> <!-- Disambiguate -->
 			<synonym value="Screens"/>
 		</heading>
-		<heading id="SexAidMiscEq" title="Sex Aid">
-			<synonym value="Sex Aids"/>
-			<synonym value="Sex-Aid"/>
-			<synonym value="Sex-Aids"/>
-		</heading>
 		<heading id="SiphonMiscEq" title="Siphon">
 			<synonym value="Siphons"/>
 		</heading>
 		<heading id="SlabMiscEq" title="Slab">
 			<synonym value="Slabs"/>
-		</heading>
-		<heading id="SleeveWeightMiscEq" title="Sleeve Weight">
-			<synonym value="Sleeve Weights"/>
-			<synonym value="Sleeve-Weight"/>
-			<synonym value="Sleeve-Weights"/>
 		</heading>
 		<heading id="SouvenirMiscEq" title="Souvenir">
 			<synonym value="Souvenirs"/>
