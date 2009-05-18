@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <taxonomy id="ObjectName" title="Object Name">
+	<description> This facet describes <em><strong>what</strong></em> an object
+		is, regardless of what it was used for.</description>
 	<notes>This is an experimental fusion of PAHMA terms in a modified British Museum
 		structure</notes>
 	<heading id="AgriculturalSubsistence" title="Agriculture &amp; Subsistence">
@@ -2553,7 +2555,6 @@
 				<synonym value="Scribal Palettes"/>
 				<synonym value="Scribal-Palette"/>
 				<synonym value="Scribal-Palettes"/>
-				<implies facet="ObjectName" cat="ScribalPalPalettes"/>
 			</heading>
 			<heading id="ScrollComm" title="Scroll">
 				<synonym value="Scrolls"/>
@@ -3906,7 +3907,7 @@
 				<synonym value="Oil-Vessels"/>
 			</heading>
 			<heading id="PanVessel" title="Pan" noMatch="true"/>
-			<heading id="Pañca-Pátra">
+			<heading id="PancaPatra" title="Pañca-Pátra">
 				<synonym value="Pañca-Pátras"/>
 			</heading>
 			<heading id="PepperMill" title="Pepper Mill">
@@ -5159,11 +5160,11 @@
 				<heading id="DokaCookEq" title="Doka">
 					<synonym value="Dokas"/>
 				</heading>
-				<heading id="DoughBowlCookEq" title="Dough Bowl">  
-					<synonym value="Dough Bowls"/>  
-					<synonym value="Dough Vats"/>  
-					<synonym value="Dough-Vat"/>  
-					<synonym value="Dough-Vats"/>  
+				<heading id="DoughBowlCookEq" title="Dough Bowl">
+					<synonym value="Dough Bowls"/>
+					<synonym value="Dough Vats"/>
+					<synonym value="Dough-Vat"/>
+					<synonym value="Dough-Vats"/>
 				</heading>
 				<heading id="PieDishCookEq" title="Pie Dish">
 					<synonym value="Pie Dishs"/> <!-- Misspelling -->
@@ -6597,7 +6598,7 @@
 						<heading id="Flossas" title="Flossas"/>
 						<heading id="FluffMats" title="Fluff Mats"/>
 						<heading id="LoopedPileCarpets" title="Looped-Pile Carpets"/>
-						<heading id="MoquettesMachineMadeRugs)" title="Moquettes (Machine-Made Rugs)"/>
+						<heading id="MoquettesMachineMadeRugs" title="Moquettes (Machine-Made Rugs)"/>
 						<heading id="OrientalRugs" title="Oriental Rugs">
 							<!-- Gabbehs [N]
 								Odjakliks [N] -->
@@ -6831,11 +6832,11 @@
 				<synonym value="Hair Pieces"/>
 				<synonym value="Hair-Piece"/>
 				<synonym value="Hair-Pieces"/>
-				<heading id="HairAccessory" title="Hair Accessory" noMatch="true"> 				
-					<synonym value="Hair Clip"/> 				
-					<synonym value="Hair Clips"/> 				
-					<synonym value="Barrette"/> 				
-					<synonym value="Barrettes"/> 			
+				<heading id="HairAccessory" title="Hair Accessory" noMatch="true">
+					<synonym value="Hair Clip"/>
+					<synonym value="Hair Clips"/>
+					<synonym value="Barrette"/>
+					<synonym value="Barrettes"/>
 				</heading>
 				<heading id="TopknotPrsOrn" title="Top Knot">
 					<synonym value="Top Knots"/>
@@ -8762,7 +8763,7 @@
 					<synonym value="Harps"/>
 					<synonym value="Harp-Like"/>
 					<!-- from old DB: "Harp-like Instrument" [sic] -->
-					<heading id="Bow Harp" title="Bow Harp">
+					<heading id="BowHarp" title="Bow Harp">
 						<synonym value="Bow Harps"/>
 					</heading>
 				</heading>
@@ -9279,7 +9280,7 @@
 					<heading id="AmuletRattle" title="Amulet Rattle">
 						<synonym value="Amulet Rattles"/>
 					</heading>
-					<heading id="Armadillo-Tail Rattle" title="Armadillo-Tail Rattle">
+					<heading id="ArmadilloTailRattle" title="Armadillo-Tail Rattle">
 						<synonym value="Armadillo-Tail Rattles"/>
 						<synonym value="Armadillo Tail Rattle"/>
 						<synonym value="Armadillo Tail Rattles"/>
@@ -9432,7 +9433,7 @@
 						<synonym value="Fur Rattles"/>
 						<implies facet="Material" cat="LeatherAndFur"/>
 					</heading>
-					<heading id="Goite-Husk Rattle" title="Goite-Husk Rattle">
+					<heading id="GoiteHuskRattle" title="Goite-Husk Rattle">
 						<synonym value="Goite-Husk Rattles"/>
 						<synonym value="Goite Husk Rattles"/>
 						<synonym value="Goite Husk Rattle"/>
