@@ -1609,7 +1609,7 @@ public class MainApp {
 			saveHooksAsSQLMenuItem.setMnemonic('H');
 			saveHooksAsSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					saveVocabHooksOrExclusionsAsSQL( true );
+					saveHooksOrExclusionsAsSQL( true );
 				}
 			});
 		}
@@ -1628,7 +1628,7 @@ public class MainApp {
 			saveExclusionsAsSQLMenuItem.setMnemonic('E');
 			saveExclusionsAsSQLMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					saveVocabHooksOrExclusionsAsSQL( false );
+					saveHooksOrExclusionsAsSQL( false );
 				}
 			});
 		}
@@ -1910,18 +1910,21 @@ public class MainApp {
 			debug(1,"Build Objects SQL...");
 			// Ask user to save info to a file.
 			String outFileName;
-			if(( outFileName = userProjInfo.getMetadataPath()) == null ) {
-				outFileName = userProjInfo.getMetadataConfigPath();
+			if((outFileName = userProjInfo.objectsSQLLoadfilePath) == null ) {
+				if(( outFileName = userProjInfo.getMetadataPath()) == null ) {
+					outFileName = userProjInfo.getMetadataConfigPath();
+				}
+				int iDot = outFileName.lastIndexOf('.');
+				if( iDot > 0 )
+					outFileName = outFileName.substring(0, iDot);
+				outFileName += "_SQL.txt";
 			}
-			int iDot = outFileName.lastIndexOf('.');
-			if( iDot > 0 )
-				outFileName = outFileName.substring(0, iDot);
-			outFileName += "_SQL.txt";
     		String filename = getSafeOutfile("Save Object Metadata to files", outFileName, txtFilter);
     		if( filename != null ) {
 				SQLUtils.writeObjectsSQL( filename, SQLUtils.WRITE_AS_LOADFILE,
 							userProjInfo.metaDataReader, userProjInfo.imagePathsReader);
 			}
+    		userProjInfo.objectsSQLLoadfilePath = filename;
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Save Vocabulary File Error", JOptionPane.ERROR_MESSAGE);
@@ -2524,8 +2527,9 @@ public class MainApp {
 				debug(1,"Saving column usage info to file: " + filename);
 		        setStatus("Saving usage report to file: " + filename);
 		        try {
-		        	// TODO Make this a UTF8 file out.
-					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+					BufferedWriter writer = new BufferedWriter(
+												new OutputStreamWriter(
+													new FileOutputStream(filename),"UTF8"));
 					Counter<String> colCounts = pair.second;
 					totalCounts.addCounts(colCounts);
 					colCounts.write(writer, true, 0, null, false, true);
@@ -2537,7 +2541,7 @@ public class MainApp {
 				}
 		    }
 			// Ask the user whether to save total Usage to a text file, or to a sql load file.
-			Object[] options = { "Text", "SQL", "CANCEL" };
+			Object[] options = { "Text file", "SQL loadfile", "CANCEL" };
 			int response = JOptionPane.showOptionDialog(getJFrame(),
 					            "Do you want to save the statistics as \n"
 								+"a text listing, or as an SQL load file?",
@@ -2558,8 +2562,9 @@ public class MainApp {
 			}
 			if(filename!= null) {
 		        try {
-		        	// TODO Make this a UTF8 file out.
-					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+					BufferedWriter writer = new BufferedWriter(
+												new OutputStreamWriter(
+													new FileOutputStream(filename),"UTF8"));
 					totalCounts.write(writer, true, 0, separator, true, true);
 					writer.flush();
 					writer.close();
@@ -2591,8 +2596,9 @@ public class MainApp {
     			debug(1,"Saving column usage info to file: " + filename);
 		        setStatus("Saving usage report to file: " + filename);
 		        try {
-		        	// TODO Make this a UTF8 file out.
-					BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+					BufferedWriter writer = new BufferedWriter(
+												new OutputStreamWriter(
+													new FileOutputStream(filename),"UTF8"));
 					vocabCounts.write(writer, true, 0, null, false, true);
 					writer.flush();
 					writer.close();
@@ -2613,30 +2619,74 @@ public class MainApp {
 	protected void saveOntologyAsSQL() {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
+			Object[] options = { "SQL loadfile", "SQL Insert", "CANCEL" };
+			int response = JOptionPane.showOptionDialog(getJFrame(),
+		            "Do you want to save the ontology as \n"
+					+"an SQL load file (required for upload function),\n"
+					+"or as an SQL file (for manual DB update)?",
+					"Saving ontology to file",
+					JOptionPane.YES_NO_CANCEL_OPTION,
+					JOptionPane.QUESTION_MESSAGE, null,
+					options, options[0] );
+			if(response != 0 && response != 1)
+				return;		// Cancel
+			boolean asSQLInsert = (response==1);
 			setStatus( "Building SQL Ontology load file...");
-			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$", ".sql");
-    		String filename = getSafeOutfile("Save Ontology as SQL load file...",
-																					suggest,sqlFilter);
+			String suggest = userProjInfo.facetsSQLLoadfilePath;
+			if(suggest == null) {
+				suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$", "_facets.txt");
+			}
+    		String filename = getSafeOutfile("Save Facets as SQL load file...",
+											    suggest,txtFilter);
     		if( filename == null )
     			return;
-	        setStatus("Saving SQL Ontology Load to file: " + filename);
+	        setStatus("Saving SQL Ontology Facets as SQL: " + filename);
 	        try {
-				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+				BufferedWriter writer = new BufferedWriter(
+											new OutputStreamWriter(
+												new FileOutputStream(filename),"UTF8"));
 				SQLUtils.writeFacetsSQL( userProjInfo.facetMapHashTree.GetFacets(),
-											dbName, writer, fWithNewlines );
-				SQLUtils.writeCategoriesSQL( userProjInfo.facetMapHashTree.GetFacets(),
-											dbName, writer, fWithNewlines );
+											dbName, writer, asSQLInsert, fWithNewlines );
 				writer.flush();
 				writer.close();
-				debug(1, "Finished writing Ontology to SQL file: "+filename);
-				setStatus( "Finished writing Ontology to SQL file: "+filename);
+				userProjInfo.facetsSQLLoadfilePath = filename;
+				debug(1, "Wrote Ontology facets to SQL file: "+filename);
+				setStatus( "Wrote Ontology facets to SQL file: "+filename);
 			} catch( IOException e ) {
 	            e.printStackTrace();
-				throw new RuntimeException("saveOntologyAsSQL: Could not create (or write to) output file: " + filename);
+				throw new RuntimeException(
+						"saveOntologyAsSQL: Could not create (or write to) facet output file: "
+						+ filename);
+			}
+			suggest = userProjInfo.categoriesSQLLoadfilePath;
+			if(suggest == null) {
+				suggest = filename.replaceAll("_facets\\.txt$", "_cats.txt");
+			}
+    		filename = getSafeOutfile("Save Categories as SQL...",
+											    suggest,txtFilter);
+    		if( filename == null )
+    			return;
+	        setStatus("Saving SQL Ontology Categories to SQL: " + filename);
+	        try {
+				BufferedWriter writer = new BufferedWriter(
+											new OutputStreamWriter(
+												new FileOutputStream(filename),"UTF8"));
+				SQLUtils.writeCategoriesSQL( userProjInfo.facetMapHashTree.GetFacets(),
+											dbName, writer, asSQLInsert, fWithNewlines );
+				writer.flush();
+				writer.close();
+				userProjInfo.categoriesSQLLoadfilePath = filename;
+				debug(1, "Wrote Ontology categories to SQL file: "+filename);
+				setStatus( "Wrote Ontology categories to SQL file: "+filename);
+			} catch( IOException e ) {
+	            e.printStackTrace();
+				throw new RuntimeException(
+						"saveOntologyAsSQL: Could not create (or write to) categories output file: "
+						+ filename);
 			}
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Save Ontology As SQL Error", JOptionPane.ERROR_MESSAGE);
+								"Save Ontology As SQL Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
 	}
@@ -2673,22 +2723,39 @@ public class MainApp {
 		return filename;
 	}
 
-	protected void saveVocabHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
+	protected void saveHooksOrExclusionsAsSQL( boolean fSaveHooks ) {
 		boolean fWithNewlines = true;	// Easier for debugging output.
 		try {
-   		String variant = fSaveHooks ? "Hook":"Exclusion";
-			String suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$",
-					variant+"s.sql");
+			String variant = fSaveHooks ? "Hook":"Exclusion";
+			Object[] options = { "SQL loadfile", "SQL Insert", "CANCEL" };
+			int response = JOptionPane.showOptionDialog(getJFrame(),
+		            "Do you want to save the "+variant+"s as \n"
+					+"an SQL load file (required for upload function),\n"
+					+"or as an SQL file (for manual DB update)?",
+					"Saving "+variant+"s to file",
+					JOptionPane.YES_NO_CANCEL_OPTION,
+					JOptionPane.QUESTION_MESSAGE, null,
+					options, options[0] );
+			if(response != 0 && response != 1)
+				return;		// Cancel
+			boolean asSQLInsert = (response==1);
+			String suggest = userProjInfo.hooksSQLLoadfilePath;
+			if(suggest == null ){
+				suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$",
+					variant+"s.txt");
+			}
     		String filename = getSafeOutfile("Save "+variant
-    							+" values as SQL Insert file...", suggest,sqlFilter);
+    							+" values as SQL Insert file...", suggest,txtFilter);
     		if( filename == null )
     			return;
 			setStatus("Saving SQL for "+variant+" values to file: " + filename);
 	        try {
 	    		setStatus( "Building SQL "+variant+" Load file...");
-				BufferedWriter writer = new BufferedWriter(new FileWriter( filename ));
+				BufferedWriter writer = new BufferedWriter(
+										  new OutputStreamWriter(
+											new FileOutputStream(filename),"UTF8"));
 				SQLUtils.writeHooksOrExclusionsSQL(userProjInfo.facetMapHashTree.GetFacets(),
-												dbName, fSaveHooks, writer, fWithNewlines);
+									dbName, fSaveHooks, writer, asSQLInsert, fWithNewlines);
 				writer.flush();
 				writer.close();
 				debug(1, "Finished writing SQL Dump to file: "+filename);

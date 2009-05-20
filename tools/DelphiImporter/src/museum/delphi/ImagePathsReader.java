@@ -3,23 +3,22 @@ package museum.delphi;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collection;
-//import java.util.Set;
-import java.util.TreeSet;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ListIterator;
-//import java.util.Map;
-//import java.util.Map.Entry;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.TreeSet;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -267,19 +266,15 @@ public class ImagePathsReader {
 
 	public void writeSQLMediaTableLoadFile( String outFileName, boolean omitMediaWithNoDims ) {
 		try {
-			writer = new BufferedWriter(new FileWriter(outFileName));
+			writer = new BufferedWriter(
+					new OutputStreamWriter(
+					new FileOutputStream(outFileName),"UTF8"));
 			debug(1,"Writing SQL LoadFile for Image Table...");
 			// Write out the header
-			writer.append("To load this file, use a sql command: ");
-			writer.newLine();
-			writer.append("LOAD DATA LOCAL INFILE '");
-			// MySQL cannot handle Windows path separators
-			if( java.io.File.separatorChar == '/' )
-				writer.append(outFileName);
-			else
-				writer.append(outFileName.replace(java.io.File.separatorChar, '/'));
-			writer.append("' INTO TABLE media\n" );
-			writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES\n" );
+			writer.append("To load this file, use a sql command: \n");
+			writer.append("SET NAMES utf8;\n");
+			writer.append("LOAD DATA LOCAL INFILE {filename} INTO TABLE media CHARACTER SET utf8\n" );
+			writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 6 LINES\n" );
 			writer.append("(obj_id, name, description, path, type, width, height)\n" );
 			writer.append("SET aspectR=width/height, creation_time=now();\n" );
 			TreeSet<Integer> sortedKeys = new TreeSet<Integer>(imageInfoMap.keySet());
@@ -310,7 +305,9 @@ public class ImagePathsReader {
 
 	public void writeSQLMediaTableInsertFile( String outFileName, boolean omitMediaWithNoDims ) {
 		try {
-			writer = new BufferedWriter(new FileWriter(outFileName));
+			writer = new BufferedWriter(
+					new OutputStreamWriter(
+					new FileOutputStream(outFileName),"UTF8"));
 			debug(1,"Writing SQL Insert for Image Table...");
 			TreeSet<Integer> sortedKeys = new TreeSet<Integer>(imageInfoMap.keySet());
 			Iterator<Integer> keysIterator = sortedKeys.iterator();

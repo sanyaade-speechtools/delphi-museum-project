@@ -154,6 +154,11 @@ public class DoubleHashTree {
 		return idMap.get(id);
 	}
 
+	public float GetNGramDiscountForFacet( String facetName ) {
+		FacetInfo facet = facetsByName.get(facetName);
+		return ( facet == null )? -1:facet.facet.nGramDiscount;
+	}
+
 	protected void AddTaxoNodeToMap( String facetName, TaxoNode node, String name, Integer id ) {
 		FacetInfo facet = facetsByName.get(facetName);
 		if( facet == null )
@@ -246,6 +251,9 @@ public class DoubleHashTree {
 	protected final String	selectModeName		= "selectmode";
 	protected final String	displayNameName		= "title";
 	protected final String	sortName			= "sort";
+	protected final String	idName 				= "id";
+	protected final String	dbIdName 			= "dbId";
+	protected final String	nGramDiscName 		= "nGramDiscount";
 
 	// We assume that this is taking my modified facetMap schema,
 	// and so can have multiple taxonomies, inferredBy flags and synsets.
@@ -253,7 +261,6 @@ public class DoubleHashTree {
 		Document	document )		// Xml doc with tree
 	{
 		final String	taxRootName = "taxonomy";
-		final String	idName 		= "id";
 		try {
 			// First, get the taxonomy children of the root.
 			NodeList taxoNodes = document.getElementsByTagName( taxRootName );
@@ -264,6 +271,13 @@ public class DoubleHashTree {
 			    Element taxoRoot = (Element)taxoNodes.item(iTax);
 			    String name = taxoRoot.getAttribute( idName );
 			    String displayName = taxoRoot.getAttribute( displayNameName );
+			    String dbIdStr = taxoRoot.getAttribute( dbIdName );
+			    int dbID;
+			    try {
+			    	dbID = Integer.parseInt(dbIdStr);
+			    } catch(Exception e){
+			    	dbID = -1;
+			    }
 			    String rootHTitle = taxoRoot.getAttribute( "root-heading-title" );
 			    String supports = taxoRoot.getAttribute( supportsName );
 			    if(( supports == null ) || ( supports == "" ))
@@ -289,18 +303,25 @@ public class DoubleHashTree {
 			    	notes = StringUtils.outputXMLStringForNode( notesEl ).replaceAll(
 							"</?notes>", "");
 			    }
+			    String nGramDiscStr = taxoRoot.getAttribute( nGramDiscName );
+			    float nGramDiscount;
+			    try {
+			    	nGramDiscount = Float.parseFloat(nGramDiscStr);
+			    } catch(Exception e){
+			    	nGramDiscount = -1;
+			    }
 			    // Facet facet = new Facet( name, displayName, -1, infer, single,
 			    // Facets should never be inferred from the children, IMO
-			    int facetID = (iTax+1)*nCatsPerFacetMax;
-			    Facet facet = new Facet( name, displayName, facetID,
-			    						description, notes, false, single,
+			    if(dbID<0)
+			    	dbID = (iTax+1)*nCatsPerFacetMax;
+			    Facet facet = new Facet( name, displayName, dbID,
+			    						description, notes, nGramDiscount, false, single,
 			    						  sort, rootHTitle, supports );
 			    FacetInfo fInfo = new FacetInfo(facet, idMap);
 			    facetsByName.put(name, fInfo);
-			    facetsByID.put(facetID, fInfo);
+			    facetsByID.put(dbID, fInfo);
 			    taxoRoot.setAttribute( "catID", String.valueOf(facet.id) );
-				// This cast is stupid - facet subclasses TaxoNode!!!
-			    AddCategoriesFromNode( taxoRoot, facet, facetID, facetID, null, null );
+			    AddCategoriesFromNode( taxoRoot, facet, dbID, dbID+1, null, null );
 			}
 			// Now we're done parsing, so we can do the second pass, resolving forward
 			// references on implied links, etc.
@@ -327,7 +348,6 @@ public class DoubleHashTree {
 	protected int AddCategoriesFromNode( Element currEl, TaxoNode parent, int facetID,
 										int nextID, ArrayList<String> prefices, ArrayList<String> suffices ) {
 		final String	categoryElName = "heading";
-		final String	idName = "id";
 		final String	impliesElName = "implies";
 		final String	isGuideName = "isGuide";
 		final String	noMatchName = "noMatch";
@@ -368,6 +388,13 @@ public class DoubleHashTree {
 			    String nodeName = childEl.getNodeName();
 			    if( nodeName.equals( categoryElName ) ) {
 				    String name = childEl.getAttribute( idName );
+				    String dbIdStr = childEl.getAttribute( dbIdName );
+				    int dbID;
+				    try {
+				    	dbID = Integer.parseInt(dbIdStr);
+				    } catch(Exception e){
+				    	dbID = nextID+nAdded;
+				    }
 				    String displayName = childEl.getAttribute( displayNameName );
 				    String inferredByChildren = childEl.getAttribute( inferName );
 				    boolean infer = (( inferredByChildren.length() == 0 )	// empty string - not there
@@ -394,10 +421,8 @@ public class DoubleHashTree {
 	    					|| !combineStr.equalsIgnoreCase("suffix"));
 				    boolean combineWithSuffices = ((combineStr.length() <= 0 )			// not empty string - is there
 	    					|| !combineStr.equalsIgnoreCase("prefix"));
-				    // TODO see if we want to put this in, and preserve it
-				    int termID = -1;
 
-				    TaxoNode newNode = new TaxoNode( name, displayName, null, nextID+nAdded, termID, facetID,
+				    TaxoNode newNode = new TaxoNode( name, displayName, null, dbID, -1, facetID,
 				    								parent, sort, guide, infer, single);
 				    try {
 				    	currFacet.AddTaxoNodeToMap( newNode, (nomatch?null:displayName), newNode.id );
@@ -408,7 +433,7 @@ public class DoubleHashTree {
 					}
 				    nAdded++;
 				    childEl.setAttribute( "catID", String.valueOf(newNode.id) );
-			    	// Note that any local prefices and suffices MUST come before the categories,
+			    	// Note that any local prefixes and suffices MUST come before the categories,
 			    	// so we can just inherit the ones coming in if we have not add any.
 				    String displayNameAsToken = displayName.toLowerCase();
 	    			if( local_prefices == null )
