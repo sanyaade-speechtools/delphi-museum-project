@@ -66,4 +66,8 @@ public class NGram {
 	public int getEnd() {
 		return end;
 	}
+
+	public int getLength() {
+		return (end-begin)+1;
+	}
 }

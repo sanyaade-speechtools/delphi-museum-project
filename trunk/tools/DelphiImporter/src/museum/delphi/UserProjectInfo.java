@@ -26,6 +26,13 @@ public class UserProjectInfo implements Serializable {
 	public transient DBMetaDataReader dbMetaDataReader = null;
 	private String imagePathsPath = null;
 	public transient ImagePathsReader imagePathsReader = null;
+	public String objectsSQLLoadfilePath = null;
+	public String facetsSQLLoadfilePath = null;
+	public String categoriesSQLLoadfilePath = null;
+	public String hooksSQLLoadfilePath = null;
+	public String exclusionsSQLLoadfilePath = null;
+	public String obj_catsSQLLoadfilePath = null;
+	public String mediaSQLLoadfilePath = null;
 	private transient boolean dirty = false;
 
 	private static int _debugLevel = 1;

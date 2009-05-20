@@ -4,8 +4,9 @@
 package museum.delphi;
 
 import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -164,12 +165,18 @@ public class Categorizer {
 			    		iOutputFile++;
 						fFirst = true;
 			    		currFilename = basefilename + iOutputFile + extension;
-			    		objCatsWriter = new BufferedWriter(new FileWriter( currFilename ));
+			    		// Using UTF8 for consistency, but this is all numeric, so should not matter.
+			    		objCatsWriter = new BufferedWriter(
+						    				new OutputStreamWriter(
+						    				new FileOutputStream(currFilename),"UTF8"));
 			    		if( fDumpAsSQLInsert ) {
-				    		objCatsWriter.append("USE "+dbName+";");
-				    		objCatsWriter.newLine();
-				    		objCatsWriter.append("INSERT IGNORE INTO obj_cats(obj_id, cat_id, inferred, reliability) VALUES" );
-				    		objCatsWriter.newLine();
+				    		objCatsWriter.append("USE "+dbName+";\n");
+				    		objCatsWriter.append("INSERT IGNORE INTO obj_cats(obj_id, cat_id, inferred, reliability) VALUES\n" );
+			    		} else {
+			    			objCatsWriter.append("To load this file, use a sql command: \n");
+			    			objCatsWriter.append("LOAD DATA LOCAL INFILE '{filename}' INTO TABLE obj_cats CHARACTER SET utf8\n" );
+			    			objCatsWriter.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 4 LINES\n" );
+			    			objCatsWriter.append("(obj_id, cat_id, inferred, reliability);\n" );
 			    		}
 					}
 					// Otherwise, now we output the info for the last Line, and then transfer
@@ -190,6 +197,12 @@ public class Categorizer {
 							categorizeObjectForAllFacets( currID, source, objStrings,
 									colDumpInfo[i], matchedCats, vocabCounts.get(i) );
 					}
+					// Now we consider weight distributions.
+					// Facets either prefer one concept, distribute weight proportionately,
+					//  or distribute weight disproportionately as a function of order.
+					// For now, we'll just handle the first two.
+					// TODO - implement weight distribution.
+
 					// Now we handle inferences. First get all the simple inferences,
 					// including inherited (ascendant) concepts, and simple declarations.
 					HashMap<TaxoNode, Float> inferredCats = deriveSimpleInferences(matchedCats);
@@ -218,7 +231,7 @@ public class Categorizer {
 					}
 					int nCatsDumped = SQLUtils.writeObjCatsSQL( currID,
 											matchedCats, inferredCats, objCatsWriter,
-											fFirst, fWithNewlines, fDumpAsSQLInsert );
+											fFirst, fDumpAsSQLInsert, fWithNewlines );
 					matchedCats.clear();
 					if( nCatsDumped > 0) {
 						nObjCatsDumpedTotal += nCatsDumped;
@@ -261,7 +274,9 @@ public class Categorizer {
 						continue;
 					currFilename = basefilename
 	    						+"_"+(colDumpInfo[i].name.replaceAll("\\W", "_"))+"_Usage.txt";
-					BufferedWriter usageWriter = new BufferedWriter(new FileWriter( currFilename ));
+					BufferedWriter usageWriter = new BufferedWriter(
+							new OutputStreamWriter(
+							new FileOutputStream(currFilename),"UTF8"));
 	    			debug(1,"Saving column usage info to file: " + currFilename);
 	    			vocabCountsForCol.write(usageWriter, true, 0, null, false, true);
 					usageWriter.flush();
@@ -345,7 +360,7 @@ public class Categorizer {
 			for( Pair<String,ArrayList<String>> pair:tokenList ) {
 				String token = pair.first;
 				boolean foundMatch =
-					checkAllFacetsForToken(id, token, allStrings, false, colInfo, matchedCats );
+					checkAllFacetsForToken(id, token, allStrings, (float)1, colInfo, matchedCats );
 				if(!foundMatch) {
 					debug(3, "No matched concept for full token: "+token);
 					ArrayList<String> words = pair.second;
@@ -358,13 +373,15 @@ public class Categorizer {
 							missedngrams.add(new NGram(token, 0, words.size()-1));
 					}
 					// Now we consider the ngrams within, if there are 2 or more words
-					if(words.size()>1) {
+					int nWords = words.size();
+					if(nWords>1) {
 						NGramStack ngrams = new NGramStack(words, maxNGramLength);
 						NGram next;
 						while((next=ngrams.pop())!=null) {
 							String ngramStr = next.getString();
+							float nGramProp = (float)next.getLength()/(float)nWords;
 							if(checkAllFacetsForToken(id, ngramStr,
-									allStrings, true, colInfo, matchedCats )) {
+									allStrings, nGramProp, colInfo, matchedCats )) {
 								ngrams.filterMatch(next);
 								if(missedngrams != null)
 									missedngrams.filterMatch(next);
@@ -393,12 +410,13 @@ public class Categorizer {
 	}
 
 	private boolean checkAllFacetsForToken(int id, String token,
-			ArrayList<String> allStrings, boolean isNGram,
+			ArrayList<String> allStrings, float nGramProportion,
 			DumpColumnConfigInfo colInfo, HashMap<TaxoNode, Float> matchedCats ) {
 		// Loop over the facets to mine list. Note that list specifies order.
 		// As we find a token, we may remove it from further consideration so we
 		// get some auto-exclusion (configured)
 		boolean foundMatch = false;
+		boolean isNGram = (nGramProportion<1.0);
 		for( DumpColumnConfigInfo.MineInfoForColumn mineInfo:colInfo.facetsToMine ) {
 			TaxoNode node = facetMapHashTree.FindNodeByHook(mineInfo.facetName,token);
 			if( node == null )
@@ -413,8 +431,14 @@ public class Categorizer {
 				continue;
 			}
 			foundMatch = true;
+			// We discount for nGrams
+			// 1-((1-prop)*disc) is applied to confidence.
+			float rel = mineInfo.reliability;
+			if(isNGram)
+				rel *= 1-((1-nGramProportion)
+						*facetMapHashTree.GetNGramDiscountForFacet(mineInfo.facetName));
 			// We have a TaxoNode match! Update matches with this node
-			updateMatches( matchedCats, mineInfo.reliability, node);
+			updateMatches( matchedCats, rel, node);
 			// Since we got a match, we may stop considering the other facets for this token.
 			if( mineInfo.filterTokenOnMatch )
 				break;

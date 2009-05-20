@@ -5,7 +5,6 @@ package museum.delphi;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -45,28 +44,32 @@ public class SQLUtils {
 	 * @param fWithNewlines set to TRUE to add newlines for easier reading
 	 */
 	public static void writeHooksOrExclusionsSQL( java.util.ArrayList<Facet> facetList,
-			String dbName, boolean fSaveHooks, BufferedWriter writer, boolean fWithNewlines ) {
+			String dbName, boolean fSaveHooks, BufferedWriter writer,
+			boolean asSQLInsert, boolean fWithNewlines ) {
 		String tablename = fSaveHooks ? "hooks":"exclusions";
 		try {
-			// Set up the correct DB
-			writer.append("USE "+dbName+";");
-			writer.newLine();
-			writer.append("truncate "+tablename+";");
-			writer.newLine();
-			// First, let's populate the hooks table
-			writer.append("INSERT INTO "+tablename+" ( cat_id, token ) VALUES" );
-			writer.newLine();
+			if(asSQLInsert) {
+				writer.append("truncate "+tablename+";\n");
+				writer.append("INSERT INTO "+tablename+" ( cat_id, token ) VALUES\n" );
+			} else {
+				writer.append("To load this file, use an sql command: \n");
+				writer.append("SET NAMES utf8;\n");
+				writer.append("LOAD DATA LOCAL INFILE '{filename}' INTO TABLE "+tablename+" CHARACTER SET utf8\n" );
+				writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES\n" );
+				writer.append("( cat_id, token );\n" );
+			}
 			boolean fFirst = true;
 			for( Facet facet : facetList ) {
 				for( TaxoNode child : facet.children ) {
 					// for each child of the facet, dump.
 					// Once something has been saved, fFirst will be marked false.
 					fFirst = SQLUtils.writeHookOrExclusionSQL( child, fSaveHooks, writer,
-														true, fFirst, fWithNewlines );
+											true, fFirst, asSQLInsert, fWithNewlines );
 				}
 			}
-			writer.append(';');
-			writer.newLine();
+			if(asSQLInsert) {
+				writer.append(";\n");
+			}
 		} catch( IOException e ) {
 			String tmp = "SQLUtils.setupHooksOrExclusionsDump: Exception writing to output file."
 				+"\n"+e.toString();
@@ -91,47 +94,57 @@ public class SQLUtils {
 	 * @param fWithNewlines set to TRUE to add newlines for easier reading
 	 * @return TRUE if at least one output entry generated.
 	 */
-	public static boolean writeHookOrExclusionSQL(
+	private static boolean writeHookOrExclusionSQL(
 			TaxoNode node, boolean fSaveHooks, BufferedWriter writer,
-			boolean fRootNode, boolean fFirst, boolean fWithNewlines ) {
+			boolean fRootNode, boolean fFirst,
+			boolean asSQLInsert, boolean fWithNewlines ) {
 		try {
 			if( fSaveHooks ) {
 				// Save the display name, even if marked as nomatch, since things like
 				// design motifs should show up if they enter "bird" in kwd.
-				if( !fFirst ) {
+				if(!fFirst && asSQLInsert) {
 					writer.append(',');
-					if( fWithNewlines )
-						writer.newLine();
+					if(fWithNewlines)
+						writer.append('\n');
 				}
 				// We use display names (in most cases) as hooks, but do not
 				// fold to lower in the TaxoNode structure. Hooks assumes all lower.
 				// TODO this should properly deal with Unicode collation mechanisms.
 				String name = node.displayName.toLowerCase().replace("\"", "\\\"").replace("'", "\\'");
-				writer.append("("+node.id+",\""+name+"\")");
+				if(asSQLInsert) {
+					writer.append("("+node.id+",\""+name+"\")");
+				} else {
+					writer.append(node.id+"|\""+name+"\"\n");
+				}
 				fFirst = false;
 				// Save any synonyms as hooks
 				if( node.synset != null )
 					for( String hook : node.synset ) {
-						if( !fFirst ) {
+						name = hook.replace("\"", "\\\"").replace("'", "\\'");
+						if(asSQLInsert) {
 							writer.append(',');
 							if( fWithNewlines )
-								writer.newLine();
+								writer.append('\n');
+							writer.append("("+node.id+",\""+name+"\")");
+						} else {
+							writer.append(node.id+"|\""+name+"\"\n");
 						}
-						name = hook.replace("\"", "\\\"").replace("'", "\\'");
-						writer.append("("+node.id+",\""+name+"\")");
-						fFirst = false;
 					}
 			} else {
 				// Save any exclusions
 				if( node.exclset != null )
 					for( String excl : node.exclset ) {
-						if( !fFirst ) {
+						String name = excl.replace("\"", "\\\"").replace("'", "\\'");
+						if(!fFirst && asSQLInsert) {
 							writer.append(',');
 							if( fWithNewlines )
-								writer.newLine();
+								writer.append('\n');
 						}
-						String name = excl.replace("\"", "\\\"").replace("'", "\\'");
-						writer.append("("+node.id+",\""+name+"\")");
+						if(asSQLInsert) {
+							writer.append("("+node.id+",\""+name+"\")");
+						} else {
+							writer.append(node.id+"|\""+name+"\"\n");
+						}
 						fFirst = false;
 					}
 			}
@@ -140,7 +153,7 @@ public class SQLUtils {
 				for( TaxoNode child : node.children ) {
 					// Recurse for children. Note cannot be roots, nor first.
 					fFirst = writeHookOrExclusionSQL( child, fSaveHooks, writer,
-																	false, fFirst, fWithNewlines );
+												false, fFirst, asSQLInsert, fWithNewlines );
 				}
 		} catch( IOException e ) {
 			String tmp = "SQLUtils.dumpHooksOrExclusionsSQLForVocabNode: Exception writing to output file."
@@ -160,35 +173,47 @@ public class SQLUtils {
 	 * @param fWithNewlines set to TRUE to add newlines for easier reading
 	 */
 	public static void writeFacetsSQL( java.util.ArrayList<Facet> facetList,
-					String dbName, BufferedWriter writer, boolean fWithNewlines ) {
+					String dbName, BufferedWriter writer,
+					boolean asSQLInsert, boolean fWithNewlines ) {
 		try {
-			// Set up the correct DB
-			writer.append("USE "+dbName+";");
-			writer.newLine();
-			writer.append("truncate facets;");
-			writer.newLine();
-			// First, let's populate the facets table
-			writer.append("INSERT INTO facets( id, name, display_name, description, notes ) VALUES" );
+			if(asSQLInsert) {
+				writer.append("truncate facets;\n");
+				writer.append(
+				 "INSERT INTO facets( id, name, display_name, description, notes ) VALUES\n" );
+			} else {
+				writer.append("To load this file, use an sql command: \n");
+				writer.append("SET NAMES utf8;\n");
+				writer.append("LOAD DATA LOCAL INFILE '{filename}' INTO TABLE facets CHARACTER SET utf8\n" );
+				writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES\n" );
+				writer.append("(id, name, display_name, description, notes);\n" );
+			}
 			boolean fFirst = true;
 			for( Facet facet : facetList ) {
 				if( fFirst )
 					fFirst = false;
-				else
+				else if(asSQLInsert) {
 					writer.append(',');
-				if(fWithNewlines)
-					writer.newLine();
+					if(fWithNewlines)
+						writer.append('\n');
+				}
 				String name = (facet.name==null||facet.name.isEmpty())?"":
 								facet.name.replace("\"", "\\\"").replace("'", "\\'");
 				String dname = (facet.displayName==null||facet.displayName.isEmpty())?"":
 								facet.displayName.replace("\"", "\\\"").replace("'", "\\'");
 				String desc = (facet.description==null||facet.description.isEmpty())?"":
-								facet.description.replace("\"", "\\\"").replace("'", "\\'");
+								facet.description.replace("\"", "\\\"").replace("'", "\\'").replaceAll("[\\s]+", " ");
 				String notes = (facet.notes==null||facet.notes.isEmpty())?"":
-								facet.notes.replace("\"", "\\\"").replace("'", "\\'");
-				writer.append("("+facet.id+",\""+name+"\",\""+dname+"\", \'"+desc+"\', \'" +notes + "\')");
+								facet.notes.replace("\"", "\\\"").replace("'", "\\'").replaceAll("[\\s]+", " ");
+				if(asSQLInsert) {
+					writer.append("("+facet.id+",\""+name+"\",\""+dname+"\", \""
+													+desc+"\", \"" +notes + "\")");
+				} else {
+					writer.append(facet.id+"|\""+name+"\"|\""+dname+"\"|\""
+													+desc+"\"|\"" +notes + "\"\n");
+				}
 			}
-			writer.append(';');
-			writer.newLine();
+			if(asSQLInsert)
+				writer.append(";\n");
 		} catch( IOException e ) {
 			String tmp = "SQLUtils.writeFacetsAsSQL: Exception writing to output file."
 				+"\n"+e.toString();
@@ -200,30 +225,38 @@ public class SQLUtils {
 
 	/**
 	 * Generate the boilerplate before writing facet information to SQL file
-	 * Assumes that appending to facet info, so does not generate a "USE db" statement.
 	 * @param facetList The list of facets to write
 	 * @param dbName Name of the database to use
 	 * @param writer SQL output file
 	 * @param fWithNewlines set to TRUE to add newlines for easier reading
 	 */
 	public static void writeCategoriesSQL( java.util.ArrayList<Facet> facetList,
-			String dbName, BufferedWriter writer, boolean fWithNewlines ) {
+			String dbName, BufferedWriter writer,
+			boolean asSQLInsert, boolean fWithNewlines ) {
 		try {
-			writer.append("truncate categories;");
-			writer.newLine();
-			// Now, let's populate the categories table
-			writer.append("INSERT INTO categories(id, parent_id, name, display_name, facet_id, select_mode, always_inferred) VALUES" );
-			writer.newLine();
+			// Write out the header
+			if(asSQLInsert) {
+				writer.append("truncate categories;\n");
+				writer.append(
+				"INSERT INTO categories(id, parent_id, name, display_name, facet_id, select_mode, always_inferred) VALUES\n" );
+			} else {
+				writer.append("To load this file, use an sql command: \n");
+				writer.append("SET NAMES utf8;\n");
+				writer.append("LOAD DATA LOCAL INFILE '{filename}' INTO TABLE categories CHARACTER SET utf8\n" );
+				writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES\n" );
+				writer.append("(id, parent_id, name, display_name, facet_id, select_mode, always_inferred);\n" );
+			}
 			boolean fFirst = true;
 			for( Facet facet : facetList ) {
 				for( TaxoNode child : facet.children ) {
 					// for each child of the facet, dump. Mark as a root in facet.
-					writeCategorySQL( child, writer, true, fFirst, fWithNewlines );
+					writeCategorySQL( child, writer, true, fFirst, asSQLInsert, fWithNewlines );
 					fFirst = false;
 				}
 			}
-			writer.append(';');
-			writer.newLine();
+			if(asSQLInsert) {
+				writer.append(";\n");
+			}
 		} catch( IOException e ) {
 			String tmp = "SQLUtils.writeCategoriesAsSQL: Exception writing to output file."
 				+"\n"+e.toString();
@@ -239,23 +272,31 @@ public class SQLUtils {
 	// (i.e., the first level nodes, all will have non-null parents).
 	// We pass in a flag to simplify this (rather than checking if parent->parent is null).
 	// What about token-based pattern model?
-	public static void writeCategorySQL( TaxoNode node, BufferedWriter writer,
-			boolean fRootNode, boolean fFirst, boolean fWithNewlines ) {
+	private static void writeCategorySQL( TaxoNode node, BufferedWriter writer,
+			boolean fRootNode, boolean fFirst,
+			boolean asSQLInsert, boolean fWithNewlines ) {
 		try {
 			if( !fFirst ) {
-				writer.append(',');
-				if( fWithNewlines )
-					writer.newLine();
+				if(asSQLInsert) {
+					writer.append(',');
+					if( fWithNewlines )
+						writer.append('\n');
+				}
 			}
 			String parentID = (fRootNode || node.parent == null)?"null":Integer.toString(node.parent.id);
-			String select = (node.selectSingle)? "'single'":"'multiple'";
+			String select = (node.selectSingle)? "single":"multiple";
 			int infer = (node.inferredByChildren)? 1:0;
-			writer.append("("+node.id+","+parentID+",\""+node.name+"\",\""+node.displayName+"\","
-							+node.facetid+","+select+","+infer+")");
+			if(asSQLInsert) {
+				writer.append("("+node.id+","+parentID+",\""+node.name+"\",\""+node.displayName+"\","
+						+node.facetid+",\""+select+"\","+infer+")");
+			} else {
+				writer.append(node.id+"|"+parentID+"|\""+node.name+"\"|\""+node.displayName+"\"|"
+						+node.facetid+"|\""+select+"\"|"+infer+'\n');
+			}
 			if( node.children != null )
 				for( TaxoNode child : node.children ) {
 					// Recurse for children. Note cannot be roots, nor first.
-					writeCategorySQL( child, writer, false, false, fWithNewlines );
+					writeCategorySQL( child, writer, false, false, asSQLInsert, fWithNewlines );
 				}
 		} catch( IOException e ) {
 			String tmp = "SQLUtils.dumpSQLForVocabNode: Exception writing to output file."
@@ -336,8 +377,8 @@ public class SQLUtils {
 					}
 					// Otherwise, now we output the info for the last Line, and then transfer
 					// the next line to Last line and loop
-					writeObjectSQL( id, asInsertFile, objStrings, objWriter,
-										fFirst, fWithNewlines, imagePathsReader );
+					writeObjectSQL( id, objStrings, objWriter,
+									fFirst, asInsertFile, fWithNewlines, imagePathsReader );
 					fFirst = false;
 					nObjsProcessedFile++;
 					nObjsProcessedTotal++;
@@ -376,9 +417,10 @@ public class SQLUtils {
 		}
 	}
 
-	public static void writeObjectSQL( int id, boolean asInsertFile,
+	private static void writeObjectSQL( int id,
 			ArrayList<String> line, BufferedWriter writer,
-			boolean fFirst, boolean fWithNewlines, ImagePathsReader imagePathsReader ) {
+			boolean fFirst, boolean asInsertFile, boolean fWithNewlines,
+			ImagePathsReader imagePathsReader ) {
 		try {
 			int objNumCol = DumpColumnConfigInfo.getMuseumIdColumnIndex();
 			int objNameCol = DumpColumnConfigInfo.getNameColumnIndex();
@@ -481,7 +523,7 @@ public class SQLUtils {
 
 	public static int writeObjCatsSQL( int id,
 			HashMap<TaxoNode, Float> matchedCats, HashMap<TaxoNode, Float> inferredCats,
-			BufferedWriter writer, boolean fFirst, boolean fWithNewlines, boolean fDumpAsSQLInsert ) {
+			BufferedWriter writer, boolean fFirst, boolean fDumpAsSQLInsert, boolean fWithNewlines ) {
 
 		try {
 			int nCatsMatched = 0;
