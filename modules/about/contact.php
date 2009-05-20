@@ -31,6 +31,12 @@ if(isset($_POST['submit'])){
 		$subj = cleanFormData($_POST['subject']);
 		$plaintextmsg = cleanFormData($_POST['message']);
 		$htmlmsg = cleanFormData($_POST['message']);
+		if(isset($_POST['objid']) and strlen($_POST['objid']) > 0) {
+			$objID = cleanFormData($_POST['objid']);
+			$htmlmsg .= '<br /><br /><hr>Feedback on server: <a href="'
+								.$CFG->wwwroot.'">'.$_SERVER['SERVER_NAME'].'</a> for <a href="'
+				.$CFG->wwwroot.'/object/'.$objID.'">Object: '.$objID.'</a>';
+		}
 		$emailFrom = $_POST['email'];
 		$nameFrom = cleanFormData($_POST['name']);
 
