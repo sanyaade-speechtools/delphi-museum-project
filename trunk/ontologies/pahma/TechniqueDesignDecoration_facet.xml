@@ -68,7 +68,6 @@
 	
 	Look for shape-motif for geom. Need to mine out of text as n-grams. Max n?
 	-->
-
 	<heading id="DesignOrDecoration" title="Design or Decoration" noMatch="true">
 		<heading id="Abstract" title="Abstract"/>
 		<heading id="Amorphous" title="Amorphous">
@@ -587,6 +586,10 @@
 			<synonym value="Linear Decoration"/>
 			<synonym value="Linear Pattern"/>
 			<!-- This is where we need  a NEAR operator (or at least an AND), to catch things like "linear indented pattern" -->
+			<heading id="BrickPattern" title="Brick Pattern">
+				<synonym value="Brick Patterns"/>
+				<synonym value="Brick Patterned"/>
+			</heading>
 			<heading id="Checkered" title="Checkered">
 				<synonym value="Checkering"/>
 			</heading>

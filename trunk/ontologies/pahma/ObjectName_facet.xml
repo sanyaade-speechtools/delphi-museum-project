@@ -994,15 +994,6 @@
 			<excl value="vertebral arch"/> <!-- Bony feature on vertebrae -->
 			<excl value="zygomatic arch"/> <!-- Bony feature on skull -->
 		</heading>
-		<heading id="ArchitecturalCone" title="Architectural Cone">
-			<synonym value="Architectural Cones"/>
-		</heading>
-		<heading id="Architrave" title="Architrave">
-			<synonym value="Architraves"/>
-		</heading>
-		<heading id="Baluster" title="Baluster">
-			<synonym value="Balusters"/>
-		</heading>
 		<heading id="Balustrade" title="Balustrade">
 			<synonym value="Balustrades"/>
 		</heading>
@@ -1016,6 +1007,9 @@
 		</heading>
 		<heading id="Brick" title="Brick">
 			<synonym value="Bricks"/>
+			<excl value="Brick Pattern"/>
+			<excl value="Brick Patterns"/>
+			<excl value="Brick Patterned"/>
 		</heading>
 		<heading id="BuildingsStructures" title="Buildings &amp; Structures" noMatch="true">
 			<synonym value="Building"/>
@@ -1053,6 +1047,28 @@
 				<synonym value="Houses"/>
 				<excl value="Frontal House"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
+			</heading>
+			<heading id="HutHouse" title="Hut">
+				<synonym value="Huts"/>
+				<heading id="BarkSlabHut" title="Bark Slab Hut">
+					<synonym value="Bark Hut"/>
+					<synonym value="Bark Huts"/>
+					<synonym value="Bark Slab Huts"/>
+					<synonym value="Slab Hut"/>
+					<synonym value="Slab Huts"/>
+				</heading>
+				<heading id="BrushHut" title="Brush Hut">
+					<synonym value="Brush Huts"/>
+				</heading>
+				<heading id="FishingHut" title="Fishing Hut">
+					<synonym value="Fishing Huts"/>
+				</heading>
+				<heading id="LogHut" title="Log Hut">
+					<synonym value="Log Huts"/>
+				</heading>
+				<heading id="StrawHut" title="Straw Hut">
+					<synonym value="Straw Huts"/>
+				</heading>
 			</heading>
 			<heading id="Roundhouse" title="Roundhouse">
 				<synonym value="Roundhouses"/>
@@ -1145,9 +1161,6 @@
 				<synonym value="Door-Socket"/>
 				<synonym value="Door-Sockets"/>
 			</heading>
-		</heading>
-		<heading id="Duct" title="Duct">
-			<synonym value="Ducts"/>
 		</heading>
 		<heading id="Epicranitis" title="Epicranitis">
 			<synonym value="Epicranites"/>
