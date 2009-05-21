@@ -974,13 +974,25 @@
 		<synonym value="Architectural Element"/>
 		<synonym value="Architecture"/>
 		<synonym value="Architectural"/>
-		<heading id="Arcade" title="Arcade">
-			<synonym value="Arcades"/>
-		</heading>
 		<heading id="Arch" title="Arch">
 			<synonym value="Arches"/>
-			<synonym value="Archs"/>
-			<!-- Misspelling -->
+			<synonym value="Archs"/> <!-- Misspelling -->
+			<excl value="amer arch eth"/> <!-- Journal: American Archaeology and Ethnography -->
+			<excl value="arch acc"/> <!-- Archaeological accession -->
+			<excl value="arch added in pencil"/> <!-- reference to a note that this is an archaeological object -->
+			<excl value="arch arrow"/> <!-- Archery arrow -->
+			<excl value="arch field record"/> <!-- Archaeological field record -->
+			<excl value="arch handle"/> <!-- a kind of jar handle -->
+			<excl value="arch handles"/> <!-- ibid. -->
+			<excl value="arch written in pencil"/> <!-- reference to a note that this is an archaeological object -->
+			<excl value="calif arch survey"/> <!-- California Archaeological Survey -->
+			<excl value="historic arch specimens"/> <!-- Historical archaeology -->
+			<excl value="novelty imitating arch. figurine"/> <!-- novelty imitating archaeological figurine -->
+			<excl value="possibly arch."/> <!-- Object is possibly archaeological -->
+			<excl value="prob arch"/> <!-- Object is probably archaeological -->
+			<excl value="of the arch of some carnivore"/> <!-- refers to the dental arcade/arch -->
+			<excl value="vertebral arch"/> <!-- Bony feature on vertebrae -->
+			<excl value="zygomatic arch"/> <!-- Bony feature on skull -->
 		</heading>
 		<heading id="ArchitecturalCone" title="Architectural Cone">
 			<synonym value="Architectural Cones"/>
@@ -996,6 +1008,11 @@
 		</heading>
 		<heading id="Beam" title="Beam">
 			<synonym value="Beams"/>
+			<excl value="Balance Beams"/>
+			<excl value="Balance Beams"/>
+			<excl value="Beam Balance"/>
+			<excl value="Scale Beam"/>
+			<excl value="Scale Beams"/>
 		</heading>
 		<heading id="Brick" title="Brick">
 			<synonym value="Bricks"/>
@@ -1097,28 +1114,37 @@
 			<heading id="Knocker" title="Knocker">
 				<synonym value="Knockers"/>
 			</heading>
-			<heading id="Doorhinge" title="Door Hinge">
-				<!-- Be Careful With Shell/Bivalve Hinges, Etc. -->
+			<heading id="DoorFrame" title="Door Frame">
+				<synonym value="Door Frames"/>
+				<synonym value="Door-Frame"/>
+				<synonym value="Door-Frames"/>
+			</heading>
+			<heading id="DoorHinge" title="Door Hinge">
 				<synonym value="Door Hinges"/>
-				<heading id="Doorhingenail" title="Door Hinge Nail">
+				<heading id="DoorHingeNail" title="Door Hinge Nail">
 					<synonym value="Door Hinge Nails"/>
 				</heading>
 			</heading>
-		</heading>
-		<heading id="DoorFrame" title="Door-Frame">
-			<synonym value="Door-Frames"/>
-		</heading>
-		<heading id="DoorJamb" title="Door-Jamb">
-			<synonym value="Door-Jambs"/>
-		</heading>
-		<heading id="DoorShoe" title="Door-Shoe">
-			<synonym value="Door-Shoes"/>
-		</heading>
-		<heading id="DoorSill" title="Door-Sill">
-			<synonym value="Door-Sills"/>
-		</heading>
-		<heading id="DoorSocket" title="Door-Socket">
-			<synonym value="Door-Sockets"/>
+			<heading id="DoorJamb" title="Door Jamb">
+				<synonym value="Door Jambs"/>
+				<synonym value="Door-Jamb"/>
+				<synonym value="Door-Jambs"/>
+			</heading>
+			<heading id="DoorShoe" title="Door Shoe">
+				<synonym value="Door Shoes"/>
+				<synonym value="Door-Shoe"/>
+				<synonym value="Door-Shoes"/>
+			</heading>
+			<heading id="DoorSill" title="Door Sill">
+				<synonym value="Door Sills"/>
+				<synonym value="Door-Sill"/>
+				<synonym value="Door-Sills"/>
+			</heading>
+			<heading id="DoorSocket" title="Door Socket">
+				<synonym value="Door Sockets"/>
+				<synonym value="Door-Socket"/>
+				<synonym value="Door-Sockets"/>
+			</heading>
 		</heading>
 		<heading id="Duct" title="Duct">
 			<synonym value="Ducts"/>
@@ -1234,6 +1260,11 @@
 			<synonym value="Revetments"/>
 			<synonym value="Revêtment"/>
 			<synonym value="Revêtments"/>
+		</heading>
+		<heading id="RidgePole" title="Ridge Pole">
+			<synonym value="Ridge Poles"/>
+			<synonym value="Ridge-Pole"/>
+			<synonym value="Ridge-Poles"/>
 		</heading>
 		<heading id="Roof" title="Roof">
 			<synonym value="Roofs"/>
@@ -3062,11 +3093,6 @@
 			<synonym value="Prongs"/>
 		</heading>
 		<heading id="RickshawPanelPart" title="Rickshaw Panel" noMatch="true"/>
-		<heading id="RidgePolePart" title="Ridge Pole">
-			<synonym value="Ridge Poles"/>
-			<synonym value="Ridge-Pole"/>
-			<synonym value="Ridge-Poles"/>
-		</heading>
 		<heading id="ShaftPart" title="Shaft">
 			<synonym value="Shafts"/>
 		</heading>
@@ -11262,6 +11288,12 @@
 				</heading>
 				<heading id="BalanceMeasure" title="Balance">
 					<synonym value="Balances"/> <!-- Disambiguate -->
+					<heading id="BalanceBeam" title="Balance Beam">
+						<synonym value="Balance Beams"/>
+						<synonym value="Beam Balance"/>
+						<synonym value="Scale Beam"/>
+						<synonym value="Scale Beams"/>
+					</heading>
 				</heading>
 				<heading id="BarometerMeasure" title="Barometer">
 					<synonym value="Barometers"/>
