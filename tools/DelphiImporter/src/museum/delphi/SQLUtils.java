@@ -433,7 +433,8 @@ public class SQLUtils {
 			if( imagePathsReader != null )
 				imgInfo = imagePathsReader.GetInfoForID(id);
 			// Gather all the description columns together and append
-			String description = "";
+			// Allow plenty of space to avoid re-allocs
+			StringBuilder description = new StringBuilder(500);
 			ArrayList<Integer> descrCols = DumpColumnConfigInfo.getDescriptionColumns();
 			boolean fFirstDescLine = true;
 			for( int i=0; i<descrCols.size(); i++ ) {
@@ -450,11 +451,27 @@ public class SQLUtils {
 				// newDescLine = newDescLine.replaceAll("\\(['\"]\\)", "\\\1");
 				newDescLine = newDescLine.replace("\"", "\\\"");
 				newDescLine = newDescLine.replace("'", "\\'");
-				if( fFirstDescLine )
+				if( fFirstDescLine ) {
 					fFirstDescLine = false;
-				else
-					description += "<br />";	// Join with line breaks between
-				description += newDescLine;
+					description.append(newDescLine);
+				}
+				else {
+					// Check for duplicates
+					// We might consider case here, but most fo the duplications are actually
+					// straight copies, so we will ignore that for efficiency.
+					// In addition, it could be argued that finding "yucatan" in a string
+					// and dropping the single token "Yucatan" is a bad idea.
+					// We'll also try the looser contains() model than a simple token
+					// duplication, since the semantic index should pick up most concepts
+					// anyway, and duplicating odd concepts from text is still ugly in the UI.
+					if(description.indexOf(newDescLine)<0) { // not found, append
+						description.append("<br />");	// Join with HTML line breaks between
+						description.append(newDescLine);
+					} else {
+						debug(2, "writeObjSql["+id+"] Discarding duplicate desc token: ["
+								+newDescLine+"]");
+					}
+				}
 			}
 			// Now do the hiddenNotes column
 			String hiddenNotes = "";
