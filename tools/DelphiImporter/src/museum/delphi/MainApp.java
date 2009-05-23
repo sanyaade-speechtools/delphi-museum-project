@@ -996,10 +996,11 @@ public class MainApp {
 			        DBMetaDataReader dbmdRdr = mdcfgMgr.GetDBSourceInfo();
 			        if(dbmdRdr != null)
 			        	userProjInfo.dbMetaDataReader = dbmdRdr;
-			        ImagePathsReader dbImageRdr = mdcfgMgr.GetDBImageInfo();
-			        if(dbImageRdr != null)
-			        	userProjInfo.imagePathsReader = dbImageRdr;
 				}
+				// TODO This should move to a separate config source
+		        ImagePathsReader dbImageRdr = mdcfgMgr.GetDBImageInfo();
+		        if(dbImageRdr != null)
+		        	userProjInfo.imagePathsReader = dbImageRdr;
 			}
 			if(( filename = userProjInfo.getMetadataPath()) != null )
 				loadMetadata(filename);
@@ -1463,48 +1464,12 @@ public class MainApp {
 			saveSQLMediaInsertFileMenuItem.setText("Save SQL Media Insert File...");
 			saveSQLMediaInsertFileMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					saveSQLMediaInsertFile();
+					saveMediaPathsSQL(true);
 				}
 			});
 		}
 		saveSQLMediaInsertFileMenuItem.setEnabled(false); // PROJ REWORK
 		return saveSQLMediaInsertFileMenuItem;
-	}
-
-	private void saveSQLMediaInsertFile() {
-		if( userProjInfo.imagePathsReader == null ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
-					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
-			return;
-		}
-		debug(1,"Saving SQL Media Insert File...");
-		try {
-			String outFileName = userProjInfo.imagePathsReader.getInFile();
-			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
-			if( lastSlash >= 0 )
-				outFileName = outFileName.substring(0, lastSlash+1) + "mediaInsert.sql";
-			else
-				outFileName = "mediaInsert.sql";
-    		String filename = getSafeOutfile("Save SQL Media Insert file...", outFileName,sqlFilter);
-		    if(filename != null) {
-	    		int nImgs = userProjInfo.imagePathsReader.getNumObjs();
-	    		int nWithDims = userProjInfo.imagePathsReader.getNImagesWithDims();
-	    		boolean omitMediaWithNoDims = false;
-	    		if( nWithDims < nImgs ) {
-	    			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
-	    					"Omit Images with no dimension info (probably invalid paths)?"
-	    					+"\nClick YES to omit; click NO to include all media references.");
-	    			if( confirm == JOptionPane.YES_OPTION )
-	    				omitMediaWithNoDims = true;
-	    		}
-		        setStatus("Saving SQL Media Load File to file: " + filename);
-		        userProjInfo.imagePathsReader.writeSQLMediaTableInsertFile(filename, omitMediaWithNoDims);
-		    }
-		} catch( RuntimeException e ) {
-			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Saving SQL Media Insert File: ", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-		}
 	}
 
 	private JMenuItem getSaveSQLMediaLoadFileMenuItem() {
@@ -1513,7 +1478,7 @@ public class MainApp {
 			saveSQLMediaLoadFileMenuItem.setText("Save SQL Media Load File...");
 			saveSQLMediaLoadFileMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					saveSQLMediaLoadFile();
+					saveMediaPathsSQL(false);
 				}
 			});
 		}
@@ -1521,26 +1486,44 @@ public class MainApp {
 		return saveSQLMediaLoadFileMenuItem;
 	}
 
-	private void saveSQLMediaLoadFile() {
-		if( userProjInfo.imagePathsReader == null ) {
+	private void saveMediaPathsSQL( boolean asSQLInsert ) {
+		ImagePathsReader reader = userProjInfo.imagePathsReader;
+		if( reader == null ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
 					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
-		debug(1,"Saving SQL Media Load File...");
+		if( !reader.ready() && !reader.prepareInfo()) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info could not be loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		if(!reader.orientationsComputed()) {
+			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
+					"Image Orientations have not yet been computed. Proceed anyway?"
+					+"\nClick YES to proceed; click NO to cancel.");
+			if( confirm != JOptionPane.YES_OPTION )
+				return;
+		}
+		String variant = asSQLInsert?"Insert":"Load";
+		debug(1,"Saving SQL Media "+variant+" File...");
 		try {
-			String outFileName = userProjInfo.getImagePathsPath();
-			if(outFileName == null)
-				outFileName = userProjInfo.getMetadataConfigPath();
-			int lastSlash = outFileName.lastIndexOf(File.separatorChar);
-			if( lastSlash >= 0 )
-				outFileName = outFileName.substring(0, lastSlash+1) + "mediaLoadFile.sql";
-			else
-				outFileName = "mediaLoadFile.sql";
-    		String filename = getSafeOutfile("Save SQL Media load-file...", outFileName,sqlFilter);
+			String outFileName = userProjInfo.mediaSQLLoadfilePath;
+			if(outFileName == null ) {
+				outFileName = reader.getInFile();
+				if(outFileName == null )
+					outFileName = userProjInfo.getImagePathsPath();
+				int lastSlash = (outFileName==null)?-1:outFileName.lastIndexOf(File.separatorChar);
+				if( lastSlash >= 0 )
+					outFileName = outFileName.substring(0, lastSlash+1) + "media"+variant+".txt";
+				else
+					outFileName = "media"+variant+".txt";
+			}
+    		String filename = getSafeOutfile("Save SQL Media "+variant+" file...", outFileName,txtFilter);
 		    if(filename != null) {
-	    		int nImgs = userProjInfo.imagePathsReader.getNumObjs();
-	    		int nWithDims = userProjInfo.imagePathsReader.getNImagesWithDims();
+		    	// This is where we should call prepare()
+	    		int nImgs = reader.getNumObjs();
+	    		int nWithDims = reader.getNImagesWithDims();
 	    		boolean omitMediaWithNoDims = false;
 	    		if( nWithDims < nImgs ) {
 	    			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
@@ -1549,12 +1532,17 @@ public class MainApp {
 	    			if( confirm == JOptionPane.YES_OPTION )
 	    				omitMediaWithNoDims = true;
 	    		}
-		        setStatus("Saving SQL Media Load File to file: " + filename);
-		        userProjInfo.imagePathsReader.writeSQLMediaTableLoadFile(filename, omitMediaWithNoDims);
+		        setStatus("Saving SQL Media "+variant+" File to file: " + filename);
+		        if(asSQLInsert)
+		        	reader.writeSQLMediaTableInsertFile(filename, omitMediaWithNoDims);
+		        else
+			        reader.writeSQLMediaTableLoadFile(filename, omitMediaWithNoDims);
+		        // Keep track of where we put this.
+		        userProjInfo.mediaSQLLoadfilePath = filename;
 		    }
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Saving SQL Media Load File: ", JOptionPane.ERROR_MESSAGE);
+											"Saving SQL Media Insert File: ", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
 	}
@@ -1844,13 +1832,21 @@ public class MainApp {
 	private boolean loadImagePaths( String filename ) {
 		boolean opened = false;
 		if(userProjInfo.imagePathsReader != null) {
-			throw new RuntimeException("loadImagePaths: Already loaded image paths from database!");
+			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
+					"Create a new ImagePaths reader, discarding the existing one?"
+					+"\nClick YES to rebuild; click NO to cancel.");
+			if( confirm != JOptionPane.YES_OPTION )
+				return true;
 		}
 		debug(1,"Loading Image paths...");
 		try {
 	        debug(1,"Scanning image paths from file: " + filename);
 	        setStatus("Scanning image paths from file: " + filename);
 	        userProjInfo.imagePathsReader = new ImagePathsReader(filename);
+			if( !userProjInfo.imagePathsReader.ready()
+					&& !userProjInfo.imagePathsReader.prepareInfo()) {
+				throw new RuntimeException("Image Path info could not be loaded.");
+			}
 	    	int nObjs = userProjInfo.imagePathsReader.getNumObjs();
 	        setStatus("Found: " + nObjs + " objects with images.");
 	        debug(2,"Found: " + nObjs + " objects with images.");
@@ -1870,6 +1866,12 @@ public class MainApp {
 		if( userProjInfo.imagePathsReader == null ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
 					"Image Path info has not yet been loaded.", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		if( !userProjInfo.imagePathsReader.ready()
+				&& !userProjInfo.imagePathsReader.prepareInfo()) {
+			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+					"Image Path info could not be loaded.", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		// Let the user point to the base path for the images.
@@ -1921,13 +1923,35 @@ public class MainApp {
 			}
     		String filename = getSafeOutfile("Save Object Metadata to files", outFileName, txtFilter);
     		if( filename != null ) {
+    			ImagePathsReader ipReader = userProjInfo.imagePathsReader;
+    			if(ipReader != null) {
+	    			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
+	    					"Include image paths in object SQL?"
+	    					+"\n(This is not recommended)"
+	    					+"\nClick YES to include image paths; click NO to omit (recommended).");
+	    			if( confirm != JOptionPane.YES_OPTION )
+	    				ipReader = null;
+	    			else if( !ipReader.ready()
+	    					&& !ipReader.prepareInfo()) {
+	    				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n",
+	    						"Image Path info could not be loaded.", JOptionPane.ERROR_MESSAGE);
+		    			confirm = JOptionPane.showConfirmDialog(getJFrame(),
+		    					"Image Path info could not be loaded."
+		    					+"\n Proceed without image path info?"
+		    					+"\nClick YES to proceed; click NO to CANCEL Object Metadata SQL save.");
+		    			if( confirm != JOptionPane.YES_OPTION )
+		    				return;
+		    			else
+		    				ipReader = null;
+	    			}
+    			}
 				SQLUtils.writeObjectsSQL( filename, SQLUtils.WRITE_AS_LOADFILE,
-							userProjInfo.metaDataReader, userProjInfo.imagePathsReader);
+											userProjInfo.metaDataReader, ipReader);
 			}
     		userProjInfo.objectsSQLLoadfilePath = filename;
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
-											"Save Vocabulary File Error", JOptionPane.ERROR_MESSAGE);
+											"Save Object Metadata SQL Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
 	}
@@ -2433,6 +2457,7 @@ public class MainApp {
 	        DBMetaDataReader dbmdRdr = mdcfgMgr.GetDBSourceInfo();
 	        if(dbmdRdr != null)
 	        	userProjInfo.dbMetaDataReader = dbmdRdr;
+	        // TODO This should not be here - move to separare config.
 	        ImagePathsReader dbImageRdr = mdcfgMgr.GetDBImageInfo();
 	        if(dbImageRdr != null)
 	        	userProjInfo.imagePathsReader = dbImageRdr;
