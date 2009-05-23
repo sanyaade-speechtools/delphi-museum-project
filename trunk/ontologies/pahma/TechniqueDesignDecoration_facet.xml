@@ -963,9 +963,9 @@
 			<!-- Payson ware -->
 		</heading>
 	</heading>
-	<heading id="TechniqueOrManufacture" title="Technique or Manufacture">
+	<heading id="TechniqueOrManufacture" title="Technique or Manufacture" noMatch="true">
 		<!-- Appliqué, unless beads aren't sewn to something but stand on their own -->
-		<heading id="BeadedSequinedEtc" title="Beaded, Sequined, etc.">
+		<heading id="BeadedSequinedEtc" title="Beaded, Sequined, etc." noMatch="true">
 			<heading id="Beaded" title="Beaded"/>
 			<heading id="Quillwork" title="Quillwork"/>
 			<heading id="Sequined" title="Sequined"/>
@@ -1067,7 +1067,7 @@
 			<heading id="Stitched" title="Stitched"/>
 		</heading>
 		<heading id="Woven" title="Woven">
-			<heading id="Wovenbasketry" title="Woven (basketry)">
+			<heading id="Wovenbasketry" title="Woven (basketry)" noMatch="true">
 				<synonym value="weave"/>
 				<synonym value="weaving"/>
 				<synonym value="plainweave"/>
@@ -1076,7 +1076,7 @@
 				<synonym value="lattice-weave"/>
 				<synonym value="plaited"/>
 			</heading>
-			<heading id="Woventextiles" title="Woven (textiles)">
+			<heading id="Woventextiles" title="Woven (textiles)" noMatch="true">
 				<synonym value="loomed"/> <!-- Be sure this doesn't preclude more specific matches -->
 				<synonym value="loom made"/>
 				<synonym value="loom-made"/>
@@ -1117,6 +1117,8 @@
 					<synonym value="Treddle Loom"/>
 					<synonym value="Treadle-loomed"/>
 					<synonym value="Treadle Loom Woven"/>
+					<synonym value="Treadle"/>
+					<synonym value="Treadles"/>
 				</heading>
 			</heading>
 		</heading>
