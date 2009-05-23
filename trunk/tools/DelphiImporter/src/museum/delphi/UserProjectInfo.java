@@ -104,11 +104,18 @@ public class UserProjectInfo implements Serializable {
 
 	public void copyFrom( UserProjectInfo upi ) {
 		// copy all the paths
-		this.vocabTermsPath = upi.vocabTermsPath;
-		this.ontologyPath = upi.ontologyPath;
-		this.metadataConfigPath = upi.metadataConfigPath;
-		this.metadataPath = upi.metadataPath;
-		this.imagePathsPath = upi.imagePathsPath;
+		this.vocabTermsPath				= upi.vocabTermsPath;
+		this.ontologyPath				= upi.ontologyPath;
+		this.metadataConfigPath			= upi.metadataConfigPath;
+		this.metadataPath				= upi.metadataPath;
+		this.imagePathsPath				= upi.imagePathsPath;
+		this.objectsSQLLoadfilePath		= upi.objectsSQLLoadfilePath;
+		this.facetsSQLLoadfilePath		= upi.facetsSQLLoadfilePath;
+		this.categoriesSQLLoadfilePath	= upi.categoriesSQLLoadfilePath;
+		this.hooksSQLLoadfilePath		= upi.hooksSQLLoadfilePath;
+		this.exclusionsSQLLoadfilePath	= upi.exclusionsSQLLoadfilePath;
+		this.obj_catsSQLLoadfilePath	= upi.obj_catsSQLLoadfilePath;
+		this.mediaSQLLoadfilePath		= upi.mediaSQLLoadfilePath;
 		// Clear all the transients - force a reload when set paths
 		vocabTermsReader = null;
 		vocabHashTree = null;

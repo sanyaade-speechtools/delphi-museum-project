@@ -326,6 +326,10 @@ public class SQLUtils {
     	int nObjsProcessedTotal = 0;
     	int nObjsSkippedTotal = 0;
     	int nObjsPerDumpFile = 50000;
+    	if(!imagePathsReader.ready()) {
+    		imagePathsReader = null;
+    		debug(1, "SQLUtils.writeObjectsSQL: passed ImagePathsReader is not ready. Ignoring paths.");
+    	}
 		try {
 			debug(1,"Build Objects SQL...");
 			// We need ObjectID, ObjectNumber, ObjectName, Description
@@ -333,7 +337,7 @@ public class SQLUtils {
 
 	    	int iDot = filename.lastIndexOf('.');
 	    	if( iDot<=0 )
-	    		throw new RuntimeException("BuildObjectSQL: bad output filename!");
+	    		throw new RuntimeException("writeObjectsSQL: bad output filename!");
 
 	    	basefilename = filename.substring(0, iDot)+'_';
 			BufferedWriter objWriter = null;
