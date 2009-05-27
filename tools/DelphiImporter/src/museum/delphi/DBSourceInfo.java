@@ -52,7 +52,7 @@ public class DBSourceInfo {
 	private Statement sqlStatement = null;
 	private ResultSet currResults = null;
 
-	private static int _debugLevel = 2;
+	private static int _debugLevel = 1;
 
 	protected static void debug( int level, String str ) {
 		if( level <= _debugLevel )
