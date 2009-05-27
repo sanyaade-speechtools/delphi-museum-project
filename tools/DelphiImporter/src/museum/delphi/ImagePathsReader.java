@@ -72,7 +72,7 @@ public class ImagePathsReader {
 		final String myName = "ImagePathsReader.Ctor: ";
 		if(!"sqlserver".equals(dbImageInfoNode.getAttribute( "protocol" )))
 			throw new RuntimeException(
-			"ImagePathsReader: db spec currently only supports sqlserver protocol.");
+					myName+"db spec currently only supports sqlserver protocol.");
 	    String host = dbImageInfoNode.getAttribute( "host" );
 	    if( host.length() <= 0 )
 			throw new RuntimeException(myName+"No host specified.");
