@@ -97,14 +97,14 @@ function cleanFormDataAllowHTML($str) {
 		// Need to ensure we safely store entities in the DB. 
 		// But html_entity_decode misses some important ones, including
 		//  mdash, ndash.
-		$tmp .= htmlentities(allEntitiesDecode(substr($str,0,$i), ENT_QUOTES), ENT_QUOTES, "UTF-8") . $tag;
+		$tmp .= htmlentities(allEntitiesDecode(substr($str,0,$i), ENT_QUOTES, ""), ENT_QUOTES, "UTF-8") . $tag;
 		
 		// Reset the string
 		$str = substr($str,$i+$l);
 	}
 
 	// Append the end of the string
-	$str = $tmp .  htmlentities(allEntitiesDecode($str, ENT_QUOTES), ENT_QUOTES, "UTF-8");
+	$str = $tmp .  htmlentities(allEntitiesDecode($str, ENT_QUOTES, ""), ENT_QUOTES, "UTF-8");
 
 	// Squash PHP tags unconditionally
 	$str = ereg_replace("<\?","",$str);
