@@ -63,7 +63,7 @@ $(document).ready(function () {
 				$(this).ajaxSubmit({
 					url: templateVarsJSON['wwwroot'] + "/modules/sets/api_updateSetObjectDetails.php",
 					dataType: "json", 
-					success: function(responseJSON,statusText){
+					success: function(responseJSON){
 						if(responseJSON['error']){
 							alert("Error updating the set details\n"+responseJSON['msg'][0]);
 						} else if( pendingSetObjectId == currentObjectId ) {
@@ -159,21 +159,25 @@ $(document).ready(function () {
 			return false;
 		});
 		$("#viewset_setDetailsEditForm").submit(function(){
+			var url = templateVarsJSON['wwwroot'] + "/modules/sets/api_updateSetDetails.php";
 			$(this).ajaxSubmit({
-				url: templateVarsJSON['wwwroot'] + "/modules/sets/api_updateSetDetails.php",
-				dataType: "json", 
-				success: function(responseJSON,statusText){
-					if(responseJSON['error']){
+				url: url, type: "POST", dataType: "json",
+				success: function(response){
+					if(!response['success']){
 						alert("Error updating the set details");
 					} else {
-						$("#viewset_setDetailsDisplay h1.viewset_setTitle").html(responseJSON['setTitle']);
-						$("#viewset_setDetailsDisplay div.viewset_setDescription").html(responseJSON['setDesc']);
-						$("#viewset_policy").html(responseJSON['policy']);
+						$("#viewset_setDetailsDisplay h1.viewset_setTitle").html(response['setTitle']);
+						$("#viewset_setDetailsDisplay div.viewset_setDescription").html(response['setDesc']);
+						$("#viewset_policy").html(response['policy']);
 						
 						$("#viewset_setDetailsDisplay").show();
 						$("#viewset_setDetailLinks").show();
 						$("#viewset_setDetailsEdit").hide();
 					}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+					alert( "Internal error: Please notify Delphi Feedback using the feedback links."
+								+"\nError Text: "+textStatus+"\nError: "+errorThrown );
 				}
 			}); 
 			return false;
