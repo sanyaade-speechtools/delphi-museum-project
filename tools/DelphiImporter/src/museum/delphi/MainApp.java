@@ -4,50 +4,58 @@
 package museum.delphi;
 
 //import java.util.*;
-import java.util.ArrayList;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
 import java.awt.BorderLayout;
-import java.awt.Point;
 import java.awt.Color;
-import javax.swing.*;
-import javax.swing.filechooser.*;
-import javax.swing.text.DefaultEditorKit;
-
-import java.io.*;
-
 import java.awt.Dimension;
+import java.awt.Event;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.KeyStroke;
+import javax.swing.ListSelectionModel;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.text.DefaultEditorKit;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
 import org.w3c.dom.Document;
-//import org.w3c.dom.Node;
-
-import java.awt.Event;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-
-// For image resizing.
-/*
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-*/
-import javax.swing.ImageIcon;
-import java.awt.Rectangle;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
+import java.awt.ComponentOrientation;
 
 
 
@@ -59,7 +67,7 @@ public class MainApp {
 	private JFileChooser chooser = null;
 	private FileNameExtensionFilter xmlFilter = null;
 	private final String xmlWildcard = "*.xml";  //  @jve:decl-index=0:
-	private FileNameExtensionFilter sqlFilter = null;
+	//private FileNameExtensionFilter sqlFilter = null;
 	//private final String sqlWildcard = "*.sql";  //  @jve:decl-index=0:
 	private FileNameExtensionFilter txtFilter = null;
 	private final String txtWildcard = "*.txt";  //  @jve:decl-index=0:
@@ -156,10 +164,26 @@ public class MainApp {
 	private JMenuItem uploadOntoConceptsMDMenuItem = null;
 	private JMenuItem uploadObjectConceptAssocMDMenuItem = null;
 	private JMenuItem uploadImageMDMenuItem = null;
-	private JMenuItem rebuildCachedImageMDMenuItem = null;
+	private JMenuItem updateCachedImageMDMenuItem = null;
 	private JMenuItem uploadCatCardImageMDMenuItem = null;
-	private JMenuItem uploadOntoHooksAndExclMenuItem = null;
-
+	private JMenuItem updateCategoryCountsMenuItem = null;
+	private JMenuItem setupWebAppDBInfoMenuItem = null;
+	private JMenuItem enableWebAppLockoutMenuItem = null;
+	private JMenuItem releaseWebAppLockoutMenuItem = null;
+	private JDialog webAppDBInfoDialog = null;  //  @jve:decl-index=0:visual-constraint="604,530"
+	private JPanel webAppDBInfoContentPane = null;
+	private JPanel webAppDBInfoInnerPane = null;
+	private JLabel hostLabel = null;
+	private JTextField webAppDB_HostNameTextField = null;
+	private JLabel webAppDB_DBNameLabel = null;
+	private JTextField webAppDB_DBNameTextField = null;
+	private JTextField webAppDB_UserTextField = null;
+	private JLabel webAppDB_UserLabel = null;
+	private JLabel webAppDB_PasswordLabel = null;
+	private JTextField webAppDB_PasswordTextField = null;
+	private JLabel webAppDBInfoTitle1 = null;
+	private JLabel webAppDBInfoTitle2 = null;
+	private JButton webAppDBInfoOKButton = null;
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
 			StringUtils.outputDebugStr( str );
@@ -660,6 +684,9 @@ public class MainApp {
 			uploadMenu.setName("Upload");
 			uploadMenu.setText("Upload");
 			uploadMenu.setMnemonic(KeyEvent.VK_U);
+			uploadMenu.add(getSetupWebAppDBInfoMenuItem());
+			uploadMenu.add(getEnableWebAppLockoutMenuItem());
+			uploadMenu.add(getReleaseWebAppLockoutMenuItem());
 			uploadMenu.add(getUploadObjMDMenuItem());
 			uploadMenu.add(getUploadOntologyMDMenu());
 			uploadMenu.add(getUploadImageMDMenu());
@@ -679,7 +706,7 @@ public class MainApp {
 			uploadObjMDMenuItem.setMnemonic(KeyEvent.VK_O);
 			uploadObjMDMenuItem.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+					uploadObjectMetadata();
 				}
 			});
 		}
@@ -697,8 +724,8 @@ public class MainApp {
 			uploadOntologyMDMenu.setText("Ontology");
 			uploadOntologyMDMenu.setMnemonic(KeyEvent.VK_N);
 			uploadOntologyMDMenu.add(getUploadOntoConceptsMDMenuItem());
-			uploadOntologyMDMenu.add(getUploadOntoHooksAndExclMenuItem());
 			uploadOntologyMDMenu.add(getUploadObjectConceptAssocMDMenuItem());
+			uploadOntologyMDMenu.add(getUpdateCategoryCountsMenuItem());
 		}
 		return uploadOntologyMDMenu;
 	}
@@ -714,7 +741,7 @@ public class MainApp {
 			uploadImageMDMenu.setText("Images");
 			uploadImageMDMenu.setMnemonic(KeyEvent.VK_I);
 			uploadImageMDMenu.add(getUploadImageMDMenuItem());
-			uploadImageMDMenu.add(getRebuildCachedImageMDMenuItem());
+			uploadImageMDMenu.add(getUpdateCachedImageMDMenuItem());
 			uploadImageMDMenu.add(getUploadCatCardImageMDMenuItem());
 		}
 		return uploadImageMDMenu;
@@ -733,7 +760,7 @@ public class MainApp {
 			uploadOntoConceptsMDMenuItem
 					.addActionListener(new java.awt.event.ActionListener() {
 						public void actionPerformed(java.awt.event.ActionEvent e) {
-							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+							uploadOntoConceptsMetadata();
 						}
 					});
 		}
@@ -753,7 +780,7 @@ public class MainApp {
 			uploadObjectConceptAssocMDMenuItem
 					.addActionListener(new java.awt.event.ActionListener() {
 						public void actionPerformed(java.awt.event.ActionEvent e) {
-							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+							uploadObjectConceptAssociations();
 						}
 					});
 		}
@@ -768,11 +795,11 @@ public class MainApp {
 	private JMenuItem getUploadImageMDMenuItem() {
 		if (uploadImageMDMenuItem == null) {
 			uploadImageMDMenuItem = new JMenuItem();
-			uploadImageMDMenuItem.setText("Image Metadata...");
+			uploadImageMDMenuItem.setText("Upload Image Metadata...");
 			uploadImageMDMenuItem.setMnemonic(KeyEvent.VK_I);
 			uploadImageMDMenuItem.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+					uploadImageMetadata();
 				}
 			});
 		}
@@ -780,23 +807,23 @@ public class MainApp {
 	}
 
 	/**
-	 * This method initializes rebuildCachedImageMDMenuItem
+	 * This method initializes updateCachedImageMDMenuItem
 	 *
 	 * @return javax.swing.JMenuItem
 	 */
-	private JMenuItem getRebuildCachedImageMDMenuItem() {
-		if (rebuildCachedImageMDMenuItem == null) {
-			rebuildCachedImageMDMenuItem = new JMenuItem();
-			rebuildCachedImageMDMenuItem.setText("Rebuild Cached Image Paths...");
-			rebuildCachedImageMDMenuItem.setMnemonic(KeyEvent.VK_R);
-			rebuildCachedImageMDMenuItem
+	private JMenuItem getUpdateCachedImageMDMenuItem() {
+		if (updateCachedImageMDMenuItem == null) {
+			updateCachedImageMDMenuItem = new JMenuItem();
+			updateCachedImageMDMenuItem.setText("Update Cached Image Paths...");
+			updateCachedImageMDMenuItem.setMnemonic(KeyEvent.VK_H);
+			updateCachedImageMDMenuItem
 					.addActionListener(new java.awt.event.ActionListener() {
 						public void actionPerformed(java.awt.event.ActionEvent e) {
-							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+							updateObjectImageCache();
 						}
 					});
 		}
-		return rebuildCachedImageMDMenuItem;
+		return updateCachedImageMDMenuItem;
 	}
 
 	/**
@@ -807,12 +834,12 @@ public class MainApp {
 	private JMenuItem getUploadCatCardImageMDMenuItem() {
 		if (uploadCatCardImageMDMenuItem == null) {
 			uploadCatCardImageMDMenuItem = new JMenuItem();
-			uploadCatCardImageMDMenuItem.setText("Catalog Card Image Metadata...");
+			uploadCatCardImageMDMenuItem.setText("Upload Catalog Card Image Metadata...");
 			uploadCatCardImageMDMenuItem.setMnemonic(KeyEvent.VK_C);
 			uploadCatCardImageMDMenuItem
 					.addActionListener(new java.awt.event.ActionListener() {
 						public void actionPerformed(java.awt.event.ActionEvent e) {
-							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+							uploadCatalogCardMetadata();
 						}
 					});
 		}
@@ -820,23 +847,237 @@ public class MainApp {
 	}
 
 	/**
-	 * This method initializes uploadOntoHooksAndExclMenuItem
+	 * This method initializes updateCategoryCountsMenuItem
 	 *
 	 * @return javax.swing.JMenuItem
 	 */
-	private JMenuItem getUploadOntoHooksAndExclMenuItem() {
-		if (uploadOntoHooksAndExclMenuItem == null) {
-			uploadOntoHooksAndExclMenuItem = new JMenuItem();
-			uploadOntoHooksAndExclMenuItem.setText("Hooks and Exclusions...");
-			uploadOntoHooksAndExclMenuItem.setMnemonic(KeyEvent.VK_H);
-			uploadOntoHooksAndExclMenuItem
+	private JMenuItem getUpdateCategoryCountsMenuItem() {
+		if (updateCategoryCountsMenuItem == null) {
+			updateCategoryCountsMenuItem = new JMenuItem();
+			updateCategoryCountsMenuItem.setText("Update Category Counts");
+			updateCategoryCountsMenuItem.setMnemonic(KeyEvent.VK_N);
+			updateCategoryCountsMenuItem
 					.addActionListener(new java.awt.event.ActionListener() {
 						public void actionPerformed(java.awt.event.ActionEvent e) {
-							System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+							updateCategoryCounts();
 						}
 					});
 		}
-		return uploadOntoHooksAndExclMenuItem;
+		return updateCategoryCountsMenuItem;
+	}
+
+	/**
+	 * This method initializes setupWebAppDBInfoMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getSetupWebAppDBInfoMenuItem() {
+		if (setupWebAppDBInfoMenuItem == null) {
+			setupWebAppDBInfoMenuItem = new JMenuItem();
+			setupWebAppDBInfoMenuItem.setText("Setup Web App DB Info");
+			setupWebAppDBInfoMenuItem.setMnemonic(KeyEvent.VK_S);
+			setupWebAppDBInfoMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							setupWebAppDBInfo();
+						}
+					});
+		}
+		return setupWebAppDBInfoMenuItem;
+	}
+
+	/**
+	 * This method initializes enableWebAppLockoutMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getEnableWebAppLockoutMenuItem() {
+		if (enableWebAppLockoutMenuItem == null) {
+			enableWebAppLockoutMenuItem = new JMenuItem();
+			enableWebAppLockoutMenuItem.setText("Enable Web App Lockout");
+			enableWebAppLockoutMenuItem.setMnemonic(KeyEvent.VK_E);
+			enableWebAppLockoutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					setWebAppLockout(true);
+				}
+			});
+		}
+		return enableWebAppLockoutMenuItem;
+	}
+
+	/**
+	 * This method initializes releaseWebAppLockoutMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getReleaseWebAppLockoutMenuItem() {
+		if (releaseWebAppLockoutMenuItem == null) {
+			releaseWebAppLockoutMenuItem = new JMenuItem();
+			releaseWebAppLockoutMenuItem.setText("Release Web App Lockout");
+			releaseWebAppLockoutMenuItem.setMnemonic(KeyEvent.VK_E);
+			releaseWebAppLockoutMenuItem
+					.addActionListener(new java.awt.event.ActionListener() {
+						public void actionPerformed(java.awt.event.ActionEvent e) {
+							setWebAppLockout(false);
+						}
+					});
+		}
+		return releaseWebAppLockoutMenuItem;
+	}
+
+	/**
+	 * This method initializes webAppDBInfoDialog
+	 *
+	 * @return javax.swing.JDialog
+	 */
+	private JDialog getWebAppDBInfoDialog() {
+		if (webAppDBInfoDialog == null) {
+			webAppDBInfoDialog = new JDialog(getJFrame(), "Setup Web App DB Info", true);
+			webAppDBInfoDialog.setBounds(new Rectangle(2, 0, 400, 276));
+			webAppDBInfoDialog.setMinimumSize(new Dimension(400, 276));
+			webAppDBInfoDialog.setResizable(false);
+			webAppDBInfoDialog.setContentPane(getWebAppDBInfoContentPane());
+		}
+		return webAppDBInfoDialog;
+	}
+
+	/**
+	 * This method initializes webAppDBInfoContentPane
+	 *
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getWebAppDBInfoContentPane() {
+		if (webAppDBInfoContentPane == null) {
+			// Set up the banner title text
+			webAppDBInfoTitle1 = new JLabel();
+			webAppDBInfoTitle1.setBounds(new Rectangle(25, 18, 343, 19));
+			webAppDBInfoTitle1.setHorizontalAlignment(SwingConstants.CENTER);
+			webAppDBInfoTitle1.setText("Enter the connection information for the");
+			webAppDBInfoTitle1.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			webAppDBInfoTitle2 = new JLabel();
+			webAppDBInfoTitle2.setBounds(new Rectangle(25, 35, 343, 19));
+			webAppDBInfoTitle2.setHorizontalAlignment(SwingConstants.CENTER);
+			webAppDBInfoTitle2.setText("Delphi Web Application database");
+			webAppDBInfoTitle2.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			// Set up host, db, user and password labels
+			hostLabel = new JLabel();
+			hostLabel.setText("Host:");
+			hostLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			hostLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			hostLabel.setBounds(new Rectangle(25, 77, 84, 19));
+			webAppDB_DBNameLabel = new JLabel();
+			webAppDB_DBNameLabel.setBounds(new Rectangle(25, 107, 84, 19));
+			webAppDB_DBNameLabel.setText("DB Name:");
+			webAppDB_DBNameLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			webAppDB_DBNameLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			webAppDB_UserLabel = new JLabel();
+			webAppDB_UserLabel.setBounds(new Rectangle(25, 137, 84, 19));
+			webAppDB_UserLabel.setText("User:");
+			webAppDB_UserLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			webAppDB_UserLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			webAppDB_PasswordLabel = new JLabel();
+			webAppDB_PasswordLabel.setBounds(new Rectangle(25, 167, 84, 19));
+			webAppDB_PasswordLabel.setText("Password:");
+			webAppDB_PasswordLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+			webAppDB_PasswordLabel.setFont(new java.awt.Font("Helvetica", java.awt.Font.BOLD, 14));
+			// Build content panel with labels and text entry widgets
+
+			webAppDBInfoInnerPane = new JPanel();
+			webAppDBInfoInnerPane.setLayout(null);
+			webAppDBInfoInnerPane.setSize(new Dimension(400, 275));
+			//webAppDBInfoInnerPane.setPreferredSize(new Dimension(400, 275));
+			webAppDBInfoInnerPane.add(webAppDBInfoTitle1, null);
+			webAppDBInfoInnerPane.add(webAppDBInfoTitle2, null);
+			webAppDBInfoInnerPane.add(hostLabel, null);
+			webAppDBInfoInnerPane.add(getWebAppDB_HostNameTextField(), null);
+			webAppDBInfoInnerPane.add(webAppDB_DBNameLabel, null);
+			webAppDBInfoInnerPane.add(getWebAppDB_DBNameTextField(), null);
+			webAppDBInfoInnerPane.add(webAppDB_UserLabel, null);
+			webAppDBInfoInnerPane.add(getWebAppDB_UserTextField(), null);
+			webAppDBInfoInnerPane.add(webAppDB_PasswordLabel, null);
+			webAppDBInfoInnerPane.add(getWebAppDB_PasswordTextField(), null);
+			webAppDBInfoInnerPane.add(getWebAppDBInfoOKButton(), null);
+			webAppDBInfoInnerPane.setMinimumSize(new Dimension(400, 275));
+
+			webAppDBInfoContentPane = new JPanel();
+			webAppDBInfoContentPane.setLayout(new BorderLayout());
+			webAppDBInfoContentPane.setMinimumSize(new Dimension(400, 275));
+			webAppDBInfoContentPane.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+			webAppDBInfoContentPane.add(webAppDBInfoInnerPane, BorderLayout.CENTER);
+		}
+		return webAppDBInfoContentPane;
+	}
+
+	/**
+	 * This method initializes webAppDB_HostNameTextField
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getWebAppDB_HostNameTextField() {
+		if (webAppDB_HostNameTextField == null) {
+			webAppDB_HostNameTextField = new JTextField();
+			webAppDB_HostNameTextField.setBounds(new Rectangle(120, 77, 250, 21));
+		}
+		return webAppDB_HostNameTextField;
+	}
+
+	/**
+	 * This method initializes webAppDB_DBNameTextField
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getWebAppDB_DBNameTextField() {
+		if (webAppDB_DBNameTextField == null) {
+			webAppDB_DBNameTextField = new JTextField();
+			webAppDB_DBNameTextField.setBounds(new Rectangle(120, 107, 250, 21));
+		}
+		return webAppDB_DBNameTextField;
+	}
+
+	/**
+	 * This method initializes webAppDB_UserTextField
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getWebAppDB_UserTextField() {
+		if (webAppDB_UserTextField == null) {
+			webAppDB_UserTextField = new JTextField();
+			webAppDB_UserTextField.setBounds(new Rectangle(120, 137, 250, 21));
+		}
+		return webAppDB_UserTextField;
+	}
+
+	/**
+	 * This method initializes webAppDB_PasswordTextField
+	 *
+	 * @return javax.swing.JTextField
+	 */
+	private JTextField getWebAppDB_PasswordTextField() {
+		if (webAppDB_PasswordTextField == null) {
+			webAppDB_PasswordTextField = new JTextField();
+			webAppDB_PasswordTextField.setBounds(new Rectangle(120, 167, 250, 21));
+		}
+		return webAppDB_PasswordTextField;
+	}
+
+	/**
+	 * This method initializes webAppDBInfoOKButton
+	 *
+	 * @return javax.swing.JButton
+	 */
+	private JButton getWebAppDBInfoOKButton() {
+		if (webAppDBInfoOKButton == null) {
+			webAppDBInfoOKButton = new JButton();
+			webAppDBInfoOKButton.setBounds(new Rectangle(157, 210, 80, 25));
+			webAppDBInfoOKButton.setText("OK");
+			webAppDBInfoOKButton.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					setupWebAppDBInfoCommitInfo();
+					webAppDBInfoDialog.setVisible(false);
+				}
+			});
+		}
+		return webAppDBInfoOKButton;
 	}
 
 	/**
@@ -849,7 +1090,7 @@ public class MainApp {
 				//application.chooser = new JFileChooser( new File("D:/PAHMA/VocabDump3b.txt"));
 				application.chooser = new JFileChooser( new File("C:/Patrick/Delphi"));
 				application.xmlFilter = new FileNameExtensionFilter( "XML files", "xml" );
-				application.sqlFilter = new FileNameExtensionFilter( "SQL files", "sql" );
+				//application.sqlFilter = new FileNameExtensionFilter( "SQL files", "sql" );
 				application.txtFilter = new FileNameExtensionFilter( "Text files", "txt" );
 				application.dpfFilter = new FileNameExtensionFilter( "Delphi Project files", "dpf" );
 				application.bkgdTan = new Color(242, 235, 207);
@@ -1020,6 +1261,12 @@ public class MainApp {
 			jFrame.setSize(700, 450);
 			jFrame.setContentPane(getJContentPane());
 			jFrame.setTitle("Delphi");
+			jFrame.addWindowListener(new java.awt.event.WindowAdapter() {
+				public void windowClosing(java.awt.event.WindowEvent e) {
+					checkOnExit();
+					//System.out.println("windowClosing()"); // TODO Auto-generated Event stub windowClosing()
+				}
+			});
 		}
 		return jFrame;
 	}
@@ -1508,7 +1755,7 @@ public class MainApp {
 		String variant = asSQLInsert?"Insert":"Load";
 		debug(1,"Saving SQL Media "+variant+" File...");
 		try {
-			String outFileName = userProjInfo.mediaSQLLoadfilePath;
+			String outFileName = userProjInfo.getMediaSQLLoadfilePath();
 			if(outFileName == null ) {
 				outFileName = reader.getInFile();
 				if(outFileName == null )
@@ -1538,7 +1785,7 @@ public class MainApp {
 		        else
 			        reader.writeSQLMediaTableLoadFile(filename, omitMediaWithNoDims);
 		        // Keep track of where we put this.
-		        userProjInfo.mediaSQLLoadfilePath = filename;
+		        userProjInfo.setMediaSQLLoadfilePath(filename);
 		    }
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
@@ -1912,7 +2159,7 @@ public class MainApp {
 			debug(1,"Build Objects SQL...");
 			// Ask user to save info to a file.
 			String outFileName;
-			if((outFileName = userProjInfo.objectsSQLLoadfilePath) == null ) {
+			if((outFileName = userProjInfo.getObjectsSQLLoadfilePath()) == null ) {
 				if(( outFileName = userProjInfo.getMetadataPath()) == null ) {
 					outFileName = userProjInfo.getMetadataConfigPath();
 				}
@@ -1948,7 +2195,7 @@ public class MainApp {
 				SQLUtils.writeObjectsSQL( filename, SQLUtils.WRITE_AS_LOADFILE,
 											userProjInfo.metaDataReader, ipReader);
 			}
-    		userProjInfo.objectsSQLLoadfilePath = filename;
+    		userProjInfo.setObjectsSQLLoadfilePath(filename);
 		} catch( RuntimeException e ) {
 			JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 											"Save Object Metadata SQL Error", JOptionPane.ERROR_MESSAGE);
@@ -2033,11 +2280,26 @@ public class MainApp {
 			exitMenuItem.setMnemonic('X');
 			exitMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					checkOnExit();
 					System.exit(0);
 				}
 			});
 		}
 		return exitMenuItem;
+	}
+
+	private void checkOnExit() {
+		if(userProjInfo.isDirty()) {
+			int confirm = JOptionPane.showConfirmDialog(getJFrame(),
+					"Save project settings before exiting?"
+					+"\nClick YES to save; click NO to discard.");
+			if( confirm == JOptionPane.YES_OPTION ) {
+				if( appSettings.getLastUserProjectPath() == null )
+					saveProjectFileAs();
+				else
+					saveProjectFile();
+			}
+		}
 	}
 
 	/**
@@ -2082,8 +2344,7 @@ public class MainApp {
 	 */
 	private JDialog getAboutDialog() {
 		if (aboutDialog == null) {
-			aboutDialog = new JDialog(getJFrame(), true);
-			aboutDialog.setTitle("About");
+			aboutDialog = new JDialog(getJFrame(), "About Delphi", true);
 			aboutDialog.setSize(new Dimension(526, 460));
 			aboutDialog.setContentPane(getAboutContentPane());
 		}
@@ -2657,7 +2918,7 @@ public class MainApp {
 				return;		// Cancel
 			boolean asSQLInsert = (response==1);
 			setStatus( "Building SQL Ontology load file...");
-			String suggest = userProjInfo.facetsSQLLoadfilePath;
+			String suggest = userProjInfo.getFacetsSQLLoadfilePath();
 			if(suggest == null) {
 				suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$", "_facets.txt");
 			}
@@ -2674,7 +2935,7 @@ public class MainApp {
 											dbName, writer, asSQLInsert, fWithNewlines );
 				writer.flush();
 				writer.close();
-				userProjInfo.facetsSQLLoadfilePath = filename;
+				userProjInfo.setFacetsSQLLoadfilePath(filename);
 				debug(1, "Wrote Ontology facets to SQL file: "+filename);
 				setStatus( "Wrote Ontology facets to SQL file: "+filename);
 			} catch( IOException e ) {
@@ -2683,7 +2944,7 @@ public class MainApp {
 						"saveOntologyAsSQL: Could not create (or write to) facet output file: "
 						+ filename);
 			}
-			suggest = userProjInfo.categoriesSQLLoadfilePath;
+			suggest = userProjInfo.getCategoriesSQLLoadfilePath();
 			if(suggest == null) {
 				suggest = filename.replaceAll("_facets\\.txt$", "_cats.txt");
 			}
@@ -2700,7 +2961,7 @@ public class MainApp {
 											dbName, writer, asSQLInsert, fWithNewlines );
 				writer.flush();
 				writer.close();
-				userProjInfo.categoriesSQLLoadfilePath = filename;
+				userProjInfo.setCategoriesSQLLoadfilePath(filename);
 				debug(1, "Wrote Ontology categories to SQL file: "+filename);
 				setStatus( "Wrote Ontology categories to SQL file: "+filename);
 			} catch( IOException e ) {
@@ -2764,7 +3025,9 @@ public class MainApp {
 			if(response != 0 && response != 1)
 				return;		// Cancel
 			boolean asSQLInsert = (response==1);
-			String suggest = userProjInfo.hooksSQLLoadfilePath;
+			String suggest = fSaveHooks?
+						userProjInfo.getHooksSQLLoadfilePath():
+						userProjInfo.getExclusionsSQLLoadfilePath();
 			if(suggest == null ){
 				suggest = userProjInfo.getOntologyPath().replaceAll("\\.xml$",
 					variant+"s.txt");
@@ -2783,6 +3046,10 @@ public class MainApp {
 									dbName, fSaveHooks, writer, asSQLInsert, fWithNewlines);
 				writer.flush();
 				writer.close();
+				if(fSaveHooks)
+					userProjInfo.setHooksSQLLoadfilePath(filename);
+				else
+					userProjInfo.setExclusionsSQLLoadfilePath(filename);
 				debug(1, "Finished writing SQL Dump to file: "+filename);
 				setStatus( "Finished writing SQL Dump to file: "+filename);
 			} catch( IOException e ) {
@@ -2794,6 +3061,213 @@ public class MainApp {
 											"Save Vocab Hooks Or Exclusions As SQL Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
 		}
+	}
+
+	protected void uploadObjectMetadata() {
+		String myName = "Upload Object Metadata";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			String suggest = userProjInfo.getObjectsSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( suggest != null )
+	    		chooser.setSelectedFile(new File( suggest ));
+		    chooser.setDialogTitle("Select Object Metadata file...");
+		    if(JFileChooser.APPROVE_OPTION == chooser.showOpenDialog(getJFrame())) {
+		    	String filename = chooser.getSelectedFile().getPath();
+				try {
+					waDB.uploadObjectsMetadata(filename);
+				} catch (Exception e ) {
+					JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+							myName, JOptionPane.ERROR_MESSAGE);
+				}
+		    }
+		}
+	}
+
+	protected void uploadOntoConceptsMetadata() {
+		String myName = "Upload Ontology Metadata";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			// Get Facets filepath
+			String facetFN = userProjInfo.getFacetsSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( facetFN != null )
+	    		chooser.setSelectedFile(new File( facetFN ));
+		    chooser.setDialogTitle("Select Facet metadata loadfile...");
+		    if(JFileChooser.APPROVE_OPTION != chooser.showOpenDialog(getJFrame()))
+		    	return;
+		    facetFN = chooser.getSelectedFile().getPath();
+			// Get Categories filepath
+			String categoriesFN = userProjInfo.getCategoriesSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( categoriesFN != null )
+	    		chooser.setSelectedFile(new File( categoriesFN ));
+		    chooser.setDialogTitle("Select Categories metadata loadfile...");
+		    if(JFileChooser.APPROVE_OPTION != chooser.showOpenDialog(getJFrame()))
+			    	return;
+		    categoriesFN = chooser.getSelectedFile().getPath();
+			// Get Hooks filepath
+			String hooksFN = userProjInfo.getHooksSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( hooksFN != null )
+	    		chooser.setSelectedFile(new File( hooksFN ));
+		    chooser.setDialogTitle("Select Hooks metadata loadfile...");
+		    if(JFileChooser.APPROVE_OPTION != chooser.showOpenDialog(getJFrame()))
+			    	return;
+		    hooksFN = chooser.getSelectedFile().getPath();
+			// Get Exclusions filepath
+			String exclusionsFN = userProjInfo.getExclusionsSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( exclusionsFN != null )
+	    		chooser.setSelectedFile(new File( exclusionsFN ));
+		    chooser.setDialogTitle("Select Exclusions metadata loadfile...");
+		    if(JFileChooser.APPROVE_OPTION != chooser.showOpenDialog(getJFrame()))
+			    	return;
+		    exclusionsFN = chooser.getSelectedFile().getPath();
+			try {
+				waDB.uploadOntologyMetadata(facetFN, categoriesFN, hooksFN, exclusionsFN);
+			} catch (Exception e ) {
+				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+						myName, JOptionPane.ERROR_MESSAGE);
+			}
+		}
+	}
+
+	protected void uploadObjectConceptAssociations() {
+		String myName = "Upload Object Concept Associations";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			String suggest = userProjInfo.getObj_catsSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( suggest != null )
+	    		chooser.setSelectedFile(new File( suggest ));
+		    chooser.setDialogTitle("Select Object Concept Associations file...");
+		    if(JFileChooser.APPROVE_OPTION == chooser.showOpenDialog(getJFrame())) {
+		    	String filename = chooser.getSelectedFile().getPath();
+				try {
+					waDB.uploadObjectCategoryAssociations(filename);
+				} catch (Exception e ) {
+					JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+							myName, JOptionPane.ERROR_MESSAGE);
+				}
+		    }
+		}
+	}
+
+	protected void uploadImageMetadata() {
+		String myName = "Upload Image Media Metadata";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			String suggest = userProjInfo.getMediaSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( suggest != null )
+	    		chooser.setSelectedFile(new File( suggest ));
+		    chooser.setDialogTitle("Select Image Media Metadata file...");
+		    if(JFileChooser.APPROVE_OPTION == chooser.showOpenDialog(getJFrame())) {
+		    	String filename = chooser.getSelectedFile().getPath();
+				try {
+					waDB.uploadImageMediaMetadata(filename);
+				} catch (Exception e ) {
+					JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+							myName, JOptionPane.ERROR_MESSAGE);
+				}
+		    }
+		}
+	}
+
+	protected void updateObjectImageCache() {
+		String myName = "Update Object Image Cache";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			try {
+				waDB.updateObjectMediaCache();
+			} catch (Exception e ) {
+				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+						myName, JOptionPane.ERROR_MESSAGE);
+			}
+		}
+	}
+
+	protected void uploadCatalogCardMetadata() {
+		String myName = "Upload Catalog Card Metadata";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			String suggest = userProjInfo.getCatCardsSQLLoadfilePath();
+			chooser.setFileFilter(txtFilter);
+	    	if( suggest != null )
+	    		chooser.setSelectedFile(new File( suggest ));
+		    chooser.setDialogTitle("Select Catalog Card Metadata file...");
+		    if(JFileChooser.APPROVE_OPTION == chooser.showOpenDialog(getJFrame())) {
+		    	String filename = chooser.getSelectedFile().getPath();
+				try {
+					waDB.uploadCatalogCardMetadata(filename);
+				} catch (Exception e ) {
+					JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+							myName, JOptionPane.ERROR_MESSAGE);
+				}
+		    }
+		}
+	}
+
+	protected void updateCategoryCounts() {
+		String myName = "Update Category Counts";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			try {
+				waDB.updateOntologyCategoryCounts();
+			} catch (Exception e ) {
+				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+						myName, JOptionPane.ERROR_MESSAGE);
+			}
+		}
+	}
+
+	protected void setupWebAppDBInfo() {
+		JDialog webAppDialog = getWebAppDBInfoDialog();
+		webAppDialog.pack();
+		String host = userProjInfo.getWebAppDB_host();
+		String dbName = userProjInfo.getWebAppDB_dbName();
+		String user = userProjInfo.getWebAppDB_user();
+		String password = userProjInfo.getWebAppDB_password();
+		webAppDB_HostNameTextField.setText(((host==null)?"":host));
+		webAppDB_DBNameTextField.setText(((dbName==null)?"":dbName));
+		webAppDB_UserTextField.setText(((user==null)?"":user));
+		webAppDB_PasswordTextField.setText(((password==null)?"":password));
+		webAppDialog.pack();
+		Point loc = getJFrame().getLocation();
+		loc.translate(100, 100);
+		webAppDialog.setLocation(loc);
+		webAppDialog.setVisible(true);
+
+	}
+
+	protected void setupWebAppDBInfoCommitInfo() {
+		userProjInfo.setWebAppDB_host(webAppDB_HostNameTextField.getText());
+		userProjInfo.setWebAppDB_dbName(webAppDB_DBNameTextField.getText());
+		userProjInfo.setWebAppDB_user(webAppDB_UserTextField.getText());
+		userProjInfo.setWebAppDB_password(webAppDB_PasswordTextField.getText());
+		userProjInfo.resetWebAppDB();
+	}
+
+	protected void setWebAppLockout( boolean lockoutActive ) {
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			try {
+				waDB.setAppLockout(lockoutActive);
+			} catch (Exception e ) {
+				JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+						"Set Web App Lockout Error:", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+	}
+
+	private WebAppDB checkWebAppDBReady() {
+		if(userProjInfo.webAppDB == null)
+			JOptionPane.showMessageDialog(getJFrame(),
+				"You must first set up the connection information for the Web App DB,\n"
+					+ " before you attempt to upload data.",
+				"Upload to Web App DB not ready", JOptionPane.ERROR_MESSAGE);
+		return userProjInfo.webAppDB;
 	}
 
 	protected void saveVocabAsXML() {

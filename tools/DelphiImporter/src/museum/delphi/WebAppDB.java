@@ -45,6 +45,11 @@ public class WebAppDB {
 								+"&password="+password;
 		}
 
+	/**
+	 * @param pathToLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
 	protected boolean setAppLockout(boolean lockoutActive ) {
 		final String myName = "WebAppDB.setAppLockout: ";
 		String mainStatement =
@@ -69,26 +74,80 @@ public class WebAppDB {
 		return success;
 	}
 
+	/**
+	 * @param pathToLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
 	protected boolean uploadObjectsMetadata(String pathToLoadfile) {
+		// Map WinDoz paths to normal ones.
+		pathToLoadfile = pathToLoadfile.replace('\\', '/');
 		String mainStatement =
 			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE objects CHARACTER SET utf8"
 			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 6 LINES"
 			+ " (id, objnum, name, description, hiddenNotes, img_path)"
 			+ " SET creation_time=now()";
-		boolean success = uploadData( "objects", mainStatement);
-		return success;
+		return uploadData( "objects", mainStatement, null);
 	}
 
+
+	/**
+	 * @param pathToLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
+	protected boolean uploadCatalogCardMetadata(String pathToLoadfile) {
+		// Map WinDoz paths to normal ones.
+		pathToLoadfile = pathToLoadfile.replace('\\', '/');
+		String deleteStmt = "DELETE FROM TABLE media WHERE type='catCard'";
+		String mainStmt =
+			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE media CHARACTER SET utf8"
+			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' "
+			+ " (obj_id,path,type,width,height,aspectR,creation_time)";
+		return uploadData( "media", mainStmt, deleteStmt);
+	}
+
+	/**
+	 * @param pathToLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
+	protected boolean uploadImageMediaMetadata(String pathToLoadfile) {
+		// Map WinDoz paths to normal ones.
+		pathToLoadfile = pathToLoadfile.replace('\\', '/');
+		String deleteStmt = "DELETE FROM TABLE media WHERE type='image'";
+		String mainStmt =
+			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE media CHARACTER SET utf8"
+			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES "
+			+ " (obj_id, name, description, path, type, width, height)"
+			+ " SET aspectR=width/height, creation_time=now()";
+		return uploadData( "media", mainStmt, deleteStmt);
+	}
+
+	/**
+	 * @param pathToFacetsLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @param pathToConceptsLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @param pathToHooksLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @param pathToExclusionsLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
 	protected boolean uploadOntologyMetadata(
 			String pathToFacetsLoadfile, String pathToConceptsLoadfile,
 			String pathToHooksLoadfile, String pathToExclusionsLoadfile ) {
+		// Map WinDoz paths to normal ones.
+		pathToFacetsLoadfile		= pathToFacetsLoadfile.replace('\\', '/');
+		pathToConceptsLoadfile		= pathToConceptsLoadfile.replace('\\', '/');
+		pathToHooksLoadfile			= pathToHooksLoadfile.replace('\\', '/');
+		pathToExclusionsLoadfile	= pathToExclusionsLoadfile.replace('\\', '/');
+
 		String mainStatement;
 		if(pathToFacetsLoadfile != null && !pathToFacetsLoadfile.isEmpty()) {
 			mainStatement =
 				"LOAD DATA LOCAL INFILE '"+pathToFacetsLoadfile+"' INTO TABLE facets CHARACTER SET utf8"
 				+" FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES"
 				+" (id, name, display_name, description, notes)";
-			if(!uploadData( "facets", mainStatement))
+			if(!uploadData( "facets", mainStatement, null))
 				return false;
 		}
 		if(pathToConceptsLoadfile != null && !pathToConceptsLoadfile.isEmpty()) {
@@ -96,10 +155,10 @@ public class WebAppDB {
 				"LOAD DATA LOCAL INFILE '"+pathToConceptsLoadfile+"' INTO TABLE categories CHARACTER SET utf8"
 				+" FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES"
 				+" (id, parent_id, name, display_name, facet_id, select_mode, always_inferred)";
-			if(!uploadData( "categories", mainStatement))
+			if(!uploadData( "categories", mainStatement, null))
 				return false;
 			// Now, truncate the obj_cats since we redefined the categories.
-			if(!uploadData( "obj_cats", null))
+			if(!uploadData( "obj_cats", mainStatement, null))
 				return false;
 		}
 		if(pathToHooksLoadfile != null && !pathToHooksLoadfile.isEmpty()) {
@@ -107,7 +166,7 @@ public class WebAppDB {
 				"LOAD DATA LOCAL INFILE '"+pathToHooksLoadfile+"' INTO TABLE hooks CHARACTER SET utf8"
 				+" FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES"
 				+" ( cat_id, token )";
-			if(!uploadData( "hooks", mainStatement))
+			if(!uploadData( "hooks", mainStatement, null))
 				return false;
 		}
 		if(pathToExclusionsLoadfile != null && !pathToExclusionsLoadfile.isEmpty()) {
@@ -115,22 +174,28 @@ public class WebAppDB {
 				"LOAD DATA LOCAL INFILE '"+pathToExclusionsLoadfile+"' INTO TABLE exclusions CHARACTER SET utf8"
 				+" FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES"
 				+" ( cat_id, token )";
-			if(!uploadData( "exclusions", mainStatement))
+			if(!uploadData( "exclusions", mainStatement, null))
 				return false;
 		}
 		return true;
 	}
 
+	/**
+	 * @param pathToLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
 	protected boolean uploadObjectCategoryAssociations(String pathToLoadfile) {
+		// Map WinDoz paths to normal ones.
+		pathToLoadfile = pathToLoadfile.replace('\\', '/');
 		String mainStatement =
 			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE obj_cats CHARACTER SET utf8"
 			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 4 LINES"
 			+ " (obj_id, cat_id, inferred, reliability)";
-		boolean success = uploadData( "obj_cats", mainStatement);
-		return success;
+		return uploadData( "obj_cats", mainStatement, null);
 	}
 
-	private boolean uploadData(String table, String mainStatement) {
+	private boolean uploadData(String table, String mainStmt, String deleteStmt) {
 		final String myName = "WebAppDB.uploadData["+table+"]: ";
 		boolean success = false;
 		Statement sqlStatement = null;
@@ -143,15 +208,20 @@ public class WebAppDB {
 		try {
 			if(jdbcConnection != null) {
 				sqlStatement = jdbcConnection.createStatement();
-				debug(1, myName+"Truncating "+table+" table...");
-				sqlStatement.execute(truncateStatement);
-				if(mainStatement!=null){
+				if(deleteStmt!=null) {
+					debug(1, myName+"Deleting entries from "+table+" table...");
+					sqlStatement.execute(deleteStmt);
+				} else {
+					debug(1, myName+"Truncating "+table+" table...");
+					sqlStatement.execute(truncateStatement);
+				}
+				if(mainStmt!=null){
 					debug(1, myName+"Setting UTF* for names...");
 					sqlStatement.execute(utf8SetupStatement);
 					debug(1, myName+"Disabling keys...");
 					sqlStatement.execute(disableKeysStatement);
 					debug(1, myName+"Executing Load statement...");
-					sqlStatement.execute(mainStatement);
+					sqlStatement.execute(mainStmt);
 					debug(1, myName+"(Re-)enabling keys...");
 					sqlStatement.execute(enableKeysStatement);
 					debug(1, myName+"Getting "+table+" count...");
@@ -175,6 +245,10 @@ public class WebAppDB {
 		return success;
 	}
 
+	/**
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
 	protected boolean updateObjectMediaCache() {
 		final String myName = "WebAppDB.updateObjectMediaCache: ";
 		final String clearAllStmt =
@@ -204,8 +278,14 @@ public class WebAppDB {
 		return success;
 	}
 
+	/**
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
 	protected boolean updateOntologyCategoryCounts() {
 		final String myName = "WebAppDB.updateCategoryCounts: ";
+		final String clearCatCountsStmt =
+			"UPDATE categories SET n_matches=0, n_matches_w_img=0";
 		final String catCountsDropTableStmt =
 			"DROP TABLE IF EXISTS cat_counts";
 		final String catCountsSetupStmt =
@@ -235,6 +315,8 @@ public class WebAppDB {
 			if(jdbcConnection != null) {
 				sqlStatement = jdbcConnection.createStatement();
 				sqlStatement = jdbcConnection.createStatement();
+				debug(1, myName+"Clearing current counts...");
+				sqlStatement.execute(clearCatCountsStmt);
 				debug(1, myName+"Dropping any old temp table...");
 				sqlStatement.execute(catCountsDropTableStmt);
 				debug(1, myName+"Creating temp table...");
