@@ -252,7 +252,7 @@ function loadObjectDetails(obj_id){
 					$("#viewset_objectDescription").html(responseJSON['objectDescription']);
 					$("#viewset_objectName").html(responseJSON['objectName']);
 					$("#viewset_objectIdFormField").val(responseJSON['obj_id']);
-					$("#viewset_objectDetailLink").attr('href', templateVarsJSON['wwwroot']+"/modules/browser/details.php?id="+responseJSON['obj_id']);					
+					$("#viewset_objectDetailLink").attr('href', templateVarsJSON['wwwroot']+"/object/"+responseJSON['obj_id']);					
 					currentObjectId = responseJSON['obj_id'];
 					currentObjectIndex = parseInt(responseJSON['obj_order'])-1;
 					highlightObject(responseJSON['obj_id']);
