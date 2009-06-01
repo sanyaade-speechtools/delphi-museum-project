@@ -3663,7 +3663,37 @@
 				<heading id="Guatemala" title="Guatemala">
 					<synonym value="Guatemalan"/>
 					<synonym value="Guatemalans"/>
+					Acatenango
+					Almolonga
+					Alotenango
+					Chajul
+					Chichicastenango
+					Chuarrancho
+					Coban
+					Colotenango
+					Comalapa
+					Comitancillo
+					Concepción Chiquirichapa
+					Huehuetenango
 					<heading id="Jutiapa" title="Jutiapa"/>
+					Mazatenango
+					Nahualá
+					Nebaj
+					Palin
+					Patzite
+					Patzun
+					Quezaltenango
+					Rabinal
+					Sacapulas
+					Salcaja
+					San Antonio Aguas Calientes
+					San Cristóbal Totonicapán
+					San Francisco el Alto
+					San Gaspar Ixchil
+					San Ildefonso Ixtahuacán
+					San Juan Chamelco
+					San Juan Cotzal
+					San Juan Sacatepéquez
 					<heading id="SantiagoDeAtitlan" title="Santiago de Atitlán">
 						<synonym value="Santiago de Atitlan"/>
 					</heading>
@@ -6842,6 +6872,7 @@
 										<heading id="BiggsButteCA" title="Biggs"/>
 										<heading id="ChicoButteCA" title="Chico"/>
 										<heading id="DogwoodCreekButteCA" title="Dogwood Creek"/>
+										<heading id="DurhamButteCA" title="Durham"/>
 										<heading id="GridleyButteCA" title="Gridley">
 											<synonym value="Near Gridley"/>
 											<heading id="GridleyCoxMound" title="Cox Mound">
@@ -6854,6 +6885,7 @@
 										<heading id="NelsonButteCA" title="Nelson"> <!-- Disambiguate -->
 											<synonym value="Near Nelson"/>
 										</heading>
+										<heading id="OldRuffPlaceButCA" title="Old Ruff Place"/>
 										<heading id="OrovilleButteCA" title="Oroville">
 											<heading id="VolcanoOrovilleArea" title="Volcano, Oroville Area"/>
 										</heading>
@@ -6862,13 +6894,12 @@
 											<excl value="Italy"/> <!-- Disambiguates from Italian city -->
 										</heading>
 										<heading id="PulgaButteCA" title="Pulga"/>
+										<heading id="VinaButCA" title="Vina"/>
 									</heading>
 									<heading id="TrinomButteCA" title="Trinomial site names" noMatch="true">
 										<heading id="CABut5" title="CA-But-5">
 											<synonym value="CA-But- 5"/>
-											<synonym value="Durham"/>
-											<!-- <implies facet="Location" cat="DurhamButteCA"/> -->
-											<!-- <heading id="DurhamButteCA" title="Durham"/> -->
+											<implies facet="Location" cat="DurhamButteCA"/>
 										</heading>
 										<heading id="CABut6" title="CA-But-6">
 											<synonym value="CA-But- 6"/>
@@ -6889,9 +6920,7 @@
 											<synonym value="Schwartz"/>
 										</heading>
 										<heading id="CABut65" title="CA-But-65">
-											<synonym value="Old Ruff Place"/>
-											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<implies facet="Location" cat="OldRuffPlaceButCA"/>
 										</heading>
 										<heading id="CABut66" title="CA-But-66"/>
 										<heading id="CAButNL1" title="CA-But-NL-1">
@@ -6901,15 +6930,13 @@
 										</heading>
 										<heading id="CAButNL2" title="CA-But-NL-2"/> 
 										<heading id="CAButNL3" title="CA-But-NL-3">
-											<synonym value="Vina"/>
-											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
+											<implies facet="Location" cat="VinaButCA"/>
 										</heading>
 										<heading id="CAButNL5" title="CA-But-NL-5"/>
 										<heading id="CAButNL4" title="CA-But-NL-4"/>
 									</heading>
 								</heading>
-								<heading id="ColusaCounty" title="Colusa county"> <!-- INFERENCES_DONE --> <!-- alphabetized -->
+								<heading id="ColusaCounty" title="Colusa county">
 									<synonym value="CA-Col-NL"/>
 									<synonym value="CA-Col"/>
 									<synonym value="CA-Colusa"/>
@@ -11206,6 +11233,9 @@
 										<heading id="JennyLindCalavCA" title="Jenny Lind"/>
 										<heading id="MokelumneCalavCA" title="Mokelumne">
 											<heading id="MokelumneHCalavCA" title="Mokelumne Hill">
+												<heading id="GaramendiKnollCalCA" title="Garamendi Knoll">
+													<synonym value="Garamendi Knoll site"/>
+												</heading>
 												<heading id="MinrlStatCalavCA" title="Mineral Station"/>
 											</heading>
 											<heading id="SeymourRCalavCA" title="Seymour Ranch">
@@ -11397,7 +11427,7 @@
 										<heading id="CACal156" title="CA-Cal-156"/>
 										<heading id="CACal157" title="CA-Cal-157"/>
 										<heading id="CACal175" title="CA-Cal-175">
-											<synonym value="Garamendi Knoll site"/>
+											<implies facet="Location" cat="GaramendiKnollCalCA"/>
 										</heading>
 									</heading>
 								</heading>
@@ -19562,73 +19592,73 @@
 											<synonym value="Tecopa Cave"/>
 											<synonym value="El Pakira"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr118" title="CA-SBr-118">
 											<synonym value="Old Woman Spring"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr123" title="CA-SBr-123">
 											<synonym value="Wood's Mountains"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr146" title="CA-SBr-146"/>
 										<heading id="CASBr227" title="CA-SBr-227">
 											<synonym value="Salt Springs C"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr229" title="CA-SBr-229">
 											<synonym value="Salt Springs E"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr230" title="CA-SBr-230">
 											<synonym value="Salt Springs F"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr231" title="CA-SBr-231">
 											<synonym value="Salt Springs G"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr232" title="CA-SBr-232">
 											<synonym value="Salt Springs H"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr233" title="CA-SBr-233">
 											<synonym value="Salt Springs I"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr234" title="CA-SBr-234">
 											<synonym value="Salt Springs J"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr236" title="CA-SBr-236">
 											<synonym value="Salt Springs L"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr237" title="CA-SBr-237">
 											<synonym value="Salt Springs M"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr240" title="CA-SBr-240">
 											<synonym value="Salt Springs P"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr241" title="CA-SBr-241">
 											<synonym value="Salt Springs Q"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr242" title="CA-SBr-242">
 											<synonym value="Cronese A"/>
@@ -19686,22 +19716,22 @@
 										<heading id="CASBr262" title="CA-SBr-262">
 											<synonym value="Lake Mojave Bay Bar"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr264" title="CA-SBr-264">
 											<synonym value="Beach at outlet"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr267" title="CA-SBr-267">
 											<synonym value="One of the Lake Mojave Spits"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr268" title="CA-SBr-268">
 											<synonym value="One of the Lake Mojave Beaches"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr277" title="CA-SBr-277"/>
 										<heading id="CASBr283" title="CA-SBr-283"/>
@@ -19711,7 +19741,7 @@
 										<heading id="CASBr288" title="CA-SBr-288">
 											<synonym value="Rustler Rock shelter"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBr289" title="CA-SBr-289"/>
 										<heading id="CASBr291" title="CA-SBr-291"/>
@@ -19728,7 +19758,7 @@
 										<heading id="CASBr541" title="CA-SBr-541">
 											<synonym value="Baker Site"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 									</heading>
 								</heading>
@@ -19811,7 +19841,7 @@
 											<synonym value="CA-SDi-  6"/>
 											<synonym value="Pala Asistencia Mission"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASDi8" title="CA-SDi-8">
 											<synonym value="CA-SDi- 8"/>
@@ -19848,7 +19878,7 @@
 										<heading id="CASDi183" title="CA-SDi-183">
 											<synonym value="Dos Cabezos Spring"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 											<synonym value="Treganza's site 6"/>
 										</heading>
 										<heading id="CASDi241" title="CA-SDi-241">
@@ -19857,7 +19887,7 @@
 										<heading id="CASDiNL1" title="CA-SDi-NL-1">
 											<synonym value="East San Diego County (Lillard)"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASDiNL2" title="CA-SDi-NL-2"/>
 										<heading id="CASDiNL3" title="CA-SDi-NL-3"/>
@@ -20378,7 +20408,7 @@
 											<synonym value="CA-SBa-79"/>
 											<synonym value="Dos Pueblos"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 											<synonym value="Rogers 79"/>
 										</heading>
 										<heading id="CASBa89" title="CA-SBa- 89">
@@ -20390,21 +20420,21 @@
 											<synonym value="CA-SBa-96"/>
 											<synonym value="Gaviota 2"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 											<synonym value="Rogers 96"/>
 										</heading>
 										<heading id="CASBa97" title="CA-SBa- 97">
 											<synonym value="CA-SBa-97"/>
 											<synonym value="Gaviota 1"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 											<synonym value="Rogers 97"/>
 										</heading>
 										<heading id="CASBa100" title="CA-SBa-100">
 											<synonym value="SBMNH 98"/>
 											<synonym value="County Farm of Rogers site P"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBa106" title="CA-SBa-106">
 											<synonym value="Rogers Tecolote Rd. Cut"/>
@@ -20413,7 +20443,7 @@
 											<synonym value="San Marcos Rancho"/>
 											<synonym value="San Marcos Asistencia"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBa114" title="CA-SBa-114">
 											<synonym value="Camp #2"/>
@@ -20456,7 +20486,7 @@
 											<synonym value="Sudden Site 4"/>
 											<synonym value="Wild Horse Creek"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBa211" title="CA-SBa-211">
 											<synonym value="RU-11"/>
@@ -20473,7 +20503,7 @@
 										<heading id="CASBa231" title="CA-SBa-231">
 											<synonym value="Seal Rock"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 											<synonym value="RU-31"/>
 										</heading>
 										<heading id="CASBa237" title="CA-SBa-237">
@@ -20481,7 +20511,7 @@
 											<synonym value="Sajachu"/>
 											<synonym value="Rennie site"/>
 											<!--  -->
-											<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
 										<heading id="CASBa242" title="CA-SBa-242">
 											<synonym value="RU-42"/>
@@ -20653,7 +20683,13 @@
 								</heading>
 							</heading>
 <!-- •••••••••••••••••••• LOCATE/REFILE OR ELIMINATE (start) •••••••••••••••••••• -->
-							<!-- <heading id="_Countynotspecified" title="_County not specified">
+							<!-- <heading id="GreatPlains" title="Great Plains">
+								<heading id="CentralPlains" title="Central Plains"/>
+								<heading id="NorthernPlains" title="Northern Plains"/>
+								<heading id="SouthernPlains" title="Southern Plains"/>
+							</heading>
+							<heading id="Orca" title="Orca"/>
+							<heading id="_Countynotspecified" title="_County not specified">
 							<heading id="BearCreek" title="Bear Creek"/>
 							<heading id="LittleStonyCreek" title="Little Stony Creek"/>
 							<heading id="HamburgBar" title="Hamburg Bar"/>
@@ -21508,6 +21544,8 @@
 							</heading>
 							<heading id="EsmeraldaCoNV" title="Esmeralda county">
 								<synonym value="PROVENIENCE = Esmerelda county, Nevada"/>
+								<heading id="PlacesEsmereldaNV" title="Place Names" noMatch="true">
+								</heading>
 								<heading id="Steward222EsmereldaCountyNV" title="Steward #222"/>
 								<heading id="IndianSpringsEsmereldaCountyNV" title="Indian Springs"/>
 							</heading>
@@ -21581,12 +21619,12 @@
 									<heading id="NVHu302" title="NV-Hu-302">
 										<synonym value="Pink Point Site"/>
 										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 									</heading>
 									<heading id="NVHu303" title="NV-Hu-303">
 										<synonym value="Metate One Site"/>
 										<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
-										<!-- <heading id="yyyyyyyyy" title="Old Ruff Place"/> -->
+										<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 									</heading>
 								</heading>
 							</heading>
@@ -21680,6 +21718,8 @@
 								<synonym value="Cow Shelter"/>
 								<synonym value="Cherry Creek lithic scatter"/>
 								<synonym value="Sharp Springs"/>
+								<heading id="PlacesLincolnNV" title="Place Names" noMatch="true">
+								</heading>
 								<heading id="TrinomLincolnNV" title="Trinomial site names" noMatch="true">
 									<heading id="NVLn46" title="NV-Ln-46">
 										<synonym value="NV-Ln- 46"/>
@@ -21728,6 +21768,8 @@
 								<synonym value="Dr. Rock"/>
 								<synonym value="Prayer Cave"/>
 								<synonym value="Ly-X2"/>
+								<heading id="PlacesLyonNV" title="Place Names" noMatch="true">
+								</heading>
 								<heading id="TrinomLyonNV" title="Trinomial site names" noMatch="true">
 									<heading id="NVLy1" title="NV-Ly- 1">
 										<synonym value="NV-Ly-1"/>
@@ -21949,40 +21991,42 @@
 							</heading>
 							<heading id="PershingCoNV" title="Pershing county">
 								<synonym value="PROVENIENCE = Pershing county, Nevada"/>
-								<!-- <synonym value="X-3"/> Disambiguate -->
-								<!-- <synonym value="X-2 ?"/> Disambiguate -->
-								<synonym value="Granite Point Shelter"/>
-								<synonym value="Awahti jubah"/>
-								<synonym value="Orr Place"/>
-								<synonym value="Granite Point Rockshelter"/>
 								<!-- <synonym value="X-1"/> Disambiguate -->
-								<synonym value="Nevada Toulon"/>
-								<synonym value="Orr-P1b"/>
-								<synonym value="Numahwatsi muinoo"/>
-								<!-- <synonym value="Medicine Rock"/> Disambiguate: one in Lyon, one in Pershing, maybe one in Mineral co. near Walker Lake -->
-								<synonym value="Toulon"/>
-								<synonym value="Owl Cave"/>
-								<synonym value="Placeritos"/>
-								<synonym value="Stick Cave"/>
-								<synonym value="Painted Cave"/>
-								<synonym value="Lohatekalupopi"/>
-								<synonym value="Pole Canyon"/>
 								<!-- <synonym value="X-2"/> Disambiguate -->
+								<!-- <synonym value="X-2 ?"/> Disambiguate -->
+								<!-- <synonym value="X-3"/> Disambiguate -->
+								<!-- <synonym value="Medicine Rock"/> Disambiguate: one in Lyon, one in Pershing, maybe one in Mineral co. near Walker Lake -->
 								<synonym value="Site #5 (Loud)"/>
-								<synonym value="Loud 17"/>
-								<synonym value="Hamilton Ranch"/>
-								<synonym value="Smelzer Summit"/>
-								<synonym value="Granite Point Rock Shelter"/>
-								<synonym value="Smelser Pass"/>
 								<synonym value="Louds Site #5"/>
+								<synonym value="Loud 17"/>
 								<heading id="PlacesPershingNV" title="Place Names" noMatch="true">
-									<heading id="HumboldtLake" title="Humboldt Lake"/> <!-- was missplaced in Humboldt co., NV -->
+									<heading id="AwahtiJubahPeNV" title="Awahti Jubah"/>
+									<heading id="GranitePtRckShltrPeNV" title="Granite Point Rockshelter">
+										<synonym value="Granite Point Rock Shelter"/>
+										<synonym value="Granite Point Shelter"/>
+									</heading>
+									<heading id="HamiltonRanchPeNV" title="Hamilton Ranch"/>
+									<heading id="HumboldtLakePeNV" title="Humboldt Lake"/> <!-- was missplaced in Humboldt co., NV -->
+									<!-- <heading id="LeonardRockshPeNV" title="Leonard Rockshelter"/> Paolo will determine whether this is in Churchill or Pershing co., NV -->
+									<heading id="LohatekalupopiPeNV" title="Lohatekalupopi"/>
 									<heading id="LovelockPershingNV" title="Lovelock city"> <!-- As opposed to cave.  Do we have anything from here? -->
 										<synonym value="Lovelock, city of"/>
 									</heading>
-									<!-- <heading id="LeonardRockshPeNV" title="Leonard Rockshelter"/> Paolo will determine whether this is in Churchill or Pershing co., NV -->
 									<heading id="MillCityPershingNV" title="Mill City"/>
+									<heading id="NevadaToulonPeNV" title="Nevada Toulon"/>
+									<heading id="NumahwatsiMuinooPeNV" title="Numahwatsi Muinoo"/>
+									<heading id="OrrPlacePeNV" title="Orr Place">
+										<synonym value="Orr-P1b"/> <!-- Verify that this is a synonym of Orr Place -->
+									</heading>
+									<heading id="OwlCavePeNV" title="Owl Cave"/>
+									<heading id="PaintedCavePeNV" title="Painted Cave"/>
 									<heading id="PittRanchMdNV" title="Pitt Ranch Mound"/>
+									<heading id="PlaceritosPeNV" title="Placeritos"/>
+									<heading id="PoleCynPeNV" title="Pole Canyon"/>
+									<heading id="SmelserPassPeNV" title="Smelser Pass"/>
+									<heading id="SmelzerSummitPeNV" title="Smelzer Summit"/>
+									<heading id="StickCavePeNV" title="Stick Cave"/>
+									<heading id="ToulonPeNV" title="Toulon"/>
 									<heading id="TungstonPershingNV" title="Tungston"/>
 								</heading>
 								<heading id="TrinomPershingNV" title="Trinomial site names" noMatch="true">
@@ -22138,30 +22182,50 @@
 										<synonym value="NV-Pe- 71"/>
 									</heading>
 									<heading id="NVPe104" title="NV-Pe-104">
-										<synonym value="pe-104"/>
+										<synonym value="Pe-104"/>
 									</heading>
 									<heading id="NVPeNL1" title="NV-Pe-NL-1">
+										<synonym value="Pe-NL-1"/>
 										<synonym value="Pe-NL-1 (MERGE)"/>
 									</heading>
 									<heading id="NVPeNL2" title="NV-Pe-NL-2">
+										<synonym value="Pe-NL-2"/>
 										<synonym value="Pe-NL-2 (MERGE)"/>
 									</heading>
-									<heading id="NVPeNL3" title="NV-Pe-NL-3"/>
-									<heading id="NVPeNL4" title="NV-Pe-NL-4"/>
+									<heading id="NVPeNL3" title="NV-Pe-NL-3">
+										<synonym value="Pe-NL-3"/>
+									</heading>
+									<heading id="NVPeNL4" title="NV-Pe-NL-4">
+										<synonym value="Pe-NL-4"/>
+									</heading>
 								</heading>
 							</heading>
 							<heading id="StoreyCoNV" title="Storey county">
 								<synonym value="PROVENIENCE = Storey county, Nevada"/>
-								<synonym value="Biddleman Spring"/>
 								<synonym value="Stewards #208"/>
 								<synonym value="Stewards #209"/>
-								<synonym value="Lagomarsino"/>
+								<heading id="PlacesStoreyNV" title="Place Names" noMatch="true">
+									<heading id="BiddlemanSprStNV" title="Biddleman Spring"/>
+									<heading id="LagomarsinoStNV" title="Lagomarsino"/>
+								</heading>
 								<heading id="TrinomStoreyNV" title="Trinomial site names" noMatch="true">
-									<heading id="NVSt1" title="NV-St- 1">
-										<synonym value="NV-St-1"/>
+									<heading id="NVSt1" title="NV-St-1">
+										<synonym value="NV-St- 1"/>
 									</heading>
-									<heading id="NVSt6" title="NV-St- 6">
-										<synonym value="NV-St-6"/>
+									<heading id="NVSt1" title="NV-St-2">
+										<synonym value="NV-St- 2"/>
+									</heading>
+									<heading id="NVSt1" title="NV-St-3">
+										<synonym value="NV-St- 3"/>
+									</heading>
+									<heading id="NVSt1" title="NV-St-4">
+										<synonym value="NV-St- 4"/>
+									</heading>
+									<heading id="NVSt1" title="NV-St-5">
+										<synonym value="NV-St- 5"/>
+									</heading>
+									<heading id="NVSt6" title="NV-St-6">
+										<synonym value="NV-St- 6"/>
 									</heading>
 								</heading>
 							</heading>
@@ -22333,14 +22397,19 @@
 							</heading>
 							<heading id="WhitePineCoNV" title="White Pine county">
 								<synonym value="PROVENIENCE = White Pine county, Nevada"/>
-								<synonym value="Blue Jay Springs"/>
-								<synonym value="Bluejay Springs"/>
-								<synonym value="Cat Mountain Shelter"/>
-								<synonym value="Pony Express Station"/>
-								<synonym value="Smith Creek Cave"/>
-								<synonym value="Whie Pinela"/>
 								<synonym value="WP-X1"/>
 								<synonym value="WP-X2"/>
+								<heading id="PlacesWhitePineNV" title="Place Names" noMatch="true">
+									<heading id="BlueJaySprWhPineNV" title="Bluejay Springs">
+										<synonym value="Blue Jay Springs"/>
+									</heading>
+									<heading id="CatMtnShltrWhPineNV" title="Cat Mountain Shelter"/>
+									<heading id="PonyExprStnWhPincNV" title="Pony Express Station"/>
+									<heading id="SmithCreekCvWhPincNV" title="Smith Creek Cave"/>
+									<heading id="WhitePinelaWhPincNV" title="White Pinela">
+										<synonym value="Whie Pinela"/>
+									</heading>
+								</heading>
 								<heading id="TrinomWhitePineNV" title="Trinomial site names" noMatch="true">
 									<heading id="NVWh2" title="NV-Wh-2">
 										<synonym value="NV-Wh- 2"/>
@@ -22536,13 +22605,6 @@
 						</heading>
 					</heading>
 				</heading>
-				<!--  LOCATE/REFILE OR ELIMINATE
-					<heading id="GreatPlains" title="Great Plains">
-						<heading id="CentralPlains" title="Central Plains"/>
-						<heading id="NorthernPlains" title="Northern Plains"/>
-						<heading id="SouthernPlains" title="Southern Plains"/>
-					</heading>
-					<heading id="Orca" title="Orca"/> -->
 			</heading>
 		</heading>
 	</heading>
@@ -22920,6 +22982,8 @@
 								<synonym value="Κέως"/>
 								<synonym value="Ceos"/>
 								<excl value="Gia Lai province"/>
+								<excl value="Zea mays"/>
+								<excl value="Zea amylacea"/>
 							</heading>
 							<heading id="KimolosOldGreece" title="Kimolos"/>
 							<heading id="KythnosOldGreece" title="Kythnos">
