@@ -922,10 +922,15 @@
 			<synonym value="Bucchero"/>
 			<implies facet="Location" cat="Etruria"/>
 		</heading>
-		<heading id="GreekPotteryStyles" title="Greek Pottery Styles">
-			<heading id="BlackFigureWare" title="BlackFigureWare"/>
+		<heading id="GreekPotteryStyles" title="Greek Pottery Styles" noMatch="true">
+			<heading id="BlackFigureWare" title="Black Figure Ware">
+				<synonym value="B/F"/>
+			</heading>
+			<heading id="RedFigureWare" title="Red Figure Ware">
+				<synonym value="R/F"/>
+			</heading>
 		</heading>
-		<heading id="SouthWestPotteryType" title="Southwest Pottery Types">
+		<heading id="SouthWestPotteryType" title="Southwest Pottery Types" noMatch="true">
 			<heading id="HohokamPotteryTypes" title="Hohokam Pottery Types">
 				<!-- Casa Grande Red-on-Buff -->
 				<!-- Estrella Red-on-Gray -->
@@ -971,7 +976,7 @@
 			<heading id="Sequined" title="Sequined"/>
 			<heading id="Strung" title="Strung"/>
 		</heading>
-		<heading id="CastOrMolded" title="Cast or Molded">
+		<heading id="CastOrMolded" title="Cast or Molded" noMatch="true">
 			<heading id="CastManufacture" title="Cast">
 				<synonym value="Casts"/>
 				<synonym value="Casted"/>
@@ -981,7 +986,7 @@
 					<synonym value="Plaster Casts"/>
 				</heading>
 			</heading>
-			<heading id="MoldManufacture" title="Molded">
+			<heading id="MoldManufacture" title="Molded" noMatch="true">
 				<synonym value="Mold"/>
 				<synonym value="Molding"/>
 				<synonym value="Moldings"/>

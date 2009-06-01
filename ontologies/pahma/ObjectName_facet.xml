@@ -573,7 +573,7 @@
 				<synonym value="Fish-Hook-Case"/>
 				<synonym value="Fish-Hook-Cases"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
-				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies container -->
+				<implies facet="ObjectName" cat="Containers"/>
 			</heading>
 			<heading id="FishingBaitFshEq" title="Fishing Bait">
 				<synonym value="Fishing Baits"/>
@@ -3409,7 +3409,6 @@
 			<synonym value="Food Container"/>
 			<synonym value="Food-Container"/>
 			<synonym value="Food-Containers"/>
-			<heading id="BeerContainerFoodCntnr" title="Beer Container" noMatch="true"/>
 			<heading id="BiscuitTin" title="Biscuit Tin">
 				<synonym value="Biscuit Tins"/>
 				<synonym value="Biscuit-Tin"/>
@@ -3635,7 +3634,6 @@
 			<heading id="Amphorisk" title="Amphorisk">
 				<synonym value="Amphorisks"/>
 			</heading>
-			<heading id="ApothecaryVesselCntnr" title="Apothecary Vessel" noMatch="true"/>
 			<heading id="Aryballos" title="Aryballos">
 				<synonym value="αρύβαλλος"/>
 			</heading>
@@ -4390,10 +4388,14 @@
 			</heading>
 		</heading>
 		<heading id="WalletContainer" title="Wallet" noMatch="true"/>
-		<heading id="WallPocketContnr" title="Wall-Pocket">
+		<heading id="WallPocketContnr" title="Wall Pocket">
+			<synonym value="Wall Pockets"/>
+			<synonym value="Wall-Pocket"/>
 			<synonym value="Wall-Pockets"/>
 		</heading>
-		<heading id="WaterContainer" title="Water-Container">
+		<heading id="WaterContainer" title="Water Container">
+			<synonym value="Water Containers"/>
+			<synonym value="Water-Container"/>
 			<synonym value="Water-Containers"/>
 		</heading>
 	</heading>
@@ -7273,7 +7275,7 @@
 					<synonym value="Mascara-Pouchs"/> <!-- Misspelling -->
 					<synonym value="Mascara-Pouch"/>
 					<synonym value="Mascara-Pouches"/>
-					<implies facet="ObjectName" cat="BagContainer"/>
+					<implies facet="ObjectName" cat="Containers"/>
 				</heading>
 			</heading>
 			<heading id="CosmeticPalette" title="Cosmetic Palette">
@@ -7510,19 +7512,16 @@
 	</heading>
 	<heading id="FireFireLightingEquip" title="Fire &amp; Fire-Lighting Items">
 		<synonym value="Fire/Fire-Lighting Equipment"/>
-		<heading id="BellowsFireEq" title="Bellows">
-			<implies facet="ObjectName" cat="BellowsTool"/>
-		</heading>
-		<heading id="BlowTubeFireEq" title="Blow Tube">
-			<synonym value="Blow Tubes"/>
-			<synonym value="Blow-Tube"/>
-			<synonym value="Blow-Tubes"/>
-			<implies facet="ObjectName" cat="BlowTubeTool"/>
-		</heading>
 		<heading id="BurnerFireEq" title="Burner">
 			<synonym value="Burners"/>
 		</heading>
-		<heading id="CamphorStickHolderFireEq" title="Camphor-Stick-Holder">
+		<heading id="CamphorStickHolderFireEq" title="Camphor Stick Holder">
+			<synonym value="Camphor Stick Holders"/>
+			<synonym value="Camphor-Stick Holder"/>
+			<synonym value="Camphor-Stick Holders"/>
+			<synonym value="Camphor Stick-Holder"/>
+			<synonym value="Camphor Stick-Holders"/>
+			<synonym value="Camphor-Stick-Holder"/>
 			<synonym value="Camphor-Stick-Holders"/>
 		</heading>
 		<heading id="FaggotFireEq" title="Faggot">
@@ -7533,29 +7532,36 @@
 			<synonym value="Fire-Basket"/>
 			<synonym value="Fire-Baskets"/>
 		</heading>
-		<heading id="FireBlowerFireEq" title="Fire-Blower">
-			<synonym value="Fire-Blowers"/>
-		</heading>
-		<heading id="FireBoxFireEq" title="Fire-Box">
-			<synonym value="Fire-Boxes"/>
-		</heading>
 		<heading id="FireBrickFireEq" title="Fire-Brick">
 			<synonym value="Fire-Bricks"/>
 		</heading>
-		<heading id="FireContainmentFireEq" title="Fire Containment">
+		<heading id="FireContainmentFireEq" title="Fire Containment">  <!-- New grouping term -->
 			<heading id="BrazierFireEq" title="Brazier">
 				<synonym value="Braziers"/>
 			</heading>
-			<heading id="FireCoverFireEq" title="Fire-Cover">
+			<heading id="FireBoxFireEq" title="Fire Box">
+				<synonym value="Fire Boxes"/>
+				<synonym value="Fire-Box"/>
+				<synonym value="Fire-Boxes"/>
+			</heading>
+			<heading id="FireCoverFireEq" title="Fire Cover">
+				<synonym value="Fire Covers"/>
+				<synonym value="Fire-Cover"/>
 				<synonym value="Fire-Covers"/>
 			</heading>
-			<heading id="FireHolderFireEq" title="Fire-Holder">
+			<heading id="FireHolderFireEq" title="Fire Holder">
+				<synonym value="Fire Holders"/>
+				<synonym value="Fire-Holder"/>
 				<synonym value="Fire-Holders"/>
 			</heading>
-			<heading id="FireJarFireEq" title="Fire-Jar">
+			<heading id="FireJarFireEq" title="Fire Jar">
+				<synonym value="Fire Jars"/>
+				<synonym value="Fire-Jar"/>
 				<synonym value="Fire-Jars"/>
 			</heading>
-			<heading id="FirePotFireEq" title="Fire-Pot">
+			<heading id="FirePotFireEq" title="Fire Pot">
+				<synonym value="Fire Pots"/>
+				<synonym value="Fire-Pot"/>
 				<synonym value="Fire-Pots"/>
 			</heading>
 			<heading id="FireScreenFireEq" title="Fire Screen">
@@ -7563,11 +7569,21 @@
 				<synonym value="Fire-Screen"/>
 				<synonym value="Fire-Screens"/>
 			</heading>
+			<heading id="ForgeFireEq" title="Forge">
+				<synonym value="Forges"/>
+			</heading>
+			<heading id="FurnaceFireEq" title="Furnace">
+				<synonym value="Furnaces"/>
+			</heading>
 			<heading id="HearthFireEq" title="Hearth">
 				<synonym value="Hearths"/>
 			</heading>
 			<heading id="KilnFireEq" title="Kiln">
 				<synonym value="Kilns"/>
+				<heading id="KilnDebrisFireEq" title="Kiln Debris"/>
+				<heading id="KilnFurnitureFireEq" title="Kiln Furniture">
+					<synonym value="Kiln-Furniture"/>
+				</heading>
 			</heading>
 			<heading id="OvenFireEq" title="Oven" noMatch="true"/>
 			<heading id="StoveFireEq" title="Stove">
@@ -7585,10 +7601,14 @@
 			<synonym value="Fire-Dogs"/>
 			<implies facet="ObjectName" cat="FireDogStndMiscEq"/>
 		</heading>
-		<heading id="FireFanFireEq" title="Fire-Fan">
+		<heading id="FireFanFireEq" title="Fire Fan">
+			<synonym value="Fire Fans"/>
+			<synonym value="Fire-Fan"/>
 			<synonym value="Fire-Fans"/>
 		</heading>
-		<heading id="FireGrateFireEq" title="Fire-Grate">
+		<heading id="FireGrateFireEq" title="Fire Grate">
+			<synonym value="Fire Grates"/>
+			<synonym value="Fire-Grate"/>
 			<synonym value="Fire-Grates"/>
 		</heading>
 		<heading id="FireGridFireEq" title="Fire Grid">
@@ -7602,7 +7622,9 @@
 			<synonym value="Fire-Hook"/>
 			<synonym value="Fire-Hooks"/>
 		</heading>
-		<heading id="FirePistonFireEq" title="Fire-Piston">
+		<heading id="FirePistonFireEq" title="Fire Piston">
+			<synonym value="Fire Pistons"/>
+			<synonym value="Fire-Piston"/>
 			<synonym value="Fire-Pistons"/>
 		</heading>
 		<heading id="FireStarters" title="Fire Starters">
@@ -7646,10 +7668,16 @@
 				<synonym value="Matchbox"/>
 				<synonym value="Matchboxes"/>
 				<implies facet="ActivityorContext" cat="DrugSmoking"/>
-				<implies facet="ObjectName" cat="MatchBoxContainer"/>
+				<implies facet="ObjectName" cat="Containers"/>
 			</heading>
-			<heading id="MatchBoxHolderFireEq" title="Match-Box-Holder">
-				<synonym value="Match-Box-Holders"/>
+			<heading id="MatchBoxHolderFireEq" title="Match Box Holder">
+				<synonym value="Match Box Holders"/>
+				<synonym value="Matchbox Holder"/>
+				<synonym value="Matchbox Holders"/>
+				<synonym value="Match-Box Holder"/>
+				<synonym value="Match-Box Holders"/>
+				<synonym value="Matchbox-Holder"/>
+				<synonym value="Matchbox-Holders"/>
 			</heading>
 			<heading id="StrikeALightFireEq" title="Strike-a-Light">
 				<synonym value="Strike-a-Lights"/>
@@ -7665,7 +7693,23 @@
 			<synonym value="Fire Stick Containers"/>
 			<synonym value="Fire-Stick-Container"/>
 			<synonym value="Fire-Stick-Containers"/>
-			<implies facet="ObjectName" cat="FireStickCntnrCntnr"/>
+			<implies facet="ObjectName" cat="Containers"/>
+		</heading>
+		<heading id="FireStokingEq" title="Fire Stoking equipment" noMatch="true">  <!-- New grouping term -->
+			<heading id="BellowsFireEq" title="Bellows">
+				<implies facet="ObjectName" cat="BellowsTool"/>
+			</heading>
+			<heading id="BlowTubeFireEq" title="Blow Tube">
+				<synonym value="Blow Tubes"/>
+				<synonym value="Blow-Tube"/>
+				<synonym value="Blow-Tubes"/>
+				<implies facet="ObjectName" cat="BlowTubeTool"/>
+			</heading>
+			<heading id="FireBlowerFireEq" title="Fire Blower">
+				<synonym value="Fire Blowers"/>
+				<synonym value="Fire-Blower"/>
+				<synonym value="Fire-Blowers"/>
+			</heading>
 		</heading>
 		<heading id="FireStoneFireEq" title="Fire Stone">
 			<synonym value="Fire Stones"/>
@@ -7673,8 +7717,10 @@
 			<synonym value="Fire-Stones"/>
 			<implies facet="ObjectName" cat="FireStoneTool"/>
 		</heading>
-		<heading id="FireTendingFireEq" title="Fire Tending Equipment">
-			<heading id="FireRakeFireEq" title="Fire-Rake">
+		<heading id="FireTendingFireEq" title="Fire Tending equipment">  <!-- New grouping term -->
+			<heading id="FireRakeFireEq" title="Fire Rake">
+				<synonym value="Fire Rakes"/>
+				<synonym value="Fire-Rakes"/>
 				<synonym value="Fire-Rakes"/>
 			</heading>
 			<heading id="FireSawFireEq" title="Fire Saw">
@@ -7683,46 +7729,45 @@
 				<synonym value="Fire-Saws"/>
 				<implies facet="ObjectName" cat="FireSawTool"/>
 			</heading>
-			<heading id="FireShovelFireEq" title="Fire-Shovel">
+			<heading id="FireShovelFireEq" title="Fire Shovel">
+				<synonym value="Fire Shovels"/>
+				<synonym value="Fire-Shovel"/>
 				<synonym value="Fire-Shovels"/>
 			</heading>
-			<heading id="FireTongsFireEq" title="Fire-Tongs">
+			<heading id="FireTongsFireEq" title="Fire Tongs">
+				<synonym value="Fire Tong"/>
 				<synonym value="Fire-Tong"/>
+				<synonym value="Fire-Tongs"/>
 			</heading>
-		</heading>
-		<heading id="ForgeFireEq" title="Forge">
-			<synonym value="Forges"/>
+			<heading id="PokerFireEq" title="Poker"> <!-- Disambiguate from card game -->
+				<synonym value="Pokers"/>
+			</heading>
 		</heading>
 		<heading id="FuelFireEq" title="Fuel">
 			<synonym value="Fuels"/>
 		</heading>
-		<heading id="FurnaceFireEq" title="Furnace">
-			<synonym value="Furnaces"/>
-		</heading>
-		<heading id="KilnDebrisFireEq" title="Kiln Debris"/>
-		<heading id="KilnFurnitureFireEq" title="Kiln-Furniture">
-			<synonym value="Kiln-Furnitures"/>
-		</heading>
-		<heading id="MatchExtinguisherFireEq" title="Match-Extinguisher">
+		<heading id="MatchExtinguisherFireEq" title="Match Extinguisher">
+			<synonym value="Match Extinguishers"/>
+			<synonym value="Match-Extinguisher"/>
 			<synonym value="Match-Extinguishers"/>
-		</heading>
-		<heading id="PokerFireEq" title="Poker">
-			<synonym value="Pokers"/>
 		</heading>
 		<heading id="SpillFireEq" title="Spill">
 			<synonym value="Spills"/>
 		</heading>
-		<heading id="SpillVaseFireEq" title="Spill-Vase">
+		<heading id="SpillVaseFireEq" title="Spill Vase">
+			<synonym value="Spill Vases"/>
+			<synonym value="Spill-Vase"/>
 			<synonym value="Spill-Vases"/>
 		</heading>
-		<heading id="TaperHolderFireEq" title="Taper-Holder">
-			<synonym value="Taper-Holders"/>
-		</heading>
-		<heading id="TinderBoxFireEq" title="Tinder-Box">
+		<heading id="TinderBoxFireEq" title="Tinder Box">
+			<synonym value="Tinder Boxes"/>
+			<synonym value="Tinder-Box"/>
 			<synonym value="Tinder-Boxes"/>
 		</heading>
 		<heading id="TorchFireEq" title="Torch" noMatch="true"/>
-		<heading id="TorchHolderFireEq" title="Torch-Holder">
+		<heading id="TorchHolderFireEq" title="Torch Holder">
+			<synonym value="Torch Holders"/>
+			<synonym value="Torch-Holder"/>
 			<synonym value="Torch-Holders"/>
 		</heading>
 		<heading id="TuyereFireEq" title="Tuyere">
@@ -7984,6 +8029,11 @@
 			<synonym value="Snuffers"/>
 		</heading>
 		<heading id="SnufferStandLghtEq" title="Snuffer Stand" noMatch="true"/>
+		<heading id="TaperHolderFireEq" title="Taper Holder">
+			<synonym value="Taper Holders"/>
+			<synonym value="Taper-Holder"/>
+			<synonym value="Taper-Holders"/>
+		</heading>
 		<heading id="TorchLghtEq" title="Torch">
 			<synonym value="Torches"/>
 			<synonym value="Torchs"/> <!-- Misspelling -->
@@ -8021,7 +8071,7 @@
 			<synonym value="Apothecary Vessels"/>
 			<synonym value="Apothecary-Vessel"/>
 			<synonym value="Apothecary-Vessels"/>
-			<implies facet="ObjectName" cat="ApothecaryVesselCntnr"/>
+			<implies facet="ObjectName" cat="Containers"/>
 		</heading>
 		<heading id="ApothecaryWeightRx" title="Apothecary-Weight">
 			<synonym value="Apothecary-Weights"/>
@@ -11792,7 +11842,7 @@
 					<synonym value="Beer Containers"/>
 					<synonym value="Beer-Container"/>
 					<synonym value="Beer-Containers"/>
-					<implies facet="ObjectName" cat="BeerContainerFoodCntnr"/>
+					<implies facet="ObjectName" cat="FoodContainer"/>
 				</heading>
 				<heading id="BeerStrainer" title="Beer Strainer">
 					<synonym value="Beer Strainers"/>
@@ -14450,8 +14500,7 @@
 							<synonym value="Hodja"/>
 							<implies facet="Culture" cat="TurkishGroups"/>
 						</heading>
-						<heading id="IskeleKahyasiShadowFigure"
-							title="Iskele Kahyasi (Istanbul Pierman)">
+						<heading id="IskeleKahyasiShadowFigure" title="Iskele Kahyasi (Istanbul Pierman)">
 							<synonym value="Iskele Kahyasi"/>
 							<synonym value="Pierman of Istanbul"/>
 							<implies facet="Culture" cat="TurkishGroups"/>
@@ -14512,7 +14561,9 @@
 			<heading id="TormaSculpture" title="Torma">
 				<synonym value="Tormas"/>
 			</heading>
-			<heading id="TotempoleSculpt" title="Totem-Pole">
+			<heading id="TotempoleSculpt" title="Totem Pole">
+				<synonym value="Totem Poles"/>
+				<synonym value="Totem-Pole"/>
 				<synonym value="Totem-Poles"/>
 			</heading>
 			<heading id="YoniSculpture" title="Yoni">
