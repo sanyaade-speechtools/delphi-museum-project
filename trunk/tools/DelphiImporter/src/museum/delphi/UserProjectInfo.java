@@ -26,13 +26,20 @@ public class UserProjectInfo implements Serializable {
 	public transient DBMetaDataReader dbMetaDataReader = null;
 	private String imagePathsPath = null;
 	public transient ImagePathsReader imagePathsReader = null;
-	public String objectsSQLLoadfilePath = null;
-	public String facetsSQLLoadfilePath = null;
-	public String categoriesSQLLoadfilePath = null;
-	public String hooksSQLLoadfilePath = null;
-	public String exclusionsSQLLoadfilePath = null;
-	public String obj_catsSQLLoadfilePath = null;
-	public String mediaSQLLoadfilePath = null;
+	private String objectsSQLLoadfilePath = null;
+	private String facetsSQLLoadfilePath = null;
+	private String categoriesSQLLoadfilePath = null;
+	private String hooksSQLLoadfilePath = null;
+	private String exclusionsSQLLoadfilePath = null;
+	private String obj_catsSQLLoadfilePath = null;
+	private String mediaSQLLoadfilePath = null;
+	private String catCardsSQLLoadfilePath = null;
+	private String webAppDB_host = null;
+	private String webAppDB_dbName = null;
+	private String webAppDB_user = null;
+	private String webAppDB_password = null;
+	public transient WebAppDB webAppDB = null;
+
 	private transient boolean dirty = false;
 
 	private static int _debugLevel = 1;
@@ -116,6 +123,11 @@ public class UserProjectInfo implements Serializable {
 		this.exclusionsSQLLoadfilePath	= upi.exclusionsSQLLoadfilePath;
 		this.obj_catsSQLLoadfilePath	= upi.obj_catsSQLLoadfilePath;
 		this.mediaSQLLoadfilePath		= upi.mediaSQLLoadfilePath;
+		this.catCardsSQLLoadfilePath	= upi.catCardsSQLLoadfilePath;
+		this.webAppDB_host				= upi.webAppDB_host;
+		this.webAppDB_dbName			= upi.webAppDB_dbName;
+		this.webAppDB_user				= upi.webAppDB_user;
+		this.webAppDB_password			= upi.webAppDB_password;
 		// Clear all the transients - force a reload when set paths
 		vocabTermsReader = null;
 		vocabHashTree = null;
@@ -125,6 +137,7 @@ public class UserProjectInfo implements Serializable {
 		metaDataReader = null;
 		dbMetaDataReader = null;
 		imagePathsReader = null;
+		webAppDB = null;
 		dirty = true;
 
 	}
@@ -198,6 +211,162 @@ public class UserProjectInfo implements Serializable {
 			|| ((imagePathsPath != null) && !imagePathsPath.equals(newVal))) {
 			dirty = true;
 			imagePathsPath = newVal;
+		}
+	}
+
+	public String getObjectsSQLLoadfilePath() {
+		return objectsSQLLoadfilePath;
+	}
+
+	public void setObjectsSQLLoadfilePath( String newVal ) {
+		if(((objectsSQLLoadfilePath == null) != (newVal == null))
+			|| ((objectsSQLLoadfilePath != null) && !objectsSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			objectsSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getFacetsSQLLoadfilePath() {
+		return facetsSQLLoadfilePath;
+	}
+
+	public void setFacetsSQLLoadfilePath( String newVal ) {
+		if(((facetsSQLLoadfilePath == null) != (newVal == null))
+			|| ((facetsSQLLoadfilePath != null) && !facetsSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			facetsSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getCategoriesSQLLoadfilePath() {
+		return categoriesSQLLoadfilePath;
+	}
+
+	public void setCategoriesSQLLoadfilePath( String newVal ) {
+		if(((categoriesSQLLoadfilePath == null) != (newVal == null))
+			|| ((categoriesSQLLoadfilePath != null) && !categoriesSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			categoriesSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getHooksSQLLoadfilePath() {
+		return hooksSQLLoadfilePath;
+	}
+
+	public void setHooksSQLLoadfilePath( String newVal ) {
+		if(((hooksSQLLoadfilePath == null) != (newVal == null))
+			|| ((hooksSQLLoadfilePath != null) && !hooksSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			hooksSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getExclusionsSQLLoadfilePath() {
+		return exclusionsSQLLoadfilePath;
+	}
+
+	public void setExclusionsSQLLoadfilePath( String newVal ) {
+		if(((exclusionsSQLLoadfilePath == null) != (newVal == null))
+			|| ((exclusionsSQLLoadfilePath != null) && !exclusionsSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			exclusionsSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getObj_catsSQLLoadfilePath() {
+		return obj_catsSQLLoadfilePath;
+	}
+
+	public void setObj_catsSQLLoadfilePath( String newVal ) {
+		if(((obj_catsSQLLoadfilePath == null) != (newVal == null))
+			|| ((obj_catsSQLLoadfilePath != null) && !obj_catsSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			obj_catsSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getMediaSQLLoadfilePath() {
+		return mediaSQLLoadfilePath;
+	}
+
+	public void setMediaSQLLoadfilePath( String newVal ) {
+		if(((mediaSQLLoadfilePath == null) != (newVal == null))
+			|| ((mediaSQLLoadfilePath != null) && !mediaSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			mediaSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getCatCardsSQLLoadfilePath() {
+		return catCardsSQLLoadfilePath;
+	}
+
+	public void setCatCardsSQLLoadfilePath( String newVal ) {
+		if(((catCardsSQLLoadfilePath == null) != (newVal == null))
+			|| ((catCardsSQLLoadfilePath != null) && !catCardsSQLLoadfilePath.equals(newVal))) {
+			dirty = true;
+			catCardsSQLLoadfilePath = newVal;
+		}
+	}
+
+	public String getWebAppDB_host() {
+		return webAppDB_host;
+	}
+
+	public void setWebAppDB_host( String newVal ) {
+		if(((webAppDB_host == null) != (newVal == null))
+			|| ((webAppDB_host != null) && !webAppDB_host.equals(newVal))) {
+			dirty = true;
+			webAppDB_host = newVal;
+		}
+	}
+
+	public String getWebAppDB_dbName() {
+		return webAppDB_dbName;
+	}
+
+	public void setWebAppDB_dbName( String newVal ) {
+		if(((webAppDB_dbName == null) != (newVal == null))
+			|| ((webAppDB_dbName != null) && !webAppDB_dbName.equals(newVal))) {
+			dirty = true;
+			webAppDB_dbName = newVal;
+		}
+	}
+
+	public String getWebAppDB_user() {
+		return webAppDB_user;
+	}
+
+	public void setWebAppDB_user( String newVal ) {
+		if(((webAppDB_user == null) != (newVal == null))
+			|| ((webAppDB_user != null) && !webAppDB_user.equals(newVal))) {
+			dirty = true;
+			webAppDB_user = newVal;
+		}
+	}
+
+	public String getWebAppDB_password() {
+		return webAppDB_password;
+	}
+
+	public void setWebAppDB_password( String newVal ) {
+		if(((webAppDB_password == null) != (newVal == null))
+			|| ((webAppDB_password != null) && !webAppDB_password.equals(newVal))) {
+			dirty = true;
+			webAppDB_password = newVal;
+		}
+	}
+
+	public void resetWebAppDB() {
+		if(   (webAppDB_host == null)	  || webAppDB_host.isEmpty()
+			||(webAppDB_dbName == null)	  || webAppDB_dbName.isEmpty()
+			||(webAppDB_user == null)	  || webAppDB_user.isEmpty()
+			||(webAppDB_password == null) || webAppDB_password.isEmpty() ) {
+			webAppDB = null;
+		} else {
+			webAppDB = new WebAppDB("mysql", webAppDB_host, webAppDB_dbName,
+									webAppDB_user, webAppDB_password);
 		}
 	}
 
