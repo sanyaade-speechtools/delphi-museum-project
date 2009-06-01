@@ -18,7 +18,6 @@ CREATE TABLE `user` (
   `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP 
         on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`),
-  INDEX `user_i_username` (`username`)
 ) ENGINE=MyIsam DEFAULT CHARSET=latin1;
 SHOW WARNINGS;
 
@@ -34,7 +33,6 @@ CREATE TABLE `role` (
   `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP
         on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`),
-  INDEX `role_i_name` (`name`)
 ) ENGINE=MyIsam DEFAULT CHARSET=latin1;
 SHOW WARNINGS;
 
@@ -50,7 +48,6 @@ CREATE TABLE `permission` (
   `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP
         on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`),
-  INDEX `perm_i_name` (`name`)
 ) ENGINE=MyIsam DEFAULT CHARSET=latin1;
 SHOW WARNINGS;
 

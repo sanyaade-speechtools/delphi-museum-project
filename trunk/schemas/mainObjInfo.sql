@@ -49,7 +49,6 @@ CREATE TABLE `objects` (
   `creation_time` timestamp NOT NULL default '0000-00-00 00:00:00',
   `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP 
         on update CURRENT_TIMESTAMP,
-  INDEX `obj_id_index` (`id`),
 	-- Enable full text (keyword) search on the name and description
   FULLTEXT KEY `obj_fulltext_index` (`name`,`description`,`hiddenNotes`)
 )ENGINE=MyIsam;
@@ -89,7 +88,6 @@ CREATE TABLE `media` (
   `creation_time` timestamp NOT NULL default '0000-00-00 00:00:00',
   `mod_time`      timestamp NOT NULL default CURRENT_TIMESTAMP 
         on update CURRENT_TIMESTAMP,
-  INDEX `med_id_index` (`id`),
   INDEX `med_obj_id_index` (`obj_id`,`type`),
   CONSTRAINT `me_ibfk_1` FOREIGN KEY (`obj_id`)
       REFERENCES `objects` (`id`)
@@ -108,7 +106,6 @@ CREATE TABLE `sets` (
   `creation_time`  timestamp NOT NULL default '0000-00-00 00:00:00',
   `mod_time`       timestamp NOT NULL default CURRENT_TIMESTAMP 
         on update CURRENT_TIMESTAMP,
-  INDEX `sets_id_index` (`id`),
   INDEX `sets_id_owner` (`owner_id`),
   CONSTRAINT `se_ibfk_1` FOREIGN KEY (`owner_id`)
       REFERENCES `user` (`id`)
@@ -165,7 +162,6 @@ CREATE TABLE `categories` (
   `always_inferred` TINYINT(1) NOT NULL default 0,
   `n_matches`       int(10) NOT NULL default 0,
   `n_matches_w_img` int(10) NOT NULL default 0,
-  INDEX `cat_id_index` (`id`),
   INDEX `cat_name_index` (`name`),    -- Removed until need clarified
 	-- Enable full text (keyword) search on the name and description
   FULLTEXT KEY `cat_fulltext_index` (`display_name`),
@@ -317,7 +313,6 @@ CREATE TABLE `tags` (
   `tag_count` int(11) NOT NULL default '1',
   PRIMARY KEY  (`tag_id`),
   UNIQUE KEY `tag_name` (`tag_name`),
-  KEY `tags_id_idx` (`tag_id`)
 ) ENGINE=MyISAM;
 
 /*
