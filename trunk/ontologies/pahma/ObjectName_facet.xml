@@ -2199,30 +2199,36 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Artifacts" title="Artifacts"> <!-- PARSE OUT AND MERGE ELSEWHERE -->
+	<!-- <heading id="Artifacts" title="Artifacts"> PARSE OUT AND MERGE ELSEWHERE
 		<synonym value="Artifact"/>
 		<synonym value="Artefact"/>
 		<synonym value="Artefacts"/>
+		••• 159 / 1606:
 		<heading id="BallArtifact" title="Ball">
 			<synonym value="Balls"/>
 			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 		</heading>
+		••• 0 / 51:
 		<heading id="CarvedStone" title="Carved Stone">
 			<implies facet="ActivityorContext" cat="Carving"/>
 			<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
 		</heading>
+		••• 233 / 3325:
 		<heading id="Disc" title="Disc">
 			<synonym value="Discs"/>
 			<synonym value="Disk"/>
 			<synonym value="Disks"/>
 		</heading>
+		••• 0 / 1:
 		<heading id="EngravedStone" title="Engraved Stone"/>
+		•••  0 / 4:
 		<heading id="RetouchedPiece" title="Retouched Piece"/>
+		•••  427 / 876:
 		<heading id="Rod" title="Rod">
 			<synonym value="Rods"/>
-			<excl value="Single rod"/> <!-- A coiled basketry technique -->
+			<excl value="Single rod"/>  A coiled basketry technique
 		</heading>
-	</heading>
+	</heading> -->
 	<heading id="BiologicalRemains" title="Biological Remains">
 		<synonym value="Animal/Vegetal Remains"/>
 		<heading id="AnimalRemains" title="Animal Remains">
@@ -7554,9 +7560,6 @@
 			<synonym value="Camphor-Stick-Holder"/>
 			<synonym value="Camphor-Stick-Holders"/>
 		</heading>
-		<heading id="FaggotFireEq" title="Faggot">
-			<synonym value="Faggots"/>
-		</heading>
 		<heading id="FireBasketFireEq" title="Fire Basket">
 			<synonym value="Fire Baskets"/>
 			<synonym value="Fire-Basket"/>
@@ -7734,6 +7737,9 @@
 				<synonym value="Blow-Tube"/>
 				<synonym value="Blow-Tubes"/>
 				<implies facet="ObjectName" cat="BlowTubeTool"/>
+			</heading>
+			<heading id="FaggotFireEq" title="Faggot">
+				<synonym value="Faggots"/>
 			</heading>
 			<heading id="FireBlowerFireEq" title="Fire Blower">
 				<synonym value="Fire Blowers"/>
