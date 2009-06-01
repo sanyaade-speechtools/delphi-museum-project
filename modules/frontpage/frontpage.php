@@ -22,7 +22,7 @@ $objects = array();
 
 while( $row=$res->fetchRow()) {
 	array_push($objects, outputWrappedImage( $row, "front_example", 
-							$CFG->wwwroot."/modules/browser/details.php?id=", 95 ));
+							$CFG->wwwroot."/object/", 95 ));
 }
 
 // Free the result
