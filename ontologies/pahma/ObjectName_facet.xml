@@ -8673,19 +8673,6 @@
 		<heading id="JestersStaff" title="Jester's Staff">
 			<synonym value="Jester's Staffs"/>
 		</heading>
-		<heading id="MaskMiscEq" title="Mask">
-			<synonym value="Masks"/>
-			<excl value="Death Mask"/>
-			<excl value="Death Masks"/>
-			<excl value="Fencing Mask"/>
-			<excl value="Fencing Masks"/>
-			<excl value="Fencing-Mask"/>
-			<excl value="Fencing-Masks"/>
-			<excl value="Life Mask"/>
-			<excl value="Life Masks"/>
-			<excl value="Mummy Mask"/>
-			<excl value="Mummy Masks"/>
-		</heading>
 		<heading id="MusicEquipment" title="Music Equipment">
 			<synonym value="Musical Instrument"/>
 			<synonym value="Musical Instruments"/>
@@ -9110,6 +9097,12 @@
 					<excl value="Bell caps"/>
 					<excl value="Bell-cap"/>
 					<excl value="Bell-caps"/>
+					<excl value="Bell Lip"/>
+					<excl value="Bell-shaped"/>
+					<excl value="Bell shaped"/>
+					<excl value="Bell shape"/>
+					<excl value="Bell-shape"/>
+					<excl value="Bell Tower"/>
 					<excl value="Sally Bell"/>
 					<excl value="Tom Bell"/>
 					<excl value="Tony Bell"/>
@@ -9147,8 +9140,7 @@
 						<synonym value="Ghanta"/>
 						<synonym value="Ghantas"/>
 					</heading>
-					<heading id="HornBell" title="Horn Bells">
-						<!-- horn as instrument, not as material of bell -->
+					<heading id="HornBell" title="Horn Bells"> <!-- horn as instrument, not as material of bell -->
 						<synonym value="Horn Bell"/>
 						<synonym value="Hornbell"/>
 						<synonym value="Hornbells"/>
@@ -9207,8 +9199,7 @@
 				<heading id="ConcussionStick_BM" title="Concussion Stick">  <!-- unknown -->
 					<synonym value="Concussion Sticks"/>
 				</heading>
-				<heading id="Cymbal" title="Cymbal">
-					<!-- includes: finger, hand, rolmo, tingsha -->
+				<heading id="Cymbal" title="Cymbal"> <!-- includes: finger, hand, rolmo, tingsha -->
 					<synonym value="Cymbals"/>
 					<heading id="FingerCymbal" title="Finger Cymbal">
 						<synonym value="Finger Cymbals"/>
@@ -10620,6 +10611,19 @@
 		</heading>
 		<heading id="MarriageEquipmentRelRit" title="Marriage Equipment">
 			<synonym value="Marriage Items"/>
+		</heading>
+		<heading id="MaskMiscEq" title="Mask">
+			<synonym value="Masks"/>
+			<excl value="Death Mask"/>
+			<excl value="Death Masks"/>
+			<excl value="Fencing Mask"/>
+			<excl value="Fencing Masks"/>
+			<excl value="Fencing-Mask"/>
+			<excl value="Fencing-Masks"/>
+			<excl value="Life Mask"/>
+			<excl value="Life Masks"/>
+			<excl value="Mummy Mask"/>
+			<excl value="Mummy Masks"/>
 		</heading>
 		<heading id="MasqueradeCostumeRelRit" title="Masquerade-Costume" noMatch="true"/>
 		<heading id="MassBellRelRit" title="Mass-Bell">
