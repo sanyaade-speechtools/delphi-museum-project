@@ -778,7 +778,7 @@
 				<synonym value="Beehive-Stand"/>
 				<synonym value="Beehive-Stands"/>
 				<implies facet="ObjectName" cat="BeehiveStandAnmlEq"/>
-				<implies facet="ObjectName" cat="BeehiveStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="ClimbingRing" title="Climbing-Ring"/>
 			<heading id="ClimbingRopeGathering" title="Climbing Rope">
@@ -2459,7 +2459,7 @@
 			</heading>
 			<heading id="CalligraphyboardComm" title="Calligraphy-Board">
 				<synonym value="Calligraphy-Boards"/>
-				<implies facet="ObjectName" cat="BoardMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="BoardMiscEq"/> -->
 			</heading>
 			<heading id="CondensingglassArtWrComm" title="Condensing Glass">
 				<synonym value="Condensing Glasses"/>
@@ -2495,7 +2495,7 @@
 				<synonym value="Ink Stands"/>
 				<synonym value="Ink-Stand"/>
 				<synonym value="Ink-Stands"/>
-				<implies facet="ObjectName" cat="InkStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="InkStoneComm" title="Ink Stone">
 				<synonym value="Inkstone"/>
@@ -2620,7 +2620,7 @@
 				<synonym value="Scroll Stands"/>
 				<synonym value="Scroll-Stand"/>
 				<synonym value="Scroll-Stands"/>
-				<implies facet="ObjectName" cat="ScrollStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="ScrollWeightComm" title="Scroll-Weight">
 				<synonym value="Scroll-Weights"/>
@@ -2670,7 +2670,7 @@
 				<synonym value="Writing Set Stands"/>
 				<synonym value="Writing-Set-Stand"/>
 				<synonym value="Writing-Set-Stands"/>
-				<implies facet="ObjectName" cat="WritingSetStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="WritingSlopeComm" title="Writing Slope">
 				<synonym value="Writing Slopes"/>
@@ -4876,7 +4876,6 @@
 		<heading id="CounterCurrency" title="Counter">
 			<synonym value="Counters"/>
 			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-			<implies facet="ObjectName" cat="CounterMiscEq"/>
 		</heading>
 		<heading id="CurrencyBar" title="Currency-Bar">
 			<synonym value="Currency-Bars"/>
@@ -5060,7 +5059,7 @@
 				<excl value="Mat"/>
 				<excl value="Roof"/>
 				<excl value="Splash"/>
-				<implies facet="ObjectName" cat="BoardMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="BoardMiscEq"/> -->
 				<heading id="BreadboardCookEq" title="Breadboard">
 					<synonym value="Breadboards"/>
 					<implies facet="ObjectName" cat="BreadFood"/>
@@ -6770,7 +6769,7 @@
 					<synonym value="Hatracks"/>
 					<synonym value="Hatstand"/>
 					<synonym value="Hatstands"/>
-					<implies facet="ObjectName" cat="HatRackStndMiscEq"/>
+					<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 				</heading>
 				<heading id="SeatFurniture" title="Seat">
 					<synonym value="Seats"/>
@@ -7330,7 +7329,7 @@
 				<synonym value="Cosmetic Stands"/>
 				<synonym value="Cosmetic-Stand"/>
 				<synonym value="Cosmetic-Stands"/>
-				<implies facet="ObjectName" cat="CosmeticStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="HairpinCsmtc" title="Hairpin">
 				<synonym value="Hairpins"/>
@@ -7632,7 +7631,7 @@
 			<synonym value="Fire Dogs"/>
 			<synonym value="Fire-Dog"/>
 			<synonym value="Fire-Dogs"/>
-			<implies facet="ObjectName" cat="FireDogStndMiscEq"/>
+			<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 		</heading>
 		<heading id="FireFanFireEq" title="Fire Fan">
 			<synonym value="Fire Fans"/>
@@ -7648,7 +7647,7 @@
 			<synonym value="Fire Grids"/>
 			<synonym value="Fire-Grid"/>
 			<synonym value="Fire-Grids"/>
-			<implies facet="ObjectName" cat="FireGridStndMiscEq"/>
+			<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 		</heading>
 		<heading id="FireHookFireEq" title="Fire Hook">
 			<synonym value="Fire Hooks"/>
@@ -8254,330 +8253,406 @@
 			<synonym value="Surgical Items"/>
 		</heading>
 	</heading>
-	<heading id="MiscellaneousEquipment" title="Miscellaneous Equipment"> <!-- PARSE OUT AND MERGE ELSEWHERE -->
+	<!-- <heading id="MiscellaneousEquipment" title="Miscellaneous Equipment"> PARSE OUT AND MERGE ELSEWHERE
 		<synonym value="Apparatus"/>
+		••• 0 / 2:
 		<heading id="BatteryMiscEq" title="Battery">
 			<synonym value="Batteries"/>
-			<synonym value="Batterys"/>
-			<!-- Misspelling -->
+			<synonym value="Batterys"/> <!- Misspelling ->
 		</heading>
+		••• 0 / 1:
 		<heading id="BirdstoneMiscEq" title="Birdstone">
 			<synonym value="Birdstones"/>
 		</heading>
+		••• 1/3:
 		<heading id="BoardMiscEq" title="Board" noMatch="true">
 			<synonym value="Chopped board"/>
 			<synonym value="Roof board"/>
 		</heading>
+		••• 0/2:
 		<heading id="BookEndMiscEq" title="Book End">
 			<synonym value="Book Ends"/>
 			<synonym value="Book-End"/>
 			<synonym value="Book-Ends"/>
 		</heading>
+		••• 0/1:
 		<heading id="BouquetMiscEq" title="Bouquet">
 			<synonym value="Bouquets"/>
 		</heading>
-		<!-- <heading id="ChainMiscEq" title="Chain"> Disambiguate with jewelery
+		••• 71/259:
+		<heading id="ChainMiscEq" title="Chain"> Disambiguate with jewelery
 			<synonym value="Chains"/>
-		</heading> -->
+		</heading>
+		••• 1/2:
 		<heading id="ChoppingBlockMiscEq" title="Chopping Block">
 			<synonym value="Chopping Blocks"/>
 			<synonym value="Chopping-Block"/>
 			<synonym value="Chopping-Blocks"/>
 		</heading>
+		••• 280/1977:
 		<heading id="CordMiscEq" title="Cord">
 			<synonym value="Cords"/>
 		</heading>
-		<heading id="CounterMiscEq" title="Counter" noMatch="true"/>
+		••• 381/1174:
 		<heading id="CoverMiscEq" title="Cover">
 			<synonym value="Covers"/>
 		</heading>
+		••• 2/48:
 		<heading id="DinnerSetMiscEq" title="Dinner Set">
 			<synonym value="Dinner Sets"/>
 			<synonym value="Dinner-Set"/>
 			<synonym value="Dinner-Sets"/>
 		</heading>
+		••• 1/2:
 		<heading id="DusterMiscEq" title="Duster">
 			<synonym value="Dusters"/>
 		</heading>
+		••• [none?]:
 		<heading id="FanMiscEq" title="Fan">
 			<synonym value="Fans"/>
 		</heading>
+		••• 12/120:
 		<heading id="FastenerMiscEq" title="Fastener">
 			<synonym value="Fasteners"/>
 		</heading>
+		••• 0/5:
 		<heading id="FeederMiscEq" title="Feeder">
 			<synonym value="Feeders"/>
 		</heading>
+		••• 0/18:
 		<heading id="FilterMiscEq" title="Filter">
 			<synonym value="Filters"/>
 		</heading>
+		••• 0/2:
 		<heading id="FireworkMiscEq" title="Firework">
 			<synonym value="Fireworks"/>
 		</heading>
+		••• 38/160:
 		<heading id="FloatMiscEq" title="Float">
 			<synonym value="Floats"/>
 		</heading>
+		••• 180/622:
 		<heading id="FrameMiscEq" title="Frame">
 			<synonym value="Frames"/>
 		</heading>
+		••• 249/853:
 		<heading id="FringeMiscEq" title="Fringe">
 			<synonym value="Fringes"/>
 		</heading>
+		••• 0/1:
 		<heading id="GratingMiscEq" title="Grating">
 			<synonym value="Gratings"/>
 		</heading>
+		••• 13/219:
 		<heading id="GridMiscEq" title="Grid">
 			<synonym value="Grids"/>
 		</heading>
+		••• 8/72:
 		<heading id="GuardMiscEq" title="Guard">
 			<synonym value="Guards"/>
 		</heading>
+		••• 15/23:
 		<heading id="HangerMiscEq" title="Hanger">
 			<synonym value="Hangers"/>
 		</heading>
+		••• 0/3:
 		<heading id="HeaterMiscEq" title="Heater">
 			<synonym value="Heaters"/>
 		</heading>
+		••• 129/234:
 		<heading id="HoopMiscEq" title="Hoop">
 			<synonym value="Hoops"/>
 			<excl value="Belt"/>
 		</heading>
+		••• 9/30:
 		<heading id="LadderMiscEq" title="Ladder">
 			<synonym value="Ladders"/>
 		</heading>
+		••• 
 		<heading id="LidMiscEq" title="Lid">
 			<synonym value="Lids"/>
 		</heading>
+		••• 5/43:
 		<heading id="MarkerMiscEq" title="Marker">
 			<synonym value="Markers"/>
-			<excl value="grave"/> <!-- Disambiguates from grave markers -->
+			<excl value="grave"/> <!- Disambiguates from grave markers ->
 		</heading>
+		••• 248/1599:
 		<heading id="MaskMiscEq" title="Mask">
 			<synonym value="Masks"/>
 		</heading>
+		••• 58/231:
 		<heading id="MirrorMiscEq" title="Mirror">
 			<synonym value="Mirrors"/>
 			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
 		</heading>
+		••• 8/57:
 		<heading id="NapkinRingMiscEq" title="Napkin Ring">
 			<synonym value="Napkin Rings"/>
 			<synonym value="Napkin-Ring"/>
 			<synonym value="Napkin-Rings"/>
 		</heading>
+		••• 0/42:
 		<heading id="NooseMiscEq" title="Noose">
 			<synonym value="Nooses"/>
 		</heading>
+		••• 467/8142:
 		<heading id="OrnamentMiscEq" title="Ornament">
 			<synonym value="Ornaments"/>
 		</heading>
+		••• 7/37:
 		<heading id="PadMiscEq" title="Pad">
 			<synonym value="Pads"/>
 		</heading>
+		••• 99/379:
 		<heading id="PegMiscEq" title="Peg">
 			<synonym value="Pegs"/>
 		</heading>
+		••• 0/1:
 		<heading id="PintleMiscEq" title="Pintle">
 			<synonym value="Pintles"/>
 		</heading>
+		••• 7/36:
 		<heading id="PlankMiscEq" title="Plank">
 			<synonym value="Planks"/>
 		</heading>
+		••• 296/405:
 		<heading id="PlaqueMiscEq" title="Plaque">
 			<synonym value="Plaques"/>
 		</heading>
+		••• 45/220:
 		<heading id="PlugMiscEq" title="Plug">
 			<synonym value="Plugs"/>
 		</heading>
+		••• 389/23179:
 		<heading id="PointMiscEq" title="Point">
 			<synonym value="Points"/>
 		</heading>
+		••• 78/365:
 		<heading id="PoleMiscEq" title="Pole">
 			<synonym value="Poles"/>
 		</heading>
+		••• 17/59:
 		<heading id="PulleyMiscEq" title="Pulley">
 			<synonym value="Pulleys"/>
 		</heading>
+		••• 3/22:
 		<heading id="PumpMiscEq" title="Pump">
 			<synonym value="Pumps"/>
 		</heading>
+		••• 4/36:
 		<heading id="RackMiscEq" title="Rack">
 			<synonym value="Racks"/>
 		</heading>
+		••• 2/200:
 		<heading id="ReelMiscEq" title="Reel">
 			<synonym value="Reels"/>
 		</heading>
+		••• 0/3:
 		<heading id="ReflectorMiscEq" title="Reflector">
 			<synonym value="Reflectors"/>
 		</heading>
+		••• 58/391:
 		<heading id="RestMiscEq" title="Rest">
 			<synonym value="Rests"/>
 		</heading>
-		<!--<heading id="RingMiscEq" title="Ring">
+		••• [none?]:
+		<heading id="RingMiscEq" title="Ring">
 			<synonym value="Rings"/>
 			<excl value="RingJewelery"/>
-		</heading>-->
+		</heading>
+		••• 66/1014:
 		<heading id="RopesMainMiscEq" title="Rope">
 			<synonym value="Ropes"/>
 		</heading>
+		••• 51/60:
 		<heading id="RoundelMiscEq" title="Roundel">
 			<synonym value="Roundels"/>
 		</heading>
-		<heading id="ScareMiscEq" title="Scare"> <!-- Disambiguate -->
+		••• 1/3:
+		<heading id="ScareMiscEq" title="Scare"> <!- Disambiguate ->
 			<synonym value="Scares"/>
 		</heading>
-		<heading id="ScreenMiscEq" title="Screen"> <!-- Disambiguate -->
+		••• 4/537:
+		<heading id="ScreenMiscEq" title="Screen"> <!- Disambiguate ->
 			<synonym value="Screens"/>
 		</heading>
+		••• 0/31:
 		<heading id="SiphonMiscEq" title="Siphon">
 			<synonym value="Siphons"/>
 		</heading>
+		••• 28/654:
 		<heading id="SlabMiscEq" title="Slab">
 			<synonym value="Slabs"/>
 		</heading>
+		••• 26/225:
 		<heading id="SouvenirMiscEq" title="Souvenir">
 			<synonym value="Souvenirs"/>
+			••• 0/11:
 			<heading id="SouvenirSpoonUtensilMiscEq" title="Souvenir Spoon">
 				<synonym value="Souvenir Spoons"/>
 			</heading>
 		</heading>
+		••• 7/240:
 		<heading id="SpikeMiscEq" title="Spike">
 			<synonym value="Spikes"/>
 		</heading>
+		••• 19/350:
 		<heading id="SpoolMiscEq" title="Spool">
 			<synonym value="Spools"/>
 		</heading>
+		••• 46/432:
 		<heading id="SpoutMiscEq" title="Spout">
 			<synonym value="Spouts"/>
 		</heading>
+		••• 2/20:
 		<heading id="SprayMiscEq" title="Spray">
 			<synonym value="Sprays"/>
 		</heading>
+		••• 4/6:
 		<heading id="SprinklerMiscEq" title="Sprinkler">
 			<synonym value="Sprinklers"/>
 		</heading>
+		••• 10/62:
 		<heading id="SpurMiscEq" title="Spur">
 			<synonym value="Spurs"/>
 		</heading>
+		••• 1050/8200:
 		<heading id="StandsMiscEq" title="Stands">
 			<synonym value="Stand"/>
+			••• [none]:
 			<heading id="ArrowStandStndMiscEq" title="Arrow Stand">
 				<synonym value="Arrow Stands"/>
 				<synonym value="Arrow-Stand"/>
 				<synonym value="Arrow-Stands"/>
 			</heading>
+			••• 941/7428:
 			<heading id="BaseStndMiscEq" title="Base">
 				<synonym value="Bases"/>
 			</heading>
-			<heading id="BeehiveStandStndMiscEq" title="Beehive-Stand" noMatch="true"/>
-			<heading id="BetelStandStndMiscEq" title="Betel Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="CakeStandStndMiscEq" title="Cake-Stand">
 				<synonym value="Cake-Stands"/>
 			</heading>
-			<heading id="ClockStandStndMiscEq" title="Clock-Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="ClothesHorseStndMiscEq" title="Clothes-Horse">
 				<synonym value="Clothes-Horses"/>
 			</heading>
+			••• [none]:
 			<heading id="CondimentStandStndMiscEq" title="Condiment-Stand">
 				<synonym value="Condiment-Stands"/>
 			</heading>
-			<heading id="CosmeticStndMiscEq" title="Cosmetic Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="EggStandStndMiscEq" title="Egg-Stand">
 				<synonym value="Egg-Stands"/>
 			</heading>
+			••• [none]:
 			<heading id="FigureStandStndMiscEq" title="Figure-Stand">
 				<synonym value="Figure-Stands"/>
 			</heading>
-			<heading id="FireDogStndMiscEq" title="Fire Dog" noMatch="true"/>
-			<heading id="FireGridStndMiscEq" title="Fire Grid" noMatch="true"/>
+			••• [none]:
 			<heading id="FruitStandStndMiscEq" title="Fruit-Stand">
 				<synonym value="Fruit-Stands"/>
 			</heading>
-			<heading id="HatRackStndMiscEq" title="Hatrack" noMatch="true"/>
+			••• [none]:
 			<heading id="IncenseBurnerStndMiscEq" title="Incense-Burner-Stand">
 				<synonym value="Incense-Burner-Stands"/>
 			</heading>
+			••• [none]:
 			<heading id="IncenseStndMiscEq" title="Incense-Stand">
 				<synonym value="Incense-Stands"/>
 			</heading>
-			<heading id="InkStandStndMiscEq" title="Ink Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="IronStandStndMiscEq" title="Iron-Stand">
 				<synonym value="Iron-Stands"/>
 			</heading>
+			••• [none]:
 			<heading id="LaceStandStndMiscEq" title="Lace-Stand">
 				<synonym value="Lace-Stands"/>
 			</heading>
+			••• [none]:
 			<heading id="LampStandStndMiscEq" title="Lamp-Stand">
 				<synonym value="Lamp-Stands"/>
 			</heading>
+			••• [none]:
 			<heading id="LibationStandStndMiscEq" title="Libation-Stand">
 				<synonym value="Libation-Stands"/>
 			</heading>
+			••• [none]:
 			<heading id="MirrorStandStndMiscEq" title="Mirror-Stand">
 				<synonym value="Mirror-Stands"/>
 			</heading>
+			••• 0/1:
 			<heading id="OfferingStandStndMiscEq" title="Offering Stand">
 				<synonym value="Offering Stands"/>
 				<synonym value="Offering-Stand"/>
 				<synonym value="Offering-Stands"/>
 			</heading>
+			••• 68/259:
 			<heading id="PedestalStndMiscEq" title="Pedestal">
 				<synonym value="Pedestals"/>
 			</heading>
+			••• 2/33:
 			<heading id="PlinthStndMiscEq" title="Plinth">
 				<synonym value="Plinths"/>
 			</heading>
+			••• [none]:
 			<heading id="QuiverStandStndMiscEq" title="Quiver Stand">
 				<synonym value="Quiver Stands"/>
 				<synonym value="Quiver-Stand"/>
 				<synonym value="Quiver-Stands"/>
 			</heading>
-			<heading id="RebabStandStndMiscEq" title="Rebab Stand" noMatch="true"/>
+			••• 0/163:
 			<heading id="RingStandStndMiscEq" title="Ring Stand">
 				<synonym value="Ring Stands"/>
 				<synonym value="Ring-Stand"/>
 				<synonym value="Ring-Stands"/>
 			</heading>
-			<heading id="ScrollStandStndMiscEq" title="Scroll Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="SnufferStandStndMiscEq" title="Snuffer Stand">
 				<synonym value="Snuffer Stands"/>
 				<synonym value="Snuffer-Stand"/>
 				<synonym value="Snuffer-Stands"/>
 				<implies facet="ObjectName" cat="SnufferStandLghtEq"/>
 			</heading>
+			••• [none]:
 			<heading id="StelaStandStndMiscEq" title="Stela Stand">
 				<synonym value="Stela Stands"/>
 				<synonym value="Stela-Stand"/>
 				<synonym value="Stela-Stands"/>
 			</heading>
-			<heading id="SulingStandStndMiscEq" title="Suling Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="TrestleStndMiscEq" title="Trestle">
 				<synonym value="Trestles"/>
 			</heading>
+			••• 0/1:
 			<heading id="TripodStandStndMiscEq" title="Tripod Stand">
 				<synonym value="Tripod Stands"/>
 			</heading>
+			••• 0/1:
 			<heading id="TrivetStndMiscEq" title="Trivet">
 				<synonym value="Trivets"/>
 			</heading>
+			••• [none]:
 			<heading id="VesselStandStndMiscEq" title="Vessel Stand">
 				<synonym value="Vessel Stands"/>
 				<synonym value="Vessel-Stand"/>
 				<synonym value="Vessel-Stands"/>
 				<implies facet="ObjectName" cat="VesselContainer"/>
 			</heading>
-			<heading id="WatchStandStndMiscEq" title="Watch Stand" noMatch="true"/>
+			••• [none]:
 			<heading id="WigStandStndMiscEq" title="Wig Stand">
 				<synonym value="Wig Stands"/>
 				<synonym value="Wig-Stand"/>
 				<synonym value="Wig-Stands"/>
 				<implies facet="ObjectName" cat="WigStandCsmtc"/>
 			</heading>
-			<heading id="WritingSetStandStndMiscEq" title="Writing Set Stand" noMatch="true"/>
 		</heading>
+		••• 18/42:
 		<heading id="StaveMiscEq" title="Stave">
 			<synonym value="Staves"/>
 		</heading>
-	</heading>
+	</heading> -->
 	<heading id="PerformanceArts" title="Performance Arts">
 		<synonym value="Performance Art"/>
 		<heading id="DanceEquipment" title="Dancing">
@@ -10185,7 +10260,7 @@
 			</heading>
 			<heading id="RebabStand" title="Rebab-Stand">
 				<synonym value="Rebab-Stands"/>
-				<implies facet="ObjectName" cat="RebabStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="Songsheet" title="Songsheet">
 				<synonym value="Songsheets"/>
@@ -10196,7 +10271,7 @@
 				<synonym value="Suling Stands"/>
 				<synonym value="Suling-Stand"/>
 				<synonym value="Suling-Stands"/>
-				<implies facet="ObjectName" cat="SulingStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="TimeBeater" title="Time-Beater">
 				<synonym value="Time-Beaters"/>
@@ -10716,7 +10791,7 @@
 				<synonym value="Clock Stands"/>
 				<synonym value="Clock-Stand"/>
 				<synonym value="Clock-Stands"/>
-				<implies facet="ObjectName" cat="ClockStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 			<heading id="DustCapHoro" title="Dust Cap">
 				<synonym value="Dust Caps"/>
@@ -11261,7 +11336,7 @@
 				<synonym value="Watch Stands"/>
 				<synonym value="Watch-Stand"/>
 				<synonym value="Watch-Stands"/>
-				<implies facet="ObjectName" cat="WatchStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 		</heading>
 		<heading id="NumericalTableSci" title="Numerical Table">
@@ -12184,7 +12259,7 @@
 				<synonym value="Betel Stands"/>
 				<synonym value="Betel-Stand"/>
 				<synonym value="Betel-Stands"/>
-				<implies facet="ObjectName" cat="BetelStandStndMiscEq"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
 			</heading>
 		</heading>
 		<heading id="ChocolateEquipment" title="Chocolate Equipment" noMatch="true">
