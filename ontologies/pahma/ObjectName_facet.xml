@@ -387,7 +387,7 @@
 		<heading id="LariatAnmlEq" title="Lariat">
 			<synonym value="Lariats"/>
 			<implies facet="ObjectName" cat="LariatHuntEq"/>
-			<implies facet="ObjectName" cat="RopesMainMiscEq"/>
+			<implies facet="ObjectName" cat="RopeTool"/>
 		</heading>
 		<heading id="MilkingEqAnmlEq" title="Milking Items">
 			<synonym value="Milking Equipment"/>
@@ -785,7 +785,7 @@
 				<synonym value="Climbing Ropes"/>
 				<synonym value="Climbing-Rope"/>
 				<synonym value="Climbing-Ropes"/>
-				<implies facet="ObjectName" cat="RopesMainMiscEq"/>
+				<implies facet="ObjectName" cat="RopeTool"/>
 			</heading>
 			<heading id="GatheringToolsMain" title="Gathering-Tools">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies Tool/Implement -->
@@ -2251,7 +2251,7 @@
 			<heading id="HumanRemains" title="Human Remains"/>
 			<heading id="Mummies" title="Mummies">
 				<synonym value="Mummy"/>
-				<synonym value="Mummy Portrait"/>
+				<excl value="Mummy Portrait"/>
 				<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
 				<heading id="HumanMummy" title="Human Mummy">
 					<synonym value="Human mummies"/>
@@ -6193,9 +6193,11 @@
 				<heading id="HeadPieceHdWr" title="Head-Piece">
 					<synonym value="Head-Pieces"/>
 				</heading>
-				<heading id="HeadRopeHdWr" title="Head-Rope">
+				<heading id="HeadRopeHdWr" title="Head Rope">
+					<synonym value="Head Ropes"/>
+					<synonym value="Head-Rope"/>
 					<synonym value="Head-Ropes"/>
-					<implies facet="ObjectName" cat="RopesMainMiscEq"/>
+					<implies facet="ObjectName" cat="RopeTool"/>
 				</heading>
 				<heading id="HeadscarfHdWr" title="Headscarf">
 					<synonym value="Headscarfs"/>
@@ -7317,12 +7319,13 @@
 				<synonym value="Cosmetic Palettes"/>
 				<synonym value="Cosmetic-Palette"/>
 				<synonym value="Cosmetic-Palettes"/>
-				<implies facet="ObjectName" cat="CosmeticPalPalettes"/>
 			</heading>
 			<heading id="CosmeticPaletteCover" title="Cosmetic-Palette-Cover">
 				<synonym value="Cosmetic-Palette-Covers"/>
 			</heading>
-			<heading id="CosmeticSet" title="Cosmetic-Set">
+			<heading id="CosmeticSet" title="Cosmetic Set">
+				<synonym value="Cosmetic Sets"/>
+				<synonym value="Cosmetic-Set"/>
 				<synonym value="Cosmetic-Sets"/>
 			</heading>
 			<heading id="CosmeticStandCsmtc" title="Cosmetic Stand">
@@ -7755,7 +7758,7 @@
 		<heading id="FireTendingFireEq" title="Fire Tending equipment">  <!-- New grouping term -->
 			<heading id="FireRakeFireEq" title="Fire Rake">
 				<synonym value="Fire Rakes"/>
-				<synonym value="Fire-Rakes"/>
+				<synonym value="Fire-Rake"/>
 				<synonym value="Fire-Rakes"/>
 			</heading>
 			<heading id="FireSawFireEq" title="Fire Saw">
@@ -7800,11 +7803,6 @@
 			<synonym value="Tinder-Boxes"/>
 		</heading>
 		<heading id="TorchFireEq" title="Torch" noMatch="true"/>
-		<heading id="TorchHolderFireEq" title="Torch Holder">
-			<synonym value="Torch Holders"/>
-			<synonym value="Torch-Holder"/>
-			<synonym value="Torch-Holders"/>
-		</heading>
 		<heading id="TuyereFireEq" title="Tuyere">
 			<synonym value="Tuyeres"/>
 		</heading>
@@ -7815,15 +7813,12 @@
 			<synonym value="Carpet-Bowls"/>
 		</heading>
 		<heading id="GamesGmSprt" title="Games" noMatch="true">
-			<!-- The British Museum Specifies That This Term Should Only Be Used
-			For Unspecified Games, And Is Not Used As A Broad Term. -->
 			<synonym value="Game"/>
 			<implies facet="ActivityorContext" cat="PlayingGames"/>
 			<heading id="CatsCradleGmSprt" title="Cat's Cradle">
 				<synonym value="Cat's Cradles"/>
 			</heading>
-			<heading id="CheckersGmSprt" title="Checkers"/>
-			<!-- Exclude the design motif -->
+			<heading id="CheckersGmSprt" title="Checkers"/>  <!-- Exclude the design motif -->
 			<heading id="ChessGameGmSprt" title="Chess">
 				<synonym value="Chessboard"/>
 				<synonym value="Chessboards"/>
@@ -8076,6 +8071,8 @@
 		</heading>
 		<heading id="TorchHolderLghtEq" title="Torch Holder">
 			<synonym value="Torch Holders"/>
+			<synonym value="Torch-Holder"/>
+			<synonym value="Torch-Holders"/>
 		</heading>
 		<heading id="WickLghtEq" title="Wick">
 			<synonym value="Wicks"/>
@@ -8460,10 +8457,6 @@
 		<heading id="RingMiscEq" title="Ring">
 			<synonym value="Rings"/>
 			<excl value="RingJewelery"/>
-		</heading>
-		••• 66/1014:
-		<heading id="RopesMainMiscEq" title="Rope">
-			<synonym value="Ropes"/>
 		</heading>
 		••• 51/60:
 		<heading id="RoundelMiscEq" title="Roundel">
@@ -13725,7 +13718,9 @@
 			<heading id="TemplateProdReplic" title="Template">
 				<synonym value="Templates"/>
 			</heading>
-			<heading id="TrialPcProdReplic" title="Trial-Piece">
+			<heading id="TrialPcProdReplic" title="Trial Piece">
+				<synonym value="Trial Pieces"/>
+				<synonym value="Trial-Piece"/>
 				<synonym value="Trial-Pieces"/>
 			</heading>
 			<heading id="WasterProdReplic" title="Waster">
@@ -13734,6 +13729,9 @@
 			<heading id="WorkedOchreProdRepl" title="Worked Ochre">
 				<synonym value="Worked Ochres"/>
 			</heading>
+		</heading>
+		<heading id="RopeTool" title="Rope">
+			<synonym value="Ropes"/>
 		</heading>
 		<heading id="StoneTools" title="Stone Tools">
 			<heading id="Burin" title="Burin">
@@ -14043,12 +14041,6 @@
 					</heading>
 					<heading id="KayakBoat" title="Kayak">
 						<synonym value="Kayaks"/>
-					</heading>
-					<heading id="ModelBoatBoat" title="Model Boat">
-						<synonym value="Boat Model"/>
-						<synonym value="Boat Models"/>
-						<synonym value="Model Boats"/>
-						<implies facet="ObjectName" cat="ModelProdReplic"/>
 					</heading>
 					<heading id="OutriggerCanoeBoat" title="Outrigger">
 						<synonym value="Outriggers"/>
