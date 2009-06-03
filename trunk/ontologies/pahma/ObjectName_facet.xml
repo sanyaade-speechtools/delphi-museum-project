@@ -3,7 +3,18 @@
 	<description> This facet describes <em><strong>what</strong></em> an object
 		is, regardless of what it was used for.</description>
 	<notes>This is an experimental fusion of PAHMA terms in a modified British Museum
-		structure</notes>
+		structure
+	
+	The following facets need to be organized to better fit Delphi's UI:
+	
+	• Architectural elements
+	• Communication-related items
+	• Containers
+	• Religious and Ritual items
+	• Tools and Implements
+	• Visual representations
+
+	</notes>
 	<heading id="AgriculturalSubsistence" title="Agriculture &amp; Subsistence">
 		<synonym value="Agricultural/Subsistence"/>
 		<synonym value="Agricultural"/>
@@ -14236,22 +14247,6 @@
 			<synonym value="Book-Decoration"/>
 			<synonym value="Book-Decorations"/>
 		</heading>
-		<heading id="BookIllustrationVisRep" title="Book-Illustration">
-			<synonym value="Book-Illustrations"/>
-		</heading>
-		<heading id="BookplateVisRep" title="Bookplate">
-			<synonym value="Bookplates"/>
-		</heading>
-		<heading id="CalligraphyVisRep" title="Calligraphy"/>
-		<heading id="CollageVisRep" title="Collage">
-			<synonym value="Collages"/>
-		</heading>
-		<heading id="CutOutVisRep" title="Cut-Out">
-			<synonym value="Cut-Outs"/>
-		</heading>
-		<heading id="DecoratedPaperVisRep" title="Decorated Paper">
-			<synonym value="Decorated Papers"/>
-		</heading>
 		<heading id="DiptychVisRep" title="Diptych">
 			<synonym value="Diptychs"/>
 			<heading id="Semi-DiptychVisRep" title="Semi-Diptych">
@@ -14260,32 +14255,15 @@
 				<synonym value="SemiDiptychs"/>
 			</heading>
 		</heading>
-		<heading id="DrawingVisRep" title="Drawing">
-			<synonym value="Drawings"/>
-			<synonym value="Sketch"/>
-			<synonym value="Sketches"/>
-			<synonym value="Illustration"/>
-			<synonym value="Illustrations"/>
-		</heading>
 		<heading id="EmblemVisRep" title="Emblem">
 			<synonym value="Emblems"/>
 		</heading>
 		<heading id="GlassSlideVisRep" title="Glass Slide">
 			<synonym value="Glass Slides"/>
 		</heading>
-		<heading id="GreetingCardVisRep" title="Greeting Card">
-			<synonym value="Greeting Cards"/>
-			<synonym value="Greeting-Card"/>
-			<synonym value="Greeting-Cards"/>
-			<implies facet="ObjectName" cat="GreetingCardCardsComm"/>
-		</heading>
 		<heading id="IconVisRep" title="Icon" noMatch="true"/>
 		<heading id="IdolVisRep" title="Idol" noMatch="true"/>
 		<heading id="ImpressionVisRep" title="Impression" noMatch="true"/>
-		<heading id="LanternSlideVisRep" title="Lantern Slide">
-			<synonym value="Lantern Slides"/>
-			<!-- Implies photography -->
-		</heading>
 		<heading id="MedalVisRep" title="Medal">
 			<synonym value="Medals"/>
 		</heading>
@@ -14343,21 +14321,11 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="PapercutVisRep" title="Papercut">
-			<synonym value="Papercuts"/>
-			<synonym value="Paper-cut"/>
-			<synonym value="Paper-cuts"/>
-		</heading>
-		<heading id="PaperworkVisRep" title="Paperwork"/>
 		<heading id="PapyrusVisRep" title="Papyrus" noMatch="true"/>
 		<!-- <heading id="PatternVisRep" title="Pattern"> Disambiguate
 			<synonym value="Patterns"/>
 			<implies facet="ObjectName" cat="PatternProdRepl"/>
 		</heading> -->
-		<heading id="PauVisRep" title="Pau">
-			<synonym value="Paus"/>
-			<implies facet="ObjectName" cat="PauComm"/>
-		</heading>
 		<heading id="PhotographsVisRep" title="Photographs">
 			<synonym value="Film"/> <!-- Disambiguate -->
 			<synonym value="Photograph"/>
@@ -14390,6 +14358,9 @@
 					<synonym value="Slide"/>
 				</heading>
 			</heading>
+			<heading id="LanternSlideVisRep" title="Lantern Slide">
+				<synonym value="Lantern Slides"/> <!-- Implies photography -->
+			</heading>
 		</heading>
 		<heading id="PictureVisRep" title="Picture">
 			<synonym value="Pictures"/>
@@ -14397,24 +14368,11 @@
 		<heading id="PlaquetteVisRep" title="Plaquette">
 			<synonym value="Plaquettes"/>
 		</heading>
-		<heading id="PlayingCardVisRep" title="Playing Card">
-			<synonym value="Playing Cards"/>
-			<synonym value="Playing-Card"/>
-			<synonym value="Playing-Cards"/>
-			<implies facet="ObjectName" cat="PlayingCardCardsComm"/>
-		</heading>
 		<heading id="PolyptychVisRep" title="Polyptych">
 			<synonym value="Polyptychs"/>
 		</heading>
 		<heading id="PortfolioVisRep" title="Portfolio">
 			<synonym value="Portfolios"/>
-		</heading>
-		<heading id="PostageStampVisRep" title="Postage Stamp" noMatch="true"/>
-		<heading id="PrintVisRep" title="Print">
-			<synonym value="Prints"/>
-			<excl value="Photograph"/>
-			<excl value="Photographic"/>
-			<excl value="Photography"/>
 		</heading>
 		<heading id="RickshawPanelVisRep" title="Rickshaw Panel">
 			<synonym value="Rickshaw Panels"/>
@@ -14714,17 +14672,6 @@
 			</heading>
 		</heading>
 		<heading id="SignBoardVisRep" title="Sign Board" noMatch="true"/>
-		<heading id="SilhouetteVisRep" title="Silhouette">
-			<synonym value="Silhouettes"/>
-		</heading>
-		<heading id="SketchBookVisRep" title="Sketch Book">
-			<synonym value="Sketch Books"/>
-			<synonym value="Sketch-Book"/>
-			<synonym value="Sketch-Books"/>
-		</heading>
-		<heading id="StoryboardVisRep" title="Storyboard">
-			<synonym value="Storyboards"/>
-		</heading>
 		<heading id="TetraptychVisRep" title="Tetraptych">
 			<synonym value="Tetraptychs"/>
 		</heading>
@@ -14733,6 +14680,69 @@
 		</heading>
 		<heading id="TriptychVisRep" title="Triptych">
 			<synonym value="Triptychs"/>
+		</heading>
+		<heading id="WorksOnPaper" title="Works on Paper">
+			<heading id="BookIllustrationVisRep" title="Book Illustration">
+				<synonym value="Book Illustrations"/>
+				<synonym value="Book-Illustration"/>
+				<synonym value="Book-Illustrations"/>
+			</heading>
+			<heading id="BookplateVisRep" title="Bookplate">
+				<synonym value="Bookplates"/>
+			</heading>
+			<heading id="CalligraphyVisRep" title="Calligraphy"/>
+			<heading id="CollageVisRep" title="Collage">
+				<synonym value="Collages"/>
+			</heading>
+			<heading id="CutOutVisRep" title="Cut-Out">
+				<synonym value="Cut-Outs"/>
+			</heading>
+			<heading id="DecoratedPaperVisRep" title="Decorated Paper">
+				<synonym value="Decorated Papers"/>
+			</heading>
+			<heading id="DrawingVisRep" title="Drawing">
+				<synonym value="Drawings"/>
+				<synonym value="Sketch"/>
+				<synonym value="Sketches"/>
+				<synonym value="Illustration"/>
+				<synonym value="Illustrations"/>
+			</heading>
+			<heading id="GreetingCardVisRep" title="Greeting Card">
+				<synonym value="Greeting Cards"/>
+				<synonym value="Greeting-Card"/>
+				<synonym value="Greeting-Cards"/>
+				<implies facet="ObjectName" cat="GreetingCardCardsComm"/>
+			</heading>
+			<heading id="PapercutVisRep" title="Papercut">
+				<synonym value="Papercuts"/>
+				<synonym value="Paper-cut"/>
+				<synonym value="Paper-cuts"/>
+			</heading>
+			<heading id="PaperworkVisRep" title="Paperwork"/>
+			<heading id="PlayingCardVisRep" title="Playing Card">
+				<synonym value="Playing Cards"/>
+				<synonym value="Playing-Card"/>
+				<synonym value="Playing-Cards"/>
+				<implies facet="ObjectName" cat="PlayingCardCardsComm"/>
+			</heading>
+			<heading id="PostageStampVisRep" title="Postage Stamp" noMatch="true"/>
+			<heading id="PrintVisRep" title="Print">
+				<synonym value="Prints"/>
+				<excl value="Photograph"/>
+				<excl value="Photographic"/>
+				<excl value="Photography"/>
+			</heading>
+			<heading id="SilhouetteVisRep" title="Silhouette">
+				<synonym value="Silhouettes"/>
+			</heading>
+			<heading id="SketchBookVisRep" title="Sketch Book">
+				<synonym value="Sketch Books"/>
+				<synonym value="Sketch-Book"/>
+				<synonym value="Sketch-Books"/>
+			</heading>
+			<heading id="StoryboardVisRep" title="Storyboard">
+				<synonym value="Storyboards"/>
+			</heading>
 		</heading>
 	</heading>
 </taxonomy>
