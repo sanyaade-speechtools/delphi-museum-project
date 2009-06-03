@@ -3276,31 +3276,45 @@
 					<implies facet="Culture" cat="MelanesianCulture"/>
 			</heading>
 			</heading>
-			<heading id="FederatedStatesOfMicronesia" title="Federated States of Micronesia">
-				<synonym value="Micronesia"/>
-				<synonym value="Micronesian"/>
-				<implies facet="Culture" cat="MicronesianCultures"/>
-				<heading id="CarolineIslandsMicronesia" title="Caroline Islands">
-					<synonym value="New Philippines"/>
-					<synonym value="Spanish East Indies"/>
-					<heading id="MortlockIslandMicronesia" title="Mortlock Island"/>
+	 		<heading id="CarolineIslandsMicronesia" title="Caroline Islands">
+	 			<synonym value="New Philippines"/>
+	 			<synonym value="Spanish East Indies"/>
+	 			<implies facet="Culture" cat="MicronesianCultures"/>
+	 			<heading id="FederatedStatesOfMicronesia" title="Federated States of Micronesia">
+	 				<synonym value="FSM"/>
+	 				<synonym value="F.S.M."/>
+					<synonym value="Micronesia"/>
+					<synonym value="Micronesian"/>
 					<heading id="ChuukIslandMicronesia" title="Chuuk Island"> <!-- New name; since 1990 -->
 						<synonym value="Truk Island"/>
 						<heading id="ChuukLagoon" title="Chuuk Lagoon">
 							<synonym value="Truk Lagoon"/>
 						</heading>
+						<heading id="MortlockIslandMicronesia" title="Mortlock Island"/> <!-- Disambiguate from PNG island of same name -->
 					</heading>
-					<heading id="PonapeMicronesia" title="Ponape"/>
-					<heading id="NukuorMicronesia" title="Nukuor">
+	 				<heading id="KusanMicronesia" title="Kusan"/>
+	 				<heading id="NukuorMicronesia" title="Nukuor">
 						<synonym value="Nukuoro"/>
 						<synonym value="Nukor"/>
 					</heading>
-					<heading id="KusanMicronesia" title="Kusan"/>
-				</heading>
-				<heading id="MokilAtollMicronesia" title="Mokil Atoll"/>
-				<heading id="YapIslandMicronesia" title="Yap"/>
-				<synonym value="Yap Island"/>
-			</heading>
+	 				<heading id="SenyavinIslsMicronesia" title="Senyavin Islands">
+	 					<!-- Pohnpei plus two nearby atolls -->
+	 					<synonym value="Senyavin"/>
+	 					<synonym value="Senyavin Group"/>
+	 					<heading id="MokilAtollMicronesia" title="Mokil Atoll"/>
+	 					<heading id="PohnpeiMicronesia" title="Pohnpei">
+	 						<synonym value="Ponape"/>
+	 					</heading>
+	 				</heading>
+					<heading id="YapIslandMicronesia" title="Yap">
+						<synonym value="Yap Island"/>
+					</heading>
+	 			</heading>
+	 			<heading id="Palau" title="Palau">
+	 				<synonym value="Palauan"/>
+	 				<heading id="Belau" title="Belau"/>
+	 			</heading>
+	 		</heading>
 			<heading id="Nauru" title="Nauru">
 				<synonym value="Naoero"/>
 				<synonym value="Pleasant Island"/>
@@ -3309,11 +3323,6 @@
 			</heading>
 			<heading id="NorthernMarianaIslands" title="Northern Mariana Islands">
 				<synonym value="Northern Mariana"/>
-				<implies facet="Culture" cat="MicronesianCultures"/>
-			</heading>
-			<heading id="Palau" title="Palau">
-				<synonym value="Palauan"/>
-				<heading id="Belau" title="Belau"/>
 				<implies facet="Culture" cat="MicronesianCultures"/>
 			</heading>
 			<heading id="PhilippinesCountry" title="Philippines">
