@@ -2,18 +2,15 @@
 <taxonomy id="ObjectName" title="Object Name">
 	<description> This facet describes <em><strong>what</strong></em> an object
 		is, regardless of what it was used for.</description>
-	<notes>This is an experimental fusion of PAHMA terms in a modified British Museum
-		structure
+	<notes>This is an experimental fusion of PAHMA terms in a modified British Museum structure
 	
-	The following facets need to be organized to better fit Delphi's UI:
-	
-	• Architectural elements
-	• Communication-related items
-	• Containers
-	• Religious and Ritual items
-	• Tools and Implements
-	• Visual representations
-
+	These facets need to be organized to better fit Delphi's UI:
+		• Architectural elements
+		• Communication-related items
+		• Containers
+		• Religious and Ritual items
+		• Tools and Implements
+		• Visual representations
 	</notes>
 	<heading id="AgriculturalSubsistence" title="Agriculture &amp; Subsistence">
 		<synonym value="Agricultural/Subsistence"/>
@@ -2694,6 +2691,40 @@
 				<synonym value="Writing-Tablets"/>
 			</heading>
 		</heading>
+		<heading id="AudioRecordingsComm" title="Audio Recordings">
+			<synonym value="Audio Recording"/>
+			<synonym value="Sound Recording"/>
+			<synonym value="Sound Recordings"/>
+			<synonym value="Sound Track"/>
+			<synonym value="Sound Tracks"/>
+			<heading id="AudioTapeComm" title="Audio Tape">
+				<synonym value="Audio Tapes"/>
+				<implies facet="ObjectName" cat="AudioTapeAVeq"/>
+			</heading>
+			<heading id="CassetteTapeComm" title="Cassette Tape">
+				<synonym value="Cassette Tapes"/>
+			</heading>
+			<heading id="DigitalaudioComm" title="Digital Audio">
+				<synonym value="Digital Audio Recording"/>
+				<synonym value="Digitized Audio"/>
+			</heading>
+			<heading id="PhonographRecordComm" title="Phonograph Record">
+				<synonym value="Phonograph Records"/>
+			</heading>
+			<heading id="TaperecordingsComm" title="Tape Recordings">
+				<synonym value="Tape Recording"/>
+			</heading>
+			<heading id="WaxcylinderrecordingsComm" title="Wax Cylinder Recordings">
+				<synonym value="Cylinder Recording"/>
+				<synonym value="Cylinder Recordings"/>
+				<synonym value="Wax Cylinder"/>
+				<synonym value="Wax Cylinders"/>
+				<synonym value="Wax Cylinder Recording"/>
+			</heading>
+			<heading id="WirerecordingsComm" title="Wire Recordings">
+				<synonym value="Wire Recording"/>
+			</heading>
+		</heading>
 		<heading id="AudioVisualEqComm" title="Audio/Visual Equipment">
 			<synonym value="Audio/Visual Items"/>
 			<!-- This category includes objects for mechanically recording, transmitting
@@ -2874,9 +2905,20 @@
 		<heading id="LeafletComm" title="Leaflet">
 			<synonym value="Leaflets"/>
 		</heading>
-		<heading id="LoveStickComm" title="Love Stick">
-			<!-- What the...? -->
-			<synonym value="Love Sticks"/>
+		<heading id="LoveStickComm" title="Love Sticks">
+			<synonym value="Love Stick"/>
+			<!-- The Chuukese love stick is part of the legendary practice of courtship
+				unique to these groups of islands.  Traditionally, young Chuukese men
+				would own personalized wooden love-sticks on which they would carve
+				two of the same design.  A short one would be carved to be utilized for
+				his hair.  The long one would be for the Chuukese woman.  When a man
+				likes a Chuukese woman, he uses the long love-stick to poke into her
+				hut, into her hair, thus waking up the woman.  When she wakes up, the
+				love-stick is felt.  If the love-stick’s design is that of the man she
+				likes, she will pull the love-stick signaling for him to come in.  If
+				the woman pushes the love-stick out, it means she is not interested in
+				the man. 
+				(from http://www.micronesiamarketplace.com/chuuk/chuuk/love-sticks.html) -->
 		</heading>
 		<heading id="ManuscriptComm" title="Manuscript">
 			<synonym value="Manuscripts"/>
@@ -2914,6 +2956,7 @@
 		<heading id="PamphletComm" title="Pamphlet">
 			<synonym value="Pamphlets"/>
 		</heading>
+		<heading id="PaperworkVisRep" title="Paperwork"/>
 		<heading id="PapyrusComm" title="Papyrus">
 			<synonym value="Papyri"/>
 			<implies facet="ObjectName" cat="PapyrusVisRep"/>
@@ -2926,7 +2969,6 @@
 			<synonym value="Pattern-Board"/>
 			<synonym value="Pattern-Boards"/>
 		</heading>
-		<heading id="PauComm" title="Pau" noMatch="true"/>
 		<heading id="PermitComm" title="Permit">
 			<synonym value="Permits"/>
 		</heading>
@@ -2987,40 +3029,6 @@
 			<implies facet="ObjectName" cat="ScrollVisRep"/>
 		</heading>
 		<heading id="SongsheetComm" title="Songsheet" noMatch="true"/>
-		<heading id="AudioRecordingsComm" title="Audio Recordings">
-			<synonym value="Audio Recording"/>
-			<synonym value="Sound Recording"/>
-			<synonym value="Sound Recordings"/>
-			<synonym value="Sound Track"/>
-			<synonym value="Sound Tracks"/>
-			<heading id="AudioTapeComm" title="Audio Tape">
-				<synonym value="Audio Tapes"/>
-				<implies facet="ObjectName" cat="AudioTapeAVeq"/>
-			</heading>
-			<heading id="CassetteTapeComm" title="Cassette Tape">
-				<synonym value="Cassette Tapes"/>
-			</heading>
-			<heading id="DigitalaudioComm" title="Digital Audio">
-				<synonym value="Digital Audio Recording"/>
-				<synonym value="Digitized Audio"/>
-			</heading>
-			<heading id="PhonographRecordComm" title="Phonograph Record">
-				<synonym value="Phonograph Records"/>
-			</heading>
-			<heading id="TaperecordingsComm" title="Tape Recordings">
-				<synonym value="Tape Recording"/>
-			</heading>
-			<heading id="WaxcylinderrecordingsComm" title="Wax Cylinder Recordings">
-				<synonym value="Cylinder Recording"/>
-				<synonym value="Cylinder Recordings"/>
-				<synonym value="Wax Cylinder"/>
-				<synonym value="Wax Cylinders"/>
-				<synonym value="Wax Cylinder Recording"/>
-			</heading>
-			<heading id="WirerecordingsComm" title="Wire Recordings">
-				<synonym value="Wire Recording"/>
-			</heading>
-		</heading>
 		<heading id="StelaComm" title="Stela">
 			<synonym value="Stelae"/>
 			<synonym value="Stelæ"/>
@@ -4546,6 +4554,25 @@
 					<synonym value="Quarter-Dollar"/>
 					<synonym value="Quarter-Dollars"/>
 					<synonym value="Quarters"/>
+					<excl value="1st Quarter"/>
+					<excl value="First Quarter"/>
+					<excl value="2nd Quarter"/>
+					<excl value="2nd. Quarter"/>
+					<excl value="In Each Quarter"/>
+					<excl value="Three Quarter"/>
+					<excl value="Three-Quarter"/>
+					<excl value="3 Quarter"/>
+					<excl value="3-Quarter"/>
+					<excl value="3- Quarter"/>
+					<excl value="Hind Quarter"/>
+					<excl value="Hind-Quarter"/>
+					<excl value="Quarter of Pit"/>
+					<excl value="NE Quarter"/>
+					<excl value="NE. Quarter"/>
+					<excl value="SE Quarter"/>
+					<excl value="S.W. Quarter"/>
+					<excl value="Quarter Blood"/>
+					<excl value="Quarter-Blood"/>
 					<heading id="Washingtonquarter" title="Washington Quarter">
 						<synonym value="Washington Quarters"/>
 					</heading>
@@ -5305,10 +5332,14 @@
 					<excl value="Gold-plated"/>
 					<excl value="Goldplate"/>
 					<excl value="Goldplated"/>
-					<excl value="negative"/>
-					<excl value="negatives"/>
+					<excl value="Lithograph"/>
+					<excl value="Lithographic"/>
+					<excl value="Lithographs"/>
+					<excl value="Negative"/>
+					<excl value="Negatives"/>
+					<excl value="New plate of"/>
 					<excl value="photographic plate"/>
-					<excl value="photographic plate"/>
+					<excl value="photographic plates"/>
 					<excl value="Silver plate"/>
 					<excl value="Silver-plate"/>
 					<excl value="Silver plated"/>
@@ -11619,7 +11650,9 @@
 				<heading id="WeightMeasure" title="Weight">
 					<synonym value="Weights"/> <!-- Disambiguate -->
 				</heading>
-				<heading id="WindVaneMeasure" title="Wind-Vane">
+				<heading id="WindVaneMeasure" title="Wind Vane">
+					<synonym value="Wind Vanes"/>
+					<synonym value="Wind-Vane"/>
 					<synonym value="Wind-Vanes"/>
 				</heading>
 			</heading>
@@ -11642,8 +11675,12 @@
 					<synonym value="Magnifying-Glass"/>
 					<synonym value="Magnifying-Glasses"/>
 				</heading>
-				<heading id="MicroscopeSlide" title="Microscope-Slide">
+				<heading id="MicroscopeSlide" title="Microscope Slide">
+					<synonym value="Microscope Slides"/>
+					<synonym value="Microscope-Slide"/>
 					<synonym value="Microscope-Slides"/>
+					<synonym value="Microscopic Slide"/>
+					<synonym value="Microscopic Slides"/>
 				</heading>
 				<heading id="Phakometer" title="Phakometer">
 					<synonym value="Phakometers"/>
@@ -11658,8 +11695,10 @@
 				</heading>
 				<heading id="Spectacles" title="Spectacles">
 					<synonym value="Spectacle"/>
-					<heading id="SnowSpectacles" title="Snow-Spectacles">
+					<heading id="SnowSpectacles" title="Snow Spectacles">
+						<synonym value="Snow Spectacle"/>
 						<synonym value="Snow-Spectacle"/>
+						<synonym value="Snow-Spectacles"/>
 					</heading>
 				</heading>
 				<heading id="Telescope" title="Telescope">
@@ -12551,6 +12590,10 @@
 			</heading>
 			<heading id="CigarSmkng" title="Cigar">
 				<synonym value="Cigars"/>
+				<excl value="Cigar shape"/>
+				<excl value="Cigar shaped"/>
+				<excl value="Cigar-shape"/>
+				<excl value="Cigar-shaped"/>
 				<heading id="CherootSmkng" title="Cheroot">
 					<!-- "a cigar with both ends open and untapered." (New Oxford American Dictionary) -->
 					<synonym value="Cheroots"/>
@@ -14258,9 +14301,6 @@
 		<heading id="EmblemVisRep" title="Emblem">
 			<synonym value="Emblems"/>
 		</heading>
-		<heading id="GlassSlideVisRep" title="Glass Slide">
-			<synonym value="Glass Slides"/>
-		</heading>
 		<heading id="IconVisRep" title="Icon" noMatch="true"/>
 		<heading id="IdolVisRep" title="Idol" noMatch="true"/>
 		<heading id="ImpressionVisRep" title="Impression" noMatch="true"/>
@@ -14275,9 +14315,6 @@
 		</heading>
 		<heading id="ModernCartoonVisRep" title="Modern Cartoon">
 			<synonym value="Modern Cartoons"/>
-		</heading>
-		<heading id="OffsetVisRep" title="Offset">
-			<synonym value="Offsets"/>
 		</heading>
 		<heading id="PaintingsVisRep" title="Paintings">
 			<synonym value="Painting"/>
@@ -14326,13 +14363,8 @@
 			<synonym value="Patterns"/>
 			<implies facet="ObjectName" cat="PatternProdRepl"/>
 		</heading> -->
-		<heading id="PhotographsVisRep" title="Photographs">
+		<heading id="PhotographsVisRep" title="Photographic Images">
 			<synonym value="Film"/> <!-- Disambiguate -->
-			<synonym value="Photograph"/>
-			<synonym value="Photo"/>
-			<synonym value="Photos"/>
-			<synonym value="Photographic Print"/>
-			<synonym value="Photographic Prints"/>
 			<heading id="NegativesVisRep" title="Negatives">
 				<synonym value="Negative"/> <!-- Check for possible exclusions -->
 				<synonym value="photograph   negative"/>
@@ -14347,24 +14379,40 @@
 					<synonym value="Glassplate Negatives"/>
 				</heading>
 			</heading>
-			<heading id="PositivesVisRep" title="Positives">
+			<heading id="PositivesVisRep" title="Photographic Prints">
 				<synonym value="Positive"/> <!-- Check for possible exclusions -->
-				<heading id="ColorSlidesVisRep" title="Color Slides">
-					<synonym value="Color Slide"/>
-					<synonym value="BW Slide"/>
-					<synonym value="B/W Slide"/>
-					<synonym value="B&amp;W Slide"/>
-					<synonym value="Slides"/>
-					<synonym value="Slide"/>
-				</heading>
+				<synonym value="Positives"/>
+				<synonym value="Photograph"/>
+				<synonym value="Photographs"/>
+				<synonym value="Photo"/>
+				<synonym value="Photos"/>
+				<synonym value="Photographic Print"/>
+			</heading>
+			<heading id="ColorSlidesVisRep" title="Color Slides">
+				<synonym value="Color Slide"/>
+				<synonym value="Color Transparencies"/>
+				<synonym value="Color Transparency"/>
+				<synonym value="BW Slide"/>
+				<synonym value="B/W Slide"/>
+				<synonym value="B&amp;W Slide"/>
+				<synonym value="Slides"/>
+				<synonym value="Slide"/>
+				<excl value="Bolo Tie Slide"/>
+				<excl value="Bolo Tie Slides"/>
+				<excl value="Rock Slide"/>
+				<excl value="Rock Slides"/>
+				<excl value="Microscope"/>
+				<excl value="Microscopic"/>
 			</heading>
 			<heading id="LanternSlideVisRep" title="Lantern Slide">
 				<synonym value="Lantern Slides"/> <!-- Implies photography -->
+				<synonym value="Glass Slide"/>
+				<synonym value="Glass Slides"/>
 			</heading>
 		</heading>
-		<heading id="PictureVisRep" title="Picture">
+		<!-- <heading id="PictureVisRep" title="Picture"> Too vague; disambiguate from "depicts", etc.
 			<synonym value="Pictures"/>
-		</heading>
+		</heading> -->
 		<heading id="PlaquetteVisRep" title="Plaquette">
 			<synonym value="Plaquettes"/>
 		</heading>
@@ -14718,7 +14766,6 @@
 				<synonym value="Paper-cut"/>
 				<synonym value="Paper-cuts"/>
 			</heading>
-			<heading id="PaperworkVisRep" title="Paperwork"/>
 			<heading id="PlayingCardVisRep" title="Playing Card">
 				<synonym value="Playing Cards"/>
 				<synonym value="Playing-Card"/>
@@ -14731,6 +14778,17 @@
 				<excl value="Photograph"/>
 				<excl value="Photographic"/>
 				<excl value="Photography"/>
+				<heading id="LithographVisRep" title="Lithograph">
+					<synonym value="Lithographs"/>
+					<!-- <heading id="OffsetVisRep" title="Offset">
+						<synonym value="Offsets"/>
+						</heading> -->
+					<heading id="ChromoLithographVisRep" title="Chromo-Lithograph">
+						<synonym value="Chromo-Lithographs"/>
+						<synonym value="Chromolithograph"/>
+						<synonym value="Chromolithographs"/>
+					</heading>
+				</heading>
 			</heading>
 			<heading id="SilhouetteVisRep" title="Silhouette">
 				<synonym value="Silhouettes"/>
