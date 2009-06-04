@@ -49,10 +49,36 @@
 					<input type="hidden" name="set_id" value="{$setId}"/>
 				</form>
 			</div>
+			<div id="viewset_setShare" style="display:none;">
+				<form method="post" accept-charset="utf-8" id="viewset_setShareForm">
+					<table cellspacing="2px" cellpadding="2px">
+						<tr>
+							<td><p style="text-align:right">To:&nbsp;</p></td>
+							<td><input type="text" size="32" name="To" id="viewset_setShareToInput" value=""/></td>
+						</tr>
+						<tr>
+							<td><p style="text-align:right">Subject:&nbsp;</p></td><td><input type="text" size="32" name="Subj" id="viewset_setShareSubjInput" value=""/></td>
+						</tr>
+						<tr>
+							<td><p style="text-align:left">Your<br />message:</p></td>
+							<td><textarea name="Msg" id="viewset_setShareMsgTextarea" rows="4" cols="30"></textarea><td>
+						</tr>
+						<tr><td colspan="2" height="5px"></td></tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" name="submit" value="Send Message"/>
+							  or <a href="#" id="viewset_cancelSetShareLink">Cancel</a></td>
+						</tr>
+					</table>					
+					<input type="hidden" name="set_id" value="{$setId}"/>
+				</form>
+			</div>
 			<div id="viewset_setDetailLinks">
 				<a href="#" id="viewset_editSetDetailsLink" class="smaller">Edit set details</a><br/>
-				<a href="#" id="viewset_deleteSetLink" class="smaller">Delete this set</a>
+				<a href="#" id="viewset_deleteSetLink" class="smaller">Delete this set</a><br/>
+				<a href="#" id="viewset_shareSetLink" class="smaller">Share this set</a>
 			</div>
+			<p id="viewset_setShareResponse" style="display:none;font-style:italic;"></p>
 		{/if}
 		
 		{if $setHasObjects}

@@ -148,6 +148,7 @@ $(document).ready(function () {
 
 			$("#viewset_setDetailsDisplay").hide();
 			$("#viewset_setDetailLinks").hide();
+			$("#viewset_setShareResponse").hide();
 			$("#viewset_setDetailsEdit").show();
 			return false;
 		});
@@ -204,6 +205,49 @@ $(document).ready(function () {
 			}
 			return false;
 		});
+
+		/*
+		Sharing set
+		*/
+		$("#viewset_shareSetLink").click(function(){
+			// Set a default subject, but leave To: and message blank
+			$("#viewset_setShareSubjInput").val("Sharing one of my sets from Delphi");
+
+			$("#viewset_setDetailLinks").hide();
+			$("#viewset_setShareResponse").hide();
+			$("#viewset_setShare").show();
+			return false;
+		});
+		$("#viewset_cancelSetShareLink").click(function(){
+			// Hide the share form
+			$("#viewset_setDetailLinks").show();
+			$("#viewset_setShare").hide();
+			$("#viewset_setShareResponse").hide();
+			return false;
+		});
+		$("#viewset_setShareForm").submit(function(){
+			var url = templateVarsJSON['wwwroot'] + "/modules/sets/api_sendShareSet.php";
+			$(this).ajaxSubmit({
+				url: url, type: "POST", dataType: "json",
+				success: function(response){
+					if(!response['success']){
+						alert("Problem sending mail - could not share set.\n"
+									+"Please check the email address and try again.");
+					} else {
+						$("#viewset_setShareResponse").html("Mail successfully sent to share your set.");
+						$("#viewset_setShareResponse").show();
+						$("#viewset_setDetailLinks").show();
+						$("#viewset_setShare").hide();
+					}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+					alert( "Internal error: Please notify Delphi Feedback using the feedback links."
+								+"\nError Text: "+textStatus+"\nError: "+errorThrown );
+				}
+			}); 
+			return false;
+		});
+		
 	}
 	
 });
