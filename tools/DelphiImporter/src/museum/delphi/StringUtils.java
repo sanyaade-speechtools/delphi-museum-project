@@ -167,31 +167,21 @@ public class StringUtils {
 			Pair<String,ArrayList<String>> pair = null;
 				new Pair<String,ArrayList<String>>(token,words);
 			String[] words_strings = token.split("[\\W&&[^\\-\']]");
-			if( colInfo.noiseTokens.size() == 0 ){
-				pair = new Pair<String,ArrayList<String>>(token,words);
-				for( int iW=0; iW<words_strings.length; iW++) {
+			boolean noNoiseTokens = colInfo.noiseTokens.size() == 0;
+			StringBuilder sb = new StringBuilder();
+			for( int iW=0; iW<words_strings.length; iW++)
+				if( noNoiseTokens || !colInfo.noiseTokens.contains(words_strings[iW]) ) {
 					String word = words_strings[iW].trim();
-					if(word.length()>0)
+					if(word.length()>0) {
+						if( iW > 0)
+							sb.append(' ');
+						sb.append(word);
 						words.add(word);
-				}
-				returnList.add(pair);
-			}
-			else {
-				StringBuilder sb = new StringBuilder();
-				for( int iW=0; iW<words_strings.length; iW++)
-					if( !colInfo.noiseTokens.contains(words_strings[iW]) ) {
-						String word = words_strings[iW].trim();
-						if(word.length()>0) {
-							if( iW > 0)
-								sb.append(' ');
-							sb.append(word);
-							words.add(word);
-						}
 					}
-				if(sb.length()>0) {
-					pair = new Pair<String,ArrayList<String>>(sb.toString(),words);
-					returnList.add(pair);
 				}
+			if(sb.length()>0) {
+				pair = new Pair<String,ArrayList<String>>(sb.toString(),words);
+				returnList.add(pair);
 			}
 		}
 		return returnList;

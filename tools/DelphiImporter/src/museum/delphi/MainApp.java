@@ -184,6 +184,7 @@ public class MainApp {
 	private JLabel webAppDBInfoTitle1 = null;
 	private JLabel webAppDBInfoTitle2 = null;
 	private JButton webAppDBInfoOKButton = null;
+	private JMenuItem uploadTermStatsMenuItem = null;
 	protected void debug( int level, String str ){
 		if( level <= _debugLevel )
 			StringUtils.outputDebugStr( str );
@@ -690,6 +691,7 @@ public class MainApp {
 			uploadMenu.add(getUploadObjMDMenuItem());
 			uploadMenu.add(getUploadOntologyMDMenu());
 			uploadMenu.add(getUploadImageMDMenu());
+			uploadMenu.add(getUploadTermStatsMenuItem());
 		}
 		return uploadMenu;
 	}
@@ -1078,6 +1080,25 @@ public class MainApp {
 			});
 		}
 		return webAppDBInfoOKButton;
+	}
+
+	/**
+	 * This method initializes uploadTermStatsMenuItem
+	 *
+	 * @return javax.swing.JMenuItem
+	 */
+	private JMenuItem getUploadTermStatsMenuItem() {
+		if (uploadTermStatsMenuItem == null) {
+			uploadTermStatsMenuItem = new JMenuItem();
+			uploadTermStatsMenuItem.setText("Term Statistics");
+			uploadTermStatsMenuItem.setMnemonic(KeyEvent.VK_T);
+			uploadTermStatsMenuItem.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					uploadTermStats();
+				}
+			});
+		}
+		return uploadTermStatsMenuItem;
 	}
 
 	/**
@@ -2801,7 +2822,7 @@ public class MainApp {
 		try {
 			setStatus( "Building usage reports...");
 			ArrayList<Pair<String,Counter<String>>> allVocabCounts =
-				userProjInfo.metaDataReader.compileUsageForAllColumns(2, 100, -1, this );
+				userProjInfo.metaDataReader.compileUsageForAllColumns(2, 10000, -1, this );
 			String outFileName = userProjInfo.metaDataReader.getFileName();
 			int iDot = outFileName.lastIndexOf('.');
 			if( iDot >0 )
@@ -2818,7 +2839,7 @@ public class MainApp {
 													new FileOutputStream(filename),"UTF8"));
 					Counter<String> colCounts = pair.second;
 					totalCounts.addCounts(colCounts);
-					colCounts.write(writer, true, 0, null, false, true);
+					colCounts.write(writer, true, 0, null, false, false, true);
 					writer.flush();
 					writer.close();
 				} catch( IOException e ) {
@@ -2836,12 +2857,16 @@ public class MainApp {
 								JOptionPane.QUESTION_MESSAGE, null,
 								options, options[1] );
 			String separator = null;
+			boolean escapeStrings = false;
+			boolean quoteStrings = false;
 			if( response == 0 ) {	// Save to txt file
 				filename = outFileName+"_Total_Usage.txt";
 				debug(1,"Saving total usage info to file: " + filename);
 			} else if( response == 1 ) {	// Save to SQL load file
-				filename = outFileName+"_Total_Usage.sql";
+				filename = outFileName+"_Total_UsageSQL.txt";
 				separator = "|";
+				quoteStrings = true;
+				escapeStrings = true;
 				debug(1,"Saving total usage info to SQL load file: " + filename);
 			} else {
 				filename = null;
@@ -2851,7 +2876,12 @@ public class MainApp {
 					BufferedWriter writer = new BufferedWriter(
 												new OutputStreamWriter(
 													new FileOutputStream(filename),"UTF8"));
-					totalCounts.write(writer, true, 0, separator, true, true);
+					writer.append("To load this file, use a sql command:\n");
+					writer.append("SET NAMES utf8;\n");
+					writer.append("LOAD DATA LOCAL INFILE '{filename}' INTO TABLE termStats CHARACTER SET utf8\n");
+					writer.append("FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES\n");
+					writer.append("(`count`, term);\n");
+					totalCounts.write(writer, true, 0, separator, escapeStrings, quoteStrings, true);
 					writer.flush();
 					writer.close();
 				} catch( IOException e ) {
@@ -2871,7 +2901,7 @@ public class MainApp {
 		try {
 			setStatus( "Building usage report...");
 			Counter<String> vocabCounts =
-				userProjInfo.metaDataReader.compileUsageForColumn(colIndex, 2, 100, -1, this );
+				userProjInfo.metaDataReader.compileUsageForColumn(colIndex, 2, 10000, -1, this );
 			String outFileName = userProjInfo.metaDataReader.getFileName();
 			int iDot = outFileName.lastIndexOf('.');
 			if( iDot >0 )
@@ -2885,7 +2915,7 @@ public class MainApp {
 					BufferedWriter writer = new BufferedWriter(
 												new OutputStreamWriter(
 													new FileOutputStream(filename),"UTF8"));
-					vocabCounts.write(writer, true, 0, null, false, true);
+					vocabCounts.write(writer, true, 0, null, false, false, true);
 					writer.flush();
 					writer.close();
 				} catch( IOException e ) {
@@ -3167,6 +3197,27 @@ public class MainApp {
 		    	String filename = chooser.getSelectedFile().getPath();
 				try {
 					waDB.uploadImageMediaMetadata(filename);
+				} catch (Exception e ) {
+					JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
+							myName, JOptionPane.ERROR_MESSAGE);
+				}
+		    }
+		}
+	}
+
+	protected void uploadTermStats() {
+		String myName = "Upload Term Stats";
+		WebAppDB waDB = checkWebAppDBReady();
+		if( waDB != null ) {
+			String suggest = userProjInfo.getMetadataPath();
+			chooser.setFileFilter(txtFilter);
+	    	if( suggest != null )
+	    		chooser.setSelectedFile(new File( suggest ));
+		    chooser.setDialogTitle("Select Term Stats Metadata file...");
+		    if(JFileChooser.APPROVE_OPTION == chooser.showOpenDialog(getJFrame())) {
+		    	String filename = chooser.getSelectedFile().getPath();
+				try {
+					waDB.uploadTermStatsMetadata(filename);
 				} catch (Exception e ) {
 					JOptionPane.showMessageDialog(getJFrame(), "Error encountered:\n" + e.toString(),
 							myName, JOptionPane.ERROR_MESSAGE);
