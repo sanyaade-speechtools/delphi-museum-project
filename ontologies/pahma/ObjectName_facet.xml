@@ -11650,87 +11650,6 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="SocialControlEquipment" title="Social Control Equipment">
-		<synonym value="Social Control Items"/>
-		<!-- This Category Does Not Include Weapons -->
-		<heading id="ChastityBelt" title="Chastity-Belt">
-			<synonym value="Chastity-Belts"/>
-		</heading>
-		<heading id="ExecutionersSword" title="Executioner's Sword">
-			<synonym value="Executioner's Swords"/>
-		</heading>
-		<heading id="FetterLock" title="Fetter-Lock">
-			<synonym value="Fetter-Locks"/>
-		</heading>
-		<heading id="ManTrap" title="Man-Trap">
-			<synonym value="Man-Traps"/>
-		</heading>
-		<heading id="ScoldsBridleSocCntrl" title="Scold's Bridle">
-			<synonym value="Scolds Bridle"/>
-			<synonym value="Scolds Bridles"/>
-			<synonym value="Scold's Bridles"/>
-			<synonym value="Scolds' Bridle"/>
-			<synonym value="Scolds' Bridles"/>
-			<implies facet="ObjectName" cat="ScoldsBridleHdWr"/>
-		</heading>
-		<heading id="ScourgeSocCntrl" title="Scourge">
-			<synonym value="Scourges"/>
-		</heading>
-		<heading id="ShacklesSocCntrl" title="Shackles">
-			<synonym value="Shackle"/>
-			<heading id="Fetter" title="Fetter">
-				<synonym value="Fetters"/>
-			</heading>
-			<heading id="Handcuff" title="Handcuff">
-				<synonym value="Handcuffs"/>
-			</heading>
-			<heading id="Manacle" title="Manacle">
-				<synonym value="Manacles"/>
-			</heading>
-		</heading>
-		<heading id="Stocks" title="Stocks"/>
-		<heading id="TortureInstrument" title="Torture Instrument">
-			<synonym value="Torture Instruments"/>
-			<synonym value="Torture-Instrument"/>
-			<synonym value="Torture-Instruments"/>
-			<implies facet="ActivityorContext" cat="Torturing"/>
-			<heading id="ArmPressTorture" title="Arm Press">
-				<synonym value="Arm Presses"/>
-				<synonym value="Arm-Press"/>
-				<synonym value="Arm-Presses"/>
-			</heading>
-			<heading id="FingerPressTorture" title="Finger Press">
-				<synonym value="Finger Presses"/>
-				<synonym value="Finger-Press"/>
-				<synonym value="Finger-Presses"/>
-			</heading>
-			<heading id="GenitalClampTorture" title="Genital Clamp">
-				<synonym value="Genital Clamps"/>
-				<synonym value="Genital-Clamp"/>
-				<synonym value="Genital-Clamps"/>
-			</heading>
-			<heading id="SlaveKillerTorture" title="Slave Killer">
-				<synonym value="Slave Killers"/>
-				<synonym value="Slave-Killer"/>
-				<synonym value="Slave-Killers"/>
-			</heading>
-			<heading id="ThumbScrewTorture" title="Thumb Screw">
-				<synonym value="Thumb Screws"/>
-				<synonym value="Thumb-Screw"/>
-				<synonym value="Thumb-Screws"/>
-				<synonym value="Thumbscrew"/>
-				<synonym value="Thumbscrews"/>
-			</heading>
-			<heading id="TortureChairTorture" title="Torture Chair">
-				<synonym value="Torture Chairs"/>
-				<synonym value="Torture-Chair"/>
-				<synonym value="Torture-Chairs"/>
-			</heading>
-		</heading>
-		<heading id="Truncheon" title="Truncheon">
-			<synonym value="Truncheons"/>
-		</heading>
-	</heading>
 	<heading id="StimulantNarcEquip" title="Stimulant &amp; Narcotic Equipment">
 		<synonym value="Stimulant/Narcotic Equipment"/>
 		<synonym value="Stimulant/Narcotic Items"/>
@@ -13817,6 +13736,87 @@
 		</heading>
 		<heading id="RopeTool" title="Rope">
 			<synonym value="Ropes"/>
+		</heading>
+		<heading id="SocialControlEquipment" title="Social Control Equipment">
+			<synonym value="Social Control Items"/>
+			<!-- This Category Does Not Include Weapons -->
+			<heading id="ChastityBelt" title="Chastity-Belt">
+				<synonym value="Chastity-Belts"/>
+			</heading>
+			<heading id="ExecutionersSword" title="Executioner's Sword">
+				<synonym value="Executioner's Swords"/>
+			</heading>
+			<heading id="FetterLock" title="Fetter-Lock">
+				<synonym value="Fetter-Locks"/>
+			</heading>
+			<heading id="ManTrap" title="Man-Trap">
+				<synonym value="Man-Traps"/>
+			</heading>
+			<heading id="ScoldsBridleSocCntrl" title="Scold's Bridle">
+				<synonym value="Scolds Bridle"/>
+				<synonym value="Scolds Bridles"/>
+				<synonym value="Scold's Bridles"/>
+				<synonym value="Scolds' Bridle"/>
+				<synonym value="Scolds' Bridles"/>
+				<implies facet="ObjectName" cat="ScoldsBridleHdWr"/>
+			</heading>
+			<heading id="ScourgeSocCntrl" title="Scourge">
+				<synonym value="Scourges"/>
+			</heading>
+			<heading id="ShacklesSocCntrl" title="Shackles">
+				<synonym value="Shackle"/>
+				<heading id="Fetter" title="Fetter">
+					<synonym value="Fetters"/>
+				</heading>
+				<heading id="Handcuff" title="Handcuff">
+					<synonym value="Handcuffs"/>
+				</heading>
+				<heading id="Manacle" title="Manacle">
+					<synonym value="Manacles"/>
+				</heading>
+			</heading>
+			<heading id="Stocks" title="Stocks"/>
+			<heading id="TortureInstrument" title="Torture Instrument">
+				<synonym value="Torture Instruments"/>
+				<synonym value="Torture-Instrument"/>
+				<synonym value="Torture-Instruments"/>
+				<implies facet="ActivityorContext" cat="Torturing"/>
+				<heading id="ArmPressTorture" title="Arm Press">
+					<synonym value="Arm Presses"/>
+					<synonym value="Arm-Press"/>
+					<synonym value="Arm-Presses"/>
+				</heading>
+				<heading id="FingerPressTorture" title="Finger Press">
+					<synonym value="Finger Presses"/>
+					<synonym value="Finger-Press"/>
+					<synonym value="Finger-Presses"/>
+				</heading>
+				<heading id="GenitalClampTorture" title="Genital Clamp">
+					<synonym value="Genital Clamps"/>
+					<synonym value="Genital-Clamp"/>
+					<synonym value="Genital-Clamps"/>
+				</heading>
+				<heading id="SlaveKillerTorture" title="Slave Killer">
+					<synonym value="Slave Killers"/>
+					<synonym value="Slave-Killer"/>
+					<synonym value="Slave-Killers"/>
+				</heading>
+				<heading id="ThumbScrewTorture" title="Thumb Screw">
+					<synonym value="Thumb Screws"/>
+					<synonym value="Thumb-Screw"/>
+					<synonym value="Thumb-Screws"/>
+					<synonym value="Thumbscrew"/>
+					<synonym value="Thumbscrews"/>
+				</heading>
+				<heading id="TortureChairTorture" title="Torture Chair">
+					<synonym value="Torture Chairs"/>
+					<synonym value="Torture-Chair"/>
+					<synonym value="Torture-Chairs"/>
+				</heading>
+			</heading>
+			<heading id="Truncheon" title="Truncheon">
+				<synonym value="Truncheons"/>
+			</heading>
 		</heading>
 		<heading id="StoneTools" title="Stone Tools">
 			<heading id="Burin" title="Burin">
