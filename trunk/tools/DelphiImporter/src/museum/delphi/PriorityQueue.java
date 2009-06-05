@@ -222,7 +222,7 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 	  * @param minPrioToPrint
 	  */
 	 public void write( java.io.BufferedWriter writer, boolean fDestructive,
-			 int minPrioToPrint, String separator, boolean escapeStrings, boolean fWithNewlines)
+			 int minPrioToPrint, String separator, boolean escapeStrings, boolean quoteStrings, boolean fWithNewlines)
 	 			throws java.io.IOException {
 		 if(separator==null)
 			 separator = " : ";
@@ -237,10 +237,13 @@ public class PriorityQueue <I> implements Iterator<I>, Cloneable {
 			 String outStr = item.toString();
 			 if(escapeStrings)
 				 outStr = StringUtils.escapeForDBAndXML(outStr);
-			 writer.append(priority+separator+outStr);
+			 if(quoteStrings)
+				 writer.append(priority+separator+'"'+outStr+'"');
+			 else
+				 writer.append(priority+separator+outStr);
 			 if (numItemsPrinted < nTotalMinus1) {
 				 if(fWithNewlines)
-					 writer.newLine();
+					 writer.append("\n");
 				 else
 					 writer.append(", ");
 			 }

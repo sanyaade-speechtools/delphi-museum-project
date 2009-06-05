@@ -278,7 +278,7 @@ public class Categorizer {
 							new OutputStreamWriter(
 							new FileOutputStream(currFilename),"UTF8"));
 	    			debug(1,"Saving column usage info to file: " + currFilename);
-	    			vocabCountsForCol.write(usageWriter, true, 0, null, false, true);
+	    			vocabCountsForCol.write(usageWriter, true, 0, null, false, false, true);
 					usageWriter.flush();
 					usageWriter.close();
 				}

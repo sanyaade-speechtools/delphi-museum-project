@@ -188,11 +188,31 @@ public class WebAppDB {
 	protected boolean uploadObjectCategoryAssociations(String pathToLoadfile) {
 		// Map WinDoz paths to normal ones.
 		pathToLoadfile = pathToLoadfile.replace('\\', '/');
-		String mainStatement =
+		String loadObjCatsStmt =
 			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE obj_cats CHARACTER SET utf8"
 			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 4 LINES"
 			+ " (obj_id, cat_id, inferred, reliability)";
-		return uploadData( "obj_cats", mainStatement, null);
+		boolean retVal = uploadData( "obj_cats", loadObjCatsStmt, null);
+		String loadObjCatsWImgsStmt =
+			"INSERT INTO obj_cats_wimgs (obj_id, cat_id, inferred, reliability)"
+			+ " SELECT oc.obj_id, oc.cat_id, oc.inferred, oc.reliability"
+			+ " FROM obj_cats oc, objects o WHERE oc.obj_id=o.id AND NOT o.img_path IS NULL";
+		retVal = uploadData( "obj_cats", loadObjCatsWImgsStmt, null) && retVal;
+		return retVal;
+	}
+
+	/**
+	 * @param pathToLoadfile Full path on the local system to a UTF8 encoded data file
+	 * @return true if load succeeds, else false.
+	 * @throws RuntimeException for any SQL or other errors.
+	 */
+	protected boolean uploadTermStatsMetadata(String pathToLoadfile) {
+		// Map WinDoz paths to normal ones.
+		pathToLoadfile = pathToLoadfile.replace('\\', '/');
+		String mainStmt =
+			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE termStats CHARACTER SET utf8"
+			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES (`count`, term)";
+		return uploadData( "termStats", mainStmt, null);
 	}
 
 	private boolean uploadData(String table, String mainStmt, String deleteStmt) {

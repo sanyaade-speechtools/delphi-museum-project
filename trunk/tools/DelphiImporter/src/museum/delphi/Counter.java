@@ -187,10 +187,10 @@ public class Counter <I> {
 	 * @return partial string representation
 	 */
 	 public void write( java.io.BufferedWriter writer, boolean fDestructive,
-			 int minCountToPrint, String separator, boolean escapeStrings, boolean fWithNewlines)
+			 int minCountToPrint, String separator, boolean escapeStrings, boolean quoteStrings, boolean fWithNewlines)
 		throws java.io.IOException {
 		asPriorityQueue().write( writer, fDestructive, minCountToPrint,
-									separator, escapeStrings, fWithNewlines);
+									separator, escapeStrings, quoteStrings, fWithNewlines);
 	 }
 
 	/**
