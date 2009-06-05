@@ -283,7 +283,9 @@ public class SQLUtils {
 						writer.append('\n');
 				}
 			}
-			String parentID = (fRootNode || node.parent == null)?"null":Integer.toString(node.parent.id);
+			String parentID = (fRootNode || node.parent == null)?
+								(asSQLInsert?"null":"\\N")
+								:Integer.toString(node.parent.id);
 			String select = (node.selectSingle)? "single":"multiple";
 			int infer = (node.inferredByChildren)? 1:0;
 			if(asSQLInsert) {
@@ -326,7 +328,7 @@ public class SQLUtils {
     	int nObjsProcessedTotal = 0;
     	int nObjsSkippedTotal = 0;
     	int nObjsPerDumpFile = 50000;
-    	if(!imagePathsReader.ready()) {
+    	if(imagePathsReader!=null && !imagePathsReader.ready()) {
     		imagePathsReader = null;
     		debug(1, "SQLUtils.writeObjectsSQL: passed ImagePathsReader is not ready. Ignoring paths.");
     	}
