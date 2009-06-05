@@ -3969,7 +3969,7 @@
 				<heading id="TormaSculpture" title="Torma">
 					<synonym value="Tormas"/>
 				</heading>
-				<heading id="TotempoleSculpt" title="Totem Pole">
+				<heading id="TotemPoleSculpt" title="Totem Pole">
 					<synonym value="Totem Poles"/>
 					<synonym value="Totem-Pole"/>
 					<synonym value="Totem-Poles"/>
@@ -7700,10 +7700,6 @@
 		<heading id="Textiles" title="Textiles">
 			<synonym value="Textile"/>
 			<synonym value="RGM Yardage"/>
-			<heading id="Cloth" title="Cloth">
-				<synonym value="Fabric"/>
-				<synonym value="Fabrics"/>
-			</heading>
 			<heading id="EmbroiderySample" title="Embroidery Sample">
 				<synonym value="Embroidery Samples"/>
 				<synonym value="Embroidery-Sample"/>
@@ -10511,6 +10507,10 @@
 		<synonym value="Scientific"/>
 		<heading id="CalendarScience" title="Calendar">
 			<synonym value="Calendars"/>
+			<synonym value="Calender"/> <!-- Also could refer to a machine in which cloth
+				or paper is pressed by rollers to glaze or smooth it, but PAHMA has none
+				of these in its collections -->
+			<synonym value="Calenders"/>
 			<implies facet="ObjectName" cat="CalendarComm"/>
 			<heading id="Almanac" title="Almanac">
 				<synonym value="Almanacs"/>
@@ -12741,15 +12741,6 @@
 			</heading>
 		</heading>
 		<heading id="AxeTool" title="Axe" noMatch="true"/>
-		<heading id="BackedBladeTool" title="Backed Blade">
-			<synonym value="Backed Blades"/>
-		</heading>
-		<heading id="BackedBladeletTool" title="Backed Bladelet">
-			<synonym value="Backed Bladelets"/>
-		</heading>
-		<heading id="BackedKnifeTool" title="Backed Knife">
-			<synonym value="Backed Knifes"/>
-		</heading>
 		<heading id="BailerTool" title="Bailer">
 			<synonym value="Bailers"/>
 		</heading>
@@ -12803,9 +12794,6 @@
 		</heading>
 		<heading id="ButtonHookTool" title="Button-Hook">
 			<synonym value="Button-Hooks"/>
-		</heading>
-		<heading id="CalenderTool" title="Calender">
-			<synonym value="Calenders"/>
 		</heading>
 		<heading id="CarderTool" title="Carder">
 			<synonym value="Carders"/>
@@ -13282,9 +13270,6 @@
 				<synonym value="Tuyeres"/>
 			</heading>
 		</heading>
-		<heading id="FlakedFlakeTool" title="Flaked Flake">
-			<synonym value="Flaked Flakes"/>
-		</heading>
 		<heading id="FlenchingTool" title="Flenching Tool">
 			<synonym value="Flenching-Tool/Implement"/>
 		</heading>
@@ -13331,10 +13316,6 @@
 		<heading id="GrateTool" title="Grate">
 			<synonym value="Grates"/>
 		</heading>
-		<heading id="GrattoirTool" title="Grattoir">
-			<synonym value="Grattoirs"/>
-			<implies facet="ObjectName" cat="Scraper"/>
-		</heading>
 		<heading id="GrinderTool" title="Grinder">
 			<synonym value="Grinders"/>
 		</heading>
@@ -13344,9 +13325,6 @@
 		<heading id="GunnersKeyTool" title="Gunner's Key" noMatch="true"/>
 		<heading id="HammerTool" title="Hammer">
 			<synonym value="Hammers"/>
-		</heading>
-		<heading id="HammerstoneTool" title="Hammerstone">
-			<synonym value="Hammerstones"/>
 		</heading>
 		<heading id="HarpagoTool" title="Harpago">
 			<synonym value="Harpagos"/>
@@ -13819,14 +13797,33 @@
 			</heading>
 		</heading>
 		<heading id="StoneTools" title="Stone Tools">
+			<heading id="BackedBladeTool" title="Backed Blade">
+				<synonym value="Backed Blades"/>
+			</heading>
+			<heading id="BackedBladeletTool" title="Backed Bladelet">
+				<synonym value="Backed Bladelets"/>
+			</heading>
+			<heading id="BackedKnifeTool" title="Backed Knife">
+				<synonym value="Backed Knifes"/>
+			</heading>
 			<heading id="Burin" title="Burin">
 				<synonym value="Burins"/>
 			</heading>
 			<heading id="Chopper" title="Chopper">
 				<synonym value="Choppers"/>
 			</heading>
+			<heading id="FlakedFlakeTool" title="Flaked Flake">
+				<synonym value="Flaked Flakes"/>
+			</heading>
 			<heading id="Flaker" title="Flaker">
 				<synonym value="Flakers"/>
+			</heading>
+			<heading id="GrattoirTool" title="Grattoir">
+				<synonym value="Grattoirs"/>
+				<implies facet="ObjectName" cat="Scraper"/>
+			</heading>
+			<heading id="HammerstoneTool" title="Hammerstone">
+				<synonym value="Hammerstones"/>
 			</heading>
 			<heading id="Handaxe" title="Handaxe">
 				<synonym value="Handaxes"/>
