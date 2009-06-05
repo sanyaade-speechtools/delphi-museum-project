@@ -1057,8 +1057,19 @@
 			<synonym value="recording"/>
 			<heading id="Filmed" title="Filmed"/>
 			<heading id="Photographed" title="Photographed"/>
-			<heading id="Taped" title="Taped"/>
-			<heading id="Written" title="Written"/>
+			<heading id="Taped" title="Taped">
+				<excl value="Broken and taped"/>
+				<excl value="Glued and taped"/>
+				<excl value="Taped to"/>
+				<excl value="Taped together"/>
+			</heading>
+			<heading id="Written" title="Written">
+				<excl value="on which is written"/>
+				<excl value="written in cat"/>
+				<excl value="written in next to"/>
+				<excl value="written in pencil"/>
+				<excl value="written in red pencil"/>
+			</heading>
 		</heading>
 		<heading id="Ropework" title="Ropework">
 			<heading id="Braided" title="Braided"/>
