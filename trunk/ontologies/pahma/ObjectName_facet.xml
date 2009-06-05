@@ -1112,9 +1112,6 @@
 		<heading id="Column" title="Column">
 			<synonym value="Columns"/>
 		</heading>
-		<heading id="Console" title="Console">
-			<synonym value="Consoles"/>
-		</heading>
 		<heading id="Coping" title="Coping">
 			<synonym value="Copings"/>
 		</heading>
@@ -1171,8 +1168,7 @@
 			</heading>
 		</heading>
 		<heading id="Epicranitis" title="Epicranitis">
-			<synonym value="Epicranites"/>
-			<!-- CHECK -->
+			<synonym value="Epicranites"/> <!-- CHECK -->
 		</heading>
 		<heading id="Finial" title="Finial"/>
 		<heading id="Floor" title="Floor">
@@ -1314,9 +1310,6 @@
 		</heading>
 		<heading id="Stair" title="Stair">
 			<synonym value="Stairs"/>
-		</heading>
-		<heading id="Step" title="Step">
-			<synonym value="Steps"/>
 		</heading>
 		<heading id="TentPeg" title="Tent-Peg">
 			<synonym value="Tent-Pegs"/>
@@ -2207,36 +2200,6 @@
 			</heading>
 		</heading>
 	</heading>
-	<!-- <heading id="Artifacts" title="Artifacts"> PARSE OUT AND MERGE ELSEWHERE
-		<synonym value="Artifact"/>
-		<synonym value="Artefact"/>
-		<synonym value="Artefacts"/>
-		••• 159 / 1606:
-		<heading id="BallArtifact" title="Ball">
-			<synonym value="Balls"/>
-			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
-		</heading>
-		••• 0 / 51:
-		<heading id="CarvedStone" title="Carved Stone">
-			<implies facet="ActivityorContext" cat="Carving"/>
-			<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
-		</heading>
-		••• 233 / 3325:
-		<heading id="Disc" title="Disc">
-			<synonym value="Discs"/>
-			<synonym value="Disk"/>
-			<synonym value="Disks"/>
-		</heading>
-		••• 0 / 1:
-		<heading id="EngravedStone" title="Engraved Stone"/>
-		•••  0 / 4:
-		<heading id="RetouchedPiece" title="Retouched Piece"/>
-		•••  427 / 876:
-		<heading id="Rod" title="Rod">
-			<synonym value="Rods"/>
-			<excl value="Single rod"/>  A coiled basketry technique
-		</heading>
-	</heading> -->
 	<heading id="BiologicalRemains" title="Biological Remains">
 		<synonym value="Animal/Vegetal Remains"/>
 		<heading id="AnimalRemains" title="Animal Remains">
@@ -2316,7 +2279,7 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="CommunicationRelatedItems" title="Communication-Related Items">
+	<heading id="CommunicationRelatedItems" title="Communication-related Items">
 		<synonym value="Communication"/>
 		<synonym value="Communication Equipment"/>
 		<synonym value="Communications"/>
@@ -2775,19 +2738,31 @@
 		<heading id="BillofSaleComm" title="Bill of Sale">
 			<synonym value="Bill of Sales"/>
 		</heading>
-		<heading id="BookComm" title="Book">
-			<synonym value="Books"/>
+		<heading id="BooksRelatedComm" title="Books &amp; related items" noMatch="true">
+			<heading id="BookComm" title="Book">
+				<synonym value="Books"/>
+			</heading>
+			<heading id="BookClaspComm" title="Book Clasp">
+				<synonym value="Book Clasps"/>
+				<synonym value="Book-Clasp"/>
+				<synonym value="Book-Clasps"/>
+			</heading>
+			<heading id="BookCoverComm" title="Book Cover">
+				<synonym value="Book Covers"/>
+				<synonym value="Book-Cover"/>
+				<synonym value="Book-Covers"/>
+			</heading>
+			<heading id="BookMarkComm" title="Bookmark">
+				<synonym value="Bookmarks"/>
+				<synonym value="Book Mark"/>
+				<synonym value="Book Marks"/>
+				<synonym value="Book-Mark"/>
+				<synonym value="Book-Marks"/>
+			</heading>
 		</heading>
-		<heading id="BookClaspComm" title="Book-Clasp">
-			<synonym value="Book-Clasps"/>
-		</heading>
-		<heading id="BookCoverComm" title="Book-Cover">
-			<synonym value="Book-Covers"/>
-		</heading>
-		<heading id="BookMarkComm" title="Book-Mark">
-			<synonym value="Book-Marks"/>
-		</heading>
-		<heading id="BoundaryMarkerComm" title="Boundary-Marker">
+		<heading id="BoundaryMarkerComm" title="Boundary Marker">
+			<synonym value="Boundary Markers"/>
+			<synonym value="Boundary-Marker"/>
 			<synonym value="Boundary-Markers"/>
 		</heading>
 		<heading id="BroadsheetComm" title="Broadsheet">
@@ -2851,8 +2826,506 @@
 				<synonym value="King-Lists"/>
 			</heading>
 		</heading>
-		<heading id="CommunicationsTubeComm" title="Communications-Tube">
+		<heading id="CommunicationsTubeComm" title="Communications Tube">
+			<synonym value="Communications Tubes"/>
+			<synonym value="Communications-Tube"/>
 			<synonym value="Communications-Tubes"/>
+		</heading>
+		<heading id="Currency" title="Currency">
+			<synonym value="Currencies"/>
+			<heading id="Banknote" title="Banknote">
+				<synonym value="Banknotes"/>
+				<implies facet="ObjectName" cat="BanknoteVisRep"/>
+			</heading>
+			<heading id="BridePrice" title="Bride Price">
+				<synonym value="Bride Prices"/>
+				<synonym value="Bride-Price"/>
+				<synonym value="Bride-Prices"/>
+			</heading>
+			<heading id="ChequeOrCheck" title="Check" noMatch="true">
+				<!-- <synonym value="Checks"/> -->
+				<synonym value="Cheque"/>
+				<synonym value="Cheques"/>
+			</heading>
+			<heading id="CheckBook" title="Check Book">
+				<synonym value="Checkbook"/>
+				<synonym value="Checkbooks"/>
+				<synonym value="Check Books"/>
+				<synonym value="Check-Book"/>
+				<synonym value="Check-Books"/>
+				<synonym value="Chequebook"/>
+				<synonym value="Chequebooks"/>
+				<synonym value="Cheque Book"/>
+				<synonym value="Cheque Books"/>
+				<synonym value="Cheque-Book"/>
+				<synonym value="Cheque-Books"/>
+			</heading>
+			<heading id="CheckCard" title="Check Card">
+				<synonym value="Check Cards"/>
+				<synonym value="Check-Card"/>
+				<synonym value="Check-Cards"/>
+				<synonym value="Cheque Card"/>
+				<synonym value="Cheque Cards"/>
+				<synonym value="Cheque-Card"/>
+				<synonym value="Cheque-Cards"/>
+				<implies facet="ObjectName" cat="CheckCardCardsComm"/>
+			</heading>
+			<heading id="Coin" title="Coin">
+				<synonym value="Coins"/>
+				<synonym value="Coinage"/>
+				<excl value="Coin applique"/>
+				<excl value="Coin appliqué"/>
+				<excl value="Coin purse"/>
+				<implies facet="ActivityorContext" cat="Metallurgy"/>
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+				<!-- oooooooooooo The following concepts need to be better organized zzzzzzzzzzzz -->
+				<heading id="Denomination" title="Denomination">
+					<heading id="Bronzedouble" title="Bronze Double">
+						<synonym value="Bronze Doubles"/>
+						<implies facet="Material" cat="BronzeMetal"/>
+					</heading>
+					<heading id="Notgeld" title="Notgeld"/>
+					<heading id="FiftyCentavos" title="50 Centavos"/>
+				</heading>
+				<heading id="UnitedStatesCoins" title="United States Coins">
+					<synonym value="US/Dollar System"/>
+					<heading id="Penny" title="Penny">
+						<synonym value="Pennies"/>
+						<heading id="Flyingeaglepenny" title="Flying Eagle Penny">
+							<synonym value="Flying Eagle Pennies"/>
+							<synonym value="Flying-Eagle Penny"/>
+							<synonym value="Flying-Eagle Pennies"/>
+						</heading>
+						<heading id="Lincolnheadpenny" title="Lincoln Head Penny">
+							<synonym value="Lincoln Head Pennies"/>
+							<synonym value="Lincoln-Head Penny"/>
+							<synonym value="Lincoln-Head Pennies"/>
+						</heading>
+						<heading id="Indianheadpenny" title="Indian Head Penny">
+							<synonym value="Indian Head Pennies"/>
+							<synonym value="Indian-Head Penny"/>
+							<synonym value="Indian-Head Pennies"/>
+						</heading>
+					</heading>
+					<heading id="Nickel" title="Nickel">
+						<synonym value="Nickels"/>
+						<heading id="Libertyheadnickel" title="Liberty Head Nickel">
+							<synonym value="Liberty Head Nickels"/>
+							<synonym value="Liberty-Head Nickel"/>
+							<synonym value="Liberty-Head Nickels"/>
+						</heading>
+						<heading id="Halfdime" title="Half Dime">
+							<synonym value="Half Dimes"/>
+						</heading>
+						<heading id="Nicklethreecent" title="Nickle Three Cent">
+							<synonym value="Nickle Three Cents"/>
+						</heading>
+						<heading id="Buffaloheadnickel" title="Buffalo Head Nickel">
+							<synonym value="Buffalo Head Nickels"/>
+						</heading>
+					</heading>
+					<heading id="Dime" title="Dime">
+						<synonym value="Dimes"/>
+					</heading>
+					<heading id="Quarterdollar" title="Quarter">
+						<synonym value="Quarter-Dollar"/>
+						<synonym value="Quarter-Dollars"/>
+						<synonym value="Quarters"/>
+						<excl value="1st Quarter"/>
+						<excl value="First Quarter"/>
+						<excl value="2nd Quarter"/>
+						<excl value="2nd. Quarter"/>
+						<excl value="In Each Quarter"/>
+						<excl value="Three Quarter"/>
+						<excl value="Three-Quarter"/>
+						<excl value="3 Quarter"/>
+						<excl value="3-Quarter"/>
+						<excl value="3- Quarter"/>
+						<excl value="Hind Quarter"/>
+						<excl value="Hind-Quarter"/>
+						<excl value="Quarter of Pit"/>
+						<excl value="NE Quarter"/>
+						<excl value="NE. Quarter"/>
+						<excl value="SE Quarter"/>
+						<excl value="S.W. Quarter"/>
+						<excl value="Quarter Blood"/>
+						<excl value="Quarter-Blood"/>
+						<heading id="Washingtonquarter" title="Washington Quarter">
+							<synonym value="Washington Quarters"/>
+						</heading>
+					</heading>
+					<heading id="Halfdollar" title="Half-Dollar">
+						<synonym value="Half-Dollars"/>
+						<synonym value="Half Dollar"/>
+						<synonym value="Half Dollars"/>
+						<synonym value="Franklin &amp; Kennedy Half Dollars"/>
+						<heading id="BayBridgeCommemHalfDoll" title="Bay Bridge Commemorative">
+							<synonym value="Bay Bridge Commemorative Half Dollar"/>
+							<synonym value="Bay Bridge Commemorative Half Dollars"/>
+							<synonym value="Bay Bridge Commemorative Half-Dollar"/>
+							<synonym value="Bay Bridge Commemorative Half-Dollars"/>
+							<synonym value="Bay Bridge Commem. Half Dollar"/>
+						</heading>
+						<heading id="ColumbianExpoCommemHalfDoll" title="Columbian Expo Commemorative">
+							<synonym value="Columbian Expo Commemorative Half Dollar"/>
+							<synonym value="Columbian Expo Commemorative Half Dollars"/>
+							<synonym value="Columbian Expo Commemorative Half-Dollar"/>
+							<synonym value="Columbian Expo Commemorative Half-Dollars"/>
+							<synonym value="Columbian Expo. Commemorative Half Dollar"/>
+							<synonym value="Columbian Expo. Commemorative Half Dollars"/>
+							<synonym value="Columbian Expo. Commemorative Half-Dollar"/>
+							<synonym value="Columbian Expo. Commemorative Half-Dollars"/>
+							<synonym value="Columbian Exposition Commemorative Half Dollar"/>
+							<synonym value="Columbian Exposition Commemorative Half Dollars"/>
+							<synonym value="Columbian Exposition Commemorative Half-Dollar"/>
+							<synonym value="Columbian Exposition Commemorative Half-Dollars"/>
+							<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies event Columbian Expo. -->
+						</heading>
+						<heading id="DiamondJubCommemHalfDoll" title="Diamond Jubilee Commemorative">
+							<synonym value="Diamond Jubilee Commemorative Half Dollar"/>
+							<synonym value="Diamond Jubilee Commemorative Half Dollars"/>
+							<synonym value="Diamond Jubilee Commemorative Half-Dollar"/>
+							<synonym value="Diamond Jubilee Commemorative Half-Dollars"/>
+							<synonym value="Diamond Jubilee Commem. Half Dollar"/>
+						</heading>
+						<heading id="FranklinHalfDollar" title="Franklin Half Dollar">
+							<synonym value="Ben Franklin Half Dollar"/>
+							<synonym value="Ben Franklin Half Dollars"/>
+							<synonym value="Ben Franklin Half-Dollar"/>
+							<synonym value="Ben Franklin Half-Dollars"/>
+							<synonym value="Ben Franklin Half Dollar, Uncirculated Mint Set"/>
+							<synonym value="Franklin Half Dollars"/>
+							<synonym value="Franklin Half-Dollar"/>
+							<synonym value="Franklin Half-Dollars"/>
+							<synonym value="Franklin Half Dollar, Proof Set"/>
+						</heading>
+						<heading id="KennedyHalfDollar" title="Kennedy Half Dollar">
+							<synonym value="Kennedy Half Dollars"/>
+							<synonym value="Kennedy Half-Dollar"/>
+							<synonym value="Kennedy Half-Dollars"/>
+							<synonym value="JFK Half Dollar"/>
+							<synonym value="JFK Half Dollars"/>
+							<synonym value="JFK Half-Dollar"/>
+							<synonym value="JFK Half-Dollars"/>
+							<synonym value="Kennedy Half Dollar, Uncirculated Mint Set"/>
+							<synonym value="Kennedy Half Dollar, Proof Set"/>
+							<synonym value="Kennedy Half Dollar, 40th Commemorative"/>
+							<!-- Missing Synonym? "40th Commemorative" -->
+						</heading>
+						<heading id="MonroeDoctCommemHalfDoll" title="Monroe Doctrine Commemorative">
+							<synonym value="Monroe Doctrine Commemorative Half Dollar"/>
+							<synonym value="Monroe Doctrine Commemorative Half Dollars"/>
+							<synonym value="Monroe Doctrine Commemorative Half-Dollar"/>
+							<synonym value="Monroe Doctrine Commemorative Half-Dollars"/>
+							<synonym value="Monroe Doctrine Commem. Half Dollar"/>
+						</heading>
+						<heading id="Coppedbusthalfdollar" title="Copped Bust Half Dollar"/>
+						<heading id="Libertystandinghalfdollar" title="Liberty Standing Half Dollar"/>
+						<heading id="Grantmemorialhalfdollar" title="Grant Memorial Half Dollar"/>
+					</heading>
+					<heading id="Silverdollar" title="Silver Dollar">
+						<heading id="EisenhowerSilverDollar" title="Eisenhower Silver Dollar">
+							<synonym value="Eisenhower Dollar"/>
+							<synonym value="Eisenhower Uncirculated Silver Dollar"/>
+						</heading>
+						<heading id="Libertyheadsilverdollar" title="Liberty Head Silver Dollar"/>
+						<heading id="Peacetypesilverdollar" title="Peace Type Silver Dollar"/>
+					</heading>
+					<heading id="Emergencywartimecurrency" title="Emergency War Time Currency"/>
+					<heading id="Commemorative" title="Commemorative">
+						<synonym value="Medallion Commemorating Thologians"/>
+					</heading>
+				</heading>
+				<heading id="Ancientgreekcoins" title="Ancient Greek Coins">
+					<heading id="Halfdrachma" title="Half Drachma">
+						<synonym value="Half Drachmas"/>
+						<synonym value="Half Drachm"/>
+						<synonym value="Half Drachms"/>
+						<synonym value="Half-Drachma"/>
+						<synonym value="Hemidrachm"/>
+						<synonym value="Hemidrachms"/>
+						<synonym value="Hemidrachma"/>
+						<synonym value="Hemidrachmas"/>
+						<synonym value="Hemi-Drachm"/>
+						<synonym value="Hemi-Drachms"/>
+						<synonym value="Hemi-Drachma"/>
+						<synonym value="Hemi-Drachmas"/>
+						<synonym value="Half-Drachmas"/>
+						<synonym value="Half-Drachm"/>
+						<synonym value="Half-Drachms"/>
+					</heading>
+					<heading id="Drachma" title="Drachma">
+						<synonym value="Drachmas"/>
+						<synonym value="Drachm"/>
+						<synonym value="Drachms"/>
+					</heading>
+					<heading id="Didrachm" title="Didrachm">
+						<synonym value="Two Drachm"/>
+						<synonym value="Two Drachms"/>
+						<synonym value="Two Drachma"/>
+						<synonym value="Two Drachmas"/>
+						<synonym value="Two-Drachm"/>
+						<synonym value="Two-Drachms"/>
+						<synonym value="Two-Drachma"/>
+						<synonym value="Two-Drachmas"/>
+						<synonym value="Didrachms"/>
+						<synonym value="Didrachma"/>
+						<synonym value="Didrachmas"/>
+					</heading>
+					<heading id="Tetradrachm" title="Tetradrachm">
+						<synonym value="Four Drachm"/>
+						<synonym value="Four Drachms"/>
+						<synonym value="Four Drachma"/>
+						<synonym value="Four Drachmas"/>
+						<synonym value="Four-Drachm"/>
+						<synonym value="Four-Drachms"/>
+						<synonym value="Four-Drachma"/>
+						<synonym value="Four-Drachmas"/>
+						<synonym value="Tetradrachms"/>
+						<synonym value="Tetradrachma"/>
+						<synonym value="Tetradrachmas"/>
+						<synonym value="Tetradrachm?"/>
+					</heading>
+					<heading id="Octodrachm" title="Octodrachm">
+						<synonym value="Eight Drachm"/>
+						<synonym value="Eight Drachms"/>
+						<synonym value="Eight Drachma"/>
+						<synonym value="Eight Drachmas"/>
+						<synonym value="Eight-Drachm"/>
+						<synonym value="Eight-Drachms"/>
+						<synonym value="Eight-Drachma"/>
+						<synonym value="Eight-Drachmas"/>
+						<synonym value="Octodrachms"/>
+						<synonym value="Octodrachma"/>
+						<synonym value="Octodrachmas"/>
+					</heading>
+					<heading id="Dekadrachm" title="Dekadrachm">
+						<synonym value="Ten Drachm"/>
+						<synonym value="Ten Drachms"/>
+						<synonym value="Ten Drachma"/>
+						<synonym value="Ten Drachmas"/>
+						<synonym value="Ten-Drachm"/>
+						<synonym value="Ten-Drachms"/>
+						<synonym value="Ten-Drachma"/>
+						<synonym value="Ten-Drachmas"/>
+						<synonym value="Dekadrachms"/>
+						<synonym value="Dekadrachma"/>
+						<synonym value="Dekadrachmas"/>
+					</heading>
+					<heading id="Hemiobol" title="Hemiobol">
+						<synonym value="Hemiobols"/>
+						<synonym value="Hemiobolus"/>
+						<synonym value="Hemioboluses"/>
+					</heading>
+					<heading id="Obol" title="Obol">
+						<synonym value="Obols"/>
+						<synonym value="Obolus"/>
+						<synonym value="Oboluses"/>
+					</heading>
+					<heading id="Diobol" title="Diobol">
+						<synonym value="Diobols"/>
+						<synonym value="Diobolus"/>
+						<synonym value="Dioboluses"/>
+					</heading>
+					<heading id="Triobol" title="Triobol">
+						<synonym value="Triobols"/>
+						<synonym value="Triobolus"/>
+						<synonym value="Trioboluses"/>
+					</heading>
+					<heading id="Tetrobol" title="Tetrobol">
+						<synonym value="Tetrobols"/>
+						<synonym value="Tetrobolus"/>
+						<synonym value="Tetroboluses"/>
+					</heading>
+					<heading id="Billonstater" title="Billon Stater"/>
+					<heading id="Sixthofstater" title="Sixth of Stater">
+						<synonym value="Sixths of Stater"/>
+					</heading>
+					<heading id="Stater" title="Stater">
+						<synonym value="Staters"/>
+					</heading>
+					<heading id="Twostater" title="Two Stater">
+						<synonym value="Two Staters"/>
+						<synonym value="Two-Stater"/>
+						<synonym value="Two-Staters"/>
+						<synonym value="2 Stater"/>
+						<synonym value="2 Staters"/>
+					</heading>
+					<heading id="Hemilitron" title="Hemilitron">
+						<synonym value="Hemilitrons"/>
+					</heading>
+					<heading id="Litra" title="Litra">
+						<synonym value="Litras"/>
+					</heading>
+					<heading id="SixteenLitraiPc" title="16 Litrai piece"/>
+					<heading id="Pentokion" title="Pentokion">
+						<synonym value="Pentokions"/>
+					</heading>
+					<heading id="Dekonkion" title="Dekonkion">
+						<synonym value="Dekonkions"/>
+					</heading>
+				</heading>
+				<heading id="Ancientpersiancoins" title="Ancient Persian Coins">
+					<heading id="Siglos" title="Siglos">
+						<synonym value="Sigloi"/>
+					</heading>
+				</heading>
+				<heading id="Ancientromancoins" title="Ancient Roman Coins">
+					<heading id="RomanCoinsByDenom" title="By Denomination" noMatch="true">
+						<heading id="RomanBronzeCoinDenom" title="Bronze coin denominations" noMatch="true">
+							<heading id="RomanDenomAs" title="As" noMatch="true"/>
+							<heading id="RomanDenomSemis" title="Semis">
+								<synonym value="Semis ?"/>
+							</heading>
+							<heading id="RomanDenomTriens" title="Triens"/>
+						</heading>
+						<heading id="RomanDenomAureus" title="Aureus">
+							<implies facet="Material" cat="GoldMaterial"/>
+						</heading>
+						<heading id="Quinarius" title="Quinarius"/> <!-- could be gold or silver -->
+					</heading>
+					<heading id="RomanCoinsByType" title="By Type" noMatch="true">
+						<heading id="RomanEarlyBronzeCoins" title="Early bronze coins" noMatch="true">
+							<implies facet="Material" cat="BronzeMetal"/>
+							<heading id="RomanAesRude" title="Aes Rude">
+								<!-- Bronze/Copper bartered by weight, in irregular forms -->
+								<synonym value="Oes Rude"/>
+								<heading id="Aesrudesextantalstand" title="Aes Rude; Sextantal Stand"/>
+								<!-- Cannot currently be a single token -->
+							</heading>
+							<heading id="RomanAesGrave" title="Aes Grave">
+								<!-- Bronze/Copper bartered by weight, in the form of bars -->
+								<synonym value="Oes Grave"/>
+								<heading id="Aesgravelibral" title="Aes Grave; Libral"/>
+								<!-- Cannot currently be a single token -->
+								<heading id="Aesgraveuncia" title="Aes Grave; Uncia"/>
+								<!-- Cannot currently be a single token -->
+								<heading id="Aesgravequadrans" title="Aes Grave; Quadrans"/>
+								<!-- Cannot currently be a single token -->
+								<heading id="Aesgravetriens" title="Aes Grave; Triens"/>
+								<!-- Cannot currently be a single token -->
+							</heading>
+							<heading id="RomanAesSignatum" title="Aes Signatum">
+								<!-- Bronze/Copper bars stamped with definite figures -->
+								<synonym value="Oes Signatum"/>
+							</heading>
+						</heading>
+						<heading id="RomanLaterBronzeCoins" title="Later bronze coins" noMatch="true">
+							<implies facet="Material" cat="BronzeMetal"/>
+							<heading id="Aes" title="Aes">
+								<heading id="Aesfolles" title="Aes Folles">
+									<heading id="AesfollesFour" title="Aes Folles (4)"/>
+									<heading id="AesfollesRThree" title="Aes Folles (R3)"/>
+									<heading id="AesfollesS" title="Aes Folles (S)"/>
+									<heading id="AesfollesRFour" title="Aes Folles (R 4)"/>
+									<heading id="AesfollesROne" title="Aes Folles (R1)"/>
+									<heading id="AesfollesCOne" title="Aes Folles (C1)"/>
+								</heading>
+								<heading id="Aessemis" title="Aes Semis"/>
+							</heading>
+						</heading>
+					</heading>
+					<heading id="RomanCoinsByWtStandard" title="By Weight Standard" noMatch="true">
+						<heading id="RomanLibralStandard" title="Libral Standard"/> <!-- Original weight standard -->
+						<heading id="RomanSemiLibralStandard" title="Semilibral Standard">
+							<synonym value="(Semi-Libral S"/>
+						</heading>
+						<heading id="RomanPostSemiLibralStand" title="Post-Semilibral Standard">
+							<synonym value="(Post-Semilibral St"/>
+						</heading>
+						<heading id="RomanTrientalStandard" title="Triental Standard"/>
+						<heading id="RomanQuartuncialStandard" title="Quartuncial Standard"> <!-- CHECK -->
+						</heading>
+						<heading id="RomanSextantalStandard" title="Sextantal Standard">
+							<synonym value="(Sextantal Standard"/>
+							<synonym value="(Sextantal Standard)"/>
+							<synonym value="(Sextantal Stand"/>
+							<synonym value="(Sextantal Standard?)"/>
+						</heading>
+						<heading id="RomanUncialStandard" title="Uncial Standard">
+							<synonym value="Uncial Standrard"/>
+							<synonym value="(Uncial Standard)"/>
+							<synonym value="Uncial Standar"/>
+						</heading>
+						<heading id="RomanSemiuncialStandard" title="Semiuncial Standard">
+							<synonym value="Semiuncial Standa"/>
+							<synonym value="Semiuncial Sta"/>
+						</heading>
+					</heading>
+					<heading id="Antoninianus" title="Antoninianus">
+						<synonym value="Antoninianvs"/>
+						<synonym value="Antioninianus"/>
+					</heading>
+					<heading id="Denarius" title="Denarius">
+						<synonym value="Denari"/>
+						<synonym value="Denarii"/>
+						<implies facet="Material" cat="SilverMaterial"/>
+						<heading id="Denariusserrate" title="Denarius (Serrate)">
+							<synonym value="Denarius Serrati"/>
+						</heading>
+					</heading>
+					<heading id="Sestertius" title="Sestertius"/>
+					<heading id="Sextans" title="Sextans"/>
+					<heading id="Cistophoros" title="Cistophoros"/>
+					<heading id="Quadrans" title="Quadrans"/>
+					<heading id="Constantinians" title="Constantinians"/>
+					<heading id="Semuncia" title="Semuncia"/>
+					<heading id="Dupondius" title="Dupondius"/>
+					<heading id="Quartuncias" title="Quartuncias">
+						<synonym value="Quartuncia"/>
+						<synonym value="Sydenham:  Quartuncia; Gr"/>
+					</heading>
+					<heading id="Uncia" title="Uncia"/>
+					<heading id="Triaassaria" title="Tria Assaria"/>
+				</heading>
+				<heading id="Ancientbyzantinecoins" title="Ancient Byzantine Coins"/>
+				<heading id="Ancienthebrewcoins" title="Ancient Hebrew Coins">
+					<heading id="Shekel" title="Shekel"/>
+					<heading id="Doubleshekel" title="Double Shekel"/>
+				</heading>
+				<heading id="Germancoins" title="German Coins">
+					<heading id="Onepfenning" title="1 Pfenning"/>
+					<heading id="Fivepfenning" title="5 Pfenning"/>
+					<heading id="Tenpfenning" title="10 Pfenning"/>
+				</heading>
+			</heading>
+			<heading id="CounterCurrency" title="Counter">
+				<synonym value="Counters"/>
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+			</heading>
+			<heading id="CurrencyBar" title="Currency-Bar">
+				<synonym value="Currency-Bars"/>
+			</heading>
+			<heading id="Manilla" title="Manilla">
+				<synonym value="Manillas"/>
+			</heading>
+			<heading id="MoneyBoxCurrency" title="Money Box">
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+				<implies facet="ObjectName" cat="MoneyBoxContainer"/>
+			</heading>
+			<heading id="MoneystoneCurrency" title="Money stone">
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+			</heading>
+			<heading id="PurseCommerceCurrency" title="Purse" noMatch="true"/>
+			<heading id="RingGold" title="Ring-Gold">
+				<synonym value="Ring-Golds"/>
+			</heading>
+			<heading id="RingMoney" title="Ring-Money">
+				<synonym value="Ring-Monies"/>
+			</heading>
+			<heading id="SealCurrency" title="Seal"> <!-- exclude sea mammals and closures -->
+				<excl value="Marine"/>
+				<excl value="Pinniped"/>
+				<excl value="Sea Lion"/>
+				<synonym value="Seals"/>
+				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
+			</heading>
+			<heading id="Tikal" title="Tikal">
+				<synonym value="Tikals"/>
+			</heading>
+			<heading id="Wampum" title="Wampum">
+				<synonym value="Wampums"/>
+			</heading>
 		</heading>
 		<heading id="DiaryComm" title="Diary">
 			<synonym value="Diaries"/>
@@ -2999,13 +3472,18 @@
 		<heading id="ProspectusComm" title="Prospectus">
 			<synonym value="Prospectuses"/>
 		</heading>
+		<heading id="PropagandaSocCntrl" title="Propaganda">
+			<synonym value="Propagandas"/> <!-- Incorrect plural -->
+		</heading>
 		<heading id="QuipuComm" title="Quipu">
 			<synonym value="Quipus"/>
 		</heading>
 		<heading id="ReceiptComm" title="Receipt">
 			<synonym value="Receipts"/>
 		</heading>
-		<heading id="SealImpressionComm" title="Seal-Impression">
+		<heading id="SealImpressionComm" title="Seal Impression">
+			<synonym value="Seal Impressions"/>
+			<synonym value="Seal-Impression"/>
 			<synonym value="Seal-Impressions"/>
 		</heading>
 		<heading id="SealIndicatorComm" title="Seal Indicator" noMatch="true"/>
@@ -3015,8 +3493,7 @@
 		<heading id="SealMatrixComm" title="Seal-Matrix">
 			<synonym value="Seal-Matrices"/>
 			<synonym value="Seal-Matrixes"/>
-			<synonym value="Seal-Matrixs"/>
-			<!-- Misspelling -->
+			<synonym value="Seal-Matrixs"/> <!-- Misspelling -->
 		</heading>
 		<heading id="SerialComm" title="Serial">
 			<!-- Is magazine a better term? -->
@@ -3058,139 +3535,542 @@
 		<heading id="TreatyComm" title="Treaty">
 			<synonym value="Treaties"/>
 		</heading>
-		<heading id="VotingSlateComm" title="Voting-Slate">
+		<heading id="VisualRepresentation" title="Visual Representations">
+			<heading id="AlbumVisRep" title="Album">
+				<synonym value="Albums"/>
+			</heading>
+			<heading id="AlphabetVisRep" title="Alphabet" noMatch="true"/>
+			<heading id="BanknoteVisRep" title="Banknote" noMatch="true"/>
+			<heading id="BookofPrintsVisRep" title="Book of Prints">
+				<synonym value="Books of Prints"/>
+			</heading>
+			<heading id="BookDecorationVisRep" title="Book Decoration">
+				<synonym value="Book Decorations"/>
+				<synonym value="Book-Decoration"/>
+				<synonym value="Book-Decorations"/>
+			</heading>
+			<heading id="DiptychVisRep" title="Diptych">
+				<synonym value="Diptychs"/>
+				<heading id="Semi-DiptychVisRep" title="Semi-Diptych">
+					<synonym value="Semi-Diptychs"/>
+					<synonym value="SemiDiptych"/>
+					<synonym value="SemiDiptychs"/>
+				</heading>
+			</heading>
+			<heading id="EmblemVisRep" title="Emblem">
+				<synonym value="Emblems"/>
+			</heading>
+			<heading id="IconVisRep" title="Icon" noMatch="true"/>
+			<heading id="IdolVisRep" title="Idol" noMatch="true"/>
+			<heading id="ImpressionVisRep" title="Impression" noMatch="true"/>
+			<heading id="MedalVisRep" title="Medal">
+				<synonym value="Medals"/>
+			</heading>
+			<heading id="MedallionVisRep" title="Medallion">
+				<synonym value="Medallions"/>
+			</heading>
+			<heading id="MedleyVisRep" title="Medley">
+				<synonym value="Medleys"/>
+			</heading>
+			<heading id="ModernCartoonVisRep" title="Modern Cartoon">
+				<synonym value="Modern Cartoons"/>
+			</heading>
+			<heading id="PaintingsVisRep" title="Paintings">
+				<synonym value="Painting"/>
+				<heading id="EKambanVisRep" title="E-Kamban" noMatch="true"/>
+				<heading id="FanPaintingVisRep" title="Fan Painting">
+					<synonym value="Fan Paintings"/>
+					<synonym value="Fan-Painting"/>
+					<synonym value="Fan-Paintings"/>
+				</heading>
+				<heading id="GakuVisRep" title="Gaku">
+					<synonym value="Gakus"/>
+				</heading>
+				<heading id="MiniatureVisRep" title="Miniature" noMatch="true">
+					<synonym value="Ptg Miniature"/>
+				</heading>
+				<heading id="MummyPortraitVisRep" title="Mummy Portrait">
+					<synonym value="Mummy Portraits"/>
+					<synonym value="Mummy-Portrait "/>
+					<synonym value="Mummy-Portraits"/>
+				</heading>
+				<heading id="OtsuEVisRep" title="Otsu-E">
+					<synonym value="Otsu-Es"/>
+				</heading>
+				<heading id="PataVisRep" title="Pata">
+					<synonym value="Patas"/>
+				</heading>
+				<heading id="PichwaiVisRep" title="Pichwai">
+					<synonym value="Pichwais"/>
+				</heading>
+				<heading id="ShikishiVisRep" title="Shikishi">
+					<synonym value="Shikishis"/>
+				</heading>
+				<heading id="WallPaintingVisRep" title="Wall Painting">
+					<synonym value="Wall Paintings"/>
+					<synonym value="Wall-Painting"/>
+					<synonym value="Wall-Paintings"/>
+					<heading id="TombPaintingVisRep" title="Tomb Painting">
+						<synonym value="Tomb Paintings"/>
+						<synonym value="Tomb-Painting"/>
+						<synonym value="Tomb-Paintings"/>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="PapyrusVisRep" title="Papyrus" noMatch="true"/>
+			<!-- <heading id="PatternVisRep" title="Pattern"> Disambiguate
+				<synonym value="Patterns"/>
+				<implies facet="ObjectName" cat="PatternProdRepl"/>
+			</heading> -->
+			<heading id="PhotographsVisRep" title="Photographic Images">
+				<synonym value="Film"/> <!-- Disambiguate -->
+				<heading id="NegativesVisRep" title="Negatives">
+					<synonym value="Negative"/> <!-- Check for possible exclusions -->
+					<synonym value="photograph   negative"/>
+					<heading id="GlassPlateNegativeVisRep" title="Glass Plate Negative">
+						<synonym value="film glass"/>
+						<synonym value="film   glass plate"/>
+						<synonym value="glass plate"/>
+						<synonym value="Glass Plate Negatives"/>
+						<synonym value="Glass-Plate Negative"/>
+						<synonym value="Glass-Plate Negatives"/>
+						<synonym value="Glassplate Negative"/>
+						<synonym value="Glassplate Negatives"/>
+					</heading>
+				</heading>
+				<heading id="PositivesVisRep" title="Photographic Prints">
+					<synonym value="Positive"/> <!-- Check for possible exclusions -->
+					<synonym value="Positives"/>
+					<synonym value="Photograph"/>
+					<synonym value="Photographs"/>
+					<synonym value="Photo"/>
+					<synonym value="Photos"/>
+					<synonym value="Photographic Print"/>
+				</heading>
+				<heading id="ColorSlidesVisRep" title="Color Slides">
+					<synonym value="Color Slide"/>
+					<synonym value="Color Transparencies"/>
+					<synonym value="Color Transparency"/>
+					<synonym value="BW Slide"/>
+					<synonym value="B/W Slide"/>
+					<synonym value="B&amp;W Slide"/>
+					<synonym value="Slides"/>
+					<synonym value="Slide"/>
+					<excl value="Bolo Tie Slide"/>
+					<excl value="Bolo Tie Slides"/>
+					<excl value="Rock Slide"/>
+					<excl value="Rock Slides"/>
+					<excl value="Microscope"/>
+					<excl value="Microscopic"/>
+				</heading>
+				<heading id="LanternSlideVisRep" title="Lantern Slide">
+					<synonym value="Lantern Slides"/> <!-- Implies photography -->
+					<synonym value="Glass Slide"/>
+					<synonym value="Glass Slides"/>
+				</heading>
+			</heading>
+			<!-- <heading id="PictureVisRep" title="Picture"> Too vague; disambiguate from "depicts", etc.
+				<synonym value="Pictures"/>
+			</heading> -->
+			<heading id="PlaquetteVisRep" title="Plaquette">
+				<synonym value="Plaquettes"/>
+			</heading>
+			<heading id="PolyptychVisRep" title="Polyptych">
+				<synonym value="Polyptychs"/>
+			</heading>
+			<heading id="PortfolioVisRep" title="Portfolio">
+				<synonym value="Portfolios"/>
+			</heading>
+			<heading id="RickshawPanelVisRep" title="Rickshaw Panel">
+				<synonym value="Rickshaw Panels"/>
+				<synonym value="Rickshaw-Panel"/>
+				<synonym value="Rickshaw-Panels"/>
+			</heading>
+			<heading id="RubbingVisRep" title="Rubbing">
+				<synonym value="Rubbings"/>
+			</heading>
+			<heading id="ScrollVisRep" title="Scroll" noMatch="true"/>
+			<heading id="Sculpture" title="Sculpture">
+				<synonym value="Carving"/>
+				<synonym value="Carvings"/>
+				<synonym value="Sculptures"/>
+				<synonym value="Woodcarving"/>
+				<synonym value="Woodcarvings"/>
+				<synonym value="Wood carving"/>
+				<synonym value="Wood carvings"/>
+				<synonym value="Wood-carving"/>
+				<synonym value="Wood-carvings"/>
+				<heading id="FigureSculpture" title="Figure">
+					<heading id="AcroterionFigure" title="Acroterion">
+						<synonym value="Acroterions"/>
+					</heading>
+					<heading id="BustFigure" title="Bust">
+						<synonym value="Busts"/>
+						<excl value="Half Dollar"/>
+						<excl value="Half-Dollar"/>
+					</heading>
+					<heading id="CaryatidFigure" title="Caryatid">
+						<synonym value="Caryatids"/>
+					</heading>
+					<heading id="Dipalakshmi" title="Dipa Lakshmi">
+						<synonym value="Dipa Lakshmis"/>
+						<synonym value="Dipa-Lakshmi"/>
+						<synonym value="Dipa-Lakshmis"/>
+					</heading>
+					<heading id="DivinationFigure" title="Divination Figure">
+						<synonym value="Divination Figures"/>
+					</heading>
+					<heading id="DollFigure" title="Doll">
+						<synonym value="Dolls"/>
+						<heading id="CeremonialDollDoll" title="Ceremonial Doll">
+							<synonym value="Ceremonial Dolls"/>
+							<implies facet="ObjectName" cat="CeremonialDollRelRit"/>
+						</heading>
+						<heading id="KachinaDoll" title="Kachina Doll"> <!-- Traditionally for use by girls -->
+							<synonym value="Kachina Dolls"/>
+							<synonym value="Kachina-Doll"/>
+							<synonym value="Kachina-Dolls"/>
+							<synonym value="Kachina"/>
+							<synonym value="Kachinas"/>
+							<synonym value="Katsina"/>
+							<synonym value="Katsinam"/>
+							<!-- Implies root of cottonwood tree -->
+							<implies facet="ActivityorContext" cat="Carving"/>
+							<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
+							<implies facet="ObjectName" cat="KachinaDollRelRit"/>
+							<heading id="AholiHopiKachina" title="Aholi Kachina">
+								<!--From <http://www.aholi.com/>:
+									
+									Aholi is the companion (Kachina Chief's Lieutenant) of Eototo during *Powamu
+									and aids him in the task of bringing rain. While Eototo is present on all
+									three mesas, Aholi visits only on Third Mesa.
+									
+									Aholi is a beautiful kachina in his multicolored cloak and tall blue helmet
+									but is of less importance than the very plain Eototo. On the back of his cloak
+									is a likeness of Muyingwa, one of the Germ Gods responsible for the germination
+									of the seeds. Aholi wears a white kilt, a sash, and a fox skin. He wears red
+									moccasins and carries a staff or wand.
+									
+									Aholi carries a wand marked with a star on the end, and as the plumed water
+									serpent, two jars dedicated to him are painted with pointed star emblems.
+									
+									Aholi is the patron saint (wuya) of the Pikyas or Young Corn Clan who care for
+									the seed corn. The colors on his cloak are said to represent the flowers and
+									brightness of summer.
+									
+									Legend has it that the Aholi and Eototo kachinas were partners ages ago in a
+									different land. Aholi stayed behind to fight a rear guard action, then had his
+									throat cut to allow Eototo time to escape as leader. After many lengthy migrations
+									throughout the Southwest, they were reunited at Old Oraibi.
+									
+									Aholi's name appears to derive from the Hopi word ahulti, or "return" which was
+									the promise that the departing Quetzalcoatl made his people when he fled the
+									Toltec capital of Tula for the mythical land of Tlillan.
+									
+									* The Powamu Ceremony is also called the Bean Planting Festival. It is observed
+									in late January or early February and lasts 8 days. -->
+							</heading>
+							<heading id="BearHopiKachina" title="Bear Kachina">
+								<!--From <http://bear.kachina.us/index.htm>:
+									The Bear Kachina is of such great strength that it is felt he can cure the sick.
+									He appears in the kachina return or Soyal of First Mesa as the watchman or side
+									dancer for the Chakwaina. In this role he appears a little different that he does
+									in this illustration. He may come singly or in a group during the Palolokong
+									Dance, and he may appear in a number of colors such as Sakwa Honau (Blue Bear) or
+									Kocha Honau (White Bear). Probably he is most familiar in the Mixed Kachina Dance,
+									dancing outside the lines. His most distinctive features is the presence of a
+									bear footprint on either cheek.-->
+							</heading>
+							<heading id="ClownHopiKachina" title="Clown Kachina">
+								<synonym value="Clown Figure Kachina"/>
+								<synonym value="Clown Figure Kachinas"/>
+								<synonym value="Clown-Figure Kachina"/>
+								<synonym value="Clown-Figure Kachinas"/>
+								<synonym value="Clown Kachinas"/>
+							</heading>
+							<heading id="CrowMotherHopiKachina" title="Crow Mother"/>
+							<heading id="EagleHopiKachina" title="Eagle Kachina">
+								<synonym value="Eagle Kachinas"/>
+								<synonym value="Bird Kachina"/>
+								<synonym value="Bird Kachinas"/>
+							</heading>
+							<heading id="EototoHopiKachina" title="Eototo Kachina"/>
+							<heading id="FoxHopiKachina" title="Fox Kachina"/>
+							<heading id="KokopelliHopiKachina" title="Kokopelli Kachina"/>
+							<heading id="MorningSingerHopiKachina" title="Morning Singer Kachina"/>
+							<heading id="MudheadHopiKachina" title="Mudhead Kachina">
+								<synonym value="Koyemsi"/>
+								<!-- From <http://mudhead.kachina.us/index.htm>:
+									The Koyemsi, or Mudhead Kachina, is a clown who may be seen in most Hopi ceremonies.
+									Mudhead Kachinas drum, dance, play games with the audience, and may act as
+									announcers for events. They often give prizes or rewards for the races and
+									guessing games they organize. The term "mudhead" comes from their masks which
+									have mud applied to them.
+									
+									Most of the time they accompany other kachina; probably the only time when they
+									do not appear with other personages is during the Night Dances. Koyemsi are usually
+									the ones that play games with the audience to the accompaniment of rollicking tunes.
+									These games are generally guessing games or simple attempts to balance objects of
+									performances of some common act and the rewards are prizes of food or clothing.
+									
+									They may appear as a chorus, and on First Mesa and possibly other villages their
+									songs are in Zuni. During the rests in a dance, they may engage in games with the
+									boys and girls in the audience. At other times, only a single Mudhead may appear
+									as a drummer for a group. Should a dancer not have the proper mask or be late in
+									arriving, he can easily become a Mudhead by donning that mask. These kachinas
+									appear in almost every Hopi dance.-->
+							</heading>
+							<heading id="SnowHopiKachina" title="Snow Kachina">
+								<synonym value="Snow Kachinas"/>
+								<synonym value="Snow Figure Kachina"/>
+								<synonym value="Snow Figure Kachinas"/>
+								<synonym value="Snow-Figure Kachina"/>
+								<synonym value="Snow-Figure Kachinas"/>
+							</heading>
+							<heading id="SunHopiKachina" title="Sun Kachina">
+								<synonym value="Sun Kachinas"/>
+								<synonym value="Sun Figure Kachina"/>
+								<synonym value="Sun Figure Kachinas"/>
+								<synonym value="Sun-Figure Kachina"/>
+								<synonym value="Sun-Figure Kachinas"/>
+							</heading>
+							<heading id="WolfHopiKachina" title="Wolf Kachina"/>
+							<heading id="WupamoHopiKachina" title="Wupamo Kachina"/>
+							<!-- ************************ -->
+							<heading id="AnimalFigureKachina" title="Animal Figure">
+								<synonym value="Animal Kachinas"/>
+								<synonym value="Animal Kachina"/>
+							</heading>
+							<heading id="ChiefFigureKachina" title="Chief Figure">
+								<synonym value="Chief Kachinas"/>
+								<synonym value="Chief Kachina"/>
+							</heading>
+							<heading id="GuardFigureKachina" title="Guard Figure">
+								<synonym value="Guard Kachinas"/>
+								<synonym value="Guard Kachina"/>
+							</heading>
+							<heading id="OgreFigureKachina" title="Ogre Figure">
+								<synonym value="Ogre Kachinas"/>
+								<synonym value="Ogre Kachina"/>
+							</heading>
+							<heading id="PlantFigureKachina" title="Plant Figure">
+								<synonym value="Plant Kachinas"/>
+								<synonym value="Plant Kachina"/>
+							</heading>
+							<heading id="RunnerFigureKachina" title="Runner Figure">
+								<synonym value="Runner Kachinas"/>
+								<synonym value="Runner Kachina"/>
+							</heading>
+							<heading id="WomenFigureKachina" title="Women Figure">
+								<synonym value="Women Kachinas"/>
+								<synonym value="Women Kachina"/>
+								<synonym value="Woman Kachinas"/>
+								<synonym value="Woman Kachina"/>
+								<synonym value="Female Kachinas"/>
+								<synonym value="Female Kachina"/>
+							</heading>
+						</heading>
+						<heading id="RagDoll" title="Rag Doll">
+							<synonym value="Rag Dolls"/>
+						</heading>
+					</heading>
+					<heading id="FigureHead" title="Figure-Head">
+						<synonym value="Figure-Heads"/>
+					</heading>
+					<heading id="FigurineFigure" title="Figurine">
+						<synonym value="Figurines"/>
+					</heading>
+					<heading id="HermFigure" title="Herm">
+						<synonym value="Herms"/>
+					</heading>
+					<heading id="MushroomStone" title="Mushroom Stone">
+						<synonym value="Mushroom Stones"/>
+					</heading>
+					<heading id="NaukraticFigure" title="Naukratic Figure">
+						<synonym value="Naukratic Figures"/>
+					</heading>
+					<heading id="PuppetFigures" title="Puppets">
+						<synonym value="Puppet"/>
+						<implies facet="ObjectName" cat="PuppetPerfArt"/>
+						<heading id="HandPuppets" title="Hand Puppets">
+							<synonym value="Hand Puppet"/>
+						</heading>
+						<heading id="Marionettes" title="Marionettes">
+							<synonym value="Marionette"/>
+						</heading>
+						<heading id="ShadowPuppets" title="Shadow Puppets">
+							<synonym value="Shadow Play Figures"/>
+							<synonym value="Shadow Play Figure"/>
+							<heading id="HajivatShadowFigure" title="Hajivat">
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="HodjaShadowFigure" title="Hodja (The Religious Leader)">
+								<synonym value="Hodja"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="IskeleKahyasiShadowFigure" title="Iskele Kahyasi (Istanbul Pierman)">
+								<synonym value="Iskele Kahyasi"/>
+								<synonym value="Pierman of Istanbul"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="KaragozShadowFigure" title="Karagöz (The Black-Eyed Man)">
+								<synonym value="Karagöz"/>
+								<synonym value="Karagoz"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+							<heading id="TerzinikoShadowFigure" title="Terzi Niko (The Greek Tailor Niko)">
+								<synonym value="Terzi Niko"/>
+								<synonym value="The Greek Tailor Niko"/>
+								<implies facet="Culture" cat="TurkishGroups"/>
+							</heading>
+						</heading>
+					</heading>
+					<heading id="ScareDevilFigure" title="Scare-Devil">
+						<synonym value="Scare-Devils"/>
+					</heading>
+					<heading id="ShabtiFigure" title="Shabti" noMatch="true"/>
+					<heading id="StaffGod" title="Staff God">
+						<synonym value="Staff Gods"/>
+					</heading>
+					<heading id="Statue" title="Statue">
+						<synonym value="Statues"/>
+						<heading id="Statuette" title="Statuette">
+							<synonym value="Statuettes"/>
+						</heading>
+					</heading>
+					<heading id="VotiveFigure" title="Votive Figure">
+						<synonym value="Votive Figures"/>
+						<heading id="EyeIdol" title="Eye Idol">
+							<synonym value="Eye Idols"/>
+						</heading>
+						<heading id="PaddleDoll" title="Paddle Doll">
+							<synonym value="Paddle Dolls"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="LingaSculpture" title="Linga">
+					<synonym value="Lingas"/>
+					<implies facet="ObjectName" cat="LingaRelRit"/>
+				</heading>
+				<heading id="Monuminscription" title="Monumental Inscription" noMatch="true"/>
+				<heading id="OkimonoSculpt" title="Okimono">
+					<synonym value="Okimonos"/>
+				</heading>
+				<heading id="PadukaSculpture" title="Paduka" noMatch="true"/>
+				<heading id="Petroglyph" title="Petroglyph">
+					<synonym value="Petroglyphs"/>
+				</heading>
+				<heading id="ReliefSculpture" title="Relief">
+					<synonym value="Reliefs"/>
+				</heading>
+				<heading id="ScrimshawSculpt" title="Scrimshaw">
+					<synonym value="Scrimshaws"/>
+				</heading>
+				<heading id="TormaSculpture" title="Torma">
+					<synonym value="Tormas"/>
+				</heading>
+				<heading id="TotempoleSculpt" title="Totem Pole">
+					<synonym value="Totem Poles"/>
+					<synonym value="Totem-Pole"/>
+					<synonym value="Totem-Poles"/>
+				</heading>
+				<heading id="YoniSculpture" title="Yoni">
+					<synonym value="Yonis"/>
+				</heading>
+			</heading>
+			<heading id="SignBoardVisRep" title="Sign Board" noMatch="true"/>
+			<heading id="TetraptychVisRep" title="Tetraptych">
+				<synonym value="Tetraptychs"/>
+			</heading>
+			<heading id="TransparencyVisRep" title="Transparency">
+				<synonym value="Transparencies"/>
+			</heading>
+			<heading id="TriptychVisRep" title="Triptych">
+				<synonym value="Triptychs"/>
+			</heading>
+			<heading id="WorksOnPaper" title="Works on Paper">
+				<heading id="BookIllustrationVisRep" title="Book Illustration">
+					<synonym value="Book Illustrations"/>
+					<synonym value="Book-Illustration"/>
+					<synonym value="Book-Illustrations"/>
+				</heading>
+				<heading id="BookplateVisRep" title="Bookplate">
+					<synonym value="Bookplates"/>
+				</heading>
+				<heading id="CalligraphyVisRep" title="Calligraphy"/>
+				<heading id="CollageVisRep" title="Collage">
+					<synonym value="Collages"/>
+				</heading>
+				<heading id="CutOutVisRep" title="Cut-Out">
+					<synonym value="Cut-Outs"/>
+				</heading>
+				<heading id="DecoratedPaperVisRep" title="Decorated Paper">
+					<synonym value="Decorated Papers"/>
+				</heading>
+				<heading id="DrawingVisRep" title="Drawing">
+					<synonym value="Drawings"/>
+					<synonym value="Sketch"/>
+					<synonym value="Sketches"/>
+					<synonym value="Illustration"/>
+					<synonym value="Illustrations"/>
+				</heading>
+				<heading id="GreetingCardVisRep" title="Greeting Card">
+					<synonym value="Greeting Cards"/>
+					<synonym value="Greeting-Card"/>
+					<synonym value="Greeting-Cards"/>
+					<implies facet="ObjectName" cat="GreetingCardCardsComm"/>
+				</heading>
+				<heading id="PapercutVisRep" title="Papercut">
+					<synonym value="Papercuts"/>
+					<synonym value="Paper-cut"/>
+					<synonym value="Paper-cuts"/>
+				</heading>
+				<heading id="PlayingCardVisRep" title="Playing Card">
+					<synonym value="Playing Cards"/>
+					<synonym value="Playing-Card"/>
+					<synonym value="Playing-Cards"/>
+					<implies facet="ObjectName" cat="PlayingCardCardsComm"/>
+				</heading>
+				<heading id="PostageStampVisRep" title="Postage Stamp" noMatch="true"/>
+				<heading id="PrintVisRep" title="Print">
+					<synonym value="Prints"/>
+					<excl value="Photograph"/>
+					<excl value="Photographic"/>
+					<excl value="Photography"/>
+					<heading id="LithographVisRep" title="Lithograph">
+						<synonym value="Lithographs"/>
+						<!-- <heading id="OffsetVisRep" title="Offset">
+							<synonym value="Offsets"/>
+							</heading> -->
+						<heading id="ChromoLithographVisRep" title="Chromo-Lithograph">
+							<synonym value="Chromo-Lithographs"/>
+							<synonym value="Chromolithograph"/>
+							<synonym value="Chromolithographs"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="SilhouetteVisRep" title="Silhouette">
+					<synonym value="Silhouettes"/>
+				</heading>
+				<heading id="SketchBookVisRep" title="Sketch Book">
+					<synonym value="Sketch Books"/>
+					<synonym value="Sketch-Book"/>
+					<synonym value="Sketch-Books"/>
+				</heading>
+				<heading id="StoryboardVisRep" title="Storyboard">
+					<synonym value="Storyboards"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="VotingSlateComm" title="Voting Slate">
+			<synonym value="Voting Slates"/>
+			<synonym value="Voting-Slate"/>
 			<synonym value="Voting-Slates"/>
 		</heading>
 		<heading id="WarrantComm" title="Warrant">
 			<synonym value="Warrants"/>
 		</heading>
 	</heading>
-	<!-- <heading id="ComponentsParts" title="Components &amp; Parts"> PARSE OUT AND MERGE ELSEWHERE
-		<synonym value="Component"/>
-		<synonym value="Components"/>
-		<synonym value="Part"/>
-		<synonym value="Parts"/>
-		••• 27 / 428:
-		<heading id="BarbPart" title="Barb">
-			<synonym value="Barbs"/>
-		</heading>
-		••• [none?]:
-		<heading id="ChuckPart" title="Chuck">
-			<synonym value="Chucks"/>
-		</heading>
-		••• 0 / 4:
-		<heading id="CogStonePart" title="Cog Stone">
-			<synonym value="Cog Stones"/>
-			<synonym value="Cog-Stone "/>
-			<synonym value="Cog-Stones"/>
-		</heading>
-		••• 1 / 2:
-		<heading id="CogWheelPart" title="Cog Wheel">
-			<synonym value="Cog Wheels"/>
-			<synonym value="Cog-Wheel"/>
-			<synonym value="Cog-Wheels"/>
-		</heading>
-		••• 0 / 1:
-		<heading id="CounterpoisePart" title="Counterpoise">
-			<synonym value="Counterpoises"/>
-			a factor, force, or influence that balances or neutralizes another : money is a good counterpoise to beauty | they see the power of Brussels as a counterpoise to that of London.
-			• archaic a state of equilibrium.
-			• a counterbalancing weight.
-		</heading>
-		••• 8 / 38:
-		<heading id="FerrulePart" title="Ferrule">
-			<synonym value="Ferrules"/>
-			a ring or cap, typically a metal one, that strengthens the end of a handle, stick, or tube and prevents it from splitting or wearing.
-			• a metal band strengthening or forming a joint.
-		</heading>
-		••• 16 / 88:
-			<heading id="FixtureFittingPart" title="Fixture or Fitting">
-			<synonym value="Fixture/Fitting"/>
-			<synonym value="Fixture/Fittings"/>
-			<synonym value="Fixture"/>
-			<synonym value="Fixtures"/>
-			<synonym value="Fitting"/>
-			<synonym value="Fittings"/>
-		</heading>
-		••• 78 / 240:
-		<heading id="FlangePart" title="Flange">
-			<synonym value="Flanges"/>
-		</heading>
-		••• 1211 / 5067:
-		<heading id="HandlePart" title="Handle">
-			<synonym value="Handles"/>
-		</heading>
-		••• 1 / 1:
-		<heading id="HubPart" title="Hub">
-			<synonym value="Hubs"/>
-		</heading>
-		••• 83 / 364:
-		<heading id="KnobPart" title="Knob">
-			<synonym value="Knobs"/>
-		</heading>
-		••• 2 / 2:
-		<heading id="LanyardPart" title="Lanyard">
-			<synonym value="Lanyards"/>
-		</heading>
-		••• 267 / 861:
-		<heading id="LoopPart" title="Loop">
-			<synonym value="Loops"/>
-		</heading>
-		••• 4 / 31:
-		<heading id="NozzlePart" title="Nozzle">
-			<synonym value="Nozzles"/>
-		</heading>
-		••• 1 / 3:
-		<heading id="PistonPart" title="Piston">
-			<synonym value="Pistons"/>
-		</heading>
-		••• 0 / 10:
-		<heading id="PivotPart" title="Pivot">
-			<synonym value="Pivots"/>
-		</heading>
-		••• 16 / 116:
-		<heading id="ProngPart" title="Prong">
-			<synonym value="Prongs"/>
-		</heading>
-		••• 76 / 1317:
-		<heading id="ShaftPart" title="Shaft">
-			<synonym value="Shafts"/>
-		</heading>
-		••• 183 / 433:
-		<heading id="ShankPart" title="Shank">
-			<synonym value="Shanks"/>
-		</heading>
-		••• 13 /156:
-		<heading id="SocketPart" title="Socket">
-			<synonym value="Sockets"/>
-		</heading>
-		••• [none?]:
-		<heading id="SpindleWhorlPart" title="Spindle Whorl">
-			<synonym value="Spindle Whorls"/>
-			<synonym value="Spindle-Whorl"/>
-			<synonym value="Spindle-Whorls"/>
-		</heading>
-		••• 59 / 1165:
-			<heading id="SpringPart" title="Spring">
-			<synonym value="Springs"/>
-		</heading>
-		••• 9 / 19:
-		<heading id="StaplePart" title="Staple">
-			<synonym value="Staples"/>
-		</heading>
-		••• 2 / 8:
-		<heading id="SwivelPart" title="Swivel">
-			<synonym value="Swivels"/>
-		</heading>
-		••• 32 / 141:
-		<heading id="TerminalPart" title="Terminal">
-			<synonym value="Terminals"/>
-		</heading>
-		••• 3 / 169:
-		<heading id="TinePart" title="Tine">
-			<synonym value="Tines"/>
-		</heading>
-	</heading> -->
 	<heading id="Containers" title="Containers">
 		<synonym value="Container"/>
 		<heading id="BagContainer" title="Bag">
@@ -4454,506 +5334,7 @@
 			<synonym value="Water-Containers"/>
 		</heading>
 	</heading>
-	<heading id="Currency" title="Currency">
-		<synonym value="Currencies"/>
-		<heading id="Banknote" title="Banknote">
-			<synonym value="Banknotes"/>
-			<implies facet="ObjectName" cat="BanknoteVisRep"/>
-		</heading>
-		<heading id="BridePrice" title="Bride Price">
-			<synonym value="Bride Prices"/>
-			<synonym value="Bride-Price"/>
-			<synonym value="Bride-Prices"/>
-		</heading>
-		<heading id="ChequeOrCheck" title="Check" noMatch="true">
-			<!-- <synonym value="Checks"/> -->
-			<synonym value="Cheque"/>
-			<synonym value="Cheques"/>
-		</heading>
-		<heading id="CheckBook" title="Check Book">
-			<synonym value="Checkbook"/>
-			<synonym value="Checkbooks"/>
-			<synonym value="Check Books"/>
-			<synonym value="Check-Book"/>
-			<synonym value="Check-Books"/>
-			<synonym value="Chequebook"/>
-			<synonym value="Chequebooks"/>
-			<synonym value="Cheque Book"/>
-			<synonym value="Cheque Books"/>
-			<synonym value="Cheque-Book"/>
-			<synonym value="Cheque-Books"/>
-		</heading>
-		<heading id="CheckCard" title="Check Card">
-			<synonym value="Check Cards"/>
-			<synonym value="Check-Card"/>
-			<synonym value="Check-Cards"/>
-			<synonym value="Cheque Card"/>
-			<synonym value="Cheque Cards"/>
-			<synonym value="Cheque-Card"/>
-			<synonym value="Cheque-Cards"/>
-			<implies facet="ObjectName" cat="CheckCardCardsComm"/>
-		</heading>
-		<heading id="Coin" title="Coin">
-			<synonym value="Coins"/>
-			<synonym value="Coinage"/>
-			<excl value="Coin applique"/>
-			<excl value="Coin appliqué"/>
-			<excl value="Coin purse"/>
-			<implies facet="ActivityorContext" cat="Metallurgy"/>
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-			<!-- oooooooooooo The following concepts need to be better organized zzzzzzzzzzzz -->
-			<heading id="Denomination" title="Denomination">
-				<heading id="Bronzedouble" title="Bronze Double">
-					<synonym value="Bronze Doubles"/>
-					<implies facet="Material" cat="BronzeMetal"/>
-				</heading>
-				<heading id="Notgeld" title="Notgeld"/>
-				<heading id="FiftyCentavos" title="50 Centavos"/>
-			</heading>
-			<heading id="UnitedStatesCoins" title="United States Coins">
-				<synonym value="US/Dollar System"/>
-				<heading id="Penny" title="Penny">
-					<synonym value="Pennies"/>
-					<heading id="Flyingeaglepenny" title="Flying Eagle Penny">
-						<synonym value="Flying Eagle Pennies"/>
-						<synonym value="Flying-Eagle Penny"/>
-						<synonym value="Flying-Eagle Pennies"/>
-					</heading>
-					<heading id="Lincolnheadpenny" title="Lincoln Head Penny">
-						<synonym value="Lincoln Head Pennies"/>
-						<synonym value="Lincoln-Head Penny"/>
-						<synonym value="Lincoln-Head Pennies"/>
-					</heading>
-					<heading id="Indianheadpenny" title="Indian Head Penny">
-						<synonym value="Indian Head Pennies"/>
-						<synonym value="Indian-Head Penny"/>
-						<synonym value="Indian-Head Pennies"/>
-					</heading>
-				</heading>
-				<heading id="Nickel" title="Nickel">
-					<synonym value="Nickels"/>
-					<heading id="Libertyheadnickel" title="Liberty Head Nickel">
-						<synonym value="Liberty Head Nickels"/>
-						<synonym value="Liberty-Head Nickel"/>
-						<synonym value="Liberty-Head Nickels"/>
-					</heading>
-					<heading id="Halfdime" title="Half Dime">
-						<synonym value="Half Dimes"/>
-					</heading>
-					<heading id="Nicklethreecent" title="Nickle Three Cent">
-						<synonym value="Nickle Three Cents"/>
-					</heading>
-					<heading id="Buffaloheadnickel" title="Buffalo Head Nickel">
-						<synonym value="Buffalo Head Nickels"/>
-					</heading>
-				</heading>
-				<heading id="Dime" title="Dime">
-					<synonym value="Dimes"/>
-				</heading>
-				<heading id="Quarterdollar" title="Quarter">
-					<synonym value="Quarter-Dollar"/>
-					<synonym value="Quarter-Dollars"/>
-					<synonym value="Quarters"/>
-					<excl value="1st Quarter"/>
-					<excl value="First Quarter"/>
-					<excl value="2nd Quarter"/>
-					<excl value="2nd. Quarter"/>
-					<excl value="In Each Quarter"/>
-					<excl value="Three Quarter"/>
-					<excl value="Three-Quarter"/>
-					<excl value="3 Quarter"/>
-					<excl value="3-Quarter"/>
-					<excl value="3- Quarter"/>
-					<excl value="Hind Quarter"/>
-					<excl value="Hind-Quarter"/>
-					<excl value="Quarter of Pit"/>
-					<excl value="NE Quarter"/>
-					<excl value="NE. Quarter"/>
-					<excl value="SE Quarter"/>
-					<excl value="S.W. Quarter"/>
-					<excl value="Quarter Blood"/>
-					<excl value="Quarter-Blood"/>
-					<heading id="Washingtonquarter" title="Washington Quarter">
-						<synonym value="Washington Quarters"/>
-					</heading>
-				</heading>
-				<heading id="Halfdollar" title="Half-Dollar">
-					<synonym value="Half-Dollars"/>
-					<synonym value="Half Dollar"/>
-					<synonym value="Half Dollars"/>
-					<synonym value="Franklin &amp; Kennedy Half Dollars"/>
-					<heading id="BayBridgeCommemHalfDoll" title="Bay Bridge Commemorative">
-						<synonym value="Bay Bridge Commemorative Half Dollar"/>
-						<synonym value="Bay Bridge Commemorative Half Dollars"/>
-						<synonym value="Bay Bridge Commemorative Half-Dollar"/>
-						<synonym value="Bay Bridge Commemorative Half-Dollars"/>
-						<synonym value="Bay Bridge Commem. Half Dollar"/>
-					</heading>
-					<heading id="ColumbianExpoCommemHalfDoll" title="Columbian Expo Commemorative">
-						<synonym value="Columbian Expo Commemorative Half Dollar"/>
-						<synonym value="Columbian Expo Commemorative Half Dollars"/>
-						<synonym value="Columbian Expo Commemorative Half-Dollar"/>
-						<synonym value="Columbian Expo Commemorative Half-Dollars"/>
-						<synonym value="Columbian Expo. Commemorative Half Dollar"/>
-						<synonym value="Columbian Expo. Commemorative Half Dollars"/>
-						<synonym value="Columbian Expo. Commemorative Half-Dollar"/>
-						<synonym value="Columbian Expo. Commemorative Half-Dollars"/>
-						<synonym value="Columbian Exposition Commemorative Half Dollar"/>
-						<synonym value="Columbian Exposition Commemorative Half Dollars"/>
-						<synonym value="Columbian Exposition Commemorative Half-Dollar"/>
-						<synonym value="Columbian Exposition Commemorative Half-Dollars"/>
-						<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies event Columbian Expo. -->
-					</heading>
-					<heading id="DiamondJubCommemHalfDoll" title="Diamond Jubilee Commemorative">
-						<synonym value="Diamond Jubilee Commemorative Half Dollar"/>
-						<synonym value="Diamond Jubilee Commemorative Half Dollars"/>
-						<synonym value="Diamond Jubilee Commemorative Half-Dollar"/>
-						<synonym value="Diamond Jubilee Commemorative Half-Dollars"/>
-						<synonym value="Diamond Jubilee Commem. Half Dollar"/>
-					</heading>
-					<heading id="FranklinHalfDollar" title="Franklin Half Dollar">
-						<synonym value="Ben Franklin Half Dollar"/>
-						<synonym value="Ben Franklin Half Dollars"/>
-						<synonym value="Ben Franklin Half-Dollar"/>
-						<synonym value="Ben Franklin Half-Dollars"/>
-						<synonym value="Ben Franklin Half Dollar, Uncirculated Mint Set"/>
-						<synonym value="Franklin Half Dollars"/>
-						<synonym value="Franklin Half-Dollar"/>
-						<synonym value="Franklin Half-Dollars"/>
-						<synonym value="Franklin Half Dollar, Proof Set"/>
-					</heading>
-					<heading id="KennedyHalfDollar" title="Kennedy Half Dollar">
-						<synonym value="Kennedy Half Dollars"/>
-						<synonym value="Kennedy Half-Dollar"/>
-						<synonym value="Kennedy Half-Dollars"/>
-						<synonym value="JFK Half Dollar"/>
-						<synonym value="JFK Half Dollars"/>
-						<synonym value="JFK Half-Dollar"/>
-						<synonym value="JFK Half-Dollars"/>
-						<synonym value="Kennedy Half Dollar, Uncirculated Mint Set"/>
-						<synonym value="Kennedy Half Dollar, Proof Set"/>
-						<synonym value="Kennedy Half Dollar, 40th Commemorative"/>
-						<!-- Missing Synonym? "40th Commemorative" -->
-					</heading>
-					<heading id="MonroeDoctCommemHalfDoll" title="Monroe Doctrine Commemorative">
-						<synonym value="Monroe Doctrine Commemorative Half Dollar"/>
-						<synonym value="Monroe Doctrine Commemorative Half Dollars"/>
-						<synonym value="Monroe Doctrine Commemorative Half-Dollar"/>
-						<synonym value="Monroe Doctrine Commemorative Half-Dollars"/>
-						<synonym value="Monroe Doctrine Commem. Half Dollar"/>
-					</heading>
-					<heading id="Coppedbusthalfdollar" title="Copped Bust Half Dollar"/>
-					<heading id="Libertystandinghalfdollar" title="Liberty Standing Half Dollar"/>
-					<heading id="Grantmemorialhalfdollar" title="Grant Memorial Half Dollar"/>
-				</heading>
-				<heading id="Silverdollar" title="Silver Dollar">
-					<heading id="EisenhowerSilverDollar" title="Eisenhower Silver Dollar">
-						<synonym value="Eisenhower Dollar"/>
-						<synonym value="Eisenhower Uncirculated Silver Dollar"/>
-					</heading>
-					<heading id="Libertyheadsilverdollar" title="Liberty Head Silver Dollar"/>
-					<heading id="Peacetypesilverdollar" title="Peace Type Silver Dollar"/>
-				</heading>
-				<heading id="Emergencywartimecurrency" title="Emergency War Time Currency"/>
-				<heading id="Commemorative" title="Commemorative">
-					<synonym value="Medallion Commemorating Thologians"/>
-				</heading>
-			</heading>
-			<heading id="Ancientgreekcoins" title="Ancient Greek Coins">
-				<heading id="Halfdrachma" title="Half Drachma">
-					<synonym value="Half Drachmas"/>
-					<synonym value="Half Drachm"/>
-					<synonym value="Half Drachms"/>
-					<synonym value="Half-Drachma"/>
-					<synonym value="Hemidrachm"/>
-					<synonym value="Hemidrachms"/>
-					<synonym value="Hemidrachma"/>
-					<synonym value="Hemidrachmas"/>
-					<synonym value="Hemi-Drachm"/>
-					<synonym value="Hemi-Drachms"/>
-					<synonym value="Hemi-Drachma"/>
-					<synonym value="Hemi-Drachmas"/>
-					<synonym value="Half-Drachmas"/>
-					<synonym value="Half-Drachm"/>
-					<synonym value="Half-Drachms"/>
-				</heading>
-				<heading id="Drachma" title="Drachma">
-					<synonym value="Drachmas"/>
-					<synonym value="Drachm"/>
-					<synonym value="Drachms"/>
-				</heading>
-				<heading id="Didrachm" title="Didrachm">
-					<synonym value="Two Drachm"/>
-					<synonym value="Two Drachms"/>
-					<synonym value="Two Drachma"/>
-					<synonym value="Two Drachmas"/>
-					<synonym value="Two-Drachm"/>
-					<synonym value="Two-Drachms"/>
-					<synonym value="Two-Drachma"/>
-					<synonym value="Two-Drachmas"/>
-					<synonym value="Didrachms"/>
-					<synonym value="Didrachma"/>
-					<synonym value="Didrachmas"/>
-				</heading>
-				<heading id="Tetradrachm" title="Tetradrachm">
-					<synonym value="Four Drachm"/>
-					<synonym value="Four Drachms"/>
-					<synonym value="Four Drachma"/>
-					<synonym value="Four Drachmas"/>
-					<synonym value="Four-Drachm"/>
-					<synonym value="Four-Drachms"/>
-					<synonym value="Four-Drachma"/>
-					<synonym value="Four-Drachmas"/>
-					<synonym value="Tetradrachms"/>
-					<synonym value="Tetradrachma"/>
-					<synonym value="Tetradrachmas"/>
-					<synonym value="Tetradrachm?"/>
-				</heading>
-				<heading id="Octodrachm" title="Octodrachm">
-					<synonym value="Eight Drachm"/>
-					<synonym value="Eight Drachms"/>
-					<synonym value="Eight Drachma"/>
-					<synonym value="Eight Drachmas"/>
-					<synonym value="Eight-Drachm"/>
-					<synonym value="Eight-Drachms"/>
-					<synonym value="Eight-Drachma"/>
-					<synonym value="Eight-Drachmas"/>
-					<synonym value="Octodrachms"/>
-					<synonym value="Octodrachma"/>
-					<synonym value="Octodrachmas"/>
-				</heading>
-				<heading id="Dekadrachm" title="Dekadrachm">
-					<synonym value="Ten Drachm"/>
-					<synonym value="Ten Drachms"/>
-					<synonym value="Ten Drachma"/>
-					<synonym value="Ten Drachmas"/>
-					<synonym value="Ten-Drachm"/>
-					<synonym value="Ten-Drachms"/>
-					<synonym value="Ten-Drachma"/>
-					<synonym value="Ten-Drachmas"/>
-					<synonym value="Dekadrachms"/>
-					<synonym value="Dekadrachma"/>
-					<synonym value="Dekadrachmas"/>
-				</heading>
-				<heading id="Hemiobol" title="Hemiobol">
-					<synonym value="Hemiobols"/>
-					<synonym value="Hemiobolus"/>
-					<synonym value="Hemioboluses"/>
-				</heading>
-				<heading id="Obol" title="Obol">
-					<synonym value="Obols"/>
-					<synonym value="Obolus"/>
-					<synonym value="Oboluses"/>
-				</heading>
-				<heading id="Diobol" title="Diobol">
-					<synonym value="Diobols"/>
-					<synonym value="Diobolus"/>
-					<synonym value="Dioboluses"/>
-				</heading>
-				<heading id="Triobol" title="Triobol">
-					<synonym value="Triobols"/>
-					<synonym value="Triobolus"/>
-					<synonym value="Trioboluses"/>
-				</heading>
-				<heading id="Tetrobol" title="Tetrobol">
-					<synonym value="Tetrobols"/>
-					<synonym value="Tetrobolus"/>
-					<synonym value="Tetroboluses"/>
-				</heading>
-				<heading id="Billonstater" title="Billon Stater"/>
-				<heading id="Sixthofstater" title="Sixth of Stater">
-					<synonym value="Sixths of Stater"/>
-				</heading>
-				<heading id="Stater" title="Stater">
-					<synonym value="Staters"/>
-				</heading>
-				<heading id="Twostater" title="Two Stater">
-					<synonym value="Two Staters"/>
-					<synonym value="Two-Stater"/>
-					<synonym value="Two-Staters"/>
-					<synonym value="2 Stater"/>
-					<synonym value="2 Staters"/>
-				</heading>
-				<heading id="Hemilitron" title="Hemilitron">
-					<synonym value="Hemilitrons"/>
-				</heading>
-				<heading id="Litra" title="Litra">
-					<synonym value="Litras"/>
-				</heading>
-				<heading id="SixteenLitraiPc" title="16 Litrai piece"/>
-				<heading id="Pentokion" title="Pentokion">
-					<synonym value="Pentokions"/>
-				</heading>
-				<heading id="Dekonkion" title="Dekonkion">
-					<synonym value="Dekonkions"/>
-				</heading>
-			</heading>
-			<heading id="Ancientpersiancoins" title="Ancient Persian Coins">
-				<heading id="Siglos" title="Siglos">
-					<synonym value="Sigloi"/>
-				</heading>
-			</heading>
-			<heading id="Ancientromancoins" title="Ancient Roman Coins">
-				<heading id="RomanCoinsByDenom" title="By Denomination" noMatch="true">
-					<heading id="RomanBronzeCoinDenom" title="Bronze coin denominations" noMatch="true">
-						<heading id="RomanDenomAs" title="As" noMatch="true"/>
-						<heading id="RomanDenomSemis" title="Semis">
-							<synonym value="Semis ?"/>
-						</heading>
-						<heading id="RomanDenomTriens" title="Triens"/>
-					</heading>
-					<heading id="RomanDenomAureus" title="Aureus">
-						<implies facet="Material" cat="GoldMaterial"/>
-					</heading>
-					<heading id="Quinarius" title="Quinarius"/> <!-- could be gold or silver -->
-				</heading>
-				<heading id="RomanCoinsByType" title="By Type" noMatch="true">
-					<heading id="RomanEarlyBronzeCoins" title="Early bronze coins" noMatch="true">
-						<implies facet="Material" cat="BronzeMetal"/>
-						<heading id="RomanAesRude" title="Aes Rude">
-							<!-- Bronze/Copper bartered by weight, in irregular forms -->
-							<synonym value="Oes Rude"/>
-							<heading id="Aesrudesextantalstand" title="Aes Rude; Sextantal Stand"/>
-							<!-- Cannot currently be a single token -->
-						</heading>
-						<heading id="RomanAesGrave" title="Aes Grave">
-							<!-- Bronze/Copper bartered by weight, in the form of bars -->
-							<synonym value="Oes Grave"/>
-							<heading id="Aesgravelibral" title="Aes Grave; Libral"/>
-							<!-- Cannot currently be a single token -->
-							<heading id="Aesgraveuncia" title="Aes Grave; Uncia"/>
-							<!-- Cannot currently be a single token -->
-							<heading id="Aesgravequadrans" title="Aes Grave; Quadrans"/>
-							<!-- Cannot currently be a single token -->
-							<heading id="Aesgravetriens" title="Aes Grave; Triens"/>
-							<!-- Cannot currently be a single token -->
-						</heading>
-						<heading id="RomanAesSignatum" title="Aes Signatum">
-							<!-- Bronze/Copper bars stamped with definite figures -->
-							<synonym value="Oes Signatum"/>
-						</heading>
-					</heading>
-					<heading id="RomanLaterBronzeCoins" title="Later bronze coins" noMatch="true">
-						<implies facet="Material" cat="BronzeMetal"/>
-						<heading id="Aes" title="Aes">
-							<heading id="Aesfolles" title="Aes Folles">
-								<heading id="AesfollesFour" title="Aes Folles (4)"/>
-								<heading id="AesfollesRThree" title="Aes Folles (R3)"/>
-								<heading id="AesfollesS" title="Aes Folles (S)"/>
-								<heading id="AesfollesRFour" title="Aes Folles (R 4)"/>
-								<heading id="AesfollesROne" title="Aes Folles (R1)"/>
-								<heading id="AesfollesCOne" title="Aes Folles (C1)"/>
-							</heading>
-							<heading id="Aessemis" title="Aes Semis"/>
-						</heading>
-					</heading>
-				</heading>
-				<heading id="RomanCoinsByWtStandard" title="By Weight Standard" noMatch="true">
-					<heading id="RomanLibralStandard" title="Libral Standard"/>
-					<!-- Original weight standard -->
-					<heading id="RomanSemiLibralStandard" title="Semilibral Standard">
-						<synonym value="(Semi-Libral S"/>
-					</heading>
-					<heading id="RomanPostSemiLibralStand" title="Post-Semilibral Standard">
-						<synonym value="(Post-Semilibral St"/>
-					</heading>
-					<heading id="RomanTrientalStandard" title="Triental Standard"/>
-					<heading id="RomanQuartuncialStandard" title="Quartuncial Standard">
-						<!-- CHECK -->
-					</heading>
-					<heading id="RomanSextantalStandard" title="Sextantal Standard">
-						<synonym value="(Sextantal Standard"/>
-						<synonym value="(Sextantal Standard)"/>
-						<synonym value="(Sextantal Stand"/>
-						<synonym value="(Sextantal Standard?)"/>
-					</heading>
-					<heading id="RomanUncialStandard" title="Uncial Standard">
-						<synonym value="Uncial Standrard"/>
-						<synonym value="(Uncial Standard)"/>
-						<synonym value="Uncial Standar"/>
-					</heading>
-					<heading id="RomanSemiuncialStandard" title="Semiuncial Standard">
-						<synonym value="Semiuncial Standa"/>
-						<synonym value="Semiuncial Sta"/>
-					</heading>
-				</heading>
-				<heading id="Antoninianus" title="Antoninianus">
-					<synonym value="Antoninianvs"/>
-					<synonym value="Antioninianus"/>
-				</heading>
-				<heading id="Denarius" title="Denarius">
-					<synonym value="Denari"/>
-					<synonym value="Denarii"/>
-					<implies facet="Material" cat="SilverMaterial"/>
-					<heading id="Denariusserrate" title="Denarius (Serrate)">
-						<synonym value="Denarius Serrati"/>
-					</heading>
-				</heading>
-				<heading id="Sestertius" title="Sestertius"/>
-				<heading id="Sextans" title="Sextans"/>
-				<heading id="Cistophoros" title="Cistophoros"/>
-				<heading id="Quadrans" title="Quadrans"/>
-				<heading id="Constantinians" title="Constantinians"/>
-				<heading id="Semuncia" title="Semuncia"/>
-				<heading id="Dupondius" title="Dupondius"/>
-				<heading id="Quartuncias" title="Quartuncias">
-					<synonym value="Quartuncia"/>
-					<synonym value="Sydenham:  Quartuncia; Gr"/>
-				</heading>
-				<heading id="Uncia" title="Uncia"/>
-				<heading id="Triaassaria" title="Tria Assaria"/>
-			</heading>
-			<heading id="Ancientbyzantinecoins" title="Ancient Byzantine Coins"/>
-			<heading id="Ancienthebrewcoins" title="Ancient Hebrew Coins">
-				<heading id="Shekel" title="Shekel"/>
-				<heading id="Doubleshekel" title="Double Shekel"/>
-			</heading>
-			<heading id="Germancoins" title="German Coins">
-				<heading id="Onepfenning" title="1 Pfenning"/>
-				<heading id="Fivepfenning" title="5 Pfenning"/>
-				<heading id="Tenpfenning" title="10 Pfenning"/>
-			</heading>
-		</heading>
-		<heading id="CounterCurrency" title="Counter">
-			<synonym value="Counters"/>
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="CurrencyBar" title="Currency-Bar">
-			<synonym value="Currency-Bars"/>
-		</heading>
-		<heading id="Manilla" title="Manilla">
-			<synonym value="Manillas"/>
-		</heading>
-		<heading id="MoneyBoxCurrency" title="Money Box">
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-			<implies facet="ObjectName" cat="MoneyBoxContainer"/>
-		</heading>
-		<heading id="MoneystoneCurrency" title="Money stone">
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="PurseCommerceCurrency" title="Purse" noMatch="true"/>
-		<heading id="RingGold" title="Ring-Gold">
-			<synonym value="Ring-Golds"/>
-		</heading>
-		<heading id="RingMoney" title="Ring-Money">
-			<synonym value="Ring-Monies"/>
-		</heading>
-		<heading id="SealCurrency" title="Seal">
-			<!-- exclude sea mammals and closures -->
-			<excl value="Marine"/>
-			<excl value="Pinniped"/>
-			<excl value="Sea Lion"/>
-			<synonym value="Seals"/>
-			<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-		</heading>
-		<heading id="Tikal" title="Tikal">
-			<synonym value="Tikals"/>
-		</heading>
-		<heading id="Wampum" title="Wampum">
-			<synonym value="Wampums"/>
-		</heading>
-	</heading>
-	<heading id="DomesticObjects" title="Domestic Objects">
+	<heading id="DomesticObjects" title="Domestic Life" noMatch="true">
 		<heading id="ChildcareEquipment" title="Childcare Equipment">
 			<heading id="BabyCoverChdCr" title="Baby Cover">
 				<synonym value="Baby Covers"/>
@@ -5756,11 +6137,13 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="Costume" title="Costume">
+		<heading id="Clothing" title="Clothing">
+			<synonym value="Costume"/>
 			<synonym value="Costumes"/>
 			<synonym value="Clothes"/>
-			<synonym value="Clothing"/>
-			<heading id="CostumeFitting" title="Costume-Fitting">
+			<heading id="CostumeFitting" title="Costume Fitting">
+				<synonym value="Costume Fittings"/>
+				<synonym value="Costume-Fitting"/>
 				<synonym value="Costume-Fittings"/>
 			</heading>
 			<heading id="DanceCostume" title="Dance Costume">
@@ -6457,6 +6840,9 @@
 			<synonym value="Foods"/>
 			<synonym value="Food Sample"/>
 			<synonym value="Food Samples"/>
+			<heading id="BeansFood" title="Beans">
+				<synonym value="Bean"/>
+			</heading>
 			<heading id="BeerFood" title="Beer">
 				<synonym value="Beers"/>
 				<excl value="Root Beer"/>
@@ -6831,13 +7217,21 @@
 					<synonym value="Seats"/>
 				</heading>
 				<heading id="ShelfFurniture" title="Shelf">
-					<synonym value="Shelfs"/>
-					<!-- Misspelling -->
+					<synonym value="Shelfs"/> <!-- Misspelling -->
 					<synonym value="Shelves"/>
 				</heading>
 				<heading id="TableFurniture" title="Table">
 					<synonym value="Tables"/>
+					<heading id="CabinetTable" title="Cabinet Table">
+						<synonym value="Cabinet Tables"/>
+					</heading>
+					<heading id="ConsoleTable" title="Console Table">
+						<synonym value="Console Tables"/>
+					</heading>
 					<heading id="DeskTabFurniture" title="Desk" noMatch="true"/>
+					<heading id="SideTable" title="Side Table">
+						<synonym value="Side Tables"/>
+					</heading>
 				</heading>
 				<heading id="TabouretFurniture" title="Tabouret">
 					<synonym value="Tabourets"/>
@@ -7303,6 +7697,90 @@
 				<!-- Miscellaneous, non-jewelery items? -->
 			</heading>
 		</heading>
+		<heading id="Textiles" title="Textiles">
+			<synonym value="Textile"/>
+			<synonym value="RGM Yardage"/>
+			<heading id="Cloth" title="Cloth">
+				<synonym value="Fabric"/>
+				<synonym value="Fabrics"/>
+			</heading>
+			<heading id="EmbroiderySample" title="Embroidery Sample">
+				<synonym value="Embroidery Samples"/>
+				<synonym value="Embroidery-Sample"/>
+				<synonym value="Embroidery-Samples"/>
+			</heading>
+			<heading id="Flags" title="Flags">
+				<synonym value="Flag"/>
+				<heading id="Pennant" title="Pennant">
+					<synonym value="Pennants"/>
+				</heading>
+			</heading>
+			<heading id="LaceTextiles" title="Lace Textiles">
+				<synonym value="Lace Textile"/>
+				<heading id="Lace" title="Lace">
+					<excl value="Shoe Lace"/>
+					<excl value="Shoe Laces"/>
+					<heading id="BobbinLace" title="Bobbin Lace">
+						<synonym value="Pillow Lace"/>
+						<heading id="HonitonBobbinLace" title="Honiton Bobbin Lace"/>
+					</heading>
+					<heading id="BedfordshireLace" title="Bedfordshire Lace"/>
+					<heading id="BruggeLace" title="Brugge Lace"/>
+					<heading id="IdrijaLace" title="Idrija Lace"/>
+					<heading id="TorchonLace" title="Torchon Lace"/>
+				</heading>
+			</heading>
+			<heading id="HangingsTextiles" title="Hangings">
+				<synonym value="Hanging"/>
+				<implies facet="ObjectName" cat="VisualRepresentation"/>
+				<implies facet="ObjectName" cat="HangingFurn"/>
+				<heading id="Chakla" title="Chakla">
+					<synonym value="Chaklas"/>
+				</heading>
+				<heading id="DoorHanging" title="Door Hanging">
+					<synonym value="Door Hangings"/>
+					<synonym value="Door-Hanging"/>
+					<synonym value="Door-Hangings"/>
+				</heading>
+				<heading id="Patta" title="Patta">
+					<synonym value="Pattas"/>
+				</heading>
+				<heading id="TempleHanging" title="Temple Hanging">
+					<synonym value="Temple Hangings"/>
+					<synonym value="Temple-Hanging"/>
+					<synonym value="Temple-Hangings"/>
+				</heading>
+				<heading id="TentHanging" title="Tent Hanging">
+					<synonym value="Tent Hangings"/>
+					<synonym value="Tent-Hanging"/>
+					<synonym value="Tent-Hangings"/>
+				</heading>
+				<heading id="Toran" title="Toran">
+					<synonym value="Torans"/>
+				</heading>
+				<heading id="WallHanging" title="Wall Hanging">
+					<synonym value="Wall Hangings"/>
+					<synonym value="Wall-Hanging"/>
+					<synonym value="Wall-Hangings"/>
+					<!-- <implies facet="ObjectName" cat="Wall-Cover"/> Check -->
+					<!-- <implies facet="ObjectName" cat="Wall-Ornament"/> Check -->
+					<heading id="Kalaga" title="Kalaga"> <!-- The term refers to a Burmese wall-hanging, or curtain, often made of a mixture of local and imported materials. -->
+						<synonym value="Kalagas"/>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="PrayerRugTextiles" title="Prayer Rugs" noMatch="true"/>
+			<heading id="Ribbon" title="Ribbon">
+				<synonym value="Ribbons"/>
+			</heading>
+			<heading id="Sampler" title="Sampler"> <!-- Done -->
+				<synonym value="Samplers"/>
+				<implies facet="ActivityorContext" cat="NeedleWork"/> <!-- Check -->
+			</heading>
+			<heading id="Tapestry" title="Tapestry"> <!-- Done -->
+				<synonym value="Tapestries"/>
+			</heading>
+		</heading>
 		<heading id="ToiletriesCosmetics" title="Toiletries &amp; Cosmetics">
 			<synonym value="Toilet/Cosmetic Equipment"/>
 			<heading id="Bath" title="Bath" noMatch="true"> <!-- This needs a better name -->
@@ -7602,265 +8080,6 @@
 			<heading id="WigStandCsmtc" title="Wig Stand" noMatch="true"/>
 		</heading>
 	</heading>
-	<heading id="FireFireLightingEquip" title="Fire &amp; Fire-Lighting Items">
-		<synonym value="Fire/Fire-Lighting Equipment"/>
-		<heading id="BurnerFireEq" title="Burner">
-			<synonym value="Burners"/>
-		</heading>
-		<heading id="CamphorStickHolderFireEq" title="Camphor Stick Holder">
-			<synonym value="Camphor Stick Holders"/>
-			<synonym value="Camphor-Stick Holder"/>
-			<synonym value="Camphor-Stick Holders"/>
-			<synonym value="Camphor Stick-Holder"/>
-			<synonym value="Camphor Stick-Holders"/>
-			<synonym value="Camphor-Stick-Holder"/>
-			<synonym value="Camphor-Stick-Holders"/>
-		</heading>
-		<heading id="FireBasketFireEq" title="Fire Basket">
-			<synonym value="Fire Baskets"/>
-			<synonym value="Fire-Basket"/>
-			<synonym value="Fire-Baskets"/>
-		</heading>
-		<heading id="FireBrickFireEq" title="Fire-Brick">
-			<synonym value="Fire-Bricks"/>
-		</heading>
-		<heading id="FireContainmentFireEq" title="Fire Containment">  <!-- New grouping term -->
-			<heading id="BrazierFireEq" title="Brazier">
-				<synonym value="Braziers"/>
-			</heading>
-			<heading id="FireBoxFireEq" title="Fire Box">
-				<synonym value="Fire Boxes"/>
-				<synonym value="Fire-Box"/>
-				<synonym value="Fire-Boxes"/>
-			</heading>
-			<heading id="FireCoverFireEq" title="Fire Cover">
-				<synonym value="Fire Covers"/>
-				<synonym value="Fire-Cover"/>
-				<synonym value="Fire-Covers"/>
-			</heading>
-			<heading id="FireHolderFireEq" title="Fire Holder">
-				<synonym value="Fire Holders"/>
-				<synonym value="Fire-Holder"/>
-				<synonym value="Fire-Holders"/>
-			</heading>
-			<heading id="FireJarFireEq" title="Fire Jar">
-				<synonym value="Fire Jars"/>
-				<synonym value="Fire-Jar"/>
-				<synonym value="Fire-Jars"/>
-			</heading>
-			<heading id="FirePotFireEq" title="Fire Pot">
-				<synonym value="Fire Pots"/>
-				<synonym value="Fire-Pot"/>
-				<synonym value="Fire-Pots"/>
-			</heading>
-			<heading id="FireScreenFireEq" title="Fire Screen">
-				<synonym value="Fire Screens"/>
-				<synonym value="Fire-Screen"/>
-				<synonym value="Fire-Screens"/>
-			</heading>
-			<heading id="ForgeFireEq" title="Forge">
-				<synonym value="Forges"/>
-			</heading>
-			<heading id="FurnaceFireEq" title="Furnace">
-				<synonym value="Furnaces"/>
-			</heading>
-			<heading id="HearthFireEq" title="Hearth">
-				<synonym value="Hearths"/>
-			</heading>
-			<heading id="KilnFireEq" title="Kiln">
-				<synonym value="Kilns"/>
-				<heading id="KilnDebrisFireEq" title="Kiln Debris"/>
-				<heading id="KilnFurnitureFireEq" title="Kiln Furniture">
-					<synonym value="Kiln-Furniture"/>
-				</heading>
-			</heading>
-			<heading id="OvenFireEq" title="Oven" noMatch="true"/>
-			<heading id="StoveFireEq" title="Stove">
-				<synonym value="Stoves"/>
-			</heading>
-		</heading>
-		<heading id="FireDevilFireEq" title="Fire Devil">
-			<synonym value="Fire Devils"/>
-			<synonym value="Fire-Devil"/>
-			<synonym value="Fire-Devils"/>
-		</heading>
-		<heading id="FireDogFireEq" title="Fire Dog">
-			<synonym value="Fire Dogs"/>
-			<synonym value="Fire-Dog"/>
-			<synonym value="Fire-Dogs"/>
-			<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
-		</heading>
-		<heading id="FireFanFireEq" title="Fire Fan">
-			<synonym value="Fire Fans"/>
-			<synonym value="Fire-Fan"/>
-			<synonym value="Fire-Fans"/>
-		</heading>
-		<heading id="FireGrateFireEq" title="Fire Grate">
-			<synonym value="Fire Grates"/>
-			<synonym value="Fire-Grate"/>
-			<synonym value="Fire-Grates"/>
-		</heading>
-		<heading id="FireGridFireEq" title="Fire Grid">
-			<synonym value="Fire Grids"/>
-			<synonym value="Fire-Grid"/>
-			<synonym value="Fire-Grids"/>
-			<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
-		</heading>
-		<heading id="FireHookFireEq" title="Fire Hook">
-			<synonym value="Fire Hooks"/>
-			<synonym value="Fire-Hook"/>
-			<synonym value="Fire-Hooks"/>
-		</heading>
-		<heading id="FirePistonFireEq" title="Fire Piston">
-			<synonym value="Fire Pistons"/>
-			<synonym value="Fire-Piston"/>
-			<synonym value="Fire-Pistons"/>
-		</heading>
-		<heading id="FireStarters" title="Fire Starters">
-			<synonym value="Fire Starter"/>
-			<synonym value="Firestarter"/>
-			<synonym value="Firestarters"/>
-			<synonym value="Fire-Starter"/>
-			<synonym value="Fire-Starters"/>
-			<heading id="CigaretteLighterFireEq" title="Cigarette Lighter" noMatch="true"/>
-			<heading id="FireDrill" title="Fire Drill">
-				<synonym value="Fire Drills"/>
-				<synonym value="Fire-Drill"/>
-				<synonym value="Fire-Drills"/>
-			</heading>
-			<heading id="FireLighterFireEq" title="Fire Lighter">
-				<synonym value="Fire Lighters"/>
-				<synonym value="Fire-Lighter"/>
-				<synonym value="Fire-Lighters"/>
-			</heading>
-			<heading id="FireSteelFireEq" title="Fire Steel">
-				<synonym value="Fire Steels"/>
-				<synonym value="Fire-Steel"/>
-				<synonym value="Fire-Steels"/>
-				<implies facet="ObjectName" cat="FireSteelTool"/>
-			</heading>
-			<heading id="FlintFireEq" title="Flint">
-				<synonym value="Flints"/>
-			</heading>
-			<heading id="Lighter" title="Lighter">
-				<synonym value="Lighters"/>
-			</heading>
-			<heading id="MatchFireEq" title="Match">
-				<synonym value="Matches"/>
-			</heading>
-			<heading id="MatchBoxFireEq" title="Match Box">
-				<synonym value="Match Boxes"/>
-				<synonym value="Match-Box"/>
-				<synonym value="Match-Boxes"/>
-				<synonym value="Box of Matches"/>
-				<synonym value="Boxed Matches"/>
-				<synonym value="Matchbox"/>
-				<synonym value="Matchboxes"/>
-				<implies facet="ActivityorContext" cat="DrugSmoking"/>
-				<implies facet="ObjectName" cat="Containers"/>
-			</heading>
-			<heading id="MatchBoxHolderFireEq" title="Match Box Holder">
-				<synonym value="Match Box Holders"/>
-				<synonym value="Matchbox Holder"/>
-				<synonym value="Matchbox Holders"/>
-				<synonym value="Match-Box Holder"/>
-				<synonym value="Match-Box Holders"/>
-				<synonym value="Matchbox-Holder"/>
-				<synonym value="Matchbox-Holders"/>
-			</heading>
-			<heading id="StrikeALightFireEq" title="Strike-a-Light">
-				<synonym value="Strike-a-Lights"/>
-			</heading>
-		</heading>
-		<heading id="FireStickFireEq" title="Fire Stick">
-			<synonym value="Fire Sticks"/>
-			<synonym value="Fire-Stick"/>
-			<synonym value="Fire-Sticks"/>
-			<implies facet="ObjectName" cat="FireStickTool"/>
-		</heading>
-		<heading id="FireStickCntnrFireEq" title="Fire Stick Container">
-			<synonym value="Fire Stick Containers"/>
-			<synonym value="Fire-Stick-Container"/>
-			<synonym value="Fire-Stick-Containers"/>
-			<implies facet="ObjectName" cat="Containers"/>
-		</heading>
-		<heading id="FireStokingEq" title="Fire Stoking equipment" noMatch="true">  <!-- New grouping term -->
-			<heading id="BellowsFireEq" title="Bellows">
-				<implies facet="ObjectName" cat="BellowsTool"/>
-			</heading>
-			<heading id="BlowTubeFireEq" title="Blow Tube">
-				<synonym value="Blow Tubes"/>
-				<synonym value="Blow-Tube"/>
-				<synonym value="Blow-Tubes"/>
-				<implies facet="ObjectName" cat="BlowTubeTool"/>
-			</heading>
-			<heading id="FaggotFireEq" title="Faggot">
-				<synonym value="Faggots"/>
-			</heading>
-			<heading id="FireBlowerFireEq" title="Fire Blower">
-				<synonym value="Fire Blowers"/>
-				<synonym value="Fire-Blower"/>
-				<synonym value="Fire-Blowers"/>
-			</heading>
-		</heading>
-		<heading id="FireStoneFireEq" title="Fire Stone">
-			<synonym value="Fire Stones"/>
-			<synonym value="Fire-Stone"/>
-			<synonym value="Fire-Stones"/>
-			<implies facet="ObjectName" cat="FireStoneTool"/>
-		</heading>
-		<heading id="FireTendingFireEq" title="Fire Tending equipment">  <!-- New grouping term -->
-			<heading id="FireRakeFireEq" title="Fire Rake">
-				<synonym value="Fire Rakes"/>
-				<synonym value="Fire-Rake"/>
-				<synonym value="Fire-Rakes"/>
-			</heading>
-			<heading id="FireSawFireEq" title="Fire Saw">
-				<synonym value="Fire Saws"/>
-				<synonym value="Fire-Saw"/>
-				<synonym value="Fire-Saws"/>
-				<implies facet="ObjectName" cat="FireSawTool"/>
-			</heading>
-			<heading id="FireShovelFireEq" title="Fire Shovel">
-				<synonym value="Fire Shovels"/>
-				<synonym value="Fire-Shovel"/>
-				<synonym value="Fire-Shovels"/>
-			</heading>
-			<heading id="FireTongsFireEq" title="Fire Tongs">
-				<synonym value="Fire Tong"/>
-				<synonym value="Fire-Tong"/>
-				<synonym value="Fire-Tongs"/>
-			</heading>
-			<heading id="PokerFireEq" title="Poker"> <!-- Disambiguate from card game -->
-				<synonym value="Pokers"/>
-			</heading>
-		</heading>
-		<heading id="FuelFireEq" title="Fuel">
-			<synonym value="Fuels"/>
-		</heading>
-		<heading id="MatchExtinguisherFireEq" title="Match Extinguisher">
-			<synonym value="Match Extinguishers"/>
-			<synonym value="Match-Extinguisher"/>
-			<synonym value="Match-Extinguishers"/>
-		</heading>
-		<heading id="SpillFireEq" title="Spill">
-			<synonym value="Spills"/>
-		</heading>
-		<heading id="SpillVaseFireEq" title="Spill Vase">
-			<synonym value="Spill Vases"/>
-			<synonym value="Spill-Vase"/>
-			<synonym value="Spill-Vases"/>
-		</heading>
-		<heading id="TinderBoxFireEq" title="Tinder Box">
-			<synonym value="Tinder Boxes"/>
-			<synonym value="Tinder-Box"/>
-			<synonym value="Tinder-Boxes"/>
-		</heading>
-		<heading id="TorchFireEq" title="Torch" noMatch="true"/>
-		<heading id="TuyereFireEq" title="Tuyere">
-			<synonym value="Tuyeres"/>
-		</heading>
-	</heading>
 	<heading id="GamesSportingEquipment" title="Games &amp; Sporting Equipment">
 		<synonym value="Games/Sporting Equipment"/>
 		<heading id="CarpetBowlGmSprt" title="Carpet-Bowl">
@@ -8040,115 +8259,6 @@
 			<synonym value="Yut-Sets"/>
 		</heading>
 	</heading>
-	<heading id="LightingEquipment" title="Lighting Equipment">
-		<synonym value="Lighting Items"/>
-		<heading id="CandelabrumLghtEq" title="Candelabrum">
-			<synonym value="Candelabrums"/>
-		</heading>
-		<heading id="CandelonLghtEq" title="Candelon">
-			<synonym value="Candelons"/>
-			<implies facet="ObjectName" cat="CandelonRelRit"/>
-		</heading>
-		<heading id="CandleLghtEq" title="Candle">
-			<synonym value="Candles"/>
-		</heading>
-		<heading id="CandleBoxLghtEq" title="Candle Box">
-			<synonym value="Candle Boxes"/>
-		</heading>
-		<heading id="CandleCaseLghtEq" title="Candle Case">
-			<synonym value="Candle Cases"/>
-		</heading>
-		<heading id="CandleHolderLghtEq" title="Candle Holder">
-			<synonym value="Candle Holders"/>
-		</heading>
-		<heading id="CandleMoldLghtEq" title="Candle Mold">
-			<synonym value="Candle Molds"/>
-		</heading>
-		<heading id="CandleScreenLghtEq" title="Candle Screen">
-			<synonym value="Candle Screens"/>
-		</heading>
-		<heading id="CandlestickHolderLghtEq" title="Candlestick Holder">
-			<synonym value="Candlestick Holders"/>
-		</heading>
-		<heading id="CeilingLightLghtEq" title="Ceiling Light">
-			<synonym value="Ceiling Lights"/>
-		</heading>
-		<heading id="ChandelierLghtEq" title="Chandelier">
-			<synonym value="Chandeliers"/>
-		</heading>
-		<heading id="LampLightingLghtEq" title="Lamp">
-			<synonym value="Lamps"/>
-		</heading>
-		<heading id="LampBracketLghtEq" title="Lamp Bracket">
-			<synonym value="Lamp Brackets"/>
-		</heading>
-		<heading id="LampFillerLghtEq" title="Lamp Filler">
-			<synonym value="Lamp Fillers"/>
-			<implies facet="ObjectName" cat="LampFillerVsl"/>
-			<heading id="GuttusLghtEq" title="Guttus (Lamp Feeder/Filler)">
-				<synonym value="Guttus"/>
-			</heading>
-		</heading>
-		<heading id="LampHolderLghtEq" title="Lamp Holder">
-			<synonym value="Lamp Holders"/>
-		</heading>
-		<heading id="LampHookLghtEq" title="Lamp Hook">
-			<synonym value="Lamp Hooks"/>
-		</heading>
-		<heading id="LampOrnamentLghtEq" title="Lamp Ornament">
-			<synonym value="Lamp Ornaments"/>
-		</heading>
-		<heading id="LampStandLghtEq" title="Lamp Stand">
-			<synonym value="Lamp Stands"/>
-		</heading>
-		<heading id="LanternLghtEq" title="Lantern">
-			<synonym value="Lanterns"/>
-			<excl value="Lantern Slide"/>
-			<excl value="Lantern Slides"/>
-		</heading>
-		<heading id="LusterLghtEq" title="Luster">
-			<synonym value="Lusters"/>
-			<synonym value="Lustre"/>
-			<synonym value="Lustres"/>
-		</heading>
-		<heading id="PeermanLghtEq" title="Peerman">
-			<synonym value="Peermans"/>
-		</heading>
-		<heading id="RushLightHolderLghtEq" title="Rush Light Holder">
-			<synonym value="Rush Light Holders"/>
-		</heading>
-		<heading id="SnufferLghtEq" title="Snuffer">
-			<synonym value="Snuffers"/>
-		</heading>
-		<heading id="SnufferStandLghtEq" title="Snuffer Stand" noMatch="true"/>
-		<heading id="TaperHolderFireEq" title="Taper Holder">
-			<synonym value="Taper Holders"/>
-			<synonym value="Taper-Holder"/>
-			<synonym value="Taper-Holders"/>
-		</heading>
-		<heading id="TorchLghtEq" title="Torch">
-			<synonym value="Torches"/>
-			<synonym value="Torchs"/> <!-- Misspelling -->
-			<implies facet="ObjectName" cat="TorchFireEq"/>
-		</heading>
-		<heading id="TorchHolderLghtEq" title="Torch Holder">
-			<synonym value="Torch Holders"/>
-			<synonym value="Torch-Holder"/>
-			<synonym value="Torch-Holders"/>
-		</heading>
-		<heading id="WickLghtEq" title="Wick">
-			<synonym value="Wicks"/>
-		</heading>
-		<heading id="WickHolderLghtEq" title="Wick Holder">
-			<synonym value="Wick Holders"/>
-		</heading>
-		<heading id="WickPullerLghtEq" title="Wick Puller">
-			<synonym value="Wick Pullers"/>
-		</heading>
-		<heading id="WickTrimmerLghtEq" title="Wick Trimmer">
-			<synonym value="Wick Trimmers"/>
-		</heading>
-	</heading>
 	<heading id="MedicalHealingItems" title="Medical &amp; Healing items">
 		<synonym value="Doctor"/>
 		<synonym value="Doctors"/>
@@ -8312,398 +8422,6 @@
 			<synonym value="Surgical Items"/>
 		</heading>
 	</heading>
-	<!-- <heading id="MiscellaneousEquipment" title="Miscellaneous Equipment"> PARSE OUT AND MERGE ELSEWHERE
-		<synonym value="Apparatus"/>
-		••• 0 / 2:
-		<heading id="BatteryMiscEq" title="Battery">
-			<synonym value="Batteries"/>
-			<synonym value="Batterys"/> <!- Misspelling ->
-		</heading>
-		••• 0 / 1:
-		<heading id="BirdstoneMiscEq" title="Birdstone">
-			<synonym value="Birdstones"/>
-		</heading>
-		••• 1/3:
-		<heading id="BoardMiscEq" title="Board" noMatch="true">
-			<synonym value="Chopped board"/>
-			<synonym value="Roof board"/>
-		</heading>
-		••• 0/2:
-		<heading id="BookEndMiscEq" title="Book End">
-			<synonym value="Book Ends"/>
-			<synonym value="Book-End"/>
-			<synonym value="Book-Ends"/>
-		</heading>
-		••• 0/1:
-		<heading id="BouquetMiscEq" title="Bouquet">
-			<synonym value="Bouquets"/>
-		</heading>
-		••• 71/259:
-		<heading id="ChainMiscEq" title="Chain"> Disambiguate with jewelery
-			<synonym value="Chains"/>
-		</heading>
-		••• 1/2:
-		<heading id="ChoppingBlockMiscEq" title="Chopping Block">
-			<synonym value="Chopping Blocks"/>
-			<synonym value="Chopping-Block"/>
-			<synonym value="Chopping-Blocks"/>
-		</heading>
-		••• 280/1977:
-		<heading id="CordMiscEq" title="Cord">
-			<synonym value="Cords"/>
-		</heading>
-		••• 381/1174:
-		<heading id="CoverMiscEq" title="Cover">
-			<synonym value="Covers"/>
-		</heading>
-		••• 2/48:
-		<heading id="DinnerSetMiscEq" title="Dinner Set">
-			<synonym value="Dinner Sets"/>
-			<synonym value="Dinner-Set"/>
-			<synonym value="Dinner-Sets"/>
-		</heading>
-		••• 1/2:
-		<heading id="DusterMiscEq" title="Duster">
-			<synonym value="Dusters"/>
-		</heading>
-		••• [none?]:
-		<heading id="FanMiscEq" title="Fan">
-			<synonym value="Fans"/>
-		</heading>
-		••• 12/120:
-		<heading id="FastenerMiscEq" title="Fastener">
-			<synonym value="Fasteners"/>
-		</heading>
-		••• 0/5:
-		<heading id="FeederMiscEq" title="Feeder">
-			<synonym value="Feeders"/>
-		</heading>
-		••• 0/18:
-		<heading id="FilterMiscEq" title="Filter">
-			<synonym value="Filters"/>
-		</heading>
-		••• 0/2:
-		<heading id="FireworkMiscEq" title="Firework">
-			<synonym value="Fireworks"/>
-		</heading>
-		••• 38/160:
-		<heading id="FloatMiscEq" title="Float">
-			<synonym value="Floats"/>
-		</heading>
-		••• 180/622:
-		<heading id="FrameMiscEq" title="Frame">
-			<synonym value="Frames"/>
-		</heading>
-		••• 249/853:
-		<heading id="FringeMiscEq" title="Fringe">
-			<synonym value="Fringes"/>
-		</heading>
-		••• 0/1:
-		<heading id="GratingMiscEq" title="Grating">
-			<synonym value="Gratings"/>
-		</heading>
-		••• 13/219:
-		<heading id="GridMiscEq" title="Grid">
-			<synonym value="Grids"/>
-		</heading>
-		••• 8/72:
-		<heading id="GuardMiscEq" title="Guard">
-			<synonym value="Guards"/>
-		</heading>
-		••• 15/23:
-		<heading id="HangerMiscEq" title="Hanger">
-			<synonym value="Hangers"/>
-		</heading>
-		••• 0/3:
-		<heading id="HeaterMiscEq" title="Heater">
-			<synonym value="Heaters"/>
-		</heading>
-		••• 129/234:
-		<heading id="HoopMiscEq" title="Hoop">
-			<synonym value="Hoops"/>
-			<excl value="Belt"/>
-		</heading>
-		••• 9/30:
-		<heading id="LadderMiscEq" title="Ladder">
-			<synonym value="Ladders"/>
-		</heading>
-		••• 
-		<heading id="LidMiscEq" title="Lid">
-			<synonym value="Lids"/>
-		</heading>
-		••• 5/43:
-		<heading id="MarkerMiscEq" title="Marker">
-			<synonym value="Markers"/>
-			<excl value="grave"/> <!- Disambiguates from grave markers ->
-		</heading>
-		••• 58/231:
-		<heading id="MirrorMiscEq" title="Mirror">
-			<synonym value="Mirrors"/>
-			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
-		</heading>
-		••• 8/57:
-		<heading id="NapkinRingMiscEq" title="Napkin Ring">
-			<synonym value="Napkin Rings"/>
-			<synonym value="Napkin-Ring"/>
-			<synonym value="Napkin-Rings"/>
-		</heading>
-		••• 0/42:
-		<heading id="NooseMiscEq" title="Noose">
-			<synonym value="Nooses"/>
-		</heading>
-		••• 467/8142:
-		<heading id="OrnamentMiscEq" title="Ornament">
-			<synonym value="Ornaments"/>
-		</heading>
-		••• 7/37:
-		<heading id="PadMiscEq" title="Pad">
-			<synonym value="Pads"/>
-		</heading>
-		••• 99/379:
-		<heading id="PegMiscEq" title="Peg">
-			<synonym value="Pegs"/>
-		</heading>
-		••• 0/1:
-		<heading id="PintleMiscEq" title="Pintle">
-			<synonym value="Pintles"/>
-		</heading>
-		••• 7/36:
-		<heading id="PlankMiscEq" title="Plank">
-			<synonym value="Planks"/>
-		</heading>
-		••• 296/405:
-		<heading id="PlaqueMiscEq" title="Plaque">
-			<synonym value="Plaques"/>
-		</heading>
-		••• 45/220:
-		<heading id="PlugMiscEq" title="Plug">
-			<synonym value="Plugs"/>
-		</heading>
-		••• 389/23179:
-		<heading id="PointMiscEq" title="Point">
-			<synonym value="Points"/>
-		</heading>
-		••• 78/365:
-		<heading id="PoleMiscEq" title="Pole">
-			<synonym value="Poles"/>
-		</heading>
-		••• 17/59:
-		<heading id="PulleyMiscEq" title="Pulley">
-			<synonym value="Pulleys"/>
-		</heading>
-		••• 3/22:
-		<heading id="PumpMiscEq" title="Pump">
-			<synonym value="Pumps"/>
-		</heading>
-		••• 4/36:
-		<heading id="RackMiscEq" title="Rack">
-			<synonym value="Racks"/>
-		</heading>
-		••• 2/200:
-		<heading id="ReelMiscEq" title="Reel">
-			<synonym value="Reels"/>
-		</heading>
-		••• 0/3:
-		<heading id="ReflectorMiscEq" title="Reflector">
-			<synonym value="Reflectors"/>
-		</heading>
-		••• 58/391:
-		<heading id="RestMiscEq" title="Rest">
-			<synonym value="Rests"/>
-		</heading>
-		••• [none?]:
-		<heading id="RingMiscEq" title="Ring">
-			<synonym value="Rings"/>
-			<excl value="RingJewelery"/>
-		</heading>
-		••• 51/60:
-		<heading id="RoundelMiscEq" title="Roundel">
-			<synonym value="Roundels"/>
-		</heading>
-		••• 1/3:
-		<heading id="ScareMiscEq" title="Scare"> <!- Disambiguate ->
-			<synonym value="Scares"/>
-		</heading>
-		••• 4/537:
-		<heading id="ScreenMiscEq" title="Screen"> <!- Disambiguate ->
-			<synonym value="Screens"/>
-		</heading>
-		••• 0/31:
-		<heading id="SiphonMiscEq" title="Siphon">
-			<synonym value="Siphons"/>
-		</heading>
-		••• 28/654:
-		<heading id="SlabMiscEq" title="Slab">
-			<synonym value="Slabs"/>
-		</heading>
-		••• 26/225:
-		<heading id="SouvenirMiscEq" title="Souvenir">
-			<synonym value="Souvenirs"/>
-			••• 0/11:
-			<heading id="SouvenirSpoonUtensilMiscEq" title="Souvenir Spoon">
-				<synonym value="Souvenir Spoons"/>
-			</heading>
-		</heading>
-		••• 7/240:
-		<heading id="SpikeMiscEq" title="Spike">
-			<synonym value="Spikes"/>
-		</heading>
-		••• 19/350:
-		<heading id="SpoolMiscEq" title="Spool">
-			<synonym value="Spools"/>
-		</heading>
-		••• 46/432:
-		<heading id="SpoutMiscEq" title="Spout">
-			<synonym value="Spouts"/>
-		</heading>
-		••• 2/20:
-		<heading id="SprayMiscEq" title="Spray">
-			<synonym value="Sprays"/>
-		</heading>
-		••• 4/6:
-		<heading id="SprinklerMiscEq" title="Sprinkler">
-			<synonym value="Sprinklers"/>
-		</heading>
-		••• 10/62:
-		<heading id="SpurMiscEq" title="Spur">
-			<synonym value="Spurs"/>
-		</heading>
-		••• 1050/8200:
-		<heading id="StandsMiscEq" title="Stands">
-			<synonym value="Stand"/>
-			••• [none]:
-			<heading id="ArrowStandStndMiscEq" title="Arrow Stand">
-				<synonym value="Arrow Stands"/>
-				<synonym value="Arrow-Stand"/>
-				<synonym value="Arrow-Stands"/>
-			</heading>
-			••• 941/7428:
-			<heading id="BaseStndMiscEq" title="Base">
-				<synonym value="Bases"/>
-			</heading>
-			••• [none]:
-			<heading id="CakeStandStndMiscEq" title="Cake-Stand">
-				<synonym value="Cake-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="ClothesHorseStndMiscEq" title="Clothes-Horse">
-				<synonym value="Clothes-Horses"/>
-			</heading>
-			••• [none]:
-			<heading id="CondimentStandStndMiscEq" title="Condiment-Stand">
-				<synonym value="Condiment-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="EggStandStndMiscEq" title="Egg-Stand">
-				<synonym value="Egg-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="FigureStandStndMiscEq" title="Figure-Stand">
-				<synonym value="Figure-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="FruitStandStndMiscEq" title="Fruit-Stand">
-				<synonym value="Fruit-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="IncenseBurnerStndMiscEq" title="Incense-Burner-Stand">
-				<synonym value="Incense-Burner-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="IncenseStndMiscEq" title="Incense-Stand">
-				<synonym value="Incense-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="IronStandStndMiscEq" title="Iron-Stand">
-				<synonym value="Iron-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="LaceStandStndMiscEq" title="Lace-Stand">
-				<synonym value="Lace-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="LampStandStndMiscEq" title="Lamp-Stand">
-				<synonym value="Lamp-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="LibationStandStndMiscEq" title="Libation-Stand">
-				<synonym value="Libation-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="MirrorStandStndMiscEq" title="Mirror-Stand">
-				<synonym value="Mirror-Stands"/>
-			</heading>
-			••• 0/1:
-			<heading id="OfferingStandStndMiscEq" title="Offering Stand">
-				<synonym value="Offering Stands"/>
-				<synonym value="Offering-Stand"/>
-				<synonym value="Offering-Stands"/>
-			</heading>
-			••• 68/259:
-			<heading id="PedestalStndMiscEq" title="Pedestal">
-				<synonym value="Pedestals"/>
-			</heading>
-			••• 2/33:
-			<heading id="PlinthStndMiscEq" title="Plinth">
-				<synonym value="Plinths"/>
-			</heading>
-			••• [none]:
-			<heading id="QuiverStandStndMiscEq" title="Quiver Stand">
-				<synonym value="Quiver Stands"/>
-				<synonym value="Quiver-Stand"/>
-				<synonym value="Quiver-Stands"/>
-			</heading>
-			••• 0/163:
-			<heading id="RingStandStndMiscEq" title="Ring Stand">
-				<synonym value="Ring Stands"/>
-				<synonym value="Ring-Stand"/>
-				<synonym value="Ring-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="SnufferStandStndMiscEq" title="Snuffer Stand">
-				<synonym value="Snuffer Stands"/>
-				<synonym value="Snuffer-Stand"/>
-				<synonym value="Snuffer-Stands"/>
-				<implies facet="ObjectName" cat="SnufferStandLghtEq"/>
-			</heading>
-			••• [none]:
-			<heading id="StelaStandStndMiscEq" title="Stela Stand">
-				<synonym value="Stela Stands"/>
-				<synonym value="Stela-Stand"/>
-				<synonym value="Stela-Stands"/>
-			</heading>
-			••• [none]:
-			<heading id="TrestleStndMiscEq" title="Trestle">
-				<synonym value="Trestles"/>
-			</heading>
-			••• 0/1:
-			<heading id="TripodStandStndMiscEq" title="Tripod Stand">
-				<synonym value="Tripod Stands"/>
-			</heading>
-			••• 0/1:
-			<heading id="TrivetStndMiscEq" title="Trivet">
-				<synonym value="Trivets"/>
-			</heading>
-			••• [none]:
-			<heading id="VesselStandStndMiscEq" title="Vessel Stand">
-				<synonym value="Vessel Stands"/>
-				<synonym value="Vessel-Stand"/>
-				<synonym value="Vessel-Stands"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
-			</heading>
-			••• [none]:
-			<heading id="WigStandStndMiscEq" title="Wig Stand">
-				<synonym value="Wig Stands"/>
-				<synonym value="Wig-Stand"/>
-				<synonym value="Wig-Stands"/>
-				<implies facet="ObjectName" cat="WigStandCsmtc"/>
-			</heading>
-		</heading>
-		••• 18/42:
-		<heading id="StaveMiscEq" title="Stave">
-			<synonym value="Staves"/>
-		</heading>
-	</heading> -->
 	<heading id="PerformanceArts" title="Performance Arts">
 		<synonym value="Performance Art"/>
 		<heading id="DanceEquipment" title="Dance Equipment">
@@ -11947,9 +11665,6 @@
 		<heading id="ManTrap" title="Man-Trap">
 			<synonym value="Man-Traps"/>
 		</heading>
-		<heading id="PropagandaSocCntrl" title="Propaganda">
-			<synonym value="Propagandas"/> <!-- Incorrect plural -->
-		</heading>
 		<heading id="ScoldsBridleSocCntrl" title="Scold's Bridle">
 			<synonym value="Scolds Bridle"/>
 			<synonym value="Scolds Bridles"/>
@@ -13061,90 +12776,6 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="Textiles" title="Textiles">
-		<synonym value="Textile"/>
-		<synonym value="RGM Yardage"/>
-		<heading id="Cloth" title="Cloth">
-			<synonym value="Fabric"/>
-			<synonym value="Fabrics"/>
-		</heading>
-		<heading id="EmbroiderySample" title="Embroidery Sample">
-			<synonym value="Embroidery Samples"/>
-			<synonym value="Embroidery-Sample"/>
-			<synonym value="Embroidery-Samples"/>
-		</heading>
-		<heading id="Flags" title="Flags">
-			<synonym value="Flag"/>
-			<heading id="Pennant" title="Pennant">
-				<synonym value="Pennants"/>
-			</heading>
-		</heading>
-		<heading id="LaceTextiles" title="Lace Textiles">
-			<synonym value="Lace Textile"/>
-			<heading id="Lace" title="Lace">
-				<excl value="Shoe Lace"/>
-				<excl value="Shoe Laces"/>
-				<heading id="BobbinLace" title="Bobbin Lace">
-					<synonym value="Pillow Lace"/>
-					<heading id="HonitonBobbinLace" title="Honiton Bobbin Lace"/>
-				</heading>
-				<heading id="BedfordshireLace" title="Bedfordshire Lace"/>
-				<heading id="BruggeLace" title="Brugge Lace"/>
-				<heading id="IdrijaLace" title="Idrija Lace"/>
-				<heading id="TorchonLace" title="Torchon Lace"/>
-			</heading>
-		</heading>
-		<heading id="HangingsTextiles" title="Hangings">
-			<synonym value="Hanging"/>
-			<implies facet="ObjectName" cat="VisualRepresentation"/>
-			<implies facet="ObjectName" cat="HangingFurn"/>
-			<heading id="Chakla" title="Chakla">
-				<synonym value="Chaklas"/>
-			</heading>
-			<heading id="DoorHanging" title="Door Hanging">
-				<synonym value="Door Hangings"/>
-				<synonym value="Door-Hanging"/>
-				<synonym value="Door-Hangings"/>
-			</heading>
-			<heading id="Patta" title="Patta">
-				<synonym value="Pattas"/>
-			</heading>
-			<heading id="TempleHanging" title="Temple Hanging">
-				<synonym value="Temple Hangings"/>
-				<synonym value="Temple-Hanging"/>
-				<synonym value="Temple-Hangings"/>
-			</heading>
-			<heading id="TentHanging" title="Tent Hanging">
-				<synonym value="Tent Hangings"/>
-				<synonym value="Tent-Hanging"/>
-				<synonym value="Tent-Hangings"/>
-			</heading>
-			<heading id="Toran" title="Toran">
-				<synonym value="Torans"/>
-			</heading>
-			<heading id="WallHanging" title="Wall Hanging">
-				<synonym value="Wall Hangings"/>
-				<synonym value="Wall-Hanging"/>
-				<synonym value="Wall-Hangings"/>
-				<!-- <implies facet="ObjectName" cat="Wall-Cover"/> Check -->
-				<!-- <implies facet="ObjectName" cat="Wall-Ornament"/> Check -->
-				<heading id="Kalaga" title="Kalaga"> <!-- The term refers to a Burmese wall-hanging, or curtain, often made of a mixture of local and imported materials. -->
-					<synonym value="Kalagas"/>
-				</heading>
-			</heading>
-		</heading>
-		<heading id="PrayerRugTextiles" title="Prayer Rugs" noMatch="true"/>
-		<heading id="Ribbon" title="Ribbon">
-			<synonym value="Ribbons"/>
-		</heading>
-		<heading id="Sampler" title="Sampler"> <!-- Done -->
-			<synonym value="Samplers"/>
-			<implies facet="ActivityorContext" cat="NeedleWork"/> <!-- Check -->
-		</heading>
-		<heading id="Tapestry" title="Tapestry"> <!-- Done -->
-			<synonym value="Tapestries"/>
-		</heading>
-	</heading>
 	<heading id="ToolsImplements" title="Tools &amp; Implements">
 		<synonym value="Tool"/>
 		<synonym value="Tools"/>
@@ -13368,10 +12999,370 @@
 		<heading id="FileTool" title="File">
 			<synonym value="Files"/>
 		</heading>
-		<heading id="FireSawTool" title="Fire-Saw" noMatch="true"/>
-		<heading id="FireSteelTool" title="Fire Steel" noMatch="true"/>
-		<heading id="FireStickTool" title="Fire Stick" noMatch="true"/>
-		<heading id="FireStoneTool" title="Fire Stone" noMatch="true"/>
+		<heading id="FireFireLightingEquip" title="Fire &amp; Lighting Items">
+			<synonym value="Fire/Fire-Lighting Equipment"/>
+			<heading id="BurnerFireEq" title="Burner">
+				<synonym value="Burners"/>
+			</heading>
+			<heading id="CamphorStickHolderFireEq" title="Camphor Stick Holder">
+				<synonym value="Camphor Stick Holders"/>
+				<synonym value="Camphor-Stick Holder"/>
+				<synonym value="Camphor-Stick Holders"/>
+				<synonym value="Camphor Stick-Holder"/>
+				<synonym value="Camphor Stick-Holders"/>
+				<synonym value="Camphor-Stick-Holder"/>
+				<synonym value="Camphor-Stick-Holders"/>
+			</heading>
+			<heading id="FireBasketFireEq" title="Fire Basket">
+				<synonym value="Fire Baskets"/>
+				<synonym value="Fire-Basket"/>
+				<synonym value="Fire-Baskets"/>
+			</heading>
+			<heading id="FireBrickFireEq" title="Fire-Brick">
+				<synonym value="Fire-Bricks"/>
+			</heading>
+			<heading id="FireContainmentFireEq" title="Fire Containment">  <!-- New grouping term -->
+				<heading id="BrazierFireEq" title="Brazier">
+					<synonym value="Braziers"/>
+				</heading>
+				<heading id="FireBoxFireEq" title="Fire Box">
+					<synonym value="Fire Boxes"/>
+					<synonym value="Fire-Box"/>
+					<synonym value="Fire-Boxes"/>
+				</heading>
+				<heading id="FireCoverFireEq" title="Fire Cover">
+					<synonym value="Fire Covers"/>
+					<synonym value="Fire-Cover"/>
+					<synonym value="Fire-Covers"/>
+				</heading>
+				<heading id="FireHolderFireEq" title="Fire Holder">
+					<synonym value="Fire Holders"/>
+					<synonym value="Fire-Holder"/>
+					<synonym value="Fire-Holders"/>
+				</heading>
+				<heading id="FireJarFireEq" title="Fire Jar">
+					<synonym value="Fire Jars"/>
+					<synonym value="Fire-Jar"/>
+					<synonym value="Fire-Jars"/>
+				</heading>
+				<heading id="FirePotFireEq" title="Fire Pot">
+					<synonym value="Fire Pots"/>
+					<synonym value="Fire-Pot"/>
+					<synonym value="Fire-Pots"/>
+				</heading>
+				<heading id="FireScreenFireEq" title="Fire Screen">
+					<synonym value="Fire Screens"/>
+					<synonym value="Fire-Screen"/>
+					<synonym value="Fire-Screens"/>
+				</heading>
+				<heading id="ForgeFireEq" title="Forge">
+					<synonym value="Forges"/>
+				</heading>
+				<heading id="FurnaceFireEq" title="Furnace">
+					<synonym value="Furnaces"/>
+				</heading>
+				<heading id="HearthFireEq" title="Hearth">
+					<synonym value="Hearths"/>
+				</heading>
+				<heading id="KilnFireEq" title="Kiln">
+					<synonym value="Kilns"/>
+					<heading id="KilnDebrisFireEq" title="Kiln Debris"/>
+					<heading id="KilnFurnitureFireEq" title="Kiln Furniture">
+						<synonym value="Kiln-Furniture"/>
+					</heading>
+				</heading>
+				<heading id="OvenFireEq" title="Oven" noMatch="true"/>
+				<heading id="StoveFireEq" title="Stove">
+					<synonym value="Stoves"/>
+				</heading>
+			</heading>
+			<heading id="FireDevilFireEq" title="Fire Devil">
+				<synonym value="Fire Devils"/>
+				<synonym value="Fire-Devil"/>
+				<synonym value="Fire-Devils"/>
+			</heading>
+			<heading id="FireDogFireEq" title="Fire Dog">
+				<synonym value="Fire Dogs"/>
+				<synonym value="Fire-Dog"/>
+				<synonym value="Fire-Dogs"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
+			</heading>
+			<heading id="FireFanFireEq" title="Fire Fan">
+				<synonym value="Fire Fans"/>
+				<synonym value="Fire-Fan"/>
+				<synonym value="Fire-Fans"/>
+			</heading>
+			<heading id="FireGrateFireEq" title="Fire Grate">
+				<synonym value="Fire Grates"/>
+				<synonym value="Fire-Grate"/>
+				<synonym value="Fire-Grates"/>
+			</heading>
+			<heading id="FireGridFireEq" title="Fire Grid">
+				<synonym value="Fire Grids"/>
+				<synonym value="Fire-Grid"/>
+				<synonym value="Fire-Grids"/>
+				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
+			</heading>
+			<heading id="FireHookFireEq" title="Fire Hook">
+				<synonym value="Fire Hooks"/>
+				<synonym value="Fire-Hook"/>
+				<synonym value="Fire-Hooks"/>
+			</heading>
+			<heading id="FirePistonFireEq" title="Fire Piston">
+				<synonym value="Fire Pistons"/>
+				<synonym value="Fire-Piston"/>
+				<synonym value="Fire-Pistons"/>
+			</heading>
+			<heading id="FireStarters" title="Fire Starters">
+				<synonym value="Fire Starter"/>
+				<synonym value="Firestarter"/>
+				<synonym value="Firestarters"/>
+				<synonym value="Fire-Starter"/>
+				<synonym value="Fire-Starters"/>
+				<heading id="CigaretteLighterFireEq" title="Cigarette Lighter" noMatch="true"/>
+				<heading id="FireDrill" title="Fire Drill">
+					<synonym value="Fire Drills"/>
+					<synonym value="Fire-Drill"/>
+					<synonym value="Fire-Drills"/>
+				</heading>
+				<heading id="FireLighterFireEq" title="Fire Lighter">
+					<synonym value="Fire Lighters"/>
+					<synonym value="Fire-Lighter"/>
+					<synonym value="Fire-Lighters"/>
+				</heading>
+				<heading id="FireSteelFireEq" title="Fire Steel">
+					<synonym value="Fire Steels"/>
+					<synonym value="Fire-Steel"/>
+					<synonym value="Fire-Steels"/>
+				</heading>
+				<heading id="FlintFireEq" title="Flint">
+					<synonym value="Flints"/>
+				</heading>
+				<heading id="Lighter" title="Lighter">
+					<synonym value="Lighters"/>
+				</heading>
+				<heading id="MatchFireEq" title="Match">
+					<synonym value="Matches"/>
+				</heading>
+				<heading id="MatchBoxFireEq" title="Match Box">
+					<synonym value="Match Boxes"/>
+					<synonym value="Match-Box"/>
+					<synonym value="Match-Boxes"/>
+					<synonym value="Box of Matches"/>
+					<synonym value="Boxed Matches"/>
+					<synonym value="Matchbox"/>
+					<synonym value="Matchboxes"/>
+					<implies facet="ActivityorContext" cat="DrugSmoking"/>
+					<implies facet="ObjectName" cat="Containers"/>
+				</heading>
+				<heading id="MatchBoxHolderFireEq" title="Match Box Holder">
+					<synonym value="Match Box Holders"/>
+					<synonym value="Matchbox Holder"/>
+					<synonym value="Matchbox Holders"/>
+					<synonym value="Match-Box Holder"/>
+					<synonym value="Match-Box Holders"/>
+					<synonym value="Matchbox-Holder"/>
+					<synonym value="Matchbox-Holders"/>
+				</heading>
+				<heading id="StrikeALightFireEq" title="Strike-a-Light">
+					<synonym value="Strike-a-Lights"/>
+				</heading>
+			</heading>
+			<heading id="FireStickFireEq" title="Fire Stick">
+				<synonym value="Fire Sticks"/>
+				<synonym value="Fire-Stick"/>
+				<synonym value="Fire-Sticks"/>
+			</heading>
+			<heading id="FireStickCntnrFireEq" title="Fire Stick Container">
+				<synonym value="Fire Stick Containers"/>
+				<synonym value="Fire-Stick-Container"/>
+				<synonym value="Fire-Stick-Containers"/>
+				<implies facet="ObjectName" cat="Containers"/>
+			</heading>
+			<heading id="FireStokingEq" title="Fire Stoking equipment" noMatch="true">  <!-- New grouping term -->
+				<heading id="BellowsFireEq" title="Bellows">
+					<implies facet="ObjectName" cat="BellowsTool"/>
+				</heading>
+				<heading id="BlowTubeFireEq" title="Blow Tube">
+					<synonym value="Blow Tubes"/>
+					<synonym value="Blow-Tube"/>
+					<synonym value="Blow-Tubes"/>
+					<implies facet="ObjectName" cat="BlowTubeTool"/>
+				</heading>
+				<heading id="FaggotFireEq" title="Faggot">
+					<synonym value="Faggots"/>
+				</heading>
+				<heading id="FireBlowerFireEq" title="Fire Blower">
+					<synonym value="Fire Blowers"/>
+					<synonym value="Fire-Blower"/>
+					<synonym value="Fire-Blowers"/>
+				</heading>
+			</heading>
+			<heading id="FireStoneFireEq" title="Fire Stone">
+				<synonym value="Fire Stones"/>
+				<synonym value="Fire-Stone"/>
+				<synonym value="Fire-Stones"/>
+			</heading>
+			<heading id="FireTendingFireEq" title="Fire Tending equipment">  <!-- New grouping term -->
+				<heading id="FireRakeFireEq" title="Fire Rake">
+					<synonym value="Fire Rakes"/>
+					<synonym value="Fire-Rake"/>
+					<synonym value="Fire-Rakes"/>
+				</heading>
+				<heading id="FireSawFireEq" title="Fire Saw">
+					<synonym value="Fire Saws"/>
+					<synonym value="Fire-Saw"/>
+					<synonym value="Fire-Saws"/>
+				</heading>
+				<heading id="FireShovelFireEq" title="Fire Shovel">
+					<synonym value="Fire Shovels"/>
+					<synonym value="Fire-Shovel"/>
+					<synonym value="Fire-Shovels"/>
+				</heading>
+				<heading id="FireTongsFireEq" title="Fire Tongs">
+					<synonym value="Fire Tong"/>
+					<synonym value="Fire-Tong"/>
+					<synonym value="Fire-Tongs"/>
+				</heading>
+				<heading id="PokerFireEq" title="Poker"> <!-- Disambiguate from card game -->
+					<synonym value="Pokers"/>
+				</heading>
+			</heading>
+			<heading id="FuelFireEq" title="Fuel">
+				<synonym value="Fuels"/>
+			</heading>
+			<heading id="LightingEquipment" title="Lighting Equipment">
+				<synonym value="Lighting Items"/>
+				<heading id="CandelabrumLghtEq" title="Candelabrum">
+					<synonym value="Candelabrums"/>
+				</heading>
+				<heading id="CandelonLghtEq" title="Candelon">
+					<synonym value="Candelons"/>
+					<implies facet="ObjectName" cat="CandelonRelRit"/>
+				</heading>
+				<heading id="CandleLghtEq" title="Candle">
+					<synonym value="Candles"/>
+				</heading>
+				<heading id="CandleBoxLghtEq" title="Candle Box">
+					<synonym value="Candle Boxes"/>
+				</heading>
+				<heading id="CandleCaseLghtEq" title="Candle Case">
+					<synonym value="Candle Cases"/>
+				</heading>
+				<heading id="CandleHolderLghtEq" title="Candle Holder">
+					<synonym value="Candle Holders"/>
+				</heading>
+				<heading id="CandleMoldLghtEq" title="Candle Mold">
+					<synonym value="Candle Molds"/>
+				</heading>
+				<heading id="CandleScreenLghtEq" title="Candle Screen">
+					<synonym value="Candle Screens"/>
+				</heading>
+				<heading id="CandlestickHolderLghtEq" title="Candlestick Holder">
+					<synonym value="Candlestick Holders"/>
+				</heading>
+				<heading id="CeilingLightLghtEq" title="Ceiling Light">
+					<synonym value="Ceiling Lights"/>
+				</heading>
+				<heading id="ChandelierLghtEq" title="Chandelier">
+					<synonym value="Chandeliers"/>
+				</heading>
+				<heading id="LampLightingLghtEq" title="Lamp">
+					<synonym value="Lamps"/>
+				</heading>
+				<heading id="LampBracketLghtEq" title="Lamp Bracket">
+					<synonym value="Lamp Brackets"/>
+				</heading>
+				<heading id="LampFillerLghtEq" title="Lamp Filler">
+					<synonym value="Lamp Fillers"/>
+					<implies facet="ObjectName" cat="LampFillerVsl"/>
+					<heading id="GuttusLghtEq" title="Guttus (Lamp Feeder/Filler)">
+						<synonym value="Guttus"/>
+					</heading>
+				</heading>
+				<heading id="LampHolderLghtEq" title="Lamp Holder">
+					<synonym value="Lamp Holders"/>
+				</heading>
+				<heading id="LampHookLghtEq" title="Lamp Hook">
+					<synonym value="Lamp Hooks"/>
+				</heading>
+				<heading id="LampOrnamentLghtEq" title="Lamp Ornament">
+					<synonym value="Lamp Ornaments"/>
+				</heading>
+				<heading id="LampStandLghtEq" title="Lamp Stand">
+					<synonym value="Lamp Stands"/>
+				</heading>
+				<heading id="LanternLghtEq" title="Lantern">
+					<synonym value="Lanterns"/>
+					<excl value="Lantern Slide"/>
+					<excl value="Lantern Slides"/>
+				</heading>
+				<heading id="LusterLghtEq" title="Luster">
+					<synonym value="Lusters"/>
+					<synonym value="Lustre"/>
+					<synonym value="Lustres"/>
+				</heading>
+				<heading id="PeermanLghtEq" title="Peerman">
+					<synonym value="Peermans"/>
+				</heading>
+				<heading id="RushLightHolderLghtEq" title="Rush Light Holder">
+					<synonym value="Rush Light Holders"/>
+				</heading>
+				<heading id="SnufferLghtEq" title="Snuffer">
+					<synonym value="Snuffers"/>
+				</heading>
+				<heading id="SnufferStandLghtEq" title="Snuffer Stand" noMatch="true"/>
+				<heading id="TaperHolderFireEq" title="Taper Holder">
+					<synonym value="Taper Holders"/>
+					<synonym value="Taper-Holder"/>
+					<synonym value="Taper-Holders"/>
+				</heading>
+				<heading id="TorchLghtEq" title="Torch">
+					<synonym value="Torches"/>
+					<synonym value="Torchs"/> <!-- Misspelling -->
+					<implies facet="ObjectName" cat="TorchFireEq"/>
+				</heading>
+				<heading id="TorchHolderLghtEq" title="Torch Holder">
+					<synonym value="Torch Holders"/>
+					<synonym value="Torch-Holder"/>
+					<synonym value="Torch-Holders"/>
+				</heading>
+				<heading id="WickLghtEq" title="Wick">
+					<synonym value="Wicks"/>
+				</heading>
+				<heading id="WickHolderLghtEq" title="Wick Holder">
+					<synonym value="Wick Holders"/>
+				</heading>
+				<heading id="WickPullerLghtEq" title="Wick Puller">
+					<synonym value="Wick Pullers"/>
+				</heading>
+				<heading id="WickTrimmerLghtEq" title="Wick Trimmer">
+					<synonym value="Wick Trimmers"/>
+				</heading>
+			</heading>
+			<heading id="MatchExtinguisherFireEq" title="Match Extinguisher">
+				<synonym value="Match Extinguishers"/>
+				<synonym value="Match-Extinguisher"/>
+				<synonym value="Match-Extinguishers"/>
+			</heading>
+			<heading id="SpillFireEq" title="Spill">
+				<synonym value="Spills"/>
+			</heading>
+			<heading id="SpillVaseFireEq" title="Spill Vase">
+				<synonym value="Spill Vases"/>
+				<synonym value="Spill-Vase"/>
+				<synonym value="Spill-Vases"/>
+			</heading>
+			<heading id="TinderBoxFireEq" title="Tinder Box">
+				<synonym value="Tinder Boxes"/>
+				<synonym value="Tinder-Box"/>
+				<synonym value="Tinder-Boxes"/>
+			</heading>
+			<heading id="TorchFireEq" title="Torch" noMatch="true"/>
+			<heading id="TuyereFireEq" title="Tuyere">
+				<synonym value="Tuyeres"/>
+			</heading>
+		</heading>
 		<heading id="FlakedFlakeTool" title="Flaked Flake">
 			<synonym value="Flaked Flakes"/>
 		</heading>
@@ -14276,532 +14267,553 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="VisualRepresentation" title="Visual Representations">
-		<heading id="AlbumVisRep" title="Album">
-			<synonym value="Albums"/>
+	<!-- <heading id="Artifacts" title="Artifacts"> PARSE OUT AND MERGE ELSEWHERE
+		<synonym value="Artifact"/>
+		<synonym value="Artefact"/>
+		<synonym value="Artefacts"/>
+		••• 159 / 1606:
+		<heading id="BallArtifact" title="Ball">
+		<synonym value="Balls"/>
+		<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 		</heading>
-		<heading id="AlphabetVisRep" title="Alphabet" noMatch="true"/>
-		<heading id="BanknoteVisRep" title="Banknote" noMatch="true"/>
-		<heading id="BookofPrintsVisRep" title="Book of Prints">
-			<synonym value="Books of Prints"/>
+		••• 0 / 51:
+		<heading id="CarvedStone" title="Carved Stone">
+		<implies facet="ActivityorContext" cat="Carving"/>
+		<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
 		</heading>
-		<heading id="BookDecorationVisRep" title="Book Decoration">
-			<synonym value="Book Decorations"/>
-			<synonym value="Book-Decoration"/>
-			<synonym value="Book-Decorations"/>
+		••• 233 / 3325:
+		<heading id="Disc" title="Disc">
+		<synonym value="Discs"/>
+		<synonym value="Disk"/>
+		<synonym value="Disks"/>
 		</heading>
-		<heading id="DiptychVisRep" title="Diptych">
-			<synonym value="Diptychs"/>
-			<heading id="Semi-DiptychVisRep" title="Semi-Diptych">
-				<synonym value="Semi-Diptychs"/>
-				<synonym value="SemiDiptych"/>
-				<synonym value="SemiDiptychs"/>
-			</heading>
+		••• 0 / 1:
+		<heading id="EngravedStone" title="Engraved Stone"/>
+		•••  0 / 4:
+		<heading id="RetouchedPiece" title="Retouched Piece"/>
+		•••  427 / 876:
+		<heading id="Rod" title="Rod">
+		<synonym value="Rods"/>
+		<excl value="Single rod"/>  A coiled basketry technique
 		</heading>
-		<heading id="EmblemVisRep" title="Emblem">
-			<synonym value="Emblems"/>
-		</heading>
-		<heading id="IconVisRep" title="Icon" noMatch="true"/>
-		<heading id="IdolVisRep" title="Idol" noMatch="true"/>
-		<heading id="ImpressionVisRep" title="Impression" noMatch="true"/>
-		<heading id="MedalVisRep" title="Medal">
-			<synonym value="Medals"/>
-		</heading>
-		<heading id="MedallionVisRep" title="Medallion">
-			<synonym value="Medallions"/>
-		</heading>
-		<heading id="MedleyVisRep" title="Medley">
-			<synonym value="Medleys"/>
-		</heading>
-		<heading id="ModernCartoonVisRep" title="Modern Cartoon">
-			<synonym value="Modern Cartoons"/>
-		</heading>
-		<heading id="PaintingsVisRep" title="Paintings">
-			<synonym value="Painting"/>
-			<heading id="EKambanVisRep" title="E-Kamban" noMatch="true"/>
-			<heading id="FanPaintingVisRep" title="Fan Painting">
-				<synonym value="Fan Paintings"/>
-				<synonym value="Fan-Painting"/>
-				<synonym value="Fan-Paintings"/>
-			</heading>
-			<heading id="GakuVisRep" title="Gaku">
-				<synonym value="Gakus"/>
-			</heading>
-			<heading id="MiniatureVisRep" title="Miniature" noMatch="true">
-				<synonym value="Ptg Miniature"/>
-			</heading>
-			<heading id="MummyPortraitVisRep" title="Mummy Portrait">
-				<synonym value="Mummy Portraits"/>
-				<synonym value="Mummy-Portrait "/>
-				<synonym value="Mummy-Portraits"/>
-			</heading>
-			<heading id="OtsuEVisRep" title="Otsu-E">
-				<synonym value="Otsu-Es"/>
-			</heading>
-			<heading id="PataVisRep" title="Pata">
-				<synonym value="Patas"/>
-			</heading>
-			<heading id="PichwaiVisRep" title="Pichwai">
-				<synonym value="Pichwais"/>
-			</heading>
-			<heading id="ShikishiVisRep" title="Shikishi">
-				<synonym value="Shikishis"/>
-			</heading>
-			<heading id="WallPaintingVisRep" title="Wall Painting">
-				<synonym value="Wall Paintings"/>
-				<synonym value="Wall-Painting"/>
-				<synonym value="Wall-Paintings"/>
-				<heading id="TombPaintingVisRep" title="Tomb Painting">
-					<synonym value="Tomb Paintings"/>
-					<synonym value="Tomb-Painting"/>
-					<synonym value="Tomb-Paintings"/>
-				</heading>
-			</heading>
-		</heading>
-		<heading id="PapyrusVisRep" title="Papyrus" noMatch="true"/>
-		<!-- <heading id="PatternVisRep" title="Pattern"> Disambiguate
-			<synonym value="Patterns"/>
-			<implies facet="ObjectName" cat="PatternProdRepl"/>
 		</heading> -->
-		<heading id="PhotographsVisRep" title="Photographic Images">
-			<synonym value="Film"/> <!-- Disambiguate -->
-			<heading id="NegativesVisRep" title="Negatives">
-				<synonym value="Negative"/> <!-- Check for possible exclusions -->
-				<synonym value="photograph   negative"/>
-				<heading id="GlassPlateNegativeVisRep" title="Glass Plate Negative">
-					<synonym value="film glass"/>
-					<synonym value="film   glass plate"/>
-					<synonym value="glass plate"/>
-					<synonym value="Glass Plate Negatives"/>
-					<synonym value="Glass-Plate Negative"/>
-					<synonym value="Glass-Plate Negatives"/>
-					<synonym value="Glassplate Negative"/>
-					<synonym value="Glassplate Negatives"/>
-				</heading>
-			</heading>
-			<heading id="PositivesVisRep" title="Photographic Prints">
-				<synonym value="Positive"/> <!-- Check for possible exclusions -->
-				<synonym value="Positives"/>
-				<synonym value="Photograph"/>
-				<synonym value="Photographs"/>
-				<synonym value="Photo"/>
-				<synonym value="Photos"/>
-				<synonym value="Photographic Print"/>
-			</heading>
-			<heading id="ColorSlidesVisRep" title="Color Slides">
-				<synonym value="Color Slide"/>
-				<synonym value="Color Transparencies"/>
-				<synonym value="Color Transparency"/>
-				<synonym value="BW Slide"/>
-				<synonym value="B/W Slide"/>
-				<synonym value="B&amp;W Slide"/>
-				<synonym value="Slides"/>
-				<synonym value="Slide"/>
-				<excl value="Bolo Tie Slide"/>
-				<excl value="Bolo Tie Slides"/>
-				<excl value="Rock Slide"/>
-				<excl value="Rock Slides"/>
-				<excl value="Microscope"/>
-				<excl value="Microscopic"/>
-			</heading>
-			<heading id="LanternSlideVisRep" title="Lantern Slide">
-				<synonym value="Lantern Slides"/> <!-- Implies photography -->
-				<synonym value="Glass Slide"/>
-				<synonym value="Glass Slides"/>
-			</heading>
+	<!-- <heading id="ComponentsParts" title="Components &amp; Parts"> PARSE OUT AND MERGE ELSEWHERE
+		<synonym value="Component"/>
+		<synonym value="Components"/>
+		<synonym value="Part"/>
+		<synonym value="Parts"/>
+		••• 27 / 428:
+		<heading id="BarbPart" title="Barb">
+		<synonym value="Barbs"/>
 		</heading>
-		<!-- <heading id="PictureVisRep" title="Picture"> Too vague; disambiguate from "depicts", etc.
-			<synonym value="Pictures"/>
+		••• [none?]:
+		<heading id="ChuckPart" title="Chuck">
+		<synonym value="Chucks"/>
+		</heading>
+		••• 0 / 4:
+		<heading id="CogStonePart" title="Cog Stone">
+		<synonym value="Cog Stones"/>
+		<synonym value="Cog-Stone "/>
+		<synonym value="Cog-Stones"/>
+		</heading>
+		••• 1 / 2:
+		<heading id="CogWheelPart" title="Cog Wheel">
+		<synonym value="Cog Wheels"/>
+		<synonym value="Cog-Wheel"/>
+		<synonym value="Cog-Wheels"/>
+		</heading>
+		••• 0 / 1:
+		<heading id="CounterpoisePart" title="Counterpoise">
+		<synonym value="Counterpoises"/>
+		a factor, force, or influence that balances or neutralizes another : money is a good counterpoise to beauty | they see the power of Brussels as a counterpoise to that of London.
+		• archaic a state of equilibrium.
+		• a counterbalancing weight.
+		</heading>
+		••• 8 / 38:
+		<heading id="FerrulePart" title="Ferrule">
+		<synonym value="Ferrules"/>
+		a ring or cap, typically a metal one, that strengthens the end of a handle, stick, or tube and prevents it from splitting or wearing.
+		• a metal band strengthening or forming a joint.
+		</heading>
+		••• 16 / 88:
+		<heading id="FixtureFittingPart" title="Fixture or Fitting">
+		<synonym value="Fixture/Fitting"/>
+		<synonym value="Fixture/Fittings"/>
+		<synonym value="Fixture"/>
+		<synonym value="Fixtures"/>
+		<synonym value="Fitting"/>
+		<synonym value="Fittings"/>
+		</heading>
+		••• 78 / 240:
+		<heading id="FlangePart" title="Flange">
+		<synonym value="Flanges"/>
+		</heading>
+		••• 1211 / 5067:
+		<heading id="HandlePart" title="Handle">
+		<synonym value="Handles"/>
+		</heading>
+		••• 1 / 1:
+		<heading id="HubPart" title="Hub">
+		<synonym value="Hubs"/>
+		</heading>
+		••• 83 / 364:
+		<heading id="KnobPart" title="Knob">
+		<synonym value="Knobs"/>
+		</heading>
+		••• 2 / 2:
+		<heading id="LanyardPart" title="Lanyard">
+		<synonym value="Lanyards"/>
+		</heading>
+		••• 267 / 861:
+		<heading id="LoopPart" title="Loop">
+		<synonym value="Loops"/>
+		</heading>
+		••• 4 / 31:
+		<heading id="NozzlePart" title="Nozzle">
+		<synonym value="Nozzles"/>
+		</heading>
+		••• 1 / 3:
+		<heading id="PistonPart" title="Piston">
+		<synonym value="Pistons"/>
+		</heading>
+		••• 0 / 10:
+		<heading id="PivotPart" title="Pivot">
+		<synonym value="Pivots"/>
+		</heading>
+		••• 16 / 116:
+		<heading id="ProngPart" title="Prong">
+		<synonym value="Prongs"/>
+		</heading>
+		••• 76 / 1317:
+		<heading id="ShaftPart" title="Shaft">
+		<synonym value="Shafts"/>
+		</heading>
+		••• 183 / 433:
+		<heading id="ShankPart" title="Shank">
+		<synonym value="Shanks"/>
+		</heading>
+		••• 13 /156:
+		<heading id="SocketPart" title="Socket">
+		<synonym value="Sockets"/>
+		</heading>
+		••• [none?]:
+		<heading id="SpindleWhorlPart" title="Spindle Whorl">
+		<synonym value="Spindle Whorls"/>
+		<synonym value="Spindle-Whorl"/>
+		<synonym value="Spindle-Whorls"/>
+		</heading>
+		••• 59 / 1165:
+		<heading id="SpringPart" title="Spring">
+		<synonym value="Springs"/>
+		</heading>
+		••• 9 / 19:
+		<heading id="StaplePart" title="Staple">
+		<synonym value="Staples"/>
+		</heading>
+		••• 2 / 8:
+		<heading id="SwivelPart" title="Swivel">
+		<synonym value="Swivels"/>
+		</heading>
+		••• 32 / 141:
+		<heading id="TerminalPart" title="Terminal">
+		<synonym value="Terminals"/>
+		</heading>
+		••• 3 / 169:
+		<heading id="TinePart" title="Tine">
+		<synonym value="Tines"/>
+		</heading>
 		</heading> -->
-		<heading id="PlaquetteVisRep" title="Plaquette">
-			<synonym value="Plaquettes"/>
+	<!-- <heading id="MiscellaneousEquipment" title="Miscellaneous Equipment"> PARSE OUT AND MERGE ELSEWHERE
+		<synonym value="Apparatus"/>
+		••• 0 / 2:
+		<heading id="BatteryMiscEq" title="Battery">
+			<synonym value="Batteries"/>
+			<synonym value="Batterys"/> <!- Misspelling ->
 		</heading>
-		<heading id="PolyptychVisRep" title="Polyptych">
-			<synonym value="Polyptychs"/>
+		••• 0 / 1:
+		<heading id="BirdstoneMiscEq" title="Birdstone">
+			<synonym value="Birdstones"/>
 		</heading>
-		<heading id="PortfolioVisRep" title="Portfolio">
-			<synonym value="Portfolios"/>
+		••• 1/3:
+		<heading id="BoardMiscEq" title="Board" noMatch="true">
+			<synonym value="Chopped board"/>
+			<synonym value="Roof board"/>
 		</heading>
-		<heading id="RickshawPanelVisRep" title="Rickshaw Panel">
-			<synonym value="Rickshaw Panels"/>
-			<synonym value="Rickshaw-Panel"/>
-			<synonym value="Rickshaw-Panels"/>
+		••• 0/2:
+		<heading id="BookEndMiscEq" title="Book End">
+			<synonym value="Book Ends"/>
+			<synonym value="Book-End"/>
+			<synonym value="Book-Ends"/>
 		</heading>
-		<heading id="RubbingVisRep" title="Rubbing">
-			<synonym value="Rubbings"/>
+		••• 0/1:
+		<heading id="BouquetMiscEq" title="Bouquet">
+			<synonym value="Bouquets"/>
 		</heading>
-		<heading id="ScrollVisRep" title="Scroll" noMatch="true"/>
-		<heading id="Sculpture" title="Sculpture">
-			<synonym value="Carving"/>
-			<synonym value="Carvings"/>
-			<synonym value="Sculptures"/>
-			<synonym value="Woodcarving"/>
-			<synonym value="Woodcarvings"/>
-			<synonym value="Wood carving"/>
-			<synonym value="Wood carvings"/>
-			<synonym value="Wood-carving"/>
-			<synonym value="Wood-carvings"/>
-			<heading id="FigureSculpture" title="Figure">
-				<heading id="AcroterionFigure" title="Acroterion">
-					<synonym value="Acroterions"/>
-				</heading>
-				<heading id="BustFigure" title="Bust">
-					<synonym value="Busts"/>
-					<excl value="Half Dollar"/>
-					<excl value="Half-Dollar"/>
-				</heading>
-				<heading id="CaryatidFigure" title="Caryatid">
-					<synonym value="Caryatids"/>
-				</heading>
-				<heading id="Dipalakshmi" title="Dipa Lakshmi">
-					<synonym value="Dipa Lakshmis"/>
-					<synonym value="Dipa-Lakshmi"/>
-					<synonym value="Dipa-Lakshmis"/>
-				</heading>
-				<heading id="DivinationFigure" title="Divination Figure">
-					<synonym value="Divination Figures"/>
-				</heading>
-				<heading id="DollFigure" title="Doll">
-					<synonym value="Dolls"/>
-					<heading id="CeremonialDollDoll" title="Ceremonial Doll">
-						<synonym value="Ceremonial Dolls"/>
-						<implies facet="ObjectName" cat="CeremonialDollRelRit"/>
-					</heading>
-					<heading id="KachinaDoll" title="Kachina Doll"> <!-- Traditionally for use by girls -->
-						<synonym value="Kachina Dolls"/>
-						<synonym value="Kachina-Doll"/>
-						<synonym value="Kachina-Dolls"/>
-						<synonym value="Kachina"/>
-						<synonym value="Kachinas"/>
-						<synonym value="Katsina"/>
-						<synonym value="Katsinam"/>
-						<!-- Implies root of cottonwood tree -->
-						<implies facet="ActivityorContext" cat="Carving"/>
-						<implies facet="TechniqueDesignorDecoration" cat="Carved"/>
-						<implies facet="ObjectName" cat="KachinaDollRelRit"/>
-						<heading id="AholiHopiKachina" title="Aholi Kachina">
-							<!--From <http://www.aholi.com/>:
-								
-								Aholi is the companion (Kachina Chief's Lieutenant) of Eototo during *Powamu
-								and aids him in the task of bringing rain. While Eototo is present on all
-								three mesas, Aholi visits only on Third Mesa.
-								
-								Aholi is a beautiful kachina in his multicolored cloak and tall blue helmet
-								but is of less importance than the very plain Eototo. On the back of his cloak
-								is a likeness of Muyingwa, one of the Germ Gods responsible for the germination
-								of the seeds. Aholi wears a white kilt, a sash, and a fox skin. He wears red
-								moccasins and carries a staff or wand.
-								
-								Aholi carries a wand marked with a star on the end, and as the plumed water
-								serpent, two jars dedicated to him are painted with pointed star emblems.
-								
-								Aholi is the patron saint (wuya) of the Pikyas or Young Corn Clan who care for
-								the seed corn. The colors on his cloak are said to represent the flowers and
-								brightness of summer.
-								
-								Legend has it that the Aholi and Eototo kachinas were partners ages ago in a
-								different land. Aholi stayed behind to fight a rear guard action, then had his
-								throat cut to allow Eototo time to escape as leader. After many lengthy migrations
-								throughout the Southwest, they were reunited at Old Oraibi.
-								
-								Aholi's name appears to derive from the Hopi word ahulti, or "return" which was
-								the promise that the departing Quetzalcoatl made his people when he fled the
-								Toltec capital of Tula for the mythical land of Tlillan.
-								
-								* The Powamu Ceremony is also called the Bean Planting Festival. It is observed
-								in late January or early February and lasts 8 days. -->
-						</heading>
-						<heading id="BearHopiKachina" title="Bear Kachina">
-							<!--From <http://bear.kachina.us/index.htm>:
-								The Bear Kachina is of such great strength that it is felt he can cure the sick.
-								He appears in the kachina return or Soyal of First Mesa as the watchman or side
-								dancer for the Chakwaina. In this role he appears a little different that he does
-								in this illustration. He may come singly or in a group during the Palolokong
-								Dance, and he may appear in a number of colors such as Sakwa Honau (Blue Bear) or
-								Kocha Honau (White Bear). Probably he is most familiar in the Mixed Kachina Dance,
-								dancing outside the lines. His most distinctive features is the presence of a
-								bear footprint on either cheek.-->
-						</heading>
-						<heading id="ClownHopiKachina" title="Clown Kachina">
-							<synonym value="Clown Figure Kachina"/>
-							<synonym value="Clown Figure Kachinas"/>
-							<synonym value="Clown-Figure Kachina"/>
-							<synonym value="Clown-Figure Kachinas"/>
-							<synonym value="Clown Kachinas"/>
-						</heading>
-						<heading id="CrowMotherHopiKachina" title="Crow Mother"/>
-						<heading id="EagleHopiKachina" title="Eagle Kachina">
-							<synonym value="Eagle Kachinas"/>
-							<synonym value="Bird Kachina"/>
-							<synonym value="Bird Kachinas"/>
-						</heading>
-						<heading id="EototoHopiKachina" title="Eototo Kachina"/>
-						<heading id="FoxHopiKachina" title="Fox Kachina"/>
-						<heading id="KokopelliHopiKachina" title="Kokopelli Kachina"/>
-						<heading id="MorningSingerHopiKachina" title="Morning Singer Kachina"/>
-						<heading id="MudheadHopiKachina" title="Mudhead Kachina">
-							<synonym value="Koyemsi"/>
-							<!-- From <http://mudhead.kachina.us/index.htm>:
-								The Koyemsi, or Mudhead Kachina, is a clown who may be seen in most Hopi ceremonies.
-								Mudhead Kachinas drum, dance, play games with the audience, and may act as
-								announcers for events. They often give prizes or rewards for the races and
-								guessing games they organize. The term "mudhead" comes from their masks which
-								have mud applied to them.
-								
-								Most of the time they accompany other kachina; probably the only time when they
-								do not appear with other personages is during the Night Dances. Koyemsi are usually
-								the ones that play games with the audience to the accompaniment of rollicking tunes.
-								These games are generally guessing games or simple attempts to balance objects of
-								performances of some common act and the rewards are prizes of food or clothing.
-								
-								They may appear as a chorus, and on First Mesa and possibly other villages their
-								songs are in Zuni. During the rests in a dance, they may engage in games with the
-								boys and girls in the audience. At other times, only a single Mudhead may appear
-								as a drummer for a group. Should a dancer not have the proper mask or be late in
-								arriving, he can easily become a Mudhead by donning that mask. These kachinas
-								appear in almost every Hopi dance.-->
-						</heading>
-						<heading id="SnowHopiKachina" title="Snow Kachina">
-							<synonym value="Snow Kachinas"/>
-							<synonym value="Snow Figure Kachina"/>
-							<synonym value="Snow Figure Kachinas"/>
-							<synonym value="Snow-Figure Kachina"/>
-							<synonym value="Snow-Figure Kachinas"/>
-						</heading>
-						<heading id="SunHopiKachina" title="Sun Kachina">
-							<synonym value="Sun Kachinas"/>
-							<synonym value="Sun Figure Kachina"/>
-							<synonym value="Sun Figure Kachinas"/>
-							<synonym value="Sun-Figure Kachina"/>
-							<synonym value="Sun-Figure Kachinas"/>
-						</heading>
-						<heading id="WolfHopiKachina" title="Wolf Kachina"/>
-						<heading id="WupamoHopiKachina" title="Wupamo Kachina"/>
-						<!-- ************************ -->
-						<heading id="AnimalFigureKachina" title="Animal Figure">
-							<synonym value="Animal Kachinas"/>
-							<synonym value="Animal Kachina"/>
-						</heading>
-						<heading id="ChiefFigureKachina" title="Chief Figure">
-							<synonym value="Chief Kachinas"/>
-							<synonym value="Chief Kachina"/>
-						</heading>
-						<heading id="GuardFigureKachina" title="Guard Figure">
-							<synonym value="Guard Kachinas"/>
-							<synonym value="Guard Kachina"/>
-						</heading>
-						<heading id="OgreFigureKachina" title="Ogre Figure">
-							<synonym value="Ogre Kachinas"/>
-							<synonym value="Ogre Kachina"/>
-						</heading>
-						<heading id="PlantFigureKachina" title="Plant Figure">
-							<synonym value="Plant Kachinas"/>
-							<synonym value="Plant Kachina"/>
-						</heading>
-						<heading id="RunnerFigureKachina" title="Runner Figure">
-							<synonym value="Runner Kachinas"/>
-							<synonym value="Runner Kachina"/>
-						</heading>
-						<heading id="WomenFigureKachina" title="Women Figure">
-							<synonym value="Women Kachinas"/>
-							<synonym value="Women Kachina"/>
-							<synonym value="Woman Kachinas"/>
-							<synonym value="Woman Kachina"/>
-							<synonym value="Female Kachinas"/>
-							<synonym value="Female Kachina"/>
-						</heading>
-					</heading>
-					<heading id="RagDoll" title="Rag Doll">
-						<synonym value="Rag Dolls"/>
-					</heading>
-				</heading>
-				<heading id="FigureHead" title="Figure-Head">
-					<synonym value="Figure-Heads"/>
-				</heading>
-				<heading id="FigurineFigure" title="Figurine">
-					<synonym value="Figurines"/>
-				</heading>
-				<heading id="HermFigure" title="Herm">
-					<synonym value="Herms"/>
-				</heading>
-				<heading id="MushroomStone" title="Mushroom Stone">
-					<synonym value="Mushroom Stones"/>
-				</heading>
-				<heading id="NaukraticFigure" title="Naukratic Figure">
-					<synonym value="Naukratic Figures"/>
-				</heading>
-				<heading id="PuppetFigures" title="Puppets">
-					<synonym value="Puppet"/>
-					<implies facet="ObjectName" cat="PuppetPerfArt"/>
-					<heading id="HandPuppets" title="Hand Puppets">
-						<synonym value="Hand Puppet"/>
-					</heading>
-					<heading id="Marionettes" title="Marionettes">
-						<synonym value="Marionette"/>
-					</heading>
-					<heading id="ShadowPuppets" title="Shadow Puppets">
-						<synonym value="Shadow Play Figures"/>
-						<synonym value="Shadow Play Figure"/>
-						<heading id="HajivatShadowFigure" title="Hajivat">
-							<implies facet="Culture" cat="TurkishGroups"/>
-						</heading>
-						<heading id="HodjaShadowFigure" title="Hodja (The Religious Leader)">
-							<synonym value="Hodja"/>
-							<implies facet="Culture" cat="TurkishGroups"/>
-						</heading>
-						<heading id="IskeleKahyasiShadowFigure" title="Iskele Kahyasi (Istanbul Pierman)">
-							<synonym value="Iskele Kahyasi"/>
-							<synonym value="Pierman of Istanbul"/>
-							<implies facet="Culture" cat="TurkishGroups"/>
-						</heading>
-						<heading id="KaragozShadowFigure" title="Karagöz (The Black-Eyed Man)">
-							<synonym value="Karagöz"/>
-							<synonym value="Karagoz"/>
-							<implies facet="Culture" cat="TurkishGroups"/>
-						</heading>
-						<heading id="TerzinikoShadowFigure" title="Terzi Niko (The Greek Tailor Niko)">
-							<synonym value="Terzi Niko"/>
-							<synonym value="The Greek Tailor Niko"/>
-							<implies facet="Culture" cat="TurkishGroups"/>
-						</heading>
-					</heading>
-				</heading>
-				<heading id="ScareDevilFigure" title="Scare-Devil">
-					<synonym value="Scare-Devils"/>
-				</heading>
-				<heading id="ShabtiFigure" title="Shabti" noMatch="true"/>
-				<heading id="StaffGod" title="Staff God">
-					<synonym value="Staff Gods"/>
-				</heading>
-				<heading id="Statue" title="Statue">
-					<synonym value="Statues"/>
-					<heading id="Statuette" title="Statuette">
-						<synonym value="Statuettes"/>
-					</heading>
-				</heading>
-				<heading id="VotiveFigure" title="Votive Figure">
-					<synonym value="Votive Figures"/>
-					<heading id="EyeIdol" title="Eye Idol">
-						<synonym value="Eye Idols"/>
-					</heading>
-					<heading id="PaddleDoll" title="Paddle Doll">
-						<synonym value="Paddle Dolls"/>
-					</heading>
-				</heading>
-			</heading>
-			<heading id="LingaSculpture" title="Linga">
-				<synonym value="Lingas"/>
-				<implies facet="ObjectName" cat="LingaRelRit"/>
-			</heading>
-			<heading id="Monuminscription" title="Monumental Inscription" noMatch="true"/>
-			<heading id="OkimonoSculpt" title="Okimono">
-				<synonym value="Okimonos"/>
-			</heading>
-			<heading id="PadukaSculpture" title="Paduka" noMatch="true"/>
-			<heading id="Petroglyph" title="Petroglyph">
-				<synonym value="Petroglyphs"/>
-			</heading>
-			<heading id="ReliefSculpture" title="Relief">
-				<synonym value="Reliefs"/>
-			</heading>
-			<heading id="ScrimshawSculpt" title="Scrimshaw">
-				<synonym value="Scrimshaws"/>
-			</heading>
-			<heading id="TormaSculpture" title="Torma">
-				<synonym value="Tormas"/>
-			</heading>
-			<heading id="TotempoleSculpt" title="Totem Pole">
-				<synonym value="Totem Poles"/>
-				<synonym value="Totem-Pole"/>
-				<synonym value="Totem-Poles"/>
-			</heading>
-			<heading id="YoniSculpture" title="Yoni">
-				<synonym value="Yonis"/>
+		••• 71/259:
+		<heading id="ChainMiscEq" title="Chain"> Disambiguate with jewelery
+			<synonym value="Chains"/>
+		</heading>
+		••• 1/2:
+		<heading id="ChoppingBlockMiscEq" title="Chopping Block">
+			<synonym value="Chopping Blocks"/>
+			<synonym value="Chopping-Block"/>
+			<synonym value="Chopping-Blocks"/>
+		</heading>
+		••• 280/1977:
+		<heading id="CordMiscEq" title="Cord">
+			<synonym value="Cords"/>
+		</heading>
+		••• 381/1174:
+		<heading id="CoverMiscEq" title="Cover">
+			<synonym value="Covers"/>
+		</heading>
+		••• 2/48:
+		<heading id="DinnerSetMiscEq" title="Dinner Set">
+			<synonym value="Dinner Sets"/>
+			<synonym value="Dinner-Set"/>
+			<synonym value="Dinner-Sets"/>
+		</heading>
+		••• 1/2:
+		<heading id="DusterMiscEq" title="Duster">
+			<synonym value="Dusters"/>
+		</heading>
+		••• [none?]:
+		<heading id="FanMiscEq" title="Fan">
+			<synonym value="Fans"/>
+		</heading>
+		••• 12/120:
+		<heading id="FastenerMiscEq" title="Fastener">
+			<synonym value="Fasteners"/>
+		</heading>
+		••• 0/5:
+		<heading id="FeederMiscEq" title="Feeder">
+			<synonym value="Feeders"/>
+		</heading>
+		••• 0/18:
+		<heading id="FilterMiscEq" title="Filter">
+			<synonym value="Filters"/>
+		</heading>
+		••• 0/2:
+		<heading id="FireworkMiscEq" title="Firework">
+			<synonym value="Fireworks"/>
+		</heading>
+		••• 38/160:
+		<heading id="FloatMiscEq" title="Float">
+			<synonym value="Floats"/>
+		</heading>
+		••• 180/622:
+		<heading id="FrameMiscEq" title="Frame">
+			<synonym value="Frames"/>
+		</heading>
+		••• 249/853:
+		<heading id="FringeMiscEq" title="Fringe">
+			<synonym value="Fringes"/>
+		</heading>
+		••• 0/1:
+		<heading id="GratingMiscEq" title="Grating">
+			<synonym value="Gratings"/>
+		</heading>
+		••• 13/219:
+		<heading id="GridMiscEq" title="Grid">
+			<synonym value="Grids"/>
+		</heading>
+		••• 8/72:
+		<heading id="GuardMiscEq" title="Guard">
+			<synonym value="Guards"/>
+		</heading>
+		••• 15/23:
+		<heading id="HangerMiscEq" title="Hanger">
+			<synonym value="Hangers"/>
+		</heading>
+		••• 0/3:
+		<heading id="HeaterMiscEq" title="Heater">
+			<synonym value="Heaters"/>
+		</heading>
+		••• 129/234:
+		<heading id="HoopMiscEq" title="Hoop">
+			<synonym value="Hoops"/>
+			<excl value="Belt"/>
+		</heading>
+		••• 9/30:
+		<heading id="LadderMiscEq" title="Ladder">
+			<synonym value="Ladders"/>
+		</heading>
+		••• 
+		<heading id="LidMiscEq" title="Lid">
+			<synonym value="Lids"/>
+		</heading>
+		••• 5/43:
+		<heading id="MarkerMiscEq" title="Marker">
+			<synonym value="Markers"/>
+			<excl value="grave"/> <!- Disambiguates from grave markers ->
+		</heading>
+		••• 58/231:
+		<heading id="MirrorMiscEq" title="Mirror">
+			<synonym value="Mirrors"/>
+			<implies facet="ActivityorContext" cat="GroomingPersonal"/>
+		</heading>
+		••• 8/57:
+		<heading id="NapkinRingMiscEq" title="Napkin Ring">
+			<synonym value="Napkin Rings"/>
+			<synonym value="Napkin-Ring"/>
+			<synonym value="Napkin-Rings"/>
+		</heading>
+		••• 0/42:
+		<heading id="NooseMiscEq" title="Noose">
+			<synonym value="Nooses"/>
+		</heading>
+		••• 467/8142:
+		<heading id="OrnamentMiscEq" title="Ornament">
+			<synonym value="Ornaments"/>
+		</heading>
+		••• 7/37:
+		<heading id="PadMiscEq" title="Pad">
+			<synonym value="Pads"/>
+		</heading>
+		••• 99/379:
+		<heading id="PegMiscEq" title="Peg">
+			<synonym value="Pegs"/>
+		</heading>
+		••• 0/1:
+		<heading id="PintleMiscEq" title="Pintle">
+			<synonym value="Pintles"/>
+		</heading>
+		••• 7/36:
+		<heading id="PlankMiscEq" title="Plank">
+			<synonym value="Planks"/>
+		</heading>
+		••• 296/405:
+		<heading id="PlaqueMiscEq" title="Plaque">
+			<synonym value="Plaques"/>
+		</heading>
+		••• 45/220:
+		<heading id="PlugMiscEq" title="Plug">
+			<synonym value="Plugs"/>
+		</heading>
+		••• 389/23179:
+		<heading id="PointMiscEq" title="Point">
+			<synonym value="Points"/>
+		</heading>
+		••• 78/365:
+		<heading id="PoleMiscEq" title="Pole">
+			<synonym value="Poles"/>
+		</heading>
+		••• 17/59:
+		<heading id="PulleyMiscEq" title="Pulley">
+			<synonym value="Pulleys"/>
+		</heading>
+		••• 3/22:
+		<heading id="PumpMiscEq" title="Pump">
+			<synonym value="Pumps"/>
+		</heading>
+		••• 4/36:
+		<heading id="RackMiscEq" title="Rack">
+			<synonym value="Racks"/>
+		</heading>
+		••• 2/200:
+		<heading id="ReelMiscEq" title="Reel">
+			<synonym value="Reels"/>
+		</heading>
+		••• 0/3:
+		<heading id="ReflectorMiscEq" title="Reflector">
+			<synonym value="Reflectors"/>
+		</heading>
+		••• 58/391:
+		<heading id="RestMiscEq" title="Rest">
+			<synonym value="Rests"/>
+		</heading>
+		••• [none?]:
+		<heading id="RingMiscEq" title="Ring">
+			<synonym value="Rings"/>
+			<excl value="RingJewelery"/>
+		</heading>
+		••• 51/60:
+		<heading id="RoundelMiscEq" title="Roundel">
+			<synonym value="Roundels"/>
+		</heading>
+		••• 1/3:
+		<heading id="ScareMiscEq" title="Scare"> <!- Disambiguate ->
+			<synonym value="Scares"/>
+		</heading>
+		••• 4/537:
+		<heading id="ScreenMiscEq" title="Screen"> <!- Disambiguate ->
+			<synonym value="Screens"/>
+		</heading>
+		••• 0/31:
+		<heading id="SiphonMiscEq" title="Siphon">
+			<synonym value="Siphons"/>
+		</heading>
+		••• 28/654:
+		<heading id="SlabMiscEq" title="Slab">
+			<synonym value="Slabs"/>
+		</heading>
+		••• 26/225:
+		<heading id="SouvenirMiscEq" title="Souvenir">
+			<synonym value="Souvenirs"/>
+			••• 0/11:
+			<heading id="SouvenirSpoonUtensilMiscEq" title="Souvenir Spoon">
+				<synonym value="Souvenir Spoons"/>
 			</heading>
 		</heading>
-		<heading id="SignBoardVisRep" title="Sign Board" noMatch="true"/>
-		<heading id="TetraptychVisRep" title="Tetraptych">
-			<synonym value="Tetraptychs"/>
+		••• 7/240:
+		<heading id="SpikeMiscEq" title="Spike">
+			<synonym value="Spikes"/>
 		</heading>
-		<heading id="TransparencyVisRep" title="Transparency">
-			<synonym value="Transparencies"/>
+		••• 19/350:
+		<heading id="SpoolMiscEq" title="Spool">
+			<synonym value="Spools"/>
 		</heading>
-		<heading id="TriptychVisRep" title="Triptych">
-			<synonym value="Triptychs"/>
+		••• 46/432:
+		<heading id="SpoutMiscEq" title="Spout">
+			<synonym value="Spouts"/>
 		</heading>
-		<heading id="WorksOnPaper" title="Works on Paper">
-			<heading id="BookIllustrationVisRep" title="Book Illustration">
-				<synonym value="Book Illustrations"/>
-				<synonym value="Book-Illustration"/>
-				<synonym value="Book-Illustrations"/>
+		••• 2/20:
+		<heading id="SprayMiscEq" title="Spray">
+			<synonym value="Sprays"/>
+		</heading>
+		••• 4/6:
+		<heading id="SprinklerMiscEq" title="Sprinkler">
+			<synonym value="Sprinklers"/>
+		</heading>
+		••• 10/62:
+		<heading id="SpurMiscEq" title="Spur">
+			<synonym value="Spurs"/>
+		</heading>
+		••• 1050/8200:
+		<heading id="StandsMiscEq" title="Stands">
+			<synonym value="Stand"/>
+			••• [none]:
+			<heading id="ArrowStandStndMiscEq" title="Arrow Stand">
+				<synonym value="Arrow Stands"/>
+				<synonym value="Arrow-Stand"/>
+				<synonym value="Arrow-Stands"/>
 			</heading>
-			<heading id="BookplateVisRep" title="Bookplate">
-				<synonym value="Bookplates"/>
+			••• 941/7428:
+			<heading id="BaseStndMiscEq" title="Base">
+				<synonym value="Bases"/>
 			</heading>
-			<heading id="CalligraphyVisRep" title="Calligraphy"/>
-			<heading id="CollageVisRep" title="Collage">
-				<synonym value="Collages"/>
+			••• [none]:
+			<heading id="CakeStandStndMiscEq" title="Cake-Stand">
+				<synonym value="Cake-Stands"/>
 			</heading>
-			<heading id="CutOutVisRep" title="Cut-Out">
-				<synonym value="Cut-Outs"/>
+			••• [none]:
+			<heading id="ClothesHorseStndMiscEq" title="Clothes-Horse">
+				<synonym value="Clothes-Horses"/>
 			</heading>
-			<heading id="DecoratedPaperVisRep" title="Decorated Paper">
-				<synonym value="Decorated Papers"/>
+			••• [none]:
+			<heading id="CondimentStandStndMiscEq" title="Condiment-Stand">
+				<synonym value="Condiment-Stands"/>
 			</heading>
-			<heading id="DrawingVisRep" title="Drawing">
-				<synonym value="Drawings"/>
-				<synonym value="Sketch"/>
-				<synonym value="Sketches"/>
-				<synonym value="Illustration"/>
-				<synonym value="Illustrations"/>
+			••• [none]:
+			<heading id="EggStandStndMiscEq" title="Egg-Stand">
+				<synonym value="Egg-Stands"/>
 			</heading>
-			<heading id="GreetingCardVisRep" title="Greeting Card">
-				<synonym value="Greeting Cards"/>
-				<synonym value="Greeting-Card"/>
-				<synonym value="Greeting-Cards"/>
-				<implies facet="ObjectName" cat="GreetingCardCardsComm"/>
+			••• [none]:
+			<heading id="FigureStandStndMiscEq" title="Figure-Stand">
+				<synonym value="Figure-Stands"/>
 			</heading>
-			<heading id="PapercutVisRep" title="Papercut">
-				<synonym value="Papercuts"/>
-				<synonym value="Paper-cut"/>
-				<synonym value="Paper-cuts"/>
+			••• [none]:
+			<heading id="FruitStandStndMiscEq" title="Fruit-Stand">
+				<synonym value="Fruit-Stands"/>
 			</heading>
-			<heading id="PlayingCardVisRep" title="Playing Card">
-				<synonym value="Playing Cards"/>
-				<synonym value="Playing-Card"/>
-				<synonym value="Playing-Cards"/>
-				<implies facet="ObjectName" cat="PlayingCardCardsComm"/>
+			••• [none]:
+			<heading id="IncenseBurnerStndMiscEq" title="Incense-Burner-Stand">
+				<synonym value="Incense-Burner-Stands"/>
 			</heading>
-			<heading id="PostageStampVisRep" title="Postage Stamp" noMatch="true"/>
-			<heading id="PrintVisRep" title="Print">
-				<synonym value="Prints"/>
-				<excl value="Photograph"/>
-				<excl value="Photographic"/>
-				<excl value="Photography"/>
-				<heading id="LithographVisRep" title="Lithograph">
-					<synonym value="Lithographs"/>
-					<!-- <heading id="OffsetVisRep" title="Offset">
-						<synonym value="Offsets"/>
-						</heading> -->
-					<heading id="ChromoLithographVisRep" title="Chromo-Lithograph">
-						<synonym value="Chromo-Lithographs"/>
-						<synonym value="Chromolithograph"/>
-						<synonym value="Chromolithographs"/>
-					</heading>
-				</heading>
+			••• [none]:
+			<heading id="IncenseStndMiscEq" title="Incense-Stand">
+				<synonym value="Incense-Stands"/>
 			</heading>
-			<heading id="SilhouetteVisRep" title="Silhouette">
-				<synonym value="Silhouettes"/>
+			••• [none]:
+			<heading id="IronStandStndMiscEq" title="Iron-Stand">
+				<synonym value="Iron-Stands"/>
 			</heading>
-			<heading id="SketchBookVisRep" title="Sketch Book">
-				<synonym value="Sketch Books"/>
-				<synonym value="Sketch-Book"/>
-				<synonym value="Sketch-Books"/>
+			••• [none]:
+			<heading id="LaceStandStndMiscEq" title="Lace-Stand">
+				<synonym value="Lace-Stands"/>
 			</heading>
-			<heading id="StoryboardVisRep" title="Storyboard">
-				<synonym value="Storyboards"/>
+			••• [none]:
+			<heading id="LampStandStndMiscEq" title="Lamp-Stand">
+				<synonym value="Lamp-Stands"/>
+			</heading>
+			••• [none]:
+			<heading id="LibationStandStndMiscEq" title="Libation-Stand">
+				<synonym value="Libation-Stands"/>
+			</heading>
+			••• [none]:
+			<heading id="MirrorStandStndMiscEq" title="Mirror-Stand">
+				<synonym value="Mirror-Stands"/>
+			</heading>
+			••• 0/1:
+			<heading id="OfferingStandStndMiscEq" title="Offering Stand">
+				<synonym value="Offering Stands"/>
+				<synonym value="Offering-Stand"/>
+				<synonym value="Offering-Stands"/>
+			</heading>
+			••• 68/259:
+			<heading id="PedestalStndMiscEq" title="Pedestal">
+				<synonym value="Pedestals"/>
+			</heading>
+			••• 2/33:
+			<heading id="PlinthStndMiscEq" title="Plinth">
+				<synonym value="Plinths"/>
+			</heading>
+			••• [none]:
+			<heading id="QuiverStandStndMiscEq" title="Quiver Stand">
+				<synonym value="Quiver Stands"/>
+				<synonym value="Quiver-Stand"/>
+				<synonym value="Quiver-Stands"/>
+			</heading>
+			••• 0/163:
+			<heading id="RingStandStndMiscEq" title="Ring Stand">
+				<synonym value="Ring Stands"/>
+				<synonym value="Ring-Stand"/>
+				<synonym value="Ring-Stands"/>
+			</heading>
+			••• [none]:
+			<heading id="SnufferStandStndMiscEq" title="Snuffer Stand">
+				<synonym value="Snuffer Stands"/>
+				<synonym value="Snuffer-Stand"/>
+				<synonym value="Snuffer-Stands"/>
+				<implies facet="ObjectName" cat="SnufferStandLghtEq"/>
+			</heading>
+			••• [none]:
+			<heading id="StelaStandStndMiscEq" title="Stela Stand">
+				<synonym value="Stela Stands"/>
+				<synonym value="Stela-Stand"/>
+				<synonym value="Stela-Stands"/>
+			</heading>
+			••• [none]:
+			<heading id="TrestleStndMiscEq" title="Trestle">
+				<synonym value="Trestles"/>
+			</heading>
+			••• 0/1:
+			<heading id="TripodStandStndMiscEq" title="Tripod Stand">
+				<synonym value="Tripod Stands"/>
+			</heading>
+			••• 0/1:
+			<heading id="TrivetStndMiscEq" title="Trivet">
+				<synonym value="Trivets"/>
+			</heading>
+			••• [none]:
+			<heading id="VesselStandStndMiscEq" title="Vessel Stand">
+				<synonym value="Vessel Stands"/>
+				<synonym value="Vessel-Stand"/>
+				<synonym value="Vessel-Stands"/>
+				<implies facet="ObjectName" cat="VesselContainer"/>
+			</heading>
+			••• [none]:
+			<heading id="WigStandStndMiscEq" title="Wig Stand">
+				<synonym value="Wig Stands"/>
+				<synonym value="Wig-Stand"/>
+				<synonym value="Wig-Stands"/>
+				<implies facet="ObjectName" cat="WigStandCsmtc"/>
 			</heading>
 		</heading>
-	</heading>
+		••• 18/42:
+		<heading id="StaveMiscEq" title="Stave">
+			<synonym value="Staves"/>
+		</heading>
+	</heading> -->
 </taxonomy>
 
