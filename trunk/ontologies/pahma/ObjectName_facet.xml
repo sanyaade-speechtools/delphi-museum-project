@@ -1760,6 +1760,18 @@
 					<synonym value="Staff Weapons"/>
 					<heading id="BillEdgWpn" title="Bill">
 						<synonym value="Bills"/> <!-- Disambiguate -->
+						<excl value="Bill Franklin"/>
+						<excl value="Bill Graves"/>
+						<excl value="Bill Holm"/>
+						<excl value="Bill Joseph"/>
+						<excl value="Bill Olsen"/>
+						<excl value="Dandy Bill"/>
+						<excl value="Susie-Bill"/>
+						<excl value="Paper Bill"/>
+						<excl value="Auklet"/>
+						<excl value="Bird"/>
+						<excl value="Duck"/>
+						<excl value="Pelican"/>
 					</heading>
 					<heading id="FauchardEdgWpn" title="Fauchard">
 						<synonym value="Fauchards"/>
@@ -2284,28 +2296,6 @@
 		<synonym value="Communication Equipment"/>
 		<synonym value="Communications"/>
 		<synonym value="Communications Equipment"/>
-		<heading id="AdvertisementComm" title="Advertisement">
-			<synonym value="Advertisements"/>
-			<heading id="EKambamComm" title="E-Kamban">
-				<synonym value="E-Kambans"/>
-				<implies facet="ObjectName" cat="EKambanVisRep"/>
-			</heading>
-			<heading id="PlayBillComm" title="Play-Bill">
-				<synonym value="Play-Bills"/>
-			</heading>
-			<heading id="ShowCardComm" title="Show Card">
-				<synonym value="Show Cards"/>
-				<synonym value="Show-Card "/>
-				<synonym value="Show-Cards"/>
-				<implies facet="ObjectName" cat="ShowCardCardsComm"/>
-			</heading>
-			<heading id="TradeCardComm" title="Trade Card">
-				<synonym value="Trade Cards"/>
-				<synonym value="Trade-Card "/>
-				<synonym value="Trade-Cards"/>
-				<implies facet="ObjectName" cat="TradeCardCardsComm"/>
-			</heading>
-		</heading>
 		<heading id="ArtWritingItemsComm" title="Art &amp; Writing Items">
 			<synonym value="Art/Writing Equipment"/>
 			<heading id="AlphabetComm" title="Alphabet">
@@ -2709,6 +2699,9 @@
 			<heading id="HeadphonesAVeq" title="Headphones">
 				<synonym value="Headphone"/>
 			</heading>
+			<heading id="MegaphoneComm" title="Megaphone">
+				<synonym value="Megaphones"/>
+			</heading>
 			<heading id="MicrophoneAVeq" title="Microphone">
 				<synonym value="Microphones"/>
 			</heading>
@@ -2734,9 +2727,6 @@
 			<heading id="VideoCassetteRecorderAVeq" title="Video Cassette-Recorder">
 				<synonym value="Video Cassette-Recorders"/>
 			</heading>
-		</heading>
-		<heading id="BillofSaleComm" title="Bill of Sale">
-			<synonym value="Bill of Sales"/>
 		</heading>
 		<heading id="BooksRelatedComm" title="Books &amp; related items" noMatch="true">
 			<heading id="BookComm" title="Book">
@@ -2775,6 +2765,9 @@
 		<heading id="CardsComm" title="Cards">
 			<synonym value="Card"/>
 			<excl value="Catalog Card"/>
+			<excl value="Catalog Cards"/>
+			<excl value="Bascom Card"/>
+			<excl value="Bascom Cards"/>
 			<heading id="AltarCardCardsComm" title="Altar Card" noMatch="true"/>
 			<heading id="CheckCardCardsComm" title="Check Card" noMatch="true"/>
 			<heading id="CollectingCardsComm" title="Collecting Card">
@@ -2824,6 +2817,43 @@
 				Emperors, Noble Families, Etc. -->
 			<heading id="KingListComm" title="King-List">
 				<synonym value="King-Lists"/>
+			</heading>
+		</heading>
+		<heading id="CommerceRelatedComm" title="Commerce-related items">
+			<heading id="AdvertisementComm" title="Advertisement">
+				<synonym value="Advertisements"/>
+				<heading id="EKambamComm" title="E-Kamban">
+					<synonym value="E-Kambans"/>
+					<implies facet="ObjectName" cat="EKambanVisRep"/>
+				</heading>
+				<heading id="PlayBillComm" title="Play-Bill">
+					<synonym value="Play-Bills"/>
+				</heading>
+				<heading id="ShowCardComm" title="Show Card">
+					<synonym value="Show Cards"/>
+					<synonym value="Show-Card "/>
+					<synonym value="Show-Cards"/>
+					<implies facet="ObjectName" cat="ShowCardCardsComm"/>
+				</heading>
+				<heading id="TradeCardComm" title="Trade Card">
+					<synonym value="Trade Cards"/>
+					<synonym value="Trade-Card "/>
+					<synonym value="Trade-Cards"/>
+					<implies facet="ObjectName" cat="TradeCardCardsComm"/>
+				</heading>
+			</heading>
+			<heading id="BillofSaleComm" title="Bill of Sale">
+				<synonym value="Bill of Sales"/>
+			</heading>
+			<heading id="GuaranteeComm" title="Guarantee">
+				<synonym value="Guarantees"/>
+			</heading>
+			<heading id="PreachersPlateComm" title="Preacher's Plate" noMatch="true"/>
+			<heading id="ProspectusComm" title="Prospectus">
+				<synonym value="Prospectuses"/>
+			</heading>
+			<heading id="ReceiptComm" title="Receipt">
+				<synonym value="Receipts"/>
 			</heading>
 		</heading>
 		<heading id="CommunicationsTubeComm" title="Communications Tube">
@@ -3330,7 +3360,9 @@
 		<heading id="DiaryComm" title="Diary">
 			<synonym value="Diaries"/>
 		</heading>
-		<heading id="DisplayBoardComm" title="Display-Board">
+		<heading id="DisplayBoardComm" title="Display Board">
+			<synonym value="Display Boards"/>
+			<synonym value="Display-Board"/>
 			<synonym value="Display-Boards"/>
 		</heading>
 		<heading id="DocketComm" title="Docket">
@@ -3360,9 +3392,6 @@
 			<synonym value="Graffitis"/> <!-- Misspelling -->
 			<synonym value="Graffitos"/> <!-- Misspelling -->
 			<implies facet="ObjectName" cat="GraffitiArchtct"/>
-		</heading>
-		<heading id="GuaranteeComm" title="Guarantee">
-			<synonym value="Guarantees"/>
 		</heading>
 		<heading id="HornBookComm" title="Horn Book">
 			<synonym value="Horn Books"/>
@@ -3403,15 +3432,8 @@
 			<synonym value="Map"/>
 			<synonym value="Maps"/>
 		</heading>
-		<heading id="MegaphoneComm" title="Megaphone">
-			<synonym value="Megaphones"/>
-		</heading>
 		<heading id="MemoryBoardComm" title="Memory Board">
 			<synonym value="Memory Boards"/>
-		</heading>
-		<heading id="MenuComm" title="Menu">
-			<synonym value="Menus"/>
-			<synonym value="Menues"/>
 		</heading>
 		<heading id="MessageComm" title="Message">
 			<synonym value="Messages"/>
@@ -3459,8 +3481,16 @@
 		</heading>
 		<heading id="PosterComm" title="Poster">
 			<synonym value="Posters"/>
+			<excl value="Four Poster"/>
+			<excl value="Four-Poster"/>
+			<excl value="4 Poster"/>
+			<excl value="4-Poster"/>
+			<excl value="Poster Paint"/>
+			<excl value="Poster Paints"/>
+			<heading id="WoodcutPosterComm" title="Woodcut Poster">
+				<synonym value="Woodcut Posters"/>
+			</heading>
 		</heading>
-		<heading id="PreachersPlateComm" title="Preacher's Plate" noMatch="true"/>
 		<heading id="ProclamationComm" title="Proclamation">
 			<synonym value="Proclamations"/>
 		</heading>
@@ -3469,17 +3499,11 @@
 			<synonym value="Programme"/>
 			<synonym value="Programmes"/>
 		</heading>
-		<heading id="ProspectusComm" title="Prospectus">
-			<synonym value="Prospectuses"/>
-		</heading>
 		<heading id="PropagandaSocCntrl" title="Propaganda">
 			<synonym value="Propagandas"/> <!-- Incorrect plural -->
 		</heading>
 		<heading id="QuipuComm" title="Quipu">
 			<synonym value="Quipus"/>
-		</heading>
-		<heading id="ReceiptComm" title="Receipt">
-			<synonym value="Receipts"/>
 		</heading>
 		<heading id="SealImpressionComm" title="Seal Impression">
 			<synonym value="Seal Impressions"/>
@@ -13050,6 +13074,17 @@
 				</heading>
 				<heading id="MatchFireEq" title="Match">
 					<synonym value="Matches"/>
+					<excl value="Appear to match"/>
+					<excl value="Appears to match"/>
+					<excl value="Boxing Match"/>
+					<excl value="Changed to match"/>
+					<excl value="Do not match"/>
+					<excl value="Does not match"/>
+					<excl value="Don't match"/>
+					<excl value="Doesn't match"/>
+					<excl value="Match box"/>
+					<excl value="Match this record"/>
+					<excl value="Match this record's"/>
 				</heading>
 				<heading id="MatchBoxFireEq" title="Match Box">
 					<synonym value="Match Boxes"/>
