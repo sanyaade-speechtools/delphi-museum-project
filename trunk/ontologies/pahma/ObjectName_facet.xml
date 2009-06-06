@@ -2366,10 +2366,20 @@
 				</heading>
 				<heading id="PenComm" title="Pen">
 					<synonym value="Pens"/>
+					<excl value="added in pen"/> <!-- reference to a note written on Museum documents -->
+					<excl value="in light red pen"/> <!-- reference to a note written on Museum documents -->
+					<excl value="in purple pen"/> <!-- reference to a note written on Museum documents -->
+					<excl value="in red pen"/> <!-- reference to a note written on Museum documents -->
+					<excl value="pen knife"/>
 					<implies facet="ObjectName" cat="PenTool"/>
 				</heading>
 				<heading id="PencilComm" title="Pencil">
 					<synonym value="Pencils"/>
+					<excl value="added in pencil"/> <!-- reference to a note written on Museum documents -->
+					<excl value="in blue pencil"/> <!-- reference to a note written on Museum documents -->
+					<excl value="in red pencil"/> <!-- reference to a note written on Museum documents -->
+					<excl value="to card in pencil"/> <!-- reference to a note written on Museum documents -->
+					<excl value="written in pencil"/> <!-- reference to a note written on Museum documents -->
 					<implies facet="ObjectName" cat="PencilTool"/>
 				</heading>
 				<heading id="PenCutterComm" title="Pen Cutter">
@@ -3529,17 +3539,14 @@
 			<synonym value="Sign-Boards"/>
 			<implies facet="ObjectName" cat="ScrollVisRep"/>
 		</heading>
-		<heading id="SongsheetComm" title="Songsheet" noMatch="true"/>
 		<heading id="StelaComm" title="Stela">
 			<synonym value="Stelae"/>
 			<synonym value="Stelæ"/>
 			<synonym value="Stelas"/>
-		</heading>
-		<heading id="SteleComm" title="Stele">
+			<synonym value="Stele"/>
 			<synonym value="Steles"/>
-		</heading>
-		<heading id="StickerComm" title="Sticker">
-			<synonym value="Stickers"/>
+			<implies facet="ActivityorContext" cat="Carving"/>
+			<implies facet="TechniqueDesignorDecoration" cat="Written"/>
 		</heading>
 		<heading id="TabletComm" title="Tablet">
 			<synonym value="Tablets"/>
@@ -3552,12 +3559,6 @@
 		</heading>
 		<heading id="TicketComm" title="Ticket">
 			<synonym value="Tickets"/>
-		</heading>
-		<heading id="TractComm" title="Tract">
-			<synonym value="Tracts"/>
-		</heading>
-		<heading id="TreatyComm" title="Treaty">
-			<synonym value="Treaties"/>
 		</heading>
 		<heading id="VisualRepresentation" title="Visual Representations">
 			<heading id="AlbumVisRep" title="Album">
