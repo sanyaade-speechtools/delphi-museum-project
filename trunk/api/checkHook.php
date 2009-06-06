@@ -39,7 +39,13 @@ span.fullterm { background-color:#ff6666; }
 			$word = trim($subterm);
 			if(!empty($word) ) {
 				$kwdterms[] = '+'.(($usepartial)?($word.'*'):'"'.$word.'"');
-				$modterms[] = '<span class="term">'.$word.'</span>';
+				if($usepartial) {
+					$modterms[] = '<span class="term">'.$word.'</span>';
+				} else {
+					// Need to match whoe word at start, at end, or in middle
+					$pregpatterns[] = '/([^\w]|^)'.$word.'([^\w]|$)/';
+					$pregreplaces[] = '\1<span class="term">'.$word.'</span>\2';
+				}
 			}
 		}
 		$qString1 = 
@@ -164,7 +170,11 @@ span.fullterm { background-color:#ff6666; }
 					}
 					$termR = $row[0];
 					$countR = $row[1];
-					$match = str_replace($terms, $modterms, $termR);
+					if($usepartial)
+						$match = str_replace($terms, $modterms, $termR);
+					else
+						$match = preg_replace($pregpatterns, $pregreplaces, $termR);
+
 					echo '<tr><td class="freq">'.$countR.':</td><td class="matches">'
 							.$match.'</td></tr>';
 					$nrows2++;
