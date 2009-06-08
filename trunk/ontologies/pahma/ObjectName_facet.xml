@@ -2046,11 +2046,13 @@
 					<synonym value="Projectile"/>
 					<heading id="ArrowWeapon" title="Arrow">
 						<synonym value="Arrows"/>
-						<heading id="PartsofArrow" title="Parts of Arrow" noMatch="true">
-							<heading id="ArrowheadPointPart" title="Arrowpoints" noMatch="true"/>
+						<heading id="PartsofArrows" title="Parts of Arrows" noMatch="true">
 							<heading id="ArrowFletching" title="Fletching">
 								<synonym value="Fletchings"/>
 								<implies facet="Material" cat="Feathers"/>
+							</heading>
+							<heading id="ArrowNock" title="Nock">
+								<synonym value="Nocks"/>
 							</heading>
 							<heading id="ArrowShaft" title="Shaft" noMatch="true">
 								<synonym value="Arrow shaft"/>
@@ -2101,7 +2103,6 @@
 						<synonym value="Arrowpoints"/>
 						<synonym value="Arrowhead"/>
 						<implies facet="ObjectName" cat="ArrowHeadPart"/>
-						<implies facet="ObjectName" cat="ArrowheadPointPart"/>
 						<heading id="BarbedAndTangedArrowhead" title="Barbed and Tanged Arrowhead"/>
 						<heading id="BoraxLakeArrowhead" title="Borax Lake Arrowhead"/>					
 						<heading id="CottonwoodArrowhead" title="Cottonwood Arrowhead"/>
@@ -6488,10 +6489,8 @@
 							<synonym value="G Strings"/>
 							<synonym value="Gstring"/>
 							<synonym value="Gstrings"/>
-							<excl value="Stringed"/>
-							<!-- For Excluding Musical G-Strings -->
-							<excl value="Strung"/>
-							<!-- For Excluding Musical G-Strings -->
+							<excl value="Stringed"/> <!-- Disambiguates from musical G-strings -->
+							<excl value="Strung"/> <!-- Disambiguates from musical G-strings -->
 							<excl value="Banjo"/>
 							<excl value="Banjos"/>
 							<excl value="Cello"/>
@@ -8510,7 +8509,7 @@
 				<synonym value="Cordophone"/>
 				<synonym value="Cordophones"/>
 				<synonym value="Stringed"/>
-				<synonym value="Strings"/> <!-- Disambiguate ? -->
+				<!-- <synonym value="Strings"/> Disambiguate -->
 				<synonym value="gourd string instrument"/>
 				<synonym value="gourd string instruments"/>
 				<heading id="BanjoMusical" title="Banjo">
