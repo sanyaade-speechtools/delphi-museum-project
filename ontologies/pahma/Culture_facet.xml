@@ -467,10 +467,9 @@
 				</heading>
 			</heading>
 			<heading id="ModernNorthAmericanCultures" title="North American cultures">
-				<heading id="NorthAmericanHistoricCultures" title="No. Amer. historic cultures">
+				<heading id="NorthAmericanHistoricCultures" title="North American historic cultures">
 					<synonym value="North America Unspecified"/>
 					<synonym value="North American Historic"/>
-					<synonym value="North American Historic Cultures"/>
 					<synonym value="United States Historic"/>
 					<heading id="AfricanAmericanCultures" title="African-American">
 						<synonym value="African American"/>
@@ -2943,14 +2942,20 @@
 			<heading id="EuropeanGroups" title="European">
 				<heading id="CzechoslovakianGroups" title="Czechoslovakian"/>  <!-- how to parse into Czech and Slovakian? -->
 				<heading id="EnglishGroups" title="English"/>
+				<heading id="DanishGroups" title="Danish"/>
+				<heading id="DutchGroups" title="Dutch">
+					<synonym value=="Flemish"/>
+				</heading>
 				<heading id="FrenchGroups" title="French"/>
 				<heading id="GermanGroups" title="German"/>
 				<heading id="GreekGroupsModern" title="Greek" noMatch="true"/> <!-- Need to disambiguate from Ancient Greek -->
 				<heading id="HungarianGroups" title="Hungarian"/>
 				<heading id="IrishGroups" title="Irish"/>
+				<heading id="ItalianGroups" title="Italian"/>
+				<heading id="NorwegianGroups" title="Norwegian"/>
 				<heading id="PortugeseGroups" title="Portugese"/>
 				<heading id="ScottishGroups" title="Scottish"/>
-				<heading id="SpanishGroups" title="Spain"/>
+				<heading id="SpanishGroups" title="Spanish"/>
 				<heading id="SwedishGroups" title="Swedish"/>
 				<heading id="YugoslavianGroups" title="Yugoslavian"/>  <!-- how to parse into Croatian, Bosnian, Serbian, etc.? -->
 			</heading>
@@ -3287,6 +3292,7 @@
 					<synonym value="Republican Roman"/>
 					<synonym value="Roman"/> <!-- Need complex inferencing: if cat 8 *and* Rome... --> 
 					<synonym value="Romans"/>
+					<excl value="Roman gold"/>
 				</heading>
 			</heading>
 			<heading id="CelticTribes" title="Celtic tribes">
