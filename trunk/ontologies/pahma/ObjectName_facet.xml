@@ -176,13 +176,16 @@
 		</heading>
 		<heading id="AnimalEquipment" title="Animal Equipment">
 			<synonym value="Animal Items"/>
-			<heading id="AnimalLabelAnmlEq" title="Animal-Label">
+			<heading id="AnimalLabelAnmlEq" title="Animal Label">
+				<synonym value="Animal Labels"/>
+				<synonym value="Animal-Label"/>
 				<synonym value="Animal-Labels"/>
 			</heading>
-			<heading id="BeehiveAnmlEq" title="Beehive" noMatch="true"/>
-			<heading id="BeehiveCoverAnmlEq" title="Beehive-Cover" noMatch="true"/>
-			<heading id="BeehiveStandAnmlEq" title="Beehive-Stand" noMatch="true"/>
-			<heading id="BirdBathAnmlEq" title="Bird-Bath">
+			<heading id="BirdBathAnmlEq" title="Birdbath">
+				<synonym value="Birdbaths"/>
+				<synonym value="Bird Bath"/>
+				<synonym value="Bird Baths"/>
+				<synonym value="Bird-Bath"/>
 				<synonym value="Bird-Baths"/>
 			</heading>
 			<heading id="BirdFeederAnmlEq" title="Bird-Feeder">
@@ -201,19 +204,27 @@
 				<implies facet="ActivityorContext" cat="Metallurgy"/>
 				<implies facet="ObjectName" cat="BrandingIronTool"/>
 			</heading>
-			<heading id="BullockCoverAnmlEq" title="Bullock-Cover">
+			<heading id="BullockCoverAnmlEq" title="Bullock Cover">
+				<synonym value="Bullock Covers"/>
+				<synonym value="Bullock-Cover"/>
 				<synonym value="Bullock-Covers"/>
 			</heading>
 			<heading id="CageAnmlEq" title="Cage">
 				<synonym value="Cages"/>
 			</heading>
-			<heading id="CamelBlanketAnmlEq" title="Camel-Blanket">
+			<heading id="CamelBlanketAnmlEq" title="Camel Blanket">
+				<synonym value="Camel Blankets"/>
+				<synonym value="Camel-Blanket"/>
 				<synonym value="Camel-Blankets"/>
 			</heading>
-			<heading id="CamelCoverAnmlEq" title="Camel-Cover">
+			<heading id="CamelCoverAnmlEq" title="Camel Cover">
+				<synonym value="Camel Covers"/>
+				<synonym value="Camel-Cover"/>
 				<synonym value="Camel-Covers"/>
 			</heading>
-			<heading id="CamelWhipAnmlEq" title="Camel-Whip">
+			<heading id="CamelWhipAnmlEq" title="Camel Whip">
+				<synonym value="Camel Whips"/>
+				<synonym value="Camel-Whip"/>
 				<synonym value="Camel-Whips"/>
 			</heading>
 			<heading id="CattleBellAnmlEq" title="Cattle-Bell">
@@ -244,8 +255,8 @@
 			<heading id="GoatBellAnmlEq" title="Goat-Bell">
 				<synonym value="Goat-Bells"/>
 			</heading>
-			<heading id="HarnessToolAnmlEq" title="Harness">
-				<synonym value="Harnesses"/>
+			<heading id="HarnessToolAnmlEq" title="Harnesses">
+				<synonym value="Harness"/>
 				<heading id="CamelHarnessAnmlEq" title="Camel Harness">
 					<synonym value="Camel Harnesses"/>
 				</heading>
@@ -761,26 +772,26 @@
 		</heading>
 		<heading id="GatheringEquipment" title="Gathering Equipment">
 			<synonym value="Gathering Items"/>
-			<heading id="BeehiveBees" title="Beehive"> <!-- MAIN TERM -->
+			<heading id="BeehiveBees" title="Beehive">
 				<synonym value="Beehives"/>
 				<synonym value="Bee hive"/>
 				<synonym value="Bee hives"/>
 				<synonym value="Bee-hive"/>
 				<synonym value="Bee-hives"/>
-				<implies facet="ObjectName" cat="BeehiveAnmlEq"/>
+				<excl value="Beehive-like"/>
+				<excl value="Beehive like"/>
+				<excl value="Beehive shaped"/>
 			</heading>
-			<heading id="BeehiveCoverBees" title="Beehive Cover"> <!-- MAIN TERM -->
+			<heading id="BeehiveCoverBees" title="Beehive Cover">
 				<synonym value="Beehive Covers"/>
 				<synonym value="Beehive-Cover"/>
 				<synonym value="Beehive-Covers"/>
-				<implies facet="ObjectName" cat="BeehiveCoverAnmlEq"/>
 			</heading>
-			<heading id="BeehiveStandBees" title="Beehive Stand"> <!-- MAIN TERM -->
+			<heading id="BeehiveStandBees" title="Beehive Stand">
 				<synonym value="Beehive Stands"/>
 				<synonym value="Beehive-Stand"/>
 				<synonym value="Beehive-Stands"/>
-				<implies facet="ObjectName" cat="BeehiveStandAnmlEq"/>
-				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
+				<implies facet="ObjectName" cat="StandsMiscEq"/>
 			</heading>
 			<heading id="ClimbingRing" title="Climbing-Ring"/>
 			<heading id="ClimbingRopeGathering" title="Climbing Rope">
@@ -791,10 +802,14 @@
 			</heading>
 			<heading id="GatheringToolsMain" title="Gathering-Tools">
 				<!-- <implies facet="ObjectName" cat="mmmmmmmm"/>implies Tool/Implement -->
-				<heading id="BerryComb" title="Berry-Comb">
+				<heading id="BerryComb" title="Berry Comb">
+					<synonym value="Berry Combs"/>
+					<synonym value="Berry-Comb"/>
 					<synonym value="Berry-Combs"/>
 				</heading>
-				<heading id="DiggingStick" title="Digging-Stick">
+				<heading id="DiggingStick" title="Digging Stick">
+					<synonym value="Digging Sticks"/>
+					<synonym value="Digging-Stick"/>
 					<synonym value="Digging-Sticks"/>
 				</heading>
 				<heading id="GatheringHook" title="Gathering Hook">
@@ -802,13 +817,17 @@
 					<synonym value="Gathering-Hook"/>
 					<synonym value="Gathering-Hooks"/>
 				</heading>
-				<heading id="GatheringStick" title="Gathering-Stick">
+				<heading id="GatheringStick" title="Gathering Stick">
+					<synonym value="Gathering Sticks"/>
+					<synonym value="Gathering-Stick"/>
 					<synonym value="Gathering-Sticks"/>
 				</heading>
 				<heading id="Grubber" title="Grubber">
 					<synonym value="Grubbers"/>
 				</heading>
-				<heading id="TappingImplement" title="Tapping-Implement">
+				<heading id="TappingImplement" title="Tapping Implement">
+					<synonym value="Tapping Implements"/>
+					<synonym value="Tapping-Implement"/>
 					<synonym value="Tapping-Implements"/>
 				</heading>
 			</heading>
