@@ -175,310 +175,304 @@
 			</heading>
 		</heading>
 		<heading id="AnimalEquipment" title="Animal Equipment">
-		<synonym value="Animal Items"/>
-		<heading id="AnimalLabelAnmlEq" title="Animal-Label">
-			<synonym value="Animal-Labels"/>
+			<synonym value="Animal Items"/>
+			<heading id="AnimalLabelAnmlEq" title="Animal-Label">
+				<synonym value="Animal-Labels"/>
+			</heading>
+			<heading id="BeehiveAnmlEq" title="Beehive" noMatch="true"/>
+			<heading id="BeehiveCoverAnmlEq" title="Beehive-Cover" noMatch="true"/>
+			<heading id="BeehiveStandAnmlEq" title="Beehive-Stand" noMatch="true"/>
+			<heading id="BirdBathAnmlEq" title="Bird-Bath">
+				<synonym value="Bird-Baths"/>
+			</heading>
+			<heading id="BirdFeederAnmlEq" title="Bird-Feeder">
+				<synonym value="Bird-Feeders"/>
+			</heading>
+			<heading id="BirdScareAnmlEq" title="Bird-Scare" noMatch="true"/>
+			<heading id="BrailAnmlEq" title="Brail">
+				<synonym value="Brails"/>
+				<implies facet="ObjectName" cat="BrailHuntEq"/>
+			</heading>
+			<heading id="BrandingIronAnmlEq" title="Branding Iron">
+				<synonym value="Branding Irons"/>
+				<synonym value="Branding-Iron"/>
+				<synonym value="Branding-Irons"/>
+				<implies facet="ActivityorContext" cat="BrandingHusbandry"/>
+				<implies facet="ActivityorContext" cat="Metallurgy"/>
+				<implies facet="ObjectName" cat="BrandingIronTool"/>
+			</heading>
+			<heading id="BullockCoverAnmlEq" title="Bullock-Cover">
+				<synonym value="Bullock-Covers"/>
+			</heading>
+			<heading id="CageAnmlEq" title="Cage">
+				<synonym value="Cages"/>
+			</heading>
+			<heading id="CamelBlanketAnmlEq" title="Camel-Blanket">
+				<synonym value="Camel-Blankets"/>
+			</heading>
+			<heading id="CamelCoverAnmlEq" title="Camel-Cover">
+				<synonym value="Camel-Covers"/>
+			</heading>
+			<heading id="CamelWhipAnmlEq" title="Camel-Whip">
+				<synonym value="Camel-Whips"/>
+			</heading>
+			<heading id="CattleBellAnmlEq" title="Cattle-Bell">
+				<synonym value="Cattle-Bells"/>
+			</heading>
+			<heading id="CattleFetterAnmlEq" title="Cattle-Fetter">
+				<synonym value="Cattle-Fetters"/>
+			</heading>
+			<heading id="CattleWhipAnmlEq" title="Cattle-Whip">
+				<synonym value="Cattle-Whips"/>
+			</heading>
+			<heading id="ChickenCoopAnmlEq" title="Chicken-Coop">
+				<synonym value="Chicken-Coops"/>
+			</heading>
+			<heading id="CockspurAnmlEq" title="Cockspur" noMatch="true"/>
+			<heading id="DogBellAnmlEq" title="Dog-Bell">
+				<synonym value="Dog-Bells"/>
+			</heading>
+			<heading id="DogBootAnmlEq" title="Dog-Boot">
+				<synonym value="Dog-Boots"/>
+			</heading>
+			<heading id="EquestrianEquipmentAnmlEq" title="Equestrian Equipment">
+				<synonym value="Equestrian Items"/>
+			</heading>
+			<heading id="GoadAnmlEq" title="Goad">
+				<synonym value="Goads"/>
+			</heading>
+			<heading id="GoatBellAnmlEq" title="Goat-Bell">
+				<synonym value="Goat-Bells"/>
+			</heading>
+			<heading id="HarnessToolAnmlEq" title="Harness">
+				<synonym value="Harnesses"/>
+				<heading id="CamelHarnessAnmlEq" title="Camel Harness">
+					<synonym value="Camel Harnesses"/>
+				</heading>
+				<heading id="DogHarnessAnmlEq" title="Dog Harness">
+					<synonym value="Dog Harnesses"/>
+				</heading>
+				<heading id="DonkeyHarnessAnmlEq" title="Donkey Harness">
+					<synonym value="Donkey Harneses"/>
+				</heading>
+				<heading id="HarnessHorseTack" title="Horse Harness">
+					<synonym value="Horse Harness"/>
+					<synonym value="Horse Harnesses"/>
+					<excl value="Mule Harness"/>
+					<excl value="Mule Harnesses"/>
+					<excl value="Camel Harness"/>
+					<excl value="Camel Harnesses"/>
+					<excl value="Dog Harness"/>
+					<excl value="Dog Harnesses"/>
+					<excl value="Donkey Harness"/>
+					<excl value="Donkey Harnesses"/>
+					<implies facet="ObjectName" cat="HarnessToolAnmlEq"/>
+				</heading>
+				<heading id="MuleHarnessAnmlEq" title="Mule Harness">
+					<synonym value="Mule Harnesses"/>
+				</heading>
+				<heading id="BlinkerAnmlEq" title="Blinker">
+					<synonym value="Blinkers"/>
+				</heading>
+				<heading id="BridleAnmlEq" title="Bridle">
+					<synonym value="Bridles"/>
+				</heading>
+				<heading id="FrontletAnmlEq" title="Frontlet">
+					<synonym value="Frontlets"/>
+				</heading>
+				<heading id="GirthAnmlEq" title="Girth">
+					<synonym value="Girths"/>
+				</heading>
+				<heading id="GirthStrapAnmlEq" title="Girth Strap">
+					<synonym value="Girth Straps"/>
+				</heading>
+				<heading id="HalterAnmlEq" title="Halter">
+					<synonym value="Halters"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="HeadstallAnmlEq" title="Headstall">
+					<synonym value="Headstalls"/>
+				</heading>
+				<heading id="HorsebitAnmlEq" title="Horse Bit">
+					<synonym value="Horse Bits"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="HorseshoeAnmlEq" title="Horseshoe">
+					<synonym value="Horseshoes"/>
+					<synonym value="Horse Shoe"/>
+					<synonym value="Horse Shoes"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+					<implies facet="ActivityorContext" cat="Metallurgy"/>
+				</heading>
+				<heading id="KneeRestAnmlEq" title="Knee Rest">
+					<synonym value="Knee Rests"/>
+				</heading>
+				<heading id="LeadAnmlEq" title="Lead">
+					<synonym value="Leads"/>
+				</heading>
+				<heading id="MartingaleAnmlEq" title="Martingale">
+					<synonym value="Martingales"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="MuzzleAnmlEq" title="Muzzle">
+					<synonym value="Muzzles"/>
+				</heading>
+				<heading id="NoseBandAnmlEq" title="Nose Band">
+					<synonym value="Nose Bands"/>
+				</heading>
+				<heading id="RangleHarnessAnmlEq" title="Rangle">
+					<synonym value="Rangles"/>
+				</heading>
+				<heading id="ReinsHorseTackAnmlEq" title="Reins">
+					<synonym value="Rein"/>
+				</heading>	
+				<heading id="SaddleHorseTackAnmlEq" title="Saddle">
+					<synonym value="Saddles"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="SaddleBagAnmlEq" title="Saddle Bag">
+					<synonym value="Saddle Bags"/>
+					<synonym value="Saddle-Bag"/>
+					<synonym value="Saddle-Bags"/>
+					<synonym value="Saddlebag"/>
+					<synonym value="Saddlebags"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="SaddleBlanketAnmlEq" title="Saddle Blanket">
+					<synonym value="Saddle Blankets"/>
+					<synonym value="Saddle-Blanket"/>
+					<synonym value="Saddle-Blankets"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="SaddleCoverAnmlEq" title="Saddle Cover">
+					<synonym value="Saddle Covers"/>
+					<synonym value="Saddle-Cover"/>
+					<synonym value="Saddle-Covers"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="SaddleCushionAnmlEq" title="Saddle Cushion">
+					<synonym value="Saddle Cushions"/>
+					<synonym value="Saddle-Cushion"/>
+					<synonym value="Saddle-Cushions"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="StirrupAnmlEq" title="Stirrup">
+					<synonym value="Stirrups"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+				</heading>
+				<heading id="TerretHarnessAnmlEq" title="Terret">
+					<synonym value="Terrets"/>
+				</heading>
+				<heading id="YokeAnmlEq" title="Yoke">
+					<synonym value="Yokes"/>
+					<excl value="Blouse"/>
+					<excl value="Blouses"/>
+					<excl value="Blusa"/>
+					<excl value="Blusas"/>
+					<excl value="Dress"/>
+					<excl value="Dresses"/>
+					<excl value="Huipil"/>
+					<excl value="Huipils"/>
+					<excl value="Netsuke"/>
+					<excl value="Parka"/>
+					<excl value="Parkas"/>
+					<excl value="Shirt"/>
+					<excl value="Shirts"/>
+					<excl value="Tunic"/>
+					<excl value="Tunics"/>
+				</heading>
+			</heading>
+			<heading id="HawkBellAnmlEq" title="Hawk Bell" noMatch="true"/>
+			<heading id="HobbleAnmlEq" title="Hobble">
+				<synonym value="Hobbles"/>
+			</heading>
+			<heading id="LariatAnmlEq" title="Lariat">
+				<synonym value="Lariats"/>
+				<implies facet="ObjectName" cat="LariatHuntEq"/>
+				<implies facet="ObjectName" cat="RopeTool"/>
+			</heading>
+			<heading id="MilkingEqAnmlEq" title="Milking Items">
+				<synonym value="Milking Equipment"/>
+				<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
+				<heading id="MilkingCanAnmlEq" title="Milking Can">
+					<synonym value="Milking Cans"/>
+					<synonym value="Milking-Can"/>
+					<synonym value="Milking-Cans"/>
+					<implies facet="ObjectName" cat="MilkingCanAgEq"/>
+				</heading>
+				<heading id="MilkingJugAnmlEq" title="Milking Jug">
+					<synonym value="Milking Jugs"/>
+					<synonym value="Milking-Jug"/>
+					<synonym value="Milking-Jugs"/>
+					<implies facet="ObjectName" cat="MilkingJugAgEq"/>
+				</heading>
+				<heading id="MilkingPailAnmlEq" title="Milking Pail">
+					<synonym value="Milking Pails"/>
+					<synonym value="Milking-Pail"/>
+					<synonym value="Milking-Pails"/>
+					<implies facet="ObjectName" cat="MilkingPailAgEq"/>
+				</heading>
+				<heading id="MilkingPotAnmlEq" title="Milking Pot">
+					<synonym value="Milking Pots"/>
+					<synonym value="Milking-Pot"/>
+					<synonym value="Milking-Pots"/>
+					<implies facet="ObjectName" cat="MilkingPotAgEq"/>
+				</heading>
+				<heading id="MilkingStoolAnmlEq" title="Milking Stool">
+					<synonym value="Milking Stools"/>
+					<synonym value="Milking-Stool"/>
+					<synonym value="Milking-Stools"/>
+					<implies facet="ObjectName" cat="MilkingStoolAgEq"/>
+				</heading>
+			</heading>
+			<heading id="MonkeyScareAnmlEq" title="Monkey Scare" noMatch="true"/>
+			<heading id="NestAnmlEq" title="Nest">
+				<synonym value="Nests"/>
+			</heading>
+			<heading id="NoseBagAnmlEq" title="Nose-Bag">
+				<synonym value="Nose-Bags"/>
+			</heading>
+			<heading id="OxCoverAnmlEq" title="Ox-Cover">
+				<synonym value="Ox-Covers"/>
+			</heading>
+			<heading id="OxShoeAnmlEq" title="Ox-Shoe">
+				<synonym value="Ox-Shoes"/>
+			</heading>
+			<heading id="PerchAnmlEq" title="Perch">
+				<synonym value="Perches"/>
+			</heading>
+			<heading id="SheepBellAnmlEq" title="Sheep Bell">
+				<synonym value="Sheep Bells"/>
+				<synonym value="Sheep-Bell"/>
+				<synonym value="Sheep-Bells"/>
+			</heading>
+			<heading id="SheepShearsAnmlEq" title="Sheep-Shears">
+				<synonym value="Sheep-Shear"/>
+			</heading>
+			<heading id="Stockwhip" title="Stockwhip">
+				<synonym value="Stockwhips"/>
+				<heading id="BuggyWhip" title="Buggy Whip">
+					<synonym value="Buggy Whips"/>
+				</heading>
+				<heading id="Ridingcrop" title="Riding Crop">
+					<synonym value="Riding Crops"/>
+				</heading>
+				<heading id="Quirt" title="Quirt">
+					<synonym value="Quirts"/>
+					<implies facet="ActivityorContext" cat="HorsebackRiding"/>
+					<implies facet="Material" cat="LeatherAndFur"/>
+					<implies facet="TechniqueDesignorDecoration" cat="Forked"/>
+				</heading>
+			</heading>
+			<heading id="TetherAnmlEq" title="Tether">
+				<synonym value="Tethers"/>
+			</heading>
+			<heading id="TrappingsAnmlEq" title="Trappings"/>
+			<heading id="VervelAnmlEq" title="Vervel">
+				<synonym value="Vervels"/>
+				<implies facet="ObjectName" cat="VervelHuntEq"/>
+			</heading>
 		</heading>
-		<heading id="BeehiveAnmlEq" title="Beehive" noMatch="true"/>
-		<heading id="BeehiveCoverAnmlEq" title="Beehive-Cover" noMatch="true"/>
-		<heading id="BeehiveStandAnmlEq" title="Beehive-Stand" noMatch="true"/>
-		<heading id="BirdBathAnmlEq" title="Bird-Bath">
-			<synonym value="Bird-Baths"/>
-		</heading>
-		<heading id="BirdFeederAnmlEq" title="Bird-Feeder">
-			<synonym value="Bird-Feeders"/>
-		</heading>
-		<heading id="BirdScareAnmlEq" title="Bird-Scare" noMatch="true"/>
-		<heading id="BrailAnmlEq" title="Brail">
-			<synonym value="Brails"/>
-			<implies facet="ObjectName" cat="BrailHuntEq"/>
-		</heading>
-		<heading id="BrandingIronAnmlEq" title="Branding Iron">
-			<synonym value="Branding Irons"/>
-			<synonym value="Branding-Iron"/>
-			<synonym value="Branding-Irons"/>
-			<implies facet="ActivityorContext" cat="BrandingHusbandry"/>
-			<implies facet="ActivityorContext" cat="Metallurgy"/>
-			<implies facet="ObjectName" cat="BrandingIronTool"/>
-		</heading>
-		<heading id="BullockCoverAnmlEq" title="Bullock-Cover">
-			<synonym value="Bullock-Covers"/>
-		</heading>
-		<heading id="CageAnmlEq" title="Cage">
-			<synonym value="Cages"/>
-		</heading>
-		<heading id="CamelBlanketAnmlEq" title="Camel-Blanket">
-			<synonym value="Camel-Blankets"/>
-		</heading>
-		<heading id="CamelCoverAnmlEq" title="Camel-Cover">
-			<synonym value="Camel-Covers"/>
-		</heading>
-		<heading id="CamelWhipAnmlEq" title="Camel-Whip">
-			<synonym value="Camel-Whips"/>
-		</heading>
-		<heading id="CattleBellAnmlEq" title="Cattle-Bell">
-			<synonym value="Cattle-Bells"/>
-		</heading>
-		<heading id="CattleFetterAnmlEq" title="Cattle-Fetter">
-			<synonym value="Cattle-Fetters"/>
-		</heading>
-		<heading id="CattleWhipAnmlEq" title="Cattle-Whip">
-			<synonym value="Cattle-Whips"/>
-		</heading>
-		<heading id="ChickenCoopAnmlEq" title="Chicken-Coop">
-			<synonym value="Chicken-Coops"/>
-		</heading>
-		<heading id="CockspurAnmlEq" title="Cockspur" noMatch="true"/>
-		<heading id="DogBellAnmlEq" title="Dog-Bell">
-			<synonym value="Dog-Bells"/>
-		</heading>
-		<heading id="DogBootAnmlEq" title="Dog-Boot">
-			<synonym value="Dog-Boots"/>
-		</heading>
-		<heading id="EquestrianEquipmentAnmlEq" title="Equestrian Equipment">
-			<synonym value="Equestrian Items"/>
-		</heading>
-		<heading id="GoadAnmlEq" title="Goad">
-			<synonym value="Goads"/>
-		</heading>
-		<heading id="GoatBellAnmlEq" title="Goat-Bell">
-			<synonym value="Goat-Bells"/>
-		</heading>
-		<heading id="HarnessToolAnmlEq" title="Harness">
-			<synonym value="Harnesses"/>
-			<heading id="BlinkerAnmlEq" title="Blinker">
-				<synonym value="Blinkers"/>
-			</heading>
-			<heading id="BridleHarnessAnmlEq" title="Bridle" noMatch="true"/>
-			<heading id="CamelHarnessAnmlEq" title="Camel Harness">
-				<synonym value="Camel Harnesses"/>
-			</heading>
-			<heading id="DogHarnessAnmlEq" title="Dog Harness">
-				<synonym value="Dog Harnesses"/>
-			</heading>
-			<heading id="DonkeyHarnessAnmlEq" title="Donkey Harness">
-				<synonym value="Donkey Harneses"/>
-			</heading>
-			<heading id="FrontletAnmlEq" title="Frontlet">
-				<synonym value="Frontlets"/>
-			</heading>
-			<heading id="GirthAnmlEq" title="Girth">
-				<synonym value="Girths"/>
-			</heading>
-			<heading id="GirthStrapAnmlEq" title="Girth Strap">
-				<synonym value="Girth Straps"/>
-			</heading>
-			<heading id="HalterHarnessAnmlEq" title="Halter" noMatch="true"/>
-			<heading id="HeadstallAnmlEq" title="Headstall">
-				<synonym value="Headstalls"/>
-			</heading>
-			<heading id="HorseHarnessAnmlEq" title="Horse Harness" noMatch="true"/>
-			<heading id="KneeRestAnmlEq" title="Knee Rest">
-				<synonym value="Knee Rests"/>
-			</heading>
-			<heading id="LeadAnmlEq" title="Lead">
-				<synonym value="Leads"/>
-			</heading>
-			<heading id="MuleHarnessAnmlEq" title="Mule Harness">
-				<synonym value="Mule Harnesses"/>
-			</heading>
-			<heading id="MuzzleAnmlEq" title="Muzzle">
-				<synonym value="Muzzles"/>
-			</heading>
-			<heading id="NoseBandAnmlEq" title="Nose Band">
-				<synonym value="Nose Bands"/>
-			</heading>
-			<heading id="RangleHarnessAnmlEq" title="Rangle">
-				<synonym value="Rangles"/>
-			</heading>
-			<heading id="ReinHarnessAnmlEq" title="Rein" noMatch="true"/>
-			<heading id="SaddleHarnessAnmlEq" title="Saddle" noMatch="true"/>
-			<heading id="StirrupHarnessAnmlEq" title="Stirrup" noMatch="true"/>
-			<heading id="TerretHarnessAnmlEq" title="Terret">
-				<synonym value="Terrets"/>
-			</heading>
-			<heading id="YokeAnmlEq" title="Yoke">
-				<synonym value="Yokes"/>
-				<excl value="Blouse"/>
-				<excl value="Blouses"/>
-				<excl value="Blusa"/>
-				<excl value="Blusas"/>
-				<excl value="Dress"/>
-				<excl value="Dresses"/>
-				<excl value="Huipil"/>
-				<excl value="Huipils"/>
-				<excl value="Netsuke"/>
-				<excl value="Parka"/>
-				<excl value="Parkas"/>
-				<excl value="Shirt"/>
-				<excl value="Shirts"/>
-				<excl value="Tunic"/>
-				<excl value="Tunics"/>
-			</heading>
-		</heading>
-		<heading id="HawkBellAnmlEq" title="Hawk Bell" noMatch="true"/>
-		<heading id="HobbleAnmlEq" title="Hobble">
-			<synonym value="Hobbles"/>
-		</heading>
-		<heading id="HorsetackAnmlEq" title="Horse Tack">
-			<!-- Pahma Only -->
-			<!-- Used To Describe Any of The Various Equipment And Accessories 
-				Worn By Horses In The Course of Their Use As Domesticated Animals -->
-			<implies facet="ActivityorContext" cat="HorsebackRiding"/>
-			<heading id="BridleAnmlEq" title="Bridle">
-				<synonym value="Bridles"/>
-				<implies facet="ObjectName" cat="BridleHarnessAnmlEq"/>
-			</heading>
-			<heading id="HorsebitAnmlEq" title="Horse Bit">
-				<synonym value="Horse Bits"/>
-			</heading>
-			<heading id="HalterAnmlEq" title="Halter">
-				<synonym value="Halters"/>
-				<implies facet="ObjectName" cat="HalterHarnessAnmlEq"/>
-			</heading>
-			<heading id="HarnessHorseTack" title="Harness" noMatch="true">
-				<synonym value="Horse Harness"/>
-				<synonym value="Horse Harnesses"/>
-				<excl value="Mule Harness"/>
-				<excl value="Mule Harnesses"/>
-				<excl value="Camel Harness"/>
-				<excl value="Camel Harnesses"/>
-				<excl value="Dog Harness"/>
-				<excl value="Dog Harnesses"/>
-				<excl value="Donkey Harness"/>
-				<excl value="Donkey Harnesses"/>
-				<implies facet="ObjectName" cat="HorseHarnessAnmlEq"/>
-				<implies facet="ObjectName" cat="HarnessToolAnmlEq"/>
-			</heading>
-			<heading id="HorseshoeAnmlEq" title="Horseshoe">
-				<synonym value="Horseshoes"/>
-				<synonym value="Horse Shoe"/>
-				<synonym value="Horse Shoes"/>
-			</heading>
-			<heading id="MartingaleAnmlEq" title="Martingale">
-				<synonym value="Martingales"/>
-			</heading>
-			<heading id="ReinsHorseTackAnmlEq" title="Reins">
-				<implies facet="ObjectName" cat="ReinHarnessAnmlEq"/>
-			</heading>
-			<heading id="SaddleHorseTackAnmlEq" title="Saddle">
-				<synonym value="Saddles"/>
-				<implies facet="ObjectName" cat="SaddleHarnessAnmlEq"/>
-			</heading>
-			<heading id="SaddleBagAnmlEq" title="Saddle Bag">
-				<synonym value="Saddle Bags"/>
-				<synonym value="Saddle-Bag"/>
-				<synonym value="Saddle-Bags"/>
-				<synonym value="Saddlebag"/>
-				<synonym value="Saddlebags"/>
-			</heading>
-			<heading id="SaddleBlanketAnmlEq" title="Saddle Blanket">
-				<synonym value="Saddle Blankets"/>
-				<synonym value="Saddle-Blanket"/>
-				<synonym value="Saddle-Blankets"/>
-			</heading>
-			<heading id="SaddleCoverAnmlEq" title="Saddle Cover">
-				<synonym value="Saddle Covers"/>
-				<synonym value="Saddle-Cover"/>
-				<synonym value="Saddle-Covers"/>
-			</heading>
-			<heading id="SaddleCushionAnmlEq" title="Saddle Cushion">
-				<synonym value="Saddle Cushions"/>
-				<synonym value="Saddle-Cushion"/>
-				<synonym value="Saddle-Cushions"/>
-			</heading>
-			<heading id="StirrupAnmlEq" title="Stirrup">
-				<synonym value="Stirrups"/>
-				<implies facet="ObjectName" cat="StirrupHarnessAnmlEq"/>
-			</heading>
-		</heading>
-		<heading id="LariatAnmlEq" title="Lariat">
-			<synonym value="Lariats"/>
-			<implies facet="ObjectName" cat="LariatHuntEq"/>
-			<implies facet="ObjectName" cat="RopeTool"/>
-		</heading>
-		<heading id="MilkingEqAnmlEq" title="Milking Items">
-			<synonym value="Milking Equipment"/>
-			<implies facet="ActivityorContext" cat="MilkingHusbandry"/>
-			<heading id="MilkingCanAnmlEq" title="Milking Can">
-				<synonym value="Milking Cans"/>
-				<synonym value="Milking-Can"/>
-				<synonym value="Milking-Cans"/>
-				<implies facet="ObjectName" cat="MilkingCanAgEq"/>
-			</heading>
-			<heading id="MilkingJugAnmlEq" title="Milking Jug">
-				<synonym value="Milking Jugs"/>
-				<synonym value="Milking-Jug"/>
-				<synonym value="Milking-Jugs"/>
-				<implies facet="ObjectName" cat="MilkingJugAgEq"/>
-			</heading>
-			<heading id="MilkingPailAnmlEq" title="Milking Pail">
-				<synonym value="Milking Pails"/>
-				<synonym value="Milking-Pail"/>
-				<synonym value="Milking-Pails"/>
-				<implies facet="ObjectName" cat="MilkingPailAgEq"/>
-			</heading>
-			<heading id="MilkingPotAnmlEq" title="Milking Pot">
-				<synonym value="Milking Pots"/>
-				<synonym value="Milking-Pot"/>
-				<synonym value="Milking-Pots"/>
-				<implies facet="ObjectName" cat="MilkingPotAgEq"/>
-			</heading>
-			<heading id="MilkingStoolAnmlEq" title="Milking Stool">
-				<synonym value="Milking Stools"/>
-				<synonym value="Milking-Stool"/>
-				<synonym value="Milking-Stools"/>
-				<implies facet="ObjectName" cat="MilkingStoolAgEq"/>
-			</heading>
-		</heading>
-		<heading id="MonkeyScareAnmlEq" title="Monkey Scare" noMatch="true"/>
-		<heading id="NestAnmlEq" title="Nest">
-			<synonym value="Nests"/>
-		</heading>
-		<heading id="NoseBagAnmlEq" title="Nose-Bag">
-			<synonym value="Nose-Bags"/>
-		</heading>
-		<heading id="OxCoverAnmlEq" title="Ox-Cover">
-			<synonym value="Ox-Covers"/>
-		</heading>
-		<heading id="OxShoeAnmlEq" title="Ox-Shoe">
-			<synonym value="Ox-Shoes"/>
-		</heading>
-		<heading id="PerchAnmlEq" title="Perch">
-			<synonym value="Perches"/>
-		</heading>
-		<heading id="SheepBellAnmlEq" title="Sheep Bell">
-			<synonym value="Sheep Bells"/>
-			<synonym value="Sheep-Bell"/>
-			<synonym value="Sheep-Bells"/>
-		</heading>
-		<heading id="SheepShearsAnmlEq" title="Sheep-Shears">
-			<synonym value="Sheep-Shear"/>
-		</heading>
-		<heading id="Stockwhip" title="Stockwhip">
-			<synonym value="Stockwhips"/>
-			<heading id="BuggyWhip" title="Buggy Whip">
-				<synonym value="Buggy Whips"/>
-			</heading>
-			<heading id="Ridingcrop" title="Riding Crop">
-				<synonym value="Riding Crops"/>
-			</heading>
-			<heading id="Quirt" title="Quirt">
-				<synonym value="Quirts"/>
-				<implies facet="ActivityorContext" cat="HorsebackRiding"/>
-				<implies facet="Material" cat="LeatherAndFur"/>
-				<implies facet="TechniqueDesignorDecoration" cat="Forked"/>
-			</heading>
-		</heading>
-		<heading id="TetherAnmlEq" title="Tether">
-			<synonym value="Tethers"/>
-		</heading>
-		<heading id="TrappingsAnmlEq" title="Trappings"/>
-		<heading id="VervelAnmlEq" title="Vervel">
-			<synonym value="Vervels"/>
-			<implies facet="ObjectName" cat="VervelHuntEq"/>
-		</heading>
-	</heading>
 		<heading id="FishingEquipment" title="Fishing Equipment">
 			<synonym value="Fishing"/>
 			<heading id="EelForkFshEq" title="Eel Fork">
