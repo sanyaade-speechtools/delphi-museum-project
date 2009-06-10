@@ -2317,7 +2317,7 @@
 					<synonym value="Bahrainis"/>
 				</heading>
 				<heading id="CyprusCountry" title="Cyprus" noMatch="true"/>
-				<heading id="Iran" title="Iran"> <!-- Alphabetize -->
+				<heading id="IranCountry" title="Iran"> <!-- Alphabetize -->
 					<synonym value="Iranian"/>
 					<synonym value="Iranians"/>
 					<synonym value="Persia"/>
@@ -2390,7 +2390,7 @@
 						<synonym value="Khorassan province"/>
 					</heading>
 				</heading>
-				<heading id="Iraq" title="Iraq">
+				<heading id="IraqCountry" title="Iraq">
 					<synonym value="Iraqi"/>
 					<synonym value="Iraqis"/>
 					<heading id="Baghdad" title="Baghdad"/>
@@ -2399,7 +2399,7 @@
 					<heading id="Mosul" title="Mosul"/>
 					<heading id="UrAncientCity" title="Ur"/>
 				</heading>
-				<heading id="Israel" title="Israel">
+				<heading id="IsraelCountry" title="Israel">
 					<synonym value="Israeli"/>
 					<synonym value="Israelis"/>
 					<heading id="Bethlehem" title="Bethlehem"/>
@@ -2424,27 +2424,26 @@
 							</heading>
 						</heading>
 					</heading>
-					<heading id="Palestine" title="Palestine">
+					<heading id="PalestineCountry" title="Palestine">
 						<synonym value="Palestinian"/>
 						<synonym value="Palestinians"/>
 						<heading id="WestBank" title="West Bank"/>
 						<heading id="GazaStrip" title="Gaza Strip"/>
 					</heading>
 				</heading>
-				<heading id="Jordan" title="Jordan">
+				<heading id="JordanCountry" title="Jordan">
 					<heading id="Amman" title="Amman"/>
 					<heading id="Petra" title="Petra"/>
 				</heading>
-				<heading id="Kuwait" title="Kuwait">
+				<heading id="KuwaitCountry" title="Kuwait">
 					<synonym value="Kuwaiti"/>
 					<synonym value="Kuwaitis"/>
 					<heading id="Kuwaitcity" title="Kuwait city"/>
 				</heading>
-				<heading id="Lebanon" title="Lebanon">
+				<heading id="LebanonCountry" title="Lebanon">
 					<synonym value="Lebanese"/>
 					<heading id="BayofJanica" title="Bay of Janica"/>
 					<heading id="Beirut" title="Beirut"/>
-					<heading id="Byblos" title="Byblos"/>
 					<heading id="Damour" title="Damour"/>
 					<heading id="KsarAkil" title="Ksar Akil"/>
 					<heading id="MountLebanon" title="Mount Lebanon"/>
@@ -24058,6 +24057,16 @@
 					<implies facet="Location" cat="BosniaHerzegovina"/> <!-- Need to work on this inference rule -->
 					<implies facet="Location" cat="CroatiaCountry"/> <!-- Need to work on this inference rule -->
 					<implies facet="Location" cat="SerbiaCountry"/> <!-- Need to work on this inference rule -->
+				</heading>
+			</heading>
+		</heading>
+		<heading id="NonModernNearEast" title="Near East" noMatch="true">
+			<heading id="Phoenicia" title="Phoenicia">
+				<synonym value="Phoenecia"/> <!-- Misspelling -->
+				<synonym value="Phoenician"/>
+				<synonym value="Phoenicians"/>
+				<heading id="Byblos" title="Byblos">
+					<implies facet="Location" cat="LebanonCountry"/>
 				</heading>
 			</heading>
 		</heading>
