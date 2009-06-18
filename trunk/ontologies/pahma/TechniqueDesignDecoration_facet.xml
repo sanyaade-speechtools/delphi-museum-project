@@ -397,24 +397,32 @@
 				</heading>
 				<heading id="LandMammals" title="Land Mammals" noMatch="true">
 					<heading id="DomesticMammals" title="Domestic Mammals" noMatch="true">
+						<heading id="Alpaca" title="Alpaca" noMatch="true" asToken="plural"/>
 						<heading id="Cat" title="Cat" noMatch="true" asToken="plural"/>
+						<heading id="Cow" title="Cow" noMatch="true" asToken="plural">
+							<token value="Cattle"/>
+							<heading id="Bull" title="Bull" noMatch="true" asToken="plural"/>
+							<heading id="Carabao" title="Carabao" noMatch="true" asToken="plural">
+								<token value="Kalabaw"/>
+								<token value="Kerbaw"/>
+							</heading>
+						</heading>
 						<heading id="Dog" title="Dog" noMatch="true" asToken="plural"/>
-						<heading id="Pig" title="Pig" noMatch="true" asToken="plural"/>
 						<heading id="Goat" title="Goat" noMatch="true" asToken="plural"/>
-						<heading id="Sheep" title="Sheep" noMatch="true" asToken="plural"/>
 						<heading id="Horse" title="Horse" noMatch="true" asToken="plural"/>
+						<heading id="Pig" title="Pig" noMatch="true" asToken="plural"/>
+						<heading id="Sheep" title="Sheep" noMatch="true" asToken="plural"/>
 						<heading id="Llama" title="Llama" noMatch="true" asToken="plural"/>
-						<heading id="Bull" title="Bull" noMatch="true" asToken="plural"/>
 						<heading id="Oxen" title="Oxen"/>
 					</heading>
 					<heading id="SmallWildMammals" title="Small Wild Mammals" noMatch="true">
 						<heading id="Bat" title="Bat" noMatch="true" asToken="plural"/>
 						<heading id="Beaver" title="Beaver" noMatch="true" asToken="plural"/>
 						<heading id="BobcatOrLynx" title="Bobcat Or Lynx" noMatch="true">
-							<token value="bobcat"/>
-							<token value="bobcats" combine="prefix"/>
-							<token value="lynx"/>
-							<token value="lynxes" combine="prefix"/>
+							<token value="Bobcat"/>
+							<token value="Bobcats" combine="prefix"/>
+							<token value="Lynx"/>
+							<token value="Lynxes" combine="prefix"/>
 						</heading>
 						<heading id="Marten" title="Marten" noMatch="true" asToken="plural"/>
 						<heading id="Mink" title="Mink" noMatch="true" asToken="plural"/>
