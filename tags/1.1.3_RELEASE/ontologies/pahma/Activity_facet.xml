@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy id="ActivityorContext" title="Activity or Context">
+	<description>This facet expressed the activity that is depicted on, 
+		or implied by, an object.
+	</description>
+	<notes> 
+		[empty at the moment]
+	</notes>
+	<heading id="ArtistryCraftsmanship" title="Artistry &amp; Craftsmanship">
+		<heading id="BasketMaking" title="Basket Making">
+			<synonym value="Basket weaving"/>
+			<synonym value="Basketry"/>
+		</heading>
+		<heading id="Carving" title="Carving"> 
+			<synonym value="Woodcarving"/>
+			<synonym value="Woodcarvings"/>
+			<synonym value="Wood-carvings"/>			
+		</heading>
+		<heading id="DyingArtCraft" title="Dying"/>
+		<heading id="Drawing" title="Drawing">
+			<synonym value="Drawn"/>
+			<synonym value="Sketching"/>
+			<synonym value="Sketched"/>
+			<synonym value="Illustrating"/>
+		</heading>
+		<heading id="Metallurgy" title="Metallurgy">
+			<synonym value="Metalwork"/>
+			<synonym value="Metal work"/>
+		</heading>
+		<heading id="Millinery" title="Millinery">
+			<synonym value="Milliner"/>
+			<synonym value="Hat making"/>
+			<synonym value="Hat maker"/>
+			<synonym value="Hat-making"/>
+			<synonym value="Hat-maker"/>
+			<synonym value="Hatmaking"/>
+			<synonym value="Hatmaker"/>
+		</heading>
+		<heading id="Painting" title="Painting">
+			<synonym value="Paintings"/> 				
+		</heading>
+		<heading id="Photography" title="Photography">
+			<synonym value="Taking a photo"/>				
+			<synonym value="Photographing"/>
+			<synonym value="Taking a snapshot"/>				
+		</heading>
+		<heading id="PotMaking" title="Pot Making">
+			<synonym value="Pottery"/> 				
+		</heading>
+		<heading id="Sculpting" title="Sculpting">
+			<synonym value="Sculpture"/> 				
+		</heading>
+		<heading id="NeedleWork" title="Needle Work">
+			<synonym value="Needlework"/>
+			<synonym value="Needleworking"/>
+			<synonym value="Needleworks"/>
+			<synonym value="Sewn"/>
+			<synonym value="Sewing"/>
+			<synonym value="Embroidery"/>
+			<synonym value="Embroidered"/>
+		</heading>
+		<heading id="ShoeMaking" title="Shoe Making">
+			<synonym value="Shoemaking"/>
+			<synonym value="Shoe-making"/>
+			<synonym value="Cobbler"/>
+			<synonym value="Cobblers"/>
+			<synonym value="Shoe maker"/>
+			<synonym value="Shoe-maker"/>
+			<synonym value="Shoemaker"/>
+		</heading>
+		<heading id="Weaving" title="Weaving"/> 					
+	</heading>
+	<heading id="Building" title="Building">
+		<excl value="Buildings"/> <!-- helps exclude the noun sense of "building" -->
+		<excl value="a building"/> <!-- helps exclude the noun sense of "building" -->
+		<excl value="the building"/> <!-- helps exclude the noun sense of "building" -->
+		<heading id="Constructing" title="Constructing"/>
+		<heading id="Erecting" title="Erecting"/>
+		<heading id="Raising" title="Raising"/> <!-- Be careful of other meanings.  Exclusions needed? -->
+	</heading>
+	<heading id="Celebrating" title="Celebrating"/>
+	<heading id="Childrearing" title="Child rearing">
+		<synonym value="Raising children"/>
+		<synonym value="Raising a child"/>
+	</heading>
+	<heading id="CommerceAndTrade" title="Commerce &amp; Trade">
+		<synonym value="Commerce"/>
+		<synonym value="Commercial"/>
+		<synonym value="Trade"/>
+		<synonym value="Trading"/>
+		<heading id="Bartering" title="Bartering">
+			<synonym value="Barter"/>
+			<synonym value="Barters"/>
+		</heading>
+		<heading id="Purchasing" title="Purchasing">
+			<synonym value="Purchases"/>
+		</heading>
+		<heading id="Selling" title="Selling">
+			<synonym value="Sales"/>
+		</heading>
+	</heading>
+	<heading id="DrugUse" title="Drug Use">
+		<heading id="AlcoholicDrugs" title="Drinking (Alcohol)">
+			<heading id="DrugsAlcoholBeer" title="Drinking Beer" noMatch="true"/>
+			<heading id="DrugsAlcoholLiqour" title="Drinking Liquor" noMatch="true"/>
+			<heading id="DrugsAlcoholWine" title="Drinking Wine" noMatch="true"/>
+		</heading>
+		<heading id="HallucinogenicDrugs" title="Hallucinogens"/>
+		<heading id="DrugSwallowing" title="Injesting Drugs">
+			<heading id="MescalineUse" title="Mescaline use"/>
+		</heading>
+		<heading id="DrugSmoking" title="Smoking">
+			<heading id="CannibisSmoking" title="Cannibis smoking">
+				<synonym value="Smoking cannibis"/>
+				<synonym value="Smoking marijuana"/>
+			</heading>
+			<heading id="OpiumSmoking" title="Opium smoking">
+				<synonym value="Smoking opium"/>
+			</heading>
+			<heading id="TobaccoSmoking" title="Tobacco smoking">
+				<synonym value="Smoking tobacco"/>
+			</heading>
+			<excl value="Fish"/>
+			<excl value="Salmon"/>
+			<excl value="Meat"/>
+		</heading>
+		<heading id="DrugSniffing" title="Sniffing Drugs">
+			<heading id="CocaineDrugUse" title="Cocaine Use"/>
+			<heading id="SnuffDrugUse" title="Snuff Use"/>
+		</heading>
+		<heading id="StimulantDrugs" title="Stimulants">
+			<heading id="CocaChewingStimulant" title="Coca Chewing">
+				<!-- Coca can also be ingested as a tea/ as well as the derivative cocaine... -->
+			</heading>
+			<heading id="BetelChewingStimulant" title="Betel Chewing"/>
+			<heading id="DrugsCaffeine" title="CaffeineUse" noMatch="true">
+				<heading id="ChocolateCaffeineStimulant" title="Using Chocolate"/>
+				<heading id="CoffeeCaffeineStimulant" title="Using Coffee"/>
+				<heading id="TeaCaffeineStimulant" title="Using Tea"/>
+			</heading>
+		</heading>
+	</heading>
+	<heading id="EatingDrinking" title="Eating &amp; Drinking">
+		<heading id="Drinking" title="Drinking">
+			<synonym value="Imbibing"/>
+			<heading id="DrinkingAlcohol" title="Drinking Alcohol">
+				<implies facet="ActivityorContext" cat="AlcoholicDrugs"/>
+				<heading id="BeerDrinking" title="Beer Drinking">
+					<synonym value="Drinking Beer"/>
+					<implies facet="ActivityorContext" cat="DrugsAlcoholBeer"/>
+				</heading>
+				<heading id="LiquorDrinking" title="Liquor Drinking">
+					<synonym value="Drinking Liquor"/>
+					<implies facet="ActivityorContext" cat="DrugsAlcoholLiqour"/>
+				</heading>
+				<heading id="WineDrinking" title="Wine Drinking">
+					<synonym value="Drinking Wine"/>
+					<implies facet="ActivityorContext" cat="DrugsAlcoholWine"/>
+				</heading>
+			</heading>
+			<heading id="OtherDrinking" title="Other Drinking">
+				<heading id="ChocolateDrinking" title="Chocolate Drinking">
+					<synonym value="Drinking Chocolate"/>
+					<implies facet="ObjectName" cat="ChocolateFood"/>
+					<implies facet="ActivityorContext" cat="ChocolateCaffeineStimulant"/>
+				</heading>
+				<heading id="CoffeeDrinking" title="Coffee Drinking">
+					<synonym value="Drinking Coffee"/>
+					<implies facet="ActivityorContext" cat="CoffeeCaffeineStimulant"/>
+				</heading>
+				<heading id="TeaDrinking" title="Tea Drinking">
+					<synonym value="Drinking Tea"/>
+					<implies facet="ActivityorContext" cat="TeaCaffeineStimulant"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="Eating" title="Eating">
+			<synonym value="Dining"/>
+			<heading id="FoodPreparation" title="Food preparation">
+				<synonym value="Preparing Food"/>
+				<synonym value="Baking"/>
+				<synonym value="Cooking"/>
+				<synonym value="Frying"/>
+				<synonym value="Parching"/>
+				<synonym value="Making Breakfast"/>
+				<synonym value="Making Lunch"/>
+				<synonym value="Making Dinner"/>
+				<heading id="SmokingFood" title="Smoking" noMatch="true">
+					<synonym value="Smoked"/>
+					<excl value="Tobacco"/>
+				</heading>
+			</heading>
+			<heading id="FoodServing" title="Food serving">
+				<synonym value="Serving food"/>
+				<synonym value="Serving meals"/>
+				<synonym value="Serving a meal"/>
+				<synonym value="Serving breakfast"/>
+				<synonym value="Serving lunch"/>
+				<synonym value="Serving dinner"/>
+			</heading>
+			<heading id="FoodStorage" title="Food storage">
+				<synonym value="Storing Food"/>
+				<synonym value="Putting Away"/>
+				<synonym value="Setting Away"/>
+			</heading>
+		</heading>
+		<heading id="Fasting" title="Fasting"/> 
+	</heading>
+	<heading id="Events" title="Events">
+		<heading id="CeremoniesFestivalsHolidays" title="Ceremonies, Festivals, &amp; Holidays">  <!-- keep this separate from Religion & Spirituality -->
+			<heading id="Ceremonies" title="Ceremonies">
+				<synonym value="Ceremony"/>
+				<heading id="AgeRelatedCeremonies" title="Age-Related Ceremonies">
+					<synonym value="Coming-of-Age Ceremony"/>
+					<synonym value="Coming of Age Ceremony"/>
+					<synonym value="Coming-of-Age Ceremonies"/>
+					<synonym value="Coming of Age Ceremonies"/>
+					<heading id="CircumcisionCeremony" title="Circumcision Ceremony"> 					
+						<synonym value="Circumcision Ceremonies"/>
+						<synonym value="Circumcision"/>
+						<heading id="Bris" title="Bris"> 					
+							<synonym value="Brith"/> 				
+						</heading>		
+					</heading>
+					<heading id="NamingCeremony" title="Naming Ceremony"> 					
+						<synonym value="Naming Ceremonies"/> 				
+					</heading>
+					<heading id="PubertyCeremonies" title="Puberty Ceremonies"> 					
+						<synonym value="Puberty Ceremony"/>
+						<heading id="Barmitzvah" title="Barmitzvah"> <!-- tie to the concept of 'intended for boys' (future gender- and age-specificity facet) -->				
+							<synonym value="Barmitzvahs"/><!-- tie to the concept of 'judaism' (future religion facet?) -->
+							<synonym value="Bar Mitzvah"/>
+							<synonym value="Bar Mitzvahs"/>
+						</heading>
+						<heading id="Batmitzvah" title="Batmitzvah"><!-- tie to the concept of 'intended for girls' (future gender- and age-specificity facet) -->			
+							<synonym value="Batmitzvahs"/><!-- tie to the concept of 'judaism' (future religion facet?) -->
+							<synonym value="Bat Mitzvah"/>
+							<synonym value="Bat Mitzvahs"/>
+						</heading>
+						<heading id="Confirmation" title="Confirmation"> <!-- tie to the concept of 'intended for boys' (future gender- and age-specificity facet) -->	
+							<!-- tie to the concept of 'catholicism' (future religion facet?) -->							
+						</heading>	
+					</heading>
+					<heading id="MarriageAvailabilityCeremonies" title="Marriage Availability Ceremonies">
+						<heading id="Debuntante" title="Debuntante"> 					
+							<synonym value="Debuntante Ball"/>	
+						</heading>
+						<heading id="QuinsineraCeremony" title="Quinsinera Ceremony"> 					
+							<synonym value="Quinzinera Ceremonies"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="Coronations" title="Coronations">
+					<synonym value="Coronation"/>
+				</heading>
+				<heading id="FuneraryRites" title="Funerary Rites">
+					<heading id="Cremations" title="Cremations">
+						<heading id="FuneralPyre" title="Funeral Pyre"> <!-- Is a pyre a kind of cremation?  Vice-versa?  Or something different? -->
+							<synonym value="Funerary Pyre"/>
+							<synonym value="Pyre"/>
+						</heading>
+					</heading>
+					<heading id="Funerals" title="Funerals">
+						<synonym value="Funeral"/>
+						<heading id="Burial" title="Burial">
+							<synonym value="Burials"/>
+						</heading>
+					</heading>
+				</heading>
+				<heading id="HealingCeremonies" title="Healing Ceremonies">
+					<synonym value="Healing Ceremony"/>
+				</heading>
+				<heading id="Marriage" title="Marriage">
+					<synonym value="Wedding"/>
+					<synonym value="Weddings"/>
+					<synonym value="Marriages"/>
+					<heading id="BridalAdornment" title="Bridal Adornment"/>
+				</heading>
+				<heading id="MourningCeremonies" title="Mourning Ceremonies">
+					<synonym value="Mourning Ceremony"/>
+					<synonym value="Wake"/>
+					<excl value="Wake up"/> <!-- helps exclude the verb sense of "wake" -->
+					<synonym value="Mourning"/>
+				</heading>
+			</heading>
+			<heading id="Festivals" title="Festivals">
+				<heading id="BladderFestival" title="Bladder Festival"> <!-- Annual celebration; each December -->
+					<synonym value="Bladder Festivals"/>
+				</heading>
+				<heading id="DiwaliFestival" title="Diwali Festival">
+					<synonym value="Diwali Festivals"/>
+				</heading>
+				<heading id="DragonBoatFestival" title="Dragon Boat Festival"> <!-- Annual celebration; mid-summer -->
+					<synonym value="Dragon Boat Festivals"/>
+					<synonym value="Dragonboat Festival"/>
+					<synonym value="Dragonboat Festivals"/>
+					<synonym value="Dragon-boat Festival"/>
+					<synonym value="Dragon-boat Festivals"/>
+				</heading>
+				<heading id="FandangoFestival" title="Fandango Festival">
+					<synonym value="Fandango Festivals"/>
+				</heading>
+				<heading id="GionFestival" title="Gion Festival"> <!-- In Japan (at least in Kyoto) -->
+					<synonym value="Gion Festivals"/>
+				</heading>
+				<heading id="HarvestFestivals" title="Harvest Festivals">
+					<synonym value="Harvest Festival"/>
+					<synonym value="Oktoberfest"/>
+					<synonym value="Otoberfest"/>
+					<heading id="RiceFestival" title="Rice Festival">
+						<synonym value="Rice Festivals"/>
+						<synonym value="Rice Harvest Festival"/>
+						<synonym value="Rice Harvest Festivals"/>
+					</heading>
+					<heading id="StrawberryFestival" title="Strawberry Festival">
+						<synonym value="Strawberry Festivals"/>
+						<implies facet="Culture" cat="KashayaIndians"/>
+					</heading>
+				</heading>
+				<heading id="HoliFestival" title="Holi Festival">
+					<synonym value="Holi Festivals"/>
+				</heading>
+				<heading id="JunkanooFestival" title="Junkanoo Festival">
+					<synonym value="Junkanoo Festivals"/>
+					<implies facet="Location" cat="TheBahamas"/>
+				</heading>
+				<heading id="Só'iFestival" title="Só'i Festival"> <!-- Mortuary festival -->
+					<synonym value="Só'i Festivals"/>
+				</heading>
+			</heading>
+			<heading id="Holidays" title="Holidays">
+				<synonym value="Holiday"/>
+				<heading id="Christmas" title="Christmas">
+					<synonym value="Christmases"/>
+					<synonym value="Christmasses"/>
+				</heading>
+			</heading>
+		</heading>
+		<heading id="DancesEvents" title="Dances">
+			<synonym value="Dance"/>
+			<heading id="BadjucaDance" title="Badjuca Dance">
+				<synonym value="Badjuca Dances"/>
+				<synonym value="Badjuca"/>
+				<implies facet="Culture" cat="EasternPomo"/>
+			</heading>
+			<heading id="DjaneDance" title="Djane Dance">
+				<synonym value="Djane Dances"/>
+				<synonym value="Djane"/>
+				<implies facet="Culture" cat="EasternPomo"/>
+			</heading>
+			<heading id="GilakDance" title="Gilak Dance">
+				<synonym value="Gilak Dances"/>
+				<synonym value="Gilak"/>
+				<implies facet="Culture" cat="EasternPomo"/>
+			</heading>
+			<heading id="KalimatotoDance" title="Kalimatoto Dance">
+				<synonym value="Kalimatoto Dances"/>
+				<synonym value="Kalimatoto"/>
+				<implies facet="Culture" cat="EasternPomo"/>
+			</heading>
+			<heading id="LoleDance" title="Lole Dance">
+				<synonym value="Lole Dances"/>
+				<synonym value="Lole"/>
+				<implies facet="Culture" cat="EasternPomo"/>
+			</heading>
+			<heading id="XshlingakDance" title="Xshlingak Dance">
+				<synonym value="Xshlingak Dances"/>
+				<synonym value="Xshlingak"/>
+				<implies facet="Culture" cat="EasternPomo"/>
+			</heading>
+		</heading>
+		<heading id="Gatherings" title="Gatherings">
+		</heading>
+		<heading id="InternationalFairsExpos" title="International Fairs &amp; Expos">
+			<synonym value="World's Fair"/>
+			<synonym value="Worlds' Fair"/>
+			<synonym value="Worlds Fair"/>
+			<synonym value="World Fair"/>
+			<synonym value="World's Expo"/>
+			<synonym value="Worlds' Expo"/>
+			<synonym value="Worlds Expo"/>
+			<synonym value="World Expo"/>
+			<synonym value="World's Exposition"/>
+			<synonym value="Worlds' Exposition"/>
+			<synonym value="Worlds Exposition"/>
+			<synonym value="World Exposition"/>
+			<heading id="PanAmericanExpo" title="Pan-American Expo.">
+				<synonym value="Pan-American Expo"/>
+				<synonym value="Pan-American Exposition"/>
+			</heading>
+		</heading>
+	</heading>
+	<heading id="GroomingPersonal" title="Grooming">
+		<heading id="Bathing" title="Bathing"/>
+		<heading id="Combing" title="Combing"/>
+		<heading id="Showering" title="Showering"/>
+		<heading id="Washing" title="Washing"/>
+	</heading>
+	<heading id="Healing" title="Healing">
+		<synonym value="Doctoring"/>
+		<synonym value="Medicine"/>
+	</heading>
+	<heading id="HuntingGatheringAgriculture" title="Hunting, Gathering, &amp; Agriculture">
+		<heading id="AnimalHusbandry" title="Animal Husbandry">
+			<heading id="BeekeepingHusbandry" title="Beekeeping">
+				<synonym value="Apiculture"/>
+				<synonym value="Bee keeping"/>
+				<synonym value="Bee-keeping"/>
+			</heading>
+			<heading id="BrandingHusbandry" title="Branding"/>
+			<heading id="BreedingHusbandry" title="Breeding"/>
+			<heading id="CastratingHusbandry" title="Castrating"/>
+			<heading id="HerdingHusbandry" title="Herding"/>
+			<heading id="MilkingHusbandry" title="Milking"/>
+			<heading id="SlaughteringHusbandry" title="Slaughtering"/>
+		</heading>
+		<heading id="FarmingActivity" title="Farming">
+			<heading id="HarvestingFarming" title="Harvesting"/>
+			<heading id="PlowingFarming" title="Plowing"/>
+			<heading id="SowingFarming" title="Sowing"/>
+			<heading id="TillingFarming" title="Tilling"/>
+			<heading id="WinnowingFarming" title="Winnowing"/>
+		</heading>
+		<heading id="FishingActivity" title="Fishing">
+			<heading id="AnglingFishing" title="Angling"/>
+			<heading id="FishTrapFishing" title="Fish Trapping"/>
+			<heading id="HandGatheringFishing" title="Hand-gathering" noMatch="true"/>
+			<heading id="NettingFishing" title="Netting"/>
+			<heading id="FishSpearingFishing" title="Spearing" noMatch="true">
+				<heading id="GiggingFishing" title="Gigging">
+					<heading id="FlounderGigging" title="Flounder gigging"/>
+					<heading id="FrogGigging" title="Frog gigging"/>
+					<heading id="SuckerGigging" title="Sucker gigging"/>
+				</heading>
+				<heading id="HarpooningFishing" title="Harpooning"/>
+				<heading id="SpearFishing" title="Spear Fishing"/>
+				<heading id="WhalingFishing" title="Whaling"/>
+			</heading>
+		</heading>
+		<heading id="GatheringActivity" title="Gathering">
+			<heading id="BerryGathering" title="Berry Gathering"/>
+			<heading id="FishGathering" title="Fish Gathering">
+				<implies facet="ActivityorContext" cat="HandGatheringFishing"/>
+			</heading>
+			<heading id="SeedGathering" title="Seed Gathering"/>
+		</heading>
+		<heading id="HuntingActivity" title="Hunting"/>
+	</heading>
+	<heading id="Recreation" title="Recreation">
+		<heading id="PlayingGames" title="Playing Games">
+			<synonym value="Game playing"/>
+			<synonym value="Playing a game"/>
+		</heading>
+		<heading id="PlayingSports" title="Playing Sports">
+			<synonym value="Sport"/>
+			<synonym value="Sports"/>
+		</heading>
+	</heading>
+	<heading id="Resting" title="Resting">
+		<synonym value="Reclining"/>
+		<synonym value="Relaxing"/>
+	</heading>
+	<heading id="ReligionSpirituality" title="Religion &amp; Spirituality">
+		<synonym value="Worship"/>
+		<synonym value="Worshipping"/>
+		<synonym value="Praying"/>
+	</heading>
+	<heading id="Singing" title="Singing">
+		<synonym value="Sung"/>
+	</heading>
+	<heading id="Sitting" title="Sitting">
+		<synonym value="enthroned"/>
+		<synonym value="in throne"/>
+		<synonym value="on throne"/>
+		<synonym value="Sat"/>  <!-- look for exclusions -->
+		<synonym value="Seated"/>
+	</heading>
+	<heading id="Transporting" title="Transporting">
+		<heading id="HorsebackRiding" title="Horseback Riding"/>
+	</heading>
+	<heading id="Violence" title="Violence">
+		<heading id="Attacking" title="Attacking">
+			<synonym value="Attack"/>
+			<synonym value="Attacked"/>
+			<synonym value="Attacks"/>
+		</heading>
+		<heading id="Blinding" title="Blinding">
+			<synonym value="Blinded"/>
+		</heading>
+		<heading id="Destroying" title="Destroying">
+			<synonym value="Destroy"/>
+			<synonym value="Destroyed"/> <!-- Careful: beware objects destroyed by analysis, disposal -->
+			<synonym value="Destroys"/>
+		</heading>
+		<heading id="Injuring" title="Injuring">
+			<synonym value="Injure"/>
+			<synonym value="Injured"/>
+			<synonym value="Injures"/>
+			<synonym value="Injury"/>
+		</heading>
+		<heading id="Killing" title="Killing">
+			<synonym value="Kill"/>
+			<synonym value="Killed"/>
+			<synonym value="Kills"/>
+		</heading>
+		<heading id="Maiming" title="Maiming">
+			<synonym value="Maim"/>
+			<synonym value="Maims"/>
+			<synonym value="Maimed"/>
+		</heading>
+		<heading id="Stabbing" title="Stabbing">
+			<synonym value="Stab"/>
+			<synonym value="Stabs"/>
+			<synonym value="Stabbed"/>
+		</heading>
+		<heading id="Torturing" title="Torturing">
+			<synonym value="Torture"/>
+			<synonym value="Tortures"/>
+			<synonym value="Tortured"/>
+		</heading>
+		<heading id="Warring" title="Warring">
+			<synonym value="Battle"/>
+			<synonym value="Battled"/>
+			<synonym value="Battling"/>
+			<synonym value="War"/>
+			<synonym value="Wars"/>
+			<synonym value="Warred"/>
+		</heading>
+	</heading>
+</taxonomy>
+
