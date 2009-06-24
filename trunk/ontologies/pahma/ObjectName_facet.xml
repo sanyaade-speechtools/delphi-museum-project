@@ -2449,7 +2449,7 @@
 				<synonym value="Brush Containers"/>
 				<synonym value="Brush-Container"/>
 				<synonym value="Brush-Containers"/>
-				<implies facet="ObjectName" cat="BrushCntnrCntnr"/>
+				<implies facet="ObjectName" cat="Containers"/>
 			</heading>
 			<heading id="BrushrestComm" title="Brush-Rest">
 				<synonym value="Brush-Rests"/>
@@ -2480,7 +2480,7 @@
 				<synonym value="Ink Containers"/>
 				<synonym value="Ink-Container"/>
 				<synonym value="Ink-Containers"/>
-				<implies facet="ObjectName" cat="InkCntnrCntnr"/>
+				<implies facet="ObjectName" cat="Containers"/>
 			</heading>
 			<heading id="InkPadComm" title="Ink-Pad">
 				<synonym value="Ink-Pads"/>
@@ -2513,10 +2513,14 @@
 			<heading id="LetterHeadComm" title="Letterhead">
 				<synonym value="Letterheads"/>
 			</heading>
-			<heading id="LetterHolderComm" title="Letter-Holder">
+			<heading id="LetterHolderComm" title="Letter Holder">
+				<synonym value="Letter Holders"/>
+				<synonym value="Letter-Holder"/>
 				<synonym value="Letter-Holders"/>
 			</heading>
-			<heading id="LetterrackComm" title="Letter-Rack">
+			<heading id="LetterrackComm" title="Letter Rack">
+				<synonym value="Letter Racks"/>
+				<synonym value="Letter-Rack"/>
 				<synonym value="Letter-Racks"/>
 			</heading>
 			<heading id="ModellingtoolsComm" title="Modelling Tools">
@@ -2531,65 +2535,106 @@
 			<heading id="PaintComm" title="Paint">
 				<synonym value="Paints"/>
 			</heading>
-			<heading id="PaintboxComm" title="Paint-Box">
+			<heading id="PaintboxComm" title="Paint Box">
+				<synonym value="Paint Boxes"/>
+				<synonym value="Paint-Box"/>
 				<synonym value="Paint-Boxes"/>
 			</heading>
-			<heading id="PaintCanComm" title="Paint Can" noMatch="true"/>
-			<heading id="PaintmixerComm" title="Paint-Mixer">
+			<heading id="PaintCanComm" title="Paint Can">
+				<synonym value="Paint Cans"/>
+				<synonym value="Paint-Can"/>
+				<synonym value="Paint-Cans"/>
+				<synonym value="Paint Tin"/>
+				<synonym value="Paint Tins"/>
+				<synonym value="Paint-Tin"/>
+				<synonym value="Paint-Tins"/>
+				<implies facet="ObjectName" cat="Containers"/>
+			</heading>
+			<heading id="PaintmixerComm" title="Paint Mixer">
+				<synonym value="Paint Mixers"/>
+				<synonym value="Paint-Mixer"/>
 				<synonym value="Paint-Mixers"/>
 			</heading>
-			<heading id="PaintpotComm" title="Paint-Pot">
+			<heading id="PaintpotComm" title="Paint Pot">
+				<synonym value="Paint Pots"/>
+				<synonym value="Paint-Pot"/>
 				<synonym value="Paint-Pots"/>
 			</heading>
-			<heading id="PaintstoneComm" title="Paint-Stone">
+			<heading id="PaintstoneComm" title="Paint Stone">
+				<synonym value="Paint Stones"/>
+				<synonym value="Paint-Stone"/>
 				<synonym value="Paint-Stones"/>
 			</heading>
-			<heading id="PaperSheetComm" title="Paper-Sheet">
+			<heading id="PaperSheetComm" title="Paper Sheet">
+				<synonym value="Paper Sheets"/>
+				<synonym value="Paper-Sheet"/>
 				<synonym value="Paper-Sheets"/>
 			</heading>
-			<heading id="PaperweightComm" title="Paper-Weight">
+			<heading id="PaperweightComm" title="Paperweight">
+				<synonym value="Paperweights"/>
+				<synonym value="Paper Weight"/>
+				<synonym value="Paper Weights"/>
+				<synonym value="Paper-Weight"/>
 				<synonym value="Paper-Weights"/>
 			</heading>
-			<heading id="PapyrusBindingComm" title="Papyrus-Binding">
+			<heading id="PapyrusBindingComm" title="Papyrus Binding">
+				<synonym value="Papyrus Bindings"/>
+				<synonym value="Papyrus-Binding"/>
 				<synonym value="Papyrus-Bindings"/>
 			</heading>
 			<heading id="ParchmentComm" title="Parchment">
 				<synonym value="Parchments"/>
 			</heading>
-			<heading id="PenBoxComm" title="Pen-Box">
+			<heading id="PenBoxComm" title="Pen Box">
+				<synonym value="Pen Boxes"/>
+				<synonym value="Pen-Box"/>
 				<synonym value="Pen-Boxes"/>
 			</heading>
-			<heading id="PenCaseComm" title="Pen-Case">
+			<heading id="PenCaseComm" title="Pen Case">
+				<synonym value="Pen Cases"/>
+				<synonym value="Pen-Case"/>
 				<synonym value="Pen-Cases"/>
 			</heading>
-			<heading id="PencilCaseComm" title="Pencil-Case">
+			<heading id="PencilCaseComm" title="Pencil Case">
+				<synonym value="Pencil Cases"/>
+				<synonym value="Pencil-Case"/>
 				<synonym value="Pencil-Cases"/>
 			</heading>
-			<heading id="PencilHolderComm" title="Pencil-Holder">
+			<heading id="PencilHolderComm" title="Pencil Holder">
+				<synonym value="Pencil Holders"/>
+				<synonym value="Pencil-Holder"/>
 				<synonym value="Pencil-Holders"/>
 			</heading>
-			<heading id="PencilRestComm" title="Pencil-Rest">
+			<heading id="PencilRestComm" title="Pencil Rest">
+				<synonym value="Pencil Rests"/>
+				<synonym value="Pencil-Rest"/>
 				<synonym value="Pencil-Rests"/>
 			</heading>
 			<heading id="PenHolderComm" title="Pen-Holder">
 				<synonym value="Pen-Holders"/>
 			</heading>
-			<heading id="PenTrayComm" title="Pen-Tray">
+			<heading id="PenTrayComm" title="Pen Tray">
+				<synonym value="Pen Trays"/>
+				<synonym value="Pen-Tray"/>
 				<synonym value="Pen-Trays"/>
 			</heading>
 			<heading id="PigmentContainerComm" title="Pigment Container">
 				<synonym value="Pigment Containers"/>
 				<synonym value="Pigment-Container"/>
 				<synonym value="Pigment-Containers"/>
-				<implies facet="ObjectName" cat="PigmentCntnrCntnr"/>
+				<implies facet="ObjectName" cat="Containers"/>
 			</heading>
-			<heading id="PouncePotComm" title="Pounce-Pot">
+			<heading id="PouncePotComm" title="Pounce Pot">
+				<synonym value="Pounce Pots"/>
+				<synonym value="Pounce-Pot"/>
 				<synonym value="Pounce-Pots"/>
 			</heading>
 			<heading id="PrintingEquipmentComm" title="Printing Equipment">
 				<synonym value="Printing Items"/>
 			</heading>
-			<heading id="SandHolderComm" title="Sand-Holder">
+			<heading id="SandHolderComm" title="Sand Holder">
+				<synonym value="Sand Holders"/>
+				<synonym value="Sand-Holder"/>
 				<synonym value="Sand-Holders"/>
 			</heading>
 			<heading id="SandSprinklerComm" title="Sand-Sprinkler">
@@ -4273,9 +4318,9 @@
 			<synonym value="Bath-Tub"/>
 			<synonym value="Bath-Tubs"/>
 		</heading>
-		<heading id="Bin" title="Bin">
+		<!--<heading id="Bin" title="Bin">
 			<synonym value="Bins"/>
-		</heading>
+		</heading>-->
 		<heading id="BoxContainers" title="Box">
 			<synonym value="Boxes"/>
 			<excl value="Box Drum"/>
@@ -4333,7 +4378,6 @@
 				<implies facet="ObjectName" cat="SnuffDrug"/>
 			</heading>
 		</heading>
-		<heading id="BrushCntnrCntnr" title="Brush Container" noMatch="true"/>
 		<heading id="CanContainer" title="Can" noMatch="true"> <!-- Disambiguate -->
 			<synonym value="Cans"/>
 			<synonym value="Tins"/>
@@ -4362,23 +4406,20 @@
 		<heading id="Chest" title="Chest">
 			<synonym value="Chests"/>
 		</heading>
-		<heading id="CigarettePackCntnr" title="Cigarette Pack" noMatch="true"/>
 		<heading id="CineraryEnvelope" title="Cinerary Envelope">
 			<synonym value="Cinerary Envelopes"/>
 		</heading>
 		<heading id="Coffer" title="Coffer">
 			<synonym value="Coffers"/>
 		</heading>
-		<heading id="CosmeticCntnrCntnr" title="Cosmetic Container" noMatch="true"/>
-		<heading id="Creel" title="Creel">
+		<!--<heading id="Creel" title="Creel">
 			<synonym value="Creels"/>
-		</heading>
+		</heading>-->
 		<heading id="EelCntnrCntnr" title="Eel Container">
 			<synonym value="Eel Containers"/>
 			<synonym value="Eel-Container"/>
 			<synonym value="Eel-Containers"/>
 		</heading>
-		<heading id="FireStickCntnrCntnr" title="Fire Stick Container" noMatch="true"/>
 		<heading id="DrugContainers" title="Drug Containers">
 			<heading id="BetelContainerCntnr" title="Betel Container" noMatch="true"/>
 			<heading id="CocaContainerCntnr" title="Coca Container">
@@ -4551,44 +4592,27 @@
 		<heading id="HolderContnr" title="Holder">
 			<synonym value="Holders"/>
 		</heading>
-		<heading id="InkCntnrCntnr" title="Ink Container" noMatch="true"/>
 		<heading id="InroContainer" title="Inro">
 			<synonym value="Inros"/>
 		</heading>
-		<heading id="JiulingStickContainer" title="Jiuling Stick Container" noMatch="true"/>
-		<heading id="MedicineHornCntr" title="Medicine Horn" noMatch="true"/>
-		<heading id="MonstranceContnr" title="Monstrance" noMatch="true"/>
 		<heading id="OilContainer" title="Oil Container">
 			<synonym value="Oil Containers"/>
 			<synonym value="Oil-Container"/>
 			<synonym value="Oil-Containers"/>
 		</heading>
-		<heading id="PaintCanContnr" title="Paint Can" noMatch="true">
-			<synonym value="Paint Cans"/>
-			<synonym value="Paint-Can"/>
-			<synonym value="Paint-Cans"/>
-			<synonym value="Paint Tin"/>
-			<synonym value="Paint Tins"/>
-			<synonym value="Paint-Tin"/>
-			<synonym value="Paint-Tins"/>
-			<implies facet="ObjectName" cat="PaintCanComm"/>
-		</heading>
 		<heading id="ParflecheContnr" title="Parfleche">
 			<synonym value="Parfleches"/>
 			<!-- Implies leather -->
 		</heading>
-		<heading id="PigmentCntnrCntnr" title="Pigment Container" noMatch="true"/>
 		<heading id="PocketContnr" title="Pocket">
 			<synonym value="Pockets"/>
 		</heading>
-		<heading id="PocketBookContnr" title="Pocket-Book" noMatch="true"/>
 		<heading id="PomanderContnr" title="Pomander">
 			<synonym value="Pomanders"/>
 		</heading>
 		<heading id="PrimingHorn" title="Priming-Horn">
 			<synonym value="Priming-Horns"/>
 		</heading>
-		<heading id="PurseContainer" title="Purse" noMatch="true"/>
 		<heading id="SachetContainer" title="Sachet">
 			<synonym value="Sachets"/>
 		</heading>
@@ -5380,7 +5404,6 @@
 				<synonym value="Vials"/>
 			</heading>
 		</heading>
-		<heading id="WalletContainer" title="Wallet" noMatch="true"/>
 		<heading id="WallPocketContnr" title="Wall Pocket">
 			<synonym value="Wall Pockets"/>
 			<synonym value="Wall-Pocket"/>
@@ -6828,7 +6851,7 @@
 					<synonym value="Pocket Books"/>
 					<synonym value="Pocket-Book"/>
 					<synonym value="Pocket-Books"/>
-					<implies facet="ObjectName" cat="PocketBookContnr"/>
+					<implies facet="ObjectName" cat="Containers"/>
 				</heading>
 				<heading id="PursePersAcc" title="Purse">
 					<synonym value="Purses"/>
@@ -6841,7 +6864,7 @@
 					<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 					<implies facet="ObjectName" cat="PursePersAcc"/>
 					<implies facet="ObjectName" cat="PurseCommerceCurrency"/>
-					<implies facet="ObjectName" cat="PurseContainer"/>
+					<implies facet="ObjectName" cat="Containers"/>
 				</heading>
 				<heading id="Puttee" title="Puttee">
 					<synonym value="Puttees"/>
@@ -6874,15 +6897,19 @@
 					<synonym value="Waist-Band"/>
 					<synonym value="Waist-Bands"/>
 				</heading>
-				<heading id="WaistString" title="Waist-String">
+				<heading id="WaistString" title="Waist String">
+					<synonym value="Waist Strings"/>
+					<synonym value="Waist-String"/>
 					<synonym value="Waist-Strings"/>
 				</heading>
-				<heading id="WalkingStick" title="Walking-Stick">
+				<heading id="WalkingStick" title="Walking Stick">
+					<synonym value="Walking Sticks"/>
+					<synonym value="Walking-Stick"/>
 					<synonym value="Walking-Sticks"/>
 				</heading>
 				<heading id="WalletPersAcc" title="Wallet">
 					<synonym value="Wallets"/>
-					<implies facet="ObjectName" cat="WalletContainer"/>
+					<implies facet="ObjectName" cat="Containers"/>
 				</heading>
 				<heading id="WigPersAcc" title="Wig" noMatch="true"/>
 			</heading>
@@ -7865,7 +7892,7 @@
 				<synonym value="Cosmetic Containers"/>
 				<synonym value="Cosmetic-Container"/>
 				<synonym value="Cosmetic-Containers"/>
-				<implies facet="ObjectName" cat="CosmeticCntnrCntnr"/>
+				<implies facet="ObjectName" cat="Containers"/>
 				<heading id="CosmeticBag" title="Cosmetic Bag">
 					<synonym value="Cosmetic Bags"/>
 					<synonym value="Cosmetic-Bag"/>
@@ -8236,7 +8263,7 @@
 		</heading>
 		<heading id="JiulingStckCntnrGmSprt" title="Jiuling-Stick-Container">
 			<synonym value="Jiuling-Stick-Containers"/>
-			<implies facet="ObjectName" cat="JiulingStickContainer"/>
+			<implies facet="ObjectName" cat="Containers"/>
 		</heading>
 		<heading id="QuoitGmSprt" title="Quoit">
 			<synonym value="Quoits"/>
@@ -8358,7 +8385,7 @@
 		<heading id="DoctoringBasketMedicalRx" title="Doctoring Basket">
 			<synonym value="Doctoring Baskets"/>
 			<implies facet="ActivityorContext" cat="Healing"/>
-			<implies facet="ObjectName" cat="DoctoringBasketBaskets"/>
+			<implies facet="ObjectName" cat="Containers"/>
 			<implies facet="Collection" cat="BasketCollection"/>
 		</heading>
 		<heading id="EnemaRx" title="Enema">
@@ -8452,7 +8479,7 @@
 			<synonym value="Medicine Horns"/>
 			<synonym value="Medicine-Horn"/>
 			<synonym value="Medicine-Horns"/>
-			<implies facet="ObjectName" cat="MedicineHornCntr"/>
+			<implies facet="ObjectName" cat="Containers"/>
 		</heading>
 		<heading id="OculistsStampRx" title="Oculist's Stamp">
 			<synonym value="Oculist's Stamps"/>
@@ -10451,7 +10478,7 @@
 		</heading>
 		<heading id="MonstranceRelRit" title="Monstrance">
 			<synonym value="Monstrances"/>
-			<implies facet="ObjectName" cat="MonstranceContnr"/>
+			<implies facet="ObjectName" cat="Containers"/>
 			<!-- Implies Roman Catholicism -->
 		</heading>
 		<heading id="MorseRelRit" title="Morse" noMatch="true"/>
