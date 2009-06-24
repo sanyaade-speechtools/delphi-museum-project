@@ -4372,7 +4372,7 @@
 				<implies facet="ObjectName" cat="SnuffDrug"/>
 			</heading>
 		</heading>
-		<heading id="CanContainer" title="Can" noMatch="true"> <!-- Disambiguate -->
+		<heading id="CanContainers" title="Can" noMatch="true"> <!-- Disambiguate -->
 			<synonym value="Cans"/>
 			<synonym value="Tins"/>
 			<excl value="Watering Can"/>
@@ -4383,10 +4383,9 @@
 				<synonym value="Tin Billy"/>
 			</heading>
 			<heading id="CigaretteTin" title="Cigarette Tin"/>
-			<heading id="CoffeeCanCntnr" title="Coffee Can" noMatch="true"/>
 			<heading id="GunpowderCan" title="Gunpowder Can">
 				<synonym value="Gunpowder Cans"/>
-				<!-- Infer Firearms -->
+				<!-- Infer firearms -->
 			</heading>
 			<heading id="MilkTin" title="Milk Tin"/>
 			<heading id="OpiumTin" title="Opium Tin"/>
@@ -4415,7 +4414,6 @@
 			<synonym value="Eel-Containers"/>
 		</heading>
 		<heading id="DrugContainers" title="Drug Containers">
-			<heading id="BetelContainerCntnr" title="Betel Container" noMatch="true"/>
 			<heading id="CocaContainerCntnr" title="Coca Container">
 				<synonym value="Coca Containers"/>
 				<synonym value="Coca Pouch"/>
@@ -4430,8 +4428,6 @@
 				<!-- <implies facet="ObjectName" cat="CocaChewingStimulant"/>  Is this exclusively Betel-nut related? -->
 				<!-- <implies facet="ObjectName" cat="BetelNutDrug"/>   No; also used with Coca leaves -->
 			</heading>
-			<heading id="SnuffContainerCntnr" title="Snuff Container" noMatch="true"/>
-			<heading id="TobaccoContainerCntnr" title="Tobacco-Container" noMatch="true"/>
 		</heading>
 		<heading id="FoodContainers" title="Food Containers">
 			<synonym value="Food Container"/>
@@ -4501,7 +4497,6 @@
 			<heading id="Casket" title="Casket">
 				<synonym value="Caskets"/>
 			</heading>
-			<heading id="CoffinCntnr" title="Coffin" noMatch="true"/>
 			<heading id="OssuaryContainer" title="Ossuary">
 				<synonym value="Ossuaries"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
@@ -4509,10 +4504,8 @@
 				<implies facet="ActivityorContext" cat="Carving"/>
 				<implies facet="TechniqueDesignorDecoration" cat="Carved"/> <!-- Could be stone carving or wood carving -->
 			</heading>
-			<heading id="SarcophagusContainer" title="Sarcophagus" noMatch="true"/>
 		</heading>
-		<heading id="ReligiousCntnrCntnr" title="Religious Containers">
-			<heading id="GodHouseContnr" title="God House" noMatch="true"/>
+		<heading id="ReligiousContainers" title="Religious Containers">
 			<heading id="IncenseContainer" title="Incense Container">
 				<synonym value="Incense Containers"/>
 				<synonym value="Incense-Container "/>
@@ -4648,14 +4641,16 @@
 			<heading id="AsparagusServer" title="Asparagus-Server">
 				<synonym value="Asparagus-Servers"/>
 			</heading>
-			<heading id="BasinVessel" title="Basin" noMatch="true">
+			<!--<heading id="BasinVessel" title="Basin" noMatch="true">
 				<synonym value="Wash Basin"/>
 				<synonym value="Wash Basins"/>
-			</heading>
+			</heading>-->
 			<heading id="Beaker" title="Beaker">
 				<synonym value="Beakers"/>
 			</heading>
-			<heading id="BeerVessel" title="Beer-Vessel">
+			<heading id="BeerVessel" title="Beer Vessel">
+				<synonym value="Beer Vessels"/>
+				<synonym value="Beer-Vessel"/>
 				<synonym value="Beer-Vessels"/>
 			</heading>
 			<heading id="Biberon" title="Biberon">
@@ -4682,7 +4677,9 @@
 			<heading id="Burette" title="Burette">
 				<synonym value="Burettes"/>
 			</heading>
-			<heading id="ButterVessel" title="Butter-Vessel">
+			<heading id="ButterVessel" title="Butter Vessel">
+				<synonym value="Butter Vessels"/>
+				<synonym value="Butter-Vessel"/>
 				<synonym value="Butter-Vessels"/>
 			</heading>
 			<heading id="Cambu" title="Cambu">
@@ -4735,7 +4732,9 @@
 			<heading id="CowCreamer" title="Cow Creamer">
 				<synonym value="Cow Creamers"/>
 			</heading>
-			<heading id="CreamBoat" title="Cream-Boat">
+			<heading id="CreamBoat" title="Cream Boat">
+				<synonym value="Cream Boats"/>
+				<synonym value="Cream-Boat"/>
 				<synonym value="Cream-Boats"/>
 			</heading>
 			<heading id="Cresset" title="Cresset">
@@ -4747,13 +4746,15 @@
 			<heading id="Crucible" title="Crucible">
 				<synonym value="Crucibles"/>
 			</heading>
-			<heading id="CruetSet" title="Cruet-Set">
+			<heading id="CruetSet" title="Cruet Set">
+				<synonym value="Cruet Sets"/>
+				<synonym value="Cruet-Set"/>
 				<synonym value="Cruet-Sets"/>
 			</heading>
 			<heading id="Cruse" title="Cruse">
 				<synonym value="Cruses"/>
 			</heading>
-			<heading id="Cup" title="Cups">
+			<heading id="CupVessels" title="Cups">
 				<!-- To Be Added:
 					Column-Krater
 					Cup-Skyphos
@@ -4770,7 +4771,6 @@
 					<implies facet="ActivityorContext" cat="Drinking"/>
 					<implies facet="ObjectName" cat="ChaliceAlcEq"/>
 				</heading>
-				<heading id="GobletCup" title="Goblet" noMatch="true"/>
 				<heading id="Kotyle" title="Kotyle">
 					<heading id="Kylix" title="Kylix">
 						<synonym value="κύλιξ"/>
@@ -4796,21 +4796,21 @@
 						<implies facet="ActivityorContext" cat="WineDrinking"/>
 					</heading>
 				</heading>
-				<heading id="RhytonCup" title="Rhyton" noMatch="true"/>
 				<heading id="Stein" title="Stein">
 					<synonym value="Steins"/>
 				</heading>
 			</heading>
-			<heading id="CupelVessel" title="Cupel" noMatch="true"/>
-			<heading id="CuppingVessel" title="Cupping-Vessel">
+			<heading id="CuppingVessel" title="Cupping Vessel">
+				<synonym value="Cupping Vessels"/>
+				<synonym value="Cupping-Vessel"/>
 				<synonym value="Cupping-Vessels"/>
 			</heading>
-			<heading id="DecanterVessel" title="Decanter" noMatch="true"/>
 			<heading id="Dipper" title="Dipper">
 				<synonym value="Dippers"/>
 			</heading>
-			<heading id="DishVessel" title="Dish" noMatch="true"/>
-			<heading id="DrinkingVessel" title="Drinking-Vessel">
+			<heading id="DrinkingVessel" title="Drinking Vessel">
+				<synonym value="Drinking Vessels"/>
+				<synonym value="Drinking-Vessel"/>
 				<synonym value="Drinking-Vessels"/>
 			</heading>
 			<heading id="Ewer" title="Ewer">
@@ -4925,11 +4925,15 @@
 			<heading id="LiDing" title="Li Ding">
 				<synonym value="Li Dings"/>
 			</heading>
-			<heading id="LimeVessel" title="Lime-Vessel">
+			<heading id="LimeVessel" title="Lime Vessel">
+				<synonym value="Lime Vessels"/>
+				<synonym value="Lime-Vessel"/>
 				<synonym value="Lime-Vessels"/>
 			</heading>
 			<heading id="MeasuringVslVsl" title="Measuring-Vessel" noMatch="true"/>
-			<heading id="MilkVessel" title="Milk-Vessel">
+			<heading id="MilkVessel" title="Milk Vessel">
+				<synonym value="Milk Vessels"/>
+				<synonym value="Milk-Vessel"/>
 				<synonym value="Milk-Vessels"/>
 			</heading>
 			<heading id="MortarVessel" title="Mortar" noMatch="true"/>
@@ -5757,7 +5761,7 @@
 			<heading id="DishCookEq" title="Dish">
 				<synonym value="Dishes"/>
 				<excl value="Offering"/>
-				<implies facet="ObjectName" cat="DishVessel"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<heading id="FeastDishCookEq" title="Feast Dish">
 					<synonym value="Feast Dishes"/>
@@ -10335,7 +10339,7 @@
 				<synonym value="Coffins"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
 				<implies facet="ObjectName" cat="BoxContainers"/>
-				<implies facet="ObjectName" cat="CoffinCntnr"/>
+				<implies facet="ObjectName" cat="FuneraryContainers"/>
 			</heading>
 			<heading id="MummyFuneraryItemRelRit" title="Mummy" noMatch="true">
 				<implies facet="ActivityorContext" cat="Burial"/>
@@ -10345,7 +10349,7 @@
 				<synonym value="Sarcophogases"/>
 				<synonym value="Sarcophagi"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
-				<implies facet="ObjectName" cat="SarcophagusContainer"/>
+				<implies facet="ObjectName" cat="FuneraryContainers"/>
 			</heading>
 			<heading id="UrnRelRit" title="Urn">
 				<synonym value="Urns"/>
@@ -10358,7 +10362,7 @@
 			<synonym value="God Houses"/>
 			<synonym value="God-House"/>
 			<synonym value="God-Houses"/>
-			<implies facet="ObjectName" cat="GodHouseContnr"/>
+			<implies facet="ObjectName" cat="ReligiousContainers"/>
 		</heading>
 		<heading id="HanukahLampRelRit" title="Hanukah Lamp">
 			<synonym value="Hanukah Lamps"/>
@@ -10615,7 +10619,7 @@
 		</heading>
 		<heading id="CupelScience" title="Cupel">
 			<synonym value="Cupels"/>
-			<implies facet="ObjectName" cat="CupelVessel"/>
+			<implies facet="ObjectName" cat="VesselContainers"/>
 		</heading>
 		<heading id="GlobeScience" title="Globe">
 			<synonym value="Globes"/>
@@ -11802,7 +11806,7 @@
 			</heading>
 			<heading id="GobletAlcEq" title="Goblet">
 				<synonym value="Goblets"/>
-				<implies facet="ObjectName" cat="GobletCup"/>
+				<implies facet="ObjectName" cat="CupVessels"/>
 			</heading>
 			<heading id="LiqueurGlass" title="Liqueur Glass">
 				<synonym value="Liqueur Glasses"/>
@@ -11878,7 +11882,7 @@
 			</heading>
 			<heading id="RhytonAlcEq" title="Rhyton">
 				<synonym value="Rhytons"/>
-				<implies facet="ObjectName" cat="RhytonCup"/>
+				<implies facet="ObjectName" cat="CupVessels"/>
 			</heading>
 			<heading id="RummerAlcEq" title="Rummer">
 				<synonym value="Rummers"/>
@@ -11933,7 +11937,7 @@
 				<heading id="CorkscrewAlcEq" title="Corkscrew" noMatch="true"/>
 				<heading id="DecanterAlcEq" title="Decanter">
 					<synonym value="Decanters"/>
-					<implies facet="ObjectName" cat="DecanterVessel"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="WineCup" title="Wine Cup">
 					<synonym value="Wine Cups"/>
@@ -12016,7 +12020,7 @@
 				<synonym value="Betel Containers"/>
 				<synonym value="Betel-Container"/>
 				<synonym value="Betel-Containers"/>
-				<implies facet="ObjectName" cat="BetelContainerCntnr"/>
+				<implies facet="ObjectName" cat="DrugContainers"/>
 				<implies facet="ObjectName" cat="BetelNutDrug"/>
 			</heading>
 			<heading id="BetelCrusherBetlEq" title="Betel Crusher">
@@ -12070,7 +12074,7 @@
 				<synonym value="Coffee Cans"/>
 				<synonym value="Coffee-Can"/>
 				<synonym value="Coffee-Cans"/>
-				<implies facet="ObjectName" cat="CoffeeCanCntnr"/>
+				<implies facet="ObjectName" cat="CanContainers"/>
 			</heading>
 			<heading id="CoffeeCoolerCfeEq" title="Coffee Cooler">
 				<synonym value="Coffee Coolers"/>
@@ -12551,7 +12555,7 @@
 				<synonym value="Snuff Containers"/>
 				<synonym value="Snuff-Container"/>
 				<synonym value="Snuff-Containers"/>
-				<implies facet="ObjectName" cat="SnuffContainerCntnr"/>
+				<implies facet="ObjectName" cat="DrugContainers"/>
 			</heading>
 			<heading id="SnuffFunnel" title="Snuff-Funnel">
 				<synonym value="Snuff-Funnels"/>
@@ -12734,7 +12738,7 @@
 				<synonym value="Tobacco Containers"/>
 				<synonym value="Tobacco-Container"/>
 				<synonym value="Tobacco-Containers"/>
-				<implies facet="ObjectName" cat="TobaccoContainerCntnr"/>
+				<implies facet="ObjectName" cat="DrugContainers"/>
 			</heading>
 			<heading id="TobaccoGrinderTobac" title="Tobacco Grinder">
 				<synonym value="Tobacco Grinders"/>
