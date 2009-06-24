@@ -13,17 +13,18 @@ associated with the collections into distinct <em>facets</em> such as location,
 culture, materials, etc.</p>
 <h3>What is a facet?</h3>
 <p> 
-A facet is a set of attributes that describe an object from a distinct and
-independent perspective. A Location facet, for example, describes all the places
-associated with objects in the collections, and organizes these places for easy
-understanding.&nbsp; The PAHMA collections are described using facets that
-address the general questions of&nbsp; 'who?' (<strong>Culture</strong>),
-'what?' (<strong>Use or Context</strong>, and <strong>Materials)</strong>,
-'where?' (<strong>Location</strong>), 'why?' (<strong>Use or Context</strong>)
-and 'how?' (<strong>Technique, Design or Decoration</strong>, and <strong>Color</strong>).&nbsp;
-Separating these from one another simplifies the
-overall structure and makes it easier and more powerful to use for searching and
-browsing.</p>
+A facet is a set of attributes that describe an object from a distinct
+and independent perspective. A Location facet, for example, describes
+all the places associated with objects in the collections, and organizes
+these places for easy understanding.&nbsp; The PAHMA collections are
+described using facets that address the general questions of&nbsp;'who?'
+(<strong>Culture</strong>), 'what?' (<strong>Object Name</strong>,
+<strong>Materials</strong>, and <strong>Collection</strong>), 'where?'
+(<strong>Location</strong>), 'why?' (<strong>Activity or
+Context</strong>) and 'how?' (<strong>Technique, Design or
+Decoration</strong>, and <strong>Color</strong>).&nbsp;
+Separating these from one another simplifies the overall structure and
+makes it easier and more powerful to use for searching and browsing.</p>
 <h3>Where to begin?</h3>
 <p>There are several ways to use the Delphi browser, depending on the task at
 hand. You can dive right in, enter a basic keyword search, or browse the full
