@@ -717,18 +717,16 @@
 					<synonym value="Fish-Trap Baskets"/>
 					<implies facet="ActivityorContext" cat="FishingActivity"/>
 					<implies facet="Collection" cat="BasketCollection"/>
-					<implies facet="ObjectName" cat="FishTrapBasketBasket"/>
+					<implies facet="ObjectName" cat="Baskets"/>
 					<heading id="TrapEelTrapBasketFshEq" title="Eel Trap Basket">
 						<synonym value="Eel Trap Baskets"/>
 						<synonym value="Eel-Trap Basket"/>
 						<synonym value="Eel-Trap Baskets"/>
-						<implies facet="ObjectName" cat="EelTrapBasketBasket"/>
 					</heading>
 					<heading id="TrapSalmonTrapBasketFshEq" title="Salmon Trap Basket">
 						<synonym value="Salmon Trap Baskets"/>
 						<synonym value="Salmon-Trap Basket"/>
 						<synonym value="Salmon-Trap Baskets"/>
-						<implies facet="ObjectName" cat="SalmonTrapBasketBasket"/>
 					</heading>
 				</heading>
 				<heading id="FishWeirFshEq" title="Fish Weir">
@@ -3419,7 +3417,7 @@
 			</heading>
 			<heading id="MoneyBoxCurrency" title="Money Box">
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
-				<implies facet="ObjectName" cat="MoneyBoxContainer"/>
+				<implies facet="ObjectName" cat="BoxContainers"/>
 			</heading>
 			<heading id="MoneystoneCurrency" title="Money stone">
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
@@ -4218,7 +4216,6 @@
 				<synonym value="Burden Baskets"/>
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			</heading>
-			<heading id="CarryingBasketBskt" title="Carrying Basket" noMatch="true"/>
 			<heading id="CookingBasketBaskets" title="Cooking Basket">
 				<synonym value="Cooking Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
@@ -4231,11 +4228,6 @@
 			<heading id="DippingBasket" title="Dipping Basket">
 				<synonym value="Dipping Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-			</heading>
-			<heading id="DoctoringBasketBaskets" title="Doctoring Basket" noMatch="true"/>
-			<heading id="FishTrapBasketBasket" title="Fish Trap Basket" noMatch="true">
-				<heading id="EelTrapBasketBasket" title="Eel Trap Basket" noMatch="true"/>
-				<heading id="SalmonTrapBasketBasket" title="Salmon Trap Basket" noMatch="true"/>
 			</heading>
 			<heading id="GatheringBasket" title="Gathering Basket">
 				<synonym value="Gathering Baskets"/>
@@ -4263,7 +4255,6 @@
 				<synonym value="Hanging Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
-			<heading id="MortarBasketBskts" title="Mortar Basket" noMatch="true"/>
 			<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
 				<synonym value="Mush-Boiling Baskets"/>
 				<synonym value="Mush Boiling Basket"/>
@@ -4324,7 +4315,13 @@
 		<heading id="BoxContainers" title="Box">
 			<synonym value="Boxes"/>
 			<excl value="Box Drum"/>
-			<heading id="BentwoodBoxContainer" title="Bent Wood Box" noMatch="true"/>
+			<heading id="BentwoodBoxContainer" title="Bent Wood Box">
+				<synonym value="Bentwood Box"/>
+				<synonym value="Bentwood Boxes"/>
+				<synonym value="Bent Wood Boxes"/>
+				<synonym value="Bent-wood Box"/>
+				<synonym value="Bent-wood Boxes"/>
+			</heading>
 			<heading id="BreadBoxContainer" title="Bread Box">
 				<synonym value="Bread Boxes"/>
 				<synonym value="Breadbox"/>
@@ -4338,7 +4335,6 @@
 				<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
 				<implies facet="ObjectName" cat="CanopicBxFunerRelRit"/>
 			</heading>
-			<heading id="CoffinBoxContainer" title="Coffin" noMatch="true"/>
 			<heading id="FeatherBoxContainer" title="Feather Box">
 				<synonym value="Feather-Box"/>
 				<synonym value="Featherbox"/>
@@ -4353,8 +4349,6 @@
 				<synonym value="Gold Dust Boxes"/>
 				<synonym value="Golddust Boxes"/>
 			</heading>
-			<heading id="MatchBoxContainer" title="Match Box" noMatch="true"/>
-			<heading id="MoneyBoxContainer" title="Money Box" noMatch="true"/>
 			<heading id="PowdercapBoxContainer" title="Powder &amp; Cap Box">
 				<synonym value="Cap Box"/>
 				<synonym value="Cap Boxes"/>
@@ -4439,7 +4433,7 @@
 			<heading id="SnuffContainerCntnr" title="Snuff Container" noMatch="true"/>
 			<heading id="TobaccoContainerCntnr" title="Tobacco-Container" noMatch="true"/>
 		</heading>
-		<heading id="FoodContainer" title="Food Containers">
+		<heading id="FoodContainers" title="Food Containers">
 			<synonym value="Food Container"/>
 			<synonym value="Food-Container"/>
 			<synonym value="Food-Containers"/>
@@ -4499,9 +4493,6 @@
 				<synonym value="Soup-Container"/>
 				<synonym value="Soup-Containers"/>
 			</heading>
-			<heading id="TeaBagContnr" title="Tea Bag" noMatch="true"/>
-			<heading id="TeaJarContainer" title="Tea Jar" noMatch="true"/>
-			<heading id="TeaWhiskCntnrCntnr" title="Tea Whisk Container" noMatch="true"/>
 			<heading id="WineskinContainer" title="Wineskin">
 				<synonym value="Wineskins"/>
 			</heading>
@@ -4634,7 +4625,7 @@
 		<heading id="VatContainer" title="Vat">
 			<synonym value="Vats"/>
 		</heading>
-		<heading id="VesselContainer" title="Vessels">
+		<heading id="VesselContainers" title="Vessels">
 			<synonym value="Vessel"/>
 			<heading id="Aeolipile" title="Aeolipile">
 				<synonym value="Aeolipiles"/>
@@ -4657,7 +4648,6 @@
 			<heading id="AsparagusServer" title="Asparagus-Server">
 				<synonym value="Asparagus-Servers"/>
 			</heading>
-			<heading id="BabyFeederCntnr" title="Baby Feeder" noMatch="true"/>
 			<heading id="BasinVessel" title="Basin" noMatch="true">
 				<synonym value="Wash Basin"/>
 				<synonym value="Wash Basins"/>
@@ -4671,7 +4661,6 @@
 			<heading id="Biberon" title="Biberon">
 				<synonym value="Biberons"/>
 			</heading>
-			<heading id="BoilerVessel" title="Boiler" noMatch="true"/>
 			<heading id="Bottle" title="Bottle">
 				<synonym value="Bottles"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
@@ -4734,13 +4723,6 @@
 				<synonym value="Cocktail-Shakers"/>
 				<implies facet="ObjectName" cat="CocktailShakerAlcEq"/>
 			</heading>
-			<heading id="CoffeePotVessel" title="Coffee Pot" noMatch="true">
-				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
-				<implies facet="ObjectName" cat="CoffeePotHeatingCookEq"/>
-				<implies facet="ObjectName" cat="CoffeeFood"/>
-			</heading>
-			<heading id="CoffeePercolatorVess" title="Coffee Percolator" noMatch="true"/>
 			<heading id="Cooler" title="Cooler">
 				<synonym value="Coolers"/>
 			</heading>
@@ -5257,7 +5239,7 @@
 					</heading>
 					<heading id="LibationVessel" title="Libation-Vessel">
 						<synonym value="Libation-Vessels"/>
-						<implies facet="ObjectName" cat="VesselContainer"/>
+						<implies facet="ObjectName" cat="VesselContainers"/>
 					</heading>
 					<heading id="PreachersPlate" title="Preacher's Plate">
 						<synonym value="Preacher's Plates"/>
@@ -5329,7 +5311,7 @@
 				</heading>
 				<heading id="YiRelRegVes" title="Yi">
 					<synonym value="Yis"/>
-					<implies facet="ObjectName" cat="VesselContainer"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="YouRelRegVes" title="You" noMatch="true"> <!-- Disambiguate from the pronoun -->
 					<synonym value="Yous"/>
@@ -5349,7 +5331,7 @@
 			</heading>
 			<heading id="SaltVessel" title="Salt Vessel">
 				<synonym value="Salt Vessels"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="SanzuFu" title="Sanzu Fu">
 				<synonym value="Sanzu Fus"/>
@@ -5362,7 +5344,7 @@
 			</heading>
 			<heading id="SnuffVessel" title="Snuff-Vessel">
 				<synonym value="Snuff-Vessels"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 				<implies facet="ObjectName" cat="SnuffDrug"/>
 			</heading>
 			<heading id="Spittoon" title="Spittoon">
@@ -5373,7 +5355,7 @@
 			</heading>
 			<heading id="StorageVessel" title="Storage-Vessel">
 				<synonym value="Storage-Vessels"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="SugarShaker" title="Sugar-Shaker">
 				<synonym value="Sugar-Shakers"/>
@@ -5426,7 +5408,7 @@
 				<synonym value="Baby Feeders"/>
 				<synonym value="Baby-Feeder"/>
 				<synonym value="Baby-Feeders"/>
-				<implies facet="ObjectName" cat="BabyFeederCntnr"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="BabyRattleChdCr" title="Baby Rattle">
 				<synonym value="Baby Rattles"/>
@@ -5631,7 +5613,7 @@
 			</heading>
 			<heading id="CookingVesselCookEq" title="Cooking Vessel">
 				<synonym value="Cooking Vessels"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 				<heading id="BakingDishCookEq" title="Baking Dish">
 					<synonym value="Baking Dishs"/>  <!-- Misspelling -->
 					<synonym value="Baking-Dish"/>
@@ -5723,7 +5705,7 @@
 					<synonym value="Cauldrons"/>
 					<synonym value="Caldron"/>
 					<synonym value="Caldrons"/>
-					<implies facet="ObjectName" cat="BoilerVessel"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 					<heading id="ChytraCookEq" title="Chytra">
 						<synonym value="Chytras"/>
 					</heading>
@@ -5877,7 +5859,7 @@
 					<!-- are all kettles made of metal? -->
 					<implies facet="ActivityorContext" cat="FoodPreparation"/>
 					<implies facet="ObjectName" cat="KettleVessels"/>
-					<implies facet="ObjectName" cat="VesselContainer"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="OvenCookEq" title="Oven">
 					<synonym value="Ovens"/>
@@ -6038,7 +6020,7 @@
 							<synonym value="Mortar Baskets"/>
 							<implies facet="ActivityorContext" cat="FoodPreparation"/>
 							<implies facet="Collection" cat="BasketCollection"/>
-							<implies facet="ObjectName" cat="MortarBasketBskts"/>
+							<implies facet="ObjectName" cat="Baskets"/>
 						</heading>
 						<heading id="PestleCookEq" title="Pestle">
 							<synonym value="Pestles"/>
@@ -7913,7 +7895,7 @@
 					<synonym value="Cosmetic Vessels"/>
 					<synonym value="Cosmetic-Vessel"/>
 					<synonym value="Cosmetic-Vessels"/>
-					<implies facet="ObjectName" cat="VesselContainer"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="KohlContainer" title="Kohl Container">
 					<synonym value="Kohl Containers"/>
@@ -8151,7 +8133,7 @@
 				<synonym value="Toilet Vessels"/>
 				<synonym value="Toilet-Vessel"/>
 				<synonym value="Toilet-Vessels"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="WigBoxCsmtc" title="Wig Box">
 				<synonym value="Wig Boxes"/>
@@ -8385,7 +8367,7 @@
 		<heading id="DoctoringBasketMedicalRx" title="Doctoring Basket">
 			<synonym value="Doctoring Baskets"/>
 			<implies facet="ActivityorContext" cat="Healing"/>
-			<implies facet="ObjectName" cat="Containers"/>
+			<implies facet="ObjectName" cat="Baskets"/>
 			<implies facet="Collection" cat="BasketCollection"/>
 		</heading>
 		<heading id="EnemaRx" title="Enema">
@@ -10352,7 +10334,7 @@
 			<heading id="CoffinRelRit" title="Coffin">
 				<synonym value="Coffins"/>
 				<implies facet="ActivityorContext" cat="Burial"/>
-				<implies facet="ObjectName" cat="CoffinBoxContainer"/>
+				<implies facet="ObjectName" cat="BoxContainers"/>
 				<implies facet="ObjectName" cat="CoffinCntnr"/>
 			</heading>
 			<heading id="MummyFuneraryItemRelRit" title="Mummy" noMatch="true">
@@ -11755,7 +11737,7 @@
 					<synonym value="Beer Containers"/>
 					<synonym value="Beer-Container"/>
 					<synonym value="Beer-Containers"/>
-					<implies facet="ObjectName" cat="FoodContainer"/>
+					<implies facet="ObjectName" cat="FoodContainers"/>
 				</heading>
 				<heading id="BeerStrainer" title="Beer Strainer">
 					<synonym value="Beer Strainers"/>
@@ -12020,7 +12002,7 @@
 					<synonym value="Wine Vessels"/>
 					<synonym value="Wine-Vessel"/>
 					<synonym value="Wine-Vessels"/>
-					<implies facet="ObjectName" cat="VesselContainer"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 			</heading>
 			<heading id="YunomiAlcEq" title="Yunomi">
@@ -12124,7 +12106,7 @@
 				<synonym value="Coffee Percolators"/>
 				<synonym value="Coffee-Percolator"/>
 				<synonym value="Coffee-Percolators"/>
-				<implies facet="ObjectName" cat="CoffeePercolatorVess"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="CoffeePotCfeEq" title="Coffee Pot">
 				<synonym value="Coffee Pots"/>
@@ -12132,7 +12114,7 @@
 				<synonym value="Coffee-Pots"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
 				<implies facet="ActivityorContext" cat="CoffeeDrinking"/>
-				<implies facet="ObjectName" cat="CoffeePotVessel"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 				<implies facet="ObjectName" cat="CoffeePotHeatingCookEq"/>
 				<implies facet="ObjectName" cat="CoffeeFood"/>
 			</heading>
@@ -12305,7 +12287,7 @@
 			<implies facet="ActivityorContext" cat="TobaccoSmoking"/>
 			<heading id="AshtraySmkng" title="Ashtray">
 				<synonym value="Ashtrays"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="CigarSmkng" title="Cigar">
 				<synonym value="Cigars"/>
@@ -12618,7 +12600,7 @@
 				<synonym value="Tea Caddies"/>
 				<synonym value="Tea-Caddy"/>
 				<synonym value="Tea-Caddies"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 				<heading id="Chaire" title="Chaire">
 					<synonym value="Chaires"/>
 				</heading>
@@ -12656,7 +12638,7 @@
 				<synonym value="Tea Jar-Containers"/>
 				<synonym value="Tea-Jar-Container"/>
 				<synonym value="Tea-Jar-Containers"/>
-				<implies facet="ObjectName" cat="TeaJarContainer"/>
+				<implies facet="ObjectName" cat="FoodContainers"/>
 			</heading>
 			<heading id="TeaJug" title="Tea Jug">
 				<synonym value="Tea Jugs"/>
@@ -12683,7 +12665,7 @@
 				<synonym value="Tea Packets"/>
 				<synonym value="Tea-Packet"/>
 				<synonym value="Tea-Packets"/>
-				<implies facet="ObjectName" cat="TeaBagContnr"/>
+				<implies facet="ObjectName" cat="FoodContainers"/>
 			</heading>
 			<heading id="TeapotTeaEq" title="Teapot">
 				<synonym value="Teapots"/>
@@ -12741,7 +12723,7 @@
 				<synonym value="Tea Whisk-Containers"/>
 				<synonym value="Tea-Whisk-Container"/>
 				<synonym value="Tea-Whisk-Containers"/>
-				<implies facet="ObjectName" cat="TeaWhiskCntnrCntnr"/>
+				<implies facet="ObjectName" cat="FoodContainers"/>
 			</heading>
 		</heading>
 		<heading id="TobaccoEquipment" title="Tobacco Equipment">
@@ -14022,7 +14004,7 @@
 				<synonym value="Carrying Baskets"/>
 				<synonym value="Carrying-Basket"/>
 				<synonym value="Carrying-Baskets"/>
-				<implies facet="ObjectName" cat="CarryingBasketBskt"/>
+				<implies facet="ObjectName" cat="Baskets"/>
 			</heading>
 			<heading id="CarryingBelt" title="Carrying Belt">
 				<synonym value="Carrying Belts"/>
@@ -14068,7 +14050,7 @@
 			</heading>
 			<heading id="VesselCarrier" title="Vessel-Carrier">
 				<synonym value="Vessel-Carriers"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="WaterCarrier" title="Water Carrier">
 				<synonym value="Water Carriers"/>
@@ -14910,7 +14892,7 @@
 				<synonym value="Vessel Stands"/>
 				<synonym value="Vessel-Stand"/>
 				<synonym value="Vessel-Stands"/>
-				<implies facet="ObjectName" cat="VesselContainer"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			••• [none]:
 			<heading id="WigStandStndMiscEq" title="Wig Stand">
