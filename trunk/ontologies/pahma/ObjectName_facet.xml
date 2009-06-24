@@ -4527,7 +4527,6 @@
 					<synonym value="Incense Vessels"/>
 					<synonym value="Incense-Vessel"/>
 					<synonym value="Incense-Vessels"/>
-					<implies facet="ObjectName" cat="IncenseVslVsl"/>
 					<heading id="Balsamarium" title="Balsamarium">
 						<synonym value="Balsamariums"/>
 					</heading>
@@ -4836,7 +4835,6 @@
 			<heading id="Hanap" title="Hanap">
 				<synonym value="Hanaps"/>
 			</heading>
-			<heading id="IncenseVslVsl" title="Incense Vessel" noMatch="true"/>
 			<heading id="Jars" title="Jars">
 				<synonym value="Jar"/>
 				<heading id="Beerjar" title="Beer Jar">
@@ -4930,20 +4928,22 @@
 				<synonym value="Lime-Vessel"/>
 				<synonym value="Lime-Vessels"/>
 			</heading>
-			<heading id="MeasuringVslVsl" title="Measuring-Vessel" noMatch="true"/>
 			<heading id="MilkVessel" title="Milk Vessel">
 				<synonym value="Milk Vessels"/>
 				<synonym value="Milk-Vessel"/>
 				<synonym value="Milk-Vessels"/>
 			</heading>
 			<heading id="MortarVessel" title="Mortar" noMatch="true"/>
-			<heading id="MustardShaker" title="Mustard-Shaker">
+			<heading id="MustardShaker" title="Mustard Shaker">
+				<synonym value="Mustard Shakers"/>
+				<synonym value="Mustard-Shaker"/>
 				<synonym value="Mustard-Shakers"/>
 			</heading>
-			<heading id="OilVessel" title="Oil-Vessel">
+			<heading id="OilVessel" title="Oil Vessel">
+				<synonym value="Oil Vessels"/>
+				<synonym value="Oil-Vessel"/>
 				<synonym value="Oil-Vessels"/>
 			</heading>
-			<heading id="PanVessel" title="Pan" noMatch="true"/>
 			<heading id="PancaPatra" title="Pañca-Pátra">
 				<synonym value="Pañca-Pátras"/>
 			</heading>
@@ -4957,11 +4957,15 @@
 				<synonym value="Pepper-Pot "/>
 				<synonym value="Pepper-Pots"/>
 			</heading>
-			<heading id="PickleTray" title="Pickle-Tray">
+			<heading id="PickleDish" title="Pickle Dish">
+				<synonym value="Pickle Dishes"/>
+				<synonym value="Pickle-Dish"/>
+				<synonym value="Pickle-Dishes"/>
+				<synonym value="Pickle Tray"/>
+				<synonym value="Pickle Trays"/>
+				<synonym value="Pickle-Tray"/>
 				<synonym value="Pickle-Trays"/>
 			</heading>
-			<heading id="PlateVessel" title="Plate" noMatch="true"/>
-			<heading id="PlatterVsl" title="Platter" noMatch="true"/>
 			<heading id="PopeJoanBoard" title="Pope Joan Board">
 				<synonym value="Pope Joan Boards"/>
 			</heading>
@@ -5074,7 +5078,7 @@
 						<synonym value="baked clay  tablet"/>
 					</heading>
 				</heading>
-				<heading id="Potterybyshape" title="By Shape" noMatch="true">
+				<heading id="Potterybyshape" title="(by shape)" noMatch="true">
 					<heading id="Offeringtable" title="Offering Table">
 						<synonym value="Offering Tables"/>
 					</heading>
@@ -5082,12 +5086,12 @@
 						<synonym value="Oil Lamps"/>
 						<implies facet="ObjectName" cat="LampLightingLghtEq"/>
 					</heading>
-					<heading id="PotteryPlate" title="Plate" noMatch="true"/>
+					<heading id="PotteryPlate" title="Plate" noMatch="true"/> <!-- Currently has nothing pointing here -->
 					<heading id="Potstand" title="Pot Stand">
 						<synonym value="Pot Stands"/>
 					</heading>
 				</heading>
-				<heading id="Potterybystyleortype" title="By Style Or Type" noMatch="true">
+				<heading id="Potterybystyleortype" title="(by style or type)" noMatch="true">
 					<heading id="BlackFigureware" title="Black Figure Ware">
 						<synonym value="Black-Figure Ware"/>
 						<synonym value="'μελανόμορφα"/>
@@ -5279,7 +5283,7 @@
 				</heading>
 				<heading id="PanRelRegVes" title="Pan" noMatch="true">
 					<excl value="Cooking"/>
-					<implies facet="ObjectName" cat="PanVessel"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="PouRelRegVes" title="Pou">
 					<synonym value="Pous"/>
@@ -5688,7 +5692,7 @@
 					<synonym value="Pan"/>
 					<synonym value="Pans"/>
 					<implies facet="ActivityorContext" cat="Metallurgy"/>
-					<implies facet="ObjectName" cat="PanVessel"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 					<heading id="SkilletCookEq" title="Skillet">
 						<synonym value="Skillets"/>
 						<synonym value="Fry Pan"/>
@@ -5795,13 +5799,13 @@
 					<excl value="Silverplate"/>
 					<excl value="Silverplated"/>
 					<implies facet="ActivityorContext" cat="FoodServing"/>
-					<implies facet="ObjectName" cat="PlateVessel"/>
-					<implies facet="ObjectName" cat="PotteryPlate"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
+					<!-- <implies facet="ObjectName" cat="PotteryPlate"/> Not all plates are pottery plates -->
 				</heading>
 				<heading id="PlatterCookEq" title="Platter">
 					<synonym value="Platters"/>
 					<implies facet="ActivityorContext" cat="FoodServing"/>
-					<implies facet="ObjectName" cat="PlatterVsl"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 			</heading>
 			<heading id="FishDrierCookEq" title="Fish Drier">
@@ -11395,7 +11399,7 @@
 					<synonym value="Measuring Vessels"/>
 					<synonym value="Measuring-Vessel"/>
 					<synonym value="Measuring-Vessels"/>
-					<implies facet="ObjectName" cat="MeasuringVslVsl"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="PedometerMeasure" title="Pedometer">
 					<synonym value="Pedometers"/>
