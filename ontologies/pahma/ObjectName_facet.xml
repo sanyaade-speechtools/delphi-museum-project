@@ -4539,13 +4539,13 @@
 						<synonym value="Incense Bowls"/>
 						<synonym value="Incense-Bowl"/>
 						<synonym value="Incense-Bowls"/>
-						<implies facet="ObjectName" cat="BowlVessel"/>
+						<implies facet="ObjectName" cat="BowlVessels"/>
 					</heading>
 					<heading id="IncenseJarCntnr" title="Incense Jar">
 						<synonym value="Incense Jars"/>
 						<synonym value="Incense-Jar"/>
 						<synonym value="Incense-Jars"/>
-						<implies facet="ObjectName" cat="IncenseJarJars"/>
+						<implies facet="ObjectName" cat="Jars"/>
 					</heading> 
 					<heading id="IncenseVase" title="Incense Vase">
 						<synonym value="Incense Vases"/>
@@ -4659,7 +4659,7 @@
 				<synonym value="Bottles"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
 			</heading>
-			<heading id="BowlVessel" title="Bowls" noMatch="true">
+			<heading id="BowlVessels" title="Bowls" noMatch="true">
 				<heading id="IncantationBowl" title="Incantation Bowl">
 					<synonym value="Incantation Bowls"/>
 					</heading>
@@ -4707,287 +4707,13 @@
 				<synonym value="Center-Piece"/>
 				<synonym value="Center-Pieces"/>
 			</heading>
-			<heading id="Charger" title="Charger">
-				<synonym value="Chargers"/>
-			</heading>
-			<heading id="Churn" title="Churn">
-				<synonym value="Churns"/>
-			</heading>
-			<heading id="CocktailShaker" title="Cocktail-Shaker">
-				<synonym value="Cocktail Shaker"/>
-				<synonym value="Cocktail Shakers"/>
-				<synonym value="Cocktail-Shakers"/>
-				<implies facet="ObjectName" cat="CocktailShakerAlcEq"/>
-			</heading>
-			<heading id="Cooler" title="Cooler">
-				<synonym value="Coolers"/>
-			</heading>
-			<heading id="Cornet" title="Cornet">
-				<synonym value="Cornets"/>
-			</heading>
-			<heading id="Costrel" title="Costrel">
-				<synonym value="Costrels"/>
-			</heading>
-			<heading id="CowCreamer" title="Cow Creamer">
-				<synonym value="Cow Creamers"/>
-			</heading>
-			<heading id="CreamBoat" title="Cream Boat">
-				<synonym value="Cream Boats"/>
-				<synonym value="Cream-Boat"/>
-				<synonym value="Cream-Boats"/>
-			</heading>
-			<heading id="Cresset" title="Cresset">
-				<synonym value="Cressets"/>
-			</heading>
-			<heading id="CrucheDeMossoul" title="Cruche de Mossoul">
-				<synonym value="Cruche de Mossouls"/>
-			</heading>
-			<heading id="Crucible" title="Crucible">
-				<synonym value="Crucibles"/>
-			</heading>
-			<heading id="CruetSet" title="Cruet Set">
-				<synonym value="Cruet Sets"/>
-				<synonym value="Cruet-Set"/>
-				<synonym value="Cruet-Sets"/>
-			</heading>
-			<heading id="Cruse" title="Cruse">
-				<synonym value="Cruses"/>
-			</heading>
-			<heading id="CupVessels" title="Cups">
-				<!-- To Be Added:
-					Column-Krater
-					Cup-Skyphos
-					Eye-Cup
-				-->
-				<synonym value="Cup"/>
-				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<heading id="BeerCup" title="Beer Cup">
-					<synonym value="Beer Cups"/>
-					<implies facet="ActivityorContext" cat="BeerDrinking"/>
-				</heading>
-				<heading id="ChaliceCup" title="Chalice">
-					<synonym value="Chalices"/>
-					<implies facet="ActivityorContext" cat="Drinking"/>
-					<implies facet="ObjectName" cat="ChaliceAlcEq"/>
-				</heading>
-				<heading id="Kotyle" title="Kotyle">
-					<heading id="Kylix" title="Kylix">
-						<synonym value="κύλιξ"/>
-						<synonym value="Cylix"/>
-						<synonym value="Kylixes"/>
-						<synonym value="Kylikes"/>
-						<implies facet="Culture" cat="AncGreekCulture"/>
-						<implies facet="ActivityorContext" cat="WineDrinking"/>
-						<heading id="Tondo" title="Tondo">
-							<!--The Almost Flat Interior Circle On The interior Base of The Cup, 
-								Called The Tondo, Was The Primary Surface For Painted Decoration In The 
-								Black-Figure Or Red-Figure Styles of The 6th And 5th Century BC. As The
-								Representations Would Be Covered With Wine, The Scenes Would Only Be
-								Revealed In Stages As The Wine Was Drained. They Were Often Designed
-								With This In Mind, With Scenes Created So That They Would Surprise Or
-								Titillate The Drinker As They Were Revealed."-->
-						</heading>
-					</heading>
-					<heading id="Skyphos" title="Skyphos">
-						<synonym value="σκύφος"/>
-						<synonym value="Skyphoi"/>
-						<implies facet="Culture" cat="AncGreekCulture"/>
-						<implies facet="ActivityorContext" cat="WineDrinking"/>
-					</heading>
-				</heading>
-				<heading id="Stein" title="Stein">
-					<synonym value="Steins"/>
-				</heading>
-			</heading>
-			<heading id="CuppingVessel" title="Cupping Vessel">
-				<synonym value="Cupping Vessels"/>
-				<synonym value="Cupping-Vessel"/>
-				<synonym value="Cupping-Vessels"/>
-			</heading>
-			<heading id="Dipper" title="Dipper">
-				<synonym value="Dippers"/>
-			</heading>
-			<heading id="DrinkingVessel" title="Drinking Vessel">
-				<synonym value="Drinking Vessels"/>
-				<synonym value="Drinking-Vessel"/>
-				<synonym value="Drinking-Vessels"/>
-			</heading>
-			<heading id="Ewer" title="Ewer">
-				<synonym value="Ewers"/>
-			</heading>
-			<heading id="Flask" title="Flask">
-				<synonym value="Flasks"/>
-				<heading id="Alabastron" title="Alabastron">
-					<synonym value="αλάβαστρον"/>
-					<synonym value="Alabastra"/>
-					<synonym value="Alabastrons"/>
-				</heading>
-				<heading id="Pilgrimsflask" title="Pilgrims Flask">
-					<synonym value="Pilgrims Flasks"/>
-					<synonym value="Pilgrims' Flask"/>
-					<synonym value="Pilgrims' Flasks"/>
-					<synonym value="Pilgrim's Flask"/>
-					<synonym value="Pilgrim's Flasks"/>
-					<synonym value="Pilgrim Flask"/>
-					<synonym value="Pilgrim Flasks"/>
-				</heading>
-			</heading>
-			<heading id="Hanap" title="Hanap">
-				<synonym value="Hanaps"/>
-			</heading>
-			<heading id="Jars" title="Jars">
-				<synonym value="Jar"/>
-				<heading id="Beerjar" title="Beer Jar">
-					<synonym value="Beer Jars"/>
-					<implies facet="ActivityorContext" cat="BeerDrinking"/>
-				</heading>
-				<heading id="Bottlejar" title="Bottle Jar">
-					<synonym value="Bottle Jars"/>
-				</heading>
-				<heading id="CanopicJarJars" title="Canopic Jar">
-					<synonym value="Canopic Jars"/>
-					<implies facet="ActivityorContext" cat="Burial"/>
-					<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
-					<implies facet="ObjectName" cat="CanopicJFunerRelRit"/>
-				</heading>
-				<heading id="Dummyjar" title="Dummy Jar">
-					<synonym value="Dummy Jars"/>
-				</heading>
-				<heading id="Effigyjar" title="Effigy Jar">
-					<synonym value="Effigy Jars"/>
-				</heading>
-				<heading id="Gingerjar" title="Ginger Jar">
-					<synonym value="Ginger Jars"/>
-				</heading>
-				<heading id="IncenseJarJars" title="Incense Jar" noMatch="true"/>
-				<heading id="Kohljar" title="Kohl Jar">
-					<synonym value="Kohl Jars"/>
-				</heading>
-				<heading id="Waterjar" title="Water Jar">
-					<synonym value="Water Jars"/>
-				</heading>
-				<heading id="Partsofjars" title="Parts of Jars">
-					<heading id="Jarhandle" title="Jar Handle">
-						<synonym value="Jar Handles"/>
-					</heading>
-					<heading id="Jarlid" title="Jar Lid">
-						<synonym value="Jar Lids"/>
-					</heading>
-					<heading id="Jarstopper" title="Jar Stopper">
-						<synonym value="Jar Stoppers"/>
-					</heading>
-				</heading>
-			</heading>
-			<heading id="Jardiniere" title="Jardiniere">
-				<synonym value="Jardinieres"/>
-			</heading>
-			<heading id="Jugspitchers" title="Jugs &amp; Pitchers">
-				<synonym value="Jugs"/>
-				<heading id="Juglet" title="Juglet">
-					<synonym value="Juglets"/>
-				</heading>
-				<heading id="Winejug" title="Wine Jug">
-					<synonym value="Wine Jugs"/>
-					<implies facet="ActivityorContext" cat="WineDrinking"/>
-					<heading id="Oinochoe" title="Oinochoe">
-						<synonym value="Οινοχόη"/>
-						<synonym value="Oenochoe"/>
-						<heading id="Olpe" title="Olpe">
-							<implies facet="Culture" cat="CorinthianCul"/>
-							<implies facet="TechniqueDesignorDecoration" cat="SShaped"/>
-							<implies facet="ActivityorContext" cat="WineDrinking"/>
-						</heading>
-					</heading>
-				</heading>
-			</heading>
-			<heading id="Kashkul" title="Kashkul">
-				<synonym value="Kashkuls"/>
-			</heading>
-			<heading id="Kendi" title="Kendi">
-				<synonym value="Kendis"/>
-			</heading>
-			<heading id="Kero" title="Kero">
-				<synonym value="Keros"/>
-			</heading>
-			<heading id="KettleVessels" title="Kettle" noMatch="true"/>
-			<heading id="Kuduo" title="Kuduo">
-				<synonym value="Kuduos"/>
-			</heading>
-			<heading id="Kullah" title="Kullah">
-				<synonym value="Kullahs"/>
-			</heading>
-			<heading id="Kuttrolf" title="Kuttrolf">
-				<synonym value="Kuttrolfs"/>
-			</heading>
-			<heading id="LampFillerVsl" title="Lamp Filler" noMatch="true"/>
-			<heading id="LiDing" title="Li Ding">
-				<synonym value="Li Dings"/>
-			</heading>
-			<heading id="LimeVessel" title="Lime Vessel">
-				<synonym value="Lime Vessels"/>
-				<synonym value="Lime-Vessel"/>
-				<synonym value="Lime-Vessels"/>
-			</heading>
-			<heading id="MilkVessel" title="Milk Vessel">
-				<synonym value="Milk Vessels"/>
-				<synonym value="Milk-Vessel"/>
-				<synonym value="Milk-Vessels"/>
-			</heading>
-			<heading id="MortarVessel" title="Mortar" noMatch="true"/>
-			<heading id="MustardShaker" title="Mustard Shaker">
-				<synonym value="Mustard Shakers"/>
-				<synonym value="Mustard-Shaker"/>
-				<synonym value="Mustard-Shakers"/>
-			</heading>
-			<heading id="OilVessel" title="Oil Vessel">
-				<synonym value="Oil Vessels"/>
-				<synonym value="Oil-Vessel"/>
-				<synonym value="Oil-Vessels"/>
-			</heading>
-			<heading id="PancaPatra" title="Pañca-Pátra">
-				<synonym value="Pañca-Pátras"/>
-			</heading>
-			<heading id="PepperMill" title="Pepper Mill">
-				<synonym value="Pepper Mills"/>
-				<synonym value="Pepper-Mill "/>
-				<synonym value="Pepper-Mills"/>
-			</heading>
-			<heading id="PepperPot" title="Pepper Pot">
-				<synonym value="Pepper Pots"/>
-				<synonym value="Pepper-Pot "/>
-				<synonym value="Pepper-Pots"/>
-			</heading>
-			<heading id="PickleDish" title="Pickle Dish">
-				<synonym value="Pickle Dishes"/>
-				<synonym value="Pickle-Dish"/>
-				<synonym value="Pickle-Dishes"/>
-				<synonym value="Pickle Tray"/>
-				<synonym value="Pickle Trays"/>
-				<synonym value="Pickle-Tray"/>
-				<synonym value="Pickle-Trays"/>
-			</heading>
-			<heading id="PopeJoanBoard" title="Pope Joan Board">
-				<synonym value="Pope Joan Boards"/>
-			</heading>
-			<heading id="Porringer" title="Porringer">
-				<synonym value="Porringers"/>
-				<implies facet="ActivityorContext" cat="Eating"/>
-			</heading>
-			<heading id="Pot" title="Pot" noMatch="true">
-				<synonym value="Pots"/>
-				<heading id="Olla" title="Olla">
-					<synonym value="Ollas"/>
-					<implies facet="ActivityorContext" cat="FoodStorage"/>
-					<implies facet="ObjectName" cat="CookingPotCookEq"/>
-					<!-- Where do non-cooking related pots live?  -->
-				</heading>
-			</heading>
-			<heading id="Pottery" title="Pottery">
+			<heading id="Ceramics" title="Ceramics">
 				<synonym value="Ceramic-sherds"/>
 				<synonym value="Clay Pot"/>
 				<synonym value="Clay Pots"/>
 				<synonym value="Potsherd"/>
 				<synonym value="Potsherds"/>
+				<synonym value="Pottery"/>
 				<synonym value="Pottery sherds"/>
 				<synonym value="Pottery sherds-"/>
 				<synonym value="Sherd"/>
@@ -5138,10 +4864,283 @@
 					</heading>
 				</heading>
 			</heading>
+			<heading id="Charger" title="Charger">
+				<synonym value="Chargers"/>
+			</heading>
+			<heading id="Churn" title="Churn">
+				<synonym value="Churns"/>
+			</heading>
+			<heading id="CocktailShaker" title="Cocktail-Shaker">
+				<synonym value="Cocktail Shaker"/>
+				<synonym value="Cocktail Shakers"/>
+				<synonym value="Cocktail-Shakers"/>
+				<implies facet="ObjectName" cat="CocktailShakerAlcEq"/>
+			</heading>
+			<heading id="Cooler" title="Cooler">
+				<synonym value="Coolers"/>
+			</heading>
+			<heading id="Cornet" title="Cornet">
+				<synonym value="Cornets"/>
+			</heading>
+			<heading id="Costrel" title="Costrel">
+				<synonym value="Costrels"/>
+			</heading>
+			<heading id="CowCreamer" title="Cow Creamer">
+				<synonym value="Cow Creamers"/>
+			</heading>
+			<heading id="CreamBoat" title="Cream Boat">
+				<synonym value="Cream Boats"/>
+				<synonym value="Cream-Boat"/>
+				<synonym value="Cream-Boats"/>
+			</heading>
+			<heading id="Cresset" title="Cresset">
+				<synonym value="Cressets"/>
+			</heading>
+			<heading id="CrucheDeMossoul" title="Cruche de Mossoul">
+				<synonym value="Cruche de Mossouls"/>
+			</heading>
+			<heading id="Crucible" title="Crucible">
+				<synonym value="Crucibles"/>
+			</heading>
+			<heading id="CruetSet" title="Cruet Set">
+				<synonym value="Cruet Sets"/>
+				<synonym value="Cruet-Set"/>
+				<synonym value="Cruet-Sets"/>
+			</heading>
+			<heading id="Cruse" title="Cruse">
+				<synonym value="Cruses"/>
+			</heading>
+			<heading id="CupVessels" title="Cups">
+				<!-- To Be Added:
+					Column-Krater
+					Cup-Skyphos
+					Eye-Cup
+				-->
+				<synonym value="Cup"/>
+				<implies facet="ActivityorContext" cat="FoodServing"/>
+				<heading id="BeerCup" title="Beer Cup">
+					<synonym value="Beer Cups"/>
+					<implies facet="ActivityorContext" cat="BeerDrinking"/>
+				</heading>
+				<heading id="ChaliceCup" title="Chalice">
+					<synonym value="Chalices"/>
+					<implies facet="ActivityorContext" cat="Drinking"/>
+					<implies facet="ObjectName" cat="ChaliceAlcEq"/>
+				</heading>
+				<heading id="Kotyle" title="Kotyle">
+					<heading id="Kylix" title="Kylix">
+						<synonym value="κύλιξ"/>
+						<synonym value="Cylix"/>
+						<synonym value="Kylixes"/>
+						<synonym value="Kylikes"/>
+						<implies facet="Culture" cat="AncGreekCulture"/>
+						<implies facet="ActivityorContext" cat="WineDrinking"/>
+						<heading id="Tondo" title="Tondo">
+							<!--The Almost Flat Interior Circle On The interior Base of The Cup, 
+								Called The Tondo, Was The Primary Surface For Painted Decoration In The 
+								Black-Figure Or Red-Figure Styles of The 6th And 5th Century BC. As The
+								Representations Would Be Covered With Wine, The Scenes Would Only Be
+								Revealed In Stages As The Wine Was Drained. They Were Often Designed
+								With This In Mind, With Scenes Created So That They Would Surprise Or
+								Titillate The Drinker As They Were Revealed."-->
+						</heading>
+					</heading>
+					<heading id="Skyphos" title="Skyphos">
+						<synonym value="σκύφος"/>
+						<synonym value="Skyphoi"/>
+						<implies facet="Culture" cat="AncGreekCulture"/>
+						<implies facet="ActivityorContext" cat="WineDrinking"/>
+					</heading>
+				</heading>
+				<heading id="Stein" title="Stein">
+					<synonym value="Steins"/>
+				</heading>
+			</heading>
+			<heading id="CuppingVessel" title="Cupping Vessel">
+				<synonym value="Cupping Vessels"/>
+				<synonym value="Cupping-Vessel"/>
+				<synonym value="Cupping-Vessels"/>
+			</heading>
+			<heading id="Dipper" title="Dipper">
+				<synonym value="Dippers"/>
+			</heading>
+			<heading id="DrinkingVessel" title="Drinking Vessel">
+				<synonym value="Drinking Vessels"/>
+				<synonym value="Drinking-Vessel"/>
+				<synonym value="Drinking-Vessels"/>
+			</heading>
+			<heading id="Ewer" title="Ewer">
+				<synonym value="Ewers"/>
+			</heading>
+			<heading id="Flask" title="Flask">
+				<synonym value="Flasks"/>
+				<heading id="Alabastron" title="Alabastron">
+					<synonym value="αλάβαστρον"/>
+					<synonym value="Alabastra"/>
+					<synonym value="Alabastrons"/>
+				</heading>
+				<heading id="Pilgrimsflask" title="Pilgrims Flask">
+					<synonym value="Pilgrims Flasks"/>
+					<synonym value="Pilgrims' Flask"/>
+					<synonym value="Pilgrims' Flasks"/>
+					<synonym value="Pilgrim's Flask"/>
+					<synonym value="Pilgrim's Flasks"/>
+					<synonym value="Pilgrim Flask"/>
+					<synonym value="Pilgrim Flasks"/>
+				</heading>
+			</heading>
+			<heading id="Hanap" title="Hanap">
+				<synonym value="Hanaps"/>
+			</heading>
+			<heading id="Jars" title="Jars">
+				<synonym value="Jar"/>
+				<heading id="BeerJar" title="Beer Jar">
+					<synonym value="Beer Jars"/>
+					<implies facet="ActivityorContext" cat="BeerDrinking"/>
+				</heading>
+				<heading id="BottleJar" title="Bottle Jar">
+					<synonym value="Bottle Jars"/>
+				</heading>
+				<heading id="CanopicJarJars" title="Canopic Jar">
+					<synonym value="Canopic Jars"/>
+					<implies facet="ActivityorContext" cat="Burial"/>
+					<implies facet="ActivityorContext" cat="ReligionSpirituality"/>
+					<implies facet="ObjectName" cat="CanopicJFunerRelRit"/>
+				</heading>
+				<heading id="DummyJar" title="Dummy Jar">
+					<synonym value="Dummy Jars"/>
+				</heading>
+				<heading id="EffigyJar" title="Effigy Jar">
+					<synonym value="Effigy Jars"/>
+				</heading>
+				<heading id="GingerJar" title="Ginger Jar">
+					<synonym value="Ginger Jars"/>
+				</heading>
+				<heading id="KohlJar" title="Kohl Jar">
+					<synonym value="Kohl Jars"/>
+				</heading>
+				<heading id="WaterJar" title="Water Jar">
+					<synonym value="Water Jars"/>
+				</heading>
+				<heading id="PartsOfJars" title="(parts of jars)" noMatch="true">
+					<heading id="JarHandle" title="Handle" noMatch="true">
+						<synonym value="Jar Handle"/>
+						<synonym value="Jar Handles"/>
+					</heading>
+					<heading id="JarLid" title="Lid" noMatch="true">
+						<synonym value="Jar Lid"/>
+						<synonym value="Jar Lids"/>
+					</heading>
+					<heading id="JarStopper" title="Stopper" noMatch="true">
+						<synonym value="Jar Stopper"/>
+						<synonym value="Jar Stoppers"/>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="Jardiniere" title="Jardiniere">
+				<synonym value="Jardinieres"/>
+			</heading>
+			<heading id="Jugspitchers" title="Jugs &amp; Pitchers">
+				<synonym value="Jugs"/>
+				<heading id="Juglet" title="Juglet">
+					<synonym value="Juglets"/>
+				</heading>
+				<heading id="Winejug" title="Wine Jug">
+					<synonym value="Wine Jugs"/>
+					<implies facet="ActivityorContext" cat="WineDrinking"/>
+					<heading id="Oinochoe" title="Oinochoe">
+						<synonym value="Οινοχόη"/>
+						<synonym value="Oenochoe"/>
+						<heading id="Olpe" title="Olpe">
+							<implies facet="Culture" cat="CorinthianCul"/>
+							<implies facet="TechniqueDesignorDecoration" cat="SShaped"/>
+							<implies facet="ActivityorContext" cat="WineDrinking"/>
+						</heading>
+					</heading>
+				</heading>
+			</heading>
+			<heading id="Kashkul" title="Kashkul">
+				<synonym value="Kashkuls"/>
+			</heading>
+			<heading id="Kendi" title="Kendi">
+				<synonym value="Kendis"/>
+			</heading>
+			<heading id="Kero" title="Kero">
+				<synonym value="Keros"/>
+			</heading>
+			<heading id="Kuduo" title="Kuduo">
+				<synonym value="Kuduos"/>
+			</heading>
+			<heading id="Kullah" title="Kullah">
+				<synonym value="Kullahs"/>
+			</heading>
+			<heading id="Kuttrolf" title="Kuttrolf">
+				<synonym value="Kuttrolfs"/>
+			</heading>
+			<heading id="LiDing" title="Li Ding">
+				<synonym value="Li Dings"/>
+			</heading>
+			<heading id="LimeVessel" title="Lime Vessel">
+				<synonym value="Lime Vessels"/>
+				<synonym value="Lime-Vessel"/>
+				<synonym value="Lime-Vessels"/>
+			</heading>
+			<heading id="MilkVessel" title="Milk Vessel">
+				<synonym value="Milk Vessels"/>
+				<synonym value="Milk-Vessel"/>
+				<synonym value="Milk-Vessels"/>
+			</heading>
+			<heading id="MustardShaker" title="Mustard Shaker">
+				<synonym value="Mustard Shakers"/>
+				<synonym value="Mustard-Shaker"/>
+				<synonym value="Mustard-Shakers"/>
+			</heading>
+			<heading id="OilVessel" title="Oil Vessel">
+				<synonym value="Oil Vessels"/>
+				<synonym value="Oil-Vessel"/>
+				<synonym value="Oil-Vessels"/>
+			</heading>
+			<heading id="PancaPatra" title="Pañca-Pátra">
+				<synonym value="Pañca-Pátras"/>
+			</heading>
+			<heading id="PepperMill" title="Pepper Mill">
+				<synonym value="Pepper Mills"/>
+				<synonym value="Pepper-Mill "/>
+				<synonym value="Pepper-Mills"/>
+			</heading>
+			<heading id="PepperPot" title="Pepper Pot">
+				<synonym value="Pepper Pots"/>
+				<synonym value="Pepper-Pot "/>
+				<synonym value="Pepper-Pots"/>
+			</heading>
+			<heading id="PickleDish" title="Pickle Dish">
+				<synonym value="Pickle Dishes"/>
+				<synonym value="Pickle-Dish"/>
+				<synonym value="Pickle-Dishes"/>
+				<synonym value="Pickle Tray"/>
+				<synonym value="Pickle Trays"/>
+				<synonym value="Pickle-Tray"/>
+				<synonym value="Pickle-Trays"/>
+			</heading>
+			<heading id="PopeJoanBoard" title="Pope Joan Board">
+				<synonym value="Pope Joan Boards"/>
+			</heading>
+			<heading id="Porringer" title="Porringer">
+				<synonym value="Porringers"/>
+				<implies facet="ActivityorContext" cat="Eating"/>
+			</heading>
+			<heading id="Pot" title="Pot" noMatch="true">
+				<synonym value="Pots"/>
+				<heading id="Olla" title="Olla">
+					<synonym value="Ollas"/>
+					<implies facet="ActivityorContext" cat="FoodStorage"/>
+					<implies facet="ObjectName" cat="CookingPotCookEq"/>
+					<!-- Where do non-cooking related pots live?  -->
+				</heading>
+			</heading>
 			<heading id="Pourer" title="Pourer">
 				<synonym value="Pourers"/>
 			</heading>
-			<heading id="PunchBowlVsl" title="Punch Bowl" noMatch="true"/>
 			<heading id="Qadus" title="Qadus">
 				<!-- <synonym value="xxxxxxxxx"/> Does this have a plural? -->
 			</heading>
@@ -5194,26 +5193,33 @@
 				<heading id="GuiRelRegVes" title="Gui">
 					<synonym value="Guis"/>
 				</heading>
-				<heading id="HeRelRegVes" title="He" noMatch="true">
-					<synonym value="Hes"/>
-				</heading>
-				<heading id="HolyWaterSprinkler" title="Holy Water-Sprinkler">
+				<heading id="HolyWaterSprinkler" title="Holy Water Sprinkler">
+					<synonym value="Holy Water Sprinklers"/>
+					<synonym value="Holy Water-Sprinkler"/>
 					<synonym value="Holy Water-Sprinklers"/>
 				</heading>
-				<heading id="HolyWaterVessel" title="Holy Water-Vessel">
+				<heading id="HolyWaterVessel" title="Holy Water Vessel">
+					<synonym value="Holy Water Vessels"/>
+					<synonym value="Holy Water-Vessel"/>
 					<synonym value="Holy Water-Vessels"/>
 					<heading id="Ampulla" title="Ampulla">
 						<synonym value="Ampullae"/>
 						<synonym value="Ampullæ"/>
 						<synonym value="Ampullas"/>
 					</heading>
-					<heading id="HolyWaterBox" title="Holy Water-Box">
+					<heading id="HolyWaterBox" title="Holy Water Box">
+						<synonym value="Holy Water Boxes"/>
+						<synonym value="Holy Water-Box"/>
 						<synonym value="Holy Water-Boxes"/>
 					</heading>
-					<heading id="HolyWaterPot" title="Holy Water-Pot">
+					<heading id="HolyWaterPot" title="Holy Water Pot">
+						<synonym value="Holy Water Pots"/>
+						<synonym value="Holy Water-Pot"/>
 						<synonym value="Holy Water-Pots"/>
 					</heading>
-					<heading id="HolyWaterVase" title="Holy Water-Vase">
+					<heading id="HolyWaterVase" title="Holy Water Vase">
+						<synonym value="Holy Water Vases"/>
+						<synonym value="Holy Water-Vase"/>
 						<synonym value="Holy Water-Vases"/>
 					</heading>
 				</heading>
@@ -5245,7 +5251,9 @@
 					<heading id="HsunOk" title="Hsun-Ok">
 						<synonym value="Hsun-Oks"/>
 					</heading>
-					<heading id="LibationVessel" title="Libation-Vessel">
+					<heading id="LibationVessel" title="Libation Vessel">
+						<synonym value="Libation Vessels"/>
+						<synonym value="Libation-Vessel"/>
 						<synonym value="Libation-Vessels"/>
 						<implies facet="ObjectName" cat="VesselContainers"/>
 					</heading>
@@ -5259,7 +5267,7 @@
 						<synonym value="Offering Bowls"/>
 						<synonym value="Offering-Bowl"/>
 						<synonym value="Offering-Bowls"/>
-						<implies facet="ObjectName" cat="BowlVessel"/>
+						<implies facet="ObjectName" cat="BowlVessels"/>
 					</heading>
 					<heading id="OfferingCup" title="Offering-Cup">
 						<synonym value="Offering-Cups"/>
@@ -5280,10 +5288,6 @@
 					<heading id="OfferingVase" title="Offering-Vase">
 						<synonym value="Offering-Vases"/>
 					</heading>
-				</heading>
-				<heading id="PanRelRegVes" title="Pan" noMatch="true">
-					<excl value="Cooking"/>
-					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="PouRelRegVes" title="Pou">
 					<synonym value="Pous"/>
@@ -5344,13 +5348,17 @@
 			<heading id="SanzuFu" title="Sanzu Fu">
 				<synonym value="Sanzu Fus"/>
 			</heading>
-			<heading id="SauceBoat" title="Sauce-Boat">
+			<heading id="SauceBoat" title="Sauce Boat">
+				<synonym value="Sauce Boats"/>
+				<synonym value="Sauce-Boat"/>
 				<synonym value="Sauce-Boats"/>
 			</heading>
 			<heading id="Saucer" title="Saucer">
 				<synonym value="Saucers"/>
 			</heading>
-			<heading id="SnuffVessel" title="Snuff-Vessel">
+			<heading id="SnuffVessel" title="Snuff Vessel">
+				<synonym value="Snuff Vessels"/>
+				<synonym value="Snuff-Vessel"/>
 				<synonym value="Snuff-Vessels"/>
 				<implies facet="ObjectName" cat="VesselContainers"/>
 				<implies facet="ObjectName" cat="SnuffDrug"/>
@@ -5358,20 +5366,28 @@
 			<heading id="Spittoon" title="Spittoon">
 				<synonym value="Spittoons"/>
 			</heading>
-			<heading id="SpoonWarmer" title="Spoon-Warmer">
+			<heading id="SpoonWarmer" title="Spoon Warmer">
+				<synonym value="Spoon Warmers"/>
+				<synonym value="Spoon-Warmer"/>
 				<synonym value="Spoon-Warmers"/>
 			</heading>
-			<heading id="StorageVessel" title="Storage-Vessel">
+			<heading id="StorageVessel" title="Storage Vessel">
+				<synonym value="Storage Vessels"/>
+				<synonym value="Storage-Vessel"/>
 				<synonym value="Storage-Vessels"/>
 				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
-			<heading id="SugarShaker" title="Sugar-Shaker">
+			<heading id="SugarShaker" title="Sugar Shaker">
+				<synonym value="Sugar Shakers"/>
+				<synonym value="Sugar-Shaker"/>
 				<synonym value="Sugar-Shakers"/>
 			</heading>
 			<heading id="Surahi" title="Surahi">
 				<synonym value="Surahis"/>
 			</heading>
-			<heading id="SweetmeatStand" title="Sweetmeat-Stand">
+			<heading id="SweetmeatStand" title="Sweetmeat Stand">
+				<synonym value="Sweetmeat Stands"/>
+				<synonym value="Sweetmeat-Stand"/>
 				<synonym value="Sweetmeat-Stands"/>
 			</heading>
 			<heading id="Tazon" title="Tazon">
@@ -5380,8 +5396,6 @@
 			<heading id="Tazza" title="Tazza">
 				<synonym value="Tazzas"/>
 			</heading>
-			<heading id="TeapotVessels" title="Teapot" noMatch="true"/>
-			<heading id="TrayVsl" title="Tray" noMatch="true"/>
 			<heading id="Vase" title="Vase">
 				<synonym value="Vases"/>
 				<heading id="Hesvase" title="Hes Vase">
@@ -5680,7 +5694,7 @@
 					<excl value="Punch"/>
 					<excl value="Ritual"/>
 					<implies facet="ActivityorContext" cat="FoodServing"/>
-					<implies facet="ObjectName" cat="BowlVessel"/>
+					<implies facet="ObjectName" cat="BowlVessels"/>
 					<heading id="BreadBowlCookEq" title="Bread Bowl">
 						<synonym value="Bread Bowls"/>
 					</heading>
@@ -5866,7 +5880,6 @@
 					<implies facet="ActivityorContext" cat="Metallurgy"/>
 					<!-- are all kettles made of metal? -->
 					<implies facet="ActivityorContext" cat="FoodPreparation"/>
-					<implies facet="ObjectName" cat="KettleVessels"/>
 					<implies facet="ObjectName" cat="VesselContainers"/>
 				</heading>
 				<heading id="OvenCookEq" title="Oven">
@@ -6022,7 +6035,7 @@
 							<synonym value="Molcajete"/>
 							<excl value="Weapon"/>
 							<implies facet="ActivityorContext" cat="FoodPreparation"/>
-							<implies facet="ObjectName" cat="MortarVessel"/>
+							<implies facet="ObjectName" cat="VesselContainers"/>
 						</heading>
 						<heading id="MortarBasketCookEq" title="Mortar Basket">
 							<synonym value="Mortar Baskets"/>
@@ -11764,7 +11777,7 @@
 				<synonym value="Brandy-Bowl"/>
 				<synonym value="Brandy-Bowls"/>
 				<implies facet="ObjectName" cat="BrandyFood"/>
-				<implies facet="ObjectName" cat="BowlVessel"/>
+				<implies facet="ObjectName" cat="BowlVessels"/>
 			</heading>
 			<heading id="CaudleCupAlcEq" title="Caudle Cup">
 				<synonym value="Caudle Cups"/>
@@ -11820,7 +11833,7 @@
 			</heading>
 			<heading id="MazerBowl" title="Mazer Bowl">
 				<synonym value="Mazer Bowls"/>
-				<implies facet="ObjectName" cat="BowlVessel"/>
+				<implies facet="ObjectName" cat="BowlVessels"/>
 			</heading>
 			<heading id="MazerCup" title="Mazer Cup">
 				<synonym value="Mazer Cups"/>
@@ -11857,8 +11870,7 @@
 					<synonym value="Punch Bowls"/>
 					<synonym value="Punch-Bowl"/>
 					<synonym value="Punch-Bowls"/>
-					<implies facet="ObjectName" cat="PunchBowlVsl"/>
-					<implies facet="ObjectName" cat="BowlVessel"/>
+					<implies facet="ObjectName" cat="BowlVessels"/>
 				</heading>
 				<heading id="PunchKettleAlcEq" title="Punch-Kettle">
 					<synonym value="Punch-Kettles"/>
@@ -11930,7 +11942,7 @@
 			<heading id="WagerCupAlcEq" title="Wager Cup" noMatch="true"/>
 			<heading id="WassailBowl" title="Wassail-Bowl">
 				<synonym value="Wassail-Bowls"/>
-				<implies facet="ObjectName" cat="BowlVessel"/>
+				<implies facet="ObjectName" cat="BowlVessels"/>
 			</heading>
 			<heading id="WeddingCupAlcEq" title="Wedding Cup" noMatch="true"/>
 			<heading id="WineEqAlcEq" title="Wine-related items" noMatch="true">
@@ -12270,7 +12282,7 @@
 		</heading>
 		<heading id="KavaBowl" title="Kava-Bowl">
 			<synonym value="Kava-Bowls"/>
-			<implies facet="ObjectName" cat="BowlVessel"/>
+			<implies facet="ObjectName" cat="BowlVessels"/>
 		</heading>
 		<heading id="KavaCup" title="Kava-Cup">
 			<synonym value="Kava-Cups"/>
@@ -12599,7 +12611,7 @@
 				<synonym value="Tea Bowls"/>
 				<synonym value="Tea-Bowl"/>
 				<synonym value="Tea-Bowls"/>
-				<implies facet="ObjectName" cat="BowlVessel"/>
+				<implies facet="ObjectName" cat="BowlVessels"/>
 			</heading>
 			<heading id="TeaBox" title="Tea-Box">
 				<synonym value="Tea-Boxes"/>
@@ -12680,7 +12692,7 @@
 				<synonym value="Tea Pot"/>
 				<synonym value="Tea Pots"/>
 				<implies facet="ActivityorContext" cat="FoodServing"/>
-				<implies facet="ObjectName" cat="TeapotVessels"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 				<heading id="DoubleTeapot" title="Double Teapot">
 					<synonym value="Double Teapots"/>
 				</heading>
@@ -13285,7 +13297,7 @@
 				</heading>
 				<heading id="LampFillerLghtEq" title="Lamp Filler">
 					<synonym value="Lamp Fillers"/>
-					<implies facet="ObjectName" cat="LampFillerVsl"/>
+					<implies facet="ObjectName" cat="VesselContainers"/>
 					<heading id="GuttusLghtEq" title="Guttus (Lamp Feeder/Filler)">
 						<synonym value="Guttus"/>
 					</heading>
@@ -14054,7 +14066,7 @@
 			</heading>
 			<heading id="TrayCarrier" title="Tray">
 				<synonym value="Trays"/>
-				<implies facet="ObjectName" cat="TrayVsl"/>
+				<implies facet="ObjectName" cat="VesselContainers"/>
 			</heading>
 			<heading id="VesselCarrier" title="Vessel-Carrier">
 				<synonym value="Vessel-Carriers"/>
