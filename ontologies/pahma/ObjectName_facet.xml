@@ -4804,11 +4804,11 @@
 						<synonym value="baked clay  tablet"/>
 					</heading>
 				</heading>
-				<heading id="Potterybyshape" title="(by shape)" noMatch="true">
-					<heading id="Offeringtable" title="Offering Table">
+				<heading id="PotteryByShape" title="(by shape)" noMatch="true">
+					<heading id="OfferingTable" title="Offering Table">
 						<synonym value="Offering Tables"/>
 					</heading>
-					<heading id="Oillamp" title="Oil Lamp">
+					<heading id="OilLamp" title="Oil Lamp">
 						<synonym value="Oil Lamps"/>
 						<implies facet="ObjectName" cat="LampLightingLghtEq"/>
 					</heading>
@@ -4817,23 +4817,49 @@
 						<synonym value="Pot Stands"/>
 					</heading>
 				</heading>
-				<heading id="Potterybystyleortype" title="(by style or type)" noMatch="true">
-					<heading id="BlackFigureware" title="Black Figure Ware">
-						<synonym value="Black-Figure Ware"/>
-						<synonym value="'μελανόμορφα"/>
-						<implies facet="Color" cat="Black"/>
-						<implies facet="Color" cat="Red"/>
-						<implies facet="Culture" cat="AncGreekCulture"/>
-						<implies facet="Collection" cat="ClassicMeditrColl"/>
+				<heading id="PotteryByStyleOrType" title="(by style or type)" noMatch="true">
+					<heading id="PotteryByChromaticStyle" title="(chromatic styles)" noMatch="true">
+						<heading id="BlackFigureWare" title="Black Figure Ware">
+							<synonym value="Black-Figure Ware"/>
+							<synonym value="'μελανόμορφα"/>
+							<implies facet="Color" cat="Black"/>
+							<implies facet="Color" cat="Red"/>
+							<implies facet="Culture" cat="AncGreekCulture"/>
+							<implies facet="Collection" cat="ClassicMeditrColl"/>
+						</heading>
+						<heading id="BlackTopRedWare" title="Black-Top Red Ware">
+							<synonym value="Btr"/>
+							<implies facet="Color" cat="Red"/>
+							<implies facet="Color" cat="Black"/>
+						</heading>
+						<heading id="BrownWare" title="Brown Ware"/>
+						<heading id="CeladonWare" title="Celadon Ware">
+							<synonym value="Celadon"/>
+							<implies facet="Color" cat="JadeGreen"/>
+						</heading>
+						<heading id="RedFigureWare" title="Red Figure Ware">
+							<synonym value="Red-Figure Ware"/>
+							<synonym value="Red Figure Pottery"/>
+							<synonym value="Red-Figure Pottery"/>
+							<implies facet="Color" cat="Black"/>
+							<implies facet="Color" cat="Red"/>
+							<implies facet="Culture" cat="AncGreekCulture"/>
+							<implies facet="Collection" cat="ClassicMeditrColl"/>
+						</heading>
+						<heading id="WhiteWare" title="White Ware">
+							<synonym value="Whiteware"/>
+							<implies facet="Color" cat="White"/>
+						</heading>
+						<heading id="WhiteGroundWare" title="White Ground Ware">
+							<synonym value="WG Ware"/>
+							<implies facet="Color" cat="White"/>
+						</heading>
 					</heading>
-					<heading id="Blacktopredware" title="Black-Top Red Ware">
-						<synonym value="Btr"/>
-						<implies facet="Color" cat="Red"/>
-						<implies facet="Color" cat="Black"/>
-					</heading>
-					<heading id="Celadonware" title="Celadon Ware">
-						<synonym value="Celadon"/>
-						<implies facet="Color" cat="JadeGreen"/>
+					<heading id="PotteryByRegionalStyle" title="(regional styles)" noMatch="true">
+						<heading id="Lusterware" title="Lusterware">
+							<heading id="CantonWare" title="Canton Ware"/>
+							<heading id="ColoradoRiverWare" title="Colorado River Ware"/>
+						</heading>
 					</heading>
 					<heading id="Lusterware" title="Lusterware">
 						<synonym value="Lustre Ware"/>
@@ -4845,23 +4871,6 @@
 						<implies facet="Culture" cat="AncGreekCulture"/>
 					</heading>
 					<heading id="Porcelain" title="Porcelain"/>
-					<heading id="RedFigureware" title="Red Figure Ware">
-						<synonym value="Red-Figure Ware"/>
-						<synonym value="Red Figure Pottery"/>
-						<synonym value="Red-Figure Pottery"/>
-						<implies facet="Color" cat="Black"/>
-						<implies facet="Color" cat="Red"/>
-						<implies facet="Culture" cat="AncGreekCulture"/>
-						<implies facet="Collection" cat="ClassicMeditrColl"/>
-					</heading>
-					<heading id="Whiteware" title="White Ware">
-						<synonym value="Whiteware"/>
-						<implies facet="Color" cat="White"/>
-					</heading>
-					<heading id="Whitegroundware" title="White Ground Ware">
-						<synonym value="WG Ware"/>
-						<implies facet="Color" cat="White"/>
-					</heading>
 				</heading>
 			</heading>
 			<heading id="Charger" title="Charger">
