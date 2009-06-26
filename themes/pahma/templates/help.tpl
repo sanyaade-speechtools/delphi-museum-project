@@ -18,7 +18,7 @@ and independent perspective. A Location facet, for example, describes
 all the places associated with objects in the collections, and organizes
 these places for easy understanding.&nbsp; The PAHMA collections are
 described using facets that address the general questions of&nbsp;'who?'
-(<strong>Culture</strong>), 'what?' (<strong>Object Name</strong>,
+(<strong>Cultural Group</strong>), 'what?' (<strong>Object Name</strong>,
 <strong>Materials</strong>, and <strong>Collection</strong>), 'where?'
 (<strong>Location</strong>), 'why?' (<strong>Activity or
 Context</strong>) and 'how?' (<strong>Technique, Design or
