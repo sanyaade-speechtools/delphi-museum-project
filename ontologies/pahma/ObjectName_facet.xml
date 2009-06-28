@@ -3432,13 +3432,6 @@
 		<heading id="ManuscriptComm" title="Manuscript">
 			<synonym value="Manuscripts"/>
 		</heading>
-		<heading id="MapsAndChartsComm" title="Maps &amp; Charts" noMatch="true">
-			<!-- Fill This Out Following Museum's Categorization -->
-			<synonym value="Chart"/>
-			<synonym value="Charts"/>
-			<synonym value="Map"/>
-			<synonym value="Maps"/>
-		</heading>
 		<heading id="MemoryBoardComm" title="Memory Board">
 			<synonym value="Memory Boards"/>
 		</heading>
@@ -10365,6 +10358,8 @@
 			<heading id="AnimalRemains" title="Animal Remains">
 				<synonym value="Bone"/>
 				<synonym value="Bones"/>
+				<synonym value="Skeleton"/>
+				<synonym value="Skeletons"/>
 				<synonym value="'faunal'"/>
 				<synonym value="unmodified 'faunal'"/>
 				<synonym value="faunal"/>
@@ -10377,17 +10372,9 @@
 				<synonym value="header labeled 'faunal remains'"/>
 				<synonym value="labeled 'faunal"/>
 				<synonym value="Faunal Material"/>
-				<synonym value="Skeleton"/>
-				<synonym value="Skeletons"/>
-				<heading id="HumanRemains" title="Human Remains"/>
-				<heading id="Mummies" title="Mummies">
-					<synonym value="Mummy"/>
-					<excl value="Mummy Portrait"/>
+				<heading id="AnimalMummies" title="Animal Mummies">
 					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-					<heading id="HumanMummy" title="Human Mummy">
-						<synonym value="Human mummies"/>
-						<implies facet="ObjectName" cat="HumanRemains"/>
-					</heading>
+					<implies facet="TechniqueDesignorDecoration" cat="Mummified"/>
 					<heading id="CatMummy" title="Cat Mummy">
 						<synonym value="Cat mummies"/>
 					</heading>
@@ -10423,6 +10410,13 @@
 					</heading>
 					</heading> -->
 			</heading>
+			<heading id="HumanRemains" title="Human Remains">
+				<heading id="HumanMummy" title="Human Mummy">
+					<synonym value="Human mummies"/>
+					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
+					<implies facet="TechniqueDesignorDecoration" cat="Mummified"/>
+				</heading>
+			</heading>
 			<heading id="PlantRemains" title="Plant Remains">
 				<synonym value="Floral Remains"/>
 				<synonym value="Vegetal Remains"/>
@@ -10439,11 +10433,11 @@
 				</heading>
 			</heading>
 		</heading>
-		<heading id="CalendarScience" title="Calendar">
-			<synonym value="Calendars"/>
-			<synonym value="Calender"/> <!-- Also could refer to a machine in which cloth
-				or paper is pressed by rollers to glaze or smooth it, but PAHMA has none
-				of these in its collections -->
+		<heading id="CalendarScience" title="Calendars">
+			<synonym value="Calendar"/>
+			<synonym value="Calender"/> <!-- A misspelling, but also could refer to a
+				machine in which cloth or paper is pressed by rollers to glaze or smooth
+				it. Thankfuly, PAHMA has none of these latter objects in its collections -->
 			<synonym value="Calenders"/>
 			<implies facet="ObjectName" cat="CalendarComm"/>
 			<heading id="Almanac" title="Almanac">
@@ -10483,14 +10477,6 @@
 		<heading id="CupelScience" title="Cupel">
 			<synonym value="Cupels"/>
 			<implies facet="ObjectName" cat="VesselContainers"/>
-		</heading>
-		<heading id="GlobeScience" title="Globe">
-			<synonym value="Globes"/>
-			<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
-			<heading id="CelestialGlobeSci" title="Celestial Globe" noMatch="true"/>
-			<heading id="TerrestrialGlobeSci" title="Terrestrial Globe">
-				<synonym value="Terrestrial Globes"/>
-			</heading>
 		</heading>
 		<heading id="HorologicalEqSci" title="Horological Equipment">
 			<synonym value="Horological Items"/>
@@ -11064,6 +11050,42 @@
 				<synonym value="Watch-Stand"/>
 				<synonym value="Watch-Stands"/>
 				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
+			</heading>
+		</heading>
+		<heading id="MapsAndGlobes" title="Maps &amp; Globes" noMatch="true">
+			<!-- Fill This Out Following Museum's Categorization -->
+			<heading id="MapsChartsScience" title="Maps &amp; Charts">
+				<synonym value="Chart of Alaska"/>
+				<synonym value="Chart of the World"/>
+				<synonym value="Map"/>
+				<synonym value="Maps"/>
+				<!-- The following imply map references, they do not imply that
+					the associated object is a map. --> 
+				<excl value="on map card"/>
+				<excl value="see map"/>
+				<excl value="see also general map"/>
+				<excl value="AAA map"/>
+				<excl value="Death Valley map"/>
+				<excl value="Eastern Sierra map"/>
+				<excl value="Indian Country map"/>
+				<excl value="Mississippi map"/>
+				<excl value="New Mexico map"/>
+				<excl value="Sacramentro Valley Region map"/>
+				<excl value="Utah map"/>
+				<excl value="Washington map"/>
+				<excl value="Western States and Provinces map"/>
+			</heading>
+			<heading id="GlobeScience" title="Globes">
+				<synonym value="Globe"/>
+				<excl value="Globe Ariz"/>
+				<excl value="Globe District"/>
+				<excl value="Globe Shaped"/>
+				<excl value="Semi-Globe Cup"/>
+				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
+				<heading id="CelestialGlobeSci" title="Celestial Globe" noMatch="true"/>
+				<heading id="TerrestrialGlobeSci" title="Terrestrial Globe">
+					<synonym value="Terrestrial Globes"/>
+				</heading>
 			</heading>
 		</heading>
 		<heading id="MedicalHealingItems" title="Medical &amp; Healing items">
