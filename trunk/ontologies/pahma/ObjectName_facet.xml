@@ -3470,9 +3470,6 @@
 		<heading id="PlanComm" title="Plan">
 			<synonym value="Plans"/>
 		</heading>
-		<heading id="PointerComm" title="Pointer">
-			<synonym value="Pointers"/>
-		</heading>
 		<heading id="PostageStampComm" title="Postage Stamp">
 			<synonym value="Postage Stamps"/>
 			<synonym value="Postage-Stamp"/>
@@ -8119,13 +8116,11 @@
 				<synonym value="Cockspurs"/>
 				<implies facet="ObjectName" cat="CockspurAnmlEq"/>
 			</heading>
-			<heading id="DiceGmSprt" title="Dice">
-				<synonym value="Die"/> <!-- Disambiguates from Death, Machining Tools -->
-			</heading>
-			<heading id="DiceShakerGmSprt" title="Dice-Shaker">
-				<synonym value="Dice-Shakers"/>
-			</heading>
-			<heading id="DominoSetGmSprt" title="Domino-Set">
+			<heading id="DominosGmSprt" title="Dominos">
+				<synonym value="Domino"/>
+				<synonym value="Domino Set"/>
+				<synonym value="Domino Sets"/>
+				<synonym value="Domino-Set"/>
 				<synonym value="Domino-Sets"/>
 			</heading>
 			<heading id="GameBallGmSprt" title="Game-Ball">
@@ -8135,22 +8130,51 @@
 			<heading id="GameBoardGmSprt" title="Game-Board">
 				<synonym value="Game-Boards"/>
 			</heading>
-			<heading id="GameBoxGmSprt" title="Game-Box">
+			<heading id="GameBoxGmSprt" title="Game Box">
+				<synonym value="Game Boxes"/>
+				<synonym value="Game-Box"/>
 				<synonym value="Game-Boxes"/>
 			</heading>
 			<heading id="GameCounterTrayGmSprt" title="Game-Counter-Tray">
 				<synonym value="Game-Counter-Trays"/>
 			</heading>
-			<heading id="GamePieceGmSprt" title="Game-Piece">
+			<heading id="GamePieceGmSprt" title="Game Pieces">
+				<synonym value="Game Piece"/>
+				<synonym value="Game-Piece"/>
 				<synonym value="Game-Pieces"/>
+				<heading id="DiceGmSprt" title="Dice">
+					<synonym value="Die"/> <!-- Disambiguate from Death, Machining Tools -->
+				</heading>
+				<heading id="DiceShakerGmSprt" title="Dice Shaker">
+					<synonym value="Dice Shakers"/>
+					<synonym value="Dice-Shaker"/>
+					<synonym value="Dice-Shakers"/>
+				</heading>
+				<heading id="GameStickGmSprt" title="Game Stick">
+					<synonym value="Game Sticks"/>
+					<synonym value="Game-Stick"/>
+					<synonym value="Game-Sticks"/>
+				</heading>
+				<heading id="PointerComm" title="Pointer">
+					<synonym value="Pointers"/>
+				</heading>
+				<heading id="WagerCupGmSprt" title="Wager Cup">
+					<synonym value="Wager Cups"/>
+					<synonym value="Wager-Cup"/>
+					<synonym value="Wager-Cups"/>
+					<implies facet="ObjectName" cat="WagerCupAlcEq"/>
+				</heading>
 			</heading>
-			<heading id="GamesCabinetGmSprt" title="Games-Cabinet">
+			<heading id="GameCabinetGmSprt" title="Game Cabinet">
+				<synonym value="Game Cabinets"/>
+				<synonym value="Games Cabinet"/>
+				<synonym value="Games Cabinets"/>
+				<synonym value="Games-Cabinet"/>
 				<synonym value="Games-Cabinets"/>
 			</heading>
-			<heading id="GameStickGmSprt" title="Game-Stick">
-				<synonym value="Game-Sticks"/>
-			</heading>
-			<heading id="GamingCharmGmSprt" title="Gaming-Charm">
+			<heading id="GamingCharmGmSprt" title="Gaming Charm">
+				<synonym value="Gaming Charms"/>
+				<synonym value="Gaming-Charm"/>
 				<synonym value="Gaming-Charms"/>
 			</heading>
 			<heading id="GamingTableGmSprt" title="Gaming-Table">
@@ -8165,8 +8189,7 @@
 			<heading id="MahjongSetGmSprt" title="Mahjong-Set">
 				<synonym value="Mahjong-Sets"/>
 			</heading>
-			<heading id="MonopolyGmSprt" title="Monopoly"/>
-			<!-- From Card 7-7236 -->
+			<heading id="MonopolyGmSprt" title="Monopoly"/>  <!-- From Card 7-7236 -->
 			<heading id="ParcheesiGmSprt" title="Parcheesi"/>
 			<heading id="PlayingCardCaseGmSprt" title="Playing-Card-Case">
 				<synonym value="Playing-Card-Cases"/>
@@ -8176,12 +8199,6 @@
 			</heading>
 			<heading id="PuzzleGmSprt" title="Puzzle">
 				<synonym value="Puzzles"/>
-			</heading>
-			<heading id="WagerCupGmSprt" title="Wager Cup">
-				<synonym value="Wager Cups"/>
-				<synonym value="Wager-Cup"/>
-				<synonym value="Wager-Cups"/>
-				<implies facet="ObjectName" cat="WagerCupAlcEq"/>
 			</heading>
 		</heading>
 		<heading id="JiulingSetGmSprt" title="Jiuling-Set">
@@ -11062,6 +11079,7 @@
 				<!-- The following imply map references, they do not imply that
 					the associated object is a map. --> 
 				<excl value="on map card"/>
+				<excl value="not on map"/>
 				<excl value="see map"/>
 				<excl value="see also general map"/>
 				<excl value="AAA map"/>
