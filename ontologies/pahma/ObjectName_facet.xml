@@ -2236,85 +2236,6 @@
 			</heading>
 		</heading>
 	</heading>
-	<heading id="BiologicalRemains" title="Biological Remains">
-		<synonym value="Animal/Vegetal Remains"/>
-		<heading id="AnimalRemains" title="Animal Remains">
-			<synonym value="Bone"/>
-			<synonym value="Bones"/>
-			<synonym value="'faunal'"/>
-			<synonym value="unmodified 'faunal'"/>
-			<synonym value="faunal"/>
-			<synonym value="faunal remain"/>
-			<synonym value="faunal remains"/> <!-- Unless it says "faunal remains and artifacts removed" -->
-			<synonym value="faunal bones"/>
-			<synonym value="modified faunal"/>
-			<synonym value="unmodified faunal"/>
-			<synonym value="faunal remains'"/>
-			<synonym value="header labeled 'faunal remains'"/>
-			<synonym value="labeled 'faunal"/>
-			<synonym value="Faunal Material"/>
-			<synonym value="Skeleton"/>
-			<synonym value="Skeletons"/>
-			<heading id="HumanRemains" title="Human Remains"/>
-			<heading id="Mummies" title="Mummies">
-				<synonym value="Mummy"/>
-				<excl value="Mummy Portrait"/>
-				<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
-				<heading id="HumanMummy" title="Human Mummy">
-					<synonym value="Human mummies"/>
-					<implies facet="ObjectName" cat="HumanRemains"/>
-				</heading>
-				<heading id="CatMummy" title="Cat Mummy">
-					<synonym value="Cat mummies"/>
-				</heading>
-				<heading id="CrocodileMummy" title="Crocodile Mummy">
-					<synonym value="Crocodile mummies"/>
-				</heading>
-				<heading id="DogMummy" title="Dog Mummy">
-					<synonym value="Dog mummies"/>
-				</heading>
-				<heading id="MonkeyMummy" title="Monkey Mummy">
-					<synonym value="Monkey mummies"/>
-				</heading>
-				<heading id="FishMummy" title="Fish Mummy">
-					<synonym value="Fish mummies"/>
-				</heading>
-				<heading id="LizardMummy" title="Lizard Mummy">
-					<synonym value="Lizard mummies"/>
-				</heading>
-				<heading id="ParrotMummy" title="Parrot Mummy">
-					<synonym value="Parrot mummies"/>
-				</heading>
-				<heading id="SnakeMummy" title="Snake Mummy">
-					<synonym value="Snake mummies"/>
-				</heading>
-			</heading>
-			<!-- <heading id="Biologicalshells" title="Shells">
-				<synonym value="Shell"/>
-				<implies facet="Material" cat="ShellMaterials"/>
-				<heading id="Clamshells" title="Clam Shells">
-				<heading id="SaxidomusNuttalli" title="Butternut Clam">
-				<synonym value="Saxidomus nuttalli"/>
-				</heading>
-				</heading>
-				</heading> -->
-		</heading>
-		<heading id="PlantRemains" title="Plant Remains">
-			<synonym value="Floral Remains"/>
-			<synonym value="Vegetal Remains"/>
-			<heading id="SnuffPlantRemains" title="Snuff">
-				<excl value="Snuff Box"/>
-				<excl value="Snuff Boxes"/>
-				<excl value="Snuff-Box"/>
-				<excl value="Snuff-Boxes"/>
-				<implies facet="ObjectName" cat="SnuffDrug"/>
-			</heading>
-			<heading id="TobaccoPlantRemains" title="Tobacco">
-				<implies facet="ObjectName" cat="TobaccoDrug"/>
-				<!-- Found Elsewhere? -->
-			</heading>
-		</heading>
-	</heading>
 	<heading id="CommunicationRelatedItems" title="Communication-related Items">
 		<synonym value="Communication"/>
 		<synonym value="Communication Equipment"/>
@@ -8352,169 +8273,6 @@
 			<synonym value="Yut-Sets"/>
 		</heading>
 	</heading>
-	<heading id="MedicalHealingItems" title="Medical &amp; Healing items">
-		<synonym value="Doctor"/>
-		<synonym value="Doctors"/>
-		<synonym value="Healing"/>
-		<synonym value="Healings"/>
-		<synonym value="Medical"/>
-		<synonym value="Medical/Medicine Equipment"/>
-		<heading id="ApothecaryLadleRx" title="Apothecary Ladle">
-			<synonym value="Apothecary Ladles"/>
-			<synonym value="Apothecary-Ladle"/>
-			<synonym value="Apothecary-Ladles"/>
-		</heading>
-		<heading id="ApothecaryVesselRx" title="Apothecary Vessel">
-			<synonym value="Apothecary Vessels"/>
-			<synonym value="Apothecary-Vessel"/>
-			<synonym value="Apothecary-Vessels"/>
-			<implies facet="ObjectName" cat="Containers"/>
-		</heading>
-		<heading id="ApothecaryWeightRx" title="Apothecary-Weight">
-			<synonym value="Apothecary-Weights"/>
-		</heading>
-		<heading id="ArtificialHandRx" title="Artificial Hand">
-			<synonym value="Artificial Hands"/>
-		</heading>
-		<heading id="BandageRx" title="Bandage">
-			<synonym value="Bandages"/>
-		</heading>
-		<heading id="BirthingStoolRx" title="Birthing-Stool">
-			<synonym value="Birthing-Stools"/>
-		</heading>
-		<heading id="BleedingCupRx" title="Bleeding-Cup">
-			<synonym value="Bleeding-Cups"/>
-		</heading>
-		<heading id="CaudleCupRx" title="Caudle Cup" noMatch="true"/>
-		<heading id="CrutchRx" title="Crutch">
-			<synonym value="Crutches"/>
-			<synonym value="Crutchs"/> <!-- Misspelling -->
-			<implies facet="ObjectName" cat="CrutchPersAccsry"/>
-		</heading>
-		<heading id="DenturesRx" title="Dentures">
-			<synonym value="Denture"/>
-		</heading>
-		<heading id="DoctoringBasketMedicalRx" title="Doctoring Basket">
-			<synonym value="Doctoring Baskets"/>
-			<implies facet="ActivityorContext" cat="Healing"/>
-			<implies facet="ObjectName" cat="Baskets"/>
-			<implies facet="Collection" cat="BasketCollection"/>
-		</heading>
-		<heading id="EnemaRx" title="Enema">
-			<synonym value="Enemas"/>
-		</heading>
-		<heading id="EyeBathRx" title="Eye Bath">
-			<synonym value="Eye Baths"/>
-			<synonym value="Eye-Bath"/>
-			<synonym value="Eye-Baths"/>
-			<implies facet="ObjectName" cat="EyeBathTreatment"/>
-		</heading>
-		<heading id="FingerStallRx" title="Finger Stall">
-			<synonym value="Finger Stalls"/>
-			<synonym value="Finger-Stall"/>
-			<synonym value="Finger-Stalls"/>
-		</heading>
-		<heading id="HealingPlateRx" title="Healing Plate">
-			<synonym value="Healing Plates"/>
-			<synonym value="Healing-Plate"/>
-			<synonym value="Healing-Plates"/>
-		</heading>
-		<heading id="InsectRepellentRx" title="Insect Repellent">
-			<synonym value="Insect Repellents"/>
-			<synonym value="Insect-Repellent"/>
-			<synonym value="Insect-Repellents"/>
-			<implies facet="ObjectName" cat="InsectRepellentSciSamp"/>
-		</heading>
-		<heading id="InvalidMugRx" title="Invalid Mug">
-			<synonym value="Invalid Mugs"/>
-		</heading>
-		<heading id="MedicalInstrumentRx" title="Medical Instruments">
-			<synonym value="Medical Instrument"/>
-			<implies facet="ObjectName" cat="MedicalInstrumentInstr"/>
-			<heading id="AcupunctureNeedle" title="Acupuncture Needle">
-				<synonym value="Acupuncture Needles"/>
-				<synonym value="Acupuncture-Needle"/>
-				<synonym value="Acupuncture-Needles"/>
-			</heading>
-			<heading id="Catheter" title="Catheter">
-				<synonym value="Catheters"/>
-			</heading>
-			<heading id="DentalInstrument" title="Dental Instrument">
-				<synonym value="Dental Instruments"/>
-			</heading>
-			<heading id="EnemaFunnel" title="Enema Funnel">
-				<synonym value="Enema Funnels"/>
-				<synonym value="Enema-Funnel"/>
-				<synonym value="Enema-Funnels"/>
-				<implies facet="ActivityorContext" cat="Healing"/>
-				<implies facet="ObjectName" cat="FunnelTool"/>
-			</heading>
-			<heading id="HealingDevice" title="Healing-Device">
-				<synonym value="Healing-Devices"/>
-			</heading>
-			<heading id="Probe" title="Probe">
-				<synonym value="Probes"/>
-			</heading>
-			<heading id="RectalSpeculum" title="Rectal Speculum">
-				<synonym value="Rectal Speculums"/>
-			</heading>
-			<heading id="RejuvenatingDevice" title="Rejuvenating-Device">
-				<synonym value="Rejuvenating-Devices"/>
-			</heading>
-			<heading id="SurgicalInstrument" title="Surgical Instrument">
-				<synonym value="Surgical Instruments"/>
-			</heading>
-			<heading id="Syringe" title="Syringe">
-				<synonym value="Syringes"/>
-			</heading>
-			<heading id="TractionHook" title="Traction-Hook">
-				<synonym value="Traction-Hooks"/>
-			</heading>
-		</heading>
-		<heading id="MedicineRx" title="Medicine">
-			<synonym value="Medicines"/>
-			<synonym value="Febrifuge"/>
-			<heading id="PillMedicineRx" title="Pill">
-				<synonym value="Pills"/>
-			</heading>
-		</heading>
-		<heading id="MedicineBagRx" title="Medicine-Bag">
-			<synonym value="Medicine-Bags"/>
-		</heading>
-		<heading id="MedicineBottleRx" title="Medicine-Bottle">
-			<synonym value="Medicine-Bottles"/>
-		</heading>
-		<heading id="MedicineBoxRx" title="Medicine-Box">
-			<synonym value="Medicine-Boxes"/>
-		</heading>
-		<heading id="MedicineHornRx" title="Medicine Horn">
-			<synonym value="Medicine Horns"/>
-			<synonym value="Medicine-Horn"/>
-			<synonym value="Medicine-Horns"/>
-			<implies facet="ObjectName" cat="Containers"/>
-		</heading>
-		<heading id="OculistsStampRx" title="Oculist's Stamp">
-			<synonym value="Oculist's Stamps"/>
-		</heading>
-		<heading id="PhrenologicalChartRx" title="Phrenological Chart">
-			<synonym value="Phrenological Charts"/>
-		</heading>
-		<heading id="PhrenologicalSkullRx" title="Phrenological Skull">
-			<synonym value="Phrenological Skulls"/>
-		</heading>
-		<heading id="PillBoxRx" title="Pill-Box">
-			<synonym value="Pill-Boxes"/>
-		</heading>
-		<heading id="PillSlabRx" title="Pill-Slab">
-			<synonym value="Pill-Slabs"/>
-		</heading>
-		<heading id="StumpCoverRx" title="Stump-Cover">
-			<synonym value="Stump-Covers"/>
-		</heading>
-		<heading id="SurgicalEquipmentRx" title="Surgical Equipment">
-			<synonym value="Surgical Items"/>
-		</heading>
-	</heading>
 	<heading id="PerformanceArts" title="Performance Arts">
 		<synonym value="Performance Art"/>
 		<heading id="DanceEquipment" title="Dance Equipment">
@@ -10598,10 +10356,89 @@
 			<synonym value="Wands"/>
 		</heading>
 	</heading>
-	<heading id="ScienceMeasuring" title="Science &amp; Measuring">
+	<heading id="ScienceMedicine" title="Science &amp; Medicine">
 		<synonym value="Science"/>
 		<synonym value="Sciences"/>
 		<synonym value="Scientific"/>
+		<heading id="BiologicalRemains" title="Biological Remains">
+			<synonym value="Animal/Vegetal Remains"/>
+			<heading id="AnimalRemains" title="Animal Remains">
+				<synonym value="Bone"/>
+				<synonym value="Bones"/>
+				<synonym value="'faunal'"/>
+				<synonym value="unmodified 'faunal'"/>
+				<synonym value="faunal"/>
+				<synonym value="faunal remain"/>
+				<synonym value="faunal remains"/> <!-- Unless it says "faunal remains and artifacts removed" -->
+				<synonym value="faunal bones"/>
+				<synonym value="modified faunal"/>
+				<synonym value="unmodified faunal"/>
+				<synonym value="faunal remains'"/>
+				<synonym value="header labeled 'faunal remains'"/>
+				<synonym value="labeled 'faunal"/>
+				<synonym value="Faunal Material"/>
+				<synonym value="Skeleton"/>
+				<synonym value="Skeletons"/>
+				<heading id="HumanRemains" title="Human Remains"/>
+				<heading id="Mummies" title="Mummies">
+					<synonym value="Mummy"/>
+					<excl value="Mummy Portrait"/>
+					<implies facet="ObjectName" cat="MummyFuneraryItemRelRit"/>
+					<heading id="HumanMummy" title="Human Mummy">
+						<synonym value="Human mummies"/>
+						<implies facet="ObjectName" cat="HumanRemains"/>
+					</heading>
+					<heading id="CatMummy" title="Cat Mummy">
+						<synonym value="Cat mummies"/>
+					</heading>
+					<heading id="CrocodileMummy" title="Crocodile Mummy">
+						<synonym value="Crocodile mummies"/>
+					</heading>
+					<heading id="DogMummy" title="Dog Mummy">
+						<synonym value="Dog mummies"/>
+					</heading>
+					<heading id="MonkeyMummy" title="Monkey Mummy">
+						<synonym value="Monkey mummies"/>
+					</heading>
+					<heading id="FishMummy" title="Fish Mummy">
+						<synonym value="Fish mummies"/>
+					</heading>
+					<heading id="LizardMummy" title="Lizard Mummy">
+						<synonym value="Lizard mummies"/>
+					</heading>
+					<heading id="ParrotMummy" title="Parrot Mummy">
+						<synonym value="Parrot mummies"/>
+					</heading>
+					<heading id="SnakeMummy" title="Snake Mummy">
+						<synonym value="Snake mummies"/>
+					</heading>
+				</heading>
+				<!-- <heading id="Biologicalshells" title="Shells">
+					<synonym value="Shell"/>
+					<implies facet="Material" cat="ShellMaterials"/>
+					<heading id="Clamshells" title="Clam Shells">
+					<heading id="SaxidomusNuttalli" title="Butternut Clam">
+					<synonym value="Saxidomus nuttalli"/>
+					</heading>
+					</heading>
+					</heading> -->
+			</heading>
+			<heading id="PlantRemains" title="Plant Remains">
+				<synonym value="Floral Remains"/>
+				<synonym value="Vegetal Remains"/>
+				<heading id="SnuffPlantRemains" title="Snuff">
+					<excl value="Snuff Box"/>
+					<excl value="Snuff Boxes"/>
+					<excl value="Snuff-Box"/>
+					<excl value="Snuff-Boxes"/>
+					<implies facet="ObjectName" cat="SnuffDrug"/>
+				</heading>
+				<heading id="TobaccoPlantRemains" title="Tobacco">
+					<implies facet="ObjectName" cat="TobaccoDrug"/>
+					<!-- Found Elsewhere? -->
+				</heading>
+			</heading>
+		</heading>
 		<heading id="CalendarScience" title="Calendar">
 			<synonym value="Calendars"/>
 			<synonym value="Calender"/> <!-- Also could refer to a machine in which cloth
@@ -11227,6 +11064,169 @@
 				<synonym value="Watch-Stand"/>
 				<synonym value="Watch-Stands"/>
 				<!-- <implies facet="ObjectName" cat="StandsMiscEq"/> -->
+			</heading>
+		</heading>
+		<heading id="MedicalHealingItems" title="Medical &amp; Healing items">
+			<synonym value="Doctor"/>
+			<synonym value="Doctors"/>
+			<synonym value="Healing"/>
+			<synonym value="Healings"/>
+			<synonym value="Medical"/>
+			<synonym value="Medical/Medicine Equipment"/>
+			<heading id="ApothecaryLadleRx" title="Apothecary Ladle">
+				<synonym value="Apothecary Ladles"/>
+				<synonym value="Apothecary-Ladle"/>
+				<synonym value="Apothecary-Ladles"/>
+			</heading>
+			<heading id="ApothecaryVesselRx" title="Apothecary Vessel">
+				<synonym value="Apothecary Vessels"/>
+				<synonym value="Apothecary-Vessel"/>
+				<synonym value="Apothecary-Vessels"/>
+				<implies facet="ObjectName" cat="Containers"/>
+			</heading>
+			<heading id="ApothecaryWeightRx" title="Apothecary-Weight">
+				<synonym value="Apothecary-Weights"/>
+			</heading>
+			<heading id="ArtificialHandRx" title="Artificial Hand">
+				<synonym value="Artificial Hands"/>
+			</heading>
+			<heading id="BandageRx" title="Bandage">
+				<synonym value="Bandages"/>
+			</heading>
+			<heading id="BirthingStoolRx" title="Birthing-Stool">
+				<synonym value="Birthing-Stools"/>
+			</heading>
+			<heading id="BleedingCupRx" title="Bleeding-Cup">
+				<synonym value="Bleeding-Cups"/>
+			</heading>
+			<heading id="CaudleCupRx" title="Caudle Cup" noMatch="true"/>
+			<heading id="CrutchRx" title="Crutch">
+				<synonym value="Crutches"/>
+				<synonym value="Crutchs"/> <!-- Misspelling -->
+				<implies facet="ObjectName" cat="CrutchPersAccsry"/>
+			</heading>
+			<heading id="DenturesRx" title="Dentures">
+				<synonym value="Denture"/>
+			</heading>
+			<heading id="DoctoringBasketMedicalRx" title="Doctoring Basket">
+				<synonym value="Doctoring Baskets"/>
+				<implies facet="ActivityorContext" cat="Healing"/>
+				<implies facet="ObjectName" cat="Baskets"/>
+				<implies facet="Collection" cat="BasketCollection"/>
+			</heading>
+			<heading id="EnemaRx" title="Enema">
+				<synonym value="Enemas"/>
+			</heading>
+			<heading id="EyeBathRx" title="Eye Bath">
+				<synonym value="Eye Baths"/>
+				<synonym value="Eye-Bath"/>
+				<synonym value="Eye-Baths"/>
+				<implies facet="ObjectName" cat="EyeBathTreatment"/>
+			</heading>
+			<heading id="FingerStallRx" title="Finger Stall">
+				<synonym value="Finger Stalls"/>
+				<synonym value="Finger-Stall"/>
+				<synonym value="Finger-Stalls"/>
+			</heading>
+			<heading id="HealingPlateRx" title="Healing Plate">
+				<synonym value="Healing Plates"/>
+				<synonym value="Healing-Plate"/>
+				<synonym value="Healing-Plates"/>
+			</heading>
+			<heading id="InsectRepellentRx" title="Insect Repellent">
+				<synonym value="Insect Repellents"/>
+				<synonym value="Insect-Repellent"/>
+				<synonym value="Insect-Repellents"/>
+				<implies facet="ObjectName" cat="InsectRepellentSciSamp"/>
+			</heading>
+			<heading id="InvalidMugRx" title="Invalid Mug">
+				<synonym value="Invalid Mugs"/>
+			</heading>
+			<heading id="MedicalInstrumentRx" title="Medical Instruments">
+				<synonym value="Medical Instrument"/>
+				<implies facet="ObjectName" cat="MedicalInstrumentInstr"/>
+				<heading id="AcupunctureNeedle" title="Acupuncture Needle">
+					<synonym value="Acupuncture Needles"/>
+					<synonym value="Acupuncture-Needle"/>
+					<synonym value="Acupuncture-Needles"/>
+				</heading>
+				<heading id="Catheter" title="Catheter">
+					<synonym value="Catheters"/>
+				</heading>
+				<heading id="DentalInstrument" title="Dental Instrument">
+					<synonym value="Dental Instruments"/>
+				</heading>
+				<heading id="EnemaFunnel" title="Enema Funnel">
+					<synonym value="Enema Funnels"/>
+					<synonym value="Enema-Funnel"/>
+					<synonym value="Enema-Funnels"/>
+					<implies facet="ActivityorContext" cat="Healing"/>
+					<implies facet="ObjectName" cat="FunnelTool"/>
+				</heading>
+				<heading id="HealingDevice" title="Healing-Device">
+					<synonym value="Healing-Devices"/>
+				</heading>
+				<heading id="Probe" title="Probe">
+					<synonym value="Probes"/>
+				</heading>
+				<heading id="RectalSpeculum" title="Rectal Speculum">
+					<synonym value="Rectal Speculums"/>
+				</heading>
+				<heading id="RejuvenatingDevice" title="Rejuvenating-Device">
+					<synonym value="Rejuvenating-Devices"/>
+				</heading>
+				<heading id="SurgicalInstrument" title="Surgical Instrument">
+					<synonym value="Surgical Instruments"/>
+				</heading>
+				<heading id="Syringe" title="Syringe">
+					<synonym value="Syringes"/>
+				</heading>
+				<heading id="TractionHook" title="Traction-Hook">
+					<synonym value="Traction-Hooks"/>
+				</heading>
+			</heading>
+			<heading id="MedicineRx" title="Medicine">
+				<synonym value="Medicines"/>
+				<synonym value="Febrifuge"/>
+				<heading id="PillMedicineRx" title="Pill">
+					<synonym value="Pills"/>
+				</heading>
+			</heading>
+			<heading id="MedicineBagRx" title="Medicine-Bag">
+				<synonym value="Medicine-Bags"/>
+			</heading>
+			<heading id="MedicineBottleRx" title="Medicine-Bottle">
+				<synonym value="Medicine-Bottles"/>
+			</heading>
+			<heading id="MedicineBoxRx" title="Medicine-Box">
+				<synonym value="Medicine-Boxes"/>
+			</heading>
+			<heading id="MedicineHornRx" title="Medicine Horn">
+				<synonym value="Medicine Horns"/>
+				<synonym value="Medicine-Horn"/>
+				<synonym value="Medicine-Horns"/>
+				<implies facet="ObjectName" cat="Containers"/>
+			</heading>
+			<heading id="OculistsStampRx" title="Oculist's Stamp">
+				<synonym value="Oculist's Stamps"/>
+			</heading>
+			<heading id="PhrenologicalChartRx" title="Phrenological Chart">
+				<synonym value="Phrenological Charts"/>
+			</heading>
+			<heading id="PhrenologicalSkullRx" title="Phrenological Skull">
+				<synonym value="Phrenological Skulls"/>
+			</heading>
+			<heading id="PillBoxRx" title="Pill-Box">
+				<synonym value="Pill-Boxes"/>
+			</heading>
+			<heading id="PillSlabRx" title="Pill-Slab">
+				<synonym value="Pill-Slabs"/>
+			</heading>
+			<heading id="StumpCoverRx" title="Stump-Cover">
+				<synonym value="Stump-Covers"/>
+			</heading>
+			<heading id="SurgicalEquipmentRx" title="Surgical Equipment">
+				<synonym value="Surgical Items"/>
 			</heading>
 		</heading>
 		<heading id="NumericalTableSci" title="Numerical Table">
