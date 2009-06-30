@@ -267,7 +267,7 @@
 					<synonym value="Donkey Harneses"/>
 				</heading>
 				<heading id="HarnessHorseTack" title="Horse Harness">
-					<synonym value="Horse Harness"/>
+					<synonym value="Horse Tack"/>
 					<synonym value="Horse Harnesses"/>
 					<excl value="Mule Harness"/>
 					<excl value="Mule Harnesses"/>
@@ -789,7 +789,7 @@
 				<synonym value="Beehive Stands"/>
 				<synonym value="Beehive-Stand"/>
 				<synonym value="Beehive-Stands"/>
-				<implies facet="ObjectName" cat="StandsMiscEq"/>
+				<!--<implies facet="ObjectName" cat="StandsMiscEq"/>-->
 			</heading>
 			<heading id="ClimbingRing" title="Climbing-Ring"/>
 			<heading id="ClimbingRopeGathering" title="Climbing Rope">
@@ -4767,12 +4767,11 @@
 						</heading>
 					</heading>
 					<heading id="PotteryByRegionalStyle" title="(regional styles)" noMatch="true">
-						<heading id="Lusterware" title="Lusterware">
-							<heading id="CantonWare" title="Canton Ware"/>
-							<heading id="ColoradoRiverWare" title="Colorado River Ware"/>
-						</heading>
+						<heading id="CantonWare" title="Canton Ware"/>
+						<heading id="ColoradoRiverWare" title="Colorado River Ware"/>
 					</heading>
 					<heading id="Lusterware" title="Lusterware">
+						<synonym value="Luster Ware"/>
 						<synonym value="Lustre Ware"/>
 						<synonym value="Lustreware"/>
 						<implies facet="TechniqueDesignorDecoration" cat="MetallicGlaze"/>
@@ -5593,7 +5592,7 @@
 					<excl value="Tonto Basin"/>
 					<excl value="Walker Basin"/>
 					<excl value="Wash"/>
-					<implies facet="ObjectName" cat="BasinVessel"/>
+					<!--<implies facet="ObjectName" cat="BasinVessel"/>-->
 				</heading>
 				<heading id="CookingBasketCookEq" title="Cooking Basket" noMatch="true"/> 
 				<heading id="CookingBowlCookEq" title="Cooking Bowl">
@@ -8286,7 +8285,7 @@
 	<heading id="PerformanceArts" title="Performance Arts">
 		<synonym value="Performance Art"/>
 		<heading id="DanceEquipment" title="Dance Equipment">
-			<synonym value="Dance Equipment"/>
+			<synonym value="Dancing Equipment"/>
 			<synonym value="Dance Item"/>
 			<synonym value="Dance Items"/>
 			<implies facet="ActivityorContext" cat="DancesEvents"/>
@@ -9906,7 +9905,6 @@
 			<heading id="Songsheet" title="Songsheet">
 				<synonym value="Songsheets"/>
 				<implies facet="ActivityorContext" cat="Singing"/>
-				<implies facet="ObjectName" cat="SongsheetComm"/>
 			</heading>
 			<heading id="SulingStand" title="Suling Stand">
 				<synonym value="Suling Stands"/>
