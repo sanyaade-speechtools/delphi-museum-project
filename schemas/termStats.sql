@@ -3,8 +3,6 @@
 -- ----------------------------------------------------------------------
 
 -- Define the concordance table
--- Need to take care that maximum tokenlength produced by tool 
--- does not exceed 255 or we need to change from VARCHAR to text.
 DROP TABLE IF EXISTS `termStats`;
 CREATE TABLE `termStats` (
   `term`     text NOT NULL,
