@@ -2762,8 +2762,8 @@
 		<heading id="CallComm" title="Call">
 			<synonym value="Calls"/>
 		</heading>
-		<heading id="CardsComm" title="Cards">
-			<synonym value="Card"/>
+		<heading id="CardsComm" title="Cards" noMatch="true">
+			<!--<synonym value="Card"/>-->
 			<excl value="Catalog Card"/>
 			<excl value="Catalog Cards"/>
 			<excl value="Bascom Card"/>
@@ -4030,6 +4030,7 @@
 					<synonym value="Greeting Cards"/>
 					<synonym value="Greeting-Card"/>
 					<synonym value="Greeting-Cards"/>
+					<synonym value="Thank you Card"/>
 					<implies facet="ObjectName" cat="GreetingCardCardsComm"/>
 				</heading>
 				<heading id="PapercutVisRep" title="Papercut">
@@ -5705,32 +5706,136 @@
 				</heading>
 				<heading id="PlateCookEq" title="Plate">
 					<synonym value="Plates"/>
-					<excl value="Copper plate"/>
-					<excl value="Copper-plate"/>
-					<excl value="Copper plated"/>
-					<excl value="Copper-plated"/>
-					<excl value="Copperplate"/>
-					<excl value="Copperplated"/>
-					<excl value="Gold plate"/>
-					<excl value="Gold-plate"/>
-					<excl value="Gold plated"/>
-					<excl value="Gold-plated"/>
-					<excl value="Goldplate"/>
-					<excl value="Goldplated"/>
+					<excl value="Argillite"/>
+					<excl value="Brass"/>
+					<excl value="Copper"/>
+					<excl value="Gold"/>
+					<excl value="Metal"/>
+					<excl value="Metallic"/>
+					<excl value="Nickel"/>
+					<excl value="Silver"/>
+					<excl value="Tin"/>
+					<excl value="Armor"/>
+					<excl value="Base Plate"/>
+					<excl value="Breast plate"/>
+					<excl value="Glass Plate"/>
+					<excl value="Hot Plate"/>
+					<excl value="Keyhole"/>
 					<excl value="Lithograph"/>
 					<excl value="Lithographic"/>
 					<excl value="Lithographs"/>
 					<excl value="Negative"/>
 					<excl value="Negatives"/>
-					<excl value="New plate of"/>
-					<excl value="photographic plate"/>
-					<excl value="photographic plates"/>
-					<excl value="Silver plate"/>
-					<excl value="Silver-plate"/>
-					<excl value="Silver plated"/>
-					<excl value="Silver-plated"/>
-					<excl value="Silverplate"/>
-					<excl value="Silverplated"/>
+					<excl value="Photo"/>
+					<excl value="Photos"/>
+					<excl value="Photograph"/>
+					<excl value="Photographic"/>
+					<excl value="Plate Glass"/>
+					<excl value="Plate-Glass"/>
+					<excl value="New plate"/>
+					<excl value="Plate Valley"/>
+					<excl value="Sturgeon"/>
+					<excl value="Operculan"/> <!-- Misspelling-->
+					<excl value="Opercular"/>
+					<excl value="Companion Plate"/>
+					<excl value="Plate Shape"/>
+					<excl value="Plate Shaped"/>
+					<excl value="1st Plate"/>
+					<excl value="2nd Plate"/>
+					<excl value="3rd Plate"/>
+					<excl value="4th Plate"/>
+					<excl value="5th Plate"/>
+					<excl value="6th Plate"/>
+					<excl value="7th Plate"/>
+					<excl value="8th Plate"/>
+					<excl value="9th Plate"/>
+					<excl value="10th Plate"/>
+					<excl value="Plate 1"/>
+					<excl value="Plate 2"/>
+					<excl value="Plate 3"/>
+					<excl value="Plate 3a"/>
+					<excl value="Plate 4b"/>
+					<excl value="Plate 4e"/>
+					<excl value="Plate 5"/>
+					<excl value="Plate 5a"/>
+					<excl value="Plate 5b"/>
+					<excl value="Plate 5c"/>
+					<excl value="Plate 6"/>
+					<excl value="Plate 7a"/>
+					<excl value="Plate 8"/>
+					<excl value="Plate 8c"/>
+					<excl value="Plate 10"/>
+					<excl value="Plate 11"/>
+					<excl value="Plate 12"/>
+					<excl value="Plate 13"/>
+					<excl value="Plate 13b"/>
+					<excl value="Plate 14"/>
+					<excl value="Plate 15"/>
+					<excl value="Plate 16"/>
+					<excl value="Plate 17"/>
+					<excl value="Plate 20"/>
+					<excl value="Plate 21"/>
+					<excl value="Plate 20b"/>
+					<excl value="Plate 22"/>
+					<excl value="Plate 22b"/>
+					<excl value="Plate 23"/>
+					<excl value="Plate 24"/>
+					<excl value="Plate 26"/>
+					<excl value="Plate 26b"/>
+					<excl value="Plate 26 b"/>
+					<excl value="Plate 27"/>
+					<excl value="Plate 29"/>
+					<excl value="Plate 30"/>
+					<excl value="Plate 34"/>
+					<excl value="Plate 36"/>
+					<excl value="Plate 38"/>
+					<excl value="Plate 43"/>
+					<excl value="Plate 47"/>
+					<excl value="Plate 49"/>
+					<excl value="Plate 51"/>
+					<excl value="Plate 55"/>
+					<excl value="Plate 59"/>
+					<excl value="Plate 60"/>
+					<excl value="Plate 63"/>
+					<excl value="Plate 65"/>
+					<excl value="Plate 67"/>
+					<excl value="Plate 68"/>
+					<excl value="Plate 71"/>
+					<excl value="Plate 77"/>
+					<excl value="Plate 81"/>
+					<excl value="Plate 94"/>
+					<excl value="Plate 97"/>
+					<excl value="Plate 100"/>
+					<excl value="Plate 105"/>
+					<excl value="Plate 105worn"/>
+					<excl value="Plate 120"/>
+					<excl value="Plate 175"/>
+					<excl value="Plate 519"/>
+					<excl value="Plate I"/>
+					<excl value="Plate Ia"/>
+					<excl value="Plate Ib"/>
+					<excl value="Plate Ic"/>
+					<excl value="Plate II"/>
+					<excl value="Plate II b"/>
+					<excl value="Plate III"/>
+					<excl value="Plate IV"/>
+					<excl value="Plate V"/>
+					<excl value="Plate VI"/>
+					<excl value="Plate XV"/>
+					<excl value="Plate XLII"/>
+					<excl value="Plate XLIV"/>
+					<excl value="Plate XLIX"/>
+					<excl value="Plate LI"/>
+					<excl value="Plate LIV"/>
+					<excl value="Plate LVIII"/>
+					<excl value="Plate LXII"/>
+					<excl value="Plate LXVII"/>
+					<excl value="Plate LXX"/>
+					<excl value="Plate LXXII"/>
+					<excl value="Plate LXXVI"/>
+					<excl value="Plate LXXIX"/>
+					<excl value="Plate Type XVIII"/>
+					<excl value="Plate Type XXVI"/>
 					<implies facet="ActivityorContext" cat="FoodServing"/>
 					<implies facet="ObjectName" cat="VesselContainers"/>
 					<!-- <implies facet="ObjectName" cat="PotteryPlate"/> Not all plates are pottery plates -->
@@ -11963,9 +12068,9 @@
 			<heading id="Stangenglas" title="Stangenglas">
 				<!-- <synonym value="xxxxxxxxx"/> Does this have a plural? -->
 			</heading>
-			<heading id="StillAlcEq" title="Still">
+			<!--<heading id="StillAlcEq" title="Still">
 				<synonym value="Stills"/>
-			</heading>
+			</heading>-->
 			<heading id="StirrupCup" title="Stirrup Cup">
 				<synonym value="Stirrup Cups"/>
 			</heading>
