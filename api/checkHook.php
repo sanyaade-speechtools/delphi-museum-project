@@ -33,6 +33,7 @@ span.fullterm { background-color:#ff6666; }
 		$usepartial = false;
 
 	if( !empty($_GET['term'])) { 
+		// Convert term into individual keywords, with expansion forms
 		$term = trim($_GET['term']);
 		$terms = explode(' ', $term);
 		foreach($terms as $subterm) {
@@ -48,6 +49,7 @@ span.fullterm { background-color:#ff6666; }
 				}
 			}
 		}
+		// Build queries to check against existing concepts/hooks
 		$qString1 = 
 				"SELECT f.display_name, c.display_name, h.token "
 			 ." FROM hooks h JOIN categories c on h.cat_id=c.id JOIN facets f on c.facet_id=f.id"
@@ -127,12 +129,21 @@ span.fullterm { background-color:#ff6666; }
 		//echo "<p>Query1: ".$qString1.'</p>';
 		//echo "<p>Query2: ".$qString2.'</p>';
 		}
+		// Build queries to check against corpus vocabulary
 		$qString3 =
 				"SELECT term, count FROM termStats where term='".$term."'";
 		$qString4 =
 				"SELECT SQL_CALC_FOUND_ROWS term, count FROM termStats where term!='".$term."'"
 			  ." AND MATCH(term) AGAINST('".implode(' ',$kwdterms)."' IN BOOLEAN MODE) "
 				." LIMIT ".$termlimit;
+		// Note that if the term is a stopword, we have to fall back to the slower LIKE
+		$qString5 =
+			"SELECT SQL_CALC_FOUND_ROWS term, count FROM termStats where term!='".$term."'";
+		if($usepartial)
+			$qString5 .= " AND term LIKE '%".$term."%' ";
+		else
+			$qString5 .= " AND term REGEXP '[[:<:]]".$term."[[:>:]]'";
+		$qString5 .= " LIMIT ".$termlimit;
 		// Get the term matches and show in table
 		$results =& $db->query($qString3);
 		if (PEAR::isError($results)) {
@@ -180,6 +191,34 @@ span.fullterm { background-color:#ff6666; }
 					$nrows2++;
 				}
 				$results->free();
+			}
+			// Now if we got no results from fulltext, try the LIKE form
+			if($nrows2==0) {
+				$results =& $db->query($qString5);
+				if (PEAR::isError($results)) {
+						echo "Error in query: ".$results->getMessage();
+						echo "Query: ".$qString5;
+				} else {
+					$nrows2 = 0;
+					while ($row = $results->fetchRow(MDB2_FETCHMODE_ORDERED)) {
+						if($nrows1==0&&$nrows2==0) {
+							echo '<h3>Corpus matches for term: "'.$term.'":</h3>'
+								.'<table id="corpusmatches" cellspacing="0" cellpadding="0">'
+								.'<tr class="hdr"><td class="freq">Frequency</td><td class="matches">&nbsp;&nbsp;&nbsp;Corpus matches</td></tr><tr><td class="hspace" colspan="2"></td></tr>';
+						}
+						$termR = $row[0];
+						$countR = $row[1];
+						if($usepartial)
+							$match = str_replace($terms, $modterms, $termR);
+						else
+							$match = preg_replace($pregpatterns, $pregreplaces, $termR);
+
+						echo '<tr><td class="freq">'.$countR.':</td><td class="matches">'
+								.$match.'</td></tr>';
+						$nrows2++;
+					}
+					$results->free();
+				}
 			}
 			$results =& $db->query("SELECT FOUND_ROWS()");
 			if(!PEAR::isError($results)&&($row = $results->fetchRow(MDB2_FETCHMODE_ORDERED))) {
