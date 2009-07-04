@@ -8461,6 +8461,22 @@
 			<synonym value="Dancing Equipment"/>
 			<synonym value="Dance Item"/>
 			<synonym value="Dance Items"/>
+			<heading id="DanceInstruments" title="Dance Instruments">
+				<heading id="DoubleDanceWhistle" title="Double Dance Whistle">
+					<implies facet="ObjectName" cat="WhistleInstrument"/>
+				</heading>
+			</heading>
+			<heading id="DanceRegalia" title="Dance Regalia">
+				<heading id="DanceApron" title="Dance Apron"/>
+				<heading id="DanceBasket" title="Dance Basket">
+					<implies facet="ObjectName" cat="Baskets"/>
+				</heading>
+				<heading id="DanceRuffs" title="Dance Ruffs"/>
+				<heading id="DanceStaff" title="Dance Staff"/>
+				<heading id="DanceSuit" title="Dance Suit"/>
+				<heading id="DanceVestment" title="Dance Vestment"/>
+				<heading id="DanceWand" title="Dance Wand"/>
+			</heading>
 			<implies facet="ActivityorContext" cat="DancesEvents"/>
 		</heading>
 		<heading id="JestersStaff" title="Jester's Staff">
@@ -10093,7 +10109,6 @@
 			</heading>
 		</heading>
 		<heading id="PuppetPerfArt" title="Puppets" noMatch="true"/>
-		<heading id="SceneryPerfArt" title="Scenery"/>
 		<heading id="TheaterCostumePerfArt" title="Theater Costume" noMatch="true">
 			<synonym value="Theater Costumes"/>
 			<synonym value="Theater-Costume"/>
