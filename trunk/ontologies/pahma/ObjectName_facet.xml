@@ -4096,7 +4096,7 @@
 			<synonym value="Pouches"/>
 			<synonym value="Sack"/>
 			<synonym value="Sacks"/>
-			<implies facet="ObjectName" cat="BagCarrier"/>
+			<implies facet="ObjectName" cat="Carrier"/>
 		</heading>
 		<heading id="BarrelCntnr" title="Barrel">
 			<synonym value="Barrels"/>
@@ -6205,6 +6205,17 @@
 					</heading>
 					<heading id="ForkUtensilCookEq" title="Fork">
 						<synonym value="Forks"/>
+						<excl value="Eel fork"/>
+						<excl value="Pitchfork"/>
+						<excl value="East Fork"/>
+						<excl value="S.Fork"/>
+						<excl value="S Fork"/>
+						<excl value="South Fork"/>
+						<excl value="North Fork"/>
+						<excl value="Mid Fork"/>
+						<excl value="Middle Fork"/>
+						<excl value="West Fork"/>
+						<excl value="Winnowing"/>
 						<implies facet="ActivityorContext" cat="FoodServing"/>
 						<implies facet="ObjectName" cat="ForkTool"/>
 					</heading>
@@ -12859,31 +12870,49 @@
 				<synonym value="Teapot-Stand"/>
 				<synonym value="Teapot-Stands"/>
 			</heading>
-			<heading id="TeaScoop" title="Tea-Scoop">
+			<heading id="TeaScoop" title="Tea Scoop">
+				<synonym value="Tea Scoops"/>
+				<synonym value="Tea-Scoop"/>
 				<synonym value="Tea-Scoops"/>
 			</heading>
-			<heading id="TeaScreen" title="Tea-Screen">
+			<heading id="TeaScreen" title="Tea Screen">
+				<synonym value="Tea Screens"/>
+				<synonym value="Tea-Screen"/>
 				<synonym value="Tea-Screens"/>
 			</heading>
-			<heading id="TeaSet" title="Tea-Set">
+			<heading id="TeaSet" title="Tea Set">
+				<synonym value="Tea Sets"/>
+				<synonym value="Tea-Set"/>
 				<synonym value="Tea-Sets"/>
 			</heading>
-			<heading id="TeaShovel" title="Tea-Shovel">
+			<heading id="TeaShovel" title="Tea Shovel">
+				<synonym value="Tea Shovels"/>
+				<synonym value="Tea-Shovel"/>
 				<synonym value="Tea-Shovels"/>
 			</heading>
-			<heading id="TeaSpatula" title="Tea-Spatula">
+			<heading id="TeaSpatula" title="Tea Spatula">
+				<synonym value="Tea Spatulas"/>
+				<synonym value="Tea-Spatula"/>
 				<synonym value="Tea-Spatulas"/>
 			</heading>
-			<heading id="TeaSpoon" title="Tea-Spoon">
+			<heading id="TeaSpoon" title="Tea Spoon">
+				<synonym value="Tea Spoons"/>
+				<synonym value="Tea-Spoon"/>
 				<synonym value="Tea-Spoons"/>
 			</heading>
-			<heading id="TeaStrainer" title="Tea-Strainer">
+			<heading id="TeaStrainer" title="Tea Strainer">
+				<synonym value="Tea Strainers"/>
+				<synonym value="Tea-Strainer"/>
 				<synonym value="Tea-Strainers"/>
 			</heading>
-			<heading id="TeaTray" title="Tea-Tray">
+			<heading id="TeaTray" title="Tea Tray">
+				<synonym value="Tea Trays"/>
+				<synonym value="Tea-Tray"/>
 				<synonym value="Tea-Trays"/>
 			</heading>
-			<heading id="TeaUrn" title="Tea-Urn">
+			<heading id="TeaUrn" title="Tea Urn">
+				<synonym value="Tea Urns"/>
+				<synonym value="Tea-Urn"/>
 				<synonym value="Tea-Urns"/>
 			</heading>
 			<heading id="TeaWhisk" title="Tea Whisk">
@@ -12925,15 +12954,29 @@
 			<heading id="TobaccoPipeCaseTobac" title="Tobacco-Pipe-Case">
 				<synonym value="Tobacco-Pipe-Cases"/>
 			</heading>
-			<heading id="TobaccoPipePinTobac" title="Tobacco-Pipe-Pin">
+			<heading id="TobaccoPipePinTobac" title="Tobacco Pipe Pin">
+				<synonym value="Tobacco Pipe Pins"/>
+				<synonym value="Tobacco Pipe-Pin"/>
+				<synonym value="Tobacco Pipe-Pins"/>
+				<synonym value="Tobacco-Pipe Pin"/>
+				<synonym value="Tobacco-Pipe Pins"/>
+				<synonym value="Tobacco-Pipe-Pin"/>
 				<synonym value="Tobacco-Pipe-Pins"/>
 			</heading>
-			<heading id="TobaccoPipeScraperTobac" title="Tobacco-Pipe-Scraper" noMatch="true"/>
-			<heading id="TobaccoPipeStopperTobac" title="Tobacco-Pipe-Stopper" noMatch="true"/>
-			<heading id="TobaccoPotCaseTobac" title="Tobacco-Pot-Case">
+			<heading id="TobaccoPipeScraperTobac" title="Tobacco Pipe Scraper" noMatch="true"/>
+			<heading id="TobaccoPipeStopperTobac" title="Tobacco Pipe Stopper" noMatch="true"/>
+			<heading id="TobaccoPotCaseTobac" title="Tobacco Pot Case">
+				<synonym value="Tobacco Pot Cases"/>
+				<synonym value="Tobacco Pot-Case"/>
+				<synonym value="Tobacco Pot-Cases"/>
+				<synonym value="Tobacco-Pot Case"/>
+				<synonym value="Tobacco-Pot Cases"/>
+				<synonym value="Tobacco-Pot-Case"/>
 				<synonym value="Tobacco-Pot-Cases"/>
 			</heading>
-			<heading id="TobaccoPressTobac" title="Tobacco-Press">
+			<heading id="TobaccoPressTobac" title="Tobacco Press">
+				<synonym value="Tobacco Presses"/>
+				<synonym value="Tobacco-Press"/>
 				<synonym value="Tobacco-Presses"/>
 			</heading>
 		</heading>
@@ -14167,7 +14210,6 @@
 	</heading>
 	<heading id="TransportationCarrying" title="Transportation &amp; Carrying">
 		<heading id="Carrier" title="Carrier">
-			<heading id="BagCarrier" title="Bag" noMatch="true"/>
 			<heading id="BasketCarrier" title="Basket Carrier">
 				<synonym value="Basket Carriers"/>
 				<synonym value="Basket-Carrier"/>
