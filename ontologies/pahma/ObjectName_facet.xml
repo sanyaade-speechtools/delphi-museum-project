@@ -5430,7 +5430,9 @@
 				<synonym value="Swaddling-Cloth"/>
 				<synonym value="Swaddling-Cloths"/>
 			</heading>
-			<heading id="ToyChdCr" title="Toy" noMatch="true"/>
+			<heading id="ToyChdCr" title="Toy">
+				<synonym value="Toys"/>
+			</heading>
 			<heading id="UrinePipeChdCr" title="Urine Pipe">
 				<synonym value="Urine Pipes"/>
 				<synonym value="Urine-Pipe"/>
@@ -8242,11 +8244,15 @@
 				<synonym value="Domino-Set"/>
 				<synonym value="Domino-Sets"/>
 			</heading>
-			<heading id="GameBallGmSprt" title="Game-Ball">
+			<heading id="GameBallGmSprt" title="Game Ball">
+				<synonym value="Game Balls"/>
+				<synonym value="Game-Ball"/>
 				<synonym value="Game-Balls"/>
 				<implies facet="TechniqueDesignorDecoration" cat="BallorSpherical"/>
 			</heading>
-			<heading id="GameBoardGmSprt" title="Game-Board">
+			<heading id="GameBoardGmSprt" title="Game Board">
+				<synonym value="Game Boards"/>
+				<synonym value="Game-Board"/>
 				<synonym value="Game-Boards"/>
 			</heading>
 			<heading id="GameBoxGmSprt" title="Game Box">
@@ -8254,7 +8260,13 @@
 				<synonym value="Game-Box"/>
 				<synonym value="Game-Boxes"/>
 			</heading>
-			<heading id="GameCounterTrayGmSprt" title="Game-Counter-Tray">
+			<heading id="GameCounterTrayGmSprt" title="Game Counter Tray">
+				<synonym value="Game Counter Trays"/>
+				<synonym value="Game-Counter Tray"/>
+				<synonym value="Game-Counter Trays"/>
+				<synonym value="Game Counter-Tray"/>
+				<synonym value="Game Counter-Trays"/>
+				<synonym value="Game-Counter-Tray"/>
 				<synonym value="Game-Counter-Trays"/>
 			</heading>
 			<heading id="GamePieceGmSprt" title="Game Pieces">
@@ -8273,6 +8285,7 @@
 					<synonym value="Game Sticks"/>
 					<synonym value="Game-Stick"/>
 					<synonym value="Game-Sticks"/>
+					<synonym value="Game like quoits"/>
 				</heading>
 				<heading id="PointerComm" title="Pointer">
 					<synonym value="Pointers"/>
@@ -8296,39 +8309,77 @@
 				<synonym value="Gaming-Charm"/>
 				<synonym value="Gaming-Charms"/>
 			</heading>
-			<heading id="GamingTableGmSprt" title="Gaming-Table">
+			<heading id="GamingTableGmSprt" title="Gaming Table">
+				<synonym value="Gaming Tables"/>
+				<synonym value="Gaming-Table"/>
 				<synonym value="Gaming-Tables"/>
 			</heading>
 			<heading id="GrassgameGmSprt" title="Grass Game">
 				<synonym value="Grass Games"/>
 			</heading>
-			<heading id="LotteryTicketGmSprt" title="Lottery Ticket">
-				<synonym value="Lottery Tickets"/>
+			<heading id="GuessingGames" title="Guessing Games" noMatch="true">
+				<heading id="JiulingGmSprt" title="Jiuling Set">
+					<heading id="JiulingSetGmSprt" title="Jiuling Set">
+						<synonym value="Jiuling Sets"/>
+						<synonym value="Jiuling-Set"/>
+						<synonym value="Jiuling-Sets"/>
+					</heading>
+					<heading id="JiulingStickGm" title="Jiuling Stick">
+						<synonym value="Jiuling Sticks"/>
+						<implies facet="ObjectName" cat="GamePieceGmSprt"/>
+					</heading>
+					<heading id="JiulingStckCntnrGmSprt" title="Jiuling Stick Container">
+						<synonym value="Jiuling Stick Containers"/>
+						<synonym value="Jiuling-Stick Container"/>
+						<synonym value="Jiuling-Stick Containers"/>
+						<synonym value="Jiuling Stick-Container"/>
+						<synonym value="Jiuling Stick-Containers"/>
+						<synonym value="Jiuling-Stick-Container"/>
+						<synonym value="Jiuling-Stick-Containers"/>
+						<implies facet="ObjectName" cat="Containers"/>
+					</heading>
+				</heading>
+				<heading id="LotteryTicketGmSprt" title="Lottery Ticket">
+					<synonym value="Lottery Tickets"/>
+				</heading>
 			</heading>
-			<heading id="MahjongSetGmSprt" title="Mahjong-Set">
+			<heading id="MahjongSetGmSprt" title="Mahjong Set">
+				<synonym value="Mahjong Sets"/>
+				<synonym value="Mahjong-Set"/>
 				<synonym value="Mahjong-Sets"/>
 			</heading>
 			<heading id="MonopolyGmSprt" title="Monopoly"/>  <!-- From Card 7-7236 -->
 			<heading id="ParcheesiGmSprt" title="Parcheesi"/>
-			<heading id="PlayingCardCaseGmSprt" title="Playing-Card-Case">
+			<heading id="PlayingCardCaseGmSprt" title="Playing Card Case">
+				<synonym value="Playing Card Cases"/>
+				<synonym value="Playing-Card Case"/>
+				<synonym value="Playing-Card Cases"/>
+				<synonym value="Playing Card-Case"/>
+				<synonym value="Playing Card-Cases"/>
+				<synonym value="Playing-Card-Case"/>
 				<synonym value="Playing-Card-Cases"/>
 			</heading>
-			<heading id="PlayingCrdHldrGmSprt" title="Playing-Card-Holder">
+			<heading id="PlayingCrdHldrGmSprt" title="Playing Card Holder">
+				<synonym value="Playing Card Holders"/>
+				<synonym value="Playing-Card Holder"/>
+				<synonym value="Playing-Card Holders"/>
+				<synonym value="Playing Card-Holder"/>
+				<synonym value="Playing Card-Holders"/>
+				<synonym value="Playing-Card-Holder"/>
 				<synonym value="Playing-Card-Holders"/>
 			</heading>
 			<heading id="PuzzleGmSprt" title="Puzzle">
 				<synonym value="Puzzles"/>
 			</heading>
-		</heading>
-		<heading id="JiulingSetGmSprt" title="Jiuling-Set">
-			<synonym value="Jiuling-Sets"/>
-		</heading>
-		<heading id="JiulingStckCntnrGmSprt" title="Jiuling-Stick-Container">
-			<synonym value="Jiuling-Stick-Containers"/>
-			<implies facet="ObjectName" cat="Containers"/>
-		</heading>
-		<heading id="QuoitGmSprt" title="Quoit">
-			<synonym value="Quoits"/>
+			<heading id="ThrowingGameSprt" title="Throwing games" noMatch="true">
+				<heading id="DartsGmSprt" title="Darts">
+					<synonym value="Dart"/>
+				</heading>
+				<heading id="QuoitGmSprt" title="Quoits">
+					<synonym value="Quoit"/>
+					<excl value="Game like quoits"/>
+				</heading>
+			</heading>
 		</heading>
 		<heading id="SportsEquipmentGmSprt" title="Sports Equipment">
 			<synonym value="Sport"/>
@@ -8388,17 +8439,19 @@
 		<heading id="SugorokuGmSprt" title="Sugoroku">
 			<synonym value="Sugorokus"/>
 		</heading>
-		<heading id="ToyGmSprt" title="Toy">
-			<synonym value="Toys"/>
-			<implies facet="ObjectName" cat="ToyChdCr"/>
-		</heading>
-		<heading id="WeiqiPotGmSprt" title="Weiqi-Pot">
+		<heading id="WeiqiPotGmSprt" title="Weiqi Pot">
+			<synonym value="Weiqi Pots"/>
+			<synonym value="Weiqi-Pot"/>
 			<synonym value="Weiqi-Pots"/>
 		</heading>
-		<heading id="WeiqiSetGmSprt" title="Weiqi-Set">
+		<heading id="WeiqiSetGmSprt" title="Weiqi Set">
+			<synonym value="Weiqi Sets"/>
+			<synonym value="Weiqi-Set"/>
 			<synonym value="Weiqi-Sets"/>
 		</heading>
-		<heading id="YutSetGmSprt" title="Yut-Set">
+		<heading id="YutSetGmSprt" title="Yut Set">
+			<synonym value="Yut Sets"/>
+			<synonym value="Yut-Set"/>
 			<synonym value="Yut-Sets"/>
 		</heading>
 	</heading>
