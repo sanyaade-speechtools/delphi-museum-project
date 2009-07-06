@@ -363,11 +363,11 @@ function getCategoryIDsForKwds(
 	$retval['query'] = $tqCatsForKwds;
  	$catsresult =& $db->query($tqCatsForKwds);
 	if (PEAR::isError($catsresult)) {
-		error_log( "getCategoryIDsForKwds() Query error: ".$tqCatsForKwds->getMessage());
+		error_log( "getCategoryIDsForKwds() Query error: ".$catsresult->getMessage());
 		error_log( "getCategoryIDsForKwds() Query : ".$tqCatsForKwds);
 		// Fall back to just returning the keywords as input.
 		$retval['kwds'] = requoteMultiTermKwdTokens($tokens);
-		$retval['msg'] = "getCategoryIDsForKwds() Query error: ".$tqCatsForKwds->getMessage();
+		$retval['msg'] = "getCategoryIDsForKwds() Query error: ".$catsresult->getMessage();
 		return $retval;
 	}
 
