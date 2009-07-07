@@ -15,6 +15,14 @@ $(document).ready(function(){
 		return false;
 	});
 	
+	// Bind tag [remove] link
+	$(".results_tagRemoveLink").click(function(){
+		tag = "";
+		page = 1;
+		window.location = generateURL();
+		return false;
+	});
+
 	// Bind keyword [remove] link
 	$(".results_kwdRemoveLink").click(function(){
 		removeArrayElement($(this).attr("href"), kwds);
@@ -55,15 +63,22 @@ $(document).ready(function(){
 
 // Parse out variables from the URL
 function initVars(){
-	// Parse out Cats from URL
-	// NO - get from passed var. catsGET = $.getURLParam("cats");
 	if( requested_cats.length > 0 )
 		{cats = requested_cats.split(",");}
 	
-	// Parse out Keywords from URL
-	// NO - get from passed var. kwdsGET = $.getURLParam("kwds");
 	if( requested_kwds.length > 0 )
 		{kwds = requested_kwds.split(",");}
+	
+	// Parse out tag
+	tag = $.getURLParam("tag");
+	if(tag == null) {
+		tag = "";
+	} else {
+		user = $.getURLParam("user");
+		if(user == null) {
+			user = "any";
+		}
+	}
 	
 	// Parse out page
 	page = $.getURLParam("page");
@@ -82,11 +97,15 @@ function initVars(){
 
 function generateURL(){
 	output = new Array();
-	if(kwds.length == 0 && cats.length > 0 == 0){
+	if(kwds.length == 0 && cats.length == 0 && tag.length == 0){
 		return baseURL + "/browser/";
 	} else {
 		if(kwds.length > 0){output.push("kwds=" + kwds.join(","));}
 		if(cats.length > 0){output.push("cats=" + cats.join(","));}
+		if(tag.length > 0 ) {
+			output.push("tag="+tag);
+			output.push("user="+user);
+		}
 		if(page > 0){output.push("page=" + page);}
 		if(pageSize > 0){output.push("pageSize=" + pageSize);}
 		if(images != null){output.push("images=" + images);}

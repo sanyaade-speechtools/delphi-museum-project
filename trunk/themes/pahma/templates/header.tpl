@@ -28,6 +28,7 @@
 				{if $currentUser_loggedIn }
 					Logged in as <a href="{$wwwroot}/modules/auth/profile.php?uid={$currentUser_id}"><span>{$currentUser_name}</span></a> | 
 					<a href="{$wwwroot}/modules/sets/mysets.php">My Sets</a> | 
+					<a href="{$wwwroot}/modules/tags/showTags.php?user=curr">My Tags</a> | 
 					<a href="{$wwwroot}/modules/help/help.php">Help</a> | 
 					{if $currentUser_isAdmin || $currentUser_isAuthStaff }
 					<a href="{$wwwroot}/modules/admin/admin.php">Admin</a> |
@@ -45,6 +46,7 @@
 				<a class="navLink" href="{$wwwroot}">Home</a>
 				<a class="navLink" href="{$wwwroot}/modules/browser/browser.php">Browse</a>
 				<a class="navLink" href="{$wwwroot}/modules/sets/featuredSets.php">Sets</a>
+				<a class="navLink" href="{$wwwroot}/modules/tags/showTags.php?user=any">Tags</a>
 			</div>
 			<div id="navBarSearchBox">
 				<form id="navBarSearchBoxForm" action="{$wwwroot}/results/" method="get">

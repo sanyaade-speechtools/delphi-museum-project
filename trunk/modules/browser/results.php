@@ -10,6 +10,13 @@ $t->assign("templateVarsJSON", json_encode($t->_tpl_vars));
 isset($_GET['cats']) ? $catIDs = explode(",",$_GET['cats']) : $catIDs = array();
 // Parse out Keywords from URL
 isset($_GET['kwds']) ? $kwds = $_GET['kwds'] : $kwds = false;
+// Parse out tag
+isset($_GET['tag']) ? $tag = $_GET['tag'] : $tag = false;
+// Parse out user, only for tag
+if($tag && isset($_GET['user']) && ('any'!= $_GET['user']))
+	$user = $_SESSION['id'];
+else
+	$user = -1;
 // Parse out with images
 (isset($_GET['images']) && $_GET['images'] == 0)? $images = false : $images = true;
 // Parse out page
@@ -29,7 +36,7 @@ if( $kwds )
 	$t->assign('kwds', $kwds );
 
 // Query objects
-$objResults = queryObjects($catIDs, $kwds, $page-1, $pageSize, $images);
+$objResults = queryObjects($catIDs, $kwds, $tag, $user, $page-1, $pageSize, $images);
 
 // Get object thumbs
 $objects = array();
@@ -58,7 +65,8 @@ if(empty($objResults['objects'])) {
 	$t->assign('results_total', $objResults['nObjs']);
 	$t->assign('results_start', ($page * $objResults['pageSize']) - $objResults['pageSize'] + 1);
 	$t->assign('results_end', ($page * $objResults['pageSize'] <= $objResults['nObjs']) ? $page * $objResults['pageSize'] : $objResults['nObjs']);
-	$t->assign('facets', queryResultsCategories( $catIDs, $kwds, $images, "HTML_UL_ATAG", "id_"));
+	$t->assign('facets', queryResultsCategories( $catIDs, $kwds, $tag, $user,
+																								$images, "HTML_UL_ATAG", "id_"));
 	$t->assign('toggleImages', $images);
 }
 
@@ -67,8 +75,9 @@ if(empty($objResults['objects'])) {
 $t->assign('objects', $objects);
 
 $rawfilters = getFilters($kwds,$catIDs);
-$t->assign('filters',themeFilters($rawfilters));
-$t->assign('page_title', filtersToNameList($rawfilters).' - PAHMA Delphi Search Results');
+$tagname = $tag?getTagNameByID($tag):false;
+$t->assign('filters',themeFilters($rawfilters,$tagname,$user));
+$t->assign('page_title', filtersToNameList($rawfilters,$tagname).' - PAHMA Delphi Search Results');
 
 
 // Display template
@@ -89,8 +98,14 @@ function getFilters($kwds, $catIDs){
 	return $filters;
 }
 
-function themeFilters($filters){
+function themeFilters($filters,$tag,$user){
 	$output = "";
+	if($tag) {
+		$output .= "<h3><div class='results_filterFacet'>".(($user=='-1')?"Community":"My")
+								." tag is:</div></h3>";
+		$output .= "<div class='results_filterName'>".$tag
+								." <a href='#' class='results_tagRemoveLink'>[remove]</a></div>";
+	}
 	foreach($filters as $filterType => $filter ){
 		$output .= "<h3><div class='results_filterFacet'>".$filterType
 								.(($filterType == "Keywords")?" include:</div></h3>":" is:</div></h3>");
@@ -105,9 +120,13 @@ function themeFilters($filters){
 	return $output;
 }
 
-function filtersToNameList($filters){
+function filtersToNameList($filters,$tag){
 	$output = "";
 	$first = true;
+	if($tag) {
+		$output .= "Tag:".$tag;
+		$first = false;
+	}
 	foreach($filters as $filterType => $filter ){
 		foreach($filter as $item){
 			if( !$first )
@@ -120,6 +139,22 @@ function filtersToNameList($filters){
 	return $output;
 }
 
+
+function getTagNameByID($tagID){
+	if(!is_numeric($tagID)){
+		// avoid sql injection
+		return "Error: Non-numeric ID";
+	} else {
+		global $db;
+		$res =& $db->query("SELECT tag_name FROM tags WHERE tag_id = $tagID LIMIT 1");
+		if (PEAR::isError($res)) {
+		    return $res->getMessage();
+		} else {
+			$tag = $res->fetchRow();
+			return $tag['tag_name'];
+		}		
+	}
+}
 
 function getCategoryByID($catID){
 	if(!is_numeric($catID)){
