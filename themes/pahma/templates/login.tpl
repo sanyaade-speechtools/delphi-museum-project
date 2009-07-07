@@ -20,6 +20,9 @@
 		<div class="buttonRow">
 			<input type="submit" name="sublogin" value="Login"/>
 		</div>
+		{if $redir}
+			<input type="hidden" name="redir" value="{$redir}"/>
+		{/if}
 	</div>
 </form>
 <p><!-- <a href="register.php">Register</a> --><br/>

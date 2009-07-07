@@ -5,6 +5,13 @@ require_once("../common/imgthumb.php");
 /**********************************
 GET USER'S SETS
 **********************************/
+// User must be logged in
+if(empty($_SESSION['id'])) {   // User must be logged in
+	header( 'Location: ' . $CFG->wwwroot .
+					'/modules/auth/login.php?redir=' .$_SERVER['REQUEST_URI'] );
+	die();
+}
+
 $t->assign('page_title', 'My Sets - '.$CFG->page_title_default);
 
 $sql = 	"	SELECT sets.id, sets.name, sets.creation_time, tTotal_objects.total_objects, tImage_paths.thumb_path, tImage_paths.img_ar
