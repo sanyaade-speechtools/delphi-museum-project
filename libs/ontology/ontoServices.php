@@ -439,13 +439,15 @@ $_DELPHI_PAGE_SIZE = 40;	// TODO move to config.php
 function queryObjects(
 						$catIDs,						//:int[] array of category IDs
 						$kwds,							//:String[] array of keyword names
+						$tag,								//:int ID of a tag
+						$user,							//:int ID of user, or -1 for any
 						$pageNum,						//:int start page
 						$pageSize,					//:int page size (specify <=0 for default)
 						$countsWithImages ) {	//:boolean
 	global $db;
 	global $_DELPHI_PAGE_SIZE;
 
-	if( empty($catIDs) && empty($kwds) ) {
+	if( empty($catIDs) && empty($kwds) && empty($tag)) {
 		error_log( "queryObjects() called with no categories or keywords" );
 		return false;
 	}
@@ -462,7 +464,8 @@ function queryObjects(
 	//error_log( "queryObjects() Kwds: ".(empty($kwds)?"None":$kwds));
 	//error_log( "queryObjects() Cats: ".(empty($qCatIDs)?"None":implode(",", $qCatIDs)));
 	//$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $countsWithImages );
-	$tqFull = prepareObjsQuery( $qCatIDs, $kwds, $countsWithImages, $pageNum, $pageSize );
+	$tqFull = prepareObjsQuery( $qCatIDs, $kwds, $tag, $user, 
+																$countsWithImages, $pageNum, $pageSize );
 	$objsresult =& $db->query($tqFull);
 	if (PEAR::isError($objsresult)) {
 		error_log( "queryObjects() main Query error: ".$objsresult->getMessage());
@@ -498,6 +501,8 @@ function queryObjects(
 function queryResultsCategories(
 						$catIDs,					//:int[] array of category IDs
 						$kwds,						//:String[] array of keyword names
+						$tag,							//:int ID of a tag
+						$user,						//:int ID of user, or -1 for any
 						$countsWithImages,			// :boolean
 						$retType,					//:String "PHP", "JSON" or "HTML_UL"
 						$HTparam 					//:String
@@ -508,7 +513,7 @@ function queryResultsCategories(
 	if( count($facets) == 0 ) 
 		return false;		// Can't find any facets in DB - just bail
 
-	if( empty($catIDs) && empty($kwds) ) {
+	if( empty($catIDs) && empty($kwds) && empty($tag)) {
 		error_log( "queryResultsCategories() called with no categories or keywords" );
 		return false;
 	}
@@ -521,7 +526,7 @@ function queryResultsCategories(
 	//error_log( "queryObjects() Kwds: ".(empty($kwds)?"None":$kwds));
 	//error_log( "queryObjects() Cats: ".(empty($qCatIDs)?"None":implode(",", $qCatIDs)));
 	//$tqMain = buildMainQueryForTerm( $qCatIDs, 0, $kwds, $countsWithImages );
-	$tqFull = prepareResultsCatsQuery( $qCatIDs, $kwds, $countsWithImages );
+	$tqFull = prepareResultsCatsQuery( $qCatIDs, $kwds, $tag, $user, $countsWithImages );
 	$catsresult =& $db->query($tqFull);
 	if (PEAR::isError($catsresult)) {
 		error_log( "queryResultsCategories() main Query error: ".$catsresult->getMessage());
@@ -607,17 +612,13 @@ function orderCatsForQuery( $catIDs, $countsWithImages ) {
 }
 
 // Assumes that any categories have already been sorted for query-opt.
-function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
+function prepareObjsQuery( $qCatIDs, $kwds, $tag, $user, $withImages, $pageNum, $pageSize ) {
 	$tq = "SELECT SQL_CALC_FOUND_ROWS o.id, o.objnum, o.name, o.description, o.img_path, o.img_ar";
-	if( empty($qCatIDs) ) {
-		if( empty($kwds))
-			die("prepareObjsQuery: no categories and no keywords!");
-		// No relevance ranking for keywords-only search
-		$tq .= ", MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) score 
-		     from objects o where MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
-		if( $withImages )
-			$tq .= " AND NOT o.img_path IS NULL";
-	} else { // Have some concepts to search on
+	if( empty($qCatIDs) && empty($kwds) && empty($tag))
+		die("prepareObjsQuery: no categories, no keywords, and no tag!");
+	$firstclause = true;
+	if(!empty($qCatIDs)) { // Have some concepts to search on
+		$firstclause = false;
 		$nCats = count($qCatIDs);
 		// First, tack on the relevance computation to the select fields
 		$tq .= ",";
@@ -630,6 +631,8 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 			$tq .= " * MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
 		$tq .= " score 
 		FROM objects o";
+		if(!empty($tag))
+			$tq .= ", tag_user_object tuo";
 		// Now, tack on the self-join tables for the category matching
 		for($i=0; $i<$nCats; $i++) {
 			$tq .= ", ".($withImages?"obj_cats_wimgs":"obj_cats")." oc".($i+1);
@@ -639,11 +642,43 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 			$tq .= ($i==0)?" WHERE ":" AND ";
 			$tq .= "o.id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
 		}
-		if( !empty($kwds) )
-			$tq .= " AND MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
-		// Note that if we only want objs with images, this is covered by using
-		// the custom obj_cats table that only associates to such objects. We
-		// can omit the explicit qualifier in the query.
+	}
+	if( !empty($kwds) ) {
+		if($firstclause) {
+			// Only fulltext relevance ranking for keywords-only search
+			$tq .= ", MATCH(o.name, o.description, o.hiddenNotes)
+				AGAINST('".$kwds."' IN BOOLEAN MODE) score from objects o";
+			if(!empty($tag))
+				$tq .= ", tag_user_object tuo";
+			$tq .= " WHERE";
+			if( $withImages )
+				$tq .= " NOT(o.img_path IS NULL) AND ";
+		} else {
+			// Note that if we only want objs with images, this is covered by using
+			// the custom obj_cats table that only associates to such objects. We
+			// can omit the explicit qualifier in the query.
+			$firstclause = false;
+			$tq .= " AND ";
+		}
+		// Append common where clause
+		$tq .= "MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
+	}
+	if( !empty($tag) ) {
+		if($firstclause) {
+			// Only fulltext relevance ranking for keywords-only search
+			$tq .= ", 1 score from objects o, tag_user_object tuo WHERE ";
+			if( $withImages )
+				$tq .= " NOT(o.img_path IS NULL) AND ";
+		} else {
+			// Note that if we only want objs with images, this is covered by using
+			// the custom obj_cats table that only associates to such objects. We
+			// can omit the explicit qualifier in the query.
+			$tq .= " AND ";
+		}
+		// Append common where clause
+		$tq .= "tuo.tag_object_id=o.id AND tuo.tag_id=".$tag;
+		if($user>=0)
+			$tq .= " AND tuo.tag_user_id=".$user;
 	}
 	$tq .= " order by score desc limit ".$pageSize;
 	if( $pageNum > 0 )
@@ -651,20 +686,20 @@ function prepareObjsQuery( $qCatIDs, $kwds, $withImages, $pageNum, $pageSize ) {
 	return $tq;
 }
 
-function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
+function prepareResultsCatsQuery( $qCatIDs, $kwds, $tag, $user, $withImages ) {
 	$tq = "SELECT c.id, c.parent_id, c.facet_id, c.display_name, count(*) "
-				."FROM categories c, ".($withImages?"obj_cats_wimgs":"obj_cats")." oc0";
-	if( empty($qCatIDs) ) {
-		if( empty($kwds))
-			die("prepareResultsCatsQuery: no categories and no keywords!");
-		$tq .= ", objects o where MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) "
-					."AND oc0.obj_id=o.id AND c.id=oc0.cat_id ";
-		if( $withImages )
-			$tq .= "AND NOT o.img_path IS NULL";
-	} else { // Have some concepts to search on
-		if( !empty($kwds) )
-			$tq .= ", objects o";
+			."FROM categories c, ".($withImages?"obj_cats_wimgs":"obj_cats")." oc0";
+	if( empty($qCatIDs) && empty($kwds) && empty($tag))
+		die("prepareResultsCatsQuery: no categories, no keywords, and no tag!");
+	$firstclause = true;
+	// Deal with category specifiers
+	if(!empty($qCatIDs)) { // Have some concepts to search on
+		$firstclause = false;
 		$nCats = count($qCatIDs);
+		if(!empty($kwds))
+			$tq .= ", objects o";
+		if(!empty($tag))
+			$tq .= ", tag_user_object tuo";
 		// Now, tack on the self-join tables for the category matching
 		for($i=0; $i<$nCats; $i++) {
 			$tq .= ", ".($withImages?"obj_cats_wimgs":"obj_cats")." oc".($i+1);
@@ -674,11 +709,33 @@ function prepareResultsCatsQuery( $qCatIDs, $kwds, $withImages ) {
 		for($i=0; $i<$nCats; $i++) {
 			$tq .= " AND oc0.obj_id=oc".($i+1).".obj_id AND oc".($i+1).".cat_id=".$qCatIDs[$i];
 		}
-		if( !empty($kwds) )
-			$tq .= " AND oc0.obj_id=o.id AND MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) ";
-		// Note that if we only want objs with images, this is covered by using
-		// the custom obj_cats table that only associates to such objects. We
-		// can omit the explicit qualifier in the query.
+	}
+	// Deal with keywords
+	if( !empty($kwds) ) {
+		if($firstclause) {
+			$tq .= ", objects o";
+			if(!empty($tag))
+				$tq .= ", tag_user_object tuo";
+			$tq .= " WHERE c.id=oc0.cat_id AND";
+			$firstclause = false;
+		} else {
+			$tq .= " AND";
+		}
+		// Append common where clause
+		$tq .= " MATCH(o.name, o.description, o.hiddenNotes) AGAINST('".$kwds."' IN BOOLEAN MODE) "
+			."AND oc0.obj_id=o.id";
+	}
+	// Deal with a tag
+	if( !empty($tag) ) {
+		if($firstclause) {
+			$tq .= ", tag_user_object tuo WHERE c.id=oc0.cat_id AND";
+		} else {
+			$tq .= " AND";
+		}
+		// Append common where clause
+		$tq .= " tuo.tag_object_id=oc0.obj_id AND tuo.tag_id=".$tag;
+		if($user>=0)
+			$tq .= " AND tuo.tag_user_id=".$user;
 	}
 	$tq .= " GROUP BY c.id ORDER BY c.id ";
 	return $tq;
