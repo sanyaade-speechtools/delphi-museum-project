@@ -13,19 +13,24 @@ $t->assign('contactEmail',$CFG->contactEmail);
 
 if(isset($_POST['sublogin'])){
 	
+	// In case of errors, preserve the redir path
+	if(isset($_POST['redir'])){
+		$t->assign('redir',$_POST['redir']);
+	}
+
    /* Check that all fields were typed in */
-   if(!$_POST['user'] || !$_POST['pass']){
+	if(!$_POST['user'] || !$_POST['pass']){
 		$t->assign('message','You did not fill in a required field.');
 		$t->display('login.tpl');
-		 die();
-   }
+		die();
+  }
    /* Spruce up username, check length */
-   $_POST['user'] = trim($_POST['user']);
-   if(strlen($_POST['user']) > 40){
+  $_POST['user'] = trim($_POST['user']);
+  if(strlen($_POST['user']) > 40){
 		$t->assign('message','Sorry, the username is longer than 40 characters, please shorten it.');
 		$t->display('login.tpl');
-		 die();
-   }
+		die();
+  }
 
    /* Checks that username is in database and password is correct 
 	  confirmUser lives in checkLogin.php
@@ -60,10 +65,15 @@ if(isset($_POST['sublogin'])){
       setcookie("cookpass", $_SESSION['password'], time()+60*60*24*100, "/");
    }
 
+	// If there is a redir path, go there. Else go to home page.
+	$goTo = isset($_POST['redir'])?$_POST['redir']:$CFG->wwwroot;
 	// redirect to frontpage
-	header( 'Location: ' . $CFG->wwwroot . '/modules/frontpage/frontpage.php' );
+	header( 'Location: ' . $goTo );
 	die();
+}
 
+if(isset($_GET['redir'])){
+	$t->assign('redir',$_GET['redir']);
 }
 
 // Display template

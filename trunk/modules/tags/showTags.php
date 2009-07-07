@@ -9,9 +9,10 @@ GET USER'S or ANYONE's TAGS, WEIGHTED BY USAGE
 if( isset( $_GET['user'] ) && ("any"==$_GET['user'] )) {
 	$anyUser = true;
 	$limitClause = "LIMIT 150";
-//} else if(empty($_SESSION['id'])) {  // User must be logged in
-//	header( 'Location: ' . $CFG->wwwroot . '/modules/auth/login.php?redir=' . XXX CURR LOC );
-//	die();
+} else if(empty($_SESSION['id'])) {  // User must be logged in
+	header( 'Location: ' . $CFG->wwwroot .
+					'/modules/auth/login.php?redir=' .$_SERVER['REQUEST_URI'] );
+	die();
 } else {
 	$anyUser = false;
 	$limitClause = "";
