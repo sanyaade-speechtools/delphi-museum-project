@@ -1770,19 +1770,32 @@
 					<synonym value="Pole Weapons"/>
 					<synonym value="Staff Weapons"/>
 					<heading id="BillEdgWpn" title="Bill">
-						<synonym value="Bills"/> <!-- Disambiguate -->
+						<synonym value="Bills"/>
+						<!-- Bills that are personal names: -->
+						<excl value="Bill Benson"/>
+						<excl value="Bill Bursham"/>
 						<excl value="Bill Franklin"/>
 						<excl value="Bill Graves"/>
 						<excl value="Bill Holm"/>
 						<excl value="Bill Joseph"/>
+						<excl value="Bill Murphy"/>
 						<excl value="Bill Olsen"/>
+						<excl value="Bill Turner"/>
+						<excl value="Bill and Nancy Williams"/>
+						<excl value="Buffalo Bill"/>
 						<excl value="Dandy Bill"/>
 						<excl value="Susie-Bill"/>
-						<excl value="Paper Bill"/>
+						<excl value="Whiskey Bill"/>
+						<!-- Bills that are parts of birds: -->
 						<excl value="Auklet"/>
 						<excl value="Bird"/>
 						<excl value="Duck"/>
 						<excl value="Pelican"/>
+						<!-- Bills that are monetary instruments: -->
+						<excl value="Currency"/>
+						<excl value="Paper Bill"/>
+						<!-- Bills that are invoices: -->
+						<excl value="In their bill"/>
 					</heading>
 					<heading id="FauchardEdgWpn" title="Fauchard">
 						<synonym value="Fauchards"/>
