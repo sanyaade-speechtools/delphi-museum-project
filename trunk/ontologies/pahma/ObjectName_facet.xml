@@ -5409,8 +5409,9 @@
 			<heading id="CradleChdCr" title="Cradle"> <!-- MAIN TERM -->
 				<!-- Want to link this run of terms to bedding more generally (cradle and swaddling-related)? -->
 				<synonym value="Cradles"/>
+				<excl value="Hung on Cradle"/>
 				<implies facet="ActivityorContext" cat="Childrearing"/>
-				<implies facet="ObjectName" cat="CradleFurniture"/>
+				<implies facet="ObjectName" cat="FurnitureFurniture"/> <!-- Are all cradles really furniture
 			</heading>
 			<heading id="CradleCoverChdCr" title="Cradle Cover">
 				<synonym value="Cradle Covers"/>
@@ -7281,7 +7282,9 @@
 						Turkish Carpets
 						Turkmen ("Bukhara") Carpet -->
 				</heading>
-				<heading id="SeatCover" title="Seat-Cover">
+				<heading id="SeatCover" title="Seat Cover">
+					<synonym value="Seat Covers"/>
+					<synonym value="Seat-Cover"/>
 					<synonym value="Seat-Covers"/>
 				</heading>
 				<heading id="Tablecloth" title="Tablecloth">
@@ -7291,7 +7294,9 @@
 				<heading id="Valance" title="Valance">
 					<synonym value="Valances"/>
 				</heading>
-				<heading id="WallCover" title="Wall-Cover">
+				<heading id="WallCover" title="Wall Cover">
+					<synonym value="Wall Covers"/>
+					<synonym value="Wall-Cover"/>
 					<synonym value="Wall-Covers"/>
 				</heading>
 			</heading>
@@ -7299,8 +7304,12 @@
 				<heading id="BedFurniture" title="Bed">
 					<synonym value="Beds"/>
 				</heading>
-				<heading id="BedStandFurniture" title="Bed-Stand">
+				<heading id="BedStandFurniture" title="Bed Stand">
+					<synonym value="Bed Stands"/>
+					<synonym value="Bed-Stand"/>
 					<synonym value="Bed-Stands"/>
+					<synonym value="Bedstand"/>
+					<synonym value="Bedstands"/>
 				</heading>
 				<heading id="CabinetFurniture" title="Cabinet">
 					<synonym value="Cabinets"/>
@@ -7308,10 +7317,11 @@
 				<heading id="ChairFurniture" title="Chair">
 					<synonym value="Chairs"/>
 				</heading>
-				<heading id="ChestDrawersFurnit" title="Chest-Of-Drawers">
-					<synonym value="Chests-Of-Drawers"/>
+				<heading id="ChestDrawersFurnit" title="Chest of Drawers">
+					<synonym value="Chests of Drawers"/>
+					<synonym value="Chest-of-Drawers"/>
+					<synonym value="Chests-of-Drawers"/>
 				</heading>
-				<heading id="CradleFurniture" title="Cradle" noMatch="true"/>
 				<heading id="CupboardFurniture" title="Cupboard">
 					<synonym value="Cupboards"/>
 				</heading>
@@ -7322,8 +7332,12 @@
 				<heading id="DuhoFurniture" title="Duho">
 					<synonym value="Duhos"/>
 				</heading>
-				<heading id="FootRestFurniture" title="Foot-Rest">
+				<heading id="FootRestFurniture" title="Foot Rest">
+					<synonym value="Foot Rests"/>
+					<synonym value="Foot-Rest"/>
 					<synonym value="Foot-Rests"/>
+					<synonym value="Footrest"/>
+					<synonym value="Footrests"/>
 				</heading>
 				<heading id="HangingMirror" title="Hanging Mirror">
 					<synonym value="Hanging Mirrors"/>
