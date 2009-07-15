@@ -1138,52 +1138,49 @@
 			<heading id="Stitched" title="Stitched"/>
 		</heading>
 		<heading id="Woven" title="Woven">
-			<heading id="Wovenbasketry" title="Woven (basketry)" noMatch="true">
-				<synonym value="weave"/>
-				<synonym value="weaving"/>
-				<synonym value="plainweave"/>
-				<synonym value="openweave"/>
-				<synonym value="checker-weave"/>
-				<synonym value="lattice-weave"/>
-				<synonym value="plaited"/>
+			<synonym value="weave"/>
+			<synonym value="weaving"/>
+			<synonym value="plainweave"/>
+			<synonym value="openweave"/>
+			<synonym value="checker-weave"/>
+			<synonym value="lattice-weave"/>
+			<synonym value="plaited"/>
+			<synonym value="loomed"/> <!-- Be sure this doesn't preclude more specific matches -->
+			<synonym value="loom made"/>
+			<synonym value="loom-made"/>
+			<synonym value="loom woven"/>
+			<synonym value="loom-woven"/>
+			<heading id="BackBackLoomed" title="Backstrap Loomed">
+				<synonym value="Backstrap Loom"/>
+				<synonym value="Back Strap loom"/>
+				<synonym value="Backstrap-loomed"/>
+				<synonym value="Backstrap loom woven"/>
 			</heading>
-			<heading id="Woventextiles" title="Woven (textiles)" noMatch="true">
-				<synonym value="loomed"/> <!-- Be sure this doesn't preclude more specific matches -->
-				<synonym value="loom made"/>
-				<synonym value="loom-made"/>
-				<synonym value="loom woven"/>
-				<synonym value="loom-woven"/>
-				<heading id="BackBackLoomed" title="Backstrap Loomed">
-					<synonym value="Backstrap Loom"/>
-					<synonym value="Back Strap loom"/>
-					<synonym value="Backstrap-loomed"/>
-					<synonym value="Backstrap loom woven"/>
-				</heading>
-				<heading id="BeltLoomed" title="Belt Loomed">
-					<synonym value="Belt Loom"/>
-					<synonym value="Belt loom?"/>
-				</heading>
-				<heading id="FloorLoomed" title="Floor Loomed">
-					<synonym value="Floor Loom"/>
-					<synonym value="Floor loom?"/>
-				</heading>
-				<heading id="GirdleBackLoomed" title="Girdle-back Loomed">
-					<synonym value="Girdle-back Loom"/>
-					<synonym value="Girdle Back loom"/>
-				</heading>
-				<heading id="HandLoomed" title="Hand Loomed">
-					<synonym value="Hand Loom"/>
-					<synonym value="Hand-loomed"/>
-					<synonym value="Hand loom?"/>
-				</heading>
-				<heading id="MachineLoomed" title="Machine Loomed">
-					<synonym value="Machine Loom"/>
-					<synonym value="machine loomed (?)"/>
-				</heading>
-				<heading id="PeddleLoomed" title="Peddle Loomed">
-					<synonym value="Peddle Loom"/>
-				</heading>
-				<heading id="TreadleLoomed" title="Treadle Loomed">
+			<heading id="BeltLoomed" title="Belt Loomed">
+				<synonym value="Belt Loom"/>
+				<synonym value="Belt loom?"/>
+			</heading>
+			<heading id="FloorLoomed" title="Floor Loomed">
+				<synonym value="Floor Loom"/>
+				<synonym value="Floor loom?"/>
+			</heading>
+			<heading id="GirdleBackLoomed" title="Girdle-back Loomed">
+				<synonym value="Girdle-back Loom"/>
+				<synonym value="Girdle Back loom"/>
+			</heading>
+			<heading id="HandLoomed" title="Hand Loomed">
+				<synonym value="Hand Loom"/>
+				<synonym value="Hand-loomed"/>
+				<synonym value="Hand loom?"/>
+			</heading>
+			<heading id="MachineLoomed" title="Machine Loomed">
+				<synonym value="Machine Loom"/>
+				<synonym value="machine loomed (?)"/>
+			</heading>
+			<heading id="PeddleLoomed" title="Peddle Loomed">
+				<synonym value="Peddle Loom"/>
+			</heading>
+			<heading id="TreadleLoomed" title="Treadle Loomed">
 					<synonym value="Treadle Loom"/>
 					<synonym value="Treddle Loom"/>
 					<synonym value="Treadle-loomed"/>
@@ -1191,7 +1188,6 @@
 					<synonym value="Treadle"/>
 					<synonym value="Treadles"/>
 				</heading>
-			</heading>
 		</heading>
 	</heading>
 </taxonomy>
