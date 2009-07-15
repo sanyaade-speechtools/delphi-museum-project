@@ -858,6 +858,11 @@ div.front_set a:active img {
 .viewset_setDescription{
 	margin-bottom:20px;
 }
+#viewset_setDetailsDisplay .viewset_setDescription{
+	max-height: 200px;
+	overflow-y: auto;
+}
+
 .viewset_setNoDescription{
 	font-style:italic;
 }
