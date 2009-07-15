@@ -1,0 +1,1052 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.5.0
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}body {font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+/* ------------------------------------------------------- *
+ * - Global     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+html{
+	font-size:93%;/*12px*/
+	color: #61615F;
+	background-image: url(../images/sideShadows.png);
+	background-repeat:repeat-y;
+	background-position:50% 0pt;
+	background-color:#2D100F;
+}
+
+body{
+	background: url(../images/backgroundFade2.png) no-repeat scroll 50% -10px;
+}
+
+h1{
+	font-size:182%;/*24px*/
+	color:#e8941a;
+	font-weight: normal;
+	margin: 10px 0px 10px 0px;
+	line-height:1.2em;
+}
+
+h2{
+	font-size:138.5%;/*18px*/
+	color:#e8941a;
+	font-weight: normal;
+	margin: 10px 0px 10px 0px;
+}
+
+h3{
+	font-size:108%;/*14px*/
+	color:#61615F;
+	font-weight: bold;
+	margin: 5px 0px 5px 0px;
+}
+
+a, a:visited{
+	color:#00a6e6;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+border:0;
+}
+
+.smaller{
+	font-size:85%;/*11px*/
+}
+
+.clear{
+	clear:both;
+}
+
+ul{
+	list-style: none;
+}
+
+ul li ul li{
+	margin-left: 18px;
+	text-indent:-5px;
+	list-style-image: url("../images/bulletArrow.gif");
+}
+
+p {
+	margin-bottom:10px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+/* ------------------------------------------------------- *
+ * - Main Layout Divs   ---------------------------------- *
+ * ------------------------------------------------------- */
+
+#contentContainer{
+	position: relative;
+	top:0px;
+	width:885px;
+	margin-left:auto;
+	margin-right:auto;
+
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 775px;
+	height: auto !important;
+	height: 775px;
+}
+
+#content{
+	position:relative;
+	background-color:#FFF;
+	width:785px;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0px 20px 15px;
+	overflow: auto;
+}
+
+/* used for some pages which don't need the full width*/
+#contentNarrow{
+	width:625px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* ------------------------------------------------------- *
+ * - Header     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+#headerBar{
+	position:relative;
+	height:100px;
+	width:885px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#headerBarLinks{
+	position:absolute;
+	bottom:5px;
+	right:41px;
+	color:#FFF;
+	font-size:93%;/*12px*/
+}
+
+#navBar{
+	position: relative;
+	width:885px;
+	height: 51px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#navBarLinks{
+	position:absolute;
+	left:45px;
+	top:7px;
+	width:100%;
+}
+
+#navBarLinks a{
+	color:#FFF;
+	font-size:182%;/*24px*/
+	font-weight:normal;
+	margin-right:16px;
+}
+
+#navBarSearchBox{
+	position:absolute;
+	right:41px;
+	top:12px;
+}
+
+/* ------------------------------------------------------- *
+ * - Footer     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+
+#footer{
+	width:500px;
+	margin: 50px auto 100px auto;
+	text-align:center;
+}
+
+/* ------------------------------------------------------- *
+ * - Profile     ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+.profile_metadata{
+	margin-top:5px;
+	width:400px;
+}
+
+.profile_metadataLabel{
+	font-weight:bold;
+}
+
+.profile_memberSince{
+	margin-top:-8px;
+	margin-bottom:5px;
+}
+
+
+/* ------------------------------------------------------- *
+ * - Forms      ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+form.delphiForm{
+	width:465px;
+}
+
+form.delphiForm label{
+	font-size:85%;/*11px*/
+	font-weight:bold;
+	margin-top:10px;
+	margin-bottom:2px;
+	display:block;
+}
+
+form.delphiForm .buttonRow{
+	margin-top:10px;
+}
+
+form.delphiForm fieldset {
+	margin-bottom:20px;
+	padding:0px 20px 20px 20px;
+	border:1px solid #cdcdc9;
+}
+
+form.delphiForm legend {
+	font-size:108%;/*14px*/
+	color:#000;
+	font-weight: bold;
+	padding: 0px;
+	margin:0px;
+}
+
+/*Should be applied to all textarea and text input fields*/
+.delphiFormInput{
+	padding:2px 2px 2px 4px;
+	border:1px solid #603913;
+}
+
+/* Used for styling grey help text that appears in form fields. */
+label.overlabel-apply {
+	display:inline;
+	margin-top:0px;
+	position:absolute;
+	top:5px;
+	left:8px;
+	z-index:1;
+	font-size:93%;/*12px*/
+	font-weight: normal;
+	color:#61615f;
+}
+
+.formError{
+	padding:20px;
+	color:#F00;
+	font-weight:bold;
+}
+
+.requiredFieldIndicator{
+	color:#F00;
+}
+
+/* ------------------------------------------------------- *
+ * - Messages -------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#messageBox{
+	border: 1px solid #999;
+	width: 100%;
+	height:40px;
+	margin:5px auto 5px auto;
+	padding:0px;
+	color:#000;
+	background-color: green;
+	text-align:center;
+}
+
+
+/* ------------------------------------------------------- *
+ * - Browser    ------------------------------------------ *
+ * ------------------------------------------------------- */
+
+#browserDiv {
+	position:relative;
+}
+
+#browserTabs{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+.browser_topLevelFacet{
+	left:7px;
+	position:relative;	
+	width:181px;
+	border:1px solid #cdcdc9;
+	padding:7px 15px 5px 0px;
+	background-color:#f2f1ee;
+	color:#00a6e6;
+	font-size:123.1%;/*16px*/
+	text-align:right;
+	cursor: pointer;
+}	
+
+.browser_topLevelFacetSelected{
+	z-index:1;	
+	left:0px;
+	border-right:0px;
+	width:189px;
+	background-color:#FFF;
+	font-weight:bold;
+	cursor: default;
+}
+
+.browser_browsePane{
+	display:none;
+	margin-left:204px;
+	width:375px;
+	border:1px solid #cdcdc9;
+	padding:10px 20px 20px 20px;
+	height:400px;
+	overflow:auto;
+} 
+
+div.browser_browsePane div.smaller{
+	padding-bottom: 5px;
+}
+
+.browser_browsePaneSelected{
+	display:block;
+}
+
+/*.browser_browsePane * ul {
+	list-style-type:none;
+}
+*/
+/*.browser_browsePane * li.treeCat span {
+	text-decoration:underline;
+	cursor:pointer;
+	color:#00a6e6;
+}*/
+
+li.treeCat.noClick {
+	font-style:italic;
+	color:#000000;
+}
+li.treeCat.noClick ul {
+	font-style:normal;
+	color: #61615F;
+}
+
+
+/* ------------------------------------------------------- *
+ * - FRONT ----------------------------------------------- *
+ * ------------------------------------------------------- */
+#front_tongue{
+	position:absolute;
+	left:70px;
+	z-index: 1;
+	background-image: url(../images/tongue.gif);
+	background-repeat: no-repeat;
+	width:246px;
+	height: 200px;
+	padding: 18px 25px 10px 25px;
+	top:0px;
+}
+
+#front_tongue h1, #front_tongue p, #front_tongue a{
+	color:#FFF;
+}
+
+
+#front_featuredObjects{
+	position:absolute;
+	left:95px;
+	top:230px;
+	width:253px;
+	padding: 0px;
+}
+
+div.front_example{
+	float:left;
+	width:95px;
+	border: 1px solid #cdcdc9;
+	margin-right:9px;
+	margin-bottom:9px;
+	padding:8px 8px 4px 8px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack */
+	min-height: 122px;
+	/* height:auto !important; */
+	height: 122px;
+}
+
+div.thumb_img_wrapper95{
+	width:95px;
+	height:98px;
+	border-style:none;
+	padding:0;
+}
+
+div.thumb_img_wrapper173{
+	width:173px;
+	height:176px;
+	border-style:none;
+	padding:0;
+}
+
+
+img.thumb{
+	border:0px;
+}
+
+img.thumb_unk95{
+	width:95px;
+	height:95px;
+	border:0px;
+}
+
+img.thumb_unk173{
+	width:173px;
+	height:173px;
+	border:0px;
+}
+
+
+
+.thumbLabel{
+	font-size:.9em;
+	width:100%;
+	text-align:center;
+}
+
+.thumbLabel a, .thumbLabel abbr{
+	text-decoration: none;
+    border-style: none;
+	color:#61615f;
+}
+
+div.front_fset .thumbLabel{
+	font-size:1.2em;
+	text-align:left;
+	color:#61615f;
+}
+
+
+div.front_fset .thumbLabel a {
+	text-decoration: none;
+    border-style: none;
+	color:#61615f;
+}
+
+div.front_example a:hover abbr,
+div.front_fset a:hover abbr {
+	text-decoration: underline;
+	color:#0094df;
+}
+
+div.front_example a:link img,
+div.front_example a:visited img,
+div.front_set a:link img,
+div.front_set a:visited img 
+{
+	border: 1px solid #FFF;
+}
+
+div.front_example a:hover img,
+div.front_example a:active img,
+div.front_set a:hover img,
+div.front_set a:active img {
+	border: 1px solid #0094df;
+}
+
+#front_greyCol{
+	float:right;
+	width:435px;
+	background-color:#f2f1ee;
+	padding-left:18px;
+	padding-bottom:40px;
+}
+
+#front_greyCol h2 {
+	padding-left:18px;
+}
+
+.front_fset{
+	position:relative;
+	float:left;
+	border: 1px solid #cdcdc9;
+	padding: 8px 8px 0px 8px;
+	margin-right:17px;
+	margin-bottom:17px;
+	width:173px;
+	/*Min Height Hack - http://www.dustindiaz.com/min-height-fast-hack 
+	min-height: 240px;
+	height:auto !important;
+	*/
+	height: 240px;
+}
+
+.ownerLabel{
+	position:absolute;
+	bottom:8px;
+	right:8px;
+	color:#61615f;
+	font-size:85%;/*11px*/
+}
+
+.ownerLabel span.ownerName{
+	color:#f7941d;
+}
+
+/* ------------------------------------------------------- *
+ * - RESULTS --------------------------------- *
+ * ------------------------------------------------------- */
+
+#results_menuCol{
+        width:250px;
+        float:left;
+}
+
+#results_resultsCol{
+        width:535px;
+        text-align:center;
+}
+
+.results_object{
+        background: #FFF;
+        float:left;
+        margin:10px 0px 0px 10px;
+        width:97px;
+        height:135px;
+        padding:10px 10px 5px 10px;
+        border: 1px solid #cdcdc9;
+}
+
+.results_objectThumb div{
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:10px;
+}
+
+.resuts_objectDetails{
+        text-align:center;
+}
+
+
+#results_filterContainer, #results_categoriesContainer{
+	border-bottom:1px solid #999;
+	padding-bottom:13px;
+}
+
+.results_filterFacet{
+	font-weight:bold;
+}
+
+.results_filterName{
+/*        font-weight: bold;*/
+}
+
+#results_categoriesContainer h3{
+	margin-top:8px;
+}
+
+#results_keywordContainer{
+}
+
+#results_pagerCount{
+
+}
+
+#results_pagerLinks{
+	padding-top:20px;
+	clear:both;
+}
+
+#results_pagerLinks span{
+	margin:10px 5px 10px 5px;
+}
+
+#results_thumbnails{
+
+}
+
+
+/* ------------------------------------------------------- *
+ * - DETAIL ---------------------------------------------- *
+ * ------------------------------------------------------- */
+
+#detail_imageCol {
+	float: left;
+	width: 450px;
+	margin-top: 10px;
+}
+
+
+#detail_infoCol {
+	float: right;
+	width:310px;
+	padding: 0px 10px 10px 0px;
+	background-color: #FFF;
+}
+
+.detail_publicSetlet{
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	clear:both;
+}
+
+.detail_publicSetletThumb{
+	float:left;
+	background: #FFF url(../images/setFrame_s.gif) no-repeat scroll;
+	padding:6px 7px 4px 3px;
+	height:40px;
+	width:40px;
+}
+
+.detail_publicSetletDetails{
+	float:left;
+	margin-left:10px;
+}
+#detail_publicSetletAllLink{
+	padding-top:15px;
+	clear:both;
+}
+
+.detail_personalSetlet{
+	background: #FFF url(../images/setFrame_m.gif) no-repeat scroll;
+	float:left;
+	margin:10px 0px 0px 10px;
+	width:80px;
+	height:109px;
+	padding:10px 10px 5px 5px;
+}
+
+.detail_personalSetletThumb div{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+}
+
+.detail_personalSetletDetails{
+	text-align:center;
+}
+
+#detail_personalSetletLinks{
+	padding-top:15px;
+	padding-bottom:8px;
+	clear:both;
+}
+
+#detail_tagList{
+	padding-top:7px;
+}
+
+.detail_tag{
+	padding-bottom:2px;
+}
+
+#detail_mediaBox {
+	margin:0px 0px 10px 0px;
+	padding:10px;
+	border:1px solid #cdcdc9;
+	width:440;
+}
+
+#detail_thumbnails{
+	overflow:auto;
+}
+
+.detail_thumbnail{
+	float:left;
+	padding:3px;
+	border:1px solid #FFF;
+	margin-right:6;
+	margin-bottom:0px;
+}
+
+.detail_thumbnailSelected{
+	border:1px solid #00a6e6;
+}
+
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .ui-tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.ui-tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0px;
+	height: 42px; /* IE 6 treats height as min-height */
+    min-height: 42px;
+	position:relative;
+}
+.ui-tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.ui-tabs-nav li {
+    float: left;
+    margin: 0px;
+	position:absolute;
+	bottom:-1px;
+    min-width: 84px; /* be nice to Opera */
+}
+
+.detail_setsTabLI{
+	left:0px;
+}
+
+.detail_tagsTabLI{
+	left:83px;
+}
+
+.ui-tabs-nav a {
+	display: block;
+    padding: 5px 5px 12px 8px;
+    text-decoration: none;
+	background-color:#f2f1ee;
+	border:1px solid #cdcdc9;
+	font-size:123.1%;/*16px*/
+    white-space: nowrap; /* required in IE 6 */    
+    outline: 0; /* prevent dotted border in Firefox */
+}
+.ui-tabs-nav .ui-tabs-selected a {
+    padding: 7px 5px 12px 8px;
+    z-index: 2;
+	background-color:#fff;
+	font-weight: bold;
+	border-bottom:1px solid #fff;
+}
+
+
+.ui-tabs-container {
+    border: 1px solid #cdcdc9;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+	padding:8px;
+}
+
+*>.ui-tabs-nav a span { /* hide from IE 6 */
+    width: auto;
+    height: auto;
+}
+
+.ui-tabs-nav .ui-tabs-selected a:link, .ui-tabs-nav .ui-tabs-selected a:visited, .ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active, .ui-tabs-nav .ui-tabs-unselect a:hover, .ui-tabs-nav .ui-tabs-unselect a:focus, .ui-tabs-nav .ui-tabs-unselect a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .ui-tabs-nav  { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}
+
+
+/* ------------------------------------------------------- *
+ * - My SETS --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+.setlet_Large{
+	background: #FFF url(../images/setFrame_l.gif) no-repeat scroll;
+	float:left;
+	margin:5px 0px 15px 18px;
+	width:161px;
+	height:170px;
+	padding:15px 12px 5px 8px;
+}
+
+.setletThumb_Large div{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:5px;
+}
+
+.setletDetails_Large{
+	text-align:center;
+}
+
+.setletDetails_Large a{
+	font-size:123.1%;/*16px*/
+	font-weight: bold;
+}
+
+
+/* ------------------------------------------------------- *
+ * - VIEWSET --------------------------------------------- *
+ * ------------------------------------------------------- */
+
+
+.viewset_shareLink{
+	position: absolute;
+	right:32px;
+	top:62px;
+}
+
+#viewset_createdBy{
+	margin-top:-8px;
+	margin-bottom:15px;
+}
+
+#viewset_leftCol {
+	float:left;
+	width: 300px;
+	margin-top:20px;
+}
+
+#viewset_rightCol {
+	width:425px;	
+	float:right;
+	margin-top:40px;
+}
+
+#viewset_thumbnails {
+	margin-top:20px;
+}
+
+#viewset_noThumbnails{
+	font-style:italic;
+}
+
+.viewset_objectThumb{
+	float:left;
+	padding:5px;
+	border:1px solid #cdcdc9;
+	margin-right:10px;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+
+.viewset_objectThumbSelected{
+	border:1px solid #00a6e6;
+}
+
+.viewset_setDescription{
+	margin-bottom:20px;
+}
+#viewset_setDetailsDisplay .viewset_setDescription{
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.viewset_setNoDescription{
+	font-style:italic;
+}
+
+.viewset_descTextarea{
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #61615F;
+	height:100px;
+	padding: 2px;
+	border:1px solid #603913;
+}
+
+.viewset_titleInput{
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#00a6e6;
+	line-height:1.2em;
+	padding:2px 2px 2px 4px;
+	border:1px solid #603913;
+}
+
+#viewset_detailsBox{
+	margin:0px 25px 0px 10px;
+	padding:15px 10px 20px 10px;
+	border:1px solid #cdcdc9;
+}
+
+#viewset_objectDescription{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#viewset_objectDetaiLink{
+	
+}
+
+#viewset_objectImage{
+	height:360px;
+}
+
+.viewset_prevIcon{
+	position:absolute;
+	top:190px;
+	right:429px;
+}
+.viewset_nextIcon{
+	position:absolute;
+	top:190px;
+	right:19px;
+}
+
+
+/* ------------------------------------------------------- *
+ * -- Admin Pages settings ------------------------------- *
+ * ------------------------------------------------------- */
+
+div.admin_hdr {
+	padding-top:1px;
+	padding-bottom:10px;
+}
+
+div.admin_hdr p#orient {
+	color:#61615f;
+	font-size:85%;/*11px*/
+	font-weight: bold;
+}
+
+div.admin_hdr p#orient a {
+	color:#0085c9;
+}
+
+
+/* ------------------------------------------------------- *
+ * -- Tree view            ------------------------------- *
+ * ------------------------------------------------------- */
+
+div.tree ul li ul li {
+	margin:0px;
+	margin-left:5px;
+	text-indent:-5px;
+	list-style-image: none;
+}
+
+div.tree ul {
+	margin-left: 0px;
+	text-indent: 0em;
+}
+
+div.tree li {
+	padding-left:18px;
+}
+
+div.tree li.parent ul {
+	display:none;
+/*	cursor:default;*/
+}
+
+div.tree li.parent {
+	cursor:pointer !important;
+	background:transparent url(../images/plus.gif) no-repeat top left;
+	list-style-image:none;
+	text-indent:0px;
+	margin:0px;
+}
+
+div.tree li.expanded {
+	background:transparent url(../images/minus.gif) no-repeat top left;
+		list-style-image:none;
+		text-indent:0px;
+		margin:0px;
+}
+
+div.tree li span {
+	color:#00a6e6;
+	text-decoration:none;
+	cursor:pointer !important;
+}
+
+div.tree li span.c1,
+div.tree li span.c2 {
+	color: #61615F;
+	text-decoration:none;
+	cursor:pointer !important;
+}
+#cat_card_clipper
+{
+
+	overflow:auto;
+	width:680px;
+	height:425px;
+
+}
+
+#cat_card_clipper.unzoomed a  #cat_card_image{
+	width:650px;
+	text-align:center;
+	
+}
+
+#cat_card_clipper.zoomed a  #cat_card_image{
+	width:2000px;
+	text-align:left;
+}
+
+#pop_screen{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+background-color:#FFF;
+display:none;
+}
+
+#vcc_inner{
+position:absolute;
+top:10px;
+left:10px;
+width:680px;
+height:650px;
+background-color:#F8F8F8;
+border:2px solid #cdcdc9;
+padding:0 15px;
+}
+
+#vcc_inner.manyimages{
+height:100%;
+
+}
+
+#catCard_thumbnail img{
+margin:5px;
+cursor:pointer;
+border:solid black 1px;
+width:120px;
+}
+
+#catCardProblem{
+float:right;
+font-weight:200;
+}
+
+#hideCatCard{
+float:right;
+font-weight: bold;
+}
