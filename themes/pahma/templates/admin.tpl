@@ -17,6 +17,8 @@ permissions associated with each role.</dd>
 <dt><h3><a href="adminPermissions.php">Edit Permission Definitions</a></h3></dt>
 <dd>Creates new permissions (only for developers).</dd>
 {/if}
+<dt><h3><a href="editNews.php?id=1">Edit News Content</a></h3></dt>
+<dd>Creates News items for display on the front page.</dd>
 </dl>
 <p></p>
 <p></p>
