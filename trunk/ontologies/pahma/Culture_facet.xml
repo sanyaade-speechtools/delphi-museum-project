@@ -22,6 +22,7 @@
 	</notes>
 	<heading id="ModernCultures" title="Modern cultures" noMatch="true">
 		<heading id="ModernAfricanCultures" title="African cultures">
+			<implies facet="Location" cat="Africa"/>
 			<heading id="NorthernAfricanGroups" title="North Africa" noMatch="true">
 				<heading id="AlgerianGroups" title="Algerian">
 					<implies facet="Location" cat="Algeria"/>
@@ -392,6 +393,7 @@
 			</heading>
 		</heading>
 		<heading id="ModernAmericanCultures" title="American cultures">
+			<implies facet="Location" cat="TheAmericas"/>
 			<heading id="CaribbeanCultures" title="Caribbean cultures">
 				<heading id="AfroCuban" title="Afro-Cuban"/>
 				<heading id="ArawakTribe" title="Arawak">
@@ -2738,6 +2740,7 @@
 		</heading>
 		<heading id="ModernAsianCultures" title="Asian cultures">
 			<synonym value="Asian"/>
+			<implies facet="Location" cat="Asia"/>
 			<heading id="ChineseGroupsModern" title="Chinese"/>
 			<heading id="KotaGroups" title="Kota"/>
 			<heading id="RussianGroups" title="Russian Cultures">
@@ -2954,48 +2957,48 @@
 		    <heading id="TurkishGroups" title="Turkish"/>
 		</heading>
 		<heading id="ModernEuropeanCultures" title="European cultures">
-			<heading id="EuropeanGroups" title="European">
-				<heading id="CzechoslovakianGroups" title="Czechoslovakian"/>  <!-- how to parse into Czech and Slovakian? -->
-				<heading id="EnglishGroups" title="English"/>
-				<heading id="DanishGroups" title="Danish"/>
-				<heading id="DutchGroups" title="Dutch">
-					<synonym value="Flemish"/>
-				</heading>
-				<heading id="FrenchGroups" title="French"/>
-				<heading id="GermanGroups" title="German"/>
-				<heading id="GreekGroupsModern" title="Greek" noMatch="true"/> <!-- Need to disambiguate from Ancient Greek -->
-				<heading id="HungarianGroups" title="Hungarian"/>
-				<heading id="IrishGroups" title="Irish"/>
-				<heading id="ItalianGroups" title="Italian"/>
-				<heading id="NorwegianGroups" title="Norwegian"/>
-				<heading id="PortugeseGroups" title="Portugese"/>
-				<heading id="ScottishGroups" title="Scottish"/>
-				<heading id="SpanishGroups" title="Spanish">
-					<excl value="Advertisement in Spanish"/>
-					<excl value="Derived from the Spanish"/>
-					<excl value="in Spanish"/>
-					<excl value="Notes in Spanish"/>
-					<excl value="Pre-Spanish"/>
-					<excl value="Pre Spanish"/>
-					<excl value="Spanish - American"/>
-					<excl value="Spanish American"/>
-					<excl value="Spanish Amer"/>
-					<excl value="Spanish Flat"/>
-					<excl value="Spanish for"/>
-					<excl value="Spanish Influence"/>
-					<excl value="Spanish Lace"/>
-					<excl value="Spanish Land Grant"/>
-					<excl value="Spanish Moss"/>
-					<excl value="Spanish Springs"/>
-					<excl value="Spanish Trade Beads"/>
-					<excl value="Spanish word for"/>
-				</heading>
-				<heading id="SwedishGroups" title="Swedish"/>
-				<heading id="YugoslavianGroups" title="Yugoslavian"/>  <!-- how to parse into Croatian, Bosnian, Serbian, etc.? -->
+			<implies facet="Location" cat="Europe"/>
+			<heading id="CzechoslovakianGroups" title="Czechoslovakian"/>  <!-- how to parse into Czech and Slovakian? -->
+			<heading id="EnglishGroups" title="English"/>
+			<heading id="DanishGroups" title="Danish"/>
+			<heading id="DutchGroups" title="Dutch">
+				<synonym value="Flemish"/>
 			</heading>
+			<heading id="FrenchGroups" title="French"/>
+			<heading id="GermanGroups" title="German"/>
+			<heading id="GreekGroupsModern" title="Greek" noMatch="true"/> <!-- Need to disambiguate from Ancient Greek -->
+			<heading id="HungarianGroups" title="Hungarian"/>
+			<heading id="IrishGroups" title="Irish"/>
+			<heading id="ItalianGroups" title="Italian"/>
+			<heading id="NorwegianGroups" title="Norwegian"/>
+			<heading id="PortugeseGroups" title="Portugese"/>
+			<heading id="ScottishGroups" title="Scottish"/>
+			<heading id="SpanishGroups" title="Spanish">
+				<excl value="Advertisement in Spanish"/>
+				<excl value="Derived from the Spanish"/>
+				<excl value="in Spanish"/>
+				<excl value="Notes in Spanish"/>
+				<excl value="Pre-Spanish"/>
+				<excl value="Pre Spanish"/>
+				<excl value="Spanish - American"/>
+				<excl value="Spanish American"/>
+				<excl value="Spanish Amer"/>
+				<excl value="Spanish Flat"/>
+				<excl value="Spanish for"/>
+				<excl value="Spanish Influence"/>
+				<excl value="Spanish Lace"/>
+				<excl value="Spanish Land Grant"/>
+				<excl value="Spanish Moss"/>
+				<excl value="Spanish Springs"/>
+				<excl value="Spanish Trade Beads"/>
+				<excl value="Spanish word for"/>
+			</heading>
+			<heading id="SwedishGroups" title="Swedish"/>
+			<heading id="YugoslavianGroups" title="Yugoslavian"/>  <!-- how to parse into Croatian, Bosnian, Serbian, etc.? -->
 		</heading>
 		<heading id="ModernOceanianCultures" title="Oceanian cultures">
 			<synonym value="Oceanian"/>
+			<implies facet="Location" cat="Oceania"/>
 			<heading id="AustralianCultures" title="Australian cultures">
 				<heading id="AustralianAborigines" title="Australian aborigines">
 					<heading id="ArandaTribe" title="Aranda tribe"/>

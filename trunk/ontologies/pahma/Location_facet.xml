@@ -33,6 +33,7 @@
 	</notes>
 	<heading id="ModernLocations" title="Modern Placenames" noMatch="true">
 		<heading id="Africa" title="Africa">
+			<implies facet="Culture" cat="ModernAfricanCultures"/>
 			<heading id="NorthernAfrica" title="Northern Africa">
 				<synonym value="North Africa"/>
 				<heading id="Algeria" title="Algeria">
@@ -1008,6 +1009,7 @@
 			</heading>
 		</heading>
 		<heading id="Europe" title="Europe">
+			<implies facet="Culture" cat="ModernEuropeanCultures"/>
 			<synonym value="European"/>
 			<synonym value="Europeans"/>
 			<heading id="CentralEurope" title="Central Europe">
@@ -3644,6 +3646,7 @@
 			</heading>
 		</heading>
 		<heading id="TheAmericas" title="The Americas"> <!-- All organized except for Alaska, Peru, and misc. U.S. -->
+			<implies facet="Culture" cat="ModernAmericanCultures"/>
 			<heading id="CaribbeanIslands" title="Caribbean Islands"> <!--  done -->
 				<heading id="AntiguaandBarbuda" title="Antigua and Barbuda"/>
 				<heading id="TheBahamas" title="The Bahamas">
