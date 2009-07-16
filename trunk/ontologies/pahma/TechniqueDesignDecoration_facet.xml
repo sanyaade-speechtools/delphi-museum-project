@@ -255,10 +255,11 @@
 				<token value="imaginary creature"/>
 				<token value="imaginary creatures" combine="prefix"/>
 				<heading id="Birds" title="Birds" noMatch="true" asToken="plural">
-					<token value="feather"/>
-					<token value="wing"/>
-					<token value="talon"/>
-					<token value="beak"/>
+					<token value="Beak"/>
+					<token value="Bird"/>
+					<token value="Feather"/>
+					<token value="Talon"/>
+					<token value="Wing"/>
 					<heading id="Crane" title="Crane" noMatch="true" asToken="plural"/>
 					<heading id="Chicken" title="Chicken" noMatch="true" asToken="plural"/>
 					<heading id="Condor" title="Condor" noMatch="true" asToken="plural"/>
@@ -273,21 +274,18 @@
 					<heading id="Hawk" title="Hawk" noMatch="true" asToken="plural"/>
 					<heading id="Hummingbird" title="Hummingbird" asToken="plural"/>
 					<heading id="Ibis" title="Ibis"/>
-					<heading id="Meadowlark" title="Meadowlark"/>
+					<heading id="Meadowlark" title="Meadowlark" asToken="plural"/>
 					<heading id="Ostrich" title="Ostrich" noMatch="true" asToken="plural"/>
 					<heading id="Owl" title="Owl" noMatch="true" asToken="plural"/>
 					<heading id="Parrot" title="Parrot" noMatch="true" asToken="plural"/>
 					<heading id="Peacock" title="Peacock" noMatch="true" asToken="plural"/>
-					<heading id="Pelican" title="Pelican" noMatch="true">
-						<token value="Pelican"/>
-						<token value="Pelicans"/>
+					<heading id="Pelican" title="Pelican" noMatch="true" asToken="plural">
 						<token value="Pelikan"/>
 					</heading>
 					<heading id="Penguin" title="Penguin" noMatch="true" asToken="plural"/>
 					<heading id="Phoenix" title="Phoenix" noMatch="true" asToken="noplural"/>
 					<heading id="Quail" title="Quail" noMatch="true" asToken="plural">
-						<heading id="QuailCrest" title="Quail Crest">
-							<synonym value="Quail Crests"/>
+						<heading id="QuailCrest" title="Quail Crest" asToken="plural">
 							<synonym value="Quail Crest Decoration"/>
 							<synonym value="Quail Crest Fringe"/>
 							<synonym value="Quail Crest Design"/>
@@ -295,15 +293,14 @@
 						</heading>
 					</heading>
 					<heading id="Raven" title="Raven" noMatch="true" asToken="plural"/>
-					<heading id="RedWingedBlackbird" title="Red-Winged Blackbird">
+					<heading id="RedWingedBlackbird" title="Red-Winged Blackbird" asToken="plural">
 						<synonym value="Red-wing Blackbird"/>
 						<synonym value="Redwinged Blackbird"/>
-						<synonym value="Redwinged Blackbirds"/>
 					</heading>
 					<heading id="Roadrunner" title="Roadrunner" noMatch="true" asToken="plural"/>
 					<heading id="Sparrow" title="Sparrow" noMatch="true" asToken="plural"/>
 					<heading id="Swan" title="Swan" noMatch="true" asToken="plural"/>
-					<heading id="Thunderbird" title="Thunderbird">
+					<heading id="Thunderbird" title="Thunderbird" asToken="plural">
 						<synonym value="Thunderbirds"/>
 						<synonym value="Thunder Bird"/>
 						<synonym value="Thunder-Bird"/>
@@ -637,6 +634,10 @@
 			<synonym value="symbolism"/>
 			<excl value="no visible symbols"/>
 			<heading id="Ammunition" title="Ammunition"/>
+			<heading id="ArrowDesign" title="Arrow">
+				<synonym value="Arrows"/>
+				<synonym value="Arrow Design"/>
+			</heading>
 			<heading id="Arrowhead" title="Arrowhead"/>
 			<heading id="Aura" title="Aura"/>
 			<heading id="Cross" title="Cross"/>
@@ -685,6 +686,16 @@
 		</heading>
 	</heading>
 	<heading id="ShapeOrForm" title="Shape or Form" noMatch="true">
+		<prefix value="shaped like "/>
+		<prefix value="shaped like a "/>
+		<prefix value="shaped like an "/>
+		<prefix value="the shaped of "/>
+		<prefix value="the shaped of a "/>
+		<prefix value="the shaped of an "/>
+		<suffix value=" shape"/>
+		<suffix value=" shaped"/>
+		<suffix value="-shape"/>
+		<suffix value="-shaped"/>
 		<heading id="Angular" title="Angular">
 			<heading id="Diamond" title="Diamond">
 				<excl value="diamond-like stone"/>
