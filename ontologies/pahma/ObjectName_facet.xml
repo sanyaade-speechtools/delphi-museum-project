@@ -1050,43 +1050,6 @@
 		<synonym value="Architectural Element"/>
 		<synonym value="Architecture"/>
 		<synonym value="Architectural"/>
-		<heading id="Arch" title="Arch">
-			<synonym value="Arches"/>
-			<synonym value="Archs"/> <!-- Misspelling -->
-			<excl value="amer arch eth"/> <!-- Journal: American Archaeology and Ethnography -->
-			<excl value="arch acc"/> <!-- Archaeological accession -->
-			<excl value="arch added in pencil"/> <!-- reference to a note that this is an archaeological object -->
-			<excl value="arch arrow"/> <!-- Archery arrow -->
-			<excl value="arch field record"/> <!-- Archaeological field record -->
-			<excl value="arch handle"/> <!-- a kind of jar handle -->
-			<excl value="arch handles"/> <!-- ibid. -->
-			<excl value="arch written in pencil"/> <!-- reference to a note that this is an archaeological object -->
-			<excl value="calif arch survey"/> <!-- California Archaeological Survey -->
-			<excl value="historic arch specimens"/> <!-- Historical archaeology -->
-			<excl value="novelty imitating arch. figurine"/> <!-- novelty imitating archaeological figurine -->
-			<excl value="possibly arch."/> <!-- Object is possibly archaeological -->
-			<excl value="prob arch"/> <!-- Object is probably archaeological -->
-			<excl value="of the arch of some carnivore"/> <!-- refers to the dental arcade/arch -->
-			<excl value="vertebral arch"/> <!-- Bony feature on vertebrae -->
-			<excl value="zygomatic arch"/> <!-- Bony feature on skull -->
-		</heading>
-		<heading id="Balustrade" title="Balustrade">
-			<synonym value="Balustrades"/>
-		</heading>
-		<heading id="Beam" title="Beam">
-			<synonym value="Beams"/>
-			<excl value="Balance Beams"/>
-			<excl value="Balance Beams"/>
-			<excl value="Beam Balance"/>
-			<excl value="Scale Beam"/>
-			<excl value="Scale Beams"/>
-		</heading>
-		<heading id="Brick" title="Brick">
-			<synonym value="Bricks"/>
-			<excl value="Brick Pattern"/>
-			<excl value="Brick Patterns"/>
-			<excl value="Brick Patterned"/>
-		</heading>
 		<heading id="BuildingsStructures" title="Buildings &amp; Structures" noMatch="true">
 			<synonym value="Building"/>
 			<synonym value="Buildings"/>
@@ -1146,12 +1109,27 @@
 					<synonym value="Straw Huts"/>
 				</heading>
 			</heading>
+			<heading id="Latrine" title="Latrine">
+				<synonym value="Latrines"/>
+			</heading>
+			<heading id="Pyramidion" title="Pyramidion">
+				<synonym value="Pyramidia"/>
+				<synonym value="Pyramidions"/>
+			</heading>
 			<heading id="Roundhouse" title="Roundhouse">
 				<synonym value="Roundhouses"/>
 				<synonym value="Round House"/>
 				<synonym value="Round Houses"/>
 				<synonym value="Round-House"/>
 				<synonym value="Round-Houses"/>
+			</heading>
+			<heading id="TentStructure" title="Tent">
+				<synonym value="Tents"/>
+				<heading id="TentPeg" title="Tent Peg">
+					<synonym value="Tent Pegs"/>
+					<synonym value="Tent-Peg"/>
+					<synonym value="Tent-Pegs"/>
+				</heading>
 			</heading>
 			<heading id="Tipi" title="Tipi">
 				<synonym value="Tipis"/>
@@ -1161,244 +1139,292 @@
 				<synonym value="Teepees"/>
 				<synonym value="Tepee"/>
 				<synonym value="Tepees"/>
-				<synonym value="Thípi"/>
-				<!-- in the Lakota language -->
+				<synonym value="Thípi"/> <!-- in the Lakota language -->
 				<synonym value="Thípis"/>
 				<synonym value="Wigwam"/>
 				<synonym value="Wigwams"/>
 			</heading>
 		</heading>
-		<heading id="Capital" title="Capital">
-			<synonym value="Capitals"/>
-		</heading>
-		<heading id="Ceiling" title="Ceiling">
-			<synonym value="Ceilings"/>
-		</heading>
-		<heading id="ChimneyPot" title="Chimney-Pot">
-			<synonym value="Chimney-Pots"/>
-		</heading>
-		<heading id="Column" title="Column">
-			<synonym value="Columns"/>
-		</heading>
-		<heading id="Coping" title="Coping">
-			<synonym value="Copings"/>
-		</heading>
-		<heading id="Corbel" title="Corbel">
-			<synonym value="Corbels"/>
-		</heading>
-		<heading id="Cornice" title="Cornice">
-			<synonym value="Cornices"/>
-		</heading>
-		<heading id="Crenellation" title="Crenellation">
-			<synonym value="Crenellations"/>
-		</heading>
-		<heading id="Dentil" title="Dentil">
-			<synonym value="Dentils"/>
-		</heading>
-		<heading id="Dome" title="Dome">
-			<synonym value="Domes"/>
-		</heading>
-		<heading id="Door" title="Door">
-			<synonym value="Doors"/>
-			<heading id="Knocker" title="Knocker">
-				<synonym value="Knockers"/>
+		<heading id="DecorativeElements" title="Decorative Elements" noMatch="true">
+			<heading id="Ceiling" title="Ceiling">
+				<synonym value="Ceilings"/>
 			</heading>
-			<heading id="DoorFrame" title="Door Frame">
-				<synonym value="Door Frames"/>
-				<synonym value="Door-Frame"/>
-				<synonym value="Door-Frames"/>
+			<heading id="Coping" title="Coping">
+				<synonym value="Copings"/>
 			</heading>
-			<heading id="DoorHinge" title="Door Hinge">
-				<synonym value="Door Hinges"/>
-				<heading id="DoorHingeNail" title="Door Hinge Nail">
-					<synonym value="Door Hinge Nails"/>
+			<heading id="Cornice" title="Cornice">
+				<synonym value="Cornices"/>
+			</heading>
+			<heading id="Dentil" title="Dentil">
+				<synonym value="Dentils"/>
+			</heading>
+			<heading id="Finial" title="Finial">
+				<synonym value="Finials"/>
+			</heading>
+			<heading id="Frieze" title="Frieze">
+				<synonym value="Friezes"/>
+			</heading>
+			<heading id="FriezeCrown" title="Frieze Crown">
+				<synonym value="Frieze Crowns"/>
+				<synonym value="Frieze-Crown"/>
+				<synonym value="Frieze-Crowns"/>
+			</heading>
+			<heading id="GraffitiArchtct" title="Graffiti" noMatch="true"/>
+			<heading id="Molding" title="Molding">
+				<synonym value="Moldings"/>
+				<synonym value="Moulding"/>
+				<synonym value="Mouldings"/>
+				<heading id="Epicranitis" title="Epicranitis">
+					<synonym value="Epicranitises"/>
+					<synonym value="Epicranites"/>
+					<synonym value="Epikranitis"/>
+					<synonym value="Epikranitises"/>
+					<synonym value="Epikranites"/>
 				</heading>
 			</heading>
-			<heading id="DoorJamb" title="Door Jamb">
-				<synonym value="Door Jambs"/>
-				<synonym value="Door-Jamb"/>
-				<synonym value="Door-Jambs"/>
+			<heading id="Monument" title="Monument">
+				<synonym value="Monuments"/>
 			</heading>
-			<heading id="DoorShoe" title="Door Shoe">
-				<synonym value="Door Shoes"/>
-				<synonym value="Door-Shoe"/>
-				<synonym value="Door-Shoes"/>
+			<heading id="Mosaic" title="Mosaic">
+				<synonym value="Mosaics"/>
 			</heading>
-			<heading id="DoorSill" title="Door Sill">
-				<synonym value="Door Sills"/>
-				<synonym value="Door-Sill"/>
-				<synonym value="Door-Sills"/>
+			<heading id="Niche" title="Niche">
+				<synonym value="Niches"/>
 			</heading>
-			<heading id="DoorSocket" title="Door Socket">
-				<synonym value="Door Sockets"/>
-				<synonym value="Door-Socket"/>
-				<synonym value="Door-Sockets"/>
+			<heading id="Oscillum" title="Oscillum">
+				<synonym value="Oscillums"/>
 			</heading>
-		</heading>
-		<heading id="Epicranitis" title="Epicranitis">
-			<synonym value="Epicranites"/> <!-- CHECK -->
-		</heading>
-		<heading id="Finial" title="Finial"/>
-		<heading id="Floor" title="Floor">
-			<synonym value="Floors"/>
-		</heading>
-		<heading id="FoundationStone" title="Foundation Stone">
-			<synonym value="Foundation Stones"/>
-			<synonym value="Foundation-Stone"/>
-			<synonym value="Foundation-Stones"/>
-		</heading>
-		<heading id="Frieze" title="Frieze">
-			<synonym value="Friezes"/>
-		</heading>
-		<heading id="FriezeCrown" title="Frieze Crown">
-			<synonym value="Frieze Crowns"/>
-			<synonym value="Frieze-Crown"/>
-			<synonym value="Frieze-Crowns"/>
-		</heading>
-		<heading id="Gable" title="Gable">
-			<synonym value="Gables"/>
-		</heading>
-		<heading id="Gate" title="Gate">
-			<synonym value="Gates"/>
-		</heading>
-		<heading id="GatePillar" title="Gate-Pillar">
-			<synonym value="Gate-Pillars"/>
-		</heading>
-		<heading id="Gateway" title="Gateway">
-			<synonym value="Gateways"/>
-		</heading>
-		<heading id="GraffitiArchtct" title="Graffiti" noMatch="true"/>
-		<heading id="HydraulicEquipment" title="Hydraulic Equipment">
-			<synonym value="Hydraulic Items"/>
-		</heading>
-		<heading id="Latrine" title="Latrine">
-			<synonym value="Latrines"/>
-		</heading>
-		<heading id="Lintel" title="Lintel">
-			<synonym value="Lintels"/>
-		</heading>
-		<heading id="Louver" title="Louver">
-			<synonym value="Louvers"/>
-			<synonym value="Louvre"/>
-			<synonym value="Louvres"/>
-		</heading>
-		<heading id="Merlon" title="Merlon">
-			<synonym value="Merlons"/>
-		</heading>
-		<heading id="Monument" title="Monument">
-			<synonym value="Monuments"/>
-		</heading>
-		<heading id="Mosaic" title="Mosaic">
-			<synonym value="Mosaics"/>
-		</heading>
-		<heading id="Molding" title="Molding">
-			<synonym value="Moldings"/>
-			<synonym value="Moulding"/>
-			<synonym value="Mouldings"/>
-		</heading>
-		<heading id="Niche" title="Niche">
-			<synonym value="Niches"/>
-		</heading>
-		<heading id="Oscillum" title="Oscillum">
-			<synonym value="Oscillums"/>
-		</heading>
-		<heading id="Pavement" title="Pavement">
-			<synonym value="Pavements"/>
-		</heading>
-		<heading id="Pediment" title="Pediment">
-			<synonym value="Pediments"/>
-		</heading>
-		<heading id="Pier" title="Pier">
-			<synonym value="Piers"/>
-		</heading>
-		<heading id="Pilaster" title="Pilaster">
-			<synonym value="Pilasters"/>
-		</heading>
-		<heading id="Pillar" title="Pillar">
-			<synonym value="Pillars"/>
-		</heading>
-		<heading id="Post" title="Post">
-			<synonym value="Posts"/>
-		</heading>
-		<heading id="PyramidCasing" title="Pyramid Casing">
-			<synonym value="Pyramid Casings"/>
-			<synonym value="Pyramid-Casing"/>
-			<synonym value="Pyramid-Casings"/>
-		</heading>
-		<heading id="Pyramidion" title="Pyramidion">
-			<synonym value="Pyramidia"/>
-			<synonym value="Pyramidions"/>
-		</heading>
-		<heading id="Quatrefoil" title="Quatrefoil">
-			<synonym value="Quatrefoils"/>
-		</heading>
-		<heading id="Railing" title="Railing">
-			<synonym value="Railings"/>
-		</heading>
-		<heading id="Ramp" title="Ramp">
-			<synonym value="Ramps"/>
-		</heading>
-		<!-- <heading id="Relief" title="Relief">
-			<synonym value="Reliefs"/>
-		</heading> -->
-		<heading id="Revetment" title="Revetment">
-			<synonym value="Revetments"/>
-			<synonym value="Revêtment"/>
-			<synonym value="Revêtments"/>
-		</heading>
-		<heading id="RidgePole" title="Ridge Pole">
-			<synonym value="Ridge Poles"/>
-			<synonym value="Ridge-Pole"/>
-			<synonym value="Ridge-Poles"/>
-		</heading>
-		<heading id="Roof" title="Roof">
-			<synonym value="Roofs"/>
-			<heading id="Roofingtiles" title="Roofing Tiles">
-				<synonym value="Roofing Tile"/>
-				<!-- Implies tile -->
-				<heading id="Imbrex" title="Imbrex">
-					<synonym value="Imbrexes"/>
-					<synonym value="Imbrices"/>
-				</heading>
-				<heading id="Tegula" title="Tegula">
-					<synonym value="Tegulea"/>
+			<heading id="Quatrefoil" title="Quatrefoil">
+				<synonym value="Quatrefoils"/>
+			</heading>
+			<heading id="Tile" title="Tile">
+				<synonym value="Tiles"/>
+				<heading id="Roofingtiles" title="Roofing Tiles">
+					<synonym value="Roofing Tile"/>
+					<heading id="Imbrex" title="Imbrex">
+						<synonym value="Imbrexes"/>
+						<synonym value="Imbrices"/>
+					</heading>
+					<heading id="Tegula" title="Tegula">
+						<synonym value="Tegulea"/>
+					</heading>
 				</heading>
 			</heading>
+			<heading id="Tympanum" title="Tympanum">
+				<synonym value="Tympanums"/>
+			</heading>
 		</heading>
-		<heading id="RoofProp" title="Roof Prop">
-			<synonym value="Roof Props"/>
-			<synonym value="Roof-Prop"/>
-			<synonym value="Roof-Props"/>
+		<heading id="FunctionalElements" title="Functional Elements" noMatch="true">
+			<heading id="Balustrade" title="Balustrade">
+				<synonym value="Balustrades"/>
+			</heading>
+			<heading id="ChimneyPot" title="Chimney Pot">
+				<synonym value="Chimney Pots"/>
+				<synonym value="Chimney-Pot"/>
+				<synonym value="Chimney-Pots"/>
+			</heading>
+			<heading id="Door" title="Door">
+				<synonym value="Doors"/>
+				<heading id="Knocker" title="Knocker">
+					<synonym value="Knockers"/>
+				</heading>
+				<heading id="DoorFrame" title="Door Frame">
+					<synonym value="Door Frames"/>
+					<synonym value="Door-Frame"/>
+					<synonym value="Door-Frames"/>
+				</heading>
+				<heading id="DoorHinge" title="Door Hinge">
+					<synonym value="Door Hinges"/>
+					<heading id="DoorHingeNail" title="Door Hinge Nail">
+						<synonym value="Door Hinge Nails"/>
+					</heading>
+				</heading>
+				<heading id="DoorJamb" title="Door Jamb">
+					<synonym value="Door Jambs"/>
+					<synonym value="Door-Jamb"/>
+					<synonym value="Door-Jambs"/>
+				</heading>
+				<heading id="DoorShoe" title="Door Shoe">
+					<synonym value="Door Shoes"/>
+					<synonym value="Door-Shoe"/>
+					<synonym value="Door-Shoes"/>
+				</heading>
+				<heading id="DoorSill" title="Door Sill">
+					<synonym value="Door Sills"/>
+					<synonym value="Door-Sill"/>
+					<synonym value="Door-Sills"/>
+				</heading>
+				<heading id="DoorSocket" title="Door Socket">
+					<synonym value="Door Sockets"/>
+					<synonym value="Door-Socket"/>
+					<synonym value="Door-Sockets"/>
+				</heading>
+			</heading>
+			<heading id="Gate" title="Gate">
+				<synonym value="Gates"/>
+			</heading>
+			<heading id="Gateway" title="Gateway">
+				<synonym value="Gateways"/>
+			</heading>
+			<heading id="Louver" title="Louver">
+				<synonym value="Louvers"/>
+				<synonym value="Louvre"/>
+				<synonym value="Louvres"/>
+			</heading>
+			<heading id="PyramidCasing" title="Pyramid Casing">
+				<synonym value="Pyramid Casings"/>
+				<synonym value="Pyramid-Casing"/>
+				<synonym value="Pyramid-Casings"/>
+			</heading>
+			<heading id="Railing" title="Railing">
+				<synonym value="Railings"/>
+			</heading>
+			<heading id="Ramp" title="Ramp">
+				<synonym value="Ramps"/>
+			</heading>
+			<heading id="Sima" title="Sima">
+				<synonym value="Simas"/>
+			</heading>
+			<heading id="Stair" title="Stair">
+				<synonym value="Stairs"/>
+			</heading>
+			<heading id="VentilatorScreen" title="Ventilator Screen">
+				<synonym value="Ventilator Screens"/>
+				<synonym value="Ventilator-Screen"/>
+				<synonym value="Ventilator-Screens"/>
+			</heading>
+			<heading id="Window" title="Window">
+				<synonym value="Windows"/>
+			</heading>
 		</heading>
-		<heading id="Sima" title="Sima">
-			<synonym value="Simas"/>
-		</heading>
-		<heading id="Spandrel" title="Spandrel">
-			<synonym value="Spandrels"/>
-		</heading>
-		<heading id="Stair" title="Stair">
-			<synonym value="Stairs"/>
-		</heading>
-		<heading id="TentPeg" title="Tent-Peg">
-			<synonym value="Tent-Pegs"/>
-		</heading>
-		<heading id="Tile" title="Tile">
-			<synonym value="Tiles"/>
-		</heading>
-		<heading id="Tympanum" title="Tympanum">
-			<synonym value="Tympanums"/>
-		</heading>
-		<heading id="VentilatorScreen" title="Ventilator-Screen">
-			<synonym value="Ventilator-Screens"/>
-		</heading>
-		<heading id="Voussoir" title="Voussoir">
-			<synonym value="Voussoirs"/>
-		</heading>
-		<heading id="Wall" title="Wall">
-			<synonym value="Walls"/>
-		</heading>
-		<heading id="Window" title="Window">
-			<synonym value="Windows"/>
+		<heading id="StructuralElements" title="Structural Elements">
+			<synonym value="Structural Element"/>
+			<heading id="Arch" title="Arch">
+				<synonym value="Arches"/>
+				<synonym value="Archs"/> <!-- Misspelling -->
+				<excl value="amer arch eth"/> <!-- Journal: American Archaeology and Ethnography -->
+				<excl value="arch acc"/> <!-- Archaeological accession -->
+				<excl value="arch added in pencil"/> <!-- reference to a note that this is an archaeological object -->
+				<excl value="arch arrow"/> <!-- Archery arrow -->
+				<excl value="arch field record"/> <!-- Archaeological field record -->
+				<excl value="arch handle"/> <!-- a kind of jar handle -->
+				<excl value="arch handles"/> <!-- ibid. -->
+				<excl value="arch written in pencil"/> <!-- reference to a note that this is an archaeological object -->
+				<excl value="calif arch survey"/> <!-- California Archaeological Survey -->
+				<excl value="historic arch specimens"/> <!-- Historical archaeology -->
+				<excl value="novelty imitating arch. figurine"/> <!-- novelty imitating archaeological figurine -->
+				<excl value="possibly arch."/> <!-- Object is possibly archaeological -->
+				<excl value="prob arch"/> <!-- Object is probably archaeological -->
+				<excl value="of the arch of some carnivore"/> <!-- refers to the dental arcade/arch -->
+				<excl value="vertebral arch"/> <!-- Bony feature on vertebrae -->
+				<excl value="zygomatic arch"/> <!-- Bony feature on skull -->
+				<heading id="Voussoir" title="Voussoir">
+					<synonym value="Voussoirs"/>
+				</heading>
+			</heading>
+			<heading id="Beam" title="Beam">
+				<synonym value="Beams"/>
+				<excl value="Balance Beams"/>
+				<excl value="Balance Beams"/>
+				<excl value="Beam Balance"/>
+				<excl value="Scale Beam"/>
+				<excl value="Scale Beams"/>
+			</heading>
+			<heading id="Brick" title="Brick">
+				<synonym value="Bricks"/>
+				<excl value="Brick Pattern"/>
+				<excl value="Brick Patterns"/>
+				<excl value="Brick Patterned"/>
+			</heading>
+			<heading id="Capital" title="Capital">
+				<synonym value="Capitals"/>
+			</heading>
+			<heading id="Column" title="Column">
+				<synonym value="Columns"/>
+			</heading>
+			<heading id="Corbel" title="Corbel">
+				<synonym value="Corbels"/>
+			</heading>
+			<heading id="Crenellation" title="Crenellation">
+				<synonym value="Crenellations"/>
+			</heading>
+			<heading id="Dome" title="Dome">
+				<synonym value="Domes"/>
+			</heading>
+			<heading id="Floor" title="Floor">
+				<synonym value="Floors"/>
+			</heading>
+			<heading id="FoundationStone" title="Foundation Stone">
+				<synonym value="Foundation Stones"/>
+				<synonym value="Foundation-Stone"/>
+				<synonym value="Foundation-Stones"/>
+			</heading>
+			<heading id="Gable" title="Gable">
+				<synonym value="Gables"/>
+			</heading>
+			<heading id="GatePillar" title="Gate Pillar">
+				<synonym value="Gate Pillars"/>
+				<synonym value="Gate-Pillar"/>
+				<synonym value="Gate-Pillars"/>
+			</heading>
+			<heading id="Lintel" title="Lintel">
+				<synonym value="Lintels"/>
+			</heading>
+			<heading id="Merlon" title="Merlon">
+				<synonym value="Merlons"/>
+			</heading>
+			<heading id="Pavement" title="Pavement">
+				<synonym value="Pavements"/>
+			</heading>
+			<heading id="Pediment" title="Pediment">
+				<synonym value="Pediments"/>
+			</heading>
+			<heading id="Pier" title="Pier">
+				<synonym value="Piers"/>
+			</heading>
+			<heading id="Pilaster" title="Pilaster">
+				<synonym value="Pilasters"/>
+			</heading>
+			<heading id="Pillar" title="Pillar">
+				<synonym value="Pillars"/>
+			</heading>
+			<heading id="Post" title="Post">
+				<synonym value="Posts"/>
+			</heading>
+			<heading id="Revetment" title="Revetment">
+				<synonym value="Revetments"/>
+				<synonym value="Revêtment"/>
+				<synonym value="Revêtments"/>
+			</heading>
+			<heading id="RidgePole" title="Ridge Pole">
+				<synonym value="Ridge Poles"/>
+				<synonym value="Ridge-Pole"/>
+				<synonym value="Ridge-Poles"/>
+			</heading>
+			<heading id="RoofProp" title="Roof Prop">
+				<synonym value="Roof Props"/>
+				<synonym value="Roof-Prop"/>
+				<synonym value="Roof-Props"/>
+			</heading>
+			<heading id="Roof" title="Roof">
+				<synonym value="Roofs"/>
+			</heading>
+			<heading id="Spandrel" title="Spandrel">
+				<synonym value="Spandrels"/>
+			</heading>
+			<heading id="HouseStilts" title="Stilts" noMatch="true">
+				<synonym value="Stilts"/>
+				<synonym value="House on Stilts"/>
+				<synonym value="Houses on Stilts"/>
+				<synonym value="Shed on Stilts"/>
+				<synonym value="Sheds on Stilts"/>
+				<synonym value="Village on Stilts"/>
+				<excl value="Stilt Marks"/> <!-- Refers to pottery firing stilts -->
+				<excl value="Stilt Legs"/> <!-- Refers to architecture -->
+			</heading>
+			<heading id="Wall" title="Wall">
+				<synonym value="Walls"/>
+			</heading>
 		</heading>
 	</heading>
 	<heading id="Armaments" title="Armaments">
@@ -14502,6 +14528,13 @@
 		</heading>
 		<heading id="Stilt" title="Stilt">
 			<synonym value="Stilts"/>
+			<excl value="House on Stilts"/> <!-- Refers to architecture -->
+			<excl value="Houses on Stilts"/> <!-- Refers to architecture -->
+			<excl value="Shed on Stilts"/> <!-- Refers to architecture -->
+			<excl value="Sheds on Stilts"/> <!-- Refers to architecture -->
+			<excl value="Stilt Marks"/> <!-- Refers to pottery firing stilts -->
+			<excl value="Stilt Legs"/> <!-- Refers to architecture -->
+			<excl value="Village on Stilts"/> <!-- Refers to architecture -->
 		</heading>
 		<heading id="TransportEquipment" title="Transport Equipment">
 			<synonym value="Transport Items"/>
