@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy id="Collection" title="Collection">
+	<description>This facet describes the collection(s) to which an object
+		belongs.
+	</description>
+	<heading id="ByCollector" title="Collector" noMatch="true">
+		<heading id="TheosBernard" title="Theos Bernard"/>
+		<heading id="IsabelleTKelly" title="Isabelle T. Kelly"/>
+		<heading id="DorothyLiebesColl" title="Dorothy Liebes Collection">
+			<synonym value="Liebes Collection"/>
+			<synonym value="from the Dorothy Liebes Collection"/>
+		</heading>
+		<heading id="GeorgeReisner" title="George Reisner"/>
+		<heading id="MaxUhle" title="Max Uhle"/>
+	</heading>
+	<heading id="ByDonor" title="By Donor" noMatch="true">
+		<heading id="PhoebeHearst" title="Phoebe A. Hearst">
+			<synonym value="Phoebe Hearst"/>
+			<synonym value="P.A. Hearst"/>
+			<synonym value="PA Hearst"/>
+		</heading>
+		<heading id="Gregory" title="Sarah &amp; Jane Gregory"/>
+		<heading id="JBLillard" title="J.B. Lillard"/>
+		<heading id="RachelMossman" title="Rachel Gould Mossman"/>
+		<heading id="EleanorMurray" title="Eleanor Murray"/>
+		<heading id="UCDesignDept" title="U.C. Design Department">
+			<synonym value="UCDD"/>
+			<synonym value="Design Department"/>
+		</heading>
+		<heading id="Ziegelmaier" title="Paul Ziegelmaier"/>
+	</heading>
+	<heading id="FoundingCollections" title="Founding Collections" noMatch="true"> <!-- Need to add these -->
+		<heading id="CaliforniaArchaeology" title="California Archaeology"/>
+		<heading id="ClassicMeditrColl" title="Classical Mediterranean"/>
+	</heading>
+	<heading id="SpecialCollections" title="Special Collections" noMatch="true"> <!-- Need to add these -->
+		<heading id="AlaskaCommercialCollection" title="Alaska Commercial Co. collecton">
+			<synonym value="ACC Database"/>
+			<synonym value="Alaska Commercial Co"/>
+			<synonym value="Alaska Commerical Co"/> <!-- Misspelling -->
+			<synonym value="Alaska Commercial Co."/>
+			<synonym value="Alaska Commerical Co."/> <!-- Misspelling -->
+			<synonym value="Alaska Commercial Company"/>
+			<synonym value="Alaska Commerical Company"/> <!-- Misspelling -->
+			<implies facet="Location" cat="AlaskaState"/>
+		</heading>
+		<heading id="MeighanBeadCollection" title="Meighan Bead collecton">
+			<synonym value="Meighan Bead"/>
+			<synonym value="Meighan Coll"/>
+			<synonym value="Meighan Coll."/>
+			<synonym value="Meighan Collection"/>
+			<implies facet="ObjectName" cat="BeadsJeweleryPrsOrn"/>
+		</heading>
+		<heading id="GiffordShellCollection" title="Gifford CA worked shell coll.">
+			<heading id="GiffordShellTypeA" title="Class A: Spire-Lopped">
+				<heading id="GiffordShellTypeA1" title="Type A1. Simple Spire-Lopped">
+					<heading id="GiffordShellTypeA1a" title="Subtype A1a. Small Spire-Lopped"/>
+					<heading id="GiffordShellTypeA1b" title="Subtype A1b. Medium Spire-Lopped"/>
+					<heading id="GiffordShellTypeA1c" title="Subtype A1c. Large Spire-Lopped"/>
+				</heading>
+				<heading id="GiffordShellTypeA2" title="Type A2. Oblique Spire-Lopped"/>
+				<heading id="GiffordShellTypeA3" title="Type A3. Drilled Spire-Lopped"/>
+				<heading id="GiffordShellTypeA4" title="Type A4. Punched Spire-Lopped"/>
+				<heading id="GiffordShellTypeA5" title="Type A5. Applique Spire-Lopped"/>
+				<heading id="GiffordShellTypeA6" title="Type A6. End-Perforated Spire-Lopped"/>
+			</heading>
+			<heading id="GiffordShellTypeB" title="Class B: End-Ground">
+				<heading id="GiffordShellTypeB1" title="Type B1. Side-Ground"/>
+				<heading id="GiffordShellTypeB2" title="Type B2. End-Ground"/>
+				<heading id="GiffordShellTypeB3" title="Type B3. Barrel">
+					<heading id="GiffordShellTypeB3a" title="Subtype B3a. Small Barrel"/>
+					<heading id="GiffordShellTypeB3b" title="Subtype B3b. Medium Barrel"/>
+					<heading id="GiffordShellTypeB3c" title="Subtype B3c. Large Barrel"/>
+			</heading>
+				<heading id="GiffordShellTypeB4" title="Type B4. Cap"/>
+				<heading id="GiffordShellTypeB5" title="Type B5. Spire"/>
+				<heading id="GiffordShellTypeB6" title="Type B6. Double-Oblique"/>
+			</heading>
+			<heading id="GiffordShellTypeC" title="Class C: Split">
+				<heading id="GiffordShellTypeC1" title="Type C1. Beveled"/>
+				<heading id="GiffordShellTypeC2" title="Type C2. Split Drilled">
+					<heading id="GiffordShellTypeC2i" title="Subtype C2i. Incised"/>
+			</heading>
+				<heading id="GiffordShellTypeC3" title="Type C3. Split Oval"/>
+				<heading id="GiffordShellTypeC4" title="Type C4. Split End-Perforated">
+					<heading id="GiffordShellTypeC4a" title="Subtype C4a."/>
+					<heading id="GiffordShellTypeC4b" title="Subtype C4b."/>
+			</heading>
+				<heading id="GiffordShellTypeC5" title="Type C5. Scoop"/>
+				<heading id="GiffordShellTypeC6" title="Type C6. Split Double-Perforated"/>
+				<heading id="GiffordShellTypeC7" title="Type C7. Split Amorphous"/>	
+				<heading id="GiffordShellTypeC8" title="Type C8. Split Rough"/>
+			</heading>
+			<heading id="GiffordShellTypeD" title="Class D: Split Punched">
+				<heading id="GiffordShellTypeD1" title="Type D1">
+					<heading id="GiffordShellTypeD1a" title="Subtype D1a. Shelved Punched"/>
+					<heading id="GiffordShellTypeD1b" title="Subtype D1b. Small Punched"/>
+				</heading>
+				<heading id="GiffordShellTypeD2" title="Type D2. Rectangular Punched"/>
+				<heading id="GiffordShellTypeD3" title="Type D3. Oval Punched"/>
+			</heading>
+			<heading id="GiffordShellTypeE" title="Class E: Lipped">
+				<heading id="GiffordShellTypeE1" title="Type E1. Thin Lipped">
+					<heading id="GiffordShellTypeE1a" title="Subtype E1a. Round Thin Lipped"/>
+					<heading id="GiffordShellTypeE1b" title="Subtype E1b. Oval Thin Lipped"/>
+			</heading>	
+				<heading id="GiffordShellTypeE2" title="Type E2. Thick Lipped">
+					<heading id="GiffordShellTypeE2a" title="Subtype E2a. Full Lipped"/>
+					<heading id="GiffordShellTypeE2b" title="Subtype E2b. Deep Lipped"/>
+				</heading>
+				<heading id="GiffordShellTypeE3" title="Type E3. Large Lipped">
+					<heading id="GiffordShellTypeE3a" title="Subtype E3a. Full Large Lipped"/>
+					<heading id="GiffordShellTypeE3b" title="Subtype E3b. Deep Large Lipped"/>					
+					<heading id="GiffordShellTypeE3c" title="Subtype E3c. Rough Large Lipped"/>
+				</heading>
+			</heading>
+			<heading id="GiffordShellTypeF" title="Class F: Saddle">	
+				<heading id="GiffordShellTypeF1" title="Type F1. Oval Saddle"/>
+				<heading id="GiffordShellTypeF2" title="Type F2">
+					<heading id="GiffordShellTypeF2a" title="Subtype F2a. Full Saddle"/>
+					<heading id="GiffordShellTypeF2b" title="Subtype F2b. Round Saddle"/>					
+					<heading id="GiffordShellTypeF2c" title="Subtype F2c. Rectanguloid Saddle"/>
+					<heading id="GiffordShellTypeF2d" title="Subtype F2d. Elliptical Saddle"/>
+				</heading>
+				<heading id="GiffordShellTypeF3" title="Type F3">
+					<heading id="GiffordShellTypeF3a" title="Subtype F3a. Square Saddle"/>
+					<heading id="GiffordShellTypeF3b" title="Subtype F3b. Small Saddle"/>
+				</heading>
+			</heading>	
+			<heading id="GiffordShellTypeG" title="Class G: Saucer">
+				<heading id="GiffordShellTypeG1" title="Type G1. Tiny Saucer"/>
+				<heading id="GiffordShellTypeG2" title="Type G2. Normal Saucer"/>
+				<heading id="GiffordShellTypeG3" title="Type G3. Ring"/>
+				<heading id="GiffordShellTypeG4" title="Type G4. Ground Saucer"/>
+				<heading id="GiffordShellTypeG5" title="Type G5. Oval Saucer"/>
+				<heading id="GiffordShellTypeG6" title="Type G6. Irregular Saucer">
+					<heading id="GiffordShellTypeG6a" title="Subtype G6a. Symmetrical"/>
+					<heading id="GiffordShellTypeG6b" title="Subtype G6b. Asymmetrical"/>					
+					<heading id="GiffordShellTypeG6c" title="Subtype G6c. Oval"/>
+					<heading id="GiffordShellTypeG6d" title="Subtype G6d. Wide"/>
+				</heading>
+			</heading>
+			<heading id="GiffordShellTypeH" title="Class H: Disk">
+				<heading id="GiffordShellTypeH1" title="Type H1">
+					<heading id="GiffordShellTypeH1a" title="Subtype H1a. Ground Disk"/>
+					<heading id="GiffordShellTypeH1b" title="Subtype H1b. Semi-Ground Disk"/>
+				</heading>
+				<heading id="GiffordShellTypeH2" title="Type H2. Rough Disk"/>
+				<heading id="GiffordShellTypeH3" title="Type H3. Chiped Disk"/>
+			</heading>
+			<heading id="GiffordShellTypeJ" title="Class J: Wall Disk"/>
+			<heading id="GiffordShellTypeK" title="Class K: Callus">
+				<heading id="GiffordShellTypeK1" title="Type K1. Cupped"/>
+				<heading id="GiffordShellTypeK2" title="Type K2. Bushing"/>
+				<heading id="GiffordShellTypeK3" title="Type K3. Cylinder"/>					
+			</heading>
+			<heading id="GiffordShellTypeL" title="Class L: Thick Rectangle">
+				<heading id="GiffordShellTypeL1" title="Type L1. Large Thick Rectangle"/>
+				<heading id="GiffordShellTypeL2" title="Type L2. Small Thick Rectangle"/>
+				<heading id="GiffordShellTypeL3" title="Type L3. Ovoid Thick Rectangle"/>
+			</heading>
+			<heading id="GiffordShellTypeM" title="Class M: Thin Rectangle">
+				<heading id="GiffordShellTypeM1" title="Type M1">
+					<heading id="GiffordShellTypeM1a" title="Subtype M1a. Normal Sequin"/>
+					<heading id="GiffordShellTypeM1b" title="Subtype M1b. Rhomboid Sequin"/>
+					<heading id="GiffordShellTypeM1c" title="Subtype M1c. Narrow Sequin"/>
+					<heading id="GiffordShellTypeM1d" title="Subtype M1d. Wide Sequin"/>
+				</heading>
+				<heading id="GiffordShellTypeM2" title="Type M2">
+					<heading id="GiffordShellTypeM2a" title="Subtype M2a. Normal Pendant"/>
+					<heading id="GiffordShellTypeM2b" title="Subtype M2b. Rhomboid Pendant"/>
+					<heading id="GiffordShellTypeM2c" title="Subtype M2c. Narrow Pendant"/>		
+				</heading>
+				<heading id="GiffordShellTypeM3" title="Type M3. Elongate Pendant"/>
+				<heading id="GiffordShellTypeM4" title="Type M4. Trapezoid Pendant"/>
+			</heading>
+			<heading id="GiffordShellTypeN" title="Class N: Grooved Rectangle">	
+				<heading id="GiffordShellTypeN1" title="Type N1. Large Grooved Rectangle"/>
+				<heading id="GiffordShellTypeN2" title="Type N2. Small Grooved Rectangle"/>
+			</heading>
+			<heading id="GiffordShellTypeO" title="Class O: Whole Shell">
+				<heading id="GiffordShellTypeO1" title="Type O1. Drilled Whole Shell"/>
+				<heading id="GiffordShellTypeO2" title="Type O2. Punched Whole Shell"/>
+				<heading id="GiffordShellTypeO3" title="Type O3. Button Whole Shell"/>
+				<heading id="GiffordShellTypeO4" title="Type O4. Double-Punched Whole Shell"/>
+			</heading>
+			<heading id="GiffordShellTypeP" title="Class P: Abraded Quarter-Shell"/>
+			<heading id="GiffordShellTypeQ" title="Class Q: Columella">
+				<heading id="GiffordShellTypeQ1" title="Type Q1. Tube"/>
+				<heading id="GiffordShellTypeQ2" title="Type Q2. Spoon"/>
+			</heading>
+		</heading>
+	</heading>
+	<heading id="MuseumCatalogs" title="Museum Catalogs" noMatch="true">
+		<heading id="Catalog1" title="Catalog 1">
+			 <synonym value="1-"/>
+			 <implies facet="Location" cat="California"/>
+		</heading>
+		<heading id="Catalog2" title="Catalog 2">
+			<synonym value="2-"/>
+			<implies facet="Location" cat="NorthAmerica"/>
+		</heading>
+		<heading id="Catalog3" title="Catalog 3">
+			<synonym value="3-"/>
+		</heading>
+		<heading id="Catalog4" title="Catalog 4">
+			<synonym value="4-"/>
+			<implies facet="Collection" cat="PhoebeHearst"/>
+			<implies facet="Location" cat="PeruCountry"/>
+			<implies facet="Collection" cat="MaxUhle"/>
+		</heading>
+		<heading id="Catalog5" title="Catalog 5">
+			<synonym value="5-"/>
+			<implies facet="Location" cat="Africa"/>
+		</heading>
+		<heading id="Catalog6" title="Catalog 6">
+			<synonym value="6-"/>
+			<implies facet="Collection" cat="PhoebeHearst"/>
+			<implies facet="Location" cat="EgyptCountry"/>
+		</heading>
+		<heading id="Catalog7" title="Catalog 7">
+			<synonym value="7-"/>
+		</heading>
+		<heading id="Catalog8" title="Catalog 8">
+			<synonym value="8-"/>
+			<implies facet="Collection" cat="ClassicMeditrColl"/>
+		</heading>
+		<heading id="Catalog9" title="Catalog 9">
+			<synonym value="9-"/>
+			<implies facet="Location" cat="Asia"/>
+		</heading>
+		<heading id="Catalog10" title="Catalog 10">
+			<synonym value="10-"/>
+			<implies facet="Location" cat="PhilippinesCountry"/>
+		</heading>
+		<heading id="Catalog11" title="Catalog 11">
+			<synonym value="11-"/>
+			<implies facet="Location" cat="Oceania"/>
+		</heading>
+		<heading id="Catalog12" title="Catalog 12">
+			<synonym value="12-"/>
+		</heading>
+		<heading id="Catalog13" title="Catalog 13">
+			<synonym value="13-"/>
+			<implies facet="ObjectName" cat="PhotographsVisRep"/>
+		</heading>
+		<heading id="Catalog14" title="Catalog 14">
+			<synonym value="14-"/>
+			<implies facet="ObjectName" cat="AudioRecordingsComm"/>
+		</heading>
+		<heading id="Catalog15" title="Catalog 15">
+			<synonym value="15-"/>
+			<implies facet="ObjectName" cat="PhotographsVisRep"/>
+			<implies facet="ObjectName" cat="NegativesVisRep"/>
+		</heading>
+		<heading id="Catalog16" title="Catalog 16">
+			<synonym value="16-"/>
+			<implies facet="Location" cat="SouthAmerica"/>
+		</heading>
+		<heading id="Catalog17" title="Catalog 17">
+			<synonym value="17-"/>
+			<!--	<implies facet="ObjectName" cat="Paintings"/> need to have complex inferencing -->
+			<!--	<implies facet="ObjectName" cat="Drawings"/> need to have complex inferencing -->
+		</heading>
+		<heading id="Catalog18" title="Catalog 18">
+			<synonym value="18-"/>
+			<implies facet="Location" cat="Malaysia"/>
+		</heading>
+		<heading id="Catalog19" title="Catalog 19">
+			<synonym value="19-"/>
+			<implies facet="ObjectName" cat="MapsChartsScience"/>
+		</heading>
+		<heading id="Catalog20" title="Catalog 20">
+			<synonym value="20-"/>
+			<implies facet="ObjectName" cat="MapsChartsScience"/>
+		</heading>
+		<heading id="Catalog21" title="Catalog 21">
+			<synonym value="21-"/>
+			<implies facet="TechniqueDesignorDecoration" cat="PlasterCast"/>
+		</heading>
+		<heading id="Catalog22" title="Catalog 22">
+			<synonym value="22-"/>
+			<implies facet="Collection" cat="ClassicalRubbingColl"/>
+		</heading>
+		<heading id="Catalog23" title="Catalog 23">
+			<synonym value="23-"/>
+		</heading>
+		<heading id="Catalog24" title="Catalog 24">
+			<synonym value="24-"/>
+			<implies facet="ObjectName" cat="AudioRecordingsComm"/>
+		</heading>
+		<heading id="Catalog25" title="Catalog 25">
+			<synonym value="25-"/>
+		</heading>
+		<heading id="Catalog26" title="Catalog 26">
+			<synonym value="26-"/>
+			<implies facet="ObjectName" cat="ColorSlidesVisRep"/>
+		</heading>
+		<heading id="CatalogB" title="Cat. B: Barr Collection">
+			<synonym value="B-"/>
+		</heading>
+		<heading id="CatalogK" title="Cat. K: Kelly Collection">
+			<synonym value="K-"/>
+			<implies facet="Collection" cat="IsabelleTKelly"/>
+			<implies facet="Location" cat="MexicoCountry"/>
+		</heading>
+		<heading id="CatalogL" title="Cat. L: Lillard Collection">
+			<synonym value="L-"/>
+			<implies facet="Collection" cat="JBLillard"/>
+			<implies facet="Location" cat="NorthAmerica"/>
+		</heading>
+	</heading>
+	<heading id="ObjectCollections" title="Object Collections" noMatch="true"> <!-- Need to fill this out -->
+		<heading id="BasketCollection" title="Basket Collection" noMatch="true"/>
+		<heading id="ClassicalRubbingColl" title="Classical Rubbings" noMatch="true"/>
+	</heading>
+</taxonomy>
+
