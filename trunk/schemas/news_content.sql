@@ -16,3 +16,7 @@ SHOW WARNINGS;
 GRANT INSERT,UPDATE,DELETE ON pahma_dev.newsContent
 TO 'pahma'@'webfarm%.berkeley.edu' IDENTIFIED BY 'password';
 
+GRANT INSERT,UPDATE,DELETE ON pahma_prod.newsContent
+TO 'pahma'@'webfarm%.berkeley.edu' IDENTIFIED BY 'password';
+
+INSERT INTO newsContent(id, header, content) VALUES (0, "", "");
