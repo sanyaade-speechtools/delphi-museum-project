@@ -2429,6 +2429,7 @@
 					<excl value="pen-mark"/>
 					<excl value="pen marks"/>
 					<excl value="pen-marks"/>
+					<excl value="to the pen"/> <!-- reference to an enclosure -->
 					<implies facet="ObjectName" cat="ArtWritingImplementTool"/>
 				</heading>
 				<heading id="PencilComm" title="Pencil" noMatch="true">
@@ -7432,8 +7433,24 @@
 						Pakistani Carpets
 						Persian and Anatolian Carpets -->
 					<heading id="Runner" title="Runner">
-						<!-- EXCL: might be confused with the bipedally ambulating athlete, e.g., on Greek pottery -->
 						<synonym value="Runners"/>
+						<excl value="Sled"/>
+						<excl value="Sleds"/>
+						<excl value="Nude runner"/>
+						<excl value="Purchased in Berkeley from a runner"/>  <!-- quotes removed: [Purchased in Berkeley from a "runner".] is the actual usage. -->
+						<excl value="ladder of death"/> <!-- As a backup to exclude 5-14920, which was [Purchased in Berkeley from a "runner".] -->
+						<excl value="Amoaku"/> <!-- As a backup to exclude 5-14919, which was [Purchased in Berkeley from a "runner".] -->
+						<excl value="Once the head of a snake is squeezed"/> <!-- As a backup to exclude 5-14921, which was [Purchased in Berkeley from a "runner".] -->
+						<excl value="2 runners on bottom"/>
+						<excl value="Two runners on bottom"/>
+						<excl value="Yuma Indian Runner"/>
+						<excl value="Yuma Indian Runners"/>
+						<excl value="Mohave runner"/>
+						<excl value="San Carlos runners"/>
+						<excl value="Once the head of a snake is squeezed"/>
+						<excl value="cord runners"/> <!-- Found on netsuke -->
+						<excl value="Racer"/>
+						<excl value="two bearded runners"/>
 					</heading>
 					<!-- Spanish Carpets
 						Turkish Carpets
@@ -10637,9 +10654,7 @@
 			<synonym value="Padukas"/>
 			<implies facet="ObjectName" cat="PadukaSculpture"/>
 		</heading>
-		<heading id="PaxRelRit" title="Pax">
-			<!-- <synonym value="xxxxxxx"/> Is there a plural form for this concept? -->
-		</heading>
+		<heading id="PaxRelRit" title="Pax"/> <!--Is there a plural form for this concept? -->
 		<heading id="PenitentialChainRelRit" title="Penitential Chain">
 			<synonym value="Penitential Chains"/>
 			<!-- Implies Catholicism -->
@@ -11488,7 +11503,9 @@
 				<synonym value="Apothecary-Vessels"/>
 				<implies facet="ObjectName" cat="Containers"/>
 			</heading>
-			<heading id="ApothecaryWeightRx" title="Apothecary-Weight">
+			<heading id="ApothecaryWeightRx" title="Apothecary Weight">
+				<synonym value="Apothecary Weights"/>
+				<synonym value="Apothecary-Weight"/>
 				<synonym value="Apothecary-Weights"/>
 			</heading>
 			<heading id="ArtificialHandRx" title="Artificial Hand">
@@ -11497,10 +11514,14 @@
 			<heading id="BandageRx" title="Bandage">
 				<synonym value="Bandages"/>
 			</heading>
-			<heading id="BirthingStoolRx" title="Birthing-Stool">
+			<heading id="BirthingStoolRx" title="Birthing Stool">
+				<synonym value="Birthing Stools"/>
+				<synonym value="Birthing-Stool"/>
 				<synonym value="Birthing-Stools"/>
 			</heading>
-			<heading id="BleedingCupRx" title="Bleeding-Cup">
+			<heading id="BleedingCupRx" title="Bleeding Cup">
+				<synonym value="Bleeding Cups"/>
+				<synonym value="Bleeding-Cup"/>
 				<synonym value="Bleeding-Cups"/>
 			</heading>
 			<heading id="CaudleCupRx" title="Caudle Cup" noMatch="true"/>
@@ -12321,9 +12342,7 @@
 			<heading id="StandingCup" title="Standing Cup">
 				<synonym value="Standing Cups"/>
 			</heading>
-			<heading id="Stangenglas" title="Stangenglas">
-				<!-- <synonym value="xxxxxxxxx"/> Does this have a plural? -->
-			</heading>
+			<heading id="Stangenglas" title="Stangenglas"/> <!-- Does this have a plural? -->
 			<!--<heading id="StillAlcEq" title="Still">
 				<synonym value="Stills"/>
 			</heading>-->
@@ -14791,6 +14810,9 @@
 					<synonym value="Sledge"/> <!-- British singular -->
 					<synonym value="Sledges"/> <!-- British plural -->
 					<synonym value="Sleds"/>
+					<heading id="DogSledVehicle" title="Dog Sled">
+						<synonym value="Dog Sleds"/>
+					</heading>
 				</heading>
 				<heading id="SnowmobileVehicle" title="Snowmobile">
 					<synonym value="Snowmobiles"/>
