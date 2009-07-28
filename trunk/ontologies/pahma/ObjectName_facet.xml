@@ -702,6 +702,20 @@
 				<synonym value="Fishing-Nets"/>
 				<synonym value="Net"/>
 				<synonym value="Nets"/>
+				<excl value="Net lace"/>
+				<excl value="Net bag"/>
+				<excl value="Rattle"/>
+				<excl value="Rattles"/>
+				<excl value="Net hanger"/>
+				<excl value="Net hangers"/>
+				<excl value="Net weight"/>
+				<excl value="Net weights"/>
+				<excl value="Net float"/>
+				<excl value="Net floats"/>
+				<excl value="Net sinker"/>
+				<excl value="Net sinkers"/>
+				<excl value="Netted bag"/>
+				<excl value="Netted bags"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
 				<heading id="LandingNetFshEq" title="Landing Net">
 					<synonym value="Landing Nets"/>
@@ -817,6 +831,11 @@
 			<heading id="SinkerFshEq" title="Sinker">
 				<synonym value="Sinkers"/>
 				<implies facet="ActivityorContext" cat="FishingActivity"/>
+				<heading id="NetSinkerFshEq" title="Net Sinker">
+					<synonym value="Net Sinkers"/>
+					<synonym value="Net-Sinker"/>
+					<synonym value="Net-Sinkers"/>
+				</heading>
 			</heading>
 			<heading id="SlitterFshEq" title="Slitter">
 				<heading id="EelSlitterFshEq" title="Eel Slitter">
@@ -991,13 +1010,19 @@
 				<synonym value="Hunting-Calendars"/>
 				<implies facet="ObjectName" cat="HuntingClndrClndr"/>
 			</heading>
-			<heading id="HuntingHornHuntEq" title="Hunting-Horn">
+			<heading id="HuntingHornHuntEq" title="Hunting Horn">
+				<synonym value="Hunting Horns"/>
+				<synonym value="Hunting-Horn"/>
 				<synonym value="Hunting-Horns"/>
 			</heading>
-			<heading id="HuntingNetHuntEq" title="Hunting-Net">
+			<heading id="HuntingNetHuntEq" title="Hunting Net">
+				<synonym value="Hunting Nets"/>
+				<synonym value="Hunting-Net"/>
 				<synonym value="Hunting-Nets"/>
 			</heading>
-			<heading id="HuntingNooseHuntEq" title="Hunting-Noose">
+			<heading id="HuntingNooseHuntEq" title="Hunting Noose">
+				<synonym value="Hunting Nooses"/>
+				<synonym value="Hunting-Noose"/>
 				<synonym value="Hunting-Nooses"/>
 			</heading>
 			<heading id="JessHuntEq" title="Jess">
