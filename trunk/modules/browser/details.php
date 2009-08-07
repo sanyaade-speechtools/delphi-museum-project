@@ -27,6 +27,9 @@ if( !empty( $_GET['wImgs'] ) && ($_GET['wImgs'] == 'false'))
 	$onlyWithImgs = false;
 
 
+$t->assign("moreSetsLink", false);
+$t->assign("otherSets", null);
+//
 //---------------------------------
 // Query DB for obj info
 //---------------------------------
@@ -67,6 +70,7 @@ while ($row = $res->fetchRow()) {
 		$t->assign('zoomDir', $CFG->image_zoom."/".$path_clean);		
 	} else {
 		$t->assign('noImage', true);
+		$t->assign('zoomDir', null);
 	}
 }
 
@@ -323,6 +327,7 @@ if (isset($_SESSION['id'])){
 	// If nothing is found, set personalSets variable to false
 	if ( $res->numRows() < 1 ){
 		$t->assign("objectTags", false);
+		$t->assign("tags", null);
 	} else {
 		$t->assign("objectTags", true);
 
