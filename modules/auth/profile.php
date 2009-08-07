@@ -37,6 +37,8 @@ if ( $res->numRows() < 1 ){
 	// Check if this user is the current user
 	if( isset($_SESSION['id']) && $profileId == $_SESSION['id']){
 		$t->assign('ownProfile', true);
+	} else {
+		$t->assign('ownProfile', false);
 	}
 
 
