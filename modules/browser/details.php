@@ -127,11 +127,18 @@ while ($row = $res->fetchRow()) {
 if(count($additionalMediaItems) > 1 ) {
 	$t->assign("hasAdditionalMedia", true);
 	$t->assign("additionalMediaItems", $additionalMediaItems);
+} else {
+	$t->assign("hasAdditionalMedia", false);
+	$t->assign("additionalMediaItems", null);
 }
 if(count($catCardMediaItems) > 0 ) {
 	$t->assign("hasCatCardMedia", true);
 	$t->assign("catCardMediaItems", $catCardMediaItems);
 	$t->assign("numCatCardMediaItems", count($catCardMediaItems));
+} else {
+	$t->assign("hasCatCardMedia", false);
+	$t->assign("catCardMediaItems", null);
+	$t->assign("numCatCardMediaItems", 0);
 }
 // Free the result
 $res->free();

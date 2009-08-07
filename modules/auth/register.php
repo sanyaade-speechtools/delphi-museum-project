@@ -4,6 +4,9 @@ require_once("../../libs/env.php");
 require_once("../../libs/utils.php");
 
 
+$t->assign('messages', null);
+$t->assign('email', null);
+$t->assign('user', null);
 /**
  * Confirms a user's registration, clearing the pending flag in the DB
  */

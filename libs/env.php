@@ -91,6 +91,10 @@ $login_state = checkLogin();
 
 // Assign global UI defaults here
 $t->assign('page_title', $CFG->page_title_default);
+$t->assign('currentURI', $_SERVER['REQUEST_URI']);
+
+$t->assign('currentUser_isAdmin', FALSE );
+$t->assign('currentUser_isAuthStaff', FALSE );
 
 if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 	$details = getUserDetails($_SESSION['username']);
@@ -106,7 +110,9 @@ if( $login_state == DELPHI_LOGGED_IN || $login_state == DELPHI_REG_PENDING){
 		$t->assign('currentUser_isAuthStaff', TRUE );
 } else {
 	$t->assign('currentUser_loggedIn', FALSE);
-	$t->assign('currentURI', $_SERVER['REQUEST_URI']);
+	$t->assign('currentUser_name', null);
+	$t->assign('currentUser_email', null);
+	$t->assign('currentUser_id', null);
 	//	Get the name of the file being called
 	// $scriptName = end(explode("/", $_SERVER['SCRIPT_NAME']) );
 	// if ( $scriptName != "login.php" ) {
