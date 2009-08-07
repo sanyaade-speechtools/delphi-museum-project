@@ -3,6 +3,7 @@
 require_once("../../libs/env.php");
 require_once("../../libs/utils.php");
 
+
 /**
  * Checks for a given user, and returns the info for that user, 
  * or FALSE if user not found.
@@ -10,22 +11,31 @@ require_once("../../libs/utils.php");
 function getUserInfo(){
 	global $db;
 	// Get current user info
-	$sql = "SELECT * FROM user WHERE id = ".$db->quote($_SESSION['id'], 'integer');
+	$id = $_SESSION['id'];
+	if(!is_numeric($id))
+		die("Illegal value set for the user ID in _SESSION");
+
+	$sql = "SELECT * FROM user WHERE id=$id";
 	
 	$res =& $db->query($sql);
-	if (PEAR::isError($res)) {die($res->getMessage());}
-	
-   	// If nothing is found, username is available
+	if (PEAR::isError($res)) {
+		die($res->getMessage());
+	}
+	// If nothing is found, username is available
 	if ( $res->numRows() < 1 ){
 		return false;
 	} else {
-		return $res->fetchRow();
+		$row = $res->fetchRow();
+		return $row;
 	}
 }
 
 function updateField($field, $value){
 	global $db;
-	$sql = "UPDATE user SET $field=".$db->quote($value, 'text')." WHERE id = ".$db->quote($_SESSION['id'], 'integer');
+	$id = $_SESSION['id'];
+	if(!is_numeric($id))
+		die("Illegal value set for the user ID in _SESSION");
+	$sql = "UPDATE user SET $field='".$value."' WHERE id=$id";
 	$res =& $db->exec($sql);
 
 	// check that result is not an error
@@ -39,6 +49,7 @@ function updateField($field, $value){
 
 // Errors to show if we find any
 $msg = array();
+$t->assign('messages', $msg);
 
 // If the user isn't logged in, send to the login page.
 if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
@@ -46,12 +57,20 @@ if(($login_state != DELPHI_LOGGED_IN) && ($login_state != DELPHI_REG_PENDING)){
 	die();
 }
 
+
 // Fetch an array of user data to get updated values
 $userData = getUserInfo();
-$t->assign('email', $userData['email']);
-$t->assign('real_name', $userData['real_name']);
-$t->assign('website_url', $userData['website_url']);
-$t->assign('about', $userData['about']);
+if(empty($userData)) {
+	$t->assign('email', '');
+	$t->assign('real_name', '');
+	$t->assign('website_url', '');
+	$t->assign('about', '');
+} else {
+	$t->assign('email', $userData['email']);
+	$t->assign('real_name', $userData['real_name']);
+	$t->assign('website_url', $userData['website_url']);
+	$t->assign('about', $userData['about']);
+}
 
 /* If a request has been submitted, handle it.  */
 if(isset($_POST['subreq'])){
