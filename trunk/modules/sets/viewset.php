@@ -82,6 +82,9 @@ if (PEAR::isError($res)) {
 // If nothing is found...
 if ( $res->numRows() < 1 ){
 	$t->assign('setHasObjects', false);
+	$t->assign('objectCount', null);
+	$t->assign('objects', null); 
+	$t->assign('firstObjectID', null);
 } else {
 	$t->assign('setHasObjects', true);
 	$objects = array();

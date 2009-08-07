@@ -3,6 +3,11 @@
 require_once("../../libs/env.php");
 require_once("../../libs/utils.php");
 
+$t->assign('messages', null);
+$t->assign('name', "");
+$t->assign('email', "");
+$t->assign('message', "");
+$t->assign('subject', "");
 if(isset($_POST['submit'])){
 	$msg = array();
 	
@@ -43,6 +48,8 @@ if(isset($_POST['submit'])){
 		if(sendDelphiMail($nameTo, $emailTo, $subj, $plaintextmsg, $htmlmsg, $emailFrom, $nameFrom)){
 			if(isset($_POST['objid']) and strlen($_POST['objid']) > 0) {
 				$t->assign('objid', $_POST['objid']);
+			} else {
+				$t->assign('objid', null);
 			}
 			$t->display('contactSent.tpl');
 			die();

@@ -10,6 +10,8 @@ require_once("../../libs/env.php");
  */
 
 $t->assign('contactEmail',$CFG->contactEmail);
+$t->assign('redir',null);
+$t->assign('message',null);
 
 if(isset($_POST['sublogin'])){
 	

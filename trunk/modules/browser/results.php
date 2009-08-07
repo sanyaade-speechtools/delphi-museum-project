@@ -32,7 +32,7 @@ if( isset($_GET['rawkwds']) && empty($kwds) && empty($catIDs)) {
 	$kwds = implode( ",", $values['kwds']);
 }
 $t->assign('cats', implode( ",", $catIDs));
-if( $kwds )
+//if( $kwds )
 	$t->assign('kwds', $kwds );
 
 // Query objects
@@ -45,7 +45,7 @@ if(empty($objResults['objects'])) {
 	$t->assign('results_total', 0);
 	$t->assign('results_start', 0);
 	$t->assign('results_end', 0);
-	if( $images )
+	//if( $images )
 		$t->assign('toggleImages', $images);
 } else {
 	foreach($objResults['objects'] as $obj){
