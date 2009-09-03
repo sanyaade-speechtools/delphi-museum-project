@@ -853,6 +853,7 @@
 					<heading id="Anyi" title="Anyi"/>
 				</heading>
 				<heading id="EquatorialGuinea" title="Equatorial Guinea">
+					<synonym value="Equatorial-Guinea"/>
 					<heading id="Bata" title="Bata"/>
 					<heading id="Malabo" title="Malabo"/>
 				</heading>
@@ -871,6 +872,16 @@
 					<heading id="LegonGhana" title="Legon"/>
 				</heading>
 				<heading id="Guinea" title="Guinea">
+					<excl value="xxx"/>
+					<excl value="Equatorial Guinea"/>
+					<excl value="Equatorial-Guinea"/>
+					<excl value="Guinea Bissau"/>
+					<excl value="Guinea-Bissau"/>
+					<excl value="Papua New Guinea"/>
+					<excl value="Papua-New Guinea"/>
+					<excl value="Papua-New-Guinea"/>
+					<excl value="New Guinea"/>
+					<excl value="xxx"/>
 					<heading id="Conakry" title="Conakry"/>
 				</heading>
 				<heading id="GuineaBissau" title="Guinea-Bissau">
@@ -2968,7 +2979,6 @@
 				<heading id="SumatraIsland" title="Sumatra">
 					<synonym value="Sumatran"/>
 					<synonym value="Sumatrans"/>
-					<heading id="MinangkabauIndonesia" title="Minangkabau"/>
 				</heading>
 				<heading id="West Papua" title="West Papua">
 					<synonym value="Irian Jaya"/>
@@ -3143,21 +3153,49 @@
 					</heading>
 				</heading>
 				<heading id="NewCaledonia" title="New Caledonia">
-					<synonym value="Nouvelle-Calédonie"/>
-					<synonym value="Calédonie"/>
-					<synonym value="La Calédonie"/>
-					<synonym value="Kanaky"/>
-					<synonym value="La Kanaky"/>
 					<synonym value="Caillou"/>
+					<synonym value="Calédonie"/>
+					<synonym value="Kanaky"/>
+					<synonym value="La Calédonie"/>
+					<synonym value="La Kanaky"/>
 					<synonym value="Le Caillou"/>
+					<synonym value="New-Caledonia"/>
 					<synonym value="New Caledonian"/>
+					<synonym value="New-Caledonian"/>
+					<synonym value="Nouvelle Calédonie"/>
+					<synonym value="Nouvelle-Calédonie"/>
+					<synonym value="Nouvelle Calédonien"/>
+					<synonym value="Nouvelle-Calédonien"/>
+					<synonym value="Nouvelle Calédonienne"/>
+					<synonym value="Nouvelle-Calédonienne"/>
 					<implies facet="Culture" cat="MelanesianCulture"/>
+					<!--<heading id="GrandeTerreArchipelago" title="Grande Terre archipelago">
+						<heading id="GrandeTerreIsland" title="Grande Terre">
+							<synonym value="Grande-Terre"/>
+							They are many small islands around it. The main ones are the Beleps islands and Surprise reefs in the North and the Isle of Pines or Kunie in the South.
+						</heading>
+					</heading>
+					<heading id="EastOfGrandeTerre" title="East of Grande-Terre">
+						<heading id="LoyaltyIslandsArchipelago" title="Loyalty Islands archipelago">
+							Ouvéa, Lifou, Tiga, Maré islands, the Beautemps-Beaupré reefs in the North and the small island Walpole in the South.  Also Kunié
+						</heading>
+					</heading>
+					<heading id="EastIslandsCaledonia" title="East Islands" noMatch="true">
+						the volcanic islands of Matthew and Hunter on the southern part of the New-Hebrides volcanic arc.
+					</heading>
+					<heading id="WestIslandsCaledonia" title="West Islands" noMatch="true">
+						the reefs and small islands of the Chesterfields plateau. 
+					</heading> -->
 					<heading id="AnseLongue" title="Anse Longue"/>
 					<heading id="AnseVata" title="Anse Vata"/>
-					<heading id="IleBanu" title="Ile Banu"/> <!-- Ile is ignored for alphabetization -->
+					<heading id="IleBanu" title="Île Banu"> <!-- Ile is ignored for alphabetization -->
+						<synonym value="Ile Banu"/>
+					</heading>
 					<heading id="Baye" title="Baye"/>
 					<heading id="Dumbea" title="Dumbea"/>
-					<heading id="FouePeninsula" title="Foué Peninsula"/>
+					<heading id="FouePeninsula" title="Foué Peninsula">
+						<synonym value="Foue Peninsula"/>
+					</heading>
 					<heading id="Gorotabiaye" title="Gorotabiaye"/>
 					<heading id="Gorotendo" title="Gorotendo"/>
 					<heading id="Gotipu" title="Gotipu"/>
@@ -3166,32 +3204,49 @@
 					</heading>
 					<heading id="Nowe" title="Nowé">
 						<synonym value="Canala"/>
+						<synonym value="Nowe"/>
 					</heading>
-					<heading id="OuaoueCaves" title="Ouaoue Caves"/>
+					<heading id="Ouaoue" title="Ouaoué">
+						<heading id="OuaoueCaves" title="Ouaoué Caves">
+							<synonym value="Ouaoué Cave"/>
+							<synonym value="Ouaoue Caves"/>
+							<synonym value="Ouaoue Cave"/>
+						</heading>
+					</heading>
 					<heading id="Ouapa" title="Ouapa"/>
 					<heading id="Oundjo" title="Oundjo"/>
 					<heading id="Pasma" title="Pasma"/>
 					<heading id="Pindai" title="Pindai"/>
-					<heading id="IleDePins" title="Ile de Pins"/> <!-- "Ile de" is ignored for alphabetization -->
+					<heading id="PinsIleDe" title="Île de Pins"> <!-- "Ile de" is ignored for alphabetization -->
+						<synonym value="Ile de Pins"/>
+					</heading>
 					<heading id="Patana" title="Patana"/>
 					<heading id="Poinge" title="Poinge"/>
 					<heading id="Pouenloch" title="Pouenloch"/>
 					<heading id="Sekodi" title="Sekodi"/>
 					<heading id="Tiaoue" title="Tiaoue"/>
-					<heading id="Tiouande" title="Tiouandé"/>
+					<heading id="Tiouande" title="Tiouandé">
+						<synonym value="Tiouande"/>
+					</heading>
 					<heading id="Touaourou" title="Touaourou"/>
 					<heading id="WallinIsland" title="Wallin Island"/>
 				</heading>
 				<heading id="PapuaNewGuinea" title="Papua New Guinea">
 					<synonym value="Australian New Guinea"/>
-					<synonym value="German New Guinea"/>
 					<synonym value="British New Guinea"/>
+					<synonym value="German New Guinea"/>
+					<synonym value="New Guinea"/>
 					<synonym value="NiuGini"/>
 					<synonym value="Papua"/>
+					<synonym value="Papua-New Guinea"/>
+					<synonym value="Papua New-Guinea"/>
+					<synonym value="Papua-New-Guinea"/>
+					<synonym value="Papua New Guinean"/>
+					<synonym value="Papua-New Guinean"/>
+					<synonym value="Papua New-Guinean"/>
+					<synonym value="Papua-New-Guinean"/>
 					<synonym value="PNG"/>
 					<synonym value="P.N.G."/>
-					<synonym value="New Guinea"/>
-					<synonym value="Papua New Guinean"/>
 					<implies facet="Culture" cat="MelanesianCulture"/>
 					<heading id="BismarckArchipelago" title="Bismarck Archipelago">
 						<heading id="Manusprovince" title="Manus province">
