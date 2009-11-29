@@ -9893,15 +9893,16 @@
 					<synonym value="Bull-roarer"/>
 					<synonym value="Bull-roarers"/>
 				</heading>
-				<heading id="FluteInstrument" title="Flute">
+				<heading id="FluteInstrument" title="Flutes">
 					<!-- includes flageolet, flute, pipe, ocarina, recorder, transverse / implied materials: bamboo, bone, cane, reed, metal, wood/en -->
-					<synonym value="Flutes"/>
+					<synonym value="Flute"/>
 					<synonym value="Musical Flute"/>
 					<synonym value="Musical Flutes"/>
 					<synonym value="a flute"/>
 					<excl value="fluted"/> <!-- Disambiguates from sculpted ornamentation -->
 					<excl value="organ"/> <!-- Disambiguates from mouth organs -->
 					<excl value="whistle"/> <!-- Disambiguates from whistles -->
+					<implies facet="TechniqueDesignorDecoration" cat="Tubular"/>
 					<heading id="BambooFlute" title="Bamboo Flute">
 						<synonym value="Bamboo Flutes"/>
 						<implies facet="Material" cat="BambooMaterial"/>
