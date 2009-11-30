@@ -73,7 +73,6 @@ function cleanFormDataAllowHTML($str) {
 		}
 
 		if(in_array($tag, $safeFormatTags)) {
-		//if( false ) {
 			if($closetag)
 				$tag = "</$tag>";
 			else
