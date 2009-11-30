@@ -11,7 +11,8 @@ INSERT INTO permission( id, name, description, creation_time ) VALUES
    ( 4, 'EditSets', 'Permission to add new sets and delete existing sets. Permission to add and remove items from existing sets. Permission to set titles, comments and tags on owned sets.', now() ),
    ( 5, 'MarkFavorites', 'Permission to add and remove items from default Favorites set.', now() ),
    ( 6, 'ViewBaseCMSInfo', 'Permission to see basic details of the Collection management system, such as object number. This does not include access to sensitive information.', now() ),
-   ( 7, 'ViewSensitiveInfo', 'Permission to see sensitive information from the Collections metadata.', now() );
+   ( 7, 'ViewSensitiveInfo', 'Permission to see sensitive information from the Collections metadata.', now() ),
+   ( 8, 'EditNewsContent', 'Permission to News Content Items.', now() );
 
 INSERT INTO role_perms( role_id, perm_id, creation_time ) VALUES 
    ( 1, 1, now() ),
@@ -20,6 +21,7 @@ INSERT INTO role_perms( role_id, perm_id, creation_time ) VALUES
    ( 1, 4, now() ),
    ( 1, 5, now() ),
    ( 1, 6, now() ),
+   ( 1, 8, now() ),
    ( 2, 4, now() ),
    ( 2, 5, now() ),
    ( 3, 4, now() ),
