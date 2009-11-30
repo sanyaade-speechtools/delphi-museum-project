@@ -12,7 +12,8 @@ INSERT INTO permission( id, name, description, creation_time ) VALUES
    ( 5, 'MarkFavorites', 'Permission to add and remove items from default Favorites set.', now() ),
    ( 6, 'ViewBaseCMSInfo', 'Permission to see basic details of the Collection management system, such as object number. This does not include access to sensitive information.', now() ),
    ( 7, 'ViewSensitiveInfo', 'Permission to see sensitive information from the Collections metadata.', now() ),
-   ( 8, 'EditNewsContent', 'Permission to News Content Items.', now() );
+   ( 8, 'EditNewsContent', 'Permission to edit News Content Items.', now() ),
+   ( 9, 'EditInferences', 'Permission to add and edit complex ontology inference rules.', now() );
 
 INSERT INTO role_perms( role_id, perm_id, creation_time ) VALUES 
    ( 1, 1, now() ),
@@ -22,12 +23,14 @@ INSERT INTO role_perms( role_id, perm_id, creation_time ) VALUES
    ( 1, 5, now() ),
    ( 1, 6, now() ),
    ( 1, 8, now() ),
+   ( 1, 9, now() ),
    ( 2, 4, now() ),
    ( 2, 5, now() ),
    ( 3, 4, now() ),
    ( 3, 5, now() ),
    ( 3, 6, now() ),
    ( 3, 7, now() ),
+   ( 3, 9, now() ),
    ( 4, 4, now() ),
    ( 4, 5, now() ),
    ( 4, 6, now() );

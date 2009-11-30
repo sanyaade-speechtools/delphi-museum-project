@@ -19,6 +19,8 @@ permissions associated with each role.</dd>
 {/if}
 <dt><h3><a href="editNews.php?id=1">Edit News Content</a></h3></dt>
 <dd>Creates News items for display on the front page.</dd>
+<dt><h3><a href="../ontotools/addInference.php">Add Ontology Inference Rule</a></h3></dt>
+<dd>Creates new inference rules to be used by the indexing tools.</dd>
 </dl>
 <p></p>
 <p></p>
