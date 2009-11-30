@@ -8,7 +8,7 @@
 {if isset($style_block) }
 {$style_block}
 {/if}
-<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.2.1.pack.js"></script>
+<script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="{$wwwroot}/libs/jquery/jquery.overlabel.js"></script>
 <script type="text/javascript" charset="utf-8">
 //<![CDATA[
