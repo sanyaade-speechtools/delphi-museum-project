@@ -1,35 +1,57 @@
-$(document).ready(function(){
-  //alert("Hi there");
-  addReqRow();
-  addReqRow();
-  addExclRow();
-  addExclRow();
-	$("#InfConcept")[0].focus();
-});
-
 var nReqRows = 0;
 var nExclRows = 0;
 
-function newReqRowHTML( iRow ) {
-	var id0 = "ReqRow" + iRow;
-	var id2 = "ReqConcept" + iRow;
-	var id3 = "ReqConceptID" + iRow;
-	var htmlStr = '<tr class="ReqRow" id="' + id0 + '"><td width="10px"></td>' +
+var REQ = true;
+var EXCL = false;
+
+function getRow_ID(isReq, iRow) {
+	return (isReq?"Req":"Excl")+"Row"+iRow;
+}
+
+function getConcept_ID(isReq, iRow) {
+	return (isReq?"Req":"Excl")+"Concept" + iRow;
+}
+
+function getConceptID_ID(isReq, iRow) {
+	return (isReq?"Req":"Excl")+"ConceptID" + iRow;
+}
+
+function newReqRowHTML(rowID, concID, idID) {
+	var htmlStr = '<tr class="ReqRow" id="' + rowID + '"><td width="10px"></td>' +
 		'<td><p class="label" align="right">Concept:</p></td>' +
-		'<td><input id="'+id2+'" type="text" maxlength="150" size="40" value="" />' +
-		'<input id="'+id3+'" type="hidden" value="'+(10001*(iRow+1))+'" /></td>' +
-		'<td><input type="image" src="'+_themeroot+'/images/choose.gif" onclick="ShowChooser(\''+id2+'\',\''+id3+'\');"/></td>' +
-		'<td><input type="image" src="'+_themeroot+'/images/delete.gif" onclick="DeleteRow(\''+id0+'\',\'Req\');"/></td>' +
+		'<td><input id="'+concID+'" class="ac_concept" type="text" maxlength="150" size="40" value="" />' +
+		'<input id="'+idID+'" type="hidden" value="-1" /></td>' +
+//		'<td><input type="image" src="'+_themeroot+'/images/choose.gif" onclick="ShowChooser(\''+concID+'\',\''+idID+'\');"/></td>' +
+		'<td colspan="2"><input type="image" src="'+_themeroot+'/images/delete.gif" onclick="DeleteRow(\''+rowID+'\',\'Req\');"/></td>' +
 		'<td width="10px"></td></tr>';
 	return htmlStr;
 }
 
 function addReqRow() {
+	var addAfter;
 	if( $("tr.ReqRow").length <= 0 ) {
-		$("#ReqModeRow").after( newReqRowHTML(0) );
+		nReqRows = 0;
+		addAfter = $("#ReqModeRow");
 	} else {
-		$("tr.ReqRow:last").after( newReqRowHTML(nReqRows) );
+		addAfter = $("tr.ReqRow:last");
 	}
+	var rowID = getRow_ID(REQ,nReqRows);
+	var concID = getConcept_ID(REQ,nReqRows);
+	var idID = getConceptID_ID(REQ,nReqRows);
+	addAfter.after( newReqRowHTML(rowID, concID, idID) );
+	//alert("Setting autocomplete on: " + concID + " with URL:\n"+wwwroot+"/api/ac_concepts.php");
+	$("#"+concID).autocomplete(wwwroot+"/api/ac_concepts.php", {
+		minChars: 2,
+		scroll: true,
+		scrollHeight: 180,
+		max: 40,
+		matchSubset: false
+	});
+	$("#"+concID).result(function(event, data, formatted) {
+		if (data)
+			$("#"+idID).val(data[1]);
+	});
+
 	nReqRows += 1;
 }
 
@@ -47,27 +69,40 @@ function DeleteRow(rowID, rowtype) {
 	}
 }
 
-function newExclRowHTML( iRow ) {
-	var id0 = "ExclRow" + iRow;
-	var id2 = "ExclConcept" + iRow;
-	var id3 = "ExclConceptID" + iRow;
-	var htmlStr = '<tr class="ExclRow" id="' + id0 + '"><td width="10px"></td>' +
+function newExclRowHTML(rowID, concID, idID) {
+	var htmlStr = '<tr class="ExclRow" id="' + rowID + '"><td width="10px"></td>' +
 		'<td><p class="label" align="right">Concept:</p></td>' +
-		'<td><input id="'+id2+'" type="text" maxlength="150" size="40" value="" />' +
-		//'<input id="'+id3+'" type="hidden" value="'+(10100*(iRow+1))+'" /></td>' +
-		'<input id="'+id3+'" type="hidden" value="" /></td>' +
-		'<td><input type="image" src="'+_themeroot+'/images/choose.gif" onclick="ShowChooser(\''+id2+'\',\''+id3+'\');"/></td>' +
-		'<td><input type="image" src="'+_themeroot+'/images/delete.gif" onclick="DeleteRow(\''+id0+'\',\'Excl\');"/></td>' +
+		'<td><input id="'+concID+'" class="ac_concept" type="text" maxlength="150" size="40" value="" />' +
+		'<input id="'+idID+'" type="hidden" value="-1" /></td>' +
+//		'<td><input type="image" src="'+_themeroot+'/images/choose.gif" onclick="ShowChooser(\''+concID+'\',\''+idID+'\');"/></td>' +
+		'<td colspan="2"><input type="image" src="'+_themeroot+'/images/delete.gif" onclick="DeleteRow(\''+rowID+'\',\'Excl\');"/></td>' +
 		'<td width="10px"></td></tr>';
 	return htmlStr;
 }
 
 function addExclRow() {
 	if( $("tr.ExclRow").length <= 0 ) {
-		$("#ExclModeRow").after( newExclRowHTML(0) );
+		nExclRows = 0;
+		addAfter = $("#ExclModeRow");
 	} else {
-		$("tr.ExclRow:last").after( newExclRowHTML(nExclRows) );
+		addAfter = $("tr.ExclRow:last");
 	}
+	var rowID = getRow_ID(EXCL,nExclRows);
+	var concID = getConcept_ID(EXCL,nExclRows);
+	var idID = getConceptID_ID(EXCL,nExclRows);
+	addAfter.after( newExclRowHTML(rowID, concID, idID) );
+	$("#"+concID).autocomplete(wwwroot+"/api/ac_concepts.php", {
+		minChars: 2,
+		scroll: true,
+		scrollHeight: 180,
+		max: 40,
+		matchSubset: false
+	});
+	$("#"+concID).result(function(event, data, formatted) {
+		if (data)
+			$("#"+idID).val(data[1]);
+	});
+
 	nExclRows += 1;
 }
 
@@ -99,7 +134,7 @@ function prepareAddInfXML() {
 			for( var i=0; i < nReqRows; i++ ) {
 				var idval = "#ReqConceptID" + i;
 				refidstr = $(idval)[0].value;
-				if(( "" + refidstr ) != "" )  {
+				if((( "" + refidstr ) != "" ) && ((0+refidstr)>=1))  {
 					xmlStr += '\n    <concept idref="'+ refidstr + '" />';
 					nReqFound++;
 				}
@@ -115,7 +150,7 @@ function prepareAddInfXML() {
 			for( i=0; i < nExclRows; i++ ) {
 				var idval = "#ExclConceptID" + i;
 				refidstr = $(idval)[0].value;
-				if(( "" + refidstr ) != "" ) {
+				if((( "" + refidstr ) != "" ) && ((0+refidstr)>=1))  {
 					if( nExclFound == 0 )
 						xmlStr += '\n  <exclude mode="'+$("#InfExclSel")[0].options[$("#InfExclSel")[0].selectedIndex].text +'">';
 					xmlStr += '\n    <concept idref="'+ refidstr + '" />';
@@ -128,4 +163,3 @@ function prepareAddInfXML() {
 		alert( "XML for new Rule:\n\n" + xmlStr );
 		return xmlStr;
 }
-

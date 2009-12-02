@@ -22,7 +22,11 @@ if( !currUserHasPerm( 'EditInferences' ) ) {
 	die();
 }
 
-$style_block = "<style>
+$themebase = $CFG->wwwroot.'/themes/'.$CFG->theme;
+
+$style_block = '
+<link rel="stylesheet" href="'.$themebase.'/style/jquery.autocomplete.css" type="text/css">
+<style>
 .nochoice {color:#888; }
 .intro {font-size:0.9em; font-weight:bold;  margin-bottom:0;}
 .up {margin-bottom: 0.1em; }
@@ -32,17 +36,42 @@ $style_block = "<style>
 #table1 td {padding:4px; }
 #table1 .label {font-size:0.9em; }
 #table1 input.numeric {text-align:right; }
-</style>";
+</style>';
 
 $t->assign("style_block", $style_block);
-
-$themebase = $CFG->wwwroot.'/themes/'.$CFG->theme;
 
 $script_block = '
 <script type="text/javascript">
   var _themeroot = "'.$themebase.'";
 </script>
-<script type="text/javascript" src="'.$themebase.'/scripts/addInference.js"></script>';
+<script type="text/javascript" src="'.$CFG->wwwroot.'/libs/jquery/jquery.autocomplete.pack.js"></script>
+<script type="text/javascript" src="'.$CFG->wwwroot.'/libs/jquery/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="'.$CFG->wwwroot.'/libs/jquery/jquery.ajaxQueue.js"></script>
+<script type="text/javascript" src="'.$themebase.'/scripts/addInference.js"></script>
+<script type="text/javascript">
+$().ready(function() {
+
+	$("#InfConcept").autocomplete("'.$CFG->wwwroot.'/api/ac_concepts.php", {
+		minChars: 2,
+		scroll: true,
+		scrollHeight: 180,
+		max: 40,
+		matchSubset: false
+	});
+	
+	$("#InfConcept").result(function(event, data, formatted) {
+		if (data)
+			$("#InfConceptID").val(data[1]);
+	});
+
+  //alert("Adding test row: "+newReqRowHTML(getRow_ID(true, 0), getConcept_ID(true, 0), getConceptID_ID(true, 0)));
+  addReqRow();
+  addReqRow();
+  addExclRow();
+	$("#InfConcept")[0].focus();
+});
+
+</script>';
 
 $t->assign("script_block", $script_block);
 
