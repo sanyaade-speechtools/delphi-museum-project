@@ -28,7 +28,7 @@
 		<tr>
 			<td width="10px"></td>
 			<td colspan="4"><p class="intro" align="left">
-			Let Delphi infer that an object has</p>
+			Make Delphi infer that an object has</p>
 			</td>
 			<td width="10px"></td>
 		</tr>
@@ -37,22 +37,13 @@
 			<td><p class="label" align="right">Concept:</p></td>
 			<td>
 				<input id="InfConcept" type="text" maxlength="150" size="40" value="" />
-				<input id="InfConceptID" type="hidden" value="10000" />
+				<input id="InfConceptID" type="hidden" value="-1" />
 			</td>
-			<td><input type="image" src="{$themeroot}/images/choose.gif" onclick="ShowChooser('InfConcept','InfConceptID');"/></td>
-			<td></td>
+			<!-- <td><input type="image" src="{$themeroot}/images/choose.gif" onclick="ShowChooser('InfConcept','InfConceptID');"/></td> -->
+			<td colspan="2"></td>
 			<td width="10px"></td>
 		</tr>
-		<tr>
-			<td width="10px"></td>
-			<td><p class="label" align="right">Notes:</p></td>
-			<td colspan="3">
-				<textarea rows="2" id="InfNotes" cols="40"></textarea>
-			</td>
-			<td width="10px"></td>
-		</tr>
-		<tr><td colspan="6"><hr></td>
-		</tr>
+		<tr><td colspan="6" height="15px"></td>
 		<tr id="ReqModeRow">
 			<td width="10px"></td>
 			<td><p class="intro" align="right">When it has:</p></td>
@@ -71,7 +62,7 @@
 			</td>
 			<td width="10px"></td>
 		</tr>
-		<tr><td colspan="6" height="15px"></td>
+		<!-- <tr><td colspan="6" height="5px"></td> -->
 		<tr id="ExclModeRow">
 			<td width="10px"></td>
 			<td><p class="intro" align="right">Unless it has:</p></td>
@@ -91,8 +82,18 @@
 			<td width="10px"></td>
 		</tr>
 		<tr><td colspan="6"><hr></td>
+		<tr>
+			<td width="10px"></td>
+			<td><p class="label" align="right">Notes:</p></td>
+			<td colspan="3">
+				<textarea rows="2" id="InfNotes" cols="40"></textarea>
+			</td>
+			<td width="10px"></td>
+		</tr>
+		<tr><td colspan="6"><hr></td>
+		</tr>
 		<tr><td colspan="6">
-		<p align="center">	<input id="CommitBtn" type="button" value="Add this rule" 
+		<p align="center">	<input id="CommitBtn" type="button" value="     Add this rule     " 
 			style="font-size:10pt;font-weight:bold" onclick="prepareAddInfXML();" /></p>
 		</td></tr>
 		<tr><td colspan="6" height="10px"></td></tr>
