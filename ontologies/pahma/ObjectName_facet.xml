@@ -2866,7 +2866,7 @@
 				<synonym value="Greeting card"/>
 				<heading id="XmasCardCardsComm" title="Christmas Card" noMatch="true"/>
 			</heading>
-			<heading id="PlayingCardCardsComm" title="Playing Card" noMatch="true">
+			<heading id="PlayingCardCardsComm" title="Playing Card" noMatch="true"> <!-- should move to games -->
 				<synonym value="Playing cards"/>
 				<excl value="Symbols of playing card"/>
 			</heading>
@@ -2891,12 +2891,6 @@
 				</heading>
 				<heading id="PlayBillComm" title="Play-Bill">
 					<synonym value="Play-Bills"/>
-				</heading>
-				<heading id="ShowCardComm" title="Show Card">
-					<synonym value="Show Cards"/>
-					<synonym value="Show-Card "/>
-					<synonym value="Show-Cards"/>
-					<implies facet="ObjectName" cat="ShowCardCardsComm"/>
 				</heading>
 				<heading id="TradeCardComm" title="Trade Card">
 					<synonym value="Trade Cards"/>
