@@ -3765,6 +3765,17 @@
 			<heading id="PaintingsVisRep" title="Paintings">
 				<synonym value="Painting"/>
 				<heading id="EKambanVisRep" title="E-Kamban" noMatch="true"/>
+				<heading id="Barkpainting" title="Bark Painting">
+					<synonym value="Barkpaintings"/>
+					<synonym value="Barkpainting"/>
+					<synonym value="Bark paintings"/>
+					<synonym value="Bark-painting"/>
+					<synonym value="Bark-paintings"/>
+					<synonym value="Painting on bark"/>
+					<synonym value="Paintings on bark"/>
+					<implies facet="Material" cat="TreeBarkMaterial"/>
+					<excl value="with bark painting"/>
+				</heading>
 				<heading id="FanPaintingVisRep" title="Fan Painting">
 					<synonym value="Fan Paintings"/>
 					<synonym value="Fan-Painting"/>
