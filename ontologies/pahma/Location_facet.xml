@@ -6332,7 +6332,9 @@
 									<heading id="CanyonDiablo" title="Canyon Diablo"/>
 									<heading id="CoalMineMesa" title="Coal Mine Mesa"/>
 									<heading id="CowSprings" title="Cow Springs"/>
-									<heading id="Flagstaff" title="Flagstaff"/>
+									<heading id="Flagstaff" title="Flagstaff">
+										<excl value="probably purchased near flagstaff"/>
+									</heading>
 									<heading id="LeesFerry" title="Lees Ferry">
 										<synonym value="Lee's Ferry"/>
 									</heading>
@@ -11044,6 +11046,8 @@
 											</heading>
 										</heading>
 										<heading id="BerkeleyAlamedaCA" title="Berkeley">
+											<excl value="purchased by donor in berkeley"/>
+											<excl value="purchased by donor in a berkeley"/>
 											<heading id="MortarRockParkAlaCA" title="Mortar Rock Park"/>
 											<heading id="NorthBerkeleyAlaCA" title="North Berkeley"/>
 											<heading id="UCBerkCampus" title="UC Berkeley Campus">
@@ -14541,8 +14545,6 @@
 								</heading>
 								<heading id="SanFranciscoCountyCA" title="San Francisco county">
 									<synonym value="CA-SFr-NL"/>
-									<synonym value="CA-SFr-N3"/> <!-- What is this? -->
-									<synonym value="CA-SFr-N5"/> <!-- What is this? -->
 									<synonym value="CA-SFr"/>
 									<synonym value="CA-San Francisco"/>
 									<synonym value="CA-San Francisco-NL"/>
@@ -14580,6 +14582,10 @@
 												<synonym value="PPIE"/>
 											</heading>
 											<heading id="NearPresidioSanFranCA" title="Near Presidio"/>
+											<heading id="SanFranciscoBayWaterfront" title="San Francisco bayside waterfront">  <!-- is there a better name for this? -->
+												<synonym value="CA-SFr-N3"/> <!-- One of the SF Wastewater sites -->
+												<synonym value="CA-SFr-N5"/> <!-- One of the SF Wastewater sites -->
+											</heading>
 										</heading>
 										<heading id="WSideGraveydSFranCA" title="West side graveyard"/> <!-- At least 1-97773 -->
 									</heading>
@@ -14890,7 +14896,7 @@
 											<synonym value="Schenck &amp; Dawson 85"/>
 											<!-- <synonym value="Barr"/> Disambiguate -->
 											<synonym value="Copperopolis"/>
-											<synonym value="Mormon"/>
+											<synonym value="Mormon Channel"/>
 											<!-- <implies facet="Location" cat="yyyyyyyyy"/> -->
 											<!-- <heading id="yyyyyyyyy" title="yyyyyyyyy"/> -->
 										</heading>
