@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+	<?xml version="1.0" encoding="UTF-8"?>
 <taxonomy id="Location" title="Location">
 	<description> This facet describes <em><strong>where</strong></em> an object
 		was created and/or found. The organization is based upon geographic and
@@ -18402,6 +18402,7 @@
 										</heading>
 										<heading id="MossLandingMntryCA" title="Moss Landing">
 											<heading id="MossLandingSite1" title="Site 1, Moss Landing"/>
+											<heading id="MossLandingSite2" title="Site 2, Moss Landing"/>
 										</heading>
 										<heading id="PineValleyMntCA" title="Pine Valley"/>
 										<heading id="PtPinosMntryCA" title="Pt. Pinos">
@@ -18706,6 +18707,7 @@
 											<synonym value="Hill 3"/>
 											<!-- <synonym value="Wood I-3"/> -->
 											<synonym value="Golomshtok 2"/>
+											<implies facet="Location" cat="MossLandingSite2"/>
 										</heading>
 										<heading id="CAMnt233" title="CA-Mnt-233">
 											<synonym value="Historical Landmark 233"/>
