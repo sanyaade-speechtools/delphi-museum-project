@@ -4150,12 +4150,6 @@
 				<synonym value="Burden Baskets"/>
 				<implies facet="ActivityorContext" cat="CommerceAndTrade"/>
 			</heading>
-			<heading id="CookingBasketBaskets" title="Cooking Basket">
-				<synonym value="Cooking Baskets"/>
-				<implies facet="ActivityorContext" cat="FoodPreparation"/>
-				<implies facet="Collection" cat="BasketCollection"/>
-				<implies facet="ObjectName" cat="CookingBasketCookEq"/>
-			</heading>
 			<heading id="DecorativeBasket" title="Decorative Basket">
 				<synonym value="Decorative Baskets"/>
 			</heading>
@@ -4188,14 +4182,6 @@
 			<heading id="HangingBasket" title="Hanging Basket">
 				<synonym value="Hanging Baskets"/>
 				<implies facet="ActivityorContext" cat="FoodStorage"/>
-			</heading>
-			<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
-				<synonym value="Mush-Boiling Baskets"/>
-				<synonym value="Mush Boiling Basket"/>
-				<synonym value="Mush Boiling Baskets"/>
-				<synonym value="Boiling Basket"/>
-				<synonym value="Boiling Baskets"/>
-				<implies facet="ActivityorContext" cat="FoodPreparation"/>
 			</heading>
 			<heading id="ParchingBasket" title="Parching Basket">
 				<synonym value="Parching Baskets"/>
@@ -5620,7 +5606,20 @@
 					<excl value="Wash"/>
 					<!--<implies facet="ObjectName" cat="BasinVessel"/>-->
 				</heading>
-				<heading id="CookingBasketCookEq" title="Cooking Basket" noMatch="true"/> 
+				<heading id="CookingBasketCookEq" title="Cooking Basket"> 
+					<synonym value="Cooking Baskets"/>
+					<implies facet="ActivityorContext" cat="FoodPreparation"/>
+					<implies facet="Collection" cat="BasketCollection"/>
+					<implies facet="ObjectName" cat="Baskets"/>
+					<heading id="MushBoilingBasket" title="Mush-Boiling Basket">
+						<synonym value="Mush-Boiling Baskets"/>
+						<synonym value="Mush Boiling Basket"/>
+						<synonym value="Mush Boiling Baskets"/>
+						<synonym value="Boiling Basket"/>
+						<synonym value="Boiling Baskets"/>
+						<implies facet="ActivityorContext" cat="FoodPreparation"/>
+					</heading>
+				</heading>
 				<heading id="CookingBowlCookEq" title="Cooking Bowl">
 					<synonym value="Cooking Bowls"/>
 					<synonym value="Cooking-Bowl"/>
