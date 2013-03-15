@@ -1,0 +1,179 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+<style>
+.api_method { font-family: Courier New, Courier, fixed; font-weight:bold; color:#000088; }
+.api_method_param_val { font-family: Courier New, Courier, fixed; font-weight:bold; font-style:italic; }
+code { font-family: Courier New, Courier, fixed; font-weight:bold; color:#000088; }
+</style>
+</head>
+
+<body>
+
+<h1>Specification for ontology related services</h1>
+<h2>Introduction</h2>
+<p>This describes some common library services for use in web pages that support
+ontology-related services. This includes query building services, services
+related to faceted browser use, ontology browser services, and
+ontology/categorization services around a single object. These services are not
+those that support categorization or other back-end processing of metadata into
+the database, but rather just the services that leverage the database contents
+to get information about the ontology itself, about a set of results, or about
+an individual result.</p>
+<h3>Version: 0.9.5</h3>
+<p>This version reflects reviews from Jon on ease of use, and includes missing
+item.id field in object returns.&nbsp;<br>
+Changed the return from getFacets to be objects that include facet id as well as
+name. Added getNumObjs() function.</p>
+<h2>Ontology related services</h2>
+<p>Must include php file X. Leverages existing DB connection from env.php.</p>
+<dl>
+<dt class="api_method">getFacets()</dt>
+<dd>Returns an array of objects for the facets. Each item has the facet id and name as <code>item.id:int</code> and&nbsp;
+  <code>item.name:String</code>. Used both for UI as well as in calling additional methods such as <code>getCategoriesInFacet()</code>.
+</dd>
+<dt>&nbsp;</dt>
+<dt class="api_method">getNumObjs()</dt>
+<dd>Returns an object with two counts:&nbsp; <code>allObjs:int</code> and&nbsp;<code>withImgs:int</code>.
+  These indicate the total number of objects in the database, and the total that
+  have images.
+</dd>
+<dt>&nbsp;</dt>
+<dt class="api_method">getCategoriesInFacet( facet:String,
+  countsWithImages:boolean, retType:String )</dt>
+<dd>Returns information about the categories in the facet indicated by <code>facet</code>
+  (if <code>facet</code> is not recognized, returns <code>false</code>). If the
+  passed facet name is null or &quot;__ALL&quot;, then information for all facets will be
+  returned.<br>
+  The return value (for valid queries) is an array of objects with the facet
+  name in a string <code>facet</code> field and category information in <code>items</code>. The
+  type and value of <code>items</code>  depends upon the <code> retType</code> 
+  parameter, as described below.<br>
+ The <code>countsWithImages</code>
+  parameter controls whether the entire collection is counted, or only those
+  items with images. <br>
+  The <code> retType</code> parameter controls how the information is returned. It must be one
+  of the following values (or the method will return <code>false</code>):
+	<dl>
+	<dt class="api_method_param_val">&quot;PHP&quot;</dt>
+	<dd>Provides a PHP array of structured values (an array of associative
+      arrays).
+  Each category item in <code>items</code> has the category id and name as <code>item.id:int</code> and&nbsp;
+  <code>item.name:String.</code>  The <code>item.count:int</code> indicates how
+  many items in the collection are associated to that category. If the item has child categories, it will have an additional
+      non-null value <code>children</code> that is a nested array of the same
+      structured values.
+	</dd>
+    <dt class="api_method_param_val">&quot;JSON&quot;</dt>
+	<dd>Provides a JSON array variant equivalent to the PHP return value.
+	</dd>
+    <dt class="api_method_param_val">&quot;HTML_UL&quot;</dt>
+	<dd>Provides HTML for the results, using nested unordered lists. <code>items</code> 
+      is a string with encoded HTML for the nested lists. Here is an example of the markup:<pre>&lt;ul&gt;
+  &lt;li class=&quot;treeCat&quot;&gt;&lt;a href=&quot;cat_id_1&quot;&gt;Cat Name&lt;/a&gt; (34)&lt;/li&gt;
+  &lt;li class=&quot;treeCat&quot;&gt;&lt;a href=&quot;cat_id_2&quot;&gt;Cat Name&lt;/a&gt; (23)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li class=&quot;treeCat&quot;&gt;&lt;a href=&quot;cat_id_21&quot;&gt;Cat Name&lt;/a&gt; (34)&lt;/li&gt;
+      &lt;li class=&quot;treeCat&quot;&gt;&lt;a href=&quot;cat_id_22&quot;&gt;Cat Name&lt;/a&gt; (23)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+      </pre>
+	</dd>
+    <dt>&nbsp;</dt>
+	</dl>
+  </dd>
+<dt class="api_method">getCategoriesForObject( forObjID:int, facet:String,
+  countsWithImages:boolean, retType:String )</dt>
+<dd>Returns information about the categories that are
+  associated with the object indicated by <code>forObjID</code>.<br>
+  Categories can be constrained to the facet indicated by <code>facet</code>
+  (if <code>facet</code> is not recognized, returns <code>false</code>). If the
+  passed facet name is null or &quot;__ALL&quot;, then information for all facets will be
+  returned.<br>
+  The return value (for valid queries) is an array of objects with the facet
+  name in a string <code>facet</code> field and an array of category information
+  <code>items</code>.<br>
+  Each category item in <code>items</code> has the category id and name as <code>item.id:int</code> and&nbsp;
+  <code>item.name:String.</code>  The <code>item.count:int</code> indicates how
+  many items in the collection are associated to that category.&nbsp;<br>
+  The <code>countsWithImages</code>
+  parameter controls whether the entire collection is counted, or only those
+  items with images. <br>
+  The <code>catsRetType</code> parameter controls how the information is returned. It
+  takes the same values as the <code>retType</code> param to <code>getCategoriesInFacet()</code>.
+  </dd>
+<dt>&nbsp;</dt>
+<dt class="api_method">queryObjectsAndCategories( cats:int[], kwds:string[],
+  page:int, pageSize:int,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  countsWithImages:boolean, catsRetType:String )</dt>
+<dd>Builds and executes a query for the passed category IDs in <code>cats</code>
+  and keywords in <code>kwds</code>, returning results <code>start*pageSize</code>
+  through <code>(start*pageSize)+pageSize-1</code>. The associated categories returned are
+  for the <em>entire result set</em>, not the indicated page. If <code>pageSize</code>
+  is not specified or is &lt;= 0, then the system default page size is used.<br>
+ The <code>countsWithImages</code>
+  parameter controls whether the entire collection is queried, or only those
+  items with images. <br>
+  Returns an object with query results members <code>nObjs:int</code> (a count
+  of results found), <code>nPages:int</code> (the total pages that can be
+  returned), <code>pagesize:int</code> (the page size used, especially for the
+  default) and two member arrays: <code>objects</code> is an array of
+  result info items, and <code>catsByFacet</code> is an array as is returned by <code>getCategoriesForObject</code>.&nbsp;<br>
+  Each item in <code>objects </code>includes the following fields: <code>item.id:int,
+  item.objnum:String, item.name:String, item.description:String, item.img_path:String,
+  item.aspectRatio:Double</code>.<br>
+  The <code>catsRetType</code> parameter controls how the information is returned. It
+  takes the same values as the <code>retType</code> param to <code>getCategoriesInFacet()</code>.<br>
+  <b>This form (rather than the separate calls to get objects and associated
+  categories) is recommended, as it will perform better for each call.</b> If
+  the application can maintain the category results across individual pages of
+  results, separate calls may be more efficient.
+
+  </dd>
+<dt>&nbsp;</dt>
+<dt class="api_method">queryObjects( cats:int[], kwds:string[], page:int, pageSize:int,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  countsWithImages:boolean )</dt>
+<dd>Builds and executes a query for the passed category IDs in <code>cats</code>
+  and keywords in <code>kwds</code>, returning results <code>start*pageSize</code>
+  through <code>(start*pageSize)+pageSize-1</code>. If <code>pageSize</code>
+  is not specified or is &lt;= 0, then the system default page size is used.<br>
+ The <code>countsWithImages</code>
+  parameter controls whether the entire collection is queried, or only those
+  items with images. <br>
+  Returns an object with query results members <code>nObjs:int</code> (a count
+  of results found), <code>nPages:int</code> (the total pages that can be
+  returned), <code>pagesize:int</code> (the page size used, especially for the
+  default), and an array: <code>objects</code> of
+  result info items.
+  Each item in <code>objects </code>includes the following fields: <code>item.id:int,
+  item.objnum:String, item.name:String, item.description:String, item.img_path:String,
+  item.aspectRatio:Double</code>.
+
+  </dd>
+<dt>&nbsp;</dt>
+<dt class="api_method">queryResultsCategories( cats:int[], kwds:string[],<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  countsWithImages:boolean, catsRetType:String )</dt>
+<dd>Builds and executes a query for the passed category IDs in <code>cats</code>
+  and keywords in <code>kwds</code>, and returns an array as is returned by <code>getCategoriesForObject</code>.<br>
+ The <code>countsWithImages</code>
+  parameter controls whether the entire collection is queried, or only those
+  items with images. <br>
+  The <code>catsRetType</code> parameter controls how the information is returned. It
+  takes the same values as the <code>retType</code> param to <code>getCategoriesInFacet()</code>.
+
+  </dd>
+</dl>
+
+</body>
+
+</html>

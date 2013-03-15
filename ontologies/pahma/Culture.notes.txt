@@ -1,0 +1,300 @@
+Review of Culture Facet
+Susan Stone, February 24, 2009 
+
+General
+We would like to be able to validate the full ontology against an XML schema.
+This means extra note elements as used in the Culture facet can't be added
+at will. Please move the following notes entirely into XML comments
+(and please don't embed comments within comments; my tools are having
+trouble with that).
+
+FUTURE_REVISION_NOTES
+temporary_notes
+syntax_notes
+note under California tribes betwen Patwin and Pomo
+
+The schema allows one <description> under the taxonomy element in each facet,
+followed by zero or one <notes>).
+
+There are still many comments about dupes and revisions to make in this facet;
+some of these concern things also listed below.
+
+1. number of headings at a given node level (should be 3-12)
+(Note: where there are only 1-2 headings under another heading, consider making them synonyms; where there are too many headings, can they be merged or another level added?)
+
+- There are 2 headings at the top level
+
+- There are > 25 headings under ModernCultures:Africancultures
+- There is onely one heading under ModernCultures:Africancultures:Congo
+- There are about 25 headings under ModernCultures:Africancultures:WestenAfrica
+- There is only one heading under ModernCultures:Africancultures:SouthernAfrica
+- There are two headings under ModernCultures:Africancultures:CentralAfrica
+- There is only one heading under ModernCultures:Africancultures:Bantupeoples
+- There are two cultures under ModernCultures:Americancultures:CaribbeanCultures
+- There is only one heading under ModernCultures:Americancultures:NorthAmericanCultures:AfricanAmericanCultures
+- There is only one heading under ModernCultures:AmericanCultures:NorthAmericanCultures:NorthAmericanHistoricCultures
+
+- There is only one culture under ... NorthAmericanCultures:NorthAmericanNativeCultures:ArcticTribes:AlaskanTribes:Aleut:Attu
+- There are >30 cultures under ... ArcticTribes:Eskimo
+- (see note under AkulemiutEskimo & AkulemjuteEskimoAlter: "I think this should be subsumed with the next/previous entry")
+- There is only one culture under ... Eskimo:Ntlakapanuk
+- There are > 40 cultures under ...NorthAmericanNativeCultures:CaliforniaTribes
+- See comments DUPE... under CaliforiaTribes
+- Only one heading under SouthwestCaliforniaTribes
+- Only two headings under ...Chumash:InteriorChumash
+- Only two headings under ...Chumash:InteriorChumash:Emgidiano
+- only two cultures under ...NorthernCoastalChumash
+- only two cultures under ...Nomlaki
+- only two cultures under ...Nomlaki:RiverWintun
+- only two headings under ...Miwok:LakeMiwok
+- See comments under ...Yokuts
+- only one heading under ...Klamath:KlamathRiverTribes
+- only one heading under ... Hupa
+- only one heading under ...Cupeo
+- only one heading under SouthernPomo
+- only one heading under CentralPomo:Shokowa
+- only one heading under NorthernPomo:ShodaKay
+- only one heading under Yana
+- only one heading under Yurok
+- only two headings under Sinkyone
+- only one heading under AchumawiPitRiver
+- only one heading under BearRiver
+- only two hedings under Karuk
+- only one heading under Wintu:ShastaWintu
+
+under GreatBasinTribes
+- only two headings under Paiute
+- only one (unwieldy) under NorthernPaiute:FallonPaiute (make a synonym?)
+- only one (unwieldy) heading under NorthernPaiute:MonoPaiute
+- only two headings under Ute
+
+Northeasttribes
+- only one heading under Chippewa
+- only one heading under GreatLakestribes
+
+> 30 headings under NorthwestCoasttribes
+- only one heading under Tlingit (and only one heading under InlandTlingit under that)
+- only one heading under Tsimshian
+- only one heading under Washingtontribes
+- only two heading under Oregontribes (WesternOregontribes & WesternOregontype)
+
+> 25 headings under Plainstribes
+- Crow (probably) only heading under Crow (make synonym)
+- only two headings under Blackfoot
+- only one heading under Hidatsa
+
+Plateautribes
+- only one heading under Wasco
+
+Southwesttribes
+- 14 headings under Southwesttribes
+- 19 headings under ...Pueblotribes
+- only one heading under ...Pueblotribes:Hopi
+- only two headings under Pueblotribes:Pueblo (and one is dupe:Pueblo)
+- only one heading under Papago
+- only one heading under Yuman (Yuma vs. Yuman OK?)
+
+-Only two headings under SubArctictribes:Athabaskan
+- note dupes under NorthernAthapaskantribes: some are also found under SubArctictribes
+
+- Only one heading under SouthAmericanCultures
+- only two headings under ...SouthAmericanIndianCultures:Goajiraindians
+- only one heading under ...Matiloursindians
+- only two headings under Asiancultures:IndianCulture
+- only one heading European under Europeanculture
+- only one heading under Australiancultures
+- only two headings under PolynesianCultures (could Eastern Polynesians and WesternPolynesians under Polynesian move up one level?)
+
+Ancient 
+- only one heading under WidespreadCultures:Acheulean
+- only two headings under EuropeanCultures:AncientGreece
+- 17 headings under CelticTribes:BritishTribes
+- only 2 headings under ...BritishTribes:atrebate
+- only one heading under Gallic Tribes
+- only one heading under SouthAmericanCultures
+
+
+2. IDs: duplicate IDs
+PlainsMiwok
+	under both Miwok and SierraMiwok
+Atakapa
+	under both Plainstribes and Southeasttribes
+Teslin
+	under both Subarctictribes and Tlingit
+Ahtna
+Han
+Ingalik
+Tanaina
+Tanana
+Kutchin
+	under both Subarctictribes and NorthernAthapaskantribes
+Maya
+	under both Mexicantribes and MesoAmericanCultures
+NorthAmericanCultures
+SouthAmericanCultures
+	under AncientCultures and ModernCultures:AmericanCultures
+
+Duplicate headings/IDs in Culture and Location
+(note: duplicate IDs are not legal)
+Acoma
+Alabama
+Aleut
+Ambo
+Anyi
+Asmara
+Bannock
+Bear River
+Benin
+Caddo
+Central Africa
+Chehalis
+Cherokee
+Cochiti
+Congo
+Coquille
+Delaware
+Eastern Africa
+French
+Guana
+Isleta
+Jemez
+Klamath
+Klamath Reservation
+Laguna
+Mayo
+Mescalero
+Mewar
+Micmac
+Mochica
+Nambe
+North Fork
+Onondaga
+Panamint
+Penobscot
+Picuris
+Pojoaque
+Queets
+Sanapana
+Sandia
+San Felipe
+San Ildefonso
+San Juan
+Santa Ana
+Santa Clara
+Santo Domingo
+Sia
+Sioux
+Southern Africa
+Spain
+Taos
+Tesuque
+Tiwanaku
+Walla Walla
+Western Africa
+White Mountain
+Yakima
+Yuma
+Zuni
+
+Duplicate IDs in Culture/Location (with different heading)
+LowerMadRiver
+HumboldtBay
+EelRiver
+
+
+3. String length of  headings  (generally 6-20 characters);
+also check for weird titles
+
+(3-letter cultures OK)
+Long headings (may be OK; not sure how much room there is in GUI):
+North American Historic Cultures
+Northeastern California Tribes
+Santa Cruz Island Chumash
+Santa Rosa Island Chumash
+San Miguel Island Chumash
+Northern Coastal Chumash
+Southern Valley Yokuts
+East Side of San Joaquin Tribal Name Uncertain
+Lower Merced, Tribal Name Uncertain
+Lower Klamath River Tribes
+Northern California tribes
+Athabascans of Lower Mad River
+Northern Paiute (Tovusidokado), living at Fallon Reservation, Nevada.
+Northern Paiute (kutsavi dokado), Mono Lake
+Wind River Shoshone, Wyoming
+Uintah Ute, married to a Washo, lived among Washo ca. 10 years.
+Upper Great Lakes tribes
+Sioux from Pine Ridge Reservation, South Dakota
+Wasco of Warm Springs Reservation
+Lower Colorado River tribes
+Papago, Santa Rosa, Arizona
+Yosa division of Matilours indians
+Sepik River & adjacent coast cultures
+
+Iffy headings:
+
+LaterAku-le-mjute Eskimo (Alter)
+East Side of San Joaquin Tribal Name Uncertain
+Lower Merced, Tribal Name Uncertain
+Pomo, N. Central (others are not inverted)
+catcamkau (lower case)
+ka'-mina (lower case)
+Northern Paiute (Tovusidokado), living at Fallon Reservation, Nevada.
+Northern Paiute (kutsavi dokado), Mono Lake
+Wind River Shoshone, Wyoming (location needed?)
+Crow (probably)
+Sioux from Pine Ridge Reservation, South Dakota
+Uintah Ute, married to a Washo, lived among Washo ca. 10 years.
+Pueblo (?)
+Plains tribe (unspecified)
+Yosa division of Matilours indians
+AndeanCultures (needs space)
+
+Misc
+Yurok_Klamath (should this be a hypen?)
+
+4. IDREFs (implies) without matching IDs
+
+900BC-200BC (period facet)
+100-800AD (period facet)
+1000-1500AD (period facet)
+
+5&6. synonyms that are the same as their own headings or close ancestors:
+Bokeya
+Chippewa
+Gabrieleño
+Ojibwa
+Plains Ojibwa
+Sioux
+
+terms that are both a heading and a synonym in another category
+Greek
+How-ku-ma
+Ibo
+Juanenon
+Klamath
+Komli
+Mattole
+Wiyot
+Yuman
+
+synonyms that appear two places
+Etchulets
+
+
+7. Locations: see above for duplicate headings/IDs
+
+8. NoMatch, asToken:
+
+headings used just for grouping:
+xxx cultures, xxx tribes, locations (particularly location strings
+that appear in the location facet) and regional headings: should these be
+NoMatch="true"
+
+9. Prefixes, suffixes: none
+
+10.: Missing plurals: n.a.
+
+
+
+

@@ -1,0 +1,31 @@
+These notes describe how to build a DB from scratch. It refers to schema files and data files. The former are checked in, and the latter are built with the Delphi tool.
+
+0) Create the DB, with UTF8 and preferred collation (PAHMA uses general_ci). Set the name to something meaningful. You will either need to set the DB within mysql and SOURCE the files, or use the command line tool specifying the default DB as an argument.
+1) Load the user identity schema:  
+     schemas/delphi_ident.sql
+2) Run the script to create the base user info: 
+     schemas/addBaseRolesAndPerms.sql
+   You can modify the admin password via the Delphi UI once this is done.
+3) Load the main schema:
+     schemas/mainObjInfo.sql
+4) Load the featured sets schema
+     schemas/featured.sql
+5) Run the grants script (with at least password modified for local instance).
+6) Fill the objects table. This is a set of SQL INSERT files at this point.
+     data/DumpMMDDYYYY_#.sql (may be multiple)
+   OR can run as batch  
+		 data/allobjs.sql
+7) Fill the facets and categories tables
+     data/mainVocab.sql
+8) Fill the obj_cats table. This is a set of loadfiles at this point.
+     data/objCats.{facets}.sql (will be multiple)
+   OR can run as batch (on non-win, just execute all statements)
+		 data/allcats.bat 
+9) Run the script to create the category counts
+     schemas/cat_counts.sql
+10) Run the script to load the media table
+     data/mediaInsert.sql
+11) (Temporary - to be fixed in delphi tool) Run the script to update the objects table aspect ratio
+     schemas/updateObjects_img_ar From Media.sql
+
+Then, log in to the system as admin (see the schemas/addBaseRolesAndPerms.sql script for the pw), and deal with any other a priori accounts, or registering new accounts if the system is closed.

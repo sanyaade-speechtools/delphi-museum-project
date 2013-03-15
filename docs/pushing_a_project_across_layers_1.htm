@@ -1,0 +1,112 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Pushing a project across layers of the WebFarm</title>
+</head>
+
+<body>
+
+<h3>Pushing a project across layers of the WebFarm</h3>
+<p>[<i>This might fit into code-repository.html, or some other spot - you
+decide.</i>]</p>
+<p>We geneally do our development work in our respective branches of the
+development layer, which for the PAHMA deployment is pahma-dev.berkeley.edu.
+Thus, my development code is generally at <a href="http://pahma-dev.berkeley.edu/patrick/">http://pahma-dev.berkeley.edu/patrick/</a>.
+When we are ready to push current checked in code to the QA layer, we should
+follow these steps:</p>
+<ol>
+  <li>Check out current code into the main development trunk, on <a href="http://pahma-dev.berkeley.edu/delphi">http://pahma-dev.berkeley.edu/delphi</a>.
+    Ensure that there are not writable files there (you can either clean out the
+    files, or just watch the svn co carefully for any conflicts. You need not
+    check out everything. Only these folders need to be checked out:
+    <ol>
+      <li>[root] to pick up .htaccess, favicon.ico</li>
+		<li>api</li>
+		<li>lib</li>
+		<li>modules</li>
+		<li>themes</li>
+    </ol>
+  </li>
+  <li>Verify that the config files (including <code>config.php</code> and <code>http.conf</code>)
+    are up to date in the main dev trunk. This is only an issue if there are
+    additions to the <code>config.php</code> file or if credentials change, etc.
+    Remember that the config files are stored in the local (Berkeley) svn
+    repository, under the site specific files, <code>./pahma/config/config.php.dev</code>,
+    etc.</li>
+	<li>Verify the functionality of the just-checked-out code, running through all
+    the pages for basic functionality. You do not have to do extensive testing -
+    that is why we push to QA.</li>
+	<li>Send a request to the WebFarm (Unix) team (<a href="mailto:unix-tickets@berkeley.edu">unix-tickets@berkeley.edu</a>) to request the update to pahma-qa.berkeley.edu. You must reference the instance, and include specific
+    instructions for the update. In the examples below, you must specify either 
+	&quot;QA&quot; or &quot;PROD&quot;, as appropriate.<p>Here is a sample if you only need to update the
+    code, with no need to update the config.php and other config files:</p>
+	<div>
+		<blockquote>
+			<p><b><font face="Arial" size="2">webfarm site: pahma.berkeley.edu<br>
+			webfarm user: pahma<br>
+			<br>
+			Please perform this svn update on&nbsp;<span class="791251406-07102008">PROD</span>:<br>
+			cd ~/apache2/http-pahma/htdocs/delphi<br>
+			svn up</font></b></p>
+		</blockquote>
+	</div>
+	<p>If you need to update both the code as well as the config.php and other
+    config files, put the files that are not in the google svn instance into the 
+	folder ~/etc (using an sftp tool or equivalent), and then use a message like this:</p>
+	<div>
+		<blockquote>
+			<p><b><font face="Arial" size="2">webfarm site: pahma.berkeley.edu<br>
+			webfarm user: pahma<br>
+			<br>
+			Please migrate the following file from DEV to&nbsp;<span class="791251406-07102008">PROD</span>:<br>
+			~/etc/config.php.<span class="791251406-07102008">prod</span><br>
+			<br>
+			and copy it in to place on&nbsp;<span class="791251406-07102008">PROD</span>:<br>
+			cp ~/etc/config.php.<span class="791251406-07102008">prod</span> 
+			~/apache2/http-pahma/htdocs/delphi/config.php<br>
+			<br>
+			Also please perform this svn update on&nbsp;<span class="791251406-07102008">PROD</span>:<br>
+			cd ~/apache2/http-pahma/htdocs/delphi<br>
+			svn up</font></b></p>
+		</blockquote>
+	</div>
+	<p><br></li>
+	<li>It generally takes the team about a half-day to a day to respond to
+    requests like this. You will get back email once they have completed the
+    move, and you should immediately test the results.</li>
+</ol>
+
+<h4>General caveats and advice</h4>
+<p>Since you will want to &quot;babysit&quot; the process, and given that we
+only have 5X8 support on the WebFarm, it is generally best to make requests in
+the early morning on a day when you can pay attention, and will have some time
+to deal with any hiccups. I generally avoid doing this on Fridays, and prefer
+M-W.</p>
+<h3>Pushing new media to the attached storage on the WebFarm</h3>
+<p>We have two units (~32GB each) of attached storage for the media files for
+the PAHMA instance of Delphi. These are set up to be read-only on the Dev and QA
+instances, and read-write on the production instance (that is their standard
+procedure, although we do not need the RW access on production either).</p>
+<p>In order to update media, we must first send a request to the WebFarm team to
+make the storage writable on the Dev instance. Once this is complete, you can
+manipulate the storage via a logical link under the http root of the Dev
+instance, in your Unix shell, via scp, etc. I use a secure ftp tool to push
+media up from my workstation or other storage. In general, you will want to test
+all the new media on the Dev or QA instance before you go live with this. Since
+we have only once NAS mount point, this means structuring the media on that
+storage to allow side-by-side copies if you are replacing a lot of media. If you
+are just adding media and leaving the old media in place, you can copy up the
+new files, and then update the media tables in the Dev/QA database instance to
+verify paths, etc. In any case, because there is a single NAS instance, all work
+on the media must be done with extreme care. </p>
+<p>If you get into trouble and need to take the site down, you can always use
+the lockout mechanism in the main info table for either DB, and this will lock
+out the associated Delphi layers.</p>
+
+</body>
+
+</html>
