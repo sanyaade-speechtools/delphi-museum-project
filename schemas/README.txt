@@ -17,6 +17,6 @@
 
 Once data is loaded, scripts like cat_counts.sql, fill_obj_cats_wimgs.sql, updateObjectsFromMedia.sql are used to calculate some values. They have been superceded by code that does this in the app.
 
-All the scripts that specify “use onto_maint” are not needed for core Delphi functionality: addTestInferences.sql, complexInference.sql
+All the scripts that specify "use onto_maint" are not needed for core Delphi functionality: addTestInferences.sql, complexInference.sql
 
 delphi_visit.sql supports future functionality NYI. 
