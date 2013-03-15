@@ -115,7 +115,7 @@ public class WebAppDB {
 	protected boolean uploadImageMediaMetadata(String pathToLoadfile) {
 		// Map WinDoz paths to normal ones.
 		pathToLoadfile = pathToLoadfile.replace('\\', '/');
-		String deleteStmt = "DELETE FROM TABLE media WHERE type='image'";
+		String deleteStmt = "DELETE FROM media WHERE type='image'";
 		String mainStmt =
 			"LOAD DATA LOCAL INFILE '"+pathToLoadfile+"' INTO TABLE media CHARACTER SET utf8"
 			+ " FIELDS TERMINATED BY '|' OPTIONALLY ENCLOSED BY '\"' IGNORE 5 LINES "
