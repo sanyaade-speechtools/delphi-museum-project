@@ -36,9 +36,12 @@ SHOW WARNINGS;
 -- The image info is denormalized for simplicity and performance,
 -- based upon the initial system requirements. Must also
 -- provide additional images with a proper normalized table.
+-- Original ID may be a UUID or some such thing. Need to be able to query
+-- on it, but want a number id key for normal joins.
 DROP TABLE IF EXISTS `objects`;
 CREATE TABLE `objects` (
   `id`            INT(10) UNSIGNED PRIMARY KEY NOT NULL,
+  `strid`         VARCHAR(80) NOT NULL,
   `objnum`        VARCHAR(80) NOT NULL,
   `name`          VARCHAR(255) NOT NULL,
   `description`   text NULL,
@@ -263,7 +266,6 @@ CREATE TABLE NewPhotoDB.FacetCaches (
 
 /*
  * Provides associations of categorizations of objects.
- * TODO add creation and modification times.
  */
 DROP TABLE IF EXISTS `obj_cats`;
 CREATE TABLE `obj_cats` (
