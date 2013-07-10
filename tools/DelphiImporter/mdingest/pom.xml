@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project 
+	xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+			<groupId>edu.berkeley.delphi</groupId>
+			<artifactId>delphi</artifactId>
+			<version>0.9.1-SNAPSHOT</version>
+	</parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>delphi.mdingest</artifactId>
+  <packaging>jar</packaging>
+
+  <name>delphi.mdingest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+		<!--
+   <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.1</version>
+			<!- Include this in the normal build, so other packages can
+					 depend upon this.
+					 <scope>test</scope> ->
+				 </dependency>
+		 -->
+		<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.5.8</version>
+		</dependency>
+		<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.5.8</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.berkeley.delphi</groupId>
+			<artifactId>delphi.utils</artifactId>
+			<version>0.9.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.berkeley.delphi</groupId>
+			<artifactId>delphi.config</artifactId>
+			<version>0.9.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.berkeley.delphi</groupId>
+			<artifactId>delphi.media</artifactId>
+			<version>0.9.1-SNAPSHOT</version>
+		</dependency>
+  </dependencies>
+	<build>
+		<!-- Filter resources using the build.properties pulled in below -->
+		<resources>
+				<resource>
+						<directory>src/main/resources</directory>
+						<filtering>true</filtering>
+				</resource>
+		</resources>
+		<plugins>
+			<!-- Get the base properties file, for use in this pom -->
+			<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>1.0-alpha-2</version>
+        <executions>
+          <execution>
+            <phase>initialize</phase>
+            <goals>
+              <goal>read-project-properties</goal>
+            </goals>
+            <configuration>
+              <files>
+                <file>../build.properties</file>
+              </files>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+			<!-- No need to include sql in jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+						<excludes>
+							<exclude>**/*.sql</exclude>
+						</excludes>
+						<!-- Should preclude empty jar, but does not seem to -->
+						<skipIfEmpty>true</skipIfEmpty>
+					</configuration>
+				</plugin>
+
+		</plugins>
+	</build>
+</project>
