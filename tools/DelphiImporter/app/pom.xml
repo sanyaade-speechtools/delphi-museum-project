@@ -110,6 +110,14 @@
           </execution>
         </executions>
       </plugin>
+			<!-- Need to set the main class to run as an app -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>edu.berkeley.delphi.app.MainApp</mainClass>
+				</configuration>
+			</plugin>
 
 			<!-- No need to include sql in jar -->
 			<plugin>
@@ -149,26 +157,6 @@
 					<username>${db.user}</username>
 					<password>${db.user.password}</password>
         </configuration>
-				<executions>
-					<!-- Declare this only to run on the explicit goal, so we do not
-							 blow away our DB with every build. -->
-					<!-- THIS NEEDS ATTENTION FOR DELPHI -->
-					<execution>
-						<id>default-cli</id>
-						<phase>none</phase>
-						<goals>
-							<goal>execute</goal>
-						</goals>
-						<configuration>
-							<autocommit>true</autocommit>
-							<srcFiles>
-								<srcFile>target/classes/schemas/grants.sql</srcFile>
-								<srcFile>target/classes/schemas/dbInfo.sql</srcFile>
-								<srcFile>target/classes/schemas/news_content.sql</srcFile>
-							</srcFiles>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 
 		</plugins>

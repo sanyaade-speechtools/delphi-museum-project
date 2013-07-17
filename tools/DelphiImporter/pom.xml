@@ -114,6 +114,14 @@
                         <target>1.6</target>
                     </configuration>
                 </plugin>
+								<!-- Need to set the main class to run as an app -->
+								<plugin>
+									<groupId>org.codehaus.mojo</groupId>
+									<artifactId>exec-maven-plugin</artifactId>
+									<configuration>
+										<mainClass>edu.berkeley.delphi.app.MainApp</mainClass>
+									</configuration>
+								</plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
@@ -207,9 +215,10 @@
 							<username>root</username>
 							<password>admin</password>jdbc:mysql://localhost
 						</configuration>
-						<executions>
 							<!-- Declare this only to run on the explicit goal, so we do not
 									 blow away our DB with every build. -->
+					<!--				 
+						<executions>
 					 		<execution>
 								<id>default-cli</id>
 								<phase>none</phase>
@@ -219,12 +228,13 @@
 								<configuration>
 									<autocommit>true</autocommit>
 									<forceMojoExecution>true</forceMojoExecution>
-									<srcFiles>
+									<srcFiles> -->
 										<!-- Dummy entry, so this will recurse for all the dirs -->
+										<!--					
 									</srcFiles>
 								</configuration>
 							</execution>
-						</executions>
+						</executions> -->
 					</plugin>
        </plugins>
 				
