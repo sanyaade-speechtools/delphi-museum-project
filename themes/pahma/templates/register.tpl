@@ -22,6 +22,13 @@
 	
 	<label for="email">Email <span class="requiredFieldIndicator">*</span></label>
 	<input class="delphiFormInput" type="text" name="email" maxlength="70" value="{$email}"/>
+	<p></p>
+	<p>To prevent robots from creating accounts, we ask that
+		you enter the text you see in the image, into the form field below. </p>
+	<div>
+	{$captchaHtml}
+	</div>
+
 	<div class="buttonRow">
 		<input type="submit" name="subjoin" value="Register"/>
 	</div>
