@@ -28,6 +28,13 @@ Starred<span class="requiredFieldIndicator">*</span> items are required.</p>
 	<input type="hidden" name="objid" value="{$objId}"/>
 	{/if}
 	
+	<p></p>
+	<p>To prevent robots from sending us email, we ask that
+		you enter the "captcha" text you see in the image, into the form field below. </p>
+	<div>
+	{$captchaHtml}
+	</div>
+	
 	<div class="buttonRow">
 		<input type="submit" name="submit" value="Submit"/>
 	</div>

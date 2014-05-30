@@ -203,7 +203,7 @@ function checkSubmitValues(){
 		/* Verify the captcha, but only if everything else is good */
 		$securimage = new Securimage();
 		if ($securimage->check($_POST['captcha_code']) == false) {
-			array_push($msg, "The security code entered was incorrect.<br />Please try again.");
+			array_push($msg, "The \"captcha\" text entered was incorrect.<br />Please try again.");
 		}
 	}
 

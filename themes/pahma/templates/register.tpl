@@ -24,7 +24,7 @@
 	<input class="delphiFormInput" type="text" name="email" maxlength="70" value="{$email}"/>
 	<p></p>
 	<p>To prevent robots from creating accounts, we ask that
-		you enter the text you see in the image, into the form field below. </p>
+		you enter the "captcha" text you see in the image, into the form field below. </p>
 	<div>
 	{$captchaHtml}
 	</div>
