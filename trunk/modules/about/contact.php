@@ -2,6 +2,10 @@
 
 require_once("../../libs/env.php");
 require_once("../../libs/utils.php");
+require_once('../../libs/securimage/securimage.php');
+
+
+$t->assign('captchaHtml', null);
 
 $t->assign('messages', null);
 $t->assign('name', "");
@@ -21,6 +25,14 @@ if(isset($_POST['submit'])){
 
 	if(!strlen($_POST['subject']) > 0) {
 		$_POST['subject'] = 'Feedback on Delphi';
+	}
+
+	if(count($msg)<=0) {
+		/* Verify the captcha, but only if everything else is good */
+		$securimage = new Securimage();
+		if ($securimage->check($_POST['captcha_code']) == false) {
+			array_push($msg, "The \"captcha\" text entered was incorrect.<br />Please try again.");
+		}
 	}
 	
 	
@@ -88,6 +100,7 @@ if( isset( $_GET['objId'] ) ) {
 } else {
 	$t->assign('objId', -1);
 }
+$t->assign('captchaHtml', Securimage::getCaptchaHtml());
 $t->display('contact.tpl');
 
 ?>
